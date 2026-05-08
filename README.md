@@ -4,6 +4,8 @@
 
 Open Cybersecurity Schema Framework - LinkML Schema
 
+(*reproducible*)
+
 ## Documentation Website
 
 [https://lmodel.github.io/ocsf](https://lmodel.github.io/ocsf)
@@ -51,9 +53,7 @@ its `base_values` parameter in [tools/generate_ocsf_schema.py](tools/generate_oc
 
 ### Known upstream LinkML issues
 
-A small number of generator/runtime bugs in upstream LinkML currently affect
-the Python datamodel produced from this schema. They are tracked in
-[ISSUE.md](ISSUE.md) with a workaround sketch.
+A small number of generator/runtime bugs in upstream LinkML currently affect the Python datamodel produced from this schema. They are tracked upstream.
 
 ## Credits
 

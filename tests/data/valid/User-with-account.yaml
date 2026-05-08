@@ -1,10 +1,10 @@
 # User referencing a nested Account object — exercises object→object range.
 name: alice
-uid: u-7001
+uid: "u-7001"
 domain: corp.example.com
 email_addr: alice@example.com
 full_name: Alice Q. Example
 account:
   name: alice@CORP
-  uid: 7001
+  uid: "7001"
   type: User Account

@@ -50,3 +50,19 @@ etc.). Multiple mapping sets stack on the same OCSF class — for example,
 `Vulnerability` accumulates `exact_mappings` from STIX and vulnerability-core,
 `close_mappings` from CVE, KEV, and NVD, and `related_mappings` from CAPEC and
 CWE, all applied in a single generation pass.
+
+## Known upstream LinkML issues affecting this schema
+
+Three upstream bugs in `linkml` / `linkml-runtime` 1.10.0 affect generators
+run against this schema. All have local workarounds wired into the
+`just`-based build; the workarounds have upstream issues open.
+
+| # | Affected generator | Workaround | Upstream |
+|---|---|---|---|
+| 1 | `gen-python` (`TypeError` on enum casts) | [`tools/strip_redundant_enum_casts.py`](../../../tools/strip_redundant_enum_casts.py), invoked from `_test-python` |raised upstream |
+| 2 | `gen-yaml` (`RepresenterError` on `JsonObj`) | [`tools/gen_yaml_jsonobj_safe.py`](../../../tools/gen_yaml_jsonobj_safe.py), invoked from `_gen-yaml` | [linkml/linkml#3423](https://github.com/linkml/linkml/pull/3423) |
+| 3 | `gen-doc` (`TypeError: 'NoneType' object is not iterable`) | [`tools/gen_doc_template_safe.py`](../../../tools/gen_doc_template_safe.py) + [`docs/templates-linkml/class.md.jinja2`](../../../docs/templates-linkml/class.md.jinja2), invoked from `gen-doc` | raised upstream` |
+
+All workarounds are idempotent and wired into the standard `just test`
+and `just gen-doc` flows — no manual steps required. Remove them as the
+upstream fixes land.

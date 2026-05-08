@@ -1,0 +1,4533 @@
+{
+   "@context": {
+      "xsd": "http://www.w3.org/2001/XMLSchema#",
+      "attack": {
+         "@type": "@id",
+         "@id": "attack"
+      },
+      "capec": "https://w3id.org/lmodel/capec/",
+      "core": "https://w3id.org/lmodel/vulnerability-core/",
+      "cve": {
+         "@type": "@id",
+         "@id": "cve"
+      },
+      "cwe": {
+         "@type": "@id",
+         "@id": "cwe"
+      },
+      "dcterms": "http://purl.org/dc/terms/",
+      "iso27001": "https://w3id.org/lmodel/iso27001/",
+      "kev_catalog": "https://w3id.org/lmodel/kev-catalog/",
+      "linkml": "https://w3id.org/linkml/",
+      "nvd": "https://w3id.org/lmodel/nist-nvd/",
+      "ocsf": "https://w3id.org/lmodel/ocsf/",
+      "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+      "schema": "http://schema.org/",
+      "skos": "http://www.w3.org/2004/02/skos/core#",
+      "stix": "https://lmodel.github.io/stix/",
+      "uco_master": "https://lmodel.github.io/uco-master/",
+      "@vocab": "https://w3id.org/lmodel/ocsf/",
+      "access_analysis_result": {
+         "@type": "@id",
+         "@id": "access_analysis_result"
+      },
+      "access_level": {
+         "@id": "access_level"
+      },
+      "access_list": {
+         "@id": "access_list"
+      },
+      "access_mask": {
+         "@type": "xsd:integer",
+         "@id": "access_mask"
+      },
+      "access_result": {
+         "@id": "access_result"
+      },
+      "access_type": {
+         "@id": "access_type"
+      },
+      "accessed_time": {
+         "@type": "xsd:long",
+         "@id": "accessed_time"
+      },
+      "accessor": {
+         "@type": "@id",
+         "@id": "accessor"
+      },
+      "accessors": {
+         "@type": "@id",
+         "@id": "accessors"
+      },
+      "account": {
+         "@type": "@id",
+         "@id": "account"
+      },
+      "account_switch_type": {
+         "@id": "account_switch_type"
+      },
+      "account_switch_type_id": {
+         "@context": {
+            "text": "skos:notation",
+            "description": "skos:prefLabel",
+            "meaning": "@id"
+         },
+         "@id": "account_switch_type_id"
+      },
+      "ack_reason": {
+         "@type": "xsd:integer",
+         "@id": "ack_reason"
+      },
+      "ack_result": {
+         "@type": "xsd:integer",
+         "@id": "ack_result"
+      },
+      "action": {
+         "@id": "action"
+      },
+      "action_id": {
+         "@context": {
+            "text": "skos:notation",
+            "description": "skos:prefLabel",
+            "meaning": "@id"
+         },
+         "@id": "action_id"
+      },
+      "activity_id": {
+         "@context": {
+            "text": "skos:notation",
+            "description": "skos:prefLabel",
+            "meaning": "@id"
+         },
+         "@id": "activity_id"
+      },
+      "activity_name": {
+         "@id": "activity_name"
+      },
+      "actor": {
+         "@type": "@id",
+         "@id": "actor"
+      },
+      "actual_permissions": {
+         "@type": "xsd:integer",
+         "@id": "actual_permissions"
+      },
+      "additional_restrictions": {
+         "@type": "@id",
+         "@id": "additional_restrictions"
+      },
+      "advisory": {
+         "@type": "@id",
+         "@id": "advisory"
+      },
+      "aerial_height": {
+         "@id": "aerial_height"
+      },
+      "affected_code": {
+         "@type": "@id",
+         "@id": "affected_code"
+      },
+      "affected_packages": {
+         "@type": "@id",
+         "@id": "affected_packages"
+      },
+      "agent": {
+         "@type": "@id",
+         "@id": "agent"
+      },
+      "agent_list": {
+         "@type": "@id",
+         "@id": "agent_list"
+      },
+      "ai_model": {
+         "@type": "@id",
+         "@id": "ai_model"
+      },
+      "ai_provider": {
+         "@id": "ai_provider"
+      },
+      "ai_role": {
+         "@id": "ai_role"
+      },
+      "ai_role_id": {
+         "@type": "xsd:integer",
+         "@id": "ai_role_id"
+      },
+      "aircraft": {
+         "@type": "@id",
+         "@id": "aircraft"
+      },
+      "alert": {
+         "@type": "xsd:integer",
+         "@id": "alert"
+      },
+      "algorithm": {
+         "@id": "algorithm"
+      },
+      "algorithm_id": {
+         "@context": {
+            "text": "skos:notation",
+            "description": "skos:prefLabel",
+            "meaning": "@id"
+         },
+         "@id": "algorithm_id"
+      },
+      "all_privileges_unused": {
+         "@type": "xsd:boolean",
+         "@id": "all_privileges_unused"
+      },
+      "altitude_ceiling": {
+         "@id": "altitude_ceiling"
+      },
+      "altitude_floor": {
+         "@id": "altitude_floor"
+      },
+      "analysis_targets": {
+         "@type": "@id",
+         "@id": "analysis_targets"
+      },
+      "analytic": {
+         "@type": "@id",
+         "@id": "analytic"
+      },
+      "analyzed_privileges_count": {
+         "@type": "xsd:integer",
+         "@id": "analyzed_privileges_count"
+      },
+      "ancestry": {
+         "@type": "@id",
+         "@id": "ancestry"
+      },
+      "anomalies": {
+         "@type": "@id",
+         "@id": "anomalies"
+      },
+      "anomaly_analyses": {
+         "@type": "@id",
+         "@id": "anomaly_analyses"
+      },
+      "answers": {
+         "@type": "@id",
+         "@id": "answers"
+      },
+      "api": {
+         "@type": "@id",
+         "@id": "api"
+      },
+      "app": {
+         "@type": "@id",
+         "@id": "app"
+      },
+      "app_name": {
+         "@id": "app_name"
+      },
+      "app_protocol_name": {
+         "@id": "app_protocol_name"
+      },
+      "app_uid": {
+         "@id": "app_uid"
+      },
+      "application": {
+         "@type": "@id",
+         "@id": "application"
+      },
+      "applications": {
+         "@type": "@id",
+         "@id": "applications"
+      },
+      "architecture": {
+         "@id": "architecture"
+      },
+      "args": {
+         "@id": "args"
+      },
+      "assessment": {
+         "@type": "@id",
+         "@id": "assessment"
+      },
+      "assessments": {
+         "@type": "@id",
+         "@id": "assessments"
+      },
+      "assignee": {
+         "@type": "@id",
+         "@id": "assignee"
+      },
+      "assignee_group": {
+         "@type": "@id",
+         "@id": "assignee_group"
+      },
+      "attack_graph": {
+         "@type": "@id",
+         "@id": "attack_graph"
+      },
+      "attacks": {
+         "@type": "@id",
+         "@id": "attacks"
+      },
+      "attempt": {
+         "@type": "xsd:integer",
+         "@id": "attempt"
+      },
+      "attributes": {
+         "@type": "xsd:integer",
+         "@id": "attributes"
+      },
+      "auid": {
+         "@type": "xsd:integer",
+         "@id": "auid"
+      },
+      "auth_factors": {
+         "@type": "@id",
+         "@id": "auth_factors"
+      },
+      "auth_protocol": {
+         "@id": "auth_protocol"
+      },
+      "auth_protocol_id": {
+         "@context": {
+            "text": "skos:notation",
+            "description": "skos:prefLabel",
+            "meaning": "@id"
+         },
+         "@id": "auth_protocol_id"
+      },
+      "auth_type": {
+         "@id": "auth_type"
+      },
+      "auth_type_id": {
+         "@context": {
+            "text": "skos:notation",
+            "description": "skos:prefLabel",
+            "meaning": "@id"
+         },
+         "@id": "auth_type_id"
+      },
+      "authentication_token": {
+         "@type": "@id",
+         "@id": "authentication_token"
+      },
+      "author": {
+         "@id": "author"
+      },
+      "authorizations": {
+         "@type": "@id",
+         "@id": "authorizations"
+      },
+      "autonomous_system": {
+         "@type": "@id",
+         "@id": "autonomous_system"
+      },
+      "autoscale_uid": {
+         "@id": "autoscale_uid"
+      },
+      "avg_timespan": {
+         "@type": "@id",
+         "@id": "avg_timespan"
+      },
+      "banner": {
+         "@id": "banner"
+      },
+      "base_address": {
+         "@id": "base_address"
+      },
+      "base_score": {
+         "@type": "xsd:float",
+         "@id": "base_score"
+      },
+      "baselines": {
+         "@type": "@id",
+         "@id": "baselines"
+      },
+      "bios_date": {
+         "@id": "bios_date"
+      },
+      "bios_manufacturer": {
+         "@id": "bios_manufacturer"
+      },
+      "bios_ver": {
+         "@id": "bios_ver"
+      },
+      "body_length": {
+         "@type": "xsd:integer",
+         "@id": "body_length"
+      },
+      "boot_time": {
+         "@type": "xsd:long",
+         "@id": "boot_time"
+      },
+      "boot_uid": {
+         "@id": "boot_uid"
+      },
+      "boundary": {
+         "@id": "boundary"
+      },
+      "boundary_id": {
+         "@context": {
+            "text": "skos:notation",
+            "description": "skos:prefLabel",
+            "meaning": "@id"
+         },
+         "@id": "boundary_id"
+      },
+      "build": {
+         "@id": "build"
+      },
+      "bulletin": {
+         "@id": "bulletin"
+      },
+      "bus_type": {
+         "@id": "bus_type"
+      },
+      "bus_type_id": {
+         "@context": {
+            "text": "skos:notation",
+            "description": "skos:prefLabel",
+            "meaning": "@id"
+         },
+         "@id": "bus_type_id"
+      },
+      "bytes": {
+         "@type": "xsd:integer",
+         "@id": "bytes"
+      },
+      "bytes_in": {
+         "@type": "xsd:integer",
+         "@id": "bytes_in"
+      },
+      "bytes_missed": {
+         "@type": "xsd:integer",
+         "@id": "bytes_missed"
+      },
+      "bytes_out": {
+         "@type": "xsd:integer",
+         "@id": "bytes_out"
+      },
+      "campaign": {
+         "@type": "@id",
+         "@id": "campaign"
+      },
+      "capabilities": {
+         "@id": "capabilities"
+      },
+      "caption": {
+         "@id": "caption"
+      },
+      "categories": {
+         "@id": "categories"
+      },
+      "category": {
+         "@id": "category"
+      },
+      "category_id": {
+         "@type": "xsd:integer",
+         "@id": "category_id"
+      },
+      "category_ids": {
+         "@context": {
+            "text": "skos:notation",
+            "description": "skos:prefLabel",
+            "meaning": "@id"
+         },
+         "@id": "category_ids"
+      },
+      "category_name": {
+         "@id": "category_name"
+      },
+      "category_uid": {
+         "@type": "xsd:integer",
+         "@id": "category_uid"
+      },
+      "cc": {
+         "@id": "cc"
+      },
+      "cc_mailboxes": {
+         "@id": "cc_mailboxes"
+      },
+      "cell_name": {
+         "@id": "cell_name"
+      },
+      "certificate": {
+         "@type": "@id",
+         "@id": "certificate"
+      },
+      "certificate_chain": {
+         "@id": "certificate_chain"
+      },
+      "chassis": {
+         "@id": "chassis"
+      },
+      "checks": {
+         "@type": "@id",
+         "@id": "checks"
+      },
+      "chunks": {
+         "@type": "xsd:integer",
+         "@id": "chunks"
+      },
+      "chunks_in": {
+         "@type": "xsd:integer",
+         "@id": "chunks_in"
+      },
+      "chunks_out": {
+         "@type": "xsd:integer",
+         "@id": "chunks_out"
+      },
+      "cipher": {
+         "@id": "cipher"
+      },
+      "cis_benchmark": {
+         "@type": "@id",
+         "@id": "cis_benchmark"
+      },
+      "cis_benchmark_result": {
+         "@type": "@id",
+         "@id": "cis_benchmark_result"
+      },
+      "cis_controls": {
+         "@type": "@id",
+         "@id": "cis_controls"
+      },
+      "cis_csc": {
+         "@type": "@id",
+         "@id": "cis_csc"
+      },
+      "city": {
+         "@id": "city"
+      },
+      "class_": {
+         "@id": "class_"
+      },
+      "class_name": {
+         "@id": "class_name"
+      },
+      "class_uid": {
+         "@type": "xsd:integer",
+         "@id": "class_uid"
+      },
+      "classification": {
+         "@id": "classification"
+      },
+      "classification_ids": {
+         "@context": {
+            "text": "skos:notation",
+            "description": "skos:prefLabel",
+            "meaning": "@id"
+         },
+         "@id": "classification_ids"
+      },
+      "classifications": {
+         "@id": "classifications"
+      },
+      "classifier_details": {
+         "@type": "@id",
+         "@id": "classifier_details"
+      },
+      "client_ciphers": {
+         "@id": "client_ciphers"
+      },
+      "client_dialects": {
+         "@id": "client_dialects"
+      },
+      "client_hassh": {
+         "@type": "@id",
+         "@id": "client_hassh"
+      },
+      "cloud": {
+         "@type": "@id",
+         "@id": "cloud"
+      },
+      "cloud_partition": {
+         "@id": "cloud_partition"
+      },
+      "cmd_line": {
+         "@id": "cmd_line"
+      },
+      "code": {
+         "@type": "xsd:integer",
+         "@id": "code"
+      },
+      "codes": {
+         "@type": "xsd:integer",
+         "@id": "codes"
+      },
+      "color_depth": {
+         "@type": "xsd:integer",
+         "@id": "color_depth"
+      },
+      "column_name": {
+         "@id": "column_name"
+      },
+      "column_number": {
+         "@type": "xsd:integer",
+         "@id": "column_number"
+      },
+      "command": {
+         "@id": "command"
+      },
+      "command_response": {
+         "@id": "command_response"
+      },
+      "command_responses": {
+         "@id": "command_responses"
+      },
+      "command_uid": {
+         "@id": "command_uid"
+      },
+      "comment": {
+         "@id": "comment"
+      },
+      "community_uid": {
+         "@id": "community_uid"
+      },
+      "company_name": {
+         "@id": "company_name"
+      },
+      "completion_tokens": {
+         "@type": "xsd:integer",
+         "@id": "completion_tokens"
+      },
+      "compliance": {
+         "@type": "@id",
+         "@id": "compliance"
+      },
+      "compliance_references": {
+         "@type": "@id",
+         "@id": "compliance_references"
+      },
+      "compliance_standards": {
+         "@type": "@id",
+         "@id": "compliance_standards"
+      },
+      "component": {
+         "@id": "component"
+      },
+      "condition": {
+         "@id": "condition"
+      },
+      "condition_keys": {
+         "@type": "@id",
+         "@id": "condition_keys"
+      },
+      "confidence": {
+         "@id": "confidence"
+      },
+      "confidence_id": {
+         "@context": {
+            "text": "skos:notation",
+            "description": "skos:prefLabel",
+            "meaning": "@id"
+         },
+         "@id": "confidence_id"
+      },
+      "confidence_score": {
+         "@type": "xsd:integer",
+         "@id": "confidence_score"
+      },
+      "confidentiality": {
+         "@id": "confidentiality"
+      },
+      "confidentiality_id": {
+         "@context": {
+            "text": "skos:notation",
+            "description": "skos:prefLabel",
+            "meaning": "@id"
+         },
+         "@id": "confidentiality_id"
+      },
+      "connection_info": {
+         "@type": "@id",
+         "@id": "connection_info"
+      },
+      "connection_uid": {
+         "@id": "connection_uid"
+      },
+      "container": {
+         "@type": "@id",
+         "@id": "container"
+      },
+      "containers": {
+         "@type": "@id",
+         "@id": "containers"
+      },
+      "content_type": {
+         "@id": "content_type"
+      },
+      "continent": {
+         "@id": "continent"
+      },
+      "control": {
+         "@id": "control"
+      },
+      "control_parameters": {
+         "@type": "@id",
+         "@id": "control_parameters"
+      },
+      "coordinates": {
+         "@type": "xsd:float",
+         "@id": "coordinates"
+      },
+      "cores": {
+         "@type": "xsd:integer",
+         "@id": "cores"
+      },
+      "correlation_uid": {
+         "@id": "correlation_uid"
+      },
+      "cost_center": {
+         "@id": "cost_center"
+      },
+      "count": {
+         "@type": "xsd:integer",
+         "@id": "count"
+      },
+      "countermeasures": {
+         "@type": "@id",
+         "@id": "countermeasures"
+      },
+      "country": {
+         "@id": "country"
+      },
+      "cpe_name": {
+         "@id": "cpe_name"
+      },
+      "cpid": {
+         "@id": "cpid"
+      },
+      "cpu_architecture": {
+         "@id": "cpu_architecture"
+      },
+      "cpu_architecture_id": {
+         "@context": {
+            "text": "skos:notation",
+            "description": "skos:prefLabel",
+            "meaning": "@id"
+         },
+         "@id": "cpu_architecture_id"
+      },
+      "cpu_bits": {
+         "@type": "xsd:integer",
+         "@id": "cpu_bits"
+      },
+      "cpu_cores": {
+         "@type": "xsd:integer",
+         "@id": "cpu_cores"
+      },
+      "cpu_count": {
+         "@type": "xsd:integer",
+         "@id": "cpu_count"
+      },
+      "cpu_speed": {
+         "@type": "xsd:integer",
+         "@id": "cpu_speed"
+      },
+      "cpu_type": {
+         "@id": "cpu_type"
+      },
+      "create_mask": {
+         "@id": "create_mask"
+      },
+      "created_time": {
+         "@type": "xsd:long",
+         "@id": "created_time"
+      },
+      "creator": {
+         "@type": "@id",
+         "@id": "creator"
+      },
+      "credential_uid": {
+         "@id": "credential_uid"
+      },
+      "criticality": {
+         "@id": "criticality"
+      },
+      "cumulative_traffic": {
+         "@type": "@id",
+         "@id": "cumulative_traffic"
+      },
+      "customer_uid": {
+         "@id": "customer_uid"
+      },
+      "cves": {
+         "@type": "@id",
+         "@id": "cves"
+      },
+      "cvss": {
+         "@type": "@id",
+         "@id": "cvss"
+      },
+      "cwe_uid": {
+         "@id": "cwe_uid"
+      },
+      "cwe_url": {
+         "@type": "xsd:anyURI",
+         "@id": "cwe_url"
+      },
+      "d3f_tactic": {
+         "@type": "@id",
+         "@id": "d3f_tactic"
+      },
+      "d3f_technique": {
+         "@type": "@id",
+         "@id": "d3f_technique"
+      },
+      "data": {
+         "@id": "data"
+      },
+      "data_classification": {
+         "@type": "@id",
+         "@id": "data_classification"
+      },
+      "data_classifications": {
+         "@type": "@id",
+         "@id": "data_classifications"
+      },
+      "data_lifecycle_state": {
+         "@id": "data_lifecycle_state"
+      },
+      "data_lifecycle_state_id": {
+         "@context": {
+            "text": "skos:notation",
+            "description": "skos:prefLabel",
+            "meaning": "@id"
+         },
+         "@id": "data_lifecycle_state_id"
+      },
+      "data_security": {
+         "@type": "@id",
+         "@id": "data_security"
+      },
+      "data_sources": {
+         "@id": "data_sources"
+      },
+      "database": {
+         "@type": "@id",
+         "@id": "database"
+      },
+      "databucket": {
+         "@type": "@id",
+         "@id": "databucket"
+      },
+      "dce_rpc": {
+         "@type": "@id",
+         "@id": "dce_rpc"
+      },
+      "debug": {
+         "@id": "debug"
+      },
+      "decision": {
+         "@id": "decision"
+      },
+      "delay": {
+         "@type": "xsd:integer",
+         "@id": "delay"
+      },
+      "deleted_time": {
+         "@type": "xsd:long",
+         "@id": "deleted_time"
+      },
+      "delivered_to": {
+         "@id": "delivered_to"
+      },
+      "delivered_to_list": {
+         "@id": "delivered_to_list"
+      },
+      "department": {
+         "@id": "department"
+      },
+      "dependency_chain": {
+         "@id": "dependency_chain"
+      },
+      "depth": {
+         "@context": {
+            "text": "skos:notation",
+            "description": "skos:prefLabel",
+            "meaning": "@id"
+         },
+         "@id": "depth"
+      },
+      "desc": {
+         "@id": "desc"
+      },
+      "desktop_display": {
+         "@type": "@id",
+         "@id": "desktop_display"
+      },
+      "details": {
+         "@id": "details"
+      },
+      "detection_pattern": {
+         "@id": "detection_pattern"
+      },
+      "detection_pattern_type": {
+         "@id": "detection_pattern_type"
+      },
+      "detection_pattern_type_id": {
+         "@context": {
+            "text": "skos:notation",
+            "description": "skos:prefLabel",
+            "meaning": "@id"
+         },
+         "@id": "detection_pattern_type_id"
+      },
+      "detection_system": {
+         "@id": "detection_system"
+      },
+      "detection_system_id": {
+         "@context": {
+            "text": "skos:notation",
+            "description": "skos:prefLabel",
+            "meaning": "@id"
+         },
+         "@id": "detection_system_id"
+      },
+      "detection_uid": {
+         "@id": "detection_uid"
+      },
+      "developer_uid": {
+         "@id": "developer_uid"
+      },
+      "device": {
+         "@type": "@id",
+         "@id": "device"
+      },
+      "devices": {
+         "@type": "@id",
+         "@id": "devices"
+      },
+      "dialect": {
+         "@id": "dialect"
+      },
+      "digest": {
+         "@type": "@id",
+         "@id": "digest"
+      },
+      "direction": {
+         "@id": "direction"
+      },
+      "direction_id": {
+         "@context": {
+            "text": "skos:notation",
+            "description": "skos:prefLabel",
+            "meaning": "@id"
+         },
+         "@id": "direction_id"
+      },
+      "discovery_details": {
+         "@type": "@id",
+         "@id": "discovery_details"
+      },
+      "dispersion": {
+         "@type": "xsd:integer",
+         "@id": "dispersion"
+      },
+      "display_name": {
+         "@id": "display_name"
+      },
+      "disposition": {
+         "@id": "disposition"
+      },
+      "disposition_id": {
+         "@context": {
+            "text": "skos:notation",
+            "description": "skos:prefLabel",
+            "meaning": "@id"
+         },
+         "@id": "disposition_id"
+      },
+      "dkim": {
+         "@id": "dkim"
+      },
+      "dkim_domain": {
+         "@id": "dkim_domain"
+      },
+      "dkim_signature": {
+         "@id": "dkim_signature"
+      },
+      "dmarc": {
+         "@id": "dmarc"
+      },
+      "dmarc_override": {
+         "@id": "dmarc_override"
+      },
+      "dmarc_policy": {
+         "@id": "dmarc_policy"
+      },
+      "dnssec_status": {
+         "@id": "dnssec_status"
+      },
+      "dnssec_status_id": {
+         "@context": {
+            "text": "skos:notation",
+            "description": "skos:prefLabel",
+            "meaning": "@id"
+         },
+         "@id": "dnssec_status_id"
+      },
+      "domain": {
+         "@id": "domain"
+      },
+      "domain_contact": {
+         "@type": "@id",
+         "@id": "domain_contact"
+      },
+      "domain_contacts": {
+         "@type": "@id",
+         "@id": "domain_contacts"
+      },
+      "drive_type": {
+         "@id": "drive_type"
+      },
+      "drive_type_id": {
+         "@context": {
+            "text": "skos:notation",
+            "description": "skos:prefLabel",
+            "meaning": "@id"
+         },
+         "@id": "drive_type_id"
+      },
+      "driver": {
+         "@type": "@id",
+         "@id": "driver"
+      },
+      "dst_endpoint": {
+         "@type": "@id",
+         "@id": "dst_endpoint"
+      },
+      "duration": {
+         "@type": "xsd:integer",
+         "@id": "duration"
+      },
+      "duration_days": {
+         "@type": "xsd:integer",
+         "@id": "duration_days"
+      },
+      "duration_hours": {
+         "@type": "xsd:integer",
+         "@id": "duration_hours"
+      },
+      "duration_mins": {
+         "@type": "xsd:integer",
+         "@id": "duration_mins"
+      },
+      "duration_months": {
+         "@type": "xsd:integer",
+         "@id": "duration_months"
+      },
+      "duration_secs": {
+         "@type": "xsd:integer",
+         "@id": "duration_secs"
+      },
+      "duration_weeks": {
+         "@type": "xsd:integer",
+         "@id": "duration_weeks"
+      },
+      "duration_years": {
+         "@type": "xsd:integer",
+         "@id": "duration_years"
+      },
+      "edges": {
+         "@type": "@id",
+         "@id": "edges"
+      },
+      "edition": {
+         "@id": "edition"
+      },
+      "egid": {
+         "@type": "xsd:integer",
+         "@id": "egid"
+      },
+      "eid": {
+         "@id": "eid"
+      },
+      "email": {
+         "@type": "@id",
+         "@id": "email"
+      },
+      "email_addr": {
+         "@id": "email_addr"
+      },
+      "email_addrs": {
+         "@id": "email_addrs"
+      },
+      "email_auth": {
+         "@type": "@id",
+         "@id": "email_auth"
+      },
+      "email_uid": {
+         "@id": "email_uid"
+      },
+      "embedding_model": {
+         "@id": "embedding_model"
+      },
+      "employee_uid": {
+         "@id": "employee_uid"
+      },
+      "encoding": {
+         "@id": "encoding"
+      },
+      "encoding_id": {
+         "@context": {
+            "text": "skos:notation",
+            "description": "skos:prefLabel",
+            "meaning": "@id"
+         },
+         "@id": "encoding_id"
+      },
+      "encryption_details": {
+         "@type": "@id",
+         "@id": "encryption_details"
+      },
+      "end_column": {
+         "@type": "xsd:integer",
+         "@id": "end_column"
+      },
+      "end_line": {
+         "@type": "xsd:integer",
+         "@id": "end_line"
+      },
+      "end_offset": {
+         "@type": "xsd:integer",
+         "@id": "end_offset"
+      },
+      "end_time": {
+         "@type": "xsd:long",
+         "@id": "end_time"
+      },
+      "endpoint_connections": {
+         "@type": "@id",
+         "@id": "endpoint_connections"
+      },
+      "enrichments": {
+         "@type": "@id",
+         "@id": "enrichments"
+      },
+      "entity": {
+         "@type": "@id",
+         "@id": "entity"
+      },
+      "entity_result": {
+         "@type": "@id",
+         "@id": "entity_result"
+      },
+      "environment_variables": {
+         "@type": "@id",
+         "@id": "environment_variables"
+      },
+      "epoch": {
+         "@type": "xsd:integer",
+         "@id": "epoch"
+      },
+      "epss": {
+         "@type": "@id",
+         "@id": "epss"
+      },
+      "error": {
+         "@id": "error"
+      },
+      "error_message": {
+         "@id": "error_message"
+      },
+      "euid": {
+         "@type": "xsd:integer",
+         "@id": "euid"
+      },
+      "event_code": {
+         "@id": "event_code"
+      },
+      "event_uid": {
+         "@id": "event_uid"
+      },
+      "evidence": {
+         "@id": "evidence"
+      },
+      "evidences": {
+         "@type": "@id",
+         "@id": "evidences"
+      },
+      "execute_count": {
+         "@type": "xsd:integer",
+         "@id": "execute_count"
+      },
+      "exit_code": {
+         "@type": "xsd:integer",
+         "@id": "exit_code"
+      },
+      "expiration_reason": {
+         "@id": "expiration_reason"
+      },
+      "expiration_time": {
+         "@type": "xsd:long",
+         "@id": "expiration_time"
+      },
+      "exploit_last_seen_time": {
+         "@type": "xsd:long",
+         "@id": "exploit_last_seen_time"
+      },
+      "exploit_ref_url": {
+         "@type": "xsd:anyURI",
+         "@id": "exploit_ref_url"
+      },
+      "exploit_requirement": {
+         "@id": "exploit_requirement"
+      },
+      "exploit_type": {
+         "@id": "exploit_type"
+      },
+      "ext": {
+         "@id": "ext"
+      },
+      "extension": {
+         "@type": "@id",
+         "@id": "extension"
+      },
+      "extension_list": {
+         "@type": "@id",
+         "@id": "extension_list"
+      },
+      "extensions": {
+         "@type": "@id",
+         "@id": "extensions"
+      },
+      "external_uid": {
+         "@id": "external_uid"
+      },
+      "factor_type": {
+         "@id": "factor_type"
+      },
+      "factor_type_id": {
+         "@context": {
+            "text": "skos:notation",
+            "description": "skos:prefLabel",
+            "meaning": "@id"
+         },
+         "@id": "factor_type_id"
+      },
+      "feature": {
+         "@type": "@id",
+         "@id": "feature"
+      },
+      "file": {
+         "@type": "@id",
+         "@id": "file"
+      },
+      "file_diff": {
+         "@id": "file_diff"
+      },
+      "file_result": {
+         "@type": "@id",
+         "@id": "file_result"
+      },
+      "files": {
+         "@type": "@id",
+         "@id": "files"
+      },
+      "finding": {
+         "@type": "@id",
+         "@id": "finding"
+      },
+      "finding_info": {
+         "@type": "@id",
+         "@id": "finding_info"
+      },
+      "finding_info_list": {
+         "@type": "@id",
+         "@id": "finding_info_list"
+      },
+      "fingerprint": {
+         "@type": "@id",
+         "@id": "fingerprint"
+      },
+      "fingerprints": {
+         "@type": "@id",
+         "@id": "fingerprints"
+      },
+      "firewall_rule": {
+         "@type": "@id",
+         "@id": "firewall_rule"
+      },
+      "first_seen_time": {
+         "@type": "xsd:long",
+         "@id": "first_seen_time"
+      },
+      "fix_available": {
+         "@type": "xsd:boolean",
+         "@id": "fix_available"
+      },
+      "fix_coverage": {
+         "@id": "fix_coverage"
+      },
+      "fix_coverage_id": {
+         "@context": {
+            "text": "skos:notation",
+            "description": "skos:prefLabel",
+            "meaning": "@id"
+         },
+         "@id": "fix_coverage_id"
+      },
+      "fixed_in_version": {
+         "@id": "fixed_in_version"
+      },
+      "flag_history": {
+         "@id": "flag_history"
+      },
+      "flag_ids": {
+         "@context": {
+            "text": "skos:notation",
+            "description": "skos:prefLabel",
+            "meaning": "@id"
+         },
+         "@id": "flag_ids"
+      },
+      "flags": {
+         "@id": "flags"
+      },
+      "folder": {
+         "@type": "@id",
+         "@id": "folder"
+      },
+      "format": {
+         "@id": "format"
+      },
+      "format_id": {
+         "@context": {
+            "text": "skos:notation",
+            "description": "skos:prefLabel",
+            "meaning": "@id"
+         },
+         "@id": "format_id"
+      },
+      "forward_addr": {
+         "@id": "forward_addr"
+      },
+      "from_": {
+         "@id": "from_"
+      },
+      "from_list": {
+         "@id": "from_list"
+      },
+      "from_mailbox": {
+         "@id": "from_mailbox"
+      },
+      "from_mailboxes": {
+         "@id": "from_mailboxes"
+      },
+      "full_name": {
+         "@id": "full_name"
+      },
+      "function_invocation": {
+         "@type": "@id",
+         "@id": "function_invocation"
+      },
+      "function_keys": {
+         "@type": "xsd:integer",
+         "@id": "function_keys"
+      },
+      "function_name": {
+         "@id": "function_name"
+      },
+      "geodetic_altitude": {
+         "@id": "geodetic_altitude"
+      },
+      "geodetic_vertical_accuracy": {
+         "@id": "geodetic_vertical_accuracy"
+      },
+      "geohash": {
+         "@id": "geohash"
+      },
+      "given_name": {
+         "@id": "given_name"
+      },
+      "gpu_count": {
+         "@type": "xsd:integer",
+         "@id": "gpu_count"
+      },
+      "gpu_info_list": {
+         "@type": "@id",
+         "@id": "gpu_info_list"
+      },
+      "granted_privileges": {
+         "@id": "granted_privileges"
+      },
+      "graph": {
+         "@type": "@id",
+         "@id": "graph"
+      },
+      "group": {
+         "@type": "@id",
+         "@id": "group"
+      },
+      "group_name": {
+         "@id": "group_name"
+      },
+      "groups": {
+         "@type": "@id",
+         "@id": "groups"
+      },
+      "handshake_dur": {
+         "@type": "xsd:integer",
+         "@id": "handshake_dur"
+      },
+      "has_mfa": {
+         "@type": "xsd:boolean",
+         "@id": "has_mfa"
+      },
+      "hash": {
+         "@type": "@id",
+         "@id": "hash"
+      },
+      "hashes": {
+         "@type": "@id",
+         "@id": "hashes"
+      },
+      "hire_time": {
+         "@type": "xsd:long",
+         "@id": "hire_time"
+      },
+      "horizontal_accuracy": {
+         "@id": "horizontal_accuracy"
+      },
+      "hosted_services": {
+         "@type": "@id",
+         "@id": "hosted_services"
+      },
+      "hosting_process": {
+         "@type": "@id",
+         "@id": "hosting_process"
+      },
+      "hostname": {
+         "@id": "hostname"
+      },
+      "http_cookies": {
+         "@type": "@id",
+         "@id": "http_cookies"
+      },
+      "http_headers": {
+         "@type": "@id",
+         "@id": "http_headers"
+      },
+      "http_method": {
+         "@id": "http_method"
+      },
+      "http_only": {
+         "@type": "xsd:boolean",
+         "@id": "http_only"
+      },
+      "http_request": {
+         "@type": "@id",
+         "@id": "http_request"
+      },
+      "http_response": {
+         "@type": "@id",
+         "@id": "http_response"
+      },
+      "http_status": {
+         "@type": "xsd:integer",
+         "@id": "http_status"
+      },
+      "hw_info": {
+         "@type": "@id",
+         "@id": "hw_info"
+      },
+      "hypervisor": {
+         "@id": "hypervisor"
+      },
+      "iccid": {
+         "@id": "iccid"
+      },
+      "identifier_cookie": {
+         "@id": "identifier_cookie"
+      },
+      "identity_activity_metrics": {
+         "@type": "@id",
+         "@id": "identity_activity_metrics"
+      },
+      "idle_timeout": {
+         "@type": "xsd:integer",
+         "@id": "idle_timeout"
+      },
+      "idp": {
+         "@type": "@id",
+         "@id": "idp"
+      },
+      "image": {
+         "@type": "@id",
+         "@id": "image"
+      },
+      "ime": {
+         "@id": "ime"
+      },
+      "imei": {
+         "@id": "imei"
+      },
+      "imei_list": {
+         "@id": "imei_list"
+      },
+      "impact": {
+         "@id": "impact"
+      },
+      "impact_id": {
+         "@context": {
+            "text": "skos:notation",
+            "description": "skos:prefLabel",
+            "meaning": "@id"
+         },
+         "@id": "impact_id"
+      },
+      "impact_score": {
+         "@type": "xsd:integer",
+         "@id": "impact_score"
+      },
+      "imported_symbols": {
+         "@id": "imported_symbols"
+      },
+      "initiator": {
+         "@id": "initiator"
+      },
+      "initiator_id": {
+         "@context": {
+            "text": "skos:notation",
+            "description": "skos:prefLabel",
+            "meaning": "@id"
+         },
+         "@id": "initiator_id"
+      },
+      "injection_type": {
+         "@id": "injection_type"
+      },
+      "injection_type_id": {
+         "@context": {
+            "text": "skos:notation",
+            "description": "skos:prefLabel",
+            "meaning": "@id"
+         },
+         "@id": "injection_type_id"
+      },
+      "install_state": {
+         "@id": "install_state"
+      },
+      "install_state_id": {
+         "@context": {
+            "text": "skos:notation",
+            "description": "skos:prefLabel",
+            "meaning": "@id"
+         },
+         "@id": "install_state_id"
+      },
+      "instance_uid": {
+         "@id": "instance_uid"
+      },
+      "integrity": {
+         "@id": "integrity"
+      },
+      "integrity_id": {
+         "@context": {
+            "text": "skos:notation",
+            "description": "skos:prefLabel",
+            "meaning": "@id"
+         },
+         "@id": "integrity_id"
+      },
+      "interface_name": {
+         "@id": "interface_name"
+      },
+      "interface_uid": {
+         "@id": "interface_uid"
+      },
+      "intermediate_ips": {
+         "@id": "intermediate_ips"
+      },
+      "internal_name": {
+         "@id": "internal_name"
+      },
+      "intrusion_sets": {
+         "@id": "intrusion_sets"
+      },
+      "invoked_by": {
+         "@id": "invoked_by"
+      },
+      "ip": {
+         "@id": "ip"
+      },
+      "is_alert": {
+         "@type": "xsd:boolean",
+         "@id": "is_alert"
+      },
+      "is_applied": {
+         "@type": "xsd:boolean",
+         "@id": "is_applied"
+      },
+      "is_backed_up": {
+         "@type": "xsd:boolean",
+         "@id": "is_backed_up"
+      },
+      "is_cleartext": {
+         "@type": "xsd:boolean",
+         "@id": "is_cleartext"
+      },
+      "is_compliant": {
+         "@type": "xsd:boolean",
+         "@id": "is_compliant"
+      },
+      "is_default": {
+         "@type": "xsd:boolean",
+         "@id": "is_default"
+      },
+      "is_deleted": {
+         "@type": "xsd:boolean",
+         "@id": "is_deleted"
+      },
+      "is_directed": {
+         "@type": "xsd:boolean",
+         "@id": "is_directed"
+      },
+      "is_disabled": {
+         "@type": "xsd:boolean",
+         "@id": "is_disabled"
+      },
+      "is_encrypted": {
+         "@type": "xsd:boolean",
+         "@id": "is_encrypted"
+      },
+      "is_exploit_available": {
+         "@type": "xsd:boolean",
+         "@id": "is_exploit_available"
+      },
+      "is_fix_available": {
+         "@type": "xsd:boolean",
+         "@id": "is_fix_available"
+      },
+      "is_group_provisioning_enabled": {
+         "@type": "xsd:boolean",
+         "@id": "is_group_provisioning_enabled"
+      },
+      "is_hotp": {
+         "@type": "xsd:boolean",
+         "@id": "is_hotp"
+      },
+      "is_http_only": {
+         "@type": "xsd:boolean",
+         "@id": "is_http_only"
+      },
+      "is_locked": {
+         "@type": "xsd:boolean",
+         "@id": "is_locked"
+      },
+      "is_managed": {
+         "@type": "xsd:boolean",
+         "@id": "is_managed"
+      },
+      "is_mfa": {
+         "@type": "xsd:boolean",
+         "@id": "is_mfa"
+      },
+      "is_mobile_account_active": {
+         "@type": "xsd:boolean",
+         "@id": "is_mobile_account_active"
+      },
+      "is_new_logon": {
+         "@type": "xsd:boolean",
+         "@id": "is_new_logon"
+      },
+      "is_on_premises": {
+         "@type": "xsd:boolean",
+         "@id": "is_on_premises"
+      },
+      "is_on_premises_sync_enabled": {
+         "@type": "xsd:boolean",
+         "@id": "is_on_premises_sync_enabled"
+      },
+      "is_personal": {
+         "@type": "xsd:boolean",
+         "@id": "is_personal"
+      },
+      "is_public": {
+         "@type": "xsd:boolean",
+         "@id": "is_public"
+      },
+      "is_read": {
+         "@type": "xsd:boolean",
+         "@id": "is_read"
+      },
+      "is_readonly": {
+         "@type": "xsd:boolean",
+         "@id": "is_readonly"
+      },
+      "is_remote": {
+         "@type": "xsd:boolean",
+         "@id": "is_remote"
+      },
+      "is_renewable": {
+         "@type": "xsd:boolean",
+         "@id": "is_renewable"
+      },
+      "is_renewal": {
+         "@type": "xsd:boolean",
+         "@id": "is_renewal"
+      },
+      "is_secure": {
+         "@type": "xsd:boolean",
+         "@id": "is_secure"
+      },
+      "is_self_signed": {
+         "@type": "xsd:boolean",
+         "@id": "is_self_signed"
+      },
+      "is_shared": {
+         "@type": "xsd:boolean",
+         "@id": "is_shared"
+      },
+      "is_src_dst_assignment_known": {
+         "@type": "xsd:boolean",
+         "@id": "is_src_dst_assignment_known"
+      },
+      "is_superseded": {
+         "@type": "xsd:boolean",
+         "@id": "is_superseded"
+      },
+      "is_supervised": {
+         "@type": "xsd:boolean",
+         "@id": "is_supervised"
+      },
+      "is_suspected_breach": {
+         "@type": "xsd:boolean",
+         "@id": "is_suspected_breach"
+      },
+      "is_system": {
+         "@type": "xsd:boolean",
+         "@id": "is_system"
+      },
+      "is_totp": {
+         "@type": "xsd:boolean",
+         "@id": "is_totp"
+      },
+      "is_truncated": {
+         "@type": "xsd:boolean",
+         "@id": "is_truncated"
+      },
+      "is_trusted": {
+         "@type": "xsd:boolean",
+         "@id": "is_trusted"
+      },
+      "is_unused": {
+         "@type": "xsd:boolean",
+         "@id": "is_unused"
+      },
+      "is_user_provisioning_enabled": {
+         "@type": "xsd:boolean",
+         "@id": "is_user_provisioning_enabled"
+      },
+      "is_vpn": {
+         "@type": "xsd:boolean",
+         "@id": "is_vpn"
+      },
+      "isp": {
+         "@id": "isp"
+      },
+      "isp_org": {
+         "@id": "isp_org"
+      },
+      "issuer": {
+         "@id": "issuer"
+      },
+      "ja3_hash": {
+         "@type": "@id",
+         "@id": "ja3_hash"
+      },
+      "ja3s_hash": {
+         "@type": "@id",
+         "@id": "ja3s_hash"
+      },
+      "ja4_fingerprint_list": {
+         "@type": "@id",
+         "@id": "ja4_fingerprint_list"
+      },
+      "job": {
+         "@type": "@id",
+         "@id": "job"
+      },
+      "job_title": {
+         "@id": "job_title"
+      },
+      "json_path": {
+         "@id": "json_path"
+      },
+      "kb_article_list": {
+         "@type": "@id",
+         "@id": "kb_article_list"
+      },
+      "kb_articles": {
+         "@id": "kb_articles"
+      },
+      "kerberos_flags": {
+         "@id": "kerberos_flags"
+      },
+      "kernel": {
+         "@type": "@id",
+         "@id": "kernel"
+      },
+      "kernel_release": {
+         "@id": "kernel_release"
+      },
+      "key_length": {
+         "@type": "xsd:integer",
+         "@id": "key_length"
+      },
+      "key_uid": {
+         "@id": "key_uid"
+      },
+      "keyboard_info": {
+         "@type": "@id",
+         "@id": "keyboard_info"
+      },
+      "keyboard_layout": {
+         "@id": "keyboard_layout"
+      },
+      "keyboard_subtype": {
+         "@type": "xsd:integer",
+         "@id": "keyboard_subtype"
+      },
+      "keyboard_type": {
+         "@id": "keyboard_type"
+      },
+      "kill_chain": {
+         "@type": "@id",
+         "@id": "kill_chain"
+      },
+      "labels": {
+         "@id": "labels"
+      },
+      "lang": {
+         "@id": "lang"
+      },
+      "last_authentication_time": {
+         "@type": "xsd:long",
+         "@id": "last_authentication_time"
+      },
+      "last_login_time": {
+         "@type": "xsd:long",
+         "@id": "last_login_time"
+      },
+      "last_run_time": {
+         "@type": "xsd:long",
+         "@id": "last_run_time"
+      },
+      "last_seen_time": {
+         "@type": "xsd:long",
+         "@id": "last_seen_time"
+      },
+      "last_used_time": {
+         "@type": "xsd:long",
+         "@id": "last_used_time"
+      },
+      "lat": {
+         "@type": "xsd:float",
+         "@id": "lat"
+      },
+      "latency": {
+         "@type": "xsd:integer",
+         "@id": "latency"
+      },
+      "launch_type": {
+         "@id": "launch_type"
+      },
+      "launch_type_id": {
+         "@context": {
+            "text": "skos:notation",
+            "description": "skos:prefLabel",
+            "meaning": "@id"
+         },
+         "@id": "launch_type_id"
+      },
+      "ldap_cn": {
+         "@id": "ldap_cn"
+      },
+      "ldap_dn": {
+         "@id": "ldap_dn"
+      },
+      "ldap_person": {
+         "@type": "@id",
+         "@id": "ldap_person"
+      },
+      "lease_dur": {
+         "@type": "xsd:integer",
+         "@id": "lease_dur"
+      },
+      "leave_time": {
+         "@type": "xsd:long",
+         "@id": "leave_time"
+      },
+      "length": {
+         "@type": "xsd:integer",
+         "@id": "length"
+      },
+      "license": {
+         "@id": "license"
+      },
+      "license_url": {
+         "@type": "xsd:anyURI",
+         "@id": "license_url"
+      },
+      "lineage": {
+         "@id": "lineage"
+      },
+      "load_balancer": {
+         "@type": "@id",
+         "@id": "load_balancer"
+      },
+      "load_order_group": {
+         "@id": "load_order_group"
+      },
+      "load_type": {
+         "@id": "load_type"
+      },
+      "load_type_id": {
+         "@context": {
+            "text": "skos:notation",
+            "description": "skos:prefLabel",
+            "meaning": "@id"
+         },
+         "@id": "load_type_id"
+      },
+      "loaded_modules": {
+         "@id": "loaded_modules"
+      },
+      "location": {
+         "@type": "@id",
+         "@id": "location"
+      },
+      "locations": {
+         "@type": "@id",
+         "@id": "locations"
+      },
+      "log_format": {
+         "@id": "log_format"
+      },
+      "log_level": {
+         "@id": "log_level"
+      },
+      "log_name": {
+         "@id": "log_name"
+      },
+      "log_provider": {
+         "@id": "log_provider"
+      },
+      "log_source": {
+         "@id": "log_source"
+      },
+      "log_type": {
+         "@id": "log_type"
+      },
+      "log_type_id": {
+         "@context": {
+            "text": "skos:notation",
+            "description": "skos:prefLabel",
+            "meaning": "@id"
+         },
+         "@id": "log_type_id"
+      },
+      "log_version": {
+         "@id": "log_version"
+      },
+      "logged_time": {
+         "@type": "xsd:long",
+         "@id": "logged_time"
+      },
+      "loggers": {
+         "@type": "@id",
+         "@id": "loggers"
+      },
+      "login_endpoint": {
+         "@type": "xsd:anyURI",
+         "@id": "login_endpoint"
+      },
+      "logon_process": {
+         "@type": "@id",
+         "@id": "logon_process"
+      },
+      "logon_type": {
+         "@id": "logon_type"
+      },
+      "logon_type_id": {
+         "@context": {
+            "text": "skos:notation",
+            "description": "skos:prefLabel",
+            "meaning": "@id"
+         },
+         "@id": "logon_type_id"
+      },
+      "logout_endpoint": {
+         "@type": "xsd:anyURI",
+         "@id": "logout_endpoint"
+      },
+      "long": {
+         "@type": "xsd:float",
+         "@id": "long"
+      },
+      "mac": {
+         "@id": "mac"
+      },
+      "mac_vendor": {
+         "@id": "mac_vendor"
+      },
+      "malware": {
+         "@type": "@id",
+         "@id": "malware"
+      },
+      "malware_scan_info": {
+         "@type": "@id",
+         "@id": "malware_scan_info"
+      },
+      "manager": {
+         "@type": "@id",
+         "@id": "manager"
+      },
+      "match_details": {
+         "@id": "match_details"
+      },
+      "match_location": {
+         "@id": "match_location"
+      },
+      "meets_criteria": {
+         "@type": "xsd:boolean",
+         "@id": "meets_criteria"
+      },
+      "meid": {
+         "@id": "meid"
+      },
+      "message": {
+         "@id": "message"
+      },
+      "message_context": {
+         "@type": "@id",
+         "@id": "message_context"
+      },
+      "message_trace_uid": {
+         "@id": "message_trace_uid"
+      },
+      "message_uid": {
+         "@id": "message_uid"
+      },
+      "metadata": {
+         "@type": "@id",
+         "@id": "metadata"
+      },
+      "metadata_endpoint": {
+         "@type": "xsd:anyURI",
+         "@id": "metadata_endpoint"
+      },
+      "metrics": {
+         "@type": "@id",
+         "@id": "metrics"
+      },
+      "mime_type": {
+         "@id": "mime_type"
+      },
+      "mitigation": {
+         "@type": "@id",
+         "@id": "mitigation"
+      },
+      "model": {
+         "@id": "model"
+      },
+      "modified_time": {
+         "@type": "xsd:long",
+         "@id": "modified_time"
+      },
+      "modifier": {
+         "@type": "@id",
+         "@id": "modifier"
+      },
+      "module": {
+         "@type": "@id",
+         "@id": "module"
+      },
+      "name": {
+         "@id": "name"
+      },
+      "name_servers": {
+         "@id": "name_servers"
+      },
+      "namespace": {
+         "@id": "namespace"
+      },
+      "namespace_pid": {
+         "@type": "xsd:integer",
+         "@id": "namespace_pid"
+      },
+      "network_driver": {
+         "@id": "network_driver"
+      },
+      "network_endpoint": {
+         "@type": "@id",
+         "@id": "network_endpoint"
+      },
+      "network_interfaces": {
+         "@type": "@id",
+         "@id": "network_interfaces"
+      },
+      "network_observation_point": {
+         "@type": "@id",
+         "@id": "network_observation_point"
+      },
+      "network_scope": {
+         "@id": "network_scope"
+      },
+      "network_scope_id": {
+         "@context": {
+            "text": "skos:notation",
+            "description": "skos:prefLabel",
+            "meaning": "@id"
+         },
+         "@id": "network_scope_id"
+      },
+      "next_run_time": {
+         "@type": "xsd:long",
+         "@id": "next_run_time"
+      },
+      "nist": {
+         "@id": "nist"
+      },
+      "nodes": {
+         "@type": "@id",
+         "@id": "nodes"
+      },
+      "num_detections": {
+         "@type": "xsd:integer",
+         "@id": "num_detections"
+      },
+      "num_files": {
+         "@type": "xsd:integer",
+         "@id": "num_files"
+      },
+      "num_folders": {
+         "@type": "xsd:integer",
+         "@id": "num_folders"
+      },
+      "num_infected": {
+         "@type": "xsd:integer",
+         "@id": "num_infected"
+      },
+      "num_network_items": {
+         "@type": "xsd:integer",
+         "@id": "num_network_items"
+      },
+      "num_processes": {
+         "@type": "xsd:integer",
+         "@id": "num_processes"
+      },
+      "num_registry_items": {
+         "@type": "xsd:integer",
+         "@id": "num_registry_items"
+      },
+      "num_resolutions": {
+         "@type": "xsd:integer",
+         "@id": "num_resolutions"
+      },
+      "num_skipped_items": {
+         "@type": "xsd:integer",
+         "@id": "num_skipped_items"
+      },
+      "num_trusted_items": {
+         "@type": "xsd:integer",
+         "@id": "num_trusted_items"
+      },
+      "num_violations": {
+         "@type": "xsd:integer",
+         "@id": "num_violations"
+      },
+      "num_volumes": {
+         "@type": "xsd:integer",
+         "@id": "num_volumes"
+      },
+      "number": {
+         "@type": "xsd:integer",
+         "@id": "number"
+      },
+      "observables": {
+         "@type": "@id",
+         "@id": "observables"
+      },
+      "observation_parameter": {
+         "@id": "observation_parameter"
+      },
+      "observation_point": {
+         "@id": "observation_point"
+      },
+      "observation_point_id": {
+         "@context": {
+            "text": "skos:notation",
+            "description": "skos:prefLabel",
+            "meaning": "@id"
+         },
+         "@id": "observation_point_id"
+      },
+      "observation_type": {
+         "@id": "observation_type"
+      },
+      "observations": {
+         "@type": "@id",
+         "@id": "observations"
+      },
+      "observed_pattern": {
+         "@id": "observed_pattern"
+      },
+      "occurrence_details": {
+         "@type": "@id",
+         "@id": "occurrence_details"
+      },
+      "occurrences": {
+         "@type": "@id",
+         "@id": "occurrences"
+      },
+      "office_location": {
+         "@id": "office_location"
+      },
+      "opcode": {
+         "@id": "opcode"
+      },
+      "opcode_id": {
+         "@context": {
+            "text": "skos:notation",
+            "description": "skos:prefLabel",
+            "meaning": "@id"
+         },
+         "@id": "opcode_id"
+      },
+      "open_mask": {
+         "@type": "xsd:integer",
+         "@id": "open_mask"
+      },
+      "open_ports": {
+         "@type": "@id",
+         "@id": "open_ports"
+      },
+      "open_type": {
+         "@id": "open_type"
+      },
+      "operation": {
+         "@id": "operation"
+      },
+      "opnum": {
+         "@type": "xsd:integer",
+         "@id": "opnum"
+      },
+      "orchestrator": {
+         "@id": "orchestrator"
+      },
+      "org": {
+         "@type": "@id",
+         "@id": "org"
+      },
+      "original_event_uid": {
+         "@id": "original_event_uid"
+      },
+      "original_time": {
+         "@id": "original_time"
+      },
+      "os": {
+         "@type": "@id",
+         "@id": "os"
+      },
+      "os_machine_uuid": {
+         "@id": "os_machine_uuid"
+      },
+      "osint": {
+         "@type": "@id",
+         "@id": "osint"
+      },
+      "ou_name": {
+         "@id": "ou_name"
+      },
+      "ou_uid": {
+         "@id": "ou_uid"
+      },
+      "overall_score": {
+         "@type": "xsd:float",
+         "@id": "overall_score"
+      },
+      "owner": {
+         "@type": "@id",
+         "@id": "owner"
+      },
+      "package": {
+         "@type": "@id",
+         "@id": "package"
+      },
+      "package_manager": {
+         "@id": "package_manager"
+      },
+      "package_manager_url": {
+         "@type": "xsd:anyURI",
+         "@id": "package_manager_url"
+      },
+      "packages": {
+         "@type": "@id",
+         "@id": "packages"
+      },
+      "packet": {
+         "@type": "@id",
+         "@id": "packet"
+      },
+      "packet_list": {
+         "@type": "@id",
+         "@id": "packet_list"
+      },
+      "packet_uid": {
+         "@type": "xsd:integer",
+         "@id": "packet_uid"
+      },
+      "packets": {
+         "@type": "xsd:integer",
+         "@id": "packets"
+      },
+      "packets_in": {
+         "@type": "xsd:integer",
+         "@id": "packets_in"
+      },
+      "packets_out": {
+         "@type": "xsd:integer",
+         "@id": "packets_out"
+      },
+      "page_number": {
+         "@type": "xsd:integer",
+         "@id": "page_number"
+      },
+      "parameters": {
+         "@type": "@id",
+         "@id": "parameters"
+      },
+      "parent_folder": {
+         "@id": "parent_folder"
+      },
+      "parent_process": {
+         "@type": "@id",
+         "@id": "parent_process"
+      },
+      "parent_uid": {
+         "@id": "parent_uid"
+      },
+      "password_last_used_time": {
+         "@type": "xsd:long",
+         "@id": "password_last_used_time"
+      },
+      "path": {
+         "@id": "path"
+      },
+      "pattern_match": {
+         "@id": "pattern_match"
+      },
+      "percentile": {
+         "@type": "xsd:float",
+         "@id": "percentile"
+      },
+      "peripheral_device": {
+         "@type": "@id",
+         "@id": "peripheral_device"
+      },
+      "permission": {
+         "@id": "permission"
+      },
+      "permission_analysis_results": {
+         "@type": "@id",
+         "@id": "permission_analysis_results"
+      },
+      "phase": {
+         "@id": "phase"
+      },
+      "phase_id": {
+         "@context": {
+            "text": "skos:notation",
+            "description": "skos:prefLabel",
+            "meaning": "@id"
+         },
+         "@id": "phase_id"
+      },
+      "phone_number": {
+         "@id": "phone_number"
+      },
+      "phones": {
+         "@id": "phones"
+      },
+      "physical_height": {
+         "@type": "xsd:integer",
+         "@id": "physical_height"
+      },
+      "physical_orientation": {
+         "@type": "xsd:integer",
+         "@id": "physical_orientation"
+      },
+      "physical_width": {
+         "@type": "xsd:integer",
+         "@id": "physical_width"
+      },
+      "pid": {
+         "@type": "xsd:integer",
+         "@id": "pid"
+      },
+      "pod_uuid": {
+         "@id": "pod_uuid"
+      },
+      "policies": {
+         "@type": "@id",
+         "@id": "policies"
+      },
+      "policy": {
+         "@type": "@id",
+         "@id": "policy"
+      },
+      "pool": {
+         "@type": "@id",
+         "@id": "pool"
+      },
+      "port": {
+         "@type": "xsd:integer",
+         "@id": "port"
+      },
+      "post_value": {
+         "@id": "post_value"
+      },
+      "postal_code": {
+         "@id": "postal_code"
+      },
+      "pre_value": {
+         "@id": "pre_value"
+      },
+      "precision": {
+         "@type": "xsd:integer",
+         "@id": "precision"
+      },
+      "pressure_altitude": {
+         "@id": "pressure_altitude"
+      },
+      "prev_reg_key": {
+         "@type": "@id",
+         "@id": "prev_reg_key"
+      },
+      "prev_reg_value": {
+         "@type": "@id",
+         "@id": "prev_reg_value"
+      },
+      "prev_security_level": {
+         "@id": "prev_security_level"
+      },
+      "prev_security_level_id": {
+         "@context": {
+            "text": "skos:notation",
+            "description": "skos:prefLabel",
+            "meaning": "@id"
+         },
+         "@id": "prev_security_level_id"
+      },
+      "prev_security_states": {
+         "@type": "@id",
+         "@id": "prev_security_states"
+      },
+      "priority": {
+         "@id": "priority"
+      },
+      "priority_id": {
+         "@context": {
+            "text": "skos:notation",
+            "description": "skos:prefLabel",
+            "meaning": "@id"
+         },
+         "@id": "priority_id"
+      },
+      "privilege_attack_info": {
+         "@type": "@id",
+         "@id": "privilege_attack_info"
+      },
+      "privilege_attack_info_list": {
+         "@type": "@id",
+         "@id": "privilege_attack_info_list"
+      },
+      "privilege_info": {
+         "@type": "@id",
+         "@id": "privilege_info"
+      },
+      "privilege_info_list": {
+         "@type": "@id",
+         "@id": "privilege_info_list"
+      },
+      "privileges": {
+         "@id": "privileges"
+      },
+      "process": {
+         "@type": "@id",
+         "@id": "process"
+      },
+      "processed_time": {
+         "@type": "xsd:long",
+         "@id": "processed_time"
+      },
+      "product": {
+         "@type": "@id",
+         "@id": "product"
+      },
+      "product_uid": {
+         "@id": "product_uid"
+      },
+      "profiles": {
+         "@id": "profiles"
+      },
+      "programmatic_credentials": {
+         "@type": "@id",
+         "@id": "programmatic_credentials"
+      },
+      "project_uid": {
+         "@id": "project_uid"
+      },
+      "prompt_tokens": {
+         "@type": "xsd:integer",
+         "@id": "prompt_tokens"
+      },
+      "protocol_name": {
+         "@id": "protocol_name"
+      },
+      "protocol_num": {
+         "@type": "xsd:integer",
+         "@id": "protocol_num"
+      },
+      "protocol_ver": {
+         "@id": "protocol_ver"
+      },
+      "protocol_ver_id": {
+         "@context": {
+            "text": "skos:notation",
+            "description": "skos:prefLabel",
+            "meaning": "@id"
+         },
+         "@id": "protocol_ver_id"
+      },
+      "provider": {
+         "@id": "provider"
+      },
+      "proxy": {
+         "@type": "@id",
+         "@id": "proxy"
+      },
+      "proxy_connection_info": {
+         "@type": "@id",
+         "@id": "proxy_connection_info"
+      },
+      "proxy_endpoint": {
+         "@type": "@id",
+         "@id": "proxy_endpoint"
+      },
+      "proxy_http_request": {
+         "@type": "@id",
+         "@id": "proxy_http_request"
+      },
+      "proxy_http_response": {
+         "@type": "@id",
+         "@id": "proxy_http_response"
+      },
+      "proxy_tls": {
+         "@type": "@id",
+         "@id": "proxy_tls"
+      },
+      "proxy_traffic": {
+         "@type": "@id",
+         "@id": "proxy_traffic"
+      },
+      "ptid": {
+         "@type": "xsd:integer",
+         "@id": "ptid"
+      },
+      "purl": {
+         "@id": "purl"
+      },
+      "query": {
+         "@type": "@id",
+         "@id": "query"
+      },
+      "query_evidence": {
+         "@type": "@id",
+         "@id": "query_evidence"
+      },
+      "query_info": {
+         "@type": "@id",
+         "@id": "query_info"
+      },
+      "query_language": {
+         "@id": "query_language"
+      },
+      "query_language_id": {
+         "@context": {
+            "text": "skos:notation",
+            "description": "skos:prefLabel",
+            "meaning": "@id"
+         },
+         "@id": "query_language_id"
+      },
+      "query_result": {
+         "@id": "query_result"
+      },
+      "query_result_id": {
+         "@context": {
+            "text": "skos:notation",
+            "description": "skos:prefLabel",
+            "meaning": "@id"
+         },
+         "@id": "query_result_id"
+      },
+      "query_string": {
+         "@id": "query_string"
+      },
+      "query_time": {
+         "@type": "xsd:long",
+         "@id": "query_time"
+      },
+      "query_type": {
+         "@id": "query_type"
+      },
+      "query_type_id": {
+         "@context": {
+            "text": "skos:notation",
+            "description": "skos:prefLabel",
+            "meaning": "@id"
+         },
+         "@id": "query_type_id"
+      },
+      "radius": {
+         "@id": "radius"
+      },
+      "ram_size": {
+         "@type": "xsd:integer",
+         "@id": "ram_size"
+      },
+      "rate_limit": {
+         "@type": "xsd:integer",
+         "@id": "rate_limit"
+      },
+      "raw_data": {
+         "@id": "raw_data"
+      },
+      "raw_data_hash": {
+         "@type": "@id",
+         "@id": "raw_data_hash"
+      },
+      "raw_data_size": {
+         "@type": "xsd:integer",
+         "@id": "raw_data_size"
+      },
+      "raw_header": {
+         "@id": "raw_header"
+      },
+      "rcode": {
+         "@id": "rcode"
+      },
+      "rcode_id": {
+         "@context": {
+            "text": "skos:notation",
+            "description": "skos:prefLabel",
+            "meaning": "@id"
+         },
+         "@id": "rcode_id"
+      },
+      "rdata": {
+         "@id": "rdata"
+      },
+      "read_count": {
+         "@type": "xsd:integer",
+         "@id": "read_count"
+      },
+      "record_index_in_array": {
+         "@type": "xsd:integer",
+         "@id": "record_index_in_array"
+      },
+      "references": {
+         "@id": "references"
+      },
+      "referrer": {
+         "@id": "referrer"
+      },
+      "reg_binary_data": {
+         "@id": "reg_binary_data"
+      },
+      "reg_integer_data": {
+         "@type": "xsd:integer",
+         "@id": "reg_integer_data"
+      },
+      "reg_key": {
+         "@type": "@id",
+         "@id": "reg_key"
+      },
+      "reg_string_data": {
+         "@id": "reg_string_data"
+      },
+      "reg_string_list_data": {
+         "@id": "reg_string_list_data"
+      },
+      "reg_value": {
+         "@type": "@id",
+         "@id": "reg_value"
+      },
+      "region": {
+         "@id": "region"
+      },
+      "registrar": {
+         "@id": "registrar"
+      },
+      "related_analytics": {
+         "@type": "@id",
+         "@id": "related_analytics"
+      },
+      "related_component": {
+         "@id": "related_component"
+      },
+      "related_cves": {
+         "@type": "@id",
+         "@id": "related_cves"
+      },
+      "related_cwes": {
+         "@type": "@id",
+         "@id": "related_cwes"
+      },
+      "related_events": {
+         "@type": "@id",
+         "@id": "related_events"
+      },
+      "related_events_count": {
+         "@type": "xsd:integer",
+         "@id": "related_events_count"
+      },
+      "related_vulnerabilities": {
+         "@id": "related_vulnerabilities"
+      },
+      "relation": {
+         "@id": "relation"
+      },
+      "relationship": {
+         "@id": "relationship"
+      },
+      "relationship_id": {
+         "@context": {
+            "text": "skos:notation",
+            "description": "skos:prefLabel",
+            "meaning": "@id"
+         },
+         "@id": "relationship_id"
+      },
+      "relay": {
+         "@type": "@id",
+         "@id": "relay"
+      },
+      "release": {
+         "@id": "release"
+      },
+      "remediation": {
+         "@type": "@id",
+         "@id": "remediation"
+      },
+      "remote_display": {
+         "@type": "@id",
+         "@id": "remote_display"
+      },
+      "reply_to": {
+         "@id": "reply_to"
+      },
+      "reply_to_list": {
+         "@id": "reply_to_list"
+      },
+      "reply_to_mailboxes": {
+         "@id": "reply_to_mailboxes"
+      },
+      "reporter": {
+         "@type": "@id",
+         "@id": "reporter"
+      },
+      "reputation": {
+         "@type": "@id",
+         "@id": "reputation"
+      },
+      "request": {
+         "@type": "@id",
+         "@id": "request"
+      },
+      "requested_permissions": {
+         "@type": "xsd:integer",
+         "@id": "requested_permissions"
+      },
+      "requirements": {
+         "@id": "requirements"
+      },
+      "resource": {
+         "@type": "@id",
+         "@id": "resource"
+      },
+      "resource_relationship": {
+         "@type": "@id",
+         "@id": "resource_relationship"
+      },
+      "resource_type": {
+         "@id": "resource_type"
+      },
+      "resources": {
+         "@type": "@id",
+         "@id": "resources"
+      },
+      "resources_result": {
+         "@type": "@id",
+         "@id": "resources_result"
+      },
+      "response": {
+         "@type": "@id",
+         "@id": "response"
+      },
+      "response_time": {
+         "@type": "xsd:long",
+         "@id": "response_time"
+      },
+      "return_path": {
+         "@id": "return_path"
+      },
+      "return_value": {
+         "@id": "return_value"
+      },
+      "risk_details": {
+         "@id": "risk_details"
+      },
+      "risk_level": {
+         "@id": "risk_level"
+      },
+      "risk_level_id": {
+         "@context": {
+            "text": "skos:notation",
+            "description": "skos:prefLabel",
+            "meaning": "@id"
+         },
+         "@id": "risk_level_id"
+      },
+      "risk_score": {
+         "@type": "xsd:integer",
+         "@id": "risk_score"
+      },
+      "role": {
+         "@id": "role"
+      },
+      "role_id": {
+         "@context": {
+            "text": "skos:notation",
+            "description": "skos:prefLabel",
+            "meaning": "@id"
+         },
+         "@id": "role_id"
+      },
+      "row_number": {
+         "@type": "xsd:integer",
+         "@id": "row_number"
+      },
+      "rpc_interface": {
+         "@type": "@id",
+         "@id": "rpc_interface"
+      },
+      "rssi": {
+         "@type": "xsd:integer",
+         "@id": "rssi"
+      },
+      "rule": {
+         "@type": "@id",
+         "@id": "rule"
+      },
+      "run_count": {
+         "@type": "xsd:integer",
+         "@id": "run_count"
+      },
+      "run_mode_ids": {
+         "@context": {
+            "text": "skos:notation",
+            "description": "skos:prefLabel",
+            "meaning": "@id"
+         },
+         "@id": "run_mode_ids"
+      },
+      "run_modes": {
+         "@id": "run_modes"
+      },
+      "run_state": {
+         "@id": "run_state"
+      },
+      "run_state_id": {
+         "@context": {
+            "text": "skos:notation",
+            "description": "skos:prefLabel",
+            "meaning": "@id"
+         },
+         "@id": "run_state_id"
+      },
+      "runtime": {
+         "@id": "runtime"
+      },
+      "samesite": {
+         "@id": "samesite"
+      },
+      "sandbox": {
+         "@id": "sandbox"
+      },
+      "sans": {
+         "@type": "@id",
+         "@id": "sans"
+      },
+      "sbom": {
+         "@type": "@id",
+         "@id": "sbom"
+      },
+      "scale_factor": {
+         "@type": "xsd:integer",
+         "@id": "scale_factor"
+      },
+      "scan": {
+         "@type": "@id",
+         "@id": "scan"
+      },
+      "schedule_uid": {
+         "@id": "schedule_uid"
+      },
+      "scheme": {
+         "@id": "scheme"
+      },
+      "scim": {
+         "@type": "@id",
+         "@id": "scim"
+      },
+      "scim_group_schema": {
+         "@id": "scim_group_schema"
+      },
+      "scim_user_schema": {
+         "@id": "scim_user_schema"
+      },
+      "scopes": {
+         "@id": "scopes"
+      },
+      "score": {
+         "@id": "score"
+      },
+      "score_id": {
+         "@context": {
+            "text": "skos:notation",
+            "description": "skos:prefLabel",
+            "meaning": "@id"
+         },
+         "@id": "score_id"
+      },
+      "script": {
+         "@type": "@id",
+         "@id": "script"
+      },
+      "script_content": {
+         "@type": "@id",
+         "@id": "script_content"
+      },
+      "section_a": {
+         "@id": "section_a"
+      },
+      "section_b": {
+         "@id": "section_b"
+      },
+      "section_c": {
+         "@id": "section_c"
+      },
+      "section_d": {
+         "@id": "section_d"
+      },
+      "secure": {
+         "@type": "xsd:boolean",
+         "@id": "secure"
+      },
+      "security_descriptor": {
+         "@id": "security_descriptor"
+      },
+      "security_level": {
+         "@id": "security_level"
+      },
+      "security_level_id": {
+         "@context": {
+            "text": "skos:notation",
+            "description": "skos:prefLabel",
+            "meaning": "@id"
+         },
+         "@id": "security_level_id"
+      },
+      "security_questions": {
+         "@id": "security_questions"
+      },
+      "security_states": {
+         "@type": "@id",
+         "@id": "security_states"
+      },
+      "sender": {
+         "@id": "sender"
+      },
+      "sender_mailbox": {
+         "@id": "sender_mailbox"
+      },
+      "sensitivity": {
+         "@id": "sensitivity"
+      },
+      "sequence": {
+         "@type": "xsd:integer",
+         "@id": "sequence"
+      },
+      "sequence_number": {
+         "@type": "xsd:integer",
+         "@id": "sequence_number"
+      },
+      "serial_number": {
+         "@id": "serial_number"
+      },
+      "server_ciphers": {
+         "@id": "server_ciphers"
+      },
+      "server_hassh": {
+         "@type": "@id",
+         "@id": "server_hassh"
+      },
+      "service": {
+         "@type": "@id",
+         "@id": "service"
+      },
+      "service_category": {
+         "@id": "service_category"
+      },
+      "service_category_id": {
+         "@context": {
+            "text": "skos:notation",
+            "description": "skos:prefLabel",
+            "meaning": "@id"
+         },
+         "@id": "service_category_id"
+      },
+      "service_dependencies": {
+         "@id": "service_dependencies"
+      },
+      "service_dll_file": {
+         "@type": "@id",
+         "@id": "service_dll_file"
+      },
+      "service_error_control": {
+         "@id": "service_error_control"
+      },
+      "service_error_control_id": {
+         "@context": {
+            "text": "skos:notation",
+            "description": "skos:prefLabel",
+            "meaning": "@id"
+         },
+         "@id": "service_error_control_id"
+      },
+      "service_file": {
+         "@type": "@id",
+         "@id": "service_file"
+      },
+      "service_privilege_analysis": {
+         "@type": "@id",
+         "@id": "service_privilege_analysis"
+      },
+      "service_privilege_analysis_list": {
+         "@type": "@id",
+         "@id": "service_privilege_analysis_list"
+      },
+      "service_start_name": {
+         "@id": "service_start_name"
+      },
+      "service_start_type": {
+         "@id": "service_start_type"
+      },
+      "service_start_type_id": {
+         "@context": {
+            "text": "skos:notation",
+            "description": "skos:prefLabel",
+            "meaning": "@id"
+         },
+         "@id": "service_start_type_id"
+      },
+      "service_type": {
+         "@id": "service_type"
+      },
+      "service_type_id": {
+         "@context": {
+            "text": "skos:notation",
+            "description": "skos:prefLabel",
+            "meaning": "@id"
+         },
+         "@id": "service_type_id"
+      },
+      "session": {
+         "@type": "@id",
+         "@id": "session"
+      },
+      "severity": {
+         "@id": "severity"
+      },
+      "severity_id": {
+         "@context": {
+            "text": "skos:notation",
+            "description": "skos:prefLabel",
+            "meaning": "@id"
+         },
+         "@id": "severity_id"
+      },
+      "share": {
+         "@id": "share"
+      },
+      "share_type": {
+         "@id": "share_type"
+      },
+      "share_type_id": {
+         "@context": {
+            "text": "skos:notation",
+            "description": "skos:prefLabel",
+            "meaning": "@id"
+         },
+         "@id": "share_type_id"
+      },
+      "short_desc": {
+         "@id": "short_desc"
+      },
+      "signature": {
+         "@type": "@id",
+         "@id": "signature"
+      },
+      "signatures": {
+         "@type": "@id",
+         "@id": "signatures"
+      },
+      "size": {
+         "@type": "xsd:integer",
+         "@id": "size"
+      },
+      "smtp_from": {
+         "@id": "smtp_from"
+      },
+      "smtp_hello": {
+         "@id": "smtp_hello"
+      },
+      "smtp_to": {
+         "@id": "smtp_to"
+      },
+      "sni": {
+         "@id": "sni"
+      },
+      "software_components": {
+         "@type": "@id",
+         "@id": "software_components"
+      },
+      "source": {
+         "@id": "source"
+      },
+      "source_id": {
+         "@context": {
+            "text": "skos:notation",
+            "description": "skos:prefLabel",
+            "meaning": "@id"
+         },
+         "@id": "source_id"
+      },
+      "sp_name": {
+         "@id": "sp_name"
+      },
+      "sp_ver": {
+         "@type": "xsd:integer",
+         "@id": "sp_ver"
+      },
+      "span": {
+         "@type": "@id",
+         "@id": "span"
+      },
+      "speed": {
+         "@id": "speed"
+      },
+      "speed_accuracy": {
+         "@id": "speed_accuracy"
+      },
+      "spf": {
+         "@id": "spf"
+      },
+      "src_endpoint": {
+         "@type": "@id",
+         "@id": "src_endpoint"
+      },
+      "src_url": {
+         "@type": "xsd:anyURI",
+         "@id": "src_url"
+      },
+      "sso": {
+         "@type": "@id",
+         "@id": "sso"
+      },
+      "standards": {
+         "@id": "standards"
+      },
+      "start_address": {
+         "@id": "start_address"
+      },
+      "start_column": {
+         "@type": "xsd:integer",
+         "@id": "start_column"
+      },
+      "start_line": {
+         "@type": "xsd:integer",
+         "@id": "start_line"
+      },
+      "start_offset": {
+         "@type": "xsd:integer",
+         "@id": "start_offset"
+      },
+      "start_time": {
+         "@type": "xsd:long",
+         "@id": "start_time"
+      },
+      "start_type": {
+         "@id": "start_type"
+      },
+      "start_type_id": {
+         "@context": {
+            "text": "skos:notation",
+            "description": "skos:prefLabel",
+            "meaning": "@id"
+         },
+         "@id": "start_type_id"
+      },
+      "startup_item": {
+         "@type": "@id",
+         "@id": "startup_item"
+      },
+      "state": {
+         "@id": "state"
+      },
+      "state_id": {
+         "@context": {
+            "text": "skos:notation",
+            "description": "skos:prefLabel",
+            "meaning": "@id"
+         },
+         "@id": "state_id"
+      },
+      "status": {
+         "@id": "status"
+      },
+      "status_code": {
+         "@id": "status_code"
+      },
+      "status_detail": {
+         "@id": "status_detail"
+      },
+      "status_details": {
+         "@id": "status_details"
+      },
+      "status_id": {
+         "@context": {
+            "text": "skos:notation",
+            "description": "skos:prefLabel",
+            "meaning": "@id"
+         },
+         "@id": "status_id"
+      },
+      "storage_class": {
+         "@id": "storage_class"
+      },
+      "stratum": {
+         "@id": "stratum"
+      },
+      "stratum_id": {
+         "@context": {
+            "text": "skos:notation",
+            "description": "skos:prefLabel",
+            "meaning": "@id"
+         },
+         "@id": "stratum_id"
+      },
+      "sub_technique": {
+         "@type": "@id",
+         "@id": "sub_technique"
+      },
+      "subdomain": {
+         "@id": "subdomain"
+      },
+      "subdomains": {
+         "@id": "subdomains"
+      },
+      "subgroup": {
+         "@type": "@id",
+         "@id": "subgroup"
+      },
+      "subject": {
+         "@id": "subject"
+      },
+      "subnet": {
+         "@id": "subnet"
+      },
+      "subnet_prefix": {
+         "@type": "xsd:integer",
+         "@id": "subnet_prefix"
+      },
+      "subnet_uid": {
+         "@id": "subnet_uid"
+      },
+      "supporting_data": {
+         "@id": "supporting_data"
+      },
+      "surname": {
+         "@id": "surname"
+      },
+      "svc_name": {
+         "@id": "svc_name"
+      },
+      "system_call": {
+         "@id": "system_call"
+      },
+      "table": {
+         "@type": "@id",
+         "@id": "table"
+      },
+      "tactic": {
+         "@type": "@id",
+         "@id": "tactic"
+      },
+      "tactics": {
+         "@type": "@id",
+         "@id": "tactics"
+      },
+      "tag": {
+         "@id": "tag"
+      },
+      "tags": {
+         "@type": "@id",
+         "@id": "tags"
+      },
+      "target": {
+         "@id": "target"
+      },
+      "tcp_flags": {
+         "@type": "xsd:integer",
+         "@id": "tcp_flags"
+      },
+      "tcp_state_id": {
+         "@context": {
+            "text": "skos:notation",
+            "description": "skos:prefLabel",
+            "meaning": "@id"
+         },
+         "@id": "tcp_state_id"
+      },
+      "technique": {
+         "@type": "@id",
+         "@id": "technique"
+      },
+      "tenant_uid": {
+         "@id": "tenant_uid"
+      },
+      "terminal": {
+         "@id": "terminal"
+      },
+      "terminated_time": {
+         "@type": "xsd:long",
+         "@id": "terminated_time"
+      },
+      "threat_actor": {
+         "@type": "@id",
+         "@id": "threat_actor"
+      },
+      "ticket": {
+         "@type": "@id",
+         "@id": "ticket"
+      },
+      "tickets": {
+         "@type": "@id",
+         "@id": "tickets"
+      },
+      "tid": {
+         "@type": "xsd:integer",
+         "@id": "tid"
+      },
+      "time": {
+         "@type": "xsd:long",
+         "@id": "time"
+      },
+      "timespan": {
+         "@type": "@id",
+         "@id": "timespan"
+      },
+      "timezone_offset": {
+         "@type": "xsd:integer",
+         "@id": "timezone_offset"
+      },
+      "title": {
+         "@id": "title"
+      },
+      "tlp": {
+         "@id": "tlp"
+      },
+      "tls": {
+         "@type": "@id",
+         "@id": "tls"
+      },
+      "tls_extension_list": {
+         "@type": "@id",
+         "@id": "tls_extension_list"
+      },
+      "to": {
+         "@id": "to"
+      },
+      "to_mailboxes": {
+         "@id": "to_mailboxes"
+      },
+      "token": {
+         "@type": "@id",
+         "@id": "token"
+      },
+      "total": {
+         "@type": "xsd:integer",
+         "@id": "total"
+      },
+      "total_potential_attacks_count": {
+         "@type": "xsd:integer",
+         "@id": "total_potential_attacks_count"
+      },
+      "total_queued_duration": {
+         "@type": "@id",
+         "@id": "total_queued_duration"
+      },
+      "total_tokens": {
+         "@type": "xsd:integer",
+         "@id": "total_tokens"
+      },
+      "trace": {
+         "@type": "@id",
+         "@id": "trace"
+      },
+      "track_direction": {
+         "@id": "track_direction"
+      },
+      "traffic": {
+         "@type": "@id",
+         "@id": "traffic"
+      },
+      "traits": {
+         "@type": "@id",
+         "@id": "traits"
+      },
+      "transaction_uid": {
+         "@id": "transaction_uid"
+      },
+      "transformation_info_list": {
+         "@type": "@id",
+         "@id": "transformation_info_list"
+      },
+      "transmit_time": {
+         "@type": "xsd:long",
+         "@id": "transmit_time"
+      },
+      "tree_uid": {
+         "@id": "tree_uid"
+      },
+      "ttl": {
+         "@type": "xsd:integer",
+         "@id": "ttl"
+      },
+      "tunnel_interface": {
+         "@type": "@id",
+         "@id": "tunnel_interface"
+      },
+      "tunnel_type": {
+         "@id": "tunnel_type"
+      },
+      "tunnel_type_id": {
+         "@context": {
+            "text": "skos:notation",
+            "description": "skos:prefLabel",
+            "meaning": "@id"
+         },
+         "@id": "tunnel_type_id"
+      },
+      "type": {
+         "@id": "type"
+      },
+      "type_id": {
+         "@context": {
+            "text": "skos:notation",
+            "description": "skos:prefLabel",
+            "meaning": "@id"
+         },
+         "@id": "type_id"
+      },
+      "type_name": {
+         "@id": "type_name"
+      },
+      "type_uid": {
+         "@type": "xsd:integer",
+         "@id": "type_uid"
+      },
+      "types": {
+         "@id": "types"
+      },
+      "udid": {
+         "@id": "udid"
+      },
+      "uid": {
+         "@id": "uid"
+      },
+      "uid_alt": {
+         "@id": "uid_alt"
+      },
+      "unique_malware_count": {
+         "@type": "xsd:integer",
+         "@id": "unique_malware_count"
+      },
+      "unmanned_aerial_system": {
+         "@type": "@id",
+         "@id": "unmanned_aerial_system"
+      },
+      "unmanned_system_operating_area": {
+         "@type": "@id",
+         "@id": "unmanned_system_operating_area"
+      },
+      "unmanned_system_operator": {
+         "@type": "@id",
+         "@id": "unmanned_system_operator"
+      },
+      "unmapped": {
+         "@type": "@id",
+         "@id": "unmapped"
+      },
+      "untruncated_size": {
+         "@type": "xsd:integer",
+         "@id": "untruncated_size"
+      },
+      "unused_privileges_count": {
+         "@type": "xsd:integer",
+         "@id": "unused_privileges_count"
+      },
+      "unused_services_count": {
+         "@type": "xsd:integer",
+         "@id": "unused_services_count"
+      },
+      "uploaded_time": {
+         "@type": "xsd:long",
+         "@id": "uploaded_time"
+      },
+      "uri": {
+         "@type": "xsd:anyURI",
+         "@id": "uri"
+      },
+      "url": {
+         "@type": "@id",
+         "@id": "url"
+      },
+      "url_string": {
+         "@type": "xsd:anyURI",
+         "@id": "url_string"
+      },
+      "urls": {
+         "@type": "@id",
+         "@id": "urls"
+      },
+      "user": {
+         "@type": "@id",
+         "@id": "user"
+      },
+      "user_agent": {
+         "@id": "user_agent"
+      },
+      "user_result": {
+         "@type": "@id",
+         "@id": "user_result"
+      },
+      "users": {
+         "@type": "@id",
+         "@id": "users"
+      },
+      "uuid": {
+         "@id": "uuid"
+      },
+      "value": {
+         "@id": "value"
+      },
+      "values": {
+         "@id": "values"
+      },
+      "vector_string": {
+         "@id": "vector_string"
+      },
+      "vendor_attributes": {
+         "@type": "@id",
+         "@id": "vendor_attributes"
+      },
+      "vendor_id_list": {
+         "@id": "vendor_id_list"
+      },
+      "vendor_name": {
+         "@id": "vendor_name"
+      },
+      "verdict": {
+         "@id": "verdict"
+      },
+      "verdict_id": {
+         "@context": {
+            "text": "skos:notation",
+            "description": "skos:prefLabel",
+            "meaning": "@id"
+         },
+         "@id": "verdict_id"
+      },
+      "version": {
+         "@id": "version"
+      },
+      "vertical_speed": {
+         "@id": "vertical_speed"
+      },
+      "vlan_uid": {
+         "@id": "vlan_uid"
+      },
+      "volume": {
+         "@id": "volume"
+      },
+      "vpc_uid": {
+         "@id": "vpc_uid"
+      },
+      "vram_mode": {
+         "@id": "vram_mode"
+      },
+      "vram_mode_id": {
+         "@context": {
+            "text": "skos:notation",
+            "description": "skos:prefLabel",
+            "meaning": "@id"
+         },
+         "@id": "vram_mode_id"
+      },
+      "vram_size": {
+         "@type": "xsd:integer",
+         "@id": "vram_size"
+      },
+      "vulnerabilities": {
+         "@type": "@id",
+         "@id": "vulnerabilities"
+      },
+      "vulnerability": {
+         "@type": "@id",
+         "@id": "vulnerability"
+      },
+      "web_resources": {
+         "@type": "@id",
+         "@id": "web_resources"
+      },
+      "web_resources_result": {
+         "@type": "@id",
+         "@id": "web_resources_result"
+      },
+      "whois": {
+         "@type": "@id",
+         "@id": "whois"
+      },
+      "win_resource": {
+         "@type": "@id",
+         "@id": "win_resource"
+      },
+      "win_service": {
+         "@type": "@id",
+         "@id": "win_service"
+      },
+      "working_directory": {
+         "@id": "working_directory"
+      },
+      "write_count": {
+         "@type": "xsd:integer",
+         "@id": "write_count"
+      },
+      "x_forwarded_for": {
+         "@id": "x_forwarded_for"
+      },
+      "x_originating_ip": {
+         "@id": "x_originating_ip"
+      },
+      "xattributes": {
+         "@type": "@id",
+         "@id": "xattributes"
+      },
+      "zone": {
+         "@id": "zone"
+      },
+      "AccessAnalysisResult": {
+         "@id": "AccessAnalysisResult"
+      },
+      "Account": {
+         "@id": "Account"
+      },
+      "AccountChange": {
+         "@id": "AccountChange"
+      },
+      "Actor": {
+         "@id": "Actor"
+      },
+      "AdditionalRestriction": {
+         "@id": "AdditionalRestriction"
+      },
+      "AdminGroupQuery": {
+         "@id": "AdminGroupQuery"
+      },
+      "Advisory": {
+         "@id": "Advisory"
+      },
+      "AffectedCode": {
+         "@id": "AffectedCode"
+      },
+      "AffectedPackage": {
+         "@id": "AffectedPackage"
+      },
+      "Agent": {
+         "@id": "Agent"
+      },
+      "AiModel": {
+         "@id": "AiModel"
+      },
+      "AiOperationProfile": {
+         "@id": "AiOperationProfile"
+      },
+      "AirborneBroadcastActivity": {
+         "@id": "AirborneBroadcastActivity"
+      },
+      "Aircraft": {
+         "@id": "Aircraft"
+      },
+      "AnalysisTarget": {
+         "@id": "AnalysisTarget"
+      },
+      "Analytic": {
+         "@id": "Analytic"
+      },
+      "Anomaly": {
+         "@id": "Anomaly"
+      },
+      "AnomalyAnalysis": {
+         "@id": "AnomalyAnalysis"
+      },
+      "Api": {
+         "@id": "Api"
+      },
+      "ApiActivity": {
+         "@id": "ApiActivity"
+      },
+      "ApplicationError": {
+         "@id": "ApplicationError"
+      },
+      "ApplicationEvent": {
+         "@id": "ApplicationEvent"
+      },
+      "ApplicationLifecycle": {
+         "@id": "ApplicationLifecycle"
+      },
+      "ApplicationObject": {
+         "@id": "ApplicationObject"
+      },
+      "ApplicationSecurityPostureFinding": {
+         "@id": "ApplicationSecurityPostureFinding"
+      },
+      "Assessment": {
+         "@id": "Assessment"
+      },
+      "Attack": {
+         "@id": "Attack"
+      },
+      "Authentication": {
+         "@id": "Authentication"
+      },
+      "AuthenticationToken": {
+         "@id": "AuthenticationToken"
+      },
+      "AuthFactor": {
+         "@id": "AuthFactor"
+      },
+      "Authorization": {
+         "@id": "Authorization"
+      },
+      "AuthorizeSession": {
+         "@id": "AuthorizeSession"
+      },
+      "AutonomousSystem": {
+         "@id": "AutonomousSystem"
+      },
+      "BaseEvent": {
+         "@id": "BaseEvent"
+      },
+      "Baseline": {
+         "@id": "Baseline"
+      },
+      "Campaign": {
+         "@id": "Campaign"
+      },
+      "Certificate": {
+         "@id": "Certificate"
+      },
+      "Check": {
+         "@id": "Check"
+      },
+      "CisBenchmark": {
+         "@id": "CisBenchmark"
+      },
+      "CisBenchmarkResult": {
+         "@id": "CisBenchmarkResult"
+      },
+      "CisControl": {
+         "@id": "CisControl"
+      },
+      "CisCsc": {
+         "@id": "CisCsc"
+      },
+      "ClassifierDetails": {
+         "@id": "ClassifierDetails"
+      },
+      "Cloud": {
+         "@id": "Cloud"
+      },
+      "CloudProfile": {
+         "@id": "CloudProfile"
+      },
+      "CloudResourcesInventoryInfo": {
+         "@id": "CloudResourcesInventoryInfo"
+      },
+      "Compliance": {
+         "@id": "Compliance"
+      },
+      "ComplianceFinding": {
+         "@id": "ComplianceFinding"
+      },
+      "ConfigState": {
+         "@id": "ConfigState"
+      },
+      "Container": {
+         "@id": "Container"
+      },
+      "ContainerProfile": {
+         "@id": "ContainerProfile"
+      },
+      "Cve": {
+         "@id": "Cve"
+      },
+      "Cvss": {
+         "@id": "Cvss"
+      },
+      "Cwe": {
+         "@id": "Cwe"
+      },
+      "D3fend": {
+         "@id": "D3fend"
+      },
+      "D3fTactic": {
+         "@id": "D3fTactic"
+      },
+      "D3fTechnique": {
+         "@id": "D3fTechnique"
+      },
+      "Database": {
+         "@id": "Database"
+      },
+      "Databucket": {
+         "@id": "Databucket"
+      },
+      "DataClassification": {
+         "@id": "DataClassification"
+      },
+      "DataClassificationProfile": {
+         "@id": "DataClassificationProfile"
+      },
+      "DataSecurity": {
+         "@id": "DataSecurity"
+      },
+      "DataSecurityFinding": {
+         "@id": "DataSecurityFinding"
+      },
+      "DatastoreActivity": {
+         "@id": "DatastoreActivity"
+      },
+      "DatetimeProfile": {
+         "@id": "DatetimeProfile"
+      },
+      "DceRpc": {
+         "@id": "DceRpc"
+      },
+      "DetectionFinding": {
+         "@id": "DetectionFinding"
+      },
+      "Device": {
+         "@id": "Device"
+      },
+      "DeviceConfigStateChange": {
+         "@id": "DeviceConfigStateChange"
+      },
+      "DeviceHwInfo": {
+         "@id": "DeviceHwInfo"
+      },
+      "DhcpActivity": {
+         "@id": "DhcpActivity"
+      },
+      "DigitalSignature": {
+         "@id": "DigitalSignature"
+      },
+      "DiscoveryDetails": {
+         "@id": "DiscoveryDetails"
+      },
+      "DiscoveryEvent": {
+         "@id": "DiscoveryEvent"
+      },
+      "DiscoveryResult": {
+         "@id": "DiscoveryResult"
+      },
+      "Display": {
+         "@id": "Display"
+      },
+      "Dns": {
+         "@id": "Dns"
+      },
+      "DnsActivity": {
+         "@id": "DnsActivity"
+      },
+      "DnsAnswer": {
+         "@id": "DnsAnswer"
+      },
+      "DnsQuery": {
+         "@id": "DnsQuery"
+      },
+      "DomainContact": {
+         "@id": "DomainContact"
+      },
+      "DroneFlightsActivity": {
+         "@id": "DroneFlightsActivity"
+      },
+      "Edge": {
+         "@id": "Edge"
+      },
+      "Email": {
+         "@id": "Email"
+      },
+      "EmailActivity": {
+         "@id": "EmailActivity"
+      },
+      "EmailAuth": {
+         "@id": "EmailAuth"
+      },
+      "EmailFileActivity": {
+         "@id": "EmailFileActivity"
+      },
+      "EmailUrlActivity": {
+         "@id": "EmailUrlActivity"
+      },
+      "EncryptionDetails": {
+         "@id": "EncryptionDetails"
+      },
+      "Endpoint": {
+         "@id": "Endpoint"
+      },
+      "EndpointConnection": {
+         "@id": "EndpointConnection"
+      },
+      "Enrichment": {
+         "@id": "Enrichment"
+      },
+      "Entity": {
+         "@id": "Entity"
+      },
+      "EntityManagement": {
+         "@id": "EntityManagement"
+      },
+      "EnvironmentVariable": {
+         "@id": "EnvironmentVariable"
+      },
+      "Epss": {
+         "@id": "Epss"
+      },
+      "EventLogActvity": {
+         "@id": "EventLogActvity"
+      },
+      "EvidenceInfo": {
+         "@id": "EvidenceInfo"
+      },
+      "Evidences": {
+         "@id": "Evidences"
+      },
+      "Extension": {
+         "@id": "Extension"
+      },
+      "Feature": {
+         "@id": "Feature"
+      },
+      "File": {
+         "@id": "File"
+      },
+      "FileActivity": {
+         "@id": "FileActivity"
+      },
+      "FileHosting": {
+         "@id": "FileHosting"
+      },
+      "FileQuery": {
+         "@id": "FileQuery"
+      },
+      "FileRemediationActivity": {
+         "@id": "FileRemediationActivity"
+      },
+      "Finding": {
+         "@id": "Finding"
+      },
+      "FindingInfo": {
+         "@id": "FindingInfo"
+      },
+      "FindingObject": {
+         "@id": "FindingObject"
+      },
+      "Fingerprint": {
+         "@id": "Fingerprint"
+      },
+      "FirewallRule": {
+         "@id": "FirewallRule"
+      },
+      "FolderQuery": {
+         "@id": "FolderQuery"
+      },
+      "FtpActivity": {
+         "@id": "FtpActivity"
+      },
+      "FunctionInvocation": {
+         "@id": "FunctionInvocation"
+      },
+      "GpuInfo": {
+         "@id": "GpuInfo"
+      },
+      "Graph": {
+         "@id": "Graph"
+      },
+      "Group": {
+         "@id": "Group"
+      },
+      "GroupManagement": {
+         "@id": "GroupManagement"
+      },
+      "Hassh": {
+         "@id": "Hassh"
+      },
+      "HostProfile": {
+         "@id": "HostProfile"
+      },
+      "HttpActivity": {
+         "@id": "HttpActivity"
+      },
+      "HttpCookie": {
+         "@id": "HttpCookie"
+      },
+      "HttpHeader": {
+         "@id": "HttpHeader"
+      },
+      "HttpRequest": {
+         "@id": "HttpRequest"
+      },
+      "HttpResponse": {
+         "@id": "HttpResponse"
+      },
+      "IamAnalysisFinding": {
+         "@id": "IamAnalysisFinding"
+      },
+      "IamEvent": {
+         "@id": "IamEvent"
+      },
+      "IdentityActivityMetrics": {
+         "@id": "IdentityActivityMetrics"
+      },
+      "Idp": {
+         "@id": "Idp"
+      },
+      "Image": {
+         "@id": "Image"
+      },
+      "IncidentFinding": {
+         "@id": "IncidentFinding"
+      },
+      "IncidentProfile": {
+         "@id": "IncidentProfile"
+      },
+      "InventoryInfo": {
+         "@id": "InventoryInfo"
+      },
+      "Ja4Fingerprint": {
+         "@id": "Ja4Fingerprint"
+      },
+      "Job": {
+         "@id": "Job"
+      },
+      "JobQuery": {
+         "@id": "JobQuery"
+      },
+      "KbArticle": {
+         "@id": "KbArticle"
+      },
+      "Kernel": {
+         "@id": "Kernel"
+      },
+      "KernelActivity": {
+         "@id": "KernelActivity"
+      },
+      "KernelDriver": {
+         "@id": "KernelDriver"
+      },
+      "KernelExtensionActivity": {
+         "@id": "KernelExtensionActivity"
+      },
+      "KernelObjectQuery": {
+         "@id": "KernelObjectQuery"
+      },
+      "KeyboardInfo": {
+         "@id": "KeyboardInfo"
+      },
+      "KeyValueObject": {
+         "@id": "KeyValueObject"
+      },
+      "KillChainPhase": {
+         "@id": "KillChainPhase"
+      },
+      "LdapPerson": {
+         "@id": "LdapPerson"
+      },
+      "LinuxProcess": {
+         "@id": "LinuxProcess"
+      },
+      "LinuxUsersProfile": {
+         "@id": "LinuxUsersProfile"
+      },
+      "LoadBalancer": {
+         "@id": "LoadBalancer"
+      },
+      "LoadBalancerProfile": {
+         "@id": "LoadBalancerProfile"
+      },
+      "Location": {
+         "@id": "Location"
+      },
+      "Logger": {
+         "@id": "Logger"
+      },
+      "LongString": {
+         "@id": "LongString"
+      },
+      "MacosProcess": {
+         "@id": "MacosProcess"
+      },
+      "MacosUsersProfile": {
+         "@id": "MacosUsersProfile"
+      },
+      "Malware": {
+         "@id": "Malware"
+      },
+      "MalwareScanInfo": {
+         "@id": "MalwareScanInfo"
+      },
+      "ManagedEntity": {
+         "@id": "ManagedEntity"
+      },
+      "MemoryActivity": {
+         "@id": "MemoryActivity"
+      },
+      "MessageContext": {
+         "@id": "MessageContext"
+      },
+      "Metadata": {
+         "@id": "Metadata"
+      },
+      "Metric": {
+         "@id": "Metric"
+      },
+      "Mitigation": {
+         "@id": "Mitigation"
+      },
+      "Module": {
+         "@id": "Module"
+      },
+      "ModuleActivity": {
+         "@id": "ModuleActivity"
+      },
+      "ModuleQuery": {
+         "@id": "ModuleQuery"
+      },
+      "NetworkActivity": {
+         "@id": "NetworkActivity"
+      },
+      "NetworkConnectionInfo": {
+         "@id": "NetworkConnectionInfo"
+      },
+      "NetworkConnectionQuery": {
+         "@id": "NetworkConnectionQuery"
+      },
+      "NetworkEndpoint": {
+         "@id": "NetworkEndpoint"
+      },
+      "NetworkEvent": {
+         "@id": "NetworkEvent"
+      },
+      "NetworkFileActivity": {
+         "@id": "NetworkFileActivity"
+      },
+      "NetworkInterface": {
+         "@id": "NetworkInterface"
+      },
+      "NetworkProxy": {
+         "@id": "NetworkProxy"
+      },
+      "NetworkProxyProfile": {
+         "@id": "NetworkProxyProfile"
+      },
+      "NetworkRemediationActivity": {
+         "@id": "NetworkRemediationActivity"
+      },
+      "NetworksQuery": {
+         "@id": "NetworksQuery"
+      },
+      "NetworkTraffic": {
+         "@id": "NetworkTraffic"
+      },
+      "Node": {
+         "@id": "Node"
+      },
+      "NtpActivity": {
+         "@id": "NtpActivity"
+      },
+      "Object": {
+         "@id": "Object"
+      },
+      "Observable": {
+         "@id": "Observable"
+      },
+      "Observation": {
+         "@id": "Observation"
+      },
+      "OccurrenceDetails": {
+         "@id": "OccurrenceDetails"
+      },
+      "OcsfObject": {
+         "@id": "OcsfObject"
+      },
+      "Organization": {
+         "@id": "Organization"
+      },
+      "Os": {
+         "@id": "Os"
+      },
+      "Osint": {
+         "@id": "Osint"
+      },
+      "OsintInventoryInfo": {
+         "@id": "OsintInventoryInfo"
+      },
+      "OsintProfile": {
+         "@id": "OsintProfile"
+      },
+      "Package": {
+         "@id": "Package"
+      },
+      "Packet": {
+         "@id": "Packet"
+      },
+      "Parameter": {
+         "@id": "Parameter"
+      },
+      "PatchState": {
+         "@id": "PatchState"
+      },
+      "PeripheralActivity": {
+         "@id": "PeripheralActivity"
+      },
+      "PeripheralDevice": {
+         "@id": "PeripheralDevice"
+      },
+      "PeripheralDeviceQuery": {
+         "@id": "PeripheralDeviceQuery"
+      },
+      "PermissionAnalysisResult": {
+         "@id": "PermissionAnalysisResult"
+      },
+      "Policy": {
+         "@id": "Policy"
+      },
+      "PortInfo": {
+         "@id": "PortInfo"
+      },
+      "PrefetchQuery": {
+         "@id": "PrefetchQuery"
+      },
+      "PrivilegeAttackInfo": {
+         "@id": "PrivilegeAttackInfo"
+      },
+      "PrivilegeInfo": {
+         "@id": "PrivilegeInfo"
+      },
+      "Process": {
+         "@id": "Process"
+      },
+      "ProcessActivity": {
+         "@id": "ProcessActivity"
+      },
+      "ProcessEntity": {
+         "@id": "ProcessEntity"
+      },
+      "ProcessQuery": {
+         "@id": "ProcessQuery"
+      },
+      "ProcessRemediationActivity": {
+         "@id": "ProcessRemediationActivity"
+      },
+      "Product": {
+         "@id": "Product"
+      },
+      "ProgrammaticCredential": {
+         "@id": "ProgrammaticCredential"
+      },
+      "QueryEvidence": {
+         "@id": "QueryEvidence"
+      },
+      "QueryInfo": {
+         "@id": "QueryInfo"
+      },
+      "RdpActivity": {
+         "@id": "RdpActivity"
+      },
+      "RegistryKeyActivity": {
+         "@id": "RegistryKeyActivity"
+      },
+      "RegistryKeyQuery": {
+         "@id": "RegistryKeyQuery"
+      },
+      "RegistryValueActivity": {
+         "@id": "RegistryValueActivity"
+      },
+      "RegistryValueQuery": {
+         "@id": "RegistryValueQuery"
+      },
+      "RegKey": {
+         "@id": "RegKey"
+      },
+      "RegValue": {
+         "@id": "RegValue"
+      },
+      "RelatedEvent": {
+         "@id": "RelatedEvent"
+      },
+      "Remediation": {
+         "@id": "Remediation"
+      },
+      "RemediationActivity": {
+         "@id": "RemediationActivity"
+      },
+      "Reporter": {
+         "@id": "Reporter"
+      },
+      "Reputation": {
+         "@id": "Reputation"
+      },
+      "Request": {
+         "@id": "Request"
+      },
+      "Resource": {
+         "@id": "Resource"
+      },
+      "ResourceDetails": {
+         "@id": "ResourceDetails"
+      },
+      "Response": {
+         "@id": "Response"
+      },
+      "RpcInterface": {
+         "@id": "RpcInterface"
+      },
+      "Rule": {
+         "@id": "Rule"
+      },
+      "San": {
+         "@id": "San"
+      },
+      "Sbom": {
+         "@id": "Sbom"
+      },
+      "Scan": {
+         "@id": "Scan"
+      },
+      "ScanActivity": {
+         "@id": "ScanActivity"
+      },
+      "ScheduledJobActivity": {
+         "@id": "ScheduledJobActivity"
+      },
+      "Scim": {
+         "@id": "Scim"
+      },
+      "Script": {
+         "@id": "Script"
+      },
+      "ScriptActivity": {
+         "@id": "ScriptActivity"
+      },
+      "SecurityControlProfile": {
+         "@id": "SecurityControlProfile"
+      },
+      "SecurityFinding": {
+         "@id": "SecurityFinding"
+      },
+      "SecurityState": {
+         "@id": "SecurityState"
+      },
+      "Service": {
+         "@id": "Service"
+      },
+      "ServicePrivilegeAnalysis": {
+         "@id": "ServicePrivilegeAnalysis"
+      },
+      "ServiceQuery": {
+         "@id": "ServiceQuery"
+      },
+      "Session": {
+         "@id": "Session"
+      },
+      "SessionQuery": {
+         "@id": "SessionQuery"
+      },
+      "SmbActivity": {
+         "@id": "SmbActivity"
+      },
+      "SoftwareComponent": {
+         "@id": "SoftwareComponent"
+      },
+      "SoftwareInfo": {
+         "@id": "SoftwareInfo"
+      },
+      "Span": {
+         "@id": "Span"
+      },
+      "SshActivity": {
+         "@id": "SshActivity"
+      },
+      "Sso": {
+         "@id": "Sso"
+      },
+      "StartupItem": {
+         "@id": "StartupItem"
+      },
+      "StartupItemQuery": {
+         "@id": "StartupItemQuery"
+      },
+      "SubTechnique": {
+         "@id": "SubTechnique"
+      },
+      "SystemEvent": {
+         "@id": "SystemEvent"
+      },
+      "Table": {
+         "@id": "Table"
+      },
+      "Tactic": {
+         "@id": "Tactic"
+      },
+      "Technique": {
+         "@id": "Technique"
+      },
+      "ThreatActor": {
+         "@id": "ThreatActor"
+      },
+      "Ticket": {
+         "@id": "Ticket"
+      },
+      "Timespan": {
+         "@id": "Timespan"
+      },
+      "Tls": {
+         "@id": "Tls"
+      },
+      "TlsExtension": {
+         "@id": "TlsExtension"
+      },
+      "Token": {
+         "@id": "Token"
+      },
+      "Trace": {
+         "@id": "Trace"
+      },
+      "TraceProfile": {
+         "@id": "TraceProfile"
+      },
+      "Trait": {
+         "@id": "Trait"
+      },
+      "TransformationInfo": {
+         "@id": "TransformationInfo"
+      },
+      "TunnelActivity": {
+         "@id": "TunnelActivity"
+      },
+      "UnmannedAerialSystem": {
+         "@id": "UnmannedAerialSystem"
+      },
+      "UnmannedSystemOperatingArea": {
+         "@id": "UnmannedSystemOperatingArea"
+      },
+      "UnmannedSystemsEvent": {
+         "@id": "UnmannedSystemsEvent"
+      },
+      "Url": {
+         "@id": "Url"
+      },
+      "User": {
+         "@id": "User"
+      },
+      "UserAccess": {
+         "@id": "UserAccess"
+      },
+      "UserInventory": {
+         "@id": "UserInventory"
+      },
+      "UserQuery": {
+         "@id": "UserQuery"
+      },
+      "VendorAttributes": {
+         "@id": "VendorAttributes"
+      },
+      "Vulnerability": {
+         "@id": "Vulnerability"
+      },
+      "VulnerabilityFinding": {
+         "@id": "VulnerabilityFinding"
+      },
+      "WebResource": {
+         "@id": "WebResource"
+      },
+      "WebResourceAccessActivity": {
+         "@id": "WebResourceAccessActivity"
+      },
+      "WebResourcesActivity": {
+         "@id": "WebResourcesActivity"
+      },
+      "Whois": {
+         "@id": "Whois"
+      },
+      "WindowsEvidences": {
+         "@id": "WindowsEvidences"
+      },
+      "WindowsProcess": {
+         "@id": "WindowsProcess"
+      },
+      "WindowsQueryEvidence": {
+         "@id": "WindowsQueryEvidence"
+      },
+      "WindowsResourceActivity": {
+         "@id": "WindowsResourceActivity"
+      },
+      "WindowsServiceActivity": {
+         "@id": "WindowsServiceActivity"
+      },
+      "WindowsStartupItem": {
+         "@id": "WindowsStartupItem"
+      },
+      "WinResource": {
+         "@id": "WinResource"
+      },
+      "WinService": {
+         "@id": "WinService"
+      }
+   }
+}

@@ -93,9 +93,11 @@ lint:
   uv run linkml-lint {{source_schema_dir}}
 
 # Generate md documentation for the schema and add artifacts
+# NOTE: delegates to `_gen-doc-template-safe` in project.justfile to work
+# around an upstream LinkML gen-doc bug. Restore the original
+# body once the upstream class.md.jinja2 ships a None guard on preconditions.
 [group('model development')]
-gen-doc: _gen-yaml && _add-artifacts
-  uv run gen-doc {{gen_doc_args}} -d {{docdir}} {{source_schema_path}}
+gen-doc: _gen-yaml _gen-doc-template-safe && _add-artifacts
 
 # Build docs and run test server
 [group('model development')]
@@ -187,25 +189,21 @@ _test-schema:
   uv run gen-project {{config_yaml}} -d tmp {{source_schema_path}}
 
 # Run Python unit tests with pytest
-_test-python: gen-python
+_test-python: gen-python _apply-codegen-workaround
   uv run python -m pytest
 
 # Run example tests
-_test-examples: _ensure_examples_output
-  uv run linkml-run-examples \
-    --input-formats json \
-    --input-formats yaml \
-    --output-formats json \
-    --output-formats yaml \
-    --counter-example-input-directory tests/data/invalid \
-    --input-directory tests/data/valid \
-    --output-directory examples/output \
-    --schema {{source_schema_path}} > examples/output/README.md
+# NOTE: delegates to `_run-examples-safe` in project.justfile to work around
+# ExampleRunner regenerating the Python datamodel in memory and bypassing our
+# strip_redundant_enum_casts.py workaround. Restore the original
+# body once the upstream enum-cast bugs (A/B/C) are fixed in linkml.
+_test-examples: _run-examples-safe
 
 # Add the merged model to docs/schema.
-_gen-yaml:
-  -mkdir -p {{distrib_schema_path}}
-  uv run gen-yaml {{source_schema_path}} > {{distrib_schema_path}}/{{schema_name}}.yaml
+# NOTE: delegates to `_gen-yaml-jsonobj-safe` in project.justfile to work
+# around an upstream LinkML PyYAML representer bug. Restore
+# the original two-line body once linkml/linkml#3423 lands.
+_gen-yaml: _gen-yaml-jsonobj-safe
 
 # Overridable recipe to add project-specific artifacts to the distribution schema path
 _add-artifacts:

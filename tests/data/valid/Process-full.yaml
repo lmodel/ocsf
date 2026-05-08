@@ -16,5 +16,5 @@ parent_process:
   cmd_line: /sbin/init
 user:
   name: www-data
-  uid: u-1001
+  uid: "u-1001"
   domain: example.com

@@ -1,6 +1,6 @@
 # Session object — no required slots, just exercises the boolean MFA/VPN flags
 # and timestamp fields.
-uid: sess-12345
+uid: "sess-12345"
 uuid: 6f9619ff-8b86-d011-b42d-00c04fc964ff
 issuer: idp.example.com
 created_time: 1700000000000
