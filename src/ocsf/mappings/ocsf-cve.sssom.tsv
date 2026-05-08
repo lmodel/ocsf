@@ -1,0 +1,23 @@
+# curie_map:
+#   ocsf: 'https://w3id.org/lmodel/ocsf/'
+#   cve: 'https://w3id.org/lmodel/cve/'
+#   skos: 'http://www.w3.org/2004/02/skos/core#'
+#   semapv: 'https://w3id.org/semapv/vocab/'
+# license: 'https://creativecommons.org/licenses/by/4.0/'
+# mapping_set_id: 'https://w3id.org/lmodel/ocsf/mappings/ocsf-cve'
+# mapping_set_title: 'OCSF to CVE Record Format class mappings'
+# mapping_set_description: |
+#   Class-level mappings between OCSF (Open Cybersecurity Schema Framework)
+#   classes and the CVE Record Format v5 schema. OCSF has first-class CVE
+#   support via the Cve object, and vulnerability-oriented event classes
+#   (VulnerabilityFinding) that carry CVE identifiers and CVSS scores. The
+#   AffectedPackage object corresponds directly to CVE AffectedProduct.
+# mapping_set_version: '1.0.0'
+# creator_id: 'https://orcid.org/0000-0000-0000-0000'
+subject_id	subject_label	predicate_id	object_id	object_label	mapping_justification	confidence	comment
+ocsf:Cve	CVE	skos:exactMatch	cve:CVERecord	CVE Record	semapv:ManualMappingCuration	0.95	OCSF Cve object is a direct representation of a CVE Program record; both carry CVE-ID, description, references, and CVSS scores.
+ocsf:Vulnerability	Vulnerability Details	skos:closeMatch	cve:CVERecord	CVE Record	semapv:ManualMappingCuration	0.80	OCSF Vulnerability wraps one or more CVE references; CVERecord is the authoritative CVE Program container — close but not exact because Vulnerability can reference non-CVE advisories.
+ocsf:AffectedPackage	Affected Software Package	skos:exactMatch	cve:AffectedProduct	Affected Product	semapv:ManualMappingCuration	0.90	Direct 1:1 — OCSF AffectedPackage and CVE AffectedProduct both record vendor/product/version triples for software impacted by a vulnerability.
+ocsf:VulnerabilityFinding	Vulnerability Finding	skos:closeMatch	cve:CVERecord	CVE Record	semapv:ManualMappingCuration	0.75	A VulnerabilityFinding event reports on a detected CVE; the underlying data model aligns closely with CVERecord fields.
+ocsf:Advisory	Advisory	skos:closeMatch	cve:CnaPublishedContainer	CNA Published Container	semapv:ManualMappingCuration	0.70	An OCSF Advisory (e.g. Microsoft KB, Apple Security Advisory) parallels a CVE CNA Published Container which holds the vendor-provided vulnerability details.
+ocsf:Cvss	CVSS Score	skos:relatedMatch	cve:CnaContainer	CNA Container	semapv:ManualMappingCuration	0.55	OCSF Cvss captures CVSS vector/score metadata; CVE CnaContainer aggregates CVSS metrics among other fields — related rather than equivalent.

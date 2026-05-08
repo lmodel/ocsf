@@ -1,0 +1,4 @@
+# INVALID: Tls requires `version` but it is missing.
+cipher: TLS_AES_256_GCM_SHA384
+key_length: 256
+sni: api.example.com

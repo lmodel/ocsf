@@ -1,0 +1,11 @@
+# Module object — no required slots.
+load_type_id: STANDARD
+load_type: Standard
+type: shared library
+function_name: ssl_init
+base_address: "0x00007F8E40000000"
+start_address: "0x00007F8E40000080"
+file:
+  name: libssl.so.3
+  path: /usr/lib/x86_64-linux-gnu/libssl.so.3
+  type_id: REGULAR_FILE

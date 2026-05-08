@@ -1,0 +1,15 @@
+# HTTP request with a multivalued list of headers.
+http_method: GET
+version: HTTP/1.1
+url:
+  url_string: https://example.com/api
+  scheme: https
+  hostname: example.com
+  path: /api
+user_agent: "Mozilla/5.0"
+http_headers:
+  - name: Accept
+    value: application/json
+  - name: Authorization
+    value: "Bearer xxx"
+length: 0

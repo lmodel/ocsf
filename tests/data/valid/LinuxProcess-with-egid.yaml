@@ -1,0 +1,13 @@
+# Linux extension's Process subtype with effective uid/gid added by the
+# linux/linux_users profile.
+name: nginx
+pid: 4321
+created_time: 1700000000000
+working_directory: /var/www
+egid: 33
+euid: 33
+auid: 1000
+file:
+  name: nginx
+  path: /usr/sbin/nginx
+  type_id: REGULAR_FILE

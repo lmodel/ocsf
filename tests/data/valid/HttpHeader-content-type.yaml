@@ -1,0 +1,3 @@
+# Smallest HttpHeader — both `name` and `value` are required.
+name: Content-Type
+value: application/json

@@ -1,0 +1,23 @@
+# TLS handshake metadata with a nested Certificate and Fingerprint hashes.
+# `version` is the only required slot.
+version: "1.3"
+cipher: TLS_AES_256_GCM_SHA384
+key_length: 256
+sni: api.example.com
+handshake_dur: 42
+ja3_hash:
+  algorithm_id: MD5
+  value: "0123456789abcdef0123456789abcdef"
+ja3s_hash:
+  algorithm_id: MD5
+  value: "fedcba9876543210fedcba9876543210"
+certificate:
+  issuer: "CN=Example CA"
+  serial_number: "01:23:45:67:89:AB:CD:EF"
+  subject: "CN=api.example.com"
+  version: "3"
+client_ciphers:
+  - TLS_AES_256_GCM_SHA384
+  - TLS_CHACHA20_POLY1305_SHA256
+server_ciphers:
+  - TLS_AES_256_GCM_SHA384

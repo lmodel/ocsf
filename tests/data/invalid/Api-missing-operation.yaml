@@ -1,0 +1,5 @@
+# INVALID: Api requires `operation` but it is missing.
+version: "v2"
+service:
+  name: identity-service
+  uid: svc-iam

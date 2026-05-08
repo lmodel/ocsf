@@ -1,0 +1,5 @@
+# INVALID: Kernel requires both `name` and `type_id` (KernelTypeIdEnum);
+# `type_id` is missing.
+name: sys_open
+type: System Call
+system_call: open

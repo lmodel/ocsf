@@ -1,0 +1,20 @@
+# A typical Process record with a parent (recursion via the same class) and
+# a nested File object — exercises is_a inheritance + inlined sub-objects.
+name: nginx
+pid: 4321
+created_time: 1700000000000
+working_directory: /var/www
+cmd_line: "/usr/sbin/nginx -g daemon off;"
+file:
+  name: nginx
+  path: /usr/sbin/nginx
+  type_id: REGULAR_FILE
+  size: 1048576
+parent_process:
+  name: systemd
+  pid: 1
+  cmd_line: /sbin/init
+user:
+  name: www-data
+  uid: u-1001
+  domain: example.com

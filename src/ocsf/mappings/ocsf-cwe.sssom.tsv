@@ -1,0 +1,21 @@
+# curie_map:
+#   ocsf: 'https://w3id.org/lmodel/ocsf/'
+#   cwe: 'https://w3id.org/lmodel/cwe/'
+#   skos: 'http://www.w3.org/2004/02/skos/core#'
+#   semapv: 'https://w3id.org/semapv/vocab/'
+# license: 'https://creativecommons.org/licenses/by/4.0/'
+# mapping_set_id: 'https://w3id.org/lmodel/ocsf/mappings/ocsf-cwe'
+# mapping_set_title: 'OCSF to CWE class mappings'
+# mapping_set_description: |
+#   Class-level mappings between OCSF (Open Cybersecurity Schema Framework)
+#   classes and the MITRE CWE (Common Weakness Enumeration) schema. OCSF
+#   has a dedicated Cwe object that directly models a CWE entry. Vulnerability-
+#   related classes are linked to CWE Weakness as the root-cause concept for
+#   software vulnerabilities.
+# mapping_set_version: '1.0.0'
+# creator_id: 'https://orcid.org/0000-0000-0000-0000'
+subject_id	subject_label	predicate_id	object_id	object_label	mapping_justification	confidence	comment
+ocsf:Cwe	CWE	skos:exactMatch	cwe:Weakness	Weakness	semapv:ManualMappingCuration	0.95	Direct 1:1 — OCSF Cwe object models a CWE entry carrying uid/caption describing a software weakness; CWE Weakness is the canonical MITRE concept.
+ocsf:Vulnerability	Vulnerability Details	skos:relatedMatch	cwe:Weakness	Weakness	semapv:ManualMappingCuration	0.55	A vulnerability typically has one or more CWE root-cause weaknesses; the relationship is causal rather than structural equivalence.
+ocsf:AffectedCode	Affected Code	skos:closeMatch	cwe:DemonstrativeExample	Demonstrative Example	semapv:ManualMappingCuration	0.70	OCSF AffectedCode describes a vulnerable code block; CWE DemonstrativeExample provides code snippets illustrating a weakness — structurally analogous.
+ocsf:VulnerabilityFinding	Vulnerability Finding	skos:relatedMatch	cwe:Weakness	Weakness	semapv:ManualMappingCuration	0.55	A vulnerability finding event includes a CWE reference identifying the underlying weakness class; related rather than equivalent.

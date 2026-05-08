@@ -1,0 +1,5 @@
+# Reputation object — `base_score` and `score_id` are required (ScoreIdEnum).
+base_score: 6.5
+score_id: SUSPICIOUS_RISKY
+score: "Suspicious"
+provider: ExampleThreatIntel

@@ -1,0 +1,5 @@
+# INVALID: BaseEvent has multiple required slots inherited via the base_event
+# profile. This sample omits `metadata`, `category_uid`, `class_uid`,
+# `severity_id`, `time`, `type_uid`, `cloud`, and `osint`.
+activity_id: UNKNOWN
+status: Success

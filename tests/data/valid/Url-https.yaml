@@ -1,0 +1,9 @@
+# A URL object with the standard parts populated.
+url_string: https://api.example.com/v1/items?id=42
+scheme: https
+hostname: api.example.com
+domain: example.com
+subdomain: api
+port: 443
+path: /v1/items
+query_string: "id=42"

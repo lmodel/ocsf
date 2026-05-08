@@ -1,0 +1,43 @@
+id: https://w3id.org/lmodel/ocsf
+name: ocsf
+description: 'Open Cybersecurity Schema Framework (OCSF) — LinkML schema. Generated from upstream OCSF JSON at version 1.9.0-dev. Each top-level concern is one module: types, dictionary (slots), enums, categories, objects, profiles, events, extensions.'
+license: Apache-2.0
+source: https://github.com/ocsf/ocsf-schema/tree/main
+version: 1.9.0-dev
+annotations:
+  copyright: © OCSF a Series of LF Projects, LLC
+prefixes:
+  ocsf: https://w3id.org/lmodel/ocsf/
+  linkml: https://w3id.org/linkml/
+  schema: http://schema.org/
+  xsd: http://www.w3.org/2001/XMLSchema#
+  rdfs: http://www.w3.org/2000/01/rdf-schema#
+  dcterms: http://purl.org/dc/terms/
+  skos: http://www.w3.org/2004/02/skos/core#
+  attack: https://lmodel.github.io/attack/
+  stix: https://lmodel.github.io/stix/
+  uco_master: https://lmodel.github.io/uco-master/
+  capec: https://w3id.org/lmodel/capec/
+  cve: https://w3id.org/lmodel/cve/
+  cwe: https://w3id.org/lmodel/cwe/
+  iso27001: https://w3id.org/lmodel/iso27001/
+  kev_catalog: https://w3id.org/lmodel/kev-catalog/
+  nvd: https://w3id.org/lmodel/nist-nvd/
+  core: https://w3id.org/lmodel/vulnerability-core/
+default_prefix: ocsf
+default_range: string
+imports:
+- linkml:types
+- ./types
+- ./enums
+- ./dictionary
+- ./categories
+- ./objects
+- ./profiles
+- ./events
+- ./extensions
+title: Open Cybersecurity Schema Framework (OCSF) — LinkML Schema
+see_also:
+- https://lmodel.github.io/ocsf
+- https://schema.ocsf.io/
+- https://github.com/ocsf/ocsf-schema

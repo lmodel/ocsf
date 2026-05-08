@@ -1,0 +1,24 @@
+# A DNS Activity event with a nested DnsQuery object.
+class_uid: BASE_EVENT
+category_uid: UNCATEGORIZED
+activity_id: UNKNOWN
+type_uid: 400301
+severity_id: INFORMATIONAL
+time: 1700003000000
+query:
+  hostname: malicious.example.com
+  type: A
+src_endpoint:
+  ip: 10.0.0.42
+dst_endpoint:
+  ip: 8.8.8.8
+  hostname: dns.google
+metadata:
+  version: "1.4.0"
+  product:
+    name: dns-monitor
+cloud:
+  provider: gcp
+osint:
+  - type_id: HOSTNAME
+    value: malicious.example.com

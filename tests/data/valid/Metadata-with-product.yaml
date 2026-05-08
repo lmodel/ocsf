@@ -1,0 +1,11 @@
+# Event metadata block — exercises a Product nested object + version string.
+version: "1.4.0"
+product:
+  name: ExampleSensor
+  vendor_name: Example Co.
+  version: "3.2.1"
+log_name: ssh.log
+log_provider: openssh
+log_level: info
+logged_time: 1700000010000
+correlation_uid: 1f7e0adf-66e3-4fa6-9def-2a8c8a7fbf3a

@@ -1,0 +1,15 @@
+# Database object — `type_id` is required (DatabaseTypeIdEnum).
+type_id: RELATIONAL
+type: PostgreSQL
+name: customer-prod
+uid: db-001
+desc: Customer-facing transactional database
+size: 1099511627776
+created_time: 1690000000000
+modified_time: 1700000000000
+groups:
+  - name: dba
+    uid: g-100
+    desc: Database administrators
+  - name: readonly
+    uid: g-200

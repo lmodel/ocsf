@@ -1,0 +1,14 @@
+# Api object — `operation` is required; demonstrates nested Request,
+# Response, Service, and Token sub-objects.
+operation: ListUsers
+version: "v2"
+service:
+  name: identity-service
+  uid: svc-iam
+  version: "1.5.2"
+request:
+  uid: req-abc123
+  data: '{"limit":50}'
+response:
+  code: 200
+  message: OK

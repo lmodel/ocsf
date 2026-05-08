@@ -1,0 +1,334 @@
+id: https://w3id.org/lmodel/ocsf/profiles
+name: ocsf-profiles
+description: OCSF profiles, expressed as LinkML mixins. Each upstream profile JSON (``profiles/<name>.json``) becomes one mixin class. Events and objects pick up profile slots via the ``mixins:`` list.
+license: Apache-2.0
+source: https://github.com/ocsf/ocsf-schema/tree/main/profiles
+version: 1.9.0-dev
+annotations:
+  copyright: © OCSF a Series of LF Projects, LLC
+prefixes:
+  ocsf: https://w3id.org/lmodel/ocsf/
+  linkml: https://w3id.org/linkml/
+  schema: http://schema.org/
+  xsd: http://www.w3.org/2001/XMLSchema#
+  rdfs: http://www.w3.org/2000/01/rdf-schema#
+  dcterms: http://purl.org/dc/terms/
+  skos: http://www.w3.org/2004/02/skos/core#
+  attack: https://lmodel.github.io/attack/
+  stix: https://lmodel.github.io/stix/
+  uco_master: https://lmodel.github.io/uco-master/
+  capec: https://w3id.org/lmodel/capec/
+  cve: https://w3id.org/lmodel/cve/
+  cwe: https://w3id.org/lmodel/cwe/
+  iso27001: https://w3id.org/lmodel/iso27001/
+  kev_catalog: https://w3id.org/lmodel/kev-catalog/
+  nvd: https://w3id.org/lmodel/nist-nvd/
+  core: https://w3id.org/lmodel/vulnerability-core/
+default_prefix: ocsf
+default_range: string
+imports:
+- linkml:types
+- ./dictionary
+- ./enums
+classes:
+  AiOperationProfile:
+    description: AI-specific attributes for model operations, retrieval systems, and agent activities. e.g. model_name, total_token_counts etc.
+    aliases:
+    - AI Operation
+    mixin: true
+    slots:
+    - ai_model
+    - message_context
+    slot_usage:
+      ai_model:
+        recommended: true
+        annotations:
+          group: context
+      message_context:
+        annotations:
+          group: context
+    annotations:
+      ocsf_profile: ai_operation
+  CloudProfile:
+    description: The attributes that describe information specific to Cloud services/applications.
+    aliases:
+    - Cloud
+    mixin: true
+    slots:
+    - api
+    - cloud
+    slot_usage:
+      api:
+        annotations:
+          group: context
+      cloud:
+        required: true
+        annotations:
+          group: primary
+    annotations:
+      ocsf_profile: cloud
+  ContainerProfile:
+    description: The container context for a process.
+    aliases:
+    - Container
+    mixin: true
+    slots:
+    - container
+    - namespace_pid
+    slot_usage:
+      container:
+        recommended: true
+        annotations:
+          group: context
+      namespace_pid:
+        recommended: true
+        annotations:
+          group: context
+    annotations:
+      ocsf_profile: container
+  DataClassificationProfile:
+    description: The Data Classification profile adds attributes to specific resource objects, allowing users to describe information about classifiers & data classification results.
+    aliases:
+    - Data Classification
+    mixin: true
+    slots:
+    - data_classification
+    - data_classifications
+    slot_usage:
+      data_classification:
+        recommended: true
+        annotations:
+          group: context
+      data_classifications:
+        recommended: true
+        annotations:
+          group: context
+    annotations:
+      ocsf_profile: data_classification
+  DatetimeProfile:
+    description: This profile defines date/time attributes as defined in RFC-3339. For example 1985-04-12T23:20:50.52Z.
+    aliases:
+    - Date/Time
+    mixin: true
+    annotations:
+      ocsf_profile: datetime
+  HostProfile:
+    description: The attributes that identify host/device attributes.
+    aliases:
+    - Host
+    mixin: true
+    slots:
+    - actor
+    - device
+    slot_usage:
+      device:
+        recommended: true
+    annotations:
+      ocsf_profile: host
+      group: primary
+  IncidentProfile:
+    description: The attributes that add incident handling semantics to a Finding.
+    aliases:
+    - Incident
+    mixin: true
+    slots:
+    - assignee
+    - assignee_group
+    - impact
+    - impact_id
+    - impact_score
+    - is_suspected_breach
+    - priority
+    - priority_id
+    - src_url
+    - ticket
+    - tickets
+    - verdict
+    - verdict_id
+    slot_usage:
+      assignee:
+        annotations:
+          group: context
+      assignee_group:
+        annotations:
+          group: context
+      impact:
+        recommended: true
+        annotations:
+          group: primary
+      impact_id:
+        recommended: true
+        annotations:
+          group: primary
+      impact_score:
+        recommended: true
+        annotations:
+          group: primary
+      is_suspected_breach:
+        annotations:
+          group: context
+      priority:
+        annotations:
+          group: context
+      priority_id:
+        recommended: true
+        annotations:
+          group: context
+      src_url:
+        recommended: true
+        description: A Url link used to access the original incident.
+        annotations:
+          group: primary
+      ticket:
+        annotations:
+          group: context
+      tickets:
+        annotations:
+          group: context
+      verdict:
+        recommended: true
+        annotations:
+          group: primary
+      verdict_id:
+        recommended: true
+        annotations:
+          group: primary
+    annotations:
+      ocsf_profile: incident
+      group: primary
+  LoadBalancerProfile:
+    description: The attributes that describe information specific to load balancers.
+    aliases:
+    - Load Balancer
+    mixin: true
+    slots:
+    - load_balancer
+    slot_usage:
+      load_balancer:
+        recommended: true
+    annotations:
+      ocsf_profile: load_balancer
+      group: primary
+  NetworkProxyProfile:
+    description: The attributes that identify network proxy attributes.
+    aliases:
+    - Network Proxy
+    mixin: true
+    slots:
+    - proxy_connection_info
+    - proxy_endpoint
+    - proxy_http_request
+    - proxy_http_response
+    - proxy_tls
+    - proxy_traffic
+    slot_usage:
+      proxy_connection_info:
+        recommended: true
+        description: The connection information from the proxy server to the remote server.
+      proxy_endpoint:
+        description: The proxy (server) in a network connection.
+      proxy_http_request:
+        description: The HTTP Request from the proxy server to the remote server.
+      proxy_http_response:
+        description: The HTTP Response from the remote server to the proxy server.
+      proxy_tls:
+        recommended: true
+        description: The TLS protocol negotiated between the proxy server and the remote server.
+      proxy_traffic:
+        recommended: true
+        description: The network traffic refers to the amount of data moving across a network, from proxy to remote server at a given point of time.
+    annotations:
+      ocsf_profile: network_proxy
+      group: context
+  OsintProfile:
+    description: The OSINT (Open Source Intelligence) profile contains one or more indicators and associated analysis and details, such as registrar (WHOIS) information and commentary about a hostname, or information about a digital certificate and its usage within a campaign. This information can be used to further enrich a detection or finding by providing decisioning support to other analysts and engineers within the profile itself.
+    aliases:
+    - OSINT
+    mixin: true
+    slots:
+    - osint
+    slot_usage:
+      osint:
+        required: true
+        annotations:
+          group: primary
+    annotations:
+      ocsf_profile: osint
+  SecurityControlProfile:
+    description: The attributes including disposition that represent the outcome of a security control including but not limited to access control, malware or policy violation, network proxy, intrusion detection, firewall, or data control.  The profile is intended to augment activities or findings with an outcome when a security control has observed or intervened. If the control detected a security violation, and the <code>disposition_id</code> or <code>action_id</code> is an alertable outcome or action, the <code>is_alert</code> flag may be set to <code>true</code>.
+    aliases:
+    - Security Control
+    mixin: true
+    slots:
+    - action
+    - action_id
+    - attacks
+    - authorizations
+    - confidence
+    - confidence_id
+    - confidence_score
+    - disposition
+    - disposition_id
+    - firewall_rule
+    - is_alert
+    - malware
+    - malware_scan_info
+    - policy
+    - risk_details
+    - risk_level
+    - risk_level_id
+    - risk_score
+    slot_usage:
+      action:
+        description: The normalized caption of <code>action_id</code>.
+      action_id:
+        recommended: true
+        description: The action taken by a control or other policy-based system leading to an outcome or disposition. An unknown action may still correspond to a known disposition. Refer to <code>disposition_id</code> for the outcome of the action.
+      confidence:
+        annotations:
+          group: context
+      confidence_id:
+        recommended: true
+        annotations:
+          group: context
+      confidence_score:
+        annotations:
+          group: context
+      disposition_id:
+        recommended: true
+      firewall_rule:
+        description: The firewall rule that pertains to the control that triggered the event, if applicable.
+      is_alert:
+        recommended: true
+        description: Indicates that the event is considered to be an alertable signal. Should be set to <code>true</code> if <code>disposition_id = Alert</code> among other dispositions, and/or <code>risk_level_id</code> or <code>severity_id</code> of the event is elevated. Not all control events will be alertable, for example if <code>disposition_id = Exonerated</code> or <code>disposition_id = Allowed</code>.
+      policy:
+        description: The policy that pertains to the control that triggered the event, if applicable. For example the name of an anti-malware policy or an access control policy.
+      risk_details:
+        annotations:
+          group: context
+      risk_level:
+        annotations:
+          group: context
+      risk_level_id:
+        annotations:
+          group: context
+      risk_score:
+        annotations:
+          group: context
+    annotations:
+      ocsf_profile: security_control
+      group: primary
+  TraceProfile:
+    description: The Trace Profile extends the OCSF framework to capture and standardize observability events, specifically targeting trace-level data. This profile enables integration and normalization of distributed tracing information, allowing OCSF events to retain essential trace context such as trace IDs, span relationships, and service dependencies.
+    aliases:
+    - Trace
+    mixin: true
+    slots:
+    - trace
+    slot_usage:
+      trace:
+        recommended: true
+        description: The trace object contains information about distributed traces which are critical to observability and describe how requests move through a system, capturing each step's timing and status.
+    annotations:
+      ocsf_profile: trace
+      group: primary

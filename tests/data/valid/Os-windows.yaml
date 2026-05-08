@@ -1,0 +1,8 @@
+# OS object covering a Windows host — exercises enum + integer + version slots.
+name: Windows Server
+type_id: WINDOWS
+version: "2022"
+build: "20348.2031"
+cpu_bits: 64
+edition: Datacenter
+lang: en-US

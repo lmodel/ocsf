@@ -1,0 +1,13 @@
+# Cloud object with nested Account + Organization references.
+provider: aws
+account:
+  name: prod
+  uid: "123456789012"
+  type: AWS Account
+org:
+  name: ExampleCorp
+  uid: org-1234
+region: us-east-1
+zone: us-east-1a
+project_uid: prj-42
+cloud_partition: aws

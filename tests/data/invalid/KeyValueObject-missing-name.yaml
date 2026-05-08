@@ -1,0 +1,4 @@
+# INVALID: KeyValueObject requires `name` but it is missing.
+value: production
+values:
+  - https://app.example.com

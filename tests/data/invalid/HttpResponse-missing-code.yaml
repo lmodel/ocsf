@@ -1,0 +1,4 @@
+# INVALID: HttpResponse requires `code` but it is missing.
+status: OK
+content_type: application/json
+length: 4096

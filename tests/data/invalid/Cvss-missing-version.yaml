@@ -1,0 +1,4 @@
+# INVALID: Cvss requires both `base_score` and `version`; `version` is missing.
+base_score: 9.8
+severity: Critical
+vector_string: "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"

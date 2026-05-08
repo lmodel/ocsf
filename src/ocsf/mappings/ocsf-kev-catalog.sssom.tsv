@@ -1,0 +1,23 @@
+# curie_map:
+#   ocsf: 'https://w3id.org/lmodel/ocsf/'
+#   kev_catalog: 'https://w3id.org/lmodel/kev-catalog/'
+#   skos: 'http://www.w3.org/2004/02/skos/core#'
+#   semapv: 'https://w3id.org/semapv/vocab/'
+# license: 'https://creativecommons.org/licenses/by/4.0/'
+# mapping_set_id: 'https://w3id.org/lmodel/ocsf/mappings/ocsf-kev-catalog'
+# mapping_set_title: 'OCSF to CISA KEV Catalog class mappings'
+# mapping_set_description: |
+#   Class-level mappings between OCSF (Open Cybersecurity Schema Framework)
+#   classes and the CISA Known Exploited Vulnerabilities (KEV) Catalog schema.
+#   KEV entries represent CVEs confirmed as exploited in the wild, mandating
+#   federal remediation timelines under BOD 22-01. OCSF vulnerability and CVE
+#   objects cover the same vulnerability domain; EPSS provides the probabilistic
+#   exploit score that contextualises KEV membership.
+# mapping_set_version: '1.0.0'
+# creator_id: 'https://orcid.org/0000-0000-0000-0000'
+subject_id	subject_label	predicate_id	object_id	object_label	mapping_justification	confidence	comment
+ocsf:Cve	CVE	skos:closeMatch	kev_catalog:KevEntry	KEV Entry	semapv:ManualMappingCuration	0.75	OCSF Cve models any CVE record; KevEntry is the subset confirmed exploited in the wild — every KevEntry has a corresponding CVERecord but not vice versa.
+ocsf:Vulnerability	Vulnerability Details	skos:closeMatch	kev_catalog:KevEntry	KEV Entry	semapv:ManualMappingCuration	0.70	OCSF Vulnerability wraps CVE references and may refer to a KEV-listed entry; close match because KEV is a curated subset of the broader vulnerability population.
+ocsf:VulnerabilityFinding	Vulnerability Finding	skos:closeMatch	kev_catalog:KevEntry	KEV Entry	semapv:ManualMappingCuration	0.70	A vulnerability finding event for a KEV-listed CVE directly corresponds to a KevEntry; findings for non-KEV CVEs are similar in structure but out of KEV scope.
+ocsf:Epss	EPSS	skos:relatedMatch	kev_catalog:KevEntry	KEV Entry	semapv:ManualMappingCuration	0.55	EPSS probability scores contextualise exploitation likelihood; KEV membership confirms active exploitation — related but distinct signals for the same vulnerability.
+ocsf:Remediation	Remediation	skos:relatedMatch	kev_catalog:KevEntry	KEV Entry	semapv:ManualMappingCuration	0.50	KEV entries include a required remediation due-date; OCSF Remediation describes the recommended fix — related through the shared remediation mandate.

@@ -1,0 +1,26 @@
+# curie_map:
+#   ocsf: 'https://w3id.org/lmodel/ocsf/'
+#   capec: 'https://w3id.org/lmodel/capec/'
+#   skos: 'http://www.w3.org/2004/02/skos/core#'
+#   semapv: 'https://w3id.org/semapv/vocab/'
+# license: 'https://creativecommons.org/licenses/by/4.0/'
+# mapping_set_id: 'https://w3id.org/lmodel/ocsf/mappings/ocsf-capec'
+# mapping_set_title: 'OCSF to CAPEC class mappings'
+# mapping_set_description: |
+#   Class-level mappings between OCSF (Open Cybersecurity Schema Framework)
+#   object and event classes and CAPEC (Common Attack Pattern Enumeration and
+#   Classification) schema entities. OCSF Attack/Technique/SubTechnique mirror
+#   the ATT&CK-aligned concepts that CAPEC also catalogues at the attack-pattern
+#   and technique granularity. Vulnerability-related classes are linked to
+#   CAPEC AttackPattern as the mechanism through which weaknesses are exploited.
+# mapping_set_version: '1.0.0'
+# creator_id: 'https://orcid.org/0000-0000-0000-0000'
+subject_id	subject_label	predicate_id	object_id	object_label	mapping_justification	confidence	comment
+ocsf:Attack	MITRE ATT&CK / ATLAS	skos:exactMatch	capec:AttackPattern	Attack Pattern	semapv:ManualMappingCuration	0.90	OCSF Attack wraps ATT&CK/ATLAS tactic+technique references; CAPEC AttackPattern is the foundational attack-pattern concept from which ATT&CK descends.
+ocsf:Technique	Technique	skos:exactMatch	capec:Technique	Technique	semapv:ManualMappingCuration	0.95	Direct 1:1 — OCSF Technique carries ATT&CK technique id/name; CAPEC Technique models the same concept.
+ocsf:SubTechnique	Sub-technique	skos:closeMatch	capec:AttackStep	Attack Step	semapv:ManualMappingCuration	0.80	OCSF SubTechnique is a specialisation of Technique; CAPEC AttackStep models an ordered step within an attack pattern — the closest structural analogue.
+ocsf:Tactic	Tactic	skos:closeMatch	capec:Category	Category	semapv:ManualMappingCuration	0.75	ATT&CK Tactics and CAPEC Categories both serve as grouping constructs for lower-level attack concepts; semantics differ but the organising role is equivalent.
+ocsf:Mitigation	Mitigation	skos:relatedMatch	capec:AttackPattern	Attack Pattern	semapv:ManualMappingCuration	0.55	OCSF Mitigation describes countermeasures; CAPEC AttackPattern includes mitigation guidance — the link is informational rather than structural.
+ocsf:Vulnerability	Vulnerability Details	skos:relatedMatch	capec:AttackPattern	Attack Pattern	semapv:ManualMappingCuration	0.50	A vulnerability is often the entry point for a CAPEC attack pattern; the relationship is causal rather than definitional.
+ocsf:VulnerabilityFinding	Vulnerability Finding	skos:relatedMatch	capec:AttackPattern	Attack Pattern	semapv:ManualMappingCuration	0.50	A vulnerability finding event may reference an associated CAPEC attack pattern via the embedded attack object.
+ocsf:Malware	Malware	skos:relatedMatch	capec:AttackPattern	Attack Pattern	semapv:ManualMappingCuration	0.55	Malware implements or embodies specific attack patterns; related rather than equivalent.

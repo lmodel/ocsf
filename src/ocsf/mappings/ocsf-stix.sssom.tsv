@@ -1,0 +1,36 @@
+# curie_map:
+#   ocsf: 'https://w3id.org/lmodel/ocsf/'
+#   stix: 'https://lmodel.github.io/stix/'
+#   skos: 'http://www.w3.org/2004/02/skos/core#'
+#   semapv: 'https://w3id.org/semapv/vocab/'
+# license: 'https://creativecommons.org/licenses/by/4.0/'
+# mapping_set_id: 'https://w3id.org/lmodel/ocsf/mappings/ocsf-stix'
+# mapping_set_title: 'OCSF to STIX 2.1 class mappings'
+# mapping_set_description: |
+#   Class-level mappings between OCSF (Open Cybersecurity Schema Framework)
+#   object classes and STIX 2.1 SCOs (Cyber Observables) and SDOs (Domain
+#   Objects). OCSF deliberately tracks the same observable types STIX
+#   defines, but with platform-specific elaborations. Where OCSF is
+#   strictly a subset/superset of the STIX object, "exact" is asserted;
+#   otherwise "close" or "broad" with a justifying comment.
+# mapping_set_version: '1.0.0'
+# creator_id: 'https://orcid.org/0000-0000-0000-0000'
+subject_id	subject_label	predicate_id	object_id	object_label	mapping_justification	confidence	comment
+ocsf:Process	Process	skos:exactMatch	stix:Process	process	semapv:ManualMappingCuration	0.95	OCSF Process aligns with STIX SCO "process" — both model a running OS process with pid, image, parent.
+ocsf:File	File	skos:exactMatch	stix:File	file	semapv:ManualMappingCuration	0.95	OCSF File aligns with STIX SCO "file"; OCSF carries additional fingerprint/signature detail.
+ocsf:Url	URL	skos:exactMatch	stix:Url	url	semapv:ManualMappingCuration	0.95	Direct one-to-one; both define a URL string with optional sub-parts.
+ocsf:Email	Email	skos:exactMatch	stix:EmailMessage	email-message	semapv:ManualMappingCuration	0.9	OCSF Email object models email metadata (sender/receivers/subject/headers) like STIX email-message.
+ocsf:AutonomousSystem	Autonomous System	skos:exactMatch	stix:AutonomousSystem	autonomous-system	semapv:ManualMappingCuration	0.95	Direct one-to-one (number + name).
+ocsf:Certificate	Digital Certificate	skos:exactMatch	stix:X509Certificate	x509-certificate	semapv:ManualMappingCuration	0.95	Direct one-to-one for X.509 certificates.
+ocsf:NetworkConnectionInfo	Network Connection Information	skos:closeMatch	stix:NetworkTraffic	network-traffic	semapv:ManualMappingCuration	0.85	OCSF tracks OSI L4 connection metadata; STIX network-traffic is the SCO equivalent.
+ocsf:Endpoint	Endpoint	skos:broadMatch	stix:Host	host	semapv:ManualMappingCuration	0.7	OCSF Endpoint is more general (host + addressable network point); STIX has no first-class equivalent — closest is the proposed host SCO.
+ocsf:Account	Account	skos:closeMatch	stix:UserAccount	user-account	semapv:ManualMappingCuration	0.85	Both model an account on a system; OCSF has stronger typing for account categories.
+ocsf:User	User	skos:closeMatch	stix:UserAccount	user-account	semapv:ManualMappingCuration	0.8	Person-as-account view; OCSF User is closer to identity than to OS account.
+ocsf:Malware	Malware	skos:exactMatch	stix:Malware	malware	semapv:ManualMappingCuration	0.95	Direct correspondence (SDO).
+ocsf:Vulnerability	Vulnerability	skos:exactMatch	stix:Vulnerability	vulnerability	semapv:ManualMappingCuration	0.9	Both model a vulnerability with CVE references.
+ocsf:Cve	CVE	skos:closeMatch	stix:Vulnerability	vulnerability	semapv:ManualMappingCuration	0.85	OCSF Cve is a CVE-specific subset of the more general Vulnerability concept.
+ocsf:Campaign	Campaign	skos:exactMatch	stix:Campaign	campaign	semapv:ManualMappingCuration	0.95	Direct correspondence (SDO).
+ocsf:ThreatActor	Threat Actor	skos:exactMatch	stix:ThreatActor	threat-actor	semapv:ManualMappingCuration	0.95	Direct correspondence (SDO).
+ocsf:Attack	MITRE ATT&CK	skos:exactMatch	stix:AttackPattern	attack-pattern	semapv:ManualMappingCuration	0.9	OCSF Attack plays the same role as STIX attack-pattern (often used to model ATT&CK techniques).
+ocsf:Os	Operating System	skos:closeMatch	stix:Software	software	semapv:ManualMappingCuration	0.7	STIX has no dedicated OS SCO; closest match is the software SCO.
+ocsf:RegKey	Registry Key	skos:exactMatch	stix:WindowsRegistryKey	windows-registry-key	semapv:ManualMappingCuration	0.95	OCSF windows extension defines reg_key (class RegKey) analogous to STIX windows-registry-key SCO.

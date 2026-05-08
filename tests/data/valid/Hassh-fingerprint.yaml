@@ -1,0 +1,5 @@
+# HASSH SSH fingerprint — `fingerprint` is required.
+algorithm: ssh
+fingerprint:
+  algorithm_id: MD5
+  value: "06f4be15f6c5cf4a3c4f7c2e9a3d5f7b"

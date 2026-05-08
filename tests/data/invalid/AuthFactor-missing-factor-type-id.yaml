@@ -1,0 +1,5 @@
+# INVALID: AuthFactor requires `factor_type_id` (FactorTypeIdEnum) but it
+# is missing.
+factor_type: SMS one-time code
+phone_number: "+1-555-0100"
+provider: ExampleAuthApp

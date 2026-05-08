@@ -1,0 +1,39 @@
+# Authentication event with nested User + endpoint objects.
+# Class-scoped enum overrides (e.g. AuthenticationActivityIdEnum.LOGON) are
+# inherited from base_event's slot_usage at the Python level — so we use the
+# values baked into the BaseEvent-scoped enums (UNCATEGORIZED, BASE_EVENT,
+# UNKNOWN). All ``required`` slots from the cloud/host/osint profiles
+# included by base_event are populated.
+class_uid: BASE_EVENT
+category_uid: UNCATEGORIZED
+activity_id: UNKNOWN
+type_uid: 300201
+severity_id: INFORMATIONAL
+time: 1700000123000
+status: Success
+status_id: SUCCESS
+auth_protocol: SSH
+auth_protocol_id: KERBEROS
+metadata:
+  version: "1.4.0"
+  product:
+    name: openssh
+    version: "8.9p1"
+cloud:
+  provider: aws
+osint:
+  - type_id: HOSTNAME
+    value: bastion-01.example.com
+user:
+  name: alice
+  uid: u-7001
+src_endpoint:
+  ip: 203.0.113.42
+  hostname: laptop-alice
+dst_endpoint:
+  ip: 10.0.0.7
+  hostname: bastion-01
+  os:
+    name: Ubuntu
+    type_id: LINUX
+    version: "22.04"

@@ -1,0 +1,11 @@
+# Email object exercising the renamed `from_` slot (Python keyword work-around).
+from_: alice@example.com
+to:
+  - bob@example.com
+  - carol@example.com
+cc:
+  - dave@example.com
+subject: "Quarterly report"
+message_uid: "<abc123@mail.example.com>"
+size: 51200
+is_read: false

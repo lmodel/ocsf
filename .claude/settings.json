@@ -1,0 +1,32 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(just --version)",
+      "Bash(command -v linkml)",
+      "Read(//home/noel/.cargo/bin/**)",
+      "Read(//usr/local/bin/**)",
+      "Bash(command -v uv pipx)",
+      "Bash(pip3 list *)",
+      "Bash(python3 -m pip list)",
+      "Bash(python3 -m linkml.linter src/ocsf/schema/ocsf.yaml)",
+      "Bash(python3 -c \"from linkml.linter.cli import main; print\\('ok'\\)\")",
+      "Bash(python3 -m linkml --help)",
+      "Bash(python3 -c \"from linkml.linter.cli import main; main\\(['src/ocsf/schema/ocsf.yaml']\\)\")",
+      "Bash(grep -rn \"is_a: System$\\\\|is_a: Findings$\\\\|is_a: Iam$\\\\|is_a: Network$\\\\|is_a: Discovery$\\\\|is_a: Application$\\\\|is_a: Remediation$\\\\|is_a: UnmannedSystems$\" src/ocsf/schema/)",
+      "Bash(grep -B1 \"is_a: System$\" src/ocsf/schema/extensions/windows.yaml)",
+      "Bash(python3 -c ' *)",
+      "Bash(python3 -c \"from linkml.utils.generator import Generator; print\\('ok'\\)\")",
+      "Bash(python3 -c \"from linkml.generators.projectgen import ProjectGenerator; print\\('ok'\\)\")",
+      "Bash(python3 -m pytest tests/ -x)",
+      "Bash(PYTHONPATH=src python3 -m pytest tests/ -x)",
+      "Bash(PYTHONPATH=src python3 -c \"import ocsf.datamodel.ocsf; print\\('imported ok'\\)\")",
+      "Bash(PYTHONPATH=src python3 -c \"import ocsf.datamodel.ocsf as m; print\\('imported ok, classes:', sum\\(1 for n in dir\\(m\\) if not n.startswith\\('_'\\)\\)\\)\")",
+      "Bash(PYTHONPATH=src python3 -c ' *)",
+      "Bash(rm -rf src/ocsf/schema/*.yaml src/ocsf/schema/events src/ocsf/schema/profiles src/ocsf/schema/extensions && python3 -m tools.generate_ocsf_schema 2>&1 | tail -2 && python3 -c \"from linkml.linter.cli import main; main\\(['src/ocsf/schema/ocsf.yaml']\\)\" 2>&1 | tail -3)",
+      "Bash(PYTHONPATH=src python3 -m pytest tests/)"
+    ],
+    "additionalDirectories": [
+      "/home/noel/git/hub/lmodel/ocsf/src/ocsf/schema"
+    ]
+  }
+}

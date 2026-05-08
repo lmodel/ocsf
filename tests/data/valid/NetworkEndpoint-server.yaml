@@ -1,0 +1,15 @@
+# NetworkEndpoint — inherits ip/hostname/etc. from Endpoint; type_id from EndpointTypeIdEnum.
+hostname: api.example.com
+ip: 198.51.100.10
+port: 443
+mac: 00:11:22:33:44:55
+type: Server
+svc_name: https
+isp: ExampleNet
+isp_org: ExampleCorp
+intermediate_ips:
+  - 203.0.113.1
+  - 203.0.113.2
+fingerprints:
+  - algorithm_id: SHA_256
+    value: "1111111111111111111111111111111111111111111111111111111111111111"

@@ -1,0 +1,3 @@
+# INVALID: ThreatActor requires `name` but it is missing.
+type: Advanced Persistent Threat
+type_id: NATION_STATE

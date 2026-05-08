@@ -1,0 +1,15 @@
+# Endpoint with a nested Os object — exercises class-as-range for an
+# inline object slot + an enum-typed slot (type_id).
+name: web01
+uid: ep-001
+hostname: web01.example.com
+domain: example.com
+ip: 10.0.0.42
+mac: 00:1B:44:11:3A:B7
+os:
+  name: Ubuntu
+  type_id: LINUX
+  version: "22.04"
+  build: 22.04.3
+  cpu_bits: 64
+type: Server

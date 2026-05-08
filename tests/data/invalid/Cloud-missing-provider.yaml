@@ -1,0 +1,3 @@
+# INVALID: `provider` is required on Cloud but is missing.
+region: us-east-1
+zone: us-east-1a

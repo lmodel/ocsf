@@ -1,0 +1,6 @@
+# INVALID: Package requires both `name` and `version`; `version` is missing.
+name: openssl-libs
+release: "16.el9_2"
+architecture: x86_64
+type: rpm
+type_id: APPLICATION

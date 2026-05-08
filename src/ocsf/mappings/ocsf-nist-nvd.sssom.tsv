@@ -1,0 +1,24 @@
+# curie_map:
+#   ocsf: 'https://w3id.org/lmodel/ocsf/'
+#   nvd: 'https://w3id.org/lmodel/nist-nvd/'
+#   skos: 'http://www.w3.org/2004/02/skos/core#'
+#   semapv: 'https://w3id.org/semapv/vocab/'
+# license: 'https://creativecommons.org/licenses/by/4.0/'
+# mapping_set_id: 'https://w3id.org/lmodel/ocsf/mappings/ocsf-nist-nvd'
+# mapping_set_title: 'OCSF to NIST NVD class mappings'
+# mapping_set_description: |
+#   Class-level mappings between OCSF (Open Cybersecurity Schema Framework)
+#   classes and the NIST National Vulnerability Database (NVD) LinkML schema.
+#   NVD enriches CVE records with CVSS scores, CPE applicability, and weakness
+#   attributions. OCSF Cvss maps directly to NVD CVSSMetric; vulnerability and
+#   affected-package objects correspond to NVD enrichment fields.
+# mapping_set_version: '1.0.0'
+# creator_id: 'https://orcid.org/0000-0000-0000-0000'
+subject_id	subject_label	predicate_id	object_id	object_label	mapping_justification	confidence	comment
+ocsf:Cvss	CVSS Score	skos:exactMatch	nvd:CVSSMetric	CVSS Metric	semapv:ManualMappingCuration	0.90	OCSF Cvss and NVD CVSSMetric both capture CVSS version, vector string, and base/temporal/environmental scores for a vulnerability.
+ocsf:Cve	CVE	skos:closeMatch	nvd:NVDEntry	NVD Entry	semapv:ManualMappingCuration	0.80	OCSF Cve models the CVE Program record; NVD NVDEntry is the NVD-enriched view of the same CVE with additional CVSS, CPE, and CWE data.
+ocsf:Vulnerability	Vulnerability Details	skos:closeMatch	nvd:NVDEntry	NVD Entry	semapv:ManualMappingCuration	0.75	OCSF Vulnerability wraps CVE references and CVSS details closely aligned to the NVD enrichment model; close match because OCSF may reference non-NVD sources.
+ocsf:AffectedPackage	Affected Software Package	skos:closeMatch	nvd:CPEMatch	CPE Match	semapv:ManualMappingCuration	0.80	OCSF AffectedPackage carries vendor/product/version/CPE data; NVD CPEMatch encodes the same data in CPE applicability statements — structurally equivalent with minor granularity differences.
+ocsf:Epss	EPSS	skos:relatedMatch	nvd:NVDEntry	NVD Entry	semapv:ManualMappingCuration	0.55	EPSS scores contextualise NVD vulnerability data; NVD NVDEntry includes an EPSS indicator where available — related via shared vulnerability record.
+ocsf:VulnerabilityFinding	Vulnerability Finding	skos:closeMatch	nvd:NVDEntry	NVD Entry	semapv:ManualMappingCuration	0.75	A VulnerabilityFinding event surfaces NVD-sourced data (CVSS, CPE, CWE) for a detected CVE; structurally close to an NVD entry.
+ocsf:Cwe	CWE	skos:closeMatch	nvd:NVDWeakness	NVD Weakness	semapv:ManualMappingCuration	0.80	OCSF Cwe carries a CWE identifier and caption; NVD NVDWeakness stores the weakness attribution row associated with an NVD entry — same concept, different container.

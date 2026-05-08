@@ -1,0 +1,4 @@
+# A CWE record — only `uid` is required.
+uid: CWE-79
+caption: "Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting')"
+src_url: https://cwe.mitre.org/data/definitions/79.html

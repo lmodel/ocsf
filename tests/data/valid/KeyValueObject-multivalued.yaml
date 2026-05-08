@@ -1,0 +1,5 @@
+# KeyValueObject — `name` is required. Demonstrates the multivalued `values`.
+name: allowed-origins
+values:
+  - https://app.example.com
+  - https://admin.example.com

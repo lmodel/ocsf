@@ -1,0 +1,821 @@
+id: https://w3id.org/lmodel/ocsf/extensions
+name: ocsf-extensions
+description: OCSF platform extensions (linux, macos, windows). Each class is annotated with the originating extension name and only prefixed with the extension when its bare class name would collide with a base-schema class.
+license: Apache-2.0
+source: https://github.com/ocsf/ocsf-schema/tree/main/extensions
+version: 1.9.0-dev
+annotations:
+  copyright: © OCSF a Series of LF Projects, LLC
+prefixes:
+  ocsf: https://w3id.org/lmodel/ocsf/
+  linkml: https://w3id.org/linkml/
+  schema: http://schema.org/
+  xsd: http://www.w3.org/2001/XMLSchema#
+  rdfs: http://www.w3.org/2000/01/rdf-schema#
+  dcterms: http://purl.org/dc/terms/
+  skos: http://www.w3.org/2004/02/skos/core#
+  attack: https://lmodel.github.io/attack/
+  stix: https://lmodel.github.io/stix/
+  uco_master: https://lmodel.github.io/uco-master/
+  capec: https://w3id.org/lmodel/capec/
+  cve: https://w3id.org/lmodel/cve/
+  cwe: https://w3id.org/lmodel/cwe/
+  iso27001: https://w3id.org/lmodel/iso27001/
+  kev_catalog: https://w3id.org/lmodel/kev-catalog/
+  nvd: https://w3id.org/lmodel/nist-nvd/
+  core: https://w3id.org/lmodel/vulnerability-core/
+default_prefix: ocsf
+default_range: string
+imports:
+- linkml:types
+- ./dictionary
+- ./enums
+- ./objects
+- ./profiles
+- ./events
+slots:
+  hosted_services:
+    description: The Windows services that this process is hosting.
+    range: WinService
+    multivalued: true
+    aliases:
+    - Hosted Services
+    annotations:
+      ocsf_extension: windows
+  hosting_process:
+    description: The process that is hosting this service.
+    range: ProcessEntity
+    aliases:
+    - Hosting Process
+    annotations:
+      ocsf_extension: windows
+  load_order_group:
+    description: The name of the load ordering group of which this service is a member.
+    range: string
+    aliases:
+    - Load Order Group
+    annotations:
+      ocsf_extension: windows
+  prev_reg_key:
+    description: The registry key before the mutation
+    range: RegKey
+    aliases:
+    - Previous Registry Key
+    annotations:
+      ocsf_extension: windows
+  prev_reg_value:
+    description: The registry value before the mutation
+    range: RegValue
+    aliases:
+    - Previous Registry Value
+    annotations:
+      ocsf_extension: windows
+  reg_binary_data:
+    description: The data of the registry value when <code>type_id</code> is <code>REG_BINARY</code> or <code>REG_NONE</code>.
+    range: string
+    aliases:
+    - Registry Binary Data
+    annotations:
+      ocsf_extension: windows
+  reg_integer_data:
+    description: The data of the registry value when <code>type_id</code> is <code>REG_DWORD</code>, <code>REG_DWORD_BIG_ENDIAN</code>, or <code>REG_QWORD</code>.
+    range: integer
+    aliases:
+    - Registry Integer Data
+    annotations:
+      ocsf_extension: windows
+  reg_key:
+    description: The registry key.
+    range: RegKey
+    aliases:
+    - Registry Key
+    annotations:
+      ocsf_extension: windows
+  reg_string_data:
+    description: The data of the registry value when <code>type_id</code> is <code>REG_SZ</code>, <code>REG_EXPAND_SZ</code>, or <code>REG_LINK</code>.
+    range: string
+    aliases:
+    - Registry String Data
+    annotations:
+      ocsf_extension: windows
+  reg_string_list_data:
+    description: The data of the registry value when <code>type_id</code> is <code>REG_MULTI_SZ</code>.
+    range: string
+    multivalued: true
+    aliases:
+    - Registry String List Data
+    annotations:
+      ocsf_extension: windows
+  reg_value:
+    description: The registry value.
+    range: RegValue
+    aliases:
+    - Registry Value
+    annotations:
+      ocsf_extension: windows
+  run_count:
+    description: The prefetch file run count.
+    range: integer
+    aliases:
+    - Run Count
+    annotations:
+      ocsf_extension: windows
+  service_category:
+    description: The service category, normalized to the caption of the service_category_id value. In the case of 'Other', it is defined by the event source.
+    range: string
+    aliases:
+    - Service Category
+    annotations:
+      ocsf_extension: windows
+  service_category_id:
+    description: The normalized identifier of the service category.
+    range: WindowsServiceCategoryIdEnum
+    aliases:
+    - Service Category ID
+    annotations:
+      ocsf_extension: windows
+  service_dependencies:
+    description: The names of other services upon which this service has a dependency.
+    range: string
+    multivalued: true
+    aliases:
+    - Service Dependencies
+    annotations:
+      ocsf_extension: windows
+  service_dll_file:
+    description: For a shared user mode service (<code>service_type_id</code> is 4) this is the DLL that gets loaded by the generic service host process (e.g. <code>svchost.exe</code>) to implement the service.
+    range: File
+    aliases:
+    - Service DLL
+    annotations:
+      ocsf_extension: windows
+  service_error_control:
+    description: The service error control, normalized to the caption of the <code>service_error_control_id</code> value. In the case of 'Other', it is defined by the event source.
+    range: string
+    aliases:
+    - Service Error Control
+    annotations:
+      ocsf_extension: windows
+  service_error_control_id:
+    description: The normalized identifier of the service error control.
+    range: WindowsServiceErrorControlIdEnum
+    aliases:
+    - Service Error Control ID
+    annotations:
+      ocsf_extension: windows
+  service_file:
+    description: 'For a user mode service (<code>service_type_id</code> 3 or 4) this is the executable program that the SCM launches as the service process.<br>For a kernel mode driver (<code>service_type_id</code> 1 or 2) this is the driver file loaded into the kernel at the request of the SCM. '
+    range: File
+    aliases:
+    - Service File
+    annotations:
+      ocsf_extension: windows
+  service_start_name:
+    description: For a user mode service, this attribute represents the name of the account under which the service is run. For a kernel mode driver, this attribute represents the object name used to load the driver.
+    range: string
+    aliases:
+    - Service Start Name
+    annotations:
+      ocsf_extension: windows
+  service_start_type:
+    description: The service start type, normalized to the caption of the <code>service_start_type_id</code> value. In the case of 'Other', it is defined by the event source.
+    range: string
+    aliases:
+    - Service Start Type
+    annotations:
+      ocsf_extension: windows
+  service_start_type_id:
+    description: The normalized identifier of the service start type.
+    range: WindowsServiceStartTypeIdEnum
+    aliases:
+    - Service Start Type ID
+    annotations:
+      ocsf_extension: windows
+  service_type:
+    description: The service type, normalized to the caption of the service_type_id value. In the case of 'Other', it is defined by the event source.
+    range: string
+    aliases:
+    - Service Type
+    annotations:
+      ocsf_extension: windows
+  service_type_id:
+    description: The normalized identifier of the service type.
+    range: WindowsServiceTypeIdEnum
+    aliases:
+    - Service Type ID
+    annotations:
+      ocsf_extension: windows
+  win_resource:
+    description: The Windows resource object that was accessed, such as a mutant or timer.
+    range: WinResource
+    aliases:
+    - Windows Resource
+    annotations:
+      ocsf_extension: windows
+  win_service:
+    description: The Windows service.
+    range: WinService
+    aliases:
+    - Windows Service
+    annotations:
+      ocsf_extension: windows
+classes:
+  LinuxUsersProfile:
+    description: The attributes that Linux uses to identify user information.
+    aliases:
+    - Linux Users
+    mixin: true
+    slots:
+    - auid
+    - egid
+    - euid
+    - group
+    slot_usage:
+      group:
+        recommended: true
+        description: The group under which this process is running.
+    annotations:
+      ocsf_profile: linux/linux_users
+      ocsf_extension: linux
+  LinuxProcess:
+    description: Extends the process object to add Linux specific fields
+    aliases:
+    - Linux Process
+    is_a: Process
+    mixins:
+    - LinuxUsersProfile
+    exact_mappings:
+    - uco_master:UNIXProcess
+    annotations:
+      ocsf_extension: linux
+  MacosUsersProfile:
+    description: The attributes that macOS uses to identify user information.
+    aliases:
+    - macOS Users
+    mixin: true
+    slots:
+    - egid
+    - euid
+    annotations:
+      ocsf_profile: macos/macos_users
+      ocsf_extension: macos
+  MacosProcess:
+    description: Extends the process object to add macOS specific fields
+    aliases:
+    - macOS Process
+    is_a: Process
+    mixins:
+    - MacosUsersProfile
+    close_mappings:
+    - uco_master:UNIXProcess
+    annotations:
+      ocsf_extension: macos
+  WindowsEvidences:
+    description: Extends the evidences object to add Windows specific fields
+    aliases:
+    - Windows Evidence Artifacts
+    is_a: Evidences
+    slots:
+    - reg_key
+    - reg_value
+    - win_service
+    slot_usage:
+      reg_key:
+        description: Describes details about the registry key that triggered the detection.
+        recommended: true
+      reg_value:
+        description: Describes details about the registry value that triggered the detection.
+        recommended: true
+      win_service:
+        description: Describes details about the Windows service that triggered the detection.
+        recommended: true
+    rules:
+    - description: 'OCSF at_least_one: at least one of [''actor'', ''api'', ''connection_info'', ''data'', ''database'', ''databucket'', ''device'', ''dst_endpoint'', ''email'', ''file'', ''process'', ''query'', ''src_endpoint'', ''url'', ''user'', ''job'', ''script'', ''reg_key'', ''reg_value'', ''win_service''] must be set.'
+      postconditions:
+        any_of:
+        - slot_conditions:
+            actor:
+              required: true
+        - slot_conditions:
+            api:
+              required: true
+        - slot_conditions:
+            connection_info:
+              required: true
+        - slot_conditions:
+            data:
+              required: true
+        - slot_conditions:
+            database:
+              required: true
+        - slot_conditions:
+            databucket:
+              required: true
+        - slot_conditions:
+            device:
+              required: true
+        - slot_conditions:
+            dst_endpoint:
+              required: true
+        - slot_conditions:
+            email:
+              required: true
+        - slot_conditions:
+            file:
+              required: true
+        - slot_conditions:
+            process:
+              required: true
+        - slot_conditions:
+            query:
+              required: true
+        - slot_conditions:
+            src_endpoint:
+              required: true
+        - slot_conditions:
+            url:
+              required: true
+        - slot_conditions:
+            user:
+              required: true
+        - slot_conditions:
+            job:
+              required: true
+        - slot_conditions:
+            script:
+              required: true
+        - slot_conditions:
+            reg_key:
+              required: true
+        - slot_conditions:
+            reg_value:
+              required: true
+        - slot_conditions:
+            win_service:
+              required: true
+    annotations:
+      ocsf_constraints: '{"at_least_one": ["actor", "api", "connection_info", "data", "database", "databucket", "device", "dst_endpoint", "email", "file", "process", "query", "src_endpoint", "url", "user", "job", "script", "reg_key", "reg_value", "win_service"]}'
+      ocsf_extension: windows
+  WindowsProcess:
+    description: Extends the process object to add Windows specific fields.
+    aliases:
+    - Process
+    is_a: Process
+    slots:
+    - hosted_services
+    rules:
+    - description: 'OCSF at_least_one: at least one of [''pid'', ''uid'', ''cpid''] must be set.'
+      postconditions:
+        any_of:
+        - slot_conditions:
+            pid:
+              required: true
+        - slot_conditions:
+            uid:
+              required: true
+        - slot_conditions:
+            cpid:
+              required: true
+    annotations:
+      ocsf_constraints: '{"at_least_one": ["pid", "uid", "cpid"]}'
+      ocsf_extension: windows
+    exact_mappings:
+    - uco_master:WindowsProcess
+  WindowsQueryEvidence:
+    description: The resulting evidence information that was queried.
+    aliases:
+    - Query Evidence
+    is_a: QueryEvidence
+    slots:
+    - reg_key
+    - reg_value
+    slot_usage:
+      reg_key:
+        description: The registry key object describes a Windows registry key.
+        recommended: true
+        annotations:
+          group: primary
+      reg_value:
+        description: The registry key object describes a Windows registry value.
+        recommended: true
+        annotations:
+          group: primary
+    rules:
+    - description: 'OCSF just_one: exactly one of [''connection_info'', ''file'', ''folder'', ''group'', ''job'', ''kernel'', ''module'', ''network_interfaces'', ''peripheral_device'', ''process'', ''reg_key'', ''reg_value'', ''service'', ''session'', ''startup_item'', ''user''] must be set.'
+      postconditions:
+        exactly_one_of:
+        - slot_conditions:
+            connection_info:
+              required: true
+        - slot_conditions:
+            file:
+              required: true
+        - slot_conditions:
+            folder:
+              required: true
+        - slot_conditions:
+            group:
+              required: true
+        - slot_conditions:
+            job:
+              required: true
+        - slot_conditions:
+            kernel:
+              required: true
+        - slot_conditions:
+            module:
+              required: true
+        - slot_conditions:
+            network_interfaces:
+              required: true
+        - slot_conditions:
+            peripheral_device:
+              required: true
+        - slot_conditions:
+            process:
+              required: true
+        - slot_conditions:
+            reg_key:
+              required: true
+        - slot_conditions:
+            reg_value:
+              required: true
+        - slot_conditions:
+            service:
+              required: true
+        - slot_conditions:
+            session:
+              required: true
+        - slot_conditions:
+            startup_item:
+              required: true
+        - slot_conditions:
+            user:
+              required: true
+    annotations:
+      ocsf_constraints: '{"just_one": ["connection_info", "file", "folder", "group", "job", "kernel", "module", "network_interfaces", "peripheral_device", "process", "reg_key", "reg_value", "service", "session", "startup_item", "user"]}'
+      ocsf_extension: windows
+  RegKey:
+    description: The registry key object describes a Windows registry key.
+    aliases:
+    - Registry Key
+    is_a: Object
+    slots:
+    - is_system
+    - modified_time
+    - path
+    - security_descriptor
+    slot_usage:
+      modified_time:
+        description: The time when the registry key was last modified.
+      path:
+        description: The full path to the registry key.
+        required: true
+      security_descriptor:
+        description: The security descriptor of the registry key.
+    see_also:
+    - https://d3fend.mitre.org/dao/artifact/d3f:WindowsRegistryKey/
+    notes:
+    - D3FEND™ Ontology d3f:WindowsRegistryKey. — https://d3fend.mitre.org/dao/artifact/d3f:WindowsRegistryKey/
+    annotations:
+      observable_id: 28
+      ocsf_extension: windows
+    exact_mappings:
+    - stix:WindowsRegistryKey
+    - uco_master:WindowsRegistryKey
+  RegValue:
+    description: The registry value object describes a Windows registry value.
+    aliases:
+    - Registry Value
+    is_a: Object
+    slots:
+    - data
+    - is_default
+    - is_system
+    - modified_time
+    - name
+    - path
+    - reg_binary_data
+    - reg_integer_data
+    - reg_string_data
+    - reg_string_list_data
+    - type
+    - type_id
+    slot_usage:
+      data:
+        description: The data of the registry value. Where the value type is known, implementers should instead use a type-specific attribute, i.e. <code>reg_binary_data</code>, <code>reg_integer_data</code>, <code>reg_string_data</code>, or <code>reg_string_list_data</code>.
+      modified_time:
+        description: The time when the registry value was last modified.
+      name:
+        description: The name of the registry value.
+        required: true
+      path:
+        description: The full path to the registry key, where the value is located.
+        required: true
+      type:
+        description: A string representation of the value type as specified in <a target='_blank' href='https://learn.microsoft.com/en-us/windows/win32/sysinfo/registry-value-types'>Registry Value Types</a>.
+      type_id:
+        description: The value type ID.
+        recommended: true
+        range: RegValueTypeIdEnum
+    see_also:
+    - https://d3fend.mitre.org/dao/artifact/d3f:WindowsRegistryValue/
+    notes:
+    - D3FEND™ Ontology d3f:WindowsRegistryValue. — https://d3fend.mitre.org/dao/artifact/d3f:WindowsRegistryValue/
+    annotations:
+      observable_id: 29
+      ocsf_extension: windows
+  WindowsStartupItem:
+    description: The startup item object describes an application component that has associated startup criteria and configurations.
+    aliases:
+    - Startup Item
+    is_a: StartupItem
+    slots:
+    - win_service
+    slot_usage:
+      win_service:
+        description: The startup item Windows service resource.
+    rules:
+    - description: 'OCSF just_one: exactly one of [''driver'', ''job'', ''process'', ''win_service''] must be set.'
+      postconditions:
+        exactly_one_of:
+        - slot_conditions:
+            driver:
+              required: true
+        - slot_conditions:
+            job:
+              required: true
+        - slot_conditions:
+            process:
+              required: true
+        - slot_conditions:
+            win_service:
+              required: true
+    annotations:
+      ocsf_constraints: '{"just_one": ["driver", "job", "process", "win_service"]}'
+      ocsf_extension: windows
+  WinResource:
+    description: The Windows resource object describes a resource object managed by Windows, such as mutant or timer.
+    aliases:
+    - Windows Resource
+    is_a: Resource
+    slots:
+    - details
+    - name
+    - svc_name
+    - type
+    - type_id
+    - uid
+    slot_usage:
+      details:
+        description: The string detailing the attributes of the resource object.
+      name:
+        description: The name of the resource object.
+      svc_name:
+        description: The Windows service acting as the object server for the resource object, such as Security or Security Account Manager.
+      type:
+        description: The type of the Windows resource object.
+      type_id:
+        description: The normalized type identifier of the Windows resource object accessed.
+        required: true
+        range: WinResourceTypeIdEnum
+      uid:
+        description: The Windows provided handle identifier for the resource object
+    annotations:
+      ocsf_extension: windows
+  WinService:
+    description: The Windows Service object describes a Windows service.
+    aliases:
+    - Windows Service
+    is_a: Service
+    slots:
+    - cmd_line
+    - hosting_process
+    - load_order_group
+    - name
+    - service_category
+    - service_category_id
+    - service_dependencies
+    - service_dll_file
+    - service_error_control
+    - service_error_control_id
+    - service_file
+    - service_start_name
+    - service_start_type
+    - service_start_type_id
+    - service_type
+    - service_type_id
+    slot_usage:
+      cmd_line:
+        description: The full command line used to launch the service.
+        recommended: true
+      load_order_group:
+        recommended: true
+      name:
+        description: The unique name of the service.
+        required: true
+      service_category_id:
+        recommended: true
+      service_dependencies:
+        recommended: true
+      service_error_control_id:
+        recommended: true
+      service_file:
+        recommended: true
+      service_start_name:
+        recommended: true
+      service_start_type_id:
+        recommended: true
+      service_type_id:
+        recommended: true
+    rules:
+    - description: 'OCSF at_least_one: at least one of [''cmd_line'', ''service_category_id'', ''service_dependencies'', ''service_error_control_id'', ''service_start_name'', ''service_start_type_id'', ''service_type_id''] must be set.'
+      postconditions:
+        any_of:
+        - slot_conditions:
+            cmd_line:
+              required: true
+        - slot_conditions:
+            service_category_id:
+              required: true
+        - slot_conditions:
+            service_dependencies:
+              required: true
+        - slot_conditions:
+            service_error_control_id:
+              required: true
+        - slot_conditions:
+            service_start_name:
+              required: true
+        - slot_conditions:
+            service_start_type_id:
+              required: true
+        - slot_conditions:
+            service_type_id:
+              required: true
+    annotations:
+      ocsf_constraints: '{"at_least_one": ["cmd_line", "service_category_id", "service_dependencies", "service_error_control_id", "service_start_name", "service_start_type_id", "service_type_id"]}'
+      ocsf_extension: windows
+    close_mappings:
+    - uco_master:WindowsActiveDirectoryAccount
+  PrefetchQuery:
+    description: Prefetch Query events report information about Windows prefetch files.
+    aliases:
+    - Prefetch Query
+    deprecated: Use the <code>Evidence Info</code> class with the <code>Query Evidence</code> object populated with <code>File</code> instead. (since 1.5.0)
+    is_a: DiscoveryResult
+    slots:
+    - last_run_time
+    - name
+    - run_count
+    slot_usage:
+      last_run_time:
+        description: The prefetch file last run time.
+        recommended: true
+        annotations:
+          group: occurrence
+      name:
+        description: The name of the prefetch file that is the target of the query.
+        required: true
+        annotations:
+          group: primary
+      run_count:
+        recommended: true
+        annotations:
+          group: primary
+    annotations:
+      ocsf_event_uid: 19
+      ocsf_extension: windows
+  RegistryKeyActivity:
+    description: Registry Key Activity events report when a process performs an action on a Windows registry key.
+    aliases:
+    - Registry Key Activity
+    is_a: SystemEvent
+    slots:
+    - access_mask
+    - activity_id
+    - actor
+    - create_mask
+    - open_mask
+    - prev_reg_key
+    - reg_key
+    slot_usage:
+      access_mask:
+        recommended: true
+        annotations:
+          group: primary
+      activity_id:
+        range: RegistryKeyActivityActivityIdEnum
+      actor:
+        description: The actor that performed the activity on the <code>reg_key</code> object.
+        required: true
+      create_mask:
+        recommended: true
+        annotations:
+          group: primary
+      open_mask:
+        recommended: true
+        annotations:
+          group: primary
+      prev_reg_key:
+        recommended: true
+        annotations:
+          group: primary
+      reg_key:
+        required: true
+        annotations:
+          group: primary
+    annotations:
+      ocsf_event_uid: 1
+      ocsf_extension: windows
+  RegistryKeyQuery:
+    description: Registry Key Query events report information about discovered Windows registry keys.
+    aliases:
+    - Registry Key Query
+    deprecated: Use the <code>Evidence Info</code> class with the <code>Query Evidence</code> object populated with <code>Registry Key</code> instead. (since 1.5.0)
+    is_a: DiscoveryResult
+    slots:
+    - reg_key
+    slot_usage:
+      reg_key:
+        description: The registry key that pertains to the event.
+        required: true
+        annotations:
+          group: primary
+    annotations:
+      ocsf_event_uid: 4
+      ocsf_extension: windows
+  RegistryValueActivity:
+    description: Registry Value Activity events reports when a process performs an action on a Windows registry value.
+    aliases:
+    - Registry Value Activity
+    is_a: SystemEvent
+    slots:
+    - activity_id
+    - actor
+    - prev_reg_value
+    - reg_value
+    slot_usage:
+      activity_id:
+        range: RegistryValueActivityActivityIdEnum
+      actor:
+        description: The actor that performed the activity on the <code>reg_value</code> object.
+        required: true
+      reg_value:
+        required: true
+    annotations:
+      ocsf_event_uid: 2
+      ocsf_extension: windows
+  RegistryValueQuery:
+    description: Registry Value Query events report information about discovered Windows registry values.
+    aliases:
+    - Registry Value Query
+    deprecated: Use the <code>Evidence Info</code> class with the <code>Query Evidence</code> object populated with <code>Registry Value</code> instead. (since 1.5.0)
+    is_a: DiscoveryResult
+    slots:
+    - reg_value
+    slot_usage:
+      reg_value:
+        description: The registry value that pertains to the event.
+        required: true
+        annotations:
+          group: primary
+    annotations:
+      ocsf_event_uid: 5
+      ocsf_extension: windows
+  WindowsResourceActivity:
+    description: Windows Resource Activity events report when a process accesses a Windows managed resource object, successful or otherwise.
+    aliases:
+    - Windows Resource Activity
+    is_a: SystemEvent
+    slots:
+    - activity_id
+    - win_resource
+    slot_usage:
+      activity_id:
+        range: WindowsResourceActivityActivityIdEnum
+      win_resource:
+        required: true
+        annotations:
+          group: primary
+    annotations:
+      ocsf_event_uid: 3
+      ocsf_extension: windows
+  WindowsServiceActivity:
+    description: Windows Service Activity events report when a process interacts with the Service Control Manager.
+    aliases:
+    - Windows Service Activity
+    is_a: SystemEvent
+    slots:
+    - activity_id
+    - win_service
+    slot_usage:
+      activity_id:
+        range: WindowsServiceActivityActivityIdEnum
+      win_service:
+        required: true
+        annotations:
+          group: primary
+    annotations:
+      ocsf_event_uid: 4
+      ocsf_extension: windows

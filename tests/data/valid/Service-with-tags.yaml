@@ -1,0 +1,12 @@
+# Service entity — no required slots.
+name: payment-api
+uid: svc-payment-001
+version: "2.4.1"
+labels:
+  - team=billing
+  - tier=critical
+tags:
+  - name: env
+    value: prod
+  - name: region
+    value: us-east-1

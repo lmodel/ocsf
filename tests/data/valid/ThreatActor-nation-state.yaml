@@ -1,0 +1,4 @@
+# ThreatActor — `name` is required; `type_id` is from ThreatActorTypeIdEnum.
+name: APT-EXAMPLE
+type: Advanced Persistent Threat
+type_id: NATION_STATE

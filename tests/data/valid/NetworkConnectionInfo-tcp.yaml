@@ -1,0 +1,6 @@
+# Network connection info for an outbound TCP session.
+direction_id: OUTBOUND
+protocol_name: tcp
+protocol_num: 6
+tcp_flags: 24
+uid: conn-aabbcc

@@ -1,0 +1,4014 @@
+id: https://w3id.org/lmodel/ocsf/events
+name: ocsf-events
+description: OCSF event class definitions across every category. BaseEvent is the abstract root; each category root (e.g. SystemEvent, NetworkEvent) extends BaseEvent and is itself extended by concrete event classes.
+license: Apache-2.0
+source: https://github.com/ocsf/ocsf-schema/tree/main/events
+version: 1.9.0-dev
+annotations:
+  copyright: © OCSF a Series of LF Projects, LLC
+prefixes:
+  ocsf: https://w3id.org/lmodel/ocsf/
+  linkml: https://w3id.org/linkml/
+  schema: http://schema.org/
+  xsd: http://www.w3.org/2001/XMLSchema#
+  rdfs: http://www.w3.org/2000/01/rdf-schema#
+  dcterms: http://purl.org/dc/terms/
+  skos: http://www.w3.org/2004/02/skos/core#
+  attack: https://lmodel.github.io/attack/
+  stix: https://lmodel.github.io/stix/
+  uco_master: https://lmodel.github.io/uco-master/
+  capec: https://w3id.org/lmodel/capec/
+  cve: https://w3id.org/lmodel/cve/
+  cwe: https://w3id.org/lmodel/cwe/
+  iso27001: https://w3id.org/lmodel/iso27001/
+  kev_catalog: https://w3id.org/lmodel/kev-catalog/
+  nvd: https://w3id.org/lmodel/nist-nvd/
+  core: https://w3id.org/lmodel/vulnerability-core/
+default_prefix: ocsf
+default_range: string
+imports:
+- linkml:types
+- ./dictionary
+- ./enums
+- ./categories
+- ./profiles
+- ./objects
+classes:
+  BaseEvent:
+    description: The base event is a generic and concrete event. It also defines a set of attributes available in most event classes. As a generic event that does not belong to any event category, it could be used to log events that are not otherwise defined by the schema.
+    aliases:
+    - Base Event
+    mixins:
+    - CloudProfile
+    - DatetimeProfile
+    - HostProfile
+    - OsintProfile
+    - SecurityControlProfile
+    slots:
+    - activity_id
+    - activity_name
+    - category_name
+    - category_uid
+    - class_name
+    - class_uid
+    - count
+    - duration
+    - end_time
+    - enrichments
+    - message
+    - metadata
+    - observables
+    - raw_data
+    - raw_data_hash
+    - raw_data_size
+    - severity
+    - severity_id
+    - start_time
+    - status
+    - status_code
+    - status_detail
+    - status_id
+    - time
+    - timezone_offset
+    - type_name
+    - type_uid
+    - unmapped
+    slot_usage:
+      activity_id:
+        required: true
+        range: BaseEventActivityIdEnum
+        annotations:
+          group: classification
+      activity_name:
+        annotations:
+          group: classification
+      category_name:
+        annotations:
+          group: classification
+      category_uid:
+        required: true
+        range: BaseEventCategoryUidEnum
+        annotations:
+          group: classification
+      class_name:
+        annotations:
+          group: classification
+      class_uid:
+        required: true
+        range: BaseEventClassUidEnum
+        annotations:
+          group: classification
+      count:
+        annotations:
+          group: occurrence
+      duration:
+        description: The event duration or aggregate time, the amount of time the event covers from <code>start_time</code> to <code>end_time</code> in milliseconds.
+        annotations:
+          group: occurrence
+      end_time:
+        description: The end time of a time period, or the time of the most recent event included in the aggregate event.
+        annotations:
+          group: occurrence
+      enrichments:
+        annotations:
+          group: context
+      message:
+        recommended: true
+        annotations:
+          group: primary
+      metadata:
+        required: true
+        annotations:
+          group: context
+      observables:
+        recommended: true
+        annotations:
+          group: primary
+      raw_data:
+        annotations:
+          group: context
+      raw_data_hash:
+        annotations:
+          group: context
+      raw_data_size:
+        annotations:
+          group: context
+      severity:
+        annotations:
+          group: classification
+      severity_id:
+        required: true
+        annotations:
+          group: classification
+      start_time:
+        description: The start time of a time period, or the time of the least recent event included in the aggregate event.
+        annotations:
+          group: occurrence
+      status:
+        recommended: true
+        annotations:
+          group: primary
+      status_code:
+        recommended: true
+        annotations:
+          group: primary
+      status_detail:
+        recommended: true
+        annotations:
+          group: primary
+      status_id:
+        recommended: true
+        annotations:
+          group: primary
+      time:
+        required: true
+        annotations:
+          group: occurrence
+      timezone_offset:
+        recommended: true
+        annotations:
+          group: occurrence
+      type_name:
+        annotations:
+          group: classification
+      type_uid:
+        required: true
+        annotations:
+          group: classification
+      unmapped:
+        annotations:
+          group: context
+    annotations:
+      category: other
+  ApplicationEvent:
+    aliases:
+    - Application Activity
+    is_a: BaseEvent
+    annotations:
+      category: application
+  ApiActivity:
+    description: API events describe general CRUD (Create, Read, Update, Delete) API activities, e.g. (AWS Cloudtrail)
+    aliases:
+    - API Activity
+    is_a: ApplicationEvent
+    mixins:
+    - TraceProfile
+    - AiOperationProfile
+    slots:
+    - activity_id
+    - actor
+    - api
+    - dst_endpoint
+    - http_request
+    - http_response
+    - resources
+    - src_endpoint
+    slot_usage:
+      activity_id:
+        range: ApiActivityActivityIdEnum
+      actor:
+        required: true
+        annotations:
+          group: primary
+      api:
+        required: true
+        annotations:
+          group: primary
+      dst_endpoint:
+        recommended: true
+        annotations:
+          group: primary
+      http_request:
+        description: Details about the underlying http request.
+        recommended: true
+        annotations:
+          group: primary
+      http_response:
+        description: Details about the underlying http response.
+        recommended: true
+        annotations:
+          group: primary
+      resources:
+        description: Details about resources that were affected by the activity/event.
+        recommended: true
+        annotations:
+          group: primary
+      src_endpoint:
+        description: Details about the source of the activity.
+        required: true
+        annotations:
+          group: primary
+    annotations:
+      ocsf_event_uid: 3
+  ApplicationError:
+    description: Application Error events describe issues with an applications. The error message should be put in the event's <code>message</code> attribute. The <code>metadata.product</code> attribute can be used to capture the originating application information. The <code>host</code> profile can used to include the generating device information. This class is helpful for applications that generate or handle OCSF events and can also be used for errors in upstream products and services.
+    aliases:
+    - Application Error
+    is_a: ApplicationEvent
+    slots:
+    - activity_id
+    - message
+    slot_usage:
+      activity_id:
+        range: ApplicationErrorActivityIdEnum
+      message:
+        description: The error message as reported by the application.
+    annotations:
+      ocsf_event_uid: 8
+  ApplicationLifecycle:
+    description: Application Lifecycle events report installation, removal, start, stop of an application or service.
+    aliases:
+    - Application Lifecycle
+    is_a: ApplicationEvent
+    slots:
+    - activity_id
+    - app
+    slot_usage:
+      activity_id:
+        required: true
+        range: ApplicationLifecycleActivityIdEnum
+      app:
+        description: The application that was affected by the lifecycle event.  This also applies to self-updating application systems.
+        required: true
+        annotations:
+          group: primary
+    see_also:
+    - https://d3fend.mitre.org/event/d3f:ApplicationEvent/
+    notes:
+    - D3FEND™ Ontology d3f:ApplicationEvent — https://d3fend.mitre.org/event/d3f:ApplicationEvent/
+    annotations:
+      ocsf_event_uid: 2
+  DatastoreActivity:
+    description: Datastore events describe general activities (Read, Update, Query, Delete, etc.) which affect datastores or data within those datastores, e.g. (AWS RDS, AWS S3).
+    aliases:
+    - Datastore Activity
+    is_a: ApplicationEvent
+    mixins:
+    - AiOperationProfile
+    slots:
+    - activity_id
+    - actor
+    - database
+    - databucket
+    - dst_endpoint
+    - http_request
+    - http_response
+    - query_info
+    - src_endpoint
+    - table
+    - type
+    - type_id
+    slot_usage:
+      activity_id:
+        range: DatastoreActivityActivityIdEnum
+      actor:
+        required: true
+        annotations:
+          group: primary
+      database:
+        recommended: true
+        annotations:
+          group: primary
+      databucket:
+        recommended: true
+        annotations:
+          group: primary
+      dst_endpoint:
+        description: Details about the endpoint hosting the datastore application or service.
+        recommended: true
+        annotations:
+          group: primary
+      http_request:
+        description: Details about the underlying http request.
+        recommended: true
+        annotations:
+          group: primary
+      http_response:
+        description: Details about the underlying http response.
+        recommended: true
+        annotations:
+          group: primary
+      query_info:
+        recommended: true
+        annotations:
+          group: primary
+      src_endpoint:
+        description: Details about the source of the activity.
+        required: true
+        annotations:
+          group: primary
+      table:
+        recommended: true
+        annotations:
+          group: primary
+      type:
+        description: The datastore resource type (e.g. database, datastore, or table).
+      type_id:
+        description: The normalized datastore resource type identifier.
+        recommended: true
+        range: DatastoreActivityTypeIdEnum
+    rules:
+    - description: 'OCSF at_least_one: at least one of [''database'', ''databucket'', ''table''] must be set.'
+      postconditions:
+        any_of:
+        - slot_conditions:
+            database:
+              required: true
+        - slot_conditions:
+            databucket:
+              required: true
+        - slot_conditions:
+            table:
+              required: true
+    annotations:
+      ocsf_constraints: '{"at_least_one": ["database", "databucket", "table"]}'
+      ocsf_event_uid: 5
+  FileHosting:
+    description: File Hosting Activity events report the actions taken by file management applications, including file sharing servers like Sharepoint and services such as Box, MS OneDrive, Google Drive, or network file share services.
+    aliases:
+    - File Hosting Activity
+    is_a: ApplicationEvent
+    slots:
+    - access_list
+    - access_mask
+    - access_result
+    - activity_id
+    - actor
+    - connection_info
+    - dst_endpoint
+    - expiration_time
+    - file
+    - file_result
+    - http_request
+    - http_response
+    - share
+    - share_type
+    - share_type_id
+    - src_endpoint
+    slot_usage:
+      access_list:
+        annotations:
+          group: context
+      access_mask:
+        description: The sum of hexadecimal values of requested access rights.
+        annotations:
+          group: context
+      access_result:
+        annotations:
+          group: context
+      activity_id:
+        range: FileHostingActivityIdEnum
+      actor:
+        description: The actor that performed the activity on the target file.
+        required: true
+        annotations:
+          group: primary
+      connection_info:
+        annotations:
+          group: context
+      dst_endpoint:
+        description: The endpoint that received the activity on the target file.
+        recommended: true
+      expiration_time:
+        description: The share expiration time.
+        annotations:
+          group: context
+      file:
+        description: The file that is the target of the activity.
+        required: true
+        annotations:
+          group: primary
+      file_result:
+        description: The resulting file object when the activity was allowed and successful.
+        annotations:
+          group: context
+      http_request:
+        description: Details about the underlying HTTP request.
+        recommended: true
+        annotations:
+          group: context
+      http_response:
+        description: Details about the HTTP response, if available.
+        annotations:
+          group: context
+      share:
+        description: The share name.
+        annotations:
+          group: context
+      share_type:
+        annotations:
+          group: context
+      share_type_id:
+        annotations:
+          group: context
+      src_endpoint:
+        description: The endpoint that performed the activity on the target file.
+        required: true
+        annotations:
+          group: primary
+    annotations:
+      ocsf_event_uid: 6
+  ScanActivity:
+    description: Scan events report the start, completion, and results of a scan job. The scan event includes the number of items that were scanned and the number of detections that were resolved.
+    aliases:
+    - Scan Activity
+    is_a: ApplicationEvent
+    slots:
+    - activity_id
+    - command_uid
+    - duration
+    - end_time
+    - num_detections
+    - num_files
+    - num_folders
+    - num_network_items
+    - num_processes
+    - num_registry_items
+    - num_resolutions
+    - num_skipped_items
+    - num_trusted_items
+    - policy
+    - scan
+    - schedule_uid
+    - start_time
+    - total
+    slot_usage:
+      activity_id:
+        range: ScanActivityActivityIdEnum
+      command_uid:
+        description: The command identifier that is associated with this scan event.  This ID uniquely identifies the proactive scan command, e.g., if remotely initiated.
+        recommended: true
+        annotations:
+          group: primary
+      duration:
+        description: The duration of the scan
+        recommended: true
+      end_time:
+        description: The end time of the scan job.
+        recommended: true
+      num_detections:
+        recommended: true
+        annotations:
+          group: primary
+      num_files:
+        recommended: true
+        annotations:
+          group: primary
+      num_folders:
+        recommended: true
+        annotations:
+          group: primary
+      num_network_items:
+        recommended: true
+        annotations:
+          group: primary
+      num_processes:
+        recommended: true
+        annotations:
+          group: primary
+      num_registry_items:
+        recommended: true
+        annotations:
+          group: primary
+      num_resolutions:
+        recommended: true
+        annotations:
+          group: primary
+      num_skipped_items:
+        recommended: true
+        annotations:
+          group: primary
+      num_trusted_items:
+        recommended: true
+        annotations:
+          group: primary
+      policy:
+        description: The policy associated with this Scan event; required if the scan was initiated by a policy.
+        recommended: true
+        annotations:
+          group: primary
+      scan:
+        description: The Scan object describes characteristics of the scan job.
+        required: true
+        annotations:
+          group: primary
+      schedule_uid:
+        recommended: true
+        annotations:
+          group: primary
+      start_time:
+        description: The start time of the scan job.
+        recommended: true
+      total:
+        description: The total number of items that were scanned; zero if no items were scanned.
+        recommended: true
+        annotations:
+          group: primary
+    annotations:
+      ocsf_event_uid: 7
+  WebResourceAccessActivity:
+    description: Web Resource Access Activity events describe successful/failed attempts to access a web resource over HTTP.
+    aliases:
+    - Web Resource Access Activity
+    deprecated: Use the <code>Web Resources Activity</code> class with the <code>Security Control</code> and/or <code>Network Proxy</code> profile instead. (since 1.1.0)
+    is_a: ApplicationEvent
+    mixins:
+    - NetworkProxyProfile
+    slots:
+    - activity_id
+    - http_request
+    - http_response
+    - proxy
+    - src_endpoint
+    - tls
+    - web_resources
+    slot_usage:
+      activity_id:
+        range: WebResourceAccessActivityActivityIdEnum
+      http_request:
+        description: Details about the underlying HTTP request.
+        required: true
+        annotations:
+          group: context
+      http_response:
+        description: Details about the HTTP response, if available.
+        annotations:
+          group: context
+      proxy:
+        description: Details about the proxy service, if available.
+        annotations:
+          group: context
+      src_endpoint:
+        description: Details about the source endpoint of the request.
+        recommended: true
+        annotations:
+          group: primary
+      tls:
+        description: The Transport Layer Security (TLS) attributes, if available.
+        annotations:
+          group: context
+      web_resources:
+        description: Details about the resource that is the target of the activity.
+        required: true
+        annotations:
+          group: primary
+    annotations:
+      ocsf_event_uid: 4
+  WebResourcesActivity:
+    description: Web Resources Activity events describe actions executed on a set of Web Resources.
+    aliases:
+    - Web Resources Activity
+    is_a: ApplicationEvent
+    mixins:
+    - NetworkProxyProfile
+    slots:
+    - activity_id
+    - dst_endpoint
+    - http_request
+    - http_response
+    - src_endpoint
+    - tls
+    - web_resources
+    - web_resources_result
+    slot_usage:
+      activity_id:
+        range: WebResourcesActivityActivityIdEnum
+      dst_endpoint:
+        description: Details about server providing the web resources.
+        recommended: true
+        annotations:
+          group: primary
+      http_request:
+        description: Details about the underlying HTTP request.
+        recommended: true
+        annotations:
+          group: context
+      http_response:
+        description: Details about the HTTP response, if available.
+        annotations:
+          group: context
+      src_endpoint:
+        description: Details about the endpoint from which the request originated.
+        recommended: true
+        annotations:
+          group: primary
+      tls:
+        description: The Transport Layer Security (TLS) attributes, if available.
+        annotations:
+          group: context
+      web_resources:
+        required: true
+        annotations:
+          group: primary
+      web_resources_result:
+        recommended: true
+        annotations:
+          group: primary
+    annotations:
+      ocsf_event_uid: 1
+  DiscoveryEvent:
+    description: The Discovery event is a generic event that defines a set of attributes available in Discovery category events. As a generic event, it could be used to log events that are not otherwise defined by the Discovery specific event classes.
+    aliases:
+    - Discovery
+    is_a: BaseEvent
+    slots:
+    - activity_id
+    slot_usage:
+      activity_id:
+        range: DiscoveryEventActivityIdEnum
+    annotations:
+      category: discovery
+  AdminGroupQuery:
+    description: Admin Group Query events report information about administrative groups.
+    aliases:
+    - Admin Group Query
+    deprecated: Use the <code>Live Evidence Info</code> class. (since 1.5.0)
+    is_a: DiscoveryResult
+    slots:
+    - group
+    - users
+    slot_usage:
+      group:
+        description: The administrative group.
+        required: true
+        annotations:
+          group: primary
+      users:
+        description: The users that belong to the administrative group.
+        recommended: true
+        annotations:
+          group: primary
+    annotations:
+      ocsf_event_uid: 9
+  CloudResourcesInventoryInfo:
+    description: Cloud Resources Inventory Info events report cloud asset inventory data. This data can be either logged or proactively collected. For example, use this event class when creating an inventory of cloud resource information from a Configuration Management Database (CMDB), Cyber Asset Attack Surface Management (CAASM), direct public cloud service provider APIs, Software-as-a-Service (SaaS) APIs, or otherwise.
+    aliases:
+    - Cloud Resources Inventory Info
+    is_a: DiscoveryEvent
+    slots:
+    - cloud
+    - container
+    - database
+    - databucket
+    - idp
+    - region
+    - resources
+    - table
+    slot_usage:
+      cloud:
+        description: Cloud service provider or SaaS platform metadata about the cloud resource(s) that are being discovered by an inventory process.
+        recommended: true
+        annotations:
+          group: primary
+      container:
+        description: A cloud-based container image or running container discovered by an inventory process.
+        recommended: true
+        annotations:
+          group: primary
+      database:
+        description: A cloud-based database discovered by an inventory process.
+        recommended: true
+        annotations:
+          group: primary
+      databucket:
+        description: A cloud-based data bucket or other object storage discovered by an inventory process.
+        recommended: true
+        annotations:
+          group: primary
+      idp:
+        description: The Identity Provider that is being discovered by an inventory process, or that is related to the cloud resource(s) being discovered by an inventory process.
+        recommended: true
+        annotations:
+          group: primary
+      region:
+        description: The cloud region where the resource is located, e.g., <code>us-isof-south-1</code>, <code>eastus2</code>, <code>us-central1</code>, etc.
+        recommended: true
+        annotations:
+          group: context
+      resources:
+        description: The cloud resource(s) that are being discovered by an inventory process. Use this object if there is not a direct object match in the class.
+        recommended: true
+        annotations:
+          group: primary
+      table:
+        description: A cloud-based database table discovered by an inventory process.
+        recommended: true
+        annotations:
+          group: primary
+    rules:
+    - description: 'OCSF at_least_one: at least one of [''cloud'', ''container'', ''database'', ''databucket'', ''idp'', ''resources'', ''table''] must be set.'
+      postconditions:
+        any_of:
+        - slot_conditions:
+            cloud:
+              required: true
+        - slot_conditions:
+            container:
+              required: true
+        - slot_conditions:
+            database:
+              required: true
+        - slot_conditions:
+            databucket:
+              required: true
+        - slot_conditions:
+            idp:
+              required: true
+        - slot_conditions:
+            resources:
+              required: true
+        - slot_conditions:
+            table:
+              required: true
+    annotations:
+      ocsf_constraints: '{"at_least_one": ["cloud", "container", "database", "databucket", "idp", "resources", "table"]}'
+      ocsf_event_uid: 23
+  ConfigState:
+    description: Device Config State events report device configuration data, device assessments, and/or CIS Benchmark results.
+    aliases:
+    - Device Config State
+    deprecated: Use <code>Compliance Finding</code> class. (since 1.5.0)
+    is_a: DiscoveryEvent
+    slots:
+    - actor
+    - assessments
+    - cis_benchmark_result
+    - device
+    slot_usage:
+      actor:
+        annotations:
+          group: context
+      assessments:
+        description: A list of assessments associated with the device.
+        annotations:
+          group: context
+      cis_benchmark_result:
+        recommended: true
+        annotations:
+          group: primary
+      device:
+        description: The device that is being discovered by an inventory process.
+        required: true
+        annotations:
+          group: primary
+    annotations:
+      ocsf_event_uid: 2
+  DeviceConfigStateChange:
+    description: Device Config State Change events report state changes that impact the security of the device.
+    aliases:
+    - Device Config State Change
+    is_a: DiscoveryEvent
+    slots:
+    - actor
+    - device
+    - prev_security_level
+    - prev_security_level_id
+    - prev_security_states
+    - security_level
+    - security_level_id
+    - security_states
+    - state
+    - state_id
+    slot_usage:
+      actor:
+        annotations:
+          group: context
+      device:
+        description: The device that is impacted by the state change.
+        required: true
+        annotations:
+          group: primary
+      prev_security_level:
+        recommended: true
+        annotations:
+          group: primary
+      prev_security_level_id:
+        recommended: true
+        annotations:
+          group: primary
+      prev_security_states:
+        description: The previous security states of the device.
+        recommended: true
+        annotations:
+          group: primary
+      security_level:
+        recommended: true
+        annotations:
+          group: primary
+      security_level_id:
+        recommended: true
+        annotations:
+          group: primary
+      security_states:
+        description: The current security states of the device.
+        recommended: true
+        annotations:
+          group: primary
+      state:
+        description: The Config Change Stat, normalized to the caption of the state_id value. In the case of 'Other', it is defined by the source.
+      state_id:
+        description: The Config Change State of the managed entity.
+        recommended: true
+        range: DeviceConfigStateChangeStateIdEnum
+    annotations:
+      ocsf_event_uid: 19
+  DiscoveryResult:
+    description: Discovery Result events report the results of a discovery request.
+    aliases:
+    - Discovery Result
+    is_a: BaseEvent
+    slots:
+    - activity_id
+    - query_info
+    - query_result
+    - query_result_id
+    slot_usage:
+      activity_id:
+        range: DiscoveryResultActivityIdEnum
+      query_info:
+        description: The search details associated with the query request.
+        recommended: true
+        annotations:
+          group: primary
+      query_result:
+        recommended: true
+        annotations:
+          group: primary
+      query_result_id:
+        required: true
+        annotations:
+          group: primary
+    annotations:
+      category: discovery
+  EvidenceInfo:
+    description: Data collected directly from devices that represents forensic information pulled, queried, or discovered from devices that may indicate malicious activity. It contains a number of child objects, each representing a distinct evidence domain (network connections, file artifacts, registry entries, etc.). When mapping raw telemetry data users should select Query Evidence and then the appropriate child object that best matches the evidence type.
+    aliases:
+    - Live Evidence Info
+    is_a: DiscoveryResult
+    slots:
+    - device
+    - query_evidence
+    slot_usage:
+      device:
+        description: An addressable device, computer system or host from which evidence was collected.
+        required: true
+        annotations:
+          group: primary
+      query_evidence:
+        description: The specific resulting evidence information that was queried or discovered based on the query type. Contains various child objects corresponding to the query_type_id values.
+        required: true
+        annotations:
+          group: primary
+    annotations:
+      ocsf_event_uid: 40
+  FileQuery:
+    description: File Query events report information about files that are present on the system.
+    aliases:
+    - File Query
+    deprecated: Use the <code>Live Evidence Info</code> class. (since 1.5.0)
+    is_a: DiscoveryResult
+    slots:
+    - file
+    slot_usage:
+      file:
+        description: The file that is the target of the query.
+        required: true
+        annotations:
+          group: primary
+    annotations:
+      ocsf_event_uid: 7
+  FolderQuery:
+    description: Folder Query events report information about folders that are present on the system.
+    aliases:
+    - Folder Query
+    deprecated: Use the <code>Live Evidence Info</code> class. (since 1.5.0)
+    is_a: DiscoveryResult
+    slots:
+    - folder
+    slot_usage:
+      folder:
+        description: The folder that is the target of the query.
+        required: true
+        annotations:
+          group: primary
+    annotations:
+      ocsf_event_uid: 8
+  InventoryInfo:
+    description: Device Inventory Info events report device inventory data that is either logged or proactively collected. For example, when collecting device information from a CMDB or running a network sweep of connected devices.
+    aliases:
+    - Device Inventory Info
+    is_a: DiscoveryEvent
+    slots:
+    - actor
+    - device
+    slot_usage:
+      actor:
+        annotations:
+          group: context
+      device:
+        description: The device that is being discovered by an inventory process.
+        required: true
+        annotations:
+          group: primary
+    annotations:
+      ocsf_event_uid: 1
+  JobQuery:
+    description: Job Query events report information about scheduled jobs.
+    aliases:
+    - Job Query
+    deprecated: Use the <code>Live Evidence Info</code> class. (since 1.5.0)
+    is_a: DiscoveryResult
+    slots:
+    - job
+    slot_usage:
+      job:
+        required: true
+        annotations:
+          group: primary
+    annotations:
+      ocsf_event_uid: 10
+  KernelObjectQuery:
+    description: Kernel Object Query events report information about discovered kernel resources.
+    aliases:
+    - Kernel Object Query
+    deprecated: Use the <code>Live Evidence Info</code> class. (since 1.5.0)
+    is_a: DiscoveryResult
+    slots:
+    - kernel
+    slot_usage:
+      kernel:
+        description: The kernel object that pertains to the event.
+        required: true
+        annotations:
+          group: primary
+    annotations:
+      ocsf_event_uid: 6
+  ModuleQuery:
+    description: Module Query events report information about loaded modules.
+    aliases:
+    - Module Query
+    deprecated: Use the <code>Live Evidence Info</code> class. (since 1.5.0)
+    is_a: DiscoveryResult
+    slots:
+    - module
+    - process
+    slot_usage:
+      module:
+        required: true
+        annotations:
+          group: primary
+      process:
+        description: The process that loaded the module.
+        required: true
+        annotations:
+          group: primary
+    annotations:
+      ocsf_event_uid: 11
+  NetworkConnectionQuery:
+    description: Network Connection Query events report information about active network connections.
+    aliases:
+    - Network Connection Query
+    deprecated: Use the <code>Live Evidence Info</code> class. (since 1.5.0)
+    is_a: DiscoveryResult
+    slots:
+    - connection_info
+    - process
+    - state
+    - state_id
+    slot_usage:
+      connection_info:
+        required: true
+        annotations:
+          group: primary
+      process:
+        description: The process that owns the socket.
+        required: true
+        annotations:
+          group: primary
+      state:
+        description: The state of the socket, normalized to the caption of the state_id value. In the case of 'Other', it is defined by the event source.
+        recommended: true
+        annotations:
+          group: primary
+      state_id:
+        description: The state of the socket.
+        required: true
+        range: NetworkConnectionQueryStateIdEnum
+        annotations:
+          group: primary
+    annotations:
+      ocsf_event_uid: 12
+  NetworksQuery:
+    description: Networks Query events report information about network adapters.
+    aliases:
+    - Networks Query
+    deprecated: Use the <code>Live Evidence Info</code> class. (since 1.5.0)
+    is_a: DiscoveryResult
+    slots:
+    - network_interfaces
+    slot_usage:
+      network_interfaces:
+        required: true
+        annotations:
+          group: primary
+    annotations:
+      ocsf_event_uid: 13
+  OsintInventoryInfo:
+    description: OSINT Inventory Info events report open source intelligence or threat intelligence inventory data that is either logged or proactively collected. For example, when collecting OSINT information from Threat Intelligence Platforms (TIPs) or Extended Detection and Response (XDR) platforms, or collecting data from OSINT or other generic threat intelligence and enrichment feeds such as APIs and datastores.
+    aliases:
+    - OSINT Inventory Info
+    is_a: DiscoveryEvent
+    slots:
+    - actor
+    - osint
+    slot_usage:
+      actor:
+        description: The actor describes the process that was the source of the inventory activity. In the case of OSINT inventory data, that could be a particular process or script that is run to scrape the OSINT or threat intelligence data. For example, it could be a Python process that runs to pull data from a MISP or Shodan API.
+        annotations:
+          group: context
+      osint:
+        description: The OSINT that is being discovered by an inventory process.
+        required: true
+        annotations:
+          group: primary
+    annotations:
+      ocsf_event_uid: 21
+  PatchState:
+    description: Operating System Patch State reports the installation of an OS patch to a device and any associated knowledgebase articles.
+    aliases:
+    - Operating System Patch State
+    is_a: DiscoveryEvent
+    slots:
+    - device
+    - kb_article_list
+    slot_usage:
+      device:
+        required: true
+        annotations:
+          group: primary
+      kb_article_list:
+        recommended: true
+        annotations:
+          group: primary
+    rules:
+    - description: 'OCSF at_least_one: at least one of [''device.os.sp_name'', ''device.os.sp_ver'', ''device.os.version''] must be set.'
+      postconditions:
+        any_of:
+        - slot_conditions:
+            device.os.sp_name:
+              required: true
+        - slot_conditions:
+            device.os.sp_ver:
+              required: true
+        - slot_conditions:
+            device.os.version:
+              required: true
+    annotations:
+      ocsf_constraints: '{"at_least_one": ["device.os.sp_name", "device.os.sp_ver", "device.os.version"]}'
+      ocsf_event_uid: 4
+  PeripheralDeviceQuery:
+    description: Peripheral Device Query events report information about peripheral devices.
+    aliases:
+    - Peripheral Device Query
+    deprecated: Use the <code>Live Evidence Info</code> class. (since 1.5.0)
+    is_a: DiscoveryResult
+    slots:
+    - peripheral_device
+    slot_usage:
+      peripheral_device:
+        required: true
+        annotations:
+          group: primary
+    annotations:
+      ocsf_event_uid: 14
+  ProcessQuery:
+    description: Process Query events report information about running processes.
+    aliases:
+    - Process Query
+    deprecated: Use the <code>Live Evidence Info</code> class. (since 1.5.0)
+    is_a: DiscoveryResult
+    slots:
+    - process
+    slot_usage:
+      process:
+        required: true
+        annotations:
+          group: primary
+    annotations:
+      ocsf_event_uid: 15
+  ServiceQuery:
+    description: Service Query events report information about running services.
+    aliases:
+    - Service Query
+    deprecated: Use the <code>Live Evidence Info</code> class. (since 1.5.0)
+    is_a: DiscoveryResult
+    slots:
+    - service
+    slot_usage:
+      service:
+        required: true
+        annotations:
+          group: primary
+    annotations:
+      ocsf_event_uid: 16
+  SessionQuery:
+    description: User Session Query events report information about existing user sessions.
+    aliases:
+    - User Session Query
+    deprecated: Use the <code>Live Evidence Info</code> class. (since 1.5.0)
+    is_a: DiscoveryResult
+    slots:
+    - session
+    slot_usage:
+      session:
+        required: true
+        annotations:
+          group: primary
+    annotations:
+      ocsf_event_uid: 17
+  SoftwareInfo:
+    description: Software Inventory Info events report device software inventory data that is either logged or proactively collected. For example, when collecting device information from a CMDB or running a network sweep of connected devices.
+    aliases:
+    - Software Inventory Info
+    is_a: DiscoveryEvent
+    slots:
+    - actor
+    - device
+    - package
+    - product
+    - sbom
+    slot_usage:
+      actor:
+        annotations:
+          group: context
+      device:
+        description: The device that is being discovered by an inventory process.
+        required: true
+        annotations:
+          group: primary
+      package:
+        description: The device software that is being discovered by an inventory process.
+        recommended: true
+        annotations:
+          group: primary
+        deprecated: Use the <code>sbom</code> attribute instead.
+      product:
+        description: Additional product attributes that have been discovered or enriched from a catalog or other external source.
+        annotations:
+          group: context
+      sbom:
+        description: The Software Bill of Materials (SBOM) of the device software that is being discovered by an inventory process.
+        recommended: true
+        annotations:
+          group: primary
+    annotations:
+      ocsf_event_uid: 20
+  StartupItemQuery:
+    description: Startup Item Query events report information about discovered items, e.g., application components that are generally configured to run automatically.
+    aliases:
+    - Startup Item Query
+    deprecated: Use the <code>Live Evidence Info</code> class. (since 1.5.0)
+    is_a: DiscoveryResult
+    slots:
+    - startup_item
+    slot_usage:
+      startup_item:
+        required: true
+        annotations:
+          group: primary
+    annotations:
+      ocsf_event_uid: 22
+  UserInventory:
+    description: User Inventory Info events report user inventory data that is either logged or proactively collected. For example, when collecting user information from Active Directory entries.
+    aliases:
+    - User Inventory Info
+    is_a: DiscoveryEvent
+    slots:
+    - actor
+    - user
+    slot_usage:
+      actor:
+        description: The actor describes the process that was the source of the inventory activity. In the case of user inventory data, that could be a particular process or script that is run to scrape the user data. For example, it could be a powershell process that runs to pull data from the Azure AD graph API.
+        annotations:
+          group: context
+      user:
+        description: The user that is being discovered by an inventory process.
+        required: true
+        annotations:
+          group: primary
+    annotations:
+      ocsf_event_uid: 3
+  UserQuery:
+    description: User Query events report user data that have been discovered, queried, polled or searched. This event differs from User Inventory as it describes the result of a targeted search by filtering a subset of user attributes.
+    aliases:
+    - User Query
+    deprecated: Use the <code>Live Evidence Info</code> class. (since 1.5.0)
+    is_a: DiscoveryResult
+    slots:
+    - user
+    slot_usage:
+      user:
+        required: true
+        annotations:
+          group: primary
+    annotations:
+      ocsf_event_uid: 18
+  ApplicationSecurityPostureFinding:
+    description: 'The Application Security Posture Finding event is a notification about any bug, defect, deficiency, exploit, vulnerability, weakness or any other issue with software and related systems. Application Security Posture Findings typically involve reporting on the greater context including compliance, impacted resources, remediation guidance, specific code defects, and/or vulnerability metadata. Application Security Posture Findings can be reported by Threat & Vulnerability Management (TVM) tools, Application Security Posture Management (ASPM) tools, or other similar tools. Note: if the event producer is a security control, the <code>security_control</code> profile should be applied and its <code>attacks</code> information, if present, should be duplicated into the <code>finding_info</code> object. <br><strong>Note: </strong>If the Finding is an incident, i.e. requires incident workflow, also apply the <code>incident</code> profile or aggregate this finding into an <code>Incident Finding</code>.'
+    aliases:
+    - Application Security Posture Finding
+    is_a: Finding
+    mixins:
+    - IncidentProfile
+    slots:
+    - application
+    - compliance
+    - remediation
+    - resources
+    - vulnerabilities
+    slot_usage:
+      application:
+        recommended: true
+        annotations:
+          group: primary
+      compliance:
+        description: Provides compliance context to vulnerabilities and other weaknesses that are reported as part of an Application Security or Vulnerability Management tool's built-in compliance framework mapping.
+        recommended: true
+        annotations:
+          group: primary
+      remediation:
+        description: Describes the recommended remediation steps to address identified vulnerabilities or weaknesses.
+        recommended: true
+        annotations:
+          group: context
+      resources:
+        description: Describes details about the resource/resources that are affected by the vulnerability/vulnerabilities.
+        recommended: true
+        annotations:
+          group: context
+      vulnerabilities:
+        recommended: true
+        annotations:
+          group: primary
+    rules:
+    - description: 'OCSF at_least_one: at least one of [''application'', ''compliance'', ''remediation'', ''vulnerabilities''] must be set.'
+      postconditions:
+        any_of:
+        - slot_conditions:
+            application:
+              required: true
+        - slot_conditions:
+            compliance:
+              required: true
+        - slot_conditions:
+            remediation:
+              required: true
+        - slot_conditions:
+            vulnerabilities:
+              required: true
+    annotations:
+      ocsf_constraints: '{"at_least_one": ["application", "compliance", "remediation", "vulnerabilities"]}'
+      ocsf_event_uid: 7
+  ComplianceFinding:
+    description: 'Compliance Finding events describe results of evaluations performed against resources, to check compliance with various Industry Frameworks or Security Standards such as <code>NIST SP 800-53, CIS AWS Foundations Benchmark v1.4.0, ISO/IEC 27001</code> etc. Note: if the event producer is a security control, the <code>security_control</code> profile should be applied and its <code>attacks</code> information, if present, should be duplicated into the <code>finding_info</code> object. <br><strong>Note: </strong>If the Finding is an incident, i.e. requires incident workflow, also apply the <code>incident</code> profile or aggregate this finding into an <code>Incident Finding</code>.'
+    aliases:
+    - Compliance Finding
+    is_a: Finding
+    slots:
+    - compliance
+    - evidences
+    - remediation
+    - resource
+    - resources
+    slot_usage:
+      compliance:
+        required: true
+        annotations:
+          group: primary
+      evidences:
+        description: Describes various evidence artifacts associated with the compliance finding.
+        annotations:
+          group: context
+      remediation:
+        recommended: true
+        annotations:
+          group: context
+      resource:
+        description: Describes details about the resource that is the subject of the compliance check.
+        recommended: true
+        annotations:
+          group: primary
+        deprecated: Use the <code>resources</code> attribute instead.
+      resources:
+        description: Describes details about the resource/resources that are the subject of the compliance check.
+        recommended: true
+        annotations:
+          group: primary
+    annotations:
+      ocsf_event_uid: 3
+    close_mappings:
+    - iso27001:AuditFinding
+  DataSecurityFinding:
+    description: 'A Data Security Finding describes detections or alerts generated by various data security products such as Data Loss Prevention (DLP), Data Classification, Secrets Management, Digital Rights Management (DRM), Data Security Posture Management (DSPM), and similar tools. These detections or alerts can be created using fingerprinting, statistical analysis, machine learning or other methodologies. The finding describes the actors and endpoints who accessed or own the sensitive data, as well as the resources which store the sensitive data. Note: if the event producer is a security control, the <code>security_control</code> profile should be applied and its <code>attacks</code> information, if present, should be duplicated into the <code>finding_info</code> object. <br><strong>Note: </strong>If the Finding is an incident, i.e. requires incident workflow, also apply the <code>incident</code> profile  or aggregate this finding into an <code>Incident Finding</code>.'
+    aliases:
+    - Data Security Finding
+    is_a: Finding
+    slots:
+    - activity_id
+    - activity_name
+    - actor
+    - confidence
+    - confidence_id
+    - confidence_score
+    - data_security
+    - database
+    - databucket
+    - device
+    - dst_endpoint
+    - file
+    - impact
+    - impact_id
+    - impact_score
+    - is_alert
+    - resources
+    - risk_details
+    - risk_level
+    - risk_level_id
+    - risk_score
+    - src_endpoint
+    - table
+    slot_usage:
+      activity_id:
+        description: The normalized identifier of the Data Security Finding activity.
+        required: true
+        range: DataSecurityFindingActivityIdEnum
+      activity_name:
+        description: The Data Security finding activity name, as defined by the <code>activity_id</code>.
+      actor:
+        description: Describes details about the actor implicated in the data security finding. Either an actor that owns a particular digital file or information store, or an actor which accessed classified or sensitive data.
+        recommended: true
+        annotations:
+          group: context
+      confidence:
+        annotations:
+          group: context
+      confidence_id:
+        recommended: true
+        annotations:
+          group: context
+      confidence_score:
+        annotations:
+          group: context
+      data_security:
+        recommended: true
+        annotations:
+          group: context
+      database:
+        description: Describes the database where classified or sensitive data is stored in, or was accessed from. Databases are typically datastore services that contain an organized collection of structured and/or semi-structured data.
+        recommended: true
+        annotations:
+          group: primary
+      databucket:
+        description: Describes the databucket where classified or sensitive data is stored in, or was accessed from. The data bucket object is a basic container that holds data, typically organized through the use of data partitions.
+        recommended: true
+        annotations:
+          group: primary
+      device:
+        description: Describes the device where classified or sensitive data is stored in, or was accessed from.
+        recommended: true
+        annotations:
+          group: context
+      dst_endpoint:
+        description: Describes the endpoint where classified or sensitive data is stored in, or was accessed from.
+        recommended: true
+        annotations:
+          group: context
+      file:
+        description: Describes a file that contains classified or sensitive data.
+        recommended: true
+        annotations:
+          group: primary
+      impact:
+        annotations:
+          group: context
+      impact_id:
+        annotations:
+          group: context
+      impact_score:
+        annotations:
+          group: context
+      is_alert:
+        description: Indicates that the event is considered to be an alertable signal. For example, an <code>activity_id</code> of 'Create' could constitute an alertable signal and the value would be <code>true</code>, while 'Close' likely would not and either omit the attribute or set its value to <code>false</code>.  Note that other events with the <code>security_control</code> profile may also be deemed alertable signals and may also carry <code>is_alert = true</code> attributes.
+        recommended: true
+        annotations:
+          group: primary
+      resources:
+        description: Describes details about additional resources, where classified or sensitive data is stored in, or was accessed from. <p> You can populate this object, if the specific resource type objects available in the class (<code>database, databucket, table, file</code>) aren't sufficient; OR <br> You can also choose to duplicate <code>uid, name</code> of the specific resources objects, for a consistent access to resource uids across all findings.
+        recommended: true
+        annotations:
+          group: primary
+      risk_details:
+        annotations:
+          group: context
+      risk_level:
+        annotations:
+          group: context
+      risk_level_id:
+        annotations:
+          group: context
+      risk_score:
+        annotations:
+          group: context
+      src_endpoint:
+        description: Details about the source endpoint where classified or sensitive data was accessed from.
+        recommended: true
+        annotations:
+          group: context
+      table:
+        description: Describes the table where classified or sensitive data is stored in, or was accessed from. The table object represents a table within a structured relational database, warehouse, lake, or similar.
+        recommended: true
+        annotations:
+          group: primary
+    annotations:
+      ocsf_event_uid: 6
+  DetectionFinding:
+    description: 'A Detection Finding describes detections or alerts generated by security products using correlation engines, detection engines or other methodologies. Note: if the event producer is a security control, the <code>security_control</code> profile should be applied and its <code>attacks</code> information, if present, should be duplicated into the <code>finding_info</code> object. <br><strong>Note: </strong>If the Finding is an incident, i.e. requires incident workflow, also apply the <code>incident</code> profile  or aggregate this finding into an <code>Incident Finding</code>.'
+    aliases:
+    - Detection Finding
+    is_a: Finding
+    slots:
+    - anomaly_analyses
+    - confidence
+    - confidence_id
+    - confidence_score
+    - evidences
+    - impact
+    - impact_id
+    - impact_score
+    - is_alert
+    - malware
+    - malware_scan_info
+    - remediation
+    - resources
+    - risk_details
+    - risk_level
+    - risk_level_id
+    - risk_score
+    - vulnerabilities
+    slot_usage:
+      anomaly_analyses:
+        description: Describes baseline information about normal activity patterns, along with any detected deviations or anomalies that triggered this finding.
+        annotations:
+          group: context
+      confidence:
+        annotations:
+          group: context
+      confidence_id:
+        recommended: true
+        annotations:
+          group: context
+      confidence_score:
+        annotations:
+          group: context
+      evidences:
+        description: Describes various evidence artifacts associated to the activity/activities that triggered a security detection.
+        recommended: true
+        annotations:
+          group: primary
+      impact:
+        annotations:
+          group: context
+      impact_id:
+        annotations:
+          group: context
+      impact_score:
+        annotations:
+          group: context
+      is_alert:
+        description: Indicates that the event is considered to be an alertable signal. For example, an <code>activity_id</code> of 'Create' could constitute an alertable signal and the value would be <code>true</code>, while 'Close' likely would not and either omit the attribute or set its value to <code>false</code>.  Note that other events with the <code>security_control</code> profile may also be deemed alertable signals and may also carry <code>is_alert = true</code> attributes.
+        recommended: true
+        annotations:
+          group: primary
+      malware:
+        description: Describes malware reported in a Detection Finding.
+        annotations:
+          group: context
+      malware_scan_info:
+        description: Describes details about malware scan job that triggered this Detection Finding.
+        annotations:
+          group: context
+      remediation:
+        annotations:
+          group: context
+      resources:
+        description: Describes details about resources that were the target of the activity that triggered the finding.
+        recommended: true
+        annotations:
+          group: context
+      risk_details:
+        annotations:
+          group: context
+      risk_level:
+        annotations:
+          group: context
+      risk_level_id:
+        annotations:
+          group: context
+      risk_score:
+        annotations:
+          group: context
+      vulnerabilities:
+        description: Describes vulnerabilities reported in a Detection Finding.
+        annotations:
+          group: context
+    annotations:
+      ocsf_event_uid: 4
+  Finding:
+    description: The Finding event is a generic event that defines a set of attributes available in the Findings category.
+    aliases:
+    - Finding
+    is_a: BaseEvent
+    mixins:
+    - IncidentProfile
+    slots:
+    - activity_id
+    - activity_name
+    - comment
+    - confidence
+    - confidence_id
+    - confidence_score
+    - device
+    - end_time
+    - finding_info
+    - start_time
+    - status
+    - status_id
+    - vendor_attributes
+    slot_usage:
+      activity_id:
+        description: The normalized identifier of the finding activity.
+        range: FindingActivityIdEnum
+      activity_name:
+        description: The finding activity name, as defined by the <code>activity_id</code>.
+      comment:
+        description: A user provided comment about the finding.
+        annotations:
+          group: context
+      confidence:
+        annotations:
+          group: context
+      confidence_id:
+        recommended: true
+        annotations:
+          group: context
+      confidence_score:
+        annotations:
+          group: context
+      device:
+        description: Describes the affected device/host. If applicable, it can be used in conjunction with <code>Resource(s)</code>. <p> e.g. Specific details about an AWS EC2 instance, that is affected by the Finding.</p>
+        annotations:
+          group: context
+      end_time:
+        description: The time of the most recent event included in the finding.
+      finding_info:
+        required: true
+        annotations:
+          group: primary
+      start_time:
+        description: The time of the least recent event included in the finding.
+      status:
+        description: The normalized status of the Finding set by the consumer normalized to the caption of the status_id value. In the case of 'Other', it is defined by the source.
+        annotations:
+          group: context
+      status_id:
+        description: The normalized status identifier of the Finding, set by the consumer.
+        recommended: true
+        range: FindingStatusIdEnum
+        annotations:
+          group: context
+      vendor_attributes:
+        annotations:
+          group: context
+    annotations:
+      category: findings
+    related_mappings:
+    - iso27001:Risk
+  IamAnalysisFinding:
+    description: This finding represents an IAM analysis result, which evaluates IAM policies, access patterns, and IAM configurations for potential security risks. The analysis can focus on either an identity (user, role, service account) or a resource to assess permissions, access patterns, and security posture within the IAM domain. <br><strong>Note:</strong> Use <code>permission_analysis_results</code> for identity-centric analysis (evaluating what an identity can do) and <code>access_analysis_result</code> for resource-centric analysis (evaluating who can access a resource). These complement each other for comprehensive IAM security assessment.<br><strong>Note:</strong> If the Finding is an incident, i.e. requires incident workflow, also apply the <code>incident</code> profile or aggregate this finding into an <code>Incident Finding</code>.
+    aliases:
+    - IAM Analysis Finding
+    is_a: Finding
+    slots:
+    - access_analysis_result
+    - applications
+    - identity_activity_metrics
+    - permission_analysis_results
+    - remediation
+    - resources
+    - user
+    slot_usage:
+      access_analysis_result:
+        annotations:
+          group: context
+      applications:
+        description: Details about applications, services, or systems that are accessible based on the IAM analysis. For identity-centric analysis, this represents applications the identity can access. For resource-centric analysis, this represents applications that can access the resource.
+        recommended: true
+        annotations:
+          group: primary
+      identity_activity_metrics:
+        recommended: true
+        annotations:
+          group: primary
+      permission_analysis_results:
+        recommended: true
+        annotations:
+          group: primary
+      remediation:
+        annotations:
+          group: context
+      resources:
+        description: Details about resources involved in the IAM analysis. For identity-centric analysis, this represents resources the identity can access. For resource-centric analysis, this represents the resource being analyzed and related resources in the access chain.
+        recommended: true
+        annotations:
+          group: primary
+      user:
+        description: Details about the identity (user, role, service account, or other principal) that is the subject of the IAM analysis. This provides context about the identity being evaluated for security risks and access patterns.
+        recommended: true
+        annotations:
+          group: primary
+    rules:
+    - description: 'OCSF at_least_one: at least one of [''access_analysis_result'', ''applications'', ''identity_activity_metrics'', ''permission_analysis_results''] must be set.'
+      postconditions:
+        any_of:
+        - slot_conditions:
+            access_analysis_result:
+              required: true
+        - slot_conditions:
+            applications:
+              required: true
+        - slot_conditions:
+            identity_activity_metrics:
+              required: true
+        - slot_conditions:
+            permission_analysis_results:
+              required: true
+    annotations:
+      ocsf_constraints: '{"at_least_one": ["access_analysis_result", "applications", "identity_activity_metrics", "permission_analysis_results"]}'
+      ocsf_event_uid: 8
+  IncidentFinding:
+    description: 'An Incident Finding reports the creation, update, or closure of security incidents as a result of detections and/or analytics. <br><strong>Note: </strong><code>Incident Finding</code> implicitly includes the <code>incident</code> profile and it should be added to the <code>metadata.profiles[]</code> array.'
+    aliases:
+    - Incident Finding
+    is_a: BaseEvent
+    mixins:
+    - IncidentProfile
+    slots:
+    - activity_id
+    - activity_name
+    - assignee
+    - assignee_group
+    - attacks
+    - comment
+    - confidence
+    - confidence_id
+    - confidence_score
+    - desc
+    - end_time
+    - finding_info_list
+    - impact
+    - impact_id
+    - impact_score
+    - is_suspected_breach
+    - priority
+    - priority_id
+    - src_url
+    - start_time
+    - status
+    - status_id
+    - ticket
+    - tickets
+    - vendor_attributes
+    - verdict
+    - verdict_id
+    slot_usage:
+      activity_id:
+        description: The normalized identifier of the Incident activity.
+        required: true
+        range: IncidentFindingActivityIdEnum
+      activity_name:
+        description: The Incident activity name, as defined by the <code>activity_id</code>.
+      assignee:
+        annotations:
+          group: context
+      assignee_group:
+        annotations:
+          group: context
+      attacks:
+        description: An array of <a target='_blank' href='https://attack.mitre.org'>MITRE ATT&CK®</a> objects describing the tactics, techniques & sub-techniques associated to the Incident.
+        annotations:
+          group: context
+      comment:
+        description: Additional user supplied details for updating or closing the incident.
+        annotations:
+          group: context
+      confidence:
+        annotations:
+          group: context
+      confidence_id:
+        recommended: true
+        annotations:
+          group: context
+      confidence_score:
+        annotations:
+          group: context
+      desc:
+        description: The short description of the Incident.
+        recommended: true
+        annotations:
+          group: primary
+      end_time:
+        description: The time of the most recent event included in the incident.
+      finding_info_list:
+        required: true
+        annotations:
+          group: primary
+      impact:
+        recommended: true
+        annotations:
+          group: primary
+      impact_id:
+        recommended: true
+        annotations:
+          group: primary
+      impact_score:
+        recommended: true
+        annotations:
+          group: primary
+      is_suspected_breach:
+        annotations:
+          group: context
+      priority:
+        annotations:
+          group: context
+      priority_id:
+        recommended: true
+        annotations:
+          group: context
+      src_url:
+        description: A Url link used to access the original incident.
+        recommended: true
+        annotations:
+          group: primary
+      start_time:
+        description: The time of the least recent event included in the incident.
+      status:
+        description: The normalized status of the Incident normalized to the caption of the status_id value. In the case of 'Other', it is defined by the source.
+        recommended: true
+        annotations:
+          group: primary
+      status_id:
+        description: The normalized status identifier of the Incident.
+        required: true
+        range: IncidentFindingStatusIdEnum
+        annotations:
+          group: primary
+      ticket:
+        annotations:
+          group: context
+        deprecated: Use <code>tickets</code> instead.
+      tickets:
+        annotations:
+          group: context
+      verdict:
+        recommended: true
+        annotations:
+          group: primary
+      verdict_id:
+        recommended: true
+        annotations:
+          group: primary
+    rules:
+    - description: 'OCSF at_least_one: at least one of [''assignee'', ''assignee_group''] must be set.'
+      postconditions:
+        any_of:
+        - slot_conditions:
+            assignee:
+              required: true
+        - slot_conditions:
+            assignee_group:
+              required: true
+    annotations:
+      ocsf_constraints: '{"at_least_one": ["assignee", "assignee_group"]}'
+      ocsf_event_uid: 5
+      category: findings
+  SecurityFinding:
+    description: Security Finding events describe findings, detections, anomalies, alerts and/or actions performed by security products
+    aliases:
+    - Security Finding
+    deprecated: 'Use the new specific classes according to the use-case: <code>Vulnerability Finding, Compliance Finding, Detection Finding, Incident Finding, Data Security Finding.</code> (since 1.1.0)'
+    is_a: BaseEvent
+    slots:
+    - activity_id
+    - analytic
+    - attacks
+    - cis_csc
+    - compliance
+    - confidence
+    - confidence_id
+    - confidence_score
+    - data_sources
+    - evidence
+    - finding
+    - impact
+    - impact_id
+    - impact_score
+    - kill_chain
+    - malware
+    - nist
+    - process
+    - resources
+    - risk_level
+    - risk_level_id
+    - risk_score
+    - state
+    - state_id
+    - vulnerabilities
+    slot_usage:
+      activity_id:
+        range: SecurityFindingActivityIdEnum
+      analytic:
+        recommended: true
+        annotations:
+          group: primary
+      attacks:
+        description: An array of <a target='_blank' href='https://attack.mitre.org'>MITRE ATT&CK®</a> objects describing the tactics, techniques & sub-techniques associated to the Finding.
+        annotations:
+          group: context
+      cis_csc:
+        annotations:
+          group: context
+      compliance:
+        annotations:
+          group: context
+      confidence:
+        recommended: true
+        annotations:
+          group: primary
+      confidence_id:
+        recommended: true
+        annotations:
+          group: primary
+      confidence_score:
+        recommended: true
+        annotations:
+          group: primary
+      data_sources:
+        annotations:
+          group: context
+      evidence:
+        annotations:
+          group: context
+      finding:
+        required: true
+        annotations:
+          group: primary
+      impact:
+        recommended: true
+        annotations:
+          group: primary
+      impact_id:
+        recommended: true
+        annotations:
+          group: primary
+      impact_score:
+        recommended: true
+        annotations:
+          group: primary
+      kill_chain:
+        annotations:
+          group: context
+      malware:
+        annotations:
+          group: context
+      nist:
+        annotations:
+          group: context
+      process:
+        annotations:
+          group: context
+      resources:
+        recommended: true
+        annotations:
+          group: primary
+      risk_level:
+        recommended: true
+        annotations:
+          group: primary
+      risk_level_id:
+        recommended: true
+        annotations:
+          group: primary
+      risk_score:
+        recommended: true
+        annotations:
+          group: primary
+      state:
+        description: The normalized state of a security finding.
+        annotations:
+          group: context
+      state_id:
+        description: The normalized state identifier of a security finding.
+        required: true
+        range: SecurityFindingStateIdEnum
+        annotations:
+          group: context
+      vulnerabilities:
+        annotations:
+          group: context
+    annotations:
+      ocsf_event_uid: 1
+      category: findings
+  VulnerabilityFinding:
+    description: 'The Vulnerability Finding event is a notification about weakness in an information system, system security procedures, internal controls, or implementation that could be exploited or triggered by a threat source. Note: if the event producer is a security control, the <code>security_control</code> profile should be applied and its <code>attacks</code> information, if present, should be duplicated into the <code>finding_info</code> object. <br><strong>Note: </strong>If the Finding is an incident, i.e. requires incident workflow, also apply the <code>incident</code> profile  or aggregate this finding into an <code>Incident Finding</code>.'
+    aliases:
+    - Vulnerability Finding
+    is_a: Finding
+    slots:
+    - resource
+    - resources
+    - vulnerabilities
+    slot_usage:
+      resource:
+        description: Describes details about the resource that is affected by the vulnerability/vulnerabilities.
+        recommended: true
+        annotations:
+          group: primary
+        deprecated: Use the <code>resources</code> attribute instead.
+      resources:
+        description: Describes details about the resource/resources that are affected by the vulnerability/vulnerabilities.
+        recommended: true
+        annotations:
+          group: primary
+      vulnerabilities:
+        required: true
+        annotations:
+          group: primary
+    annotations:
+      ocsf_event_uid: 2
+    close_mappings:
+    - cve:CVERecord
+    - iso27001:Risk
+    - kev_catalog:KevEntry
+    - nvd:NVDEntry
+    - core:Vulnerability
+    related_mappings:
+    - capec:AttackPattern
+    - cwe:Weakness
+  IamEvent:
+    description: The Identity & Access Management event is a generic event that defines a set of attributes available in the access control events. As a generic event, it could be used to log events that are not otherwise defined by the IAM category.
+    aliases:
+    - Identity & Access Management
+    is_a: BaseEvent
+    slots:
+    - actor
+    - http_request
+    - http_response
+    - src_endpoint
+    slot_usage:
+      actor:
+        recommended: true
+        annotations:
+          group: context
+      http_request:
+        description: Details about the underlying HTTP request.
+        annotations:
+          group: context
+      http_response:
+        description: Details about the underlying HTTP response.
+        annotations:
+          group: context
+      src_endpoint:
+        description: Details about the source of the IAM activity.
+        recommended: true
+        annotations:
+          group: primary
+    annotations:
+      category: iam
+  AccountChange:
+    description: Account Change events report when specific user account management tasks are performed, such as a user/role being created, changed, deleted, renamed, disabled, enabled, locked out or unlocked.
+    aliases:
+    - Account Change
+    is_a: IamEvent
+    slots:
+    - activity_id
+    - auth_factors
+    - policies
+    - policy
+    - user
+    - user_result
+    slot_usage:
+      activity_id:
+        range: AccountChangeActivityIdEnum
+      auth_factors:
+        description: Details about the authentication factors associated with the MFA Factor Enable/Disable activities.
+        annotations:
+          group: context
+      policies:
+        description: Details about the IAM policies associated with the Attach/Detach Policy activities.
+        annotations:
+          group: context
+      policy:
+        description: Details about the IAM policy associated to the Attach/Detach Policy activities.
+        annotations:
+          group: context
+        deprecated: Use the <code>policies</code> attribute instead.
+      user:
+        description: The user that was a target of an activity.
+        required: true
+        annotations:
+          group: primary
+      user_result:
+        recommended: true
+        annotations:
+          group: primary
+    annotations:
+      ocsf_event_uid: 1
+  Authentication:
+    description: Authentication events report authentication session activities, including user attempts to log on or log off, regardless of success, as well as other key stages within the authentication process. These events are typically generated by authentication services, such as Kerberos, OIDC, or SAML, and may include information about the user, the authentication method used, and the status of the authentication attempt.
+    aliases:
+    - Authentication
+    is_a: IamEvent
+    slots:
+    - account_switch_type
+    - account_switch_type_id
+    - activity_id
+    - auth_factors
+    - auth_protocol
+    - auth_protocol_id
+    - authentication_token
+    - certificate
+    - dst_endpoint
+    - is_cleartext
+    - is_mfa
+    - is_new_logon
+    - is_remote
+    - logon_process
+    - logon_type
+    - logon_type_id
+    - service
+    - session
+    - status_detail
+    - user
+    slot_usage:
+      account_switch_type:
+        recommended: true
+        annotations:
+          group: primary
+      account_switch_type_id:
+        recommended: true
+        annotations:
+          group: primary
+      activity_id:
+        range: AuthenticationActivityIdEnum
+      auth_factors:
+        description: Describes a category of methods used for identity verification in an authentication attempt.
+        annotations:
+          group: context
+      auth_protocol:
+        recommended: true
+        annotations:
+          group: primary
+      auth_protocol_id:
+        recommended: true
+        annotations:
+          group: primary
+      authentication_token:
+        description: The authentication token, ticket, or assertion, e.g. <code>Kerberos</code>, <code>OIDC</code>, <code>SAML</code>.
+        annotations:
+          group: context
+      certificate:
+        description: The certificate associated with the authentication or pre-authentication (Kerberos).
+        recommended: true
+        annotations:
+          group: primary
+      dst_endpoint:
+        description: The endpoint to which the authentication was targeted.
+        recommended: true
+        annotations:
+          group: primary
+      is_cleartext:
+        annotations:
+          group: context
+      is_mfa:
+        recommended: true
+        annotations:
+          group: primary
+      is_new_logon:
+        annotations:
+          group: context
+      is_remote:
+        description: The attempted authentication is over a remote connection.
+        recommended: true
+        annotations:
+          group: primary
+      logon_process:
+        annotations:
+          group: context
+      logon_type:
+        recommended: true
+        annotations:
+          group: primary
+      logon_type_id:
+        recommended: true
+        annotations:
+          group: primary
+      service:
+        description: The service or gateway to which the user or process is being authenticated
+        recommended: true
+        annotations:
+          group: primary
+      session:
+        recommended: true
+        annotations:
+          group: primary
+      status_detail:
+        description: The details about the authentication request. For example, possible details for Windows logon or logoff events are:<ul><li>Success</li><ul><li>LOGOFF_USER_INITIATED</li><li>LOGOFF_OTHER</li></ul><li>Failure</li><ul><li>USER_DOES_NOT_EXIST</li><li>INVALID_CREDENTIALS</li><li>ACCOUNT_DISABLED</li><li>ACCOUNT_LOCKED_OUT</li><li>PASSWORD_EXPIRED</li></ul></ul>
+      user:
+        description: The subject (user/role or account) to authenticate.
+        required: true
+        annotations:
+          group: primary
+    rules:
+    - description: 'OCSF at_least_one: at least one of [''service'', ''dst_endpoint''] must be set.'
+      postconditions:
+        any_of:
+        - slot_conditions:
+            service:
+              required: true
+        - slot_conditions:
+            dst_endpoint:
+              required: true
+    annotations:
+      ocsf_constraints: '{"at_least_one": ["service", "dst_endpoint"]}'
+      ocsf_event_uid: 2
+      associations: '{"actor.user": ["src_endpoint"], "dst_endpoint": ["user"], "src_endpoint": ["actor.user"], "user": ["dst_endpoint"]}'
+    see_also:
+    - https://d3fend.mitre.org/event/d3f:AuthenticationEvent
+    notes:
+    - D3FEND™ Ontology d3f:AuthenticationEvent — https://d3fend.mitre.org/event/d3f:AuthenticationEvent
+  AuthorizeSession:
+    description: Authorize Session events report privileges or groups assigned to a new user session, usually at login time.
+    aliases:
+    - Authorize Session
+    is_a: IamEvent
+    slots:
+    - activity_id
+    - dst_endpoint
+    - group
+    - privileges
+    - session
+    - user
+    slot_usage:
+      activity_id:
+        range: AuthorizeSessionActivityIdEnum
+      dst_endpoint:
+        description: The Endpoint for which the user session was targeted.
+        annotations:
+          group: context
+      group:
+        description: Group that was assigned to the new user session.
+        recommended: true
+        annotations:
+          group: primary
+      privileges:
+        description: The list of sensitive privileges, assigned to the new user session.
+        recommended: true
+        annotations:
+          group: primary
+      session:
+        description: The user session with the assigned privileges.
+        recommended: true
+        annotations:
+          group: primary
+      user:
+        description: The user to which new privileges were assigned.
+        required: true
+        annotations:
+          group: primary
+    rules:
+    - description: 'OCSF just_one: exactly one of [''privileges'', ''group''] must be set.'
+      postconditions:
+        exactly_one_of:
+        - slot_conditions:
+            privileges:
+              required: true
+        - slot_conditions:
+            group:
+              required: true
+    annotations:
+      ocsf_constraints: '{"just_one": ["privileges", "group"]}'
+      ocsf_event_uid: 3
+      associations: '{"session": ["user"], "user": ["session"]}'
+    see_also:
+    - https://d3fend.mitre.org/event/d3f:AuthorizationEvent/
+    notes:
+    - D3FEND™ Ontology d3f:AuthorizationEvent — https://d3fend.mitre.org/event/d3f:AuthorizationEvent/
+  EntityManagement:
+    description: Entity Management events report activity by a managed client, a micro service, or a user at a management console. The activity can be a create, read, update, and delete operation on a managed entity.
+    aliases:
+    - Entity Management
+    is_a: IamEvent
+    slots:
+    - access_list
+    - access_mask
+    - activity_id
+    - comment
+    - entity
+    - entity_result
+    slot_usage:
+      access_list:
+        annotations:
+          group: context
+      access_mask:
+        annotations:
+          group: context
+      activity_id:
+        range: EntityManagementActivityIdEnum
+      comment:
+        description: The user provided comment about why the entity was changed.
+        recommended: true
+        annotations:
+          group: primary
+      entity:
+        required: true
+        annotations:
+          group: primary
+      entity_result:
+        recommended: true
+        annotations:
+          group: primary
+    annotations:
+      ocsf_event_uid: 4
+  GroupManagement:
+    description: Group Management events report management updates to a group, including updates to membership and permissions.
+    aliases:
+    - Group Management
+    is_a: IamEvent
+    slots:
+    - activity_id
+    - group
+    - privileges
+    - resource
+    - subgroup
+    - user
+    slot_usage:
+      activity_id:
+        range: GroupManagementActivityIdEnum
+      group:
+        description: Group that was the target of the event.
+        required: true
+        annotations:
+          group: primary
+      privileges:
+        description: A list of privileges assigned to the group.
+        recommended: true
+        annotations:
+          group: primary
+      resource:
+        description: Resource that the privileges give access to.
+        recommended: true
+        annotations:
+          group: primary
+      subgroup:
+        description: A subgroup that was added to or removed from the group.
+        recommended: true
+        annotations:
+          group: primary
+      user:
+        description: A user that was added to or removed from the group.
+        recommended: true
+        annotations:
+          group: primary
+    see_also:
+    - https://d3fend.mitre.org/event/d3f:GroupManagementEvent/
+    notes:
+    - D3FEND™ Ontology d3f:GroupManagementEvent — https://d3fend.mitre.org/event/d3f:GroupManagementEvent/
+    annotations:
+      ocsf_event_uid: 6
+  UserAccess:
+    description: User Access Management events report management updates to a user's privileges.
+    aliases:
+    - User Access Management
+    is_a: IamEvent
+    slots:
+    - activity_id
+    - privileges
+    - resource
+    - resources
+    - user
+    slot_usage:
+      activity_id:
+        range: UserAccessActivityIdEnum
+      privileges:
+        description: List of privileges assigned to a user.
+        required: true
+        annotations:
+          group: primary
+      resource:
+        description: Resource that the privileges give access to.
+        recommended: true
+        annotations:
+          group: primary
+        deprecated: Use the <code>resources</code> attribute instead.
+      resources:
+        description: Resources that the privileges give access to.
+        recommended: true
+        annotations:
+          group: primary
+      user:
+        description: User to which privileges were assigned.
+        required: true
+        annotations:
+          group: primary
+    see_also:
+    - https://d3fend.mitre.org/event/d3f:PermissionGrantingEvent/
+    notes:
+    - D3FEND™ Ontology d3f:PermissionGrantingEvent — https://d3fend.mitre.org/event/d3f:PermissionGrantingEvent/
+    annotations:
+      ocsf_event_uid: 5
+  NetworkEvent:
+    description: Network event is a generic event that defines a set of attributes available in the Network category.
+    aliases:
+    - Network
+    is_a: BaseEvent
+    mixins:
+    - NetworkProxyProfile
+    - LoadBalancerProfile
+    slots:
+    - app_name
+    - app_protocol_name
+    - connection_info
+    - cumulative_traffic
+    - dst_endpoint
+    - ja4_fingerprint_list
+    - network_observation_point
+    - observation_point
+    - observation_point_id
+    - packet_list
+    - proxy
+    - src_endpoint
+    - tls
+    - traffic
+    slot_usage:
+      app_name:
+        description: The network application name identified by tools such as NBAR or App ID (e.g., youtube, facebook, webex). This represents a specific network application that uses standard protocols (such as https or quic) to deliver its service.
+        annotations:
+          group: context
+      app_protocol_name:
+        description: |-
+          The application-layer (Layer 7) protocol name identified by deep packet inspection or packet parsing (e.g., <code>https</code>, <code>quic</code>, <code>ssh</code>, <code>dns</code>), expressed as an IANA-registered service name from the IANA Service Name and Transport Protocol Port Number Registry.
+
+          <p><b>Note:</b> Port numbers alone are not always a reliable indicator of the actual application protocol in use.</p>
+        annotations:
+          group: context
+      connection_info:
+        recommended: true
+        annotations:
+          group: primary
+      cumulative_traffic:
+        description: 'The cumulative (running total) network traffic aggregated from the start of a flow or session. Use when reporting: (1) total accumulated bytes/packets since flow initiation, (2) combined aggregation models where both incremental deltas and running totals are reported together (populate both <code>traffic</code> for the delta and this attribute for the cumulative total), or (3) final summary metrics when a long-lived connection closes. This represents the sum of all activity from flow start to the current observation, not a delta or point-in-time value.'
+        annotations:
+          group: context
+      dst_endpoint:
+        description: The responder (server) in a network connection.
+        recommended: true
+        annotations:
+          group: primary
+      ja4_fingerprint_list:
+        annotations:
+          group: context
+      network_observation_point:
+        description: The network endpoint that observes or inspects network traffic as a third-party system, used when the observer is neither the source nor the destination of the communication (when <code>observation_point_id</code> = 3). Examples include network taps, span ports, inline security devices, or packet capture systems that monitor traffic between other endpoints.
+        annotations:
+          group: context
+      observation_point:
+        description: Indicates whether the source network endpoint, destination network endpoint, or neither served as the observation point for the activity. The value is normalized to the caption of the <code>observation_point_id</code>.
+      observation_point_id:
+        description: The normalized identifier of the observation point. The observation point identifier indicates whether the source network endpoint, destination network endpoint, or neither served as the observation point for the activity.
+        range: NetworkEventObservationPointIdEnum
+      packet_list:
+        annotations:
+          group: context
+      proxy:
+        recommended: true
+        annotations:
+          group: primary
+      src_endpoint:
+        description: The initiator (client) of the network connection.
+        recommended: true
+        annotations:
+          group: primary
+      tls:
+        annotations:
+          group: context
+      traffic:
+        description: 'The network traffic for this observation period. Use when reporting: (1) delta values (bytes/packets transferred since the last observation), (2) instantaneous measurements at a specific point in time, or (3) standalone single-event metrics. This attribute represents a point-in-time measurement or incremental change, not a running total. For accumulated totals across multiple observations or the lifetime of a flow, use <code>cumulative_traffic</code> instead.'
+        recommended: true
+        annotations:
+          group: primary
+    rules:
+    - description: 'OCSF at_least_one: at least one of [''dst_endpoint'', ''src_endpoint''] must be set.'
+      postconditions:
+        any_of:
+        - slot_conditions:
+            dst_endpoint:
+              required: true
+        - slot_conditions:
+            src_endpoint:
+              required: true
+    annotations:
+      ocsf_constraints: '{"at_least_one": ["dst_endpoint", "src_endpoint"]}'
+      category: network
+    see_also:
+    - https://d3fend.mitre.org/event/d3f:NetworkEvent/
+    notes:
+    - D3FEND™ Ontology d3f:NetworkEvent — https://d3fend.mitre.org/event/d3f:NetworkEvent/
+  DhcpActivity:
+    description: DHCP Activity events report MAC to IP assignment via DHCP from a client or server.
+    aliases:
+    - DHCP Activity
+    is_a: NetworkEvent
+    mixins:
+    - CloudProfile
+    slots:
+    - activity_id
+    - dst_endpoint
+    - is_renewal
+    - lease_dur
+    - relay
+    - src_endpoint
+    - transaction_uid
+    slot_usage:
+      activity_id:
+        required: true
+        range: DhcpActivityActivityIdEnum
+      dst_endpoint:
+        description: The responder (server) of the DHCP connection.
+        recommended: true
+        annotations:
+          group: primary
+      is_renewal:
+        description: Indicates whether this is a lease/session renewal event.
+        recommended: true
+        annotations:
+          group: primary
+      lease_dur:
+        recommended: true
+        annotations:
+          group: primary
+      relay:
+        recommended: true
+        annotations:
+          group: primary
+      src_endpoint:
+        description: The initiator (client) of the DHCP connection.
+        recommended: true
+        annotations:
+          group: primary
+      transaction_uid:
+        description: The unique identifier of the transaction. This is typically a random number generated from the client to associate a dhcp request/response pair.
+        recommended: true
+        annotations:
+          group: primary
+    see_also:
+    - https://d3fend.mitre.org/event/d3f:DHCPEvent/
+    notes:
+    - D3FEND™ Ontology d3f:DHCPEvent — https://d3fend.mitre.org/event/d3f:DHCPEvent/
+    annotations:
+      ocsf_event_uid: 4
+  DnsActivity:
+    description: DNS Activity events report DNS queries and answers as seen on the network.
+    aliases:
+    - DNS Activity
+    is_a: NetworkEvent
+    slots:
+    - activity_id
+    - answers
+    - connection_info
+    - dst_endpoint
+    - query
+    - query_time
+    - rcode
+    - rcode_id
+    - response_time
+    - traffic
+    slot_usage:
+      activity_id:
+        range: DnsActivityActivityIdEnum
+      answers:
+        recommended: true
+        annotations:
+          group: primary
+      connection_info:
+        annotations:
+          group: context
+      dst_endpoint:
+        recommended: true
+      query:
+        recommended: true
+        annotations:
+          group: primary
+      query_time:
+        recommended: true
+        annotations:
+          group: occurrence
+      rcode:
+        description: The DNS server response code, normalized to the caption of the rcode_id value. In the case of 'Other', it is defined by the event source.
+        recommended: true
+        annotations:
+          group: primary
+      rcode_id:
+        description: The normalized identifier of the DNS server response code. See <a target='_blank' href='https://datatracker.ietf.org/doc/html/rfc6895'>RFC-6895</a>.
+        recommended: true
+        range: DnsActivityRcodeIdEnum
+        annotations:
+          group: primary
+      response_time:
+        recommended: true
+        annotations:
+          group: occurrence
+      traffic:
+        annotations:
+          group: context
+    see_also:
+    - https://d3fend.mitre.org/event/d3f:DNSEvent/
+    notes:
+    - D3FEND™ Ontology d3f:DNSEvent — https://d3fend.mitre.org/event/d3f:DNSEvent/
+    annotations:
+      ocsf_event_uid: 3
+  EmailActivity:
+    description: Email Activity events report SMTP protocol and email activities including those with embedded URLs and files. See the <code>Email</code> object for details.
+    aliases:
+    - Email Activity
+    is_a: BaseEvent
+    slots:
+    - activity_id
+    - attempt
+    - banner
+    - command
+    - direction
+    - direction_id
+    - dst_endpoint
+    - email
+    - email_auth
+    - from_
+    - message_trace_uid
+    - protocol_name
+    - smtp_hello
+    - src_endpoint
+    - to
+    slot_usage:
+      activity_id:
+        required: true
+        range: EmailActivityActivityIdEnum
+      attempt:
+        description: The attempt number for attempting to deliver the email.
+        annotations:
+          group: context
+      banner:
+        annotations:
+          group: context
+      command:
+        description: The command issued by the initiator (client), such as SMTP HELO or EHLO.
+        recommended: true
+        annotations:
+          group: primary
+      direction:
+        description: The direction of the email, as defined by the <code>direction_id</code> value.
+        annotations:
+          group: context
+      direction_id:
+        description: <p>The direction of the email relative to the scanning host or organization.</p>Email scanned at an internet gateway might be characterized as inbound to the organization from the Internet, outbound from the organization to the Internet, or internal within the organization. Email scanned at a workstation might be characterized as inbound to, or outbound from the workstation.
+        required: true
+        range: EmailActivityDirectionIdEnum
+        annotations:
+          group: context
+      dst_endpoint:
+        description: The responder (server) receiving the email.
+        recommended: true
+        annotations:
+          group: primary
+      email:
+        required: true
+        annotations:
+          group: primary
+      email_auth:
+        recommended: true
+        annotations:
+          group: primary
+      from_:
+        description: The sender address from the transmission envelope. This reflects the actual sending party and may differ from the 'From' header in the message.
+        recommended: true
+        annotations:
+          group: primary
+      message_trace_uid:
+        recommended: true
+        annotations:
+          group: primary
+      protocol_name:
+        description: The Protocol Name specifies the email communication protocol, such as SMTP, IMAP, or POP3.
+        recommended: true
+        annotations:
+          group: primary
+      smtp_hello:
+        description: The value of the SMTP HELO or EHLO command sent by the initiator (client).
+        recommended: true
+        annotations:
+          group: primary
+        deprecated: Use the <code>command</code> attribute instead.
+      src_endpoint:
+        description: The initiator (client) sending the email.
+        recommended: true
+        annotations:
+          group: primary
+      to:
+        description: The recipient address from the transmission envelope. This may differ from the 'To' header and represents where the message was actually delivered.
+        recommended: true
+        annotations:
+          group: primary
+    see_also:
+    - https://d3fend.mitre.org/event/d3f:EmailEvent/
+    notes:
+    - D3FEND™ Ontology d3f:EmailEvent — https://d3fend.mitre.org/event/d3f:EmailEvent/
+    annotations:
+      ocsf_event_uid: 9
+      category: network
+  EmailFileActivity:
+    description: Email File Activity events report files within emails.
+    aliases:
+    - Email File Activity
+    deprecated: Use the <code>Email Activity</code> class with the <code>email.files[]</code> array instead. (since 1.3.0)
+    is_a: BaseEvent
+    slots:
+    - activity_id
+    - email_uid
+    - file
+    slot_usage:
+      activity_id:
+        required: true
+        range: EmailFileActivityActivityIdEnum
+      email_uid:
+        required: true
+        annotations:
+          group: primary
+        deprecated: Use the <code>email.uid</code> attribute instead.
+      file:
+        description: The email file attachment.
+        required: true
+        annotations:
+          group: primary
+    annotations:
+      ocsf_event_uid: 11
+      category: network
+  EmailUrlActivity:
+    description: Email URL Activity events report URLs within an email.
+    aliases:
+    - Email URL Activity
+    deprecated: Use the <code>Email Activity</code> class with the <code>email.urls[]</code> array instead. (since 1.3.0)
+    is_a: BaseEvent
+    slots:
+    - activity_id
+    - email_uid
+    - url
+    slot_usage:
+      activity_id:
+        required: true
+        range: EmailUrlActivityActivityIdEnum
+      email_uid:
+        required: true
+        annotations:
+          group: primary
+        deprecated: Use the <code>email.uid</code> attribute instead.
+      url:
+        description: The URL included in the email content.
+        required: true
+        annotations:
+          group: primary
+    annotations:
+      ocsf_event_uid: 12
+      category: network
+  FtpActivity:
+    description: File Transfer Protocol (FTP) Activity events report file transfers between a server and a client as seen on the network.
+    aliases:
+    - FTP Activity
+    is_a: NetworkEvent
+    slots:
+    - activity_id
+    - codes
+    - command
+    - command_responses
+    - file
+    - name
+    - port
+    - type
+    slot_usage:
+      activity_id:
+        range: FtpActivityActivityIdEnum
+      codes:
+        description: The list of return codes to the FTP command.
+        recommended: true
+        annotations:
+          group: primary
+      command:
+        description: The FTP command.
+        recommended: true
+        annotations:
+          group: primary
+      command_responses:
+        description: The list of responses to the FTP command.
+        recommended: true
+        annotations:
+          group: primary
+      file:
+        description: The file that is the target of the FTP activity.
+        annotations:
+          group: context
+      name:
+        description: The name of the data affiliated with the command.
+        recommended: true
+        annotations:
+          group: primary
+      port:
+        description: The dynamic port established for impending data transfers.
+        recommended: true
+        annotations:
+          group: primary
+      type:
+        description: The type of FTP network connection (e.g. active, passive).
+        recommended: true
+        annotations:
+          group: primary
+    see_also:
+    - https://d3fend.mitre.org/event/d3f:FTPEvent/
+    notes:
+    - D3FEND™ Ontology d3f:FTPEvent — https://d3fend.mitre.org/event/d3f:FTPEvent/
+    annotations:
+      ocsf_event_uid: 8
+  HttpActivity:
+    description: HTTP Activity events report HTTP connection and traffic information.
+    aliases:
+    - HTTP Activity
+    is_a: NetworkEvent
+    mixins:
+    - TraceProfile
+    slots:
+    - activity_id
+    - file
+    - http_cookies
+    - http_request
+    - http_response
+    - http_status
+    slot_usage:
+      activity_id:
+        range: HttpActivityActivityIdEnum
+      file:
+        description: The file that is the target of the HTTP activity.
+        annotations:
+          group: context
+      http_cookies:
+        recommended: true
+        annotations:
+          group: primary
+      http_request:
+        recommended: true
+        annotations:
+          group: primary
+      http_response:
+        recommended: true
+        annotations:
+          group: primary
+      http_status:
+        recommended: true
+        annotations:
+          group: primary
+    rules:
+    - description: 'OCSF at_least_one: at least one of [''http_request'', ''http_response''] must be set.'
+      postconditions:
+        any_of:
+        - slot_conditions:
+            http_request:
+              required: true
+        - slot_conditions:
+            http_response:
+              required: true
+    annotations:
+      ocsf_constraints: '{"at_least_one": ["http_request", "http_response"]}'
+      ocsf_event_uid: 2
+    see_also:
+    - https://d3fend.mitre.org/event/d3f:HTTPEvent/
+    notes:
+    - D3FEND™ Ontology d3f:HTTPEvent — https://d3fend.mitre.org/event/d3f:HTTPEvent/
+  NetworkActivity:
+    description: Network Activity events report network connection and traffic activity.
+    aliases:
+    - Network Activity
+    is_a: NetworkEvent
+    slots:
+    - activity_id
+    - dst_endpoint
+    - initiator
+    - initiator_id
+    - is_src_dst_assignment_known
+    - src_endpoint
+    - url
+    slot_usage:
+      activity_id:
+        range: NetworkActivityActivityIdEnum
+      dst_endpoint:
+        description: The destination endpoint of the network activity — typically the responder. In bi-flow or asymmetric flow scenarios, this endpoint may represent the true initiator of the original communication. Use <code>initiator_id</code> to determine which endpoint actually initiated the communication.
+      initiator:
+        description: The endpoint that initiated the network communication, normalized to the caption of <code>initiator_id</code>. In the case of <code>Other</code>, it is defined by the event source.
+      initiator_id:
+        description: The normalized identifier of the endpoint that initiated the network communication. Use this field to disambiguate source and destination roles in bi-directional or asymmetric flow scenarios.
+        recommended: true
+        range: NetworkActivityInitiatorIdEnum
+        annotations:
+          group: primary
+      is_src_dst_assignment_known:
+        recommended: true
+        annotations:
+          group: primary
+        deprecated: Use <code>initiator_id</code> instead, which provides richer semantics for bi-flow and asymmetric flow scenarios.
+      src_endpoint:
+        description: The source endpoint of the network activity — typically the initiator. In bi-flow or asymmetric flow scenarios, this endpoint may represent the response side of communication originally initiated by the destination. Use <code>initiator_id</code> to determine which endpoint actually initiated the communication.
+      url:
+        description: The URL details relevant to the network traffic.
+        recommended: true
+        annotations:
+          group: primary
+    see_also:
+    - https://d3fend.mitre.org/event/d3f:NetworkConnectionEvent/
+    notes:
+    - D3FEND™ Ontology d3f:NetworkConnectionEvent — https://d3fend.mitre.org/event/d3f:NetworkConnectionEvent/
+    annotations:
+      ocsf_event_uid: 1
+  NetworkFileActivity:
+    description: Network File Activity events report file activities traversing the network, including file storage services such as Box, MS OneDrive, or Google Drive.
+    aliases:
+    - Network File Activity
+    deprecated: 'Use the new class: <code>''File Hosting Activity'' in the ''Application''  category.</code> (since 1.1.0)'
+    is_a: NetworkEvent
+    slots:
+    - activity_id
+    - actor
+    - connection_info
+    - dst_endpoint
+    - expiration_time
+    - file
+    - src_endpoint
+    slot_usage:
+      activity_id:
+        range: NetworkFileActivityActivityIdEnum
+      actor:
+        description: The actor that performed the activity on the target file.
+        required: true
+        annotations:
+          group: primary
+      connection_info:
+        annotations:
+          group: context
+      dst_endpoint:
+        description: The endpoint that received the activity on the target file.
+        recommended: true
+      expiration_time:
+        description: The share expiration time.
+        annotations:
+          group: context
+      file:
+        description: The file that is the target of the activity.
+        required: true
+        annotations:
+          group: primary
+      src_endpoint:
+        description: The endpoint that performed the activity on the target file.
+        required: true
+        annotations:
+          group: primary
+    annotations:
+      ocsf_event_uid: 10
+  NtpActivity:
+    description: The Network Time Protocol (NTP) Activity events report instances of remote clients synchronizing their clocks with an NTP server, as observed on the network.
+    aliases:
+    - NTP Activity
+    is_a: NetworkEvent
+    slots:
+    - activity_id
+    - delay
+    - dispersion
+    - precision
+    - stratum
+    - stratum_id
+    - version
+    slot_usage:
+      activity_id:
+        range: NtpActivityActivityIdEnum
+      delay:
+        recommended: true
+        annotations:
+          group: primary
+      dispersion:
+        recommended: true
+        annotations:
+          group: primary
+      precision:
+        description: The NTP precision quantifies a clock's accuracy and stability in log2 seconds, as defined in RFC-5905.
+        recommended: true
+        annotations:
+          group: primary
+      stratum:
+        recommended: true
+        annotations:
+          group: primary
+      stratum_id:
+        recommended: true
+        annotations:
+          group: primary
+      version:
+        description: The version number of the NTP protocol.
+        required: true
+        annotations:
+          group: context
+    see_also:
+    - https://d3fend.mitre.org/event/d3f:NTPEvent/
+    notes:
+    - D3FEND™ Ontology d3f:NTPEvent — https://d3fend.mitre.org/event/d3f:NTPEvent/
+    annotations:
+      ocsf_event_uid: 13
+  RdpActivity:
+    description: Remote Desktop Protocol (RDP) Activity events report post-authentication remote client connections between clients and servers over the network.
+    aliases:
+    - RDP Activity
+    is_a: NetworkEvent
+    slots:
+    - activity_id
+    - capabilities
+    - certificate_chain
+    - connection_info
+    - device
+    - file
+    - identifier_cookie
+    - keyboard_info
+    - protocol_ver
+    - remote_display
+    - request
+    - response
+    - user
+    slot_usage:
+      activity_id:
+        range: RdpActivityActivityIdEnum
+      capabilities:
+        annotations:
+          group: context
+      certificate_chain:
+        description: The list of observed certificates in an RDP TLS connection.
+        recommended: true
+        annotations:
+          group: primary
+      connection_info:
+        description: The remote desktop connection details, either connection-based or connectionless.
+        recommended: true
+        annotations:
+          group: primary
+      device:
+        description: The device instigating the RDP connection.
+      file:
+        description: The file that is the target of the RDP activity.
+        annotations:
+          group: context
+      identifier_cookie:
+        annotations:
+          group: context
+      keyboard_info:
+        annotations:
+          group: context
+      protocol_ver:
+        description: The Remote Desktop Protocol version.
+        recommended: true
+        annotations:
+          group: context
+      remote_display:
+        annotations:
+          group: context
+      request:
+        description: The client request in an RDP network connection.
+        recommended: true
+        annotations:
+          group: primary
+      response:
+        description: The server response in an RDP network connection.
+        recommended: true
+        annotations:
+          group: primary
+      user:
+        description: The target user associated with the RDP activity.
+        recommended: true
+        annotations:
+          group: primary
+    see_also:
+    - https://d3fend.mitre.org/event/d3f:RDPEvent/
+    notes:
+    - D3FEND™ Ontology d3f:RDPEvent — https://d3fend.mitre.org/event/d3f:RDPEvent/
+    annotations:
+      ocsf_event_uid: 5
+  SmbActivity:
+    description: Server Message Block (SMB) Protocol Activity events report client/server connections sharing resources within the network.
+    aliases:
+    - SMB Activity
+    is_a: NetworkEvent
+    slots:
+    - activity_id
+    - client_dialects
+    - command
+    - dce_rpc
+    - dialect
+    - file
+    - open_type
+    - response
+    - share
+    - share_type
+    - share_type_id
+    - tree_uid
+    slot_usage:
+      activity_id:
+        range: SmbActivityActivityIdEnum
+      client_dialects:
+        recommended: true
+        annotations:
+          group: context
+      command:
+        description: The command name (e.g. SMB2_COMMAND_CREATE, SMB1_COMMAND_WRITE_ANDX).
+        recommended: true
+        annotations:
+          group: primary
+      dce_rpc:
+        annotations:
+          group: context
+      dialect:
+        recommended: true
+        annotations:
+          group: context
+      file:
+        description: The file that is the target of the SMB activity.
+        recommended: true
+        annotations:
+          group: primary
+      open_type:
+        description: Indicates how the file was opened (e.g. normal, delete on close).
+        recommended: true
+        annotations:
+          group: primary
+      response:
+        description: The server response in an SMB network connection.
+        recommended: true
+        annotations:
+          group: primary
+      share:
+        description: The SMB share name.
+        recommended: true
+        annotations:
+          group: primary
+      share_type:
+        description: The SMB share type, normalized to the caption of the share_type_id value. In the case of 'Other', it is defined by the event source.
+        recommended: true
+        annotations:
+          group: primary
+      share_type_id:
+        description: The normalized identifier of the SMB share type.
+        recommended: true
+        annotations:
+          group: primary
+      tree_uid:
+        recommended: true
+        annotations:
+          group: primary
+    see_also:
+    - https://d3fend.mitre.org/event/d3f:SMBEvent/
+    notes:
+    - D3FEND™ Ontology d3f:SMBEvent — https://d3fend.mitre.org/event/d3f:SMBEvent/
+    annotations:
+      ocsf_event_uid: 6
+  SshActivity:
+    description: SSH Activity events report remote client connections to a server using the Secure Shell (SSH) Protocol.
+    aliases:
+    - SSH Activity
+    is_a: NetworkEvent
+    slots:
+    - activity_id
+    - auth_type
+    - auth_type_id
+    - client_hassh
+    - file
+    - protocol_ver
+    - server_hassh
+    slot_usage:
+      activity_id:
+        range: SshActivityActivityIdEnum
+      auth_type:
+        description: The SSH authentication type, normalized to the caption of 'auth_type_id'. In the case of 'Other', it is defined by the event source.
+        recommended: true
+        annotations:
+          group: primary
+      auth_type_id:
+        description: The normalized identifier of the SSH authentication type.
+        recommended: true
+        range: SshActivityAuthTypeIdEnum
+        annotations:
+          group: primary
+      client_hassh:
+        recommended: true
+        annotations:
+          group: primary
+      file:
+        description: The file that is the target of the SSH activity.
+        annotations:
+          group: context
+      protocol_ver:
+        description: The Secure Shell Protocol version.
+        recommended: true
+        annotations:
+          group: context
+      server_hassh:
+        recommended: true
+        annotations:
+          group: primary
+    see_also:
+    - https://d3fend.mitre.org/event/d3f:SSHEvent/
+    notes:
+    - D3FEND™ Ontology d3f:SSHEvent — https://d3fend.mitre.org/event/d3f:SSHEvent/
+    annotations:
+      ocsf_event_uid: 7
+  TunnelActivity:
+    description: Tunnel Activity events report secure tunnel establishment (such as VPN), teardowns, renewals, and other network tunnel specific actions.
+    aliases:
+    - Tunnel Activity
+    is_a: NetworkEvent
+    slots:
+    - activity_id
+    - connection_info
+    - device
+    - dst_endpoint
+    - protocol_name
+    - session
+    - src_endpoint
+    - traffic
+    - tunnel_interface
+    - tunnel_type
+    - tunnel_type_id
+    - user
+    slot_usage:
+      activity_id:
+        required: true
+        range: TunnelActivityActivityIdEnum
+      connection_info:
+        description: The tunnel connection information.
+        annotations:
+          group: context
+      device:
+        description: The device that reported the event.
+        recommended: true
+        annotations:
+          group: primary
+      dst_endpoint:
+        description: The server responding to the tunnel connection.
+        recommended: true
+        annotations:
+          group: primary
+      protocol_name:
+        description: The networking protocol associated with the tunnel. E.g. <code>IPSec</code>, <code>SSL</code>, <code>GRE</code>.
+        annotations:
+          group: context
+      session:
+        description: The session associated with the tunnel.
+        recommended: true
+        annotations:
+          group: primary
+      src_endpoint:
+        description: The initiator (client) of the tunnel connection.
+        recommended: true
+        annotations:
+          group: primary
+      traffic:
+        description: 'Traffic refers to the amount of data moving across the tunnel at a given point of time. Ex: <code>bytes_in</code> and <code>bytes_out</code>.'
+        annotations:
+          group: context
+      tunnel_interface:
+        description: The information about the virtual tunnel interface, e.g. <code>utun0</code>. This is usually associated with the private (rfc-1918) ip of the tunnel.
+        recommended: true
+        annotations:
+          group: primary
+      tunnel_type:
+        description: 'The type of tunnel configuration, normalized to the caption of the <code>tunnel_type_id</code> value, indicating the scope of traffic routed through the connection. Example: <code>Split Tunnel</code> or <code>Full Tunnel</code>.'
+        recommended: true
+        annotations:
+          group: primary
+      tunnel_type_id:
+        description: 'The normalized identifier for the type of tunnel configuration, indicating the scope of traffic routed through the connection. Example: <code>1 (Split Tunnel)</code> or <code>2 (Full Tunnel)</code>.'
+        recommended: true
+        range: TunnelActivityTunnelTypeIdEnum
+        annotations:
+          group: primary
+      user:
+        description: The user associated with the tunnel activity.
+        recommended: true
+        annotations:
+          group: primary
+    rules:
+    - description: 'OCSF at_least_one: at least one of [''connection_info'', ''session'', ''src_endpoint'', ''traffic'', ''tunnel_interface'', ''tunnel_type_id''] must be set.'
+      postconditions:
+        any_of:
+        - slot_conditions:
+            connection_info:
+              required: true
+        - slot_conditions:
+            session:
+              required: true
+        - slot_conditions:
+            src_endpoint:
+              required: true
+        - slot_conditions:
+            traffic:
+              required: true
+        - slot_conditions:
+            tunnel_interface:
+              required: true
+        - slot_conditions:
+            tunnel_type_id:
+              required: true
+    annotations:
+      ocsf_constraints: '{"at_least_one": ["connection_info", "session", "src_endpoint", "traffic", "tunnel_interface", "tunnel_type_id"]}'
+      ocsf_event_uid: 14
+      associations: '{"src_endpoint": ["user"], "user": ["src_endpoint"]}'
+    see_also:
+    - https://d3fend.mitre.org/event/d3f:TunnelEvent/
+    notes:
+    - D3FEND™ Ontology d3f:TunnelEvent — https://d3fend.mitre.org/event/d3f:TunnelEvent/
+  FileRemediationActivity:
+    description: File Remediation Activity events report on attempts at remediating files. It follows the MITRE countermeasures defined by the D3FEND™ <a target='_blank' href='https://d3fend.mitre.org/'>Matrix</a>. Sub-techniques will include File, such as File Removal or Restore File.
+    aliases:
+    - File Remediation Activity
+    is_a: RemediationActivity
+    slots:
+    - file
+    slot_usage:
+      file:
+        description: The file that pertains to the remediation event.
+        required: true
+        annotations:
+          group: primary
+    annotations:
+      ocsf_event_uid: 2
+  NetworkRemediationActivity:
+    description: Network Remediation Activity events report on attempts at remediating computer networks. It follows the MITRE countermeasures defined by the D3FEND™ <a target='_blank' href='https://d3fend.mitre.org/'>Matrix</a>. Techniques and Sub-techniques will include Network, such as Network Isolation or Network Traffic Filtering.
+    aliases:
+    - Network Remediation Activity
+    is_a: RemediationActivity
+    slots:
+    - connection_info
+    slot_usage:
+      connection_info:
+        description: The network connection that pertains to the remediation event.
+        required: true
+        annotations:
+          group: primary
+    annotations:
+      ocsf_event_uid: 4
+  ProcessRemediationActivity:
+    description: Process Remediation Activity events report on attempts at remediating processes. It follows the MITRE countermeasures defined by the D3FEND™ <a target='_blank' href='https://d3fend.mitre.org/'>Matrix</a>. Sub-techniques will include Process, such as Process Termination or Kernel-based Process Isolation.
+    aliases:
+    - Process Remediation Activity
+    is_a: RemediationActivity
+    slots:
+    - process
+    slot_usage:
+      process:
+        description: The process that pertains to the remediation event.
+        required: true
+        annotations:
+          group: primary
+    annotations:
+      ocsf_event_uid: 3
+  RemediationActivity:
+    description: Remediation Activity events report on attempts at remediating a compromised device or computer network. It follows the MITRE countermeasures defined by the D3FEND™ <a target='_blank' href='https://d3fend.mitre.org/'>Matrix</a>.
+    aliases:
+    - Remediation Activity
+    is_a: BaseEvent
+    slots:
+    - activity_id
+    - command_uid
+    - countermeasures
+    - remediation
+    - scan
+    - status_id
+    slot_usage:
+      activity_id:
+        description: 'Matches the MITRE D3FEND™ Tactic. Note: the Model and Detect Tactics are not supported as remediations by the OCSF Remediation event class.'
+        range: RemediationActivityActivityIdEnum
+      command_uid:
+        description: The unique identifier of the remediation command that pertains to this event.
+        required: true
+        annotations:
+          group: primary
+      countermeasures:
+        recommended: true
+        annotations:
+          group: primary
+      remediation:
+        annotations:
+          group: context
+      scan:
+        description: The remediation scan that pertains to this event.
+        annotations:
+          group: context
+      status_id:
+        range: RemediationActivityStatusIdEnum
+    annotations:
+      ocsf_event_uid: 1
+      category: remediation
+  SystemEvent:
+    description: The System Activity event is a generic event that defines a set of attributes available in the system activity events. As a generic event, it could be used to log events that are not otherwise defined by the System Activity category.
+    aliases:
+    - System Activity
+    is_a: BaseEvent
+    slots:
+    - actor
+    - device
+    slot_usage:
+      actor:
+        required: true
+        annotations:
+          group: primary
+      device:
+        required: true
+        annotations:
+          group: primary
+    annotations:
+      category: system
+      associations: '{"actor.user": ["device"], "device": ["actor.user"]}'
+  EventLogActvity:
+    description: Event Log Activity events report actions pertaining to the system's event logging service(s), such as disabling logging or clearing the log data.
+    aliases:
+    - Event Log Activity
+    is_a: SystemEvent
+    slots:
+    - activity_id
+    - actor
+    - device
+    - dst_endpoint
+    - file
+    - log_name
+    - log_provider
+    - log_type
+    - log_type_id
+    - src_endpoint
+    - status_code
+    - status_detail
+    slot_usage:
+      activity_id:
+        range: EventLogActvityActivityIdEnum
+      actor:
+        description: The actor that performed the activity.
+        recommended: true
+        annotations:
+          group: primary
+      device:
+        description: The device that reported the event.
+        recommended: true
+        annotations:
+          group: primary
+      dst_endpoint:
+        description: The <p style='display:inline;color:red'>targeted</p> endpoint for the event log activity.
+        recommended: true
+        annotations:
+          group: primary
+      file:
+        description: 'The file <p style=''display:inline;color:red''>targeted by</p> the activity. Example: <code>/var/log/audit.log</code>'
+        recommended: true
+        annotations:
+          group: primary
+      log_name:
+        description: 'The name of the event log <p style=''display:inline;color:red''>targeted by</p> the activity. Example: Windows <code>Security</code>.'
+        recommended: true
+        annotations:
+          group: primary
+      log_provider:
+        description: 'The logging provider or logging service <p style=''display:inline;color:red''>targeted by</p> the activity.<br />Example: <code>Microsoft-Windows-Security-Auditing</code>, <code>Auditd</code>, or <code>Syslog</code>.'
+        recommended: true
+        annotations:
+          group: primary
+      log_type:
+        recommended: true
+        annotations:
+          group: primary
+      log_type_id:
+        recommended: true
+        annotations:
+          group: primary
+      src_endpoint:
+        description: The source endpoint for the event log activity.
+        recommended: true
+        annotations:
+          group: primary
+      status_code:
+        description: 'The event status code, as reported by the event source.<br />Example: <code>0</code>, <code>8</code>, or <code>21</code> for <a target=''_blank'' href=''https://learn.microsoft.com/en-us/previous-versions/windows/desktop/eventlogprov/cleareventlog-method-in-class-win32-nteventlogfile''>Windows ClearEventLog</a>.'
+        recommended: true
+        annotations:
+          group: primary
+      status_detail:
+        description: 'The status detail contains additional information about the event outcome.<br />Example: <code>Success</code>, <code>Privilege Missing</code>, or <code>Invalid Parameter</code> for <a target=''_blank'' href=''https://learn.microsoft.com/en-us/previous-versions/windows/desktop/eventlogprov/cleareventlog-method-in-class-win32-nteventlogfile''>Windows ClearEventLog</a>.'
+        recommended: true
+        annotations:
+          group: primary
+    rules:
+    - description: 'OCSF at_least_one: at least one of [''log_file'', ''log_name'', ''log_provider'', ''log_type'', ''log_type_id''] must be set.'
+      postconditions:
+        any_of:
+        - slot_conditions:
+            log_file:
+              required: true
+        - slot_conditions:
+            log_name:
+              required: true
+        - slot_conditions:
+            log_provider:
+              required: true
+        - slot_conditions:
+            log_type:
+              required: true
+        - slot_conditions:
+            log_type_id:
+              required: true
+    annotations:
+      ocsf_constraints: '{"at_least_one": ["log_file", "log_name", "log_provider", "log_type", "log_type_id"]}'
+      ocsf_event_uid: 8
+    see_also:
+    - https://d3fend.mitre.org/event/d3f:EventLogEvent/
+    notes:
+    - D3FEND™ Ontology d3f:EventLogEvent — https://d3fend.mitre.org/event/d3f:EventLogEvent/
+  FileActivity:
+    description: File System Activity events report when a process performs an action on a file or folder.
+    aliases:
+    - File System Activity
+    is_a: SystemEvent
+    slots:
+    - access_mask
+    - activity_id
+    - actor
+    - component
+    - connection_uid
+    - create_mask
+    - file
+    - file_diff
+    - file_result
+    slot_usage:
+      access_mask:
+        annotations:
+          group: context
+      activity_id:
+        range: FileActivityActivityIdEnum
+      actor:
+        description: The actor that performed the activity on the <code>file</code> object
+        required: true
+      component:
+        description: '<p>The name or relative pathname of a sub-component of the data object, if applicable. </p>For example: <code>attachment.doc</code>, <code>attachment.zip/bad.doc</code>, or <code>part.mime/part.cab/part.uue/part.doc</code>.'
+        recommended: true
+        annotations:
+          group: primary
+      connection_uid:
+        annotations:
+          group: context
+      create_mask:
+        recommended: true
+        annotations:
+          group: primary
+      file:
+        description: The file that is the target of the activity.
+        required: true
+        annotations:
+          group: primary
+      file_diff:
+        recommended: true
+        annotations:
+          group: primary
+      file_result:
+        description: The resulting file object when the activity was allowed and successful.
+        recommended: true
+        annotations:
+          group: primary
+    see_also:
+    - https://d3fend.mitre.org/event/d3f:FileEvent/
+    notes:
+    - D3FEND™ Ontology d3f:FileEvent — https://d3fend.mitre.org/event/d3f:FileEvent/
+    annotations:
+      ocsf_event_uid: 1
+  KernelActivity:
+    description: Kernel Activity events report when an process creates, reads, or deletes a kernel resource.
+    aliases:
+    - Kernel Activity
+    is_a: SystemEvent
+    slots:
+    - activity_id
+    - kernel
+    slot_usage:
+      activity_id:
+        range: KernelActivityActivityIdEnum
+      kernel:
+        description: The target kernel resource.
+        required: true
+        annotations:
+          group: primary
+    see_also:
+    - https://d3fend.mitre.org/event/d3f:KernelEvent/
+    notes:
+    - D3FEND™ Ontology d3f:KernelEvent — https://d3fend.mitre.org/event/d3f:KernelEvent/
+    annotations:
+      ocsf_event_uid: 3
+  KernelExtensionActivity:
+    description: Kernel Extension events report when a driver/extension is loaded or unloaded into the kernel
+    aliases:
+    - Kernel Extension Activity
+    is_a: SystemEvent
+    slots:
+    - activity_id
+    - actor
+    - driver
+    slot_usage:
+      activity_id:
+        range: KernelExtensionActivityActivityIdEnum
+      actor:
+        description: The actor process that loaded or unloaded the driver/extension.
+        required: true
+      driver:
+        required: true
+        annotations:
+          group: primary
+    see_also:
+    - https://d3fend.mitre.org/event/d3f:KernelModuleEvent/
+    notes:
+    - D3FEND™ Ontology d3f:KernelModuleEvent — https://d3fend.mitre.org/event/d3f:KernelModuleEvent/
+    annotations:
+      ocsf_event_uid: 2
+  MemoryActivity:
+    description: Memory Activity events report when a process has memory allocated, read/modified, or other manipulation activities - such as a buffer overflow or turning off data execution protection (DEP).
+    aliases:
+    - Memory Activity
+    is_a: SystemEvent
+    slots:
+    - activity_id
+    - actual_permissions
+    - base_address
+    - process
+    - requested_permissions
+    - size
+    slot_usage:
+      activity_id:
+        range: MemoryActivityActivityIdEnum
+      actual_permissions:
+        description: The permissions that were granted to access memory.
+        recommended: true
+        annotations:
+          group: primary
+      base_address:
+        description: The memory address that was access or requested.
+        recommended: true
+        annotations:
+          group: primary
+      process:
+        description: The process that had memory allocated, read/written, or had other manipulation activities performed on it.
+        required: true
+        annotations:
+          group: primary
+      requested_permissions:
+        description: The permissions mask that was requested to access memory.
+        recommended: true
+        annotations:
+          group: primary
+      size:
+        description: The memory size that was access or requested.
+        recommended: true
+        annotations:
+          group: primary
+    see_also:
+    - https://d3fend.mitre.org/event/d3f:MemoryEvent/
+    notes:
+    - D3FEND™ Ontology d3f:MemoryEvent — https://d3fend.mitre.org/event/d3f:MemoryEvent/
+    annotations:
+      ocsf_event_uid: 4
+  ModuleActivity:
+    description: Module Activity events report when an endpoint process acts on a <code>module</code>.
+    aliases:
+    - Module Activity
+    is_a: SystemEvent
+    slots:
+    - activity_id
+    - actor
+    - module
+    slot_usage:
+      activity_id:
+        range: ModuleActivityActivityIdEnum
+      actor:
+        description: The actor that performed the activity on the target <code>module</code>. For example, the process that loaded a module into memory.
+        required: true
+      module:
+        description: The module that was loaded, unloaded, or invoked.
+        required: true
+        annotations:
+          group: primary
+    see_also:
+    - https://d3fend.mitre.org/event/d3f:LoadLibraryEvent/
+    - https://d3fend.mitre.org/event/d3f:UnloadLibraryEvent/
+    notes:
+    - D3FEND™ Ontology d3f:LoadLibraryEvent — https://d3fend.mitre.org/event/d3f:LoadLibraryEvent/
+    - D3FEND™ Ontology d3f:UnloadLibraryEvent — https://d3fend.mitre.org/event/d3f:UnloadLibraryEvent/
+    annotations:
+      ocsf_event_uid: 5
+  PeripheralActivity:
+    description: Peripheral Activity events log a system's interactions with external, connectable, and detachable hardware. These events provide visibility into the external devices connected to and used by a system.
+    aliases:
+    - Peripheral Activity
+    is_a: SystemEvent
+    slots:
+    - activity_id
+    - peripheral_device
+    slot_usage:
+      activity_id:
+        range: PeripheralActivityActivityIdEnum
+      peripheral_device:
+        description: The peripheral device that is the subject of the activity.
+        required: true
+        annotations:
+          group: primary
+    annotations:
+      ocsf_event_uid: 10
+  ProcessActivity:
+    description: Process Activity events report when a process launches, injects, opens or terminates another process, successful or otherwise.
+    aliases:
+    - Process Activity
+    is_a: SystemEvent
+    mixins:
+    - AiOperationProfile
+    slots:
+    - activity_id
+    - actor
+    - actual_permissions
+    - exit_code
+    - injection_type
+    - injection_type_id
+    - launch_type
+    - launch_type_id
+    - module
+    - process
+    - requested_permissions
+    slot_usage:
+      activity_id:
+        range: ProcessActivityActivityIdEnum
+      actor:
+        description: The actor that performed the activity on the target <code>process</code>. For example, the process that started a new process or injected code into another process.
+      actual_permissions:
+        description: The permissions that were granted to the process in a platform-native format.
+        recommended: true
+        annotations:
+          group: primary
+      exit_code:
+        recommended: true
+        annotations:
+          group: primary
+      injection_type:
+        recommended: true
+        annotations:
+          group: primary
+      injection_type_id:
+        recommended: true
+        annotations:
+          group: primary
+      launch_type:
+        recommended: true
+        annotations:
+          group: primary
+      launch_type_id:
+        recommended: true
+        annotations:
+          group: primary
+      module:
+        description: The module that was injected by the actor process.
+        recommended: true
+        annotations:
+          group: primary
+      process:
+        description: The process that was launched, injected into, opened, or terminated.
+        required: true
+        annotations:
+          group: primary
+      requested_permissions:
+        description: The permissions mask that was requested by the process.
+        recommended: true
+        annotations:
+          group: primary
+    see_also:
+    - https://d3fend.mitre.org/event/d3f:ProcessEvent/
+    notes:
+    - D3FEND™ Ontology d3f:ProcessEvent — https://d3fend.mitre.org/event/d3f:ProcessEvent/
+    annotations:
+      ocsf_event_uid: 7
+  ScheduledJobActivity:
+    description: Scheduled Job Activity events report activities related to scheduled jobs or tasks.
+    aliases:
+    - Scheduled Job Activity
+    is_a: SystemEvent
+    slots:
+    - activity_id
+    - actor
+    - job
+    slot_usage:
+      activity_id:
+        range: ScheduledJobActivityActivityIdEnum
+      actor:
+        description: The actor that performed the activity on the <code>job</code> object.
+        annotations:
+          group: context
+      job:
+        required: true
+        annotations:
+          group: primary
+    see_also:
+    - https://d3fend.mitre.org/event/d3f:ScheduledJobEvent/
+    notes:
+    - D3FEND™ Ontology d3f:ScheduledJobEvent — https://d3fend.mitre.org/event/d3f:ScheduledJobEvent/
+    annotations:
+      ocsf_event_uid: 6
+  ScriptActivity:
+    description: Script Activity events report when a process executes a script.
+    aliases:
+    - Script Activity
+    is_a: SystemEvent
+    slots:
+    - activity_id
+    - script
+    slot_usage:
+      activity_id:
+        range: ScriptActivityActivityIdEnum
+      script:
+        description: The script that was the target of the activity.
+        required: true
+        annotations:
+          group: primary
+    annotations:
+      ocsf_event_uid: 9
+  UnmannedSystemsEvent:
+    description: The Unmanned Systems event is a generic event that defines a set of attributes available in the Unmanned Systems category.
+    aliases:
+    - Unmanned Systems
+    is_a: BaseEvent
+    slots:
+    - connection_info
+    - dst_endpoint
+    - proxy_endpoint
+    - src_endpoint
+    - tls
+    - traffic
+    slot_usage:
+      connection_info:
+        recommended: true
+        annotations:
+          group: context
+      dst_endpoint:
+        description: The destination network endpoint of the Unmanned Aerial System (UAS), Counter Unmanned Aerial System (CUAS) platform, or other unmanned systems monitoring and/or sensing infrastructure.
+        required: true
+        annotations:
+          group: context
+      proxy_endpoint:
+        recommended: true
+        annotations:
+          group: context
+      src_endpoint:
+        description: The source network endpoint of the Unmanned Aerial System (UAS), Counter Unmanned Aerial System (CUAS) platform, or other unmanned systems monitoring and/or sensing infrastructure.
+        recommended: true
+        annotations:
+          group: context
+      tls:
+        annotations:
+          group: context
+      traffic:
+        recommended: true
+        annotations:
+          group: context
+    annotations:
+      category: unmanned_systems
+  AirborneBroadcastActivity:
+    description: Airborne Broadcast Activity events report the activity of any aircraft or unmanned system as reported and tracked by Automatic Dependent Surveillance - Broadcast (ADS-B) receivers. Based on the ADS-B standards described in <a target='_blank' href='https://www.ecfr.gov/current/title-14/chapter-I/subchapter-F/part-91#91.225'>Code of Federal Regulations (CFR) Title 14 Chapter I Subchapter F Part 91</a> and in other general Federal Aviation Administration (FAA) supplemental orders and guidance described <a target='_blank' href='https://www.faa.gov/about/office_org/headquarters_offices/avs/offices/afx/afs/afs400/afs410/ads-b'>here</a>.
+    aliases:
+    - Airborne Broadcast Activity
+    is_a: UnmannedSystemsEvent
+    slots:
+    - activity_id
+    - aircraft
+    - dst_endpoint
+    - protocol_name
+    - rssi
+    - src_endpoint
+    - traffic
+    - unmanned_aerial_system
+    - unmanned_system_operating_area
+    - unmanned_system_operator
+    slot_usage:
+      activity_id:
+        required: true
+        range: AirborneBroadcastActivityActivityIdEnum
+        annotations:
+          group: primary
+      aircraft:
+        recommended: true
+        annotations:
+          group: primary
+      dst_endpoint:
+        description: The destination network endpoint for the ADS-B system, if telemetry is being remotely broadcasted.
+        annotations:
+          group: context
+      protocol_name:
+        description: The specific protocol associated with the ADS-B system. E.g. <code>ADS-B UAT</code> or <code>ADS-B ES</code>.
+        recommended: true
+        annotations:
+          group: primary
+      rssi:
+        description: Recent average RSSI (signal power) measured in dbFS. This value will always be negative, e.g., <code>-87.13</code>.
+        annotations:
+          group: context
+      src_endpoint:
+        description: The source network endpoint for the ADS-B system.
+        annotations:
+          group: context
+      traffic:
+        description: 'Traffic refers to the amount of data transmitted from a ADS-B remote monitoring system at a given point of time. Ex: <code>bytes_in</code> and <code>bytes_out</code>.'
+        annotations:
+          group: context
+      unmanned_aerial_system:
+        required: true
+        annotations:
+          group: primary
+      unmanned_system_operating_area:
+        recommended: true
+        annotations:
+          group: primary
+      unmanned_system_operator:
+        required: true
+        annotations:
+          group: primary
+    rules:
+    - description: 'OCSF at_least_one: at least one of [''aircraft'', ''unmanned_aerial_system'', ''unmanned_system_operating_area''] must be set.'
+      postconditions:
+        any_of:
+        - slot_conditions:
+            aircraft:
+              required: true
+        - slot_conditions:
+            unmanned_aerial_system:
+              required: true
+        - slot_conditions:
+            unmanned_system_operating_area:
+              required: true
+    annotations:
+      ocsf_constraints: '{"at_least_one": ["aircraft", "unmanned_aerial_system", "unmanned_system_operating_area"]}'
+      ocsf_event_uid: 2
+  DroneFlightsActivity:
+    description: 'Drone Flights Activity events report the activity of Unmanned Aerial Systems (UAS), their Operators, and mission-planning and authorization metadata as reported by the UAS platforms themselves, by Counter-UAS (CUAS) systems, or other remote monitoring or sensing infrastructure. Based on the Remote ID defined in Standard Specification for Remote ID and Tracking (ASTM Designation: F3411-22a) <a target=''_blank'' href=''https://cdn.standards.iteh.ai/samples/112830/71297057ac42432880a203654f213709/ASTM-F3411-22a.pdf''>ASTM F3411-22a</a>'
+    aliases:
+    - Drone Flights Activity
+    is_a: UnmannedSystemsEvent
+    slots:
+    - activity_id
+    - auth_protocol
+    - auth_protocol_id
+    - classification
+    - comment
+    - protocol_name
+    - src_endpoint
+    - status
+    - status_id
+    - traffic
+    - unmanned_aerial_system
+    - unmanned_system_operating_area
+    - unmanned_system_operator
+    slot_usage:
+      activity_id:
+        required: true
+        range: DroneFlightsActivityActivityIdEnum
+        annotations:
+          group: primary
+      auth_protocol:
+        description: The authentication type as defined by the caption of <code>auth_protocol_id</code>. In the case of 'Other', it is defined by the event source.
+        annotations:
+          group: context
+      auth_protocol_id:
+        description: The normalized identifier of the authentication type used to authorize a flight plan or mission.
+        range: DroneFlightsActivityAuthProtocolIdEnum
+        annotations:
+          group: context
+      classification:
+        description: UA Classification - Allows a region to classify UAS in a regional specific manner. The format may differ from region to region.
+        annotations:
+          group: context
+      comment:
+        description: This optional, free-text field enables the operator to describe the purpose of a flight, if so desired.
+        annotations:
+          group: context
+      protocol_name:
+        description: The networking protocol associated with the Remote ID device or beacon. E.g. <code>BLE</code>, <code>LTE</code>, <code>802.11</code>.
+        annotations:
+          group: context
+      src_endpoint:
+        annotations:
+          group: context
+      status:
+        description: The normalized Operational status for the Unmanned Aerial System (UAS) normalized to the caption of the <code>status_id</code> value. In the case of 'Other', it is defined by the source.
+        annotations:
+          group: context
+      status_id:
+        description: The normalized Operational status identifier for the Unmanned Aerial System (UAS).
+        recommended: true
+        range: DroneFlightsActivityStatusIdEnum
+        annotations:
+          group: primary
+      traffic:
+        description: 'Traffic refers to the amount of data transmitted from a Unmanned Aerial System (UAS) or Counter Unmanned Aerial System (UAS) (CUAS) system at a given point of time. Ex: <code>bytes_in</code> and <code>bytes_out</code>.'
+        annotations:
+          group: context
+      unmanned_aerial_system:
+        required: true
+        annotations:
+          group: primary
+      unmanned_system_operating_area:
+        recommended: true
+        annotations:
+          group: primary
+      unmanned_system_operator:
+        required: true
+        annotations:
+          group: primary
+    rules:
+    - description: 'OCSF at_least_one: at least one of [''src_endpoint'', ''unmanned_aerial_system'', ''unmanned_system_operator'', ''unmanned_system_operating_area''] must be set.'
+      postconditions:
+        any_of:
+        - slot_conditions:
+            src_endpoint:
+              required: true
+        - slot_conditions:
+            unmanned_aerial_system:
+              required: true
+        - slot_conditions:
+            unmanned_system_operator:
+              required: true
+        - slot_conditions:
+            unmanned_system_operating_area:
+              required: true
+    annotations:
+      ocsf_constraints: '{"at_least_one": ["src_endpoint", "unmanned_aerial_system", "unmanned_system_operator", "unmanned_system_operating_area"]}'
+      ocsf_event_uid: 1

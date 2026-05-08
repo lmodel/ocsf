@@ -1,0 +1,16 @@
+# File with a multivalued list of Fingerprint objects — exercises multivalued
+# slot of inlined objects + the FingerprintAlgorithmIdEnum enum.
+name: report.pdf
+path: /home/alice/report.pdf
+type_id: REGULAR_FILE
+size: 102400
+mime_type: application/pdf
+created_time: 1700000000000
+modified_time: 1700001000000
+hashes:
+  - algorithm_id: SHA_256
+    value: "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  - algorithm_id: SHA_1
+    value: "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+  - algorithm_id: MD5
+    value: "d41d8cd98f00b204e9800998ecf8427e"

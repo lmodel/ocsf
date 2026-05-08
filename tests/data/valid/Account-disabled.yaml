@@ -1,0 +1,6 @@
+# Account using the 1.8.0-added is_disabled / is_locked boolean attributes.
+name: svc-deploy
+uid: 9001
+type: Service Account
+is_disabled: true
+is_locked: false

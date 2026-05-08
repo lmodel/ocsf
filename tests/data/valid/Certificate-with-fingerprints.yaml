@@ -1,0 +1,15 @@
+# X.509 Certificate with a list of Fingerprints.
+# `issuer` and `serial_number` are required.
+issuer: "CN=Example Internal CA, O=Example Corp, C=US"
+serial_number: "0A:1B:2C:3D:4E:5F"
+subject: "CN=*.example.com, O=Example Corp, C=US"
+version: "3"
+uid: cert-12345
+created_time: 1700000000000
+expiration_time: 1731536000000
+is_self_signed: false
+fingerprints:
+  - algorithm_id: SHA_256
+    value: "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  - algorithm_id: SHA_1
+    value: "da39a3ee5e6b4b0d3255bfef95601890afd80709"

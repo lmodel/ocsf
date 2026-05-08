@@ -1,0 +1,15 @@
+# WindowsProcess extends Process with Windows-specific fields. Exercises is_a
+# inheritance with a different OS subtype than the existing LinuxProcess test.
+name: cmd.exe
+pid: 4321
+created_time: 1700001000000
+working_directory: C:\Users\alice
+cmd_line: 'C:\Windows\System32\cmd.exe /c whoami'
+file:
+  name: cmd.exe
+  path: C:\Windows\System32\cmd.exe
+  type_id: REGULAR_FILE
+user:
+  name: alice
+  uid: S-1-5-21-1234567890-1234567890-1234567890-1001
+  domain: CORP

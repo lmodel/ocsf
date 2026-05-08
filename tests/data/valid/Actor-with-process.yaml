@@ -1,0 +1,17 @@
+# Actor object with a nested Process and User — exercises the nested
+# object→object→object chain.
+app_name: chrome
+app_uid: app-chrome-1
+invoked_by: systemd
+process:
+  name: chrome
+  pid: 8888
+  cmd_line: "/usr/bin/chrome --user-data-dir=/home/alice/.config/chrome"
+  created_time: 1700000500000
+user:
+  name: alice
+  uid: u-7001
+  domain: corp.example.com
+session:
+  uid: sess-001
+  is_remote: false

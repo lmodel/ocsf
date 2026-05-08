@@ -1,0 +1,6 @@
+# INVALID: `type_id` must be a value from DatabaseTypeIdEnum
+# (UNKNOWN/RELATIONAL/NETWORK/...). "QUANTUM" is not a permissible value.
+type_id: QUANTUM
+type: PostgreSQL
+name: customer-prod
+uid: db-001

@@ -1,0 +1,12 @@
+# HTTP response — `code` is the only required slot.
+code: 200
+status: OK
+content_type: application/json
+length: 4096
+body_length: 4096
+latency: 12
+http_headers:
+  - name: Content-Type
+    value: application/json
+  - name: Cache-Control
+    value: no-store

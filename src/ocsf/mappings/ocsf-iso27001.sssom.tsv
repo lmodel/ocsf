@@ -1,0 +1,24 @@
+# curie_map:
+#   ocsf: 'https://w3id.org/lmodel/ocsf/'
+#   iso27001: 'https://w3id.org/lmodel/iso27001/'
+#   skos: 'http://www.w3.org/2004/02/skos/core#'
+#   semapv: 'https://w3id.org/semapv/vocab/'
+# license: 'https://creativecommons.org/licenses/by/4.0/'
+# mapping_set_id: 'https://w3id.org/lmodel/ocsf/mappings/ocsf-iso27001'
+# mapping_set_title: 'OCSF to ISO/IEC 27001:2022 class mappings'
+# mapping_set_description: |
+#   Class-level mappings between OCSF (Open Cybersecurity Schema Framework)
+#   classes and the ISO/IEC 27001:2022 ISMS LinkML schema. OCSF Compliance
+#   and policy objects align with ISO 27001 security control and policy
+#   concepts. Vulnerability and security findings map to the ISO 27001 risk
+#   and audit-finding lifecycle. Remediation maps to risk treatment planning.
+# mapping_set_version: '1.0.0'
+# creator_id: 'https://orcid.org/0000-0000-0000-0000'
+subject_id	subject_label	predicate_id	object_id	object_label	mapping_justification	confidence	comment
+ocsf:Compliance	Compliance	skos:closeMatch	iso27001:SecurityControl	Security Control	semapv:ManualMappingCuration	0.80	OCSF Compliance records the assessment state of a security control against a standard; ISO 27001 SecurityControl represents an Annex A control with applicability and implementation status.
+ocsf:ComplianceFinding	Compliance Finding	skos:closeMatch	iso27001:AuditFinding	Audit Finding	semapv:ManualMappingCuration	0.80	A ComplianceFinding event signals that a policy or control check produced a result; ISO 27001 AuditFinding is the structured record of such a result in an ISMS internal audit.
+ocsf:VulnerabilityFinding	Vulnerability Finding	skos:closeMatch	iso27001:Risk	Risk	semapv:ManualMappingCuration	0.75	A vulnerability finding represents a realised or potential risk to information assets; ISO 27001 Risk captures the likelihood/consequence assessment of such threats.
+ocsf:Finding	Finding	skos:relatedMatch	iso27001:Risk	Risk	semapv:ManualMappingCuration	0.60	A generic security finding indicates a potential risk; the ISO 27001 Risk entity is the closest structural equivalent in the ISMS lifecycle.
+ocsf:Remediation	Remediation	skos:closeMatch	iso27001:RiskTreatmentPlan	Risk Treatment Plan	semapv:ManualMappingCuration	0.75	OCSF Remediation describes recommended fix actions; ISO 27001 RiskTreatmentPlan formalises the selected controls and owner accountabilities for treating a risk.
+ocsf:Policy	Policy	skos:closeMatch	iso27001:InformationSecurityPolicy	Information Security Policy	semapv:ManualMappingCuration	0.75	OCSF Policy captures the applicable security policy at event time; ISO 27001 InformationSecurityPolicy is the top-level ISMS policy document — close but OCSF policy is more operational.
+ocsf:CisControl	CIS Control	skos:closeMatch	iso27001:SecurityControl	Security Control	semapv:ManualMappingCuration	0.70	CIS Critical Security Controls are widely mapped to ISO 27001 Annex A controls; both model prioritised technical and organisational safeguards.

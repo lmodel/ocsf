@@ -1,0 +1,10 @@
+# Group object — no required slots, just commonly used fields.
+name: domain-admins
+uid: S-1-5-21-1234567890-1234567890-1234567890-512
+domain: corp.example.com
+desc: Administrative users with elevated privileges
+type: security
+privileges:
+  - SeBackupPrivilege
+  - SeRestorePrivilege
+  - SeDebugPrivilege

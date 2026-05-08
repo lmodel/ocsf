@@ -1,0 +1,5 @@
+# INVALID: Certificate requires both `issuer` and `serial_number`;
+# `issuer` is missing.
+serial_number: "0A:1B:2C:3D:4E:5F"
+subject: "CN=*.example.com"
+version: "3"

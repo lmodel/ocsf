@@ -1,0 +1,5 @@
+# INVALID: `score_id` must be a value from ScoreIdEnum.
+# "TOXIC" is not a permissible value.
+base_score: 6.5
+score_id: TOXIC
+provider: ExampleThreatIntel

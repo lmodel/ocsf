@@ -1,0 +1,7 @@
+# AuthFactor — `factor_type_id` (FactorTypeIdEnum) is required.
+factor_type_id: SMS
+factor_type: SMS one-time code
+phone_number: "+1-555-0100"
+provider: ExampleAuthApp
+is_totp: false
+is_hotp: false

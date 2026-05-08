@@ -1,0 +1,8 @@
+# CVSS v3.1 score — both `base_score` and `version` are required.
+base_score: 9.8
+version: "3.1"
+severity: Critical
+vector_string: "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+overall_score: 9.6
+vendor_name: NVD
+src_url: https://nvd.nist.gov/vuln-metrics/cvss

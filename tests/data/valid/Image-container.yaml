@@ -1,0 +1,11 @@
+# Container Image — `uid` is required.
+uid: sha256:9c8d6c8f6e5b4a3c2d1e0f9e8d7c6b5a4f3e2d1c0b9a8d7c6b5a4f3e2d1c0b9a
+name: nginx
+path: docker.io/library/nginx
+tag: "1.25-alpine"
+labels:
+  - tier=web
+  - maintainer=infra
+tags:
+  - name: source
+    value: official

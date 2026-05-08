@@ -1,0 +1,61 @@
+# curie_map:
+#   ocsf: 'https://w3id.org/lmodel/ocsf/'
+#   uco_master: 'https://lmodel.github.io/uco-master/'
+#   skos: 'http://www.w3.org/2004/02/skos/core#'
+#   semapv: 'https://w3id.org/semapv/vocab/'
+# license: 'https://creativecommons.org/licenses/by/4.0/'
+# mapping_set_id: 'https://w3id.org/lmodel/ocsf/mappings/ocsf-uco'
+# mapping_set_title: 'OCSF to UCO (Unified Cyber Ontology) class mappings'
+# mapping_set_description: |
+#   Class-level mappings between OCSF (Open Cybersecurity Schema Framework)
+#   and UCO master schema (Unified Cyber Ontology).  UCO is an upper-level
+#   cyber observable ontology with very granular sub-typing (e.g. Process /
+#   UNIXProcess / WindowsProcess).  Where OCSF has a corresponding
+#   platform-specific extension class, the platform-specific UCO class is
+#   the exact match; otherwise the abstract UCO class is the exact match.
+# mapping_set_version: '1.0.0'
+# creator_id: 'https://orcid.org/0000-0000-0000-0000'
+subject_id	subject_label	predicate_id	object_id	object_label	mapping_justification	confidence	comment
+ocsf:OcsfObject	OCSF Object root	skos:broadMatch	uco_master:UcoObject	UcoObject	semapv:ManualMappingCuration	0.85	Both are abstract roots; OCSF is narrower (cybersecurity events/objects), UCO covers the full cyber observable space.
+ocsf:Observable	Observable	skos:closeMatch	uco_master:ObservableObject	ObservableObject	semapv:ManualMappingCuration	0.85	OCSF Observable parallels UCO ObservableObject (a directly-observed cyber artefact).
+ocsf:Observation	Observation	skos:exactMatch	uco_master:Observation	Observation	semapv:ManualMappingCuration	0.95	Direct correspondence — both model a temporal perception of an observable.
+ocsf:Process	Process	skos:exactMatch	uco_master:Process	Process	semapv:ManualMappingCuration	0.95	Direct correspondence; UCO Process is the abstract parent of OS-specific variants.
+ocsf:LinuxProcess	Linux Process	skos:exactMatch	uco_master:UNIXProcess	UNIXProcess	semapv:ManualMappingCuration	0.9	OCSF's Linux extension narrows Process to UNIX semantics (uid/gid/etc).
+ocsf:MacosProcess	macOS Process	skos:closeMatch	uco_master:UNIXProcess	UNIXProcess	semapv:ManualMappingCuration	0.85	macOS is UNIX-derived; UCO has no separate MacOSProcess class.
+ocsf:WindowsProcess	Windows Process	skos:exactMatch	uco_master:WindowsProcess	WindowsProcess	semapv:ManualMappingCuration	0.95	Direct correspondence.
+ocsf:File	File	skos:exactMatch	uco_master:File	File	semapv:ManualMappingCuration	0.95	Direct correspondence.
+ocsf:Url	URL	skos:exactMatch	uco_master:URL	URL	semapv:ManualMappingCuration	0.95	Direct correspondence.
+ocsf:Email	Email	skos:exactMatch	uco_master:EmailMessage	EmailMessage	semapv:ManualMappingCuration	0.95	Direct correspondence.
+ocsf:AutonomousSystem	Autonomous System	skos:exactMatch	uco_master:AutonomousSystem	AutonomousSystem	semapv:ManualMappingCuration	0.95	Direct correspondence.
+ocsf:Account	Account	skos:closeMatch	uco_master:Account	Account	semapv:ManualMappingCuration	0.9	Direct correspondence at the abstract level.
+ocsf:User	User	skos:closeMatch	uco_master:UserAccount	UserAccount	semapv:ManualMappingCuration	0.85	Person-as-account view; UCO splits Identity (Person) from UserAccount.
+ocsf:Os	Operating System	skos:exactMatch	uco_master:OperatingSystem	OperatingSystem	semapv:ManualMappingCuration	0.95	Direct correspondence.
+ocsf:Whois	WHOIS	skos:exactMatch	uco_master:Whois	Whois	semapv:ManualMappingCuration	0.95	Direct correspondence (RFC 3912 conformant).
+ocsf:Dns	DNS	skos:closeMatch	uco_master:DNSRecord	DNSRecord	semapv:ManualMappingCuration	0.8	OCSF Dns wraps a DNS exchange; UCO DNSRecord models a single resource record.
+ocsf:DnsAnswer	DNS Answer	skos:closeMatch	uco_master:DNSRecord	DNSRecord	semapv:ManualMappingCuration	0.85	Each DNS answer is a UCO DNSRecord.
+ocsf:Fingerprint	Fingerprint	skos:exactMatch	uco_master:Hash	Hash	semapv:ManualMappingCuration	0.9	OCSF Fingerprint carries hash algorithm + value pairs equivalent to UCO Hash.
+ocsf:HttpRequest	HTTP Request	skos:closeMatch	uco_master:HTTPConnection	HTTPConnection	semapv:ManualMappingCuration	0.8	UCO HTTPConnection captures the full HTTP exchange; HttpRequest is one half.
+ocsf:HttpResponse	HTTP Response	skos:closeMatch	uco_master:HTTPConnection	HTTPConnection	semapv:ManualMappingCuration	0.8	UCO HTTPConnection captures the full HTTP exchange; HttpResponse is one half.
+ocsf:HttpCookie	HTTP Cookie	skos:exactMatch	uco_master:BrowserCookie	BrowserCookie	semapv:ManualMappingCuration	0.9	Direct correspondence (cookie metadata).
+ocsf:Application	Application	skos:exactMatch	uco_master:Application	Application	semapv:ManualMappingCuration	0.95	Direct correspondence.
+ocsf:ApplicationObject	Application (legacy object)	skos:exactMatch	uco_master:Application	Application	semapv:ManualMappingCuration	0.9	Same target as the Application event class; the OCSF object is an older form.
+ocsf:NetworkConnectionInfo	Network Connection Info	skos:exactMatch	uco_master:NetworkConnection	NetworkConnection	semapv:ManualMappingCuration	0.95	Direct correspondence.
+ocsf:NetworkInterface	Network Interface	skos:exactMatch	uco_master:NetworkInterface	NetworkInterface	semapv:ManualMappingCuration	0.95	Direct correspondence.
+ocsf:DomainContact	Domain Contact	skos:closeMatch	uco_master:DomainName	DomainName	semapv:ManualMappingCuration	0.7	OCSF DomainContact captures registrar contact info; UCO DomainName is the closest related term.
+ocsf:Endpoint	Endpoint	skos:broadMatch	uco_master:Device	Device	semapv:ManualMappingCuration	0.7	OCSF Endpoint is a host with network identity; UCO Device is the closest abstract equivalent.
+ocsf:Device	Device	skos:exactMatch	uco_master:Device	Device	semapv:ManualMappingCuration	0.95	Direct correspondence.
+ocsf:PeripheralDevice	Peripheral Device	skos:narrowMatch	uco_master:Device	Device	semapv:ManualMappingCuration	0.8	OCSF narrows to peripherals; UCO Device is the abstract parent.
+ocsf:Image	Image	skos:relatedMatch	uco_master:RasterPicture	RasterPicture	semapv:ManualMappingCuration	0.6	OCSF Image is closer to "container/disk image" than to a raster picture; mapping is best-effort.
+ocsf:Service	Service	skos:closeMatch	uco_master:OnlineService	OnlineService	semapv:ManualMappingCuration	0.7	OCSF Service models a network service; UCO has OnlineService for hosted services.
+ocsf:WinService	Windows Service	skos:closeMatch	uco_master:WindowsActiveDirectoryAccount	WindowsActiveDirectoryAccount	semapv:ManualMappingCuration	0.5	UCO has no first-class WindowsService; AD account is the closest related; consider unmapped.
+ocsf:Organization	Organization	skos:exactMatch	uco_master:Organization	Organization	semapv:ManualMappingCuration	0.95	Direct correspondence.
+ocsf:LdapPerson	LDAP Person	skos:closeMatch	uco_master:Person	Person	semapv:ManualMappingCuration	0.85	OCSF LdapPerson maps to UCO Person identity.
+ocsf:Location	Location	skos:exactMatch	uco_master:Location	Location	semapv:ManualMappingCuration	0.95	Direct correspondence (geospatial location).
+ocsf:Module	Module	skos:closeMatch	uco_master:Library	Library	semapv:ManualMappingCuration	0.7	UCO Library covers loadable shared libraries; OCSF Module covers loaded modules including DLLs/SOs.
+ocsf:RegKey	Registry Key	skos:exactMatch	uco_master:WindowsRegistryKey	WindowsRegistryKey	semapv:ManualMappingCuration	0.95	Direct correspondence.
+ocsf:Malware	Malware	skos:closeMatch	uco_master:MaliciousTool	MaliciousTool	semapv:ManualMappingCuration	0.75	UCO models malicious software via MaliciousTool (sub-class of Tool with a malicious role).
+ocsf:DataClassification	Data Classification	skos:closeMatch	uco_master:MarkingDefinition	MarkingDefinition	semapv:ManualMappingCuration	0.75	OCSF DataClassification labels data sensitivity; UCO MarkingDefinition is the analogous handling label.
+ocsf:Kernel	Kernel	skos:relatedMatch	uco_master:OperatingSystem	OperatingSystem	semapv:ManualMappingCuration	0.6	UCO has no Kernel class; OperatingSystem is the closest related concept.
+ocsf:KernelDriver	Kernel Driver	skos:closeMatch	uco_master:Library	Library	semapv:ManualMappingCuration	0.65	Loadable driver; closest UCO match is Library.
+ocsf:Container	Container	skos:relatedMatch	uco_master:Software	Software	semapv:ManualMappingCuration	0.5	UCO has no Container class; Software is the closest related abstract concept.
+ocsf:EnvironmentVariable	Environment Variable	skos:exactMatch	uco_master:EnvironmentVariable	EnvironmentVariable	semapv:ManualMappingCuration	0.95	Direct correspondence.

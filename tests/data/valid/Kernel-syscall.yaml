@@ -1,0 +1,7 @@
+# Kernel resource — `name` and `type_id` (KernelTypeIdEnum) are required.
+name: sys_open
+type_id: SYSTEM_CALL
+type: System Call
+is_system: true
+path: /proc/self/syscall
+system_call: open

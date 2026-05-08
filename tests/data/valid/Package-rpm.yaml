@@ -1,0 +1,16 @@
+# Software Package — `name` and `version` are required.
+name: openssl-libs
+version: "3.0.7"
+release: "16.el9_2"
+architecture: x86_64
+cpe_name: "cpe:2.3:a:openssl:openssl:3.0.7:*:*:*:*:*:*:*"
+purl: "pkg:rpm/redhat/openssl-libs@3.0.7-16.el9_2?arch=x86_64"
+package_manager: dnf
+package_manager_url: https://github.com/rpm-software-management/dnf
+license: Apache-2.0
+vendor_name: Red Hat, Inc.
+type: rpm
+type_id: APPLICATION
+hash:
+  algorithm_id: SHA_256
+  value: "1111111111111111111111111111111111111111111111111111111111111111"

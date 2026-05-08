@@ -1,0 +1,4 @@
+# Windows extension RegKey object — exercises an extension class with its own slots.
+path: 'HKLM\SYSTEM\CurrentControlSet\Services\Spooler'
+is_system: true
+modified_time: 1700004000000

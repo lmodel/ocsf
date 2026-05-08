@@ -1,0 +1,25 @@
+# curie_map:
+#   ocsf: 'https://w3id.org/lmodel/ocsf/'
+#   attack: 'https://lmodel.github.io/attack/'
+#   skos: 'http://www.w3.org/2004/02/skos/core#'
+#   semapv: 'https://w3id.org/semapv/vocab/'
+# license: 'https://creativecommons.org/licenses/by/4.0/'
+# mapping_set_id: 'https://w3id.org/lmodel/ocsf/mappings/ocsf-attack'
+# mapping_set_title: 'OCSF to MITRE ATT&CK class mappings'
+# mapping_set_description: |
+#   Class-level mappings between OCSF (Open Cybersecurity Schema Framework)
+#   object classes and MITRE ATT&CK Data Model concepts. OCSF has first-class
+#   support for ATT&CK references via Attack/Tactic/Technique/SubTechnique/
+#   Mitigation objects, so the bulk of these are direct correspondences.
+# mapping_set_version: '1.0.0'
+# creator_id: 'https://orcid.org/0000-0000-0000-0000'
+subject_id	subject_label	predicate_id	object_id	object_label	mapping_justification	confidence	comment
+ocsf:Attack	MITRE ATT&CK	skos:exactMatch	attack:AttackPattern	Attack Pattern	semapv:ManualMappingCuration	0.95	OCSF Attack object wraps MITRE ATT&CK references; ATT&CK Attack Pattern is the canonical concept.
+ocsf:Tactic	MITRE Tactic	skos:exactMatch	attack:Tactic	Tactic	semapv:ManualMappingCuration	0.95	Direct correspondence; OCSF Tactic carries ATT&CK tactic id and name.
+ocsf:Technique	MITRE Technique	skos:exactMatch	attack:Technique	Technique	semapv:ManualMappingCuration	0.95	Direct correspondence.
+ocsf:SubTechnique	MITRE Sub-technique	skos:exactMatch	attack:SubTechnique	Sub-technique	semapv:ManualMappingCuration	0.95	Direct correspondence.
+ocsf:Mitigation	MITRE Mitigation	skos:exactMatch	attack:Mitigation	Mitigation	semapv:ManualMappingCuration	0.95	Direct correspondence; OCSF Mitigation references ATT&CK Mxxxx ids.
+ocsf:Campaign	Campaign	skos:exactMatch	attack:Campaign	Campaign	semapv:ManualMappingCuration	0.9	OCSF Campaign aligns with the ATT&CK Campaign object (introduced in v12).
+ocsf:KillChainPhase	Kill Chain Phase	skos:closeMatch	attack:KillChainPhase	Kill Chain Phase	semapv:ManualMappingCuration	0.85	KillChainPhase originates in STIX/Lockheed Martin and is referenced by ATT&CK; close not exact.
+ocsf:ThreatActor	Threat Actor	skos:closeMatch	attack:Group	Group (Intrusion Set)	semapv:ManualMappingCuration	0.85	ATT&CK calls the analogous concept "Group"; semantically equivalent but named differently.
+ocsf:Malware	Malware	skos:closeMatch	attack:Software	Software (Malware/Tool)	semapv:ManualMappingCuration	0.75	ATT&CK Software covers both Malware and Tool subtypes; Malware maps to one of two members.

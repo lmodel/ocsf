@@ -1,0 +1,17 @@
+# MITRE ATT&CK Attack object — no required slots; demonstrates nested
+# Tactic + Technique objects.
+version: "14"
+tactic:
+  name: Initial Access
+  uid: TA0001
+tactics:
+  - name: Initial Access
+    uid: TA0001
+  - name: Execution
+    uid: TA0002
+technique:
+  name: Phishing
+  uid: T1566
+sub_technique:
+  name: Spearphishing Attachment
+  uid: T1566.001
