@@ -513,8 +513,8 @@ Alias: process</p>
 </thead>
 <tbody>
 <tr>
-<td><a href="../ProcessActivity/">ProcessActivity</a></td>
-<td>Process Activity events report when a process launches, injects, opens or</td>
+<td><a href="../QueryEvidence/">QueryEvidence</a></td>
+<td>The specific resulting evidence information that was queried or discovered</td>
 <td>yes</td>
 </tr>
 <tr>
@@ -523,13 +523,8 @@ Alias: process</p>
 <td>yes</td>
 </tr>
 <tr>
-<td><a href="../ProcessRemediationActivity/">ProcessRemediationActivity</a></td>
-<td>Process Remediation Activity events report on attempts at remediating</td>
-<td>yes</td>
-</tr>
-<tr>
-<td><a href="../QueryEvidence/">QueryEvidence</a></td>
-<td>The specific resulting evidence information that was queried or discovered</td>
+<td><a href="../Evidences/">Evidences</a></td>
+<td>A collection of evidence artifacts associated to the activity/activities that</td>
 <td>yes</td>
 </tr>
 <tr>
@@ -538,14 +533,9 @@ Alias: process</p>
 <td>yes</td>
 </tr>
 <tr>
-<td><a href="../SecurityFinding/">SecurityFinding</a></td>
-<td>Security Finding events describe findings, detections, anomalies, alerts and/...</td>
-<td>yes</td>
-</tr>
-<tr>
-<td><a href="../ProcessQuery/">ProcessQuery</a></td>
-<td>Process Query events report information about running processes</td>
-<td>yes</td>
+<td><a href="../WindowsQueryEvidence/">WindowsQueryEvidence</a></td>
+<td>The resulting evidence information that was queried</td>
+<td>no</td>
 </tr>
 <tr>
 <td><a href="../Actor/">Actor</a></td>
@@ -553,13 +543,18 @@ Alias: process</p>
 <td>yes</td>
 </tr>
 <tr>
-<td><a href="../WindowsEvidences/">WindowsEvidences</a></td>
-<td>Extends the evidences object to add Windows specific fields</td>
-<td>no</td>
-</tr>
-<tr>
 <td><a href="../MemoryActivity/">MemoryActivity</a></td>
 <td>Memory Activity events report when a process has memory allocated,</td>
+<td>yes</td>
+</tr>
+<tr>
+<td><a href="../SecurityFinding/">SecurityFinding</a></td>
+<td>Security Finding events describe findings, detections, anomalies, alerts and/...</td>
+<td>yes</td>
+</tr>
+<tr>
+<td><a href="../ProcessActivity/">ProcessActivity</a></td>
+<td>Process Activity events report when a process launches, injects, opens or</td>
 <td>yes</td>
 </tr>
 <tr>
@@ -573,14 +568,19 @@ Alias: process</p>
 <td>no</td>
 </tr>
 <tr>
-<td><a href="../WindowsQueryEvidence/">WindowsQueryEvidence</a></td>
-<td>The resulting evidence information that was queried</td>
-<td>no</td>
+<td><a href="../ProcessQuery/">ProcessQuery</a></td>
+<td>Process Query events report information about running processes</td>
+<td>yes</td>
 </tr>
 <tr>
-<td><a href="../Evidences/">Evidences</a></td>
-<td>A collection of evidence artifacts associated to the activity/activities that</td>
+<td><a href="../ProcessRemediationActivity/">ProcessRemediationActivity</a></td>
+<td>Process Remediation Activity events report on attempts at remediating</td>
 <td>yes</td>
+</tr>
+<tr>
+<td><a href="../WindowsEvidences/">WindowsEvidences</a></td>
+<td>Extends the evidences object to add Windows specific fields</td>
+<td>no</td>
 </tr>
 </tbody>
 </table>

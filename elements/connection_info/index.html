@@ -513,13 +513,8 @@ Alias: connection_info</p>
 </thead>
 <tbody>
 <tr>
-<td><a href="../SshActivity/">SshActivity</a></td>
-<td>SSH Activity events report remote client connections to a server using the</td>
-<td>no</td>
-</tr>
-<tr>
-<td><a href="../NetworkRemediationActivity/">NetworkRemediationActivity</a></td>
-<td>Network Remediation Activity events report on attempts at remediating compute...</td>
+<td><a href="../NetworkFileActivity/">NetworkFileActivity</a></td>
+<td>Network File Activity events report file activities traversing the network,</td>
 <td>yes</td>
 </tr>
 <tr>
@@ -528,49 +523,9 @@ Alias: connection_info</p>
 <td>yes</td>
 </tr>
 <tr>
-<td><a href="../FileHosting/">FileHosting</a></td>
-<td>File Hosting Activity events report the actions taken by file management</td>
-<td>yes</td>
-</tr>
-<tr>
-<td><a href="../UnmannedSystemsEvent/">UnmannedSystemsEvent</a></td>
-<td>The Unmanned Systems event is a generic event that defines a set of attribute...</td>
-<td>yes</td>
-</tr>
-<tr>
-<td><a href="../SmbActivity/">SmbActivity</a></td>
-<td>Server Message Block (SMB) Protocol Activity events report client/server</td>
+<td><a href="../DhcpActivity/">DhcpActivity</a></td>
+<td>DHCP Activity events report MAC to IP assignment via DHCP from a client or</td>
 <td>no</td>
-</tr>
-<tr>
-<td><a href="../DroneFlightsActivity/">DroneFlightsActivity</a></td>
-<td>Drone Flights Activity events report the activity of Unmanned Aerial Systems</td>
-<td>no</td>
-</tr>
-<tr>
-<td><a href="../RdpActivity/">RdpActivity</a></td>
-<td>Remote Desktop Protocol (RDP) Activity events report post-authentication remo...</td>
-<td>yes</td>
-</tr>
-<tr>
-<td><a href="../NetworkFileActivity/">NetworkFileActivity</a></td>
-<td>Network File Activity events report file activities traversing the network,</td>
-<td>yes</td>
-</tr>
-<tr>
-<td><a href="../HttpActivity/">HttpActivity</a></td>
-<td>HTTP Activity events report HTTP connection and traffic information</td>
-<td>no</td>
-</tr>
-<tr>
-<td><a href="../QueryEvidence/">QueryEvidence</a></td>
-<td>The specific resulting evidence information that was queried or discovered</td>
-<td>yes</td>
-</tr>
-<tr>
-<td><a href="../TunnelActivity/">TunnelActivity</a></td>
-<td>Tunnel Activity events report secure tunnel establishment (such as VPN),</td>
-<td>yes</td>
 </tr>
 <tr>
 <td><a href="../DnsActivity/">DnsActivity</a></td>
@@ -578,33 +533,8 @@ Alias: connection_info</p>
 <td>yes</td>
 </tr>
 <tr>
-<td><a href="../NtpActivity/">NtpActivity</a></td>
-<td>The Network Time Protocol (NTP) Activity events report instances of remote</td>
-<td>no</td>
-</tr>
-<tr>
-<td><a href="../DhcpActivity/">DhcpActivity</a></td>
-<td>DHCP Activity events report MAC to IP assignment via DHCP from a client or</td>
-<td>no</td>
-</tr>
-<tr>
-<td><a href="../AirborneBroadcastActivity/">AirborneBroadcastActivity</a></td>
-<td>Airborne Broadcast Activity events report the activity of any aircraft or</td>
-<td>no</td>
-</tr>
-<tr>
-<td><a href="../NetworkActivity/">NetworkActivity</a></td>
-<td>Network Activity events report network connection and traffic activity</td>
-<td>no</td>
-</tr>
-<tr>
-<td><a href="../WindowsEvidences/">WindowsEvidences</a></td>
-<td>Extends the evidences object to add Windows specific fields</td>
-<td>no</td>
-</tr>
-<tr>
-<td><a href="../FtpActivity/">FtpActivity</a></td>
-<td>File Transfer Protocol (FTP) Activity events report file transfers between a</td>
+<td><a href="../DroneFlightsActivity/">DroneFlightsActivity</a></td>
+<td>Drone Flights Activity events report the activity of Unmanned Aerial Systems</td>
 <td>no</td>
 </tr>
 <tr>
@@ -618,9 +548,79 @@ Alias: connection_info</p>
 <td>no</td>
 </tr>
 <tr>
+<td><a href="../FtpActivity/">FtpActivity</a></td>
+<td>File Transfer Protocol (FTP) Activity events report file transfers between a</td>
+<td>no</td>
+</tr>
+<tr>
+<td><a href="../HttpActivity/">HttpActivity</a></td>
+<td>HTTP Activity events report HTTP connection and traffic information</td>
+<td>no</td>
+</tr>
+<tr>
+<td><a href="../NetworkActivity/">NetworkActivity</a></td>
+<td>Network Activity events report network connection and traffic activity</td>
+<td>no</td>
+</tr>
+<tr>
+<td><a href="../SshActivity/">SshActivity</a></td>
+<td>SSH Activity events report remote client connections to a server using the</td>
+<td>no</td>
+</tr>
+<tr>
+<td><a href="../TunnelActivity/">TunnelActivity</a></td>
+<td>Tunnel Activity events report secure tunnel establishment (such as VPN),</td>
+<td>yes</td>
+</tr>
+<tr>
+<td><a href="../RdpActivity/">RdpActivity</a></td>
+<td>Remote Desktop Protocol (RDP) Activity events report post-authentication remo...</td>
+<td>yes</td>
+</tr>
+<tr>
+<td><a href="../FileHosting/">FileHosting</a></td>
+<td>File Hosting Activity events report the actions taken by file management</td>
+<td>yes</td>
+</tr>
+<tr>
+<td><a href="../NetworkRemediationActivity/">NetworkRemediationActivity</a></td>
+<td>Network Remediation Activity events report on attempts at remediating compute...</td>
+<td>yes</td>
+</tr>
+<tr>
+<td><a href="../QueryEvidence/">QueryEvidence</a></td>
+<td>The specific resulting evidence information that was queried or discovered</td>
+<td>yes</td>
+</tr>
+<tr>
+<td><a href="../SmbActivity/">SmbActivity</a></td>
+<td>Server Message Block (SMB) Protocol Activity events report client/server</td>
+<td>no</td>
+</tr>
+<tr>
 <td><a href="../Evidences/">Evidences</a></td>
 <td>A collection of evidence artifacts associated to the activity/activities that</td>
 <td>yes</td>
+</tr>
+<tr>
+<td><a href="../UnmannedSystemsEvent/">UnmannedSystemsEvent</a></td>
+<td>The Unmanned Systems event is a generic event that defines a set of attribute...</td>
+<td>yes</td>
+</tr>
+<tr>
+<td><a href="../AirborneBroadcastActivity/">AirborneBroadcastActivity</a></td>
+<td>Airborne Broadcast Activity events report the activity of any aircraft or</td>
+<td>no</td>
+</tr>
+<tr>
+<td><a href="../NtpActivity/">NtpActivity</a></td>
+<td>The Network Time Protocol (NTP) Activity events report instances of remote</td>
+<td>no</td>
+</tr>
+<tr>
+<td><a href="../WindowsEvidences/">WindowsEvidences</a></td>
+<td>Extends the evidences object to add Windows specific fields</td>
+<td>no</td>
 </tr>
 </tbody>
 </table>

@@ -949,13 +949,13 @@
 <td><a href="../activity_id/">activity_id</a></td>
 <td>1 <br/> <a href="../FindingActivityIdEnum/">FindingActivityIdEnum</a></td>
 <td>The normalized identifier of the finding activity</td>
-<td><a href="../BaseEvent/">BaseEvent</a>, <a href="../Finding/">Finding</a></td>
+<td><a href="../Finding/">Finding</a>, <a href="../BaseEvent/">BaseEvent</a></td>
 </tr>
 <tr>
 <td><a href="../activity_name/">activity_name</a></td>
 <td>0..1 <br/> <a href="../String/">String</a></td>
 <td>The finding activity name, as defined by the <code>activity_id</code></td>
-<td><a href="../BaseEvent/">BaseEvent</a>, <a href="../Finding/">Finding</a></td>
+<td><a href="../Finding/">Finding</a>, <a href="../BaseEvent/">BaseEvent</a></td>
 </tr>
 <tr>
 <td><a href="../comment/">comment</a></td>
@@ -967,13 +967,13 @@
 <td><a href="../device/">device</a></td>
 <td>0..1 <em>recommended</em> <br/> <a href="../Device/">Device</a></td>
 <td>Describes the affected device/host</td>
-<td><a href="../HostProfile/">HostProfile</a>, <a href="../Finding/">Finding</a></td>
+<td><a href="../Finding/">Finding</a>, <a href="../HostProfile/">HostProfile</a></td>
 </tr>
 <tr>
 <td><a href="../end_time/">end_time</a></td>
 <td>0..1 <br/> <a href="../TimestampT/">TimestampT</a></td>
 <td>The time of the most recent event included in the finding</td>
-<td><a href="../BaseEvent/">BaseEvent</a>, <a href="../Finding/">Finding</a></td>
+<td><a href="../Finding/">Finding</a>, <a href="../BaseEvent/">BaseEvent</a></td>
 </tr>
 <tr>
 <td><a href="../finding_info/">finding_info</a></td>
@@ -985,19 +985,19 @@
 <td><a href="../start_time/">start_time</a></td>
 <td>0..1 <br/> <a href="../TimestampT/">TimestampT</a></td>
 <td>The time of the least recent event included in the finding</td>
-<td><a href="../BaseEvent/">BaseEvent</a>, <a href="../Finding/">Finding</a></td>
+<td><a href="../Finding/">Finding</a>, <a href="../BaseEvent/">BaseEvent</a></td>
 </tr>
 <tr>
 <td><a href="../status/">status</a></td>
 <td>0..1 <em>recommended</em> <br/> <a href="../String/">String</a></td>
 <td>The normalized status of the Finding set by the consumer normalized to the</td>
-<td><a href="../BaseEvent/">BaseEvent</a>, <a href="../Finding/">Finding</a></td>
+<td><a href="../Finding/">Finding</a>, <a href="../BaseEvent/">BaseEvent</a></td>
 </tr>
 <tr>
 <td><a href="../status_id/">status_id</a></td>
 <td>0..1 <em>recommended</em> <br/> <a href="../FindingStatusIdEnum/">FindingStatusIdEnum</a></td>
 <td>The normalized status identifier of the Finding, set by the consumer</td>
-<td><a href="../BaseEvent/">BaseEvent</a>, <a href="../Finding/">Finding</a></td>
+<td><a href="../Finding/">Finding</a>, <a href="../BaseEvent/">BaseEvent</a></td>
 </tr>
 <tr>
 <td><a href="../vendor_attributes/">vendor_attributes</a></td>

@@ -513,28 +513,108 @@ Alias: device</p>
 </thead>
 <tbody>
 <tr>
-<td><a href="../WebResourcesActivity/">WebResourcesActivity</a></td>
-<td>Web Resources Activity events describe actions executed on a set of Web</td>
-<td>no</td>
-</tr>
-<tr>
-<td><a href="../NetworkRemediationActivity/">NetworkRemediationActivity</a></td>
-<td>Network Remediation Activity events report on attempts at remediating compute...</td>
-<td>no</td>
-</tr>
-<tr>
-<td><a href="../ConfigState/">ConfigState</a></td>
-<td>Device Config State events report device configuration data, device</td>
+<td><a href="../InventoryInfo/">InventoryInfo</a></td>
+<td>Device Inventory Info events report device inventory data that is either logg...</td>
 <td>yes</td>
+</tr>
+<tr>
+<td><a href="../IamAnalysisFinding/">IamAnalysisFinding</a></td>
+<td>This finding represents an IAM analysis result, which evaluates IAM policies,</td>
+<td>no</td>
+</tr>
+<tr>
+<td><a href="../EventLogActvity/">EventLogActvity</a></td>
+<td>Event Log Activity events report actions pertaining to the system's event</td>
+<td>yes</td>
+</tr>
+<tr>
+<td><a href="../EmailUrlActivity/">EmailUrlActivity</a></td>
+<td>Email URL Activity events report URLs within an email</td>
+<td>no</td>
+</tr>
+<tr>
+<td><a href="../NetworksQuery/">NetworksQuery</a></td>
+<td>Networks Query events report information about network adapters</td>
+<td>no</td>
+</tr>
+<tr>
+<td><a href="../MemoryActivity/">MemoryActivity</a></td>
+<td>Memory Activity events report when a process has memory allocated,</td>
+<td>no</td>
+</tr>
+<tr>
+<td><a href="../DnsActivity/">DnsActivity</a></td>
+<td>DNS Activity events report DNS queries and answers as seen on the network</td>
+<td>no</td>
+</tr>
+<tr>
+<td><a href="../RemediationActivity/">RemediationActivity</a></td>
+<td>Remediation Activity events report on attempts at remediating a compromised</td>
+<td>no</td>
+</tr>
+<tr>
+<td><a href="../EmailActivity/">EmailActivity</a></td>
+<td>Email Activity events report SMTP protocol and email activities including tho...</td>
+<td>no</td>
+</tr>
+<tr>
+<td><a href="../FtpActivity/">FtpActivity</a></td>
+<td>File Transfer Protocol (FTP) Activity events report file transfers between a</td>
+<td>no</td>
+</tr>
+<tr>
+<td><a href="../FileRemediationActivity/">FileRemediationActivity</a></td>
+<td>File Remediation Activity events report on attempts at remediating files</td>
+<td>no</td>
+</tr>
+<tr>
+<td><a href="../FolderQuery/">FolderQuery</a></td>
+<td>Folder Query events report information about folders that are present on the</td>
+<td>no</td>
+</tr>
+<tr>
+<td><a href="../UserQuery/">UserQuery</a></td>
+<td>User Query events report user data that have been discovered, queried, polled</td>
+<td>no</td>
+</tr>
+<tr>
+<td><a href="../SshActivity/">SshActivity</a></td>
+<td>SSH Activity events report remote client connections to a server using the</td>
+<td>no</td>
+</tr>
+<tr>
+<td><a href="../KernelExtensionActivity/">KernelExtensionActivity</a></td>
+<td>Kernel Extension events report when a driver/extension is loaded or unloaded</td>
+<td>no</td>
+</tr>
+<tr>
+<td><a href="../GroupManagement/">GroupManagement</a></td>
+<td>Group Management events report management updates to a group, including updat...</td>
+<td>no</td>
+</tr>
+<tr>
+<td><a href="../ApplicationLifecycle/">ApplicationLifecycle</a></td>
+<td>Application Lifecycle events report installation, removal, start, stop of an</td>
+<td>no</td>
+</tr>
+<tr>
+<td><a href="../FileActivity/">FileActivity</a></td>
+<td>File System Activity events report when a process performs an action on a fil...</td>
+<td>no</td>
+</tr>
+<tr>
+<td><a href="../DiscoveryResult/">DiscoveryResult</a></td>
+<td>Discovery Result events report the results of a discovery request</td>
+<td>no</td>
+</tr>
+<tr>
+<td><a href="../ProcessQuery/">ProcessQuery</a></td>
+<td>Process Query events report information about running processes</td>
+<td>no</td>
 </tr>
 <tr>
 <td><a href="../FileHosting/">FileHosting</a></td>
 <td>File Hosting Activity events report the actions taken by file management</td>
-<td>no</td>
-</tr>
-<tr>
-<td><a href="../SmbActivity/">SmbActivity</a></td>
-<td>Server Message Block (SMB) Protocol Activity events report client/server</td>
 <td>no</td>
 </tr>
 <tr>
@@ -543,8 +623,53 @@ Alias: device</p>
 <td>no</td>
 </tr>
 <tr>
-<td><a href="../UnmannedSystemsEvent/">UnmannedSystemsEvent</a></td>
-<td>The Unmanned Systems event is a generic event that defines a set of attribute...</td>
+<td><a href="../EmailFileActivity/">EmailFileActivity</a></td>
+<td>Email File Activity events report files within emails</td>
+<td>no</td>
+</tr>
+<tr>
+<td><a href="../ScriptActivity/">ScriptActivity</a></td>
+<td>Script Activity events report when a process executes a script</td>
+<td>no</td>
+</tr>
+<tr>
+<td><a href="../OsintInventoryInfo/">OsintInventoryInfo</a></td>
+<td>OSINT Inventory Info events report open source intelligence or threat</td>
+<td>no</td>
+</tr>
+<tr>
+<td><a href="../PeripheralActivity/">PeripheralActivity</a></td>
+<td>Peripheral Activity events log a system's interactions with external,</td>
+<td>no</td>
+</tr>
+<tr>
+<td><a href="../SessionQuery/">SessionQuery</a></td>
+<td>User Session Query events report information about existing user sessions</td>
+<td>no</td>
+</tr>
+<tr>
+<td><a href="../ModuleQuery/">ModuleQuery</a></td>
+<td>Module Query events report information about loaded modules</td>
+<td>no</td>
+</tr>
+<tr>
+<td><a href="../PrefetchQuery/">PrefetchQuery</a></td>
+<td>Prefetch Query events report information about Windows prefetch files</td>
+<td>no</td>
+</tr>
+<tr>
+<td><a href="../Finding/">Finding</a></td>
+<td>The Finding event is a generic event that defines a set of attributes availab...</td>
+<td>yes</td>
+</tr>
+<tr>
+<td><a href="../KernelObjectQuery/">KernelObjectQuery</a></td>
+<td>Kernel Object Query events report information about discovered kernel</td>
+<td>no</td>
+</tr>
+<tr>
+<td><a href="../FileQuery/">FileQuery</a></td>
+<td>File Query events report information about files that are present on the</td>
 <td>no</td>
 </tr>
 <tr>
@@ -558,48 +683,28 @@ Alias: device</p>
 <td>no</td>
 </tr>
 <tr>
-<td><a href="../ScriptActivity/">ScriptActivity</a></td>
-<td>Script Activity events report when a process executes a script</td>
+<td><a href="../DataSecurityFinding/">DataSecurityFinding</a></td>
+<td>A Data Security Finding describes detections or alerts generated by various</td>
+<td>yes</td>
+</tr>
+<tr>
+<td><a href="../SystemEvent/">SystemEvent</a></td>
+<td>The System Activity event is a generic event that defines a set of attributes</td>
+<td>yes</td>
+</tr>
+<tr>
+<td><a href="../VulnerabilityFinding/">VulnerabilityFinding</a></td>
+<td>The Vulnerability Finding event is a notification about weakness in an</td>
 <td>no</td>
 </tr>
 <tr>
-<td><a href="../IamAnalysisFinding/">IamAnalysisFinding</a></td>
-<td>This finding represents an IAM analysis result, which evaluates IAM policies,</td>
+<td><a href="../JobQuery/">JobQuery</a></td>
+<td>Job Query events report information about scheduled jobs</td>
 <td>no</td>
 </tr>
 <tr>
-<td><a href="../ApplicationEvent/">ApplicationEvent</a></td>
-<td></td>
-<td>no</td>
-</tr>
-<tr>
-<td><a href="../DatastoreActivity/">DatastoreActivity</a></td>
-<td>Datastore events describe general activities (Read, Update, Query, Delete,</td>
-<td>no</td>
-</tr>
-<tr>
-<td><a href="../FileActivity/">FileActivity</a></td>
-<td>File System Activity events report when a process performs an action on a fil...</td>
-<td>no</td>
-</tr>
-<tr>
-<td><a href="../SessionQuery/">SessionQuery</a></td>
-<td>User Session Query events report information about existing user sessions</td>
-<td>no</td>
-</tr>
-<tr>
-<td><a href="../ProcessRemediationActivity/">ProcessRemediationActivity</a></td>
-<td>Process Remediation Activity events report on attempts at remediating</td>
-<td>no</td>
-</tr>
-<tr>
-<td><a href="../DiscoveryEvent/">DiscoveryEvent</a></td>
-<td>The Discovery event is a generic event that defines a set of attributes</td>
-<td>no</td>
-</tr>
-<tr>
-<td><a href="../PeripheralDeviceQuery/">PeripheralDeviceQuery</a></td>
-<td>Peripheral Device Query events report information about peripheral devices</td>
+<td><a href="../NetworkEvent/">NetworkEvent</a></td>
+<td>Network event is a generic event that defines a set of attributes available i...</td>
 <td>no</td>
 </tr>
 <tr>
@@ -608,8 +713,13 @@ Alias: device</p>
 <td>no</td>
 </tr>
 <tr>
-<td><a href="../AirborneBroadcastActivity/">AirborneBroadcastActivity</a></td>
-<td>Airborne Broadcast Activity events report the activity of any aircraft or</td>
+<td><a href="../ProcessActivity/">ProcessActivity</a></td>
+<td>Process Activity events report when a process launches, injects, opens or</td>
+<td>no</td>
+</tr>
+<tr>
+<td><a href="../DroneFlightsActivity/">DroneFlightsActivity</a></td>
+<td>Drone Flights Activity events report the activity of Unmanned Aerial Systems</td>
 <td>no</td>
 </tr>
 <tr>
@@ -618,133 +728,8 @@ Alias: device</p>
 <td>no</td>
 </tr>
 <tr>
-<td><a href="../RegistryKeyQuery/">RegistryKeyQuery</a></td>
-<td>Registry Key Query events report information about discovered Windows registr...</td>
-<td>no</td>
-</tr>
-<tr>
-<td><a href="../NetworksQuery/">NetworksQuery</a></td>
-<td>Networks Query events report information about network adapters</td>
-<td>no</td>
-</tr>
-<tr>
-<td><a href="../RegistryValueQuery/">RegistryValueQuery</a></td>
-<td>Registry Value Query events report information about discovered Windows</td>
-<td>no</td>
-</tr>
-<tr>
-<td><a href="../FtpActivity/">FtpActivity</a></td>
-<td>File Transfer Protocol (FTP) Activity events report file transfers between a</td>
-<td>no</td>
-</tr>
-<tr>
-<td><a href="../BaseEvent/">BaseEvent</a></td>
-<td>The base event is a generic and concrete event</td>
-<td>no</td>
-</tr>
-<tr>
-<td><a href="../UserInventory/">UserInventory</a></td>
-<td>User Inventory Info events report user inventory data that is either logged o...</td>
-<td>no</td>
-</tr>
-<tr>
-<td><a href="../StartupItemQuery/">StartupItemQuery</a></td>
-<td>Startup Item Query events report information about discovered items, e</td>
-<td>no</td>
-</tr>
-<tr>
-<td><a href="../PrefetchQuery/">PrefetchQuery</a></td>
-<td>Prefetch Query events report information about Windows prefetch files</td>
-<td>no</td>
-</tr>
-<tr>
-<td><a href="../AccountChange/">AccountChange</a></td>
-<td>Account Change events report when specific user account management tasks are</td>
-<td>no</td>
-</tr>
-<tr>
-<td><a href="../CloudResourcesInventoryInfo/">CloudResourcesInventoryInfo</a></td>
-<td>Cloud Resources Inventory Info events report cloud asset inventory data</td>
-<td>no</td>
-</tr>
-<tr>
-<td><a href="../AdminGroupQuery/">AdminGroupQuery</a></td>
-<td>Admin Group Query events report information about administrative groups</td>
-<td>no</td>
-</tr>
-<tr>
-<td><a href="../EmailActivity/">EmailActivity</a></td>
-<td>Email Activity events report SMTP protocol and email activities including tho...</td>
-<td>no</td>
-</tr>
-<tr>
-<td><a href="../UserAccess/">UserAccess</a></td>
-<td>User Access Management events report management updates to a user's privilege...</td>
-<td>no</td>
-</tr>
-<tr>
-<td><a href="../EntityManagement/">EntityManagement</a></td>
-<td>Entity Management events report activity by a managed client, a micro service...</td>
-<td>no</td>
-</tr>
-<tr>
-<td><a href="../ModuleQuery/">ModuleQuery</a></td>
-<td>Module Query events report information about loaded modules</td>
-<td>no</td>
-</tr>
-<tr>
-<td><a href="../OsintInventoryInfo/">OsintInventoryInfo</a></td>
-<td>OSINT Inventory Info events report open source intelligence or threat</td>
-<td>no</td>
-</tr>
-<tr>
-<td><a href="../Finding/">Finding</a></td>
-<td>The Finding event is a generic event that defines a set of attributes availab...</td>
-<td>yes</td>
-</tr>
-<tr>
-<td><a href="../TunnelActivity/">TunnelActivity</a></td>
-<td>Tunnel Activity events report secure tunnel establishment (such as VPN),</td>
-<td>yes</td>
-</tr>
-<tr>
-<td><a href="../ApiActivity/">ApiActivity</a></td>
-<td>API events describe general CRUD (Create, Read, Update, Delete) API activitie...</td>
-<td>no</td>
-</tr>
-<tr>
-<td><a href="../VulnerabilityFinding/">VulnerabilityFinding</a></td>
-<td>The Vulnerability Finding event is a notification about weakness in an</td>
-<td>no</td>
-</tr>
-<tr>
-<td><a href="../ModuleActivity/">ModuleActivity</a></td>
-<td>Module Activity events report when an endpoint process acts on a</td>
-<td>no</td>
-</tr>
-<tr>
-<td><a href="../NetworkActivity/">NetworkActivity</a></td>
-<td>Network Activity events report network connection and traffic activity</td>
-<td>no</td>
-</tr>
-<tr>
-<td><a href="../PeripheralActivity/">PeripheralActivity</a></td>
-<td>Peripheral Activity events log a system's interactions with external,</td>
-<td>no</td>
-</tr>
-<tr>
-<td><a href="../ProcessQuery/">ProcessQuery</a></td>
-<td>Process Query events report information about running processes</td>
-<td>no</td>
-</tr>
-<tr>
-<td><a href="../AuthFactor/">AuthFactor</a></td>
-<td>An Authentication Factor object describes a category of methods used for</td>
-<td>yes</td>
-</tr>
-<tr>
-<td><a href="../ApplicationSecurityPostureFinding/">ApplicationSecurityPostureFinding</a></td>
-<td>The Application Security Posture Finding event is a notification about any bu...</td>
+<td><a href="../RegistryValueActivity/">RegistryValueActivity</a></td>
+<td>Registry Value Activity events reports when a process performs an action on a</td>
 <td>no</td>
 </tr>
 <tr>
@@ -753,43 +738,143 @@ Alias: device</p>
 <td>no</td>
 </tr>
 <tr>
+<td><a href="../EvidenceInfo/">EvidenceInfo</a></td>
+<td>Data collected directly from devices that represents forensic information</td>
+<td>yes</td>
+</tr>
+<tr>
+<td><a href="../HttpActivity/">HttpActivity</a></td>
+<td>HTTP Activity events report HTTP connection and traffic information</td>
+<td>no</td>
+</tr>
+<tr>
+<td><a href="../WebResourcesActivity/">WebResourcesActivity</a></td>
+<td>Web Resources Activity events describe actions executed on a set of Web</td>
+<td>no</td>
+</tr>
+<tr>
+<td><a href="../NetworkActivity/">NetworkActivity</a></td>
+<td>Network Activity events report network connection and traffic activity</td>
+<td>no</td>
+</tr>
+<tr>
+<td><a href="../DatastoreActivity/">DatastoreActivity</a></td>
+<td>Datastore events describe general activities (Read, Update, Query, Delete,</td>
+<td>no</td>
+</tr>
+<tr>
+<td><a href="../TunnelActivity/">TunnelActivity</a></td>
+<td>Tunnel Activity events report secure tunnel establishment (such as VPN),</td>
+<td>yes</td>
+</tr>
+<tr>
+<td><a href="../StartupItemQuery/">StartupItemQuery</a></td>
+<td>Startup Item Query events report information about discovered items, e</td>
+<td>no</td>
+</tr>
+<tr>
+<td><a href="../ProcessRemediationActivity/">ProcessRemediationActivity</a></td>
+<td>Process Remediation Activity events report on attempts at remediating</td>
+<td>no</td>
+</tr>
+<tr>
+<td><a href="../ApplicationEvent/">ApplicationEvent</a></td>
+<td></td>
+<td>no</td>
+</tr>
+<tr>
+<td><a href="../BaseEvent/">BaseEvent</a></td>
+<td>The base event is a generic and concrete event</td>
+<td>no</td>
+</tr>
+<tr>
+<td><a href="../ApiActivity/">ApiActivity</a></td>
+<td>API events describe general CRUD (Create, Read, Update, Delete) API activitie...</td>
+<td>no</td>
+</tr>
+<tr>
+<td><a href="../DiscoveryEvent/">DiscoveryEvent</a></td>
+<td>The Discovery event is a generic event that defines a set of attributes</td>
+<td>no</td>
+</tr>
+<tr>
+<td><a href="../DetectionFinding/">DetectionFinding</a></td>
+<td>A Detection Finding describes detections or alerts generated by security</td>
+<td>no</td>
+</tr>
+<tr>
+<td><a href="../WindowsEvidences/">WindowsEvidences</a></td>
+<td>Extends the evidences object to add Windows specific fields</td>
+<td>no</td>
+</tr>
+<tr>
+<td><a href="../EntityManagement/">EntityManagement</a></td>
+<td>Entity Management events report activity by a managed client, a micro service...</td>
+<td>no</td>
+</tr>
+<tr>
+<td><a href="../ScheduledJobActivity/">ScheduledJobActivity</a></td>
+<td>Scheduled Job Activity events report activities related to scheduled jobs or</td>
+<td>no</td>
+</tr>
+<tr>
+<td><a href="../PatchState/">PatchState</a></td>
+<td>Operating System Patch State reports the installation of an OS patch to a</td>
+<td>yes</td>
+</tr>
+<tr>
+<td><a href="../DeviceConfigStateChange/">DeviceConfigStateChange</a></td>
+<td>Device Config State Change events report state changes that impact the securi...</td>
+<td>yes</td>
+</tr>
+<tr>
+<td><a href="../RdpActivity/">RdpActivity</a></td>
+<td>Remote Desktop Protocol (RDP) Activity events report post-authentication remo...</td>
+<td>yes</td>
+</tr>
+<tr>
+<td><a href="../AdminGroupQuery/">AdminGroupQuery</a></td>
+<td>Admin Group Query events report information about administrative groups</td>
+<td>no</td>
+</tr>
+<tr>
+<td><a href="../CloudResourcesInventoryInfo/">CloudResourcesInventoryInfo</a></td>
+<td>Cloud Resources Inventory Info events report cloud asset inventory data</td>
+<td>no</td>
+</tr>
+<tr>
+<td><a href="../NetworkRemediationActivity/">NetworkRemediationActivity</a></td>
+<td>Network Remediation Activity events report on attempts at remediating compute...</td>
+<td>no</td>
+</tr>
+<tr>
+<td><a href="../ScanActivity/">ScanActivity</a></td>
+<td>Scan events report the start, completion, and results of a scan job</td>
+<td>no</td>
+</tr>
+<tr>
+<td><a href="../SmbActivity/">SmbActivity</a></td>
+<td>Server Message Block (SMB) Protocol Activity events report client/server</td>
+<td>no</td>
+</tr>
+<tr>
+<td><a href="../Evidences/">Evidences</a></td>
+<td>A collection of evidence artifacts associated to the activity/activities that</td>
+<td>yes</td>
+</tr>
+<tr>
+<td><a href="../UnmannedSystemsEvent/">UnmannedSystemsEvent</a></td>
+<td>The Unmanned Systems event is a generic event that defines a set of attribute...</td>
+<td>no</td>
+</tr>
+<tr>
+<td><a href="../AirborneBroadcastActivity/">AirborneBroadcastActivity</a></td>
+<td>Airborne Broadcast Activity events report the activity of any aircraft or</td>
+<td>no</td>
+</tr>
+<tr>
 <td><a href="../SecurityFinding/">SecurityFinding</a></td>
 <td>Security Finding events describe findings, detections, anomalies, alerts and/...</td>
-<td>no</td>
-</tr>
-<tr>
-<td><a href="../SoftwareInfo/">SoftwareInfo</a></td>
-<td>Software Inventory Info events report device software inventory data that is</td>
-<td>yes</td>
-</tr>
-<tr>
-<td><a href="../InventoryInfo/">InventoryInfo</a></td>
-<td>Device Inventory Info events report device inventory data that is either logg...</td>
-<td>yes</td>
-</tr>
-<tr>
-<td><a href="../RemediationActivity/">RemediationActivity</a></td>
-<td>Remediation Activity events report on attempts at remediating a compromised</td>
-<td>no</td>
-</tr>
-<tr>
-<td><a href="../RegistryKeyActivity/">RegistryKeyActivity</a></td>
-<td>Registry Key Activity events report when a process performs an action on a</td>
-<td>no</td>
-</tr>
-<tr>
-<td><a href="../SystemEvent/">SystemEvent</a></td>
-<td>The System Activity event is a generic event that defines a set of attributes</td>
-<td>yes</td>
-</tr>
-<tr>
-<td><a href="../DroneFlightsActivity/">DroneFlightsActivity</a></td>
-<td>Drone Flights Activity events report the activity of Unmanned Aerial Systems</td>
-<td>no</td>
-</tr>
-<tr>
-<td><a href="../ProcessActivity/">ProcessActivity</a></td>
-<td>Process Activity events report when a process launches, injects, opens or</td>
 <td>no</td>
 </tr>
 <tr>
@@ -798,18 +883,8 @@ Alias: device</p>
 <td>no</td>
 </tr>
 <tr>
-<td><a href="../EventLogActvity/">EventLogActvity</a></td>
-<td>Event Log Activity events report actions pertaining to the system's event</td>
-<td>yes</td>
-</tr>
-<tr>
-<td><a href="../EmailFileActivity/">EmailFileActivity</a></td>
-<td>Email File Activity events report files within emails</td>
-<td>no</td>
-</tr>
-<tr>
-<td><a href="../UserQuery/">UserQuery</a></td>
-<td>User Query events report user data that have been discovered, queried, polled</td>
+<td><a href="../ModuleActivity/">ModuleActivity</a></td>
+<td>Module Activity events report when an endpoint process acts on a</td>
 <td>no</td>
 </tr>
 <tr>
@@ -818,8 +893,53 @@ Alias: device</p>
 <td>no</td>
 </tr>
 <tr>
-<td><a href="../DataSecurityFinding/">DataSecurityFinding</a></td>
-<td>A Data Security Finding describes detections or alerts generated by various</td>
+<td><a href="../NetworkFileActivity/">NetworkFileActivity</a></td>
+<td>Network File Activity events report file activities traversing the network,</td>
+<td>no</td>
+</tr>
+<tr>
+<td><a href="../UserInventory/">UserInventory</a></td>
+<td>User Inventory Info events report user inventory data that is either logged o...</td>
+<td>no</td>
+</tr>
+<tr>
+<td><a href="../ApplicationSecurityPostureFinding/">ApplicationSecurityPostureFinding</a></td>
+<td>The Application Security Posture Finding event is a notification about any bu...</td>
+<td>no</td>
+</tr>
+<tr>
+<td><a href="../IncidentFinding/">IncidentFinding</a></td>
+<td>An Incident Finding reports the creation, update, or closure of security</td>
+<td>no</td>
+</tr>
+<tr>
+<td><a href="../AccountChange/">AccountChange</a></td>
+<td>Account Change events report when specific user account management tasks are</td>
+<td>no</td>
+</tr>
+<tr>
+<td><a href="../AuthFactor/">AuthFactor</a></td>
+<td>An Authentication Factor object describes a category of methods used for</td>
+<td>yes</td>
+</tr>
+<tr>
+<td><a href="../HostProfile/">HostProfile</a></td>
+<td>The attributes that identify host/device attributes</td>
+<td>yes</td>
+</tr>
+<tr>
+<td><a href="../RegistryKeyActivity/">RegistryKeyActivity</a></td>
+<td>Registry Key Activity events report when a process performs an action on a</td>
+<td>no</td>
+</tr>
+<tr>
+<td><a href="../WindowsResourceActivity/">WindowsResourceActivity</a></td>
+<td>Windows Resource Activity events report when a process accesses a Windows</td>
+<td>no</td>
+</tr>
+<tr>
+<td><a href="../SoftwareInfo/">SoftwareInfo</a></td>
+<td>Software Inventory Info events report device software inventory data that is</td>
 <td>yes</td>
 </tr>
 <tr>
@@ -828,9 +948,24 @@ Alias: device</p>
 <td>no</td>
 </tr>
 <tr>
-<td><a href="../WindowsResourceActivity/">WindowsResourceActivity</a></td>
-<td>Windows Resource Activity events report when a process accesses a Windows</td>
+<td><a href="../RegistryKeyQuery/">RegistryKeyQuery</a></td>
+<td>Registry Key Query events report information about discovered Windows registr...</td>
 <td>no</td>
+</tr>
+<tr>
+<td><a href="../ApplicationError/">ApplicationError</a></td>
+<td>Application Error events describe issues with an applications</td>
+<td>no</td>
+</tr>
+<tr>
+<td><a href="../ManagedEntity/">ManagedEntity</a></td>
+<td>The Managed Entity object describes the type and version of an entity, such a...</td>
+<td>yes</td>
+</tr>
+<tr>
+<td><a href="../ConfigState/">ConfigState</a></td>
+<td>Device Config State events report device configuration data, device</td>
+<td>yes</td>
 </tr>
 <tr>
 <td><a href="../Logger/">Logger</a></td>
@@ -843,78 +978,8 @@ Alias: device</p>
 <td>no</td>
 </tr>
 <tr>
-<td><a href="../WindowsEvidences/">WindowsEvidences</a></td>
-<td>Extends the evidences object to add Windows specific fields</td>
-<td>no</td>
-</tr>
-<tr>
-<td><a href="../MemoryActivity/">MemoryActivity</a></td>
-<td>Memory Activity events report when a process has memory allocated,</td>
-<td>no</td>
-</tr>
-<tr>
-<td><a href="../ManagedEntity/">ManagedEntity</a></td>
-<td>The Managed Entity object describes the type and version of an entity, such a...</td>
-<td>yes</td>
-</tr>
-<tr>
-<td><a href="../HostProfile/">HostProfile</a></td>
-<td>The attributes that identify host/device attributes</td>
-<td>yes</td>
-</tr>
-<tr>
-<td><a href="../DeviceConfigStateChange/">DeviceConfigStateChange</a></td>
-<td>Device Config State Change events report state changes that impact the securi...</td>
-<td>yes</td>
-</tr>
-<tr>
-<td><a href="../SshActivity/">SshActivity</a></td>
-<td>SSH Activity events report remote client connections to a server using the</td>
-<td>no</td>
-</tr>
-<tr>
-<td><a href="../PatchState/">PatchState</a></td>
-<td>Operating System Patch State reports the installation of an OS patch to a</td>
-<td>yes</td>
-</tr>
-<tr>
-<td><a href="../NetworkEvent/">NetworkEvent</a></td>
-<td>Network event is a generic event that defines a set of attributes available i...</td>
-<td>no</td>
-</tr>
-<tr>
-<td><a href="../RdpActivity/">RdpActivity</a></td>
-<td>Remote Desktop Protocol (RDP) Activity events report post-authentication remo...</td>
-<td>yes</td>
-</tr>
-<tr>
-<td><a href="../DiscoveryResult/">DiscoveryResult</a></td>
-<td>Discovery Result events report the results of a discovery request</td>
-<td>no</td>
-</tr>
-<tr>
-<td><a href="../DetectionFinding/">DetectionFinding</a></td>
-<td>A Detection Finding describes detections or alerts generated by security</td>
-<td>no</td>
-</tr>
-<tr>
-<td><a href="../ApplicationError/">ApplicationError</a></td>
-<td>Application Error events describe issues with an applications</td>
-<td>no</td>
-</tr>
-<tr>
-<td><a href="../NetworkFileActivity/">NetworkFileActivity</a></td>
-<td>Network File Activity events report file activities traversing the network,</td>
-<td>no</td>
-</tr>
-<tr>
-<td><a href="../HttpActivity/">HttpActivity</a></td>
-<td>HTTP Activity events report HTTP connection and traffic information</td>
-<td>no</td>
-</tr>
-<tr>
-<td><a href="../ScheduledJobActivity/">ScheduledJobActivity</a></td>
-<td>Scheduled Job Activity events report activities related to scheduled jobs or</td>
+<td><a href="../UserAccess/">UserAccess</a></td>
+<td>User Access Management events report management updates to a user's privilege...</td>
 <td>no</td>
 </tr>
 <tr>
@@ -923,79 +988,14 @@ Alias: device</p>
 <td>no</td>
 </tr>
 <tr>
-<td><a href="../DnsActivity/">DnsActivity</a></td>
-<td>DNS Activity events report DNS queries and answers as seen on the network</td>
+<td><a href="../PeripheralDeviceQuery/">PeripheralDeviceQuery</a></td>
+<td>Peripheral Device Query events report information about peripheral devices</td>
 <td>no</td>
 </tr>
 <tr>
-<td><a href="../ScanActivity/">ScanActivity</a></td>
-<td>Scan events report the start, completion, and results of a scan job</td>
+<td><a href="../RegistryValueQuery/">RegistryValueQuery</a></td>
+<td>Registry Value Query events report information about discovered Windows</td>
 <td>no</td>
-</tr>
-<tr>
-<td><a href="../FileQuery/">FileQuery</a></td>
-<td>File Query events report information about files that are present on the</td>
-<td>no</td>
-</tr>
-<tr>
-<td><a href="../FolderQuery/">FolderQuery</a></td>
-<td>Folder Query events report information about folders that are present on the</td>
-<td>no</td>
-</tr>
-<tr>
-<td><a href="../JobQuery/">JobQuery</a></td>
-<td>Job Query events report information about scheduled jobs</td>
-<td>no</td>
-</tr>
-<tr>
-<td><a href="../GroupManagement/">GroupManagement</a></td>
-<td>Group Management events report management updates to a group, including updat...</td>
-<td>no</td>
-</tr>
-<tr>
-<td><a href="../FileRemediationActivity/">FileRemediationActivity</a></td>
-<td>File Remediation Activity events report on attempts at remediating files</td>
-<td>no</td>
-</tr>
-<tr>
-<td><a href="../KernelObjectQuery/">KernelObjectQuery</a></td>
-<td>Kernel Object Query events report information about discovered kernel</td>
-<td>no</td>
-</tr>
-<tr>
-<td><a href="../KernelExtensionActivity/">KernelExtensionActivity</a></td>
-<td>Kernel Extension events report when a driver/extension is loaded or unloaded</td>
-<td>no</td>
-</tr>
-<tr>
-<td><a href="../RegistryValueActivity/">RegistryValueActivity</a></td>
-<td>Registry Value Activity events reports when a process performs an action on a</td>
-<td>no</td>
-</tr>
-<tr>
-<td><a href="../EvidenceInfo/">EvidenceInfo</a></td>
-<td>Data collected directly from devices that represents forensic information</td>
-<td>yes</td>
-</tr>
-<tr>
-<td><a href="../IncidentFinding/">IncidentFinding</a></td>
-<td>An Incident Finding reports the creation, update, or closure of security</td>
-<td>no</td>
-</tr>
-<tr>
-<td><a href="../ApplicationLifecycle/">ApplicationLifecycle</a></td>
-<td>Application Lifecycle events report installation, removal, start, stop of an</td>
-<td>no</td>
-</tr>
-<tr>
-<td><a href="../EmailUrlActivity/">EmailUrlActivity</a></td>
-<td>Email URL Activity events report URLs within an email</td>
-<td>no</td>
-</tr>
-<tr>
-<td><a href="../Evidences/">Evidences</a></td>
-<td>A collection of evidence artifacts associated to the activity/activities that</td>
-<td>yes</td>
 </tr>
 </tbody>
 </table>
