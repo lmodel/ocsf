@@ -217,6 +217,15 @@
 </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="#in-subsets">
+<span class="md-ellipsis">
+      
+        In Subsets
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#aliases">
 <span class="md-ellipsis">
       
@@ -295,7 +304,13 @@
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
 <h1 id="class-trace">Class: Trace</h1>
-<p><em>The trace object contains information about a distributed trace,  which is crucial for observability. Traces are made up of one or more spans, which are individual units of work in application activity. Traces track the journey of a request as it moves through various services in a system, capturing key details like timing, status, and dependencies at each step. Traces provide insights into system performance, helping to identify latency, bottlenecks, and issues in complex, distributed environments.</em></p>
+<p><em>The trace object contains information about a distributed trace,  which is</em></p>
+<p><em>crucial for observability. Traces are made up of one or more spans, which are</em></p>
+<p><em>individual units of work in application activity. Traces track the journey of a</em></p>
+<p><em>request as it moves through various services in a system, capturing key details</em></p>
+<p><em>like timing, status, and dependencies at each step. Traces provide insights</em></p>
+<p><em>into system performance, helping to identify latency, bottlenecks, and issues</em></p>
+<p><em>in complex, distributed environments.</em></p>
 <p>URI: <a href="https://w3id.org/lmodel/ocsf/Trace">ocsf:Trace</a></p>
 <pre class="mermaid"><code> classDiagram
     class Trace
@@ -360,19 +375,19 @@
 <tr>
 <td><a href="../duration/">duration</a></td>
 <td>0..1 <br/> <a href="../Integer/">Integer</a></td>
-<td>The total time, in milliseconds, that the trace covers, calculated as the dif...</td>
+<td>The total time, in milliseconds, that the trace covers, calculated as the</td>
 <td>direct</td>
 </tr>
 <tr>
 <td><a href="../end_time/">end_time</a></td>
 <td>0..1 <br/> <a href="../TimestampT/">TimestampT</a></td>
-<td>The end timestamp of the trace, essential for identifying latency and perform...</td>
+<td>The end timestamp of the trace, essential for identifying latency and</td>
 <td>direct</td>
 </tr>
 <tr>
 <td><a href="../flags/">flags</a></td>
 <td>* <br/> <a href="../String/">String</a></td>
-<td>The flags associated with the trace, used to indicate specific properties or ...</td>
+<td>The flags associated with the trace, used to indicate specific properties or</td>
 <td>direct</td>
 </tr>
 <tr>
@@ -390,13 +405,13 @@
 <tr>
 <td><a href="../start_time/">start_time</a></td>
 <td>0..1 <br/> <a href="../TimestampT/">TimestampT</a></td>
-<td>The start timestamp of the trace, essential for identifying latency and perfo...</td>
+<td>The start timestamp of the trace, essential for identifying latency and</td>
 <td>direct</td>
 </tr>
 <tr>
 <td><a href="../uid/">uid</a></td>
 <td>1 <br/> <a href="../String/">String</a></td>
-<td>The unique identifier of the trace used in distributed systems and microservi...</td>
+<td>The unique identifier of the trace used in distributed systems and</td>
 <td>direct</td>
 </tr>
 </tbody>
@@ -432,6 +447,10 @@
 </tr>
 </tbody>
 </table>
+<h2 id="in-subsets">In Subsets</h2>
+<ul>
+<li><a href="../Objects/">Objects</a></li>
+</ul>
 <h2 id="aliases">Aliases</h2>
 <ul>
 <li>Trace</li>
@@ -465,13 +484,22 @@
 <h3 id="direct">Direct</h3>
 <details>
 <div class="highlight"><pre><span></span><code><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Trace</span>
-<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The trace object contains information about a distributed trace,  which</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">is crucial for observability. Traces are made up of one or more spans, which are</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">individual units of work in application activity. Traces track the journey of a</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">request as it moves through various services in a system, capturing key details</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">like timing, status, and dependencies at each step. Traces provide insights into</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">system performance, helping to identify latency, bottlenecks, and issues in complex,</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">distributed environments.</span>
+<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">trace</span><span class="nv"> </span><span class="s">object</span><span class="nv"> </span><span class="s">contains</span><span class="nv"> </span><span class="s">information</span><span class="nv"> </span><span class="s">about</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">distributed</span><span class="nv"> </span><span class="s">trace,</span><span class="nv">  </span><span class="s">which</span>
+<span class="w">  </span><span class="s">is</span>
+
+<span class="w">  </span><span class="s">crucial</span><span class="nv"> </span><span class="s">for</span><span class="nv"> </span><span class="s">observability.</span><span class="nv"> </span><span class="s">Traces</span><span class="nv"> </span><span class="s">are</span><span class="nv"> </span><span class="s">made</span><span class="nv"> </span><span class="s">up</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">one</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">more</span><span class="nv"> </span><span class="s">spans,</span><span class="nv"> </span><span class="s">which</span><span class="nv"> </span><span class="s">are</span>
+
+<span class="w">  </span><span class="s">individual</span><span class="nv"> </span><span class="s">units</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">work</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">application</span><span class="nv"> </span><span class="s">activity.</span><span class="nv"> </span><span class="s">Traces</span><span class="nv"> </span><span class="s">track</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">journey</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">a</span>
+
+<span class="w">  </span><span class="s">request</span><span class="nv"> </span><span class="s">as</span><span class="nv"> </span><span class="s">it</span><span class="nv"> </span><span class="s">moves</span><span class="nv"> </span><span class="s">through</span><span class="nv"> </span><span class="s">various</span><span class="nv"> </span><span class="s">services</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">system,</span><span class="nv"> </span><span class="s">capturing</span><span class="nv"> </span><span class="s">key</span><span class="nv"> </span><span class="s">details</span>
+
+<span class="w">  </span><span class="s">like</span><span class="nv"> </span><span class="s">timing,</span><span class="nv"> </span><span class="s">status,</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">dependencies</span><span class="nv"> </span><span class="s">at</span><span class="nv"> </span><span class="s">each</span><span class="nv"> </span><span class="s">step.</span><span class="nv"> </span><span class="s">Traces</span><span class="nv"> </span><span class="s">provide</span><span class="nv"> </span><span class="s">insights</span>
+
+<span class="w">  </span><span class="s">into</span><span class="nv"> </span><span class="s">system</span><span class="nv"> </span><span class="s">performance,</span><span class="nv"> </span><span class="s">helping</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">identify</span><span class="nv"> </span><span class="s">latency,</span><span class="nv"> </span><span class="s">bottlenecks,</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">issues</span>
+
+<span class="w">  </span><span class="s">in</span><span class="nv"> </span><span class="s">complex,</span><span class="nv"> </span><span class="s">distributed</span><span class="nv"> </span><span class="s">environments.'</span>
+<span class="nt">in_subset</span><span class="p">:</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">objects</span>
 <span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="nt">aliases</span><span class="p">:</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Trace</span>
@@ -487,71 +515,120 @@
 <span class="nt">slot_usage</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">duration</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">duration</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The total time, in milliseconds, that the trace covers, calculated</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">as the difference between start_time and end_time. This duration helps assess</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">the overall performance of a request as it travels across various services,</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">and is essential for identifying latency and potential bottlenecks within the</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">distributed system. The trace duration may differ from individual span durations</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">due to the propagation and processing times of the trace as it spans multiple</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">components.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">total</span><span class="nv"> </span><span class="s">time,</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">milliseconds,</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">trace</span><span class="nv"> </span><span class="s">covers,</span><span class="nv"> </span><span class="s">calculated</span>
+<span class="w">      </span><span class="s">as</span><span class="nv"> </span><span class="s">the</span>
+
+<span class="w">      </span><span class="s">difference</span><span class="nv"> </span><span class="s">between</span><span class="nv"> </span><span class="s">start_time</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">end_time.</span><span class="nv"> </span><span class="s">This</span><span class="nv"> </span><span class="s">duration</span><span class="nv"> </span><span class="s">helps</span><span class="nv"> </span><span class="s">assess</span><span class="nv"> </span><span class="s">the</span>
+
+<span class="w">      </span><span class="s">overall</span><span class="nv"> </span><span class="s">performance</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">request</span><span class="nv"> </span><span class="s">as</span><span class="nv"> </span><span class="s">it</span><span class="nv"> </span><span class="s">travels</span><span class="nv"> </span><span class="s">across</span><span class="nv"> </span><span class="s">various</span><span class="nv"> </span><span class="s">services,</span><span class="nv"> </span><span class="s">and</span>
+<span class="w">      </span><span class="s">is</span>
+
+<span class="w">      </span><span class="s">essential</span><span class="nv"> </span><span class="s">for</span><span class="nv"> </span><span class="s">identifying</span><span class="nv"> </span><span class="s">latency</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">potential</span><span class="nv"> </span><span class="s">bottlenecks</span><span class="nv"> </span><span class="s">within</span><span class="nv"> </span><span class="s">the</span>
+
+<span class="w">      </span><span class="s">distributed</span><span class="nv"> </span><span class="s">system.</span><span class="nv"> </span><span class="s">The</span><span class="nv"> </span><span class="s">trace</span><span class="nv"> </span><span class="s">duration</span><span class="nv"> </span><span class="s">may</span><span class="nv"> </span><span class="s">differ</span><span class="nv"> </span><span class="s">from</span><span class="nv"> </span><span class="s">individual</span><span class="nv"> </span><span class="s">span</span>
+
+<span class="w">      </span><span class="s">durations</span><span class="nv"> </span><span class="s">due</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">propagation</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">processing</span><span class="nv"> </span><span class="s">times</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">trace</span><span class="nv"> </span><span class="s">as</span><span class="nv"> </span><span class="s">it</span><span class="nv"> </span><span class="s">spans</span>
+
+<span class="w">      </span><span class="s">multiple</span><span class="nv"> </span><span class="s">components.'</span>
 <span class="w">  </span><span class="nt">end_time</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">end_time</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The end timestamp of the trace, essential for identifying latency</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">and performance bottlenecks. Like the start time, this timestamp is normalized</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">across the trace system to ensure consistency, even when events are recorded</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">across distributed services with unsynchronized clocks. Normalized time allows</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">for accurate trace duration calculations and helps observability tools track</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">overall performance across services, regardless of the individual system time</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">settings.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">end</span><span class="nv"> </span><span class="s">timestamp</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">trace,</span><span class="nv"> </span><span class="s">essential</span><span class="nv"> </span><span class="s">for</span><span class="nv"> </span><span class="s">identifying</span><span class="nv"> </span><span class="s">latency</span>
+<span class="w">      </span><span class="s">and</span>
+
+<span class="w">      </span><span class="s">performance</span><span class="nv"> </span><span class="s">bottlenecks.</span><span class="nv"> </span><span class="s">Like</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">start</span><span class="nv"> </span><span class="s">time,</span><span class="nv"> </span><span class="s">this</span><span class="nv"> </span><span class="s">timestamp</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">normalized</span>
+
+<span class="w">      </span><span class="s">across</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">trace</span><span class="nv"> </span><span class="s">system</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">ensure</span><span class="nv"> </span><span class="s">consistency,</span><span class="nv"> </span><span class="s">even</span><span class="nv"> </span><span class="s">when</span><span class="nv"> </span><span class="s">events</span><span class="nv"> </span><span class="s">are</span><span class="nv"> </span><span class="s">recorded</span>
+
+<span class="w">      </span><span class="s">across</span><span class="nv"> </span><span class="s">distributed</span><span class="nv"> </span><span class="s">services</span><span class="nv"> </span><span class="s">with</span><span class="nv"> </span><span class="s">unsynchronized</span><span class="nv"> </span><span class="s">clocks.</span><span class="nv"> </span><span class="s">Normalized</span><span class="nv"> </span><span class="s">time</span><span class="nv"> </span><span class="s">allows</span>
+
+<span class="w">      </span><span class="s">for</span><span class="nv"> </span><span class="s">accurate</span><span class="nv"> </span><span class="s">trace</span><span class="nv"> </span><span class="s">duration</span><span class="nv"> </span><span class="s">calculations</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">helps</span><span class="nv"> </span><span class="s">observability</span><span class="nv"> </span><span class="s">tools</span><span class="nv"> </span><span class="s">track</span>
+
+<span class="w">      </span><span class="s">overall</span><span class="nv"> </span><span class="s">performance</span><span class="nv"> </span><span class="s">across</span><span class="nv"> </span><span class="s">services,</span><span class="nv"> </span><span class="s">regardless</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">individual</span><span class="nv"> </span><span class="s">system</span><span class="nv"> </span><span class="s">time</span>
+
+<span class="w">      </span><span class="s">settings.'</span>
 <span class="w">  </span><span class="nt">flags</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">flags</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The flags associated with the trace, used to indicate specific properties</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">or behaviors, such as whether the trace is sampled or if it has special handling.</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">Flags help control how traces are processed, logged, and analyzed, providing</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">valuable context for tracing and observability tools in identifying trace characteristics</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">or specific tracking requirements.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">flags</span><span class="nv"> </span><span class="s">associated</span><span class="nv"> </span><span class="s">with</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">trace,</span><span class="nv"> </span><span class="s">used</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">indicate</span><span class="nv"> </span><span class="s">specific</span><span class="nv"> </span><span class="s">properties</span>
+<span class="w">      </span><span class="s">or</span>
+
+<span class="w">      </span><span class="s">behaviors,</span><span class="nv"> </span><span class="s">such</span><span class="nv"> </span><span class="s">as</span><span class="nv"> </span><span class="s">whether</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">trace</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">sampled</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">if</span><span class="nv"> </span><span class="s">it</span><span class="nv"> </span><span class="s">has</span><span class="nv"> </span><span class="s">special</span><span class="nv"> </span><span class="s">handling.</span>
+
+<span class="w">      </span><span class="s">Flags</span><span class="nv"> </span><span class="s">help</span><span class="nv"> </span><span class="s">control</span><span class="nv"> </span><span class="s">how</span><span class="nv"> </span><span class="s">traces</span><span class="nv"> </span><span class="s">are</span><span class="nv"> </span><span class="s">processed,</span><span class="nv"> </span><span class="s">logged,</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">analyzed,</span><span class="nv"> </span><span class="s">providing</span>
+
+<span class="w">      </span><span class="s">valuable</span><span class="nv"> </span><span class="s">context</span><span class="nv"> </span><span class="s">for</span><span class="nv"> </span><span class="s">tracing</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">observability</span><span class="nv"> </span><span class="s">tools</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">identifying</span><span class="nv"> </span><span class="s">trace</span>
+
+<span class="w">      </span><span class="s">characteristics</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">specific</span><span class="nv"> </span><span class="s">tracking</span><span class="nv"> </span><span class="s">requirements.'</span>
 <span class="w">  </span><span class="nt">service</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">service</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Identifies the service or component generating the trace, helping</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">to track and correlate the flow of requests through various parts of a distributed</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">system. This information is essential for understanding the role and performance</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">of specific services within the broader context of system operations and for</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">diagnosing issues across different components.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'Identifies</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">service</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">component</span><span class="nv"> </span><span class="s">generating</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">trace,</span><span class="nv"> </span><span class="s">helping</span>
+<span class="w">      </span><span class="s">to</span><span class="nv"> </span><span class="s">track</span><span class="nv"> </span><span class="s">and</span>
+
+<span class="w">      </span><span class="s">correlate</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">flow</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">requests</span><span class="nv"> </span><span class="s">through</span><span class="nv"> </span><span class="s">various</span><span class="nv"> </span><span class="s">parts</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">distributed</span><span class="nv"> </span><span class="s">system.</span>
+
+<span class="w">      </span><span class="s">This</span><span class="nv"> </span><span class="s">information</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">essential</span><span class="nv"> </span><span class="s">for</span><span class="nv"> </span><span class="s">understanding</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">role</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">performance</span><span class="nv"> </span><span class="s">of</span>
+
+<span class="w">      </span><span class="s">specific</span><span class="nv"> </span><span class="s">services</span><span class="nv"> </span><span class="s">within</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">broader</span><span class="nv"> </span><span class="s">context</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">system</span><span class="nv"> </span><span class="s">operations</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">for</span>
+
+<span class="w">      </span><span class="s">diagnosing</span><span class="nv"> </span><span class="s">issues</span><span class="nv"> </span><span class="s">across</span><span class="nv"> </span><span class="s">different</span><span class="nv"> </span><span class="s">components.'</span>
 <span class="w">  </span><span class="nt">span</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">span</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Represents a single unit of work or operation within a distributed</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">trace. A span typically tracks the execution of a request across a service,</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">capturing important details such as the operation, timestamps, and status. Spans</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">help break down the overall trace into smaller, manageable parts, enabling detailed</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">analysis of the performance and behavior of specific operations within the system.</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">They are crucial for understanding latency, dependencies, and bottlenecks in</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">complex distributed systems.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'Represents</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">single</span><span class="nv"> </span><span class="s">unit</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">work</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">operation</span><span class="nv"> </span><span class="s">within</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">distributed</span>
+<span class="w">      </span><span class="s">trace.</span><span class="nv"> </span><span class="s">A</span>
+
+<span class="w">      </span><span class="s">span</span><span class="nv"> </span><span class="s">typically</span><span class="nv"> </span><span class="s">tracks</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">execution</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">request</span><span class="nv"> </span><span class="s">across</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">service,</span><span class="nv"> </span><span class="s">capturing</span>
+
+<span class="w">      </span><span class="s">important</span><span class="nv"> </span><span class="s">details</span><span class="nv"> </span><span class="s">such</span><span class="nv"> </span><span class="s">as</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">operation,</span><span class="nv"> </span><span class="s">timestamps,</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">status.</span><span class="nv"> </span><span class="s">Spans</span><span class="nv"> </span><span class="s">help</span>
+
+<span class="w">      </span><span class="s">break</span><span class="nv"> </span><span class="s">down</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">overall</span><span class="nv"> </span><span class="s">trace</span><span class="nv"> </span><span class="s">into</span><span class="nv"> </span><span class="s">smaller,</span><span class="nv"> </span><span class="s">manageable</span><span class="nv"> </span><span class="s">parts,</span><span class="nv"> </span><span class="s">enabling</span><span class="nv"> </span><span class="s">detailed</span>
+
+<span class="w">      </span><span class="s">analysis</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">performance</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">behavior</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">specific</span><span class="nv"> </span><span class="s">operations</span><span class="nv"> </span><span class="s">within</span><span class="nv"> </span><span class="s">the</span>
+
+<span class="w">      </span><span class="s">system.</span><span class="nv"> </span><span class="s">They</span><span class="nv"> </span><span class="s">are</span><span class="nv"> </span><span class="s">crucial</span><span class="nv"> </span><span class="s">for</span><span class="nv"> </span><span class="s">understanding</span><span class="nv"> </span><span class="s">latency,</span><span class="nv"> </span><span class="s">dependencies,</span><span class="nv"> </span><span class="s">and</span>
+
+<span class="w">      </span><span class="s">bottlenecks</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">complex</span><span class="nv"> </span><span class="s">distributed</span><span class="nv"> </span><span class="s">systems.'</span>
 <span class="w">  </span><span class="nt">start_time</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">start_time</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The start timestamp of the trace, essential for identifying latency</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">and performance bottlenecks. Like the end time, this timestamp is normalized</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">across the trace system to ensure consistency, even when events are recorded</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">across distributed services with unsynchronized clocks. Normalized time enables</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">accurate trace duration calculations and helps observability tools track performance</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">across services, regardless of the individual system time settings.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">start</span><span class="nv"> </span><span class="s">timestamp</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">trace,</span><span class="nv"> </span><span class="s">essential</span><span class="nv"> </span><span class="s">for</span><span class="nv"> </span><span class="s">identifying</span><span class="nv"> </span><span class="s">latency</span>
+<span class="w">      </span><span class="s">and</span>
+
+<span class="w">      </span><span class="s">performance</span><span class="nv"> </span><span class="s">bottlenecks.</span><span class="nv"> </span><span class="s">Like</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">end</span><span class="nv"> </span><span class="s">time,</span><span class="nv"> </span><span class="s">this</span><span class="nv"> </span><span class="s">timestamp</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">normalized</span><span class="nv"> </span><span class="s">across</span>
+
+<span class="w">      </span><span class="s">the</span><span class="nv"> </span><span class="s">trace</span><span class="nv"> </span><span class="s">system</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">ensure</span><span class="nv"> </span><span class="s">consistency,</span><span class="nv"> </span><span class="s">even</span><span class="nv"> </span><span class="s">when</span><span class="nv"> </span><span class="s">events</span><span class="nv"> </span><span class="s">are</span><span class="nv"> </span><span class="s">recorded</span><span class="nv"> </span><span class="s">across</span>
+
+<span class="w">      </span><span class="s">distributed</span><span class="nv"> </span><span class="s">services</span><span class="nv"> </span><span class="s">with</span><span class="nv"> </span><span class="s">unsynchronized</span><span class="nv"> </span><span class="s">clocks.</span><span class="nv"> </span><span class="s">Normalized</span><span class="nv"> </span><span class="s">time</span><span class="nv"> </span><span class="s">enables</span>
+
+<span class="w">      </span><span class="s">accurate</span><span class="nv"> </span><span class="s">trace</span><span class="nv"> </span><span class="s">duration</span><span class="nv"> </span><span class="s">calculations</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">helps</span><span class="nv"> </span><span class="s">observability</span><span class="nv"> </span><span class="s">tools</span><span class="nv"> </span><span class="s">track</span>
+
+<span class="w">      </span><span class="s">performance</span><span class="nv"> </span><span class="s">across</span><span class="nv"> </span><span class="s">services,</span><span class="nv"> </span><span class="s">regardless</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">individual</span><span class="nv"> </span><span class="s">system</span><span class="nv"> </span><span class="s">time</span><span class="nv"> </span><span class="s">settings.'</span>
 <span class="w">  </span><span class="nt">uid</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">uid</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The unique identifier of the trace used in distributed systems and</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">microservices architecture to track and correlate requests across various components</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">of an application.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">unique</span><span class="nv"> </span><span class="s">identifier</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">trace</span><span class="nv"> </span><span class="s">used</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">distributed</span><span class="nv"> </span><span class="s">systems</span><span class="nv"> </span><span class="s">and</span>
+
+<span class="w">      </span><span class="s">microservices</span><span class="nv"> </span><span class="s">architecture</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">track</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">correlate</span><span class="nv"> </span><span class="s">requests</span><span class="nv"> </span><span class="s">across</span><span class="nv"> </span><span class="s">various</span>
+
+<span class="w">      </span><span class="s">components</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">an</span><span class="nv"> </span><span class="s">application.'</span>
 <span class="w">    </span><span class="nt">required</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 </code></pre></div>
 </details>
 <h3 id="induced">Induced</h3>
 <details>
 <div class="highlight"><pre><span></span><code><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Trace</span>
-<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The trace object contains information about a distributed trace,  which</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">is crucial for observability. Traces are made up of one or more spans, which are</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">individual units of work in application activity. Traces track the journey of a</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">request as it moves through various services in a system, capturing key details</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">like timing, status, and dependencies at each step. Traces provide insights into</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">system performance, helping to identify latency, bottlenecks, and issues in complex,</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">distributed environments.</span>
+<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">trace</span><span class="nv"> </span><span class="s">object</span><span class="nv"> </span><span class="s">contains</span><span class="nv"> </span><span class="s">information</span><span class="nv"> </span><span class="s">about</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">distributed</span><span class="nv"> </span><span class="s">trace,</span><span class="nv">  </span><span class="s">which</span>
+<span class="w">  </span><span class="s">is</span>
+
+<span class="w">  </span><span class="s">crucial</span><span class="nv"> </span><span class="s">for</span><span class="nv"> </span><span class="s">observability.</span><span class="nv"> </span><span class="s">Traces</span><span class="nv"> </span><span class="s">are</span><span class="nv"> </span><span class="s">made</span><span class="nv"> </span><span class="s">up</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">one</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">more</span><span class="nv"> </span><span class="s">spans,</span><span class="nv"> </span><span class="s">which</span><span class="nv"> </span><span class="s">are</span>
+
+<span class="w">  </span><span class="s">individual</span><span class="nv"> </span><span class="s">units</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">work</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">application</span><span class="nv"> </span><span class="s">activity.</span><span class="nv"> </span><span class="s">Traces</span><span class="nv"> </span><span class="s">track</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">journey</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">a</span>
+
+<span class="w">  </span><span class="s">request</span><span class="nv"> </span><span class="s">as</span><span class="nv"> </span><span class="s">it</span><span class="nv"> </span><span class="s">moves</span><span class="nv"> </span><span class="s">through</span><span class="nv"> </span><span class="s">various</span><span class="nv"> </span><span class="s">services</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">system,</span><span class="nv"> </span><span class="s">capturing</span><span class="nv"> </span><span class="s">key</span><span class="nv"> </span><span class="s">details</span>
+
+<span class="w">  </span><span class="s">like</span><span class="nv"> </span><span class="s">timing,</span><span class="nv"> </span><span class="s">status,</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">dependencies</span><span class="nv"> </span><span class="s">at</span><span class="nv"> </span><span class="s">each</span><span class="nv"> </span><span class="s">step.</span><span class="nv"> </span><span class="s">Traces</span><span class="nv"> </span><span class="s">provide</span><span class="nv"> </span><span class="s">insights</span>
+
+<span class="w">  </span><span class="s">into</span><span class="nv"> </span><span class="s">system</span><span class="nv"> </span><span class="s">performance,</span><span class="nv"> </span><span class="s">helping</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">identify</span><span class="nv"> </span><span class="s">latency,</span><span class="nv"> </span><span class="s">bottlenecks,</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">issues</span>
+
+<span class="w">  </span><span class="s">in</span><span class="nv"> </span><span class="s">complex,</span><span class="nv"> </span><span class="s">distributed</span><span class="nv"> </span><span class="s">environments.'</span>
+<span class="nt">in_subset</span><span class="p">:</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">objects</span>
 <span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="nt">aliases</span><span class="p">:</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Trace</span>
@@ -559,69 +636,117 @@
 <span class="nt">slot_usage</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">duration</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">duration</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The total time, in milliseconds, that the trace covers, calculated</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">as the difference between start_time and end_time. This duration helps assess</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">the overall performance of a request as it travels across various services,</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">and is essential for identifying latency and potential bottlenecks within the</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">distributed system. The trace duration may differ from individual span durations</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">due to the propagation and processing times of the trace as it spans multiple</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">components.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">total</span><span class="nv"> </span><span class="s">time,</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">milliseconds,</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">trace</span><span class="nv"> </span><span class="s">covers,</span><span class="nv"> </span><span class="s">calculated</span>
+<span class="w">      </span><span class="s">as</span><span class="nv"> </span><span class="s">the</span>
+
+<span class="w">      </span><span class="s">difference</span><span class="nv"> </span><span class="s">between</span><span class="nv"> </span><span class="s">start_time</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">end_time.</span><span class="nv"> </span><span class="s">This</span><span class="nv"> </span><span class="s">duration</span><span class="nv"> </span><span class="s">helps</span><span class="nv"> </span><span class="s">assess</span><span class="nv"> </span><span class="s">the</span>
+
+<span class="w">      </span><span class="s">overall</span><span class="nv"> </span><span class="s">performance</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">request</span><span class="nv"> </span><span class="s">as</span><span class="nv"> </span><span class="s">it</span><span class="nv"> </span><span class="s">travels</span><span class="nv"> </span><span class="s">across</span><span class="nv"> </span><span class="s">various</span><span class="nv"> </span><span class="s">services,</span><span class="nv"> </span><span class="s">and</span>
+<span class="w">      </span><span class="s">is</span>
+
+<span class="w">      </span><span class="s">essential</span><span class="nv"> </span><span class="s">for</span><span class="nv"> </span><span class="s">identifying</span><span class="nv"> </span><span class="s">latency</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">potential</span><span class="nv"> </span><span class="s">bottlenecks</span><span class="nv"> </span><span class="s">within</span><span class="nv"> </span><span class="s">the</span>
+
+<span class="w">      </span><span class="s">distributed</span><span class="nv"> </span><span class="s">system.</span><span class="nv"> </span><span class="s">The</span><span class="nv"> </span><span class="s">trace</span><span class="nv"> </span><span class="s">duration</span><span class="nv"> </span><span class="s">may</span><span class="nv"> </span><span class="s">differ</span><span class="nv"> </span><span class="s">from</span><span class="nv"> </span><span class="s">individual</span><span class="nv"> </span><span class="s">span</span>
+
+<span class="w">      </span><span class="s">durations</span><span class="nv"> </span><span class="s">due</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">propagation</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">processing</span><span class="nv"> </span><span class="s">times</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">trace</span><span class="nv"> </span><span class="s">as</span><span class="nv"> </span><span class="s">it</span><span class="nv"> </span><span class="s">spans</span>
+
+<span class="w">      </span><span class="s">multiple</span><span class="nv"> </span><span class="s">components.'</span>
 <span class="w">  </span><span class="nt">end_time</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">end_time</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The end timestamp of the trace, essential for identifying latency</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">and performance bottlenecks. Like the start time, this timestamp is normalized</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">across the trace system to ensure consistency, even when events are recorded</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">across distributed services with unsynchronized clocks. Normalized time allows</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">for accurate trace duration calculations and helps observability tools track</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">overall performance across services, regardless of the individual system time</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">settings.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">end</span><span class="nv"> </span><span class="s">timestamp</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">trace,</span><span class="nv"> </span><span class="s">essential</span><span class="nv"> </span><span class="s">for</span><span class="nv"> </span><span class="s">identifying</span><span class="nv"> </span><span class="s">latency</span>
+<span class="w">      </span><span class="s">and</span>
+
+<span class="w">      </span><span class="s">performance</span><span class="nv"> </span><span class="s">bottlenecks.</span><span class="nv"> </span><span class="s">Like</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">start</span><span class="nv"> </span><span class="s">time,</span><span class="nv"> </span><span class="s">this</span><span class="nv"> </span><span class="s">timestamp</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">normalized</span>
+
+<span class="w">      </span><span class="s">across</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">trace</span><span class="nv"> </span><span class="s">system</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">ensure</span><span class="nv"> </span><span class="s">consistency,</span><span class="nv"> </span><span class="s">even</span><span class="nv"> </span><span class="s">when</span><span class="nv"> </span><span class="s">events</span><span class="nv"> </span><span class="s">are</span><span class="nv"> </span><span class="s">recorded</span>
+
+<span class="w">      </span><span class="s">across</span><span class="nv"> </span><span class="s">distributed</span><span class="nv"> </span><span class="s">services</span><span class="nv"> </span><span class="s">with</span><span class="nv"> </span><span class="s">unsynchronized</span><span class="nv"> </span><span class="s">clocks.</span><span class="nv"> </span><span class="s">Normalized</span><span class="nv"> </span><span class="s">time</span><span class="nv"> </span><span class="s">allows</span>
+
+<span class="w">      </span><span class="s">for</span><span class="nv"> </span><span class="s">accurate</span><span class="nv"> </span><span class="s">trace</span><span class="nv"> </span><span class="s">duration</span><span class="nv"> </span><span class="s">calculations</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">helps</span><span class="nv"> </span><span class="s">observability</span><span class="nv"> </span><span class="s">tools</span><span class="nv"> </span><span class="s">track</span>
+
+<span class="w">      </span><span class="s">overall</span><span class="nv"> </span><span class="s">performance</span><span class="nv"> </span><span class="s">across</span><span class="nv"> </span><span class="s">services,</span><span class="nv"> </span><span class="s">regardless</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">individual</span><span class="nv"> </span><span class="s">system</span><span class="nv"> </span><span class="s">time</span>
+
+<span class="w">      </span><span class="s">settings.'</span>
 <span class="w">  </span><span class="nt">flags</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">flags</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The flags associated with the trace, used to indicate specific properties</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">or behaviors, such as whether the trace is sampled or if it has special handling.</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">Flags help control how traces are processed, logged, and analyzed, providing</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">valuable context for tracing and observability tools in identifying trace characteristics</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">or specific tracking requirements.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">flags</span><span class="nv"> </span><span class="s">associated</span><span class="nv"> </span><span class="s">with</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">trace,</span><span class="nv"> </span><span class="s">used</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">indicate</span><span class="nv"> </span><span class="s">specific</span><span class="nv"> </span><span class="s">properties</span>
+<span class="w">      </span><span class="s">or</span>
+
+<span class="w">      </span><span class="s">behaviors,</span><span class="nv"> </span><span class="s">such</span><span class="nv"> </span><span class="s">as</span><span class="nv"> </span><span class="s">whether</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">trace</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">sampled</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">if</span><span class="nv"> </span><span class="s">it</span><span class="nv"> </span><span class="s">has</span><span class="nv"> </span><span class="s">special</span><span class="nv"> </span><span class="s">handling.</span>
+
+<span class="w">      </span><span class="s">Flags</span><span class="nv"> </span><span class="s">help</span><span class="nv"> </span><span class="s">control</span><span class="nv"> </span><span class="s">how</span><span class="nv"> </span><span class="s">traces</span><span class="nv"> </span><span class="s">are</span><span class="nv"> </span><span class="s">processed,</span><span class="nv"> </span><span class="s">logged,</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">analyzed,</span><span class="nv"> </span><span class="s">providing</span>
+
+<span class="w">      </span><span class="s">valuable</span><span class="nv"> </span><span class="s">context</span><span class="nv"> </span><span class="s">for</span><span class="nv"> </span><span class="s">tracing</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">observability</span><span class="nv"> </span><span class="s">tools</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">identifying</span><span class="nv"> </span><span class="s">trace</span>
+
+<span class="w">      </span><span class="s">characteristics</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">specific</span><span class="nv"> </span><span class="s">tracking</span><span class="nv"> </span><span class="s">requirements.'</span>
 <span class="w">  </span><span class="nt">service</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">service</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Identifies the service or component generating the trace, helping</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">to track and correlate the flow of requests through various parts of a distributed</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">system. This information is essential for understanding the role and performance</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">of specific services within the broader context of system operations and for</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">diagnosing issues across different components.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'Identifies</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">service</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">component</span><span class="nv"> </span><span class="s">generating</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">trace,</span><span class="nv"> </span><span class="s">helping</span>
+<span class="w">      </span><span class="s">to</span><span class="nv"> </span><span class="s">track</span><span class="nv"> </span><span class="s">and</span>
+
+<span class="w">      </span><span class="s">correlate</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">flow</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">requests</span><span class="nv"> </span><span class="s">through</span><span class="nv"> </span><span class="s">various</span><span class="nv"> </span><span class="s">parts</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">distributed</span><span class="nv"> </span><span class="s">system.</span>
+
+<span class="w">      </span><span class="s">This</span><span class="nv"> </span><span class="s">information</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">essential</span><span class="nv"> </span><span class="s">for</span><span class="nv"> </span><span class="s">understanding</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">role</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">performance</span><span class="nv"> </span><span class="s">of</span>
+
+<span class="w">      </span><span class="s">specific</span><span class="nv"> </span><span class="s">services</span><span class="nv"> </span><span class="s">within</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">broader</span><span class="nv"> </span><span class="s">context</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">system</span><span class="nv"> </span><span class="s">operations</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">for</span>
+
+<span class="w">      </span><span class="s">diagnosing</span><span class="nv"> </span><span class="s">issues</span><span class="nv"> </span><span class="s">across</span><span class="nv"> </span><span class="s">different</span><span class="nv"> </span><span class="s">components.'</span>
 <span class="w">  </span><span class="nt">span</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">span</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Represents a single unit of work or operation within a distributed</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">trace. A span typically tracks the execution of a request across a service,</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">capturing important details such as the operation, timestamps, and status. Spans</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">help break down the overall trace into smaller, manageable parts, enabling detailed</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">analysis of the performance and behavior of specific operations within the system.</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">They are crucial for understanding latency, dependencies, and bottlenecks in</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">complex distributed systems.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'Represents</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">single</span><span class="nv"> </span><span class="s">unit</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">work</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">operation</span><span class="nv"> </span><span class="s">within</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">distributed</span>
+<span class="w">      </span><span class="s">trace.</span><span class="nv"> </span><span class="s">A</span>
+
+<span class="w">      </span><span class="s">span</span><span class="nv"> </span><span class="s">typically</span><span class="nv"> </span><span class="s">tracks</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">execution</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">request</span><span class="nv"> </span><span class="s">across</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">service,</span><span class="nv"> </span><span class="s">capturing</span>
+
+<span class="w">      </span><span class="s">important</span><span class="nv"> </span><span class="s">details</span><span class="nv"> </span><span class="s">such</span><span class="nv"> </span><span class="s">as</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">operation,</span><span class="nv"> </span><span class="s">timestamps,</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">status.</span><span class="nv"> </span><span class="s">Spans</span><span class="nv"> </span><span class="s">help</span>
+
+<span class="w">      </span><span class="s">break</span><span class="nv"> </span><span class="s">down</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">overall</span><span class="nv"> </span><span class="s">trace</span><span class="nv"> </span><span class="s">into</span><span class="nv"> </span><span class="s">smaller,</span><span class="nv"> </span><span class="s">manageable</span><span class="nv"> </span><span class="s">parts,</span><span class="nv"> </span><span class="s">enabling</span><span class="nv"> </span><span class="s">detailed</span>
+
+<span class="w">      </span><span class="s">analysis</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">performance</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">behavior</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">specific</span><span class="nv"> </span><span class="s">operations</span><span class="nv"> </span><span class="s">within</span><span class="nv"> </span><span class="s">the</span>
+
+<span class="w">      </span><span class="s">system.</span><span class="nv"> </span><span class="s">They</span><span class="nv"> </span><span class="s">are</span><span class="nv"> </span><span class="s">crucial</span><span class="nv"> </span><span class="s">for</span><span class="nv"> </span><span class="s">understanding</span><span class="nv"> </span><span class="s">latency,</span><span class="nv"> </span><span class="s">dependencies,</span><span class="nv"> </span><span class="s">and</span>
+
+<span class="w">      </span><span class="s">bottlenecks</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">complex</span><span class="nv"> </span><span class="s">distributed</span><span class="nv"> </span><span class="s">systems.'</span>
 <span class="w">  </span><span class="nt">start_time</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">start_time</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The start timestamp of the trace, essential for identifying latency</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">and performance bottlenecks. Like the end time, this timestamp is normalized</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">across the trace system to ensure consistency, even when events are recorded</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">across distributed services with unsynchronized clocks. Normalized time enables</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">accurate trace duration calculations and helps observability tools track performance</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">across services, regardless of the individual system time settings.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">start</span><span class="nv"> </span><span class="s">timestamp</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">trace,</span><span class="nv"> </span><span class="s">essential</span><span class="nv"> </span><span class="s">for</span><span class="nv"> </span><span class="s">identifying</span><span class="nv"> </span><span class="s">latency</span>
+<span class="w">      </span><span class="s">and</span>
+
+<span class="w">      </span><span class="s">performance</span><span class="nv"> </span><span class="s">bottlenecks.</span><span class="nv"> </span><span class="s">Like</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">end</span><span class="nv"> </span><span class="s">time,</span><span class="nv"> </span><span class="s">this</span><span class="nv"> </span><span class="s">timestamp</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">normalized</span><span class="nv"> </span><span class="s">across</span>
+
+<span class="w">      </span><span class="s">the</span><span class="nv"> </span><span class="s">trace</span><span class="nv"> </span><span class="s">system</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">ensure</span><span class="nv"> </span><span class="s">consistency,</span><span class="nv"> </span><span class="s">even</span><span class="nv"> </span><span class="s">when</span><span class="nv"> </span><span class="s">events</span><span class="nv"> </span><span class="s">are</span><span class="nv"> </span><span class="s">recorded</span><span class="nv"> </span><span class="s">across</span>
+
+<span class="w">      </span><span class="s">distributed</span><span class="nv"> </span><span class="s">services</span><span class="nv"> </span><span class="s">with</span><span class="nv"> </span><span class="s">unsynchronized</span><span class="nv"> </span><span class="s">clocks.</span><span class="nv"> </span><span class="s">Normalized</span><span class="nv"> </span><span class="s">time</span><span class="nv"> </span><span class="s">enables</span>
+
+<span class="w">      </span><span class="s">accurate</span><span class="nv"> </span><span class="s">trace</span><span class="nv"> </span><span class="s">duration</span><span class="nv"> </span><span class="s">calculations</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">helps</span><span class="nv"> </span><span class="s">observability</span><span class="nv"> </span><span class="s">tools</span><span class="nv"> </span><span class="s">track</span>
+
+<span class="w">      </span><span class="s">performance</span><span class="nv"> </span><span class="s">across</span><span class="nv"> </span><span class="s">services,</span><span class="nv"> </span><span class="s">regardless</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">individual</span><span class="nv"> </span><span class="s">system</span><span class="nv"> </span><span class="s">time</span><span class="nv"> </span><span class="s">settings.'</span>
 <span class="w">  </span><span class="nt">uid</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">uid</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The unique identifier of the trace used in distributed systems and</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">microservices architecture to track and correlate requests across various components</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">of an application.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">unique</span><span class="nv"> </span><span class="s">identifier</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">trace</span><span class="nv"> </span><span class="s">used</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">distributed</span><span class="nv"> </span><span class="s">systems</span><span class="nv"> </span><span class="s">and</span>
+
+<span class="w">      </span><span class="s">microservices</span><span class="nv"> </span><span class="s">architecture</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">track</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">correlate</span><span class="nv"> </span><span class="s">requests</span><span class="nv"> </span><span class="s">across</span><span class="nv"> </span><span class="s">various</span>
+
+<span class="w">      </span><span class="s">components</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">an</span><span class="nv"> </span><span class="s">application.'</span>
 <span class="w">    </span><span class="nt">required</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="nt">attributes</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">duration</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">duration</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The total time, in milliseconds, that the trace covers, calculated</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">as the difference between start_time and end_time. This duration helps assess</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">the overall performance of a request as it travels across various services,</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">and is essential for identifying latency and potential bottlenecks within the</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">distributed system. The trace duration may differ from individual span durations</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">due to the propagation and processing times of the trace as it spans multiple</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">components.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">total</span><span class="nv"> </span><span class="s">time,</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">milliseconds,</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">trace</span><span class="nv"> </span><span class="s">covers,</span><span class="nv"> </span><span class="s">calculated</span>
+<span class="w">      </span><span class="s">as</span><span class="nv"> </span><span class="s">the</span>
+
+<span class="w">      </span><span class="s">difference</span><span class="nv"> </span><span class="s">between</span><span class="nv"> </span><span class="s">start_time</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">end_time.</span><span class="nv"> </span><span class="s">This</span><span class="nv"> </span><span class="s">duration</span><span class="nv"> </span><span class="s">helps</span><span class="nv"> </span><span class="s">assess</span><span class="nv"> </span><span class="s">the</span>
+
+<span class="w">      </span><span class="s">overall</span><span class="nv"> </span><span class="s">performance</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">request</span><span class="nv"> </span><span class="s">as</span><span class="nv"> </span><span class="s">it</span><span class="nv"> </span><span class="s">travels</span><span class="nv"> </span><span class="s">across</span><span class="nv"> </span><span class="s">various</span><span class="nv"> </span><span class="s">services,</span><span class="nv"> </span><span class="s">and</span>
+<span class="w">      </span><span class="s">is</span>
+
+<span class="w">      </span><span class="s">essential</span><span class="nv"> </span><span class="s">for</span><span class="nv"> </span><span class="s">identifying</span><span class="nv"> </span><span class="s">latency</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">potential</span><span class="nv"> </span><span class="s">bottlenecks</span><span class="nv"> </span><span class="s">within</span><span class="nv"> </span><span class="s">the</span>
+
+<span class="w">      </span><span class="s">distributed</span><span class="nv"> </span><span class="s">system.</span><span class="nv"> </span><span class="s">The</span><span class="nv"> </span><span class="s">trace</span><span class="nv"> </span><span class="s">duration</span><span class="nv"> </span><span class="s">may</span><span class="nv"> </span><span class="s">differ</span><span class="nv"> </span><span class="s">from</span><span class="nv"> </span><span class="s">individual</span><span class="nv"> </span><span class="s">span</span>
+
+<span class="w">      </span><span class="s">durations</span><span class="nv"> </span><span class="s">due</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">propagation</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">processing</span><span class="nv"> </span><span class="s">times</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">trace</span><span class="nv"> </span><span class="s">as</span><span class="nv"> </span><span class="s">it</span><span class="nv"> </span><span class="s">spans</span>
+
+<span class="w">      </span><span class="s">multiple</span><span class="nv"> </span><span class="s">components.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Duration Milliseconds</span>
@@ -638,13 +763,20 @@
 <span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">integer</span>
 <span class="w">  </span><span class="nt">end_time</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">end_time</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The end timestamp of the trace, essential for identifying latency</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">and performance bottlenecks. Like the start time, this timestamp is normalized</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">across the trace system to ensure consistency, even when events are recorded</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">across distributed services with unsynchronized clocks. Normalized time allows</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">for accurate trace duration calculations and helps observability tools track</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">overall performance across services, regardless of the individual system time</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">settings.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">end</span><span class="nv"> </span><span class="s">timestamp</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">trace,</span><span class="nv"> </span><span class="s">essential</span><span class="nv"> </span><span class="s">for</span><span class="nv"> </span><span class="s">identifying</span><span class="nv"> </span><span class="s">latency</span>
+<span class="w">      </span><span class="s">and</span>
+
+<span class="w">      </span><span class="s">performance</span><span class="nv"> </span><span class="s">bottlenecks.</span><span class="nv"> </span><span class="s">Like</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">start</span><span class="nv"> </span><span class="s">time,</span><span class="nv"> </span><span class="s">this</span><span class="nv"> </span><span class="s">timestamp</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">normalized</span>
+
+<span class="w">      </span><span class="s">across</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">trace</span><span class="nv"> </span><span class="s">system</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">ensure</span><span class="nv"> </span><span class="s">consistency,</span><span class="nv"> </span><span class="s">even</span><span class="nv"> </span><span class="s">when</span><span class="nv"> </span><span class="s">events</span><span class="nv"> </span><span class="s">are</span><span class="nv"> </span><span class="s">recorded</span>
+
+<span class="w">      </span><span class="s">across</span><span class="nv"> </span><span class="s">distributed</span><span class="nv"> </span><span class="s">services</span><span class="nv"> </span><span class="s">with</span><span class="nv"> </span><span class="s">unsynchronized</span><span class="nv"> </span><span class="s">clocks.</span><span class="nv"> </span><span class="s">Normalized</span><span class="nv"> </span><span class="s">time</span><span class="nv"> </span><span class="s">allows</span>
+
+<span class="w">      </span><span class="s">for</span><span class="nv"> </span><span class="s">accurate</span><span class="nv"> </span><span class="s">trace</span><span class="nv"> </span><span class="s">duration</span><span class="nv"> </span><span class="s">calculations</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">helps</span><span class="nv"> </span><span class="s">observability</span><span class="nv"> </span><span class="s">tools</span><span class="nv"> </span><span class="s">track</span>
+
+<span class="w">      </span><span class="s">overall</span><span class="nv"> </span><span class="s">performance</span><span class="nv"> </span><span class="s">across</span><span class="nv"> </span><span class="s">services,</span><span class="nv"> </span><span class="s">regardless</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">individual</span><span class="nv"> </span><span class="s">system</span><span class="nv"> </span><span class="s">time</span>
+
+<span class="w">      </span><span class="s">settings.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">End Time</span>
@@ -665,11 +797,16 @@
 <span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">TimestampT</span>
 <span class="w">  </span><span class="nt">flags</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">flags</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The flags associated with the trace, used to indicate specific properties</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">or behaviors, such as whether the trace is sampled or if it has special handling.</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">Flags help control how traces are processed, logged, and analyzed, providing</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">valuable context for tracing and observability tools in identifying trace characteristics</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">or specific tracking requirements.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">flags</span><span class="nv"> </span><span class="s">associated</span><span class="nv"> </span><span class="s">with</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">trace,</span><span class="nv"> </span><span class="s">used</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">indicate</span><span class="nv"> </span><span class="s">specific</span><span class="nv"> </span><span class="s">properties</span>
+<span class="w">      </span><span class="s">or</span>
+
+<span class="w">      </span><span class="s">behaviors,</span><span class="nv"> </span><span class="s">such</span><span class="nv"> </span><span class="s">as</span><span class="nv"> </span><span class="s">whether</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">trace</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">sampled</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">if</span><span class="nv"> </span><span class="s">it</span><span class="nv"> </span><span class="s">has</span><span class="nv"> </span><span class="s">special</span><span class="nv"> </span><span class="s">handling.</span>
+
+<span class="w">      </span><span class="s">Flags</span><span class="nv"> </span><span class="s">help</span><span class="nv"> </span><span class="s">control</span><span class="nv"> </span><span class="s">how</span><span class="nv"> </span><span class="s">traces</span><span class="nv"> </span><span class="s">are</span><span class="nv"> </span><span class="s">processed,</span><span class="nv"> </span><span class="s">logged,</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">analyzed,</span><span class="nv"> </span><span class="s">providing</span>
+
+<span class="w">      </span><span class="s">valuable</span><span class="nv"> </span><span class="s">context</span><span class="nv"> </span><span class="s">for</span><span class="nv"> </span><span class="s">tracing</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">observability</span><span class="nv"> </span><span class="s">tools</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">identifying</span><span class="nv"> </span><span class="s">trace</span>
+
+<span class="w">      </span><span class="s">characteristics</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">specific</span><span class="nv"> </span><span class="s">tracking</span><span class="nv"> </span><span class="s">requirements.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Flags</span>
@@ -686,11 +823,16 @@
 <span class="w">    </span><span class="nt">multivalued</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">service</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">service</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Identifies the service or component generating the trace, helping</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">to track and correlate the flow of requests through various parts of a distributed</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">system. This information is essential for understanding the role and performance</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">of specific services within the broader context of system operations and for</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">diagnosing issues across different components.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'Identifies</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">service</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">component</span><span class="nv"> </span><span class="s">generating</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">trace,</span><span class="nv"> </span><span class="s">helping</span>
+<span class="w">      </span><span class="s">to</span><span class="nv"> </span><span class="s">track</span><span class="nv"> </span><span class="s">and</span>
+
+<span class="w">      </span><span class="s">correlate</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">flow</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">requests</span><span class="nv"> </span><span class="s">through</span><span class="nv"> </span><span class="s">various</span><span class="nv"> </span><span class="s">parts</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">distributed</span><span class="nv"> </span><span class="s">system.</span>
+
+<span class="w">      </span><span class="s">This</span><span class="nv"> </span><span class="s">information</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">essential</span><span class="nv"> </span><span class="s">for</span><span class="nv"> </span><span class="s">understanding</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">role</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">performance</span><span class="nv"> </span><span class="s">of</span>
+
+<span class="w">      </span><span class="s">specific</span><span class="nv"> </span><span class="s">services</span><span class="nv"> </span><span class="s">within</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">broader</span><span class="nv"> </span><span class="s">context</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">system</span><span class="nv"> </span><span class="s">operations</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">for</span>
+
+<span class="w">      </span><span class="s">diagnosing</span><span class="nv"> </span><span class="s">issues</span><span class="nv"> </span><span class="s">across</span><span class="nv"> </span><span class="s">different</span><span class="nv"> </span><span class="s">components.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Service</span>
@@ -708,13 +850,20 @@
 <span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Service</span>
 <span class="w">  </span><span class="nt">span</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">span</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Represents a single unit of work or operation within a distributed</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">trace. A span typically tracks the execution of a request across a service,</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">capturing important details such as the operation, timestamps, and status. Spans</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">help break down the overall trace into smaller, manageable parts, enabling detailed</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">analysis of the performance and behavior of specific operations within the system.</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">They are crucial for understanding latency, dependencies, and bottlenecks in</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">complex distributed systems.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'Represents</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">single</span><span class="nv"> </span><span class="s">unit</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">work</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">operation</span><span class="nv"> </span><span class="s">within</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">distributed</span>
+<span class="w">      </span><span class="s">trace.</span><span class="nv"> </span><span class="s">A</span>
+
+<span class="w">      </span><span class="s">span</span><span class="nv"> </span><span class="s">typically</span><span class="nv"> </span><span class="s">tracks</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">execution</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">request</span><span class="nv"> </span><span class="s">across</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">service,</span><span class="nv"> </span><span class="s">capturing</span>
+
+<span class="w">      </span><span class="s">important</span><span class="nv"> </span><span class="s">details</span><span class="nv"> </span><span class="s">such</span><span class="nv"> </span><span class="s">as</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">operation,</span><span class="nv"> </span><span class="s">timestamps,</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">status.</span><span class="nv"> </span><span class="s">Spans</span><span class="nv"> </span><span class="s">help</span>
+
+<span class="w">      </span><span class="s">break</span><span class="nv"> </span><span class="s">down</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">overall</span><span class="nv"> </span><span class="s">trace</span><span class="nv"> </span><span class="s">into</span><span class="nv"> </span><span class="s">smaller,</span><span class="nv"> </span><span class="s">manageable</span><span class="nv"> </span><span class="s">parts,</span><span class="nv"> </span><span class="s">enabling</span><span class="nv"> </span><span class="s">detailed</span>
+
+<span class="w">      </span><span class="s">analysis</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">performance</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">behavior</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">specific</span><span class="nv"> </span><span class="s">operations</span><span class="nv"> </span><span class="s">within</span><span class="nv"> </span><span class="s">the</span>
+
+<span class="w">      </span><span class="s">system.</span><span class="nv"> </span><span class="s">They</span><span class="nv"> </span><span class="s">are</span><span class="nv"> </span><span class="s">crucial</span><span class="nv"> </span><span class="s">for</span><span class="nv"> </span><span class="s">understanding</span><span class="nv"> </span><span class="s">latency,</span><span class="nv"> </span><span class="s">dependencies,</span><span class="nv"> </span><span class="s">and</span>
+
+<span class="w">      </span><span class="s">bottlenecks</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">complex</span><span class="nv"> </span><span class="s">distributed</span><span class="nv"> </span><span class="s">systems.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Span</span>
@@ -726,12 +875,18 @@
 <span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Span</span>
 <span class="w">  </span><span class="nt">start_time</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">start_time</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The start timestamp of the trace, essential for identifying latency</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">and performance bottlenecks. Like the end time, this timestamp is normalized</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">across the trace system to ensure consistency, even when events are recorded</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">across distributed services with unsynchronized clocks. Normalized time enables</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">accurate trace duration calculations and helps observability tools track performance</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">across services, regardless of the individual system time settings.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">start</span><span class="nv"> </span><span class="s">timestamp</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">trace,</span><span class="nv"> </span><span class="s">essential</span><span class="nv"> </span><span class="s">for</span><span class="nv"> </span><span class="s">identifying</span><span class="nv"> </span><span class="s">latency</span>
+<span class="w">      </span><span class="s">and</span>
+
+<span class="w">      </span><span class="s">performance</span><span class="nv"> </span><span class="s">bottlenecks.</span><span class="nv"> </span><span class="s">Like</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">end</span><span class="nv"> </span><span class="s">time,</span><span class="nv"> </span><span class="s">this</span><span class="nv"> </span><span class="s">timestamp</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">normalized</span><span class="nv"> </span><span class="s">across</span>
+
+<span class="w">      </span><span class="s">the</span><span class="nv"> </span><span class="s">trace</span><span class="nv"> </span><span class="s">system</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">ensure</span><span class="nv"> </span><span class="s">consistency,</span><span class="nv"> </span><span class="s">even</span><span class="nv"> </span><span class="s">when</span><span class="nv"> </span><span class="s">events</span><span class="nv"> </span><span class="s">are</span><span class="nv"> </span><span class="s">recorded</span><span class="nv"> </span><span class="s">across</span>
+
+<span class="w">      </span><span class="s">distributed</span><span class="nv"> </span><span class="s">services</span><span class="nv"> </span><span class="s">with</span><span class="nv"> </span><span class="s">unsynchronized</span><span class="nv"> </span><span class="s">clocks.</span><span class="nv"> </span><span class="s">Normalized</span><span class="nv"> </span><span class="s">time</span><span class="nv"> </span><span class="s">enables</span>
+
+<span class="w">      </span><span class="s">accurate</span><span class="nv"> </span><span class="s">trace</span><span class="nv"> </span><span class="s">duration</span><span class="nv"> </span><span class="s">calculations</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">helps</span><span class="nv"> </span><span class="s">observability</span><span class="nv"> </span><span class="s">tools</span><span class="nv"> </span><span class="s">track</span>
+
+<span class="w">      </span><span class="s">performance</span><span class="nv"> </span><span class="s">across</span><span class="nv"> </span><span class="s">services,</span><span class="nv"> </span><span class="s">regardless</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">individual</span><span class="nv"> </span><span class="s">system</span><span class="nv"> </span><span class="s">time</span><span class="nv"> </span><span class="s">settings.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Start Time</span>
@@ -752,9 +907,11 @@
 <span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">TimestampT</span>
 <span class="w">  </span><span class="nt">uid</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">uid</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The unique identifier of the trace used in distributed systems and</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">microservices architecture to track and correlate requests across various components</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">of an application.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">unique</span><span class="nv"> </span><span class="s">identifier</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">trace</span><span class="nv"> </span><span class="s">used</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">distributed</span><span class="nv"> </span><span class="s">systems</span><span class="nv"> </span><span class="s">and</span>
+
+<span class="w">      </span><span class="s">microservices</span><span class="nv"> </span><span class="s">architecture</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">track</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">correlate</span><span class="nv"> </span><span class="s">requests</span><span class="nv"> </span><span class="s">across</span><span class="nv"> </span><span class="s">various</span>
+
+<span class="w">      </span><span class="s">components</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">an</span><span class="nv"> </span><span class="s">application.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Unique ID</span>

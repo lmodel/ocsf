@@ -217,6 +217,15 @@
 </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="#in-subsets">
+<span class="md-ellipsis">
+      
+        In Subsets
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#aliases">
 <span class="md-ellipsis">
       
@@ -295,7 +304,11 @@
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
 <h1 id="class-identityactivitymetrics">Class: IdentityActivityMetrics</h1>
-<p><em>The Identity Activity Metrics object captures usage patterns, authentication activity, credential usage and other metrics for identities across cloud and on-premises environments. Example identities include AWS IAM Users, Roles, Azure AD Principals, GCP Service Accounts, on-premises Active Directory accounts.</em></p>
+<p><em>The Identity Activity Metrics object captures usage patterns, authentication</em></p>
+<p><em>activity, credential usage and other metrics for identities across cloud and</em></p>
+<p><em>on-premises environments. Example identities include AWS IAM Users, Roles,</em></p>
+<p><em>Azure AD Principals, GCP Service Accounts, on-premises Active Directory</em></p>
+<p><em>accounts.</em></p>
 <p>URI: <a href="https://w3id.org/lmodel/ocsf/IdentityActivityMetrics">ocsf:IdentityActivityMetrics</a></p>
 <pre class="mermaid"><code> classDiagram
     class IdentityActivityMetrics
@@ -365,7 +378,7 @@
 <tr>
 <td><a href="../password_last_used_time/">password_last_used_time</a></td>
 <td>0..1 <br/> <a href="../TimestampT/">TimestampT</a></td>
-<td>The timestamp when password-based authentication was last used by this identi...</td>
+<td>The timestamp when password-based authentication was last used by this</td>
 <td>direct</td>
 </tr>
 <tr>
@@ -395,6 +408,10 @@
 </tr>
 </tbody>
 </table>
+<h2 id="in-subsets">In Subsets</h2>
+<ul>
+<li><a href="../Objects/">Objects</a></li>
+</ul>
 <h2 id="aliases">Aliases</h2>
 <ul>
 <li>Identity Activity Metrics</li>
@@ -428,10 +445,17 @@
 <h3 id="direct">Direct</h3>
 <details>
 <div class="highlight"><pre><span></span><code><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">IdentityActivityMetrics</span>
-<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The Identity Activity Metrics object captures usage patterns, authentication</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">activity, credential usage and other metrics for identities across cloud and on-premises</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">environments. Example identities include AWS IAM Users, Roles, Azure AD Principals,</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">GCP Service Accounts, on-premises Active Directory accounts.</span>
+<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">Identity</span><span class="nv"> </span><span class="s">Activity</span><span class="nv"> </span><span class="s">Metrics</span><span class="nv"> </span><span class="s">object</span><span class="nv"> </span><span class="s">captures</span><span class="nv"> </span><span class="s">usage</span><span class="nv"> </span><span class="s">patterns,</span><span class="nv"> </span><span class="s">authentication</span>
+
+<span class="w">  </span><span class="s">activity,</span><span class="nv"> </span><span class="s">credential</span><span class="nv"> </span><span class="s">usage</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">other</span><span class="nv"> </span><span class="s">metrics</span><span class="nv"> </span><span class="s">for</span><span class="nv"> </span><span class="s">identities</span><span class="nv"> </span><span class="s">across</span><span class="nv"> </span><span class="s">cloud</span><span class="nv"> </span><span class="s">and</span>
+
+<span class="w">  </span><span class="s">on-premises</span><span class="nv"> </span><span class="s">environments.</span><span class="nv"> </span><span class="s">Example</span><span class="nv"> </span><span class="s">identities</span><span class="nv"> </span><span class="s">include</span><span class="nv"> </span><span class="s">AWS</span><span class="nv"> </span><span class="s">IAM</span><span class="nv"> </span><span class="s">Users,</span><span class="nv"> </span><span class="s">Roles,</span>
+
+<span class="w">  </span><span class="s">Azure</span><span class="nv"> </span><span class="s">AD</span><span class="nv"> </span><span class="s">Principals,</span><span class="nv"> </span><span class="s">GCP</span><span class="nv"> </span><span class="s">Service</span><span class="nv"> </span><span class="s">Accounts,</span><span class="nv"> </span><span class="s">on-premises</span><span class="nv"> </span><span class="s">Active</span><span class="nv"> </span><span class="s">Directory</span>
+
+<span class="w">  </span><span class="s">accounts.'</span>
+<span class="nt">in_subset</span><span class="p">:</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">objects</span>
 <span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="nt">aliases</span><span class="p">:</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Identity Activity Metrics</span>
@@ -445,39 +469,61 @@
 <span class="nt">slot_usage</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">first_seen_time</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">first_seen_time</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The timestamp when this identity was first observed or created in</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">the system. This helps establish the identity's age and lifecycle stage for</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">risk assessment.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">timestamp</span><span class="nv"> </span><span class="s">when</span><span class="nv"> </span><span class="s">this</span><span class="nv"> </span><span class="s">identity</span><span class="nv"> </span><span class="s">was</span><span class="nv"> </span><span class="s">first</span><span class="nv"> </span><span class="s">observed</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">created</span><span class="nv"> </span><span class="s">in</span>
+<span class="w">      </span><span class="s">the</span><span class="nv"> </span><span class="s">system.</span>
+
+<span class="w">      </span><span class="s">This</span><span class="nv"> </span><span class="s">helps</span><span class="nv"> </span><span class="s">establish</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">identity</span><span class="se">''</span><span class="s">s</span><span class="nv"> </span><span class="s">age</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">lifecycle</span><span class="nv"> </span><span class="s">stage</span><span class="nv"> </span><span class="s">for</span><span class="nv"> </span><span class="s">risk</span>
+
+<span class="w">      </span><span class="s">assessment.'</span>
 <span class="w">  </span><span class="nt">last_authentication_time</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">last_authentication_time</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The timestamp when this identity last successfully authenticated</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">to any system or service. This differs from &lt;code&gt;last_seen_time&lt;/code&gt; as it</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">specifically tracks authentication events rather than all activities.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">timestamp</span><span class="nv"> </span><span class="s">when</span><span class="nv"> </span><span class="s">this</span><span class="nv"> </span><span class="s">identity</span><span class="nv"> </span><span class="s">last</span><span class="nv"> </span><span class="s">successfully</span><span class="nv"> </span><span class="s">authenticated</span>
+<span class="w">      </span><span class="s">to</span><span class="nv"> </span><span class="s">any</span><span class="nv"> </span><span class="s">system</span>
+
+<span class="w">      </span><span class="s">or</span><span class="nv"> </span><span class="s">service.</span><span class="nv"> </span><span class="s">This</span><span class="nv"> </span><span class="s">differs</span><span class="nv"> </span><span class="s">from</span><span class="nv"> </span><span class="s">&lt;code&gt;last_seen_time&lt;/code&gt;</span><span class="nv"> </span><span class="s">as</span><span class="nv"> </span><span class="s">it</span><span class="nv"> </span><span class="s">specifically</span>
+
+<span class="w">      </span><span class="s">tracks</span><span class="nv"> </span><span class="s">authentication</span><span class="nv"> </span><span class="s">events</span><span class="nv"> </span><span class="s">rather</span><span class="nv"> </span><span class="s">than</span><span class="nv"> </span><span class="s">all</span><span class="nv"> </span><span class="s">activities.'</span>
 <span class="w">  </span><span class="nt">last_seen_time</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">last_seen_time</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The timestamp of the most recent activity performed by this identity,</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">including authentication, resource access, or API calls. This is the most comprehensive</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">indicator of identity usage recency.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">timestamp</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">most</span><span class="nv"> </span><span class="s">recent</span><span class="nv"> </span><span class="s">activity</span><span class="nv"> </span><span class="s">performed</span><span class="nv"> </span><span class="s">by</span><span class="nv"> </span><span class="s">this</span><span class="nv"> </span><span class="s">identity,</span>
+<span class="w">      </span><span class="s">including</span>
+
+<span class="w">      </span><span class="s">authentication,</span><span class="nv"> </span><span class="s">resource</span><span class="nv"> </span><span class="s">access,</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">API</span><span class="nv"> </span><span class="s">calls.</span><span class="nv"> </span><span class="s">This</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">most</span><span class="nv"> </span><span class="s">comprehensive</span>
+
+<span class="w">      </span><span class="s">indicator</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">identity</span><span class="nv"> </span><span class="s">usage</span><span class="nv"> </span><span class="s">recency.'</span>
 <span class="w">    </span><span class="nt">recommended</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">password_last_used_time</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">password_last_used_time</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The timestamp when password-based authentication was last used by</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">this identity. This helps distinguish between password and other authentication</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">methods (MFA, SSO, certificates) and identify password-specific usage patterns.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">timestamp</span><span class="nv"> </span><span class="s">when</span><span class="nv"> </span><span class="s">password-based</span><span class="nv"> </span><span class="s">authentication</span><span class="nv"> </span><span class="s">was</span><span class="nv"> </span><span class="s">last</span><span class="nv"> </span><span class="s">used</span><span class="nv"> </span><span class="s">by</span>
+<span class="w">      </span><span class="s">this</span>
+
+<span class="w">      </span><span class="s">identity.</span><span class="nv"> </span><span class="s">This</span><span class="nv"> </span><span class="s">helps</span><span class="nv"> </span><span class="s">distinguish</span><span class="nv"> </span><span class="s">between</span><span class="nv"> </span><span class="s">password</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">other</span><span class="nv"> </span><span class="s">authentication</span>
+
+<span class="w">      </span><span class="s">methods</span><span class="nv"> </span><span class="s">(MFA,</span><span class="nv"> </span><span class="s">SSO,</span><span class="nv"> </span><span class="s">certificates)</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">identify</span><span class="nv"> </span><span class="s">password-specific</span><span class="nv"> </span><span class="s">usage</span><span class="nv"> </span><span class="s">patterns.'</span>
 <span class="w">  </span><span class="nt">programmatic_credentials</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">programmatic_credentials</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Details about the programmatic credentials associated with this identity,</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">such as API keys, service account keys, access tokens, and client certificates</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">used for automated access.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'Details</span><span class="nv"> </span><span class="s">about</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">programmatic</span><span class="nv"> </span><span class="s">credentials</span><span class="nv"> </span><span class="s">associated</span><span class="nv"> </span><span class="s">with</span><span class="nv"> </span><span class="s">this</span>
+<span class="w">      </span><span class="s">identity,</span><span class="nv"> </span><span class="s">such</span>
+
+<span class="w">      </span><span class="s">as</span><span class="nv"> </span><span class="s">API</span><span class="nv"> </span><span class="s">keys,</span><span class="nv"> </span><span class="s">service</span><span class="nv"> </span><span class="s">account</span><span class="nv"> </span><span class="s">keys,</span><span class="nv"> </span><span class="s">access</span><span class="nv"> </span><span class="s">tokens,</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">client</span><span class="nv"> </span><span class="s">certificates</span><span class="nv"> </span><span class="s">used</span>
+
+<span class="w">      </span><span class="s">for</span><span class="nv"> </span><span class="s">automated</span><span class="nv"> </span><span class="s">access.'</span>
 </code></pre></div>
 </details>
 <h3 id="induced">Induced</h3>
 <details>
 <div class="highlight"><pre><span></span><code><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">IdentityActivityMetrics</span>
-<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The Identity Activity Metrics object captures usage patterns, authentication</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">activity, credential usage and other metrics for identities across cloud and on-premises</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">environments. Example identities include AWS IAM Users, Roles, Azure AD Principals,</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">GCP Service Accounts, on-premises Active Directory accounts.</span>
+<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">Identity</span><span class="nv"> </span><span class="s">Activity</span><span class="nv"> </span><span class="s">Metrics</span><span class="nv"> </span><span class="s">object</span><span class="nv"> </span><span class="s">captures</span><span class="nv"> </span><span class="s">usage</span><span class="nv"> </span><span class="s">patterns,</span><span class="nv"> </span><span class="s">authentication</span>
+
+<span class="w">  </span><span class="s">activity,</span><span class="nv"> </span><span class="s">credential</span><span class="nv"> </span><span class="s">usage</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">other</span><span class="nv"> </span><span class="s">metrics</span><span class="nv"> </span><span class="s">for</span><span class="nv"> </span><span class="s">identities</span><span class="nv"> </span><span class="s">across</span><span class="nv"> </span><span class="s">cloud</span><span class="nv"> </span><span class="s">and</span>
+
+<span class="w">  </span><span class="s">on-premises</span><span class="nv"> </span><span class="s">environments.</span><span class="nv"> </span><span class="s">Example</span><span class="nv"> </span><span class="s">identities</span><span class="nv"> </span><span class="s">include</span><span class="nv"> </span><span class="s">AWS</span><span class="nv"> </span><span class="s">IAM</span><span class="nv"> </span><span class="s">Users,</span><span class="nv"> </span><span class="s">Roles,</span>
+
+<span class="w">  </span><span class="s">Azure</span><span class="nv"> </span><span class="s">AD</span><span class="nv"> </span><span class="s">Principals,</span><span class="nv"> </span><span class="s">GCP</span><span class="nv"> </span><span class="s">Service</span><span class="nv"> </span><span class="s">Accounts,</span><span class="nv"> </span><span class="s">on-premises</span><span class="nv"> </span><span class="s">Active</span><span class="nv"> </span><span class="s">Directory</span>
+
+<span class="w">  </span><span class="s">accounts.'</span>
+<span class="nt">in_subset</span><span class="p">:</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">objects</span>
 <span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="nt">aliases</span><span class="p">:</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Identity Activity Metrics</span>
@@ -485,36 +531,54 @@
 <span class="nt">slot_usage</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">first_seen_time</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">first_seen_time</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The timestamp when this identity was first observed or created in</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">the system. This helps establish the identity's age and lifecycle stage for</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">risk assessment.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">timestamp</span><span class="nv"> </span><span class="s">when</span><span class="nv"> </span><span class="s">this</span><span class="nv"> </span><span class="s">identity</span><span class="nv"> </span><span class="s">was</span><span class="nv"> </span><span class="s">first</span><span class="nv"> </span><span class="s">observed</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">created</span><span class="nv"> </span><span class="s">in</span>
+<span class="w">      </span><span class="s">the</span><span class="nv"> </span><span class="s">system.</span>
+
+<span class="w">      </span><span class="s">This</span><span class="nv"> </span><span class="s">helps</span><span class="nv"> </span><span class="s">establish</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">identity</span><span class="se">''</span><span class="s">s</span><span class="nv"> </span><span class="s">age</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">lifecycle</span><span class="nv"> </span><span class="s">stage</span><span class="nv"> </span><span class="s">for</span><span class="nv"> </span><span class="s">risk</span>
+
+<span class="w">      </span><span class="s">assessment.'</span>
 <span class="w">  </span><span class="nt">last_authentication_time</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">last_authentication_time</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The timestamp when this identity last successfully authenticated</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">to any system or service. This differs from &lt;code&gt;last_seen_time&lt;/code&gt; as it</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">specifically tracks authentication events rather than all activities.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">timestamp</span><span class="nv"> </span><span class="s">when</span><span class="nv"> </span><span class="s">this</span><span class="nv"> </span><span class="s">identity</span><span class="nv"> </span><span class="s">last</span><span class="nv"> </span><span class="s">successfully</span><span class="nv"> </span><span class="s">authenticated</span>
+<span class="w">      </span><span class="s">to</span><span class="nv"> </span><span class="s">any</span><span class="nv"> </span><span class="s">system</span>
+
+<span class="w">      </span><span class="s">or</span><span class="nv"> </span><span class="s">service.</span><span class="nv"> </span><span class="s">This</span><span class="nv"> </span><span class="s">differs</span><span class="nv"> </span><span class="s">from</span><span class="nv"> </span><span class="s">&lt;code&gt;last_seen_time&lt;/code&gt;</span><span class="nv"> </span><span class="s">as</span><span class="nv"> </span><span class="s">it</span><span class="nv"> </span><span class="s">specifically</span>
+
+<span class="w">      </span><span class="s">tracks</span><span class="nv"> </span><span class="s">authentication</span><span class="nv"> </span><span class="s">events</span><span class="nv"> </span><span class="s">rather</span><span class="nv"> </span><span class="s">than</span><span class="nv"> </span><span class="s">all</span><span class="nv"> </span><span class="s">activities.'</span>
 <span class="w">  </span><span class="nt">last_seen_time</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">last_seen_time</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The timestamp of the most recent activity performed by this identity,</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">including authentication, resource access, or API calls. This is the most comprehensive</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">indicator of identity usage recency.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">timestamp</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">most</span><span class="nv"> </span><span class="s">recent</span><span class="nv"> </span><span class="s">activity</span><span class="nv"> </span><span class="s">performed</span><span class="nv"> </span><span class="s">by</span><span class="nv"> </span><span class="s">this</span><span class="nv"> </span><span class="s">identity,</span>
+<span class="w">      </span><span class="s">including</span>
+
+<span class="w">      </span><span class="s">authentication,</span><span class="nv"> </span><span class="s">resource</span><span class="nv"> </span><span class="s">access,</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">API</span><span class="nv"> </span><span class="s">calls.</span><span class="nv"> </span><span class="s">This</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">most</span><span class="nv"> </span><span class="s">comprehensive</span>
+
+<span class="w">      </span><span class="s">indicator</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">identity</span><span class="nv"> </span><span class="s">usage</span><span class="nv"> </span><span class="s">recency.'</span>
 <span class="w">    </span><span class="nt">recommended</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">password_last_used_time</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">password_last_used_time</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The timestamp when password-based authentication was last used by</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">this identity. This helps distinguish between password and other authentication</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">methods (MFA, SSO, certificates) and identify password-specific usage patterns.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">timestamp</span><span class="nv"> </span><span class="s">when</span><span class="nv"> </span><span class="s">password-based</span><span class="nv"> </span><span class="s">authentication</span><span class="nv"> </span><span class="s">was</span><span class="nv"> </span><span class="s">last</span><span class="nv"> </span><span class="s">used</span><span class="nv"> </span><span class="s">by</span>
+<span class="w">      </span><span class="s">this</span>
+
+<span class="w">      </span><span class="s">identity.</span><span class="nv"> </span><span class="s">This</span><span class="nv"> </span><span class="s">helps</span><span class="nv"> </span><span class="s">distinguish</span><span class="nv"> </span><span class="s">between</span><span class="nv"> </span><span class="s">password</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">other</span><span class="nv"> </span><span class="s">authentication</span>
+
+<span class="w">      </span><span class="s">methods</span><span class="nv"> </span><span class="s">(MFA,</span><span class="nv"> </span><span class="s">SSO,</span><span class="nv"> </span><span class="s">certificates)</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">identify</span><span class="nv"> </span><span class="s">password-specific</span><span class="nv"> </span><span class="s">usage</span><span class="nv"> </span><span class="s">patterns.'</span>
 <span class="w">  </span><span class="nt">programmatic_credentials</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">programmatic_credentials</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Details about the programmatic credentials associated with this identity,</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">such as API keys, service account keys, access tokens, and client certificates</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">used for automated access.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'Details</span><span class="nv"> </span><span class="s">about</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">programmatic</span><span class="nv"> </span><span class="s">credentials</span><span class="nv"> </span><span class="s">associated</span><span class="nv"> </span><span class="s">with</span><span class="nv"> </span><span class="s">this</span>
+<span class="w">      </span><span class="s">identity,</span><span class="nv"> </span><span class="s">such</span>
+
+<span class="w">      </span><span class="s">as</span><span class="nv"> </span><span class="s">API</span><span class="nv"> </span><span class="s">keys,</span><span class="nv"> </span><span class="s">service</span><span class="nv"> </span><span class="s">account</span><span class="nv"> </span><span class="s">keys,</span><span class="nv"> </span><span class="s">access</span><span class="nv"> </span><span class="s">tokens,</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">client</span><span class="nv"> </span><span class="s">certificates</span><span class="nv"> </span><span class="s">used</span>
+
+<span class="w">      </span><span class="s">for</span><span class="nv"> </span><span class="s">automated</span><span class="nv"> </span><span class="s">access.'</span>
 <span class="nt">attributes</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">first_seen_time</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">first_seen_time</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The timestamp when this identity was first observed or created in</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">the system. This helps establish the identity's age and lifecycle stage for</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">risk assessment.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">timestamp</span><span class="nv"> </span><span class="s">when</span><span class="nv"> </span><span class="s">this</span><span class="nv"> </span><span class="s">identity</span><span class="nv"> </span><span class="s">was</span><span class="nv"> </span><span class="s">first</span><span class="nv"> </span><span class="s">observed</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">created</span><span class="nv"> </span><span class="s">in</span>
+<span class="w">      </span><span class="s">the</span><span class="nv"> </span><span class="s">system.</span>
+
+<span class="w">      </span><span class="s">This</span><span class="nv"> </span><span class="s">helps</span><span class="nv"> </span><span class="s">establish</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">identity</span><span class="se">''</span><span class="s">s</span><span class="nv"> </span><span class="s">age</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">lifecycle</span><span class="nv"> </span><span class="s">stage</span><span class="nv"> </span><span class="s">for</span><span class="nv"> </span><span class="s">risk</span>
+
+<span class="w">      </span><span class="s">assessment.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">First Seen</span>
@@ -531,9 +595,12 @@
 <span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">TimestampT</span>
 <span class="w">  </span><span class="nt">last_authentication_time</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">last_authentication_time</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The timestamp when this identity last successfully authenticated</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">to any system or service. This differs from &lt;code&gt;last_seen_time&lt;/code&gt; as it</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">specifically tracks authentication events rather than all activities.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">timestamp</span><span class="nv"> </span><span class="s">when</span><span class="nv"> </span><span class="s">this</span><span class="nv"> </span><span class="s">identity</span><span class="nv"> </span><span class="s">last</span><span class="nv"> </span><span class="s">successfully</span><span class="nv"> </span><span class="s">authenticated</span>
+<span class="w">      </span><span class="s">to</span><span class="nv"> </span><span class="s">any</span><span class="nv"> </span><span class="s">system</span>
+
+<span class="w">      </span><span class="s">or</span><span class="nv"> </span><span class="s">service.</span><span class="nv"> </span><span class="s">This</span><span class="nv"> </span><span class="s">differs</span><span class="nv"> </span><span class="s">from</span><span class="nv"> </span><span class="s">&lt;code&gt;last_seen_time&lt;/code&gt;</span><span class="nv"> </span><span class="s">as</span><span class="nv"> </span><span class="s">it</span><span class="nv"> </span><span class="s">specifically</span>
+
+<span class="w">      </span><span class="s">tracks</span><span class="nv"> </span><span class="s">authentication</span><span class="nv"> </span><span class="s">events</span><span class="nv"> </span><span class="s">rather</span><span class="nv"> </span><span class="s">than</span><span class="nv"> </span><span class="s">all</span><span class="nv"> </span><span class="s">activities.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Last Authentication Time</span>
@@ -545,9 +612,12 @@
 <span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">TimestampT</span>
 <span class="w">  </span><span class="nt">last_seen_time</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">last_seen_time</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The timestamp of the most recent activity performed by this identity,</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">including authentication, resource access, or API calls. This is the most comprehensive</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">indicator of identity usage recency.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">timestamp</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">most</span><span class="nv"> </span><span class="s">recent</span><span class="nv"> </span><span class="s">activity</span><span class="nv"> </span><span class="s">performed</span><span class="nv"> </span><span class="s">by</span><span class="nv"> </span><span class="s">this</span><span class="nv"> </span><span class="s">identity,</span>
+<span class="w">      </span><span class="s">including</span>
+
+<span class="w">      </span><span class="s">authentication,</span><span class="nv"> </span><span class="s">resource</span><span class="nv"> </span><span class="s">access,</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">API</span><span class="nv"> </span><span class="s">calls.</span><span class="nv"> </span><span class="s">This</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">most</span><span class="nv"> </span><span class="s">comprehensive</span>
+
+<span class="w">      </span><span class="s">indicator</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">identity</span><span class="nv"> </span><span class="s">usage</span><span class="nv"> </span><span class="s">recency.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Last Seen</span>
@@ -566,9 +636,12 @@
 <span class="w">    </span><span class="nt">recommended</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">password_last_used_time</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">password_last_used_time</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The timestamp when password-based authentication was last used by</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">this identity. This helps distinguish between password and other authentication</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">methods (MFA, SSO, certificates) and identify password-specific usage patterns.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">timestamp</span><span class="nv"> </span><span class="s">when</span><span class="nv"> </span><span class="s">password-based</span><span class="nv"> </span><span class="s">authentication</span><span class="nv"> </span><span class="s">was</span><span class="nv"> </span><span class="s">last</span><span class="nv"> </span><span class="s">used</span><span class="nv"> </span><span class="s">by</span>
+<span class="w">      </span><span class="s">this</span>
+
+<span class="w">      </span><span class="s">identity.</span><span class="nv"> </span><span class="s">This</span><span class="nv"> </span><span class="s">helps</span><span class="nv"> </span><span class="s">distinguish</span><span class="nv"> </span><span class="s">between</span><span class="nv"> </span><span class="s">password</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">other</span><span class="nv"> </span><span class="s">authentication</span>
+
+<span class="w">      </span><span class="s">methods</span><span class="nv"> </span><span class="s">(MFA,</span><span class="nv"> </span><span class="s">SSO,</span><span class="nv"> </span><span class="s">certificates)</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">identify</span><span class="nv"> </span><span class="s">password-specific</span><span class="nv"> </span><span class="s">usage</span><span class="nv"> </span><span class="s">patterns.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Password Last Used Time</span>
@@ -580,9 +653,12 @@
 <span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">TimestampT</span>
 <span class="w">  </span><span class="nt">programmatic_credentials</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">programmatic_credentials</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Details about the programmatic credentials associated with this identity,</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">such as API keys, service account keys, access tokens, and client certificates</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">used for automated access.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'Details</span><span class="nv"> </span><span class="s">about</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">programmatic</span><span class="nv"> </span><span class="s">credentials</span><span class="nv"> </span><span class="s">associated</span><span class="nv"> </span><span class="s">with</span><span class="nv"> </span><span class="s">this</span>
+<span class="w">      </span><span class="s">identity,</span><span class="nv"> </span><span class="s">such</span>
+
+<span class="w">      </span><span class="s">as</span><span class="nv"> </span><span class="s">API</span><span class="nv"> </span><span class="s">keys,</span><span class="nv"> </span><span class="s">service</span><span class="nv"> </span><span class="s">account</span><span class="nv"> </span><span class="s">keys,</span><span class="nv"> </span><span class="s">access</span><span class="nv"> </span><span class="s">tokens,</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">client</span><span class="nv"> </span><span class="s">certificates</span><span class="nv"> </span><span class="s">used</span>
+
+<span class="w">      </span><span class="s">for</span><span class="nv"> </span><span class="s">automated</span><span class="nv"> </span><span class="s">access.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Programmatic Credentials</span>

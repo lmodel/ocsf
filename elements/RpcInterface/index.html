@@ -217,6 +217,15 @@
 </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="#in-subsets">
+<span class="md-ellipsis">
+      
+        In Subsets
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#aliases">
 <span class="md-ellipsis">
       
@@ -295,7 +304,8 @@
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
 <h1 id="class-rpcinterface">Class: RpcInterface</h1>
-<p><em>The RPC Interface represents the remote procedure call interface used in the DCE/RPC session.</em></p>
+<p><em>The RPC Interface represents the remote procedure call interface used in the</em></p>
+<p><em>DCE/RPC session.</em></p>
 <p>URI: <a href="https://w3id.org/lmodel/ocsf/RpcInterface">ocsf:RpcInterface</a></p>
 <pre class="mermaid"><code> classDiagram
     class RpcInterface
@@ -336,7 +346,7 @@
 <tr>
 <td><a href="../ack_reason/">ack_reason</a></td>
 <td>0..1 <em>recommended</em> <br/> <a href="../Integer/">Integer</a></td>
-<td>An integer that provides a reason code or additional information about the ac...</td>
+<td>An integer that provides a reason code or additional information about the</td>
 <td>direct</td>
 </tr>
 <tr>
@@ -378,6 +388,10 @@
 </tr>
 </tbody>
 </table>
+<h2 id="in-subsets">In Subsets</h2>
+<ul>
+<li><a href="../Objects/">Objects</a></li>
+</ul>
 <h2 id="aliases">Aliases</h2>
 <ul>
 <li>RPC Interface</li>
@@ -411,8 +425,12 @@
 <h3 id="direct">Direct</h3>
 <details>
 <div class="highlight"><pre><span></span><code><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">RpcInterface</span>
-<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The RPC Interface represents the remote procedure call interface used</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">in the DCE/RPC session.</span>
+<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">RPC</span><span class="nv"> </span><span class="s">Interface</span><span class="nv"> </span><span class="s">represents</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">remote</span><span class="nv"> </span><span class="s">procedure</span><span class="nv"> </span><span class="s">call</span><span class="nv"> </span><span class="s">interface</span><span class="nv"> </span><span class="s">used</span>
+<span class="w">  </span><span class="s">in</span><span class="nv"> </span><span class="s">the</span>
+
+<span class="w">  </span><span class="s">DCE/RPC</span><span class="nv"> </span><span class="s">session.'</span>
+<span class="nt">in_subset</span><span class="p">:</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">objects</span>
 <span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="nt">aliases</span><span class="p">:</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">RPC Interface</span>
@@ -442,8 +460,12 @@
 <h3 id="induced">Induced</h3>
 <details>
 <div class="highlight"><pre><span></span><code><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">RpcInterface</span>
-<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The RPC Interface represents the remote procedure call interface used</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">in the DCE/RPC session.</span>
+<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">RPC</span><span class="nv"> </span><span class="s">Interface</span><span class="nv"> </span><span class="s">represents</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">remote</span><span class="nv"> </span><span class="s">procedure</span><span class="nv"> </span><span class="s">call</span><span class="nv"> </span><span class="s">interface</span><span class="nv"> </span><span class="s">used</span>
+<span class="w">  </span><span class="s">in</span><span class="nv"> </span><span class="s">the</span>
+
+<span class="w">  </span><span class="s">DCE/RPC</span><span class="nv"> </span><span class="s">session.'</span>
+<span class="nt">in_subset</span><span class="p">:</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">objects</span>
 <span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="nt">aliases</span><span class="p">:</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">RPC Interface</span>
@@ -466,8 +488,10 @@
 <span class="nt">attributes</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">ack_reason</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ack_reason</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">An integer that provides a reason code or additional information</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">about the acknowledgment result.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'An</span><span class="nv"> </span><span class="s">integer</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">provides</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">reason</span><span class="nv"> </span><span class="s">code</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">additional</span><span class="nv"> </span><span class="s">information</span>
+<span class="w">      </span><span class="s">about</span><span class="nv"> </span><span class="s">the</span>
+
+<span class="w">      </span><span class="s">acknowledgment</span><span class="nv"> </span><span class="s">result.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Acknowledgement Reason</span>

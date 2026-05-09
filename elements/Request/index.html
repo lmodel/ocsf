@@ -217,6 +217,15 @@
 </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="#in-subsets">
+<span class="md-ellipsis">
+      
+        In Subsets
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#aliases">
 <span class="md-ellipsis">
       
@@ -393,6 +402,10 @@
 </tr>
 </tbody>
 </table>
+<h2 id="in-subsets">In Subsets</h2>
+<ul>
+<li><a href="../Objects/">Objects</a></li>
+</ul>
 <h2 id="aliases">Aliases</h2>
 <ul>
 <li>Request Elements</li>
@@ -427,6 +440,8 @@
 <details>
 <div class="highlight"><pre><span></span><code><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Request</span>
 <span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The Request Elements object describes characteristics of an API request.</span>
+<span class="nt">in_subset</span><span class="p">:</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">objects</span>
 <span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="nt">aliases</span><span class="p">:</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Request Elements</span>
@@ -453,6 +468,8 @@
 <details>
 <div class="highlight"><pre><span></span><code><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Request</span>
 <span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The Request Elements object describes characteristics of an API request.</span>
+<span class="nt">in_subset</span><span class="p">:</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">objects</span>
 <span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="nt">aliases</span><span class="p">:</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Request Elements</span>
@@ -471,10 +488,14 @@
 <span class="nt">attributes</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">containers</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">containers</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">When working with containerized applications, the set of containers</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">which write to the standard the output of a particular logging driver. For example,</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">this may be the set of containers involved in handling api requests and responses</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">for a containerized application.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'When</span><span class="nv"> </span><span class="s">working</span><span class="nv"> </span><span class="s">with</span><span class="nv"> </span><span class="s">containerized</span><span class="nv"> </span><span class="s">applications,</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">set</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">containers</span>
+<span class="w">      </span><span class="s">which</span><span class="nv"> </span><span class="s">write</span>
+
+<span class="w">      </span><span class="s">to</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">standard</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">output</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">particular</span><span class="nv"> </span><span class="s">logging</span><span class="nv"> </span><span class="s">driver.</span><span class="nv"> </span><span class="s">For</span><span class="nv"> </span><span class="s">example,</span><span class="nv"> </span><span class="s">this</span>
+
+<span class="w">      </span><span class="s">may</span><span class="nv"> </span><span class="s">be</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">set</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">containers</span><span class="nv"> </span><span class="s">involved</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">handling</span><span class="nv"> </span><span class="s">api</span><span class="nv"> </span><span class="s">requests</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">responses</span>
+
+<span class="w">      </span><span class="s">for</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">containerized</span><span class="nv"> </span><span class="s">application.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Containers</span>

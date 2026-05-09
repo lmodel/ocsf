@@ -217,6 +217,15 @@
 </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="#in-subsets">
+<span class="md-ellipsis">
+      
+        In Subsets
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#aliases">
 <span class="md-ellipsis">
       
@@ -313,7 +322,9 @@
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
 <h1 id="class-device">Class: Device</h1>
-<p><em>The Device object represents an addressable computer system or host, which is typically connected to a computer network and participates in the transmission or processing of data within the computer network.</em></p>
+<p><em>The Device object represents an addressable computer system or host, which is</em></p>
+<p><em>typically connected to a computer network and participates in the transmission</em></p>
+<p><em>or processing of data within the computer network.</em></p>
 <p>URI: <a href="https://w3id.org/lmodel/ocsf/Device">ocsf:Device</a></p>
 <pre class="mermaid"><code> classDiagram
     class Device
@@ -625,7 +636,7 @@
 <tr>
 <td><a href="../eid/">eid</a></td>
 <td>0..1 <br/> <a href="../String/">String</a></td>
-<td>An Embedded Identity Document, is a unique serial number that identifies an e...</td>
+<td>An Embedded Identity Document, is a unique serial number that identifies an</td>
 <td>direct</td>
 </tr>
 <tr>
@@ -685,7 +696,7 @@
 <tr>
 <td><a href="../is_backed_up/">is_backed_up</a></td>
 <td>0..1 <br/> <a href="../Boolean/">Boolean</a></td>
-<td>Indicates whether the device or resource has a backup enabled, such as an aut...</td>
+<td>Indicates whether the device or resource has a backup enabled, such as an</td>
 <td>direct</td>
 </tr>
 <tr>
@@ -853,7 +864,7 @@
 <tr>
 <td><a href="../agent_list/">agent_list</a></td>
 <td>* <br/> <a href="../Agent/">Agent</a></td>
-<td>A list of <code>agent</code> objects associated with a device, endpoint, or r...</td>
+<td>A list of <code>agent</code> objects associated with a device, endpoint, or</td>
 <td><a href="../Endpoint/">Endpoint</a></td>
 </tr>
 <tr>
@@ -889,7 +900,7 @@
 <tr>
 <td><a href="../mac_vendor/">mac_vendor</a></td>
 <td>0..1 <br/> <a href="../String/">String</a></td>
-<td>The vendor or manufacturer of the endpoint's network interface controller (NI...</td>
+<td>The vendor or manufacturer of the endpoint's network interface controller</td>
 <td><a href="../Endpoint/">Endpoint</a></td>
 </tr>
 <tr>
@@ -943,7 +954,7 @@
 <tr>
 <td><a href="../namespace_pid/">namespace_pid</a></td>
 <td>0..1 <em>recommended</em> <br/> <a href="../Integer/">Integer</a></td>
-<td>If running under a process namespace (such as in a container), the process id...</td>
+<td>If running under a process namespace (such as in a container), the process</td>
 <td><a href="../ContainerProfile/">ContainerProfile</a></td>
 </tr>
 </tbody>
@@ -1543,6 +1554,10 @@
 </tr>
 </tbody>
 </table>
+<h2 id="in-subsets">In Subsets</h2>
+<ul>
+<li><a href="../Objects/">Objects</a></li>
+</ul>
 <h2 id="aliases">Aliases</h2>
 <ul>
 <li>Device</li>
@@ -1588,11 +1603,16 @@
 <h3 id="direct">Direct</h3>
 <details>
 <div class="highlight"><pre><span></span><code><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Device</span>
-<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The Device object represents an addressable computer system or host,</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">which is typically connected to a computer network and participates in the transmission</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">or processing of data within the computer network.</span>
+<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">Device</span><span class="nv"> </span><span class="s">object</span><span class="nv"> </span><span class="s">represents</span><span class="nv"> </span><span class="s">an</span><span class="nv"> </span><span class="s">addressable</span><span class="nv"> </span><span class="s">computer</span><span class="nv"> </span><span class="s">system</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">host,</span>
+<span class="w">  </span><span class="s">which</span><span class="nv"> </span><span class="s">is</span>
+
+<span class="w">  </span><span class="s">typically</span><span class="nv"> </span><span class="s">connected</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">computer</span><span class="nv"> </span><span class="s">network</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">participates</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">transmission</span>
+
+<span class="w">  </span><span class="s">or</span><span class="nv"> </span><span class="s">processing</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">data</span><span class="nv"> </span><span class="s">within</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">computer</span><span class="nv"> </span><span class="s">network.'</span>
 <span class="nt">notes</span><span class="p">:</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">D3FEND™ Ontology d3f:Host. — https://d3fend.mitre.org/dao/artifact/d3f:Host/</span>
+<span class="nt">in_subset</span><span class="p">:</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">objects</span>
 <span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="nt">see_also</span><span class="p">:</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://d3fend.mitre.org/dao/artifact/d3f:Host/</span>
@@ -1659,13 +1679,16 @@
 <span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">system.</span>
 <span class="w">  </span><span class="nt">domain</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">domain</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">network</span><span class="nv"> </span><span class="s">domain</span><span class="nv"> </span><span class="s">where</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">device</span><span class="nv"> </span><span class="s">resides.</span><span class="nv"> </span><span class="s">For</span><span class="nv"> </span><span class="s">example:</span><span class="nv"> </span><span class="s">&lt;code&gt;work.example.com&lt;/code&gt;.'</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">network</span><span class="nv"> </span><span class="s">domain</span><span class="nv"> </span><span class="s">where</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">device</span><span class="nv"> </span><span class="s">resides.</span><span class="nv"> </span><span class="s">For</span><span class="nv"> </span><span class="s">example:</span>
+
+<span class="w">      </span><span class="s">&lt;code&gt;work.example.com&lt;/code&gt;.'</span>
 <span class="w">  </span><span class="nt">first_seen_time</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">first_seen_time</span>
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The initial discovery time of the device.</span>
 <span class="w">  </span><span class="nt">groups</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">groups</span>
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">group</span><span class="nv"> </span><span class="s">names</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">which</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">device</span><span class="nv"> </span><span class="s">belongs.</span><span class="nv"> </span><span class="s">For</span><span class="nv"> </span><span class="s">example:</span><span class="nv"> </span><span class="s">&lt;code&gt;["Windows</span>
+
 <span class="w">      </span><span class="s">Laptops",</span><span class="nv"> </span><span class="s">"Engineering"]&lt;/code&gt;.'</span>
 <span class="w">  </span><span class="nt">hostname</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">hostname</span>
@@ -1691,9 +1714,13 @@
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The time when the device was last known to have been modified.</span>
 <span class="w">  </span><span class="nt">name</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">name</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The alternate device name, ordinarily as assigned by an administrator.</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">&lt;p&gt;&lt;b&gt;Note:&lt;/b&gt; The &lt;b&gt;Name&lt;/b&gt; could be any other string that helps to identify</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">the device, such as a phone number; for example &lt;code&gt;310-555-1234&lt;/code&gt;.&lt;/p&gt;</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">alternate</span><span class="nv"> </span><span class="s">device</span><span class="nv"> </span><span class="s">name,</span><span class="nv"> </span><span class="s">ordinarily</span><span class="nv"> </span><span class="s">as</span><span class="nv"> </span><span class="s">assigned</span><span class="nv"> </span><span class="s">by</span><span class="nv"> </span><span class="s">an</span><span class="nv"> </span><span class="s">administrator.</span>
+
+<span class="w">      </span><span class="s">&lt;p&gt;&lt;b&gt;Note:&lt;/b&gt;</span><span class="nv"> </span><span class="s">The</span><span class="nv"> </span><span class="s">&lt;b&gt;Name&lt;/b&gt;</span><span class="nv"> </span><span class="s">could</span><span class="nv"> </span><span class="s">be</span><span class="nv"> </span><span class="s">any</span><span class="nv"> </span><span class="s">other</span><span class="nv"> </span><span class="s">string</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">helps</span><span class="nv"> </span><span class="s">to</span>
+
+<span class="w">      </span><span class="s">identify</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">device,</span><span class="nv"> </span><span class="s">such</span><span class="nv"> </span><span class="s">as</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">phone</span><span class="nv"> </span><span class="s">number;</span><span class="nv"> </span><span class="s">for</span><span class="nv"> </span><span class="s">example</span>
+
+<span class="w">      </span><span class="s">&lt;code&gt;310-555-1234&lt;/code&gt;.&lt;/p&gt;'</span>
 <span class="w">  </span><span class="nt">org</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">org</span>
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Organization and org unit related to the device.</span>
@@ -1705,8 +1732,12 @@
 <span class="w">  </span><span class="nt">type</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">type</span>
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">device</span><span class="nv"> </span><span class="s">type.</span><span class="nv"> </span><span class="s">For</span><span class="nv"> </span><span class="s">example:</span><span class="nv"> </span><span class="s">&lt;code&gt;unknown&lt;/code&gt;,</span><span class="nv"> </span><span class="s">&lt;code&gt;server&lt;/code&gt;,</span>
-<span class="w">      </span><span class="s">&lt;code&gt;desktop&lt;/code&gt;,</span><span class="nv"> </span><span class="s">&lt;code&gt;laptop&lt;/code&gt;,</span><span class="nv"> </span><span class="s">&lt;code&gt;tablet&lt;/code&gt;,</span><span class="nv"> </span><span class="s">&lt;code&gt;mobile&lt;/code&gt;,</span>
-<span class="w">      </span><span class="s">&lt;code&gt;virtual&lt;/code&gt;,</span><span class="nv"> </span><span class="s">&lt;code&gt;browser&lt;/code&gt;,</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">&lt;code&gt;other&lt;/code&gt;.'</span>
+
+<span class="w">      </span><span class="s">&lt;code&gt;desktop&lt;/code&gt;,</span><span class="nv"> </span><span class="s">&lt;code&gt;laptop&lt;/code&gt;,</span><span class="nv"> </span><span class="s">&lt;code&gt;tablet&lt;/code&gt;,</span>
+
+<span class="w">      </span><span class="s">&lt;code&gt;mobile&lt;/code&gt;,</span><span class="nv"> </span><span class="s">&lt;code&gt;virtual&lt;/code&gt;,</span><span class="nv"> </span><span class="s">&lt;code&gt;browser&lt;/code&gt;,</span><span class="nv"> </span><span class="s">or</span>
+
+<span class="w">      </span><span class="s">&lt;code&gt;other&lt;/code&gt;.'</span>
 <span class="w">    </span><span class="nt">recommended</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">type_id</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">type_id</span>
@@ -1714,27 +1745,38 @@
 <span class="w">    </span><span class="nt">required</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">uid</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">uid</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The unique identifier of the device. For example the Windows TargetSID</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">or AWS EC2 ARN.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">unique</span><span class="nv"> </span><span class="s">identifier</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">device.</span><span class="nv"> </span><span class="s">For</span><span class="nv"> </span><span class="s">example</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">Windows</span><span class="nv"> </span><span class="s">TargetSID</span>
+<span class="w">      </span><span class="s">or</span><span class="nv"> </span><span class="s">AWS</span>
+
+<span class="w">      </span><span class="s">EC2</span><span class="nv"> </span><span class="s">ARN.'</span>
 <span class="w">    </span><span class="nt">recommended</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">uid_alt</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">uid_alt</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">An alternate unique identifier of the device if any. For example</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">the ActiveDirectory DN.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'An</span><span class="nv"> </span><span class="s">alternate</span><span class="nv"> </span><span class="s">unique</span><span class="nv"> </span><span class="s">identifier</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">device</span><span class="nv"> </span><span class="s">if</span><span class="nv"> </span><span class="s">any.</span><span class="nv"> </span><span class="s">For</span><span class="nv"> </span><span class="s">example</span>
+<span class="w">      </span><span class="s">the</span>
+
+<span class="w">      </span><span class="s">ActiveDirectory</span><span class="nv"> </span><span class="s">DN.'</span>
 <span class="w">  </span><span class="nt">vendor_name</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">vendor_name</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The vendor for the device. For example &lt;code&gt;Dell&lt;/code&gt; or &lt;code&gt;Lenovo&lt;/code&gt;.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">vendor</span><span class="nv"> </span><span class="s">for</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">device.</span><span class="nv"> </span><span class="s">For</span><span class="nv"> </span><span class="s">example</span><span class="nv"> </span><span class="s">&lt;code&gt;Dell&lt;/code&gt;</span><span class="nv"> </span><span class="s">or</span>
+
+<span class="w">      </span><span class="s">&lt;code&gt;Lenovo&lt;/code&gt;.'</span>
 <span class="w">    </span><span class="nt">recommended</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 </code></pre></div>
 </details>
 <h3 id="induced">Induced</h3>
 <details>
 <div class="highlight"><pre><span></span><code><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Device</span>
-<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The Device object represents an addressable computer system or host,</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">which is typically connected to a computer network and participates in the transmission</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">or processing of data within the computer network.</span>
+<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">Device</span><span class="nv"> </span><span class="s">object</span><span class="nv"> </span><span class="s">represents</span><span class="nv"> </span><span class="s">an</span><span class="nv"> </span><span class="s">addressable</span><span class="nv"> </span><span class="s">computer</span><span class="nv"> </span><span class="s">system</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">host,</span>
+<span class="w">  </span><span class="s">which</span><span class="nv"> </span><span class="s">is</span>
+
+<span class="w">  </span><span class="s">typically</span><span class="nv"> </span><span class="s">connected</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">computer</span><span class="nv"> </span><span class="s">network</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">participates</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">transmission</span>
+
+<span class="w">  </span><span class="s">or</span><span class="nv"> </span><span class="s">processing</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">data</span><span class="nv"> </span><span class="s">within</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">computer</span><span class="nv"> </span><span class="s">network.'</span>
 <span class="nt">notes</span><span class="p">:</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">D3FEND™ Ontology d3f:Host. — https://d3fend.mitre.org/dao/artifact/d3f:Host/</span>
+<span class="nt">in_subset</span><span class="p">:</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">objects</span>
 <span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="nt">see_also</span><span class="p">:</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://d3fend.mitre.org/dao/artifact/d3f:Host/</span>
@@ -1756,13 +1798,16 @@
 <span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">system.</span>
 <span class="w">  </span><span class="nt">domain</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">domain</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">network</span><span class="nv"> </span><span class="s">domain</span><span class="nv"> </span><span class="s">where</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">device</span><span class="nv"> </span><span class="s">resides.</span><span class="nv"> </span><span class="s">For</span><span class="nv"> </span><span class="s">example:</span><span class="nv"> </span><span class="s">&lt;code&gt;work.example.com&lt;/code&gt;.'</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">network</span><span class="nv"> </span><span class="s">domain</span><span class="nv"> </span><span class="s">where</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">device</span><span class="nv"> </span><span class="s">resides.</span><span class="nv"> </span><span class="s">For</span><span class="nv"> </span><span class="s">example:</span>
+
+<span class="w">      </span><span class="s">&lt;code&gt;work.example.com&lt;/code&gt;.'</span>
 <span class="w">  </span><span class="nt">first_seen_time</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">first_seen_time</span>
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The initial discovery time of the device.</span>
 <span class="w">  </span><span class="nt">groups</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">groups</span>
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">group</span><span class="nv"> </span><span class="s">names</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">which</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">device</span><span class="nv"> </span><span class="s">belongs.</span><span class="nv"> </span><span class="s">For</span><span class="nv"> </span><span class="s">example:</span><span class="nv"> </span><span class="s">&lt;code&gt;["Windows</span>
+
 <span class="w">      </span><span class="s">Laptops",</span><span class="nv"> </span><span class="s">"Engineering"]&lt;/code&gt;.'</span>
 <span class="w">  </span><span class="nt">hostname</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">hostname</span>
@@ -1788,9 +1833,13 @@
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The time when the device was last known to have been modified.</span>
 <span class="w">  </span><span class="nt">name</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">name</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The alternate device name, ordinarily as assigned by an administrator.</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">&lt;p&gt;&lt;b&gt;Note:&lt;/b&gt; The &lt;b&gt;Name&lt;/b&gt; could be any other string that helps to identify</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">the device, such as a phone number; for example &lt;code&gt;310-555-1234&lt;/code&gt;.&lt;/p&gt;</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">alternate</span><span class="nv"> </span><span class="s">device</span><span class="nv"> </span><span class="s">name,</span><span class="nv"> </span><span class="s">ordinarily</span><span class="nv"> </span><span class="s">as</span><span class="nv"> </span><span class="s">assigned</span><span class="nv"> </span><span class="s">by</span><span class="nv"> </span><span class="s">an</span><span class="nv"> </span><span class="s">administrator.</span>
+
+<span class="w">      </span><span class="s">&lt;p&gt;&lt;b&gt;Note:&lt;/b&gt;</span><span class="nv"> </span><span class="s">The</span><span class="nv"> </span><span class="s">&lt;b&gt;Name&lt;/b&gt;</span><span class="nv"> </span><span class="s">could</span><span class="nv"> </span><span class="s">be</span><span class="nv"> </span><span class="s">any</span><span class="nv"> </span><span class="s">other</span><span class="nv"> </span><span class="s">string</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">helps</span><span class="nv"> </span><span class="s">to</span>
+
+<span class="w">      </span><span class="s">identify</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">device,</span><span class="nv"> </span><span class="s">such</span><span class="nv"> </span><span class="s">as</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">phone</span><span class="nv"> </span><span class="s">number;</span><span class="nv"> </span><span class="s">for</span><span class="nv"> </span><span class="s">example</span>
+
+<span class="w">      </span><span class="s">&lt;code&gt;310-555-1234&lt;/code&gt;.&lt;/p&gt;'</span>
 <span class="w">  </span><span class="nt">org</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">org</span>
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Organization and org unit related to the device.</span>
@@ -1802,8 +1851,12 @@
 <span class="w">  </span><span class="nt">type</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">type</span>
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">device</span><span class="nv"> </span><span class="s">type.</span><span class="nv"> </span><span class="s">For</span><span class="nv"> </span><span class="s">example:</span><span class="nv"> </span><span class="s">&lt;code&gt;unknown&lt;/code&gt;,</span><span class="nv"> </span><span class="s">&lt;code&gt;server&lt;/code&gt;,</span>
-<span class="w">      </span><span class="s">&lt;code&gt;desktop&lt;/code&gt;,</span><span class="nv"> </span><span class="s">&lt;code&gt;laptop&lt;/code&gt;,</span><span class="nv"> </span><span class="s">&lt;code&gt;tablet&lt;/code&gt;,</span><span class="nv"> </span><span class="s">&lt;code&gt;mobile&lt;/code&gt;,</span>
-<span class="w">      </span><span class="s">&lt;code&gt;virtual&lt;/code&gt;,</span><span class="nv"> </span><span class="s">&lt;code&gt;browser&lt;/code&gt;,</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">&lt;code&gt;other&lt;/code&gt;.'</span>
+
+<span class="w">      </span><span class="s">&lt;code&gt;desktop&lt;/code&gt;,</span><span class="nv"> </span><span class="s">&lt;code&gt;laptop&lt;/code&gt;,</span><span class="nv"> </span><span class="s">&lt;code&gt;tablet&lt;/code&gt;,</span>
+
+<span class="w">      </span><span class="s">&lt;code&gt;mobile&lt;/code&gt;,</span><span class="nv"> </span><span class="s">&lt;code&gt;virtual&lt;/code&gt;,</span><span class="nv"> </span><span class="s">&lt;code&gt;browser&lt;/code&gt;,</span><span class="nv"> </span><span class="s">or</span>
+
+<span class="w">      </span><span class="s">&lt;code&gt;other&lt;/code&gt;.'</span>
 <span class="w">    </span><span class="nt">recommended</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">type_id</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">type_id</span>
@@ -1811,16 +1864,22 @@
 <span class="w">    </span><span class="nt">required</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">uid</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">uid</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The unique identifier of the device. For example the Windows TargetSID</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">or AWS EC2 ARN.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">unique</span><span class="nv"> </span><span class="s">identifier</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">device.</span><span class="nv"> </span><span class="s">For</span><span class="nv"> </span><span class="s">example</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">Windows</span><span class="nv"> </span><span class="s">TargetSID</span>
+<span class="w">      </span><span class="s">or</span><span class="nv"> </span><span class="s">AWS</span>
+
+<span class="w">      </span><span class="s">EC2</span><span class="nv"> </span><span class="s">ARN.'</span>
 <span class="w">    </span><span class="nt">recommended</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">uid_alt</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">uid_alt</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">An alternate unique identifier of the device if any. For example</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">the ActiveDirectory DN.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'An</span><span class="nv"> </span><span class="s">alternate</span><span class="nv"> </span><span class="s">unique</span><span class="nv"> </span><span class="s">identifier</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">device</span><span class="nv"> </span><span class="s">if</span><span class="nv"> </span><span class="s">any.</span><span class="nv"> </span><span class="s">For</span><span class="nv"> </span><span class="s">example</span>
+<span class="w">      </span><span class="s">the</span>
+
+<span class="w">      </span><span class="s">ActiveDirectory</span><span class="nv"> </span><span class="s">DN.'</span>
 <span class="w">  </span><span class="nt">vendor_name</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">vendor_name</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The vendor for the device. For example &lt;code&gt;Dell&lt;/code&gt; or &lt;code&gt;Lenovo&lt;/code&gt;.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">vendor</span><span class="nv"> </span><span class="s">for</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">device.</span><span class="nv"> </span><span class="s">For</span><span class="nv"> </span><span class="s">example</span><span class="nv"> </span><span class="s">&lt;code&gt;Dell&lt;/code&gt;</span><span class="nv"> </span><span class="s">or</span>
+
+<span class="w">      </span><span class="s">&lt;code&gt;Lenovo&lt;/code&gt;.'</span>
 <span class="w">    </span><span class="nt">recommended</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="nt">attributes</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">autoscale_uid</span><span class="p">:</span>
@@ -1849,11 +1908,14 @@
 <span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">TimestampT</span>
 <span class="w">  </span><span class="nt">boot_uid</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">boot_uid</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">A unique identifier of the device that changes after every reboot.</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">For example, the value of &lt;code&gt;/proc/sys/kernel/random/boot_id&lt;/code&gt; from</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">Linux's procfs.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'A</span><span class="nv"> </span><span class="s">unique</span><span class="nv"> </span><span class="s">identifier</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">device</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">changes</span><span class="nv"> </span><span class="s">after</span><span class="nv"> </span><span class="s">every</span><span class="nv"> </span><span class="s">reboot.</span>
+<span class="w">      </span><span class="s">For</span><span class="nv"> </span><span class="s">example,</span>
+
+<span class="w">      </span><span class="s">the</span><span class="nv"> </span><span class="s">value</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">&lt;code&gt;/proc/sys/kernel/random/boot_id&lt;/code&gt;</span><span class="nv"> </span><span class="s">from</span><span class="nv"> </span><span class="s">Linux</span><span class="se">''</span><span class="s">s</span><span class="nv"> </span><span class="s">procfs.'</span>
 <span class="w">    </span><span class="nt">notes</span><span class="p">:</span>
-<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Linux kernel's documentation — https://docs.kernel.org/admin-guide/sysctl/kernel.html#random</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">'Linux</span><span class="nv"> </span><span class="s">kernel</span><span class="se">''</span><span class="s">s</span><span class="nv"> </span><span class="s">documentation</span><span class="nv"> </span><span class="s">—</span>
+
+<span class="w">      </span><span class="s">https://docs.kernel.org/admin-guide/sysctl/kernel.html#random'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">see_also</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://docs.kernel.org/admin-guide/sysctl/kernel.html#random</span>
@@ -1948,7 +2010,9 @@
 <span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">string</span>
 <span class="w">  </span><span class="nt">domain</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">domain</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">network</span><span class="nv"> </span><span class="s">domain</span><span class="nv"> </span><span class="s">where</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">device</span><span class="nv"> </span><span class="s">resides.</span><span class="nv"> </span><span class="s">For</span><span class="nv"> </span><span class="s">example:</span><span class="nv"> </span><span class="s">&lt;code&gt;work.example.com&lt;/code&gt;.'</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">network</span><span class="nv"> </span><span class="s">domain</span><span class="nv"> </span><span class="s">where</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">device</span><span class="nv"> </span><span class="s">resides.</span><span class="nv"> </span><span class="s">For</span><span class="nv"> </span><span class="s">example:</span>
+
+<span class="w">      </span><span class="s">&lt;code&gt;work.example.com&lt;/code&gt;.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Domain</span>
@@ -1967,8 +2031,10 @@
 <span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">string</span>
 <span class="w">  </span><span class="nt">eid</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">eid</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">An Embedded Identity Document, is a unique serial number that identifies</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">an eSIM-enabled device.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'An</span><span class="nv"> </span><span class="s">Embedded</span><span class="nv"> </span><span class="s">Identity</span><span class="nv"> </span><span class="s">Document,</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">unique</span><span class="nv"> </span><span class="s">serial</span><span class="nv"> </span><span class="s">number</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">identifies</span>
+<span class="w">      </span><span class="s">an</span>
+
+<span class="w">      </span><span class="s">eSIM-enabled</span><span class="nv"> </span><span class="s">device.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">EID</span>
@@ -1998,6 +2064,7 @@
 <span class="w">  </span><span class="nt">groups</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">groups</span>
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">group</span><span class="nv"> </span><span class="s">names</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">which</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">device</span><span class="nv"> </span><span class="s">belongs.</span><span class="nv"> </span><span class="s">For</span><span class="nv"> </span><span class="s">example:</span><span class="nv"> </span><span class="s">&lt;code&gt;["Windows</span>
+
 <span class="w">      </span><span class="s">Laptops",</span><span class="nv"> </span><span class="s">"Engineering"]&lt;/code&gt;.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
@@ -2036,8 +2103,11 @@
 <span class="w">    </span><span class="nt">recommended</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">hypervisor</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">hypervisor</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The name of the hypervisor running on the device. For example, &lt;code&gt;Xen&lt;/code&gt;,</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">&lt;code&gt;VMware&lt;/code&gt;, &lt;code&gt;Hyper-V&lt;/code&gt;, &lt;code&gt;VirtualBox&lt;/code&gt;, etc.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">name</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">hypervisor</span><span class="nv"> </span><span class="s">running</span><span class="nv"> </span><span class="s">on</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">device.</span><span class="nv"> </span><span class="s">For</span><span class="nv"> </span><span class="s">example,</span>
+
+<span class="w">      </span><span class="s">&lt;code&gt;Xen&lt;/code&gt;,</span><span class="nv"> </span><span class="s">&lt;code&gt;VMware&lt;/code&gt;,</span><span class="nv"> </span><span class="s">&lt;code&gt;Hyper-V&lt;/code&gt;,</span>
+
+<span class="w">      </span><span class="s">&lt;code&gt;VirtualBox&lt;/code&gt;,</span><span class="nv"> </span><span class="s">etc.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Hypervisor</span>
@@ -2049,8 +2119,10 @@
 <span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">string</span>
 <span class="w">  </span><span class="nt">iccid</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">iccid</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The Integrated Circuit Card Identification of a mobile device. Typically</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">it is a unique 18 to 22 digit number that identifies a SIM card.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">Integrated</span><span class="nv"> </span><span class="s">Circuit</span><span class="nv"> </span><span class="s">Card</span><span class="nv"> </span><span class="s">Identification</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">mobile</span><span class="nv"> </span><span class="s">device.</span><span class="nv"> </span><span class="s">Typically</span>
+<span class="w">      </span><span class="s">it</span><span class="nv"> </span><span class="s">is</span>
+
+<span class="w">      </span><span class="s">a</span><span class="nv"> </span><span class="s">unique</span><span class="nv"> </span><span class="s">18</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">22</span><span class="nv"> </span><span class="s">digit</span><span class="nv"> </span><span class="s">number</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">identifies</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">SIM</span><span class="nv"> </span><span class="s">card.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ICCID</span>
@@ -2089,8 +2161,10 @@
 <span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">string</span>
 <span class="w">  </span><span class="nt">imei_list</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">imei_list</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The International Mobile Equipment Identity values that are associated</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">with the device.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">International</span><span class="nv"> </span><span class="s">Mobile</span><span class="nv"> </span><span class="s">Equipment</span><span class="nv"> </span><span class="s">Identity</span><span class="nv"> </span><span class="s">values</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">are</span><span class="nv"> </span><span class="s">associated</span>
+<span class="w">      </span><span class="s">with</span><span class="nv"> </span><span class="s">the</span>
+
+<span class="w">      </span><span class="s">device.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">IMEI List</span>
@@ -2122,10 +2196,14 @@
 <span class="w">    </span><span class="nt">recommended</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">is_backed_up</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">is_backed_up</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Indicates whether the device or resource has a backup enabled, such</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">as an automated snapshot or a cloud backup. For example, this is indicated by</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">the &lt;code&gt;cloudBackupEnabled&lt;/code&gt; value within JAMF Pro mobile devices or</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">the registration of an AWS ARN with the AWS Backup service.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'Indicates</span><span class="nv"> </span><span class="s">whether</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">device</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">resource</span><span class="nv"> </span><span class="s">has</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">backup</span><span class="nv"> </span><span class="s">enabled,</span><span class="nv"> </span><span class="s">such</span>
+<span class="w">      </span><span class="s">as</span><span class="nv"> </span><span class="s">an</span>
+
+<span class="w">      </span><span class="s">automated</span><span class="nv"> </span><span class="s">snapshot</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">cloud</span><span class="nv"> </span><span class="s">backup.</span><span class="nv"> </span><span class="s">For</span><span class="nv"> </span><span class="s">example,</span><span class="nv"> </span><span class="s">this</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">indicated</span><span class="nv"> </span><span class="s">by</span><span class="nv"> </span><span class="s">the</span>
+
+<span class="w">      </span><span class="s">&lt;code&gt;cloudBackupEnabled&lt;/code&gt;</span><span class="nv"> </span><span class="s">value</span><span class="nv"> </span><span class="s">within</span><span class="nv"> </span><span class="s">JAMF</span><span class="nv"> </span><span class="s">Pro</span><span class="nv"> </span><span class="s">mobile</span><span class="nv"> </span><span class="s">devices</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">the</span>
+
+<span class="w">      </span><span class="s">registration</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">an</span><span class="nv"> </span><span class="s">AWS</span><span class="nv"> </span><span class="s">ARN</span><span class="nv"> </span><span class="s">with</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">AWS</span><span class="nv"> </span><span class="s">Backup</span><span class="nv"> </span><span class="s">service.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Back Ups Configured</span>
@@ -2163,9 +2241,12 @@
 <span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">boolean</span>
 <span class="w">  </span><span class="nt">is_mobile_account_active</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">is_mobile_account_active</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Indicates whether the device has an active mobile account. For example,</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">this is indicated by the &lt;code&gt;itunesStoreAccountActive&lt;/code&gt; value within</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">JAMF Pro mobile devices.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'Indicates</span><span class="nv"> </span><span class="s">whether</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">device</span><span class="nv"> </span><span class="s">has</span><span class="nv"> </span><span class="s">an</span><span class="nv"> </span><span class="s">active</span><span class="nv"> </span><span class="s">mobile</span><span class="nv"> </span><span class="s">account.</span><span class="nv"> </span><span class="s">For</span><span class="nv"> </span><span class="s">example,</span>
+<span class="w">      </span><span class="s">this</span><span class="nv"> </span><span class="s">is</span>
+
+<span class="w">      </span><span class="s">indicated</span><span class="nv"> </span><span class="s">by</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">&lt;code&gt;itunesStoreAccountActive&lt;/code&gt;</span><span class="nv"> </span><span class="s">value</span><span class="nv"> </span><span class="s">within</span><span class="nv"> </span><span class="s">JAMF</span><span class="nv"> </span><span class="s">Pro</span>
+
+<span class="w">      </span><span class="s">mobile</span><span class="nv"> </span><span class="s">devices.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Mobile Account Active</span>
@@ -2201,9 +2282,13 @@
 <span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">boolean</span>
 <span class="w">  </span><span class="nt">is_supervised</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">is_supervised</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The event occurred on a supervised device. Devices that are supervised</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">are typically mobile devices managed by a Mobile Device Management solution</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">and are restricted from specific behaviors such as Apple AirDrop.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">event</span><span class="nv"> </span><span class="s">occurred</span><span class="nv"> </span><span class="s">on</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">supervised</span><span class="nv"> </span><span class="s">device.</span><span class="nv"> </span><span class="s">Devices</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">are</span><span class="nv"> </span><span class="s">supervised</span>
+<span class="w">      </span><span class="s">are</span>
+
+<span class="w">      </span><span class="s">typically</span><span class="nv"> </span><span class="s">mobile</span><span class="nv"> </span><span class="s">devices</span><span class="nv"> </span><span class="s">managed</span><span class="nv"> </span><span class="s">by</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">Mobile</span><span class="nv"> </span><span class="s">Device</span><span class="nv"> </span><span class="s">Management</span><span class="nv"> </span><span class="s">solution</span><span class="nv"> </span><span class="s">and</span>
+<span class="w">      </span><span class="s">are</span>
+
+<span class="w">      </span><span class="s">restricted</span><span class="nv"> </span><span class="s">from</span><span class="nv"> </span><span class="s">specific</span><span class="nv"> </span><span class="s">behaviors</span><span class="nv"> </span><span class="s">such</span><span class="nv"> </span><span class="s">as</span><span class="nv"> </span><span class="s">Apple</span><span class="nv"> </span><span class="s">AirDrop.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Supervised Device</span>
@@ -2264,8 +2349,10 @@
 <span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Location</span>
 <span class="w">  </span><span class="nt">meid</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">meid</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The Mobile Equipment Identifier. It's a unique number that identifies</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">a Code Division Multiple Access (CDMA) mobile device.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">Mobile</span><span class="nv"> </span><span class="s">Equipment</span><span class="nv"> </span><span class="s">Identifier.</span><span class="nv"> </span><span class="s">It</span><span class="se">''</span><span class="s">s</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">unique</span><span class="nv"> </span><span class="s">number</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">identifies</span>
+<span class="w">      </span><span class="s">a</span><span class="nv"> </span><span class="s">Code</span>
+
+<span class="w">      </span><span class="s">Division</span><span class="nv"> </span><span class="s">Multiple</span><span class="nv"> </span><span class="s">Access</span><span class="nv"> </span><span class="s">(CDMA)</span><span class="nv"> </span><span class="s">mobile</span><span class="nv"> </span><span class="s">device.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">MEID</span>
@@ -2322,9 +2409,13 @@
 <span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">TimestampT</span>
 <span class="w">  </span><span class="nt">name</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">name</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The alternate device name, ordinarily as assigned by an administrator.</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">&lt;p&gt;&lt;b&gt;Note:&lt;/b&gt; The &lt;b&gt;Name&lt;/b&gt; could be any other string that helps to identify</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">the device, such as a phone number; for example &lt;code&gt;310-555-1234&lt;/code&gt;.&lt;/p&gt;</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">alternate</span><span class="nv"> </span><span class="s">device</span><span class="nv"> </span><span class="s">name,</span><span class="nv"> </span><span class="s">ordinarily</span><span class="nv"> </span><span class="s">as</span><span class="nv"> </span><span class="s">assigned</span><span class="nv"> </span><span class="s">by</span><span class="nv"> </span><span class="s">an</span><span class="nv"> </span><span class="s">administrator.</span>
+
+<span class="w">      </span><span class="s">&lt;p&gt;&lt;b&gt;Note:&lt;/b&gt;</span><span class="nv"> </span><span class="s">The</span><span class="nv"> </span><span class="s">&lt;b&gt;Name&lt;/b&gt;</span><span class="nv"> </span><span class="s">could</span><span class="nv"> </span><span class="s">be</span><span class="nv"> </span><span class="s">any</span><span class="nv"> </span><span class="s">other</span><span class="nv"> </span><span class="s">string</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">helps</span><span class="nv"> </span><span class="s">to</span>
+
+<span class="w">      </span><span class="s">identify</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">device,</span><span class="nv"> </span><span class="s">such</span><span class="nv"> </span><span class="s">as</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">phone</span><span class="nv"> </span><span class="s">number;</span><span class="nv"> </span><span class="s">for</span><span class="nv"> </span><span class="s">example</span>
+
+<span class="w">      </span><span class="s">&lt;code&gt;310-555-1234&lt;/code&gt;.&lt;/p&gt;'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Name</span>
@@ -2426,10 +2517,14 @@
 <span class="w">    </span><span class="nt">recommended</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">network_interfaces</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">network_interfaces</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The physical or virtual network interfaces that are associated with</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">the device, one for each unique MAC address/IP address/hostname/name combination.&lt;p&gt;&lt;b&gt;Note:&lt;/b&gt;</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">The first element of the array is the network information that pertains to the</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">event.&lt;/p&gt;</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">physical</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">virtual</span><span class="nv"> </span><span class="s">network</span><span class="nv"> </span><span class="s">interfaces</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">are</span><span class="nv"> </span><span class="s">associated</span><span class="nv"> </span><span class="s">with</span>
+<span class="w">      </span><span class="s">the</span><span class="nv"> </span><span class="s">device,</span>
+
+<span class="w">      </span><span class="s">one</span><span class="nv"> </span><span class="s">for</span><span class="nv"> </span><span class="s">each</span><span class="nv"> </span><span class="s">unique</span><span class="nv"> </span><span class="s">MAC</span><span class="nv"> </span><span class="s">address/IP</span><span class="nv"> </span><span class="s">address/hostname/name</span>
+
+<span class="w">      </span><span class="s">combination.&lt;p&gt;&lt;b&gt;Note:&lt;/b&gt;</span><span class="nv"> </span><span class="s">The</span><span class="nv"> </span><span class="s">first</span><span class="nv"> </span><span class="s">element</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">array</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">network</span>
+
+<span class="w">      </span><span class="s">information</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">pertains</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">event.&lt;/p&gt;'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Network Interfaces</span>
@@ -2461,8 +2556,14 @@
 <span class="w">  </span><span class="nt">os_machine_uuid</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">os_machine_uuid</span>
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">operating</span><span class="nv"> </span><span class="s">system</span><span class="nv"> </span><span class="s">assigned</span><span class="nv"> </span><span class="s">Machine</span><span class="nv"> </span><span class="s">ID.</span><span class="nv"> </span><span class="s">In</span><span class="nv"> </span><span class="s">Windows,</span><span class="nv"> </span><span class="s">this</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">the</span>
-<span class="w">      </span><span class="s">value</span><span class="nv"> </span><span class="s">stored</span><span class="nv"> </span><span class="s">at</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">registry</span><span class="nv"> </span><span class="s">path:</span><span class="nv"> </span><span class="s">&lt;code&gt;HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Cryptography\MachineGuid&lt;/code&gt;.</span>
-<span class="w">      </span><span class="s">In</span><span class="nv"> </span><span class="s">Linux,</span><span class="nv"> </span><span class="s">this</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">stored</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">file:</span><span class="nv"> </span><span class="s">&lt;code&gt;/etc/machine-id&lt;/code&gt;.'</span>
+<span class="w">      </span><span class="s">value</span><span class="nv"> </span><span class="s">stored</span>
+
+<span class="w">      </span><span class="s">at</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">registry</span><span class="nv"> </span><span class="s">path:</span>
+
+<span class="w">      </span><span class="s">&lt;code&gt;HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Cryptography\MachineGuid&lt;/code&gt;.</span>
+<span class="w">      </span><span class="s">In</span>
+
+<span class="w">      </span><span class="s">Linux,</span><span class="nv"> </span><span class="s">this</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">stored</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">file:</span><span class="nv"> </span><span class="s">&lt;code&gt;/etc/machine-id&lt;/code&gt;.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">OS Machine UUID</span>
@@ -2571,8 +2672,12 @@
 <span class="w">  </span><span class="nt">type</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">type</span>
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">device</span><span class="nv"> </span><span class="s">type.</span><span class="nv"> </span><span class="s">For</span><span class="nv"> </span><span class="s">example:</span><span class="nv"> </span><span class="s">&lt;code&gt;unknown&lt;/code&gt;,</span><span class="nv"> </span><span class="s">&lt;code&gt;server&lt;/code&gt;,</span>
-<span class="w">      </span><span class="s">&lt;code&gt;desktop&lt;/code&gt;,</span><span class="nv"> </span><span class="s">&lt;code&gt;laptop&lt;/code&gt;,</span><span class="nv"> </span><span class="s">&lt;code&gt;tablet&lt;/code&gt;,</span><span class="nv"> </span><span class="s">&lt;code&gt;mobile&lt;/code&gt;,</span>
-<span class="w">      </span><span class="s">&lt;code&gt;virtual&lt;/code&gt;,</span><span class="nv"> </span><span class="s">&lt;code&gt;browser&lt;/code&gt;,</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">&lt;code&gt;other&lt;/code&gt;.'</span>
+
+<span class="w">      </span><span class="s">&lt;code&gt;desktop&lt;/code&gt;,</span><span class="nv"> </span><span class="s">&lt;code&gt;laptop&lt;/code&gt;,</span><span class="nv"> </span><span class="s">&lt;code&gt;tablet&lt;/code&gt;,</span>
+
+<span class="w">      </span><span class="s">&lt;code&gt;mobile&lt;/code&gt;,</span><span class="nv"> </span><span class="s">&lt;code&gt;virtual&lt;/code&gt;,</span><span class="nv"> </span><span class="s">&lt;code&gt;browser&lt;/code&gt;,</span><span class="nv"> </span><span class="s">or</span>
+
+<span class="w">      </span><span class="s">&lt;code&gt;other&lt;/code&gt;.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Type</span>
@@ -2699,8 +2804,11 @@
 <span class="w">  </span><span class="nt">udid</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">udid</span>
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">Apple</span><span class="nv"> </span><span class="s">assigned</span><span class="nv"> </span><span class="s">Unique</span><span class="nv"> </span><span class="s">Device</span><span class="nv"> </span><span class="s">Identifier</span><span class="nv"> </span><span class="s">(UDID).</span><span class="nv"> </span><span class="s">For</span><span class="nv"> </span><span class="s">iOS,</span><span class="nv"> </span><span class="s">iPadOS,</span>
-<span class="w">      </span><span class="s">tvOS,</span><span class="nv"> </span><span class="s">watchOS</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">visionOS</span><span class="nv"> </span><span class="s">devices,</span><span class="nv"> </span><span class="s">this</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">UDID.</span><span class="nv"> </span><span class="s">For</span><span class="nv"> </span><span class="s">macOS</span><span class="nv"> </span><span class="s">devices,</span><span class="nv"> </span><span class="s">it</span>
-<span class="w">      </span><span class="s">is</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">Provisioning</span><span class="nv"> </span><span class="s">UDID.</span><span class="nv"> </span><span class="s">For</span><span class="nv"> </span><span class="s">example:</span><span class="nv"> </span><span class="s">&lt;code&gt;00008020-008D4548007B4F26&lt;/code&gt;'</span>
+<span class="w">      </span><span class="s">tvOS,</span>
+
+<span class="w">      </span><span class="s">watchOS</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">visionOS</span><span class="nv"> </span><span class="s">devices,</span><span class="nv"> </span><span class="s">this</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">UDID.</span><span class="nv"> </span><span class="s">For</span><span class="nv"> </span><span class="s">macOS</span><span class="nv"> </span><span class="s">devices,</span><span class="nv"> </span><span class="s">it</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">the</span>
+
+<span class="w">      </span><span class="s">Provisioning</span><span class="nv"> </span><span class="s">UDID.</span><span class="nv"> </span><span class="s">For</span><span class="nv"> </span><span class="s">example:</span><span class="nv"> </span><span class="s">&lt;code&gt;00008020-008D4548007B4F26&lt;/code&gt;'</span>
 <span class="w">    </span><span class="nt">notes</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Apple Wiki — https://theapplewiki.com/wiki/UDID</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
@@ -2716,8 +2824,10 @@
 <span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">string</span>
 <span class="w">  </span><span class="nt">uid</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">uid</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The unique identifier of the device. For example the Windows TargetSID</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">or AWS EC2 ARN.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">unique</span><span class="nv"> </span><span class="s">identifier</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">device.</span><span class="nv"> </span><span class="s">For</span><span class="nv"> </span><span class="s">example</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">Windows</span><span class="nv"> </span><span class="s">TargetSID</span>
+<span class="w">      </span><span class="s">or</span><span class="nv"> </span><span class="s">AWS</span>
+
+<span class="w">      </span><span class="s">EC2</span><span class="nv"> </span><span class="s">ARN.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Unique ID</span>
@@ -2812,8 +2922,10 @@
 <span class="w">    </span><span class="nt">recommended</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">uid_alt</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">uid_alt</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">An alternate unique identifier of the device if any. For example</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">the ActiveDirectory DN.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'An</span><span class="nv"> </span><span class="s">alternate</span><span class="nv"> </span><span class="s">unique</span><span class="nv"> </span><span class="s">identifier</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">device</span><span class="nv"> </span><span class="s">if</span><span class="nv"> </span><span class="s">any.</span><span class="nv"> </span><span class="s">For</span><span class="nv"> </span><span class="s">example</span>
+<span class="w">      </span><span class="s">the</span>
+
+<span class="w">      </span><span class="s">ActiveDirectory</span><span class="nv"> </span><span class="s">DN.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Alternate ID</span>
@@ -2835,7 +2947,9 @@
 <span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">string</span>
 <span class="w">  </span><span class="nt">vendor_name</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">vendor_name</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The vendor for the device. For example &lt;code&gt;Dell&lt;/code&gt; or &lt;code&gt;Lenovo&lt;/code&gt;.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">vendor</span><span class="nv"> </span><span class="s">for</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">device.</span><span class="nv"> </span><span class="s">For</span><span class="nv"> </span><span class="s">example</span><span class="nv"> </span><span class="s">&lt;code&gt;Dell&lt;/code&gt;</span><span class="nv"> </span><span class="s">or</span>
+
+<span class="w">      </span><span class="s">&lt;code&gt;Lenovo&lt;/code&gt;.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Vendor Name</span>
@@ -2859,8 +2973,10 @@
 <span class="w">    </span><span class="nt">recommended</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">agent_list</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">agent_list</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">A list of &lt;code&gt;agent&lt;/code&gt; objects associated with a device, endpoint,</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">or resource.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'A</span><span class="nv"> </span><span class="s">list</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">&lt;code&gt;agent&lt;/code&gt;</span><span class="nv"> </span><span class="s">objects</span><span class="nv"> </span><span class="s">associated</span><span class="nv"> </span><span class="s">with</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">device,</span><span class="nv"> </span><span class="s">endpoint,</span>
+<span class="w">      </span><span class="s">or</span>
+
+<span class="w">      </span><span class="s">resource.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Agent List</span>
@@ -2940,10 +3056,14 @@
 <span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">MacT</span>
 <span class="w">  </span><span class="nt">mac_vendor</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mac_vendor</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The vendor or manufacturer of the endpoint's network interface controller</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">(NIC), as identified from the MAC address.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">vendor</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">manufacturer</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">endpoint</span><span class="se">''</span><span class="s">s</span><span class="nv"> </span><span class="s">network</span><span class="nv"> </span><span class="s">interface</span>
+<span class="w">      </span><span class="s">controller</span>
+
+<span class="w">      </span><span class="s">(NIC),</span><span class="nv"> </span><span class="s">as</span><span class="nv"> </span><span class="s">identified</span><span class="nv"> </span><span class="s">from</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">MAC</span><span class="nv"> </span><span class="s">address.'</span>
 <span class="w">    </span><span class="nt">notes</span><span class="p">:</span>
-<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">IEEE Registration Authority — https://standards.ieee.org/products-programs/regauth/</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">'IEEE</span><span class="nv"> </span><span class="s">Registration</span><span class="nv"> </span><span class="s">Authority</span><span class="nv"> </span><span class="s">—</span>
+
+<span class="w">      </span><span class="s">https://standards.ieee.org/products-programs/regauth/'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">see_also</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://standards.ieee.org/products-programs/regauth/</span>
@@ -2971,8 +3091,10 @@
 <span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Os</span>
 <span class="w">  </span><span class="nt">owner</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">owner</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The identity of the service or user account that owns the endpoint</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">or was last logged into it.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">identity</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">service</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">user</span><span class="nv"> </span><span class="s">account</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">owns</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">endpoint</span>
+<span class="w">      </span><span class="s">or</span><span class="nv"> </span><span class="s">was</span><span class="nv"> </span><span class="s">last</span>
+
+<span class="w">      </span><span class="s">logged</span><span class="nv"> </span><span class="s">into</span><span class="nv"> </span><span class="s">it.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Owner</span>
@@ -3058,9 +3180,12 @@
 <span class="w">      </span><span class="nt">group</span><span class="p">:</span>
 <span class="w">        </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">group</span>
 <span class="w">        </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">context</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The information describing an instance of a container. A container</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">is a prepackaged, portable system image that runs isolated on an existing system</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">using a container runtime like containerd.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">information</span><span class="nv"> </span><span class="s">describing</span><span class="nv"> </span><span class="s">an</span><span class="nv"> </span><span class="s">instance</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">container.</span><span class="nv"> </span><span class="s">A</span><span class="nv"> </span><span class="s">container</span>
+<span class="w">      </span><span class="s">is</span><span class="nv"> </span><span class="s">a</span>
+
+<span class="w">      </span><span class="s">prepackaged,</span><span class="nv"> </span><span class="s">portable</span><span class="nv"> </span><span class="s">system</span><span class="nv"> </span><span class="s">image</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">runs</span><span class="nv"> </span><span class="s">isolated</span><span class="nv"> </span><span class="s">on</span><span class="nv"> </span><span class="s">an</span><span class="nv"> </span><span class="s">existing</span><span class="nv"> </span><span class="s">system</span>
+
+<span class="w">      </span><span class="s">using</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">container</span><span class="nv"> </span><span class="s">runtime</span><span class="nv"> </span><span class="s">like</span><span class="nv"> </span><span class="s">containerd.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Container</span>
@@ -3079,8 +3204,10 @@
 <span class="w">      </span><span class="nt">group</span><span class="p">:</span>
 <span class="w">        </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">group</span>
 <span class="w">        </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">context</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">If running under a process namespace (such as in a container), the</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">process identifier within that process namespace.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'If</span><span class="nv"> </span><span class="s">running</span><span class="nv"> </span><span class="s">under</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">process</span><span class="nv"> </span><span class="s">namespace</span><span class="nv"> </span><span class="s">(such</span><span class="nv"> </span><span class="s">as</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">container),</span><span class="nv"> </span><span class="s">the</span>
+<span class="w">      </span><span class="s">process</span>
+
+<span class="w">      </span><span class="s">identifier</span><span class="nv"> </span><span class="s">within</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">process</span><span class="nv"> </span><span class="s">namespace.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Namespace PID</span>

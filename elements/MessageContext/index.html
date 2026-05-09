@@ -236,6 +236,15 @@
 </nav>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="#in-subsets">
+<span class="md-ellipsis">
+      
+        In Subsets
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#aliases">
 <span class="md-ellipsis">
       
@@ -341,7 +350,8 @@
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
 <h1 id="class-messagecontext">Class: MessageContext</h1>
-<p><em>Communication context for AI system interactions including protocols, roles, clients, and session information for MCP and other AI communication systems.</em></p>
+<p><em>Communication context for AI system interactions including protocols, roles,</em></p>
+<p><em>clients, and session information for MCP and other AI communication systems.</em></p>
 <p>URI: <a href="https://w3id.org/lmodel/ocsf/MessageContext">ocsf:MessageContext</a></p>
 <pre class="mermaid"><code> classDiagram
     class MessageContext
@@ -428,7 +438,7 @@
 <tr>
 <td><a href="../ai_role_id/">ai_role_id</a></td>
 <td>0..1 <em>recommended</em> <br/> <a href="../MessageContextAiRoleIdEnum/">MessageContextAiRoleIdEnum</a></td>
-<td>Specifies the functional role of the AI within the context of this message, s...</td>
+<td>Specifies the functional role of the AI within the context of this message,</td>
 <td>direct</td>
 </tr>
 <tr>
@@ -532,6 +542,10 @@
 </tr>
 </tbody>
 </table>
+<h2 id="in-subsets">In Subsets</h2>
+<ul>
+<li><a href="../Objects/">Objects</a></li>
+</ul>
 <h2 id="aliases">Aliases</h2>
 <ul>
 <li>Message Context</li>
@@ -543,7 +557,8 @@
 </ul>
 <h2 id="notes">Notes</h2>
 <ul>
-<li>OWASP AI Security and Privacy Guide - Agent Security — <a href="https://owasp.org/www-project-ai-security-and-privacy-guide/">https://owasp.org/www-project-ai-security-and-privacy-guide/</a></li>
+<li>OWASP AI Security and Privacy Guide - Agent Security —
+<a href="https://owasp.org/www-project-ai-security-and-privacy-guide/">https://owasp.org/www-project-ai-security-and-privacy-guide/</a></li>
 <li>Model Context Protocol (MCP) Specification — <a href="https://modelcontextprotocol.io/">https://modelcontextprotocol.io/</a></li>
 </ul>
 <h2 id="identifier-and-mapping-information">Identifier and Mapping Information</h2>
@@ -594,11 +609,17 @@
 <span class="w">  </span><span class="nt">ocsf_constraints</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ocsf_constraints</span>
 <span class="w">    </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="s">'{"at_least_one":</span><span class="nv"> </span><span class="s">["application",</span><span class="nv"> </span><span class="s">"service"]}'</span>
-<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Communication context for AI system interactions including protocols,</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">roles, clients, and session information for MCP and other AI communication systems.</span>
+<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'Communication</span><span class="nv"> </span><span class="s">context</span><span class="nv"> </span><span class="s">for</span><span class="nv"> </span><span class="s">AI</span><span class="nv"> </span><span class="s">system</span><span class="nv"> </span><span class="s">interactions</span><span class="nv"> </span><span class="s">including</span><span class="nv"> </span><span class="s">protocols,</span>
+<span class="w">  </span><span class="s">roles,</span>
+
+<span class="w">  </span><span class="s">clients,</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">session</span><span class="nv"> </span><span class="s">information</span><span class="nv"> </span><span class="s">for</span><span class="nv"> </span><span class="s">MCP</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">other</span><span class="nv"> </span><span class="s">AI</span><span class="nv"> </span><span class="s">communication</span><span class="nv"> </span><span class="s">systems.'</span>
 <span class="nt">notes</span><span class="p">:</span>
-<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">OWASP AI Security and Privacy Guide - Agent Security — https://owasp.org/www-project-ai-security-and-privacy-guide/</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="s">'OWASP</span><span class="nv"> </span><span class="s">AI</span><span class="nv"> </span><span class="s">Security</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">Privacy</span><span class="nv"> </span><span class="s">Guide</span><span class="nv"> </span><span class="s">-</span><span class="nv"> </span><span class="s">Agent</span><span class="nv"> </span><span class="s">Security</span><span class="nv"> </span><span class="s">—</span>
+
+<span class="w">  </span><span class="s">https://owasp.org/www-project-ai-security-and-privacy-guide/'</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Model Context Protocol (MCP) Specification — https://modelcontextprotocol.io/</span>
+<span class="nt">in_subset</span><span class="p">:</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">objects</span>
 <span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="nt">see_also</span><span class="p">:</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://owasp.org/www-project-ai-security-and-privacy-guide/</span>
@@ -619,42 +640,57 @@
 <span class="nt">slot_usage</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">ai_role_id</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ai_role_id</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Specifies the functional role of the AI within the context of this</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">message, such as retrieving information, assisting reasoning, executing a tool,</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">or generating content.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'Specifies</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">functional</span><span class="nv"> </span><span class="s">role</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">AI</span><span class="nv"> </span><span class="s">within</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">context</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">this</span>
+<span class="w">      </span><span class="s">message,</span>
+
+<span class="w">      </span><span class="s">such</span><span class="nv"> </span><span class="s">as</span><span class="nv"> </span><span class="s">retrieving</span><span class="nv"> </span><span class="s">information,</span><span class="nv"> </span><span class="s">assisting</span><span class="nv"> </span><span class="s">reasoning,</span><span class="nv"> </span><span class="s">executing</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">tool,</span><span class="nv"> </span><span class="s">or</span>
+
+<span class="w">      </span><span class="s">generating</span><span class="nv"> </span><span class="s">content.'</span>
 <span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">MessageContextAiRoleIdEnum</span>
 <span class="w">    </span><span class="nt">recommended</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">application</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">application</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The initiating client application. In AI systems, this represents</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">the client-side application or framework that initiates requests (e.g., LangChain</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">application, web browser, mobile app, SDK implementation).</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">initiating</span><span class="nv"> </span><span class="s">client</span><span class="nv"> </span><span class="s">application.</span><span class="nv"> </span><span class="s">In</span><span class="nv"> </span><span class="s">AI</span><span class="nv"> </span><span class="s">systems,</span><span class="nv"> </span><span class="s">this</span><span class="nv"> </span><span class="s">represents</span>
+<span class="w">      </span><span class="s">the</span>
+
+<span class="w">      </span><span class="s">client-side</span><span class="nv"> </span><span class="s">application</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">framework</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">initiates</span><span class="nv"> </span><span class="s">requests</span><span class="nv"> </span><span class="s">(e.g.,</span><span class="nv"> </span><span class="s">LangChain</span>
+
+<span class="w">      </span><span class="s">application,</span><span class="nv"> </span><span class="s">web</span><span class="nv"> </span><span class="s">browser,</span><span class="nv"> </span><span class="s">mobile</span><span class="nv"> </span><span class="s">app,</span><span class="nv"> </span><span class="s">SDK</span><span class="nv"> </span><span class="s">implementation).'</span>
 <span class="w">    </span><span class="nt">recommended</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">completion_tokens</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">completion_tokens</span>
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Number of tokens in the model's response/completion for this message.</span>
 <span class="w">  </span><span class="nt">name</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">name</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The name or identifier of the message context. In AI systems, this</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">could be the conversation ID, session name, thread identifier, or interaction</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">name (e.g., 'user-session-123', 'conversation-abc', 'chat-thread-456').</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">name</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">identifier</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">message</span><span class="nv"> </span><span class="s">context.</span><span class="nv"> </span><span class="s">In</span><span class="nv"> </span><span class="s">AI</span><span class="nv"> </span><span class="s">systems,</span><span class="nv"> </span><span class="s">this</span>
+<span class="w">      </span><span class="s">could</span><span class="nv"> </span><span class="s">be</span><span class="nv"> </span><span class="s">the</span>
+
+<span class="w">      </span><span class="s">conversation</span><span class="nv"> </span><span class="s">ID,</span><span class="nv"> </span><span class="s">session</span><span class="nv"> </span><span class="s">name,</span><span class="nv"> </span><span class="s">thread</span><span class="nv"> </span><span class="s">identifier,</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">interaction</span><span class="nv"> </span><span class="s">name</span><span class="nv"> </span><span class="s">(e.g.,</span>
+
+<span class="w">      </span><span class="se">''</span><span class="s">user-session-123</span><span class="se">''</span><span class="s">,</span><span class="nv"> </span><span class="se">''</span><span class="s">conversation-abc</span><span class="se">''</span><span class="s">,</span><span class="nv"> </span><span class="se">''</span><span class="s">chat-thread-456</span><span class="se">''</span><span class="s">).'</span>
 <span class="w">  </span><span class="nt">prompt_tokens</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">prompt_tokens</span>
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Number of tokens in the input prompt for this message.</span>
 <span class="w">  </span><span class="nt">service</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">service</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The server or service handling the request. In AI systems, this represents</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">the AI service, API endpoint, or agent that processes and responds to requests</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">(e.g., OpenAI API service, Claude API service, internal AI model service).</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">server</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">service</span><span class="nv"> </span><span class="s">handling</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">request.</span><span class="nv"> </span><span class="s">In</span><span class="nv"> </span><span class="s">AI</span><span class="nv"> </span><span class="s">systems,</span><span class="nv"> </span><span class="s">this</span>
+<span class="w">      </span><span class="s">represents</span><span class="nv"> </span><span class="s">the</span>
+
+<span class="w">      </span><span class="s">AI</span><span class="nv"> </span><span class="s">service,</span><span class="nv"> </span><span class="s">API</span><span class="nv"> </span><span class="s">endpoint,</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">agent</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">processes</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">responds</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">requests</span>
+
+<span class="w">      </span><span class="s">(e.g.,</span><span class="nv"> </span><span class="s">OpenAI</span><span class="nv"> </span><span class="s">API</span><span class="nv"> </span><span class="s">service,</span><span class="nv"> </span><span class="s">Claude</span><span class="nv"> </span><span class="s">API</span><span class="nv"> </span><span class="s">service,</span><span class="nv"> </span><span class="s">internal</span><span class="nv"> </span><span class="s">AI</span><span class="nv"> </span><span class="s">model</span><span class="nv"> </span><span class="s">service).'</span>
 <span class="w">    </span><span class="nt">recommended</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">total_tokens</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">total_tokens</span>
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Total number of tokens used for this message (prompt + completion).</span>
 <span class="w">  </span><span class="nt">uid</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">uid</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The unique identifier of the message context. This could be a session</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">ID, conversation ID, or other unique identifier that allows correlation of messages</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">within the same context.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">unique</span><span class="nv"> </span><span class="s">identifier</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">message</span><span class="nv"> </span><span class="s">context.</span><span class="nv"> </span><span class="s">This</span><span class="nv"> </span><span class="s">could</span><span class="nv"> </span><span class="s">be</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">session</span>
+<span class="w">      </span><span class="s">ID,</span>
+
+<span class="w">      </span><span class="s">conversation</span><span class="nv"> </span><span class="s">ID,</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">other</span><span class="nv"> </span><span class="s">unique</span><span class="nv"> </span><span class="s">identifier</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">allows</span><span class="nv"> </span><span class="s">correlation</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">messages</span>
+
+<span class="w">      </span><span class="s">within</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">same</span><span class="nv"> </span><span class="s">context.'</span>
 <span class="nt">rules</span><span class="p">:</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">postconditions</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">any_of</span><span class="p">:</span>
@@ -677,11 +713,17 @@
 <span class="w">  </span><span class="nt">ocsf_constraints</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ocsf_constraints</span>
 <span class="w">    </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="s">'{"at_least_one":</span><span class="nv"> </span><span class="s">["application",</span><span class="nv"> </span><span class="s">"service"]}'</span>
-<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Communication context for AI system interactions including protocols,</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">roles, clients, and session information for MCP and other AI communication systems.</span>
+<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'Communication</span><span class="nv"> </span><span class="s">context</span><span class="nv"> </span><span class="s">for</span><span class="nv"> </span><span class="s">AI</span><span class="nv"> </span><span class="s">system</span><span class="nv"> </span><span class="s">interactions</span><span class="nv"> </span><span class="s">including</span><span class="nv"> </span><span class="s">protocols,</span>
+<span class="w">  </span><span class="s">roles,</span>
+
+<span class="w">  </span><span class="s">clients,</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">session</span><span class="nv"> </span><span class="s">information</span><span class="nv"> </span><span class="s">for</span><span class="nv"> </span><span class="s">MCP</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">other</span><span class="nv"> </span><span class="s">AI</span><span class="nv"> </span><span class="s">communication</span><span class="nv"> </span><span class="s">systems.'</span>
 <span class="nt">notes</span><span class="p">:</span>
-<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">OWASP AI Security and Privacy Guide - Agent Security — https://owasp.org/www-project-ai-security-and-privacy-guide/</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="s">'OWASP</span><span class="nv"> </span><span class="s">AI</span><span class="nv"> </span><span class="s">Security</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">Privacy</span><span class="nv"> </span><span class="s">Guide</span><span class="nv"> </span><span class="s">-</span><span class="nv"> </span><span class="s">Agent</span><span class="nv"> </span><span class="s">Security</span><span class="nv"> </span><span class="s">—</span>
+
+<span class="w">  </span><span class="s">https://owasp.org/www-project-ai-security-and-privacy-guide/'</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Model Context Protocol (MCP) Specification — https://modelcontextprotocol.io/</span>
+<span class="nt">in_subset</span><span class="p">:</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">objects</span>
 <span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="nt">see_also</span><span class="p">:</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://owasp.org/www-project-ai-security-and-privacy-guide/</span>
@@ -692,42 +734,57 @@
 <span class="nt">slot_usage</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">ai_role_id</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ai_role_id</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Specifies the functional role of the AI within the context of this</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">message, such as retrieving information, assisting reasoning, executing a tool,</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">or generating content.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'Specifies</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">functional</span><span class="nv"> </span><span class="s">role</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">AI</span><span class="nv"> </span><span class="s">within</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">context</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">this</span>
+<span class="w">      </span><span class="s">message,</span>
+
+<span class="w">      </span><span class="s">such</span><span class="nv"> </span><span class="s">as</span><span class="nv"> </span><span class="s">retrieving</span><span class="nv"> </span><span class="s">information,</span><span class="nv"> </span><span class="s">assisting</span><span class="nv"> </span><span class="s">reasoning,</span><span class="nv"> </span><span class="s">executing</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">tool,</span><span class="nv"> </span><span class="s">or</span>
+
+<span class="w">      </span><span class="s">generating</span><span class="nv"> </span><span class="s">content.'</span>
 <span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">MessageContextAiRoleIdEnum</span>
 <span class="w">    </span><span class="nt">recommended</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">application</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">application</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The initiating client application. In AI systems, this represents</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">the client-side application or framework that initiates requests (e.g., LangChain</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">application, web browser, mobile app, SDK implementation).</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">initiating</span><span class="nv"> </span><span class="s">client</span><span class="nv"> </span><span class="s">application.</span><span class="nv"> </span><span class="s">In</span><span class="nv"> </span><span class="s">AI</span><span class="nv"> </span><span class="s">systems,</span><span class="nv"> </span><span class="s">this</span><span class="nv"> </span><span class="s">represents</span>
+<span class="w">      </span><span class="s">the</span>
+
+<span class="w">      </span><span class="s">client-side</span><span class="nv"> </span><span class="s">application</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">framework</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">initiates</span><span class="nv"> </span><span class="s">requests</span><span class="nv"> </span><span class="s">(e.g.,</span><span class="nv"> </span><span class="s">LangChain</span>
+
+<span class="w">      </span><span class="s">application,</span><span class="nv"> </span><span class="s">web</span><span class="nv"> </span><span class="s">browser,</span><span class="nv"> </span><span class="s">mobile</span><span class="nv"> </span><span class="s">app,</span><span class="nv"> </span><span class="s">SDK</span><span class="nv"> </span><span class="s">implementation).'</span>
 <span class="w">    </span><span class="nt">recommended</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">completion_tokens</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">completion_tokens</span>
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Number of tokens in the model's response/completion for this message.</span>
 <span class="w">  </span><span class="nt">name</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">name</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The name or identifier of the message context. In AI systems, this</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">could be the conversation ID, session name, thread identifier, or interaction</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">name (e.g., 'user-session-123', 'conversation-abc', 'chat-thread-456').</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">name</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">identifier</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">message</span><span class="nv"> </span><span class="s">context.</span><span class="nv"> </span><span class="s">In</span><span class="nv"> </span><span class="s">AI</span><span class="nv"> </span><span class="s">systems,</span><span class="nv"> </span><span class="s">this</span>
+<span class="w">      </span><span class="s">could</span><span class="nv"> </span><span class="s">be</span><span class="nv"> </span><span class="s">the</span>
+
+<span class="w">      </span><span class="s">conversation</span><span class="nv"> </span><span class="s">ID,</span><span class="nv"> </span><span class="s">session</span><span class="nv"> </span><span class="s">name,</span><span class="nv"> </span><span class="s">thread</span><span class="nv"> </span><span class="s">identifier,</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">interaction</span><span class="nv"> </span><span class="s">name</span><span class="nv"> </span><span class="s">(e.g.,</span>
+
+<span class="w">      </span><span class="se">''</span><span class="s">user-session-123</span><span class="se">''</span><span class="s">,</span><span class="nv"> </span><span class="se">''</span><span class="s">conversation-abc</span><span class="se">''</span><span class="s">,</span><span class="nv"> </span><span class="se">''</span><span class="s">chat-thread-456</span><span class="se">''</span><span class="s">).'</span>
 <span class="w">  </span><span class="nt">prompt_tokens</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">prompt_tokens</span>
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Number of tokens in the input prompt for this message.</span>
 <span class="w">  </span><span class="nt">service</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">service</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The server or service handling the request. In AI systems, this represents</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">the AI service, API endpoint, or agent that processes and responds to requests</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">(e.g., OpenAI API service, Claude API service, internal AI model service).</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">server</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">service</span><span class="nv"> </span><span class="s">handling</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">request.</span><span class="nv"> </span><span class="s">In</span><span class="nv"> </span><span class="s">AI</span><span class="nv"> </span><span class="s">systems,</span><span class="nv"> </span><span class="s">this</span>
+<span class="w">      </span><span class="s">represents</span><span class="nv"> </span><span class="s">the</span>
+
+<span class="w">      </span><span class="s">AI</span><span class="nv"> </span><span class="s">service,</span><span class="nv"> </span><span class="s">API</span><span class="nv"> </span><span class="s">endpoint,</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">agent</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">processes</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">responds</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">requests</span>
+
+<span class="w">      </span><span class="s">(e.g.,</span><span class="nv"> </span><span class="s">OpenAI</span><span class="nv"> </span><span class="s">API</span><span class="nv"> </span><span class="s">service,</span><span class="nv"> </span><span class="s">Claude</span><span class="nv"> </span><span class="s">API</span><span class="nv"> </span><span class="s">service,</span><span class="nv"> </span><span class="s">internal</span><span class="nv"> </span><span class="s">AI</span><span class="nv"> </span><span class="s">model</span><span class="nv"> </span><span class="s">service).'</span>
 <span class="w">    </span><span class="nt">recommended</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">total_tokens</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">total_tokens</span>
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Total number of tokens used for this message (prompt + completion).</span>
 <span class="w">  </span><span class="nt">uid</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">uid</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The unique identifier of the message context. This could be a session</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">ID, conversation ID, or other unique identifier that allows correlation of messages</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">within the same context.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">unique</span><span class="nv"> </span><span class="s">identifier</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">message</span><span class="nv"> </span><span class="s">context.</span><span class="nv"> </span><span class="s">This</span><span class="nv"> </span><span class="s">could</span><span class="nv"> </span><span class="s">be</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">session</span>
+<span class="w">      </span><span class="s">ID,</span>
+
+<span class="w">      </span><span class="s">conversation</span><span class="nv"> </span><span class="s">ID,</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">other</span><span class="nv"> </span><span class="s">unique</span><span class="nv"> </span><span class="s">identifier</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">allows</span><span class="nv"> </span><span class="s">correlation</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">messages</span>
+
+<span class="w">      </span><span class="s">within</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">same</span><span class="nv"> </span><span class="s">context.'</span>
 <span class="nt">attributes</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">ai_role</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ai_role</span>
@@ -747,9 +804,12 @@
 <span class="w">      </span><span class="nt">sibling</span><span class="p">:</span>
 <span class="w">        </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">sibling</span>
 <span class="w">        </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ai_role</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Specifies the functional role of the AI within the context of this</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">message, such as retrieving information, assisting reasoning, executing a tool,</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">or generating content.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'Specifies</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">functional</span><span class="nv"> </span><span class="s">role</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">AI</span><span class="nv"> </span><span class="s">within</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">context</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">this</span>
+<span class="w">      </span><span class="s">message,</span>
+
+<span class="w">      </span><span class="s">such</span><span class="nv"> </span><span class="s">as</span><span class="nv"> </span><span class="s">retrieving</span><span class="nv"> </span><span class="s">information,</span><span class="nv"> </span><span class="s">assisting</span><span class="nv"> </span><span class="s">reasoning,</span><span class="nv"> </span><span class="s">executing</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">tool,</span><span class="nv"> </span><span class="s">or</span>
+
+<span class="w">      </span><span class="s">generating</span><span class="nv"> </span><span class="s">content.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">AI Role ID</span>
@@ -762,9 +822,12 @@
 <span class="w">    </span><span class="nt">recommended</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">application</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">application</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The initiating client application. In AI systems, this represents</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">the client-side application or framework that initiates requests (e.g., LangChain</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">application, web browser, mobile app, SDK implementation).</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">initiating</span><span class="nv"> </span><span class="s">client</span><span class="nv"> </span><span class="s">application.</span><span class="nv"> </span><span class="s">In</span><span class="nv"> </span><span class="s">AI</span><span class="nv"> </span><span class="s">systems,</span><span class="nv"> </span><span class="s">this</span><span class="nv"> </span><span class="s">represents</span>
+<span class="w">      </span><span class="s">the</span>
+
+<span class="w">      </span><span class="s">client-side</span><span class="nv"> </span><span class="s">application</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">framework</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">initiates</span><span class="nv"> </span><span class="s">requests</span><span class="nv"> </span><span class="s">(e.g.,</span><span class="nv"> </span><span class="s">LangChain</span>
+
+<span class="w">      </span><span class="s">application,</span><span class="nv"> </span><span class="s">web</span><span class="nv"> </span><span class="s">browser,</span><span class="nv"> </span><span class="s">mobile</span><span class="nv"> </span><span class="s">app,</span><span class="nv"> </span><span class="s">SDK</span><span class="nv"> </span><span class="s">implementation).'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Application</span>
@@ -790,9 +853,12 @@
 <span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">integer</span>
 <span class="w">  </span><span class="nt">name</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">name</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The name or identifier of the message context. In AI systems, this</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">could be the conversation ID, session name, thread identifier, or interaction</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">name (e.g., 'user-session-123', 'conversation-abc', 'chat-thread-456').</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">name</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">identifier</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">message</span><span class="nv"> </span><span class="s">context.</span><span class="nv"> </span><span class="s">In</span><span class="nv"> </span><span class="s">AI</span><span class="nv"> </span><span class="s">systems,</span><span class="nv"> </span><span class="s">this</span>
+<span class="w">      </span><span class="s">could</span><span class="nv"> </span><span class="s">be</span><span class="nv"> </span><span class="s">the</span>
+
+<span class="w">      </span><span class="s">conversation</span><span class="nv"> </span><span class="s">ID,</span><span class="nv"> </span><span class="s">session</span><span class="nv"> </span><span class="s">name,</span><span class="nv"> </span><span class="s">thread</span><span class="nv"> </span><span class="s">identifier,</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">interaction</span><span class="nv"> </span><span class="s">name</span><span class="nv"> </span><span class="s">(e.g.,</span>
+
+<span class="w">      </span><span class="se">''</span><span class="s">user-session-123</span><span class="se">''</span><span class="s">,</span><span class="nv"> </span><span class="se">''</span><span class="s">conversation-abc</span><span class="se">''</span><span class="s">,</span><span class="nv"> </span><span class="se">''</span><span class="s">chat-thread-456</span><span class="se">''</span><span class="s">).'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Name</span>
@@ -906,9 +972,12 @@
 <span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">integer</span>
 <span class="w">  </span><span class="nt">service</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">service</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The server or service handling the request. In AI systems, this represents</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">the AI service, API endpoint, or agent that processes and responds to requests</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">(e.g., OpenAI API service, Claude API service, internal AI model service).</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">server</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">service</span><span class="nv"> </span><span class="s">handling</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">request.</span><span class="nv"> </span><span class="s">In</span><span class="nv"> </span><span class="s">AI</span><span class="nv"> </span><span class="s">systems,</span><span class="nv"> </span><span class="s">this</span>
+<span class="w">      </span><span class="s">represents</span><span class="nv"> </span><span class="s">the</span>
+
+<span class="w">      </span><span class="s">AI</span><span class="nv"> </span><span class="s">service,</span><span class="nv"> </span><span class="s">API</span><span class="nv"> </span><span class="s">endpoint,</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">agent</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">processes</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">responds</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">requests</span>
+
+<span class="w">      </span><span class="s">(e.g.,</span><span class="nv"> </span><span class="s">OpenAI</span><span class="nv"> </span><span class="s">API</span><span class="nv"> </span><span class="s">service,</span><span class="nv"> </span><span class="s">Claude</span><span class="nv"> </span><span class="s">API</span><span class="nv"> </span><span class="s">service,</span><span class="nv"> </span><span class="s">internal</span><span class="nv"> </span><span class="s">AI</span><span class="nv"> </span><span class="s">model</span><span class="nv"> </span><span class="s">service).'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Service</span>
@@ -939,9 +1008,12 @@
 <span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">integer</span>
 <span class="w">  </span><span class="nt">uid</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">uid</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The unique identifier of the message context. This could be a session</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">ID, conversation ID, or other unique identifier that allows correlation of messages</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">within the same context.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">unique</span><span class="nv"> </span><span class="s">identifier</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">message</span><span class="nv"> </span><span class="s">context.</span><span class="nv"> </span><span class="s">This</span><span class="nv"> </span><span class="s">could</span><span class="nv"> </span><span class="s">be</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">session</span>
+<span class="w">      </span><span class="s">ID,</span>
+
+<span class="w">      </span><span class="s">conversation</span><span class="nv"> </span><span class="s">ID,</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">other</span><span class="nv"> </span><span class="s">unique</span><span class="nv"> </span><span class="s">identifier</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">allows</span><span class="nv"> </span><span class="s">correlation</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">messages</span>
+
+<span class="w">      </span><span class="s">within</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">same</span><span class="nv"> </span><span class="s">context.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Unique ID</span>

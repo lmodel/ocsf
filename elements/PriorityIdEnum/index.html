@@ -447,7 +447,8 @@
 
 
 <h1 id="enum-priorityidenum">Enum: PriorityIdEnum</h1>
-<p><em>The normalized priority. Priority identifies the relative importance of the incident or finding. It is a measurement of urgency.</em></p>
+<p><em>The normalized priority. Priority identifies the relative importance of the</em></p>
+<p><em>incident or finding. It is a measurement of urgency.</em></p>
 <p>URI: <a href="https://w3id.org/lmodel/ocsf/PriorityIdEnum">ocsf:PriorityIdEnum</a></p>
 <h2 id="permissible-values">Permissible Values</h2>
 <table>
@@ -472,7 +473,7 @@
 <tr>
 <td>MEDIUM</td>
 <td>None</td>
-<td>Non-critical function or procedure is unusable or hard to use causing operati...</td>
+<td>Non-critical function or procedure is unusable or hard to use causing</td>
 </tr>
 <tr>
 <td>HIGH</td>
@@ -514,8 +515,10 @@
 <h2 id="linkml-source">LinkML Source</h2>
 <details>
 <div class="highlight"><pre><span></span><code><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">PriorityIdEnum</span>
-<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The normalized priority. Priority identifies the relative importance</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">of the incident or finding. It is a measurement of urgency.</span>
+<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;The</span><span class="nv"> </span><span class="s">normalized</span><span class="nv"> </span><span class="s">priority.</span><span class="nv"> </span><span class="s">Priority</span><span class="nv"> </span><span class="s">identifies</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">relative</span><span class="nv"> </span><span class="s">importance</span>
+<span class="w">  </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span>
+
+<span class="w">  </span><span class="s">incident</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">finding.</span><span class="nv"> </span><span class="s">It</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">measurement</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">urgency.&#39;</span>
 <span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="nt">rank</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1000</span>
 <span class="nt">permissible_values</span><span class="p">:</span>
@@ -531,8 +534,10 @@
 <span class="w">        </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Unknown</span>
 <span class="w">  </span><span class="nt">LOW</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">text</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">LOW</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Application or personal procedure is unusable, where a workaround</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">is available or a repair is possible.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;Application</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">personal</span><span class="nv"> </span><span class="s">procedure</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">unusable,</span><span class="nv"> </span><span class="s">where</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">workaround</span>
+<span class="w">      </span><span class="s">is</span><span class="nv"> </span><span class="s">available</span>
+
+<span class="w">      </span><span class="s">or</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">repair</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">possible.&#39;</span>
 <span class="w">    </span><span class="nt">annotations</span><span class="p">:</span>
 <span class="w">      </span><span class="nt">ocsf_uid</span><span class="p">:</span>
 <span class="w">        </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ocsf_uid</span>
@@ -542,9 +547,12 @@
 <span class="w">        </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Low</span>
 <span class="w">  </span><span class="nt">MEDIUM</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">text</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">MEDIUM</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Non-critical function or procedure is unusable or hard to use causing</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">operational disruptions with no direct impact on a service&#39;s availability. A</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">workaround is available.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;Non-critical</span><span class="nv"> </span><span class="s">function</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">procedure</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">unusable</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">hard</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">use</span><span class="nv"> </span><span class="s">causing</span>
+
+<span class="w">      </span><span class="s">operational</span><span class="nv"> </span><span class="s">disruptions</span><span class="nv"> </span><span class="s">with</span><span class="nv"> </span><span class="s">no</span><span class="nv"> </span><span class="s">direct</span><span class="nv"> </span><span class="s">impact</span><span class="nv"> </span><span class="s">on</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">service</span><span class="se">&#39;&#39;</span><span class="s">s</span><span class="nv"> </span><span class="s">availability.</span>
+<span class="w">      </span><span class="s">A</span>
+
+<span class="w">      </span><span class="s">workaround</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">available.&#39;</span>
 <span class="w">    </span><span class="nt">annotations</span><span class="p">:</span>
 <span class="w">      </span><span class="nt">ocsf_uid</span><span class="p">:</span>
 <span class="w">        </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ocsf_uid</span>
@@ -554,9 +562,12 @@
 <span class="w">        </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Medium</span>
 <span class="w">  </span><span class="nt">HIGH</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">text</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">HIGH</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Critical functionality or network access is interrupted, degraded</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">or unusable, having a severe impact on services availability. No acceptable</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">alternative is possible.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;Critical</span><span class="nv"> </span><span class="s">functionality</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">network</span><span class="nv"> </span><span class="s">access</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">interrupted,</span><span class="nv"> </span><span class="s">degraded</span>
+<span class="w">      </span><span class="s">or</span><span class="nv"> </span><span class="s">unusable,</span>
+
+<span class="w">      </span><span class="s">having</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">severe</span><span class="nv"> </span><span class="s">impact</span><span class="nv"> </span><span class="s">on</span><span class="nv"> </span><span class="s">services</span><span class="nv"> </span><span class="s">availability.</span><span class="nv"> </span><span class="s">No</span><span class="nv"> </span><span class="s">acceptable</span><span class="nv"> </span><span class="s">alternative</span><span class="nv"> </span><span class="s">is</span>
+
+<span class="w">      </span><span class="s">possible.&#39;</span>
 <span class="w">    </span><span class="nt">annotations</span><span class="p">:</span>
 <span class="w">      </span><span class="nt">ocsf_uid</span><span class="p">:</span>
 <span class="w">        </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ocsf_uid</span>
@@ -566,9 +577,12 @@
 <span class="w">        </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">High</span>
 <span class="w">  </span><span class="nt">CRITICAL</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">text</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">CRITICAL</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Interruption making a critical functionality inaccessible or a complete</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">network interruption causing a severe impact on services availability. There</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">is no possible alternative.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;Interruption</span><span class="nv"> </span><span class="s">making</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">critical</span><span class="nv"> </span><span class="s">functionality</span><span class="nv"> </span><span class="s">inaccessible</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">complete</span>
+<span class="w">      </span><span class="s">network</span>
+
+<span class="w">      </span><span class="s">interruption</span><span class="nv"> </span><span class="s">causing</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">severe</span><span class="nv"> </span><span class="s">impact</span><span class="nv"> </span><span class="s">on</span><span class="nv"> </span><span class="s">services</span><span class="nv"> </span><span class="s">availability.</span><span class="nv"> </span><span class="s">There</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">no</span>
+
+<span class="w">      </span><span class="s">possible</span><span class="nv"> </span><span class="s">alternative.&#39;</span>
 <span class="w">    </span><span class="nt">annotations</span><span class="p">:</span>
 <span class="w">      </span><span class="nt">ocsf_uid</span><span class="p">:</span>
 <span class="w">        </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ocsf_uid</span>

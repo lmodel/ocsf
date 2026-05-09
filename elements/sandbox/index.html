@@ -497,7 +497,8 @@
 
 
 <h1 id="slot-sandbox">Slot: sandbox</h1>
-<p><em>The name of the containment jail (i.e., sandbox). For example, hardened_ps, high_security_ps, oracle_ps, netsvcs_ps, or default_ps.</em></p>
+<p><em>The name of the containment jail (i.e., sandbox). For example, hardened_ps,</em></p>
+<p><em>high_security_ps, oracle_ps, netsvcs_ps, or default_ps.</em></p>
 <p>URI: <a href="https://w3id.org/lmodel/ocsf/sandbox">ocsf:sandbox</a>
 Alias: sandbox</p>
 <!-- no inheritance hierarchy -->
@@ -513,23 +514,23 @@ Alias: sandbox</p>
 </thead>
 <tbody>
 <tr>
-<td><a href="../LinuxProcess/">LinuxProcess</a></td>
-<td>Extends the process object to add Linux specific fields</td>
-<td>no</td>
-</tr>
-<tr>
 <td><a href="../MacosProcess/">MacosProcess</a></td>
 <td>Extends the process object to add macOS specific fields</td>
 <td>no</td>
 </tr>
 <tr>
-<td><a href="../Process/">Process</a></td>
-<td>The Process object describes a running instance of a launched program</td>
+<td><a href="../WindowsProcess/">WindowsProcess</a></td>
+<td>Extends the process object to add Windows specific fields</td>
 <td>no</td>
 </tr>
 <tr>
-<td><a href="../WindowsProcess/">WindowsProcess</a></td>
-<td>Extends the process object to add Windows specific fields</td>
+<td><a href="../LinuxProcess/">LinuxProcess</a></td>
+<td>Extends the process object to add Linux specific fields</td>
+<td>no</td>
+</tr>
+<tr>
+<td><a href="../Process/">Process</a></td>
+<td>The Process object describes a running instance of a launched program</td>
 <td>no</td>
 </tr>
 </tbody>
@@ -600,8 +601,9 @@ Alias: sandbox</p>
 <h2 id="linkml-source">LinkML Source</h2>
 <details>
 <div class="highlight"><pre><span></span><code><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">sandbox</span>
-<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The name of the containment jail (i.e., sandbox). For example, hardened_ps,</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">high_security_ps, oracle_ps, netsvcs_ps, or default_ps.</span>
+<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;The</span><span class="nv"> </span><span class="s">name</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">containment</span><span class="nv"> </span><span class="s">jail</span><span class="nv"> </span><span class="s">(i.e.,</span><span class="nv"> </span><span class="s">sandbox).</span><span class="nv"> </span><span class="s">For</span><span class="nv"> </span><span class="s">example,</span><span class="nv"> </span><span class="s">hardened_ps,</span>
+
+<span class="w">  </span><span class="s">high_security_ps,</span><span class="nv"> </span><span class="s">oracle_ps,</span><span class="nv"> </span><span class="s">netsvcs_ps,</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">default_ps.&#39;</span>
 <span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="nt">aliases</span><span class="p">:</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Sandbox</span>

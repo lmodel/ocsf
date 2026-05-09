@@ -217,6 +217,15 @@
 </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="#in-subsets">
+<span class="md-ellipsis">
+      
+        In Subsets
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#aliases">
 <span class="md-ellipsis">
       
@@ -295,7 +304,13 @@
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
 <h1 id="class-scim">Class: Scim</h1>
-<p><em>The System for Cross-domain Identity Management (SCIM) Configuration object provides a structured set of attributes related to SCIM protocols used for identity provisioning and management across cloud-based platforms. It standardizes user and group provisioning details, enabling identity synchronization and lifecycle management with compatible Identity Providers (IdPs) and applications. SCIM is defined in <a href="https://datatracker.ietf.org/doc/html/rfc7643" target="_blank">RFC-7634</a></em></p>
+<p><em>The System for Cross-domain Identity Management (SCIM) Configuration object</em></p>
+<p><em>provides a structured set of attributes related to SCIM protocols used for</em></p>
+<p><em>identity provisioning and management across cloud-based platforms. It</em></p>
+<p><em>standardizes user and group provisioning details, enabling identity</em></p>
+<p><em>synchronization and lifecycle management with compatible Identity Providers</em></p>
+<p><em>(IdPs) and applications. SCIM is defined in &lt;a target='_blank'</em></p>
+<p><em>href='<a href="https://datatracker.ietf.org/doc/html/rfc7643">https://datatracker.ietf.org/doc/html/rfc7643</a>'&gt;RFC-7634</em></p>
 <p>URI: <a href="https://w3id.org/lmodel/ocsf/Scim">ocsf:Scim</a></p>
 <pre class="mermaid"><code> classDiagram
     class Scim
@@ -386,13 +401,13 @@
 <tr>
 <td><a href="../auth_protocol/">auth_protocol</a></td>
 <td>0..1 <br/> <a href="../String/">String</a></td>
-<td>The authorization protocol as defined by the caption of <code>auth_protocol_i...</code></td>
+<td>The authorization protocol as defined by the caption of</td>
 <td>direct</td>
 </tr>
 <tr>
 <td><a href="../auth_protocol_id/">auth_protocol_id</a></td>
 <td>0..1 <br/> <a href="../AuthProtocolIdEnum/">AuthProtocolIdEnum</a></td>
-<td>The normalized identifier of the authorization protocol used by the SCIM reso...</td>
+<td>The normalized identifier of the authorization protocol used by the SCIM</td>
 <td>direct</td>
 </tr>
 <tr>
@@ -410,13 +425,13 @@
 <tr>
 <td><a href="../is_group_provisioning_enabled/">is_group_provisioning_enabled</a></td>
 <td>0..1 <br/> <a href="../Boolean/">Boolean</a></td>
-<td>Indicates whether the SCIM resource is configured to provision groups, automa...</td>
+<td>Indicates whether the SCIM resource is configured to provision groups,</td>
 <td>direct</td>
 </tr>
 <tr>
 <td><a href="../is_user_provisioning_enabled/">is_user_provisioning_enabled</a></td>
 <td>0..1 <br/> <a href="../Boolean/">Boolean</a></td>
-<td>Indicates whether the SCIM resource is configured to provision users, automat...</td>
+<td>Indicates whether the SCIM resource is configured to provision users,</td>
 <td>direct</td>
 </tr>
 <tr>
@@ -428,7 +443,7 @@
 <tr>
 <td><a href="../modified_time/">modified_time</a></td>
 <td>0..1 <br/> <a href="../TimestampT/">TimestampT</a></td>
-<td>The most recent time when the SCIM resource was updated at the service provid...</td>
+<td>The most recent time when the SCIM resource was updated at the service</td>
 <td>direct</td>
 </tr>
 <tr>
@@ -464,7 +479,7 @@
 <tr>
 <td><a href="../state/">state</a></td>
 <td>0..1 <br/> <a href="../String/">String</a></td>
-<td>The provisioning state of the SCIM resource, normalized to the caption of the...</td>
+<td>The provisioning state of the SCIM resource, normalized to the caption of the</td>
 <td>direct</td>
 </tr>
 <tr>
@@ -524,6 +539,10 @@
 </tr>
 </tbody>
 </table>
+<h2 id="in-subsets">In Subsets</h2>
+<ul>
+<li><a href="../Objects/">Objects</a></li>
+</ul>
 <h2 id="aliases">Aliases</h2>
 <ul>
 <li>SCIM</li>
@@ -557,12 +576,22 @@
 <h3 id="direct">Direct</h3>
 <details>
 <div class="highlight"><pre><span></span><code><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Scim</span>
-<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The System for Cross-domain Identity Management (SCIM) Configuration</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">object provides a structured set of attributes related to SCIM protocols used for</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">identity provisioning and management across cloud-based platforms. It standardizes</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">user and group provisioning details, enabling identity synchronization and lifecycle</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">management with compatible Identity Providers (IdPs) and applications. SCIM is defined</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">in &lt;a target='_blank' href='https://datatracker.ietf.org/doc/html/rfc7643'&gt;RFC-7634&lt;/a&gt;</span>
+<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">System</span><span class="nv"> </span><span class="s">for</span><span class="nv"> </span><span class="s">Cross-domain</span><span class="nv"> </span><span class="s">Identity</span><span class="nv"> </span><span class="s">Management</span><span class="nv"> </span><span class="s">(SCIM)</span><span class="nv"> </span><span class="s">Configuration</span>
+<span class="w">  </span><span class="s">object</span>
+
+<span class="w">  </span><span class="s">provides</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">structured</span><span class="nv"> </span><span class="s">set</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">attributes</span><span class="nv"> </span><span class="s">related</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">SCIM</span><span class="nv"> </span><span class="s">protocols</span><span class="nv"> </span><span class="s">used</span><span class="nv"> </span><span class="s">for</span>
+
+<span class="w">  </span><span class="s">identity</span><span class="nv"> </span><span class="s">provisioning</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">management</span><span class="nv"> </span><span class="s">across</span><span class="nv"> </span><span class="s">cloud-based</span><span class="nv"> </span><span class="s">platforms.</span><span class="nv"> </span><span class="s">It</span>
+
+<span class="w">  </span><span class="s">standardizes</span><span class="nv"> </span><span class="s">user</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">group</span><span class="nv"> </span><span class="s">provisioning</span><span class="nv"> </span><span class="s">details,</span><span class="nv"> </span><span class="s">enabling</span><span class="nv"> </span><span class="s">identity</span>
+
+<span class="w">  </span><span class="s">synchronization</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">lifecycle</span><span class="nv"> </span><span class="s">management</span><span class="nv"> </span><span class="s">with</span><span class="nv"> </span><span class="s">compatible</span><span class="nv"> </span><span class="s">Identity</span><span class="nv"> </span><span class="s">Providers</span>
+
+<span class="w">  </span><span class="s">(IdPs)</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">applications.</span><span class="nv"> </span><span class="s">SCIM</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">defined</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">&lt;a</span><span class="nv"> </span><span class="s">target=</span><span class="se">''</span><span class="s">_blank</span><span class="se">''</span>
+
+<span class="w">  </span><span class="s">href=</span><span class="se">''</span><span class="s">https://datatracker.ietf.org/doc/html/rfc7643</span><span class="se">''</span><span class="s">&gt;RFC-7634&lt;/a&gt;'</span>
+<span class="nt">in_subset</span><span class="p">:</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">objects</span>
 <span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="nt">aliases</span><span class="p">:</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">SCIM</span>
@@ -591,12 +620,17 @@
 <span class="nt">slot_usage</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">auth_protocol</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">auth_protocol</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The authorization protocol as defined by the caption of &lt;code&gt;auth_protocol_id&lt;/code&gt;.</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">In the case of &lt;code&gt;Other&lt;/code&gt;, it is defined by the event source.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">authorization</span><span class="nv"> </span><span class="s">protocol</span><span class="nv"> </span><span class="s">as</span><span class="nv"> </span><span class="s">defined</span><span class="nv"> </span><span class="s">by</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">caption</span><span class="nv"> </span><span class="s">of</span>
+
+<span class="w">      </span><span class="s">&lt;code&gt;auth_protocol_id&lt;/code&gt;.</span><span class="nv"> </span><span class="s">In</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">case</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">&lt;code&gt;Other&lt;/code&gt;,</span><span class="nv"> </span><span class="s">it</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">defined</span>
+
+<span class="w">      </span><span class="s">by</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">event</span><span class="nv"> </span><span class="s">source.'</span>
 <span class="w">  </span><span class="nt">auth_protocol_id</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">auth_protocol_id</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The normalized identifier of the authorization protocol used by the</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">SCIM resource.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">normalized</span><span class="nv"> </span><span class="s">identifier</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">authorization</span><span class="nv"> </span><span class="s">protocol</span><span class="nv"> </span><span class="s">used</span><span class="nv"> </span><span class="s">by</span>
+<span class="w">      </span><span class="s">the</span><span class="nv"> </span><span class="s">SCIM</span>
+
+<span class="w">      </span><span class="s">resource.'</span>
 <span class="w">  </span><span class="nt">created_time</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">created_time</span>
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">When the SCIM resource was added to the service provider.</span>
@@ -605,31 +639,37 @@
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Message or code associated with the last encountered error.</span>
 <span class="w">  </span><span class="nt">is_group_provisioning_enabled</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">is_group_provisioning_enabled</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Indicates whether the SCIM resource is configured to provision groups,</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">automatically or otherwise.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'Indicates</span><span class="nv"> </span><span class="s">whether</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">SCIM</span><span class="nv"> </span><span class="s">resource</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">configured</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">provision</span><span class="nv"> </span><span class="s">groups,</span>
+
+<span class="w">      </span><span class="s">automatically</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">otherwise.'</span>
 <span class="w">  </span><span class="nt">is_user_provisioning_enabled</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">is_user_provisioning_enabled</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Indicates whether the SCIM resource is configured to provision users,</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">automatically or otherwise.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'Indicates</span><span class="nv"> </span><span class="s">whether</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">SCIM</span><span class="nv"> </span><span class="s">resource</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">configured</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">provision</span><span class="nv"> </span><span class="s">users,</span>
+
+<span class="w">      </span><span class="s">automatically</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">otherwise.'</span>
 <span class="w">  </span><span class="nt">last_run_time</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">last_run_time</span>
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Timestamp of the most recent successful synchronization.</span>
 <span class="w">  </span><span class="nt">modified_time</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">modified_time</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The most recent time when the SCIM resource was updated at the service</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">provider.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">most</span><span class="nv"> </span><span class="s">recent</span><span class="nv"> </span><span class="s">time</span><span class="nv"> </span><span class="s">when</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">SCIM</span><span class="nv"> </span><span class="s">resource</span><span class="nv"> </span><span class="s">was</span><span class="nv"> </span><span class="s">updated</span><span class="nv"> </span><span class="s">at</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">service</span>
+
+<span class="w">      </span><span class="s">provider.'</span>
 <span class="w">  </span><span class="nt">name</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">name</span>
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The name of the SCIM resource.</span>
 <span class="w">    </span><span class="nt">recommended</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">protocol_name</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">protocol_name</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The supported protocol for the SCIM resource. E.g., &lt;code&gt;SAML&lt;/code&gt;,</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">&lt;code&gt;OIDC&lt;/code&gt;, or &lt;code&gt;OAuth2&lt;/code&gt;.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">supported</span><span class="nv"> </span><span class="s">protocol</span><span class="nv"> </span><span class="s">for</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">SCIM</span><span class="nv"> </span><span class="s">resource.</span><span class="nv"> </span><span class="s">E.g.,</span><span class="nv"> </span><span class="s">&lt;code&gt;SAML&lt;/code&gt;,</span>
+
+<span class="w">      </span><span class="s">&lt;code&gt;OIDC&lt;/code&gt;,</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">&lt;code&gt;OAuth2&lt;/code&gt;.'</span>
 <span class="w">  </span><span class="nt">rate_limit</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">rate_limit</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Maximum number of requests allowed by the SCIM resource within a</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">specified time frame to avoid throttling.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'Maximum</span><span class="nv"> </span><span class="s">number</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">requests</span><span class="nv"> </span><span class="s">allowed</span><span class="nv"> </span><span class="s">by</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">SCIM</span><span class="nv"> </span><span class="s">resource</span><span class="nv"> </span><span class="s">within</span><span class="nv"> </span><span class="s">a</span>
+<span class="w">      </span><span class="s">specified</span><span class="nv"> </span><span class="s">time</span>
+
+<span class="w">      </span><span class="s">frame</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">avoid</span><span class="nv"> </span><span class="s">throttling.'</span>
 <span class="w">  </span><span class="nt">scim_group_schema</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">scim_group_schema</span>
 <span class="w">    </span><span class="nt">recommended</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
@@ -638,9 +678,12 @@
 <span class="w">    </span><span class="nt">recommended</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">state</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">state</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The provisioning state of the SCIM resource, normalized to the caption</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">of the &lt;code&gt;state_id&lt;/code&gt; value. In the case of &lt;code&gt;Other&lt;/code&gt;, it is</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">defined by the event source.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">provisioning</span><span class="nv"> </span><span class="s">state</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">SCIM</span><span class="nv"> </span><span class="s">resource,</span><span class="nv"> </span><span class="s">normalized</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">caption</span>
+<span class="w">      </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span>
+
+<span class="w">      </span><span class="s">&lt;code&gt;state_id&lt;/code&gt;</span><span class="nv"> </span><span class="s">value.</span><span class="nv"> </span><span class="s">In</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">case</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">&lt;code&gt;Other&lt;/code&gt;,</span><span class="nv"> </span><span class="s">it</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">defined</span>
+
+<span class="w">      </span><span class="s">by</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">event</span><span class="nv"> </span><span class="s">source.'</span>
 <span class="w">  </span><span class="nt">state_id</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">state_id</span>
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The normalized state ID of the SCIM resource to reflect its activation</span>
@@ -653,20 +696,28 @@
 <span class="w">    </span><span class="nt">recommended</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">uid_alt</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">uid_alt</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">A String that is an identifier for the resource as defined by the</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">provisioning client. The &lt;code&gt;externalId&lt;/code&gt; may simplify identification</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">of a resource between the provisioning client and the service provider by allowing</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">the client to use a filter to locate the resource with an identifier from the</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">provisioning domain, obviating the need to store a local mapping between the</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">provisioning domain's identifier of the resource and the identifier used by</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">the service provider.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'A</span><span class="nv"> </span><span class="s">String</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">an</span><span class="nv"> </span><span class="s">identifier</span><span class="nv"> </span><span class="s">for</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">resource</span><span class="nv"> </span><span class="s">as</span><span class="nv"> </span><span class="s">defined</span><span class="nv"> </span><span class="s">by</span><span class="nv"> </span><span class="s">the</span>
+<span class="w">      </span><span class="s">provisioning</span>
+
+<span class="w">      </span><span class="s">client.</span><span class="nv"> </span><span class="s">The</span><span class="nv"> </span><span class="s">&lt;code&gt;externalId&lt;/code&gt;</span><span class="nv"> </span><span class="s">may</span><span class="nv"> </span><span class="s">simplify</span><span class="nv"> </span><span class="s">identification</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">resource</span>
+
+<span class="w">      </span><span class="s">between</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">provisioning</span><span class="nv"> </span><span class="s">client</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">service</span><span class="nv"> </span><span class="s">provider</span><span class="nv"> </span><span class="s">by</span><span class="nv"> </span><span class="s">allowing</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">client</span>
+
+<span class="w">      </span><span class="s">to</span><span class="nv"> </span><span class="s">use</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">filter</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">locate</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">resource</span><span class="nv"> </span><span class="s">with</span><span class="nv"> </span><span class="s">an</span><span class="nv"> </span><span class="s">identifier</span><span class="nv"> </span><span class="s">from</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">provisioning</span>
+
+<span class="w">      </span><span class="s">domain,</span><span class="nv"> </span><span class="s">obviating</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">need</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">store</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">local</span><span class="nv"> </span><span class="s">mapping</span><span class="nv"> </span><span class="s">between</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">provisioning</span>
+
+<span class="w">      </span><span class="s">domain</span><span class="se">''</span><span class="s">s</span><span class="nv"> </span><span class="s">identifier</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">resource</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">identifier</span><span class="nv"> </span><span class="s">used</span><span class="nv"> </span><span class="s">by</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">service</span>
+
+<span class="w">      </span><span class="s">provider.'</span>
 <span class="w">  </span><span class="nt">url_string</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">url_string</span>
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The primary URL for SCIM API requests.</span>
 <span class="w">  </span><span class="nt">vendor_name</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">vendor_name</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Name of the vendor or service provider implementing SCIM. E.g., &lt;code&gt;Okta&lt;/code&gt;,</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">&lt;code&gt;Auth0&lt;/code&gt;, &lt;code&gt;Microsoft&lt;/code&gt;.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'Name</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">vendor</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">service</span><span class="nv"> </span><span class="s">provider</span><span class="nv"> </span><span class="s">implementing</span><span class="nv"> </span><span class="s">SCIM.</span><span class="nv"> </span><span class="s">E.g.,</span>
+
+<span class="w">      </span><span class="s">&lt;code&gt;Okta&lt;/code&gt;,</span><span class="nv"> </span><span class="s">&lt;code&gt;Auth0&lt;/code&gt;,</span><span class="nv"> </span><span class="s">&lt;code&gt;Microsoft&lt;/code&gt;.'</span>
 <span class="w">  </span><span class="nt">version</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">version</span>
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">SCIM protocol version supported e.g., &lt;code&gt;SCIM 2.0&lt;/code&gt;.</span>
@@ -676,12 +727,22 @@
 <h3 id="induced">Induced</h3>
 <details>
 <div class="highlight"><pre><span></span><code><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Scim</span>
-<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The System for Cross-domain Identity Management (SCIM) Configuration</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">object provides a structured set of attributes related to SCIM protocols used for</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">identity provisioning and management across cloud-based platforms. It standardizes</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">user and group provisioning details, enabling identity synchronization and lifecycle</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">management with compatible Identity Providers (IdPs) and applications. SCIM is defined</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">in &lt;a target='_blank' href='https://datatracker.ietf.org/doc/html/rfc7643'&gt;RFC-7634&lt;/a&gt;</span>
+<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">System</span><span class="nv"> </span><span class="s">for</span><span class="nv"> </span><span class="s">Cross-domain</span><span class="nv"> </span><span class="s">Identity</span><span class="nv"> </span><span class="s">Management</span><span class="nv"> </span><span class="s">(SCIM)</span><span class="nv"> </span><span class="s">Configuration</span>
+<span class="w">  </span><span class="s">object</span>
+
+<span class="w">  </span><span class="s">provides</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">structured</span><span class="nv"> </span><span class="s">set</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">attributes</span><span class="nv"> </span><span class="s">related</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">SCIM</span><span class="nv"> </span><span class="s">protocols</span><span class="nv"> </span><span class="s">used</span><span class="nv"> </span><span class="s">for</span>
+
+<span class="w">  </span><span class="s">identity</span><span class="nv"> </span><span class="s">provisioning</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">management</span><span class="nv"> </span><span class="s">across</span><span class="nv"> </span><span class="s">cloud-based</span><span class="nv"> </span><span class="s">platforms.</span><span class="nv"> </span><span class="s">It</span>
+
+<span class="w">  </span><span class="s">standardizes</span><span class="nv"> </span><span class="s">user</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">group</span><span class="nv"> </span><span class="s">provisioning</span><span class="nv"> </span><span class="s">details,</span><span class="nv"> </span><span class="s">enabling</span><span class="nv"> </span><span class="s">identity</span>
+
+<span class="w">  </span><span class="s">synchronization</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">lifecycle</span><span class="nv"> </span><span class="s">management</span><span class="nv"> </span><span class="s">with</span><span class="nv"> </span><span class="s">compatible</span><span class="nv"> </span><span class="s">Identity</span><span class="nv"> </span><span class="s">Providers</span>
+
+<span class="w">  </span><span class="s">(IdPs)</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">applications.</span><span class="nv"> </span><span class="s">SCIM</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">defined</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">&lt;a</span><span class="nv"> </span><span class="s">target=</span><span class="se">''</span><span class="s">_blank</span><span class="se">''</span>
+
+<span class="w">  </span><span class="s">href=</span><span class="se">''</span><span class="s">https://datatracker.ietf.org/doc/html/rfc7643</span><span class="se">''</span><span class="s">&gt;RFC-7634&lt;/a&gt;'</span>
+<span class="nt">in_subset</span><span class="p">:</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">objects</span>
 <span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="nt">aliases</span><span class="p">:</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">SCIM</span>
@@ -689,12 +750,17 @@
 <span class="nt">slot_usage</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">auth_protocol</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">auth_protocol</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The authorization protocol as defined by the caption of &lt;code&gt;auth_protocol_id&lt;/code&gt;.</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">In the case of &lt;code&gt;Other&lt;/code&gt;, it is defined by the event source.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">authorization</span><span class="nv"> </span><span class="s">protocol</span><span class="nv"> </span><span class="s">as</span><span class="nv"> </span><span class="s">defined</span><span class="nv"> </span><span class="s">by</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">caption</span><span class="nv"> </span><span class="s">of</span>
+
+<span class="w">      </span><span class="s">&lt;code&gt;auth_protocol_id&lt;/code&gt;.</span><span class="nv"> </span><span class="s">In</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">case</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">&lt;code&gt;Other&lt;/code&gt;,</span><span class="nv"> </span><span class="s">it</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">defined</span>
+
+<span class="w">      </span><span class="s">by</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">event</span><span class="nv"> </span><span class="s">source.'</span>
 <span class="w">  </span><span class="nt">auth_protocol_id</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">auth_protocol_id</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The normalized identifier of the authorization protocol used by the</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">SCIM resource.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">normalized</span><span class="nv"> </span><span class="s">identifier</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">authorization</span><span class="nv"> </span><span class="s">protocol</span><span class="nv"> </span><span class="s">used</span><span class="nv"> </span><span class="s">by</span>
+<span class="w">      </span><span class="s">the</span><span class="nv"> </span><span class="s">SCIM</span>
+
+<span class="w">      </span><span class="s">resource.'</span>
 <span class="w">  </span><span class="nt">created_time</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">created_time</span>
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">When the SCIM resource was added to the service provider.</span>
@@ -703,31 +769,37 @@
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Message or code associated with the last encountered error.</span>
 <span class="w">  </span><span class="nt">is_group_provisioning_enabled</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">is_group_provisioning_enabled</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Indicates whether the SCIM resource is configured to provision groups,</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">automatically or otherwise.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'Indicates</span><span class="nv"> </span><span class="s">whether</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">SCIM</span><span class="nv"> </span><span class="s">resource</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">configured</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">provision</span><span class="nv"> </span><span class="s">groups,</span>
+
+<span class="w">      </span><span class="s">automatically</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">otherwise.'</span>
 <span class="w">  </span><span class="nt">is_user_provisioning_enabled</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">is_user_provisioning_enabled</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Indicates whether the SCIM resource is configured to provision users,</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">automatically or otherwise.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'Indicates</span><span class="nv"> </span><span class="s">whether</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">SCIM</span><span class="nv"> </span><span class="s">resource</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">configured</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">provision</span><span class="nv"> </span><span class="s">users,</span>
+
+<span class="w">      </span><span class="s">automatically</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">otherwise.'</span>
 <span class="w">  </span><span class="nt">last_run_time</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">last_run_time</span>
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Timestamp of the most recent successful synchronization.</span>
 <span class="w">  </span><span class="nt">modified_time</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">modified_time</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The most recent time when the SCIM resource was updated at the service</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">provider.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">most</span><span class="nv"> </span><span class="s">recent</span><span class="nv"> </span><span class="s">time</span><span class="nv"> </span><span class="s">when</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">SCIM</span><span class="nv"> </span><span class="s">resource</span><span class="nv"> </span><span class="s">was</span><span class="nv"> </span><span class="s">updated</span><span class="nv"> </span><span class="s">at</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">service</span>
+
+<span class="w">      </span><span class="s">provider.'</span>
 <span class="w">  </span><span class="nt">name</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">name</span>
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The name of the SCIM resource.</span>
 <span class="w">    </span><span class="nt">recommended</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">protocol_name</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">protocol_name</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The supported protocol for the SCIM resource. E.g., &lt;code&gt;SAML&lt;/code&gt;,</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">&lt;code&gt;OIDC&lt;/code&gt;, or &lt;code&gt;OAuth2&lt;/code&gt;.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">supported</span><span class="nv"> </span><span class="s">protocol</span><span class="nv"> </span><span class="s">for</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">SCIM</span><span class="nv"> </span><span class="s">resource.</span><span class="nv"> </span><span class="s">E.g.,</span><span class="nv"> </span><span class="s">&lt;code&gt;SAML&lt;/code&gt;,</span>
+
+<span class="w">      </span><span class="s">&lt;code&gt;OIDC&lt;/code&gt;,</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">&lt;code&gt;OAuth2&lt;/code&gt;.'</span>
 <span class="w">  </span><span class="nt">rate_limit</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">rate_limit</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Maximum number of requests allowed by the SCIM resource within a</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">specified time frame to avoid throttling.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'Maximum</span><span class="nv"> </span><span class="s">number</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">requests</span><span class="nv"> </span><span class="s">allowed</span><span class="nv"> </span><span class="s">by</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">SCIM</span><span class="nv"> </span><span class="s">resource</span><span class="nv"> </span><span class="s">within</span><span class="nv"> </span><span class="s">a</span>
+<span class="w">      </span><span class="s">specified</span><span class="nv"> </span><span class="s">time</span>
+
+<span class="w">      </span><span class="s">frame</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">avoid</span><span class="nv"> </span><span class="s">throttling.'</span>
 <span class="w">  </span><span class="nt">scim_group_schema</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">scim_group_schema</span>
 <span class="w">    </span><span class="nt">recommended</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
@@ -736,9 +808,12 @@
 <span class="w">    </span><span class="nt">recommended</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">state</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">state</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The provisioning state of the SCIM resource, normalized to the caption</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">of the &lt;code&gt;state_id&lt;/code&gt; value. In the case of &lt;code&gt;Other&lt;/code&gt;, it is</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">defined by the event source.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">provisioning</span><span class="nv"> </span><span class="s">state</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">SCIM</span><span class="nv"> </span><span class="s">resource,</span><span class="nv"> </span><span class="s">normalized</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">caption</span>
+<span class="w">      </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span>
+
+<span class="w">      </span><span class="s">&lt;code&gt;state_id&lt;/code&gt;</span><span class="nv"> </span><span class="s">value.</span><span class="nv"> </span><span class="s">In</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">case</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">&lt;code&gt;Other&lt;/code&gt;,</span><span class="nv"> </span><span class="s">it</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">defined</span>
+
+<span class="w">      </span><span class="s">by</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">event</span><span class="nv"> </span><span class="s">source.'</span>
 <span class="w">  </span><span class="nt">state_id</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">state_id</span>
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The normalized state ID of the SCIM resource to reflect its activation</span>
@@ -751,20 +826,28 @@
 <span class="w">    </span><span class="nt">recommended</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">uid_alt</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">uid_alt</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">A String that is an identifier for the resource as defined by the</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">provisioning client. The &lt;code&gt;externalId&lt;/code&gt; may simplify identification</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">of a resource between the provisioning client and the service provider by allowing</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">the client to use a filter to locate the resource with an identifier from the</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">provisioning domain, obviating the need to store a local mapping between the</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">provisioning domain's identifier of the resource and the identifier used by</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">the service provider.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'A</span><span class="nv"> </span><span class="s">String</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">an</span><span class="nv"> </span><span class="s">identifier</span><span class="nv"> </span><span class="s">for</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">resource</span><span class="nv"> </span><span class="s">as</span><span class="nv"> </span><span class="s">defined</span><span class="nv"> </span><span class="s">by</span><span class="nv"> </span><span class="s">the</span>
+<span class="w">      </span><span class="s">provisioning</span>
+
+<span class="w">      </span><span class="s">client.</span><span class="nv"> </span><span class="s">The</span><span class="nv"> </span><span class="s">&lt;code&gt;externalId&lt;/code&gt;</span><span class="nv"> </span><span class="s">may</span><span class="nv"> </span><span class="s">simplify</span><span class="nv"> </span><span class="s">identification</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">resource</span>
+
+<span class="w">      </span><span class="s">between</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">provisioning</span><span class="nv"> </span><span class="s">client</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">service</span><span class="nv"> </span><span class="s">provider</span><span class="nv"> </span><span class="s">by</span><span class="nv"> </span><span class="s">allowing</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">client</span>
+
+<span class="w">      </span><span class="s">to</span><span class="nv"> </span><span class="s">use</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">filter</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">locate</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">resource</span><span class="nv"> </span><span class="s">with</span><span class="nv"> </span><span class="s">an</span><span class="nv"> </span><span class="s">identifier</span><span class="nv"> </span><span class="s">from</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">provisioning</span>
+
+<span class="w">      </span><span class="s">domain,</span><span class="nv"> </span><span class="s">obviating</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">need</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">store</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">local</span><span class="nv"> </span><span class="s">mapping</span><span class="nv"> </span><span class="s">between</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">provisioning</span>
+
+<span class="w">      </span><span class="s">domain</span><span class="se">''</span><span class="s">s</span><span class="nv"> </span><span class="s">identifier</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">resource</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">identifier</span><span class="nv"> </span><span class="s">used</span><span class="nv"> </span><span class="s">by</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">service</span>
+
+<span class="w">      </span><span class="s">provider.'</span>
 <span class="w">  </span><span class="nt">url_string</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">url_string</span>
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The primary URL for SCIM API requests.</span>
 <span class="w">  </span><span class="nt">vendor_name</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">vendor_name</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Name of the vendor or service provider implementing SCIM. E.g., &lt;code&gt;Okta&lt;/code&gt;,</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">&lt;code&gt;Auth0&lt;/code&gt;, &lt;code&gt;Microsoft&lt;/code&gt;.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'Name</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">vendor</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">service</span><span class="nv"> </span><span class="s">provider</span><span class="nv"> </span><span class="s">implementing</span><span class="nv"> </span><span class="s">SCIM.</span><span class="nv"> </span><span class="s">E.g.,</span>
+
+<span class="w">      </span><span class="s">&lt;code&gt;Okta&lt;/code&gt;,</span><span class="nv"> </span><span class="s">&lt;code&gt;Auth0&lt;/code&gt;,</span><span class="nv"> </span><span class="s">&lt;code&gt;Microsoft&lt;/code&gt;.'</span>
 <span class="w">  </span><span class="nt">version</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">version</span>
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">SCIM protocol version supported e.g., &lt;code&gt;SCIM 2.0&lt;/code&gt;.</span>
@@ -772,8 +855,11 @@
 <span class="nt">attributes</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">auth_protocol</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">auth_protocol</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The authorization protocol as defined by the caption of &lt;code&gt;auth_protocol_id&lt;/code&gt;.</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">In the case of &lt;code&gt;Other&lt;/code&gt;, it is defined by the event source.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">authorization</span><span class="nv"> </span><span class="s">protocol</span><span class="nv"> </span><span class="s">as</span><span class="nv"> </span><span class="s">defined</span><span class="nv"> </span><span class="s">by</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">caption</span><span class="nv"> </span><span class="s">of</span>
+
+<span class="w">      </span><span class="s">&lt;code&gt;auth_protocol_id&lt;/code&gt;.</span><span class="nv"> </span><span class="s">In</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">case</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">&lt;code&gt;Other&lt;/code&gt;,</span><span class="nv"> </span><span class="s">it</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">defined</span>
+
+<span class="w">      </span><span class="s">by</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">event</span><span class="nv"> </span><span class="s">source.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Auth Protocol</span>
@@ -792,8 +878,10 @@
 <span class="w">      </span><span class="nt">sibling</span><span class="p">:</span>
 <span class="w">        </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">sibling</span>
 <span class="w">        </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">auth_protocol</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The normalized identifier of the authorization protocol used by the</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">SCIM resource.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">normalized</span><span class="nv"> </span><span class="s">identifier</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">authorization</span><span class="nv"> </span><span class="s">protocol</span><span class="nv"> </span><span class="s">used</span><span class="nv"> </span><span class="s">by</span>
+<span class="w">      </span><span class="s">the</span><span class="nv"> </span><span class="s">SCIM</span>
+
+<span class="w">      </span><span class="s">resource.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Auth Protocol ID</span>
@@ -860,8 +948,9 @@
 <span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">string</span>
 <span class="w">  </span><span class="nt">is_group_provisioning_enabled</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">is_group_provisioning_enabled</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Indicates whether the SCIM resource is configured to provision groups,</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">automatically or otherwise.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'Indicates</span><span class="nv"> </span><span class="s">whether</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">SCIM</span><span class="nv"> </span><span class="s">resource</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">configured</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">provision</span><span class="nv"> </span><span class="s">groups,</span>
+
+<span class="w">      </span><span class="s">automatically</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">otherwise.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Group Provisioning Enabled</span>
@@ -873,8 +962,9 @@
 <span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">boolean</span>
 <span class="w">  </span><span class="nt">is_user_provisioning_enabled</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">is_user_provisioning_enabled</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Indicates whether the SCIM resource is configured to provision users,</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">automatically or otherwise.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'Indicates</span><span class="nv"> </span><span class="s">whether</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">SCIM</span><span class="nv"> </span><span class="s">resource</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">configured</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">provision</span><span class="nv"> </span><span class="s">users,</span>
+
+<span class="w">      </span><span class="s">automatically</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">otherwise.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">User Provisioning Enabled</span>
@@ -900,8 +990,9 @@
 <span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">TimestampT</span>
 <span class="w">  </span><span class="nt">modified_time</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">modified_time</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The most recent time when the SCIM resource was updated at the service</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">provider.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">most</span><span class="nv"> </span><span class="s">recent</span><span class="nv"> </span><span class="s">time</span><span class="nv"> </span><span class="s">when</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">SCIM</span><span class="nv"> </span><span class="s">resource</span><span class="nv"> </span><span class="s">was</span><span class="nv"> </span><span class="s">updated</span><span class="nv"> </span><span class="s">at</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">service</span>
+
+<span class="w">      </span><span class="s">provider.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Modified Time</span>
@@ -1033,8 +1124,9 @@
 <span class="w">    </span><span class="nt">recommended</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">protocol_name</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">protocol_name</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The supported protocol for the SCIM resource. E.g., &lt;code&gt;SAML&lt;/code&gt;,</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">&lt;code&gt;OIDC&lt;/code&gt;, or &lt;code&gt;OAuth2&lt;/code&gt;.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">supported</span><span class="nv"> </span><span class="s">protocol</span><span class="nv"> </span><span class="s">for</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">SCIM</span><span class="nv"> </span><span class="s">resource.</span><span class="nv"> </span><span class="s">E.g.,</span><span class="nv"> </span><span class="s">&lt;code&gt;SAML&lt;/code&gt;,</span>
+
+<span class="w">      </span><span class="s">&lt;code&gt;OIDC&lt;/code&gt;,</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">&lt;code&gt;OAuth2&lt;/code&gt;.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Protocol Name</span>
@@ -1054,8 +1146,10 @@
 <span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">string</span>
 <span class="w">  </span><span class="nt">rate_limit</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">rate_limit</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Maximum number of requests allowed by the SCIM resource within a</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">specified time frame to avoid throttling.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'Maximum</span><span class="nv"> </span><span class="s">number</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">requests</span><span class="nv"> </span><span class="s">allowed</span><span class="nv"> </span><span class="s">by</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">SCIM</span><span class="nv"> </span><span class="s">resource</span><span class="nv"> </span><span class="s">within</span><span class="nv"> </span><span class="s">a</span>
+<span class="w">      </span><span class="s">specified</span><span class="nv"> </span><span class="s">time</span>
+
+<span class="w">      </span><span class="s">frame</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">avoid</span><span class="nv"> </span><span class="s">throttling.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Rate Limit</span>
@@ -1069,12 +1163,21 @@
 <span class="w">  </span><span class="nt">scim_group_schema</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">scim_group_schema</span>
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'SCIM</span><span class="nv"> </span><span class="s">provides</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">schema</span><span class="nv"> </span><span class="s">for</span><span class="nv"> </span><span class="s">representing</span><span class="nv"> </span><span class="s">groups,</span><span class="nv"> </span><span class="s">identified</span><span class="nv"> </span><span class="s">using</span>
-<span class="w">      </span><span class="s">the</span><span class="nv"> </span><span class="s">following</span><span class="nv"> </span><span class="s">schema</span><span class="nv"> </span><span class="s">URI:</span><span class="nv"> </span><span class="s">&lt;code&gt;urn:ietf:params:scim:schemas:core:2.0:Group&lt;/code&gt;</span>
-<span class="w">      </span><span class="s">as</span><span class="nv"> </span><span class="s">defined</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">&lt;a</span><span class="nv"> </span><span class="s">target=</span><span class="se">''</span><span class="s">_blank</span><span class="se">''</span><span class="nv"> </span><span class="s">href=</span><span class="se">''</span><span class="s">https://datatracker.ietf.org/doc/html/rfc7643</span><span class="se">''</span><span class="s">&gt;RFC-7634&lt;/a&gt;.</span>
-<span class="w">      </span><span class="s">This</span><span class="nv"> </span><span class="s">attribute</span><span class="nv"> </span><span class="s">will</span><span class="nv"> </span><span class="s">capture</span><span class="nv"> </span><span class="s">key-value</span><span class="nv"> </span><span class="s">pairs</span><span class="nv"> </span><span class="s">for</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">scheme</span><span class="nv"> </span><span class="s">implemented</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">a</span>
-<span class="w">      </span><span class="s">SCIM</span><span class="nv"> </span><span class="s">resource.'</span>
+<span class="w">      </span><span class="s">the</span><span class="nv"> </span><span class="s">following</span>
+
+<span class="w">      </span><span class="s">schema</span><span class="nv"> </span><span class="s">URI:</span><span class="nv"> </span><span class="s">&lt;code&gt;urn:ietf:params:scim:schemas:core:2.0:Group&lt;/code&gt;</span><span class="nv"> </span><span class="s">as</span><span class="nv"> </span><span class="s">defined</span>
+
+<span class="w">      </span><span class="s">in</span><span class="nv"> </span><span class="s">&lt;a</span><span class="nv"> </span><span class="s">target=</span><span class="se">''</span><span class="s">_blank</span><span class="se">''</span>
+
+<span class="w">      </span><span class="s">href=</span><span class="se">''</span><span class="s">https://datatracker.ietf.org/doc/html/rfc7643</span><span class="se">''</span><span class="s">&gt;RFC-7634&lt;/a&gt;.</span><span class="nv"> </span><span class="s">This</span>
+
+<span class="w">      </span><span class="s">attribute</span><span class="nv"> </span><span class="s">will</span><span class="nv"> </span><span class="s">capture</span><span class="nv"> </span><span class="s">key-value</span><span class="nv"> </span><span class="s">pairs</span><span class="nv"> </span><span class="s">for</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">scheme</span><span class="nv"> </span><span class="s">implemented</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">SCIM</span>
+
+<span class="w">      </span><span class="s">resource.'</span>
 <span class="w">    </span><span class="nt">notes</span><span class="p">:</span>
-<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">System for Cross-domain Identity Management (SCIM) RFC spec. — https://datatracker.ietf.org/doc/html/rfc7643</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">'System</span><span class="nv"> </span><span class="s">for</span><span class="nv"> </span><span class="s">Cross-domain</span><span class="nv"> </span><span class="s">Identity</span><span class="nv"> </span><span class="s">Management</span><span class="nv"> </span><span class="s">(SCIM)</span><span class="nv"> </span><span class="s">RFC</span><span class="nv"> </span><span class="s">spec.</span><span class="nv"> </span><span class="s">—</span>
+
+<span class="w">      </span><span class="s">https://datatracker.ietf.org/doc/html/rfc7643'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">see_also</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://datatracker.ietf.org/doc/html/rfc7643</span>
@@ -1090,13 +1193,25 @@
 <span class="w">  </span><span class="nt">scim_user_schema</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">scim_user_schema</span>
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'SCIM</span><span class="nv"> </span><span class="s">provides</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">resource</span><span class="nv"> </span><span class="s">type</span><span class="nv"> </span><span class="s">for</span><span class="nv"> </span><span class="s">user</span><span class="nv"> </span><span class="s">resources.</span><span class="nv"> </span><span class="s">The</span><span class="nv"> </span><span class="s">core</span><span class="nv"> </span><span class="s">schema</span>
-<span class="w">      </span><span class="s">for</span><span class="nv"> </span><span class="s">user</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">identified</span><span class="nv"> </span><span class="s">using</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">following</span><span class="nv"> </span><span class="s">schema</span><span class="nv"> </span><span class="s">URI:</span><span class="nv"> </span><span class="s">&lt;code&gt;urn:ietf:params:scim:schemas:core:2.0:User&lt;/code&gt;</span>
-<span class="w">      </span><span class="s">as</span><span class="nv"> </span><span class="s">defined</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">&lt;a</span><span class="nv"> </span><span class="s">target=</span><span class="se">''</span><span class="s">_blank</span><span class="se">''</span><span class="nv"> </span><span class="s">href=</span><span class="se">''</span><span class="s">https://datatracker.ietf.org/doc/html/rfc7643</span><span class="se">''</span><span class="s">&gt;RFC-7634&lt;/a&gt;.</span>
-<span class="w">      </span><span class="s">his</span><span class="nv"> </span><span class="s">attribute</span><span class="nv"> </span><span class="s">will</span><span class="nv"> </span><span class="s">capture</span><span class="nv"> </span><span class="s">key-value</span><span class="nv"> </span><span class="s">pairs</span><span class="nv"> </span><span class="s">for</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">scheme</span><span class="nv"> </span><span class="s">implemented</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">SCIM</span>
+<span class="w">      </span><span class="s">for</span><span class="nv"> </span><span class="s">user</span><span class="nv"> </span><span class="s">is</span>
+
+<span class="w">      </span><span class="s">identified</span><span class="nv"> </span><span class="s">using</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">following</span><span class="nv"> </span><span class="s">schema</span><span class="nv"> </span><span class="s">URI:</span>
+
+<span class="w">      </span><span class="s">&lt;code&gt;urn:ietf:params:scim:schemas:core:2.0:User&lt;/code&gt;</span><span class="nv"> </span><span class="s">as</span><span class="nv"> </span><span class="s">defined</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">&lt;a</span>
+
+<span class="w">      </span><span class="s">target=</span><span class="se">''</span><span class="s">_blank</span><span class="se">''</span>
+
+<span class="w">      </span><span class="s">href=</span><span class="se">''</span><span class="s">https://datatracker.ietf.org/doc/html/rfc7643</span><span class="se">''</span><span class="s">&gt;RFC-7634&lt;/a&gt;.</span><span class="nv"> </span><span class="s">his</span>
+
+<span class="w">      </span><span class="s">attribute</span><span class="nv"> </span><span class="s">will</span><span class="nv"> </span><span class="s">capture</span><span class="nv"> </span><span class="s">key-value</span><span class="nv"> </span><span class="s">pairs</span><span class="nv"> </span><span class="s">for</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">scheme</span><span class="nv"> </span><span class="s">implemented</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">SCIM</span>
+
 <span class="w">      </span><span class="s">resource.</span><span class="nv"> </span><span class="s">This</span><span class="nv"> </span><span class="s">object</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">inclusive</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">both</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">basic</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">Enterprise</span><span class="nv"> </span><span class="s">User</span><span class="nv"> </span><span class="s">Schema</span>
+
 <span class="w">      </span><span class="s">Extension.'</span>
 <span class="w">    </span><span class="nt">notes</span><span class="p">:</span>
-<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">System for Cross-domain Identity Management (SCIM) RFC spec. — https://datatracker.ietf.org/doc/html/rfc7643</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">'System</span><span class="nv"> </span><span class="s">for</span><span class="nv"> </span><span class="s">Cross-domain</span><span class="nv"> </span><span class="s">Identity</span><span class="nv"> </span><span class="s">Management</span><span class="nv"> </span><span class="s">(SCIM)</span><span class="nv"> </span><span class="s">RFC</span><span class="nv"> </span><span class="s">spec.</span><span class="nv"> </span><span class="s">—</span>
+
+<span class="w">      </span><span class="s">https://datatracker.ietf.org/doc/html/rfc7643'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">see_also</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://datatracker.ietf.org/doc/html/rfc7643</span>
@@ -1111,9 +1226,12 @@
 <span class="w">    </span><span class="nt">recommended</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">state</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">state</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The provisioning state of the SCIM resource, normalized to the caption</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">of the &lt;code&gt;state_id&lt;/code&gt; value. In the case of &lt;code&gt;Other&lt;/code&gt;, it is</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">defined by the event source.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">provisioning</span><span class="nv"> </span><span class="s">state</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">SCIM</span><span class="nv"> </span><span class="s">resource,</span><span class="nv"> </span><span class="s">normalized</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">caption</span>
+<span class="w">      </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span>
+
+<span class="w">      </span><span class="s">&lt;code&gt;state_id&lt;/code&gt;</span><span class="nv"> </span><span class="s">value.</span><span class="nv"> </span><span class="s">In</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">case</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">&lt;code&gt;Other&lt;/code&gt;,</span><span class="nv"> </span><span class="s">it</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">defined</span>
+
+<span class="w">      </span><span class="s">by</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">event</span><span class="nv"> </span><span class="s">source.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">State</span>
@@ -1253,13 +1371,20 @@
 <span class="w">    </span><span class="nt">recommended</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">uid_alt</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">uid_alt</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">A String that is an identifier for the resource as defined by the</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">provisioning client. The &lt;code&gt;externalId&lt;/code&gt; may simplify identification</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">of a resource between the provisioning client and the service provider by allowing</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">the client to use a filter to locate the resource with an identifier from the</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">provisioning domain, obviating the need to store a local mapping between the</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">provisioning domain's identifier of the resource and the identifier used by</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">the service provider.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'A</span><span class="nv"> </span><span class="s">String</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">an</span><span class="nv"> </span><span class="s">identifier</span><span class="nv"> </span><span class="s">for</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">resource</span><span class="nv"> </span><span class="s">as</span><span class="nv"> </span><span class="s">defined</span><span class="nv"> </span><span class="s">by</span><span class="nv"> </span><span class="s">the</span>
+<span class="w">      </span><span class="s">provisioning</span>
+
+<span class="w">      </span><span class="s">client.</span><span class="nv"> </span><span class="s">The</span><span class="nv"> </span><span class="s">&lt;code&gt;externalId&lt;/code&gt;</span><span class="nv"> </span><span class="s">may</span><span class="nv"> </span><span class="s">simplify</span><span class="nv"> </span><span class="s">identification</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">resource</span>
+
+<span class="w">      </span><span class="s">between</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">provisioning</span><span class="nv"> </span><span class="s">client</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">service</span><span class="nv"> </span><span class="s">provider</span><span class="nv"> </span><span class="s">by</span><span class="nv"> </span><span class="s">allowing</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">client</span>
+
+<span class="w">      </span><span class="s">to</span><span class="nv"> </span><span class="s">use</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">filter</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">locate</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">resource</span><span class="nv"> </span><span class="s">with</span><span class="nv"> </span><span class="s">an</span><span class="nv"> </span><span class="s">identifier</span><span class="nv"> </span><span class="s">from</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">provisioning</span>
+
+<span class="w">      </span><span class="s">domain,</span><span class="nv"> </span><span class="s">obviating</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">need</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">store</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">local</span><span class="nv"> </span><span class="s">mapping</span><span class="nv"> </span><span class="s">between</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">provisioning</span>
+
+<span class="w">      </span><span class="s">domain</span><span class="se">''</span><span class="s">s</span><span class="nv"> </span><span class="s">identifier</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">resource</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">identifier</span><span class="nv"> </span><span class="s">used</span><span class="nv"> </span><span class="s">by</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">service</span>
+
+<span class="w">      </span><span class="s">provider.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Alternate ID</span>
@@ -1298,8 +1423,9 @@
 <span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">UrlT</span>
 <span class="w">  </span><span class="nt">vendor_name</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">vendor_name</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Name of the vendor or service provider implementing SCIM. E.g., &lt;code&gt;Okta&lt;/code&gt;,</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">&lt;code&gt;Auth0&lt;/code&gt;, &lt;code&gt;Microsoft&lt;/code&gt;.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'Name</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">vendor</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">service</span><span class="nv"> </span><span class="s">provider</span><span class="nv"> </span><span class="s">implementing</span><span class="nv"> </span><span class="s">SCIM.</span><span class="nv"> </span><span class="s">E.g.,</span>
+
+<span class="w">      </span><span class="s">&lt;code&gt;Okta&lt;/code&gt;,</span><span class="nv"> </span><span class="s">&lt;code&gt;Auth0&lt;/code&gt;,</span><span class="nv"> </span><span class="s">&lt;code&gt;Microsoft&lt;/code&gt;.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Vendor Name</span>

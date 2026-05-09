@@ -208,6 +208,15 @@
 </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="#in-subsets">
+<span class="md-ellipsis">
+      
+        In Subsets
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#aliases">
 <span class="md-ellipsis">
       
@@ -286,7 +295,9 @@
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
 <h1 id="class-resource">Class: Resource</h1>
-<p><em>The Resource object contains attributes that provide information about a particular resource. It serves as a base object, offering attributes that help identify and classify the resource effectively.</em></p>
+<p><em>The Resource object contains attributes that provide information about a</em></p>
+<p><em>particular resource. It serves as a base object, offering attributes that help</em></p>
+<p><em>identify and classify the resource effectively.</em></p>
 <p>URI: <a href="https://w3id.org/lmodel/ocsf/Resource">ocsf:Resource</a></p>
 <pre class="mermaid"><code> classDiagram
     class Resource
@@ -444,17 +455,21 @@
 <tr>
 <td><a href="../data_classification/">data_classification</a></td>
 <td>0..1 <em>recommended</em> <br/> <a href="../DataClassification/">DataClassification</a></td>
-<td>The Data Classification object includes information about data classification...</td>
+<td>The Data Classification object includes information about data classification</td>
 <td><a href="../DataClassificationProfile/">DataClassificationProfile</a></td>
 </tr>
 <tr>
 <td><a href="../data_classifications/">data_classifications</a></td>
 <td>* <em>recommended</em> <br/> <a href="../DataClassification/">DataClassification</a></td>
-<td>A list of Data Classification objects, that include information about data cl...</td>
+<td>A list of Data Classification objects, that include information about data</td>
 <td><a href="../DataClassificationProfile/">DataClassificationProfile</a></td>
 </tr>
 </tbody>
 </table>
+<h2 id="in-subsets">In Subsets</h2>
+<ul>
+<li><a href="../Objects/">Objects</a></li>
+</ul>
 <h2 id="aliases">Aliases</h2>
 <ul>
 <li>Resource</li>
@@ -488,9 +503,14 @@
 <h3 id="direct">Direct</h3>
 <details>
 <div class="highlight"><pre><span></span><code><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Resource</span>
-<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The Resource object contains attributes that provide information about</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">a particular resource. It serves as a base object, offering attributes that help</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">identify and classify the resource effectively.</span>
+<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">Resource</span><span class="nv"> </span><span class="s">object</span><span class="nv"> </span><span class="s">contains</span><span class="nv"> </span><span class="s">attributes</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">provide</span><span class="nv"> </span><span class="s">information</span><span class="nv"> </span><span class="s">about</span>
+<span class="w">  </span><span class="s">a</span>
+
+<span class="w">  </span><span class="s">particular</span><span class="nv"> </span><span class="s">resource.</span><span class="nv"> </span><span class="s">It</span><span class="nv"> </span><span class="s">serves</span><span class="nv"> </span><span class="s">as</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">base</span><span class="nv"> </span><span class="s">object,</span><span class="nv"> </span><span class="s">offering</span><span class="nv"> </span><span class="s">attributes</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">help</span>
+
+<span class="w">  </span><span class="s">identify</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">classify</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">resource</span><span class="nv"> </span><span class="s">effectively.'</span>
+<span class="nt">in_subset</span><span class="p">:</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">objects</span>
 <span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="nt">aliases</span><span class="p">:</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Resource</span>
@@ -541,9 +561,14 @@
 <h3 id="induced">Induced</h3>
 <details>
 <div class="highlight"><pre><span></span><code><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Resource</span>
-<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The Resource object contains attributes that provide information about</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">a particular resource. It serves as a base object, offering attributes that help</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">identify and classify the resource effectively.</span>
+<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">Resource</span><span class="nv"> </span><span class="s">object</span><span class="nv"> </span><span class="s">contains</span><span class="nv"> </span><span class="s">attributes</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">provide</span><span class="nv"> </span><span class="s">information</span><span class="nv"> </span><span class="s">about</span>
+<span class="w">  </span><span class="s">a</span>
+
+<span class="w">  </span><span class="s">particular</span><span class="nv"> </span><span class="s">resource.</span><span class="nv"> </span><span class="s">It</span><span class="nv"> </span><span class="s">serves</span><span class="nv"> </span><span class="s">as</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">base</span><span class="nv"> </span><span class="s">object,</span><span class="nv"> </span><span class="s">offering</span><span class="nv"> </span><span class="s">attributes</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">help</span>
+
+<span class="w">  </span><span class="s">identify</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">classify</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">resource</span><span class="nv"> </span><span class="s">effectively.'</span>
+<span class="nt">in_subset</span><span class="p">:</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">objects</span>
 <span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="nt">aliases</span><span class="p">:</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Resource</span>
@@ -1014,8 +1039,9 @@
 <span class="w">      </span><span class="nt">group</span><span class="p">:</span>
 <span class="w">        </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">group</span>
 <span class="w">        </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">context</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The Data Classification object includes information about data classification</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">levels and data category types.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">Data</span><span class="nv"> </span><span class="s">Classification</span><span class="nv"> </span><span class="s">object</span><span class="nv"> </span><span class="s">includes</span><span class="nv"> </span><span class="s">information</span><span class="nv"> </span><span class="s">about</span><span class="nv"> </span><span class="s">data</span><span class="nv"> </span><span class="s">classification</span>
+
+<span class="w">      </span><span class="s">levels</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">data</span><span class="nv"> </span><span class="s">category</span><span class="nv"> </span><span class="s">types.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Data Classification</span>
@@ -1032,8 +1058,10 @@
 <span class="w">      </span><span class="nt">group</span><span class="p">:</span>
 <span class="w">        </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">group</span>
 <span class="w">        </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">context</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">A list of Data Classification objects, that include information about</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">data classification levels and data category types, identified by a classifier.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'A</span><span class="nv"> </span><span class="s">list</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">Data</span><span class="nv"> </span><span class="s">Classification</span><span class="nv"> </span><span class="s">objects,</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">include</span><span class="nv"> </span><span class="s">information</span>
+<span class="w">      </span><span class="s">about</span><span class="nv"> </span><span class="s">data</span>
+
+<span class="w">      </span><span class="s">classification</span><span class="nv"> </span><span class="s">levels</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">data</span><span class="nv"> </span><span class="s">category</span><span class="nv"> </span><span class="s">types,</span><span class="nv"> </span><span class="s">identified</span><span class="nv"> </span><span class="s">by</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">classifier.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Data Classification</span>

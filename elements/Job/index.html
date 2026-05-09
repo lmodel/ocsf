@@ -217,6 +217,15 @@
 </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="#in-subsets">
+<span class="md-ellipsis">
+      
+        In Subsets
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#aliases">
 <span class="md-ellipsis">
       
@@ -313,7 +322,9 @@
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
 <h1 id="class-job">Class: Job</h1>
-<p><em>The Job object provides information about a scheduled job or task, including its name, command line, and state. It encompasses attributes that describe the properties and status of the scheduled job.</em></p>
+<p><em>The Job object provides information about a scheduled job or task, including</em></p>
+<p><em>its name, command line, and state. It encompasses attributes that describe the</em></p>
+<p><em>properties and status of the scheduled job.</em></p>
 <p>URI: <a href="https://w3id.org/lmodel/ocsf/Job">ocsf:Job</a></p>
 <pre class="mermaid"><code> classDiagram
     class Job
@@ -513,6 +524,10 @@
 </tr>
 </tbody>
 </table>
+<h2 id="in-subsets">In Subsets</h2>
+<ul>
+<li><a href="../Objects/">Objects</a></li>
+</ul>
 <h2 id="aliases">Aliases</h2>
 <ul>
 <li>Job</li>
@@ -523,7 +538,8 @@
 </ul>
 <h2 id="notes">Notes</h2>
 <ul>
-<li>D3FEND™ Ontology d3f:ScheduledJob. — <a href="https://d3fend.mitre.org/dao/artifact/d3f:ScheduledJob/">https://d3fend.mitre.org/dao/artifact/d3f:ScheduledJob/</a></li>
+<li>D3FEND™ Ontology d3f:ScheduledJob. —
+<a href="https://d3fend.mitre.org/dao/artifact/d3f:ScheduledJob/">https://d3fend.mitre.org/dao/artifact/d3f:ScheduledJob/</a></li>
 </ul>
 <h2 id="identifier-and-mapping-information">Identifier and Mapping Information</h2>
 <h3 id="schema-source">Schema Source</h3>
@@ -554,11 +570,17 @@
 <h3 id="direct">Direct</h3>
 <details>
 <div class="highlight"><pre><span></span><code><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Job</span>
-<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The Job object provides information about a scheduled job or task, including</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">its name, command line, and state. It encompasses attributes that describe the properties</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">and status of the scheduled job.</span>
+<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">Job</span><span class="nv"> </span><span class="s">object</span><span class="nv"> </span><span class="s">provides</span><span class="nv"> </span><span class="s">information</span><span class="nv"> </span><span class="s">about</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">scheduled</span><span class="nv"> </span><span class="s">job</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">task,</span><span class="nv"> </span><span class="s">including</span>
+
+<span class="w">  </span><span class="s">its</span><span class="nv"> </span><span class="s">name,</span><span class="nv"> </span><span class="s">command</span><span class="nv"> </span><span class="s">line,</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">state.</span><span class="nv"> </span><span class="s">It</span><span class="nv"> </span><span class="s">encompasses</span><span class="nv"> </span><span class="s">attributes</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">describe</span><span class="nv"> </span><span class="s">the</span>
+
+<span class="w">  </span><span class="s">properties</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">status</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">scheduled</span><span class="nv"> </span><span class="s">job.'</span>
 <span class="nt">notes</span><span class="p">:</span>
-<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">D3FEND™ Ontology d3f:ScheduledJob. — https://d3fend.mitre.org/dao/artifact/d3f:ScheduledJob/</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="s">'D3FEND™</span><span class="nv"> </span><span class="s">Ontology</span><span class="nv"> </span><span class="s">d3f:ScheduledJob.</span><span class="nv"> </span><span class="s">—</span>
+
+<span class="w">  </span><span class="s">https://d3fend.mitre.org/dao/artifact/d3f:ScheduledJob/'</span>
+<span class="nt">in_subset</span><span class="p">:</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">objects</span>
 <span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="nt">see_also</span><span class="p">:</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://d3fend.mitre.org/dao/artifact/d3f:ScheduledJob/</span>
@@ -619,11 +641,17 @@
 <h3 id="induced">Induced</h3>
 <details>
 <div class="highlight"><pre><span></span><code><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Job</span>
-<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The Job object provides information about a scheduled job or task, including</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">its name, command line, and state. It encompasses attributes that describe the properties</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">and status of the scheduled job.</span>
+<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">Job</span><span class="nv"> </span><span class="s">object</span><span class="nv"> </span><span class="s">provides</span><span class="nv"> </span><span class="s">information</span><span class="nv"> </span><span class="s">about</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">scheduled</span><span class="nv"> </span><span class="s">job</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">task,</span><span class="nv"> </span><span class="s">including</span>
+
+<span class="w">  </span><span class="s">its</span><span class="nv"> </span><span class="s">name,</span><span class="nv"> </span><span class="s">command</span><span class="nv"> </span><span class="s">line,</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">state.</span><span class="nv"> </span><span class="s">It</span><span class="nv"> </span><span class="s">encompasses</span><span class="nv"> </span><span class="s">attributes</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">describe</span><span class="nv"> </span><span class="s">the</span>
+
+<span class="w">  </span><span class="s">properties</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">status</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">scheduled</span><span class="nv"> </span><span class="s">job.'</span>
 <span class="nt">notes</span><span class="p">:</span>
-<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">D3FEND™ Ontology d3f:ScheduledJob. — https://d3fend.mitre.org/dao/artifact/d3f:ScheduledJob/</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="s">'D3FEND™</span><span class="nv"> </span><span class="s">Ontology</span><span class="nv"> </span><span class="s">d3f:ScheduledJob.</span><span class="nv"> </span><span class="s">—</span>
+
+<span class="w">  </span><span class="s">https://d3fend.mitre.org/dao/artifact/d3f:ScheduledJob/'</span>
+<span class="nt">in_subset</span><span class="p">:</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">objects</span>
 <span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="nt">see_also</span><span class="p">:</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://d3fend.mitre.org/dao/artifact/d3f:ScheduledJob/</span>

@@ -497,7 +497,8 @@
 
 
 <h1 id="slot-namespace_pid">Slot: namespace_pid</h1>
-<p><em>If running under a process namespace (such as in a container), the process identifier within that process namespace.</em></p>
+<p><em>If running under a process namespace (such as in a container), the process</em></p>
+<p><em>identifier within that process namespace.</em></p>
 <p>URI: <a href="https://w3id.org/lmodel/ocsf/namespace_pid">ocsf:namespace_pid</a>
 Alias: namespace_pid</p>
 <!-- no inheritance hierarchy -->
@@ -513,13 +514,8 @@ Alias: namespace_pid</p>
 </thead>
 <tbody>
 <tr>
-<td><a href="../Endpoint/">Endpoint</a></td>
-<td>The Endpoint object describes a physical or virtual device that connects to a...</td>
-<td>no</td>
-</tr>
-<tr>
-<td><a href="../NetworkEndpoint/">NetworkEndpoint</a></td>
-<td>The Network Endpoint object describes characteristics of a network endpoint</td>
+<td><a href="../LinuxProcess/">LinuxProcess</a></td>
+<td>Extends the process object to add Linux specific fields</td>
 <td>no</td>
 </tr>
 <tr>
@@ -528,9 +524,14 @@ Alias: namespace_pid</p>
 <td>no</td>
 </tr>
 <tr>
-<td><a href="../Device/">Device</a></td>
-<td>The Device object represents an addressable computer system or host, which is...</td>
+<td><a href="../Process/">Process</a></td>
+<td>The Process object describes a running instance of a launched program</td>
 <td>no</td>
+</tr>
+<tr>
+<td><a href="../ContainerProfile/">ContainerProfile</a></td>
+<td>The container context for a process</td>
+<td>yes</td>
 </tr>
 <tr>
 <td><a href="../WindowsProcess/">WindowsProcess</a></td>
@@ -538,24 +539,24 @@ Alias: namespace_pid</p>
 <td>no</td>
 </tr>
 <tr>
-<td><a href="../Process/">Process</a></td>
-<td>The Process object describes a running instance of a launched program</td>
-<td>no</td>
-</tr>
-<tr>
 <td><a href="../NetworkProxy/">NetworkProxy</a></td>
-<td>The network proxy endpoint object describes a proxy server, which acts as an ...</td>
+<td>The network proxy endpoint object describes a proxy server, which acts as an</td>
 <td>no</td>
 </tr>
 <tr>
-<td><a href="../LinuxProcess/">LinuxProcess</a></td>
-<td>Extends the process object to add Linux specific fields</td>
+<td><a href="../NetworkEndpoint/">NetworkEndpoint</a></td>
+<td>The Network Endpoint object describes characteristics of a network endpoint</td>
 <td>no</td>
 </tr>
 <tr>
-<td><a href="../ContainerProfile/">ContainerProfile</a></td>
-<td>The container context for a process</td>
-<td>yes</td>
+<td><a href="../Endpoint/">Endpoint</a></td>
+<td>The Endpoint object describes a physical or virtual device that connects to a...</td>
+<td>no</td>
+</tr>
+<tr>
+<td><a href="../Device/">Device</a></td>
+<td>The Device object represents an addressable computer system or host, which is</td>
+<td>no</td>
 </tr>
 </tbody>
 </table>
@@ -625,8 +626,9 @@ Alias: namespace_pid</p>
 <h2 id="linkml-source">LinkML Source</h2>
 <details>
 <div class="highlight"><pre><span></span><code><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">namespace_pid</span>
-<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">If running under a process namespace (such as in a container), the process</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">identifier within that process namespace.</span>
+<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;If</span><span class="nv"> </span><span class="s">running</span><span class="nv"> </span><span class="s">under</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">process</span><span class="nv"> </span><span class="s">namespace</span><span class="nv"> </span><span class="s">(such</span><span class="nv"> </span><span class="s">as</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">container),</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">process</span>
+
+<span class="w">  </span><span class="s">identifier</span><span class="nv"> </span><span class="s">within</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">process</span><span class="nv"> </span><span class="s">namespace.&#39;</span>
 <span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="nt">aliases</span><span class="p">:</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Namespace PID</span>

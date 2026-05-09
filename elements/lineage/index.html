@@ -497,7 +497,9 @@
 
 
 <h1 id="slot-lineage">Slot: lineage</h1>
-<p><em>The lineage of the process, represented by a list of paths for each ancestor process. For example: <code>['/usr/sbin/sshd', '/usr/bin/bash', '/usr/bin/whoami']</code>.</em></p>
+<p><em>The lineage of the process, represented by a list of paths for each ancestor</em></p>
+<p><em>process. For example: <code>['/usr/sbin/sshd', '/usr/bin/bash',</em></p>
+<p><em>'/usr/bin/whoami']</code>.</em></p>
 <p>URI: <a href="https://w3id.org/lmodel/ocsf/lineage">ocsf:lineage</a>
 Alias: lineage</p>
 <!-- no inheritance hierarchy -->
@@ -513,24 +515,24 @@ Alias: lineage</p>
 </thead>
 <tbody>
 <tr>
-<td><a href="../LinuxProcess/">LinuxProcess</a></td>
-<td>Extends the process object to add Linux specific fields</td>
+<td><a href="../MacosProcess/">MacosProcess</a></td>
+<td>Extends the process object to add macOS specific fields</td>
 <td>no</td>
 </tr>
 <tr>
-<td><a href="../MacosProcess/">MacosProcess</a></td>
-<td>Extends the process object to add macOS specific fields</td>
+<td><a href="../WindowsProcess/">WindowsProcess</a></td>
+<td>Extends the process object to add Windows specific fields</td>
+<td>no</td>
+</tr>
+<tr>
+<td><a href="../LinuxProcess/">LinuxProcess</a></td>
+<td>Extends the process object to add Linux specific fields</td>
 <td>no</td>
 </tr>
 <tr>
 <td><a href="../Process/">Process</a></td>
 <td>The Process object describes a running instance of a launched program</td>
 <td>yes</td>
-</tr>
-<tr>
-<td><a href="../WindowsProcess/">WindowsProcess</a></td>
-<td>Extends the process object to add Windows specific fields</td>
-<td>no</td>
 </tr>
 </tbody>
 </table>
@@ -601,7 +603,11 @@ Alias: lineage</p>
 <details>
 <div class="highlight"><pre><span></span><code><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">lineage</span>
 <span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;The</span><span class="nv"> </span><span class="s">lineage</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">process,</span><span class="nv"> </span><span class="s">represented</span><span class="nv"> </span><span class="s">by</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">list</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">paths</span><span class="nv"> </span><span class="s">for</span><span class="nv"> </span><span class="s">each</span>
-<span class="w">  </span><span class="s">ancestor</span><span class="nv"> </span><span class="s">process.</span><span class="nv"> </span><span class="s">For</span><span class="nv"> </span><span class="s">example:</span><span class="nv"> </span><span class="s">&lt;code&gt;[</span><span class="se">&#39;&#39;</span><span class="s">/usr/sbin/sshd</span><span class="se">&#39;&#39;</span><span class="s">,</span><span class="nv"> </span><span class="se">&#39;&#39;</span><span class="s">/usr/bin/bash</span><span class="se">&#39;&#39;</span><span class="s">,</span><span class="nv"> </span><span class="se">&#39;&#39;</span><span class="s">/usr/bin/whoami</span><span class="se">&#39;&#39;</span><span class="s">]&lt;/code&gt;.&#39;</span>
+<span class="w">  </span><span class="s">ancestor</span>
+
+<span class="w">  </span><span class="s">process.</span><span class="nv"> </span><span class="s">For</span><span class="nv"> </span><span class="s">example:</span><span class="nv"> </span><span class="s">&lt;code&gt;[</span><span class="se">&#39;&#39;</span><span class="s">/usr/sbin/sshd</span><span class="se">&#39;&#39;</span><span class="s">,</span><span class="nv"> </span><span class="se">&#39;&#39;</span><span class="s">/usr/bin/bash</span><span class="se">&#39;&#39;</span><span class="s">,</span>
+
+<span class="w">  </span><span class="se">&#39;&#39;</span><span class="s">/usr/bin/whoami</span><span class="se">&#39;&#39;</span><span class="s">]&lt;/code&gt;.&#39;</span>
 <span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="nt">aliases</span><span class="p">:</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Lineage</span>

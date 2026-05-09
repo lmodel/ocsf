@@ -447,7 +447,8 @@
 
 
 <h1 id="enum-datalifecyclestateidenum">Enum: DataLifecycleStateIdEnum</h1>
-<p><em>The stage or state that the data was in when it was assessed or scanned by a data security tool.</em></p>
+<p><em>The stage or state that the data was in when it was assessed or scanned by a</em></p>
+<p><em>data security tool.</em></p>
 <p>URI: <a href="https://w3id.org/lmodel/ocsf/DataLifecycleStateIdEnum">ocsf:DataLifecycleStateIdEnum</a></p>
 <h2 id="permissible-values">Permissible Values</h2>
 <table>
@@ -467,17 +468,17 @@
 <tr>
 <td>DATA_AT_REST</td>
 <td>None</td>
-<td>The data was stored on physical or logical media and was not actively moving ...</td>
+<td>The data was stored on physical or logical media and was not actively moving</td>
 </tr>
 <tr>
 <td>DATA_IN_TRANSIT</td>
 <td>None</td>
-<td>The data was actively moving through the network or from one physical or logi...</td>
+<td>The data was actively moving through the network or from one physical or</td>
 </tr>
 <tr>
 <td>DATA_IN_USE</td>
 <td>None</td>
-<td>The data was being processed, accessed, or read by a system, making it active...</td>
+<td>The data was being processed, accessed, or read by a system, making it active</td>
 </tr>
 <tr>
 <td>OTHER</td>
@@ -497,7 +498,7 @@
 <tbody>
 <tr>
 <td><a href="../data_lifecycle_state_id/">data_lifecycle_state_id</a></td>
-<td>The stage or state that the data was in when it was assessed or scanned by a ...</td>
+<td>The stage or state that the data was in when it was assessed or scanned by a</td>
 </tr>
 </tbody>
 </table>
@@ -509,8 +510,10 @@
 <h2 id="linkml-source">LinkML Source</h2>
 <details>
 <div class="highlight"><pre><span></span><code><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">DataLifecycleStateIdEnum</span>
-<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The stage or state that the data was in when it was assessed or scanned</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">by a data security tool.</span>
+<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;The</span><span class="nv"> </span><span class="s">stage</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">state</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">data</span><span class="nv"> </span><span class="s">was</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">when</span><span class="nv"> </span><span class="s">it</span><span class="nv"> </span><span class="s">was</span><span class="nv"> </span><span class="s">assessed</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">scanned</span>
+<span class="w">  </span><span class="s">by</span><span class="nv"> </span><span class="s">a</span>
+
+<span class="w">  </span><span class="s">data</span><span class="nv"> </span><span class="s">security</span><span class="nv"> </span><span class="s">tool.&#39;</span>
 <span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="nt">rank</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1000</span>
 <span class="nt">permissible_values</span><span class="p">:</span>
@@ -526,9 +529,12 @@
 <span class="w">        </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Unknown</span>
 <span class="w">  </span><span class="nt">DATA_AT_REST</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">text</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">DATA_AT_REST</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The data was stored on physical or logical media and was not actively</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">moving through the network nor was being processed. E.g., data stored in a database,</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">PDF files in a file share, or EHR records in object storage.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;The</span><span class="nv"> </span><span class="s">data</span><span class="nv"> </span><span class="s">was</span><span class="nv"> </span><span class="s">stored</span><span class="nv"> </span><span class="s">on</span><span class="nv"> </span><span class="s">physical</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">logical</span><span class="nv"> </span><span class="s">media</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">was</span><span class="nv"> </span><span class="s">not</span><span class="nv"> </span><span class="s">actively</span>
+<span class="w">      </span><span class="s">moving</span>
+
+<span class="w">      </span><span class="s">through</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">network</span><span class="nv"> </span><span class="s">nor</span><span class="nv"> </span><span class="s">was</span><span class="nv"> </span><span class="s">being</span><span class="nv"> </span><span class="s">processed.</span><span class="nv"> </span><span class="s">E.g.,</span><span class="nv"> </span><span class="s">data</span><span class="nv"> </span><span class="s">stored</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">database,</span>
+
+<span class="w">      </span><span class="s">PDF</span><span class="nv"> </span><span class="s">files</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">file</span><span class="nv"> </span><span class="s">share,</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">EHR</span><span class="nv"> </span><span class="s">records</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">object</span><span class="nv"> </span><span class="s">storage.&#39;</span>
 <span class="w">    </span><span class="nt">annotations</span><span class="p">:</span>
 <span class="w">      </span><span class="nt">ocsf_uid</span><span class="p">:</span>
 <span class="w">        </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ocsf_uid</span>
@@ -538,9 +544,12 @@
 <span class="w">        </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Data at-Rest</span>
 <span class="w">  </span><span class="nt">DATA_IN_TRANSIT</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">text</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">DATA_IN_TRANSIT</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The data was actively moving through the network or from one physical</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">or logical location to another. E.g., emails being send, data replication or</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">Change Data Capture (CDC) streams, or sensitive data processed on an API.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;The</span><span class="nv"> </span><span class="s">data</span><span class="nv"> </span><span class="s">was</span><span class="nv"> </span><span class="s">actively</span><span class="nv"> </span><span class="s">moving</span><span class="nv"> </span><span class="s">through</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">network</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">from</span><span class="nv"> </span><span class="s">one</span><span class="nv"> </span><span class="s">physical</span>
+<span class="w">      </span><span class="s">or</span>
+
+<span class="w">      </span><span class="s">logical</span><span class="nv"> </span><span class="s">location</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">another.</span><span class="nv"> </span><span class="s">E.g.,</span><span class="nv"> </span><span class="s">emails</span><span class="nv"> </span><span class="s">being</span><span class="nv"> </span><span class="s">send,</span><span class="nv"> </span><span class="s">data</span><span class="nv"> </span><span class="s">replication</span><span class="nv"> </span><span class="s">or</span>
+
+<span class="w">      </span><span class="s">Change</span><span class="nv"> </span><span class="s">Data</span><span class="nv"> </span><span class="s">Capture</span><span class="nv"> </span><span class="s">(CDC)</span><span class="nv"> </span><span class="s">streams,</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">sensitive</span><span class="nv"> </span><span class="s">data</span><span class="nv"> </span><span class="s">processed</span><span class="nv"> </span><span class="s">on</span><span class="nv"> </span><span class="s">an</span><span class="nv"> </span><span class="s">API.&#39;</span>
 <span class="w">    </span><span class="nt">annotations</span><span class="p">:</span>
 <span class="w">      </span><span class="nt">ocsf_uid</span><span class="p">:</span>
 <span class="w">        </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ocsf_uid</span>
@@ -550,10 +559,14 @@
 <span class="w">        </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Data in-Transit</span>
 <span class="w">  </span><span class="nt">DATA_IN_USE</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">text</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">DATA_IN_USE</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The data was being processed, accessed, or read by a system, making</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">it active in memory or CPU. E.g., sensitive data in a Business Intelligence</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">tool, ePHI being processed in an EHR application or a user viewing data stored</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">in a spreadsheet or PDF.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;The</span><span class="nv"> </span><span class="s">data</span><span class="nv"> </span><span class="s">was</span><span class="nv"> </span><span class="s">being</span><span class="nv"> </span><span class="s">processed,</span><span class="nv"> </span><span class="s">accessed,</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">read</span><span class="nv"> </span><span class="s">by</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">system,</span><span class="nv"> </span><span class="s">making</span>
+<span class="w">      </span><span class="s">it</span><span class="nv"> </span><span class="s">active</span>
+
+<span class="w">      </span><span class="s">in</span><span class="nv"> </span><span class="s">memory</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">CPU.</span><span class="nv"> </span><span class="s">E.g.,</span><span class="nv"> </span><span class="s">sensitive</span><span class="nv"> </span><span class="s">data</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">Business</span><span class="nv"> </span><span class="s">Intelligence</span><span class="nv"> </span><span class="s">tool,</span><span class="nv"> </span><span class="s">ePHI</span>
+
+<span class="w">      </span><span class="s">being</span><span class="nv"> </span><span class="s">processed</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">an</span><span class="nv"> </span><span class="s">EHR</span><span class="nv"> </span><span class="s">application</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">user</span><span class="nv"> </span><span class="s">viewing</span><span class="nv"> </span><span class="s">data</span><span class="nv"> </span><span class="s">stored</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">a</span>
+
+<span class="w">      </span><span class="s">spreadsheet</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">PDF.&#39;</span>
 <span class="w">    </span><span class="nt">annotations</span><span class="p">:</span>
 <span class="w">      </span><span class="nt">ocsf_uid</span><span class="p">:</span>
 <span class="w">        </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ocsf_uid</span>
@@ -563,8 +576,11 @@
 <span class="w">        </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Data in-Use</span>
 <span class="w">  </span><span class="nt">OTHER</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">text</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">OTHER</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The data lifecycle state is not mapped. See the &lt;code&gt;data_lifecycle_state&lt;/code&gt;</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">attribute, which contains a data source specific value.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;The</span><span class="nv"> </span><span class="s">data</span><span class="nv"> </span><span class="s">lifecycle</span><span class="nv"> </span><span class="s">state</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">not</span><span class="nv"> </span><span class="s">mapped.</span><span class="nv"> </span><span class="s">See</span><span class="nv"> </span><span class="s">the</span>
+
+<span class="w">      </span><span class="s">&lt;code&gt;data_lifecycle_state&lt;/code&gt;</span><span class="nv"> </span><span class="s">attribute,</span><span class="nv"> </span><span class="s">which</span><span class="nv"> </span><span class="s">contains</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">data</span><span class="nv"> </span><span class="s">source</span>
+
+<span class="w">      </span><span class="s">specific</span><span class="nv"> </span><span class="s">value.&#39;</span>
 <span class="w">    </span><span class="nt">annotations</span><span class="p">:</span>
 <span class="w">      </span><span class="nt">ocsf_uid</span><span class="p">:</span>
 <span class="w">        </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ocsf_uid</span>

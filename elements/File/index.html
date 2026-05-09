@@ -217,6 +217,15 @@
 </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="#in-subsets">
+<span class="md-ellipsis">
+      
+        In Subsets
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#aliases">
 <span class="md-ellipsis">
       
@@ -322,7 +331,9 @@
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
 <h1 id="class-file">Class: File</h1>
-<p><em>The File object represents the metadata associated with a file stored in a computer system. It encompasses information about the file itself, including its attributes, properties, and organizational details.</em></p>
+<p><em>The File object represents the metadata associated with a file stored in a</em></p>
+<p><em>computer system. It encompasses information about the file itself, including</em></p>
+<p><em>its attributes, properties, and organizational details.</em></p>
 <p>URI: <a href="https://w3id.org/lmodel/ocsf/File">ocsf:File</a></p>
 <pre class="mermaid"><code> classDiagram
     class File
@@ -657,7 +668,7 @@
 <tr>
 <td><a href="../drive_type/">drive_type</a></td>
 <td>0..1 <br/> <a href="../String/">String</a></td>
-<td>The drive type, normalized to the caption of the <code>drive_type_id</code> v...</td>
+<td>The drive type, normalized to the caption of the <code>drive_type_id</code></td>
 <td>direct</td>
 </tr>
 <tr>
@@ -729,7 +740,7 @@
 <tr>
 <td><a href="../mime_type/">mime_type</a></td>
 <td>0..1 <br/> <a href="../String/">String</a></td>
-<td>The Multipurpose Internet Mail Extensions (MIME) type of the file, if applica...</td>
+<td>The Multipurpose Internet Mail Extensions (MIME) type of the file, if</td>
 <td>direct</td>
 </tr>
 <tr>
@@ -825,7 +836,7 @@
 <tr>
 <td><a href="../uid/">uid</a></td>
 <td>0..1 <em>recommended</em> <br/> <a href="../String/">String</a></td>
-<td>The unique identifier of the file as defined by the storage system, such the ...</td>
+<td>The unique identifier of the file as defined by the storage system, such the</td>
 <td>direct</td>
 </tr>
 <tr>
@@ -855,19 +866,19 @@
 <tr>
 <td><a href="../xattributes/">xattributes</a></td>
 <td>0..1 <br/> <a href="../Object/">Object</a></td>
-<td>An unordered collection of zero or more name/value pairs where each pair repr...</td>
+<td>An unordered collection of zero or more name/value pairs where each pair</td>
 <td>direct</td>
 </tr>
 <tr>
 <td><a href="../data_classification/">data_classification</a></td>
 <td>0..1 <em>recommended</em> <br/> <a href="../DataClassification/">DataClassification</a></td>
-<td>The Data Classification object includes information about data classification...</td>
+<td>The Data Classification object includes information about data classification</td>
 <td><a href="../DataClassificationProfile/">DataClassificationProfile</a></td>
 </tr>
 <tr>
 <td><a href="../data_classifications/">data_classifications</a></td>
 <td>* <em>recommended</em> <br/> <a href="../DataClassification/">DataClassification</a></td>
-<td>A list of Data Classification objects, that include information about data cl...</td>
+<td>A list of Data Classification objects, that include information about data</td>
 <td><a href="../DataClassificationProfile/">DataClassificationProfile</a></td>
 </tr>
 </tbody>
@@ -1107,6 +1118,10 @@
 </tr>
 </tbody>
 </table>
+<h2 id="in-subsets">In Subsets</h2>
+<ul>
+<li><a href="../Objects/">Objects</a></li>
+</ul>
 <h2 id="aliases">Aliases</h2>
 <ul>
 <li>File</li>
@@ -1117,7 +1132,8 @@
 </ul>
 <h2 id="notes">Notes</h2>
 <ul>
-<li>D3FEND™ Ontology d3f:File — <a href="https://next.d3fend.mitre.org/dao/artifact/d3f:File/">https://next.d3fend.mitre.org/dao/artifact/d3f:File/</a></li>
+<li>D3FEND™ Ontology d3f:File —
+<a href="https://next.d3fend.mitre.org/dao/artifact/d3f:File/">https://next.d3fend.mitre.org/dao/artifact/d3f:File/</a></li>
 </ul>
 <h2 id="identifier-and-mapping-information">Identifier and Mapping Information</h2>
 <h3 id="annotations">Annotations</h3>
@@ -1171,11 +1187,18 @@
 <span class="w">  </span><span class="nt">observable_id</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">observable_id</span>
 <span class="w">    </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">24</span>
-<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The File object represents the metadata associated with a file stored</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">in a computer system. It encompasses information about the file itself, including</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">its attributes, properties, and organizational details.</span>
+<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">File</span><span class="nv"> </span><span class="s">object</span><span class="nv"> </span><span class="s">represents</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">metadata</span><span class="nv"> </span><span class="s">associated</span><span class="nv"> </span><span class="s">with</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">file</span><span class="nv"> </span><span class="s">stored</span>
+<span class="w">  </span><span class="s">in</span><span class="nv"> </span><span class="s">a</span>
+
+<span class="w">  </span><span class="s">computer</span><span class="nv"> </span><span class="s">system.</span><span class="nv"> </span><span class="s">It</span><span class="nv"> </span><span class="s">encompasses</span><span class="nv"> </span><span class="s">information</span><span class="nv"> </span><span class="s">about</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">file</span><span class="nv"> </span><span class="s">itself,</span><span class="nv"> </span><span class="s">including</span>
+
+<span class="w">  </span><span class="s">its</span><span class="nv"> </span><span class="s">attributes,</span><span class="nv"> </span><span class="s">properties,</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">organizational</span><span class="nv"> </span><span class="s">details.'</span>
 <span class="nt">notes</span><span class="p">:</span>
-<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">D3FEND™ Ontology d3f:File — https://next.d3fend.mitre.org/dao/artifact/d3f:File/</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="s">'D3FEND™</span><span class="nv"> </span><span class="s">Ontology</span><span class="nv"> </span><span class="s">d3f:File</span><span class="nv"> </span><span class="s">—</span>
+
+<span class="w">  </span><span class="s">https://next.d3fend.mitre.org/dao/artifact/d3f:File/'</span>
+<span class="nt">in_subset</span><span class="p">:</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">objects</span>
 <span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="nt">see_also</span><span class="p">:</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://next.d3fend.mitre.org/dao/artifact/d3f:File/</span>
@@ -1241,29 +1264,47 @@
 <span class="w">  </span><span class="nt">desc</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">desc</span>
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">description</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">file,</span><span class="nv"> </span><span class="s">as</span><span class="nv"> </span><span class="s">returned</span><span class="nv"> </span><span class="s">by</span><span class="nv"> </span><span class="s">file</span><span class="nv"> </span><span class="s">system.</span><span class="nv"> </span><span class="s">For</span><span class="nv"> </span><span class="s">example:</span>
-<span class="w">      </span><span class="s">the</span><span class="nv"> </span><span class="s">description</span><span class="nv"> </span><span class="s">as</span><span class="nv"> </span><span class="s">returned</span><span class="nv"> </span><span class="s">by</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">Unix</span><span class="nv"> </span><span class="s">file</span><span class="nv"> </span><span class="s">command</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">Windows</span><span class="nv"> </span><span class="s">file</span><span class="nv"> </span><span class="s">type.'</span>
+<span class="w">      </span><span class="s">the</span>
+
+<span class="w">      </span><span class="s">description</span><span class="nv"> </span><span class="s">as</span><span class="nv"> </span><span class="s">returned</span><span class="nv"> </span><span class="s">by</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">Unix</span><span class="nv"> </span><span class="s">file</span><span class="nv"> </span><span class="s">command</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">Windows</span><span class="nv"> </span><span class="s">file</span><span class="nv"> </span><span class="s">type.'</span>
 <span class="w">  </span><span class="nt">encryption_details</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">encryption_details</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The encryption details of the file. Should be populated if the file</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">is encrypted.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">encryption</span><span class="nv"> </span><span class="s">details</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">file.</span><span class="nv"> </span><span class="s">Should</span><span class="nv"> </span><span class="s">be</span><span class="nv"> </span><span class="s">populated</span><span class="nv"> </span><span class="s">if</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">file</span>
+<span class="w">      </span><span class="s">is</span>
+
+<span class="w">      </span><span class="s">encrypted.'</span>
 <span class="w">  </span><span class="nt">ext</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ext</span>
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">extension</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">file,</span><span class="nv"> </span><span class="s">excluding</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">leading</span><span class="nv"> </span><span class="s">dot.</span><span class="nv"> </span><span class="s">For</span><span class="nv"> </span><span class="s">example:</span>
-<span class="w">      </span><span class="s">&lt;code&gt;exe&lt;/code&gt;</span><span class="nv"> </span><span class="s">from</span><span class="nv"> </span><span class="s">&lt;code&gt;svchost.exe&lt;/code&gt;,</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">&lt;code&gt;gz&lt;/code&gt;</span><span class="nv"> </span><span class="s">from</span><span class="nv"> </span><span class="s">&lt;code&gt;export.tar.gz&lt;/code&gt;.'</span>
+
+<span class="w">      </span><span class="s">&lt;code&gt;exe&lt;/code&gt;</span><span class="nv"> </span><span class="s">from</span><span class="nv"> </span><span class="s">&lt;code&gt;svchost.exe&lt;/code&gt;,</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">&lt;code&gt;gz&lt;/code&gt;</span><span class="nv"> </span><span class="s">from</span>
+
+<span class="w">      </span><span class="s">&lt;code&gt;export.tar.gz&lt;/code&gt;.'</span>
 <span class="w">    </span><span class="nt">recommended</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">hashes</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">hashes</span>
 <span class="w">    </span><span class="nt">recommended</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">internal_name</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">internal_name</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The name of the file as identified within the file itself. This contrasts</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">with the name by which the file is known on disk. Where available, the internal</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">name is widely used by security practitioners and detection content because</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">the on-disk file name is not reliable. On the Windows OS, most PE files contain</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">a &lt;a href="https://learn.microsoft.com/en-us/windows/win32/menurc/versioninfo-resource"&gt;VERSIONINFO&lt;/a&gt;</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">resource from which the internal name can be obtained. On macOS, binaries can</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">optionally embed a copy of the application's Info.plist file which in turn contains</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">the name of the executable.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">name</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">file</span><span class="nv"> </span><span class="s">as</span><span class="nv"> </span><span class="s">identified</span><span class="nv"> </span><span class="s">within</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">file</span><span class="nv"> </span><span class="s">itself.</span><span class="nv"> </span><span class="s">This</span>
+<span class="w">      </span><span class="s">contrasts</span><span class="nv"> </span><span class="s">with</span>
+
+<span class="w">      </span><span class="s">the</span><span class="nv"> </span><span class="s">name</span><span class="nv"> </span><span class="s">by</span><span class="nv"> </span><span class="s">which</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">file</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">known</span><span class="nv"> </span><span class="s">on</span><span class="nv"> </span><span class="s">disk.</span><span class="nv"> </span><span class="s">Where</span><span class="nv"> </span><span class="s">available,</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">internal</span><span class="nv"> </span><span class="s">name</span>
+
+<span class="w">      </span><span class="s">is</span><span class="nv"> </span><span class="s">widely</span><span class="nv"> </span><span class="s">used</span><span class="nv"> </span><span class="s">by</span><span class="nv"> </span><span class="s">security</span><span class="nv"> </span><span class="s">practitioners</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">detection</span><span class="nv"> </span><span class="s">content</span><span class="nv"> </span><span class="s">because</span><span class="nv"> </span><span class="s">the</span>
+
+<span class="w">      </span><span class="s">on-disk</span><span class="nv"> </span><span class="s">file</span><span class="nv"> </span><span class="s">name</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">not</span><span class="nv"> </span><span class="s">reliable.</span><span class="nv"> </span><span class="s">On</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">Windows</span><span class="nv"> </span><span class="s">OS,</span><span class="nv"> </span><span class="s">most</span><span class="nv"> </span><span class="s">PE</span><span class="nv"> </span><span class="s">files</span><span class="nv"> </span><span class="s">contain</span>
+<span class="w">      </span><span class="s">a</span>
+
+<span class="w">      </span><span class="s">&lt;a</span>
+
+<span class="w">      </span><span class="s">href="https://learn.microsoft.com/en-us/windows/win32/menurc/versioninfo-resource"&gt;VERSIONINFO&lt;/a&gt;</span>
+
+<span class="w">      </span><span class="s">resource</span><span class="nv"> </span><span class="s">from</span><span class="nv"> </span><span class="s">which</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">internal</span><span class="nv"> </span><span class="s">name</span><span class="nv"> </span><span class="s">can</span><span class="nv"> </span><span class="s">be</span><span class="nv"> </span><span class="s">obtained.</span><span class="nv"> </span><span class="s">On</span><span class="nv"> </span><span class="s">macOS,</span><span class="nv"> </span><span class="s">binaries</span><span class="nv"> </span><span class="s">can</span>
+
+<span class="w">      </span><span class="s">optionally</span><span class="nv"> </span><span class="s">embed</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">copy</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">application</span><span class="se">''</span><span class="s">s</span><span class="nv"> </span><span class="s">Info.plist</span><span class="nv"> </span><span class="s">file</span><span class="nv"> </span><span class="s">which</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">turn</span>
+
+<span class="w">      </span><span class="s">contains</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">name</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">executable.'</span>
 <span class="w">  </span><span class="nt">is_deleted</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">is_deleted</span>
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Indicates if the file was deleted from the filesystem.</span>
@@ -1272,8 +1313,10 @@
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Indicates if the file is encrypted.</span>
 <span class="w">  </span><span class="nt">is_public</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">is_public</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Indicates if the file is publicly accessible. For example in an object's</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">public access in AWS S3</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'Indicates</span><span class="nv"> </span><span class="s">if</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">file</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">publicly</span><span class="nv"> </span><span class="s">accessible.</span><span class="nv"> </span><span class="s">For</span><span class="nv"> </span><span class="s">example</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">an</span>
+<span class="w">      </span><span class="s">object</span><span class="se">''</span><span class="s">s</span><span class="nv"> </span><span class="s">public</span>
+
+<span class="w">      </span><span class="s">access</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">AWS</span><span class="nv"> </span><span class="s">S3'</span>
 <span class="w">  </span><span class="nt">is_readonly</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">is_readonly</span>
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Indicates that the file cannot be modified.</span>
@@ -1289,7 +1332,9 @@
 <span class="w">    </span><span class="nt">required</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">path</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">path</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">full</span><span class="nv"> </span><span class="s">path</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">file.</span><span class="nv"> </span><span class="s">For</span><span class="nv"> </span><span class="s">example:</span><span class="nv"> </span><span class="s">&lt;code&gt;c:\windows\system32\svchost.exe&lt;/code&gt;.'</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">full</span><span class="nv"> </span><span class="s">path</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">file.</span><span class="nv"> </span><span class="s">For</span><span class="nv"> </span><span class="s">example:</span>
+
+<span class="w">      </span><span class="s">&lt;code&gt;c:\windows\system32\svchost.exe&lt;/code&gt;.'</span>
 <span class="w">    </span><span class="nt">recommended</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">product</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">product</span>
@@ -1300,6 +1345,7 @@
 <span class="w">  </span><span class="nt">storage_class</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">storage_class</span>
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">storage</span><span class="nv"> </span><span class="s">class</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">file.</span><span class="nv"> </span><span class="s">For</span><span class="nv"> </span><span class="s">example</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">AWS</span><span class="nv"> </span><span class="s">S3:</span><span class="nv"> </span><span class="s">&lt;code&gt;STANDARD,</span>
+
 <span class="w">      </span><span class="s">STANDARD_IA,</span><span class="nv"> </span><span class="s">GLACIER&lt;/code&gt;.'</span>
 <span class="w">  </span><span class="nt">tags</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">tags</span>
@@ -1310,20 +1356,28 @@
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The file type.</span>
 <span class="w">  </span><span class="nt">type_id</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">type_id</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The file type ID. Note the distinction between a &lt;code&gt;Regular File&lt;/code&gt;</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">and an &lt;code&gt;Executable File&lt;/code&gt;. If the distinction is not known, or not</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">indicated by the log, use &lt;code&gt;Regular File&lt;/code&gt;. In this case, it should</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">not be assumed that a Regular File is not executable.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">file</span><span class="nv"> </span><span class="s">type</span><span class="nv"> </span><span class="s">ID.</span><span class="nv"> </span><span class="s">Note</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">distinction</span><span class="nv"> </span><span class="s">between</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">&lt;code&gt;Regular</span><span class="nv"> </span><span class="s">File&lt;/code&gt;</span>
+<span class="w">      </span><span class="s">and</span>
+
+<span class="w">      </span><span class="s">an</span><span class="nv"> </span><span class="s">&lt;code&gt;Executable</span><span class="nv"> </span><span class="s">File&lt;/code&gt;.</span><span class="nv"> </span><span class="s">If</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">distinction</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">not</span><span class="nv"> </span><span class="s">known,</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">not</span>
+
+<span class="w">      </span><span class="s">indicated</span><span class="nv"> </span><span class="s">by</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">log,</span><span class="nv"> </span><span class="s">use</span><span class="nv"> </span><span class="s">&lt;code&gt;Regular</span><span class="nv"> </span><span class="s">File&lt;/code&gt;.</span><span class="nv"> </span><span class="s">In</span><span class="nv"> </span><span class="s">this</span><span class="nv"> </span><span class="s">case,</span><span class="nv"> </span><span class="s">it</span><span class="nv"> </span><span class="s">should</span>
+
+<span class="w">      </span><span class="s">not</span><span class="nv"> </span><span class="s">be</span><span class="nv"> </span><span class="s">assumed</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">Regular</span><span class="nv"> </span><span class="s">File</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">not</span><span class="nv"> </span><span class="s">executable.'</span>
 <span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">FileTypeIdEnum</span>
 <span class="w">    </span><span class="nt">required</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">uid</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">uid</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The unique identifier of the file as defined by the storage system,</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">such the file system file ID.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">unique</span><span class="nv"> </span><span class="s">identifier</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">file</span><span class="nv"> </span><span class="s">as</span><span class="nv"> </span><span class="s">defined</span><span class="nv"> </span><span class="s">by</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">storage</span><span class="nv"> </span><span class="s">system,</span>
+<span class="w">      </span><span class="s">such</span><span class="nv"> </span><span class="s">the</span>
+
+<span class="w">      </span><span class="s">file</span><span class="nv"> </span><span class="s">system</span><span class="nv"> </span><span class="s">file</span><span class="nv"> </span><span class="s">ID.'</span>
 <span class="w">  </span><span class="nt">uri</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">uri</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The file URI, such as those reporting by static analysis tools. E.g.,</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">&lt;code&gt;file:///C:/dev/sarif/sarif-tutorials/samples/Introduction/simple-example.js&lt;/code&gt;</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">file</span><span class="nv"> </span><span class="s">URI,</span><span class="nv"> </span><span class="s">such</span><span class="nv"> </span><span class="s">as</span><span class="nv"> </span><span class="s">those</span><span class="nv"> </span><span class="s">reporting</span><span class="nv"> </span><span class="s">by</span><span class="nv"> </span><span class="s">static</span><span class="nv"> </span><span class="s">analysis</span><span class="nv"> </span><span class="s">tools.</span>
+<span class="w">      </span><span class="s">E.g.,</span>
+
+<span class="w">      </span><span class="s">&lt;code&gt;file:///C:/dev/sarif/sarif-tutorials/samples/Introduction/simple-example.js&lt;/code&gt;'</span>
 <span class="w">  </span><span class="nt">url</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">url</span>
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The URL of the file, when applicable.</span>
@@ -1342,11 +1396,18 @@
 <span class="w">  </span><span class="nt">observable_id</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">observable_id</span>
 <span class="w">    </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">24</span>
-<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The File object represents the metadata associated with a file stored</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">in a computer system. It encompasses information about the file itself, including</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">its attributes, properties, and organizational details.</span>
+<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">File</span><span class="nv"> </span><span class="s">object</span><span class="nv"> </span><span class="s">represents</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">metadata</span><span class="nv"> </span><span class="s">associated</span><span class="nv"> </span><span class="s">with</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">file</span><span class="nv"> </span><span class="s">stored</span>
+<span class="w">  </span><span class="s">in</span><span class="nv"> </span><span class="s">a</span>
+
+<span class="w">  </span><span class="s">computer</span><span class="nv"> </span><span class="s">system.</span><span class="nv"> </span><span class="s">It</span><span class="nv"> </span><span class="s">encompasses</span><span class="nv"> </span><span class="s">information</span><span class="nv"> </span><span class="s">about</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">file</span><span class="nv"> </span><span class="s">itself,</span><span class="nv"> </span><span class="s">including</span>
+
+<span class="w">  </span><span class="s">its</span><span class="nv"> </span><span class="s">attributes,</span><span class="nv"> </span><span class="s">properties,</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">organizational</span><span class="nv"> </span><span class="s">details.'</span>
 <span class="nt">notes</span><span class="p">:</span>
-<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">D3FEND™ Ontology d3f:File — https://next.d3fend.mitre.org/dao/artifact/d3f:File/</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="s">'D3FEND™</span><span class="nv"> </span><span class="s">Ontology</span><span class="nv"> </span><span class="s">d3f:File</span><span class="nv"> </span><span class="s">—</span>
+
+<span class="w">  </span><span class="s">https://next.d3fend.mitre.org/dao/artifact/d3f:File/'</span>
+<span class="nt">in_subset</span><span class="p">:</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">objects</span>
 <span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="nt">see_also</span><span class="p">:</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://next.d3fend.mitre.org/dao/artifact/d3f:File/</span>
@@ -1368,29 +1429,47 @@
 <span class="w">  </span><span class="nt">desc</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">desc</span>
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">description</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">file,</span><span class="nv"> </span><span class="s">as</span><span class="nv"> </span><span class="s">returned</span><span class="nv"> </span><span class="s">by</span><span class="nv"> </span><span class="s">file</span><span class="nv"> </span><span class="s">system.</span><span class="nv"> </span><span class="s">For</span><span class="nv"> </span><span class="s">example:</span>
-<span class="w">      </span><span class="s">the</span><span class="nv"> </span><span class="s">description</span><span class="nv"> </span><span class="s">as</span><span class="nv"> </span><span class="s">returned</span><span class="nv"> </span><span class="s">by</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">Unix</span><span class="nv"> </span><span class="s">file</span><span class="nv"> </span><span class="s">command</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">Windows</span><span class="nv"> </span><span class="s">file</span><span class="nv"> </span><span class="s">type.'</span>
+<span class="w">      </span><span class="s">the</span>
+
+<span class="w">      </span><span class="s">description</span><span class="nv"> </span><span class="s">as</span><span class="nv"> </span><span class="s">returned</span><span class="nv"> </span><span class="s">by</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">Unix</span><span class="nv"> </span><span class="s">file</span><span class="nv"> </span><span class="s">command</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">Windows</span><span class="nv"> </span><span class="s">file</span><span class="nv"> </span><span class="s">type.'</span>
 <span class="w">  </span><span class="nt">encryption_details</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">encryption_details</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The encryption details of the file. Should be populated if the file</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">is encrypted.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">encryption</span><span class="nv"> </span><span class="s">details</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">file.</span><span class="nv"> </span><span class="s">Should</span><span class="nv"> </span><span class="s">be</span><span class="nv"> </span><span class="s">populated</span><span class="nv"> </span><span class="s">if</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">file</span>
+<span class="w">      </span><span class="s">is</span>
+
+<span class="w">      </span><span class="s">encrypted.'</span>
 <span class="w">  </span><span class="nt">ext</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ext</span>
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">extension</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">file,</span><span class="nv"> </span><span class="s">excluding</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">leading</span><span class="nv"> </span><span class="s">dot.</span><span class="nv"> </span><span class="s">For</span><span class="nv"> </span><span class="s">example:</span>
-<span class="w">      </span><span class="s">&lt;code&gt;exe&lt;/code&gt;</span><span class="nv"> </span><span class="s">from</span><span class="nv"> </span><span class="s">&lt;code&gt;svchost.exe&lt;/code&gt;,</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">&lt;code&gt;gz&lt;/code&gt;</span><span class="nv"> </span><span class="s">from</span><span class="nv"> </span><span class="s">&lt;code&gt;export.tar.gz&lt;/code&gt;.'</span>
+
+<span class="w">      </span><span class="s">&lt;code&gt;exe&lt;/code&gt;</span><span class="nv"> </span><span class="s">from</span><span class="nv"> </span><span class="s">&lt;code&gt;svchost.exe&lt;/code&gt;,</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">&lt;code&gt;gz&lt;/code&gt;</span><span class="nv"> </span><span class="s">from</span>
+
+<span class="w">      </span><span class="s">&lt;code&gt;export.tar.gz&lt;/code&gt;.'</span>
 <span class="w">    </span><span class="nt">recommended</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">hashes</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">hashes</span>
 <span class="w">    </span><span class="nt">recommended</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">internal_name</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">internal_name</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The name of the file as identified within the file itself. This contrasts</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">with the name by which the file is known on disk. Where available, the internal</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">name is widely used by security practitioners and detection content because</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">the on-disk file name is not reliable. On the Windows OS, most PE files contain</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">a &lt;a href="https://learn.microsoft.com/en-us/windows/win32/menurc/versioninfo-resource"&gt;VERSIONINFO&lt;/a&gt;</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">resource from which the internal name can be obtained. On macOS, binaries can</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">optionally embed a copy of the application's Info.plist file which in turn contains</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">the name of the executable.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">name</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">file</span><span class="nv"> </span><span class="s">as</span><span class="nv"> </span><span class="s">identified</span><span class="nv"> </span><span class="s">within</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">file</span><span class="nv"> </span><span class="s">itself.</span><span class="nv"> </span><span class="s">This</span>
+<span class="w">      </span><span class="s">contrasts</span><span class="nv"> </span><span class="s">with</span>
+
+<span class="w">      </span><span class="s">the</span><span class="nv"> </span><span class="s">name</span><span class="nv"> </span><span class="s">by</span><span class="nv"> </span><span class="s">which</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">file</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">known</span><span class="nv"> </span><span class="s">on</span><span class="nv"> </span><span class="s">disk.</span><span class="nv"> </span><span class="s">Where</span><span class="nv"> </span><span class="s">available,</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">internal</span><span class="nv"> </span><span class="s">name</span>
+
+<span class="w">      </span><span class="s">is</span><span class="nv"> </span><span class="s">widely</span><span class="nv"> </span><span class="s">used</span><span class="nv"> </span><span class="s">by</span><span class="nv"> </span><span class="s">security</span><span class="nv"> </span><span class="s">practitioners</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">detection</span><span class="nv"> </span><span class="s">content</span><span class="nv"> </span><span class="s">because</span><span class="nv"> </span><span class="s">the</span>
+
+<span class="w">      </span><span class="s">on-disk</span><span class="nv"> </span><span class="s">file</span><span class="nv"> </span><span class="s">name</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">not</span><span class="nv"> </span><span class="s">reliable.</span><span class="nv"> </span><span class="s">On</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">Windows</span><span class="nv"> </span><span class="s">OS,</span><span class="nv"> </span><span class="s">most</span><span class="nv"> </span><span class="s">PE</span><span class="nv"> </span><span class="s">files</span><span class="nv"> </span><span class="s">contain</span>
+<span class="w">      </span><span class="s">a</span>
+
+<span class="w">      </span><span class="s">&lt;a</span>
+
+<span class="w">      </span><span class="s">href="https://learn.microsoft.com/en-us/windows/win32/menurc/versioninfo-resource"&gt;VERSIONINFO&lt;/a&gt;</span>
+
+<span class="w">      </span><span class="s">resource</span><span class="nv"> </span><span class="s">from</span><span class="nv"> </span><span class="s">which</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">internal</span><span class="nv"> </span><span class="s">name</span><span class="nv"> </span><span class="s">can</span><span class="nv"> </span><span class="s">be</span><span class="nv"> </span><span class="s">obtained.</span><span class="nv"> </span><span class="s">On</span><span class="nv"> </span><span class="s">macOS,</span><span class="nv"> </span><span class="s">binaries</span><span class="nv"> </span><span class="s">can</span>
+
+<span class="w">      </span><span class="s">optionally</span><span class="nv"> </span><span class="s">embed</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">copy</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">application</span><span class="se">''</span><span class="s">s</span><span class="nv"> </span><span class="s">Info.plist</span><span class="nv"> </span><span class="s">file</span><span class="nv"> </span><span class="s">which</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">turn</span>
+
+<span class="w">      </span><span class="s">contains</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">name</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">executable.'</span>
 <span class="w">  </span><span class="nt">is_deleted</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">is_deleted</span>
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Indicates if the file was deleted from the filesystem.</span>
@@ -1399,8 +1478,10 @@
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Indicates if the file is encrypted.</span>
 <span class="w">  </span><span class="nt">is_public</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">is_public</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Indicates if the file is publicly accessible. For example in an object's</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">public access in AWS S3</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'Indicates</span><span class="nv"> </span><span class="s">if</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">file</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">publicly</span><span class="nv"> </span><span class="s">accessible.</span><span class="nv"> </span><span class="s">For</span><span class="nv"> </span><span class="s">example</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">an</span>
+<span class="w">      </span><span class="s">object</span><span class="se">''</span><span class="s">s</span><span class="nv"> </span><span class="s">public</span>
+
+<span class="w">      </span><span class="s">access</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">AWS</span><span class="nv"> </span><span class="s">S3'</span>
 <span class="w">  </span><span class="nt">is_readonly</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">is_readonly</span>
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Indicates that the file cannot be modified.</span>
@@ -1416,7 +1497,9 @@
 <span class="w">    </span><span class="nt">required</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">path</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">path</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">full</span><span class="nv"> </span><span class="s">path</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">file.</span><span class="nv"> </span><span class="s">For</span><span class="nv"> </span><span class="s">example:</span><span class="nv"> </span><span class="s">&lt;code&gt;c:\windows\system32\svchost.exe&lt;/code&gt;.'</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">full</span><span class="nv"> </span><span class="s">path</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">file.</span><span class="nv"> </span><span class="s">For</span><span class="nv"> </span><span class="s">example:</span>
+
+<span class="w">      </span><span class="s">&lt;code&gt;c:\windows\system32\svchost.exe&lt;/code&gt;.'</span>
 <span class="w">    </span><span class="nt">recommended</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">product</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">product</span>
@@ -1427,6 +1510,7 @@
 <span class="w">  </span><span class="nt">storage_class</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">storage_class</span>
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">storage</span><span class="nv"> </span><span class="s">class</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">file.</span><span class="nv"> </span><span class="s">For</span><span class="nv"> </span><span class="s">example</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">AWS</span><span class="nv"> </span><span class="s">S3:</span><span class="nv"> </span><span class="s">&lt;code&gt;STANDARD,</span>
+
 <span class="w">      </span><span class="s">STANDARD_IA,</span><span class="nv"> </span><span class="s">GLACIER&lt;/code&gt;.'</span>
 <span class="w">  </span><span class="nt">tags</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">tags</span>
@@ -1437,20 +1521,28 @@
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The file type.</span>
 <span class="w">  </span><span class="nt">type_id</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">type_id</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The file type ID. Note the distinction between a &lt;code&gt;Regular File&lt;/code&gt;</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">and an &lt;code&gt;Executable File&lt;/code&gt;. If the distinction is not known, or not</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">indicated by the log, use &lt;code&gt;Regular File&lt;/code&gt;. In this case, it should</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">not be assumed that a Regular File is not executable.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">file</span><span class="nv"> </span><span class="s">type</span><span class="nv"> </span><span class="s">ID.</span><span class="nv"> </span><span class="s">Note</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">distinction</span><span class="nv"> </span><span class="s">between</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">&lt;code&gt;Regular</span><span class="nv"> </span><span class="s">File&lt;/code&gt;</span>
+<span class="w">      </span><span class="s">and</span>
+
+<span class="w">      </span><span class="s">an</span><span class="nv"> </span><span class="s">&lt;code&gt;Executable</span><span class="nv"> </span><span class="s">File&lt;/code&gt;.</span><span class="nv"> </span><span class="s">If</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">distinction</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">not</span><span class="nv"> </span><span class="s">known,</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">not</span>
+
+<span class="w">      </span><span class="s">indicated</span><span class="nv"> </span><span class="s">by</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">log,</span><span class="nv"> </span><span class="s">use</span><span class="nv"> </span><span class="s">&lt;code&gt;Regular</span><span class="nv"> </span><span class="s">File&lt;/code&gt;.</span><span class="nv"> </span><span class="s">In</span><span class="nv"> </span><span class="s">this</span><span class="nv"> </span><span class="s">case,</span><span class="nv"> </span><span class="s">it</span><span class="nv"> </span><span class="s">should</span>
+
+<span class="w">      </span><span class="s">not</span><span class="nv"> </span><span class="s">be</span><span class="nv"> </span><span class="s">assumed</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">Regular</span><span class="nv"> </span><span class="s">File</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">not</span><span class="nv"> </span><span class="s">executable.'</span>
 <span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">FileTypeIdEnum</span>
 <span class="w">    </span><span class="nt">required</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">uid</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">uid</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The unique identifier of the file as defined by the storage system,</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">such the file system file ID.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">unique</span><span class="nv"> </span><span class="s">identifier</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">file</span><span class="nv"> </span><span class="s">as</span><span class="nv"> </span><span class="s">defined</span><span class="nv"> </span><span class="s">by</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">storage</span><span class="nv"> </span><span class="s">system,</span>
+<span class="w">      </span><span class="s">such</span><span class="nv"> </span><span class="s">the</span>
+
+<span class="w">      </span><span class="s">file</span><span class="nv"> </span><span class="s">system</span><span class="nv"> </span><span class="s">file</span><span class="nv"> </span><span class="s">ID.'</span>
 <span class="w">  </span><span class="nt">uri</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">uri</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The file URI, such as those reporting by static analysis tools. E.g.,</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">&lt;code&gt;file:///C:/dev/sarif/sarif-tutorials/samples/Introduction/simple-example.js&lt;/code&gt;</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">file</span><span class="nv"> </span><span class="s">URI,</span><span class="nv"> </span><span class="s">such</span><span class="nv"> </span><span class="s">as</span><span class="nv"> </span><span class="s">those</span><span class="nv"> </span><span class="s">reporting</span><span class="nv"> </span><span class="s">by</span><span class="nv"> </span><span class="s">static</span><span class="nv"> </span><span class="s">analysis</span><span class="nv"> </span><span class="s">tools.</span>
+<span class="w">      </span><span class="s">E.g.,</span>
+
+<span class="w">      </span><span class="s">&lt;code&gt;file:///C:/dev/sarif/sarif-tutorials/samples/Introduction/simple-example.js&lt;/code&gt;'</span>
 <span class="w">  </span><span class="nt">url</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">url</span>
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The URL of the file, when applicable.</span>
@@ -1500,6 +1592,7 @@
 <span class="w">  </span><span class="nt">company_name</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">company_name</span>
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">name</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">company</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">published</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">file.</span><span class="nv"> </span><span class="s">For</span><span class="nv"> </span><span class="s">example:</span><span class="nv"> </span><span class="s">&lt;code&gt;Microsoft</span>
+
 <span class="w">      </span><span class="s">Corporation&lt;/code&gt;.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
@@ -1512,8 +1605,10 @@
 <span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">string</span>
 <span class="w">  </span><span class="nt">confidentiality</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">confidentiality</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The file content confidentiality, normalized to the confidentiality_id</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">value. In the case of 'Other', it is defined by the event source.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">file</span><span class="nv"> </span><span class="s">content</span><span class="nv"> </span><span class="s">confidentiality,</span><span class="nv"> </span><span class="s">normalized</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">confidentiality_id</span>
+<span class="w">      </span><span class="s">value.</span>
+
+<span class="w">      </span><span class="s">In</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">case</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="se">''</span><span class="s">Other</span><span class="se">''</span><span class="s">,</span><span class="nv"> </span><span class="s">it</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">defined</span><span class="nv"> </span><span class="s">by</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">event</span><span class="nv"> </span><span class="s">source.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Confidentiality</span>
@@ -1595,7 +1690,9 @@
 <span class="w">  </span><span class="nt">desc</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">desc</span>
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">description</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">file,</span><span class="nv"> </span><span class="s">as</span><span class="nv"> </span><span class="s">returned</span><span class="nv"> </span><span class="s">by</span><span class="nv"> </span><span class="s">file</span><span class="nv"> </span><span class="s">system.</span><span class="nv"> </span><span class="s">For</span><span class="nv"> </span><span class="s">example:</span>
-<span class="w">      </span><span class="s">the</span><span class="nv"> </span><span class="s">description</span><span class="nv"> </span><span class="s">as</span><span class="nv"> </span><span class="s">returned</span><span class="nv"> </span><span class="s">by</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">Unix</span><span class="nv"> </span><span class="s">file</span><span class="nv"> </span><span class="s">command</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">Windows</span><span class="nv"> </span><span class="s">file</span><span class="nv"> </span><span class="s">type.'</span>
+<span class="w">      </span><span class="s">the</span>
+
+<span class="w">      </span><span class="s">description</span><span class="nv"> </span><span class="s">as</span><span class="nv"> </span><span class="s">returned</span><span class="nv"> </span><span class="s">by</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">Unix</span><span class="nv"> </span><span class="s">file</span><span class="nv"> </span><span class="s">command</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">Windows</span><span class="nv"> </span><span class="s">file</span><span class="nv"> </span><span class="s">type.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Description</span>
@@ -1637,8 +1734,9 @@
 <span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">string</span>
 <span class="w">  </span><span class="nt">drive_type</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">drive_type</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The drive type, normalized to the caption of the &lt;code&gt;drive_type_id&lt;/code&gt;</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">value. In the case of &lt;code&gt;Other&lt;/code&gt;, it is defined by the source.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">drive</span><span class="nv"> </span><span class="s">type,</span><span class="nv"> </span><span class="s">normalized</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">caption</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">&lt;code&gt;drive_type_id&lt;/code&gt;</span>
+
+<span class="w">      </span><span class="s">value.</span><span class="nv"> </span><span class="s">In</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">case</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">&lt;code&gt;Other&lt;/code&gt;,</span><span class="nv"> </span><span class="s">it</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">defined</span><span class="nv"> </span><span class="s">by</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">source.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Drive Type</span>
@@ -1666,8 +1764,10 @@
 <span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">DriveTypeIdEnum</span>
 <span class="w">  </span><span class="nt">encryption_details</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">encryption_details</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The encryption details of the file. Should be populated if the file</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">is encrypted.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">encryption</span><span class="nv"> </span><span class="s">details</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">file.</span><span class="nv"> </span><span class="s">Should</span><span class="nv"> </span><span class="s">be</span><span class="nv"> </span><span class="s">populated</span><span class="nv"> </span><span class="s">if</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">file</span>
+<span class="w">      </span><span class="s">is</span>
+
+<span class="w">      </span><span class="s">encrypted.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Encryption Details</span>
@@ -1682,7 +1782,10 @@
 <span class="w">  </span><span class="nt">ext</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ext</span>
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">extension</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">file,</span><span class="nv"> </span><span class="s">excluding</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">leading</span><span class="nv"> </span><span class="s">dot.</span><span class="nv"> </span><span class="s">For</span><span class="nv"> </span><span class="s">example:</span>
-<span class="w">      </span><span class="s">&lt;code&gt;exe&lt;/code&gt;</span><span class="nv"> </span><span class="s">from</span><span class="nv"> </span><span class="s">&lt;code&gt;svchost.exe&lt;/code&gt;,</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">&lt;code&gt;gz&lt;/code&gt;</span><span class="nv"> </span><span class="s">from</span><span class="nv"> </span><span class="s">&lt;code&gt;export.tar.gz&lt;/code&gt;.'</span>
+
+<span class="w">      </span><span class="s">&lt;code&gt;exe&lt;/code&gt;</span><span class="nv"> </span><span class="s">from</span><span class="nv"> </span><span class="s">&lt;code&gt;svchost.exe&lt;/code&gt;,</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">&lt;code&gt;gz&lt;/code&gt;</span><span class="nv"> </span><span class="s">from</span>
+
+<span class="w">      </span><span class="s">&lt;code&gt;export.tar.gz&lt;/code&gt;.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Extension</span>
@@ -1723,14 +1826,25 @@
 <span class="w">    </span><span class="nt">multivalued</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">internal_name</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">internal_name</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The name of the file as identified within the file itself. This contrasts</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">with the name by which the file is known on disk. Where available, the internal</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">name is widely used by security practitioners and detection content because</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">the on-disk file name is not reliable. On the Windows OS, most PE files contain</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">a &lt;a href="https://learn.microsoft.com/en-us/windows/win32/menurc/versioninfo-resource"&gt;VERSIONINFO&lt;/a&gt;</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">resource from which the internal name can be obtained. On macOS, binaries can</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">optionally embed a copy of the application's Info.plist file which in turn contains</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">the name of the executable.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">name</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">file</span><span class="nv"> </span><span class="s">as</span><span class="nv"> </span><span class="s">identified</span><span class="nv"> </span><span class="s">within</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">file</span><span class="nv"> </span><span class="s">itself.</span><span class="nv"> </span><span class="s">This</span>
+<span class="w">      </span><span class="s">contrasts</span><span class="nv"> </span><span class="s">with</span>
+
+<span class="w">      </span><span class="s">the</span><span class="nv"> </span><span class="s">name</span><span class="nv"> </span><span class="s">by</span><span class="nv"> </span><span class="s">which</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">file</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">known</span><span class="nv"> </span><span class="s">on</span><span class="nv"> </span><span class="s">disk.</span><span class="nv"> </span><span class="s">Where</span><span class="nv"> </span><span class="s">available,</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">internal</span><span class="nv"> </span><span class="s">name</span>
+
+<span class="w">      </span><span class="s">is</span><span class="nv"> </span><span class="s">widely</span><span class="nv"> </span><span class="s">used</span><span class="nv"> </span><span class="s">by</span><span class="nv"> </span><span class="s">security</span><span class="nv"> </span><span class="s">practitioners</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">detection</span><span class="nv"> </span><span class="s">content</span><span class="nv"> </span><span class="s">because</span><span class="nv"> </span><span class="s">the</span>
+
+<span class="w">      </span><span class="s">on-disk</span><span class="nv"> </span><span class="s">file</span><span class="nv"> </span><span class="s">name</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">not</span><span class="nv"> </span><span class="s">reliable.</span><span class="nv"> </span><span class="s">On</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">Windows</span><span class="nv"> </span><span class="s">OS,</span><span class="nv"> </span><span class="s">most</span><span class="nv"> </span><span class="s">PE</span><span class="nv"> </span><span class="s">files</span><span class="nv"> </span><span class="s">contain</span>
+<span class="w">      </span><span class="s">a</span>
+
+<span class="w">      </span><span class="s">&lt;a</span>
+
+<span class="w">      </span><span class="s">href="https://learn.microsoft.com/en-us/windows/win32/menurc/versioninfo-resource"&gt;VERSIONINFO&lt;/a&gt;</span>
+
+<span class="w">      </span><span class="s">resource</span><span class="nv"> </span><span class="s">from</span><span class="nv"> </span><span class="s">which</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">internal</span><span class="nv"> </span><span class="s">name</span><span class="nv"> </span><span class="s">can</span><span class="nv"> </span><span class="s">be</span><span class="nv"> </span><span class="s">obtained.</span><span class="nv"> </span><span class="s">On</span><span class="nv"> </span><span class="s">macOS,</span><span class="nv"> </span><span class="s">binaries</span><span class="nv"> </span><span class="s">can</span>
+
+<span class="w">      </span><span class="s">optionally</span><span class="nv"> </span><span class="s">embed</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">copy</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">application</span><span class="se">''</span><span class="s">s</span><span class="nv"> </span><span class="s">Info.plist</span><span class="nv"> </span><span class="s">file</span><span class="nv"> </span><span class="s">which</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">turn</span>
+
+<span class="w">      </span><span class="s">contains</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">name</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">executable.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Internal Name</span>
@@ -1767,8 +1881,10 @@
 <span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">boolean</span>
 <span class="w">  </span><span class="nt">is_public</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">is_public</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Indicates if the file is publicly accessible. For example in an object's</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">public access in AWS S3</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'Indicates</span><span class="nv"> </span><span class="s">if</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">file</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">publicly</span><span class="nv"> </span><span class="s">accessible.</span><span class="nv"> </span><span class="s">For</span><span class="nv"> </span><span class="s">example</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">an</span>
+<span class="w">      </span><span class="s">object</span><span class="se">''</span><span class="s">s</span><span class="nv"> </span><span class="s">public</span>
+
+<span class="w">      </span><span class="s">access</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">AWS</span><span class="nv"> </span><span class="s">S3'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Public</span>
@@ -1808,8 +1924,10 @@
 <span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">boolean</span>
 <span class="w">  </span><span class="nt">mime_type</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mime_type</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The Multipurpose Internet Mail Extensions (MIME) type of the file,</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">if applicable.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">Multipurpose</span><span class="nv"> </span><span class="s">Internet</span><span class="nv"> </span><span class="s">Mail</span><span class="nv"> </span><span class="s">Extensions</span><span class="nv"> </span><span class="s">(MIME)</span><span class="nv"> </span><span class="s">type</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">file,</span>
+<span class="w">      </span><span class="s">if</span>
+
+<span class="w">      </span><span class="s">applicable.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">MIME type</span>
@@ -1983,7 +2101,9 @@
 <span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">User</span>
 <span class="w">  </span><span class="nt">parent_folder</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">parent_folder</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">parent</span><span class="nv"> </span><span class="s">folder</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">which</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">file</span><span class="nv"> </span><span class="s">resides.</span><span class="nv"> </span><span class="s">For</span><span class="nv"> </span><span class="s">example:</span><span class="nv"> </span><span class="s">&lt;code&gt;c:\windows\system32&lt;/code&gt;'</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">parent</span><span class="nv"> </span><span class="s">folder</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">which</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">file</span><span class="nv"> </span><span class="s">resides.</span><span class="nv"> </span><span class="s">For</span><span class="nv"> </span><span class="s">example:</span>
+
+<span class="w">      </span><span class="s">&lt;code&gt;c:\windows\system32&lt;/code&gt;'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Parent Folder</span>
@@ -1995,7 +2115,9 @@
 <span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">string</span>
 <span class="w">  </span><span class="nt">path</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">path</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">full</span><span class="nv"> </span><span class="s">path</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">file.</span><span class="nv"> </span><span class="s">For</span><span class="nv"> </span><span class="s">example:</span><span class="nv"> </span><span class="s">&lt;code&gt;c:\windows\system32\svchost.exe&lt;/code&gt;.'</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">full</span><span class="nv"> </span><span class="s">path</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">file.</span><span class="nv"> </span><span class="s">For</span><span class="nv"> </span><span class="s">example:</span>
+
+<span class="w">      </span><span class="s">&lt;code&gt;c:\windows\system32\svchost.exe&lt;/code&gt;.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Path</span>
@@ -2104,6 +2226,7 @@
 <span class="w">  </span><span class="nt">storage_class</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">storage_class</span>
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">storage</span><span class="nv"> </span><span class="s">class</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">file.</span><span class="nv"> </span><span class="s">For</span><span class="nv"> </span><span class="s">example</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">AWS</span><span class="nv"> </span><span class="s">S3:</span><span class="nv"> </span><span class="s">&lt;code&gt;STANDARD,</span>
+
 <span class="w">      </span><span class="s">STANDARD_IA,</span><span class="nv"> </span><span class="s">GLACIER&lt;/code&gt;.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
@@ -2215,10 +2338,14 @@
 <span class="w">      </span><span class="nt">sibling</span><span class="p">:</span>
 <span class="w">        </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">sibling</span>
 <span class="w">        </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">type</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The file type ID. Note the distinction between a &lt;code&gt;Regular File&lt;/code&gt;</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">and an &lt;code&gt;Executable File&lt;/code&gt;. If the distinction is not known, or not</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">indicated by the log, use &lt;code&gt;Regular File&lt;/code&gt;. In this case, it should</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">not be assumed that a Regular File is not executable.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">file</span><span class="nv"> </span><span class="s">type</span><span class="nv"> </span><span class="s">ID.</span><span class="nv"> </span><span class="s">Note</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">distinction</span><span class="nv"> </span><span class="s">between</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">&lt;code&gt;Regular</span><span class="nv"> </span><span class="s">File&lt;/code&gt;</span>
+<span class="w">      </span><span class="s">and</span>
+
+<span class="w">      </span><span class="s">an</span><span class="nv"> </span><span class="s">&lt;code&gt;Executable</span><span class="nv"> </span><span class="s">File&lt;/code&gt;.</span><span class="nv"> </span><span class="s">If</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">distinction</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">not</span><span class="nv"> </span><span class="s">known,</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">not</span>
+
+<span class="w">      </span><span class="s">indicated</span><span class="nv"> </span><span class="s">by</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">log,</span><span class="nv"> </span><span class="s">use</span><span class="nv"> </span><span class="s">&lt;code&gt;Regular</span><span class="nv"> </span><span class="s">File&lt;/code&gt;.</span><span class="nv"> </span><span class="s">In</span><span class="nv"> </span><span class="s">this</span><span class="nv"> </span><span class="s">case,</span><span class="nv"> </span><span class="s">it</span><span class="nv"> </span><span class="s">should</span>
+
+<span class="w">      </span><span class="s">not</span><span class="nv"> </span><span class="s">be</span><span class="nv"> </span><span class="s">assumed</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">Regular</span><span class="nv"> </span><span class="s">File</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">not</span><span class="nv"> </span><span class="s">executable.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Type ID</span>
@@ -2267,8 +2394,10 @@
 <span class="w">    </span><span class="nt">required</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">uid</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">uid</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The unique identifier of the file as defined by the storage system,</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">such the file system file ID.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">unique</span><span class="nv"> </span><span class="s">identifier</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">file</span><span class="nv"> </span><span class="s">as</span><span class="nv"> </span><span class="s">defined</span><span class="nv"> </span><span class="s">by</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">storage</span><span class="nv"> </span><span class="s">system,</span>
+<span class="w">      </span><span class="s">such</span><span class="nv"> </span><span class="s">the</span>
+
+<span class="w">      </span><span class="s">file</span><span class="nv"> </span><span class="s">system</span><span class="nv"> </span><span class="s">file</span><span class="nv"> </span><span class="s">ID.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Unique ID</span>
@@ -2363,8 +2492,10 @@
 <span class="w">    </span><span class="nt">recommended</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">uri</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">uri</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The file URI, such as those reporting by static analysis tools. E.g.,</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">&lt;code&gt;file:///C:/dev/sarif/sarif-tutorials/samples/Introduction/simple-example.js&lt;/code&gt;</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">file</span><span class="nv"> </span><span class="s">URI,</span><span class="nv"> </span><span class="s">such</span><span class="nv"> </span><span class="s">as</span><span class="nv"> </span><span class="s">those</span><span class="nv"> </span><span class="s">reporting</span><span class="nv"> </span><span class="s">by</span><span class="nv"> </span><span class="s">static</span><span class="nv"> </span><span class="s">analysis</span><span class="nv"> </span><span class="s">tools.</span>
+<span class="w">      </span><span class="s">E.g.,</span>
+
+<span class="w">      </span><span class="s">&lt;code&gt;file:///C:/dev/sarif/sarif-tutorials/samples/Introduction/simple-example.js&lt;/code&gt;'</span>
 <span class="w">    </span><span class="nt">notes</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">RFC 3986 — https://datatracker.ietf.org/doc/html/rfc3986</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
@@ -2455,12 +2586,23 @@
 <span class="w">  </span><span class="nt">xattributes</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">xattributes</span>
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'An</span><span class="nv"> </span><span class="s">unordered</span><span class="nv"> </span><span class="s">collection</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">zero</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">more</span><span class="nv"> </span><span class="s">name/value</span><span class="nv"> </span><span class="s">pairs</span><span class="nv"> </span><span class="s">where</span><span class="nv"> </span><span class="s">each</span>
-<span class="w">      </span><span class="s">pair</span><span class="nv"> </span><span class="s">represents</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">file</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">folder</span><span class="nv"> </span><span class="s">extended</span><span class="nv"> </span><span class="s">attribute.&lt;/p&gt;For</span><span class="nv"> </span><span class="s">example:</span><span class="nv"> </span><span class="s">Windows</span>
-<span class="w">      </span><span class="s">alternate</span><span class="nv"> </span><span class="s">data</span><span class="nv"> </span><span class="s">stream</span><span class="nv"> </span><span class="s">attributes</span><span class="nv"> </span><span class="s">(ADS</span><span class="nv"> </span><span class="s">stream</span><span class="nv"> </span><span class="s">name,</span><span class="nv"> </span><span class="s">ADS</span><span class="nv"> </span><span class="s">size,</span><span class="nv"> </span><span class="s">etc.),</span><span class="nv"> </span><span class="s">user-defined</span>
-<span class="w">      </span><span class="s">or</span><span class="nv"> </span><span class="s">application-defined</span><span class="nv"> </span><span class="s">attributes,</span><span class="nv"> </span><span class="s">ACL,</span><span class="nv"> </span><span class="s">owner,</span><span class="nv"> </span><span class="s">primary</span><span class="nv"> </span><span class="s">group,</span><span class="nv"> </span><span class="s">etc.</span><span class="nv"> </span><span class="s">Examples</span>
-<span class="w">      </span><span class="s">from</span><span class="nv"> </span><span class="s">DCS:</span><span class="nv"> </span><span class="s">&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;strong&gt;ads_name&lt;/strong&gt;&lt;/li&gt;&lt;li&gt;&lt;strong&gt;ads_size&lt;/strong&gt;&lt;/li&gt;&lt;li&gt;&lt;strong&gt;dacl&lt;/strong&gt;&lt;/li&gt;&lt;li&gt;&lt;strong&gt;owner&lt;/strong&gt;&lt;/li&gt;&lt;li&gt;&lt;strong&gt;primary_group&lt;/strong&gt;&lt;/li&gt;&lt;li&gt;&lt;strong&gt;link_name&lt;/strong&gt;</span>
-<span class="w">      </span><span class="s">-</span><span class="nv"> </span><span class="s">name</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">link</span><span class="nv"> </span><span class="s">associated</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">file.&lt;/li&gt;&lt;li&gt;&lt;strong&gt;hard_link_count&lt;/strong&gt;</span>
-<span class="w">      </span><span class="s">-</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">number</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">links</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">are</span><span class="nv"> </span><span class="s">associated</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">file.&lt;/li&gt;&lt;/ul&gt;'</span>
+<span class="w">      </span><span class="s">pair</span>
+
+<span class="w">      </span><span class="s">represents</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">file</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">folder</span><span class="nv"> </span><span class="s">extended</span><span class="nv"> </span><span class="s">attribute.&lt;/p&gt;For</span><span class="nv"> </span><span class="s">example:</span><span class="nv"> </span><span class="s">Windows</span>
+
+<span class="w">      </span><span class="s">alternate</span><span class="nv"> </span><span class="s">data</span><span class="nv"> </span><span class="s">stream</span><span class="nv"> </span><span class="s">attributes</span><span class="nv"> </span><span class="s">(ADS</span><span class="nv"> </span><span class="s">stream</span><span class="nv"> </span><span class="s">name,</span><span class="nv"> </span><span class="s">ADS</span><span class="nv"> </span><span class="s">size,</span><span class="nv"> </span><span class="s">etc.),</span>
+
+<span class="w">      </span><span class="s">user-defined</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">application-defined</span><span class="nv"> </span><span class="s">attributes,</span><span class="nv"> </span><span class="s">ACL,</span><span class="nv"> </span><span class="s">owner,</span><span class="nv"> </span><span class="s">primary</span><span class="nv"> </span><span class="s">group,</span><span class="nv"> </span><span class="s">etc.</span>
+
+<span class="w">      </span><span class="s">Examples</span><span class="nv"> </span><span class="s">from</span><span class="nv"> </span><span class="s">DCS:</span>
+
+<span class="w">      </span><span class="s">&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;strong&gt;ads_name&lt;/strong&gt;&lt;/li&gt;&lt;li&gt;&lt;strong&gt;ads_size&lt;/strong&gt;&lt;/li&gt;&lt;li&gt;&lt;strong&gt;dacl&lt;/strong&gt;&lt;/li&gt;&lt;li&gt;&lt;strong&gt;owner&lt;/strong&gt;&lt;/li&gt;&lt;li&gt;&lt;strong&gt;primary_group&lt;/strong&gt;&lt;/li&gt;&lt;li&gt;&lt;strong&gt;link_name&lt;/strong&gt;</span>
+
+<span class="w">      </span><span class="s">-</span><span class="nv"> </span><span class="s">name</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">link</span><span class="nv"> </span><span class="s">associated</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">the</span>
+
+<span class="w">      </span><span class="s">file.&lt;/li&gt;&lt;li&gt;&lt;strong&gt;hard_link_count&lt;/strong&gt;</span><span class="nv"> </span><span class="s">-</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">number</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">links</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">are</span>
+
+<span class="w">      </span><span class="s">associated</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">file.&lt;/li&gt;&lt;/ul&gt;'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Extended Attributes</span>
@@ -2477,8 +2619,9 @@
 <span class="w">      </span><span class="nt">group</span><span class="p">:</span>
 <span class="w">        </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">group</span>
 <span class="w">        </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">context</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The Data Classification object includes information about data classification</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">levels and data category types.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">Data</span><span class="nv"> </span><span class="s">Classification</span><span class="nv"> </span><span class="s">object</span><span class="nv"> </span><span class="s">includes</span><span class="nv"> </span><span class="s">information</span><span class="nv"> </span><span class="s">about</span><span class="nv"> </span><span class="s">data</span><span class="nv"> </span><span class="s">classification</span>
+
+<span class="w">      </span><span class="s">levels</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">data</span><span class="nv"> </span><span class="s">category</span><span class="nv"> </span><span class="s">types.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Data Classification</span>
@@ -2495,8 +2638,10 @@
 <span class="w">      </span><span class="nt">group</span><span class="p">:</span>
 <span class="w">        </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">group</span>
 <span class="w">        </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">context</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">A list of Data Classification objects, that include information about</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">data classification levels and data category types, identified by a classifier.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'A</span><span class="nv"> </span><span class="s">list</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">Data</span><span class="nv"> </span><span class="s">Classification</span><span class="nv"> </span><span class="s">objects,</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">include</span><span class="nv"> </span><span class="s">information</span>
+<span class="w">      </span><span class="s">about</span><span class="nv"> </span><span class="s">data</span>
+
+<span class="w">      </span><span class="s">classification</span><span class="nv"> </span><span class="s">levels</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">data</span><span class="nv"> </span><span class="s">category</span><span class="nv"> </span><span class="s">types,</span><span class="nv"> </span><span class="s">identified</span><span class="nv"> </span><span class="s">by</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">classifier.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Data Classification</span>

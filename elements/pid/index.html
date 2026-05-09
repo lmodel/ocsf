@@ -508,7 +508,9 @@
 
 
 <h1 id="slot-pid">Slot: pid</h1>
-<p><em>The process identifier, as reported by the operating system. Process ID (PID) is a number used by the operating system to uniquely identify an active process.</em></p>
+<p><em>The process identifier, as reported by the operating system. Process ID (PID)</em></p>
+<p><em>is a number used by the operating system to uniquely identify an active</em></p>
+<p><em>process.</em></p>
 <p>URI: <a href="https://w3id.org/lmodel/ocsf/pid">ocsf:pid</a>
 Alias: pid</p>
 <!-- no inheritance hierarchy -->
@@ -524,18 +526,8 @@ Alias: pid</p>
 </thead>
 <tbody>
 <tr>
-<td><a href="../ProcessEntity/">ProcessEntity</a></td>
-<td>The Process Entity object provides critical fields for referencing a process</td>
-<td>yes</td>
-</tr>
-<tr>
 <td><a href="../MacosProcess/">MacosProcess</a></td>
 <td>Extends the process object to add macOS specific fields</td>
-<td>no</td>
-</tr>
-<tr>
-<td><a href="../Process/">Process</a></td>
-<td>The Process object describes a running instance of a launched program</td>
 <td>no</td>
 </tr>
 <tr>
@@ -544,9 +536,19 @@ Alias: pid</p>
 <td>no</td>
 </tr>
 <tr>
+<td><a href="../Process/">Process</a></td>
+<td>The Process object describes a running instance of a launched program</td>
+<td>no</td>
+</tr>
+<tr>
 <td><a href="../WindowsProcess/">WindowsProcess</a></td>
 <td>Extends the process object to add Windows specific fields</td>
 <td>no</td>
+</tr>
+<tr>
+<td><a href="../ProcessEntity/">ProcessEntity</a></td>
+<td>The Process Entity object provides critical fields for referencing a process</td>
+<td>yes</td>
 </tr>
 </tbody>
 </table>
@@ -635,9 +637,12 @@ Alias: pid</p>
 <span class="w">  </span><span class="nt">observable_id</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">observable_id</span>
 <span class="w">    </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">15</span>
-<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The process identifier, as reported by the operating system. Process</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">ID (PID) is a number used by the operating system to uniquely identify an active</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">process.</span>
+<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;The</span><span class="nv"> </span><span class="s">process</span><span class="nv"> </span><span class="s">identifier,</span><span class="nv"> </span><span class="s">as</span><span class="nv"> </span><span class="s">reported</span><span class="nv"> </span><span class="s">by</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">operating</span><span class="nv"> </span><span class="s">system.</span><span class="nv"> </span><span class="s">Process</span>
+<span class="w">  </span><span class="s">ID</span><span class="nv"> </span><span class="s">(PID)</span>
+
+<span class="w">  </span><span class="s">is</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">number</span><span class="nv"> </span><span class="s">used</span><span class="nv"> </span><span class="s">by</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">operating</span><span class="nv"> </span><span class="s">system</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">uniquely</span><span class="nv"> </span><span class="s">identify</span><span class="nv"> </span><span class="s">an</span><span class="nv"> </span><span class="s">active</span>
+
+<span class="w">  </span><span class="s">process.&#39;</span>
 <span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="nt">aliases</span><span class="p">:</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Process ID</span>

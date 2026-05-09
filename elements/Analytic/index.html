@@ -217,6 +217,15 @@
 </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="#in-subsets">
+<span class="md-ellipsis">
+      
+        In Subsets
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#aliases">
 <span class="md-ellipsis">
       
@@ -295,7 +304,9 @@
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
 <h1 id="class-analytic">Class: Analytic</h1>
-<p><em>The Analytic object contains details about the analytic technique used to analyze and derive insights from the data or information that led to the creation of a finding or conclusion.</em></p>
+<p><em>The Analytic object contains details about the analytic technique used to</em></p>
+<p><em>analyze and derive insights from the data or information that led to the</em></p>
+<p><em>creation of a finding or conclusion.</em></p>
 <p>URI: <a href="https://w3id.org/lmodel/ocsf/Analytic">ocsf:Analytic</a></p>
 <pre class="mermaid"><code> classDiagram
     class Analytic
@@ -488,6 +499,10 @@
 </tr>
 </tbody>
 </table>
+<h2 id="in-subsets">In Subsets</h2>
+<ul>
+<li><a href="../Objects/">Objects</a></li>
+</ul>
 <h2 id="aliases">Aliases</h2>
 <ul>
 <li>Analytic</li>
@@ -521,9 +536,14 @@
 <h3 id="direct">Direct</h3>
 <details>
 <div class="highlight"><pre><span></span><code><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Analytic</span>
-<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The Analytic object contains details about the analytic technique used</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">to analyze and derive insights from the data or information that led to the creation</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">of a finding or conclusion.</span>
+<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">Analytic</span><span class="nv"> </span><span class="s">object</span><span class="nv"> </span><span class="s">contains</span><span class="nv"> </span><span class="s">details</span><span class="nv"> </span><span class="s">about</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">analytic</span><span class="nv"> </span><span class="s">technique</span><span class="nv"> </span><span class="s">used</span>
+<span class="w">  </span><span class="s">to</span>
+
+<span class="w">  </span><span class="s">analyze</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">derive</span><span class="nv"> </span><span class="s">insights</span><span class="nv"> </span><span class="s">from</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">data</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">information</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">led</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">the</span>
+
+<span class="w">  </span><span class="s">creation</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">finding</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">conclusion.'</span>
+<span class="nt">in_subset</span><span class="p">:</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">objects</span>
 <span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="nt">aliases</span><span class="p">:</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Analytic</span>
@@ -556,8 +576,9 @@
 <span class="w">  </span><span class="nt">related_analytics</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">related_analytics</span>
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Other analytics related to this analytic.</span>
-<span class="w">    </span><span class="nt">deprecated</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Related Analytics has been decoupled from this object, instead use</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">&lt;code&gt;finding_info.related_analytics&lt;/code&gt;.</span>
+<span class="w">    </span><span class="nt">deprecated</span><span class="p">:</span><span class="w"> </span><span class="s">'Related</span><span class="nv"> </span><span class="s">Analytics</span><span class="nv"> </span><span class="s">has</span><span class="nv"> </span><span class="s">been</span><span class="nv"> </span><span class="s">decoupled</span><span class="nv"> </span><span class="s">from</span><span class="nv"> </span><span class="s">this</span><span class="nv"> </span><span class="s">object,</span><span class="nv"> </span><span class="s">instead</span><span class="nv"> </span><span class="s">use</span>
+
+<span class="w">      </span><span class="s">&lt;code&gt;finding_info.related_analytics&lt;/code&gt;.'</span>
 <span class="w">  </span><span class="nt">state</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">state</span>
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The Analytic state.</span>
@@ -584,9 +605,14 @@
 <h3 id="induced">Induced</h3>
 <details>
 <div class="highlight"><pre><span></span><code><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Analytic</span>
-<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The Analytic object contains details about the analytic technique used</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">to analyze and derive insights from the data or information that led to the creation</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">of a finding or conclusion.</span>
+<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">Analytic</span><span class="nv"> </span><span class="s">object</span><span class="nv"> </span><span class="s">contains</span><span class="nv"> </span><span class="s">details</span><span class="nv"> </span><span class="s">about</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">analytic</span><span class="nv"> </span><span class="s">technique</span><span class="nv"> </span><span class="s">used</span>
+<span class="w">  </span><span class="s">to</span>
+
+<span class="w">  </span><span class="s">analyze</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">derive</span><span class="nv"> </span><span class="s">insights</span><span class="nv"> </span><span class="s">from</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">data</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">information</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">led</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">the</span>
+
+<span class="w">  </span><span class="s">creation</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">finding</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">conclusion.'</span>
+<span class="nt">in_subset</span><span class="p">:</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">objects</span>
 <span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="nt">aliases</span><span class="p">:</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Analytic</span>
@@ -607,8 +633,9 @@
 <span class="w">  </span><span class="nt">related_analytics</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">related_analytics</span>
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Other analytics related to this analytic.</span>
-<span class="w">    </span><span class="nt">deprecated</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Related Analytics has been decoupled from this object, instead use</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">&lt;code&gt;finding_info.related_analytics&lt;/code&gt;.</span>
+<span class="w">    </span><span class="nt">deprecated</span><span class="p">:</span><span class="w"> </span><span class="s">'Related</span><span class="nv"> </span><span class="s">Analytics</span><span class="nv"> </span><span class="s">has</span><span class="nv"> </span><span class="s">been</span><span class="nv"> </span><span class="s">decoupled</span><span class="nv"> </span><span class="s">from</span><span class="nv"> </span><span class="s">this</span><span class="nv"> </span><span class="s">object,</span><span class="nv"> </span><span class="s">instead</span><span class="nv"> </span><span class="s">use</span>
+
+<span class="w">      </span><span class="s">&lt;code&gt;finding_info.related_analytics&lt;/code&gt;.'</span>
 <span class="w">  </span><span class="nt">state</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">state</span>
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The Analytic state.</span>
@@ -813,8 +840,9 @@
 <span class="w">  </span><span class="nt">related_analytics</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">related_analytics</span>
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Other analytics related to this analytic.</span>
-<span class="w">    </span><span class="nt">deprecated</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Related Analytics has been decoupled from this object, instead use</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">&lt;code&gt;finding_info.related_analytics&lt;/code&gt;.</span>
+<span class="w">    </span><span class="nt">deprecated</span><span class="p">:</span><span class="w"> </span><span class="s">'Related</span><span class="nv"> </span><span class="s">Analytics</span><span class="nv"> </span><span class="s">has</span><span class="nv"> </span><span class="s">been</span><span class="nv"> </span><span class="s">decoupled</span><span class="nv"> </span><span class="s">from</span><span class="nv"> </span><span class="s">this</span><span class="nv"> </span><span class="s">object,</span><span class="nv"> </span><span class="s">instead</span><span class="nv"> </span><span class="s">use</span>
+
+<span class="w">      </span><span class="s">&lt;code&gt;finding_info.related_analytics&lt;/code&gt;.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Related Analytics</span>

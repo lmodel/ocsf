@@ -217,6 +217,15 @@
 </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="#in-subsets">
+<span class="md-ellipsis">
+      
+        In Subsets
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#aliases">
 <span class="md-ellipsis">
       
@@ -295,7 +304,11 @@
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
 <h1 id="class-osint">Class: Osint</h1>
-<p><em>The OSINT (Open Source Intelligence) object contains details related to an indicator such as the indicator itself, related indicators, geolocation, registrar information, subdomains, analyst commentary, and other contextual information. This information can be used to further enrich a detection or finding by providing decisioning support to other analysts and engineers.</em></p>
+<p><em>The OSINT (Open Source Intelligence) object contains details related to an</em></p>
+<p><em>indicator such as the indicator itself, related indicators, geolocation,</em></p>
+<p><em>registrar information, subdomains, analyst commentary, and other contextual</em></p>
+<p><em>information. This information can be used to further enrich a detection or</em></p>
+<p><em>finding by providing decisioning support to other analysts and engineers.</em></p>
 <p>URI: <a href="https://w3id.org/lmodel/ocsf/Osint">ocsf:Osint</a></p>
 <pre class="mermaid"><code> classDiagram
     class Osint
@@ -629,19 +642,19 @@
 <tr>
 <td><a href="../answers/">answers</a></td>
 <td>* <br/> <a href="../DnsAnswer/">DnsAnswer</a></td>
-<td>Any pertinent DNS answers information related to an indicator or OSINT analys...</td>
+<td>Any pertinent DNS answers information related to an indicator or OSINT</td>
 <td>direct</td>
 </tr>
 <tr>
 <td><a href="../attacks/">attacks</a></td>
 <td>* <br/> <a href="../Attack/">Attack</a></td>
-<td>MITRE ATT&amp;CK Tactics, Techniques, and/or Procedures (TTPs) pertinent to an in...</td>
+<td>MITRE ATT&amp;CK Tactics, Techniques, and/or Procedures (TTPs) pertinent to an</td>
 <td>direct</td>
 </tr>
 <tr>
 <td><a href="../autonomous_system/">autonomous_system</a></td>
 <td>0..1 <br/> <a href="../AutonomousSystem/">AutonomousSystem</a></td>
-<td>Any pertinent autonomous system information related to an indicator or OSINT ...</td>
+<td>Any pertinent autonomous system information related to an indicator or OSINT</td>
 <td>direct</td>
 </tr>
 <tr>
@@ -671,7 +684,7 @@
 <tr>
 <td><a href="../confidence_id/">confidence_id</a></td>
 <td>0..1 <em>recommended</em> <br/> <a href="../ConfidenceIdEnum/">ConfidenceIdEnum</a></td>
-<td>The normalized confidence refers to the accuracy of collected information rel...</td>
+<td>The normalized confidence refers to the accuracy of collected information</td>
 <td>direct</td>
 </tr>
 <tr>
@@ -683,13 +696,13 @@
 <tr>
 <td><a href="../creator/">creator</a></td>
 <td>0..1 <br/> <a href="../User/">User</a></td>
-<td>The identifier of the user, system, or organization that contributed the indi...</td>
+<td>The identifier of the user, system, or organization that contributed the</td>
 <td>direct</td>
 </tr>
 <tr>
 <td><a href="../desc/">desc</a></td>
 <td>0..1 <br/> <a href="../String/">String</a></td>
-<td>A detailed explanation of the indicator, including its context, purpose, and ...</td>
+<td>A detailed explanation of the indicator, including its context, purpose, and</td>
 <td>direct</td>
 </tr>
 <tr>
@@ -701,7 +714,7 @@
 <tr>
 <td><a href="../detection_pattern_type/">detection_pattern_type</a></td>
 <td>0..1 <br/> <a href="../String/">String</a></td>
-<td>The detection pattern type, normalized to the caption of the detection_patter...</td>
+<td>The detection pattern type, normalized to the caption of the</td>
 <td>direct</td>
 </tr>
 <tr>
@@ -719,13 +732,13 @@
 <tr>
 <td><a href="../email_auth/">email_auth</a></td>
 <td>0..1 <br/> <a href="../EmailAuth/">EmailAuth</a></td>
-<td>Any email authentication information pertinent to an indicator or OSINT analy...</td>
+<td>Any email authentication information pertinent to an indicator or OSINT</td>
 <td>direct</td>
 </tr>
 <tr>
 <td><a href="../expiration_time/">expiration_time</a></td>
 <td>0..1 <br/> <a href="../TimestampT/">TimestampT</a></td>
-<td>The expiration date of the indicator, after which it is no longer considered ...</td>
+<td>The expiration date of the indicator, after which it is no longer considered</td>
 <td>direct</td>
 </tr>
 <tr>
@@ -743,7 +756,7 @@
 <tr>
 <td><a href="../intrusion_sets/">intrusion_sets</a></td>
 <td>* <br/> <a href="../String/">String</a></td>
-<td>A grouping of adversarial behaviors and resources believed to be associated w...</td>
+<td>A grouping of adversarial behaviors and resources believed to be associated</td>
 <td>direct</td>
 </tr>
 <tr>
@@ -761,7 +774,7 @@
 <tr>
 <td><a href="../location/">location</a></td>
 <td>0..1 <br/> <a href="../Location/">Location</a></td>
-<td>Any pertinent geolocation information related to an indicator or OSINT analys...</td>
+<td>Any pertinent geolocation information related to an indicator or OSINT</td>
 <td>direct</td>
 </tr>
 <tr>
@@ -779,13 +792,13 @@
 <tr>
 <td><a href="../name/">name</a></td>
 <td>0..1 <br/> <a href="../String/">String</a></td>
-<td>The <code>name</code> is a pointer/reference to an attribute within the OCSF ...</td>
+<td>The <code>name</code> is a pointer/reference to an attribute within the OCSF</td>
 <td>direct</td>
 </tr>
 <tr>
 <td><a href="../references/">references</a></td>
 <td>* <br/> <a href="../String/">String</a></td>
-<td>Provides a reference to an external source of information related to the CTI ...</td>
+<td>Provides a reference to an external source of information related to the CTI</td>
 <td>direct</td>
 </tr>
 <tr>
@@ -839,7 +852,7 @@
 <tr>
 <td><a href="../subdomains/">subdomains</a></td>
 <td>* <br/> <a href="../String/">String</a></td>
-<td>Any pertinent subdomain information - such as those generated by a Domain Gen...</td>
+<td>Any pertinent subdomain information - such as those generated by a Domain</td>
 <td>direct</td>
 </tr>
 <tr>
@@ -851,7 +864,7 @@
 <tr>
 <td><a href="../threat_actor/">threat_actor</a></td>
 <td>0..1 <br/> <a href="../ThreatActor/">ThreatActor</a></td>
-<td>A threat actor is an individual or group that conducts malicious cyber activi...</td>
+<td>A threat actor is an individual or group that conducts malicious cyber</td>
 <td>direct</td>
 </tr>
 <tr>
@@ -881,7 +894,7 @@
 <tr>
 <td><a href="../uploaded_time/">uploaded_time</a></td>
 <td>0..1 <br/> <a href="../TimestampT/">TimestampT</a></td>
-<td>The timestamp indicating when the associated indicator or intelligence was ad...</td>
+<td>The timestamp indicating when the associated indicator or intelligence was</td>
 <td>direct</td>
 </tr>
 <tr>
@@ -1475,6 +1488,10 @@
 </tr>
 </tbody>
 </table>
+<h2 id="in-subsets">In Subsets</h2>
+<ul>
+<li><a href="../Objects/">Objects</a></li>
+</ul>
 <h2 id="aliases">Aliases</h2>
 <ul>
 <li>OSINT</li>
@@ -1508,11 +1525,18 @@
 <h3 id="direct">Direct</h3>
 <details>
 <div class="highlight"><pre><span></span><code><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Osint</span>
-<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The OSINT (Open Source Intelligence) object contains details related</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">to an indicator such as the indicator itself, related indicators, geolocation, registrar</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">information, subdomains, analyst commentary, and other contextual information. This</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">information can be used to further enrich a detection or finding by providing decisioning</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">support to other analysts and engineers.</span>
+<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">OSINT</span><span class="nv"> </span><span class="s">(Open</span><span class="nv"> </span><span class="s">Source</span><span class="nv"> </span><span class="s">Intelligence)</span><span class="nv"> </span><span class="s">object</span><span class="nv"> </span><span class="s">contains</span><span class="nv"> </span><span class="s">details</span><span class="nv"> </span><span class="s">related</span>
+<span class="w">  </span><span class="s">to</span><span class="nv"> </span><span class="s">an</span>
+
+<span class="w">  </span><span class="s">indicator</span><span class="nv"> </span><span class="s">such</span><span class="nv"> </span><span class="s">as</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">indicator</span><span class="nv"> </span><span class="s">itself,</span><span class="nv"> </span><span class="s">related</span><span class="nv"> </span><span class="s">indicators,</span><span class="nv"> </span><span class="s">geolocation,</span>
+
+<span class="w">  </span><span class="s">registrar</span><span class="nv"> </span><span class="s">information,</span><span class="nv"> </span><span class="s">subdomains,</span><span class="nv"> </span><span class="s">analyst</span><span class="nv"> </span><span class="s">commentary,</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">other</span><span class="nv"> </span><span class="s">contextual</span>
+
+<span class="w">  </span><span class="s">information.</span><span class="nv"> </span><span class="s">This</span><span class="nv"> </span><span class="s">information</span><span class="nv"> </span><span class="s">can</span><span class="nv"> </span><span class="s">be</span><span class="nv"> </span><span class="s">used</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">further</span><span class="nv"> </span><span class="s">enrich</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">detection</span><span class="nv"> </span><span class="s">or</span>
+
+<span class="w">  </span><span class="s">finding</span><span class="nv"> </span><span class="s">by</span><span class="nv"> </span><span class="s">providing</span><span class="nv"> </span><span class="s">decisioning</span><span class="nv"> </span><span class="s">support</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">other</span><span class="nv"> </span><span class="s">analysts</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">engineers.'</span>
+<span class="nt">in_subset</span><span class="p">:</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">objects</span>
 <span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="nt">aliases</span><span class="p">:</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">OSINT</span>
@@ -1568,16 +1592,22 @@
 <span class="nt">slot_usage</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">answers</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">answers</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Any pertinent DNS answers information related to an indicator or</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">OSINT analysis.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'Any</span><span class="nv"> </span><span class="s">pertinent</span><span class="nv"> </span><span class="s">DNS</span><span class="nv"> </span><span class="s">answers</span><span class="nv"> </span><span class="s">information</span><span class="nv"> </span><span class="s">related</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">an</span><span class="nv"> </span><span class="s">indicator</span><span class="nv"> </span><span class="s">or</span>
+<span class="w">      </span><span class="s">OSINT</span>
+
+<span class="w">      </span><span class="s">analysis.'</span>
 <span class="w">  </span><span class="nt">attacks</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">attacks</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">MITRE ATT&amp;CK Tactics, Techniques, and/or Procedures (TTPs) pertinent</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">to an indicator or OSINT analysis.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'MITRE</span><span class="nv"> </span><span class="s">ATT&amp;CK</span><span class="nv"> </span><span class="s">Tactics,</span><span class="nv"> </span><span class="s">Techniques,</span><span class="nv"> </span><span class="s">and/or</span><span class="nv"> </span><span class="s">Procedures</span><span class="nv"> </span><span class="s">(TTPs)</span><span class="nv"> </span><span class="s">pertinent</span>
+<span class="w">      </span><span class="s">to</span><span class="nv"> </span><span class="s">an</span>
+
+<span class="w">      </span><span class="s">indicator</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">OSINT</span><span class="nv"> </span><span class="s">analysis.'</span>
 <span class="w">  </span><span class="nt">autonomous_system</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">autonomous_system</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Any pertinent autonomous system information related to an indicator</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">or OSINT analysis.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'Any</span><span class="nv"> </span><span class="s">pertinent</span><span class="nv"> </span><span class="s">autonomous</span><span class="nv"> </span><span class="s">system</span><span class="nv"> </span><span class="s">information</span><span class="nv"> </span><span class="s">related</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">an</span><span class="nv"> </span><span class="s">indicator</span>
+<span class="w">      </span><span class="s">or</span><span class="nv"> </span><span class="s">OSINT</span>
+
+<span class="w">      </span><span class="s">analysis.'</span>
 <span class="w">  </span><span class="nt">category</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">category</span>
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Categorizes the threat indicator based on its functional or operational</span>
@@ -1588,28 +1618,39 @@
 <span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">analysis.</span>
 <span class="w">  </span><span class="nt">confidence</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">confidence</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The confidence of an indicator being malicious and/or pertinent,</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">normalized to the caption of the confidence_id value. In the case of 'Other',</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">it is defined by the event source or analyst.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">confidence</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">an</span><span class="nv"> </span><span class="s">indicator</span><span class="nv"> </span><span class="s">being</span><span class="nv"> </span><span class="s">malicious</span><span class="nv"> </span><span class="s">and/or</span><span class="nv"> </span><span class="s">pertinent,</span>
+<span class="w">      </span><span class="s">normalized</span><span class="nv"> </span><span class="s">to</span>
+
+<span class="w">      </span><span class="s">the</span><span class="nv"> </span><span class="s">caption</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">confidence_id</span><span class="nv"> </span><span class="s">value.</span><span class="nv"> </span><span class="s">In</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">case</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="se">''</span><span class="s">Other</span><span class="se">''</span><span class="s">,</span><span class="nv"> </span><span class="s">it</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">defined</span>
+
+<span class="w">      </span><span class="s">by</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">event</span><span class="nv"> </span><span class="s">source</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">analyst.'</span>
 <span class="w">  </span><span class="nt">confidence_id</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">confidence_id</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The normalized confidence refers to the accuracy of collected information</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">related to the OSINT or how pertinent an indicator or analysis is to a specific</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">event or finding. A low confidence means that the information collected or analysis</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">conducted lacked detail or is not accurate enough to qualify an indicator as</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">fully malicious.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">normalized</span><span class="nv"> </span><span class="s">confidence</span><span class="nv"> </span><span class="s">refers</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">accuracy</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">collected</span><span class="nv"> </span><span class="s">information</span>
+
+<span class="w">      </span><span class="s">related</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">OSINT</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">how</span><span class="nv"> </span><span class="s">pertinent</span><span class="nv"> </span><span class="s">an</span><span class="nv"> </span><span class="s">indicator</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">analysis</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">specific</span>
+
+<span class="w">      </span><span class="s">event</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">finding.</span><span class="nv"> </span><span class="s">A</span><span class="nv"> </span><span class="s">low</span><span class="nv"> </span><span class="s">confidence</span><span class="nv"> </span><span class="s">means</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">information</span><span class="nv"> </span><span class="s">collected</span><span class="nv"> </span><span class="s">or</span>
+
+<span class="w">      </span><span class="s">analysis</span><span class="nv"> </span><span class="s">conducted</span><span class="nv"> </span><span class="s">lacked</span><span class="nv"> </span><span class="s">detail</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">not</span><span class="nv"> </span><span class="s">accurate</span><span class="nv"> </span><span class="s">enough</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">qualify</span><span class="nv"> </span><span class="s">an</span>
+
+<span class="w">      </span><span class="s">indicator</span><span class="nv"> </span><span class="s">as</span><span class="nv"> </span><span class="s">fully</span><span class="nv"> </span><span class="s">malicious.'</span>
 <span class="w">    </span><span class="nt">recommended</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">created_time</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">created_time</span>
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The timestamp when the indicator was initially created or identified.</span>
 <span class="w">  </span><span class="nt">creator</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">creator</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The identifier of the user, system, or organization that contributed</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">the indicator.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">identifier</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">user,</span><span class="nv"> </span><span class="s">system,</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">organization</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">contributed</span>
+<span class="w">      </span><span class="s">the</span>
+
+<span class="w">      </span><span class="s">indicator.'</span>
 <span class="w">  </span><span class="nt">desc</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">desc</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">A detailed explanation of the indicator, including its context, purpose,</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">and relevance.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'A</span><span class="nv"> </span><span class="s">detailed</span><span class="nv"> </span><span class="s">explanation</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">indicator,</span><span class="nv"> </span><span class="s">including</span><span class="nv"> </span><span class="s">its</span><span class="nv"> </span><span class="s">context,</span>
+<span class="w">      </span><span class="s">purpose,</span><span class="nv"> </span><span class="s">and</span>
+
+<span class="w">      </span><span class="s">relevance.'</span>
 <span class="w">  </span><span class="nt">detection_pattern</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">detection_pattern</span>
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The specific detection pattern or signature associated with the indicator.</span>
@@ -1618,12 +1659,16 @@
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Any email information pertinent to an indicator or OSINT analysis.</span>
 <span class="w">  </span><span class="nt">email_auth</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">email_auth</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Any email authentication information pertinent to an indicator or</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">OSINT analysis.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'Any</span><span class="nv"> </span><span class="s">email</span><span class="nv"> </span><span class="s">authentication</span><span class="nv"> </span><span class="s">information</span><span class="nv"> </span><span class="s">pertinent</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">an</span><span class="nv"> </span><span class="s">indicator</span><span class="nv"> </span><span class="s">or</span>
+<span class="w">      </span><span class="s">OSINT</span>
+
+<span class="w">      </span><span class="s">analysis.'</span>
 <span class="w">  </span><span class="nt">expiration_time</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">expiration_time</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The expiration date of the indicator, after which it is no longer</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">considered reliable.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">expiration</span><span class="nv"> </span><span class="s">date</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">indicator,</span><span class="nv"> </span><span class="s">after</span><span class="nv"> </span><span class="s">which</span><span class="nv"> </span><span class="s">it</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">no</span><span class="nv"> </span><span class="s">longer</span>
+<span class="w">      </span><span class="s">considered</span>
+
+<span class="w">      </span><span class="s">reliable.'</span>
 <span class="w">  </span><span class="nt">file</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">file</span>
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Any pertinent file information related to an indicator or OSINT analysis.</span>
@@ -1636,28 +1681,36 @@
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Tags or keywords associated with the indicator to enhance searchability.</span>
 <span class="w">  </span><span class="nt">location</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">location</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Any pertinent geolocation information related to an indicator or</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">OSINT analysis.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'Any</span><span class="nv"> </span><span class="s">pertinent</span><span class="nv"> </span><span class="s">geolocation</span><span class="nv"> </span><span class="s">information</span><span class="nv"> </span><span class="s">related</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">an</span><span class="nv"> </span><span class="s">indicator</span><span class="nv"> </span><span class="s">or</span>
+<span class="w">      </span><span class="s">OSINT</span>
+
+<span class="w">      </span><span class="s">analysis.'</span>
 <span class="w">  </span><span class="nt">modified_time</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">modified_time</span>
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The timestamp of the last modification or update to the indicator.</span>
 <span class="w">  </span><span class="nt">name</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">name</span>
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">&lt;code&gt;name&lt;/code&gt;</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">pointer/reference</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">an</span><span class="nv"> </span><span class="s">attribute</span><span class="nv"> </span><span class="s">within</span>
-<span class="w">      </span><span class="s">the</span><span class="nv"> </span><span class="s">OCSF</span><span class="nv"> </span><span class="s">event</span><span class="nv"> </span><span class="s">data.</span><span class="nv"> </span><span class="s">For</span><span class="nv"> </span><span class="s">example:</span><span class="nv"> </span><span class="s">file.name.'</span>
+<span class="w">      </span><span class="s">the</span><span class="nv"> </span><span class="s">OCSF</span>
+
+<span class="w">      </span><span class="s">event</span><span class="nv"> </span><span class="s">data.</span><span class="nv"> </span><span class="s">For</span><span class="nv"> </span><span class="s">example:</span><span class="nv"> </span><span class="s">file.name.'</span>
 <span class="w">  </span><span class="nt">references</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">references</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Provides a reference to an external source of information related</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">to the CTI being represented. This may include a URL, a document, or some other</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">type of reference that provides additional context or information about the</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">CTI.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'Provides</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">reference</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">an</span><span class="nv"> </span><span class="s">external</span><span class="nv"> </span><span class="s">source</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">information</span><span class="nv"> </span><span class="s">related</span>
+<span class="w">      </span><span class="s">to</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">CTI</span>
+
+<span class="w">      </span><span class="s">being</span><span class="nv"> </span><span class="s">represented.</span><span class="nv"> </span><span class="s">This</span><span class="nv"> </span><span class="s">may</span><span class="nv"> </span><span class="s">include</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">URL,</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">document,</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">some</span><span class="nv"> </span><span class="s">other</span><span class="nv"> </span><span class="s">type</span><span class="nv"> </span><span class="s">of</span>
+
+<span class="w">      </span><span class="s">reference</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">provides</span><span class="nv"> </span><span class="s">additional</span><span class="nv"> </span><span class="s">context</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">information</span><span class="nv"> </span><span class="s">about</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">CTI.'</span>
 <span class="w">  </span><span class="nt">related_analytics</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">related_analytics</span>
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Any analytics related to an indicator or OSINT analysis.</span>
 <span class="w">  </span><span class="nt">reputation</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">reputation</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Related reputational analysis from third-party engines and analysts</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">for a given indicator or OSINT analysis.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'Related</span><span class="nv"> </span><span class="s">reputational</span><span class="nv"> </span><span class="s">analysis</span><span class="nv"> </span><span class="s">from</span><span class="nv"> </span><span class="s">third-party</span><span class="nv"> </span><span class="s">engines</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">analysts</span>
+<span class="w">      </span><span class="s">for</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">given</span>
+
+<span class="w">      </span><span class="s">indicator</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">OSINT</span><span class="nv"> </span><span class="s">analysis.'</span>
 <span class="w">  </span><span class="nt">risk_score</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">risk_score</span>
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">A numerical representation of the threat indicator’s risk level.</span>
@@ -1667,34 +1720,48 @@
 <span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">analysis.</span>
 <span class="w">  </span><span class="nt">severity</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">severity</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Represents the severity level of the threat indicator, typically</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">reflecting its potential impact or damage.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'Represents</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">severity</span><span class="nv"> </span><span class="s">level</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">threat</span><span class="nv"> </span><span class="s">indicator,</span><span class="nv"> </span><span class="s">typically</span>
+<span class="w">      </span><span class="s">reflecting</span><span class="nv"> </span><span class="s">its</span>
+
+<span class="w">      </span><span class="s">potential</span><span class="nv"> </span><span class="s">impact</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">damage.'</span>
 <span class="w">  </span><span class="nt">severity_id</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">severity_id</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The normalized severity level of the threat indicator, typically</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">reflecting its potential impact or damage.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">normalized</span><span class="nv"> </span><span class="s">severity</span><span class="nv"> </span><span class="s">level</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">threat</span><span class="nv"> </span><span class="s">indicator,</span><span class="nv"> </span><span class="s">typically</span>
+<span class="w">      </span><span class="s">reflecting</span><span class="nv"> </span><span class="s">its</span>
+
+<span class="w">      </span><span class="s">potential</span><span class="nv"> </span><span class="s">impact</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">damage.'</span>
 <span class="w">  </span><span class="nt">signatures</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">signatures</span>
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Any digital signatures or hashes related to an indicator or OSINT</span>
 <span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">analysis.</span>
 <span class="w">  </span><span class="nt">src_url</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">src_url</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The source URL of an indicator or OSINT analysis, e.g., a URL back</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">to a TIP, report, or otherwise.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">source</span><span class="nv"> </span><span class="s">URL</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">an</span><span class="nv"> </span><span class="s">indicator</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">OSINT</span><span class="nv"> </span><span class="s">analysis,</span><span class="nv"> </span><span class="s">e.g.,</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">URL</span><span class="nv"> </span><span class="s">back</span>
+<span class="w">      </span><span class="s">to</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">TIP,</span>
+
+<span class="w">      </span><span class="s">report,</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">otherwise.'</span>
 <span class="w">  </span><span class="nt">subdomains</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">subdomains</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Any pertinent subdomain information - such as those generated by</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">a Domain Generation Algorithm - related to an indicator or OSINT analysis.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'Any</span><span class="nv"> </span><span class="s">pertinent</span><span class="nv"> </span><span class="s">subdomain</span><span class="nv"> </span><span class="s">information</span><span class="nv"> </span><span class="s">-</span><span class="nv"> </span><span class="s">such</span><span class="nv"> </span><span class="s">as</span><span class="nv"> </span><span class="s">those</span><span class="nv"> </span><span class="s">generated</span><span class="nv"> </span><span class="s">by</span>
+<span class="w">      </span><span class="s">a</span><span class="nv"> </span><span class="s">Domain</span>
+
+<span class="w">      </span><span class="s">Generation</span><span class="nv"> </span><span class="s">Algorithm</span><span class="nv"> </span><span class="s">-</span><span class="nv"> </span><span class="s">related</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">an</span><span class="nv"> </span><span class="s">indicator</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">OSINT</span><span class="nv"> </span><span class="s">analysis.'</span>
 <span class="w">  </span><span class="nt">subnet</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">subnet</span>
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">A CIDR or network block related to an indicator or OSINT analysis.</span>
 <span class="w">  </span><span class="nt">tlp</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">tlp</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The &lt;a target='_blank' href='https://www.first.org/tlp/'&gt;Traffic</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">Light Protocol&lt;/a&gt; was created to facilitate greater sharing of potentially</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">sensitive information and more effective collaboration. TLP provides a simple</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">and intuitive schema for indicating with whom potentially sensitive information</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">can be shared.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">&lt;a</span><span class="nv"> </span><span class="s">target=</span><span class="se">''</span><span class="s">_blank</span><span class="se">''</span><span class="nv"> </span><span class="s">href=</span><span class="se">''</span><span class="s">https://www.first.org/tlp/</span><span class="se">''</span><span class="s">&gt;Traffic</span>
+<span class="w">      </span><span class="s">Light</span>
+
+<span class="w">      </span><span class="s">Protocol&lt;/a&gt;</span><span class="nv"> </span><span class="s">was</span><span class="nv"> </span><span class="s">created</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">facilitate</span><span class="nv"> </span><span class="s">greater</span><span class="nv"> </span><span class="s">sharing</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">potentially</span><span class="nv"> </span><span class="s">sensitive</span>
+
+<span class="w">      </span><span class="s">information</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">more</span><span class="nv"> </span><span class="s">effective</span><span class="nv"> </span><span class="s">collaboration.</span><span class="nv"> </span><span class="s">TLP</span><span class="nv"> </span><span class="s">provides</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">simple</span><span class="nv"> </span><span class="s">and</span>
+
+<span class="w">      </span><span class="s">intuitive</span><span class="nv"> </span><span class="s">schema</span><span class="nv"> </span><span class="s">for</span><span class="nv"> </span><span class="s">indicating</span><span class="nv"> </span><span class="s">with</span><span class="nv"> </span><span class="s">whom</span><span class="nv"> </span><span class="s">potentially</span><span class="nv"> </span><span class="s">sensitive</span><span class="nv"> </span><span class="s">information</span>
+<span class="w">      </span><span class="s">can</span>
+
+<span class="w">      </span><span class="s">be</span><span class="nv"> </span><span class="s">shared.'</span>
 <span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">OsintTlpEnum</span>
 <span class="w">    </span><span class="nt">recommended</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">type</span><span class="p">:</span>
@@ -1710,12 +1777,16 @@
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The unique identifier for the OSINT object.</span>
 <span class="w">  </span><span class="nt">uploaded_time</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">uploaded_time</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The timestamp indicating when the associated indicator or intelligence</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">was added to the system or repository.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">timestamp</span><span class="nv"> </span><span class="s">indicating</span><span class="nv"> </span><span class="s">when</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">associated</span><span class="nv"> </span><span class="s">indicator</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">intelligence</span>
+<span class="w">      </span><span class="s">was</span>
+
+<span class="w">      </span><span class="s">added</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">system</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">repository.'</span>
 <span class="w">  </span><span class="nt">value</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">value</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The actual indicator value in scope, e.g., a SHA-256 hash hexdigest</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">or a domain name.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">actual</span><span class="nv"> </span><span class="s">indicator</span><span class="nv"> </span><span class="s">value</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">scope,</span><span class="nv"> </span><span class="s">e.g.,</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">SHA-256</span><span class="nv"> </span><span class="s">hash</span><span class="nv"> </span><span class="s">hexdigest</span>
+<span class="w">      </span><span class="s">or</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">domain</span>
+
+<span class="w">      </span><span class="s">name.'</span>
 <span class="w">    </span><span class="nt">required</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">vendor_name</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">vendor_name</span>
@@ -1733,11 +1804,18 @@
 <h3 id="induced">Induced</h3>
 <details>
 <div class="highlight"><pre><span></span><code><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Osint</span>
-<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The OSINT (Open Source Intelligence) object contains details related</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">to an indicator such as the indicator itself, related indicators, geolocation, registrar</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">information, subdomains, analyst commentary, and other contextual information. This</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">information can be used to further enrich a detection or finding by providing decisioning</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">support to other analysts and engineers.</span>
+<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">OSINT</span><span class="nv"> </span><span class="s">(Open</span><span class="nv"> </span><span class="s">Source</span><span class="nv"> </span><span class="s">Intelligence)</span><span class="nv"> </span><span class="s">object</span><span class="nv"> </span><span class="s">contains</span><span class="nv"> </span><span class="s">details</span><span class="nv"> </span><span class="s">related</span>
+<span class="w">  </span><span class="s">to</span><span class="nv"> </span><span class="s">an</span>
+
+<span class="w">  </span><span class="s">indicator</span><span class="nv"> </span><span class="s">such</span><span class="nv"> </span><span class="s">as</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">indicator</span><span class="nv"> </span><span class="s">itself,</span><span class="nv"> </span><span class="s">related</span><span class="nv"> </span><span class="s">indicators,</span><span class="nv"> </span><span class="s">geolocation,</span>
+
+<span class="w">  </span><span class="s">registrar</span><span class="nv"> </span><span class="s">information,</span><span class="nv"> </span><span class="s">subdomains,</span><span class="nv"> </span><span class="s">analyst</span><span class="nv"> </span><span class="s">commentary,</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">other</span><span class="nv"> </span><span class="s">contextual</span>
+
+<span class="w">  </span><span class="s">information.</span><span class="nv"> </span><span class="s">This</span><span class="nv"> </span><span class="s">information</span><span class="nv"> </span><span class="s">can</span><span class="nv"> </span><span class="s">be</span><span class="nv"> </span><span class="s">used</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">further</span><span class="nv"> </span><span class="s">enrich</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">detection</span><span class="nv"> </span><span class="s">or</span>
+
+<span class="w">  </span><span class="s">finding</span><span class="nv"> </span><span class="s">by</span><span class="nv"> </span><span class="s">providing</span><span class="nv"> </span><span class="s">decisioning</span><span class="nv"> </span><span class="s">support</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">other</span><span class="nv"> </span><span class="s">analysts</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">engineers.'</span>
+<span class="nt">in_subset</span><span class="p">:</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">objects</span>
 <span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="nt">aliases</span><span class="p">:</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">OSINT</span>
@@ -1745,16 +1823,22 @@
 <span class="nt">slot_usage</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">answers</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">answers</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Any pertinent DNS answers information related to an indicator or</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">OSINT analysis.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'Any</span><span class="nv"> </span><span class="s">pertinent</span><span class="nv"> </span><span class="s">DNS</span><span class="nv"> </span><span class="s">answers</span><span class="nv"> </span><span class="s">information</span><span class="nv"> </span><span class="s">related</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">an</span><span class="nv"> </span><span class="s">indicator</span><span class="nv"> </span><span class="s">or</span>
+<span class="w">      </span><span class="s">OSINT</span>
+
+<span class="w">      </span><span class="s">analysis.'</span>
 <span class="w">  </span><span class="nt">attacks</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">attacks</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">MITRE ATT&amp;CK Tactics, Techniques, and/or Procedures (TTPs) pertinent</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">to an indicator or OSINT analysis.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'MITRE</span><span class="nv"> </span><span class="s">ATT&amp;CK</span><span class="nv"> </span><span class="s">Tactics,</span><span class="nv"> </span><span class="s">Techniques,</span><span class="nv"> </span><span class="s">and/or</span><span class="nv"> </span><span class="s">Procedures</span><span class="nv"> </span><span class="s">(TTPs)</span><span class="nv"> </span><span class="s">pertinent</span>
+<span class="w">      </span><span class="s">to</span><span class="nv"> </span><span class="s">an</span>
+
+<span class="w">      </span><span class="s">indicator</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">OSINT</span><span class="nv"> </span><span class="s">analysis.'</span>
 <span class="w">  </span><span class="nt">autonomous_system</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">autonomous_system</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Any pertinent autonomous system information related to an indicator</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">or OSINT analysis.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'Any</span><span class="nv"> </span><span class="s">pertinent</span><span class="nv"> </span><span class="s">autonomous</span><span class="nv"> </span><span class="s">system</span><span class="nv"> </span><span class="s">information</span><span class="nv"> </span><span class="s">related</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">an</span><span class="nv"> </span><span class="s">indicator</span>
+<span class="w">      </span><span class="s">or</span><span class="nv"> </span><span class="s">OSINT</span>
+
+<span class="w">      </span><span class="s">analysis.'</span>
 <span class="w">  </span><span class="nt">category</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">category</span>
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Categorizes the threat indicator based on its functional or operational</span>
@@ -1765,28 +1849,39 @@
 <span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">analysis.</span>
 <span class="w">  </span><span class="nt">confidence</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">confidence</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The confidence of an indicator being malicious and/or pertinent,</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">normalized to the caption of the confidence_id value. In the case of 'Other',</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">it is defined by the event source or analyst.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">confidence</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">an</span><span class="nv"> </span><span class="s">indicator</span><span class="nv"> </span><span class="s">being</span><span class="nv"> </span><span class="s">malicious</span><span class="nv"> </span><span class="s">and/or</span><span class="nv"> </span><span class="s">pertinent,</span>
+<span class="w">      </span><span class="s">normalized</span><span class="nv"> </span><span class="s">to</span>
+
+<span class="w">      </span><span class="s">the</span><span class="nv"> </span><span class="s">caption</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">confidence_id</span><span class="nv"> </span><span class="s">value.</span><span class="nv"> </span><span class="s">In</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">case</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="se">''</span><span class="s">Other</span><span class="se">''</span><span class="s">,</span><span class="nv"> </span><span class="s">it</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">defined</span>
+
+<span class="w">      </span><span class="s">by</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">event</span><span class="nv"> </span><span class="s">source</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">analyst.'</span>
 <span class="w">  </span><span class="nt">confidence_id</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">confidence_id</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The normalized confidence refers to the accuracy of collected information</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">related to the OSINT or how pertinent an indicator or analysis is to a specific</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">event or finding. A low confidence means that the information collected or analysis</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">conducted lacked detail or is not accurate enough to qualify an indicator as</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">fully malicious.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">normalized</span><span class="nv"> </span><span class="s">confidence</span><span class="nv"> </span><span class="s">refers</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">accuracy</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">collected</span><span class="nv"> </span><span class="s">information</span>
+
+<span class="w">      </span><span class="s">related</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">OSINT</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">how</span><span class="nv"> </span><span class="s">pertinent</span><span class="nv"> </span><span class="s">an</span><span class="nv"> </span><span class="s">indicator</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">analysis</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">specific</span>
+
+<span class="w">      </span><span class="s">event</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">finding.</span><span class="nv"> </span><span class="s">A</span><span class="nv"> </span><span class="s">low</span><span class="nv"> </span><span class="s">confidence</span><span class="nv"> </span><span class="s">means</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">information</span><span class="nv"> </span><span class="s">collected</span><span class="nv"> </span><span class="s">or</span>
+
+<span class="w">      </span><span class="s">analysis</span><span class="nv"> </span><span class="s">conducted</span><span class="nv"> </span><span class="s">lacked</span><span class="nv"> </span><span class="s">detail</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">not</span><span class="nv"> </span><span class="s">accurate</span><span class="nv"> </span><span class="s">enough</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">qualify</span><span class="nv"> </span><span class="s">an</span>
+
+<span class="w">      </span><span class="s">indicator</span><span class="nv"> </span><span class="s">as</span><span class="nv"> </span><span class="s">fully</span><span class="nv"> </span><span class="s">malicious.'</span>
 <span class="w">    </span><span class="nt">recommended</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">created_time</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">created_time</span>
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The timestamp when the indicator was initially created or identified.</span>
 <span class="w">  </span><span class="nt">creator</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">creator</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The identifier of the user, system, or organization that contributed</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">the indicator.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">identifier</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">user,</span><span class="nv"> </span><span class="s">system,</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">organization</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">contributed</span>
+<span class="w">      </span><span class="s">the</span>
+
+<span class="w">      </span><span class="s">indicator.'</span>
 <span class="w">  </span><span class="nt">desc</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">desc</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">A detailed explanation of the indicator, including its context, purpose,</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">and relevance.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'A</span><span class="nv"> </span><span class="s">detailed</span><span class="nv"> </span><span class="s">explanation</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">indicator,</span><span class="nv"> </span><span class="s">including</span><span class="nv"> </span><span class="s">its</span><span class="nv"> </span><span class="s">context,</span>
+<span class="w">      </span><span class="s">purpose,</span><span class="nv"> </span><span class="s">and</span>
+
+<span class="w">      </span><span class="s">relevance.'</span>
 <span class="w">  </span><span class="nt">detection_pattern</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">detection_pattern</span>
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The specific detection pattern or signature associated with the indicator.</span>
@@ -1795,12 +1890,16 @@
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Any email information pertinent to an indicator or OSINT analysis.</span>
 <span class="w">  </span><span class="nt">email_auth</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">email_auth</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Any email authentication information pertinent to an indicator or</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">OSINT analysis.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'Any</span><span class="nv"> </span><span class="s">email</span><span class="nv"> </span><span class="s">authentication</span><span class="nv"> </span><span class="s">information</span><span class="nv"> </span><span class="s">pertinent</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">an</span><span class="nv"> </span><span class="s">indicator</span><span class="nv"> </span><span class="s">or</span>
+<span class="w">      </span><span class="s">OSINT</span>
+
+<span class="w">      </span><span class="s">analysis.'</span>
 <span class="w">  </span><span class="nt">expiration_time</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">expiration_time</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The expiration date of the indicator, after which it is no longer</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">considered reliable.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">expiration</span><span class="nv"> </span><span class="s">date</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">indicator,</span><span class="nv"> </span><span class="s">after</span><span class="nv"> </span><span class="s">which</span><span class="nv"> </span><span class="s">it</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">no</span><span class="nv"> </span><span class="s">longer</span>
+<span class="w">      </span><span class="s">considered</span>
+
+<span class="w">      </span><span class="s">reliable.'</span>
 <span class="w">  </span><span class="nt">file</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">file</span>
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Any pertinent file information related to an indicator or OSINT analysis.</span>
@@ -1813,28 +1912,36 @@
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Tags or keywords associated with the indicator to enhance searchability.</span>
 <span class="w">  </span><span class="nt">location</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">location</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Any pertinent geolocation information related to an indicator or</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">OSINT analysis.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'Any</span><span class="nv"> </span><span class="s">pertinent</span><span class="nv"> </span><span class="s">geolocation</span><span class="nv"> </span><span class="s">information</span><span class="nv"> </span><span class="s">related</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">an</span><span class="nv"> </span><span class="s">indicator</span><span class="nv"> </span><span class="s">or</span>
+<span class="w">      </span><span class="s">OSINT</span>
+
+<span class="w">      </span><span class="s">analysis.'</span>
 <span class="w">  </span><span class="nt">modified_time</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">modified_time</span>
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The timestamp of the last modification or update to the indicator.</span>
 <span class="w">  </span><span class="nt">name</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">name</span>
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">&lt;code&gt;name&lt;/code&gt;</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">pointer/reference</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">an</span><span class="nv"> </span><span class="s">attribute</span><span class="nv"> </span><span class="s">within</span>
-<span class="w">      </span><span class="s">the</span><span class="nv"> </span><span class="s">OCSF</span><span class="nv"> </span><span class="s">event</span><span class="nv"> </span><span class="s">data.</span><span class="nv"> </span><span class="s">For</span><span class="nv"> </span><span class="s">example:</span><span class="nv"> </span><span class="s">file.name.'</span>
+<span class="w">      </span><span class="s">the</span><span class="nv"> </span><span class="s">OCSF</span>
+
+<span class="w">      </span><span class="s">event</span><span class="nv"> </span><span class="s">data.</span><span class="nv"> </span><span class="s">For</span><span class="nv"> </span><span class="s">example:</span><span class="nv"> </span><span class="s">file.name.'</span>
 <span class="w">  </span><span class="nt">references</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">references</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Provides a reference to an external source of information related</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">to the CTI being represented. This may include a URL, a document, or some other</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">type of reference that provides additional context or information about the</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">CTI.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'Provides</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">reference</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">an</span><span class="nv"> </span><span class="s">external</span><span class="nv"> </span><span class="s">source</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">information</span><span class="nv"> </span><span class="s">related</span>
+<span class="w">      </span><span class="s">to</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">CTI</span>
+
+<span class="w">      </span><span class="s">being</span><span class="nv"> </span><span class="s">represented.</span><span class="nv"> </span><span class="s">This</span><span class="nv"> </span><span class="s">may</span><span class="nv"> </span><span class="s">include</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">URL,</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">document,</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">some</span><span class="nv"> </span><span class="s">other</span><span class="nv"> </span><span class="s">type</span><span class="nv"> </span><span class="s">of</span>
+
+<span class="w">      </span><span class="s">reference</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">provides</span><span class="nv"> </span><span class="s">additional</span><span class="nv"> </span><span class="s">context</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">information</span><span class="nv"> </span><span class="s">about</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">CTI.'</span>
 <span class="w">  </span><span class="nt">related_analytics</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">related_analytics</span>
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Any analytics related to an indicator or OSINT analysis.</span>
 <span class="w">  </span><span class="nt">reputation</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">reputation</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Related reputational analysis from third-party engines and analysts</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">for a given indicator or OSINT analysis.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'Related</span><span class="nv"> </span><span class="s">reputational</span><span class="nv"> </span><span class="s">analysis</span><span class="nv"> </span><span class="s">from</span><span class="nv"> </span><span class="s">third-party</span><span class="nv"> </span><span class="s">engines</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">analysts</span>
+<span class="w">      </span><span class="s">for</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">given</span>
+
+<span class="w">      </span><span class="s">indicator</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">OSINT</span><span class="nv"> </span><span class="s">analysis.'</span>
 <span class="w">  </span><span class="nt">risk_score</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">risk_score</span>
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">A numerical representation of the threat indicator’s risk level.</span>
@@ -1844,34 +1951,48 @@
 <span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">analysis.</span>
 <span class="w">  </span><span class="nt">severity</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">severity</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Represents the severity level of the threat indicator, typically</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">reflecting its potential impact or damage.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'Represents</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">severity</span><span class="nv"> </span><span class="s">level</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">threat</span><span class="nv"> </span><span class="s">indicator,</span><span class="nv"> </span><span class="s">typically</span>
+<span class="w">      </span><span class="s">reflecting</span><span class="nv"> </span><span class="s">its</span>
+
+<span class="w">      </span><span class="s">potential</span><span class="nv"> </span><span class="s">impact</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">damage.'</span>
 <span class="w">  </span><span class="nt">severity_id</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">severity_id</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The normalized severity level of the threat indicator, typically</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">reflecting its potential impact or damage.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">normalized</span><span class="nv"> </span><span class="s">severity</span><span class="nv"> </span><span class="s">level</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">threat</span><span class="nv"> </span><span class="s">indicator,</span><span class="nv"> </span><span class="s">typically</span>
+<span class="w">      </span><span class="s">reflecting</span><span class="nv"> </span><span class="s">its</span>
+
+<span class="w">      </span><span class="s">potential</span><span class="nv"> </span><span class="s">impact</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">damage.'</span>
 <span class="w">  </span><span class="nt">signatures</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">signatures</span>
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Any digital signatures or hashes related to an indicator or OSINT</span>
 <span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">analysis.</span>
 <span class="w">  </span><span class="nt">src_url</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">src_url</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The source URL of an indicator or OSINT analysis, e.g., a URL back</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">to a TIP, report, or otherwise.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">source</span><span class="nv"> </span><span class="s">URL</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">an</span><span class="nv"> </span><span class="s">indicator</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">OSINT</span><span class="nv"> </span><span class="s">analysis,</span><span class="nv"> </span><span class="s">e.g.,</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">URL</span><span class="nv"> </span><span class="s">back</span>
+<span class="w">      </span><span class="s">to</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">TIP,</span>
+
+<span class="w">      </span><span class="s">report,</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">otherwise.'</span>
 <span class="w">  </span><span class="nt">subdomains</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">subdomains</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Any pertinent subdomain information - such as those generated by</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">a Domain Generation Algorithm - related to an indicator or OSINT analysis.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'Any</span><span class="nv"> </span><span class="s">pertinent</span><span class="nv"> </span><span class="s">subdomain</span><span class="nv"> </span><span class="s">information</span><span class="nv"> </span><span class="s">-</span><span class="nv"> </span><span class="s">such</span><span class="nv"> </span><span class="s">as</span><span class="nv"> </span><span class="s">those</span><span class="nv"> </span><span class="s">generated</span><span class="nv"> </span><span class="s">by</span>
+<span class="w">      </span><span class="s">a</span><span class="nv"> </span><span class="s">Domain</span>
+
+<span class="w">      </span><span class="s">Generation</span><span class="nv"> </span><span class="s">Algorithm</span><span class="nv"> </span><span class="s">-</span><span class="nv"> </span><span class="s">related</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">an</span><span class="nv"> </span><span class="s">indicator</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">OSINT</span><span class="nv"> </span><span class="s">analysis.'</span>
 <span class="w">  </span><span class="nt">subnet</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">subnet</span>
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">A CIDR or network block related to an indicator or OSINT analysis.</span>
 <span class="w">  </span><span class="nt">tlp</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">tlp</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The &lt;a target='_blank' href='https://www.first.org/tlp/'&gt;Traffic</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">Light Protocol&lt;/a&gt; was created to facilitate greater sharing of potentially</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">sensitive information and more effective collaboration. TLP provides a simple</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">and intuitive schema for indicating with whom potentially sensitive information</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">can be shared.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">&lt;a</span><span class="nv"> </span><span class="s">target=</span><span class="se">''</span><span class="s">_blank</span><span class="se">''</span><span class="nv"> </span><span class="s">href=</span><span class="se">''</span><span class="s">https://www.first.org/tlp/</span><span class="se">''</span><span class="s">&gt;Traffic</span>
+<span class="w">      </span><span class="s">Light</span>
+
+<span class="w">      </span><span class="s">Protocol&lt;/a&gt;</span><span class="nv"> </span><span class="s">was</span><span class="nv"> </span><span class="s">created</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">facilitate</span><span class="nv"> </span><span class="s">greater</span><span class="nv"> </span><span class="s">sharing</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">potentially</span><span class="nv"> </span><span class="s">sensitive</span>
+
+<span class="w">      </span><span class="s">information</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">more</span><span class="nv"> </span><span class="s">effective</span><span class="nv"> </span><span class="s">collaboration.</span><span class="nv"> </span><span class="s">TLP</span><span class="nv"> </span><span class="s">provides</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">simple</span><span class="nv"> </span><span class="s">and</span>
+
+<span class="w">      </span><span class="s">intuitive</span><span class="nv"> </span><span class="s">schema</span><span class="nv"> </span><span class="s">for</span><span class="nv"> </span><span class="s">indicating</span><span class="nv"> </span><span class="s">with</span><span class="nv"> </span><span class="s">whom</span><span class="nv"> </span><span class="s">potentially</span><span class="nv"> </span><span class="s">sensitive</span><span class="nv"> </span><span class="s">information</span>
+<span class="w">      </span><span class="s">can</span>
+
+<span class="w">      </span><span class="s">be</span><span class="nv"> </span><span class="s">shared.'</span>
 <span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">OsintTlpEnum</span>
 <span class="w">    </span><span class="nt">recommended</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">type</span><span class="p">:</span>
@@ -1887,12 +2008,16 @@
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The unique identifier for the OSINT object.</span>
 <span class="w">  </span><span class="nt">uploaded_time</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">uploaded_time</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The timestamp indicating when the associated indicator or intelligence</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">was added to the system or repository.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">timestamp</span><span class="nv"> </span><span class="s">indicating</span><span class="nv"> </span><span class="s">when</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">associated</span><span class="nv"> </span><span class="s">indicator</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">intelligence</span>
+<span class="w">      </span><span class="s">was</span>
+
+<span class="w">      </span><span class="s">added</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">system</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">repository.'</span>
 <span class="w">  </span><span class="nt">value</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">value</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The actual indicator value in scope, e.g., a SHA-256 hash hexdigest</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">or a domain name.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">actual</span><span class="nv"> </span><span class="s">indicator</span><span class="nv"> </span><span class="s">value</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">scope,</span><span class="nv"> </span><span class="s">e.g.,</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">SHA-256</span><span class="nv"> </span><span class="s">hash</span><span class="nv"> </span><span class="s">hexdigest</span>
+<span class="w">      </span><span class="s">or</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">domain</span>
+
+<span class="w">      </span><span class="s">name.'</span>
 <span class="w">    </span><span class="nt">required</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">vendor_name</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">vendor_name</span>
@@ -1908,8 +2033,10 @@
 <span class="nt">attributes</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">answers</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">answers</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Any pertinent DNS answers information related to an indicator or</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">OSINT analysis.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'Any</span><span class="nv"> </span><span class="s">pertinent</span><span class="nv"> </span><span class="s">DNS</span><span class="nv"> </span><span class="s">answers</span><span class="nv"> </span><span class="s">information</span><span class="nv"> </span><span class="s">related</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">an</span><span class="nv"> </span><span class="s">indicator</span><span class="nv"> </span><span class="s">or</span>
+<span class="w">      </span><span class="s">OSINT</span>
+
+<span class="w">      </span><span class="s">analysis.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">DNS Answer</span>
@@ -1923,8 +2050,10 @@
 <span class="w">    </span><span class="nt">multivalued</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">attacks</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">attacks</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">MITRE ATT&amp;CK Tactics, Techniques, and/or Procedures (TTPs) pertinent</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">to an indicator or OSINT analysis.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'MITRE</span><span class="nv"> </span><span class="s">ATT&amp;CK</span><span class="nv"> </span><span class="s">Tactics,</span><span class="nv"> </span><span class="s">Techniques,</span><span class="nv"> </span><span class="s">and/or</span><span class="nv"> </span><span class="s">Procedures</span><span class="nv"> </span><span class="s">(TTPs)</span><span class="nv"> </span><span class="s">pertinent</span>
+<span class="w">      </span><span class="s">to</span><span class="nv"> </span><span class="s">an</span>
+
+<span class="w">      </span><span class="s">indicator</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">OSINT</span><span class="nv"> </span><span class="s">analysis.'</span>
 <span class="w">    </span><span class="nt">notes</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">MITRE ATT&amp;CK® — https://attack.mitre.org</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">MITRE ATLAS — https://atlas.mitre.org/matrices/ATLAS</span>
@@ -1948,8 +2077,10 @@
 <span class="w">    </span><span class="nt">multivalued</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">autonomous_system</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">autonomous_system</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Any pertinent autonomous system information related to an indicator</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">or OSINT analysis.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'Any</span><span class="nv"> </span><span class="s">pertinent</span><span class="nv"> </span><span class="s">autonomous</span><span class="nv"> </span><span class="s">system</span><span class="nv"> </span><span class="s">information</span><span class="nv"> </span><span class="s">related</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">an</span><span class="nv"> </span><span class="s">indicator</span>
+<span class="w">      </span><span class="s">or</span><span class="nv"> </span><span class="s">OSINT</span>
+
+<span class="w">      </span><span class="s">analysis.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Autonomous System</span>
@@ -1963,8 +2094,10 @@
 <span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">AutonomousSystem</span>
 <span class="w">  </span><span class="nt">campaign</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">campaign</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The campaign object describes details about the campaign that was</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">the source of the activity.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">campaign</span><span class="nv"> </span><span class="s">object</span><span class="nv"> </span><span class="s">describes</span><span class="nv"> </span><span class="s">details</span><span class="nv"> </span><span class="s">about</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">campaign</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">was</span>
+<span class="w">      </span><span class="s">the</span><span class="nv"> </span><span class="s">source</span><span class="nv"> </span><span class="s">of</span>
+
+<span class="w">      </span><span class="s">the</span><span class="nv"> </span><span class="s">activity.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Campaign</span>
@@ -2013,9 +2146,12 @@
 <span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">string</span>
 <span class="w">  </span><span class="nt">confidence</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">confidence</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The confidence of an indicator being malicious and/or pertinent,</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">normalized to the caption of the confidence_id value. In the case of 'Other',</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">it is defined by the event source or analyst.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">confidence</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">an</span><span class="nv"> </span><span class="s">indicator</span><span class="nv"> </span><span class="s">being</span><span class="nv"> </span><span class="s">malicious</span><span class="nv"> </span><span class="s">and/or</span><span class="nv"> </span><span class="s">pertinent,</span>
+<span class="w">      </span><span class="s">normalized</span><span class="nv"> </span><span class="s">to</span>
+
+<span class="w">      </span><span class="s">the</span><span class="nv"> </span><span class="s">caption</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">confidence_id</span><span class="nv"> </span><span class="s">value.</span><span class="nv"> </span><span class="s">In</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">case</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="se">''</span><span class="s">Other</span><span class="se">''</span><span class="s">,</span><span class="nv"> </span><span class="s">it</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">defined</span>
+
+<span class="w">      </span><span class="s">by</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">event</span><span class="nv"> </span><span class="s">source</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">analyst.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Confidence</span>
@@ -2037,11 +2173,15 @@
 <span class="w">      </span><span class="nt">sibling</span><span class="p">:</span>
 <span class="w">        </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">sibling</span>
 <span class="w">        </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">confidence</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The normalized confidence refers to the accuracy of collected information</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">related to the OSINT or how pertinent an indicator or analysis is to a specific</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">event or finding. A low confidence means that the information collected or analysis</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">conducted lacked detail or is not accurate enough to qualify an indicator as</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">fully malicious.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">normalized</span><span class="nv"> </span><span class="s">confidence</span><span class="nv"> </span><span class="s">refers</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">accuracy</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">collected</span><span class="nv"> </span><span class="s">information</span>
+
+<span class="w">      </span><span class="s">related</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">OSINT</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">how</span><span class="nv"> </span><span class="s">pertinent</span><span class="nv"> </span><span class="s">an</span><span class="nv"> </span><span class="s">indicator</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">analysis</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">specific</span>
+
+<span class="w">      </span><span class="s">event</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">finding.</span><span class="nv"> </span><span class="s">A</span><span class="nv"> </span><span class="s">low</span><span class="nv"> </span><span class="s">confidence</span><span class="nv"> </span><span class="s">means</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">information</span><span class="nv"> </span><span class="s">collected</span><span class="nv"> </span><span class="s">or</span>
+
+<span class="w">      </span><span class="s">analysis</span><span class="nv"> </span><span class="s">conducted</span><span class="nv"> </span><span class="s">lacked</span><span class="nv"> </span><span class="s">detail</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">not</span><span class="nv"> </span><span class="s">accurate</span><span class="nv"> </span><span class="s">enough</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">qualify</span><span class="nv"> </span><span class="s">an</span>
+
+<span class="w">      </span><span class="s">indicator</span><span class="nv"> </span><span class="s">as</span><span class="nv"> </span><span class="s">fully</span><span class="nv"> </span><span class="s">malicious.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Confidence ID</span>
@@ -2098,8 +2238,10 @@
 <span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">TimestampT</span>
 <span class="w">  </span><span class="nt">creator</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">creator</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The identifier of the user, system, or organization that contributed</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">the indicator.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">identifier</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">user,</span><span class="nv"> </span><span class="s">system,</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">organization</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">contributed</span>
+<span class="w">      </span><span class="s">the</span>
+
+<span class="w">      </span><span class="s">indicator.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Creator</span>
@@ -2112,8 +2254,10 @@
 <span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">User</span>
 <span class="w">  </span><span class="nt">desc</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">desc</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">A detailed explanation of the indicator, including its context, purpose,</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">and relevance.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'A</span><span class="nv"> </span><span class="s">detailed</span><span class="nv"> </span><span class="s">explanation</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">indicator,</span><span class="nv"> </span><span class="s">including</span><span class="nv"> </span><span class="s">its</span><span class="nv"> </span><span class="s">context,</span>
+<span class="w">      </span><span class="s">purpose,</span><span class="nv"> </span><span class="s">and</span>
+
+<span class="w">      </span><span class="s">relevance.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Description</span>
@@ -2168,8 +2312,12 @@
 <span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">string</span>
 <span class="w">  </span><span class="nt">detection_pattern_type</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">detection_pattern_type</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The detection pattern type, normalized to the caption of the detection_pattern_type_id</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">value. In the case of 'Other', it is defined by the event source.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">detection</span><span class="nv"> </span><span class="s">pattern</span><span class="nv"> </span><span class="s">type,</span><span class="nv"> </span><span class="s">normalized</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">caption</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span>
+
+<span class="w">      </span><span class="s">detection_pattern_type_id</span><span class="nv"> </span><span class="s">value.</span><span class="nv"> </span><span class="s">In</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">case</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="se">''</span><span class="s">Other</span><span class="se">''</span><span class="s">,</span><span class="nv"> </span><span class="s">it</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">defined</span><span class="nv"> </span><span class="s">by</span>
+<span class="w">      </span><span class="s">the</span>
+
+<span class="w">      </span><span class="s">event</span><span class="nv"> </span><span class="s">source.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Detection Pattern</span>
@@ -2185,8 +2333,10 @@
 <span class="w">      </span><span class="nt">sibling</span><span class="p">:</span>
 <span class="w">        </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">sibling</span>
 <span class="w">        </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">detection_pattern_type</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Specifies the type of detection pattern used to identify the associated</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">threat indicator.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'Specifies</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">type</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">detection</span><span class="nv"> </span><span class="s">pattern</span><span class="nv"> </span><span class="s">used</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">identify</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">associated</span>
+<span class="w">      </span><span class="s">threat</span>
+
+<span class="w">      </span><span class="s">indicator.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Detection Pattern Type ID</span>
@@ -2213,8 +2363,10 @@
 <span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Email</span>
 <span class="w">  </span><span class="nt">email_auth</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">email_auth</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Any email authentication information pertinent to an indicator or</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">OSINT analysis.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'Any</span><span class="nv"> </span><span class="s">email</span><span class="nv"> </span><span class="s">authentication</span><span class="nv"> </span><span class="s">information</span><span class="nv"> </span><span class="s">pertinent</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">an</span><span class="nv"> </span><span class="s">indicator</span><span class="nv"> </span><span class="s">or</span>
+<span class="w">      </span><span class="s">OSINT</span>
+
+<span class="w">      </span><span class="s">analysis.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Email Authentication</span>
@@ -2227,8 +2379,10 @@
 <span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">EmailAuth</span>
 <span class="w">  </span><span class="nt">expiration_time</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">expiration_time</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The expiration date of the indicator, after which it is no longer</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">considered reliable.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">expiration</span><span class="nv"> </span><span class="s">date</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">indicator,</span><span class="nv"> </span><span class="s">after</span><span class="nv"> </span><span class="s">which</span><span class="nv"> </span><span class="s">it</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">no</span><span class="nv"> </span><span class="s">longer</span>
+<span class="w">      </span><span class="s">considered</span>
+
+<span class="w">      </span><span class="s">reliable.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Expiration Time</span>
@@ -2293,10 +2447,14 @@
 <span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">File</span>
 <span class="w">  </span><span class="nt">intrusion_sets</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">intrusion_sets</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">A grouping of adversarial behaviors and resources believed to be</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">associated with specific threat actors or campaigns. Intrusion sets often encompass</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">multiple campaigns and are used to organize related activities under a common</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">label.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'A</span><span class="nv"> </span><span class="s">grouping</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">adversarial</span><span class="nv"> </span><span class="s">behaviors</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">resources</span><span class="nv"> </span><span class="s">believed</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">be</span>
+<span class="w">      </span><span class="s">associated</span>
+
+<span class="w">      </span><span class="s">with</span><span class="nv"> </span><span class="s">specific</span><span class="nv"> </span><span class="s">threat</span><span class="nv"> </span><span class="s">actors</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">campaigns.</span><span class="nv"> </span><span class="s">Intrusion</span><span class="nv"> </span><span class="s">sets</span><span class="nv"> </span><span class="s">often</span><span class="nv"> </span><span class="s">encompass</span>
+
+<span class="w">      </span><span class="s">multiple</span><span class="nv"> </span><span class="s">campaigns</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">are</span><span class="nv"> </span><span class="s">used</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">organize</span><span class="nv"> </span><span class="s">related</span><span class="nv"> </span><span class="s">activities</span><span class="nv"> </span><span class="s">under</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">common</span>
+
+<span class="w">      </span><span class="s">label.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Intrusion Sets</span>
@@ -2347,8 +2505,10 @@
 <span class="w">    </span><span class="nt">multivalued</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">location</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">location</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Any pertinent geolocation information related to an indicator or</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">OSINT analysis.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'Any</span><span class="nv"> </span><span class="s">pertinent</span><span class="nv"> </span><span class="s">geolocation</span><span class="nv"> </span><span class="s">information</span><span class="nv"> </span><span class="s">related</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">an</span><span class="nv"> </span><span class="s">indicator</span><span class="nv"> </span><span class="s">or</span>
+<span class="w">      </span><span class="s">OSINT</span>
+
+<span class="w">      </span><span class="s">analysis.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Geo Location</span>
@@ -2415,7 +2575,9 @@
 <span class="w">  </span><span class="nt">name</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">name</span>
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">&lt;code&gt;name&lt;/code&gt;</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">pointer/reference</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">an</span><span class="nv"> </span><span class="s">attribute</span><span class="nv"> </span><span class="s">within</span>
-<span class="w">      </span><span class="s">the</span><span class="nv"> </span><span class="s">OCSF</span><span class="nv"> </span><span class="s">event</span><span class="nv"> </span><span class="s">data.</span><span class="nv"> </span><span class="s">For</span><span class="nv"> </span><span class="s">example:</span><span class="nv"> </span><span class="s">file.name.'</span>
+<span class="w">      </span><span class="s">the</span><span class="nv"> </span><span class="s">OCSF</span>
+
+<span class="w">      </span><span class="s">event</span><span class="nv"> </span><span class="s">data.</span><span class="nv"> </span><span class="s">For</span><span class="nv"> </span><span class="s">example:</span><span class="nv"> </span><span class="s">file.name.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Name</span>
@@ -2516,10 +2678,12 @@
 <span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">string</span>
 <span class="w">  </span><span class="nt">references</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">references</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Provides a reference to an external source of information related</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">to the CTI being represented. This may include a URL, a document, or some other</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">type of reference that provides additional context or information about the</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">CTI.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'Provides</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">reference</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">an</span><span class="nv"> </span><span class="s">external</span><span class="nv"> </span><span class="s">source</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">information</span><span class="nv"> </span><span class="s">related</span>
+<span class="w">      </span><span class="s">to</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">CTI</span>
+
+<span class="w">      </span><span class="s">being</span><span class="nv"> </span><span class="s">represented.</span><span class="nv"> </span><span class="s">This</span><span class="nv"> </span><span class="s">may</span><span class="nv"> </span><span class="s">include</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">URL,</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">document,</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">some</span><span class="nv"> </span><span class="s">other</span><span class="nv"> </span><span class="s">type</span><span class="nv"> </span><span class="s">of</span>
+
+<span class="w">      </span><span class="s">reference</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">provides</span><span class="nv"> </span><span class="s">additional</span><span class="nv"> </span><span class="s">context</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">information</span><span class="nv"> </span><span class="s">about</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">CTI.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">References</span>
@@ -2551,8 +2715,10 @@
 <span class="w">    </span><span class="nt">multivalued</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">reputation</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">reputation</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Related reputational analysis from third-party engines and analysts</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">for a given indicator or OSINT analysis.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'Related</span><span class="nv"> </span><span class="s">reputational</span><span class="nv"> </span><span class="s">analysis</span><span class="nv"> </span><span class="s">from</span><span class="nv"> </span><span class="s">third-party</span><span class="nv"> </span><span class="s">engines</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">analysts</span>
+<span class="w">      </span><span class="s">for</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">given</span>
+
+<span class="w">      </span><span class="s">indicator</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">OSINT</span><span class="nv"> </span><span class="s">analysis.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Reputation Scores</span>
@@ -2600,8 +2766,10 @@
 <span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Script</span>
 <span class="w">  </span><span class="nt">severity</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">severity</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Represents the severity level of the threat indicator, typically</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">reflecting its potential impact or damage.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'Represents</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">severity</span><span class="nv"> </span><span class="s">level</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">threat</span><span class="nv"> </span><span class="s">indicator,</span><span class="nv"> </span><span class="s">typically</span>
+<span class="w">      </span><span class="s">reflecting</span><span class="nv"> </span><span class="s">its</span>
+
+<span class="w">      </span><span class="s">potential</span><span class="nv"> </span><span class="s">impact</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">damage.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Severity</span>
@@ -2625,8 +2793,10 @@
 <span class="w">      </span><span class="nt">sibling</span><span class="p">:</span>
 <span class="w">        </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">sibling</span>
 <span class="w">        </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">severity</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The normalized severity level of the threat indicator, typically</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">reflecting its potential impact or damage.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">normalized</span><span class="nv"> </span><span class="s">severity</span><span class="nv"> </span><span class="s">level</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">threat</span><span class="nv"> </span><span class="s">indicator,</span><span class="nv"> </span><span class="s">typically</span>
+<span class="w">      </span><span class="s">reflecting</span><span class="nv"> </span><span class="s">its</span>
+
+<span class="w">      </span><span class="s">potential</span><span class="nv"> </span><span class="s">impact</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">damage.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Severity ID</span>
@@ -2658,8 +2828,10 @@
 <span class="w">    </span><span class="nt">multivalued</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">src_url</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">src_url</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The source URL of an indicator or OSINT analysis, e.g., a URL back</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">to a TIP, report, or otherwise.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">source</span><span class="nv"> </span><span class="s">URL</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">an</span><span class="nv"> </span><span class="s">indicator</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">OSINT</span><span class="nv"> </span><span class="s">analysis,</span><span class="nv"> </span><span class="s">e.g.,</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">URL</span><span class="nv"> </span><span class="s">back</span>
+<span class="w">      </span><span class="s">to</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">TIP,</span>
+
+<span class="w">      </span><span class="s">report,</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">otherwise.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Source URL</span>
@@ -2689,8 +2861,10 @@
 <span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">UrlT</span>
 <span class="w">  </span><span class="nt">subdomains</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">subdomains</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Any pertinent subdomain information - such as those generated by</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">a Domain Generation Algorithm - related to an indicator or OSINT analysis.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'Any</span><span class="nv"> </span><span class="s">pertinent</span><span class="nv"> </span><span class="s">subdomain</span><span class="nv"> </span><span class="s">information</span><span class="nv"> </span><span class="s">-</span><span class="nv"> </span><span class="s">such</span><span class="nv"> </span><span class="s">as</span><span class="nv"> </span><span class="s">those</span><span class="nv"> </span><span class="s">generated</span><span class="nv"> </span><span class="s">by</span>
+<span class="w">      </span><span class="s">a</span><span class="nv"> </span><span class="s">Domain</span>
+
+<span class="w">      </span><span class="s">Generation</span><span class="nv"> </span><span class="s">Algorithm</span><span class="nv"> </span><span class="s">-</span><span class="nv"> </span><span class="s">related</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">an</span><span class="nv"> </span><span class="s">indicator</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">OSINT</span><span class="nv"> </span><span class="s">analysis.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Subdomains</span>
@@ -2718,10 +2892,14 @@
 <span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">SubnetT</span>
 <span class="w">  </span><span class="nt">threat_actor</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">threat_actor</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">A threat actor is an individual or group that conducts malicious</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">cyber activities, often with financial, political, or ideological motives.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'A</span><span class="nv"> </span><span class="s">threat</span><span class="nv"> </span><span class="s">actor</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">an</span><span class="nv"> </span><span class="s">individual</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">group</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">conducts</span><span class="nv"> </span><span class="s">malicious</span>
+<span class="w">      </span><span class="s">cyber</span>
+
+<span class="w">      </span><span class="s">activities,</span><span class="nv"> </span><span class="s">often</span><span class="nv"> </span><span class="s">with</span><span class="nv"> </span><span class="s">financial,</span><span class="nv"> </span><span class="s">political,</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">ideological</span><span class="nv"> </span><span class="s">motives.'</span>
 <span class="w">    </span><span class="nt">notes</span><span class="p">:</span>
-<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">STIX Threat Actor definition — https://stixproject.github.io/data-model/1.2/ta/ThreatActorType/</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">'STIX</span><span class="nv"> </span><span class="s">Threat</span><span class="nv"> </span><span class="s">Actor</span><span class="nv"> </span><span class="s">definition</span><span class="nv"> </span><span class="s">—</span>
+
+<span class="w">      </span><span class="s">https://stixproject.github.io/data-model/1.2/ta/ThreatActorType/'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">see_also</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://stixproject.github.io/data-model/1.2/ta/ThreatActorType/</span>
@@ -2735,11 +2913,17 @@
 <span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ThreatActor</span>
 <span class="w">  </span><span class="nt">tlp</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">tlp</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The &lt;a target='_blank' href='https://www.first.org/tlp/'&gt;Traffic</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">Light Protocol&lt;/a&gt; was created to facilitate greater sharing of potentially</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">sensitive information and more effective collaboration. TLP provides a simple</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">and intuitive schema for indicating with whom potentially sensitive information</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">can be shared.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">&lt;a</span><span class="nv"> </span><span class="s">target=</span><span class="se">''</span><span class="s">_blank</span><span class="se">''</span><span class="nv"> </span><span class="s">href=</span><span class="se">''</span><span class="s">https://www.first.org/tlp/</span><span class="se">''</span><span class="s">&gt;Traffic</span>
+<span class="w">      </span><span class="s">Light</span>
+
+<span class="w">      </span><span class="s">Protocol&lt;/a&gt;</span><span class="nv"> </span><span class="s">was</span><span class="nv"> </span><span class="s">created</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">facilitate</span><span class="nv"> </span><span class="s">greater</span><span class="nv"> </span><span class="s">sharing</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">potentially</span><span class="nv"> </span><span class="s">sensitive</span>
+
+<span class="w">      </span><span class="s">information</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">more</span><span class="nv"> </span><span class="s">effective</span><span class="nv"> </span><span class="s">collaboration.</span><span class="nv"> </span><span class="s">TLP</span><span class="nv"> </span><span class="s">provides</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">simple</span><span class="nv"> </span><span class="s">and</span>
+
+<span class="w">      </span><span class="s">intuitive</span><span class="nv"> </span><span class="s">schema</span><span class="nv"> </span><span class="s">for</span><span class="nv"> </span><span class="s">indicating</span><span class="nv"> </span><span class="s">with</span><span class="nv"> </span><span class="s">whom</span><span class="nv"> </span><span class="s">potentially</span><span class="nv"> </span><span class="s">sensitive</span><span class="nv"> </span><span class="s">information</span>
+<span class="w">      </span><span class="s">can</span>
+
+<span class="w">      </span><span class="s">be</span><span class="nv"> </span><span class="s">shared.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Traffic Light Protocol</span>
@@ -2970,8 +3154,10 @@
 <span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">string</span>
 <span class="w">  </span><span class="nt">uploaded_time</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">uploaded_time</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The timestamp indicating when the associated indicator or intelligence</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">was added to the system or repository.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">timestamp</span><span class="nv"> </span><span class="s">indicating</span><span class="nv"> </span><span class="s">when</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">associated</span><span class="nv"> </span><span class="s">indicator</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">intelligence</span>
+<span class="w">      </span><span class="s">was</span>
+
+<span class="w">      </span><span class="s">added</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">system</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">repository.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Uploaded Time</span>
@@ -2983,8 +3169,10 @@
 <span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">TimestampT</span>
 <span class="w">  </span><span class="nt">value</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">value</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The actual indicator value in scope, e.g., a SHA-256 hash hexdigest</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">or a domain name.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">actual</span><span class="nv"> </span><span class="s">indicator</span><span class="nv"> </span><span class="s">value</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">scope,</span><span class="nv"> </span><span class="s">e.g.,</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">SHA-256</span><span class="nv"> </span><span class="s">hash</span><span class="nv"> </span><span class="s">hexdigest</span>
+<span class="w">      </span><span class="s">or</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">domain</span>
+
+<span class="w">      </span><span class="s">name.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Value</span>

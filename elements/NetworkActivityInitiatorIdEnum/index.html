@@ -447,7 +447,9 @@
 
 
 <h1 id="enum-networkactivityinitiatoridenum">Enum: NetworkActivityInitiatorIdEnum</h1>
-<p><em>The normalized identifier of the endpoint that initiated the network communication. Use this field to disambiguate source and destination roles in bi-directional or asymmetric flow scenarios.</em></p>
+<p><em>The normalized identifier of the endpoint that initiated the network</em></p>
+<p><em>communication. Use this field to disambiguate source and destination roles in</em></p>
+<p><em>bi-directional or asymmetric flow scenarios.</em></p>
 <p>URI: <a href="https://w3id.org/lmodel/ocsf/NetworkActivityInitiatorIdEnum">ocsf:NetworkActivityInitiatorIdEnum</a></p>
 <h2 id="permissible-values">Permissible Values</h2>
 <table>
@@ -492,7 +494,7 @@
 <tbody>
 <tr>
 <td><a href="../initiator_id/">initiator_id</a></td>
-<td>The normalized identifier of the endpoint that initiated the network communic...</td>
+<td>The normalized identifier of the endpoint that initiated the network</td>
 </tr>
 </tbody>
 </table>
@@ -504,9 +506,11 @@
 <h2 id="linkml-source">LinkML Source</h2>
 <details>
 <div class="highlight"><pre><span></span><code><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">NetworkActivityInitiatorIdEnum</span>
-<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The normalized identifier of the endpoint that initiated the network</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">communication. Use this field to disambiguate source and destination roles in bi-directional</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">or asymmetric flow scenarios.</span>
+<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;The</span><span class="nv"> </span><span class="s">normalized</span><span class="nv"> </span><span class="s">identifier</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">endpoint</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">initiated</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">network</span>
+
+<span class="w">  </span><span class="s">communication.</span><span class="nv"> </span><span class="s">Use</span><span class="nv"> </span><span class="s">this</span><span class="nv"> </span><span class="s">field</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">disambiguate</span><span class="nv"> </span><span class="s">source</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">destination</span><span class="nv"> </span><span class="s">roles</span><span class="nv"> </span><span class="s">in</span>
+
+<span class="w">  </span><span class="s">bi-directional</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">asymmetric</span><span class="nv"> </span><span class="s">flow</span><span class="nv"> </span><span class="s">scenarios.&#39;</span>
 <span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="nt">rank</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1000</span>
 <span class="nt">permissible_values</span><span class="p">:</span>
@@ -522,8 +526,9 @@
 <span class="w">        </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Unknown</span>
 <span class="w">  </span><span class="nt">SOURCE_ENDPOINT</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">text</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">SOURCE_ENDPOINT</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The &lt;code&gt;src_endpoint&lt;/code&gt; is the true initiator and the source/destination</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">assignment is correct.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;The</span><span class="nv"> </span><span class="s">&lt;code&gt;src_endpoint&lt;/code&gt;</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">true</span><span class="nv"> </span><span class="s">initiator</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">source/destination</span>
+
+<span class="w">      </span><span class="s">assignment</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">correct.&#39;</span>
 <span class="w">    </span><span class="nt">annotations</span><span class="p">:</span>
 <span class="w">      </span><span class="nt">ocsf_uid</span><span class="p">:</span>
 <span class="w">        </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ocsf_uid</span>
@@ -533,8 +538,9 @@
 <span class="w">        </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Source Endpoint</span>
 <span class="w">  </span><span class="nt">DESTINATION_ENDPOINT</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">text</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">DESTINATION_ENDPOINT</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The &lt;code&gt;dst_endpoint&lt;/code&gt; is the true initiator and the source/destination</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">assignment is reversed.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;The</span><span class="nv"> </span><span class="s">&lt;code&gt;dst_endpoint&lt;/code&gt;</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">true</span><span class="nv"> </span><span class="s">initiator</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">source/destination</span>
+
+<span class="w">      </span><span class="s">assignment</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">reversed.&#39;</span>
 <span class="w">    </span><span class="nt">annotations</span><span class="p">:</span>
 <span class="w">      </span><span class="nt">ocsf_uid</span><span class="p">:</span>
 <span class="w">        </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ocsf_uid</span>

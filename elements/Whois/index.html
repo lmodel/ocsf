@@ -217,6 +217,15 @@
 </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="#in-subsets">
+<span class="md-ellipsis">
+      
+        In Subsets
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#aliases">
 <span class="md-ellipsis">
       
@@ -295,7 +304,9 @@
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
 <h1 id="class-whois">Class: Whois</h1>
-<p><em>The resources of a WHOIS record for a given domain. This can include domain names, IP address blocks, autonomous system information, and/or contact and registration information for a domain.</em></p>
+<p><em>The resources of a WHOIS record for a given domain. This can include domain</em></p>
+<p><em>names, IP address blocks, autonomous system information, and/or contact and</em></p>
+<p><em>registration information for a domain.</em></p>
 <p>URI: <a href="https://w3id.org/lmodel/ocsf/Whois">ocsf:Whois</a></p>
 <pre class="mermaid"><code> classDiagram
     class Whois
@@ -405,7 +416,7 @@
 <tr>
 <td><a href="../dnssec_status_id/">dnssec_status_id</a></td>
 <td>0..1 <em>recommended</em> <br/> <a href="../DnssecStatusIdEnum/">DnssecStatusIdEnum</a></td>
-<td>Describes the normalized status of DNS Security Extensions (DNSSEC) for a dom...</td>
+<td>Describes the normalized status of DNS Security Extensions (DNSSEC) for a</td>
 <td>direct</td>
 </tr>
 <tr>
@@ -501,6 +512,10 @@
 </tr>
 </tbody>
 </table>
+<h2 id="in-subsets">In Subsets</h2>
+<ul>
+<li><a href="../Objects/">Objects</a></li>
+</ul>
 <h2 id="aliases">Aliases</h2>
 <ul>
 <li>WHOIS</li>
@@ -538,9 +553,14 @@
 <h3 id="direct">Direct</h3>
 <details>
 <div class="highlight"><pre><span></span><code><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Whois</span>
-<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The resources of a WHOIS record for a given domain. This can include</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">domain names, IP address blocks, autonomous system information, and/or contact and</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">registration information for a domain.</span>
+<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">resources</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">WHOIS</span><span class="nv"> </span><span class="s">record</span><span class="nv"> </span><span class="s">for</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">given</span><span class="nv"> </span><span class="s">domain.</span><span class="nv"> </span><span class="s">This</span><span class="nv"> </span><span class="s">can</span><span class="nv"> </span><span class="s">include</span>
+<span class="w">  </span><span class="s">domain</span>
+
+<span class="w">  </span><span class="s">names,</span><span class="nv"> </span><span class="s">IP</span><span class="nv"> </span><span class="s">address</span><span class="nv"> </span><span class="s">blocks,</span><span class="nv"> </span><span class="s">autonomous</span><span class="nv"> </span><span class="s">system</span><span class="nv"> </span><span class="s">information,</span><span class="nv"> </span><span class="s">and/or</span><span class="nv"> </span><span class="s">contact</span><span class="nv"> </span><span class="s">and</span>
+
+<span class="w">  </span><span class="s">registration</span><span class="nv"> </span><span class="s">information</span><span class="nv"> </span><span class="s">for</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">domain.'</span>
+<span class="nt">in_subset</span><span class="p">:</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">objects</span>
 <span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="nt">aliases</span><span class="p">:</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">WHOIS</span>
@@ -600,7 +620,9 @@
 <span class="w">    </span><span class="nt">recommended</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">status</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">status</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The status of a domain and its ability to be transferred, e.g., &lt;code&gt;clientTransferProhibited&lt;/code&gt;.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">status</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">domain</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">its</span><span class="nv"> </span><span class="s">ability</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">be</span><span class="nv"> </span><span class="s">transferred,</span><span class="nv"> </span><span class="s">e.g.,</span>
+
+<span class="w">      </span><span class="s">&lt;code&gt;clientTransferProhibited&lt;/code&gt;.'</span>
 <span class="w">    </span><span class="nt">recommended</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">subnet</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">subnet</span>
@@ -610,9 +632,14 @@
 <h3 id="induced">Induced</h3>
 <details>
 <div class="highlight"><pre><span></span><code><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Whois</span>
-<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The resources of a WHOIS record for a given domain. This can include</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">domain names, IP address blocks, autonomous system information, and/or contact and</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">registration information for a domain.</span>
+<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">resources</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">WHOIS</span><span class="nv"> </span><span class="s">record</span><span class="nv"> </span><span class="s">for</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">given</span><span class="nv"> </span><span class="s">domain.</span><span class="nv"> </span><span class="s">This</span><span class="nv"> </span><span class="s">can</span><span class="nv"> </span><span class="s">include</span>
+<span class="w">  </span><span class="s">domain</span>
+
+<span class="w">  </span><span class="s">names,</span><span class="nv"> </span><span class="s">IP</span><span class="nv"> </span><span class="s">address</span><span class="nv"> </span><span class="s">blocks,</span><span class="nv"> </span><span class="s">autonomous</span><span class="nv"> </span><span class="s">system</span><span class="nv"> </span><span class="s">information,</span><span class="nv"> </span><span class="s">and/or</span><span class="nv"> </span><span class="s">contact</span><span class="nv"> </span><span class="s">and</span>
+
+<span class="w">  </span><span class="s">registration</span><span class="nv"> </span><span class="s">information</span><span class="nv"> </span><span class="s">for</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">domain.'</span>
+<span class="nt">in_subset</span><span class="p">:</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">objects</span>
 <span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="nt">aliases</span><span class="p">:</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">WHOIS</span>
@@ -655,7 +682,9 @@
 <span class="w">    </span><span class="nt">recommended</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">status</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">status</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The status of a domain and its ability to be transferred, e.g., &lt;code&gt;clientTransferProhibited&lt;/code&gt;.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">status</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">domain</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">its</span><span class="nv"> </span><span class="s">ability</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">be</span><span class="nv"> </span><span class="s">transferred,</span><span class="nv"> </span><span class="s">e.g.,</span>
+
+<span class="w">      </span><span class="s">&lt;code&gt;clientTransferProhibited&lt;/code&gt;.'</span>
 <span class="w">    </span><span class="nt">recommended</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">subnet</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">subnet</span>
@@ -732,8 +761,10 @@
 <span class="w">      </span><span class="nt">sibling</span><span class="p">:</span>
 <span class="w">        </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">sibling</span>
 <span class="w">        </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">dnssec_status</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Describes the normalized status of DNS Security Extensions (DNSSEC)</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">for a domain.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'Describes</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">normalized</span><span class="nv"> </span><span class="s">status</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">DNS</span><span class="nv"> </span><span class="s">Security</span><span class="nv"> </span><span class="s">Extensions</span><span class="nv"> </span><span class="s">(DNSSEC)</span>
+<span class="w">      </span><span class="s">for</span><span class="nv"> </span><span class="s">a</span>
+
+<span class="w">      </span><span class="s">domain.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">DNSSEC Status ID</span>
@@ -809,11 +840,16 @@
 <span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">string</span>
 <span class="w">  </span><span class="nt">isp_org</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">isp_org</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The organization name of the Internet Service Provider (ISP). This</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">represents the parent organization or company that owns/operates the ISP. For</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">example, Comcast Corporation would be the ISP org for Xfinity internet service.</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">This attribute helps identify the ultimate provider when ISPs operate under</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">different brand names.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">organization</span><span class="nv"> </span><span class="s">name</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">Internet</span><span class="nv"> </span><span class="s">Service</span><span class="nv"> </span><span class="s">Provider</span><span class="nv"> </span><span class="s">(ISP).</span><span class="nv"> </span><span class="s">This</span>
+<span class="w">      </span><span class="s">represents</span>
+
+<span class="w">      </span><span class="s">the</span><span class="nv"> </span><span class="s">parent</span><span class="nv"> </span><span class="s">organization</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">company</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">owns/operates</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">ISP.</span><span class="nv"> </span><span class="s">For</span><span class="nv"> </span><span class="s">example,</span>
+
+<span class="w">      </span><span class="s">Comcast</span><span class="nv"> </span><span class="s">Corporation</span><span class="nv"> </span><span class="s">would</span><span class="nv"> </span><span class="s">be</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">ISP</span><span class="nv"> </span><span class="s">org</span><span class="nv"> </span><span class="s">for</span><span class="nv"> </span><span class="s">Xfinity</span><span class="nv"> </span><span class="s">internet</span><span class="nv"> </span><span class="s">service.</span><span class="nv"> </span><span class="s">This</span>
+
+<span class="w">      </span><span class="s">attribute</span><span class="nv"> </span><span class="s">helps</span><span class="nv"> </span><span class="s">identify</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">ultimate</span><span class="nv"> </span><span class="s">provider</span><span class="nv"> </span><span class="s">when</span><span class="nv"> </span><span class="s">ISPs</span><span class="nv"> </span><span class="s">operate</span><span class="nv"> </span><span class="s">under</span>
+
+<span class="w">      </span><span class="s">different</span><span class="nv"> </span><span class="s">brand</span><span class="nv"> </span><span class="s">names.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ISP Org</span>
@@ -889,7 +925,9 @@
 <span class="w">    </span><span class="nt">recommended</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">status</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">status</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The status of a domain and its ability to be transferred, e.g., &lt;code&gt;clientTransferProhibited&lt;/code&gt;.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">status</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">domain</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">its</span><span class="nv"> </span><span class="s">ability</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">be</span><span class="nv"> </span><span class="s">transferred,</span><span class="nv"> </span><span class="s">e.g.,</span>
+
+<span class="w">      </span><span class="s">&lt;code&gt;clientTransferProhibited&lt;/code&gt;.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Status</span>
@@ -913,8 +951,10 @@
 <span class="w">    </span><span class="nt">recommended</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">subdomains</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">subdomains</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">An array of subdomain strings. Can be used to collect several subdomains</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">such as those from Domain Generation Algorithms (DGAs).</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'An</span><span class="nv"> </span><span class="s">array</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">subdomain</span><span class="nv"> </span><span class="s">strings.</span><span class="nv"> </span><span class="s">Can</span><span class="nv"> </span><span class="s">be</span><span class="nv"> </span><span class="s">used</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">collect</span><span class="nv"> </span><span class="s">several</span><span class="nv"> </span><span class="s">subdomains</span>
+<span class="w">      </span><span class="s">such</span>
+
+<span class="w">      </span><span class="s">as</span><span class="nv"> </span><span class="s">those</span><span class="nv"> </span><span class="s">from</span><span class="nv"> </span><span class="s">Domain</span><span class="nv"> </span><span class="s">Generation</span><span class="nv"> </span><span class="s">Algorithms</span><span class="nv"> </span><span class="s">(DGAs).'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Subdomains</span>

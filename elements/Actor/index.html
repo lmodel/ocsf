@@ -236,6 +236,15 @@
 </nav>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="#in-subsets">
+<span class="md-ellipsis">
+      
+        In Subsets
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#aliases">
 <span class="md-ellipsis">
       
@@ -341,7 +350,9 @@
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
 <h1 id="class-actor">Class: Actor</h1>
-<p><em>The Actor object contains details about the user, role, application, service, or process that initiated or performed a specific activity. Note that Actor is not the threat actor of a campaign but may be part of a campaign.</em></p>
+<p><em>The Actor object contains details about the user, role, application, service,</em></p>
+<p><em>or process that initiated or performed a specific activity. Note that Actor is</em></p>
+<p><em>not the threat actor of a campaign but may be part of a campaign.</em></p>
 <p>URI: <a href="https://w3id.org/lmodel/ocsf/Actor">ocsf:Actor</a></p>
 <pre class="mermaid"><code> classDiagram
     class Actor
@@ -441,7 +452,7 @@
 <tr>
 <td><a href="../app_uid/">app_uid</a></td>
 <td>0..1 <br/> <a href="../String/">String</a></td>
-<td>The unique identifier of the client application or service that initiated the...</td>
+<td>The unique identifier of the client application or service that initiated the</td>
 <td>direct</td>
 </tr>
 <tr>
@@ -477,7 +488,7 @@
 <tr>
 <td><a href="../user/">user</a></td>
 <td>0..1 <em>recommended</em> <br/> <a href="../User/">User</a></td>
-<td>The user that initiated the activity or the user context from which the activ...</td>
+<td>The user that initiated the activity or the user context from which the</td>
 <td>direct</td>
 </tr>
 </tbody>
@@ -1079,6 +1090,10 @@
 </tr>
 </tbody>
 </table>
+<h2 id="in-subsets">In Subsets</h2>
+<ul>
+<li><a href="../Objects/">Objects</a></li>
+</ul>
 <h2 id="aliases">Aliases</h2>
 <ul>
 <li>Actor</li>
@@ -1103,7 +1118,11 @@
 <tbody>
 <tr>
 <td>ocsf_constraints</td>
-<td>{"at_least_one": ["process", "user", "invoked_by", "session", "app_name", "app_uid"]}</td>
+<td>{"at_least_one": ["process", "user", "invoked_by", "session", "app_name",</td>
+</tr>
+<tr>
+<td>"app_uid"]}</td>
+<td></td>
 </tr>
 </tbody>
 </table>
@@ -1139,12 +1158,18 @@
 <span class="w">  </span><span class="nt">ocsf_constraints</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ocsf_constraints</span>
 <span class="w">    </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="s">'{"at_least_one":</span><span class="nv"> </span><span class="s">["process",</span><span class="nv"> </span><span class="s">"user",</span><span class="nv"> </span><span class="s">"invoked_by",</span><span class="nv"> </span><span class="s">"session",</span><span class="nv"> </span><span class="s">"app_name",</span>
+
 <span class="w">      </span><span class="s">"app_uid"]}'</span>
-<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The Actor object contains details about the user, role, application,</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">service, or process that initiated or performed a specific activity. Note that Actor</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">is not the threat actor of a campaign but may be part of a campaign.</span>
+<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">Actor</span><span class="nv"> </span><span class="s">object</span><span class="nv"> </span><span class="s">contains</span><span class="nv"> </span><span class="s">details</span><span class="nv"> </span><span class="s">about</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">user,</span><span class="nv"> </span><span class="s">role,</span><span class="nv"> </span><span class="s">application,</span>
+<span class="w">  </span><span class="s">service,</span>
+
+<span class="w">  </span><span class="s">or</span><span class="nv"> </span><span class="s">process</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">initiated</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">performed</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">specific</span><span class="nv"> </span><span class="s">activity.</span><span class="nv"> </span><span class="s">Note</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">Actor</span><span class="nv"> </span><span class="s">is</span>
+
+<span class="w">  </span><span class="s">not</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">threat</span><span class="nv"> </span><span class="s">actor</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">campaign</span><span class="nv"> </span><span class="s">but</span><span class="nv"> </span><span class="s">may</span><span class="nv"> </span><span class="s">be</span><span class="nv"> </span><span class="s">part</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">campaign.'</span>
 <span class="nt">notes</span><span class="p">:</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">D3FEND™ Ontology d3f:Agent. — https://next.d3fend.mitre.org/agent/d3f:Agent/</span>
+<span class="nt">in_subset</span><span class="p">:</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">objects</span>
 <span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="nt">see_also</span><span class="p">:</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://next.d3fend.mitre.org/agent/d3f:Agent/</span>
@@ -1163,15 +1188,22 @@
 <span class="nt">slot_usage</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">app_name</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">app_name</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The client application or service that initiated the activity. This</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">can be in conjunction with the &lt;code&gt;user&lt;/code&gt; if present.  Note that &lt;code&gt;app_name&lt;/code&gt;</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">is distinct from the &lt;code&gt;process&lt;/code&gt; if present.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">client</span><span class="nv"> </span><span class="s">application</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">service</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">initiated</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">activity.</span><span class="nv"> </span><span class="s">This</span>
+<span class="w">      </span><span class="s">can</span><span class="nv"> </span><span class="s">be</span><span class="nv"> </span><span class="s">in</span>
+
+<span class="w">      </span><span class="s">conjunction</span><span class="nv"> </span><span class="s">with</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">&lt;code&gt;user&lt;/code&gt;</span><span class="nv"> </span><span class="s">if</span><span class="nv"> </span><span class="s">present.</span><span class="nv">  </span><span class="s">Note</span><span class="nv"> </span><span class="s">that</span>
+
+<span class="w">      </span><span class="s">&lt;code&gt;app_name&lt;/code&gt;</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">distinct</span><span class="nv"> </span><span class="s">from</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">&lt;code&gt;process&lt;/code&gt;</span><span class="nv"> </span><span class="s">if</span><span class="nv"> </span><span class="s">present.'</span>
 <span class="w">  </span><span class="nt">app_uid</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">app_uid</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The unique identifier of the client application or service that initiated</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">the activity. This can be in conjunction with the &lt;code&gt;user&lt;/code&gt; if present.</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">Note that &lt;code&gt;app_name&lt;/code&gt; is distinct from the &lt;code&gt;process.pid&lt;/code&gt;</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">or &lt;code&gt;process.uid&lt;/code&gt; if present.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">unique</span><span class="nv"> </span><span class="s">identifier</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">client</span><span class="nv"> </span><span class="s">application</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">service</span><span class="nv"> </span><span class="s">that</span>
+<span class="w">      </span><span class="s">initiated</span><span class="nv"> </span><span class="s">the</span>
+
+<span class="w">      </span><span class="s">activity.</span><span class="nv"> </span><span class="s">This</span><span class="nv"> </span><span class="s">can</span><span class="nv"> </span><span class="s">be</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">conjunction</span><span class="nv"> </span><span class="s">with</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">&lt;code&gt;user&lt;/code&gt;</span><span class="nv"> </span><span class="s">if</span><span class="nv"> </span><span class="s">present.</span>
+
+<span class="w">      </span><span class="s">Note</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">&lt;code&gt;app_name&lt;/code&gt;</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">distinct</span><span class="nv"> </span><span class="s">from</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">&lt;code&gt;process.pid&lt;/code&gt;</span>
+
+<span class="w">      </span><span class="s">or</span><span class="nv"> </span><span class="s">&lt;code&gt;process.uid&lt;/code&gt;</span><span class="nv"> </span><span class="s">if</span><span class="nv"> </span><span class="s">present.'</span>
 <span class="w">  </span><span class="nt">invoked_by</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">invoked_by</span>
 <span class="w">    </span><span class="nt">deprecated</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Use &lt;code&gt; app_name, app_uid &lt;/code&gt; attributes instead.</span>
@@ -1184,8 +1216,10 @@
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The user session from which the activity was initiated.</span>
 <span class="w">  </span><span class="nt">user</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">user</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The user that initiated the activity or the user context from which</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">the activity was initiated.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">user</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">initiated</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">activity</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">user</span><span class="nv"> </span><span class="s">context</span><span class="nv"> </span><span class="s">from</span><span class="nv"> </span><span class="s">which</span>
+<span class="w">      </span><span class="s">the</span>
+
+<span class="w">      </span><span class="s">activity</span><span class="nv"> </span><span class="s">was</span><span class="nv"> </span><span class="s">initiated.'</span>
 <span class="w">    </span><span class="nt">recommended</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="nt">rules</span><span class="p">:</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">postconditions</span><span class="p">:</span>
@@ -1215,7 +1249,9 @@
 <span class="w">          </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">app_uid</span>
 <span class="w">          </span><span class="nt">required</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'OCSF</span><span class="nv"> </span><span class="s">at_least_one:</span><span class="nv"> </span><span class="s">at</span><span class="nv"> </span><span class="s">least</span><span class="nv"> </span><span class="s">one</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">[</span><span class="se">''</span><span class="s">process</span><span class="se">''</span><span class="s">,</span><span class="nv"> </span><span class="se">''</span><span class="s">user</span><span class="se">''</span><span class="s">,</span><span class="nv"> </span><span class="se">''</span><span class="s">invoked_by</span><span class="se">''</span><span class="s">,</span>
-<span class="w">    </span><span class="se">''</span><span class="s">session</span><span class="se">''</span><span class="s">,</span><span class="nv"> </span><span class="se">''</span><span class="s">app_name</span><span class="se">''</span><span class="s">,</span><span class="nv"> </span><span class="se">''</span><span class="s">app_uid</span><span class="se">''</span><span class="s">]</span><span class="nv"> </span><span class="s">must</span><span class="nv"> </span><span class="s">be</span><span class="nv"> </span><span class="s">set.'</span>
+<span class="w">    </span><span class="se">''</span><span class="s">session</span><span class="se">''</span><span class="s">,</span>
+
+<span class="w">    </span><span class="se">''</span><span class="s">app_name</span><span class="se">''</span><span class="s">,</span><span class="nv"> </span><span class="se">''</span><span class="s">app_uid</span><span class="se">''</span><span class="s">]</span><span class="nv"> </span><span class="s">must</span><span class="nv"> </span><span class="s">be</span><span class="nv"> </span><span class="s">set.'</span>
 </code></pre></div>
 </details>
 <h3 id="induced">Induced</h3>
@@ -1225,12 +1261,18 @@
 <span class="w">  </span><span class="nt">ocsf_constraints</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ocsf_constraints</span>
 <span class="w">    </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="s">'{"at_least_one":</span><span class="nv"> </span><span class="s">["process",</span><span class="nv"> </span><span class="s">"user",</span><span class="nv"> </span><span class="s">"invoked_by",</span><span class="nv"> </span><span class="s">"session",</span><span class="nv"> </span><span class="s">"app_name",</span>
+
 <span class="w">      </span><span class="s">"app_uid"]}'</span>
-<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The Actor object contains details about the user, role, application,</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">service, or process that initiated or performed a specific activity. Note that Actor</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">is not the threat actor of a campaign but may be part of a campaign.</span>
+<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">Actor</span><span class="nv"> </span><span class="s">object</span><span class="nv"> </span><span class="s">contains</span><span class="nv"> </span><span class="s">details</span><span class="nv"> </span><span class="s">about</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">user,</span><span class="nv"> </span><span class="s">role,</span><span class="nv"> </span><span class="s">application,</span>
+<span class="w">  </span><span class="s">service,</span>
+
+<span class="w">  </span><span class="s">or</span><span class="nv"> </span><span class="s">process</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">initiated</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">performed</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">specific</span><span class="nv"> </span><span class="s">activity.</span><span class="nv"> </span><span class="s">Note</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">Actor</span><span class="nv"> </span><span class="s">is</span>
+
+<span class="w">  </span><span class="s">not</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">threat</span><span class="nv"> </span><span class="s">actor</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">campaign</span><span class="nv"> </span><span class="s">but</span><span class="nv"> </span><span class="s">may</span><span class="nv"> </span><span class="s">be</span><span class="nv"> </span><span class="s">part</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">campaign.'</span>
 <span class="nt">notes</span><span class="p">:</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">D3FEND™ Ontology d3f:Agent. — https://next.d3fend.mitre.org/agent/d3f:Agent/</span>
+<span class="nt">in_subset</span><span class="p">:</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">objects</span>
 <span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="nt">see_also</span><span class="p">:</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://next.d3fend.mitre.org/agent/d3f:Agent/</span>
@@ -1240,15 +1282,22 @@
 <span class="nt">slot_usage</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">app_name</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">app_name</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The client application or service that initiated the activity. This</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">can be in conjunction with the &lt;code&gt;user&lt;/code&gt; if present.  Note that &lt;code&gt;app_name&lt;/code&gt;</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">is distinct from the &lt;code&gt;process&lt;/code&gt; if present.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">client</span><span class="nv"> </span><span class="s">application</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">service</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">initiated</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">activity.</span><span class="nv"> </span><span class="s">This</span>
+<span class="w">      </span><span class="s">can</span><span class="nv"> </span><span class="s">be</span><span class="nv"> </span><span class="s">in</span>
+
+<span class="w">      </span><span class="s">conjunction</span><span class="nv"> </span><span class="s">with</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">&lt;code&gt;user&lt;/code&gt;</span><span class="nv"> </span><span class="s">if</span><span class="nv"> </span><span class="s">present.</span><span class="nv">  </span><span class="s">Note</span><span class="nv"> </span><span class="s">that</span>
+
+<span class="w">      </span><span class="s">&lt;code&gt;app_name&lt;/code&gt;</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">distinct</span><span class="nv"> </span><span class="s">from</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">&lt;code&gt;process&lt;/code&gt;</span><span class="nv"> </span><span class="s">if</span><span class="nv"> </span><span class="s">present.'</span>
 <span class="w">  </span><span class="nt">app_uid</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">app_uid</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The unique identifier of the client application or service that initiated</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">the activity. This can be in conjunction with the &lt;code&gt;user&lt;/code&gt; if present.</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">Note that &lt;code&gt;app_name&lt;/code&gt; is distinct from the &lt;code&gt;process.pid&lt;/code&gt;</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">or &lt;code&gt;process.uid&lt;/code&gt; if present.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">unique</span><span class="nv"> </span><span class="s">identifier</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">client</span><span class="nv"> </span><span class="s">application</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">service</span><span class="nv"> </span><span class="s">that</span>
+<span class="w">      </span><span class="s">initiated</span><span class="nv"> </span><span class="s">the</span>
+
+<span class="w">      </span><span class="s">activity.</span><span class="nv"> </span><span class="s">This</span><span class="nv"> </span><span class="s">can</span><span class="nv"> </span><span class="s">be</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">conjunction</span><span class="nv"> </span><span class="s">with</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">&lt;code&gt;user&lt;/code&gt;</span><span class="nv"> </span><span class="s">if</span><span class="nv"> </span><span class="s">present.</span>
+
+<span class="w">      </span><span class="s">Note</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">&lt;code&gt;app_name&lt;/code&gt;</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">distinct</span><span class="nv"> </span><span class="s">from</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">&lt;code&gt;process.pid&lt;/code&gt;</span>
+
+<span class="w">      </span><span class="s">or</span><span class="nv"> </span><span class="s">&lt;code&gt;process.uid&lt;/code&gt;</span><span class="nv"> </span><span class="s">if</span><span class="nv"> </span><span class="s">present.'</span>
 <span class="w">  </span><span class="nt">invoked_by</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">invoked_by</span>
 <span class="w">    </span><span class="nt">deprecated</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Use &lt;code&gt; app_name, app_uid &lt;/code&gt; attributes instead.</span>
@@ -1261,15 +1310,20 @@
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The user session from which the activity was initiated.</span>
 <span class="w">  </span><span class="nt">user</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">user</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The user that initiated the activity or the user context from which</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">the activity was initiated.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">user</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">initiated</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">activity</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">user</span><span class="nv"> </span><span class="s">context</span><span class="nv"> </span><span class="s">from</span><span class="nv"> </span><span class="s">which</span>
+<span class="w">      </span><span class="s">the</span>
+
+<span class="w">      </span><span class="s">activity</span><span class="nv"> </span><span class="s">was</span><span class="nv"> </span><span class="s">initiated.'</span>
 <span class="w">    </span><span class="nt">recommended</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="nt">attributes</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">app_name</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">app_name</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The client application or service that initiated the activity. This</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">can be in conjunction with the &lt;code&gt;user&lt;/code&gt; if present.  Note that &lt;code&gt;app_name&lt;/code&gt;</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">is distinct from the &lt;code&gt;process&lt;/code&gt; if present.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">client</span><span class="nv"> </span><span class="s">application</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">service</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">initiated</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">activity.</span><span class="nv"> </span><span class="s">This</span>
+<span class="w">      </span><span class="s">can</span><span class="nv"> </span><span class="s">be</span><span class="nv"> </span><span class="s">in</span>
+
+<span class="w">      </span><span class="s">conjunction</span><span class="nv"> </span><span class="s">with</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">&lt;code&gt;user&lt;/code&gt;</span><span class="nv"> </span><span class="s">if</span><span class="nv"> </span><span class="s">present.</span><span class="nv">  </span><span class="s">Note</span><span class="nv"> </span><span class="s">that</span>
+
+<span class="w">      </span><span class="s">&lt;code&gt;app_name&lt;/code&gt;</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">distinct</span><span class="nv"> </span><span class="s">from</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">&lt;code&gt;process&lt;/code&gt;</span><span class="nv"> </span><span class="s">if</span><span class="nv"> </span><span class="s">present.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Application Name</span>
@@ -1282,10 +1336,14 @@
 <span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">string</span>
 <span class="w">  </span><span class="nt">app_uid</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">app_uid</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The unique identifier of the client application or service that initiated</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">the activity. This can be in conjunction with the &lt;code&gt;user&lt;/code&gt; if present.</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">Note that &lt;code&gt;app_name&lt;/code&gt; is distinct from the &lt;code&gt;process.pid&lt;/code&gt;</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">or &lt;code&gt;process.uid&lt;/code&gt; if present.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">unique</span><span class="nv"> </span><span class="s">identifier</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">client</span><span class="nv"> </span><span class="s">application</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">service</span><span class="nv"> </span><span class="s">that</span>
+<span class="w">      </span><span class="s">initiated</span><span class="nv"> </span><span class="s">the</span>
+
+<span class="w">      </span><span class="s">activity.</span><span class="nv"> </span><span class="s">This</span><span class="nv"> </span><span class="s">can</span><span class="nv"> </span><span class="s">be</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">conjunction</span><span class="nv"> </span><span class="s">with</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">&lt;code&gt;user&lt;/code&gt;</span><span class="nv"> </span><span class="s">if</span><span class="nv"> </span><span class="s">present.</span>
+
+<span class="w">      </span><span class="s">Note</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">&lt;code&gt;app_name&lt;/code&gt;</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">distinct</span><span class="nv"> </span><span class="s">from</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">&lt;code&gt;process.pid&lt;/code&gt;</span>
+
+<span class="w">      </span><span class="s">or</span><span class="nv"> </span><span class="s">&lt;code&gt;process.uid&lt;/code&gt;</span><span class="nv"> </span><span class="s">if</span><span class="nv"> </span><span class="s">present.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Application ID</span>
@@ -1297,8 +1355,10 @@
 <span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">string</span>
 <span class="w">  </span><span class="nt">authorizations</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">authorizations</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Provides details about an authorization, such as authorization outcome,</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">and any associated policies related to the activity/event.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'Provides</span><span class="nv"> </span><span class="s">details</span><span class="nv"> </span><span class="s">about</span><span class="nv"> </span><span class="s">an</span><span class="nv"> </span><span class="s">authorization,</span><span class="nv"> </span><span class="s">such</span><span class="nv"> </span><span class="s">as</span><span class="nv"> </span><span class="s">authorization</span><span class="nv"> </span><span class="s">outcome,</span>
+<span class="w">      </span><span class="s">and</span><span class="nv"> </span><span class="s">any</span>
+
+<span class="w">      </span><span class="s">associated</span><span class="nv"> </span><span class="s">policies</span><span class="nv"> </span><span class="s">related</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">activity/event.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Authorization Information</span>
@@ -1381,8 +1441,10 @@
 <span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Session</span>
 <span class="w">  </span><span class="nt">user</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">user</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The user that initiated the activity or the user context from which</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">the activity was initiated.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">user</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">initiated</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">activity</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">user</span><span class="nv"> </span><span class="s">context</span><span class="nv"> </span><span class="s">from</span><span class="nv"> </span><span class="s">which</span>
+<span class="w">      </span><span class="s">the</span>
+
+<span class="w">      </span><span class="s">activity</span><span class="nv"> </span><span class="s">was</span><span class="nv"> </span><span class="s">initiated.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">User</span>
@@ -1436,7 +1498,9 @@
 <span class="w">          </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">app_uid</span>
 <span class="w">          </span><span class="nt">required</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'OCSF</span><span class="nv"> </span><span class="s">at_least_one:</span><span class="nv"> </span><span class="s">at</span><span class="nv"> </span><span class="s">least</span><span class="nv"> </span><span class="s">one</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">[</span><span class="se">''</span><span class="s">process</span><span class="se">''</span><span class="s">,</span><span class="nv"> </span><span class="se">''</span><span class="s">user</span><span class="se">''</span><span class="s">,</span><span class="nv"> </span><span class="se">''</span><span class="s">invoked_by</span><span class="se">''</span><span class="s">,</span>
-<span class="w">    </span><span class="se">''</span><span class="s">session</span><span class="se">''</span><span class="s">,</span><span class="nv"> </span><span class="se">''</span><span class="s">app_name</span><span class="se">''</span><span class="s">,</span><span class="nv"> </span><span class="se">''</span><span class="s">app_uid</span><span class="se">''</span><span class="s">]</span><span class="nv"> </span><span class="s">must</span><span class="nv"> </span><span class="s">be</span><span class="nv"> </span><span class="s">set.'</span>
+<span class="w">    </span><span class="se">''</span><span class="s">session</span><span class="se">''</span><span class="s">,</span>
+
+<span class="w">    </span><span class="se">''</span><span class="s">app_name</span><span class="se">''</span><span class="s">,</span><span class="nv"> </span><span class="se">''</span><span class="s">app_uid</span><span class="se">''</span><span class="s">]</span><span class="nv"> </span><span class="s">must</span><span class="nv"> </span><span class="s">be</span><span class="nv"> </span><span class="s">set.'</span>
 </code></pre></div>
 </details>
 </article>

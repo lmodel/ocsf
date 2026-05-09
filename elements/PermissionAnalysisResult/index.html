@@ -217,6 +217,15 @@
 </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="#in-subsets">
+<span class="md-ellipsis">
+      
+        In Subsets
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#aliases">
 <span class="md-ellipsis">
       
@@ -295,7 +304,13 @@
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
 <h1 id="class-permissionanalysisresult">Class: PermissionAnalysisResult</h1>
-<p><em>The Permission Analysis object describes analysis results of permissions, policies directly associated with an identity (user, role, or service account). This evaluates what permissions an identity has been granted through attached policies, which privileges are actively used versus unused, and identifies potential over-privileged access. Use this for identity-centric security assessments such as privilege audits, dormant permission discovery, and least-privilege compliance analysis.</em></p>
+<p><em>The Permission Analysis object describes analysis results of permissions,</em></p>
+<p><em>policies directly associated with an identity (user, role, or service account).</em></p>
+<p><em>This evaluates what permissions an identity has been granted through attached</em></p>
+<p><em>policies, which privileges are actively used versus unused, and identifies</em></p>
+<p><em>potential over-privileged access. Use this for identity-centric security</em></p>
+<p><em>assessments such as privilege audits, dormant permission discovery, and</em></p>
+<p><em>least-privilege compliance analysis.</em></p>
 <p>URI: <a href="https://w3id.org/lmodel/ocsf/PermissionAnalysisResult">ocsf:PermissionAnalysisResult</a></p>
 <pre class="mermaid"><code> classDiagram
     class PermissionAnalysisResult
@@ -389,7 +404,7 @@
 <tr>
 <td><a href="../policy/">policy</a></td>
 <td>0..1 <em>recommended</em> <br/> <a href="../Policy/">Policy</a></td>
-<td>Detailed information about the policy document that was analyzed, including p...</td>
+<td>Detailed information about the policy document that was analyzed, including</td>
 <td>direct</td>
 </tr>
 <tr>
@@ -407,13 +422,13 @@
 <tr>
 <td><a href="../unused_privileges_count/">unused_privileges_count</a></td>
 <td>0..1 <br/> <a href="../Integer/">Integer</a></td>
-<td>The total count of privileges or actions defined in the policy that have not ...</td>
+<td>The total count of privileges or actions defined in the policy that have not</td>
 <td>direct</td>
 </tr>
 <tr>
 <td><a href="../unused_services_count/">unused_services_count</a></td>
 <td>0..1 <br/> <a href="../Integer/">Integer</a></td>
-<td>The total count of cloud services or resource types referenced in the policy ...</td>
+<td>The total count of cloud services or resource types referenced in the policy</td>
 <td>direct</td>
 </tr>
 </tbody>
@@ -437,6 +452,10 @@
 </tr>
 </tbody>
 </table>
+<h2 id="in-subsets">In Subsets</h2>
+<ul>
+<li><a href="../Objects/">Objects</a></li>
+</ul>
 <h2 id="aliases">Aliases</h2>
 <ul>
 <li>Permission Analysis Result</li>
@@ -470,12 +489,21 @@
 <h3 id="direct">Direct</h3>
 <details>
 <div class="highlight"><pre><span></span><code><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">PermissionAnalysisResult</span>
-<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The Permission Analysis object describes analysis results of permissions,</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">policies directly associated with an identity (user, role, or service account).</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">This evaluates what permissions an identity has been granted through attached policies,</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">which privileges are actively used versus unused, and identifies potential over-privileged</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">access. Use this for identity-centric security assessments such as privilege audits,</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">dormant permission discovery, and least-privilege compliance analysis.</span>
+<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">Permission</span><span class="nv"> </span><span class="s">Analysis</span><span class="nv"> </span><span class="s">object</span><span class="nv"> </span><span class="s">describes</span><span class="nv"> </span><span class="s">analysis</span><span class="nv"> </span><span class="s">results</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">permissions,</span>
+
+<span class="w">  </span><span class="s">policies</span><span class="nv"> </span><span class="s">directly</span><span class="nv"> </span><span class="s">associated</span><span class="nv"> </span><span class="s">with</span><span class="nv"> </span><span class="s">an</span><span class="nv"> </span><span class="s">identity</span><span class="nv"> </span><span class="s">(user,</span><span class="nv"> </span><span class="s">role,</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">service</span><span class="nv"> </span><span class="s">account).</span>
+
+<span class="w">  </span><span class="s">This</span><span class="nv"> </span><span class="s">evaluates</span><span class="nv"> </span><span class="s">what</span><span class="nv"> </span><span class="s">permissions</span><span class="nv"> </span><span class="s">an</span><span class="nv"> </span><span class="s">identity</span><span class="nv"> </span><span class="s">has</span><span class="nv"> </span><span class="s">been</span><span class="nv"> </span><span class="s">granted</span><span class="nv"> </span><span class="s">through</span><span class="nv"> </span><span class="s">attached</span>
+
+<span class="w">  </span><span class="s">policies,</span><span class="nv"> </span><span class="s">which</span><span class="nv"> </span><span class="s">privileges</span><span class="nv"> </span><span class="s">are</span><span class="nv"> </span><span class="s">actively</span><span class="nv"> </span><span class="s">used</span><span class="nv"> </span><span class="s">versus</span><span class="nv"> </span><span class="s">unused,</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">identifies</span>
+
+<span class="w">  </span><span class="s">potential</span><span class="nv"> </span><span class="s">over-privileged</span><span class="nv"> </span><span class="s">access.</span><span class="nv"> </span><span class="s">Use</span><span class="nv"> </span><span class="s">this</span><span class="nv"> </span><span class="s">for</span><span class="nv"> </span><span class="s">identity-centric</span><span class="nv"> </span><span class="s">security</span>
+
+<span class="w">  </span><span class="s">assessments</span><span class="nv"> </span><span class="s">such</span><span class="nv"> </span><span class="s">as</span><span class="nv"> </span><span class="s">privilege</span><span class="nv"> </span><span class="s">audits,</span><span class="nv"> </span><span class="s">dormant</span><span class="nv"> </span><span class="s">permission</span><span class="nv"> </span><span class="s">discovery,</span><span class="nv"> </span><span class="s">and</span>
+
+<span class="w">  </span><span class="s">least-privilege</span><span class="nv"> </span><span class="s">compliance</span><span class="nv"> </span><span class="s">analysis.'</span>
+<span class="nt">in_subset</span><span class="p">:</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">objects</span>
 <span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="nt">aliases</span><span class="p">:</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Permission Analysis Result</span>
@@ -496,22 +524,35 @@
 <span class="w">  </span><span class="nt">condition_keys</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">condition_keys</span>
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">condition</span><span class="nv"> </span><span class="s">keys</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">their</span><span class="nv"> </span><span class="s">values</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">were</span><span class="nv"> </span><span class="s">evaluated</span><span class="nv"> </span><span class="s">during</span><span class="nv"> </span><span class="s">policy</span>
-<span class="w">      </span><span class="s">analysis,</span><span class="nv"> </span><span class="s">including</span><span class="nv"> </span><span class="s">contextual</span><span class="nv"> </span><span class="s">constraints</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">affect</span><span class="nv"> </span><span class="s">permission</span><span class="nv"> </span><span class="s">grants.</span><span class="nv"> </span><span class="s">These</span>
-<span class="w">      </span><span class="s">conditions</span><span class="nv"> </span><span class="s">define</span><span class="nv"> </span><span class="s">when</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">how</span><span class="nv"> </span><span class="s">permissions</span><span class="nv"> </span><span class="s">are</span><span class="nv"> </span><span class="s">applied.</span><span class="nv"> </span><span class="s">Examples:</span><span class="nv"> </span><span class="s">&lt;code&gt;aws:SourceIp:1.2.3.4&lt;/code&gt;,</span>
-<span class="w">      </span><span class="s">&lt;code&gt;aws:RequestedRegion:us-east-1&lt;/code&gt;.'</span>
+<span class="w">      </span><span class="s">analysis,</span>
+
+<span class="w">      </span><span class="s">including</span><span class="nv"> </span><span class="s">contextual</span><span class="nv"> </span><span class="s">constraints</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">affect</span><span class="nv"> </span><span class="s">permission</span><span class="nv"> </span><span class="s">grants.</span><span class="nv"> </span><span class="s">These</span>
+
+<span class="w">      </span><span class="s">conditions</span><span class="nv"> </span><span class="s">define</span><span class="nv"> </span><span class="s">when</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">how</span><span class="nv"> </span><span class="s">permissions</span><span class="nv"> </span><span class="s">are</span><span class="nv"> </span><span class="s">applied.</span><span class="nv"> </span><span class="s">Examples:</span>
+
+<span class="w">      </span><span class="s">&lt;code&gt;aws:SourceIp:1.2.3.4&lt;/code&gt;,</span><span class="nv"> </span><span class="s">&lt;code&gt;aws:RequestedRegion:us-east-1&lt;/code&gt;.'</span>
 <span class="w">  </span><span class="nt">granted_privileges</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">granted_privileges</span>
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">specific</span><span class="nv"> </span><span class="s">privileges,</span><span class="nv"> </span><span class="s">actions,</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">permissions</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">are</span><span class="nv"> </span><span class="s">explicitly</span>
-<span class="w">      </span><span class="s">granted</span><span class="nv"> </span><span class="s">by</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">analyzed</span><span class="nv"> </span><span class="s">policy.</span><span class="nv"> </span><span class="s">Examples:</span><span class="nv"> </span><span class="s">AWS</span><span class="nv"> </span><span class="s">actions</span><span class="nv"> </span><span class="s">like</span><span class="nv"> </span><span class="s">&lt;code&gt;s3:GetObject&lt;/code&gt;,</span>
+<span class="w">      </span><span class="s">granted</span><span class="nv"> </span><span class="s">by</span>
+
+<span class="w">      </span><span class="s">the</span><span class="nv"> </span><span class="s">analyzed</span><span class="nv"> </span><span class="s">policy.</span><span class="nv"> </span><span class="s">Examples:</span><span class="nv"> </span><span class="s">AWS</span><span class="nv"> </span><span class="s">actions</span><span class="nv"> </span><span class="s">like</span><span class="nv"> </span><span class="s">&lt;code&gt;s3:GetObject&lt;/code&gt;,</span>
+
 <span class="w">      </span><span class="s">&lt;code&gt;ec2:RunInstances&lt;/code&gt;,</span><span class="nv"> </span><span class="s">&lt;code&gt;iam:CreateUser&lt;/code&gt;;</span><span class="nv"> </span><span class="s">Azure</span><span class="nv"> </span><span class="s">actions</span><span class="nv"> </span><span class="s">like</span>
+
 <span class="w">      </span><span class="s">&lt;code&gt;Microsoft.Storage/storageAccounts/read&lt;/code&gt;;</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">GCP</span><span class="nv"> </span><span class="s">permissions</span><span class="nv"> </span><span class="s">like</span>
+
 <span class="w">      </span><span class="s">&lt;code&gt;storage.objects.get&lt;/code&gt;.'</span>
 <span class="w">  </span><span class="nt">policy</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">policy</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Detailed information about the policy document that was analyzed,</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">including policy metadata, version, type (identity-based, resource-based, etc.),</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">and structural details. This provides context for understanding the scope and</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">nature of the permission analysis.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'Detailed</span><span class="nv"> </span><span class="s">information</span><span class="nv"> </span><span class="s">about</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">policy</span><span class="nv"> </span><span class="s">document</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">was</span><span class="nv"> </span><span class="s">analyzed,</span>
+<span class="w">      </span><span class="s">including</span>
+
+<span class="w">      </span><span class="s">policy</span><span class="nv"> </span><span class="s">metadata,</span><span class="nv"> </span><span class="s">version,</span><span class="nv"> </span><span class="s">type</span><span class="nv"> </span><span class="s">(identity-based,</span><span class="nv"> </span><span class="s">resource-based,</span><span class="nv"> </span><span class="s">etc.),</span><span class="nv"> </span><span class="s">and</span>
+
+<span class="w">      </span><span class="s">structural</span><span class="nv"> </span><span class="s">details.</span><span class="nv"> </span><span class="s">This</span><span class="nv"> </span><span class="s">provides</span><span class="nv"> </span><span class="s">context</span><span class="nv"> </span><span class="s">for</span><span class="nv"> </span><span class="s">understanding</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">scope</span><span class="nv"> </span><span class="s">and</span>
+
+<span class="w">      </span><span class="s">nature</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">permission</span><span class="nv"> </span><span class="s">analysis.'</span>
 <span class="w">    </span><span class="nt">recommended</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">service_privilege_analysis_list</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">service_privilege_analysis_list</span>
@@ -519,34 +560,56 @@
 <span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">namespace.</span>
 <span class="w">  </span><span class="nt">total_potential_attacks_count</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">total_potential_attacks_count</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The total count of privilege-to-attack technique mappings identified</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">across all analyzed privileges.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">total</span><span class="nv"> </span><span class="s">count</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">privilege-to-attack</span><span class="nv"> </span><span class="s">technique</span><span class="nv"> </span><span class="s">mappings</span><span class="nv"> </span><span class="s">identified</span>
+<span class="w">      </span><span class="s">across</span><span class="nv"> </span><span class="s">all</span>
+
+<span class="w">      </span><span class="s">analyzed</span><span class="nv"> </span><span class="s">privileges.'</span>
 <span class="w">  </span><span class="nt">unused_privileges_count</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">unused_privileges_count</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The total count of privileges or actions defined in the policy that</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">have not been utilized within the analysis timeframe. This metric helps identify</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">over-privileged access and opportunities for privilege reduction to follow the</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">principle of least privilege. High counts may indicate policy bloat or excessive</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">permissions.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">total</span><span class="nv"> </span><span class="s">count</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">privileges</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">actions</span><span class="nv"> </span><span class="s">defined</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">policy</span><span class="nv"> </span><span class="s">that</span>
+<span class="w">      </span><span class="s">have</span><span class="nv"> </span><span class="s">not</span>
+
+<span class="w">      </span><span class="s">been</span><span class="nv"> </span><span class="s">utilized</span><span class="nv"> </span><span class="s">within</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">analysis</span><span class="nv"> </span><span class="s">timeframe.</span><span class="nv"> </span><span class="s">This</span><span class="nv"> </span><span class="s">metric</span><span class="nv"> </span><span class="s">helps</span><span class="nv"> </span><span class="s">identify</span>
+
+<span class="w">      </span><span class="s">over-privileged</span><span class="nv"> </span><span class="s">access</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">opportunities</span><span class="nv"> </span><span class="s">for</span><span class="nv"> </span><span class="s">privilege</span><span class="nv"> </span><span class="s">reduction</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">follow</span><span class="nv"> </span><span class="s">the</span>
+
+<span class="w">      </span><span class="s">principle</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">least</span><span class="nv"> </span><span class="s">privilege.</span><span class="nv"> </span><span class="s">High</span><span class="nv"> </span><span class="s">counts</span><span class="nv"> </span><span class="s">may</span><span class="nv"> </span><span class="s">indicate</span><span class="nv"> </span><span class="s">policy</span><span class="nv"> </span><span class="s">bloat</span><span class="nv"> </span><span class="s">or</span>
+
+<span class="w">      </span><span class="s">excessive</span><span class="nv"> </span><span class="s">permissions.'</span>
 <span class="w">  </span><span class="nt">unused_services_count</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">unused_services_count</span>
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">total</span><span class="nv"> </span><span class="s">count</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">cloud</span><span class="nv"> </span><span class="s">services</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">resource</span><span class="nv"> </span><span class="s">types</span><span class="nv"> </span><span class="s">referenced</span><span class="nv"> </span><span class="s">in</span>
-<span class="w">      </span><span class="s">the</span><span class="nv"> </span><span class="s">policy</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">have</span><span class="nv"> </span><span class="s">not</span><span class="nv"> </span><span class="s">been</span><span class="nv"> </span><span class="s">accessed</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">utilized</span><span class="nv"> </span><span class="s">within</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">analysis</span><span class="nv"> </span><span class="s">timeframe.</span>
-<span class="w">      </span><span class="s">This</span><span class="nv"> </span><span class="s">helps</span><span class="nv"> </span><span class="s">identify</span><span class="nv"> </span><span class="s">unused</span><span class="nv"> </span><span class="s">service</span><span class="nv"> </span><span class="s">permissions</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">could</span><span class="nv"> </span><span class="s">be</span><span class="nv"> </span><span class="s">removed</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">reduce</span>
-<span class="w">      </span><span class="s">attack</span><span class="nv"> </span><span class="s">surface.</span><span class="nv"> </span><span class="s">Examples:</span><span class="nv"> </span><span class="s">AWS</span><span class="nv"> </span><span class="s">services</span><span class="nv"> </span><span class="s">like</span><span class="nv"> </span><span class="s">S3,</span><span class="nv"> </span><span class="s">SQS,</span><span class="nv"> </span><span class="s">IAM,</span><span class="nv"> </span><span class="s">Lambda;</span><span class="nv"> </span><span class="s">Azure</span><span class="nv"> </span><span class="s">services</span>
-<span class="w">      </span><span class="s">like</span><span class="nv"> </span><span class="s">Storage,</span><span class="nv"> </span><span class="s">Compute,</span><span class="nv"> </span><span class="s">KeyVault;</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">GCP</span><span class="nv"> </span><span class="s">services</span><span class="nv"> </span><span class="s">like</span><span class="nv"> </span><span class="s">Cloud</span><span class="nv"> </span><span class="s">Storage,</span><span class="nv"> </span><span class="s">Compute</span>
-<span class="w">      </span><span class="s">Engine,</span><span class="nv"> </span><span class="s">BigQuery.'</span>
+<span class="w">      </span><span class="s">the</span><span class="nv"> </span><span class="s">policy</span>
+
+<span class="w">      </span><span class="s">that</span><span class="nv"> </span><span class="s">have</span><span class="nv"> </span><span class="s">not</span><span class="nv"> </span><span class="s">been</span><span class="nv"> </span><span class="s">accessed</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">utilized</span><span class="nv"> </span><span class="s">within</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">analysis</span><span class="nv"> </span><span class="s">timeframe.</span><span class="nv"> </span><span class="s">This</span>
+
+<span class="w">      </span><span class="s">helps</span><span class="nv"> </span><span class="s">identify</span><span class="nv"> </span><span class="s">unused</span><span class="nv"> </span><span class="s">service</span><span class="nv"> </span><span class="s">permissions</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">could</span><span class="nv"> </span><span class="s">be</span><span class="nv"> </span><span class="s">removed</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">reduce</span>
+
+<span class="w">      </span><span class="s">attack</span><span class="nv"> </span><span class="s">surface.</span><span class="nv"> </span><span class="s">Examples:</span><span class="nv"> </span><span class="s">AWS</span><span class="nv"> </span><span class="s">services</span><span class="nv"> </span><span class="s">like</span><span class="nv"> </span><span class="s">S3,</span><span class="nv"> </span><span class="s">SQS,</span><span class="nv"> </span><span class="s">IAM,</span><span class="nv"> </span><span class="s">Lambda;</span><span class="nv"> </span><span class="s">Azure</span>
+
+<span class="w">      </span><span class="s">services</span><span class="nv"> </span><span class="s">like</span><span class="nv"> </span><span class="s">Storage,</span><span class="nv"> </span><span class="s">Compute,</span><span class="nv"> </span><span class="s">KeyVault;</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">GCP</span><span class="nv"> </span><span class="s">services</span><span class="nv"> </span><span class="s">like</span><span class="nv"> </span><span class="s">Cloud</span><span class="nv"> </span><span class="s">Storage,</span>
+
+<span class="w">      </span><span class="s">Compute</span><span class="nv"> </span><span class="s">Engine,</span><span class="nv"> </span><span class="s">BigQuery.'</span>
 </code></pre></div>
 </details>
 <h3 id="induced">Induced</h3>
 <details>
 <div class="highlight"><pre><span></span><code><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">PermissionAnalysisResult</span>
-<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The Permission Analysis object describes analysis results of permissions,</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">policies directly associated with an identity (user, role, or service account).</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">This evaluates what permissions an identity has been granted through attached policies,</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">which privileges are actively used versus unused, and identifies potential over-privileged</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">access. Use this for identity-centric security assessments such as privilege audits,</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">dormant permission discovery, and least-privilege compliance analysis.</span>
+<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">Permission</span><span class="nv"> </span><span class="s">Analysis</span><span class="nv"> </span><span class="s">object</span><span class="nv"> </span><span class="s">describes</span><span class="nv"> </span><span class="s">analysis</span><span class="nv"> </span><span class="s">results</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">permissions,</span>
+
+<span class="w">  </span><span class="s">policies</span><span class="nv"> </span><span class="s">directly</span><span class="nv"> </span><span class="s">associated</span><span class="nv"> </span><span class="s">with</span><span class="nv"> </span><span class="s">an</span><span class="nv"> </span><span class="s">identity</span><span class="nv"> </span><span class="s">(user,</span><span class="nv"> </span><span class="s">role,</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">service</span><span class="nv"> </span><span class="s">account).</span>
+
+<span class="w">  </span><span class="s">This</span><span class="nv"> </span><span class="s">evaluates</span><span class="nv"> </span><span class="s">what</span><span class="nv"> </span><span class="s">permissions</span><span class="nv"> </span><span class="s">an</span><span class="nv"> </span><span class="s">identity</span><span class="nv"> </span><span class="s">has</span><span class="nv"> </span><span class="s">been</span><span class="nv"> </span><span class="s">granted</span><span class="nv"> </span><span class="s">through</span><span class="nv"> </span><span class="s">attached</span>
+
+<span class="w">  </span><span class="s">policies,</span><span class="nv"> </span><span class="s">which</span><span class="nv"> </span><span class="s">privileges</span><span class="nv"> </span><span class="s">are</span><span class="nv"> </span><span class="s">actively</span><span class="nv"> </span><span class="s">used</span><span class="nv"> </span><span class="s">versus</span><span class="nv"> </span><span class="s">unused,</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">identifies</span>
+
+<span class="w">  </span><span class="s">potential</span><span class="nv"> </span><span class="s">over-privileged</span><span class="nv"> </span><span class="s">access.</span><span class="nv"> </span><span class="s">Use</span><span class="nv"> </span><span class="s">this</span><span class="nv"> </span><span class="s">for</span><span class="nv"> </span><span class="s">identity-centric</span><span class="nv"> </span><span class="s">security</span>
+
+<span class="w">  </span><span class="s">assessments</span><span class="nv"> </span><span class="s">such</span><span class="nv"> </span><span class="s">as</span><span class="nv"> </span><span class="s">privilege</span><span class="nv"> </span><span class="s">audits,</span><span class="nv"> </span><span class="s">dormant</span><span class="nv"> </span><span class="s">permission</span><span class="nv"> </span><span class="s">discovery,</span><span class="nv"> </span><span class="s">and</span>
+
+<span class="w">  </span><span class="s">least-privilege</span><span class="nv"> </span><span class="s">compliance</span><span class="nv"> </span><span class="s">analysis.'</span>
+<span class="nt">in_subset</span><span class="p">:</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">objects</span>
 <span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="nt">aliases</span><span class="p">:</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Permission Analysis Result</span>
@@ -558,22 +621,35 @@
 <span class="w">  </span><span class="nt">condition_keys</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">condition_keys</span>
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">condition</span><span class="nv"> </span><span class="s">keys</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">their</span><span class="nv"> </span><span class="s">values</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">were</span><span class="nv"> </span><span class="s">evaluated</span><span class="nv"> </span><span class="s">during</span><span class="nv"> </span><span class="s">policy</span>
-<span class="w">      </span><span class="s">analysis,</span><span class="nv"> </span><span class="s">including</span><span class="nv"> </span><span class="s">contextual</span><span class="nv"> </span><span class="s">constraints</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">affect</span><span class="nv"> </span><span class="s">permission</span><span class="nv"> </span><span class="s">grants.</span><span class="nv"> </span><span class="s">These</span>
-<span class="w">      </span><span class="s">conditions</span><span class="nv"> </span><span class="s">define</span><span class="nv"> </span><span class="s">when</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">how</span><span class="nv"> </span><span class="s">permissions</span><span class="nv"> </span><span class="s">are</span><span class="nv"> </span><span class="s">applied.</span><span class="nv"> </span><span class="s">Examples:</span><span class="nv"> </span><span class="s">&lt;code&gt;aws:SourceIp:1.2.3.4&lt;/code&gt;,</span>
-<span class="w">      </span><span class="s">&lt;code&gt;aws:RequestedRegion:us-east-1&lt;/code&gt;.'</span>
+<span class="w">      </span><span class="s">analysis,</span>
+
+<span class="w">      </span><span class="s">including</span><span class="nv"> </span><span class="s">contextual</span><span class="nv"> </span><span class="s">constraints</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">affect</span><span class="nv"> </span><span class="s">permission</span><span class="nv"> </span><span class="s">grants.</span><span class="nv"> </span><span class="s">These</span>
+
+<span class="w">      </span><span class="s">conditions</span><span class="nv"> </span><span class="s">define</span><span class="nv"> </span><span class="s">when</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">how</span><span class="nv"> </span><span class="s">permissions</span><span class="nv"> </span><span class="s">are</span><span class="nv"> </span><span class="s">applied.</span><span class="nv"> </span><span class="s">Examples:</span>
+
+<span class="w">      </span><span class="s">&lt;code&gt;aws:SourceIp:1.2.3.4&lt;/code&gt;,</span><span class="nv"> </span><span class="s">&lt;code&gt;aws:RequestedRegion:us-east-1&lt;/code&gt;.'</span>
 <span class="w">  </span><span class="nt">granted_privileges</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">granted_privileges</span>
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">specific</span><span class="nv"> </span><span class="s">privileges,</span><span class="nv"> </span><span class="s">actions,</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">permissions</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">are</span><span class="nv"> </span><span class="s">explicitly</span>
-<span class="w">      </span><span class="s">granted</span><span class="nv"> </span><span class="s">by</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">analyzed</span><span class="nv"> </span><span class="s">policy.</span><span class="nv"> </span><span class="s">Examples:</span><span class="nv"> </span><span class="s">AWS</span><span class="nv"> </span><span class="s">actions</span><span class="nv"> </span><span class="s">like</span><span class="nv"> </span><span class="s">&lt;code&gt;s3:GetObject&lt;/code&gt;,</span>
+<span class="w">      </span><span class="s">granted</span><span class="nv"> </span><span class="s">by</span>
+
+<span class="w">      </span><span class="s">the</span><span class="nv"> </span><span class="s">analyzed</span><span class="nv"> </span><span class="s">policy.</span><span class="nv"> </span><span class="s">Examples:</span><span class="nv"> </span><span class="s">AWS</span><span class="nv"> </span><span class="s">actions</span><span class="nv"> </span><span class="s">like</span><span class="nv"> </span><span class="s">&lt;code&gt;s3:GetObject&lt;/code&gt;,</span>
+
 <span class="w">      </span><span class="s">&lt;code&gt;ec2:RunInstances&lt;/code&gt;,</span><span class="nv"> </span><span class="s">&lt;code&gt;iam:CreateUser&lt;/code&gt;;</span><span class="nv"> </span><span class="s">Azure</span><span class="nv"> </span><span class="s">actions</span><span class="nv"> </span><span class="s">like</span>
+
 <span class="w">      </span><span class="s">&lt;code&gt;Microsoft.Storage/storageAccounts/read&lt;/code&gt;;</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">GCP</span><span class="nv"> </span><span class="s">permissions</span><span class="nv"> </span><span class="s">like</span>
+
 <span class="w">      </span><span class="s">&lt;code&gt;storage.objects.get&lt;/code&gt;.'</span>
 <span class="w">  </span><span class="nt">policy</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">policy</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Detailed information about the policy document that was analyzed,</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">including policy metadata, version, type (identity-based, resource-based, etc.),</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">and structural details. This provides context for understanding the scope and</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">nature of the permission analysis.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'Detailed</span><span class="nv"> </span><span class="s">information</span><span class="nv"> </span><span class="s">about</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">policy</span><span class="nv"> </span><span class="s">document</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">was</span><span class="nv"> </span><span class="s">analyzed,</span>
+<span class="w">      </span><span class="s">including</span>
+
+<span class="w">      </span><span class="s">policy</span><span class="nv"> </span><span class="s">metadata,</span><span class="nv"> </span><span class="s">version,</span><span class="nv"> </span><span class="s">type</span><span class="nv"> </span><span class="s">(identity-based,</span><span class="nv"> </span><span class="s">resource-based,</span><span class="nv"> </span><span class="s">etc.),</span><span class="nv"> </span><span class="s">and</span>
+
+<span class="w">      </span><span class="s">structural</span><span class="nv"> </span><span class="s">details.</span><span class="nv"> </span><span class="s">This</span><span class="nv"> </span><span class="s">provides</span><span class="nv"> </span><span class="s">context</span><span class="nv"> </span><span class="s">for</span><span class="nv"> </span><span class="s">understanding</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">scope</span><span class="nv"> </span><span class="s">and</span>
+
+<span class="w">      </span><span class="s">nature</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">permission</span><span class="nv"> </span><span class="s">analysis.'</span>
 <span class="w">    </span><span class="nt">recommended</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">service_privilege_analysis_list</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">service_privilege_analysis_list</span>
@@ -581,23 +657,36 @@
 <span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">namespace.</span>
 <span class="w">  </span><span class="nt">total_potential_attacks_count</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">total_potential_attacks_count</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The total count of privilege-to-attack technique mappings identified</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">across all analyzed privileges.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">total</span><span class="nv"> </span><span class="s">count</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">privilege-to-attack</span><span class="nv"> </span><span class="s">technique</span><span class="nv"> </span><span class="s">mappings</span><span class="nv"> </span><span class="s">identified</span>
+<span class="w">      </span><span class="s">across</span><span class="nv"> </span><span class="s">all</span>
+
+<span class="w">      </span><span class="s">analyzed</span><span class="nv"> </span><span class="s">privileges.'</span>
 <span class="w">  </span><span class="nt">unused_privileges_count</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">unused_privileges_count</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The total count of privileges or actions defined in the policy that</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">have not been utilized within the analysis timeframe. This metric helps identify</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">over-privileged access and opportunities for privilege reduction to follow the</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">principle of least privilege. High counts may indicate policy bloat or excessive</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">permissions.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">total</span><span class="nv"> </span><span class="s">count</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">privileges</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">actions</span><span class="nv"> </span><span class="s">defined</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">policy</span><span class="nv"> </span><span class="s">that</span>
+<span class="w">      </span><span class="s">have</span><span class="nv"> </span><span class="s">not</span>
+
+<span class="w">      </span><span class="s">been</span><span class="nv"> </span><span class="s">utilized</span><span class="nv"> </span><span class="s">within</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">analysis</span><span class="nv"> </span><span class="s">timeframe.</span><span class="nv"> </span><span class="s">This</span><span class="nv"> </span><span class="s">metric</span><span class="nv"> </span><span class="s">helps</span><span class="nv"> </span><span class="s">identify</span>
+
+<span class="w">      </span><span class="s">over-privileged</span><span class="nv"> </span><span class="s">access</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">opportunities</span><span class="nv"> </span><span class="s">for</span><span class="nv"> </span><span class="s">privilege</span><span class="nv"> </span><span class="s">reduction</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">follow</span><span class="nv"> </span><span class="s">the</span>
+
+<span class="w">      </span><span class="s">principle</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">least</span><span class="nv"> </span><span class="s">privilege.</span><span class="nv"> </span><span class="s">High</span><span class="nv"> </span><span class="s">counts</span><span class="nv"> </span><span class="s">may</span><span class="nv"> </span><span class="s">indicate</span><span class="nv"> </span><span class="s">policy</span><span class="nv"> </span><span class="s">bloat</span><span class="nv"> </span><span class="s">or</span>
+
+<span class="w">      </span><span class="s">excessive</span><span class="nv"> </span><span class="s">permissions.'</span>
 <span class="w">  </span><span class="nt">unused_services_count</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">unused_services_count</span>
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">total</span><span class="nv"> </span><span class="s">count</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">cloud</span><span class="nv"> </span><span class="s">services</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">resource</span><span class="nv"> </span><span class="s">types</span><span class="nv"> </span><span class="s">referenced</span><span class="nv"> </span><span class="s">in</span>
-<span class="w">      </span><span class="s">the</span><span class="nv"> </span><span class="s">policy</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">have</span><span class="nv"> </span><span class="s">not</span><span class="nv"> </span><span class="s">been</span><span class="nv"> </span><span class="s">accessed</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">utilized</span><span class="nv"> </span><span class="s">within</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">analysis</span><span class="nv"> </span><span class="s">timeframe.</span>
-<span class="w">      </span><span class="s">This</span><span class="nv"> </span><span class="s">helps</span><span class="nv"> </span><span class="s">identify</span><span class="nv"> </span><span class="s">unused</span><span class="nv"> </span><span class="s">service</span><span class="nv"> </span><span class="s">permissions</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">could</span><span class="nv"> </span><span class="s">be</span><span class="nv"> </span><span class="s">removed</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">reduce</span>
-<span class="w">      </span><span class="s">attack</span><span class="nv"> </span><span class="s">surface.</span><span class="nv"> </span><span class="s">Examples:</span><span class="nv"> </span><span class="s">AWS</span><span class="nv"> </span><span class="s">services</span><span class="nv"> </span><span class="s">like</span><span class="nv"> </span><span class="s">S3,</span><span class="nv"> </span><span class="s">SQS,</span><span class="nv"> </span><span class="s">IAM,</span><span class="nv"> </span><span class="s">Lambda;</span><span class="nv"> </span><span class="s">Azure</span><span class="nv"> </span><span class="s">services</span>
-<span class="w">      </span><span class="s">like</span><span class="nv"> </span><span class="s">Storage,</span><span class="nv"> </span><span class="s">Compute,</span><span class="nv"> </span><span class="s">KeyVault;</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">GCP</span><span class="nv"> </span><span class="s">services</span><span class="nv"> </span><span class="s">like</span><span class="nv"> </span><span class="s">Cloud</span><span class="nv"> </span><span class="s">Storage,</span><span class="nv"> </span><span class="s">Compute</span>
-<span class="w">      </span><span class="s">Engine,</span><span class="nv"> </span><span class="s">BigQuery.'</span>
+<span class="w">      </span><span class="s">the</span><span class="nv"> </span><span class="s">policy</span>
+
+<span class="w">      </span><span class="s">that</span><span class="nv"> </span><span class="s">have</span><span class="nv"> </span><span class="s">not</span><span class="nv"> </span><span class="s">been</span><span class="nv"> </span><span class="s">accessed</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">utilized</span><span class="nv"> </span><span class="s">within</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">analysis</span><span class="nv"> </span><span class="s">timeframe.</span><span class="nv"> </span><span class="s">This</span>
+
+<span class="w">      </span><span class="s">helps</span><span class="nv"> </span><span class="s">identify</span><span class="nv"> </span><span class="s">unused</span><span class="nv"> </span><span class="s">service</span><span class="nv"> </span><span class="s">permissions</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">could</span><span class="nv"> </span><span class="s">be</span><span class="nv"> </span><span class="s">removed</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">reduce</span>
+
+<span class="w">      </span><span class="s">attack</span><span class="nv"> </span><span class="s">surface.</span><span class="nv"> </span><span class="s">Examples:</span><span class="nv"> </span><span class="s">AWS</span><span class="nv"> </span><span class="s">services</span><span class="nv"> </span><span class="s">like</span><span class="nv"> </span><span class="s">S3,</span><span class="nv"> </span><span class="s">SQS,</span><span class="nv"> </span><span class="s">IAM,</span><span class="nv"> </span><span class="s">Lambda;</span><span class="nv"> </span><span class="s">Azure</span>
+
+<span class="w">      </span><span class="s">services</span><span class="nv"> </span><span class="s">like</span><span class="nv"> </span><span class="s">Storage,</span><span class="nv"> </span><span class="s">Compute,</span><span class="nv"> </span><span class="s">KeyVault;</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">GCP</span><span class="nv"> </span><span class="s">services</span><span class="nv"> </span><span class="s">like</span><span class="nv"> </span><span class="s">Cloud</span><span class="nv"> </span><span class="s">Storage,</span>
+
+<span class="w">      </span><span class="s">Compute</span><span class="nv"> </span><span class="s">Engine,</span><span class="nv"> </span><span class="s">BigQuery.'</span>
 <span class="nt">attributes</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">analyzed_privileges_count</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">analyzed_privileges_count</span>
@@ -615,9 +704,13 @@
 <span class="w">  </span><span class="nt">condition_keys</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">condition_keys</span>
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">condition</span><span class="nv"> </span><span class="s">keys</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">their</span><span class="nv"> </span><span class="s">values</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">were</span><span class="nv"> </span><span class="s">evaluated</span><span class="nv"> </span><span class="s">during</span><span class="nv"> </span><span class="s">policy</span>
-<span class="w">      </span><span class="s">analysis,</span><span class="nv"> </span><span class="s">including</span><span class="nv"> </span><span class="s">contextual</span><span class="nv"> </span><span class="s">constraints</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">affect</span><span class="nv"> </span><span class="s">permission</span><span class="nv"> </span><span class="s">grants.</span><span class="nv"> </span><span class="s">These</span>
-<span class="w">      </span><span class="s">conditions</span><span class="nv"> </span><span class="s">define</span><span class="nv"> </span><span class="s">when</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">how</span><span class="nv"> </span><span class="s">permissions</span><span class="nv"> </span><span class="s">are</span><span class="nv"> </span><span class="s">applied.</span><span class="nv"> </span><span class="s">Examples:</span><span class="nv"> </span><span class="s">&lt;code&gt;aws:SourceIp:1.2.3.4&lt;/code&gt;,</span>
-<span class="w">      </span><span class="s">&lt;code&gt;aws:RequestedRegion:us-east-1&lt;/code&gt;.'</span>
+<span class="w">      </span><span class="s">analysis,</span>
+
+<span class="w">      </span><span class="s">including</span><span class="nv"> </span><span class="s">contextual</span><span class="nv"> </span><span class="s">constraints</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">affect</span><span class="nv"> </span><span class="s">permission</span><span class="nv"> </span><span class="s">grants.</span><span class="nv"> </span><span class="s">These</span>
+
+<span class="w">      </span><span class="s">conditions</span><span class="nv"> </span><span class="s">define</span><span class="nv"> </span><span class="s">when</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">how</span><span class="nv"> </span><span class="s">permissions</span><span class="nv"> </span><span class="s">are</span><span class="nv"> </span><span class="s">applied.</span><span class="nv"> </span><span class="s">Examples:</span>
+
+<span class="w">      </span><span class="s">&lt;code&gt;aws:SourceIp:1.2.3.4&lt;/code&gt;,</span><span class="nv"> </span><span class="s">&lt;code&gt;aws:RequestedRegion:us-east-1&lt;/code&gt;.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Condition Keys</span>
@@ -632,9 +725,14 @@
 <span class="w">  </span><span class="nt">granted_privileges</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">granted_privileges</span>
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">specific</span><span class="nv"> </span><span class="s">privileges,</span><span class="nv"> </span><span class="s">actions,</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">permissions</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">are</span><span class="nv"> </span><span class="s">explicitly</span>
-<span class="w">      </span><span class="s">granted</span><span class="nv"> </span><span class="s">by</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">analyzed</span><span class="nv"> </span><span class="s">policy.</span><span class="nv"> </span><span class="s">Examples:</span><span class="nv"> </span><span class="s">AWS</span><span class="nv"> </span><span class="s">actions</span><span class="nv"> </span><span class="s">like</span><span class="nv"> </span><span class="s">&lt;code&gt;s3:GetObject&lt;/code&gt;,</span>
+<span class="w">      </span><span class="s">granted</span><span class="nv"> </span><span class="s">by</span>
+
+<span class="w">      </span><span class="s">the</span><span class="nv"> </span><span class="s">analyzed</span><span class="nv"> </span><span class="s">policy.</span><span class="nv"> </span><span class="s">Examples:</span><span class="nv"> </span><span class="s">AWS</span><span class="nv"> </span><span class="s">actions</span><span class="nv"> </span><span class="s">like</span><span class="nv"> </span><span class="s">&lt;code&gt;s3:GetObject&lt;/code&gt;,</span>
+
 <span class="w">      </span><span class="s">&lt;code&gt;ec2:RunInstances&lt;/code&gt;,</span><span class="nv"> </span><span class="s">&lt;code&gt;iam:CreateUser&lt;/code&gt;;</span><span class="nv"> </span><span class="s">Azure</span><span class="nv"> </span><span class="s">actions</span><span class="nv"> </span><span class="s">like</span>
+
 <span class="w">      </span><span class="s">&lt;code&gt;Microsoft.Storage/storageAccounts/read&lt;/code&gt;;</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">GCP</span><span class="nv"> </span><span class="s">permissions</span><span class="nv"> </span><span class="s">like</span>
+
 <span class="w">      </span><span class="s">&lt;code&gt;storage.objects.get&lt;/code&gt;.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
@@ -649,10 +747,14 @@
 <span class="w">    </span><span class="nt">multivalued</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">policy</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">policy</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Detailed information about the policy document that was analyzed,</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">including policy metadata, version, type (identity-based, resource-based, etc.),</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">and structural details. This provides context for understanding the scope and</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">nature of the permission analysis.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'Detailed</span><span class="nv"> </span><span class="s">information</span><span class="nv"> </span><span class="s">about</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">policy</span><span class="nv"> </span><span class="s">document</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">was</span><span class="nv"> </span><span class="s">analyzed,</span>
+<span class="w">      </span><span class="s">including</span>
+
+<span class="w">      </span><span class="s">policy</span><span class="nv"> </span><span class="s">metadata,</span><span class="nv"> </span><span class="s">version,</span><span class="nv"> </span><span class="s">type</span><span class="nv"> </span><span class="s">(identity-based,</span><span class="nv"> </span><span class="s">resource-based,</span><span class="nv"> </span><span class="s">etc.),</span><span class="nv"> </span><span class="s">and</span>
+
+<span class="w">      </span><span class="s">structural</span><span class="nv"> </span><span class="s">details.</span><span class="nv"> </span><span class="s">This</span><span class="nv"> </span><span class="s">provides</span><span class="nv"> </span><span class="s">context</span><span class="nv"> </span><span class="s">for</span><span class="nv"> </span><span class="s">understanding</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">scope</span><span class="nv"> </span><span class="s">and</span>
+
+<span class="w">      </span><span class="s">nature</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">permission</span><span class="nv"> </span><span class="s">analysis.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Policy</span>
@@ -688,8 +790,10 @@
 <span class="w">    </span><span class="nt">multivalued</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">total_potential_attacks_count</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">total_potential_attacks_count</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The total count of privilege-to-attack technique mappings identified</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">across all analyzed privileges.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">total</span><span class="nv"> </span><span class="s">count</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">privilege-to-attack</span><span class="nv"> </span><span class="s">technique</span><span class="nv"> </span><span class="s">mappings</span><span class="nv"> </span><span class="s">identified</span>
+<span class="w">      </span><span class="s">across</span><span class="nv"> </span><span class="s">all</span>
+
+<span class="w">      </span><span class="s">analyzed</span><span class="nv"> </span><span class="s">privileges.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Total Potential Attacks Count</span>
@@ -701,11 +805,16 @@
 <span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">integer</span>
 <span class="w">  </span><span class="nt">unused_privileges_count</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">unused_privileges_count</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The total count of privileges or actions defined in the policy that</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">have not been utilized within the analysis timeframe. This metric helps identify</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">over-privileged access and opportunities for privilege reduction to follow the</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">principle of least privilege. High counts may indicate policy bloat or excessive</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">permissions.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">total</span><span class="nv"> </span><span class="s">count</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">privileges</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">actions</span><span class="nv"> </span><span class="s">defined</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">policy</span><span class="nv"> </span><span class="s">that</span>
+<span class="w">      </span><span class="s">have</span><span class="nv"> </span><span class="s">not</span>
+
+<span class="w">      </span><span class="s">been</span><span class="nv"> </span><span class="s">utilized</span><span class="nv"> </span><span class="s">within</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">analysis</span><span class="nv"> </span><span class="s">timeframe.</span><span class="nv"> </span><span class="s">This</span><span class="nv"> </span><span class="s">metric</span><span class="nv"> </span><span class="s">helps</span><span class="nv"> </span><span class="s">identify</span>
+
+<span class="w">      </span><span class="s">over-privileged</span><span class="nv"> </span><span class="s">access</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">opportunities</span><span class="nv"> </span><span class="s">for</span><span class="nv"> </span><span class="s">privilege</span><span class="nv"> </span><span class="s">reduction</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">follow</span><span class="nv"> </span><span class="s">the</span>
+
+<span class="w">      </span><span class="s">principle</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">least</span><span class="nv"> </span><span class="s">privilege.</span><span class="nv"> </span><span class="s">High</span><span class="nv"> </span><span class="s">counts</span><span class="nv"> </span><span class="s">may</span><span class="nv"> </span><span class="s">indicate</span><span class="nv"> </span><span class="s">policy</span><span class="nv"> </span><span class="s">bloat</span><span class="nv"> </span><span class="s">or</span>
+
+<span class="w">      </span><span class="s">excessive</span><span class="nv"> </span><span class="s">permissions.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Unused Privileges Count</span>
@@ -719,11 +828,17 @@
 <span class="w">  </span><span class="nt">unused_services_count</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">unused_services_count</span>
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">total</span><span class="nv"> </span><span class="s">count</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">cloud</span><span class="nv"> </span><span class="s">services</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">resource</span><span class="nv"> </span><span class="s">types</span><span class="nv"> </span><span class="s">referenced</span><span class="nv"> </span><span class="s">in</span>
-<span class="w">      </span><span class="s">the</span><span class="nv"> </span><span class="s">policy</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">have</span><span class="nv"> </span><span class="s">not</span><span class="nv"> </span><span class="s">been</span><span class="nv"> </span><span class="s">accessed</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">utilized</span><span class="nv"> </span><span class="s">within</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">analysis</span><span class="nv"> </span><span class="s">timeframe.</span>
-<span class="w">      </span><span class="s">This</span><span class="nv"> </span><span class="s">helps</span><span class="nv"> </span><span class="s">identify</span><span class="nv"> </span><span class="s">unused</span><span class="nv"> </span><span class="s">service</span><span class="nv"> </span><span class="s">permissions</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">could</span><span class="nv"> </span><span class="s">be</span><span class="nv"> </span><span class="s">removed</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">reduce</span>
-<span class="w">      </span><span class="s">attack</span><span class="nv"> </span><span class="s">surface.</span><span class="nv"> </span><span class="s">Examples:</span><span class="nv"> </span><span class="s">AWS</span><span class="nv"> </span><span class="s">services</span><span class="nv"> </span><span class="s">like</span><span class="nv"> </span><span class="s">S3,</span><span class="nv"> </span><span class="s">SQS,</span><span class="nv"> </span><span class="s">IAM,</span><span class="nv"> </span><span class="s">Lambda;</span><span class="nv"> </span><span class="s">Azure</span><span class="nv"> </span><span class="s">services</span>
-<span class="w">      </span><span class="s">like</span><span class="nv"> </span><span class="s">Storage,</span><span class="nv"> </span><span class="s">Compute,</span><span class="nv"> </span><span class="s">KeyVault;</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">GCP</span><span class="nv"> </span><span class="s">services</span><span class="nv"> </span><span class="s">like</span><span class="nv"> </span><span class="s">Cloud</span><span class="nv"> </span><span class="s">Storage,</span><span class="nv"> </span><span class="s">Compute</span>
-<span class="w">      </span><span class="s">Engine,</span><span class="nv"> </span><span class="s">BigQuery.'</span>
+<span class="w">      </span><span class="s">the</span><span class="nv"> </span><span class="s">policy</span>
+
+<span class="w">      </span><span class="s">that</span><span class="nv"> </span><span class="s">have</span><span class="nv"> </span><span class="s">not</span><span class="nv"> </span><span class="s">been</span><span class="nv"> </span><span class="s">accessed</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">utilized</span><span class="nv"> </span><span class="s">within</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">analysis</span><span class="nv"> </span><span class="s">timeframe.</span><span class="nv"> </span><span class="s">This</span>
+
+<span class="w">      </span><span class="s">helps</span><span class="nv"> </span><span class="s">identify</span><span class="nv"> </span><span class="s">unused</span><span class="nv"> </span><span class="s">service</span><span class="nv"> </span><span class="s">permissions</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">could</span><span class="nv"> </span><span class="s">be</span><span class="nv"> </span><span class="s">removed</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">reduce</span>
+
+<span class="w">      </span><span class="s">attack</span><span class="nv"> </span><span class="s">surface.</span><span class="nv"> </span><span class="s">Examples:</span><span class="nv"> </span><span class="s">AWS</span><span class="nv"> </span><span class="s">services</span><span class="nv"> </span><span class="s">like</span><span class="nv"> </span><span class="s">S3,</span><span class="nv"> </span><span class="s">SQS,</span><span class="nv"> </span><span class="s">IAM,</span><span class="nv"> </span><span class="s">Lambda;</span><span class="nv"> </span><span class="s">Azure</span>
+
+<span class="w">      </span><span class="s">services</span><span class="nv"> </span><span class="s">like</span><span class="nv"> </span><span class="s">Storage,</span><span class="nv"> </span><span class="s">Compute,</span><span class="nv"> </span><span class="s">KeyVault;</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">GCP</span><span class="nv"> </span><span class="s">services</span><span class="nv"> </span><span class="s">like</span><span class="nv"> </span><span class="s">Cloud</span><span class="nv"> </span><span class="s">Storage,</span>
+
+<span class="w">      </span><span class="s">Compute</span><span class="nv"> </span><span class="s">Engine,</span><span class="nv"> </span><span class="s">BigQuery.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Unused Services Count</span>

@@ -217,6 +217,15 @@
 </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="#in-subsets">
+<span class="md-ellipsis">
+      
+        In Subsets
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#aliases">
 <span class="md-ellipsis">
       
@@ -295,7 +304,8 @@
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
 <h1 id="class-domaincontact">Class: DomainContact</h1>
-<p><em>The contact information related to a domain registration, e.g., registrant, administrator, abuse, billing, or technical contact.</em></p>
+<p><em>The contact information related to a domain registration, e.g., registrant,</em></p>
+<p><em>administrator, abuse, billing, or technical contact.</em></p>
 <p>URI: <a href="https://w3id.org/lmodel/ocsf/DomainContact">ocsf:DomainContact</a></p>
 <pre class="mermaid"><code> classDiagram
     class DomainContact
@@ -366,7 +376,7 @@
 <tr>
 <td><a href="../location/">location</a></td>
 <td>0..1 <em>recommended</em> <br/> <a href="../Location/">Location</a></td>
-<td>Location details for the contract such as the city, state/province, country, ...</td>
+<td>Location details for the contract such as the city, state/province, country,</td>
 <td>direct</td>
 </tr>
 <tr>
@@ -396,7 +406,7 @@
 <tr>
 <td><a href="../uid/">uid</a></td>
 <td>0..1 <br/> <a href="../String/">String</a></td>
-<td>The unique identifier of the contact information, typically provided in WHOIS...</td>
+<td>The unique identifier of the contact information, typically provided in WHOIS</td>
 <td>direct</td>
 </tr>
 </tbody>
@@ -420,6 +430,10 @@
 </tr>
 </tbody>
 </table>
+<h2 id="in-subsets">In Subsets</h2>
+<ul>
+<li><a href="../Objects/">Objects</a></li>
+</ul>
 <h2 id="aliases">Aliases</h2>
 <ul>
 <li>Domain Contact</li>
@@ -457,8 +471,11 @@
 <h3 id="direct">Direct</h3>
 <details>
 <div class="highlight"><pre><span></span><code><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">DomainContact</span>
-<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The contact information related to a domain registration, e.g., registrant,</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">administrator, abuse, billing, or technical contact.</span>
+<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">contact</span><span class="nv"> </span><span class="s">information</span><span class="nv"> </span><span class="s">related</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">domain</span><span class="nv"> </span><span class="s">registration,</span><span class="nv"> </span><span class="s">e.g.,</span><span class="nv"> </span><span class="s">registrant,</span>
+
+<span class="w">  </span><span class="s">administrator,</span><span class="nv"> </span><span class="s">abuse,</span><span class="nv"> </span><span class="s">billing,</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">technical</span><span class="nv"> </span><span class="s">contact.'</span>
+<span class="nt">in_subset</span><span class="p">:</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">objects</span>
 <span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="nt">aliases</span><span class="p">:</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Domain Contact</span>
@@ -479,16 +496,19 @@
 <span class="w">    </span><span class="nt">recommended</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">location</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">location</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Location details for the contract such as the city, state/province,</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">country, etc.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'Location</span><span class="nv"> </span><span class="s">details</span><span class="nv"> </span><span class="s">for</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">contract</span><span class="nv"> </span><span class="s">such</span><span class="nv"> </span><span class="s">as</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">city,</span><span class="nv"> </span><span class="s">state/province,</span>
+<span class="w">      </span><span class="s">country,</span>
+
+<span class="w">      </span><span class="s">etc.'</span>
 <span class="w">    </span><span class="nt">recommended</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">name</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">name</span>
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The individual or organization name for the contact.</span>
 <span class="w">  </span><span class="nt">type</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">type</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The Domain Contact type, normalized to the caption of the &lt;code&gt;type_id&lt;/code&gt;</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">value. In the case of 'Other', it is defined by the source</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">Domain</span><span class="nv"> </span><span class="s">Contact</span><span class="nv"> </span><span class="s">type,</span><span class="nv"> </span><span class="s">normalized</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">caption</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">&lt;code&gt;type_id&lt;/code&gt;</span>
+
+<span class="w">      </span><span class="s">value.</span><span class="nv"> </span><span class="s">In</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">case</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="se">''</span><span class="s">Other</span><span class="se">''</span><span class="s">,</span><span class="nv"> </span><span class="s">it</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">defined</span><span class="nv"> </span><span class="s">by</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">source'</span>
 <span class="w">  </span><span class="nt">type_id</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">type_id</span>
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The normalized domain contact type ID.</span>
@@ -496,15 +516,20 @@
 <span class="w">    </span><span class="nt">required</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">uid</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">uid</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The unique identifier of the contact information, typically provided</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">in WHOIS information.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">unique</span><span class="nv"> </span><span class="s">identifier</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">contact</span><span class="nv"> </span><span class="s">information,</span><span class="nv"> </span><span class="s">typically</span><span class="nv"> </span><span class="s">provided</span>
+<span class="w">      </span><span class="s">in</span><span class="nv"> </span><span class="s">WHOIS</span>
+
+<span class="w">      </span><span class="s">information.'</span>
 </code></pre></div>
 </details>
 <h3 id="induced">Induced</h3>
 <details>
 <div class="highlight"><pre><span></span><code><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">DomainContact</span>
-<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The contact information related to a domain registration, e.g., registrant,</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">administrator, abuse, billing, or technical contact.</span>
+<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">contact</span><span class="nv"> </span><span class="s">information</span><span class="nv"> </span><span class="s">related</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">domain</span><span class="nv"> </span><span class="s">registration,</span><span class="nv"> </span><span class="s">e.g.,</span><span class="nv"> </span><span class="s">registrant,</span>
+
+<span class="w">  </span><span class="s">administrator,</span><span class="nv"> </span><span class="s">abuse,</span><span class="nv"> </span><span class="s">billing,</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">technical</span><span class="nv"> </span><span class="s">contact.'</span>
+<span class="nt">in_subset</span><span class="p">:</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">objects</span>
 <span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="nt">aliases</span><span class="p">:</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Domain Contact</span>
@@ -517,16 +542,19 @@
 <span class="w">    </span><span class="nt">recommended</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">location</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">location</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Location details for the contract such as the city, state/province,</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">country, etc.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'Location</span><span class="nv"> </span><span class="s">details</span><span class="nv"> </span><span class="s">for</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">contract</span><span class="nv"> </span><span class="s">such</span><span class="nv"> </span><span class="s">as</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">city,</span><span class="nv"> </span><span class="s">state/province,</span>
+<span class="w">      </span><span class="s">country,</span>
+
+<span class="w">      </span><span class="s">etc.'</span>
 <span class="w">    </span><span class="nt">recommended</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">name</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">name</span>
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The individual or organization name for the contact.</span>
 <span class="w">  </span><span class="nt">type</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">type</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The Domain Contact type, normalized to the caption of the &lt;code&gt;type_id&lt;/code&gt;</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">value. In the case of 'Other', it is defined by the source</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">Domain</span><span class="nv"> </span><span class="s">Contact</span><span class="nv"> </span><span class="s">type,</span><span class="nv"> </span><span class="s">normalized</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">caption</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">&lt;code&gt;type_id&lt;/code&gt;</span>
+
+<span class="w">      </span><span class="s">value.</span><span class="nv"> </span><span class="s">In</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">case</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="se">''</span><span class="s">Other</span><span class="se">''</span><span class="s">,</span><span class="nv"> </span><span class="s">it</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">defined</span><span class="nv"> </span><span class="s">by</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">source'</span>
 <span class="w">  </span><span class="nt">type_id</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">type_id</span>
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The normalized domain contact type ID.</span>
@@ -534,8 +562,10 @@
 <span class="w">    </span><span class="nt">required</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">uid</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">uid</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The unique identifier of the contact information, typically provided</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">in WHOIS information.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">unique</span><span class="nv"> </span><span class="s">identifier</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">contact</span><span class="nv"> </span><span class="s">information,</span><span class="nv"> </span><span class="s">typically</span><span class="nv"> </span><span class="s">provided</span>
+<span class="w">      </span><span class="s">in</span><span class="nv"> </span><span class="s">WHOIS</span>
+
+<span class="w">      </span><span class="s">information.'</span>
 <span class="nt">attributes</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">email_addr</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">email_addr</span>
@@ -555,8 +585,10 @@
 <span class="w">    </span><span class="nt">recommended</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">location</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">location</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Location details for the contract such as the city, state/province,</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">country, etc.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'Location</span><span class="nv"> </span><span class="s">details</span><span class="nv"> </span><span class="s">for</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">contract</span><span class="nv"> </span><span class="s">such</span><span class="nv"> </span><span class="s">as</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">city,</span><span class="nv"> </span><span class="s">state/province,</span>
+<span class="w">      </span><span class="s">country,</span>
+
+<span class="w">      </span><span class="s">etc.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Geo Location</span>
@@ -693,8 +725,9 @@
 <span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">string</span>
 <span class="w">  </span><span class="nt">type</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">type</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The Domain Contact type, normalized to the caption of the &lt;code&gt;type_id&lt;/code&gt;</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">value. In the case of 'Other', it is defined by the source</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">Domain</span><span class="nv"> </span><span class="s">Contact</span><span class="nv"> </span><span class="s">type,</span><span class="nv"> </span><span class="s">normalized</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">caption</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">&lt;code&gt;type_id&lt;/code&gt;</span>
+
+<span class="w">      </span><span class="s">value.</span><span class="nv"> </span><span class="s">In</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">case</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="se">''</span><span class="s">Other</span><span class="se">''</span><span class="s">,</span><span class="nv"> </span><span class="s">it</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">defined</span><span class="nv"> </span><span class="s">by</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">source'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Type</span>
@@ -818,8 +851,10 @@
 <span class="w">    </span><span class="nt">required</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">uid</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">uid</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The unique identifier of the contact information, typically provided</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">in WHOIS information.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">unique</span><span class="nv"> </span><span class="s">identifier</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">contact</span><span class="nv"> </span><span class="s">information,</span><span class="nv"> </span><span class="s">typically</span><span class="nv"> </span><span class="s">provided</span>
+<span class="w">      </span><span class="s">in</span><span class="nv"> </span><span class="s">WHOIS</span>
+
+<span class="w">      </span><span class="s">information.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Unique ID</span>

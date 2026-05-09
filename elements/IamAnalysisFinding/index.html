@@ -227,6 +227,15 @@
 </nav>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="#in-subsets">
+<span class="md-ellipsis">
+      
+        In Subsets
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#aliases">
 <span class="md-ellipsis">
       
@@ -314,7 +323,18 @@
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
 <h1 id="class-iamanalysisfinding">Class: IamAnalysisFinding</h1>
-<p><em>This finding represents an IAM analysis result, which evaluates IAM policies, access patterns, and IAM configurations for potential security risks. The analysis can focus on either an identity (user, role, service account) or a resource to assess permissions, access patterns, and security posture within the IAM domain. <br/><strong>Note:</strong> Use <code>permission_analysis_results</code> for identity-centric analysis (evaluating what an identity can do) and <code>access_analysis_result</code> for resource-centric analysis (evaluating who can access a resource). These complement each other for comprehensive IAM security assessment.<br/><strong>Note:</strong> If the Finding is an incident, i.e. requires incident workflow, also apply the <code>incident</code> profile or aggregate this finding into an <code>Incident Finding</code>.</em></p>
+<p><em>This finding represents an IAM analysis result, which evaluates IAM policies,</em></p>
+<p><em>access patterns, and IAM configurations for potential security risks. The</em></p>
+<p><em>analysis can focus on either an identity (user, role, service account) or a</em></p>
+<p><em>resource to assess permissions, access patterns, and security posture within</em></p>
+<p><em>the IAM domain. <br/><strong>Note:</strong> Use</em></p>
+<p><em><code>permission_analysis_results</code> for identity-centric analysis</em></p>
+<p><em>(evaluating what an identity can do) and <code>access_analysis_result</code></em></p>
+<p><em>for resource-centric analysis (evaluating who can access a resource). These</em></p>
+<p><em>complement each other for comprehensive IAM security</em></p>
+<p><em>assessment.<br/><strong>Note:</strong> If the Finding is an incident, i.e.</em></p>
+<p><em>requires incident workflow, also apply the <code>incident</code> profile or</em></p>
+<p><em>aggregate this finding into an <code>Incident Finding</code>.</em></p>
 <p>URI: <a href="https://w3id.org/lmodel/ocsf/IamAnalysisFinding">ocsf:IamAnalysisFinding</a></p>
 <pre class="mermaid"><code> classDiagram
     class IamAnalysisFinding
@@ -864,13 +884,13 @@
 <tr>
 <td><a href="../access_analysis_result/">access_analysis_result</a></td>
 <td>0..1 <br> <a href="../AccessAnalysisResult/">AccessAnalysisResult</a></br></td>
-<td>Describes access relationships and pathways between identities, resources, fo...</td>
+<td>Describes access relationships and pathways between identities, resources,</td>
 <td>direct</td>
 </tr>
 <tr>
 <td><a href="../applications/">applications</a></td>
 <td>* <em>recommended</em> <br> <a href="../ApplicationObject/">ApplicationObject</a></br></td>
-<td>Details about applications, services, or systems that are accessible based on...</td>
+<td>Details about applications, services, or systems that are accessible based on</td>
 <td>direct</td>
 </tr>
 <tr>
@@ -900,20 +920,20 @@
 <tr>
 <td><a href="../user/">user</a></td>
 <td>0..1 <em>recommended</em> <br/> <a href="../User/">User</a></td>
-<td>Details about the identity (user, role, service account, or other principal) ...</td>
+<td>Details about the identity (user, role, service account, or other principal)</td>
 <td>direct</td>
 </tr>
 <tr>
 <td><a href="../activity_id/">activity_id</a></td>
 <td>1 <br/> <a href="../FindingActivityIdEnum/">FindingActivityIdEnum</a></td>
 <td>The normalized identifier of the finding activity</td>
-<td><a href="../Finding/">Finding</a>, <a href="../BaseEvent/">BaseEvent</a></td>
+<td><a href="../BaseEvent/">BaseEvent</a>, <a href="../Finding/">Finding</a></td>
 </tr>
 <tr>
 <td><a href="../activity_name/">activity_name</a></td>
 <td>0..1 <br/> <a href="../String/">String</a></td>
 <td>The finding activity name, as defined by the <code>activity_id</code></td>
-<td><a href="../Finding/">Finding</a>, <a href="../BaseEvent/">BaseEvent</a></td>
+<td><a href="../BaseEvent/">BaseEvent</a>, <a href="../Finding/">Finding</a></td>
 </tr>
 <tr>
 <td><a href="../comment/">comment</a></td>
@@ -925,31 +945,31 @@
 <td><a href="../confidence/">confidence</a></td>
 <td>0..1 <br/> <a href="../String/">String</a></td>
 <td>The confidence, normalized to the caption of the confidence_id value</td>
-<td><a href="../Finding/">Finding</a>, <a href="../SecurityControlProfile/">SecurityControlProfile</a></td>
+<td><a href="../SecurityControlProfile/">SecurityControlProfile</a>, <a href="../Finding/">Finding</a></td>
 </tr>
 <tr>
 <td><a href="../confidence_id/">confidence_id</a></td>
 <td>0..1 <em>recommended</em> <br/> <a href="../ConfidenceIdEnum/">ConfidenceIdEnum</a></td>
-<td>The normalized confidence refers to the accuracy of the rule that created the...</td>
-<td><a href="../Finding/">Finding</a>, <a href="../SecurityControlProfile/">SecurityControlProfile</a></td>
+<td>The normalized confidence refers to the accuracy of the rule that created the</td>
+<td><a href="../SecurityControlProfile/">SecurityControlProfile</a>, <a href="../Finding/">Finding</a></td>
 </tr>
 <tr>
 <td><a href="../confidence_score/">confidence_score</a></td>
 <td>0..1 <br/> <a href="../Integer/">Integer</a></td>
 <td>The confidence score as reported by the event source</td>
-<td><a href="../Finding/">Finding</a>, <a href="../SecurityControlProfile/">SecurityControlProfile</a></td>
+<td><a href="../SecurityControlProfile/">SecurityControlProfile</a>, <a href="../Finding/">Finding</a></td>
 </tr>
 <tr>
 <td><a href="../device/">device</a></td>
 <td>0..1 <em>recommended</em> <br/> <a href="../Device/">Device</a></td>
 <td>Describes the affected device/host</td>
-<td><a href="../Finding/">Finding</a>, <a href="../HostProfile/">HostProfile</a></td>
+<td><a href="../HostProfile/">HostProfile</a>, <a href="../Finding/">Finding</a></td>
 </tr>
 <tr>
 <td><a href="../end_time/">end_time</a></td>
 <td>0..1 <br/> <a href="../TimestampT/">TimestampT</a></td>
 <td>The time of the most recent event included in the finding</td>
-<td><a href="../Finding/">Finding</a>, <a href="../BaseEvent/">BaseEvent</a></td>
+<td><a href="../BaseEvent/">BaseEvent</a>, <a href="../Finding/">Finding</a></td>
 </tr>
 <tr>
 <td><a href="../finding_info/">finding_info</a></td>
@@ -961,24 +981,24 @@
 <td><a href="../start_time/">start_time</a></td>
 <td>0..1 <br/> <a href="../TimestampT/">TimestampT</a></td>
 <td>The time of the least recent event included in the finding</td>
-<td><a href="../Finding/">Finding</a>, <a href="../BaseEvent/">BaseEvent</a></td>
+<td><a href="../BaseEvent/">BaseEvent</a>, <a href="../Finding/">Finding</a></td>
 </tr>
 <tr>
 <td><a href="../status/">status</a></td>
 <td>0..1 <em>recommended</em> <br/> <a href="../String/">String</a></td>
-<td>The normalized status of the Finding set by the consumer normalized to the ca...</td>
-<td><a href="../Finding/">Finding</a>, <a href="../BaseEvent/">BaseEvent</a></td>
+<td>The normalized status of the Finding set by the consumer normalized to the</td>
+<td><a href="../BaseEvent/">BaseEvent</a>, <a href="../Finding/">Finding</a></td>
 </tr>
 <tr>
 <td><a href="../status_id/">status_id</a></td>
 <td>0..1 <em>recommended</em> <br/> <a href="../FindingStatusIdEnum/">FindingStatusIdEnum</a></td>
 <td>The normalized status identifier of the Finding, set by the consumer</td>
-<td><a href="../Finding/">Finding</a>, <a href="../BaseEvent/">BaseEvent</a></td>
+<td><a href="../BaseEvent/">BaseEvent</a>, <a href="../Finding/">Finding</a></td>
 </tr>
 <tr>
 <td><a href="../vendor_attributes/">vendor_attributes</a></td>
 <td>0..1 <br/> <a href="../VendorAttributes/">VendorAttributes</a></td>
-<td>The Vendor Attributes object can be used to represent values of attributes po...</td>
+<td>The Vendor Attributes object can be used to represent values of attributes</td>
 <td><a href="../Finding/">Finding</a></td>
 </tr>
 <tr>
@@ -1086,7 +1106,7 @@
 <tr>
 <td><a href="../count/">count</a></td>
 <td>0..1 <br/> <a href="../Integer/">Integer</a></td>
-<td>The number of times that events in the same logical group occurred during the...</td>
+<td>The number of times that events in the same logical group occurred during the</td>
 <td><a href="../BaseEvent/">BaseEvent</a></td>
 </tr>
 <tr>
@@ -1098,7 +1118,7 @@
 <tr>
 <td><a href="../enrichments/">enrichments</a></td>
 <td>* <br/> <a href="../Enrichment/">Enrichment</a></td>
-<td>The additional information from an external data source, which is associated ...</td>
+<td>The additional information from an external data source, which is associated</td>
 <td><a href="../BaseEvent/">BaseEvent</a></td>
 </tr>
 <tr>
@@ -1140,7 +1160,7 @@
 <tr>
 <td><a href="../severity/">severity</a></td>
 <td>0..1 <br/> <a href="../String/">String</a></td>
-<td>The event/finding severity, normalized to the caption of the <code>severity_i...</code></td>
+<td>The event/finding severity, normalized to the caption of the</td>
 <td><a href="../BaseEvent/">BaseEvent</a></td>
 </tr>
 <tr>
@@ -1158,7 +1178,7 @@
 <tr>
 <td><a href="../status_detail/">status_detail</a></td>
 <td>0..1 <em>recommended</em> <br/> <a href="../String/">String</a></td>
-<td>The status detail contains additional information about the event/finding out...</td>
+<td>The status detail contains additional information about the event/finding</td>
 <td><a href="../BaseEvent/">BaseEvent</a></td>
 </tr>
 <tr>
@@ -1170,7 +1190,7 @@
 <tr>
 <td><a href="../timezone_offset/">timezone_offset</a></td>
 <td>0..1 <em>recommended</em> <br/> <a href="../Integer/">Integer</a></td>
-<td>The number of minutes that the reported event <code>time</code> is ahead or b...</td>
+<td>The number of minutes that the reported event <code>time</code> is ahead or</td>
 <td><a href="../BaseEvent/">BaseEvent</a></td>
 </tr>
 <tr>
@@ -1200,19 +1220,19 @@
 <tr>
 <td><a href="../cloud/">cloud</a></td>
 <td>1 <br/> <a href="../Cloud/">Cloud</a></td>
-<td>Describes details about the Cloud environment where the event or finding was ...</td>
+<td>Describes details about the Cloud environment where the event or finding was</td>
 <td><a href="../CloudProfile/">CloudProfile</a></td>
 </tr>
 <tr>
 <td><a href="../actor/">actor</a></td>
 <td>0..1 <br/> <a href="../Actor/">Actor</a></td>
-<td>The actor object describes details about the user/role/process that was the s...</td>
+<td>The actor object describes details about the user/role/process that was the</td>
 <td><a href="../HostProfile/">HostProfile</a></td>
 </tr>
 <tr>
 <td><a href="../osint/">osint</a></td>
 <td>1..* <br/> <a href="../Osint/">Osint</a></td>
-<td>The OSINT (Open Source Intelligence) object contains details related to an in...</td>
+<td>The OSINT (Open Source Intelligence) object contains details related to an</td>
 <td><a href="../OsintProfile/">OsintProfile</a></td>
 </tr>
 <tr>
@@ -1224,13 +1244,13 @@
 <tr>
 <td><a href="../action_id/">action_id</a></td>
 <td>0..1 <em>recommended</em> <br/> <a href="../ActionIdEnum/">ActionIdEnum</a></td>
-<td>The action taken by a control or other policy-based system leading to an outc...</td>
+<td>The action taken by a control or other policy-based system leading to an</td>
 <td><a href="../SecurityControlProfile/">SecurityControlProfile</a></td>
 </tr>
 <tr>
 <td><a href="../attacks/">attacks</a></td>
 <td>* <br/> <a href="../Attack/">Attack</a></td>
-<td>An array of MITRE ATT&amp;CK® objects describing identified tactics, techniques &amp;...</td>
+<td>An array of MITRE ATT&amp;CK® objects describing identified tactics, techniques &amp;</td>
 <td><a href="../SecurityControlProfile/">SecurityControlProfile</a></td>
 </tr>
 <tr>
@@ -1248,13 +1268,13 @@
 <tr>
 <td><a href="../disposition_id/">disposition_id</a></td>
 <td>0..1 <em>recommended</em> <br/> <a href="../DispositionIdEnum/">DispositionIdEnum</a></td>
-<td>Describes the outcome or action taken by a security control, such as access c...</td>
+<td>Describes the outcome or action taken by a security control, such as access</td>
 <td><a href="../SecurityControlProfile/">SecurityControlProfile</a></td>
 </tr>
 <tr>
 <td><a href="../firewall_rule/">firewall_rule</a></td>
 <td>0..1 <br/> <a href="../FirewallRule/">FirewallRule</a></td>
-<td>The firewall rule that pertains to the control that triggered the event, if a...</td>
+<td>The firewall rule that pertains to the control that triggered the event, if</td>
 <td><a href="../SecurityControlProfile/">SecurityControlProfile</a></td>
 </tr>
 <tr>
@@ -1272,13 +1292,13 @@
 <tr>
 <td><a href="../malware_scan_info/">malware_scan_info</a></td>
 <td>0..1 <br/> <a href="../MalwareScanInfo/">MalwareScanInfo</a></td>
-<td>Describes details about the scan job that identified malware on the target sy...</td>
+<td>Describes details about the scan job that identified malware on the target</td>
 <td><a href="../SecurityControlProfile/">SecurityControlProfile</a></td>
 </tr>
 <tr>
 <td><a href="../policy/">policy</a></td>
 <td>0..1 <br/> <a href="../Policy/">Policy</a></td>
-<td>The policy that pertains to the control that triggered the event, if applicab...</td>
+<td>The policy that pertains to the control that triggered the event, if</td>
 <td><a href="../SecurityControlProfile/">SecurityControlProfile</a></td>
 </tr>
 <tr>
@@ -1327,6 +1347,10 @@
 </tr>
 </tbody>
 </table>
+<h2 id="in-subsets">In Subsets</h2>
+<ul>
+<li><a href="../Findings/">Findings</a></li>
+</ul>
 <h2 id="aliases">Aliases</h2>
 <ul>
 <li>IAM Analysis Finding</li>
@@ -1343,7 +1367,11 @@
 <tbody>
 <tr>
 <td>ocsf_constraints</td>
-<td>{"at_least_one": ["access_analysis_result", "applications", "identity_activity_metrics", "permission_analysis_results"]}</td>
+<td>{"at_least_one": ["access_analysis_result", "applications",</td>
+</tr>
+<tr>
+<td>"identity_activity_metrics", "permission_analysis_results"]}</td>
+<td></td>
 </tr>
 <tr>
 <td>ocsf_event_uid</td>
@@ -1382,21 +1410,38 @@
 <span class="nt">annotations</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">ocsf_constraints</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ocsf_constraints</span>
-<span class="w">    </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="s">'{"at_least_one":</span><span class="nv"> </span><span class="s">["access_analysis_result",</span><span class="nv"> </span><span class="s">"applications",</span><span class="nv"> </span><span class="s">"identity_activity_metrics",</span>
-<span class="w">      </span><span class="s">"permission_analysis_results"]}'</span>
+<span class="w">    </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="s">'{"at_least_one":</span><span class="nv"> </span><span class="s">["access_analysis_result",</span><span class="nv"> </span><span class="s">"applications",</span>
+
+<span class="w">      </span><span class="s">"identity_activity_metrics",</span><span class="nv"> </span><span class="s">"permission_analysis_results"]}'</span>
 <span class="w">  </span><span class="nt">ocsf_event_uid</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ocsf_event_uid</span>
 <span class="w">    </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">8</span>
-<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">This finding represents an IAM analysis result, which evaluates IAM policies,</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">access patterns, and IAM configurations for potential security risks. The analysis</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">can focus on either an identity (user, role, service account) or a resource to assess</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">permissions, access patterns, and security posture within the IAM domain. &lt;br&gt;&lt;strong&gt;Note:&lt;/strong&gt;</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">Use &lt;code&gt;permission_analysis_results&lt;/code&gt; for identity-centric analysis (evaluating</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">what an identity can do) and &lt;code&gt;access_analysis_result&lt;/code&gt; for resource-centric</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">analysis (evaluating who can access a resource). These complement each other for</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">comprehensive IAM security assessment.&lt;br&gt;&lt;strong&gt;Note:&lt;/strong&gt; If the Finding</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">is an incident, i.e. requires incident workflow, also apply the &lt;code&gt;incident&lt;/code&gt;</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">profile or aggregate this finding into an &lt;code&gt;Incident Finding&lt;/code&gt;.</span>
+<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'This</span><span class="nv"> </span><span class="s">finding</span><span class="nv"> </span><span class="s">represents</span><span class="nv"> </span><span class="s">an</span><span class="nv"> </span><span class="s">IAM</span><span class="nv"> </span><span class="s">analysis</span><span class="nv"> </span><span class="s">result,</span><span class="nv"> </span><span class="s">which</span><span class="nv"> </span><span class="s">evaluates</span><span class="nv"> </span><span class="s">IAM</span>
+<span class="w">  </span><span class="s">policies,</span>
+
+<span class="w">  </span><span class="s">access</span><span class="nv"> </span><span class="s">patterns,</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">IAM</span><span class="nv"> </span><span class="s">configurations</span><span class="nv"> </span><span class="s">for</span><span class="nv"> </span><span class="s">potential</span><span class="nv"> </span><span class="s">security</span><span class="nv"> </span><span class="s">risks.</span><span class="nv"> </span><span class="s">The</span>
+
+<span class="w">  </span><span class="s">analysis</span><span class="nv"> </span><span class="s">can</span><span class="nv"> </span><span class="s">focus</span><span class="nv"> </span><span class="s">on</span><span class="nv"> </span><span class="s">either</span><span class="nv"> </span><span class="s">an</span><span class="nv"> </span><span class="s">identity</span><span class="nv"> </span><span class="s">(user,</span><span class="nv"> </span><span class="s">role,</span><span class="nv"> </span><span class="s">service</span><span class="nv"> </span><span class="s">account)</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">a</span>
+
+<span class="w">  </span><span class="s">resource</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">assess</span><span class="nv"> </span><span class="s">permissions,</span><span class="nv"> </span><span class="s">access</span><span class="nv"> </span><span class="s">patterns,</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">security</span><span class="nv"> </span><span class="s">posture</span><span class="nv"> </span><span class="s">within</span>
+
+<span class="w">  </span><span class="s">the</span><span class="nv"> </span><span class="s">IAM</span><span class="nv"> </span><span class="s">domain.</span><span class="nv"> </span><span class="s">&lt;br&gt;&lt;strong&gt;Note:&lt;/strong&gt;</span><span class="nv"> </span><span class="s">Use</span>
+
+<span class="w">  </span><span class="s">&lt;code&gt;permission_analysis_results&lt;/code&gt;</span><span class="nv"> </span><span class="s">for</span><span class="nv"> </span><span class="s">identity-centric</span><span class="nv"> </span><span class="s">analysis</span>
+
+<span class="w">  </span><span class="s">(evaluating</span><span class="nv"> </span><span class="s">what</span><span class="nv"> </span><span class="s">an</span><span class="nv"> </span><span class="s">identity</span><span class="nv"> </span><span class="s">can</span><span class="nv"> </span><span class="s">do)</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">&lt;code&gt;access_analysis_result&lt;/code&gt;</span>
+
+<span class="w">  </span><span class="s">for</span><span class="nv"> </span><span class="s">resource-centric</span><span class="nv"> </span><span class="s">analysis</span><span class="nv"> </span><span class="s">(evaluating</span><span class="nv"> </span><span class="s">who</span><span class="nv"> </span><span class="s">can</span><span class="nv"> </span><span class="s">access</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">resource).</span><span class="nv"> </span><span class="s">These</span>
+
+<span class="w">  </span><span class="s">complement</span><span class="nv"> </span><span class="s">each</span><span class="nv"> </span><span class="s">other</span><span class="nv"> </span><span class="s">for</span><span class="nv"> </span><span class="s">comprehensive</span><span class="nv"> </span><span class="s">IAM</span><span class="nv"> </span><span class="s">security</span>
+
+<span class="w">  </span><span class="s">assessment.&lt;br&gt;&lt;strong&gt;Note:&lt;/strong&gt;</span><span class="nv"> </span><span class="s">If</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">Finding</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">an</span><span class="nv"> </span><span class="s">incident,</span><span class="nv"> </span><span class="s">i.e.</span>
+
+<span class="w">  </span><span class="s">requires</span><span class="nv"> </span><span class="s">incident</span><span class="nv"> </span><span class="s">workflow,</span><span class="nv"> </span><span class="s">also</span><span class="nv"> </span><span class="s">apply</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">&lt;code&gt;incident&lt;/code&gt;</span><span class="nv"> </span><span class="s">profile</span><span class="nv"> </span><span class="s">or</span>
+
+<span class="w">  </span><span class="s">aggregate</span><span class="nv"> </span><span class="s">this</span><span class="nv"> </span><span class="s">finding</span><span class="nv"> </span><span class="s">into</span><span class="nv"> </span><span class="s">an</span><span class="nv"> </span><span class="s">&lt;code&gt;Incident</span><span class="nv"> </span><span class="s">Finding&lt;/code&gt;.'</span>
+<span class="nt">in_subset</span><span class="p">:</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">findings</span>
 <span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="nt">aliases</span><span class="p">:</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">IAM Analysis Finding</span>
@@ -1422,10 +1467,14 @@
 <span class="w">      </span><span class="nt">group</span><span class="p">:</span>
 <span class="w">        </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">group</span>
 <span class="w">        </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">primary</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Details about applications, services, or systems that are accessible</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">based on the IAM analysis. For identity-centric analysis, this represents applications</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">the identity can access. For resource-centric analysis, this represents applications</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">that can access the resource.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'Details</span><span class="nv"> </span><span class="s">about</span><span class="nv"> </span><span class="s">applications,</span><span class="nv"> </span><span class="s">services,</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">systems</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">are</span><span class="nv"> </span><span class="s">accessible</span>
+<span class="w">      </span><span class="s">based</span><span class="nv"> </span><span class="s">on</span>
+
+<span class="w">      </span><span class="s">the</span><span class="nv"> </span><span class="s">IAM</span><span class="nv"> </span><span class="s">analysis.</span><span class="nv"> </span><span class="s">For</span><span class="nv"> </span><span class="s">identity-centric</span><span class="nv"> </span><span class="s">analysis,</span><span class="nv"> </span><span class="s">this</span><span class="nv"> </span><span class="s">represents</span><span class="nv"> </span><span class="s">applications</span>
+
+<span class="w">      </span><span class="s">the</span><span class="nv"> </span><span class="s">identity</span><span class="nv"> </span><span class="s">can</span><span class="nv"> </span><span class="s">access.</span><span class="nv"> </span><span class="s">For</span><span class="nv"> </span><span class="s">resource-centric</span><span class="nv"> </span><span class="s">analysis,</span><span class="nv"> </span><span class="s">this</span><span class="nv"> </span><span class="s">represents</span>
+
+<span class="w">      </span><span class="s">applications</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">can</span><span class="nv"> </span><span class="s">access</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">resource.'</span>
 <span class="w">    </span><span class="nt">recommended</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">identity_activity_metrics</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">identity_activity_metrics</span>
@@ -1453,10 +1502,13 @@
 <span class="w">      </span><span class="nt">group</span><span class="p">:</span>
 <span class="w">        </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">group</span>
 <span class="w">        </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">primary</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Details about resources involved in the IAM analysis. For identity-centric</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">analysis, this represents resources the identity can access. For resource-centric</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">analysis, this represents the resource being analyzed and related resources</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">in the access chain.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'Details</span><span class="nv"> </span><span class="s">about</span><span class="nv"> </span><span class="s">resources</span><span class="nv"> </span><span class="s">involved</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">IAM</span><span class="nv"> </span><span class="s">analysis.</span><span class="nv"> </span><span class="s">For</span><span class="nv"> </span><span class="s">identity-centric</span>
+
+<span class="w">      </span><span class="s">analysis,</span><span class="nv"> </span><span class="s">this</span><span class="nv"> </span><span class="s">represents</span><span class="nv"> </span><span class="s">resources</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">identity</span><span class="nv"> </span><span class="s">can</span><span class="nv"> </span><span class="s">access.</span><span class="nv"> </span><span class="s">For</span>
+
+<span class="w">      </span><span class="s">resource-centric</span><span class="nv"> </span><span class="s">analysis,</span><span class="nv"> </span><span class="s">this</span><span class="nv"> </span><span class="s">represents</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">resource</span><span class="nv"> </span><span class="s">being</span><span class="nv"> </span><span class="s">analyzed</span><span class="nv"> </span><span class="s">and</span>
+
+<span class="w">      </span><span class="s">related</span><span class="nv"> </span><span class="s">resources</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">access</span><span class="nv"> </span><span class="s">chain.'</span>
 <span class="w">    </span><span class="nt">recommended</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">user</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">user</span>
@@ -1464,9 +1516,12 @@
 <span class="w">      </span><span class="nt">group</span><span class="p">:</span>
 <span class="w">        </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">group</span>
 <span class="w">        </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">primary</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Details about the identity (user, role, service account, or other</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">principal) that is the subject of the IAM analysis. This provides context about</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">the identity being evaluated for security risks and access patterns.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'Details</span><span class="nv"> </span><span class="s">about</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">identity</span><span class="nv"> </span><span class="s">(user,</span><span class="nv"> </span><span class="s">role,</span><span class="nv"> </span><span class="s">service</span><span class="nv"> </span><span class="s">account,</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">other</span>
+<span class="w">      </span><span class="s">principal)</span>
+
+<span class="w">      </span><span class="s">that</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">subject</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">IAM</span><span class="nv"> </span><span class="s">analysis.</span><span class="nv"> </span><span class="s">This</span><span class="nv"> </span><span class="s">provides</span><span class="nv"> </span><span class="s">context</span><span class="nv"> </span><span class="s">about</span><span class="nv"> </span><span class="s">the</span>
+
+<span class="w">      </span><span class="s">identity</span><span class="nv"> </span><span class="s">being</span><span class="nv"> </span><span class="s">evaluated</span><span class="nv"> </span><span class="s">for</span><span class="nv"> </span><span class="s">security</span><span class="nv"> </span><span class="s">risks</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">access</span><span class="nv"> </span><span class="s">patterns.'</span>
 <span class="w">    </span><span class="nt">recommended</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="nt">rules</span><span class="p">:</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">postconditions</span><span class="p">:</span>
@@ -1488,6 +1543,7 @@
 <span class="w">          </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">permission_analysis_results</span>
 <span class="w">          </span><span class="nt">required</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'OCSF</span><span class="nv"> </span><span class="s">at_least_one:</span><span class="nv"> </span><span class="s">at</span><span class="nv"> </span><span class="s">least</span><span class="nv"> </span><span class="s">one</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">[</span><span class="se">''</span><span class="s">access_analysis_result</span><span class="se">''</span><span class="s">,</span><span class="nv"> </span><span class="se">''</span><span class="s">applications</span><span class="se">''</span><span class="s">,</span>
+
 <span class="w">    </span><span class="se">''</span><span class="s">identity_activity_metrics</span><span class="se">''</span><span class="s">,</span><span class="nv"> </span><span class="se">''</span><span class="s">permission_analysis_results</span><span class="se">''</span><span class="s">]</span><span class="nv"> </span><span class="s">must</span><span class="nv"> </span><span class="s">be</span><span class="nv"> </span><span class="s">set.'</span>
 </code></pre></div>
 </details>
@@ -1497,21 +1553,38 @@
 <span class="nt">annotations</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">ocsf_constraints</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ocsf_constraints</span>
-<span class="w">    </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="s">'{"at_least_one":</span><span class="nv"> </span><span class="s">["access_analysis_result",</span><span class="nv"> </span><span class="s">"applications",</span><span class="nv"> </span><span class="s">"identity_activity_metrics",</span>
-<span class="w">      </span><span class="s">"permission_analysis_results"]}'</span>
+<span class="w">    </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="s">'{"at_least_one":</span><span class="nv"> </span><span class="s">["access_analysis_result",</span><span class="nv"> </span><span class="s">"applications",</span>
+
+<span class="w">      </span><span class="s">"identity_activity_metrics",</span><span class="nv"> </span><span class="s">"permission_analysis_results"]}'</span>
 <span class="w">  </span><span class="nt">ocsf_event_uid</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ocsf_event_uid</span>
 <span class="w">    </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">8</span>
-<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">This finding represents an IAM analysis result, which evaluates IAM policies,</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">access patterns, and IAM configurations for potential security risks. The analysis</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">can focus on either an identity (user, role, service account) or a resource to assess</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">permissions, access patterns, and security posture within the IAM domain. &lt;br&gt;&lt;strong&gt;Note:&lt;/strong&gt;</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">Use &lt;code&gt;permission_analysis_results&lt;/code&gt; for identity-centric analysis (evaluating</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">what an identity can do) and &lt;code&gt;access_analysis_result&lt;/code&gt; for resource-centric</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">analysis (evaluating who can access a resource). These complement each other for</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">comprehensive IAM security assessment.&lt;br&gt;&lt;strong&gt;Note:&lt;/strong&gt; If the Finding</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">is an incident, i.e. requires incident workflow, also apply the &lt;code&gt;incident&lt;/code&gt;</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">profile or aggregate this finding into an &lt;code&gt;Incident Finding&lt;/code&gt;.</span>
+<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'This</span><span class="nv"> </span><span class="s">finding</span><span class="nv"> </span><span class="s">represents</span><span class="nv"> </span><span class="s">an</span><span class="nv"> </span><span class="s">IAM</span><span class="nv"> </span><span class="s">analysis</span><span class="nv"> </span><span class="s">result,</span><span class="nv"> </span><span class="s">which</span><span class="nv"> </span><span class="s">evaluates</span><span class="nv"> </span><span class="s">IAM</span>
+<span class="w">  </span><span class="s">policies,</span>
+
+<span class="w">  </span><span class="s">access</span><span class="nv"> </span><span class="s">patterns,</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">IAM</span><span class="nv"> </span><span class="s">configurations</span><span class="nv"> </span><span class="s">for</span><span class="nv"> </span><span class="s">potential</span><span class="nv"> </span><span class="s">security</span><span class="nv"> </span><span class="s">risks.</span><span class="nv"> </span><span class="s">The</span>
+
+<span class="w">  </span><span class="s">analysis</span><span class="nv"> </span><span class="s">can</span><span class="nv"> </span><span class="s">focus</span><span class="nv"> </span><span class="s">on</span><span class="nv"> </span><span class="s">either</span><span class="nv"> </span><span class="s">an</span><span class="nv"> </span><span class="s">identity</span><span class="nv"> </span><span class="s">(user,</span><span class="nv"> </span><span class="s">role,</span><span class="nv"> </span><span class="s">service</span><span class="nv"> </span><span class="s">account)</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">a</span>
+
+<span class="w">  </span><span class="s">resource</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">assess</span><span class="nv"> </span><span class="s">permissions,</span><span class="nv"> </span><span class="s">access</span><span class="nv"> </span><span class="s">patterns,</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">security</span><span class="nv"> </span><span class="s">posture</span><span class="nv"> </span><span class="s">within</span>
+
+<span class="w">  </span><span class="s">the</span><span class="nv"> </span><span class="s">IAM</span><span class="nv"> </span><span class="s">domain.</span><span class="nv"> </span><span class="s">&lt;br&gt;&lt;strong&gt;Note:&lt;/strong&gt;</span><span class="nv"> </span><span class="s">Use</span>
+
+<span class="w">  </span><span class="s">&lt;code&gt;permission_analysis_results&lt;/code&gt;</span><span class="nv"> </span><span class="s">for</span><span class="nv"> </span><span class="s">identity-centric</span><span class="nv"> </span><span class="s">analysis</span>
+
+<span class="w">  </span><span class="s">(evaluating</span><span class="nv"> </span><span class="s">what</span><span class="nv"> </span><span class="s">an</span><span class="nv"> </span><span class="s">identity</span><span class="nv"> </span><span class="s">can</span><span class="nv"> </span><span class="s">do)</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">&lt;code&gt;access_analysis_result&lt;/code&gt;</span>
+
+<span class="w">  </span><span class="s">for</span><span class="nv"> </span><span class="s">resource-centric</span><span class="nv"> </span><span class="s">analysis</span><span class="nv"> </span><span class="s">(evaluating</span><span class="nv"> </span><span class="s">who</span><span class="nv"> </span><span class="s">can</span><span class="nv"> </span><span class="s">access</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">resource).</span><span class="nv"> </span><span class="s">These</span>
+
+<span class="w">  </span><span class="s">complement</span><span class="nv"> </span><span class="s">each</span><span class="nv"> </span><span class="s">other</span><span class="nv"> </span><span class="s">for</span><span class="nv"> </span><span class="s">comprehensive</span><span class="nv"> </span><span class="s">IAM</span><span class="nv"> </span><span class="s">security</span>
+
+<span class="w">  </span><span class="s">assessment.&lt;br&gt;&lt;strong&gt;Note:&lt;/strong&gt;</span><span class="nv"> </span><span class="s">If</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">Finding</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">an</span><span class="nv"> </span><span class="s">incident,</span><span class="nv"> </span><span class="s">i.e.</span>
+
+<span class="w">  </span><span class="s">requires</span><span class="nv"> </span><span class="s">incident</span><span class="nv"> </span><span class="s">workflow,</span><span class="nv"> </span><span class="s">also</span><span class="nv"> </span><span class="s">apply</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">&lt;code&gt;incident&lt;/code&gt;</span><span class="nv"> </span><span class="s">profile</span><span class="nv"> </span><span class="s">or</span>
+
+<span class="w">  </span><span class="s">aggregate</span><span class="nv"> </span><span class="s">this</span><span class="nv"> </span><span class="s">finding</span><span class="nv"> </span><span class="s">into</span><span class="nv"> </span><span class="s">an</span><span class="nv"> </span><span class="s">&lt;code&gt;Incident</span><span class="nv"> </span><span class="s">Finding&lt;/code&gt;.'</span>
+<span class="nt">in_subset</span><span class="p">:</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">findings</span>
 <span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="nt">aliases</span><span class="p">:</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">IAM Analysis Finding</span>
@@ -1529,10 +1602,14 @@
 <span class="w">      </span><span class="nt">group</span><span class="p">:</span>
 <span class="w">        </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">group</span>
 <span class="w">        </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">primary</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Details about applications, services, or systems that are accessible</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">based on the IAM analysis. For identity-centric analysis, this represents applications</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">the identity can access. For resource-centric analysis, this represents applications</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">that can access the resource.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'Details</span><span class="nv"> </span><span class="s">about</span><span class="nv"> </span><span class="s">applications,</span><span class="nv"> </span><span class="s">services,</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">systems</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">are</span><span class="nv"> </span><span class="s">accessible</span>
+<span class="w">      </span><span class="s">based</span><span class="nv"> </span><span class="s">on</span>
+
+<span class="w">      </span><span class="s">the</span><span class="nv"> </span><span class="s">IAM</span><span class="nv"> </span><span class="s">analysis.</span><span class="nv"> </span><span class="s">For</span><span class="nv"> </span><span class="s">identity-centric</span><span class="nv"> </span><span class="s">analysis,</span><span class="nv"> </span><span class="s">this</span><span class="nv"> </span><span class="s">represents</span><span class="nv"> </span><span class="s">applications</span>
+
+<span class="w">      </span><span class="s">the</span><span class="nv"> </span><span class="s">identity</span><span class="nv"> </span><span class="s">can</span><span class="nv"> </span><span class="s">access.</span><span class="nv"> </span><span class="s">For</span><span class="nv"> </span><span class="s">resource-centric</span><span class="nv"> </span><span class="s">analysis,</span><span class="nv"> </span><span class="s">this</span><span class="nv"> </span><span class="s">represents</span>
+
+<span class="w">      </span><span class="s">applications</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">can</span><span class="nv"> </span><span class="s">access</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">resource.'</span>
 <span class="w">    </span><span class="nt">recommended</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">identity_activity_metrics</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">identity_activity_metrics</span>
@@ -1560,10 +1637,13 @@
 <span class="w">      </span><span class="nt">group</span><span class="p">:</span>
 <span class="w">        </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">group</span>
 <span class="w">        </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">primary</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Details about resources involved in the IAM analysis. For identity-centric</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">analysis, this represents resources the identity can access. For resource-centric</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">analysis, this represents the resource being analyzed and related resources</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">in the access chain.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'Details</span><span class="nv"> </span><span class="s">about</span><span class="nv"> </span><span class="s">resources</span><span class="nv"> </span><span class="s">involved</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">IAM</span><span class="nv"> </span><span class="s">analysis.</span><span class="nv"> </span><span class="s">For</span><span class="nv"> </span><span class="s">identity-centric</span>
+
+<span class="w">      </span><span class="s">analysis,</span><span class="nv"> </span><span class="s">this</span><span class="nv"> </span><span class="s">represents</span><span class="nv"> </span><span class="s">resources</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">identity</span><span class="nv"> </span><span class="s">can</span><span class="nv"> </span><span class="s">access.</span><span class="nv"> </span><span class="s">For</span>
+
+<span class="w">      </span><span class="s">resource-centric</span><span class="nv"> </span><span class="s">analysis,</span><span class="nv"> </span><span class="s">this</span><span class="nv"> </span><span class="s">represents</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">resource</span><span class="nv"> </span><span class="s">being</span><span class="nv"> </span><span class="s">analyzed</span><span class="nv"> </span><span class="s">and</span>
+
+<span class="w">      </span><span class="s">related</span><span class="nv"> </span><span class="s">resources</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">access</span><span class="nv"> </span><span class="s">chain.'</span>
 <span class="w">    </span><span class="nt">recommended</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">user</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">user</span>
@@ -1571,9 +1651,12 @@
 <span class="w">      </span><span class="nt">group</span><span class="p">:</span>
 <span class="w">        </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">group</span>
 <span class="w">        </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">primary</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Details about the identity (user, role, service account, or other</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">principal) that is the subject of the IAM analysis. This provides context about</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">the identity being evaluated for security risks and access patterns.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'Details</span><span class="nv"> </span><span class="s">about</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">identity</span><span class="nv"> </span><span class="s">(user,</span><span class="nv"> </span><span class="s">role,</span><span class="nv"> </span><span class="s">service</span><span class="nv"> </span><span class="s">account,</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">other</span>
+<span class="w">      </span><span class="s">principal)</span>
+
+<span class="w">      </span><span class="s">that</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">subject</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">IAM</span><span class="nv"> </span><span class="s">analysis.</span><span class="nv"> </span><span class="s">This</span><span class="nv"> </span><span class="s">provides</span><span class="nv"> </span><span class="s">context</span><span class="nv"> </span><span class="s">about</span><span class="nv"> </span><span class="s">the</span>
+
+<span class="w">      </span><span class="s">identity</span><span class="nv"> </span><span class="s">being</span><span class="nv"> </span><span class="s">evaluated</span><span class="nv"> </span><span class="s">for</span><span class="nv"> </span><span class="s">security</span><span class="nv"> </span><span class="s">risks</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">access</span><span class="nv"> </span><span class="s">patterns.'</span>
 <span class="w">    </span><span class="nt">recommended</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="nt">attributes</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">access_analysis_result</span><span class="p">:</span>
@@ -1582,12 +1665,18 @@
 <span class="w">      </span><span class="nt">group</span><span class="p">:</span>
 <span class="w">        </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">group</span>
 <span class="w">        </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">context</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Describes access relationships and pathways between identities, resources,</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">focusing on who can access what and through which mechanisms. This evaluates</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">access levels (read/write/admin), access types (direct, cross-account, public,</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">federated), and the conditions under which access is granted. Use this for resource-centric</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">security assessments such as external access discovery, public exposure analysis,</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">etc.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'Describes</span><span class="nv"> </span><span class="s">access</span><span class="nv"> </span><span class="s">relationships</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">pathways</span><span class="nv"> </span><span class="s">between</span><span class="nv"> </span><span class="s">identities,</span>
+<span class="w">      </span><span class="s">resources,</span>
+
+<span class="w">      </span><span class="s">focusing</span><span class="nv"> </span><span class="s">on</span><span class="nv"> </span><span class="s">who</span><span class="nv"> </span><span class="s">can</span><span class="nv"> </span><span class="s">access</span><span class="nv"> </span><span class="s">what</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">through</span><span class="nv"> </span><span class="s">which</span><span class="nv"> </span><span class="s">mechanisms.</span><span class="nv"> </span><span class="s">This</span><span class="nv"> </span><span class="s">evaluates</span>
+
+<span class="w">      </span><span class="s">access</span><span class="nv"> </span><span class="s">levels</span><span class="nv"> </span><span class="s">(read/write/admin),</span><span class="nv"> </span><span class="s">access</span><span class="nv"> </span><span class="s">types</span><span class="nv"> </span><span class="s">(direct,</span><span class="nv"> </span><span class="s">cross-account,</span><span class="nv"> </span><span class="s">public,</span>
+
+<span class="w">      </span><span class="s">federated),</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">conditions</span><span class="nv"> </span><span class="s">under</span><span class="nv"> </span><span class="s">which</span><span class="nv"> </span><span class="s">access</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">granted.</span><span class="nv"> </span><span class="s">Use</span><span class="nv"> </span><span class="s">this</span><span class="nv"> </span><span class="s">for</span>
+
+<span class="w">      </span><span class="s">resource-centric</span><span class="nv"> </span><span class="s">security</span><span class="nv"> </span><span class="s">assessments</span><span class="nv"> </span><span class="s">such</span><span class="nv"> </span><span class="s">as</span><span class="nv"> </span><span class="s">external</span><span class="nv"> </span><span class="s">access</span><span class="nv"> </span><span class="s">discovery,</span><span class="nv"> </span><span class="s">public</span>
+
+<span class="w">      </span><span class="s">exposure</span><span class="nv"> </span><span class="s">analysis,</span><span class="nv"> </span><span class="s">etc.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Access Analysis Result</span>
@@ -1603,10 +1692,14 @@
 <span class="w">      </span><span class="nt">group</span><span class="p">:</span>
 <span class="w">        </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">group</span>
 <span class="w">        </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">primary</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Details about applications, services, or systems that are accessible</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">based on the IAM analysis. For identity-centric analysis, this represents applications</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">the identity can access. For resource-centric analysis, this represents applications</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">that can access the resource.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'Details</span><span class="nv"> </span><span class="s">about</span><span class="nv"> </span><span class="s">applications,</span><span class="nv"> </span><span class="s">services,</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">systems</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">are</span><span class="nv"> </span><span class="s">accessible</span>
+<span class="w">      </span><span class="s">based</span><span class="nv"> </span><span class="s">on</span>
+
+<span class="w">      </span><span class="s">the</span><span class="nv"> </span><span class="s">IAM</span><span class="nv"> </span><span class="s">analysis.</span><span class="nv"> </span><span class="s">For</span><span class="nv"> </span><span class="s">identity-centric</span><span class="nv"> </span><span class="s">analysis,</span><span class="nv"> </span><span class="s">this</span><span class="nv"> </span><span class="s">represents</span><span class="nv"> </span><span class="s">applications</span>
+
+<span class="w">      </span><span class="s">the</span><span class="nv"> </span><span class="s">identity</span><span class="nv"> </span><span class="s">can</span><span class="nv"> </span><span class="s">access.</span><span class="nv"> </span><span class="s">For</span><span class="nv"> </span><span class="s">resource-centric</span><span class="nv"> </span><span class="s">analysis,</span><span class="nv"> </span><span class="s">this</span><span class="nv"> </span><span class="s">represents</span>
+
+<span class="w">      </span><span class="s">applications</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">can</span><span class="nv"> </span><span class="s">access</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">resource.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Applications</span>
@@ -1624,8 +1717,10 @@
 <span class="w">      </span><span class="nt">group</span><span class="p">:</span>
 <span class="w">        </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">group</span>
 <span class="w">        </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">primary</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Describes usage activity and other metrics of an Identity i.e. AWS</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">IAM User, GCP IAM Principal, etc.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'Describes</span><span class="nv"> </span><span class="s">usage</span><span class="nv"> </span><span class="s">activity</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">other</span><span class="nv"> </span><span class="s">metrics</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">an</span><span class="nv"> </span><span class="s">Identity</span><span class="nv"> </span><span class="s">i.e.</span><span class="nv"> </span><span class="s">AWS</span>
+<span class="w">      </span><span class="s">IAM</span><span class="nv"> </span><span class="s">User,</span>
+
+<span class="w">      </span><span class="s">GCP</span><span class="nv"> </span><span class="s">IAM</span><span class="nv"> </span><span class="s">Principal,</span><span class="nv"> </span><span class="s">etc.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Identity Activity Metrics</span>
@@ -1642,12 +1737,18 @@
 <span class="w">      </span><span class="nt">group</span><span class="p">:</span>
 <span class="w">        </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">group</span>
 <span class="w">        </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">primary</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Describes analysis results of permissions, policies directly associated</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">with an identity (user, role, or service account). This evaluates what permissions</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">an identity has been granted through attached policies, which privileges are</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">actively used versus unused, and identifies potential over-privileged access.</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">Use this for identity-centric security assessments such as privilege audits,</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">dormant permission discovery, and least-privilege compliance analysis.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'Describes</span><span class="nv"> </span><span class="s">analysis</span><span class="nv"> </span><span class="s">results</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">permissions,</span><span class="nv"> </span><span class="s">policies</span><span class="nv"> </span><span class="s">directly</span><span class="nv"> </span><span class="s">associated</span>
+<span class="w">      </span><span class="s">with</span><span class="nv"> </span><span class="s">an</span>
+
+<span class="w">      </span><span class="s">identity</span><span class="nv"> </span><span class="s">(user,</span><span class="nv"> </span><span class="s">role,</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">service</span><span class="nv"> </span><span class="s">account).</span><span class="nv"> </span><span class="s">This</span><span class="nv"> </span><span class="s">evaluates</span><span class="nv"> </span><span class="s">what</span><span class="nv"> </span><span class="s">permissions</span><span class="nv"> </span><span class="s">an</span>
+
+<span class="w">      </span><span class="s">identity</span><span class="nv"> </span><span class="s">has</span><span class="nv"> </span><span class="s">been</span><span class="nv"> </span><span class="s">granted</span><span class="nv"> </span><span class="s">through</span><span class="nv"> </span><span class="s">attached</span><span class="nv"> </span><span class="s">policies,</span><span class="nv"> </span><span class="s">which</span><span class="nv"> </span><span class="s">privileges</span><span class="nv"> </span><span class="s">are</span>
+
+<span class="w">      </span><span class="s">actively</span><span class="nv"> </span><span class="s">used</span><span class="nv"> </span><span class="s">versus</span><span class="nv"> </span><span class="s">unused,</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">identifies</span><span class="nv"> </span><span class="s">potential</span><span class="nv"> </span><span class="s">over-privileged</span><span class="nv"> </span><span class="s">access.</span>
+
+<span class="w">      </span><span class="s">Use</span><span class="nv"> </span><span class="s">this</span><span class="nv"> </span><span class="s">for</span><span class="nv"> </span><span class="s">identity-centric</span><span class="nv"> </span><span class="s">security</span><span class="nv"> </span><span class="s">assessments</span><span class="nv"> </span><span class="s">such</span><span class="nv"> </span><span class="s">as</span><span class="nv"> </span><span class="s">privilege</span><span class="nv"> </span><span class="s">audits,</span>
+
+<span class="w">      </span><span class="s">dormant</span><span class="nv"> </span><span class="s">permission</span><span class="nv"> </span><span class="s">discovery,</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">least-privilege</span><span class="nv"> </span><span class="s">compliance</span><span class="nv"> </span><span class="s">analysis.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Permission Analysis Results</span>
@@ -1691,10 +1792,13 @@
 <span class="w">      </span><span class="nt">group</span><span class="p">:</span>
 <span class="w">        </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">group</span>
 <span class="w">        </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">primary</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Details about resources involved in the IAM analysis. For identity-centric</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">analysis, this represents resources the identity can access. For resource-centric</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">analysis, this represents the resource being analyzed and related resources</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">in the access chain.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'Details</span><span class="nv"> </span><span class="s">about</span><span class="nv"> </span><span class="s">resources</span><span class="nv"> </span><span class="s">involved</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">IAM</span><span class="nv"> </span><span class="s">analysis.</span><span class="nv"> </span><span class="s">For</span><span class="nv"> </span><span class="s">identity-centric</span>
+
+<span class="w">      </span><span class="s">analysis,</span><span class="nv"> </span><span class="s">this</span><span class="nv"> </span><span class="s">represents</span><span class="nv"> </span><span class="s">resources</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">identity</span><span class="nv"> </span><span class="s">can</span><span class="nv"> </span><span class="s">access.</span><span class="nv"> </span><span class="s">For</span>
+
+<span class="w">      </span><span class="s">resource-centric</span><span class="nv"> </span><span class="s">analysis,</span><span class="nv"> </span><span class="s">this</span><span class="nv"> </span><span class="s">represents</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">resource</span><span class="nv"> </span><span class="s">being</span><span class="nv"> </span><span class="s">analyzed</span><span class="nv"> </span><span class="s">and</span>
+
+<span class="w">      </span><span class="s">related</span><span class="nv"> </span><span class="s">resources</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">access</span><span class="nv"> </span><span class="s">chain.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Resources Array</span>
@@ -1722,9 +1826,12 @@
 <span class="w">      </span><span class="nt">group</span><span class="p">:</span>
 <span class="w">        </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">group</span>
 <span class="w">        </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">primary</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Details about the identity (user, role, service account, or other</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">principal) that is the subject of the IAM analysis. This provides context about</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">the identity being evaluated for security risks and access patterns.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'Details</span><span class="nv"> </span><span class="s">about</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">identity</span><span class="nv"> </span><span class="s">(user,</span><span class="nv"> </span><span class="s">role,</span><span class="nv"> </span><span class="s">service</span><span class="nv"> </span><span class="s">account,</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">other</span>
+<span class="w">      </span><span class="s">principal)</span>
+
+<span class="w">      </span><span class="s">that</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">subject</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">IAM</span><span class="nv"> </span><span class="s">analysis.</span><span class="nv"> </span><span class="s">This</span><span class="nv"> </span><span class="s">provides</span><span class="nv"> </span><span class="s">context</span><span class="nv"> </span><span class="s">about</span><span class="nv"> </span><span class="s">the</span>
+
+<span class="w">      </span><span class="s">identity</span><span class="nv"> </span><span class="s">being</span><span class="nv"> </span><span class="s">evaluated</span><span class="nv"> </span><span class="s">for</span><span class="nv"> </span><span class="s">security</span><span class="nv"> </span><span class="s">risks</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">access</span><span class="nv"> </span><span class="s">patterns.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">User</span>
@@ -1863,8 +1970,10 @@
 <span class="w">      </span><span class="nt">group</span><span class="p">:</span>
 <span class="w">        </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">group</span>
 <span class="w">        </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">context</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The confidence, normalized to the caption of the confidence_id value.</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">In the case of 'Other', it is defined by the event source.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">confidence,</span><span class="nv"> </span><span class="s">normalized</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">caption</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">confidence_id</span><span class="nv"> </span><span class="s">value.</span>
+<span class="w">      </span><span class="s">In</span><span class="nv"> </span><span class="s">the</span>
+
+<span class="w">      </span><span class="s">case</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="se">''</span><span class="s">Other</span><span class="se">''</span><span class="s">,</span><span class="nv"> </span><span class="s">it</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">defined</span><span class="nv"> </span><span class="s">by</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">event</span><span class="nv"> </span><span class="s">source.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Confidence</span>
@@ -1886,9 +1995,12 @@
 <span class="w">      </span><span class="nt">group</span><span class="p">:</span>
 <span class="w">        </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">group</span>
 <span class="w">        </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">context</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The normalized confidence refers to the accuracy of the rule that</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">created the finding. A rule with a low confidence means that the finding scope</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">is wide and may create finding reports that may not be malicious in nature.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">normalized</span><span class="nv"> </span><span class="s">confidence</span><span class="nv"> </span><span class="s">refers</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">accuracy</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">rule</span><span class="nv"> </span><span class="s">that</span>
+<span class="w">      </span><span class="s">created</span><span class="nv"> </span><span class="s">the</span>
+
+<span class="w">      </span><span class="s">finding.</span><span class="nv"> </span><span class="s">A</span><span class="nv"> </span><span class="s">rule</span><span class="nv"> </span><span class="s">with</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">low</span><span class="nv"> </span><span class="s">confidence</span><span class="nv"> </span><span class="s">means</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">finding</span><span class="nv"> </span><span class="s">scope</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">wide</span><span class="nv"> </span><span class="s">and</span>
+
+<span class="w">      </span><span class="s">may</span><span class="nv"> </span><span class="s">create</span><span class="nv"> </span><span class="s">finding</span><span class="nv"> </span><span class="s">reports</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">may</span><span class="nv"> </span><span class="s">not</span><span class="nv"> </span><span class="s">be</span><span class="nv"> </span><span class="s">malicious</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">nature.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Confidence ID</span>
@@ -1932,9 +2044,12 @@
 <span class="w">      </span><span class="nt">group</span><span class="p">:</span>
 <span class="w">        </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">group</span>
 <span class="w">        </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">context</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Describes the affected device/host. If applicable, it can be used</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">in conjunction with &lt;code&gt;Resource(s)&lt;/code&gt;. &lt;p&gt; e.g. Specific details about</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">an AWS EC2 instance, that is affected by the Finding.&lt;/p&gt;</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'Describes</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">affected</span><span class="nv"> </span><span class="s">device/host.</span><span class="nv"> </span><span class="s">If</span><span class="nv"> </span><span class="s">applicable,</span><span class="nv"> </span><span class="s">it</span><span class="nv"> </span><span class="s">can</span><span class="nv"> </span><span class="s">be</span><span class="nv"> </span><span class="s">used</span>
+<span class="w">      </span><span class="s">in</span>
+
+<span class="w">      </span><span class="s">conjunction</span><span class="nv"> </span><span class="s">with</span><span class="nv"> </span><span class="s">&lt;code&gt;Resource(s)&lt;/code&gt;.</span><span class="nv"> </span><span class="s">&lt;p&gt;</span><span class="nv"> </span><span class="s">e.g.</span><span class="nv"> </span><span class="s">Specific</span><span class="nv"> </span><span class="s">details</span><span class="nv"> </span><span class="s">about</span><span class="nv"> </span><span class="s">an</span>
+
+<span class="w">      </span><span class="s">AWS</span><span class="nv"> </span><span class="s">EC2</span><span class="nv"> </span><span class="s">instance,</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">affected</span><span class="nv"> </span><span class="s">by</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">Finding.&lt;/p&gt;'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Device</span>
@@ -2034,9 +2149,12 @@
 <span class="w">      </span><span class="nt">group</span><span class="p">:</span>
 <span class="w">        </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">group</span>
 <span class="w">        </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">context</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The normalized status of the Finding set by the consumer normalized</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">to the caption of the status_id value. In the case of 'Other', it is defined</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">by the source.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">normalized</span><span class="nv"> </span><span class="s">status</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">Finding</span><span class="nv"> </span><span class="s">set</span><span class="nv"> </span><span class="s">by</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">consumer</span><span class="nv"> </span><span class="s">normalized</span>
+<span class="w">      </span><span class="s">to</span><span class="nv"> </span><span class="s">the</span>
+
+<span class="w">      </span><span class="s">caption</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">status_id</span><span class="nv"> </span><span class="s">value.</span><span class="nv"> </span><span class="s">In</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">case</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="se">''</span><span class="s">Other</span><span class="se">''</span><span class="s">,</span><span class="nv"> </span><span class="s">it</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">defined</span><span class="nv"> </span><span class="s">by</span><span class="nv"> </span><span class="s">the</span>
+
+<span class="w">      </span><span class="s">source.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Status</span>
@@ -2090,11 +2208,18 @@
 <span class="w">      </span><span class="nt">group</span><span class="p">:</span>
 <span class="w">        </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">group</span>
 <span class="w">        </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">context</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The Vendor Attributes object can be used to represent values of attributes</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">populated by the Vendor/Finding Provider. It can help distinguish between the</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">vendor-provided values and consumer-updated values, of key attributes like &lt;code&gt;severity_id&lt;/code&gt;.&lt;br&gt;The</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">original finding producer should not populate this object. It should be populated</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">by consuming systems that support data mutability.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">Vendor</span><span class="nv"> </span><span class="s">Attributes</span><span class="nv"> </span><span class="s">object</span><span class="nv"> </span><span class="s">can</span><span class="nv"> </span><span class="s">be</span><span class="nv"> </span><span class="s">used</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">represent</span><span class="nv"> </span><span class="s">values</span><span class="nv"> </span><span class="s">of</span>
+<span class="w">      </span><span class="s">attributes</span>
+
+<span class="w">      </span><span class="s">populated</span><span class="nv"> </span><span class="s">by</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">Vendor/Finding</span><span class="nv"> </span><span class="s">Provider.</span><span class="nv"> </span><span class="s">It</span><span class="nv"> </span><span class="s">can</span><span class="nv"> </span><span class="s">help</span><span class="nv"> </span><span class="s">distinguish</span><span class="nv"> </span><span class="s">between</span><span class="nv"> </span><span class="s">the</span>
+
+<span class="w">      </span><span class="s">vendor-provided</span><span class="nv"> </span><span class="s">values</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">consumer-updated</span><span class="nv"> </span><span class="s">values,</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">key</span><span class="nv"> </span><span class="s">attributes</span><span class="nv"> </span><span class="s">like</span>
+
+<span class="w">      </span><span class="s">&lt;code&gt;severity_id&lt;/code&gt;.&lt;br&gt;The</span><span class="nv"> </span><span class="s">original</span><span class="nv"> </span><span class="s">finding</span><span class="nv"> </span><span class="s">producer</span><span class="nv"> </span><span class="s">should</span><span class="nv"> </span><span class="s">not</span><span class="nv"> </span><span class="s">populate</span>
+
+<span class="w">      </span><span class="s">this</span><span class="nv"> </span><span class="s">object.</span><span class="nv"> </span><span class="s">It</span><span class="nv"> </span><span class="s">should</span><span class="nv"> </span><span class="s">be</span><span class="nv"> </span><span class="s">populated</span><span class="nv"> </span><span class="s">by</span><span class="nv"> </span><span class="s">consuming</span><span class="nv"> </span><span class="s">systems</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">support</span><span class="nv"> </span><span class="s">data</span>
+
+<span class="w">      </span><span class="s">mutability.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Vendor Attributes</span>
@@ -2145,8 +2270,10 @@
 <span class="w">      </span><span class="nt">group</span><span class="p">:</span>
 <span class="w">        </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">group</span>
 <span class="w">        </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">primary</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The impact , normalized to the caption of the impact_id value. In</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">the case of 'Other', it is defined by the event source.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">impact</span><span class="nv"> </span><span class="s">,</span><span class="nv"> </span><span class="s">normalized</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">caption</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">impact_id</span><span class="nv"> </span><span class="s">value.</span><span class="nv"> </span><span class="s">In</span>
+<span class="w">      </span><span class="s">the</span><span class="nv"> </span><span class="s">case</span><span class="nv"> </span><span class="s">of</span>
+
+<span class="w">      </span><span class="se">''</span><span class="s">Other</span><span class="se">''</span><span class="s">,</span><span class="nv"> </span><span class="s">it</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">defined</span><span class="nv"> </span><span class="s">by</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">event</span><span class="nv"> </span><span class="s">source.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Impact</span>
@@ -2167,10 +2294,14 @@
 <span class="w">      </span><span class="nt">group</span><span class="p">:</span>
 <span class="w">        </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">group</span>
 <span class="w">        </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">primary</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The normalized impact of the incident or finding. Per NIST, this</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">is the magnitude of harm that can be expected to result from the consequences</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">of unauthorized disclosure, modification, destruction, or loss of information</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">or information system availability.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">normalized</span><span class="nv"> </span><span class="s">impact</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">incident</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">finding.</span><span class="nv"> </span><span class="s">Per</span><span class="nv"> </span><span class="s">NIST,</span><span class="nv"> </span><span class="s">this</span>
+<span class="w">      </span><span class="s">is</span><span class="nv"> </span><span class="s">the</span>
+
+<span class="w">      </span><span class="s">magnitude</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">harm</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">can</span><span class="nv"> </span><span class="s">be</span><span class="nv"> </span><span class="s">expected</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">result</span><span class="nv"> </span><span class="s">from</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">consequences</span><span class="nv"> </span><span class="s">of</span>
+
+<span class="w">      </span><span class="s">unauthorized</span><span class="nv"> </span><span class="s">disclosure,</span><span class="nv"> </span><span class="s">modification,</span><span class="nv"> </span><span class="s">destruction,</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">loss</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">information</span><span class="nv"> </span><span class="s">or</span>
+
+<span class="w">      </span><span class="s">information</span><span class="nv"> </span><span class="s">system</span><span class="nv"> </span><span class="s">availability.'</span>
 <span class="w">    </span><span class="nt">notes</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">NIST SP 800-172 from FIPS 199 — https://doi.org/10.6028/NIST.FIPS.199</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">NIST Computer Security Resource Center — https://doi.org/10.6028/NIST.FIPS.199</span>
@@ -2236,8 +2367,10 @@
 <span class="w">      </span><span class="nt">group</span><span class="p">:</span>
 <span class="w">        </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">group</span>
 <span class="w">        </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">context</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The priority, normalized to the caption of the priority_id value.</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">In the case of 'Other', it is defined by the event source.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">priority,</span><span class="nv"> </span><span class="s">normalized</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">caption</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">priority_id</span><span class="nv"> </span><span class="s">value.</span>
+<span class="w">      </span><span class="s">In</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">case</span>
+
+<span class="w">      </span><span class="s">of</span><span class="nv"> </span><span class="se">''</span><span class="s">Other</span><span class="se">''</span><span class="s">,</span><span class="nv"> </span><span class="s">it</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">defined</span><span class="nv"> </span><span class="s">by</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">event</span><span class="nv"> </span><span class="s">source.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Priority</span>
@@ -2254,8 +2387,10 @@
 <span class="w">      </span><span class="nt">group</span><span class="p">:</span>
 <span class="w">        </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">group</span>
 <span class="w">        </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">context</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The normalized priority. Priority identifies the relative importance</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">of the incident or finding. It is a measurement of urgency.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">normalized</span><span class="nv"> </span><span class="s">priority.</span><span class="nv"> </span><span class="s">Priority</span><span class="nv"> </span><span class="s">identifies</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">relative</span><span class="nv"> </span><span class="s">importance</span>
+<span class="w">      </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span>
+
+<span class="w">      </span><span class="s">incident</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">finding.</span><span class="nv"> </span><span class="s">It</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">measurement</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">urgency.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Priority ID</span>
@@ -2325,8 +2460,10 @@
 <span class="w">      </span><span class="nt">group</span><span class="p">:</span>
 <span class="w">        </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">group</span>
 <span class="w">        </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">context</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The associated ticket(s) in the ticketing system. Each ticket contains</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">details like ticket ID, status, etc.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">associated</span><span class="nv"> </span><span class="s">ticket(s)</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">ticketing</span><span class="nv"> </span><span class="s">system.</span><span class="nv"> </span><span class="s">Each</span><span class="nv"> </span><span class="s">ticket</span><span class="nv"> </span><span class="s">contains</span>
+<span class="w">      </span><span class="s">details</span>
+
+<span class="w">      </span><span class="s">like</span><span class="nv"> </span><span class="s">ticket</span><span class="nv"> </span><span class="s">ID,</span><span class="nv"> </span><span class="s">status,</span><span class="nv"> </span><span class="s">etc.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Tickets</span>
@@ -2431,8 +2568,10 @@
 <span class="w">      </span><span class="nt">group</span><span class="p">:</span>
 <span class="w">        </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">group</span>
 <span class="w">        </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">classification</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The unique identifier of a class. A class describes the attributes</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">available in an event.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">unique</span><span class="nv"> </span><span class="s">identifier</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">class.</span><span class="nv"> </span><span class="s">A</span><span class="nv"> </span><span class="s">class</span><span class="nv"> </span><span class="s">describes</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">attributes</span>
+<span class="w">      </span><span class="s">available</span><span class="nv"> </span><span class="s">in</span>
+
+<span class="w">      </span><span class="s">an</span><span class="nv"> </span><span class="s">event.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Class ID</span>
@@ -2449,8 +2588,10 @@
 <span class="w">      </span><span class="nt">group</span><span class="p">:</span>
 <span class="w">        </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">group</span>
 <span class="w">        </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">occurrence</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The number of times that events in the same logical group occurred</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">during the event &lt;strong&gt;Start Time&lt;/strong&gt; to &lt;strong&gt;End Time&lt;/strong&gt; period.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">number</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">times</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">events</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">same</span><span class="nv"> </span><span class="s">logical</span><span class="nv"> </span><span class="s">group</span><span class="nv"> </span><span class="s">occurred</span>
+<span class="w">      </span><span class="s">during</span><span class="nv"> </span><span class="s">the</span>
+
+<span class="w">      </span><span class="s">event</span><span class="nv"> </span><span class="s">&lt;strong&gt;Start</span><span class="nv"> </span><span class="s">Time&lt;/strong&gt;</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">&lt;strong&gt;End</span><span class="nv"> </span><span class="s">Time&lt;/strong&gt;</span><span class="nv"> </span><span class="s">period.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Count</span>
@@ -2471,8 +2612,10 @@
 <span class="w">      </span><span class="nt">group</span><span class="p">:</span>
 <span class="w">        </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">group</span>
 <span class="w">        </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">occurrence</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The event duration or aggregate time, the amount of time the event</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">covers from &lt;code&gt;start_time&lt;/code&gt; to &lt;code&gt;end_time&lt;/code&gt; in milliseconds.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">event</span><span class="nv"> </span><span class="s">duration</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">aggregate</span><span class="nv"> </span><span class="s">time,</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">amount</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">time</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">event</span>
+<span class="w">      </span><span class="s">covers</span><span class="nv"> </span><span class="s">from</span>
+
+<span class="w">      </span><span class="s">&lt;code&gt;start_time&lt;/code&gt;</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">&lt;code&gt;end_time&lt;/code&gt;</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">milliseconds.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Duration Milliseconds</span>
@@ -2494,10 +2637,17 @@
 <span class="w">        </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">group</span>
 <span class="w">        </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">context</span>
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">additional</span><span class="nv"> </span><span class="s">information</span><span class="nv"> </span><span class="s">from</span><span class="nv"> </span><span class="s">an</span><span class="nv"> </span><span class="s">external</span><span class="nv"> </span><span class="s">data</span><span class="nv"> </span><span class="s">source,</span><span class="nv"> </span><span class="s">which</span><span class="nv"> </span><span class="s">is</span>
-<span class="w">      </span><span class="s">associated</span><span class="nv"> </span><span class="s">with</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">event</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">finding.</span><span class="nv"> </span><span class="s">For</span><span class="nv"> </span><span class="s">example</span><span class="nv"> </span><span class="s">add</span><span class="nv"> </span><span class="s">location</span><span class="nv"> </span><span class="s">information</span>
-<span class="w">      </span><span class="s">for</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">IP</span><span class="nv"> </span><span class="s">address</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">DNS</span><span class="nv"> </span><span class="s">answers:&lt;/p&gt;&lt;code&gt;[{"name":</span><span class="nv"> </span><span class="s">"answers.ip",</span><span class="nv"> </span><span class="s">"value":</span>
+<span class="w">      </span><span class="s">associated</span>
+
+<span class="w">      </span><span class="s">with</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">event</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">finding.</span><span class="nv"> </span><span class="s">For</span><span class="nv"> </span><span class="s">example</span><span class="nv"> </span><span class="s">add</span><span class="nv"> </span><span class="s">location</span><span class="nv"> </span><span class="s">information</span><span class="nv"> </span><span class="s">for</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">IP</span>
+
+<span class="w">      </span><span class="s">address</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">DNS</span><span class="nv"> </span><span class="s">answers:&lt;/p&gt;&lt;code&gt;[{"name":</span><span class="nv"> </span><span class="s">"answers.ip",</span><span class="nv"> </span><span class="s">"value":</span>
+
 <span class="w">      </span><span class="s">"92.24.47.250",</span><span class="nv"> </span><span class="s">"type":</span><span class="nv"> </span><span class="s">"location",</span><span class="nv"> </span><span class="s">"data":</span><span class="nv"> </span><span class="s">{"city":</span><span class="nv"> </span><span class="s">"Socotra",</span><span class="nv"> </span><span class="s">"continent":</span>
-<span class="w">      </span><span class="s">"Asia",</span><span class="nv"> </span><span class="s">"coordinates":</span><span class="nv"> </span><span class="s">[-25.4153,</span><span class="nv"> </span><span class="s">17.0743],</span><span class="nv"> </span><span class="s">"country":</span><span class="nv"> </span><span class="s">"YE",</span><span class="nv"> </span><span class="s">"desc":</span><span class="nv"> </span><span class="s">"Yemen"}}]&lt;/code&gt;'</span>
+
+<span class="w">      </span><span class="s">"Asia",</span><span class="nv"> </span><span class="s">"coordinates":</span><span class="nv"> </span><span class="s">[-25.4153,</span><span class="nv"> </span><span class="s">17.0743],</span><span class="nv"> </span><span class="s">"country":</span><span class="nv"> </span><span class="s">"YE",</span><span class="nv"> </span><span class="s">"desc":</span>
+
+<span class="w">      </span><span class="s">"Yemen"}}]&lt;/code&gt;'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Enrichments</span>
@@ -2555,7 +2705,9 @@
 <span class="w">        </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">primary</span>
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The observables associated with the event or a finding.</span>
 <span class="w">    </span><span class="nt">notes</span><span class="p">:</span>
-<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">OCSF Observables FAQ — https://github.com/ocsf/ocsf-docs/blob/main/articles/defining-and-using-observables.md</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">'OCSF</span><span class="nv"> </span><span class="s">Observables</span><span class="nv"> </span><span class="s">FAQ</span><span class="nv"> </span><span class="s">—</span>
+
+<span class="w">      </span><span class="s">https://github.com/ocsf/ocsf-docs/blob/main/articles/defining-and-using-observables.md'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">see_also</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://github.com/ocsf/ocsf-docs/blob/main/articles/defining-and-using-observables.md</span>
@@ -2625,8 +2777,11 @@
 <span class="w">      </span><span class="nt">group</span><span class="p">:</span>
 <span class="w">        </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">group</span>
 <span class="w">        </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">classification</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The event/finding severity, normalized to the caption of the &lt;code&gt;severity_id&lt;/code&gt;</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">value. In the case of 'Other', it is defined by the source.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">event/finding</span><span class="nv"> </span><span class="s">severity,</span><span class="nv"> </span><span class="s">normalized</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">caption</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span>
+
+<span class="w">      </span><span class="s">&lt;code&gt;severity_id&lt;/code&gt;</span><span class="nv"> </span><span class="s">value.</span><span class="nv"> </span><span class="s">In</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">case</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="se">''</span><span class="s">Other</span><span class="se">''</span><span class="s">,</span><span class="nv"> </span><span class="s">it</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">defined</span><span class="nv"> </span><span class="s">by</span><span class="nv"> </span><span class="s">the</span>
+
+<span class="w">      </span><span class="s">source.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Severity</span>
@@ -2650,10 +2805,14 @@
 <span class="w">      </span><span class="nt">group</span><span class="p">:</span>
 <span class="w">        </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">group</span>
 <span class="w">        </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">classification</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">&lt;p&gt;The normalized identifier of the event/finding severity.&lt;/p&gt;The</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">normalized severity is a measurement the effort and expense required to manage</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">and resolve an event or incident. Smaller numerical values represent lower impact</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">events, and larger numerical values represent higher impact events.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'&lt;p&gt;The</span><span class="nv"> </span><span class="s">normalized</span><span class="nv"> </span><span class="s">identifier</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">event/finding</span><span class="nv"> </span><span class="s">severity.&lt;/p&gt;The</span>
+<span class="w">      </span><span class="s">normalized</span>
+
+<span class="w">      </span><span class="s">severity</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">measurement</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">effort</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">expense</span><span class="nv"> </span><span class="s">required</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">manage</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">resolve</span>
+
+<span class="w">      </span><span class="s">an</span><span class="nv"> </span><span class="s">event</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">incident.</span><span class="nv"> </span><span class="s">Smaller</span><span class="nv"> </span><span class="s">numerical</span><span class="nv"> </span><span class="s">values</span><span class="nv"> </span><span class="s">represent</span><span class="nv"> </span><span class="s">lower</span><span class="nv"> </span><span class="s">impact</span><span class="nv"> </span><span class="s">events,</span>
+
+<span class="w">      </span><span class="s">and</span><span class="nv"> </span><span class="s">larger</span><span class="nv"> </span><span class="s">numerical</span><span class="nv"> </span><span class="s">values</span><span class="nv"> </span><span class="s">represent</span><span class="nv"> </span><span class="s">higher</span><span class="nv"> </span><span class="s">impact</span><span class="nv"> </span><span class="s">events.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Severity ID</span>
@@ -2675,9 +2834,12 @@
 <span class="w">      </span><span class="nt">group</span><span class="p">:</span>
 <span class="w">        </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">group</span>
 <span class="w">        </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">primary</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The event status code, as reported by the event source.&lt;br /&gt;&lt;br</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">/&gt;For example, in a Windows Failed Authentication event, this would be the value</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">of 'Failure Code', e.g. 0x18.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">event</span><span class="nv"> </span><span class="s">status</span><span class="nv"> </span><span class="s">code,</span><span class="nv"> </span><span class="s">as</span><span class="nv"> </span><span class="s">reported</span><span class="nv"> </span><span class="s">by</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">event</span><span class="nv"> </span><span class="s">source.&lt;br</span><span class="nv"> </span><span class="s">/&gt;&lt;br</span>
+<span class="w">      </span><span class="s">/&gt;For</span><span class="nv"> </span><span class="s">example,</span>
+
+<span class="w">      </span><span class="s">in</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">Windows</span><span class="nv"> </span><span class="s">Failed</span><span class="nv"> </span><span class="s">Authentication</span><span class="nv"> </span><span class="s">event,</span><span class="nv"> </span><span class="s">this</span><span class="nv"> </span><span class="s">would</span><span class="nv"> </span><span class="s">be</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">value</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="se">''</span><span class="s">Failure</span>
+
+<span class="w">      </span><span class="s">Code</span><span class="se">''</span><span class="s">,</span><span class="nv"> </span><span class="s">e.g.</span><span class="nv"> </span><span class="s">0x18.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Status Code</span>
@@ -2697,8 +2859,9 @@
 <span class="w">      </span><span class="nt">group</span><span class="p">:</span>
 <span class="w">        </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">group</span>
 <span class="w">        </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">primary</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The status detail contains additional information about the event/finding</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">outcome.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">status</span><span class="nv"> </span><span class="s">detail</span><span class="nv"> </span><span class="s">contains</span><span class="nv"> </span><span class="s">additional</span><span class="nv"> </span><span class="s">information</span><span class="nv"> </span><span class="s">about</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">event/finding</span>
+
+<span class="w">      </span><span class="s">outcome.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Status Detail</span>
@@ -2737,8 +2900,10 @@
 <span class="w">      </span><span class="nt">group</span><span class="p">:</span>
 <span class="w">        </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">group</span>
 <span class="w">        </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">occurrence</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The number of minutes that the reported event &lt;code&gt;time&lt;/code&gt; is</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">ahead or behind UTC, in the range -1,080 to +1,080.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">number</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">minutes</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">reported</span><span class="nv"> </span><span class="s">event</span><span class="nv"> </span><span class="s">&lt;code&gt;time&lt;/code&gt;</span>
+<span class="w">      </span><span class="s">is</span><span class="nv"> </span><span class="s">ahead</span><span class="nv"> </span><span class="s">or</span>
+
+<span class="w">      </span><span class="s">behind</span><span class="nv"> </span><span class="s">UTC,</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">range</span><span class="nv"> </span><span class="s">-1,080</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">+1,080.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Timezone Offset</span>
@@ -2773,8 +2938,11 @@
 <span class="w">        </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">group</span>
 <span class="w">        </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">classification</span>
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">event/finding</span><span class="nv"> </span><span class="s">type</span><span class="nv"> </span><span class="s">ID.</span><span class="nv"> </span><span class="s">It</span><span class="nv"> </span><span class="s">identifies</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">event</span><span class="se">''</span><span class="s">s</span><span class="nv"> </span><span class="s">semantics</span>
-<span class="w">      </span><span class="s">and</span><span class="nv"> </span><span class="s">structure.</span><span class="nv"> </span><span class="s">The</span><span class="nv"> </span><span class="s">value</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">calculated</span><span class="nv"> </span><span class="s">by</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">logging</span><span class="nv"> </span><span class="s">system</span><span class="nv"> </span><span class="s">as:</span><span class="nv"> </span><span class="s">&lt;code&gt;class_uid</span>
-<span class="w">      </span><span class="s">*</span><span class="nv"> </span><span class="s">100</span><span class="nv"> </span><span class="s">+</span><span class="nv"> </span><span class="s">activity_id&lt;/code&gt;.'</span>
+<span class="w">      </span><span class="s">and</span><span class="nv"> </span><span class="s">structure.</span>
+
+<span class="w">      </span><span class="s">The</span><span class="nv"> </span><span class="s">value</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">calculated</span><span class="nv"> </span><span class="s">by</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">logging</span><span class="nv"> </span><span class="s">system</span><span class="nv"> </span><span class="s">as:</span><span class="nv"> </span><span class="s">&lt;code&gt;class_uid</span><span class="nv"> </span><span class="s">*</span><span class="nv"> </span><span class="s">100</span><span class="nv"> </span><span class="s">+</span>
+
+<span class="w">      </span><span class="s">activity_id&lt;/code&gt;.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Type ID</span>
@@ -2793,8 +2961,10 @@
 <span class="w">      </span><span class="nt">group</span><span class="p">:</span>
 <span class="w">        </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">group</span>
 <span class="w">        </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">context</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The attributes that are not mapped to the event schema. The names</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">and values of those attributes are specific to the event source.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">attributes</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">are</span><span class="nv"> </span><span class="s">not</span><span class="nv"> </span><span class="s">mapped</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">event</span><span class="nv"> </span><span class="s">schema.</span><span class="nv"> </span><span class="s">The</span><span class="nv"> </span><span class="s">names</span>
+<span class="w">      </span><span class="s">and</span><span class="nv"> </span><span class="s">values</span><span class="nv"> </span><span class="s">of</span>
+
+<span class="w">      </span><span class="s">those</span><span class="nv"> </span><span class="s">attributes</span><span class="nv"> </span><span class="s">are</span><span class="nv"> </span><span class="s">specific</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">event</span><span class="nv"> </span><span class="s">source.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Unmapped Data</span>
@@ -2829,8 +2999,10 @@
 <span class="w">      </span><span class="nt">group</span><span class="p">:</span>
 <span class="w">        </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">group</span>
 <span class="w">        </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">primary</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Describes details about the Cloud environment where the event or</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">finding was created.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'Describes</span><span class="nv"> </span><span class="s">details</span><span class="nv"> </span><span class="s">about</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">Cloud</span><span class="nv"> </span><span class="s">environment</span><span class="nv"> </span><span class="s">where</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">event</span><span class="nv"> </span><span class="s">or</span>
+<span class="w">      </span><span class="s">finding</span><span class="nv"> </span><span class="s">was</span>
+
+<span class="w">      </span><span class="s">created.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Cloud</span>
@@ -2844,9 +3016,12 @@
 <span class="w">    </span><span class="nt">required</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">actor</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">actor</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The actor object describes details about the user/role/process that</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">was the source of the activity. Note that this is not the threat actor of a</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">campaign but may be part of a campaign.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">actor</span><span class="nv"> </span><span class="s">object</span><span class="nv"> </span><span class="s">describes</span><span class="nv"> </span><span class="s">details</span><span class="nv"> </span><span class="s">about</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">user/role/process</span><span class="nv"> </span><span class="s">that</span>
+<span class="w">      </span><span class="s">was</span><span class="nv"> </span><span class="s">the</span>
+
+<span class="w">      </span><span class="s">source</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">activity.</span><span class="nv"> </span><span class="s">Note</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">this</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">not</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">threat</span><span class="nv"> </span><span class="s">actor</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">campaign</span>
+
+<span class="w">      </span><span class="s">but</span><span class="nv"> </span><span class="s">may</span><span class="nv"> </span><span class="s">be</span><span class="nv"> </span><span class="s">part</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">campaign.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Actor</span>
@@ -2884,11 +3059,16 @@
 <span class="w">      </span><span class="nt">group</span><span class="p">:</span>
 <span class="w">        </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">group</span>
 <span class="w">        </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">primary</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The OSINT (Open Source Intelligence) object contains details related</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">to an indicator such as the indicator itself, related indicators, geolocation,</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">registrar information, subdomains, analyst commentary, and other contextual</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">information. This information can be used to further enrich a detection or finding</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">by providing decisioning support to other analysts and engineers.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">OSINT</span><span class="nv"> </span><span class="s">(Open</span><span class="nv"> </span><span class="s">Source</span><span class="nv"> </span><span class="s">Intelligence)</span><span class="nv"> </span><span class="s">object</span><span class="nv"> </span><span class="s">contains</span><span class="nv"> </span><span class="s">details</span><span class="nv"> </span><span class="s">related</span>
+<span class="w">      </span><span class="s">to</span><span class="nv"> </span><span class="s">an</span>
+
+<span class="w">      </span><span class="s">indicator</span><span class="nv"> </span><span class="s">such</span><span class="nv"> </span><span class="s">as</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">indicator</span><span class="nv"> </span><span class="s">itself,</span><span class="nv"> </span><span class="s">related</span><span class="nv"> </span><span class="s">indicators,</span><span class="nv"> </span><span class="s">geolocation,</span>
+
+<span class="w">      </span><span class="s">registrar</span><span class="nv"> </span><span class="s">information,</span><span class="nv"> </span><span class="s">subdomains,</span><span class="nv"> </span><span class="s">analyst</span><span class="nv"> </span><span class="s">commentary,</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">other</span><span class="nv"> </span><span class="s">contextual</span>
+
+<span class="w">      </span><span class="s">information.</span><span class="nv"> </span><span class="s">This</span><span class="nv"> </span><span class="s">information</span><span class="nv"> </span><span class="s">can</span><span class="nv"> </span><span class="s">be</span><span class="nv"> </span><span class="s">used</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">further</span><span class="nv"> </span><span class="s">enrich</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">detection</span><span class="nv"> </span><span class="s">or</span>
+
+<span class="w">      </span><span class="s">finding</span><span class="nv"> </span><span class="s">by</span><span class="nv"> </span><span class="s">providing</span><span class="nv"> </span><span class="s">decisioning</span><span class="nv"> </span><span class="s">support</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">other</span><span class="nv"> </span><span class="s">analysts</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">engineers.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">OSINT</span>
@@ -2919,9 +3099,14 @@
 <span class="w">      </span><span class="nt">sibling</span><span class="p">:</span>
 <span class="w">        </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">sibling</span>
 <span class="w">        </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">action</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The action taken by a control or other policy-based system leading</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">to an outcome or disposition. An unknown action may still correspond to a known</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">disposition. Refer to &lt;code&gt;disposition_id&lt;/code&gt; for the outcome of the action.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">action</span><span class="nv"> </span><span class="s">taken</span><span class="nv"> </span><span class="s">by</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">control</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">other</span><span class="nv"> </span><span class="s">policy-based</span><span class="nv"> </span><span class="s">system</span><span class="nv"> </span><span class="s">leading</span>
+<span class="w">      </span><span class="s">to</span><span class="nv"> </span><span class="s">an</span>
+
+<span class="w">      </span><span class="s">outcome</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">disposition.</span><span class="nv"> </span><span class="s">An</span><span class="nv"> </span><span class="s">unknown</span><span class="nv"> </span><span class="s">action</span><span class="nv"> </span><span class="s">may</span><span class="nv"> </span><span class="s">still</span><span class="nv"> </span><span class="s">correspond</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">known</span>
+
+<span class="w">      </span><span class="s">disposition.</span><span class="nv"> </span><span class="s">Refer</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">&lt;code&gt;disposition_id&lt;/code&gt;</span><span class="nv"> </span><span class="s">for</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">outcome</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span>
+
+<span class="w">      </span><span class="s">action.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Action ID</span>
@@ -2934,9 +3119,12 @@
 <span class="w">    </span><span class="nt">recommended</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">attacks</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">attacks</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">An array of MITRE ATT&amp;CK® objects describing identified tactics,</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">techniques &amp; sub-techniques. The objects are compatible with MITRE ATLAS™ tactics,</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">techniques &amp; sub-techniques.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'An</span><span class="nv"> </span><span class="s">array</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">MITRE</span><span class="nv"> </span><span class="s">ATT&amp;CK®</span><span class="nv"> </span><span class="s">objects</span><span class="nv"> </span><span class="s">describing</span><span class="nv"> </span><span class="s">identified</span><span class="nv"> </span><span class="s">tactics,</span>
+<span class="w">      </span><span class="s">techniques</span><span class="nv"> </span><span class="s">&amp;</span>
+
+<span class="w">      </span><span class="s">sub-techniques.</span><span class="nv"> </span><span class="s">The</span><span class="nv"> </span><span class="s">objects</span><span class="nv"> </span><span class="s">are</span><span class="nv"> </span><span class="s">compatible</span><span class="nv"> </span><span class="s">with</span><span class="nv"> </span><span class="s">MITRE</span><span class="nv"> </span><span class="s">ATLAS™</span><span class="nv"> </span><span class="s">tactics,</span>
+
+<span class="w">      </span><span class="s">techniques</span><span class="nv"> </span><span class="s">&amp;</span><span class="nv"> </span><span class="s">sub-techniques.'</span>
 <span class="w">    </span><span class="nt">notes</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">MITRE ATT&amp;CK® — https://attack.mitre.org</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">MITRE ATLAS — https://atlas.mitre.org/matrices/ATLAS</span>
@@ -2960,8 +3148,10 @@
 <span class="w">    </span><span class="nt">multivalued</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">authorizations</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">authorizations</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Provides details about an authorization, such as authorization outcome,</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">and any associated policies related to the activity/event.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'Provides</span><span class="nv"> </span><span class="s">details</span><span class="nv"> </span><span class="s">about</span><span class="nv"> </span><span class="s">an</span><span class="nv"> </span><span class="s">authorization,</span><span class="nv"> </span><span class="s">such</span><span class="nv"> </span><span class="s">as</span><span class="nv"> </span><span class="s">authorization</span><span class="nv"> </span><span class="s">outcome,</span>
+<span class="w">      </span><span class="s">and</span><span class="nv"> </span><span class="s">any</span>
+
+<span class="w">      </span><span class="s">associated</span><span class="nv"> </span><span class="s">policies</span><span class="nv"> </span><span class="s">related</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">activity/event.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Authorization Information</span>
@@ -2975,8 +3165,10 @@
 <span class="w">    </span><span class="nt">multivalued</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">disposition</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">disposition</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The disposition name, normalized to the caption of the disposition_id</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">value. In the case of 'Other', it is defined by the event source.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">disposition</span><span class="nv"> </span><span class="s">name,</span><span class="nv"> </span><span class="s">normalized</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">caption</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">disposition_id</span>
+<span class="w">      </span><span class="s">value.</span><span class="nv"> </span><span class="s">In</span>
+
+<span class="w">      </span><span class="s">the</span><span class="nv"> </span><span class="s">case</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="se">''</span><span class="s">Other</span><span class="se">''</span><span class="s">,</span><span class="nv"> </span><span class="s">it</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">defined</span><span class="nv"> </span><span class="s">by</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">event</span><span class="nv"> </span><span class="s">source.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Disposition</span>
@@ -2992,8 +3184,10 @@
 <span class="w">      </span><span class="nt">sibling</span><span class="p">:</span>
 <span class="w">        </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">sibling</span>
 <span class="w">        </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">disposition</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Describes the outcome or action taken by a security control, such</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">as access control checks, malware detections or various types of policy violations.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'Describes</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">outcome</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">action</span><span class="nv"> </span><span class="s">taken</span><span class="nv"> </span><span class="s">by</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">security</span><span class="nv"> </span><span class="s">control,</span><span class="nv"> </span><span class="s">such</span>
+<span class="w">      </span><span class="s">as</span><span class="nv"> </span><span class="s">access</span>
+
+<span class="w">      </span><span class="s">control</span><span class="nv"> </span><span class="s">checks,</span><span class="nv"> </span><span class="s">malware</span><span class="nv"> </span><span class="s">detections</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">various</span><span class="nv"> </span><span class="s">types</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">policy</span><span class="nv"> </span><span class="s">violations.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Disposition ID</span>
@@ -3006,8 +3200,10 @@
 <span class="w">    </span><span class="nt">recommended</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">firewall_rule</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">firewall_rule</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The firewall rule that pertains to the control that triggered the</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">event, if applicable.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">firewall</span><span class="nv"> </span><span class="s">rule</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">pertains</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">control</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">triggered</span><span class="nv"> </span><span class="s">the</span>
+<span class="w">      </span><span class="s">event,</span><span class="nv"> </span><span class="s">if</span>
+
+<span class="w">      </span><span class="s">applicable.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Firewall Rule</span>
@@ -3019,11 +3215,20 @@
 <span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">FirewallRule</span>
 <span class="w">  </span><span class="nt">is_alert</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">is_alert</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Indicates that the event is considered to be an alertable signal.</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">Should be set to &lt;code&gt;true&lt;/code&gt; if &lt;code&gt;disposition_id = Alert&lt;/code&gt; among</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">other dispositions, and/or &lt;code&gt;risk_level_id&lt;/code&gt; or &lt;code&gt;severity_id&lt;/code&gt;</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">of the event is elevated. Not all control events will be alertable, for example</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">if &lt;code&gt;disposition_id = Exonerated&lt;/code&gt; or &lt;code&gt;disposition_id = Allowed&lt;/code&gt;.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'Indicates</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">event</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">considered</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">be</span><span class="nv"> </span><span class="s">an</span><span class="nv"> </span><span class="s">alertable</span><span class="nv"> </span><span class="s">signal.</span>
+<span class="w">      </span><span class="s">Should</span><span class="nv"> </span><span class="s">be</span><span class="nv"> </span><span class="s">set</span>
+
+<span class="w">      </span><span class="s">to</span><span class="nv"> </span><span class="s">&lt;code&gt;true&lt;/code&gt;</span><span class="nv"> </span><span class="s">if</span><span class="nv"> </span><span class="s">&lt;code&gt;disposition_id</span><span class="nv"> </span><span class="s">=</span><span class="nv"> </span><span class="s">Alert&lt;/code&gt;</span><span class="nv"> </span><span class="s">among</span><span class="nv"> </span><span class="s">other</span>
+
+<span class="w">      </span><span class="s">dispositions,</span><span class="nv"> </span><span class="s">and/or</span><span class="nv"> </span><span class="s">&lt;code&gt;risk_level_id&lt;/code&gt;</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">&lt;code&gt;severity_id&lt;/code&gt;</span>
+<span class="w">      </span><span class="s">of</span>
+
+<span class="w">      </span><span class="s">the</span><span class="nv"> </span><span class="s">event</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">elevated.</span><span class="nv"> </span><span class="s">Not</span><span class="nv"> </span><span class="s">all</span><span class="nv"> </span><span class="s">control</span><span class="nv"> </span><span class="s">events</span><span class="nv"> </span><span class="s">will</span><span class="nv"> </span><span class="s">be</span><span class="nv"> </span><span class="s">alertable,</span><span class="nv"> </span><span class="s">for</span><span class="nv"> </span><span class="s">example</span>
+<span class="w">      </span><span class="s">if</span>
+
+<span class="w">      </span><span class="s">&lt;code&gt;disposition_id</span><span class="nv"> </span><span class="s">=</span><span class="nv"> </span><span class="s">Exonerated&lt;/code&gt;</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">&lt;code&gt;disposition_id</span><span class="nv"> </span><span class="s">=</span>
+
+<span class="w">      </span><span class="s">Allowed&lt;/code&gt;.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Alert</span>
@@ -3055,8 +3260,10 @@
 <span class="w">    </span><span class="nt">multivalued</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">malware_scan_info</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">malware_scan_info</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Describes details about the scan job that identified malware on the</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">target system.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'Describes</span><span class="nv"> </span><span class="s">details</span><span class="nv"> </span><span class="s">about</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">scan</span><span class="nv"> </span><span class="s">job</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">identified</span><span class="nv"> </span><span class="s">malware</span><span class="nv"> </span><span class="s">on</span>
+<span class="w">      </span><span class="s">the</span><span class="nv"> </span><span class="s">target</span>
+
+<span class="w">      </span><span class="s">system.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Malware Scan Info</span>
@@ -3069,9 +3276,12 @@
 <span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">MalwareScanInfo</span>
 <span class="w">  </span><span class="nt">policy</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">policy</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The policy that pertains to the control that triggered the event,</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">if applicable. For example the name of an anti-malware policy or an access control</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">policy.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">policy</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">pertains</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">control</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">triggered</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">event,</span>
+<span class="w">      </span><span class="s">if</span>
+
+<span class="w">      </span><span class="s">applicable.</span><span class="nv"> </span><span class="s">For</span><span class="nv"> </span><span class="s">example</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">name</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">an</span><span class="nv"> </span><span class="s">anti-malware</span><span class="nv"> </span><span class="s">policy</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">an</span><span class="nv"> </span><span class="s">access</span><span class="nv"> </span><span class="s">control</span>
+
+<span class="w">      </span><span class="s">policy.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Policy</span>
@@ -3195,6 +3405,7 @@
 <span class="w">          </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">permission_analysis_results</span>
 <span class="w">          </span><span class="nt">required</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'OCSF</span><span class="nv"> </span><span class="s">at_least_one:</span><span class="nv"> </span><span class="s">at</span><span class="nv"> </span><span class="s">least</span><span class="nv"> </span><span class="s">one</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">[</span><span class="se">''</span><span class="s">access_analysis_result</span><span class="se">''</span><span class="s">,</span><span class="nv"> </span><span class="se">''</span><span class="s">applications</span><span class="se">''</span><span class="s">,</span>
+
 <span class="w">    </span><span class="se">''</span><span class="s">identity_activity_metrics</span><span class="se">''</span><span class="s">,</span><span class="nv"> </span><span class="se">''</span><span class="s">permission_analysis_results</span><span class="se">''</span><span class="s">]</span><span class="nv"> </span><span class="s">must</span><span class="nv"> </span><span class="s">be</span><span class="nv"> </span><span class="s">set.'</span>
 </code></pre></div>
 </details>

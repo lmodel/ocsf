@@ -217,6 +217,15 @@
 </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="#in-subsets">
+<span class="md-ellipsis">
+      
+        In Subsets
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#aliases">
 <span class="md-ellipsis">
       
@@ -313,7 +322,8 @@
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
 <h1 id="class-observable">Class: Observable</h1>
-<p><em>The observable object is a pivot element that contains related information found in many places in the event.</em></p>
+<p><em>The observable object is a pivot element that contains related information</em></p>
+<p><em>found in many places in the event.</em></p>
 <p>URI: <a href="https://w3id.org/lmodel/ocsf/Observable">ocsf:Observable</a></p>
 <pre class="mermaid"><code> classDiagram
     class Observable
@@ -408,7 +418,7 @@
 <tr>
 <td><a href="../type_uid/">type_uid</a></td>
 <td>0..1 <br/> <a href="../Integer/">Integer</a></td>
-<td>The OCSF event type UID (<code>type_uid</code>) of the source event that this...</td>
+<td>The OCSF event type UID (<code>type_uid</code>) of the source event that this</td>
 <td>direct</td>
 </tr>
 <tr>
@@ -984,6 +994,10 @@
 </tr>
 </tbody>
 </table>
+<h2 id="in-subsets">In Subsets</h2>
+<ul>
+<li><a href="../Objects/">Objects</a></li>
+</ul>
 <h2 id="aliases">Aliases</h2>
 <ul>
 <li>Observable</li>
@@ -994,7 +1008,9 @@
 </ul>
 <h2 id="notes">Notes</h2>
 <ul>
-<li>OCSF Observables FAQ — <a href="https://github.com/ocsf/ocsf-docs/blob/main/Articles/Defining">https://github.com/ocsf/ocsf-docs/blob/main/Articles/Defining</a> and Using Observables.md</li>
+<li>OCSF Observables FAQ —
+<a href="https://github.com/ocsf/ocsf-docs/blob/main/Articles/Defining">https://github.com/ocsf/ocsf-docs/blob/main/Articles/Defining</a> and Using
+Observables.md</li>
 </ul>
 <h2 id="identifier-and-mapping-information">Identifier and Mapping Information</h2>
 <h3 id="schema-source">Schema Source</h3>
@@ -1029,11 +1045,17 @@
 <h3 id="direct">Direct</h3>
 <details>
 <div class="highlight"><pre><span></span><code><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Observable</span>
-<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The observable object is a pivot element that contains related information</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">found in many places in the event.</span>
+<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">observable</span><span class="nv"> </span><span class="s">object</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">pivot</span><span class="nv"> </span><span class="s">element</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">contains</span><span class="nv"> </span><span class="s">related</span><span class="nv"> </span><span class="s">information</span>
+
+<span class="w">  </span><span class="s">found</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">many</span><span class="nv"> </span><span class="s">places</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">event.'</span>
 <span class="nt">notes</span><span class="p">:</span>
-<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">OCSF Observables FAQ — https://github.com/ocsf/ocsf-docs/blob/main/Articles/Defining</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">and Using Observables.md</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="s">'OCSF</span><span class="nv"> </span><span class="s">Observables</span><span class="nv"> </span><span class="s">FAQ</span><span class="nv"> </span><span class="s">—</span>
+
+<span class="w">  </span><span class="s">https://github.com/ocsf/ocsf-docs/blob/main/Articles/Defining</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">Using</span>
+
+<span class="w">  </span><span class="s">Observables.md'</span>
+<span class="nt">in_subset</span><span class="p">:</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">objects</span>
 <span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="nt">see_also</span><span class="p">:</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://github.com/ocsf/ocsf-docs/blob/main/Articles/Defining%20and%20Using%20Observables.md</span>
@@ -1053,16 +1075,25 @@
 <span class="nt">slot_usage</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">event_uid</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">event_uid</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The unique identifier (&lt;code&gt;metadata.uid&lt;/code&gt;) of the source OCSF</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">event from which this observable was extracted. This field enables linking observables</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">back to their originating event data when observables are stored in a separate</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">location or system.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">unique</span><span class="nv"> </span><span class="s">identifier</span><span class="nv"> </span><span class="s">(&lt;code&gt;metadata.uid&lt;/code&gt;)</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">source</span>
+<span class="w">      </span><span class="s">OCSF</span><span class="nv"> </span><span class="s">event</span><span class="nv"> </span><span class="s">from</span>
+
+<span class="w">      </span><span class="s">which</span><span class="nv"> </span><span class="s">this</span><span class="nv"> </span><span class="s">observable</span><span class="nv"> </span><span class="s">was</span><span class="nv"> </span><span class="s">extracted.</span><span class="nv"> </span><span class="s">This</span><span class="nv"> </span><span class="s">field</span><span class="nv"> </span><span class="s">enables</span><span class="nv"> </span><span class="s">linking</span><span class="nv"> </span><span class="s">observables</span>
+
+<span class="w">      </span><span class="s">back</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">their</span><span class="nv"> </span><span class="s">originating</span><span class="nv"> </span><span class="s">event</span><span class="nv"> </span><span class="s">data</span><span class="nv"> </span><span class="s">when</span><span class="nv"> </span><span class="s">observables</span><span class="nv"> </span><span class="s">are</span><span class="nv"> </span><span class="s">stored</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">separate</span>
+
+<span class="w">      </span><span class="s">location</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">system.'</span>
 <span class="w">  </span><span class="nt">name</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">name</span>
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">full</span><span class="nv"> </span><span class="s">name</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">observable</span><span class="nv"> </span><span class="s">attribute.</span><span class="nv"> </span><span class="s">The</span><span class="nv"> </span><span class="s">&lt;code&gt;name&lt;/code&gt;</span>
-<span class="w">      </span><span class="s">is</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">pointer/reference</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">an</span><span class="nv"> </span><span class="s">attribute</span><span class="nv"> </span><span class="s">within</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">OCSF</span><span class="nv"> </span><span class="s">event</span><span class="nv"> </span><span class="s">data.</span><span class="nv"> </span><span class="s">For</span><span class="nv"> </span><span class="s">example:</span>
+<span class="w">      </span><span class="s">is</span><span class="nv"> </span><span class="s">a</span>
+
+<span class="w">      </span><span class="s">pointer/reference</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">an</span><span class="nv"> </span><span class="s">attribute</span><span class="nv"> </span><span class="s">within</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">OCSF</span><span class="nv"> </span><span class="s">event</span><span class="nv"> </span><span class="s">data.</span><span class="nv"> </span><span class="s">For</span><span class="nv"> </span><span class="s">example:</span>
+
 <span class="w">      </span><span class="s">&lt;code&gt;file.name&lt;/code&gt;.</span><span class="nv"> </span><span class="s">Array</span><span class="nv"> </span><span class="s">attributes</span><span class="nv"> </span><span class="s">may</span><span class="nv"> </span><span class="s">be</span><span class="nv"> </span><span class="s">represented</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">one</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">three</span>
+
 <span class="w">      </span><span class="s">ways.</span><span class="nv"> </span><span class="s">For</span><span class="nv"> </span><span class="s">example:</span><span class="nv"> </span><span class="s">&lt;code&gt;resources.uid&lt;/code&gt;,</span><span class="nv"> </span><span class="s">&lt;code&gt;resources[].uid&lt;/code&gt;,</span>
+
 <span class="w">      </span><span class="s">&lt;code&gt;resources[0].uid&lt;/code&gt;.'</span>
 <span class="w">    </span><span class="nt">recommended</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">type</span><span class="p">:</span>
@@ -1076,26 +1107,41 @@
 <span class="w">  </span><span class="nt">type_uid</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">type_uid</span>
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">OCSF</span><span class="nv"> </span><span class="s">event</span><span class="nv"> </span><span class="s">type</span><span class="nv"> </span><span class="s">UID</span><span class="nv"> </span><span class="s">(&lt;code&gt;type_uid&lt;/code&gt;)</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">source</span><span class="nv"> </span><span class="s">event</span>
-<span class="w">      </span><span class="s">that</span><span class="nv"> </span><span class="s">this</span><span class="nv"> </span><span class="s">observable</span><span class="nv"> </span><span class="s">was</span><span class="nv"> </span><span class="s">extracted</span><span class="nv"> </span><span class="s">from.</span><span class="nv"> </span><span class="s">This</span><span class="nv"> </span><span class="s">field</span><span class="nv"> </span><span class="s">enables</span><span class="nv"> </span><span class="s">filtering</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">categorizing</span>
+<span class="w">      </span><span class="s">that</span><span class="nv"> </span><span class="s">this</span>
+
+<span class="w">      </span><span class="s">observable</span><span class="nv"> </span><span class="s">was</span><span class="nv"> </span><span class="s">extracted</span><span class="nv"> </span><span class="s">from.</span><span class="nv"> </span><span class="s">This</span><span class="nv"> </span><span class="s">field</span><span class="nv"> </span><span class="s">enables</span><span class="nv"> </span><span class="s">filtering</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">categorizing</span>
+
 <span class="w">      </span><span class="s">observables</span><span class="nv"> </span><span class="s">by</span><span class="nv"> </span><span class="s">their</span><span class="nv"> </span><span class="s">originating</span><span class="nv"> </span><span class="s">event</span><span class="nv"> </span><span class="s">type.</span><span class="nv"> </span><span class="s">For</span><span class="nv"> </span><span class="s">example:</span><span class="nv"> </span><span class="s">&lt;code&gt;300101&lt;/code&gt;</span>
+
 <span class="w">      </span><span class="s">for</span><span class="nv"> </span><span class="s">Network</span><span class="nv"> </span><span class="s">Activity</span><span class="nv"> </span><span class="s">(class_uid</span><span class="nv"> </span><span class="s">3001)</span><span class="nv"> </span><span class="s">with</span><span class="nv"> </span><span class="s">activity_id</span><span class="nv"> </span><span class="s">1.'</span>
 <span class="w">  </span><span class="nt">value</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">value</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The value associated with the observable attribute. The meaning of</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">the value depends on the observable type.&lt;br/&gt;If the &lt;code&gt;name&lt;/code&gt; refers</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">to a scalar attribute, then the &lt;code&gt;value&lt;/code&gt; is the value of the attribute.&lt;br/&gt;If</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">the &lt;code&gt;name&lt;/code&gt; refers to an object attribute, then the &lt;code&gt;value&lt;/code&gt;</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">is not populated.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">value</span><span class="nv"> </span><span class="s">associated</span><span class="nv"> </span><span class="s">with</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">observable</span><span class="nv"> </span><span class="s">attribute.</span><span class="nv"> </span><span class="s">The</span><span class="nv"> </span><span class="s">meaning</span>
+<span class="w">      </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">value</span>
+
+<span class="w">      </span><span class="s">depends</span><span class="nv"> </span><span class="s">on</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">observable</span><span class="nv"> </span><span class="s">type.&lt;br/&gt;If</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">&lt;code&gt;name&lt;/code&gt;</span><span class="nv"> </span><span class="s">refers</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">scalar</span>
+
+<span class="w">      </span><span class="s">attribute,</span><span class="nv"> </span><span class="s">then</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">&lt;code&gt;value&lt;/code&gt;</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">value</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">attribute.&lt;br/&gt;If</span>
+
+<span class="w">      </span><span class="s">the</span><span class="nv"> </span><span class="s">&lt;code&gt;name&lt;/code&gt;</span><span class="nv"> </span><span class="s">refers</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">an</span><span class="nv"> </span><span class="s">object</span><span class="nv"> </span><span class="s">attribute,</span><span class="nv"> </span><span class="s">then</span><span class="nv"> </span><span class="s">the</span>
+
+<span class="w">      </span><span class="s">&lt;code&gt;value&lt;/code&gt;</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">not</span><span class="nv"> </span><span class="s">populated.'</span>
 </code></pre></div>
 </details>
 <h3 id="induced">Induced</h3>
 <details>
 <div class="highlight"><pre><span></span><code><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Observable</span>
-<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The observable object is a pivot element that contains related information</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">found in many places in the event.</span>
+<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">observable</span><span class="nv"> </span><span class="s">object</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">pivot</span><span class="nv"> </span><span class="s">element</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">contains</span><span class="nv"> </span><span class="s">related</span><span class="nv"> </span><span class="s">information</span>
+
+<span class="w">  </span><span class="s">found</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">many</span><span class="nv"> </span><span class="s">places</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">event.'</span>
 <span class="nt">notes</span><span class="p">:</span>
-<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">OCSF Observables FAQ — https://github.com/ocsf/ocsf-docs/blob/main/Articles/Defining</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">and Using Observables.md</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="s">'OCSF</span><span class="nv"> </span><span class="s">Observables</span><span class="nv"> </span><span class="s">FAQ</span><span class="nv"> </span><span class="s">—</span>
+
+<span class="w">  </span><span class="s">https://github.com/ocsf/ocsf-docs/blob/main/Articles/Defining</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">Using</span>
+
+<span class="w">  </span><span class="s">Observables.md'</span>
+<span class="nt">in_subset</span><span class="p">:</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">objects</span>
 <span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="nt">see_also</span><span class="p">:</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://github.com/ocsf/ocsf-docs/blob/main/Articles/Defining%20and%20Using%20Observables.md</span>
@@ -1107,16 +1153,25 @@
 <span class="nt">slot_usage</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">event_uid</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">event_uid</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The unique identifier (&lt;code&gt;metadata.uid&lt;/code&gt;) of the source OCSF</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">event from which this observable was extracted. This field enables linking observables</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">back to their originating event data when observables are stored in a separate</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">location or system.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">unique</span><span class="nv"> </span><span class="s">identifier</span><span class="nv"> </span><span class="s">(&lt;code&gt;metadata.uid&lt;/code&gt;)</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">source</span>
+<span class="w">      </span><span class="s">OCSF</span><span class="nv"> </span><span class="s">event</span><span class="nv"> </span><span class="s">from</span>
+
+<span class="w">      </span><span class="s">which</span><span class="nv"> </span><span class="s">this</span><span class="nv"> </span><span class="s">observable</span><span class="nv"> </span><span class="s">was</span><span class="nv"> </span><span class="s">extracted.</span><span class="nv"> </span><span class="s">This</span><span class="nv"> </span><span class="s">field</span><span class="nv"> </span><span class="s">enables</span><span class="nv"> </span><span class="s">linking</span><span class="nv"> </span><span class="s">observables</span>
+
+<span class="w">      </span><span class="s">back</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">their</span><span class="nv"> </span><span class="s">originating</span><span class="nv"> </span><span class="s">event</span><span class="nv"> </span><span class="s">data</span><span class="nv"> </span><span class="s">when</span><span class="nv"> </span><span class="s">observables</span><span class="nv"> </span><span class="s">are</span><span class="nv"> </span><span class="s">stored</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">separate</span>
+
+<span class="w">      </span><span class="s">location</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">system.'</span>
 <span class="w">  </span><span class="nt">name</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">name</span>
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">full</span><span class="nv"> </span><span class="s">name</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">observable</span><span class="nv"> </span><span class="s">attribute.</span><span class="nv"> </span><span class="s">The</span><span class="nv"> </span><span class="s">&lt;code&gt;name&lt;/code&gt;</span>
-<span class="w">      </span><span class="s">is</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">pointer/reference</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">an</span><span class="nv"> </span><span class="s">attribute</span><span class="nv"> </span><span class="s">within</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">OCSF</span><span class="nv"> </span><span class="s">event</span><span class="nv"> </span><span class="s">data.</span><span class="nv"> </span><span class="s">For</span><span class="nv"> </span><span class="s">example:</span>
+<span class="w">      </span><span class="s">is</span><span class="nv"> </span><span class="s">a</span>
+
+<span class="w">      </span><span class="s">pointer/reference</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">an</span><span class="nv"> </span><span class="s">attribute</span><span class="nv"> </span><span class="s">within</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">OCSF</span><span class="nv"> </span><span class="s">event</span><span class="nv"> </span><span class="s">data.</span><span class="nv"> </span><span class="s">For</span><span class="nv"> </span><span class="s">example:</span>
+
 <span class="w">      </span><span class="s">&lt;code&gt;file.name&lt;/code&gt;.</span><span class="nv"> </span><span class="s">Array</span><span class="nv"> </span><span class="s">attributes</span><span class="nv"> </span><span class="s">may</span><span class="nv"> </span><span class="s">be</span><span class="nv"> </span><span class="s">represented</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">one</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">three</span>
+
 <span class="w">      </span><span class="s">ways.</span><span class="nv"> </span><span class="s">For</span><span class="nv"> </span><span class="s">example:</span><span class="nv"> </span><span class="s">&lt;code&gt;resources.uid&lt;/code&gt;,</span><span class="nv"> </span><span class="s">&lt;code&gt;resources[].uid&lt;/code&gt;,</span>
+
 <span class="w">      </span><span class="s">&lt;code&gt;resources[0].uid&lt;/code&gt;.'</span>
 <span class="w">    </span><span class="nt">recommended</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">type</span><span class="p">:</span>
@@ -1130,23 +1185,36 @@
 <span class="w">  </span><span class="nt">type_uid</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">type_uid</span>
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">OCSF</span><span class="nv"> </span><span class="s">event</span><span class="nv"> </span><span class="s">type</span><span class="nv"> </span><span class="s">UID</span><span class="nv"> </span><span class="s">(&lt;code&gt;type_uid&lt;/code&gt;)</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">source</span><span class="nv"> </span><span class="s">event</span>
-<span class="w">      </span><span class="s">that</span><span class="nv"> </span><span class="s">this</span><span class="nv"> </span><span class="s">observable</span><span class="nv"> </span><span class="s">was</span><span class="nv"> </span><span class="s">extracted</span><span class="nv"> </span><span class="s">from.</span><span class="nv"> </span><span class="s">This</span><span class="nv"> </span><span class="s">field</span><span class="nv"> </span><span class="s">enables</span><span class="nv"> </span><span class="s">filtering</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">categorizing</span>
+<span class="w">      </span><span class="s">that</span><span class="nv"> </span><span class="s">this</span>
+
+<span class="w">      </span><span class="s">observable</span><span class="nv"> </span><span class="s">was</span><span class="nv"> </span><span class="s">extracted</span><span class="nv"> </span><span class="s">from.</span><span class="nv"> </span><span class="s">This</span><span class="nv"> </span><span class="s">field</span><span class="nv"> </span><span class="s">enables</span><span class="nv"> </span><span class="s">filtering</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">categorizing</span>
+
 <span class="w">      </span><span class="s">observables</span><span class="nv"> </span><span class="s">by</span><span class="nv"> </span><span class="s">their</span><span class="nv"> </span><span class="s">originating</span><span class="nv"> </span><span class="s">event</span><span class="nv"> </span><span class="s">type.</span><span class="nv"> </span><span class="s">For</span><span class="nv"> </span><span class="s">example:</span><span class="nv"> </span><span class="s">&lt;code&gt;300101&lt;/code&gt;</span>
+
 <span class="w">      </span><span class="s">for</span><span class="nv"> </span><span class="s">Network</span><span class="nv"> </span><span class="s">Activity</span><span class="nv"> </span><span class="s">(class_uid</span><span class="nv"> </span><span class="s">3001)</span><span class="nv"> </span><span class="s">with</span><span class="nv"> </span><span class="s">activity_id</span><span class="nv"> </span><span class="s">1.'</span>
 <span class="w">  </span><span class="nt">value</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">value</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The value associated with the observable attribute. The meaning of</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">the value depends on the observable type.&lt;br/&gt;If the &lt;code&gt;name&lt;/code&gt; refers</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">to a scalar attribute, then the &lt;code&gt;value&lt;/code&gt; is the value of the attribute.&lt;br/&gt;If</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">the &lt;code&gt;name&lt;/code&gt; refers to an object attribute, then the &lt;code&gt;value&lt;/code&gt;</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">is not populated.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">value</span><span class="nv"> </span><span class="s">associated</span><span class="nv"> </span><span class="s">with</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">observable</span><span class="nv"> </span><span class="s">attribute.</span><span class="nv"> </span><span class="s">The</span><span class="nv"> </span><span class="s">meaning</span>
+<span class="w">      </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">value</span>
+
+<span class="w">      </span><span class="s">depends</span><span class="nv"> </span><span class="s">on</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">observable</span><span class="nv"> </span><span class="s">type.&lt;br/&gt;If</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">&lt;code&gt;name&lt;/code&gt;</span><span class="nv"> </span><span class="s">refers</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">scalar</span>
+
+<span class="w">      </span><span class="s">attribute,</span><span class="nv"> </span><span class="s">then</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">&lt;code&gt;value&lt;/code&gt;</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">value</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">attribute.&lt;br/&gt;If</span>
+
+<span class="w">      </span><span class="s">the</span><span class="nv"> </span><span class="s">&lt;code&gt;name&lt;/code&gt;</span><span class="nv"> </span><span class="s">refers</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">an</span><span class="nv"> </span><span class="s">object</span><span class="nv"> </span><span class="s">attribute,</span><span class="nv"> </span><span class="s">then</span><span class="nv"> </span><span class="s">the</span>
+
+<span class="w">      </span><span class="s">&lt;code&gt;value&lt;/code&gt;</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">not</span><span class="nv"> </span><span class="s">populated.'</span>
 <span class="nt">attributes</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">event_uid</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">event_uid</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The unique identifier (&lt;code&gt;metadata.uid&lt;/code&gt;) of the source OCSF</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">event from which this observable was extracted. This field enables linking observables</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">back to their originating event data when observables are stored in a separate</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">location or system.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">unique</span><span class="nv"> </span><span class="s">identifier</span><span class="nv"> </span><span class="s">(&lt;code&gt;metadata.uid&lt;/code&gt;)</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">source</span>
+<span class="w">      </span><span class="s">OCSF</span><span class="nv"> </span><span class="s">event</span><span class="nv"> </span><span class="s">from</span>
+
+<span class="w">      </span><span class="s">which</span><span class="nv"> </span><span class="s">this</span><span class="nv"> </span><span class="s">observable</span><span class="nv"> </span><span class="s">was</span><span class="nv"> </span><span class="s">extracted.</span><span class="nv"> </span><span class="s">This</span><span class="nv"> </span><span class="s">field</span><span class="nv"> </span><span class="s">enables</span><span class="nv"> </span><span class="s">linking</span><span class="nv"> </span><span class="s">observables</span>
+
+<span class="w">      </span><span class="s">back</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">their</span><span class="nv"> </span><span class="s">originating</span><span class="nv"> </span><span class="s">event</span><span class="nv"> </span><span class="s">data</span><span class="nv"> </span><span class="s">when</span><span class="nv"> </span><span class="s">observables</span><span class="nv"> </span><span class="s">are</span><span class="nv"> </span><span class="s">stored</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">separate</span>
+
+<span class="w">      </span><span class="s">location</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">system.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Event UID</span>
@@ -1160,9 +1228,14 @@
 <span class="w">  </span><span class="nt">name</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">name</span>
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">full</span><span class="nv"> </span><span class="s">name</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">observable</span><span class="nv"> </span><span class="s">attribute.</span><span class="nv"> </span><span class="s">The</span><span class="nv"> </span><span class="s">&lt;code&gt;name&lt;/code&gt;</span>
-<span class="w">      </span><span class="s">is</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">pointer/reference</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">an</span><span class="nv"> </span><span class="s">attribute</span><span class="nv"> </span><span class="s">within</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">OCSF</span><span class="nv"> </span><span class="s">event</span><span class="nv"> </span><span class="s">data.</span><span class="nv"> </span><span class="s">For</span><span class="nv"> </span><span class="s">example:</span>
+<span class="w">      </span><span class="s">is</span><span class="nv"> </span><span class="s">a</span>
+
+<span class="w">      </span><span class="s">pointer/reference</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">an</span><span class="nv"> </span><span class="s">attribute</span><span class="nv"> </span><span class="s">within</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">OCSF</span><span class="nv"> </span><span class="s">event</span><span class="nv"> </span><span class="s">data.</span><span class="nv"> </span><span class="s">For</span><span class="nv"> </span><span class="s">example:</span>
+
 <span class="w">      </span><span class="s">&lt;code&gt;file.name&lt;/code&gt;.</span><span class="nv"> </span><span class="s">Array</span><span class="nv"> </span><span class="s">attributes</span><span class="nv"> </span><span class="s">may</span><span class="nv"> </span><span class="s">be</span><span class="nv"> </span><span class="s">represented</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">one</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">three</span>
+
 <span class="w">      </span><span class="s">ways.</span><span class="nv"> </span><span class="s">For</span><span class="nv"> </span><span class="s">example:</span><span class="nv"> </span><span class="s">&lt;code&gt;resources.uid&lt;/code&gt;,</span><span class="nv"> </span><span class="s">&lt;code&gt;resources[].uid&lt;/code&gt;,</span>
+
 <span class="w">      </span><span class="s">&lt;code&gt;resources[0].uid&lt;/code&gt;.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
@@ -1408,8 +1481,12 @@
 <span class="w">        </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">sibling</span>
 <span class="w">        </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">type_name</span>
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">OCSF</span><span class="nv"> </span><span class="s">event</span><span class="nv"> </span><span class="s">type</span><span class="nv"> </span><span class="s">UID</span><span class="nv"> </span><span class="s">(&lt;code&gt;type_uid&lt;/code&gt;)</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">source</span><span class="nv"> </span><span class="s">event</span>
-<span class="w">      </span><span class="s">that</span><span class="nv"> </span><span class="s">this</span><span class="nv"> </span><span class="s">observable</span><span class="nv"> </span><span class="s">was</span><span class="nv"> </span><span class="s">extracted</span><span class="nv"> </span><span class="s">from.</span><span class="nv"> </span><span class="s">This</span><span class="nv"> </span><span class="s">field</span><span class="nv"> </span><span class="s">enables</span><span class="nv"> </span><span class="s">filtering</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">categorizing</span>
+<span class="w">      </span><span class="s">that</span><span class="nv"> </span><span class="s">this</span>
+
+<span class="w">      </span><span class="s">observable</span><span class="nv"> </span><span class="s">was</span><span class="nv"> </span><span class="s">extracted</span><span class="nv"> </span><span class="s">from.</span><span class="nv"> </span><span class="s">This</span><span class="nv"> </span><span class="s">field</span><span class="nv"> </span><span class="s">enables</span><span class="nv"> </span><span class="s">filtering</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">categorizing</span>
+
 <span class="w">      </span><span class="s">observables</span><span class="nv"> </span><span class="s">by</span><span class="nv"> </span><span class="s">their</span><span class="nv"> </span><span class="s">originating</span><span class="nv"> </span><span class="s">event</span><span class="nv"> </span><span class="s">type.</span><span class="nv"> </span><span class="s">For</span><span class="nv"> </span><span class="s">example:</span><span class="nv"> </span><span class="s">&lt;code&gt;300101&lt;/code&gt;</span>
+
 <span class="w">      </span><span class="s">for</span><span class="nv"> </span><span class="s">Network</span><span class="nv"> </span><span class="s">Activity</span><span class="nv"> </span><span class="s">(class_uid</span><span class="nv"> </span><span class="s">3001)</span><span class="nv"> </span><span class="s">with</span><span class="nv"> </span><span class="s">activity_id</span><span class="nv"> </span><span class="s">1.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
@@ -1424,11 +1501,16 @@
 <span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">integer</span>
 <span class="w">  </span><span class="nt">value</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">value</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The value associated with the observable attribute. The meaning of</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">the value depends on the observable type.&lt;br/&gt;If the &lt;code&gt;name&lt;/code&gt; refers</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">to a scalar attribute, then the &lt;code&gt;value&lt;/code&gt; is the value of the attribute.&lt;br/&gt;If</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">the &lt;code&gt;name&lt;/code&gt; refers to an object attribute, then the &lt;code&gt;value&lt;/code&gt;</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">is not populated.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">value</span><span class="nv"> </span><span class="s">associated</span><span class="nv"> </span><span class="s">with</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">observable</span><span class="nv"> </span><span class="s">attribute.</span><span class="nv"> </span><span class="s">The</span><span class="nv"> </span><span class="s">meaning</span>
+<span class="w">      </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">value</span>
+
+<span class="w">      </span><span class="s">depends</span><span class="nv"> </span><span class="s">on</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">observable</span><span class="nv"> </span><span class="s">type.&lt;br/&gt;If</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">&lt;code&gt;name&lt;/code&gt;</span><span class="nv"> </span><span class="s">refers</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">scalar</span>
+
+<span class="w">      </span><span class="s">attribute,</span><span class="nv"> </span><span class="s">then</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">&lt;code&gt;value&lt;/code&gt;</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">value</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">attribute.&lt;br/&gt;If</span>
+
+<span class="w">      </span><span class="s">the</span><span class="nv"> </span><span class="s">&lt;code&gt;name&lt;/code&gt;</span><span class="nv"> </span><span class="s">refers</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">an</span><span class="nv"> </span><span class="s">object</span><span class="nv"> </span><span class="s">attribute,</span><span class="nv"> </span><span class="s">then</span><span class="nv"> </span><span class="s">the</span>
+
+<span class="w">      </span><span class="s">&lt;code&gt;value&lt;/code&gt;</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">not</span><span class="nv"> </span><span class="s">populated.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Value</span>

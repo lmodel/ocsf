@@ -447,7 +447,8 @@
 
 
 <h1 id="enum-dispositionidenum">Enum: DispositionIdEnum</h1>
-<p><em>Describes the outcome or action taken by a security control, such as access control checks, malware detections or various types of policy violations.</em></p>
+<p><em>Describes the outcome or action taken by a security control, such as access</em></p>
+<p><em>control checks, malware detections or various types of policy violations.</em></p>
 <p>URI: <a href="https://w3id.org/lmodel/ocsf/DispositionIdEnum">ocsf:DispositionIdEnum</a></p>
 <h2 id="permissible-values">Permissible Values</h2>
 <table>
@@ -492,7 +493,7 @@
 <tr>
 <td>DROPPED</td>
 <td>None</td>
-<td>The request was detected as a threat and resulted in the connection being dro...</td>
+<td>The request was detected as a threat and resulted in the connection being</td>
 </tr>
 <tr>
 <td>CUSTOM_ACTION</td>
@@ -532,7 +533,7 @@
 <tr>
 <td>DELAYED</td>
 <td>None</td>
-<td>An operation was delayed, for example if a restart was required to finish the...</td>
+<td>An operation was delayed, for example if a restart was required to finish the</td>
 </tr>
 <tr>
 <td>DETECTED</td>
@@ -562,12 +563,12 @@
 <tr>
 <td>COUNT</td>
 <td>None</td>
-<td>Counted the request or activity but did not determine whether to allow it or ...</td>
+<td>Counted the request or activity but did not determine whether to allow it or</td>
 </tr>
 <tr>
 <td>RESET</td>
 <td>None</td>
-<td>The request was detected as a threat and resulted in the connection being res...</td>
+<td>The request was detected as a threat and resulted in the connection being</td>
 </tr>
 <tr>
 <td>CAPTCHA</td>
@@ -577,7 +578,7 @@
 <tr>
 <td>CHALLENGE</td>
 <td>None</td>
-<td>Ran a silent challenge that required the client session to verify that it's a...</td>
+<td>Ran a silent challenge that required the client session to verify that it's a</td>
 </tr>
 <tr>
 <td>ACCESS_REVOKED</td>
@@ -592,7 +593,7 @@
 <tr>
 <td>UNAUTHORIZED</td>
 <td>None</td>
-<td>An attempt to access a resource was denied due to an authorization check that...</td>
+<td>An attempt to access a resource was denied due to an authorization check that</td>
 </tr>
 <tr>
 <td>ERROR</td>
@@ -617,7 +618,7 @@
 <tbody>
 <tr>
 <td><a href="../disposition_id/">disposition_id</a></td>
-<td>Describes the outcome or action taken by a security control, such as access c...</td>
+<td>Describes the outcome or action taken by a security control, such as access</td>
 </tr>
 </tbody>
 </table>
@@ -629,8 +630,10 @@
 <h2 id="linkml-source">LinkML Source</h2>
 <details>
 <div class="highlight"><pre><span></span><code><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">DispositionIdEnum</span>
-<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Describes the outcome or action taken by a security control, such as</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">access control checks, malware detections or various types of policy violations.</span>
+<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;Describes</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">outcome</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">action</span><span class="nv"> </span><span class="s">taken</span><span class="nv"> </span><span class="s">by</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">security</span><span class="nv"> </span><span class="s">control,</span><span class="nv"> </span><span class="s">such</span><span class="nv"> </span><span class="s">as</span>
+<span class="w">  </span><span class="s">access</span>
+
+<span class="w">  </span><span class="s">control</span><span class="nv"> </span><span class="s">checks,</span><span class="nv"> </span><span class="s">malware</span><span class="nv"> </span><span class="s">detections</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">various</span><span class="nv"> </span><span class="s">types</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">policy</span><span class="nv"> </span><span class="s">violations.&#39;</span>
 <span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="nt">rank</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1000</span>
 <span class="nt">permissible_values</span><span class="p">:</span>
@@ -696,8 +699,10 @@
 <span class="w">        </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Deleted</span>
 <span class="w">  </span><span class="nt">DROPPED</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">text</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">DROPPED</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The request was detected as a threat and resulted in the connection</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">being dropped.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;The</span><span class="nv"> </span><span class="s">request</span><span class="nv"> </span><span class="s">was</span><span class="nv"> </span><span class="s">detected</span><span class="nv"> </span><span class="s">as</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">threat</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">resulted</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">connection</span>
+<span class="w">      </span><span class="s">being</span>
+
+<span class="w">      </span><span class="s">dropped.&#39;</span>
 <span class="w">    </span><span class="nt">annotations</span><span class="p">:</span>
 <span class="w">      </span><span class="nt">ocsf_uid</span><span class="p">:</span>
 <span class="w">        </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ocsf_uid</span>
@@ -707,8 +712,10 @@
 <span class="w">        </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Dropped</span>
 <span class="w">  </span><span class="nt">CUSTOM_ACTION</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">text</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">CUSTOM_ACTION</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">A custom action was executed such as running of a command script.</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">Use the &lt;code&gt;message&lt;/code&gt; attribute of the base class for details.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;A</span><span class="nv"> </span><span class="s">custom</span><span class="nv"> </span><span class="s">action</span><span class="nv"> </span><span class="s">was</span><span class="nv"> </span><span class="s">executed</span><span class="nv"> </span><span class="s">such</span><span class="nv"> </span><span class="s">as</span><span class="nv"> </span><span class="s">running</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">command</span><span class="nv"> </span><span class="s">script.</span>
+<span class="w">      </span><span class="s">Use</span><span class="nv"> </span><span class="s">the</span>
+
+<span class="w">      </span><span class="s">&lt;code&gt;message&lt;/code&gt;</span><span class="nv"> </span><span class="s">attribute</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">base</span><span class="nv"> </span><span class="s">class</span><span class="nv"> </span><span class="s">for</span><span class="nv"> </span><span class="s">details.&#39;</span>
 <span class="w">    </span><span class="nt">annotations</span><span class="p">:</span>
 <span class="w">      </span><span class="nt">ocsf_uid</span><span class="p">:</span>
 <span class="w">        </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ocsf_uid</span>
@@ -718,8 +725,10 @@
 <span class="w">        </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Custom Action</span>
 <span class="w">  </span><span class="nt">APPROVED</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">text</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">APPROVED</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">A request or submission was approved. For example, when a form was</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">properly filled out and submitted. This is distinct from &lt;code&gt;1&lt;/code&gt; &#39;Allowed&#39;.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;A</span><span class="nv"> </span><span class="s">request</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">submission</span><span class="nv"> </span><span class="s">was</span><span class="nv"> </span><span class="s">approved.</span><span class="nv"> </span><span class="s">For</span><span class="nv"> </span><span class="s">example,</span><span class="nv"> </span><span class="s">when</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">form</span><span class="nv"> </span><span class="s">was</span>
+<span class="w">      </span><span class="s">properly</span>
+
+<span class="w">      </span><span class="s">filled</span><span class="nv"> </span><span class="s">out</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">submitted.</span><span class="nv"> </span><span class="s">This</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">distinct</span><span class="nv"> </span><span class="s">from</span><span class="nv"> </span><span class="s">&lt;code&gt;1&lt;/code&gt;</span><span class="nv"> </span><span class="se">&#39;&#39;</span><span class="s">Allowed</span><span class="se">&#39;&#39;</span><span class="s">.&#39;</span>
 <span class="w">    </span><span class="nt">annotations</span><span class="p">:</span>
 <span class="w">      </span><span class="nt">ocsf_uid</span><span class="p">:</span>
 <span class="w">        </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ocsf_uid</span>
@@ -781,8 +790,10 @@
 <span class="w">        </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Uncorrected</span>
 <span class="w">  </span><span class="nt">DELAYED</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">text</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">DELAYED</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">An operation was delayed, for example if a restart was required to</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">finish the operation.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;An</span><span class="nv"> </span><span class="s">operation</span><span class="nv"> </span><span class="s">was</span><span class="nv"> </span><span class="s">delayed,</span><span class="nv"> </span><span class="s">for</span><span class="nv"> </span><span class="s">example</span><span class="nv"> </span><span class="s">if</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">restart</span><span class="nv"> </span><span class="s">was</span><span class="nv"> </span><span class="s">required</span>
+<span class="w">      </span><span class="s">to</span><span class="nv"> </span><span class="s">finish</span><span class="nv"> </span><span class="s">the</span>
+
+<span class="w">      </span><span class="s">operation.&#39;</span>
 <span class="w">    </span><span class="nt">annotations</span><span class="p">:</span>
 <span class="w">      </span><span class="nt">ocsf_uid</span><span class="p">:</span>
 <span class="w">        </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ocsf_uid</span>
@@ -833,8 +844,10 @@
 <span class="w">        </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Tagged</span>
 <span class="w">  </span><span class="nt">ALERT</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">text</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ALERT</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The request or activity was detected as a threat and resulted in</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">a notification but request was not blocked.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;The</span><span class="nv"> </span><span class="s">request</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">activity</span><span class="nv"> </span><span class="s">was</span><span class="nv"> </span><span class="s">detected</span><span class="nv"> </span><span class="s">as</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">threat</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">resulted</span><span class="nv"> </span><span class="s">in</span>
+<span class="w">      </span><span class="s">a</span><span class="nv"> </span><span class="s">notification</span>
+
+<span class="w">      </span><span class="s">but</span><span class="nv"> </span><span class="s">request</span><span class="nv"> </span><span class="s">was</span><span class="nv"> </span><span class="s">not</span><span class="nv"> </span><span class="s">blocked.&#39;</span>
 <span class="w">    </span><span class="nt">annotations</span><span class="p">:</span>
 <span class="w">      </span><span class="nt">ocsf_uid</span><span class="p">:</span>
 <span class="w">        </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ocsf_uid</span>
@@ -844,8 +857,10 @@
 <span class="w">        </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Alert</span>
 <span class="w">  </span><span class="nt">COUNT</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">text</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">COUNT</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Counted the request or activity but did not determine whether to</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">allow it or block it.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;Counted</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">request</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">activity</span><span class="nv"> </span><span class="s">but</span><span class="nv"> </span><span class="s">did</span><span class="nv"> </span><span class="s">not</span><span class="nv"> </span><span class="s">determine</span><span class="nv"> </span><span class="s">whether</span><span class="nv"> </span><span class="s">to</span>
+<span class="w">      </span><span class="s">allow</span><span class="nv"> </span><span class="s">it</span><span class="nv"> </span><span class="s">or</span>
+
+<span class="w">      </span><span class="s">block</span><span class="nv"> </span><span class="s">it.&#39;</span>
 <span class="w">    </span><span class="nt">annotations</span><span class="p">:</span>
 <span class="w">      </span><span class="nt">ocsf_uid</span><span class="p">:</span>
 <span class="w">        </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ocsf_uid</span>
@@ -855,8 +870,10 @@
 <span class="w">        </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Count</span>
 <span class="w">  </span><span class="nt">RESET</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">text</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">RESET</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The request was detected as a threat and resulted in the connection</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">being reset.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;The</span><span class="nv"> </span><span class="s">request</span><span class="nv"> </span><span class="s">was</span><span class="nv"> </span><span class="s">detected</span><span class="nv"> </span><span class="s">as</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">threat</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">resulted</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">connection</span>
+<span class="w">      </span><span class="s">being</span>
+
+<span class="w">      </span><span class="s">reset.&#39;</span>
 <span class="w">    </span><span class="nt">annotations</span><span class="p">:</span>
 <span class="w">      </span><span class="nt">ocsf_uid</span><span class="p">:</span>
 <span class="w">        </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ocsf_uid</span>
@@ -866,8 +883,10 @@
 <span class="w">        </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Reset</span>
 <span class="w">  </span><span class="nt">CAPTCHA</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">text</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">CAPTCHA</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Required the end user to solve a CAPTCHA puzzle to prove that a human</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">being is sending the request.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;Required</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">end</span><span class="nv"> </span><span class="s">user</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">solve</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">CAPTCHA</span><span class="nv"> </span><span class="s">puzzle</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">prove</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">a</span>
+<span class="w">      </span><span class="s">human</span><span class="nv"> </span><span class="s">being</span><span class="nv"> </span><span class="s">is</span>
+
+<span class="w">      </span><span class="s">sending</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">request.&#39;</span>
 <span class="w">    </span><span class="nt">annotations</span><span class="p">:</span>
 <span class="w">      </span><span class="nt">ocsf_uid</span><span class="p">:</span>
 <span class="w">        </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ocsf_uid</span>
@@ -877,8 +896,10 @@
 <span class="w">        </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Captcha</span>
 <span class="w">  </span><span class="nt">CHALLENGE</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">text</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">CHALLENGE</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Ran a silent challenge that required the client session to verify</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">that it&#39;s a browser, and not a bot.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;Ran</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">silent</span><span class="nv"> </span><span class="s">challenge</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">required</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">client</span><span class="nv"> </span><span class="s">session</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">verify</span>
+<span class="w">      </span><span class="s">that</span><span class="nv"> </span><span class="s">it</span><span class="se">&#39;&#39;</span><span class="s">s</span><span class="nv"> </span><span class="s">a</span>
+
+<span class="w">      </span><span class="s">browser,</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">not</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">bot.&#39;</span>
 <span class="w">    </span><span class="nt">annotations</span><span class="p">:</span>
 <span class="w">      </span><span class="nt">ocsf_uid</span><span class="p">:</span>
 <span class="w">        </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ocsf_uid</span>
@@ -889,8 +910,11 @@
 <span class="w">  </span><span class="nt">ACCESS_REVOKED</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">text</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ACCESS_REVOKED</span>
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;The</span><span class="nv"> </span><span class="s">requestor</span><span class="se">&#39;&#39;</span><span class="s">s</span><span class="nv"> </span><span class="s">access</span><span class="nv"> </span><span class="s">has</span><span class="nv"> </span><span class="s">been</span><span class="nv"> </span><span class="s">revoked</span><span class="nv"> </span><span class="s">due</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">security</span><span class="nv"> </span><span class="s">policy</span>
-<span class="w">      </span><span class="s">enforcements.</span><span class="nv"> </span><span class="s">Note:</span><span class="nv"> </span><span class="s">use</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">&lt;code&gt;Host&lt;/code&gt;</span><span class="nv"> </span><span class="s">profile</span><span class="nv"> </span><span class="s">if</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">&lt;code&gt;User&lt;/code&gt;</span>
-<span class="w">      </span><span class="s">or</span><span class="nv"> </span><span class="s">&lt;code&gt;Actor&lt;/code&gt;</span><span class="nv"> </span><span class="s">requestor</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">not</span><span class="nv"> </span><span class="s">present</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">event</span><span class="nv"> </span><span class="s">class.&#39;</span>
+<span class="w">      </span><span class="s">enforcements.</span>
+
+<span class="w">      </span><span class="s">Note:</span><span class="nv"> </span><span class="s">use</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">&lt;code&gt;Host&lt;/code&gt;</span><span class="nv"> </span><span class="s">profile</span><span class="nv"> </span><span class="s">if</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">&lt;code&gt;User&lt;/code&gt;</span><span class="nv"> </span><span class="s">or</span>
+
+<span class="w">      </span><span class="s">&lt;code&gt;Actor&lt;/code&gt;</span><span class="nv"> </span><span class="s">requestor</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">not</span><span class="nv"> </span><span class="s">present</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">event</span><span class="nv"> </span><span class="s">class.&#39;</span>
 <span class="w">    </span><span class="nt">annotations</span><span class="p">:</span>
 <span class="w">      </span><span class="nt">ocsf_uid</span><span class="p">:</span>
 <span class="w">        </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ocsf_uid</span>
@@ -900,8 +924,10 @@
 <span class="w">        </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Access Revoked</span>
 <span class="w">  </span><span class="nt">REJECTED</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">text</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">REJECTED</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">A request or submission was rejected.  For example, when a form was</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">improperly filled out and submitted. This is distinct from &lt;code&gt;2&lt;/code&gt; &#39;Blocked&#39;.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;A</span><span class="nv"> </span><span class="s">request</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">submission</span><span class="nv"> </span><span class="s">was</span><span class="nv"> </span><span class="s">rejected.</span><span class="nv">  </span><span class="s">For</span><span class="nv"> </span><span class="s">example,</span><span class="nv"> </span><span class="s">when</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">form</span>
+<span class="w">      </span><span class="s">was</span><span class="nv"> </span><span class="s">improperly</span>
+
+<span class="w">      </span><span class="s">filled</span><span class="nv"> </span><span class="s">out</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">submitted.</span><span class="nv"> </span><span class="s">This</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">distinct</span><span class="nv"> </span><span class="s">from</span><span class="nv"> </span><span class="s">&lt;code&gt;2&lt;/code&gt;</span><span class="nv"> </span><span class="se">&#39;&#39;</span><span class="s">Blocked</span><span class="se">&#39;&#39;</span><span class="s">.&#39;</span>
 <span class="w">    </span><span class="nt">annotations</span><span class="p">:</span>
 <span class="w">      </span><span class="nt">ocsf_uid</span><span class="p">:</span>
 <span class="w">        </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ocsf_uid</span>
@@ -911,10 +937,15 @@
 <span class="w">        </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Rejected</span>
 <span class="w">  </span><span class="nt">UNAUTHORIZED</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">text</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">UNAUTHORIZED</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">An attempt to access a resource was denied due to an authorization</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">check that failed. This is a more specific disposition than &lt;code&gt;2&lt;/code&gt; &#39;Blocked&#39;</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">and can be complemented with the &lt;code&gt;authorizations&lt;/code&gt; attribute for more</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">detail.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;An</span><span class="nv"> </span><span class="s">attempt</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">access</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">resource</span><span class="nv"> </span><span class="s">was</span><span class="nv"> </span><span class="s">denied</span><span class="nv"> </span><span class="s">due</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">an</span><span class="nv"> </span><span class="s">authorization</span>
+<span class="w">      </span><span class="s">check</span><span class="nv"> </span><span class="s">that</span>
+
+<span class="w">      </span><span class="s">failed.</span><span class="nv"> </span><span class="s">This</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">more</span><span class="nv"> </span><span class="s">specific</span><span class="nv"> </span><span class="s">disposition</span><span class="nv"> </span><span class="s">than</span><span class="nv"> </span><span class="s">&lt;code&gt;2&lt;/code&gt;</span><span class="nv"> </span><span class="se">&#39;&#39;</span><span class="s">Blocked</span><span class="se">&#39;&#39;</span>
+<span class="w">      </span><span class="s">and</span>
+
+<span class="w">      </span><span class="s">can</span><span class="nv"> </span><span class="s">be</span><span class="nv"> </span><span class="s">complemented</span><span class="nv"> </span><span class="s">with</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">&lt;code&gt;authorizations&lt;/code&gt;</span><span class="nv"> </span><span class="s">attribute</span><span class="nv"> </span><span class="s">for</span><span class="nv"> </span><span class="s">more</span>
+
+<span class="w">      </span><span class="s">detail.&#39;</span>
 <span class="w">    </span><span class="nt">annotations</span><span class="p">:</span>
 <span class="w">      </span><span class="nt">ocsf_uid</span><span class="p">:</span>
 <span class="w">        </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ocsf_uid</span>
@@ -924,8 +955,10 @@
 <span class="w">        </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Unauthorized</span>
 <span class="w">  </span><span class="nt">ERROR</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">text</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ERROR</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">An error occurred during the processing of the activity or request.</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">Use the &lt;code&gt;message&lt;/code&gt; attribute of the base class for details.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;An</span><span class="nv"> </span><span class="s">error</span><span class="nv"> </span><span class="s">occurred</span><span class="nv"> </span><span class="s">during</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">processing</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">activity</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">request.</span>
+<span class="w">      </span><span class="s">Use</span><span class="nv"> </span><span class="s">the</span>
+
+<span class="w">      </span><span class="s">&lt;code&gt;message&lt;/code&gt;</span><span class="nv"> </span><span class="s">attribute</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">base</span><span class="nv"> </span><span class="s">class</span><span class="nv"> </span><span class="s">for</span><span class="nv"> </span><span class="s">details.&#39;</span>
 <span class="w">    </span><span class="nt">annotations</span><span class="p">:</span>
 <span class="w">      </span><span class="nt">ocsf_uid</span><span class="p">:</span>
 <span class="w">        </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ocsf_uid</span>
@@ -935,8 +968,10 @@
 <span class="w">        </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Error</span>
 <span class="w">  </span><span class="nt">OTHER</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">text</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">OTHER</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The disposition is not mapped. See the &lt;code&gt;disposition&lt;/code&gt; attribute,</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">which contains a data source specific value.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;The</span><span class="nv"> </span><span class="s">disposition</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">not</span><span class="nv"> </span><span class="s">mapped.</span><span class="nv"> </span><span class="s">See</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">&lt;code&gt;disposition&lt;/code&gt;</span>
+<span class="w">      </span><span class="s">attribute,</span>
+
+<span class="w">      </span><span class="s">which</span><span class="nv"> </span><span class="s">contains</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">data</span><span class="nv"> </span><span class="s">source</span><span class="nv"> </span><span class="s">specific</span><span class="nv"> </span><span class="s">value.&#39;</span>
 <span class="w">    </span><span class="nt">annotations</span><span class="p">:</span>
 <span class="w">      </span><span class="nt">ocsf_uid</span><span class="p">:</span>
 <span class="w">        </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ocsf_uid</span>

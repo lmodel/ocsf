@@ -217,6 +217,15 @@
 </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="#in-subsets">
+<span class="md-ellipsis">
+      
+        In Subsets
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#aliases">
 <span class="md-ellipsis">
       
@@ -295,7 +304,8 @@
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
 <h1 id="class-portinfo">Class: PortInfo</h1>
-<p><em>The Port Information object describes a port and its associated protocol details.</em></p>
+<p><em>The Port Information object describes a port and its associated protocol</em></p>
+<p><em>details.</em></p>
 <p>URI: <a href="https://w3id.org/lmodel/ocsf/PortInfo">ocsf:PortInfo</a></p>
 <pre class="mermaid"><code> classDiagram
     class PortInfo
@@ -346,7 +356,7 @@
 <tr>
 <td><a href="../protocol_num/">protocol_num</a></td>
 <td>0..1 <br/> <a href="../Integer/">Integer</a></td>
-<td>The IP protocol number, as defined by the Internet Assigned Numbers Authority...</td>
+<td>The IP protocol number, as defined by the Internet Assigned Numbers Authority</td>
 <td>direct</td>
 </tr>
 </tbody>
@@ -370,6 +380,10 @@
 </tr>
 </tbody>
 </table>
+<h2 id="in-subsets">In Subsets</h2>
+<ul>
+<li><a href="../Objects/">Objects</a></li>
+</ul>
 <h2 id="aliases">Aliases</h2>
 <ul>
 <li>Port Information</li>
@@ -403,8 +417,11 @@
 <h3 id="direct">Direct</h3>
 <details>
 <div class="highlight"><pre><span></span><code><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">PortInfo</span>
-<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The Port Information object describes a port and its associated protocol</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">details.</span>
+<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">Port</span><span class="nv"> </span><span class="s">Information</span><span class="nv"> </span><span class="s">object</span><span class="nv"> </span><span class="s">describes</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">port</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">its</span><span class="nv"> </span><span class="s">associated</span><span class="nv"> </span><span class="s">protocol</span>
+
+<span class="w">  </span><span class="s">details.'</span>
+<span class="nt">in_subset</span><span class="p">:</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">objects</span>
 <span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="nt">aliases</span><span class="p">:</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Port Information</span>
@@ -417,20 +434,26 @@
 <span class="w">  </span><span class="nt">port</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">port</span>
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">port</span><span class="nv"> </span><span class="s">number.</span><span class="nv"> </span><span class="s">For</span><span class="nv"> </span><span class="s">example:</span><span class="nv"> </span><span class="s">&lt;code&gt;80&lt;/code&gt;,</span><span class="nv"> </span><span class="s">&lt;code&gt;443&lt;/code&gt;,</span>
+
 <span class="w">      </span><span class="s">&lt;code&gt;22&lt;/code&gt;.'</span>
 <span class="w">    </span><span class="nt">required</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">protocol_name</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">protocol_name</span>
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">IP</span><span class="nv"> </span><span class="s">protocol</span><span class="nv"> </span><span class="s">name</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">lowercase,</span><span class="nv"> </span><span class="s">as</span><span class="nv"> </span><span class="s">defined</span><span class="nv"> </span><span class="s">by</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">Internet</span><span class="nv"> </span><span class="s">Assigned</span>
-<span class="w">      </span><span class="s">Numbers</span><span class="nv"> </span><span class="s">Authority</span><span class="nv"> </span><span class="s">(IANA).</span><span class="nv"> </span><span class="s">For</span><span class="nv"> </span><span class="s">example:</span><span class="nv"> </span><span class="s">&lt;code&gt;tcp&lt;/code&gt;</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">&lt;code&gt;udp&lt;/code&gt;.'</span>
+<span class="w">      </span><span class="s">Numbers</span>
+
+<span class="w">      </span><span class="s">Authority</span><span class="nv"> </span><span class="s">(IANA).</span><span class="nv"> </span><span class="s">For</span><span class="nv"> </span><span class="s">example:</span><span class="nv"> </span><span class="s">&lt;code&gt;tcp&lt;/code&gt;</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">&lt;code&gt;udp&lt;/code&gt;.'</span>
 <span class="w">    </span><span class="nt">recommended</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 </code></pre></div>
 </details>
 <h3 id="induced">Induced</h3>
 <details>
 <div class="highlight"><pre><span></span><code><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">PortInfo</span>
-<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The Port Information object describes a port and its associated protocol</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">details.</span>
+<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">Port</span><span class="nv"> </span><span class="s">Information</span><span class="nv"> </span><span class="s">object</span><span class="nv"> </span><span class="s">describes</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">port</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">its</span><span class="nv"> </span><span class="s">associated</span><span class="nv"> </span><span class="s">protocol</span>
+
+<span class="w">  </span><span class="s">details.'</span>
+<span class="nt">in_subset</span><span class="p">:</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">objects</span>
 <span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="nt">aliases</span><span class="p">:</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Port Information</span>
@@ -439,17 +462,21 @@
 <span class="w">  </span><span class="nt">port</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">port</span>
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">port</span><span class="nv"> </span><span class="s">number.</span><span class="nv"> </span><span class="s">For</span><span class="nv"> </span><span class="s">example:</span><span class="nv"> </span><span class="s">&lt;code&gt;80&lt;/code&gt;,</span><span class="nv"> </span><span class="s">&lt;code&gt;443&lt;/code&gt;,</span>
+
 <span class="w">      </span><span class="s">&lt;code&gt;22&lt;/code&gt;.'</span>
 <span class="w">    </span><span class="nt">required</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">protocol_name</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">protocol_name</span>
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">IP</span><span class="nv"> </span><span class="s">protocol</span><span class="nv"> </span><span class="s">name</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">lowercase,</span><span class="nv"> </span><span class="s">as</span><span class="nv"> </span><span class="s">defined</span><span class="nv"> </span><span class="s">by</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">Internet</span><span class="nv"> </span><span class="s">Assigned</span>
-<span class="w">      </span><span class="s">Numbers</span><span class="nv"> </span><span class="s">Authority</span><span class="nv"> </span><span class="s">(IANA).</span><span class="nv"> </span><span class="s">For</span><span class="nv"> </span><span class="s">example:</span><span class="nv"> </span><span class="s">&lt;code&gt;tcp&lt;/code&gt;</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">&lt;code&gt;udp&lt;/code&gt;.'</span>
+<span class="w">      </span><span class="s">Numbers</span>
+
+<span class="w">      </span><span class="s">Authority</span><span class="nv"> </span><span class="s">(IANA).</span><span class="nv"> </span><span class="s">For</span><span class="nv"> </span><span class="s">example:</span><span class="nv"> </span><span class="s">&lt;code&gt;tcp&lt;/code&gt;</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">&lt;code&gt;udp&lt;/code&gt;.'</span>
 <span class="w">    </span><span class="nt">recommended</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="nt">attributes</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">port</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">port</span>
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">port</span><span class="nv"> </span><span class="s">number.</span><span class="nv"> </span><span class="s">For</span><span class="nv"> </span><span class="s">example:</span><span class="nv"> </span><span class="s">&lt;code&gt;80&lt;/code&gt;,</span><span class="nv"> </span><span class="s">&lt;code&gt;443&lt;/code&gt;,</span>
+
 <span class="w">      </span><span class="s">&lt;code&gt;22&lt;/code&gt;.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
@@ -467,7 +494,9 @@
 <span class="w">  </span><span class="nt">protocol_name</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">protocol_name</span>
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">IP</span><span class="nv"> </span><span class="s">protocol</span><span class="nv"> </span><span class="s">name</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">lowercase,</span><span class="nv"> </span><span class="s">as</span><span class="nv"> </span><span class="s">defined</span><span class="nv"> </span><span class="s">by</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">Internet</span><span class="nv"> </span><span class="s">Assigned</span>
-<span class="w">      </span><span class="s">Numbers</span><span class="nv"> </span><span class="s">Authority</span><span class="nv"> </span><span class="s">(IANA).</span><span class="nv"> </span><span class="s">For</span><span class="nv"> </span><span class="s">example:</span><span class="nv"> </span><span class="s">&lt;code&gt;tcp&lt;/code&gt;</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">&lt;code&gt;udp&lt;/code&gt;.'</span>
+<span class="w">      </span><span class="s">Numbers</span>
+
+<span class="w">      </span><span class="s">Authority</span><span class="nv"> </span><span class="s">(IANA).</span><span class="nv"> </span><span class="s">For</span><span class="nv"> </span><span class="s">example:</span><span class="nv"> </span><span class="s">&lt;code&gt;tcp&lt;/code&gt;</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">&lt;code&gt;udp&lt;/code&gt;.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Protocol Name</span>
@@ -489,10 +518,13 @@
 <span class="w">  </span><span class="nt">protocol_num</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">protocol_num</span>
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">IP</span><span class="nv"> </span><span class="s">protocol</span><span class="nv"> </span><span class="s">number,</span><span class="nv"> </span><span class="s">as</span><span class="nv"> </span><span class="s">defined</span><span class="nv"> </span><span class="s">by</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">Internet</span><span class="nv"> </span><span class="s">Assigned</span><span class="nv"> </span><span class="s">Numbers</span>
-<span class="w">      </span><span class="s">Authority</span><span class="nv"> </span><span class="s">(IANA).</span><span class="nv"> </span><span class="s">For</span><span class="nv"> </span><span class="s">example:</span><span class="nv"> </span><span class="s">&lt;code&gt;6&lt;/code&gt;</span><span class="nv"> </span><span class="s">for</span><span class="nv"> </span><span class="s">TCP</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">&lt;code&gt;17&lt;/code&gt;</span><span class="nv"> </span><span class="s">for</span>
-<span class="w">      </span><span class="s">UDP.'</span>
+<span class="w">      </span><span class="s">Authority</span>
+
+<span class="w">      </span><span class="s">(IANA).</span><span class="nv"> </span><span class="s">For</span><span class="nv"> </span><span class="s">example:</span><span class="nv"> </span><span class="s">&lt;code&gt;6&lt;/code&gt;</span><span class="nv"> </span><span class="s">for</span><span class="nv"> </span><span class="s">TCP</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">&lt;code&gt;17&lt;/code&gt;</span><span class="nv"> </span><span class="s">for</span><span class="nv"> </span><span class="s">UDP.'</span>
 <span class="w">    </span><span class="nt">notes</span><span class="p">:</span>
-<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">IANA Protocol Numbers — https://www.iana.org/assignments/protocol-numbers/protocol-numbers.xhtml</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">'IANA</span><span class="nv"> </span><span class="s">Protocol</span><span class="nv"> </span><span class="s">Numbers</span><span class="nv"> </span><span class="s">—</span>
+
+<span class="w">      </span><span class="s">https://www.iana.org/assignments/protocol-numbers/protocol-numbers.xhtml'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">see_also</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://www.iana.org/assignments/protocol-numbers/protocol-numbers.xhtml</span>

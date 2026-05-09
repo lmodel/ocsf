@@ -519,7 +519,9 @@
 
 
 <h1 id="slot-flag_history">Slot: flag_history</h1>
-<p><em>The Connection Flag History summarizes events in a network connection. For example flags <code> ShAD </code> representing SYN, SYN/ACK, ACK and Data exchange.</em></p>
+<p><em>The Connection Flag History summarizes events in a network connection. For</em></p>
+<p><em>example flags <code> ShAD </code> representing SYN, SYN/ACK, ACK and Data</em></p>
+<p><em>exchange.</em></p>
 <p>URI: <a href="https://w3id.org/lmodel/ocsf/flag_history">ocsf:flag_history</a>
 Alias: flag_history</p>
 <!-- no inheritance hierarchy -->
@@ -536,7 +538,7 @@ Alias: flag_history</p>
 <tbody>
 <tr>
 <td><a href="../NetworkConnectionInfo/">NetworkConnectionInfo</a></td>
-<td>The Network Connection Information object describes characteristics of an OSI...</td>
+<td>The Network Connection Information object describes characteristics of an OSI</td>
 <td>no</td>
 </tr>
 </tbody>
@@ -586,7 +588,8 @@ Alias: flag_history</p>
 </ul>
 <h2 id="notes">Notes</h2>
 <ul>
-<li>Zeek History — <a href="https://docs.zeek.org/en/master/scripts/base/protocols/conn/main.zeek.html#detailed-interface:~:text=Records%20the%20state%20history%20of%20connections%20as%20a%20string%20of%20letters.%20The%20meaning%20of%20those%20letters%20is">https://docs.zeek.org/en/master/scripts/base/protocols/conn/main.zeek.html#detailed-interface:~:text=Records%20the%20state%20history%20of%20connections%20as%20a%20string%20of%20letters.%20The%20meaning%20of%20those%20letters%20is</a></li>
+<li>Zeek History —
+<a href="https://docs.zeek.org/en/master/scripts/base/protocols/conn/main.zeek.html#detailed-interface:~:text=Records%20the%20state%20history%20of%20connections%20as%20a%20string%20of%20letters.%20The%20meaning%20of%20those%20letters%20is">https://docs.zeek.org/en/master/scripts/base/protocols/conn/main.zeek.html#detailed-interface:~:text=Records%20the%20state%20history%20of%20connections%20as%20a%20string%20of%20letters.%20The%20meaning%20of%20those%20letters%20is</a></li>
 </ul>
 <h2 id="identifier-and-mapping-information">Identifier and Mapping Information</h2>
 <h3 id="schema-source">Schema Source</h3>
@@ -615,10 +618,16 @@ Alias: flag_history</p>
 <h2 id="linkml-source">LinkML Source</h2>
 <details>
 <div class="highlight"><pre><span></span><code><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">flag_history</span>
-<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The Connection Flag History summarizes events in a network connection.</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">For example flags &lt;code&gt; ShAD &lt;/code&gt; representing SYN, SYN/ACK, ACK and Data exchange.</span>
+<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;The</span><span class="nv"> </span><span class="s">Connection</span><span class="nv"> </span><span class="s">Flag</span><span class="nv"> </span><span class="s">History</span><span class="nv"> </span><span class="s">summarizes</span><span class="nv"> </span><span class="s">events</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">network</span><span class="nv"> </span><span class="s">connection.</span>
+<span class="w">  </span><span class="s">For</span>
+
+<span class="w">  </span><span class="s">example</span><span class="nv"> </span><span class="s">flags</span><span class="nv"> </span><span class="s">&lt;code&gt;</span><span class="nv"> </span><span class="s">ShAD</span><span class="nv"> </span><span class="s">&lt;/code&gt;</span><span class="nv"> </span><span class="s">representing</span><span class="nv"> </span><span class="s">SYN,</span><span class="nv"> </span><span class="s">SYN/ACK,</span><span class="nv"> </span><span class="s">ACK</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">Data</span>
+
+<span class="w">  </span><span class="s">exchange.&#39;</span>
 <span class="nt">notes</span><span class="p">:</span>
-<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Zeek History — https://docs.zeek.org/en/master/scripts/base/protocols/conn/main.zeek.html#detailed-interface:~:text=Records%20the%20state%20history%20of%20connections%20as%20a%20string%20of%20letters.%20The%20meaning%20of%20those%20letters%20is</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;Zeek</span><span class="nv"> </span><span class="s">History</span><span class="nv"> </span><span class="s">—</span>
+
+<span class="w">  </span><span class="s">https://docs.zeek.org/en/master/scripts/base/protocols/conn/main.zeek.html#detailed-interface:~:text=Records%20the%20state%20history%20of%20connections%20as%20a%20string%20of%20letters.%20The%20meaning%20of%20those%20letters%20is&#39;</span>
 <span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="nt">see_also</span><span class="p">:</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://docs.zeek.org/en/master/scripts/base/protocols/conn/main.zeek.html#detailed-interface:~:text=Records%20the%20state%20history%20of%20connections%20as%20a%20string%20of%20letters.%20The%20meaning%20of%20those%20letters%20is</span>

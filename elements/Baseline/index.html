@@ -217,6 +217,15 @@
 </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="#in-subsets">
+<span class="md-ellipsis">
+      
+        In Subsets
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#aliases">
 <span class="md-ellipsis">
       
@@ -295,7 +304,10 @@
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
 <h1 id="class-baseline">Class: Baseline</h1>
-<p><em>Describes the baseline or expected behavior of a system, service, or component based on historical observations and measurements. It establishes reference points for comparison to detect anomalies, trends, and deviations from typical patterns.</em></p>
+<p><em>Describes the baseline or expected behavior of a system, service, or component</em></p>
+<p><em>based on historical observations and measurements. It establishes reference</em></p>
+<p><em>points for comparison to detect anomalies, trends, and deviations from typical</em></p>
+<p><em>patterns.</em></p>
 <p>URI: <a href="https://w3id.org/lmodel/ocsf/Baseline">ocsf:Baseline</a></p>
 <pre class="mermaid"><code> classDiagram
     class Baseline
@@ -387,6 +399,10 @@
 </tr>
 </tbody>
 </table>
+<h2 id="in-subsets">In Subsets</h2>
+<ul>
+<li><a href="../Objects/">Objects</a></li>
+</ul>
 <h2 id="aliases">Aliases</h2>
 <ul>
 <li>Baseline</li>
@@ -420,9 +436,16 @@
 <h3 id="direct">Direct</h3>
 <details>
 <div class="highlight"><pre><span></span><code><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Baseline</span>
-<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Describes the baseline or expected behavior of a system, service, or</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">component based on historical observations and measurements. It establishes reference</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">points for comparison to detect anomalies, trends, and deviations from typical patterns.</span>
+<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'Describes</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">baseline</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">expected</span><span class="nv"> </span><span class="s">behavior</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">system,</span><span class="nv"> </span><span class="s">service,</span><span class="nv"> </span><span class="s">or</span>
+<span class="w">  </span><span class="s">component</span>
+
+<span class="w">  </span><span class="s">based</span><span class="nv"> </span><span class="s">on</span><span class="nv"> </span><span class="s">historical</span><span class="nv"> </span><span class="s">observations</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">measurements.</span><span class="nv"> </span><span class="s">It</span><span class="nv"> </span><span class="s">establishes</span><span class="nv"> </span><span class="s">reference</span>
+
+<span class="w">  </span><span class="s">points</span><span class="nv"> </span><span class="s">for</span><span class="nv"> </span><span class="s">comparison</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">detect</span><span class="nv"> </span><span class="s">anomalies,</span><span class="nv"> </span><span class="s">trends,</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">deviations</span><span class="nv"> </span><span class="s">from</span><span class="nv"> </span><span class="s">typical</span>
+
+<span class="w">  </span><span class="s">patterns.'</span>
+<span class="nt">in_subset</span><span class="p">:</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">objects</span>
 <span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="nt">aliases</span><span class="p">:</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Baseline</span>
@@ -436,37 +459,59 @@
 <span class="w">  </span><span class="nt">observation_parameter</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">observation_parameter</span>
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">specific</span><span class="nv"> </span><span class="s">parameter</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">property</span><span class="nv"> </span><span class="s">being</span><span class="nv"> </span><span class="s">monitored.</span><span class="nv"> </span><span class="s">Examples</span><span class="nv"> </span><span class="s">include:</span>
-<span class="w">      </span><span class="s">CPU</span><span class="nv"> </span><span class="s">usage</span><span class="nv"> </span><span class="s">percentage,</span><span class="nv"> </span><span class="s">API</span><span class="nv"> </span><span class="s">response</span><span class="nv"> </span><span class="s">time</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">milliseconds,</span><span class="nv"> </span><span class="s">HTTP</span><span class="nv"> </span><span class="s">error</span><span class="nv"> </span><span class="s">rate,</span><span class="nv"> </span><span class="s">memory</span>
+<span class="w">      </span><span class="s">CPU</span><span class="nv"> </span><span class="s">usage</span>
+
+<span class="w">      </span><span class="s">percentage,</span><span class="nv"> </span><span class="s">API</span><span class="nv"> </span><span class="s">response</span><span class="nv"> </span><span class="s">time</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">milliseconds,</span><span class="nv"> </span><span class="s">HTTP</span><span class="nv"> </span><span class="s">error</span><span class="nv"> </span><span class="s">rate,</span><span class="nv"> </span><span class="s">memory</span>
+
 <span class="w">      </span><span class="s">utilization,</span><span class="nv"> </span><span class="s">network</span><span class="nv"> </span><span class="s">latency,</span><span class="nv"> </span><span class="s">transaction</span><span class="nv"> </span><span class="s">volume,</span><span class="nv"> </span><span class="s">etc.'</span>
 <span class="w">    </span><span class="nt">required</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">observation_type</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">observation_type</span>
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">type</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">analysis</span><span class="nv"> </span><span class="s">being</span><span class="nv"> </span><span class="s">performed</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">establish</span><span class="nv"> </span><span class="s">baseline</span><span class="nv"> </span><span class="s">behavior.</span>
-<span class="w">      </span><span class="s">Common</span><span class="nv"> </span><span class="s">types</span><span class="nv"> </span><span class="s">include:</span><span class="nv"> </span><span class="s">Frequency</span><span class="nv"> </span><span class="s">Analysis,</span><span class="nv"> </span><span class="s">Time</span><span class="nv"> </span><span class="s">Pattern</span><span class="nv"> </span><span class="s">Analysis,</span><span class="nv"> </span><span class="s">Volume</span><span class="nv"> </span><span class="s">Analysis,</span>
+<span class="w">      </span><span class="s">Common</span>
+
+<span class="w">      </span><span class="s">types</span><span class="nv"> </span><span class="s">include:</span><span class="nv"> </span><span class="s">Frequency</span><span class="nv"> </span><span class="s">Analysis,</span><span class="nv"> </span><span class="s">Time</span><span class="nv"> </span><span class="s">Pattern</span><span class="nv"> </span><span class="s">Analysis,</span><span class="nv"> </span><span class="s">Volume</span><span class="nv"> </span><span class="s">Analysis,</span>
+
 <span class="w">      </span><span class="s">Sequence</span><span class="nv"> </span><span class="s">Analysis,</span><span class="nv"> </span><span class="s">Distribution</span><span class="nv"> </span><span class="s">Analysis,</span><span class="nv"> </span><span class="s">etc.'</span>
 <span class="w">    </span><span class="nt">recommended</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">observations</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">observations</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Collection of actual measured values, data points and observations</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">recorded for this baseline.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'Collection</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">actual</span><span class="nv"> </span><span class="s">measured</span><span class="nv"> </span><span class="s">values,</span><span class="nv"> </span><span class="s">data</span><span class="nv"> </span><span class="s">points</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">observations</span>
+<span class="w">      </span><span class="s">recorded</span><span class="nv"> </span><span class="s">for</span>
+
+<span class="w">      </span><span class="s">this</span><span class="nv"> </span><span class="s">baseline.'</span>
 <span class="w">    </span><span class="nt">required</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">observed_pattern</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">observed_pattern</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The specific pattern identified within the observation type. For</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">Frequency Analysis, this could be 'FREQUENT', 'INFREQUENT', 'RARE', or 'UNSEEN'.</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">For Time Pattern Analysis, this could be 'BUSINESS_HOURS', 'OFF_HOURS', or 'UNUSUAL_TIME'.</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">For Volume Analysis, this could be 'NORMAL_VOLUME', 'HIGH_VOLUME', or 'SURGE'.</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">The pattern values are specific to each observation type and indicate the baseline</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">behavior.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">specific</span><span class="nv"> </span><span class="s">pattern</span><span class="nv"> </span><span class="s">identified</span><span class="nv"> </span><span class="s">within</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">observation</span><span class="nv"> </span><span class="s">type.</span><span class="nv"> </span><span class="s">For</span>
+<span class="w">      </span><span class="s">Frequency</span>
+
+<span class="w">      </span><span class="s">Analysis,</span><span class="nv"> </span><span class="s">this</span><span class="nv"> </span><span class="s">could</span><span class="nv"> </span><span class="s">be</span><span class="nv"> </span><span class="se">''</span><span class="s">FREQUENT</span><span class="se">''</span><span class="s">,</span><span class="nv"> </span><span class="se">''</span><span class="s">INFREQUENT</span><span class="se">''</span><span class="s">,</span><span class="nv"> </span><span class="se">''</span><span class="s">RARE</span><span class="se">''</span><span class="s">,</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="se">''</span><span class="s">UNSEEN</span><span class="se">''</span><span class="s">.</span>
+<span class="w">      </span><span class="s">For</span><span class="nv"> </span><span class="s">Time</span>
+
+<span class="w">      </span><span class="s">Pattern</span><span class="nv"> </span><span class="s">Analysis,</span><span class="nv"> </span><span class="s">this</span><span class="nv"> </span><span class="s">could</span><span class="nv"> </span><span class="s">be</span><span class="nv"> </span><span class="se">''</span><span class="s">BUSINESS_HOURS</span><span class="se">''</span><span class="s">,</span><span class="nv"> </span><span class="se">''</span><span class="s">OFF_HOURS</span><span class="se">''</span><span class="s">,</span><span class="nv"> </span><span class="s">or</span>
+
+<span class="w">      </span><span class="se">''</span><span class="s">UNUSUAL_TIME</span><span class="se">''</span><span class="s">.</span><span class="nv"> </span><span class="s">For</span><span class="nv"> </span><span class="s">Volume</span><span class="nv"> </span><span class="s">Analysis,</span><span class="nv"> </span><span class="s">this</span><span class="nv"> </span><span class="s">could</span><span class="nv"> </span><span class="s">be</span><span class="nv"> </span><span class="se">''</span><span class="s">NORMAL_VOLUME</span><span class="se">''</span><span class="s">,</span>
+
+<span class="w">      </span><span class="se">''</span><span class="s">HIGH_VOLUME</span><span class="se">''</span><span class="s">,</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="se">''</span><span class="s">SURGE</span><span class="se">''</span><span class="s">.</span><span class="nv"> </span><span class="s">The</span><span class="nv"> </span><span class="s">pattern</span><span class="nv"> </span><span class="s">values</span><span class="nv"> </span><span class="s">are</span><span class="nv"> </span><span class="s">specific</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">each</span><span class="nv"> </span><span class="s">observation</span>
+
+<span class="w">      </span><span class="s">type</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">indicate</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">baseline</span><span class="nv"> </span><span class="s">behavior.'</span>
 <span class="w">    </span><span class="nt">recommended</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 </code></pre></div>
 </details>
 <h3 id="induced">Induced</h3>
 <details>
 <div class="highlight"><pre><span></span><code><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Baseline</span>
-<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Describes the baseline or expected behavior of a system, service, or</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">component based on historical observations and measurements. It establishes reference</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">points for comparison to detect anomalies, trends, and deviations from typical patterns.</span>
+<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'Describes</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">baseline</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">expected</span><span class="nv"> </span><span class="s">behavior</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">system,</span><span class="nv"> </span><span class="s">service,</span><span class="nv"> </span><span class="s">or</span>
+<span class="w">  </span><span class="s">component</span>
+
+<span class="w">  </span><span class="s">based</span><span class="nv"> </span><span class="s">on</span><span class="nv"> </span><span class="s">historical</span><span class="nv"> </span><span class="s">observations</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">measurements.</span><span class="nv"> </span><span class="s">It</span><span class="nv"> </span><span class="s">establishes</span><span class="nv"> </span><span class="s">reference</span>
+
+<span class="w">  </span><span class="s">points</span><span class="nv"> </span><span class="s">for</span><span class="nv"> </span><span class="s">comparison</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">detect</span><span class="nv"> </span><span class="s">anomalies,</span><span class="nv"> </span><span class="s">trends,</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">deviations</span><span class="nv"> </span><span class="s">from</span><span class="nv"> </span><span class="s">typical</span>
+
+<span class="w">  </span><span class="s">patterns.'</span>
+<span class="nt">in_subset</span><span class="p">:</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">objects</span>
 <span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="nt">aliases</span><span class="p">:</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Baseline</span>
@@ -475,34 +520,52 @@
 <span class="w">  </span><span class="nt">observation_parameter</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">observation_parameter</span>
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">specific</span><span class="nv"> </span><span class="s">parameter</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">property</span><span class="nv"> </span><span class="s">being</span><span class="nv"> </span><span class="s">monitored.</span><span class="nv"> </span><span class="s">Examples</span><span class="nv"> </span><span class="s">include:</span>
-<span class="w">      </span><span class="s">CPU</span><span class="nv"> </span><span class="s">usage</span><span class="nv"> </span><span class="s">percentage,</span><span class="nv"> </span><span class="s">API</span><span class="nv"> </span><span class="s">response</span><span class="nv"> </span><span class="s">time</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">milliseconds,</span><span class="nv"> </span><span class="s">HTTP</span><span class="nv"> </span><span class="s">error</span><span class="nv"> </span><span class="s">rate,</span><span class="nv"> </span><span class="s">memory</span>
+<span class="w">      </span><span class="s">CPU</span><span class="nv"> </span><span class="s">usage</span>
+
+<span class="w">      </span><span class="s">percentage,</span><span class="nv"> </span><span class="s">API</span><span class="nv"> </span><span class="s">response</span><span class="nv"> </span><span class="s">time</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">milliseconds,</span><span class="nv"> </span><span class="s">HTTP</span><span class="nv"> </span><span class="s">error</span><span class="nv"> </span><span class="s">rate,</span><span class="nv"> </span><span class="s">memory</span>
+
 <span class="w">      </span><span class="s">utilization,</span><span class="nv"> </span><span class="s">network</span><span class="nv"> </span><span class="s">latency,</span><span class="nv"> </span><span class="s">transaction</span><span class="nv"> </span><span class="s">volume,</span><span class="nv"> </span><span class="s">etc.'</span>
 <span class="w">    </span><span class="nt">required</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">observation_type</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">observation_type</span>
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">type</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">analysis</span><span class="nv"> </span><span class="s">being</span><span class="nv"> </span><span class="s">performed</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">establish</span><span class="nv"> </span><span class="s">baseline</span><span class="nv"> </span><span class="s">behavior.</span>
-<span class="w">      </span><span class="s">Common</span><span class="nv"> </span><span class="s">types</span><span class="nv"> </span><span class="s">include:</span><span class="nv"> </span><span class="s">Frequency</span><span class="nv"> </span><span class="s">Analysis,</span><span class="nv"> </span><span class="s">Time</span><span class="nv"> </span><span class="s">Pattern</span><span class="nv"> </span><span class="s">Analysis,</span><span class="nv"> </span><span class="s">Volume</span><span class="nv"> </span><span class="s">Analysis,</span>
+<span class="w">      </span><span class="s">Common</span>
+
+<span class="w">      </span><span class="s">types</span><span class="nv"> </span><span class="s">include:</span><span class="nv"> </span><span class="s">Frequency</span><span class="nv"> </span><span class="s">Analysis,</span><span class="nv"> </span><span class="s">Time</span><span class="nv"> </span><span class="s">Pattern</span><span class="nv"> </span><span class="s">Analysis,</span><span class="nv"> </span><span class="s">Volume</span><span class="nv"> </span><span class="s">Analysis,</span>
+
 <span class="w">      </span><span class="s">Sequence</span><span class="nv"> </span><span class="s">Analysis,</span><span class="nv"> </span><span class="s">Distribution</span><span class="nv"> </span><span class="s">Analysis,</span><span class="nv"> </span><span class="s">etc.'</span>
 <span class="w">    </span><span class="nt">recommended</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">observations</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">observations</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Collection of actual measured values, data points and observations</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">recorded for this baseline.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'Collection</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">actual</span><span class="nv"> </span><span class="s">measured</span><span class="nv"> </span><span class="s">values,</span><span class="nv"> </span><span class="s">data</span><span class="nv"> </span><span class="s">points</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">observations</span>
+<span class="w">      </span><span class="s">recorded</span><span class="nv"> </span><span class="s">for</span>
+
+<span class="w">      </span><span class="s">this</span><span class="nv"> </span><span class="s">baseline.'</span>
 <span class="w">    </span><span class="nt">required</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">observed_pattern</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">observed_pattern</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The specific pattern identified within the observation type. For</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">Frequency Analysis, this could be 'FREQUENT', 'INFREQUENT', 'RARE', or 'UNSEEN'.</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">For Time Pattern Analysis, this could be 'BUSINESS_HOURS', 'OFF_HOURS', or 'UNUSUAL_TIME'.</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">For Volume Analysis, this could be 'NORMAL_VOLUME', 'HIGH_VOLUME', or 'SURGE'.</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">The pattern values are specific to each observation type and indicate the baseline</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">behavior.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">specific</span><span class="nv"> </span><span class="s">pattern</span><span class="nv"> </span><span class="s">identified</span><span class="nv"> </span><span class="s">within</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">observation</span><span class="nv"> </span><span class="s">type.</span><span class="nv"> </span><span class="s">For</span>
+<span class="w">      </span><span class="s">Frequency</span>
+
+<span class="w">      </span><span class="s">Analysis,</span><span class="nv"> </span><span class="s">this</span><span class="nv"> </span><span class="s">could</span><span class="nv"> </span><span class="s">be</span><span class="nv"> </span><span class="se">''</span><span class="s">FREQUENT</span><span class="se">''</span><span class="s">,</span><span class="nv"> </span><span class="se">''</span><span class="s">INFREQUENT</span><span class="se">''</span><span class="s">,</span><span class="nv"> </span><span class="se">''</span><span class="s">RARE</span><span class="se">''</span><span class="s">,</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="se">''</span><span class="s">UNSEEN</span><span class="se">''</span><span class="s">.</span>
+<span class="w">      </span><span class="s">For</span><span class="nv"> </span><span class="s">Time</span>
+
+<span class="w">      </span><span class="s">Pattern</span><span class="nv"> </span><span class="s">Analysis,</span><span class="nv"> </span><span class="s">this</span><span class="nv"> </span><span class="s">could</span><span class="nv"> </span><span class="s">be</span><span class="nv"> </span><span class="se">''</span><span class="s">BUSINESS_HOURS</span><span class="se">''</span><span class="s">,</span><span class="nv"> </span><span class="se">''</span><span class="s">OFF_HOURS</span><span class="se">''</span><span class="s">,</span><span class="nv"> </span><span class="s">or</span>
+
+<span class="w">      </span><span class="se">''</span><span class="s">UNUSUAL_TIME</span><span class="se">''</span><span class="s">.</span><span class="nv"> </span><span class="s">For</span><span class="nv"> </span><span class="s">Volume</span><span class="nv"> </span><span class="s">Analysis,</span><span class="nv"> </span><span class="s">this</span><span class="nv"> </span><span class="s">could</span><span class="nv"> </span><span class="s">be</span><span class="nv"> </span><span class="se">''</span><span class="s">NORMAL_VOLUME</span><span class="se">''</span><span class="s">,</span>
+
+<span class="w">      </span><span class="se">''</span><span class="s">HIGH_VOLUME</span><span class="se">''</span><span class="s">,</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="se">''</span><span class="s">SURGE</span><span class="se">''</span><span class="s">.</span><span class="nv"> </span><span class="s">The</span><span class="nv"> </span><span class="s">pattern</span><span class="nv"> </span><span class="s">values</span><span class="nv"> </span><span class="s">are</span><span class="nv"> </span><span class="s">specific</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">each</span><span class="nv"> </span><span class="s">observation</span>
+
+<span class="w">      </span><span class="s">type</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">indicate</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">baseline</span><span class="nv"> </span><span class="s">behavior.'</span>
 <span class="w">    </span><span class="nt">recommended</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="nt">attributes</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">observation_parameter</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">observation_parameter</span>
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">specific</span><span class="nv"> </span><span class="s">parameter</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">property</span><span class="nv"> </span><span class="s">being</span><span class="nv"> </span><span class="s">monitored.</span><span class="nv"> </span><span class="s">Examples</span><span class="nv"> </span><span class="s">include:</span>
-<span class="w">      </span><span class="s">CPU</span><span class="nv"> </span><span class="s">usage</span><span class="nv"> </span><span class="s">percentage,</span><span class="nv"> </span><span class="s">API</span><span class="nv"> </span><span class="s">response</span><span class="nv"> </span><span class="s">time</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">milliseconds,</span><span class="nv"> </span><span class="s">HTTP</span><span class="nv"> </span><span class="s">error</span><span class="nv"> </span><span class="s">rate,</span><span class="nv"> </span><span class="s">memory</span>
+<span class="w">      </span><span class="s">CPU</span><span class="nv"> </span><span class="s">usage</span>
+
+<span class="w">      </span><span class="s">percentage,</span><span class="nv"> </span><span class="s">API</span><span class="nv"> </span><span class="s">response</span><span class="nv"> </span><span class="s">time</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">milliseconds,</span><span class="nv"> </span><span class="s">HTTP</span><span class="nv"> </span><span class="s">error</span><span class="nv"> </span><span class="s">rate,</span><span class="nv"> </span><span class="s">memory</span>
+
 <span class="w">      </span><span class="s">utilization,</span><span class="nv"> </span><span class="s">network</span><span class="nv"> </span><span class="s">latency,</span><span class="nv"> </span><span class="s">transaction</span><span class="nv"> </span><span class="s">volume,</span><span class="nv"> </span><span class="s">etc.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
@@ -518,7 +581,10 @@
 <span class="w">  </span><span class="nt">observation_type</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">observation_type</span>
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">type</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">analysis</span><span class="nv"> </span><span class="s">being</span><span class="nv"> </span><span class="s">performed</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">establish</span><span class="nv"> </span><span class="s">baseline</span><span class="nv"> </span><span class="s">behavior.</span>
-<span class="w">      </span><span class="s">Common</span><span class="nv"> </span><span class="s">types</span><span class="nv"> </span><span class="s">include:</span><span class="nv"> </span><span class="s">Frequency</span><span class="nv"> </span><span class="s">Analysis,</span><span class="nv"> </span><span class="s">Time</span><span class="nv"> </span><span class="s">Pattern</span><span class="nv"> </span><span class="s">Analysis,</span><span class="nv"> </span><span class="s">Volume</span><span class="nv"> </span><span class="s">Analysis,</span>
+<span class="w">      </span><span class="s">Common</span>
+
+<span class="w">      </span><span class="s">types</span><span class="nv"> </span><span class="s">include:</span><span class="nv"> </span><span class="s">Frequency</span><span class="nv"> </span><span class="s">Analysis,</span><span class="nv"> </span><span class="s">Time</span><span class="nv"> </span><span class="s">Pattern</span><span class="nv"> </span><span class="s">Analysis,</span><span class="nv"> </span><span class="s">Volume</span><span class="nv"> </span><span class="s">Analysis,</span>
+
 <span class="w">      </span><span class="s">Sequence</span><span class="nv"> </span><span class="s">Analysis,</span><span class="nv"> </span><span class="s">Distribution</span><span class="nv"> </span><span class="s">Analysis,</span><span class="nv"> </span><span class="s">etc.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
@@ -533,8 +599,10 @@
 <span class="w">    </span><span class="nt">recommended</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">observations</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">observations</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Collection of actual measured values, data points and observations</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">recorded for this baseline.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'Collection</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">actual</span><span class="nv"> </span><span class="s">measured</span><span class="nv"> </span><span class="s">values,</span><span class="nv"> </span><span class="s">data</span><span class="nv"> </span><span class="s">points</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">observations</span>
+<span class="w">      </span><span class="s">recorded</span><span class="nv"> </span><span class="s">for</span>
+
+<span class="w">      </span><span class="s">this</span><span class="nv"> </span><span class="s">baseline.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Observations</span>
@@ -549,12 +617,19 @@
 <span class="w">    </span><span class="nt">multivalued</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">observed_pattern</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">observed_pattern</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The specific pattern identified within the observation type. For</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">Frequency Analysis, this could be 'FREQUENT', 'INFREQUENT', 'RARE', or 'UNSEEN'.</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">For Time Pattern Analysis, this could be 'BUSINESS_HOURS', 'OFF_HOURS', or 'UNUSUAL_TIME'.</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">For Volume Analysis, this could be 'NORMAL_VOLUME', 'HIGH_VOLUME', or 'SURGE'.</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">The pattern values are specific to each observation type and indicate the baseline</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">behavior.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">specific</span><span class="nv"> </span><span class="s">pattern</span><span class="nv"> </span><span class="s">identified</span><span class="nv"> </span><span class="s">within</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">observation</span><span class="nv"> </span><span class="s">type.</span><span class="nv"> </span><span class="s">For</span>
+<span class="w">      </span><span class="s">Frequency</span>
+
+<span class="w">      </span><span class="s">Analysis,</span><span class="nv"> </span><span class="s">this</span><span class="nv"> </span><span class="s">could</span><span class="nv"> </span><span class="s">be</span><span class="nv"> </span><span class="se">''</span><span class="s">FREQUENT</span><span class="se">''</span><span class="s">,</span><span class="nv"> </span><span class="se">''</span><span class="s">INFREQUENT</span><span class="se">''</span><span class="s">,</span><span class="nv"> </span><span class="se">''</span><span class="s">RARE</span><span class="se">''</span><span class="s">,</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="se">''</span><span class="s">UNSEEN</span><span class="se">''</span><span class="s">.</span>
+<span class="w">      </span><span class="s">For</span><span class="nv"> </span><span class="s">Time</span>
+
+<span class="w">      </span><span class="s">Pattern</span><span class="nv"> </span><span class="s">Analysis,</span><span class="nv"> </span><span class="s">this</span><span class="nv"> </span><span class="s">could</span><span class="nv"> </span><span class="s">be</span><span class="nv"> </span><span class="se">''</span><span class="s">BUSINESS_HOURS</span><span class="se">''</span><span class="s">,</span><span class="nv"> </span><span class="se">''</span><span class="s">OFF_HOURS</span><span class="se">''</span><span class="s">,</span><span class="nv"> </span><span class="s">or</span>
+
+<span class="w">      </span><span class="se">''</span><span class="s">UNUSUAL_TIME</span><span class="se">''</span><span class="s">.</span><span class="nv"> </span><span class="s">For</span><span class="nv"> </span><span class="s">Volume</span><span class="nv"> </span><span class="s">Analysis,</span><span class="nv"> </span><span class="s">this</span><span class="nv"> </span><span class="s">could</span><span class="nv"> </span><span class="s">be</span><span class="nv"> </span><span class="se">''</span><span class="s">NORMAL_VOLUME</span><span class="se">''</span><span class="s">,</span>
+
+<span class="w">      </span><span class="se">''</span><span class="s">HIGH_VOLUME</span><span class="se">''</span><span class="s">,</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="se">''</span><span class="s">SURGE</span><span class="se">''</span><span class="s">.</span><span class="nv"> </span><span class="s">The</span><span class="nv"> </span><span class="s">pattern</span><span class="nv"> </span><span class="s">values</span><span class="nv"> </span><span class="s">are</span><span class="nv"> </span><span class="s">specific</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">each</span><span class="nv"> </span><span class="s">observation</span>
+
+<span class="w">      </span><span class="s">type</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">indicate</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">baseline</span><span class="nv"> </span><span class="s">behavior.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Observed Pattern</span>

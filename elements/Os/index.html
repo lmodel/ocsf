@@ -217,6 +217,15 @@
 </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="#in-subsets">
+<span class="md-ellipsis">
+      
+        In Subsets
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#aliases">
 <span class="md-ellipsis">
       
@@ -313,7 +322,8 @@
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
 <h1 id="class-os">Class: Os</h1>
-<p><em>The Operating System (OS) object describes characteristics of an OS, such as Linux or Windows.</em></p>
+<p><em>The Operating System (OS) object describes characteristics of an OS, such as</em></p>
+<p><em>Linux or Windows.</em></p>
 <p>URI: <a href="https://w3id.org/lmodel/ocsf/Os">ocsf:Os</a></p>
 <pre class="mermaid"><code> classDiagram
     class Os
@@ -387,7 +397,7 @@
 <tr>
 <td><a href="../country/">country</a></td>
 <td>0..1 <br/> <a href="../String/">String</a></td>
-<td>The operating system country code, as defined by the ISO 3166-1 standard (Alp...</td>
+<td>The operating system country code, as defined by the ISO 3166-1 standard</td>
 <td>direct</td>
 </tr>
 <tr>
@@ -417,7 +427,7 @@
 <tr>
 <td><a href="../lang/">lang</a></td>
 <td>0..1 <br/> <a href="../String/">String</a></td>
-<td>The two letter lower case language codes, as defined by &lt;a target='_blank' hr...</td>
+<td>The two letter lower case language codes, as defined by &lt;a target='_blank'</td>
 <td>direct</td>
 </tr>
 <tr>
@@ -507,6 +517,10 @@
 </tr>
 </tbody>
 </table>
+<h2 id="in-subsets">In Subsets</h2>
+<ul>
+<li><a href="../Objects/">Objects</a></li>
+</ul>
 <h2 id="aliases">Aliases</h2>
 <ul>
 <li>Operating System (OS)</li>
@@ -517,7 +531,8 @@
 </ul>
 <h2 id="notes">Notes</h2>
 <ul>
-<li>D3FEND™ Ontology d3f:OperatingSystem — <a href="https://d3fend.mitre.org/dao/artifact/d3f:OperatingSystem/">https://d3fend.mitre.org/dao/artifact/d3f:OperatingSystem/</a></li>
+<li>D3FEND™ Ontology d3f:OperatingSystem —
+<a href="https://d3fend.mitre.org/dao/artifact/d3f:OperatingSystem/">https://d3fend.mitre.org/dao/artifact/d3f:OperatingSystem/</a></li>
 </ul>
 <h2 id="identifier-and-mapping-information">Identifier and Mapping Information</h2>
 <h3 id="schema-source">Schema Source</h3>
@@ -556,10 +571,16 @@
 <h3 id="direct">Direct</h3>
 <details>
 <div class="highlight"><pre><span></span><code><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Os</span>
-<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The Operating System (OS) object describes characteristics of an OS,</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">such as Linux or Windows.</span>
+<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">Operating</span><span class="nv"> </span><span class="s">System</span><span class="nv"> </span><span class="s">(OS)</span><span class="nv"> </span><span class="s">object</span><span class="nv"> </span><span class="s">describes</span><span class="nv"> </span><span class="s">characteristics</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">an</span><span class="nv"> </span><span class="s">OS,</span>
+<span class="w">  </span><span class="s">such</span><span class="nv"> </span><span class="s">as</span>
+
+<span class="w">  </span><span class="s">Linux</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">Windows.'</span>
 <span class="nt">notes</span><span class="p">:</span>
-<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">D3FEND™ Ontology d3f:OperatingSystem — https://d3fend.mitre.org/dao/artifact/d3f:OperatingSystem/</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="s">'D3FEND™</span><span class="nv"> </span><span class="s">Ontology</span><span class="nv"> </span><span class="s">d3f:OperatingSystem</span><span class="nv"> </span><span class="s">—</span>
+
+<span class="w">  </span><span class="s">https://d3fend.mitre.org/dao/artifact/d3f:OperatingSystem/'</span>
+<span class="nt">in_subset</span><span class="p">:</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">objects</span>
 <span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="nt">see_also</span><span class="p">:</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://d3fend.mitre.org/dao/artifact/d3f:OperatingSystem/</span>
@@ -588,7 +609,10 @@
 <span class="w">  </span><span class="nt">country</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">country</span>
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">operating</span><span class="nv"> </span><span class="s">system</span><span class="nv"> </span><span class="s">country</span><span class="nv"> </span><span class="s">code,</span><span class="nv"> </span><span class="s">as</span><span class="nv"> </span><span class="s">defined</span><span class="nv"> </span><span class="s">by</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">ISO</span><span class="nv"> </span><span class="s">3166-1</span>
-<span class="w">      </span><span class="s">standard</span><span class="nv"> </span><span class="s">(Alpha-2</span><span class="nv"> </span><span class="s">code).&lt;p&gt;&lt;b&gt;Note:&lt;/b&gt;</span><span class="nv"> </span><span class="s">The</span><span class="nv"> </span><span class="s">two</span><span class="nv"> </span><span class="s">letter</span><span class="nv"> </span><span class="s">country</span><span class="nv"> </span><span class="s">code</span><span class="nv"> </span><span class="s">should</span><span class="nv"> </span><span class="s">be</span>
+<span class="w">      </span><span class="s">standard</span>
+
+<span class="w">      </span><span class="s">(Alpha-2</span><span class="nv"> </span><span class="s">code).&lt;p&gt;&lt;b&gt;Note:&lt;/b&gt;</span><span class="nv"> </span><span class="s">The</span><span class="nv"> </span><span class="s">two</span><span class="nv"> </span><span class="s">letter</span><span class="nv"> </span><span class="s">country</span><span class="nv"> </span><span class="s">code</span><span class="nv"> </span><span class="s">should</span><span class="nv"> </span><span class="s">be</span>
+
 <span class="w">      </span><span class="s">capitalized.</span><span class="nv"> </span><span class="s">For</span><span class="nv"> </span><span class="s">example:</span><span class="nv"> </span><span class="s">&lt;code&gt;US&lt;/code&gt;</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">&lt;code&gt;CA&lt;/code&gt;.&lt;/p&gt;'</span>
 <span class="w">  </span><span class="nt">name</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">name</span>
@@ -605,16 +629,24 @@
 <span class="w">  </span><span class="nt">version</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">version</span>
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">version</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">OS</span><span class="nv"> </span><span class="s">running</span><span class="nv"> </span><span class="s">on</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">device</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">originated</span><span class="nv"> </span><span class="s">the</span>
-<span class="w">      </span><span class="s">event.</span><span class="nv"> </span><span class="s">For</span><span class="nv"> </span><span class="s">example:</span><span class="nv"> </span><span class="s">"Windows</span><span class="nv"> </span><span class="s">10",</span><span class="nv"> </span><span class="s">"OS</span><span class="nv"> </span><span class="s">X</span><span class="nv"> </span><span class="s">10.7",</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">"iOS</span><span class="nv"> </span><span class="s">9".'</span>
+<span class="w">      </span><span class="s">event.</span><span class="nv"> </span><span class="s">For</span>
+
+<span class="w">      </span><span class="s">example:</span><span class="nv"> </span><span class="s">"Windows</span><span class="nv"> </span><span class="s">10",</span><span class="nv"> </span><span class="s">"OS</span><span class="nv"> </span><span class="s">X</span><span class="nv"> </span><span class="s">10.7",</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">"iOS</span><span class="nv"> </span><span class="s">9".'</span>
 </code></pre></div>
 </details>
 <h3 id="induced">Induced</h3>
 <details>
 <div class="highlight"><pre><span></span><code><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Os</span>
-<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The Operating System (OS) object describes characteristics of an OS,</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">such as Linux or Windows.</span>
+<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">Operating</span><span class="nv"> </span><span class="s">System</span><span class="nv"> </span><span class="s">(OS)</span><span class="nv"> </span><span class="s">object</span><span class="nv"> </span><span class="s">describes</span><span class="nv"> </span><span class="s">characteristics</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">an</span><span class="nv"> </span><span class="s">OS,</span>
+<span class="w">  </span><span class="s">such</span><span class="nv"> </span><span class="s">as</span>
+
+<span class="w">  </span><span class="s">Linux</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">Windows.'</span>
 <span class="nt">notes</span><span class="p">:</span>
-<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">D3FEND™ Ontology d3f:OperatingSystem — https://d3fend.mitre.org/dao/artifact/d3f:OperatingSystem/</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="s">'D3FEND™</span><span class="nv"> </span><span class="s">Ontology</span><span class="nv"> </span><span class="s">d3f:OperatingSystem</span><span class="nv"> </span><span class="s">—</span>
+
+<span class="w">  </span><span class="s">https://d3fend.mitre.org/dao/artifact/d3f:OperatingSystem/'</span>
+<span class="nt">in_subset</span><span class="p">:</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">objects</span>
 <span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="nt">see_also</span><span class="p">:</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://d3fend.mitre.org/dao/artifact/d3f:OperatingSystem/</span>
@@ -629,7 +661,10 @@
 <span class="w">  </span><span class="nt">country</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">country</span>
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">operating</span><span class="nv"> </span><span class="s">system</span><span class="nv"> </span><span class="s">country</span><span class="nv"> </span><span class="s">code,</span><span class="nv"> </span><span class="s">as</span><span class="nv"> </span><span class="s">defined</span><span class="nv"> </span><span class="s">by</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">ISO</span><span class="nv"> </span><span class="s">3166-1</span>
-<span class="w">      </span><span class="s">standard</span><span class="nv"> </span><span class="s">(Alpha-2</span><span class="nv"> </span><span class="s">code).&lt;p&gt;&lt;b&gt;Note:&lt;/b&gt;</span><span class="nv"> </span><span class="s">The</span><span class="nv"> </span><span class="s">two</span><span class="nv"> </span><span class="s">letter</span><span class="nv"> </span><span class="s">country</span><span class="nv"> </span><span class="s">code</span><span class="nv"> </span><span class="s">should</span><span class="nv"> </span><span class="s">be</span>
+<span class="w">      </span><span class="s">standard</span>
+
+<span class="w">      </span><span class="s">(Alpha-2</span><span class="nv"> </span><span class="s">code).&lt;p&gt;&lt;b&gt;Note:&lt;/b&gt;</span><span class="nv"> </span><span class="s">The</span><span class="nv"> </span><span class="s">two</span><span class="nv"> </span><span class="s">letter</span><span class="nv"> </span><span class="s">country</span><span class="nv"> </span><span class="s">code</span><span class="nv"> </span><span class="s">should</span><span class="nv"> </span><span class="s">be</span>
+
 <span class="w">      </span><span class="s">capitalized.</span><span class="nv"> </span><span class="s">For</span><span class="nv"> </span><span class="s">example:</span><span class="nv"> </span><span class="s">&lt;code&gt;US&lt;/code&gt;</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">&lt;code&gt;CA&lt;/code&gt;.&lt;/p&gt;'</span>
 <span class="w">  </span><span class="nt">name</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">name</span>
@@ -646,7 +681,9 @@
 <span class="w">  </span><span class="nt">version</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">version</span>
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">version</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">OS</span><span class="nv"> </span><span class="s">running</span><span class="nv"> </span><span class="s">on</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">device</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">originated</span><span class="nv"> </span><span class="s">the</span>
-<span class="w">      </span><span class="s">event.</span><span class="nv"> </span><span class="s">For</span><span class="nv"> </span><span class="s">example:</span><span class="nv"> </span><span class="s">"Windows</span><span class="nv"> </span><span class="s">10",</span><span class="nv"> </span><span class="s">"OS</span><span class="nv"> </span><span class="s">X</span><span class="nv"> </span><span class="s">10.7",</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">"iOS</span><span class="nv"> </span><span class="s">9".'</span>
+<span class="w">      </span><span class="s">event.</span><span class="nv"> </span><span class="s">For</span>
+
+<span class="w">      </span><span class="s">example:</span><span class="nv"> </span><span class="s">"Windows</span><span class="nv"> </span><span class="s">10",</span><span class="nv"> </span><span class="s">"OS</span><span class="nv"> </span><span class="s">X</span><span class="nv"> </span><span class="s">10.7",</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">"iOS</span><span class="nv"> </span><span class="s">9".'</span>
 <span class="nt">attributes</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">build</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">build</span>
@@ -667,7 +704,10 @@
 <span class="w">        </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">observable_id</span>
 <span class="w">        </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">14</span>
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">operating</span><span class="nv"> </span><span class="s">system</span><span class="nv"> </span><span class="s">country</span><span class="nv"> </span><span class="s">code,</span><span class="nv"> </span><span class="s">as</span><span class="nv"> </span><span class="s">defined</span><span class="nv"> </span><span class="s">by</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">ISO</span><span class="nv"> </span><span class="s">3166-1</span>
-<span class="w">      </span><span class="s">standard</span><span class="nv"> </span><span class="s">(Alpha-2</span><span class="nv"> </span><span class="s">code).&lt;p&gt;&lt;b&gt;Note:&lt;/b&gt;</span><span class="nv"> </span><span class="s">The</span><span class="nv"> </span><span class="s">two</span><span class="nv"> </span><span class="s">letter</span><span class="nv"> </span><span class="s">country</span><span class="nv"> </span><span class="s">code</span><span class="nv"> </span><span class="s">should</span><span class="nv"> </span><span class="s">be</span>
+<span class="w">      </span><span class="s">standard</span>
+
+<span class="w">      </span><span class="s">(Alpha-2</span><span class="nv"> </span><span class="s">code).&lt;p&gt;&lt;b&gt;Note:&lt;/b&gt;</span><span class="nv"> </span><span class="s">The</span><span class="nv"> </span><span class="s">two</span><span class="nv"> </span><span class="s">letter</span><span class="nv"> </span><span class="s">country</span><span class="nv"> </span><span class="s">code</span><span class="nv"> </span><span class="s">should</span><span class="nv"> </span><span class="s">be</span>
+
 <span class="w">      </span><span class="s">capitalized.</span><span class="nv"> </span><span class="s">For</span><span class="nv"> </span><span class="s">example:</span><span class="nv"> </span><span class="s">&lt;code&gt;US&lt;/code&gt;</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">&lt;code&gt;CA&lt;/code&gt;.&lt;/p&gt;'</span>
 <span class="w">    </span><span class="nt">notes</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ISO 3166-1 alpha-2 codes — https://www.iso.org/obp/ui/#iso:pub:PUB500001:en</span>
@@ -686,7 +726,10 @@
 <span class="w">  </span><span class="nt">cpe_name</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">cpe_name</span>
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">Common</span><span class="nv"> </span><span class="s">Platform</span><span class="nv"> </span><span class="s">Enumeration</span><span class="nv"> </span><span class="s">(CPE)</span><span class="nv"> </span><span class="s">name</span><span class="nv"> </span><span class="s">as</span><span class="nv"> </span><span class="s">described</span><span class="nv"> </span><span class="s">by</span><span class="nv"> </span><span class="s">(&lt;a</span><span class="nv"> </span><span class="s">target=</span><span class="se">''</span><span class="s">_blank</span><span class="se">''</span>
-<span class="w">      </span><span class="s">href=</span><span class="se">''</span><span class="s">https://nvd.nist.gov/products/cpe</span><span class="se">''</span><span class="s">&gt;NIST&lt;/a&gt;)</span><span class="nv"> </span><span class="s">For</span><span class="nv"> </span><span class="s">example:</span><span class="nv"> </span><span class="s">&lt;code&gt;cpe:/a:apple:safari:16.2&lt;/code&gt;.'</span>
+
+<span class="w">      </span><span class="s">href=</span><span class="se">''</span><span class="s">https://nvd.nist.gov/products/cpe</span><span class="se">''</span><span class="s">&gt;NIST&lt;/a&gt;)</span><span class="nv"> </span><span class="s">For</span><span class="nv"> </span><span class="s">example:</span>
+
+<span class="w">      </span><span class="s">&lt;code&gt;cpe:/a:apple:safari:16.2&lt;/code&gt;.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The product CPE identifier</span>
@@ -701,7 +744,9 @@
 <span class="w">  </span><span class="nt">cpu_bits</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">cpu_bits</span>
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">cpu</span><span class="nv"> </span><span class="s">architecture,</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">number</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">bits</span><span class="nv"> </span><span class="s">used</span><span class="nv"> </span><span class="s">for</span><span class="nv"> </span><span class="s">addressing</span><span class="nv"> </span><span class="s">in</span>
-<span class="w">      </span><span class="s">memory.</span><span class="nv"> </span><span class="s">For</span><span class="nv"> </span><span class="s">example:</span><span class="nv"> </span><span class="s">&lt;code&gt;32&lt;/code&gt;</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">&lt;code&gt;64&lt;/code&gt;.'</span>
+<span class="w">      </span><span class="s">memory.</span><span class="nv"> </span><span class="s">For</span>
+
+<span class="w">      </span><span class="s">example:</span><span class="nv"> </span><span class="s">&lt;code&gt;32&lt;/code&gt;</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">&lt;code&gt;64&lt;/code&gt;.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">CPU Bits</span>
@@ -726,9 +771,12 @@
 <span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">string</span>
 <span class="w">  </span><span class="nt">kernel_release</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">kernel_release</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The kernel release of the operating system. On Unix-based systems,</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">this is determined from the &lt;code&gt;uname -r&lt;/code&gt; command output, for example</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">"5.15.0-122-generic".</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">kernel</span><span class="nv"> </span><span class="s">release</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">operating</span><span class="nv"> </span><span class="s">system.</span><span class="nv"> </span><span class="s">On</span><span class="nv"> </span><span class="s">Unix-based</span><span class="nv"> </span><span class="s">systems,</span>
+<span class="w">      </span><span class="s">this</span><span class="nv"> </span><span class="s">is</span>
+
+<span class="w">      </span><span class="s">determined</span><span class="nv"> </span><span class="s">from</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">&lt;code&gt;uname</span><span class="nv"> </span><span class="s">-r&lt;/code&gt;</span><span class="nv"> </span><span class="s">command</span><span class="nv"> </span><span class="s">output,</span><span class="nv"> </span><span class="s">for</span><span class="nv"> </span><span class="s">example</span>
+
+<span class="w">      </span><span class="s">"5.15.0-122-generic".'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Kernel Release</span>
@@ -741,8 +789,12 @@
 <span class="w">  </span><span class="nt">lang</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">lang</span>
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">two</span><span class="nv"> </span><span class="s">letter</span><span class="nv"> </span><span class="s">lower</span><span class="nv"> </span><span class="s">case</span><span class="nv"> </span><span class="s">language</span><span class="nv"> </span><span class="s">codes,</span><span class="nv"> </span><span class="s">as</span><span class="nv"> </span><span class="s">defined</span><span class="nv"> </span><span class="s">by</span><span class="nv"> </span><span class="s">&lt;a</span><span class="nv"> </span><span class="s">target=</span><span class="se">''</span><span class="s">_blank</span><span class="se">''</span>
+
 <span class="w">      </span><span class="s">href=</span><span class="se">''</span><span class="s">https://en.wikipedia.org/wiki/ISO_639-1</span><span class="se">''</span><span class="s">&gt;ISO</span><span class="nv"> </span><span class="s">639-1&lt;/a&gt;.</span><span class="nv"> </span><span class="s">For</span><span class="nv"> </span><span class="s">example:</span>
-<span class="w">      </span><span class="s">&lt;code&gt;en&lt;/code&gt;</span><span class="nv"> </span><span class="s">(English),</span><span class="nv"> </span><span class="s">&lt;code&gt;de&lt;/code&gt;</span><span class="nv"> </span><span class="s">(German),</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">&lt;code&gt;fr&lt;/code&gt;</span><span class="nv"> </span><span class="s">(French).'</span>
+
+<span class="w">      </span><span class="s">&lt;code&gt;en&lt;/code&gt;</span><span class="nv"> </span><span class="s">(English),</span><span class="nv"> </span><span class="s">&lt;code&gt;de&lt;/code&gt;</span><span class="nv"> </span><span class="s">(German),</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">&lt;code&gt;fr&lt;/code&gt;</span>
+
+<span class="w">      </span><span class="s">(French).'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Language</span>
@@ -1007,7 +1059,9 @@
 <span class="w">  </span><span class="nt">version</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">version</span>
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">version</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">OS</span><span class="nv"> </span><span class="s">running</span><span class="nv"> </span><span class="s">on</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">device</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">originated</span><span class="nv"> </span><span class="s">the</span>
-<span class="w">      </span><span class="s">event.</span><span class="nv"> </span><span class="s">For</span><span class="nv"> </span><span class="s">example:</span><span class="nv"> </span><span class="s">"Windows</span><span class="nv"> </span><span class="s">10",</span><span class="nv"> </span><span class="s">"OS</span><span class="nv"> </span><span class="s">X</span><span class="nv"> </span><span class="s">10.7",</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">"iOS</span><span class="nv"> </span><span class="s">9".'</span>
+<span class="w">      </span><span class="s">event.</span><span class="nv"> </span><span class="s">For</span>
+
+<span class="w">      </span><span class="s">example:</span><span class="nv"> </span><span class="s">"Windows</span><span class="nv"> </span><span class="s">10",</span><span class="nv"> </span><span class="s">"OS</span><span class="nv"> </span><span class="s">X</span><span class="nv"> </span><span class="s">10.7",</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">"iOS</span><span class="nv"> </span><span class="s">9".'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Version</span>

@@ -208,6 +208,15 @@
 </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="#in-subsets">
+<span class="md-ellipsis">
+      
+        In Subsets
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#aliases">
 <span class="md-ellipsis">
       
@@ -286,7 +295,8 @@
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
 <h1 id="class-dns">Class: Dns</h1>
-<p><em>The Domain Name System (DNS) object represents the shared information associated with the DNS query and answer objects.</em></p>
+<p><em>The Domain Name System (DNS) object represents the shared information</em></p>
+<p><em>associated with the DNS query and answer objects.</em></p>
 <p>URI: <a href="https://w3id.org/lmodel/ocsf/Dns">ocsf:Dns</a></p>
 <pre class="mermaid"><code> classDiagram
     class Dns
@@ -353,6 +363,10 @@
 </tr>
 </tbody>
 </table>
+<h2 id="in-subsets">In Subsets</h2>
+<ul>
+<li><a href="../Objects/">Objects</a></li>
+</ul>
 <h2 id="aliases">Aliases</h2>
 <ul>
 <li>DNS</li>
@@ -390,8 +404,11 @@
 <h3 id="direct">Direct</h3>
 <details>
 <div class="highlight"><pre><span></span><code><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Dns</span>
-<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The Domain Name System (DNS) object represents the shared information</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">associated with the DNS query and answer objects.</span>
+<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">Domain</span><span class="nv"> </span><span class="s">Name</span><span class="nv"> </span><span class="s">System</span><span class="nv"> </span><span class="s">(DNS)</span><span class="nv"> </span><span class="s">object</span><span class="nv"> </span><span class="s">represents</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">shared</span><span class="nv"> </span><span class="s">information</span>
+
+<span class="w">  </span><span class="s">associated</span><span class="nv"> </span><span class="s">with</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">DNS</span><span class="nv"> </span><span class="s">query</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">answer</span><span class="nv"> </span><span class="s">objects.'</span>
+<span class="nt">in_subset</span><span class="p">:</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">objects</span>
 <span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="nt">aliases</span><span class="p">:</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">DNS</span>
@@ -406,27 +423,37 @@
 <span class="w">  </span><span class="nt">class_</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">class_</span>
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">class</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">resource</span><span class="nv"> </span><span class="s">records</span><span class="nv"> </span><span class="s">being</span><span class="nv"> </span><span class="s">queried.</span><span class="nv"> </span><span class="s">See</span><span class="nv"> </span><span class="s">&lt;a</span><span class="nv"> </span><span class="s">target=</span><span class="se">''</span><span class="s">_blank</span><span class="se">''</span>
+
 <span class="w">      </span><span class="s">href=</span><span class="se">''</span><span class="s">https://www.rfc-editor.org/rfc/rfc1035.txt</span><span class="se">''</span><span class="s">&gt;RFC1035&lt;/a&gt;.</span><span class="nv"> </span><span class="s">For</span><span class="nv"> </span><span class="s">example:</span>
+
 <span class="w">      </span><span class="s">&lt;code&gt;IN&lt;/code&gt;.'</span>
 <span class="w">    </span><span class="nt">recommended</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">packet_uid</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">packet_uid</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The DNS packet identifier assigned by the program that generated</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">the query. The identifier is copied to the response.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">DNS</span><span class="nv"> </span><span class="s">packet</span><span class="nv"> </span><span class="s">identifier</span><span class="nv"> </span><span class="s">assigned</span><span class="nv"> </span><span class="s">by</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">program</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">generated</span>
+<span class="w">      </span><span class="s">the</span><span class="nv"> </span><span class="s">query.</span><span class="nv"> </span><span class="s">The</span>
+
+<span class="w">      </span><span class="s">identifier</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">copied</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">response.'</span>
 <span class="w">    </span><span class="nt">recommended</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">type</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">type</span>
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">type</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">resource</span><span class="nv"> </span><span class="s">records</span><span class="nv"> </span><span class="s">being</span><span class="nv"> </span><span class="s">queried.</span><span class="nv"> </span><span class="s">See</span><span class="nv"> </span><span class="s">&lt;a</span><span class="nv"> </span><span class="s">target=</span><span class="se">''</span><span class="s">_blank</span><span class="se">''</span>
+
 <span class="w">      </span><span class="s">href=</span><span class="se">''</span><span class="s">https://www.rfc-editor.org/rfc/rfc1035.txt</span><span class="se">''</span><span class="s">&gt;RFC1035&lt;/a&gt;.</span><span class="nv"> </span><span class="s">For</span><span class="nv"> </span><span class="s">example:</span>
-<span class="w">      </span><span class="s">A,</span><span class="nv"> </span><span class="s">AAAA,</span><span class="nv"> </span><span class="s">CNAME,</span><span class="nv"> </span><span class="s">MX,</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">NS.'</span>
+<span class="w">      </span><span class="s">A,</span>
+
+<span class="w">      </span><span class="s">AAAA,</span><span class="nv"> </span><span class="s">CNAME,</span><span class="nv"> </span><span class="s">MX,</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">NS.'</span>
 <span class="w">    </span><span class="nt">recommended</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 </code></pre></div>
 </details>
 <h3 id="induced">Induced</h3>
 <details>
 <div class="highlight"><pre><span></span><code><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Dns</span>
-<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The Domain Name System (DNS) object represents the shared information</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">associated with the DNS query and answer objects.</span>
+<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">Domain</span><span class="nv"> </span><span class="s">Name</span><span class="nv"> </span><span class="s">System</span><span class="nv"> </span><span class="s">(DNS)</span><span class="nv"> </span><span class="s">object</span><span class="nv"> </span><span class="s">represents</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">shared</span><span class="nv"> </span><span class="s">information</span>
+
+<span class="w">  </span><span class="s">associated</span><span class="nv"> </span><span class="s">with</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">DNS</span><span class="nv"> </span><span class="s">query</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">answer</span><span class="nv"> </span><span class="s">objects.'</span>
+<span class="nt">in_subset</span><span class="p">:</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">objects</span>
 <span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="nt">aliases</span><span class="p">:</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">DNS</span>
@@ -437,25 +464,34 @@
 <span class="w">  </span><span class="nt">class_</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">class_</span>
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">class</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">resource</span><span class="nv"> </span><span class="s">records</span><span class="nv"> </span><span class="s">being</span><span class="nv"> </span><span class="s">queried.</span><span class="nv"> </span><span class="s">See</span><span class="nv"> </span><span class="s">&lt;a</span><span class="nv"> </span><span class="s">target=</span><span class="se">''</span><span class="s">_blank</span><span class="se">''</span>
+
 <span class="w">      </span><span class="s">href=</span><span class="se">''</span><span class="s">https://www.rfc-editor.org/rfc/rfc1035.txt</span><span class="se">''</span><span class="s">&gt;RFC1035&lt;/a&gt;.</span><span class="nv"> </span><span class="s">For</span><span class="nv"> </span><span class="s">example:</span>
+
 <span class="w">      </span><span class="s">&lt;code&gt;IN&lt;/code&gt;.'</span>
 <span class="w">    </span><span class="nt">recommended</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">packet_uid</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">packet_uid</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The DNS packet identifier assigned by the program that generated</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">the query. The identifier is copied to the response.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">DNS</span><span class="nv"> </span><span class="s">packet</span><span class="nv"> </span><span class="s">identifier</span><span class="nv"> </span><span class="s">assigned</span><span class="nv"> </span><span class="s">by</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">program</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">generated</span>
+<span class="w">      </span><span class="s">the</span><span class="nv"> </span><span class="s">query.</span><span class="nv"> </span><span class="s">The</span>
+
+<span class="w">      </span><span class="s">identifier</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">copied</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">response.'</span>
 <span class="w">    </span><span class="nt">recommended</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">type</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">type</span>
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">type</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">resource</span><span class="nv"> </span><span class="s">records</span><span class="nv"> </span><span class="s">being</span><span class="nv"> </span><span class="s">queried.</span><span class="nv"> </span><span class="s">See</span><span class="nv"> </span><span class="s">&lt;a</span><span class="nv"> </span><span class="s">target=</span><span class="se">''</span><span class="s">_blank</span><span class="se">''</span>
+
 <span class="w">      </span><span class="s">href=</span><span class="se">''</span><span class="s">https://www.rfc-editor.org/rfc/rfc1035.txt</span><span class="se">''</span><span class="s">&gt;RFC1035&lt;/a&gt;.</span><span class="nv"> </span><span class="s">For</span><span class="nv"> </span><span class="s">example:</span>
-<span class="w">      </span><span class="s">A,</span><span class="nv"> </span><span class="s">AAAA,</span><span class="nv"> </span><span class="s">CNAME,</span><span class="nv"> </span><span class="s">MX,</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">NS.'</span>
+<span class="w">      </span><span class="s">A,</span>
+
+<span class="w">      </span><span class="s">AAAA,</span><span class="nv"> </span><span class="s">CNAME,</span><span class="nv"> </span><span class="s">MX,</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">NS.'</span>
 <span class="w">    </span><span class="nt">recommended</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="nt">attributes</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">class_</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">class_</span>
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">class</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">resource</span><span class="nv"> </span><span class="s">records</span><span class="nv"> </span><span class="s">being</span><span class="nv"> </span><span class="s">queried.</span><span class="nv"> </span><span class="s">See</span><span class="nv"> </span><span class="s">&lt;a</span><span class="nv"> </span><span class="s">target=</span><span class="se">''</span><span class="s">_blank</span><span class="se">''</span>
+
 <span class="w">      </span><span class="s">href=</span><span class="se">''</span><span class="s">https://www.rfc-editor.org/rfc/rfc1035.txt</span><span class="se">''</span><span class="s">&gt;RFC1035&lt;/a&gt;.</span><span class="nv"> </span><span class="s">For</span><span class="nv"> </span><span class="s">example:</span>
+
 <span class="w">      </span><span class="s">&lt;code&gt;IN&lt;/code&gt;.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
@@ -471,8 +507,10 @@
 <span class="w">    </span><span class="nt">recommended</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">packet_uid</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">packet_uid</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The DNS packet identifier assigned by the program that generated</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">the query. The identifier is copied to the response.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">DNS</span><span class="nv"> </span><span class="s">packet</span><span class="nv"> </span><span class="s">identifier</span><span class="nv"> </span><span class="s">assigned</span><span class="nv"> </span><span class="s">by</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">program</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">generated</span>
+<span class="w">      </span><span class="s">the</span><span class="nv"> </span><span class="s">query.</span><span class="nv"> </span><span class="s">The</span>
+
+<span class="w">      </span><span class="s">identifier</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">copied</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">response.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Packet UID</span>
@@ -486,8 +524,11 @@
 <span class="w">  </span><span class="nt">type</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">type</span>
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">type</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">resource</span><span class="nv"> </span><span class="s">records</span><span class="nv"> </span><span class="s">being</span><span class="nv"> </span><span class="s">queried.</span><span class="nv"> </span><span class="s">See</span><span class="nv"> </span><span class="s">&lt;a</span><span class="nv"> </span><span class="s">target=</span><span class="se">''</span><span class="s">_blank</span><span class="se">''</span>
+
 <span class="w">      </span><span class="s">href=</span><span class="se">''</span><span class="s">https://www.rfc-editor.org/rfc/rfc1035.txt</span><span class="se">''</span><span class="s">&gt;RFC1035&lt;/a&gt;.</span><span class="nv"> </span><span class="s">For</span><span class="nv"> </span><span class="s">example:</span>
-<span class="w">      </span><span class="s">A,</span><span class="nv"> </span><span class="s">AAAA,</span><span class="nv"> </span><span class="s">CNAME,</span><span class="nv"> </span><span class="s">MX,</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">NS.'</span>
+<span class="w">      </span><span class="s">A,</span>
+
+<span class="w">      </span><span class="s">AAAA,</span><span class="nv"> </span><span class="s">CNAME,</span><span class="nv"> </span><span class="s">MX,</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">NS.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Type</span>

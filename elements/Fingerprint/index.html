@@ -217,6 +217,15 @@
 </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="#in-subsets">
+<span class="md-ellipsis">
+      
+        In Subsets
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#aliases">
 <span class="md-ellipsis">
       
@@ -322,7 +331,11 @@
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
 <h1 id="class-fingerprint">Class: Fingerprint</h1>
-<p><em>The Fingerprint object provides detailed information about a fingerprint, which is a compact representation of data used to identify a longer piece of information, such as a public key, file content, or application implementation. It contains the algorithm or scheme and value of the fingerprint, enabling efficient and reliable identification of the associated data.</em></p>
+<p><em>The Fingerprint object provides detailed information about a fingerprint, which</em></p>
+<p><em>is a compact representation of data used to identify a longer piece of</em></p>
+<p><em>information, such as a public key, file content, or application implementation.</em></p>
+<p><em>It contains the algorithm or scheme and value of the fingerprint, enabling</em></p>
+<p><em>efficient and reliable identification of the associated data.</em></p>
 <p>URI: <a href="https://w3id.org/lmodel/ocsf/Fingerprint">ocsf:Fingerprint</a></p>
 <pre class="mermaid"><code> classDiagram
     class Fingerprint
@@ -370,7 +383,7 @@
 <tr>
 <td><a href="../algorithm/">algorithm</a></td>
 <td>0..1 <br/> <a href="../String/">String</a></td>
-<td>The algorithm or scheme used to create the fingerprint, normalized to the cap...</td>
+<td>The algorithm or scheme used to create the fingerprint, normalized to the</td>
 <td>direct</td>
 </tr>
 <tr>
@@ -1030,6 +1043,10 @@
 </tr>
 </tbody>
 </table>
+<h2 id="in-subsets">In Subsets</h2>
+<ul>
+<li><a href="../Objects/">Objects</a></li>
+</ul>
 <h2 id="aliases">Aliases</h2>
 <ul>
 <li>Fingerprint</li>
@@ -1040,7 +1057,8 @@
 </ul>
 <h2 id="notes">Notes</h2>
 <ul>
-<li>D3FEND™ Ontology d3f:DigitalFingerprint. — <a href="https://d3fend.mitre.org/dao/artifact/d3f:DigitalFingerprint/">https://d3fend.mitre.org/dao/artifact/d3f:DigitalFingerprint/</a></li>
+<li>D3FEND™ Ontology d3f:DigitalFingerprint. —
+<a href="https://d3fend.mitre.org/dao/artifact/d3f:DigitalFingerprint/">https://d3fend.mitre.org/dao/artifact/d3f:DigitalFingerprint/</a></li>
 </ul>
 <h2 id="identifier-and-mapping-information">Identifier and Mapping Information</h2>
 <h3 id="annotations">Annotations</h3>
@@ -1094,13 +1112,22 @@
 <span class="w">  </span><span class="nt">observable_id</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">observable_id</span>
 <span class="w">    </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">30</span>
-<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The Fingerprint object provides detailed information about a fingerprint,</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">which is a compact representation of data used to identify a longer piece of information,</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">such as a public key, file content, or application implementation. It contains the</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">algorithm or scheme and value of the fingerprint, enabling efficient and reliable</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">identification of the associated data.</span>
+<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">Fingerprint</span><span class="nv"> </span><span class="s">object</span><span class="nv"> </span><span class="s">provides</span><span class="nv"> </span><span class="s">detailed</span><span class="nv"> </span><span class="s">information</span><span class="nv"> </span><span class="s">about</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">fingerprint,</span>
+<span class="w">  </span><span class="s">which</span>
+
+<span class="w">  </span><span class="s">is</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">compact</span><span class="nv"> </span><span class="s">representation</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">data</span><span class="nv"> </span><span class="s">used</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">identify</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">longer</span><span class="nv"> </span><span class="s">piece</span><span class="nv"> </span><span class="s">of</span>
+
+<span class="w">  </span><span class="s">information,</span><span class="nv"> </span><span class="s">such</span><span class="nv"> </span><span class="s">as</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">public</span><span class="nv"> </span><span class="s">key,</span><span class="nv"> </span><span class="s">file</span><span class="nv"> </span><span class="s">content,</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">application</span><span class="nv"> </span><span class="s">implementation.</span>
+
+<span class="w">  </span><span class="s">It</span><span class="nv"> </span><span class="s">contains</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">algorithm</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">scheme</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">value</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">fingerprint,</span><span class="nv"> </span><span class="s">enabling</span>
+
+<span class="w">  </span><span class="s">efficient</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">reliable</span><span class="nv"> </span><span class="s">identification</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">associated</span><span class="nv"> </span><span class="s">data.'</span>
 <span class="nt">notes</span><span class="p">:</span>
-<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">D3FEND™ Ontology d3f:DigitalFingerprint. — https://d3fend.mitre.org/dao/artifact/d3f:DigitalFingerprint/</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="s">'D3FEND™</span><span class="nv"> </span><span class="s">Ontology</span><span class="nv"> </span><span class="s">d3f:DigitalFingerprint.</span><span class="nv"> </span><span class="s">—</span>
+
+<span class="w">  </span><span class="s">https://d3fend.mitre.org/dao/artifact/d3f:DigitalFingerprint/'</span>
+<span class="nt">in_subset</span><span class="p">:</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">objects</span>
 <span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="nt">see_also</span><span class="p">:</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://d3fend.mitre.org/dao/artifact/d3f:DigitalFingerprint/</span>
@@ -1116,20 +1143,28 @@
 <span class="nt">slot_usage</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">algorithm</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">algorithm</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The algorithm or scheme used to create the fingerprint, normalized</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">to the caption of &lt;code&gt;algorithm_id&lt;/code&gt;. In the case of &lt;code&gt;Other&lt;/code&gt;,</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">it is defined by the event source.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">algorithm</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">scheme</span><span class="nv"> </span><span class="s">used</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">create</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">fingerprint,</span><span class="nv"> </span><span class="s">normalized</span>
+<span class="w">      </span><span class="s">to</span><span class="nv"> </span><span class="s">the</span>
+
+<span class="w">      </span><span class="s">caption</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">&lt;code&gt;algorithm_id&lt;/code&gt;.</span><span class="nv"> </span><span class="s">In</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">case</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">&lt;code&gt;Other&lt;/code&gt;,</span><span class="nv"> </span><span class="s">it</span>
+<span class="w">      </span><span class="s">is</span>
+
+<span class="w">      </span><span class="s">defined</span><span class="nv"> </span><span class="s">by</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">event</span><span class="nv"> </span><span class="s">source.'</span>
 <span class="w">  </span><span class="nt">algorithm_id</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">algorithm_id</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The identifier of the normalized algorithm or scheme, which was used</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">to create the fingerprint.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">identifier</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">normalized</span><span class="nv"> </span><span class="s">algorithm</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">scheme,</span><span class="nv"> </span><span class="s">which</span><span class="nv"> </span><span class="s">was</span>
+<span class="w">      </span><span class="s">used</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">create</span>
+
+<span class="w">      </span><span class="s">the</span><span class="nv"> </span><span class="s">fingerprint.'</span>
 <span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">FingerprintAlgorithmIdEnum</span>
 <span class="w">    </span><span class="nt">required</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">value</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">value</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The fingerprint value.&lt;p&gt;&lt;b&gt;Note:&lt;/b&gt; This uses type &lt;code&gt;file_hash_t&lt;/code&gt;</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">(&amp;quot;Hash&amp;quot;), which has been generalized for all fingerprints but retains</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">the same name and caption for backwards compatibility.&lt;/p&gt;</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">fingerprint</span><span class="nv"> </span><span class="s">value.&lt;p&gt;&lt;b&gt;Note:&lt;/b&gt;</span><span class="nv"> </span><span class="s">This</span><span class="nv"> </span><span class="s">uses</span><span class="nv"> </span><span class="s">type</span><span class="nv"> </span><span class="s">&lt;code&gt;file_hash_t&lt;/code&gt;</span>
+
+<span class="w">      </span><span class="s">(&amp;quot;Hash&amp;quot;),</span><span class="nv"> </span><span class="s">which</span><span class="nv"> </span><span class="s">has</span><span class="nv"> </span><span class="s">been</span><span class="nv"> </span><span class="s">generalized</span><span class="nv"> </span><span class="s">for</span><span class="nv"> </span><span class="s">all</span><span class="nv"> </span><span class="s">fingerprints</span><span class="nv"> </span><span class="s">but</span><span class="nv"> </span><span class="s">retains</span>
+
+<span class="w">      </span><span class="s">the</span><span class="nv"> </span><span class="s">same</span><span class="nv"> </span><span class="s">name</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">caption</span><span class="nv"> </span><span class="s">for</span><span class="nv"> </span><span class="s">backwards</span><span class="nv"> </span><span class="s">compatibility.&lt;/p&gt;'</span>
 <span class="w">    </span><span class="nt">required</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 </code></pre></div>
 </details>
@@ -1140,13 +1175,22 @@
 <span class="w">  </span><span class="nt">observable_id</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">observable_id</span>
 <span class="w">    </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">30</span>
-<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The Fingerprint object provides detailed information about a fingerprint,</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">which is a compact representation of data used to identify a longer piece of information,</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">such as a public key, file content, or application implementation. It contains the</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">algorithm or scheme and value of the fingerprint, enabling efficient and reliable</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">identification of the associated data.</span>
+<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">Fingerprint</span><span class="nv"> </span><span class="s">object</span><span class="nv"> </span><span class="s">provides</span><span class="nv"> </span><span class="s">detailed</span><span class="nv"> </span><span class="s">information</span><span class="nv"> </span><span class="s">about</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">fingerprint,</span>
+<span class="w">  </span><span class="s">which</span>
+
+<span class="w">  </span><span class="s">is</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">compact</span><span class="nv"> </span><span class="s">representation</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">data</span><span class="nv"> </span><span class="s">used</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">identify</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">longer</span><span class="nv"> </span><span class="s">piece</span><span class="nv"> </span><span class="s">of</span>
+
+<span class="w">  </span><span class="s">information,</span><span class="nv"> </span><span class="s">such</span><span class="nv"> </span><span class="s">as</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">public</span><span class="nv"> </span><span class="s">key,</span><span class="nv"> </span><span class="s">file</span><span class="nv"> </span><span class="s">content,</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">application</span><span class="nv"> </span><span class="s">implementation.</span>
+
+<span class="w">  </span><span class="s">It</span><span class="nv"> </span><span class="s">contains</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">algorithm</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">scheme</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">value</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">fingerprint,</span><span class="nv"> </span><span class="s">enabling</span>
+
+<span class="w">  </span><span class="s">efficient</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">reliable</span><span class="nv"> </span><span class="s">identification</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">associated</span><span class="nv"> </span><span class="s">data.'</span>
 <span class="nt">notes</span><span class="p">:</span>
-<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">D3FEND™ Ontology d3f:DigitalFingerprint. — https://d3fend.mitre.org/dao/artifact/d3f:DigitalFingerprint/</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="s">'D3FEND™</span><span class="nv"> </span><span class="s">Ontology</span><span class="nv"> </span><span class="s">d3f:DigitalFingerprint.</span><span class="nv"> </span><span class="s">—</span>
+
+<span class="w">  </span><span class="s">https://d3fend.mitre.org/dao/artifact/d3f:DigitalFingerprint/'</span>
+<span class="nt">in_subset</span><span class="p">:</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">objects</span>
 <span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="nt">see_also</span><span class="p">:</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://d3fend.mitre.org/dao/artifact/d3f:DigitalFingerprint/</span>
@@ -1158,27 +1202,39 @@
 <span class="nt">slot_usage</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">algorithm</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">algorithm</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The algorithm or scheme used to create the fingerprint, normalized</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">to the caption of &lt;code&gt;algorithm_id&lt;/code&gt;. In the case of &lt;code&gt;Other&lt;/code&gt;,</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">it is defined by the event source.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">algorithm</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">scheme</span><span class="nv"> </span><span class="s">used</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">create</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">fingerprint,</span><span class="nv"> </span><span class="s">normalized</span>
+<span class="w">      </span><span class="s">to</span><span class="nv"> </span><span class="s">the</span>
+
+<span class="w">      </span><span class="s">caption</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">&lt;code&gt;algorithm_id&lt;/code&gt;.</span><span class="nv"> </span><span class="s">In</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">case</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">&lt;code&gt;Other&lt;/code&gt;,</span><span class="nv"> </span><span class="s">it</span>
+<span class="w">      </span><span class="s">is</span>
+
+<span class="w">      </span><span class="s">defined</span><span class="nv"> </span><span class="s">by</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">event</span><span class="nv"> </span><span class="s">source.'</span>
 <span class="w">  </span><span class="nt">algorithm_id</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">algorithm_id</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The identifier of the normalized algorithm or scheme, which was used</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">to create the fingerprint.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">identifier</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">normalized</span><span class="nv"> </span><span class="s">algorithm</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">scheme,</span><span class="nv"> </span><span class="s">which</span><span class="nv"> </span><span class="s">was</span>
+<span class="w">      </span><span class="s">used</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">create</span>
+
+<span class="w">      </span><span class="s">the</span><span class="nv"> </span><span class="s">fingerprint.'</span>
 <span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">FingerprintAlgorithmIdEnum</span>
 <span class="w">    </span><span class="nt">required</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">value</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">value</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The fingerprint value.&lt;p&gt;&lt;b&gt;Note:&lt;/b&gt; This uses type &lt;code&gt;file_hash_t&lt;/code&gt;</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">(&amp;quot;Hash&amp;quot;), which has been generalized for all fingerprints but retains</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">the same name and caption for backwards compatibility.&lt;/p&gt;</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">fingerprint</span><span class="nv"> </span><span class="s">value.&lt;p&gt;&lt;b&gt;Note:&lt;/b&gt;</span><span class="nv"> </span><span class="s">This</span><span class="nv"> </span><span class="s">uses</span><span class="nv"> </span><span class="s">type</span><span class="nv"> </span><span class="s">&lt;code&gt;file_hash_t&lt;/code&gt;</span>
+
+<span class="w">      </span><span class="s">(&amp;quot;Hash&amp;quot;),</span><span class="nv"> </span><span class="s">which</span><span class="nv"> </span><span class="s">has</span><span class="nv"> </span><span class="s">been</span><span class="nv"> </span><span class="s">generalized</span><span class="nv"> </span><span class="s">for</span><span class="nv"> </span><span class="s">all</span><span class="nv"> </span><span class="s">fingerprints</span><span class="nv"> </span><span class="s">but</span><span class="nv"> </span><span class="s">retains</span>
+
+<span class="w">      </span><span class="s">the</span><span class="nv"> </span><span class="s">same</span><span class="nv"> </span><span class="s">name</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">caption</span><span class="nv"> </span><span class="s">for</span><span class="nv"> </span><span class="s">backwards</span><span class="nv"> </span><span class="s">compatibility.&lt;/p&gt;'</span>
 <span class="w">    </span><span class="nt">required</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="nt">attributes</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">algorithm</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">algorithm</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The algorithm or scheme used to create the fingerprint, normalized</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">to the caption of &lt;code&gt;algorithm_id&lt;/code&gt;. In the case of &lt;code&gt;Other&lt;/code&gt;,</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">it is defined by the event source.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">algorithm</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">scheme</span><span class="nv"> </span><span class="s">used</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">create</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">fingerprint,</span><span class="nv"> </span><span class="s">normalized</span>
+<span class="w">      </span><span class="s">to</span><span class="nv"> </span><span class="s">the</span>
+
+<span class="w">      </span><span class="s">caption</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">&lt;code&gt;algorithm_id&lt;/code&gt;.</span><span class="nv"> </span><span class="s">In</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">case</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">&lt;code&gt;Other&lt;/code&gt;,</span><span class="nv"> </span><span class="s">it</span>
+<span class="w">      </span><span class="s">is</span>
+
+<span class="w">      </span><span class="s">defined</span><span class="nv"> </span><span class="s">by</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">event</span><span class="nv"> </span><span class="s">source.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Algorithm</span>
@@ -1198,8 +1254,10 @@
 <span class="w">      </span><span class="nt">sibling</span><span class="p">:</span>
 <span class="w">        </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">sibling</span>
 <span class="w">        </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">algorithm</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The identifier of the normalized algorithm or scheme, which was used</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">to create the fingerprint.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">identifier</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">normalized</span><span class="nv"> </span><span class="s">algorithm</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">scheme,</span><span class="nv"> </span><span class="s">which</span><span class="nv"> </span><span class="s">was</span>
+<span class="w">      </span><span class="s">used</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">create</span>
+
+<span class="w">      </span><span class="s">the</span><span class="nv"> </span><span class="s">fingerprint.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Algorithm ID</span>
@@ -1214,9 +1272,11 @@
 <span class="w">    </span><span class="nt">required</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">value</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">value</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The fingerprint value.&lt;p&gt;&lt;b&gt;Note:&lt;/b&gt; This uses type &lt;code&gt;file_hash_t&lt;/code&gt;</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">(&amp;quot;Hash&amp;quot;), which has been generalized for all fingerprints but retains</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">the same name and caption for backwards compatibility.&lt;/p&gt;</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">fingerprint</span><span class="nv"> </span><span class="s">value.&lt;p&gt;&lt;b&gt;Note:&lt;/b&gt;</span><span class="nv"> </span><span class="s">This</span><span class="nv"> </span><span class="s">uses</span><span class="nv"> </span><span class="s">type</span><span class="nv"> </span><span class="s">&lt;code&gt;file_hash_t&lt;/code&gt;</span>
+
+<span class="w">      </span><span class="s">(&amp;quot;Hash&amp;quot;),</span><span class="nv"> </span><span class="s">which</span><span class="nv"> </span><span class="s">has</span><span class="nv"> </span><span class="s">been</span><span class="nv"> </span><span class="s">generalized</span><span class="nv"> </span><span class="s">for</span><span class="nv"> </span><span class="s">all</span><span class="nv"> </span><span class="s">fingerprints</span><span class="nv"> </span><span class="s">but</span><span class="nv"> </span><span class="s">retains</span>
+
+<span class="w">      </span><span class="s">the</span><span class="nv"> </span><span class="s">same</span><span class="nv"> </span><span class="s">name</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">caption</span><span class="nv"> </span><span class="s">for</span><span class="nv"> </span><span class="s">backwards</span><span class="nv"> </span><span class="s">compatibility.&lt;/p&gt;'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Value</span>

@@ -217,6 +217,15 @@
 </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="#in-subsets">
+<span class="md-ellipsis">
+      
+        In Subsets
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#aliases">
 <span class="md-ellipsis">
       
@@ -313,7 +322,9 @@
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
 <h1 id="class-aimodel">Class: AiModel</h1>
-<p><em>The AI Model object describes the characteristics of an AI/ML model. Examples include language models like GPT-4, embedding models like text-embedding-ada-002, and computer vision models like CLIP.</em></p>
+<p><em>The AI Model object describes the characteristics of an AI/ML model. Examples</em></p>
+<p><em>include language models like GPT-4, embedding models like</em></p>
+<p><em>text-embedding-ada-002, and computer vision models like CLIP.</em></p>
 <p>URI: <a href="https://w3id.org/lmodel/ocsf/AiModel">ocsf:AiModel</a></p>
 <pre class="mermaid"><code> classDiagram
     class AiModel
@@ -417,6 +428,10 @@
 </tr>
 </tbody>
 </table>
+<h2 id="in-subsets">In Subsets</h2>
+<ul>
+<li><a href="../Objects/">Objects</a></li>
+</ul>
 <h2 id="aliases">Aliases</h2>
 <ul>
 <li>AI Model</li>
@@ -428,7 +443,8 @@
 </ul>
 <h2 id="notes">Notes</h2>
 <ul>
-<li>AI Model Registry and Documentation Standards — <a href="https://huggingface.co/docs/hub/models">https://huggingface.co/docs/hub/models</a></li>
+<li>AI Model Registry and Documentation Standards —
+<a href="https://huggingface.co/docs/hub/models">https://huggingface.co/docs/hub/models</a></li>
 <li>OpenAI Model Documentation — <a href="https://platform.openai.com/docs/models">https://platform.openai.com/docs/models</a></li>
 </ul>
 <h2 id="identifier-and-mapping-information">Identifier and Mapping Information</h2>
@@ -460,12 +476,19 @@
 <h3 id="direct">Direct</h3>
 <details>
 <div class="highlight"><pre><span></span><code><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">AiModel</span>
-<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The AI Model object describes the characteristics of an AI/ML model.</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">Examples include language models like GPT-4, embedding models like text-embedding-ada-002,</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">and computer vision models like CLIP.</span>
+<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">AI</span><span class="nv"> </span><span class="s">Model</span><span class="nv"> </span><span class="s">object</span><span class="nv"> </span><span class="s">describes</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">characteristics</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">an</span><span class="nv"> </span><span class="s">AI/ML</span><span class="nv"> </span><span class="s">model.</span>
+<span class="w">  </span><span class="s">Examples</span>
+
+<span class="w">  </span><span class="s">include</span><span class="nv"> </span><span class="s">language</span><span class="nv"> </span><span class="s">models</span><span class="nv"> </span><span class="s">like</span><span class="nv"> </span><span class="s">GPT-4,</span><span class="nv"> </span><span class="s">embedding</span><span class="nv"> </span><span class="s">models</span><span class="nv"> </span><span class="s">like</span>
+
+<span class="w">  </span><span class="s">text-embedding-ada-002,</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">computer</span><span class="nv"> </span><span class="s">vision</span><span class="nv"> </span><span class="s">models</span><span class="nv"> </span><span class="s">like</span><span class="nv"> </span><span class="s">CLIP.'</span>
 <span class="nt">notes</span><span class="p">:</span>
-<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">AI Model Registry and Documentation Standards — https://huggingface.co/docs/hub/models</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="s">'AI</span><span class="nv"> </span><span class="s">Model</span><span class="nv"> </span><span class="s">Registry</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">Documentation</span><span class="nv"> </span><span class="s">Standards</span><span class="nv"> </span><span class="s">—</span>
+
+<span class="w">  </span><span class="s">https://huggingface.co/docs/hub/models'</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">OpenAI Model Documentation — https://platform.openai.com/docs/models</span>
+<span class="nt">in_subset</span><span class="p">:</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">objects</span>
 <span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="nt">see_also</span><span class="p">:</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://huggingface.co/docs/hub/models</span>
@@ -482,12 +505,14 @@
 <span class="w">  </span><span class="nt">ai_provider</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ai_provider</span>
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'AI</span><span class="nv"> </span><span class="s">service</span><span class="nv"> </span><span class="s">provider</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">organization</span><span class="nv"> </span><span class="s">name.</span><span class="nv"> </span><span class="s">For</span><span class="nv"> </span><span class="s">example:</span><span class="nv"> </span><span class="s">&lt;code&gt;OpenAI&lt;/code&gt;,</span>
+
 <span class="w">      </span><span class="s">&lt;code&gt;Anthropic&lt;/code&gt;,</span><span class="nv"> </span><span class="s">&lt;code&gt;Google&lt;/code&gt;,</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">&lt;code&gt;Internal&lt;/code&gt;.'</span>
 <span class="w">    </span><span class="nt">required</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">name</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">name</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'Human-readable</span><span class="nv"> </span><span class="s">model</span><span class="nv"> </span><span class="s">name.</span><span class="nv"> </span><span class="s">For</span><span class="nv"> </span><span class="s">example:</span><span class="nv"> </span><span class="s">&lt;code&gt;gpt-4o&lt;/code&gt;,</span><span class="nv"> </span><span class="s">&lt;code&gt;claude-3-sonnet&lt;/code&gt;,</span>
-<span class="w">      </span><span class="s">or</span><span class="nv"> </span><span class="s">&lt;code&gt;text-embedding-ada-002&lt;/code&gt;.'</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'Human-readable</span><span class="nv"> </span><span class="s">model</span><span class="nv"> </span><span class="s">name.</span><span class="nv"> </span><span class="s">For</span><span class="nv"> </span><span class="s">example:</span><span class="nv"> </span><span class="s">&lt;code&gt;gpt-4o&lt;/code&gt;,</span>
+
+<span class="w">      </span><span class="s">&lt;code&gt;claude-3-sonnet&lt;/code&gt;,</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">&lt;code&gt;text-embedding-ada-002&lt;/code&gt;.'</span>
 <span class="w">    </span><span class="nt">required</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">uid</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">uid</span>
@@ -495,6 +520,7 @@
 <span class="w">  </span><span class="nt">version</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">version</span>
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'Model</span><span class="nv"> </span><span class="s">version</span><span class="nv"> </span><span class="s">identifier.</span><span class="nv"> </span><span class="s">For</span><span class="nv"> </span><span class="s">example:</span><span class="nv"> </span><span class="s">&lt;code&gt;2024-05-13&lt;/code&gt;,</span>
+
 <span class="w">      </span><span class="s">&lt;code&gt;v2.1.0&lt;/code&gt;,</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">&lt;code&gt;beta&lt;/code&gt;.'</span>
 <span class="w">    </span><span class="nt">recommended</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 </code></pre></div>
@@ -502,12 +528,19 @@
 <h3 id="induced">Induced</h3>
 <details>
 <div class="highlight"><pre><span></span><code><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">AiModel</span>
-<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The AI Model object describes the characteristics of an AI/ML model.</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">Examples include language models like GPT-4, embedding models like text-embedding-ada-002,</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">and computer vision models like CLIP.</span>
+<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">AI</span><span class="nv"> </span><span class="s">Model</span><span class="nv"> </span><span class="s">object</span><span class="nv"> </span><span class="s">describes</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">characteristics</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">an</span><span class="nv"> </span><span class="s">AI/ML</span><span class="nv"> </span><span class="s">model.</span>
+<span class="w">  </span><span class="s">Examples</span>
+
+<span class="w">  </span><span class="s">include</span><span class="nv"> </span><span class="s">language</span><span class="nv"> </span><span class="s">models</span><span class="nv"> </span><span class="s">like</span><span class="nv"> </span><span class="s">GPT-4,</span><span class="nv"> </span><span class="s">embedding</span><span class="nv"> </span><span class="s">models</span><span class="nv"> </span><span class="s">like</span>
+
+<span class="w">  </span><span class="s">text-embedding-ada-002,</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">computer</span><span class="nv"> </span><span class="s">vision</span><span class="nv"> </span><span class="s">models</span><span class="nv"> </span><span class="s">like</span><span class="nv"> </span><span class="s">CLIP.'</span>
 <span class="nt">notes</span><span class="p">:</span>
-<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">AI Model Registry and Documentation Standards — https://huggingface.co/docs/hub/models</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="s">'AI</span><span class="nv"> </span><span class="s">Model</span><span class="nv"> </span><span class="s">Registry</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">Documentation</span><span class="nv"> </span><span class="s">Standards</span><span class="nv"> </span><span class="s">—</span>
+
+<span class="w">  </span><span class="s">https://huggingface.co/docs/hub/models'</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">OpenAI Model Documentation — https://platform.openai.com/docs/models</span>
+<span class="nt">in_subset</span><span class="p">:</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">objects</span>
 <span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="nt">see_also</span><span class="p">:</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://huggingface.co/docs/hub/models</span>
@@ -519,12 +552,14 @@
 <span class="w">  </span><span class="nt">ai_provider</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ai_provider</span>
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'AI</span><span class="nv"> </span><span class="s">service</span><span class="nv"> </span><span class="s">provider</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">organization</span><span class="nv"> </span><span class="s">name.</span><span class="nv"> </span><span class="s">For</span><span class="nv"> </span><span class="s">example:</span><span class="nv"> </span><span class="s">&lt;code&gt;OpenAI&lt;/code&gt;,</span>
+
 <span class="w">      </span><span class="s">&lt;code&gt;Anthropic&lt;/code&gt;,</span><span class="nv"> </span><span class="s">&lt;code&gt;Google&lt;/code&gt;,</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">&lt;code&gt;Internal&lt;/code&gt;.'</span>
 <span class="w">    </span><span class="nt">required</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">name</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">name</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'Human-readable</span><span class="nv"> </span><span class="s">model</span><span class="nv"> </span><span class="s">name.</span><span class="nv"> </span><span class="s">For</span><span class="nv"> </span><span class="s">example:</span><span class="nv"> </span><span class="s">&lt;code&gt;gpt-4o&lt;/code&gt;,</span><span class="nv"> </span><span class="s">&lt;code&gt;claude-3-sonnet&lt;/code&gt;,</span>
-<span class="w">      </span><span class="s">or</span><span class="nv"> </span><span class="s">&lt;code&gt;text-embedding-ada-002&lt;/code&gt;.'</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'Human-readable</span><span class="nv"> </span><span class="s">model</span><span class="nv"> </span><span class="s">name.</span><span class="nv"> </span><span class="s">For</span><span class="nv"> </span><span class="s">example:</span><span class="nv"> </span><span class="s">&lt;code&gt;gpt-4o&lt;/code&gt;,</span>
+
+<span class="w">      </span><span class="s">&lt;code&gt;claude-3-sonnet&lt;/code&gt;,</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">&lt;code&gt;text-embedding-ada-002&lt;/code&gt;.'</span>
 <span class="w">    </span><span class="nt">required</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">uid</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">uid</span>
@@ -532,12 +567,14 @@
 <span class="w">  </span><span class="nt">version</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">version</span>
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'Model</span><span class="nv"> </span><span class="s">version</span><span class="nv"> </span><span class="s">identifier.</span><span class="nv"> </span><span class="s">For</span><span class="nv"> </span><span class="s">example:</span><span class="nv"> </span><span class="s">&lt;code&gt;2024-05-13&lt;/code&gt;,</span>
+
 <span class="w">      </span><span class="s">&lt;code&gt;v2.1.0&lt;/code&gt;,</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">&lt;code&gt;beta&lt;/code&gt;.'</span>
 <span class="w">    </span><span class="nt">recommended</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="nt">attributes</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">ai_provider</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ai_provider</span>
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'AI</span><span class="nv"> </span><span class="s">service</span><span class="nv"> </span><span class="s">provider</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">organization</span><span class="nv"> </span><span class="s">name.</span><span class="nv"> </span><span class="s">For</span><span class="nv"> </span><span class="s">example:</span><span class="nv"> </span><span class="s">&lt;code&gt;OpenAI&lt;/code&gt;,</span>
+
 <span class="w">      </span><span class="s">&lt;code&gt;Anthropic&lt;/code&gt;,</span><span class="nv"> </span><span class="s">&lt;code&gt;Google&lt;/code&gt;,</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">&lt;code&gt;Internal&lt;/code&gt;.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
@@ -551,8 +588,9 @@
 <span class="w">    </span><span class="nt">required</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">name</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">name</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'Human-readable</span><span class="nv"> </span><span class="s">model</span><span class="nv"> </span><span class="s">name.</span><span class="nv"> </span><span class="s">For</span><span class="nv"> </span><span class="s">example:</span><span class="nv"> </span><span class="s">&lt;code&gt;gpt-4o&lt;/code&gt;,</span><span class="nv"> </span><span class="s">&lt;code&gt;claude-3-sonnet&lt;/code&gt;,</span>
-<span class="w">      </span><span class="s">or</span><span class="nv"> </span><span class="s">&lt;code&gt;text-embedding-ada-002&lt;/code&gt;.'</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'Human-readable</span><span class="nv"> </span><span class="s">model</span><span class="nv"> </span><span class="s">name.</span><span class="nv"> </span><span class="s">For</span><span class="nv"> </span><span class="s">example:</span><span class="nv"> </span><span class="s">&lt;code&gt;gpt-4o&lt;/code&gt;,</span>
+
+<span class="w">      </span><span class="s">&lt;code&gt;claude-3-sonnet&lt;/code&gt;,</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">&lt;code&gt;text-embedding-ada-002&lt;/code&gt;.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Name</span>
@@ -751,6 +789,7 @@
 <span class="w">  </span><span class="nt">version</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">version</span>
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'Model</span><span class="nv"> </span><span class="s">version</span><span class="nv"> </span><span class="s">identifier.</span><span class="nv"> </span><span class="s">For</span><span class="nv"> </span><span class="s">example:</span><span class="nv"> </span><span class="s">&lt;code&gt;2024-05-13&lt;/code&gt;,</span>
+
 <span class="w">      </span><span class="s">&lt;code&gt;v2.1.0&lt;/code&gt;,</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">&lt;code&gt;beta&lt;/code&gt;.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>

@@ -217,6 +217,15 @@
 </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="#in-subsets">
+<span class="md-ellipsis">
+      
+        In Subsets
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#aliases">
 <span class="md-ellipsis">
       
@@ -313,7 +322,11 @@
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
 <h1 id="class-httpcookie">Class: HttpCookie</h1>
-<p><em>The HTTP Cookie object, also known as a web cookie or browser cookie, contains details and values pertaining to a small piece of data that a server sends to a user's web browser. This data is then stored by the browser and sent back to the server with subsequent requests, allowing the server to remember and track certain information about the user's browsing session or preferences.</em></p>
+<p><em>The HTTP Cookie object, also known as a web cookie or browser cookie, contains</em></p>
+<p><em>details and values pertaining to a small piece of data that a server sends to a</em></p>
+<p><em>user's web browser. This data is then stored by the browser and sent back to</em></p>
+<p><em>the server with subsequent requests, allowing the server to remember and track</em></p>
+<p><em>certain information about the user's browsing session or preferences.</em></p>
 <p>URI: <a href="https://w3id.org/lmodel/ocsf/HttpCookie">ocsf:HttpCookie</a></p>
 <pre class="mermaid"><code> classDiagram
     class HttpCookie
@@ -390,7 +403,7 @@
 <tr>
 <td><a href="../is_secure/">is_secure</a></td>
 <td>0..1 <br/> <a href="../Boolean/">Boolean</a></td>
-<td>The cookie attribute indicates that cookies are sent to the server only when ...</td>
+<td>The cookie attribute indicates that cookies are sent to the server only when</td>
 <td>direct</td>
 </tr>
 <tr>
@@ -408,13 +421,13 @@
 <tr>
 <td><a href="../samesite/">samesite</a></td>
 <td>0..1 <br/> <a href="../String/">String</a></td>
-<td>The cookie attribute that lets servers specify whether/when cookies are sent ...</td>
+<td>The cookie attribute that lets servers specify whether/when cookies are sent</td>
 <td>direct</td>
 </tr>
 <tr>
 <td><a href="../secure/">secure</a></td>
 <td>0..1 <br/> <a href="../Boolean/">Boolean</a></td>
-<td>The cookie attribute to only send cookies to the server with an encrypted req...</td>
+<td>The cookie attribute to only send cookies to the server with an encrypted</td>
 <td>direct</td>
 </tr>
 <tr>
@@ -444,6 +457,10 @@
 </tr>
 </tbody>
 </table>
+<h2 id="in-subsets">In Subsets</h2>
+<ul>
+<li><a href="../Objects/">Objects</a></li>
+</ul>
 <h2 id="aliases">Aliases</h2>
 <ul>
 <li>HTTP Cookie</li>
@@ -454,7 +471,8 @@
 </ul>
 <h2 id="notes">Notes</h2>
 <ul>
-<li>D3FEND™ Ontology d3f:SessionCookie. — <a href="https://d3fend.mitre.org/dao/artifact/d3f:SessionCookie/">https://d3fend.mitre.org/dao/artifact/d3f:SessionCookie/</a></li>
+<li>D3FEND™ Ontology d3f:SessionCookie. —
+<a href="https://d3fend.mitre.org/dao/artifact/d3f:SessionCookie/">https://d3fend.mitre.org/dao/artifact/d3f:SessionCookie/</a></li>
 </ul>
 <h2 id="identifier-and-mapping-information">Identifier and Mapping Information</h2>
 <h3 id="schema-source">Schema Source</h3>
@@ -489,13 +507,22 @@
 <h3 id="direct">Direct</h3>
 <details>
 <div class="highlight"><pre><span></span><code><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">HttpCookie</span>
-<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The HTTP Cookie object, also known as a web cookie or browser cookie,</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">contains details and values pertaining to a small piece of data that a server sends</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">to a user's web browser. This data is then stored by the browser and sent back to</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">the server with subsequent requests, allowing the server to remember and track certain</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">information about the user's browsing session or preferences.</span>
+<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">HTTP</span><span class="nv"> </span><span class="s">Cookie</span><span class="nv"> </span><span class="s">object,</span><span class="nv"> </span><span class="s">also</span><span class="nv"> </span><span class="s">known</span><span class="nv"> </span><span class="s">as</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">web</span><span class="nv"> </span><span class="s">cookie</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">browser</span><span class="nv"> </span><span class="s">cookie,</span>
+<span class="w">  </span><span class="s">contains</span>
+
+<span class="w">  </span><span class="s">details</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">values</span><span class="nv"> </span><span class="s">pertaining</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">small</span><span class="nv"> </span><span class="s">piece</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">data</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">server</span><span class="nv"> </span><span class="s">sends</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">a</span>
+
+<span class="w">  </span><span class="s">user</span><span class="se">''</span><span class="s">s</span><span class="nv"> </span><span class="s">web</span><span class="nv"> </span><span class="s">browser.</span><span class="nv"> </span><span class="s">This</span><span class="nv"> </span><span class="s">data</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">then</span><span class="nv"> </span><span class="s">stored</span><span class="nv"> </span><span class="s">by</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">browser</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">sent</span><span class="nv"> </span><span class="s">back</span><span class="nv"> </span><span class="s">to</span>
+
+<span class="w">  </span><span class="s">the</span><span class="nv"> </span><span class="s">server</span><span class="nv"> </span><span class="s">with</span><span class="nv"> </span><span class="s">subsequent</span><span class="nv"> </span><span class="s">requests,</span><span class="nv"> </span><span class="s">allowing</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">server</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">remember</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">track</span>
+
+<span class="w">  </span><span class="s">certain</span><span class="nv"> </span><span class="s">information</span><span class="nv"> </span><span class="s">about</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">user</span><span class="se">''</span><span class="s">s</span><span class="nv"> </span><span class="s">browsing</span><span class="nv"> </span><span class="s">session</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">preferences.'</span>
 <span class="nt">notes</span><span class="p">:</span>
-<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">D3FEND™ Ontology d3f:SessionCookie. — https://d3fend.mitre.org/dao/artifact/d3f:SessionCookie/</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="s">'D3FEND™</span><span class="nv"> </span><span class="s">Ontology</span><span class="nv"> </span><span class="s">d3f:SessionCookie.</span><span class="nv"> </span><span class="s">—</span>
+
+<span class="w">  </span><span class="s">https://d3fend.mitre.org/dao/artifact/d3f:SessionCookie/'</span>
+<span class="nt">in_subset</span><span class="p">:</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">objects</span>
 <span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="nt">see_also</span><span class="p">:</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://d3fend.mitre.org/dao/artifact/d3f:SessionCookie/</span>
@@ -538,13 +565,22 @@
 <h3 id="induced">Induced</h3>
 <details>
 <div class="highlight"><pre><span></span><code><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">HttpCookie</span>
-<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The HTTP Cookie object, also known as a web cookie or browser cookie,</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">contains details and values pertaining to a small piece of data that a server sends</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">to a user's web browser. This data is then stored by the browser and sent back to</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">the server with subsequent requests, allowing the server to remember and track certain</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">information about the user's browsing session or preferences.</span>
+<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">HTTP</span><span class="nv"> </span><span class="s">Cookie</span><span class="nv"> </span><span class="s">object,</span><span class="nv"> </span><span class="s">also</span><span class="nv"> </span><span class="s">known</span><span class="nv"> </span><span class="s">as</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">web</span><span class="nv"> </span><span class="s">cookie</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">browser</span><span class="nv"> </span><span class="s">cookie,</span>
+<span class="w">  </span><span class="s">contains</span>
+
+<span class="w">  </span><span class="s">details</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">values</span><span class="nv"> </span><span class="s">pertaining</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">small</span><span class="nv"> </span><span class="s">piece</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">data</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">server</span><span class="nv"> </span><span class="s">sends</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">a</span>
+
+<span class="w">  </span><span class="s">user</span><span class="se">''</span><span class="s">s</span><span class="nv"> </span><span class="s">web</span><span class="nv"> </span><span class="s">browser.</span><span class="nv"> </span><span class="s">This</span><span class="nv"> </span><span class="s">data</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">then</span><span class="nv"> </span><span class="s">stored</span><span class="nv"> </span><span class="s">by</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">browser</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">sent</span><span class="nv"> </span><span class="s">back</span><span class="nv"> </span><span class="s">to</span>
+
+<span class="w">  </span><span class="s">the</span><span class="nv"> </span><span class="s">server</span><span class="nv"> </span><span class="s">with</span><span class="nv"> </span><span class="s">subsequent</span><span class="nv"> </span><span class="s">requests,</span><span class="nv"> </span><span class="s">allowing</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">server</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">remember</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">track</span>
+
+<span class="w">  </span><span class="s">certain</span><span class="nv"> </span><span class="s">information</span><span class="nv"> </span><span class="s">about</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">user</span><span class="se">''</span><span class="s">s</span><span class="nv"> </span><span class="s">browsing</span><span class="nv"> </span><span class="s">session</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">preferences.'</span>
 <span class="nt">notes</span><span class="p">:</span>
-<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">D3FEND™ Ontology d3f:SessionCookie. — https://d3fend.mitre.org/dao/artifact/d3f:SessionCookie/</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="s">'D3FEND™</span><span class="nv"> </span><span class="s">Ontology</span><span class="nv"> </span><span class="s">d3f:SessionCookie.</span><span class="nv"> </span><span class="s">—</span>
+
+<span class="w">  </span><span class="s">https://d3fend.mitre.org/dao/artifact/d3f:SessionCookie/'</span>
+<span class="nt">in_subset</span><span class="p">:</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">objects</span>
 <span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="nt">see_also</span><span class="p">:</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://d3fend.mitre.org/dao/artifact/d3f:SessionCookie/</span>
@@ -637,8 +673,10 @@
 <span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">boolean</span>
 <span class="w">  </span><span class="nt">is_secure</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">is_secure</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The cookie attribute indicates that cookies are sent to the server</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">only when the request is encrypted using the HTTPS protocol.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">cookie</span><span class="nv"> </span><span class="s">attribute</span><span class="nv"> </span><span class="s">indicates</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">cookies</span><span class="nv"> </span><span class="s">are</span><span class="nv"> </span><span class="s">sent</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">server</span>
+<span class="w">      </span><span class="s">only</span><span class="nv"> </span><span class="s">when</span>
+
+<span class="w">      </span><span class="s">the</span><span class="nv"> </span><span class="s">request</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">encrypted</span><span class="nv"> </span><span class="s">using</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">HTTPS</span><span class="nv"> </span><span class="s">protocol.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Secure</span>
@@ -775,7 +813,9 @@
 <span class="w">  </span><span class="nt">samesite</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">samesite</span>
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">cookie</span><span class="nv"> </span><span class="s">attribute</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">lets</span><span class="nv"> </span><span class="s">servers</span><span class="nv"> </span><span class="s">specify</span><span class="nv"> </span><span class="s">whether/when</span><span class="nv"> </span><span class="s">cookies</span>
-<span class="w">      </span><span class="s">are</span><span class="nv"> </span><span class="s">sent</span><span class="nv"> </span><span class="s">with</span><span class="nv"> </span><span class="s">cross-site</span><span class="nv"> </span><span class="s">requests.</span><span class="nv"> </span><span class="s">Values</span><span class="nv"> </span><span class="s">are:</span><span class="nv"> </span><span class="s">Strict,</span><span class="nv"> </span><span class="s">Lax</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">None'</span>
+<span class="w">      </span><span class="s">are</span><span class="nv"> </span><span class="s">sent</span>
+
+<span class="w">      </span><span class="s">with</span><span class="nv"> </span><span class="s">cross-site</span><span class="nv"> </span><span class="s">requests.</span><span class="nv"> </span><span class="s">Values</span><span class="nv"> </span><span class="s">are:</span><span class="nv"> </span><span class="s">Strict,</span><span class="nv"> </span><span class="s">Lax</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">None'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">SameSite</span>
@@ -787,8 +827,10 @@
 <span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">string</span>
 <span class="w">  </span><span class="nt">secure</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">secure</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The cookie attribute to only send cookies to the server with an encrypted</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">request over the HTTPS protocol.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">cookie</span><span class="nv"> </span><span class="s">attribute</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">only</span><span class="nv"> </span><span class="s">send</span><span class="nv"> </span><span class="s">cookies</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">server</span><span class="nv"> </span><span class="s">with</span><span class="nv"> </span><span class="s">an</span>
+<span class="w">      </span><span class="s">encrypted</span>
+
+<span class="w">      </span><span class="s">request</span><span class="nv"> </span><span class="s">over</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">HTTPS</span><span class="nv"> </span><span class="s">protocol.'</span>
 <span class="w">    </span><span class="nt">deprecated</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Use the &lt;code&gt;is_secure&lt;/code&gt; attribute instead. (since 1.1.0)</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>

@@ -217,6 +217,15 @@
 </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="#in-subsets">
+<span class="md-ellipsis">
+      
+        In Subsets
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#aliases">
 <span class="md-ellipsis">
       
@@ -295,7 +304,8 @@
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
 <h1 id="class-loadbalancer">Class: LoadBalancer</h1>
-<p><em>The load balancer object describes the load balancer entity and contains additional information regarding the distribution of traffic across a network.</em></p>
+<p><em>The load balancer object describes the load balancer entity and contains</em></p>
+<p><em>additional information regarding the distribution of traffic across a network.</em></p>
 <p>URI: <a href="https://w3id.org/lmodel/ocsf/LoadBalancer">ocsf:LoadBalancer</a></p>
 <pre class="mermaid"><code> classDiagram
     class LoadBalancer
@@ -386,7 +396,7 @@
 <tr>
 <td><a href="../code/">code</a></td>
 <td>0..1 <em>recommended</em> <br/> <a href="../Integer/">Integer</a></td>
-<td>The numeric response status code detailing the connection from the load balan...</td>
+<td>The numeric response status code detailing the connection from the load</td>
 <td>direct</td>
 </tr>
 <tr>
@@ -434,7 +444,7 @@
 <tr>
 <td><a href="../status_detail/">status_detail</a></td>
 <td>0..1 <br/> <a href="../String/">String</a></td>
-<td>The status detail contains additional status information about the load balan...</td>
+<td>The status detail contains additional status information about the load</td>
 <td>direct</td>
 </tr>
 <tr>
@@ -536,6 +546,10 @@
 </tr>
 </tbody>
 </table>
+<h2 id="in-subsets">In Subsets</h2>
+<ul>
+<li><a href="../Objects/">Objects</a></li>
+</ul>
 <h2 id="aliases">Aliases</h2>
 <ul>
 <li>Load Balancer</li>
@@ -569,8 +583,11 @@
 <h3 id="direct">Direct</h3>
 <details>
 <div class="highlight"><pre><span></span><code><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">LoadBalancer</span>
-<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The load balancer object describes the load balancer entity and contains</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">additional information regarding the distribution of traffic across a network.</span>
+<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">load</span><span class="nv"> </span><span class="s">balancer</span><span class="nv"> </span><span class="s">object</span><span class="nv"> </span><span class="s">describes</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">load</span><span class="nv"> </span><span class="s">balancer</span><span class="nv"> </span><span class="s">entity</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">contains</span>
+
+<span class="w">  </span><span class="s">additional</span><span class="nv"> </span><span class="s">information</span><span class="nv"> </span><span class="s">regarding</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">distribution</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">traffic</span><span class="nv"> </span><span class="s">across</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">network.'</span>
+<span class="nt">in_subset</span><span class="p">:</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">objects</span>
 <span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="nt">aliases</span><span class="p">:</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Load Balancer</span>
@@ -593,8 +610,10 @@
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The request classification as defined by the load balancer.</span>
 <span class="w">  </span><span class="nt">code</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">code</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The numeric response status code detailing the connection from the</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">load balancer to the destination target.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">numeric</span><span class="nv"> </span><span class="s">response</span><span class="nv"> </span><span class="s">status</span><span class="nv"> </span><span class="s">code</span><span class="nv"> </span><span class="s">detailing</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">connection</span><span class="nv"> </span><span class="s">from</span><span class="nv"> </span><span class="s">the</span>
+<span class="w">      </span><span class="s">load</span>
+
+<span class="w">      </span><span class="s">balancer</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">destination</span><span class="nv"> </span><span class="s">target.'</span>
 <span class="w">    </span><span class="nt">recommended</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">dst_endpoint</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">dst_endpoint</span>
@@ -610,8 +629,12 @@
 <span class="w">  </span><span class="nt">ip</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ip</span>
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">IP</span><span class="nv"> </span><span class="s">address</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">load</span><span class="nv"> </span><span class="s">balancer</span><span class="nv"> </span><span class="s">node</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">handled</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">client</span>
-<span class="w">      </span><span class="s">request.</span><span class="nv"> </span><span class="s">Note:</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">load</span><span class="nv"> </span><span class="s">balancer</span><span class="nv"> </span><span class="s">may</span><span class="nv"> </span><span class="s">have</span><span class="nv"> </span><span class="s">other</span><span class="nv"> </span><span class="s">IP</span><span class="nv"> </span><span class="s">addresses,</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">this</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">not</span>
-<span class="w">      </span><span class="s">an</span><span class="nv"> </span><span class="s">IP</span><span class="nv"> </span><span class="s">address</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">target/distribution</span><span class="nv"> </span><span class="s">endpoint</span><span class="nv"> </span><span class="s">-</span><span class="nv"> </span><span class="s">see</span><span class="nv"> </span><span class="s">&lt;code&gt;dst_endpoint&lt;/code&gt;.'</span>
+<span class="w">      </span><span class="s">request.</span><span class="nv"> </span><span class="s">Note:</span>
+
+<span class="w">      </span><span class="s">the</span><span class="nv"> </span><span class="s">load</span><span class="nv"> </span><span class="s">balancer</span><span class="nv"> </span><span class="s">may</span><span class="nv"> </span><span class="s">have</span><span class="nv"> </span><span class="s">other</span><span class="nv"> </span><span class="s">IP</span><span class="nv"> </span><span class="s">addresses,</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">this</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">not</span><span class="nv"> </span><span class="s">an</span><span class="nv"> </span><span class="s">IP</span><span class="nv"> </span><span class="s">address</span>
+<span class="w">      </span><span class="s">of</span>
+
+<span class="w">      </span><span class="s">the</span><span class="nv"> </span><span class="s">target/distribution</span><span class="nv"> </span><span class="s">endpoint</span><span class="nv"> </span><span class="s">-</span><span class="nv"> </span><span class="s">see</span><span class="nv"> </span><span class="s">&lt;code&gt;dst_endpoint&lt;/code&gt;.'</span>
 <span class="w">  </span><span class="nt">message</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">message</span>
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The load balancer message.</span>
@@ -623,8 +646,10 @@
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The name of the load balancer.</span>
 <span class="w">  </span><span class="nt">status_detail</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">status_detail</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The status detail contains additional status information about the</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">load balancer distribution event.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">status</span><span class="nv"> </span><span class="s">detail</span><span class="nv"> </span><span class="s">contains</span><span class="nv"> </span><span class="s">additional</span><span class="nv"> </span><span class="s">status</span><span class="nv"> </span><span class="s">information</span><span class="nv"> </span><span class="s">about</span><span class="nv"> </span><span class="s">the</span>
+<span class="w">      </span><span class="s">load</span>
+
+<span class="w">      </span><span class="s">balancer</span><span class="nv"> </span><span class="s">distribution</span><span class="nv"> </span><span class="s">event.'</span>
 <span class="w">  </span><span class="nt">uid</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">uid</span>
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The unique identifier for the load balancer.</span>
@@ -633,8 +658,11 @@
 <h3 id="induced">Induced</h3>
 <details>
 <div class="highlight"><pre><span></span><code><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">LoadBalancer</span>
-<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The load balancer object describes the load balancer entity and contains</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">additional information regarding the distribution of traffic across a network.</span>
+<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">load</span><span class="nv"> </span><span class="s">balancer</span><span class="nv"> </span><span class="s">object</span><span class="nv"> </span><span class="s">describes</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">load</span><span class="nv"> </span><span class="s">balancer</span><span class="nv"> </span><span class="s">entity</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">contains</span>
+
+<span class="w">  </span><span class="s">additional</span><span class="nv"> </span><span class="s">information</span><span class="nv"> </span><span class="s">regarding</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">distribution</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">traffic</span><span class="nv"> </span><span class="s">across</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">network.'</span>
+<span class="nt">in_subset</span><span class="p">:</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">objects</span>
 <span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="nt">aliases</span><span class="p">:</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Load Balancer</span>
@@ -645,8 +673,10 @@
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The request classification as defined by the load balancer.</span>
 <span class="w">  </span><span class="nt">code</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">code</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The numeric response status code detailing the connection from the</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">load balancer to the destination target.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">numeric</span><span class="nv"> </span><span class="s">response</span><span class="nv"> </span><span class="s">status</span><span class="nv"> </span><span class="s">code</span><span class="nv"> </span><span class="s">detailing</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">connection</span><span class="nv"> </span><span class="s">from</span><span class="nv"> </span><span class="s">the</span>
+<span class="w">      </span><span class="s">load</span>
+
+<span class="w">      </span><span class="s">balancer</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">destination</span><span class="nv"> </span><span class="s">target.'</span>
 <span class="w">    </span><span class="nt">recommended</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">dst_endpoint</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">dst_endpoint</span>
@@ -662,8 +692,12 @@
 <span class="w">  </span><span class="nt">ip</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ip</span>
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">IP</span><span class="nv"> </span><span class="s">address</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">load</span><span class="nv"> </span><span class="s">balancer</span><span class="nv"> </span><span class="s">node</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">handled</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">client</span>
-<span class="w">      </span><span class="s">request.</span><span class="nv"> </span><span class="s">Note:</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">load</span><span class="nv"> </span><span class="s">balancer</span><span class="nv"> </span><span class="s">may</span><span class="nv"> </span><span class="s">have</span><span class="nv"> </span><span class="s">other</span><span class="nv"> </span><span class="s">IP</span><span class="nv"> </span><span class="s">addresses,</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">this</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">not</span>
-<span class="w">      </span><span class="s">an</span><span class="nv"> </span><span class="s">IP</span><span class="nv"> </span><span class="s">address</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">target/distribution</span><span class="nv"> </span><span class="s">endpoint</span><span class="nv"> </span><span class="s">-</span><span class="nv"> </span><span class="s">see</span><span class="nv"> </span><span class="s">&lt;code&gt;dst_endpoint&lt;/code&gt;.'</span>
+<span class="w">      </span><span class="s">request.</span><span class="nv"> </span><span class="s">Note:</span>
+
+<span class="w">      </span><span class="s">the</span><span class="nv"> </span><span class="s">load</span><span class="nv"> </span><span class="s">balancer</span><span class="nv"> </span><span class="s">may</span><span class="nv"> </span><span class="s">have</span><span class="nv"> </span><span class="s">other</span><span class="nv"> </span><span class="s">IP</span><span class="nv"> </span><span class="s">addresses,</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">this</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">not</span><span class="nv"> </span><span class="s">an</span><span class="nv"> </span><span class="s">IP</span><span class="nv"> </span><span class="s">address</span>
+<span class="w">      </span><span class="s">of</span>
+
+<span class="w">      </span><span class="s">the</span><span class="nv"> </span><span class="s">target/distribution</span><span class="nv"> </span><span class="s">endpoint</span><span class="nv"> </span><span class="s">-</span><span class="nv"> </span><span class="s">see</span><span class="nv"> </span><span class="s">&lt;code&gt;dst_endpoint&lt;/code&gt;.'</span>
 <span class="w">  </span><span class="nt">message</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">message</span>
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The load balancer message.</span>
@@ -675,8 +709,10 @@
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The name of the load balancer.</span>
 <span class="w">  </span><span class="nt">status_detail</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">status_detail</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The status detail contains additional status information about the</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">load balancer distribution event.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">status</span><span class="nv"> </span><span class="s">detail</span><span class="nv"> </span><span class="s">contains</span><span class="nv"> </span><span class="s">additional</span><span class="nv"> </span><span class="s">status</span><span class="nv"> </span><span class="s">information</span><span class="nv"> </span><span class="s">about</span><span class="nv"> </span><span class="s">the</span>
+<span class="w">      </span><span class="s">load</span>
+
+<span class="w">      </span><span class="s">balancer</span><span class="nv"> </span><span class="s">distribution</span><span class="nv"> </span><span class="s">event.'</span>
 <span class="w">  </span><span class="nt">uid</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">uid</span>
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The unique identifier for the load balancer.</span>
@@ -698,8 +734,10 @@
 <span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">string</span>
 <span class="w">  </span><span class="nt">code</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">code</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The numeric response status code detailing the connection from the</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">load balancer to the destination target.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">numeric</span><span class="nv"> </span><span class="s">response</span><span class="nv"> </span><span class="s">status</span><span class="nv"> </span><span class="s">code</span><span class="nv"> </span><span class="s">detailing</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">connection</span><span class="nv"> </span><span class="s">from</span><span class="nv"> </span><span class="s">the</span>
+<span class="w">      </span><span class="s">load</span>
+
+<span class="w">      </span><span class="s">balancer</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">destination</span><span class="nv"> </span><span class="s">target.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Response Code</span>
@@ -775,8 +813,12 @@
 <span class="w">  </span><span class="nt">ip</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ip</span>
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">IP</span><span class="nv"> </span><span class="s">address</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">load</span><span class="nv"> </span><span class="s">balancer</span><span class="nv"> </span><span class="s">node</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">handled</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">client</span>
-<span class="w">      </span><span class="s">request.</span><span class="nv"> </span><span class="s">Note:</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">load</span><span class="nv"> </span><span class="s">balancer</span><span class="nv"> </span><span class="s">may</span><span class="nv"> </span><span class="s">have</span><span class="nv"> </span><span class="s">other</span><span class="nv"> </span><span class="s">IP</span><span class="nv"> </span><span class="s">addresses,</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">this</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">not</span>
-<span class="w">      </span><span class="s">an</span><span class="nv"> </span><span class="s">IP</span><span class="nv"> </span><span class="s">address</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">target/distribution</span><span class="nv"> </span><span class="s">endpoint</span><span class="nv"> </span><span class="s">-</span><span class="nv"> </span><span class="s">see</span><span class="nv"> </span><span class="s">&lt;code&gt;dst_endpoint&lt;/code&gt;.'</span>
+<span class="w">      </span><span class="s">request.</span><span class="nv"> </span><span class="s">Note:</span>
+
+<span class="w">      </span><span class="s">the</span><span class="nv"> </span><span class="s">load</span><span class="nv"> </span><span class="s">balancer</span><span class="nv"> </span><span class="s">may</span><span class="nv"> </span><span class="s">have</span><span class="nv"> </span><span class="s">other</span><span class="nv"> </span><span class="s">IP</span><span class="nv"> </span><span class="s">addresses,</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">this</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">not</span><span class="nv"> </span><span class="s">an</span><span class="nv"> </span><span class="s">IP</span><span class="nv"> </span><span class="s">address</span>
+<span class="w">      </span><span class="s">of</span>
+
+<span class="w">      </span><span class="s">the</span><span class="nv"> </span><span class="s">target/distribution</span><span class="nv"> </span><span class="s">endpoint</span><span class="nv"> </span><span class="s">-</span><span class="nv"> </span><span class="s">see</span><span class="nv"> </span><span class="s">&lt;code&gt;dst_endpoint&lt;/code&gt;.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">IP Address</span>
@@ -927,8 +969,10 @@
 <span class="w">    </span><span class="nt">recommended</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">status_detail</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">status_detail</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The status detail contains additional status information about the</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">load balancer distribution event.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">status</span><span class="nv"> </span><span class="s">detail</span><span class="nv"> </span><span class="s">contains</span><span class="nv"> </span><span class="s">additional</span><span class="nv"> </span><span class="s">status</span><span class="nv"> </span><span class="s">information</span><span class="nv"> </span><span class="s">about</span><span class="nv"> </span><span class="s">the</span>
+<span class="w">      </span><span class="s">load</span>
+
+<span class="w">      </span><span class="s">balancer</span><span class="nv"> </span><span class="s">distribution</span><span class="nv"> </span><span class="s">event.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Status Detail</span>

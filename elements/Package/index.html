@@ -217,6 +217,15 @@
 </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="#in-subsets">
+<span class="md-ellipsis">
+      
+        In Subsets
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#aliases">
 <span class="md-ellipsis">
       
@@ -406,7 +415,7 @@
 <tr>
 <td><a href="../architecture/">architecture</a></td>
 <td>0..1 <em>recommended</em> <br/> <a href="../String/">String</a></td>
-<td>Architecture is a shorthand name describing the type of computer hardware the...</td>
+<td>Architecture is a shorthand name describing the type of computer hardware the</td>
 <td>direct</td>
 </tr>
 <tr>
@@ -454,13 +463,13 @@
 <tr>
 <td><a href="../package_manager_url/">package_manager_url</a></td>
 <td>0..1 <br/> <a href="../UrlT/">UrlT</a></td>
-<td>The URL of the package or library at the package manager, or the specific URL...</td>
+<td>The URL of the package or library at the package manager, or the specific URL</td>
 <td>direct</td>
 </tr>
 <tr>
 <td><a href="../purl/">purl</a></td>
 <td>0..1 <br/> <a href="../String/">String</a></td>
-<td>A purl is a URL string used to identify and locate a software package in a mo...</td>
+<td>A purl is a URL string used to identify and locate a software package in a</td>
 <td>direct</td>
 </tr>
 <tr>
@@ -478,7 +487,7 @@
 <tr>
 <td><a href="../type/">type</a></td>
 <td>0..1 <br/> <a href="../String/">String</a></td>
-<td>The type of software package, normalized to the caption of the <code>type_id&lt;...</code></td>
+<td>The type of software package, normalized to the caption of the</td>
 <td>direct</td>
 </tr>
 <tr>
@@ -538,6 +547,10 @@
 </tr>
 </tbody>
 </table>
+<h2 id="in-subsets">In Subsets</h2>
+<ul>
+<li><a href="../Objects/">Objects</a></li>
+</ul>
 <h2 id="aliases">Aliases</h2>
 <ul>
 <li>Software Package</li>
@@ -548,7 +561,8 @@
 </ul>
 <h2 id="notes">Notes</h2>
 <ul>
-<li>D3FEND™ Ontology d3f:SoftwarePackage. — <a href="https://d3fend.mitre.org/dao/artifact/d3f:SoftwarePackage/">https://d3fend.mitre.org/dao/artifact/d3f:SoftwarePackage/</a></li>
+<li>D3FEND™ Ontology d3f:SoftwarePackage. —
+<a href="https://d3fend.mitre.org/dao/artifact/d3f:SoftwarePackage/">https://d3fend.mitre.org/dao/artifact/d3f:SoftwarePackage/</a></li>
 </ul>
 <h2 id="identifier-and-mapping-information">Identifier and Mapping Information</h2>
 <h3 id="schema-source">Schema Source</h3>
@@ -581,7 +595,11 @@
 <div class="highlight"><pre><span></span><code><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Package</span>
 <span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The Software Package object describes details about a software package.</span>
 <span class="nt">notes</span><span class="p">:</span>
-<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">D3FEND™ Ontology d3f:SoftwarePackage. — https://d3fend.mitre.org/dao/artifact/d3f:SoftwarePackage/</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="s">'D3FEND™</span><span class="nv"> </span><span class="s">Ontology</span><span class="nv"> </span><span class="s">d3f:SoftwarePackage.</span><span class="nv"> </span><span class="s">—</span>
+
+<span class="w">  </span><span class="s">https://d3fend.mitre.org/dao/artifact/d3f:SoftwarePackage/'</span>
+<span class="nt">in_subset</span><span class="p">:</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">objects</span>
 <span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="nt">see_also</span><span class="p">:</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://d3fend.mitre.org/dao/artifact/d3f:SoftwarePackage/</span>
@@ -612,8 +630,10 @@
 <span class="w">    </span><span class="nt">recommended</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">hash</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">hash</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Cryptographic hash to identify the binary instance of a software</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">component. This can include any component such file, package, or library.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'Cryptographic</span><span class="nv"> </span><span class="s">hash</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">identify</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">binary</span><span class="nv"> </span><span class="s">instance</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">software</span>
+<span class="w">      </span><span class="s">component.</span>
+
+<span class="w">      </span><span class="s">This</span><span class="nv"> </span><span class="s">can</span><span class="nv"> </span><span class="s">include</span><span class="nv"> </span><span class="s">any</span><span class="nv"> </span><span class="s">component</span><span class="nv"> </span><span class="s">such</span><span class="nv"> </span><span class="s">file,</span><span class="nv"> </span><span class="s">package,</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">library.'</span>
 <span class="w">  </span><span class="nt">license</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">license</span>
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The software license applied to this package.</span>
@@ -623,13 +643,18 @@
 <span class="w">    </span><span class="nt">required</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">src_url</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">src_url</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The link to the specific library or package such as within &lt;code&gt;GitHub&lt;/code&gt;,</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">this is different from the link to the package manager where the library or</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">package is hosted.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">link</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">specific</span><span class="nv"> </span><span class="s">library</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">package</span><span class="nv"> </span><span class="s">such</span><span class="nv"> </span><span class="s">as</span><span class="nv"> </span><span class="s">within</span><span class="nv"> </span><span class="s">&lt;code&gt;GitHub&lt;/code&gt;,</span>
+
+<span class="w">      </span><span class="s">this</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">different</span><span class="nv"> </span><span class="s">from</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">link</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">package</span><span class="nv"> </span><span class="s">manager</span><span class="nv"> </span><span class="s">where</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">library</span><span class="nv"> </span><span class="s">or</span>
+
+<span class="w">      </span><span class="s">package</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">hosted.'</span>
 <span class="w">  </span><span class="nt">type</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">type</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The type of software package, normalized to the caption of the &lt;code&gt;type_id&lt;/code&gt;</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">value. In the case of 'Other', it is defined by the source.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">type</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">software</span><span class="nv"> </span><span class="s">package,</span><span class="nv"> </span><span class="s">normalized</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">caption</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span>
+
+<span class="w">      </span><span class="s">&lt;code&gt;type_id&lt;/code&gt;</span><span class="nv"> </span><span class="s">value.</span><span class="nv"> </span><span class="s">In</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">case</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="se">''</span><span class="s">Other</span><span class="se">''</span><span class="s">,</span><span class="nv"> </span><span class="s">it</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">defined</span><span class="nv"> </span><span class="s">by</span><span class="nv"> </span><span class="s">the</span>
+
+<span class="w">      </span><span class="s">source.'</span>
 <span class="w">  </span><span class="nt">type_id</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">type_id</span>
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The type of software package.</span>
@@ -637,9 +662,12 @@
 <span class="w">    </span><span class="nt">recommended</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">uid</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">uid</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">A unique identifier for the package or library reported by the source</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">tool. E.g., the &lt;code&gt;libId&lt;/code&gt; within the &lt;code&gt;sbom&lt;/code&gt; field of an</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">OX Security Issue or the SPDX &lt;code&gt;components.*.bom-ref&lt;/code&gt;.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'A</span><span class="nv"> </span><span class="s">unique</span><span class="nv"> </span><span class="s">identifier</span><span class="nv"> </span><span class="s">for</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">package</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">library</span><span class="nv"> </span><span class="s">reported</span><span class="nv"> </span><span class="s">by</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">source</span>
+<span class="w">      </span><span class="s">tool.</span>
+
+<span class="w">      </span><span class="s">E.g.,</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">&lt;code&gt;libId&lt;/code&gt;</span><span class="nv"> </span><span class="s">within</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">&lt;code&gt;sbom&lt;/code&gt;</span><span class="nv"> </span><span class="s">field</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">an</span><span class="nv"> </span><span class="s">OX</span>
+
+<span class="w">      </span><span class="s">Security</span><span class="nv"> </span><span class="s">Issue</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">SPDX</span><span class="nv"> </span><span class="s">&lt;code&gt;components.*.bom-ref&lt;/code&gt;.'</span>
 <span class="w">  </span><span class="nt">vendor_name</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">vendor_name</span>
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The name of the vendor who published the software package.</span>
@@ -654,7 +682,11 @@
 <div class="highlight"><pre><span></span><code><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Package</span>
 <span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The Software Package object describes details about a software package.</span>
 <span class="nt">notes</span><span class="p">:</span>
-<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">D3FEND™ Ontology d3f:SoftwarePackage. — https://d3fend.mitre.org/dao/artifact/d3f:SoftwarePackage/</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="s">'D3FEND™</span><span class="nv"> </span><span class="s">Ontology</span><span class="nv"> </span><span class="s">d3f:SoftwarePackage.</span><span class="nv"> </span><span class="s">—</span>
+
+<span class="w">  </span><span class="s">https://d3fend.mitre.org/dao/artifact/d3f:SoftwarePackage/'</span>
+<span class="nt">in_subset</span><span class="p">:</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">objects</span>
 <span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="nt">see_also</span><span class="p">:</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://d3fend.mitre.org/dao/artifact/d3f:SoftwarePackage/</span>
@@ -667,8 +699,10 @@
 <span class="w">    </span><span class="nt">recommended</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">hash</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">hash</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Cryptographic hash to identify the binary instance of a software</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">component. This can include any component such file, package, or library.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'Cryptographic</span><span class="nv"> </span><span class="s">hash</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">identify</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">binary</span><span class="nv"> </span><span class="s">instance</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">software</span>
+<span class="w">      </span><span class="s">component.</span>
+
+<span class="w">      </span><span class="s">This</span><span class="nv"> </span><span class="s">can</span><span class="nv"> </span><span class="s">include</span><span class="nv"> </span><span class="s">any</span><span class="nv"> </span><span class="s">component</span><span class="nv"> </span><span class="s">such</span><span class="nv"> </span><span class="s">file,</span><span class="nv"> </span><span class="s">package,</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">library.'</span>
 <span class="w">  </span><span class="nt">license</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">license</span>
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The software license applied to this package.</span>
@@ -678,13 +712,18 @@
 <span class="w">    </span><span class="nt">required</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">src_url</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">src_url</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The link to the specific library or package such as within &lt;code&gt;GitHub&lt;/code&gt;,</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">this is different from the link to the package manager where the library or</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">package is hosted.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">link</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">specific</span><span class="nv"> </span><span class="s">library</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">package</span><span class="nv"> </span><span class="s">such</span><span class="nv"> </span><span class="s">as</span><span class="nv"> </span><span class="s">within</span><span class="nv"> </span><span class="s">&lt;code&gt;GitHub&lt;/code&gt;,</span>
+
+<span class="w">      </span><span class="s">this</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">different</span><span class="nv"> </span><span class="s">from</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">link</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">package</span><span class="nv"> </span><span class="s">manager</span><span class="nv"> </span><span class="s">where</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">library</span><span class="nv"> </span><span class="s">or</span>
+
+<span class="w">      </span><span class="s">package</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">hosted.'</span>
 <span class="w">  </span><span class="nt">type</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">type</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The type of software package, normalized to the caption of the &lt;code&gt;type_id&lt;/code&gt;</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">value. In the case of 'Other', it is defined by the source.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">type</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">software</span><span class="nv"> </span><span class="s">package,</span><span class="nv"> </span><span class="s">normalized</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">caption</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span>
+
+<span class="w">      </span><span class="s">&lt;code&gt;type_id&lt;/code&gt;</span><span class="nv"> </span><span class="s">value.</span><span class="nv"> </span><span class="s">In</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">case</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="se">''</span><span class="s">Other</span><span class="se">''</span><span class="s">,</span><span class="nv"> </span><span class="s">it</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">defined</span><span class="nv"> </span><span class="s">by</span><span class="nv"> </span><span class="s">the</span>
+
+<span class="w">      </span><span class="s">source.'</span>
 <span class="w">  </span><span class="nt">type_id</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">type_id</span>
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The type of software package.</span>
@@ -692,9 +731,12 @@
 <span class="w">    </span><span class="nt">recommended</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">uid</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">uid</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">A unique identifier for the package or library reported by the source</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">tool. E.g., the &lt;code&gt;libId&lt;/code&gt; within the &lt;code&gt;sbom&lt;/code&gt; field of an</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">OX Security Issue or the SPDX &lt;code&gt;components.*.bom-ref&lt;/code&gt;.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'A</span><span class="nv"> </span><span class="s">unique</span><span class="nv"> </span><span class="s">identifier</span><span class="nv"> </span><span class="s">for</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">package</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">library</span><span class="nv"> </span><span class="s">reported</span><span class="nv"> </span><span class="s">by</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">source</span>
+<span class="w">      </span><span class="s">tool.</span>
+
+<span class="w">      </span><span class="s">E.g.,</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">&lt;code&gt;libId&lt;/code&gt;</span><span class="nv"> </span><span class="s">within</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">&lt;code&gt;sbom&lt;/code&gt;</span><span class="nv"> </span><span class="s">field</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">an</span><span class="nv"> </span><span class="s">OX</span>
+
+<span class="w">      </span><span class="s">Security</span><span class="nv"> </span><span class="s">Issue</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">SPDX</span><span class="nv"> </span><span class="s">&lt;code&gt;components.*.bom-ref&lt;/code&gt;.'</span>
 <span class="w">  </span><span class="nt">vendor_name</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">vendor_name</span>
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The name of the vendor who published the software package.</span>
@@ -705,8 +747,10 @@
 <span class="nt">attributes</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">architecture</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">architecture</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Architecture is a shorthand name describing the type of computer</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">hardware the packaged software is meant to run on.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'Architecture</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">shorthand</span><span class="nv"> </span><span class="s">name</span><span class="nv"> </span><span class="s">describing</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">type</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">computer</span>
+<span class="w">      </span><span class="s">hardware</span><span class="nv"> </span><span class="s">the</span>
+
+<span class="w">      </span><span class="s">packaged</span><span class="nv"> </span><span class="s">software</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">meant</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">run</span><span class="nv"> </span><span class="s">on.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Architecture</span>
@@ -720,7 +764,10 @@
 <span class="w">  </span><span class="nt">cpe_name</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">cpe_name</span>
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">Common</span><span class="nv"> </span><span class="s">Platform</span><span class="nv"> </span><span class="s">Enumeration</span><span class="nv"> </span><span class="s">(CPE)</span><span class="nv"> </span><span class="s">name</span><span class="nv"> </span><span class="s">as</span><span class="nv"> </span><span class="s">described</span><span class="nv"> </span><span class="s">by</span><span class="nv"> </span><span class="s">(&lt;a</span><span class="nv"> </span><span class="s">target=</span><span class="se">''</span><span class="s">_blank</span><span class="se">''</span>
-<span class="w">      </span><span class="s">href=</span><span class="se">''</span><span class="s">https://nvd.nist.gov/products/cpe</span><span class="se">''</span><span class="s">&gt;NIST&lt;/a&gt;)</span><span class="nv"> </span><span class="s">For</span><span class="nv"> </span><span class="s">example:</span><span class="nv"> </span><span class="s">&lt;code&gt;cpe:/a:apple:safari:16.2&lt;/code&gt;.'</span>
+
+<span class="w">      </span><span class="s">href=</span><span class="se">''</span><span class="s">https://nvd.nist.gov/products/cpe</span><span class="se">''</span><span class="s">&gt;NIST&lt;/a&gt;)</span><span class="nv"> </span><span class="s">For</span><span class="nv"> </span><span class="s">example:</span>
+
+<span class="w">      </span><span class="s">&lt;code&gt;cpe:/a:apple:safari:16.2&lt;/code&gt;.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The product CPE identifier</span>
@@ -734,8 +781,9 @@
 <span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">string</span>
 <span class="w">  </span><span class="nt">epoch</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">epoch</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The software package epoch. Epoch is a way to define weighted dependencies</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">based on version numbers.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">software</span><span class="nv"> </span><span class="s">package</span><span class="nv"> </span><span class="s">epoch.</span><span class="nv"> </span><span class="s">Epoch</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">way</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">define</span><span class="nv"> </span><span class="s">weighted</span><span class="nv"> </span><span class="s">dependencies</span>
+
+<span class="w">      </span><span class="s">based</span><span class="nv"> </span><span class="s">on</span><span class="nv"> </span><span class="s">version</span><span class="nv"> </span><span class="s">numbers.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Epoch</span>
@@ -747,8 +795,10 @@
 <span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">integer</span>
 <span class="w">  </span><span class="nt">hash</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">hash</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Cryptographic hash to identify the binary instance of a software</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">component. This can include any component such file, package, or library.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'Cryptographic</span><span class="nv"> </span><span class="s">hash</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">identify</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">binary</span><span class="nv"> </span><span class="s">instance</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">software</span>
+<span class="w">      </span><span class="s">component.</span>
+
+<span class="w">      </span><span class="s">This</span><span class="nv"> </span><span class="s">can</span><span class="nv"> </span><span class="s">include</span><span class="nv"> </span><span class="s">any</span><span class="nv"> </span><span class="s">component</span><span class="nv"> </span><span class="s">such</span><span class="nv"> </span><span class="s">file,</span><span class="nv"> </span><span class="s">package,</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">library.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Hash</span>
@@ -775,8 +825,10 @@
 <span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">string</span>
 <span class="w">  </span><span class="nt">license_url</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">license_url</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The URL pointing to the license applied on package or software. This</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">is typically a &lt;code&gt;LICENSE.md&lt;/code&gt; file within a repository.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">URL</span><span class="nv"> </span><span class="s">pointing</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">license</span><span class="nv"> </span><span class="s">applied</span><span class="nv"> </span><span class="s">on</span><span class="nv"> </span><span class="s">package</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">software.</span>
+<span class="w">      </span><span class="s">This</span><span class="nv"> </span><span class="s">is</span>
+
+<span class="w">      </span><span class="s">typically</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">&lt;code&gt;LICENSE.md&lt;/code&gt;</span><span class="nv"> </span><span class="s">file</span><span class="nv"> </span><span class="s">within</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">repository.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Software License URL</span>
@@ -890,8 +942,10 @@
 <span class="w">    </span><span class="nt">required</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">package_manager</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">package_manager</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The software packager manager utilized to manage a package on a system,</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">e.g. npm, yum, dpkg etc.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">software</span><span class="nv"> </span><span class="s">packager</span><span class="nv"> </span><span class="s">manager</span><span class="nv"> </span><span class="s">utilized</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">manage</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">package</span><span class="nv"> </span><span class="s">on</span><span class="nv"> </span><span class="s">a</span>
+<span class="w">      </span><span class="s">system,</span><span class="nv"> </span><span class="s">e.g.</span>
+
+<span class="w">      </span><span class="s">npm,</span><span class="nv"> </span><span class="s">yum,</span><span class="nv"> </span><span class="s">dpkg</span><span class="nv"> </span><span class="s">etc.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Package Manager</span>
@@ -903,9 +957,12 @@
 <span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">string</span>
 <span class="w">  </span><span class="nt">package_manager_url</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">package_manager_url</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The URL of the package or library at the package manager, or the</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">specific URL or URI of an internal package manager link such as &lt;code&gt;AWS CodeArtifact&lt;/code&gt;</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">or &lt;code&gt;Artifactory&lt;/code&gt;.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">URL</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">package</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">library</span><span class="nv"> </span><span class="s">at</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">package</span><span class="nv"> </span><span class="s">manager,</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">the</span>
+<span class="w">      </span><span class="s">specific</span><span class="nv"> </span><span class="s">URL</span>
+
+<span class="w">      </span><span class="s">or</span><span class="nv"> </span><span class="s">URI</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">an</span><span class="nv"> </span><span class="s">internal</span><span class="nv"> </span><span class="s">package</span><span class="nv"> </span><span class="s">manager</span><span class="nv"> </span><span class="s">link</span><span class="nv"> </span><span class="s">such</span><span class="nv"> </span><span class="s">as</span><span class="nv"> </span><span class="s">&lt;code&gt;AWS</span>
+
+<span class="w">      </span><span class="s">CodeArtifact&lt;/code&gt;</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">&lt;code&gt;Artifactory&lt;/code&gt;.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Package Manager URL</span>
@@ -917,9 +974,12 @@
 <span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">UrlT</span>
 <span class="w">  </span><span class="nt">purl</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">purl</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">A purl is a URL string used to identify and locate a software package</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">in a mostly universal and uniform way across programming languages, package</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">managers, packaging conventions, tools, APIs and databases.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'A</span><span class="nv"> </span><span class="s">purl</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">URL</span><span class="nv"> </span><span class="s">string</span><span class="nv"> </span><span class="s">used</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">identify</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">locate</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">software</span><span class="nv"> </span><span class="s">package</span>
+<span class="w">      </span><span class="s">in</span><span class="nv"> </span><span class="s">a</span>
+
+<span class="w">      </span><span class="s">mostly</span><span class="nv"> </span><span class="s">universal</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">uniform</span><span class="nv"> </span><span class="s">way</span><span class="nv"> </span><span class="s">across</span><span class="nv"> </span><span class="s">programming</span><span class="nv"> </span><span class="s">languages,</span><span class="nv"> </span><span class="s">package</span>
+
+<span class="w">      </span><span class="s">managers,</span><span class="nv"> </span><span class="s">packaging</span><span class="nv"> </span><span class="s">conventions,</span><span class="nv"> </span><span class="s">tools,</span><span class="nv"> </span><span class="s">APIs</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">databases.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Package URL</span>
@@ -945,9 +1005,11 @@
 <span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">string</span>
 <span class="w">  </span><span class="nt">src_url</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">src_url</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The link to the specific library or package such as within &lt;code&gt;GitHub&lt;/code&gt;,</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">this is different from the link to the package manager where the library or</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">package is hosted.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">link</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">specific</span><span class="nv"> </span><span class="s">library</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">package</span><span class="nv"> </span><span class="s">such</span><span class="nv"> </span><span class="s">as</span><span class="nv"> </span><span class="s">within</span><span class="nv"> </span><span class="s">&lt;code&gt;GitHub&lt;/code&gt;,</span>
+
+<span class="w">      </span><span class="s">this</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">different</span><span class="nv"> </span><span class="s">from</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">link</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">package</span><span class="nv"> </span><span class="s">manager</span><span class="nv"> </span><span class="s">where</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">library</span><span class="nv"> </span><span class="s">or</span>
+
+<span class="w">      </span><span class="s">package</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">hosted.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Source URL</span>
@@ -977,8 +1039,11 @@
 <span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">UrlT</span>
 <span class="w">  </span><span class="nt">type</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">type</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The type of software package, normalized to the caption of the &lt;code&gt;type_id&lt;/code&gt;</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">value. In the case of 'Other', it is defined by the source.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">type</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">software</span><span class="nv"> </span><span class="s">package,</span><span class="nv"> </span><span class="s">normalized</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">caption</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span>
+
+<span class="w">      </span><span class="s">&lt;code&gt;type_id&lt;/code&gt;</span><span class="nv"> </span><span class="s">value.</span><span class="nv"> </span><span class="s">In</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">case</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="se">''</span><span class="s">Other</span><span class="se">''</span><span class="s">,</span><span class="nv"> </span><span class="s">it</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">defined</span><span class="nv"> </span><span class="s">by</span><span class="nv"> </span><span class="s">the</span>
+
+<span class="w">      </span><span class="s">source.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Type</span>
@@ -1102,9 +1167,12 @@
 <span class="w">    </span><span class="nt">recommended</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">uid</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">uid</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">A unique identifier for the package or library reported by the source</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">tool. E.g., the &lt;code&gt;libId&lt;/code&gt; within the &lt;code&gt;sbom&lt;/code&gt; field of an</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">OX Security Issue or the SPDX &lt;code&gt;components.*.bom-ref&lt;/code&gt;.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'A</span><span class="nv"> </span><span class="s">unique</span><span class="nv"> </span><span class="s">identifier</span><span class="nv"> </span><span class="s">for</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">package</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">library</span><span class="nv"> </span><span class="s">reported</span><span class="nv"> </span><span class="s">by</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">source</span>
+<span class="w">      </span><span class="s">tool.</span>
+
+<span class="w">      </span><span class="s">E.g.,</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">&lt;code&gt;libId&lt;/code&gt;</span><span class="nv"> </span><span class="s">within</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">&lt;code&gt;sbom&lt;/code&gt;</span><span class="nv"> </span><span class="s">field</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">an</span><span class="nv"> </span><span class="s">OX</span>
+
+<span class="w">      </span><span class="s">Security</span><span class="nv"> </span><span class="s">Issue</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">SPDX</span><span class="nv"> </span><span class="s">&lt;code&gt;components.*.bom-ref&lt;/code&gt;.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Unique ID</span>

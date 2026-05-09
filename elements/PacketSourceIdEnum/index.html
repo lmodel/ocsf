@@ -447,7 +447,8 @@
 
 
 <h1 id="enum-packetsourceidenum">Enum: PacketSourceIdEnum</h1>
-<p><em>A normalized numeric identifier that specifies how the packet was obtained or generated.</em></p>
+<p><em>A normalized numeric identifier that specifies how the packet was obtained or</em></p>
+<p><em>generated.</em></p>
 <p>URI: <a href="https://w3id.org/lmodel/ocsf/PacketSourceIdEnum">ocsf:PacketSourceIdEnum</a></p>
 <h2 id="permissible-values">Permissible Values</h2>
 <table>
@@ -487,17 +488,17 @@
 <tr>
 <td>SPAN</td>
 <td>None</td>
-<td>The packet was captured from a switch Switched Port Analyzer (SPAN) or mirror...</td>
+<td>The packet was captured from a switch Switched Port Analyzer (SPAN) or mirror</td>
 </tr>
 <tr>
 <td>ENDPOINT</td>
 <td>None</td>
-<td>The packet was captured by a host-based agent or endpoint detection and respo...</td>
+<td>The packet was captured by a host-based agent or endpoint detection and</td>
 </tr>
 <tr>
 <td>VIRTUAL</td>
 <td>None</td>
-<td>The packet was captured from a virtual network interface, virtual switch, or ...</td>
+<td>The packet was captured from a virtual network interface, virtual switch, or</td>
 </tr>
 <tr>
 <td>OTHER</td>
@@ -517,7 +518,7 @@
 <tbody>
 <tr>
 <td><a href="../source_id/">source_id</a></td>
-<td>A normalized numeric identifier that specifies how the packet was obtained or...</td>
+<td>A normalized numeric identifier that specifies how the packet was obtained or</td>
 </tr>
 </tbody>
 </table>
@@ -529,8 +530,10 @@
 <h2 id="linkml-source">LinkML Source</h2>
 <details>
 <div class="highlight"><pre><span></span><code><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">PacketSourceIdEnum</span>
-<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">A normalized numeric identifier that specifies how the packet was obtained</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">or generated.</span>
+<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;A</span><span class="nv"> </span><span class="s">normalized</span><span class="nv"> </span><span class="s">numeric</span><span class="nv"> </span><span class="s">identifier</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">specifies</span><span class="nv"> </span><span class="s">how</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">packet</span><span class="nv"> </span><span class="s">was</span><span class="nv"> </span><span class="s">obtained</span>
+<span class="w">  </span><span class="s">or</span>
+
+<span class="w">  </span><span class="s">generated.&#39;</span>
 <span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="nt">rank</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1000</span>
 <span class="nt">permissible_values</span><span class="p">:</span>
@@ -577,8 +580,10 @@
 <span class="w">        </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Decoder</span>
 <span class="w">  </span><span class="nt">TAP</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">text</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">TAP</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The packet was captured from a physical network Test Access Point</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">(TAP) device used for passive monitoring.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;The</span><span class="nv"> </span><span class="s">packet</span><span class="nv"> </span><span class="s">was</span><span class="nv"> </span><span class="s">captured</span><span class="nv"> </span><span class="s">from</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">physical</span><span class="nv"> </span><span class="s">network</span><span class="nv"> </span><span class="s">Test</span><span class="nv"> </span><span class="s">Access</span><span class="nv"> </span><span class="s">Point</span>
+<span class="w">      </span><span class="s">(TAP)</span><span class="nv"> </span><span class="s">device</span>
+
+<span class="w">      </span><span class="s">used</span><span class="nv"> </span><span class="s">for</span><span class="nv"> </span><span class="s">passive</span><span class="nv"> </span><span class="s">monitoring.&#39;</span>
 <span class="w">    </span><span class="nt">annotations</span><span class="p">:</span>
 <span class="w">      </span><span class="nt">ocsf_uid</span><span class="p">:</span>
 <span class="w">        </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ocsf_uid</span>
@@ -588,8 +593,10 @@
 <span class="w">        </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">TAP</span>
 <span class="w">  </span><span class="nt">SPAN</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">text</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">SPAN</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The packet was captured from a switch Switched Port Analyzer (SPAN)</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">or mirror port.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;The</span><span class="nv"> </span><span class="s">packet</span><span class="nv"> </span><span class="s">was</span><span class="nv"> </span><span class="s">captured</span><span class="nv"> </span><span class="s">from</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">switch</span><span class="nv"> </span><span class="s">Switched</span><span class="nv"> </span><span class="s">Port</span><span class="nv"> </span><span class="s">Analyzer</span><span class="nv"> </span><span class="s">(SPAN)</span>
+<span class="w">      </span><span class="s">or</span><span class="nv"> </span><span class="s">mirror</span>
+
+<span class="w">      </span><span class="s">port.&#39;</span>
 <span class="w">    </span><span class="nt">annotations</span><span class="p">:</span>
 <span class="w">      </span><span class="nt">ocsf_uid</span><span class="p">:</span>
 <span class="w">        </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ocsf_uid</span>
@@ -599,8 +606,10 @@
 <span class="w">        </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">SPAN</span>
 <span class="w">  </span><span class="nt">ENDPOINT</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">text</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ENDPOINT</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The packet was captured by a host-based agent or endpoint detection</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">and response (EDR) sensor.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;The</span><span class="nv"> </span><span class="s">packet</span><span class="nv"> </span><span class="s">was</span><span class="nv"> </span><span class="s">captured</span><span class="nv"> </span><span class="s">by</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">host-based</span><span class="nv"> </span><span class="s">agent</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">endpoint</span><span class="nv"> </span><span class="s">detection</span>
+<span class="w">      </span><span class="s">and</span>
+
+<span class="w">      </span><span class="s">response</span><span class="nv"> </span><span class="s">(EDR)</span><span class="nv"> </span><span class="s">sensor.&#39;</span>
 <span class="w">    </span><span class="nt">annotations</span><span class="p">:</span>
 <span class="w">      </span><span class="nt">ocsf_uid</span><span class="p">:</span>
 <span class="w">        </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ocsf_uid</span>
@@ -610,8 +619,10 @@
 <span class="w">        </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Endpoint</span>
 <span class="w">  </span><span class="nt">VIRTUAL</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">text</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">VIRTUAL</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The packet was captured from a virtual network interface, virtual</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">switch, or container network.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;The</span><span class="nv"> </span><span class="s">packet</span><span class="nv"> </span><span class="s">was</span><span class="nv"> </span><span class="s">captured</span><span class="nv"> </span><span class="s">from</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">virtual</span><span class="nv"> </span><span class="s">network</span><span class="nv"> </span><span class="s">interface,</span><span class="nv"> </span><span class="s">virtual</span>
+<span class="w">      </span><span class="s">switch,</span><span class="nv"> </span><span class="s">or</span>
+
+<span class="w">      </span><span class="s">container</span><span class="nv"> </span><span class="s">network.&#39;</span>
 <span class="w">    </span><span class="nt">annotations</span><span class="p">:</span>
 <span class="w">      </span><span class="nt">ocsf_uid</span><span class="p">:</span>
 <span class="w">        </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ocsf_uid</span>
@@ -621,8 +632,10 @@
 <span class="w">        </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Virtual</span>
 <span class="w">  </span><span class="nt">OTHER</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">text</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">OTHER</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The packet source is not mapped. Refer to the &lt;code&gt;source&lt;/code&gt;</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">field for the original source-specific value.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;The</span><span class="nv"> </span><span class="s">packet</span><span class="nv"> </span><span class="s">source</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">not</span><span class="nv"> </span><span class="s">mapped.</span><span class="nv"> </span><span class="s">Refer</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">&lt;code&gt;source&lt;/code&gt;</span>
+<span class="w">      </span><span class="s">field</span><span class="nv"> </span><span class="s">for</span><span class="nv"> </span><span class="s">the</span>
+
+<span class="w">      </span><span class="s">original</span><span class="nv"> </span><span class="s">source-specific</span><span class="nv"> </span><span class="s">value.&#39;</span>
 <span class="w">    </span><span class="nt">annotations</span><span class="p">:</span>
 <span class="w">      </span><span class="nt">ocsf_uid</span><span class="p">:</span>
 <span class="w">        </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ocsf_uid</span>

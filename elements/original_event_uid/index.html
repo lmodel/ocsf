@@ -497,7 +497,11 @@
 
 
 <h1 id="slot-original_event_uid">Slot: original_event_uid</h1>
-<p><em>The unique identifier assigned to the event in its original logging system before transformation to OCSF format. This field preserves the source system's native event identifier, enabling traceability back to the raw log entry. For example, a Windows Event Record ID, a syslog message ID, a Splunk _cd value, or a database transaction log sequence number.</em></p>
+<p><em>The unique identifier assigned to the event in its original logging system</em></p>
+<p><em>before transformation to OCSF format. This field preserves the source system's</em></p>
+<p><em>native event identifier, enabling traceability back to the raw log entry. For</em></p>
+<p><em>example, a Windows Event Record ID, a syslog message ID, a Splunk _cd value, or</em></p>
+<p><em>a database transaction log sequence number.</em></p>
 <p>URI: <a href="https://w3id.org/lmodel/ocsf/original_event_uid">ocsf:original_event_uid</a>
 Alias: original_event_uid</p>
 <!-- no inheritance hierarchy -->
@@ -585,11 +589,16 @@ Alias: original_event_uid</p>
 <h2 id="linkml-source">LinkML Source</h2>
 <details>
 <div class="highlight"><pre><span></span><code><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">original_event_uid</span>
-<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The unique identifier assigned to the event in its original logging system</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">before transformation to OCSF format. This field preserves the source system&#39;s native</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">event identifier, enabling traceability back to the raw log entry. For example,</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">a Windows Event Record ID, a syslog message ID, a Splunk _cd value, or a database</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">transaction log sequence number.</span>
+<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;The</span><span class="nv"> </span><span class="s">unique</span><span class="nv"> </span><span class="s">identifier</span><span class="nv"> </span><span class="s">assigned</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">event</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">its</span><span class="nv"> </span><span class="s">original</span><span class="nv"> </span><span class="s">logging</span>
+<span class="w">  </span><span class="s">system</span>
+
+<span class="w">  </span><span class="s">before</span><span class="nv"> </span><span class="s">transformation</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">OCSF</span><span class="nv"> </span><span class="s">format.</span><span class="nv"> </span><span class="s">This</span><span class="nv"> </span><span class="s">field</span><span class="nv"> </span><span class="s">preserves</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">source</span><span class="nv"> </span><span class="s">system</span><span class="se">&#39;&#39;</span><span class="s">s</span>
+
+<span class="w">  </span><span class="s">native</span><span class="nv"> </span><span class="s">event</span><span class="nv"> </span><span class="s">identifier,</span><span class="nv"> </span><span class="s">enabling</span><span class="nv"> </span><span class="s">traceability</span><span class="nv"> </span><span class="s">back</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">raw</span><span class="nv"> </span><span class="s">log</span><span class="nv"> </span><span class="s">entry.</span><span class="nv"> </span><span class="s">For</span>
+
+<span class="w">  </span><span class="s">example,</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">Windows</span><span class="nv"> </span><span class="s">Event</span><span class="nv"> </span><span class="s">Record</span><span class="nv"> </span><span class="s">ID,</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">syslog</span><span class="nv"> </span><span class="s">message</span><span class="nv"> </span><span class="s">ID,</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">Splunk</span><span class="nv"> </span><span class="s">_cd</span><span class="nv"> </span><span class="s">value,</span><span class="nv"> </span><span class="s">or</span>
+
+<span class="w">  </span><span class="s">a</span><span class="nv"> </span><span class="s">database</span><span class="nv"> </span><span class="s">transaction</span><span class="nv"> </span><span class="s">log</span><span class="nv"> </span><span class="s">sequence</span><span class="nv"> </span><span class="s">number.&#39;</span>
 <span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="nt">aliases</span><span class="p">:</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Original Event ID</span>

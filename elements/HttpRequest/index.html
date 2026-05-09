@@ -217,6 +217,15 @@
 </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="#in-subsets">
+<span class="md-ellipsis">
+      
+        In Subsets
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#aliases">
 <span class="md-ellipsis">
       
@@ -313,7 +322,10 @@
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
 <h1 id="class-httprequest">Class: HttpRequest</h1>
-<p><em>The HTTP Request object represents the attributes of a request made to a web server. It encapsulates the details and metadata associated with an HTTP request, including the request method, headers, URL, query parameters, body content, and other relevant information.</em></p>
+<p><em>The HTTP Request object represents the attributes of a request made to a web</em></p>
+<p><em>server. It encapsulates the details and metadata associated with an HTTP</em></p>
+<p><em>request, including the request method, headers, URL, query parameters, body</em></p>
+<p><em>content, and other relevant information.</em></p>
 <p>URI: <a href="https://w3id.org/lmodel/ocsf/HttpRequest">ocsf:HttpRequest</a></p>
 <pre class="mermaid"><code> classDiagram
     class HttpRequest
@@ -413,7 +425,7 @@
 <tr>
 <td><a href="../http_method/">http_method</a></td>
 <td>0..1 <em>recommended</em> <br/> <a href="../HttpRequestHttpMethodEnum/">HttpRequestHttpMethodEnum</a></td>
-<td>The &lt;a target='_blank' href='<a href="https://developer">https://developer</a></td>
+<td>The &lt;a target='_blank'</td>
 <td>direct</td>
 </tr>
 <tr>
@@ -455,7 +467,7 @@
 <tr>
 <td><a href="../x_forwarded_for/">x_forwarded_for</a></td>
 <td>* <br/> <a href="../IpT/">IpT</a></td>
-<td>The X-Forwarded-For header identifying the originating IP address(es) of a cl...</td>
+<td>The X-Forwarded-For header identifying the originating IP address(es) of a</td>
 <td>direct</td>
 </tr>
 </tbody>
@@ -653,6 +665,10 @@
 </tr>
 </tbody>
 </table>
+<h2 id="in-subsets">In Subsets</h2>
+<ul>
+<li><a href="../Objects/">Objects</a></li>
+</ul>
 <h2 id="aliases">Aliases</h2>
 <ul>
 <li>HTTP Request</li>
@@ -663,7 +679,8 @@
 </ul>
 <h2 id="notes">Notes</h2>
 <ul>
-<li>D3FEND™ Ontology d3f:OutboundInternetNetworkTraffic. — <a href="https://d3fend.mitre.org/dao/artifact/d3f:OutboundInternetNetworkTraffic/">https://d3fend.mitre.org/dao/artifact/d3f:OutboundInternetNetworkTraffic/</a></li>
+<li>D3FEND™ Ontology d3f:OutboundInternetNetworkTraffic. —
+<a href="https://d3fend.mitre.org/dao/artifact/d3f:OutboundInternetNetworkTraffic/">https://d3fend.mitre.org/dao/artifact/d3f:OutboundInternetNetworkTraffic/</a></li>
 </ul>
 <h2 id="identifier-and-mapping-information">Identifier and Mapping Information</h2>
 <h3 id="schema-source">Schema Source</h3>
@@ -698,12 +715,20 @@
 <h3 id="direct">Direct</h3>
 <details>
 <div class="highlight"><pre><span></span><code><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">HttpRequest</span>
-<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The HTTP Request object represents the attributes of a request made to</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">a web server. It encapsulates the details and metadata associated with an HTTP request,</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">including the request method, headers, URL, query parameters, body content, and</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">other relevant information.</span>
+<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">HTTP</span><span class="nv"> </span><span class="s">Request</span><span class="nv"> </span><span class="s">object</span><span class="nv"> </span><span class="s">represents</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">attributes</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">request</span><span class="nv"> </span><span class="s">made</span>
+<span class="w">  </span><span class="s">to</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">web</span>
+
+<span class="w">  </span><span class="s">server.</span><span class="nv"> </span><span class="s">It</span><span class="nv"> </span><span class="s">encapsulates</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">details</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">metadata</span><span class="nv"> </span><span class="s">associated</span><span class="nv"> </span><span class="s">with</span><span class="nv"> </span><span class="s">an</span><span class="nv"> </span><span class="s">HTTP</span>
+
+<span class="w">  </span><span class="s">request,</span><span class="nv"> </span><span class="s">including</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">request</span><span class="nv"> </span><span class="s">method,</span><span class="nv"> </span><span class="s">headers,</span><span class="nv"> </span><span class="s">URL,</span><span class="nv"> </span><span class="s">query</span><span class="nv"> </span><span class="s">parameters,</span><span class="nv"> </span><span class="s">body</span>
+
+<span class="w">  </span><span class="s">content,</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">other</span><span class="nv"> </span><span class="s">relevant</span><span class="nv"> </span><span class="s">information.'</span>
 <span class="nt">notes</span><span class="p">:</span>
-<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">D3FEND™ Ontology d3f:OutboundInternetNetworkTraffic. — https://d3fend.mitre.org/dao/artifact/d3f:OutboundInternetNetworkTraffic/</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="s">'D3FEND™</span><span class="nv"> </span><span class="s">Ontology</span><span class="nv"> </span><span class="s">d3f:OutboundInternetNetworkTraffic.</span><span class="nv"> </span><span class="s">—</span>
+
+<span class="w">  </span><span class="s">https://d3fend.mitre.org/dao/artifact/d3f:OutboundInternetNetworkTraffic/'</span>
+<span class="nt">in_subset</span><span class="p">:</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">objects</span>
 <span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="nt">see_also</span><span class="p">:</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://d3fend.mitre.org/dao/artifact/d3f:OutboundInternetNetworkTraffic/</span>
@@ -727,16 +752,20 @@
 <span class="nt">slot_usage</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">body_length</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">body_length</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The actual length of the HTTP request body, in number of bytes, independent</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">of a potentially existing Content-Length header.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">actual</span><span class="nv"> </span><span class="s">length</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">HTTP</span><span class="nv"> </span><span class="s">request</span><span class="nv"> </span><span class="s">body,</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">number</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">bytes,</span>
+<span class="w">      </span><span class="s">independent</span><span class="nv"> </span><span class="s">of</span>
+
+<span class="w">      </span><span class="s">a</span><span class="nv"> </span><span class="s">potentially</span><span class="nv"> </span><span class="s">existing</span><span class="nv"> </span><span class="s">Content-Length</span><span class="nv"> </span><span class="s">header.'</span>
 <span class="w">  </span><span class="nt">http_headers</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">http_headers</span>
 <span class="w">    </span><span class="nt">recommended</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">http_method</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">http_method</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The &lt;a target='_blank' href='https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods'&gt;HTTP</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">request method&lt;/a&gt; indicates the desired action to be performed for a given</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">resource.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">&lt;a</span><span class="nv"> </span><span class="s">target=</span><span class="se">''</span><span class="s">_blank</span><span class="se">''</span>
+
+<span class="w">      </span><span class="s">href=</span><span class="se">''</span><span class="s">https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods</span><span class="se">''</span><span class="s">&gt;HTTP</span><span class="nv"> </span><span class="s">request</span>
+
+<span class="w">      </span><span class="s">method&lt;/a&gt;</span><span class="nv"> </span><span class="s">indicates</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">desired</span><span class="nv"> </span><span class="s">action</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">be</span><span class="nv"> </span><span class="s">performed</span><span class="nv"> </span><span class="s">for</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">given</span><span class="nv"> </span><span class="s">resource.'</span>
 <span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">HttpRequestHttpMethodEnum</span>
 <span class="w">    </span><span class="nt">recommended</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">length</span><span class="p">:</span>
@@ -761,12 +790,20 @@
 <h3 id="induced">Induced</h3>
 <details>
 <div class="highlight"><pre><span></span><code><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">HttpRequest</span>
-<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The HTTP Request object represents the attributes of a request made to</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">a web server. It encapsulates the details and metadata associated with an HTTP request,</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">including the request method, headers, URL, query parameters, body content, and</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">other relevant information.</span>
+<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">HTTP</span><span class="nv"> </span><span class="s">Request</span><span class="nv"> </span><span class="s">object</span><span class="nv"> </span><span class="s">represents</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">attributes</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">request</span><span class="nv"> </span><span class="s">made</span>
+<span class="w">  </span><span class="s">to</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">web</span>
+
+<span class="w">  </span><span class="s">server.</span><span class="nv"> </span><span class="s">It</span><span class="nv"> </span><span class="s">encapsulates</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">details</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">metadata</span><span class="nv"> </span><span class="s">associated</span><span class="nv"> </span><span class="s">with</span><span class="nv"> </span><span class="s">an</span><span class="nv"> </span><span class="s">HTTP</span>
+
+<span class="w">  </span><span class="s">request,</span><span class="nv"> </span><span class="s">including</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">request</span><span class="nv"> </span><span class="s">method,</span><span class="nv"> </span><span class="s">headers,</span><span class="nv"> </span><span class="s">URL,</span><span class="nv"> </span><span class="s">query</span><span class="nv"> </span><span class="s">parameters,</span><span class="nv"> </span><span class="s">body</span>
+
+<span class="w">  </span><span class="s">content,</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">other</span><span class="nv"> </span><span class="s">relevant</span><span class="nv"> </span><span class="s">information.'</span>
 <span class="nt">notes</span><span class="p">:</span>
-<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">D3FEND™ Ontology d3f:OutboundInternetNetworkTraffic. — https://d3fend.mitre.org/dao/artifact/d3f:OutboundInternetNetworkTraffic/</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="s">'D3FEND™</span><span class="nv"> </span><span class="s">Ontology</span><span class="nv"> </span><span class="s">d3f:OutboundInternetNetworkTraffic.</span><span class="nv"> </span><span class="s">—</span>
+
+<span class="w">  </span><span class="s">https://d3fend.mitre.org/dao/artifact/d3f:OutboundInternetNetworkTraffic/'</span>
+<span class="nt">in_subset</span><span class="p">:</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">objects</span>
 <span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="nt">see_also</span><span class="p">:</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://d3fend.mitre.org/dao/artifact/d3f:OutboundInternetNetworkTraffic/</span>
@@ -778,16 +815,20 @@
 <span class="nt">slot_usage</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">body_length</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">body_length</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The actual length of the HTTP request body, in number of bytes, independent</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">of a potentially existing Content-Length header.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">actual</span><span class="nv"> </span><span class="s">length</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">HTTP</span><span class="nv"> </span><span class="s">request</span><span class="nv"> </span><span class="s">body,</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">number</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">bytes,</span>
+<span class="w">      </span><span class="s">independent</span><span class="nv"> </span><span class="s">of</span>
+
+<span class="w">      </span><span class="s">a</span><span class="nv"> </span><span class="s">potentially</span><span class="nv"> </span><span class="s">existing</span><span class="nv"> </span><span class="s">Content-Length</span><span class="nv"> </span><span class="s">header.'</span>
 <span class="w">  </span><span class="nt">http_headers</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">http_headers</span>
 <span class="w">    </span><span class="nt">recommended</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">http_method</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">http_method</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The &lt;a target='_blank' href='https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods'&gt;HTTP</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">request method&lt;/a&gt; indicates the desired action to be performed for a given</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">resource.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">&lt;a</span><span class="nv"> </span><span class="s">target=</span><span class="se">''</span><span class="s">_blank</span><span class="se">''</span>
+
+<span class="w">      </span><span class="s">href=</span><span class="se">''</span><span class="s">https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods</span><span class="se">''</span><span class="s">&gt;HTTP</span><span class="nv"> </span><span class="s">request</span>
+
+<span class="w">      </span><span class="s">method&lt;/a&gt;</span><span class="nv"> </span><span class="s">indicates</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">desired</span><span class="nv"> </span><span class="s">action</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">be</span><span class="nv"> </span><span class="s">performed</span><span class="nv"> </span><span class="s">for</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">given</span><span class="nv"> </span><span class="s">resource.'</span>
 <span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">HttpRequestHttpMethodEnum</span>
 <span class="w">    </span><span class="nt">recommended</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">length</span><span class="p">:</span>
@@ -822,8 +863,10 @@
 <span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">string</span>
 <span class="w">  </span><span class="nt">body_length</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">body_length</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The actual length of the HTTP request body, in number of bytes, independent</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">of a potentially existing Content-Length header.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">actual</span><span class="nv"> </span><span class="s">length</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">HTTP</span><span class="nv"> </span><span class="s">request</span><span class="nv"> </span><span class="s">body,</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">number</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">bytes,</span>
+<span class="w">      </span><span class="s">independent</span><span class="nv"> </span><span class="s">of</span>
+
+<span class="w">      </span><span class="s">a</span><span class="nv"> </span><span class="s">potentially</span><span class="nv"> </span><span class="s">existing</span><span class="nv"> </span><span class="s">Content-Length</span><span class="nv"> </span><span class="s">header.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Body Length not including header</span>
@@ -852,9 +895,11 @@
 <span class="w">    </span><span class="nt">multivalued</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">http_method</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">http_method</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The &lt;a target='_blank' href='https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods'&gt;HTTP</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">request method&lt;/a&gt; indicates the desired action to be performed for a given</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">resource.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">&lt;a</span><span class="nv"> </span><span class="s">target=</span><span class="se">''</span><span class="s">_blank</span><span class="se">''</span>
+
+<span class="w">      </span><span class="s">href=</span><span class="se">''</span><span class="s">https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods</span><span class="se">''</span><span class="s">&gt;HTTP</span><span class="nv"> </span><span class="s">request</span>
+
+<span class="w">      </span><span class="s">method&lt;/a&gt;</span><span class="nv"> </span><span class="s">indicates</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">desired</span><span class="nv"> </span><span class="s">action</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">be</span><span class="nv"> </span><span class="s">performed</span><span class="nv"> </span><span class="s">for</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">given</span><span class="nv"> </span><span class="s">resource.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">HTTP Method</span>
@@ -880,8 +925,10 @@
 <span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">integer</span>
 <span class="w">  </span><span class="nt">referrer</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">referrer</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The request header that identifies the address of the previous web</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">page, which is linked to the current web page or resource being requested.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">request</span><span class="nv"> </span><span class="s">header</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">identifies</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">address</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">previous</span><span class="nv"> </span><span class="s">web</span>
+<span class="w">      </span><span class="s">page,</span><span class="nv"> </span><span class="s">which</span>
+
+<span class="w">      </span><span class="s">is</span><span class="nv"> </span><span class="s">linked</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">current</span><span class="nv"> </span><span class="s">web</span><span class="nv"> </span><span class="s">page</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">resource</span><span class="nv"> </span><span class="s">being</span><span class="nv"> </span><span class="s">requested.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">HTTP Referrer</span>
@@ -1068,8 +1115,10 @@
 <span class="w">    </span><span class="nt">recommended</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">x_forwarded_for</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">x_forwarded_for</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The X-Forwarded-For header identifying the originating IP address(es)</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">of a client connecting to a web server through an HTTP proxy or a load balancer.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">X-Forwarded-For</span><span class="nv"> </span><span class="s">header</span><span class="nv"> </span><span class="s">identifying</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">originating</span><span class="nv"> </span><span class="s">IP</span><span class="nv"> </span><span class="s">address(es)</span>
+<span class="w">      </span><span class="s">of</span><span class="nv"> </span><span class="s">a</span>
+
+<span class="w">      </span><span class="s">client</span><span class="nv"> </span><span class="s">connecting</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">web</span><span class="nv"> </span><span class="s">server</span><span class="nv"> </span><span class="s">through</span><span class="nv"> </span><span class="s">an</span><span class="nv"> </span><span class="s">HTTP</span><span class="nv"> </span><span class="s">proxy</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">load</span><span class="nv"> </span><span class="s">balancer.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">X-Forwarded-For</span>

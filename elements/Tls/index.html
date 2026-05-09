@@ -217,6 +217,15 @@
 </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="#in-subsets">
+<span class="md-ellipsis">
+      
+        In Subsets
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#aliases">
 <span class="md-ellipsis">
       
@@ -295,7 +304,8 @@
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
 <h1 id="class-tls">Class: Tls</h1>
-<p><em>The Transport Layer Security (TLS) object describes the negotiated TLS protocol used for secure communications over an establish network connection.</em></p>
+<p><em>The Transport Layer Security (TLS) object describes the negotiated TLS protocol</em></p>
+<p><em>used for secure communications over an establish network connection.</em></p>
 <p>URI: <a href="https://w3id.org/lmodel/ocsf/Tls">ocsf:Tls</a></p>
 <pre class="mermaid"><code> classDiagram
     class Tls
@@ -424,7 +434,7 @@
 <tr>
 <td><a href="../certificate_chain/">certificate_chain</a></td>
 <td>* <em>recommended</em> <br/> <a href="../String/">String</a></td>
-<td>The Chain of Certificate Serial Numbers field provides a chain of Certificate...</td>
+<td>The Chain of Certificate Serial Numbers field provides a chain of Certificate</td>
 <td>direct</td>
 </tr>
 <tr>
@@ -436,7 +446,7 @@
 <tr>
 <td><a href="../client_ciphers/">client_ciphers</a></td>
 <td>* <em>recommended</em> <br/> <a href="../String/">String</a></td>
-<td>The client cipher suites that were exchanged during the TLS handshake negotia...</td>
+<td>The client cipher suites that were exchanged during the TLS handshake</td>
 <td>direct</td>
 </tr>
 <tr>
@@ -448,7 +458,7 @@
 <tr>
 <td><a href="../handshake_dur/">handshake_dur</a></td>
 <td>0..1 <br/> <a href="../Integer/">Integer</a></td>
-<td>The amount of total time for the TLS handshake to complete after the TCP conn...</td>
+<td>The amount of total time for the TLS handshake to complete after the TCP</td>
 <td>direct</td>
 </tr>
 <tr>
@@ -472,13 +482,13 @@
 <tr>
 <td><a href="../sans/">sans</a></td>
 <td>* <br/> <a href="../San/">San</a></td>
-<td>The list of subject alternative names that are secured by a specific certific...</td>
+<td>The list of subject alternative names that are secured by a specific</td>
 <td>direct</td>
 </tr>
 <tr>
 <td><a href="../server_ciphers/">server_ciphers</a></td>
 <td>* <br/> <a href="../String/">String</a></td>
-<td>The server cipher suites that were exchanged during the TLS handshake negotia...</td>
+<td>The server cipher suites that were exchanged during the TLS handshake</td>
 <td>direct</td>
 </tr>
 <tr>
@@ -718,6 +728,10 @@
 </tr>
 </tbody>
 </table>
+<h2 id="in-subsets">In Subsets</h2>
+<ul>
+<li><a href="../Objects/">Objects</a></li>
+</ul>
 <h2 id="aliases">Aliases</h2>
 <ul>
 <li>Transport Layer Security (TLS)</li>
@@ -751,8 +765,12 @@
 <h3 id="direct">Direct</h3>
 <details>
 <div class="highlight"><pre><span></span><code><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Tls</span>
-<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The Transport Layer Security (TLS) object describes the negotiated TLS</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">protocol used for secure communications over an establish network connection.</span>
+<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">Transport</span><span class="nv"> </span><span class="s">Layer</span><span class="nv"> </span><span class="s">Security</span><span class="nv"> </span><span class="s">(TLS)</span><span class="nv"> </span><span class="s">object</span><span class="nv"> </span><span class="s">describes</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">negotiated</span><span class="nv"> </span><span class="s">TLS</span>
+<span class="w">  </span><span class="s">protocol</span>
+
+<span class="w">  </span><span class="s">used</span><span class="nv"> </span><span class="s">for</span><span class="nv"> </span><span class="s">secure</span><span class="nv"> </span><span class="s">communications</span><span class="nv"> </span><span class="s">over</span><span class="nv"> </span><span class="s">an</span><span class="nv"> </span><span class="s">establish</span><span class="nv"> </span><span class="s">network</span><span class="nv"> </span><span class="s">connection.'</span>
+<span class="nt">in_subset</span><span class="p">:</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">objects</span>
 <span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="nt">aliases</span><span class="p">:</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Transport Layer Security (TLS)</span>
@@ -807,8 +825,12 @@
 <h3 id="induced">Induced</h3>
 <details>
 <div class="highlight"><pre><span></span><code><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Tls</span>
-<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The Transport Layer Security (TLS) object describes the negotiated TLS</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">protocol used for secure communications over an establish network connection.</span>
+<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">Transport</span><span class="nv"> </span><span class="s">Layer</span><span class="nv"> </span><span class="s">Security</span><span class="nv"> </span><span class="s">(TLS)</span><span class="nv"> </span><span class="s">object</span><span class="nv"> </span><span class="s">describes</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">negotiated</span><span class="nv"> </span><span class="s">TLS</span>
+<span class="w">  </span><span class="s">protocol</span>
+
+<span class="w">  </span><span class="s">used</span><span class="nv"> </span><span class="s">for</span><span class="nv"> </span><span class="s">secure</span><span class="nv"> </span><span class="s">communications</span><span class="nv"> </span><span class="s">over</span><span class="nv"> </span><span class="s">an</span><span class="nv"> </span><span class="s">establish</span><span class="nv"> </span><span class="s">network</span><span class="nv"> </span><span class="s">connection.'</span>
+<span class="nt">in_subset</span><span class="p">:</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">objects</span>
 <span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="nt">aliases</span><span class="p">:</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Transport Layer Security (TLS)</span>
@@ -845,8 +867,12 @@
 <span class="nt">attributes</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">alert</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">alert</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The integer value of TLS alert if present. The alerts are defined</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">in the TLS specification in &lt;a target='_blank' href='https://datatracker.ietf.org/doc/html/rfc2246'&gt;RFC-2246&lt;/a&gt;.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">integer</span><span class="nv"> </span><span class="s">value</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">TLS</span><span class="nv"> </span><span class="s">alert</span><span class="nv"> </span><span class="s">if</span><span class="nv"> </span><span class="s">present.</span><span class="nv"> </span><span class="s">The</span><span class="nv"> </span><span class="s">alerts</span><span class="nv"> </span><span class="s">are</span><span class="nv"> </span><span class="s">defined</span>
+<span class="w">      </span><span class="s">in</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">TLS</span>
+
+<span class="w">      </span><span class="s">specification</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">&lt;a</span><span class="nv"> </span><span class="s">target=</span><span class="se">''</span><span class="s">_blank</span><span class="se">''</span>
+
+<span class="w">      </span><span class="s">href=</span><span class="se">''</span><span class="s">https://datatracker.ietf.org/doc/html/rfc2246</span><span class="se">''</span><span class="s">&gt;RFC-2246&lt;/a&gt;.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Client TLS Alert</span>
@@ -874,8 +900,10 @@
 <span class="w">    </span><span class="nt">recommended</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">certificate_chain</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">certificate_chain</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The Chain of Certificate Serial Numbers field provides a chain of</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">Certificate Issuer Serial Numbers leading to the Root Certificate Issuer.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">Chain</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">Certificate</span><span class="nv"> </span><span class="s">Serial</span><span class="nv"> </span><span class="s">Numbers</span><span class="nv"> </span><span class="s">field</span><span class="nv"> </span><span class="s">provides</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">chain</span><span class="nv"> </span><span class="s">of</span>
+<span class="w">      </span><span class="s">Certificate</span>
+
+<span class="w">      </span><span class="s">Issuer</span><span class="nv"> </span><span class="s">Serial</span><span class="nv"> </span><span class="s">Numbers</span><span class="nv"> </span><span class="s">leading</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">Root</span><span class="nv"> </span><span class="s">Certificate</span><span class="nv"> </span><span class="s">Issuer.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Certificate Chain</span>
@@ -903,8 +931,9 @@
 <span class="w">    </span><span class="nt">recommended</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">client_ciphers</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">client_ciphers</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The client cipher suites that were exchanged during the TLS handshake</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">negotiation.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">client</span><span class="nv"> </span><span class="s">cipher</span><span class="nv"> </span><span class="s">suites</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">were</span><span class="nv"> </span><span class="s">exchanged</span><span class="nv"> </span><span class="s">during</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">TLS</span><span class="nv"> </span><span class="s">handshake</span>
+
+<span class="w">      </span><span class="s">negotiation.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Client Cipher Suites</span>
@@ -933,8 +962,10 @@
 <span class="w">    </span><span class="nt">multivalued</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">handshake_dur</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">handshake_dur</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The amount of total time for the TLS handshake to complete after</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">the TCP connection is established, including client-side delays, in milliseconds.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">amount</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">total</span><span class="nv"> </span><span class="s">time</span><span class="nv"> </span><span class="s">for</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">TLS</span><span class="nv"> </span><span class="s">handshake</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">complete</span><span class="nv"> </span><span class="s">after</span>
+<span class="w">      </span><span class="s">the</span><span class="nv"> </span><span class="s">TCP</span>
+
+<span class="w">      </span><span class="s">connection</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">established,</span><span class="nv"> </span><span class="s">including</span><span class="nv"> </span><span class="s">client-side</span><span class="nv"> </span><span class="s">delays,</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">milliseconds.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Handshake Duration</span>
@@ -985,8 +1016,9 @@
 <span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">integer</span>
 <span class="w">  </span><span class="nt">sans</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">sans</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The list of subject alternative names that are secured by a specific</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">certificate.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">list</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">subject</span><span class="nv"> </span><span class="s">alternative</span><span class="nv"> </span><span class="s">names</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">are</span><span class="nv"> </span><span class="s">secured</span><span class="nv"> </span><span class="s">by</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">specific</span>
+
+<span class="w">      </span><span class="s">certificate.'</span>
 <span class="w">    </span><span class="nt">deprecated</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Use &lt;code&gt;tls.certificate.sans&lt;/code&gt; attribute instead.</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
@@ -1001,8 +1033,9 @@
 <span class="w">    </span><span class="nt">multivalued</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">server_ciphers</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">server_ciphers</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The server cipher suites that were exchanged during the TLS handshake</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">negotiation.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">server</span><span class="nv"> </span><span class="s">cipher</span><span class="nv"> </span><span class="s">suites</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">were</span><span class="nv"> </span><span class="s">exchanged</span><span class="nv"> </span><span class="s">during</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">TLS</span><span class="nv"> </span><span class="s">handshake</span>
+
+<span class="w">      </span><span class="s">negotiation.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Server Cipher Suites</span>

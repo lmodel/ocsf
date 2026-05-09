@@ -227,6 +227,15 @@
 </nav>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="#in-subsets">
+<span class="md-ellipsis">
+      
+        In Subsets
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#aliases">
 <span class="md-ellipsis">
       
@@ -578,37 +587,37 @@
 <tr>
 <td><a href="../file/">file</a></td>
 <td>0..1 <em>recommended</em> <br/> <a href="../File/">File</a></td>
-<td>The file that is the target of the query when query_type_id indicates a File ...</td>
+<td>The file that is the target of the query when query_type_id indicates a File</td>
 <td><a href="../QueryEvidence/">QueryEvidence</a></td>
 </tr>
 <tr>
 <td><a href="../folder/">folder</a></td>
 <td>0..1 <em>recommended</em> <br/> <a href="../File/">File</a></td>
-<td>The folder that is the target of the query when query_type_id indicates a Fol...</td>
+<td>The folder that is the target of the query when query_type_id indicates a</td>
 <td><a href="../QueryEvidence/">QueryEvidence</a></td>
 </tr>
 <tr>
 <td><a href="../group/">group</a></td>
 <td>0..1 <em>recommended</em> <br/> <a href="../Group/">Group</a></td>
-<td>The administrative group that is the target of the query when query_type_id i...</td>
+<td>The administrative group that is the target of the query when query_type_id</td>
 <td><a href="../QueryEvidence/">QueryEvidence</a></td>
 </tr>
 <tr>
 <td><a href="../job/">job</a></td>
 <td>0..1 <em>recommended</em> <br/> <a href="../Job/">Job</a></td>
-<td>The job object that pertains to the event when query_type_id indicates a Job ...</td>
+<td>The job object that pertains to the event when query_type_id indicates a Job</td>
 <td><a href="../QueryEvidence/">QueryEvidence</a></td>
 </tr>
 <tr>
 <td><a href="../kernel/">kernel</a></td>
 <td>0..1 <em>recommended</em> <br/> <a href="../Kernel/">Kernel</a></td>
-<td>The kernel object that pertains to the event when query_type_id indicates a K...</td>
+<td>The kernel object that pertains to the event when query_type_id indicates a</td>
 <td><a href="../QueryEvidence/">QueryEvidence</a></td>
 </tr>
 <tr>
 <td><a href="../module/">module</a></td>
 <td>0..1 <em>recommended</em> <br/> <a href="../Module/">Module</a></td>
-<td>The module that pertains to the event when query_type_id indicates a Module q...</td>
+<td>The module that pertains to the event when query_type_id indicates a Module</td>
 <td><a href="../QueryEvidence/">QueryEvidence</a></td>
 </tr>
 <tr>
@@ -620,13 +629,13 @@
 <tr>
 <td><a href="../peripheral_device/">peripheral_device</a></td>
 <td>0..1 <em>recommended</em> <br/> <a href="../PeripheralDevice/">PeripheralDevice</a></td>
-<td>The peripheral device that triggered the event when query_type_id indicates a...</td>
+<td>The peripheral device that triggered the event when query_type_id indicates a</td>
 <td><a href="../QueryEvidence/">QueryEvidence</a></td>
 </tr>
 <tr>
 <td><a href="../process/">process</a></td>
 <td>0..1 <em>recommended</em> <br/> <a href="../Process/">Process</a></td>
-<td>The process that pertains to the event when query_type_id indicates a Process...</td>
+<td>The process that pertains to the event when query_type_id indicates a Process</td>
 <td><a href="../QueryEvidence/">QueryEvidence</a></td>
 </tr>
 <tr>
@@ -638,19 +647,19 @@
 <tr>
 <td><a href="../query_type_id/">query_type_id</a></td>
 <td>1 <br/> <a href="../QueryEvidenceQueryTypeIdEnum/">QueryEvidenceQueryTypeIdEnum</a></td>
-<td>The normalized type of system query performed against a device or system comp...</td>
+<td>The normalized type of system query performed against a device or system</td>
 <td><a href="../QueryEvidence/">QueryEvidence</a></td>
 </tr>
 <tr>
 <td><a href="../service/">service</a></td>
 <td>0..1 <em>recommended</em> <br/> <a href="../Service/">Service</a></td>
-<td>The service that pertains to the event when query_type_id indicates a Service...</td>
+<td>The service that pertains to the event when query_type_id indicates a Service</td>
 <td><a href="../QueryEvidence/">QueryEvidence</a></td>
 </tr>
 <tr>
 <td><a href="../session/">session</a></td>
 <td>0..1 <em>recommended</em> <br/> <a href="../Session/">Session</a></td>
-<td>The authenticated user or service session when query_type_id indicates a Sess...</td>
+<td>The authenticated user or service session when query_type_id indicates a</td>
 <td><a href="../QueryEvidence/">QueryEvidence</a></td>
 </tr>
 <tr>
@@ -705,6 +714,10 @@
 </tr>
 </tbody>
 </table>
+<h2 id="in-subsets">In Subsets</h2>
+<ul>
+<li><a href="../WindowsExtension/">WindowsExtension</a></li>
+</ul>
 <h2 id="aliases">Aliases</h2>
 <ul>
 <li>Query Evidence</li>
@@ -721,7 +734,15 @@
 <tbody>
 <tr>
 <td>ocsf_constraints</td>
-<td>{"just_one": ["connection_info", "file", "folder", "group", "job", "kernel", "module", "network_interfaces", "peripheral_device", "process", "reg_key", "reg_value", "service", "session", "startup_item", "user"]}</td>
+<td>{"just_one": ["connection_info", "file", "folder", "group", "job", "kernel",</td>
+</tr>
+<tr>
+<td>"module", "network_interfaces", "peripheral_device", "process", "reg_key",</td>
+<td></td>
+</tr>
+<tr>
+<td>"reg_value", "service", "session", "startup_item", "user"]}</td>
+<td></td>
 </tr>
 <tr>
 <td>ocsf_extension</td>
@@ -761,12 +782,16 @@
 <span class="w">  </span><span class="nt">ocsf_constraints</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ocsf_constraints</span>
 <span class="w">    </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="s">'{"just_one":</span><span class="nv"> </span><span class="s">["connection_info",</span><span class="nv"> </span><span class="s">"file",</span><span class="nv"> </span><span class="s">"folder",</span><span class="nv"> </span><span class="s">"group",</span><span class="nv"> </span><span class="s">"job",</span><span class="nv"> </span><span class="s">"kernel",</span>
-<span class="w">      </span><span class="s">"module",</span><span class="nv"> </span><span class="s">"network_interfaces",</span><span class="nv"> </span><span class="s">"peripheral_device",</span><span class="nv"> </span><span class="s">"process",</span><span class="nv"> </span><span class="s">"reg_key",</span><span class="nv"> </span><span class="s">"reg_value",</span>
-<span class="w">      </span><span class="s">"service",</span><span class="nv"> </span><span class="s">"session",</span><span class="nv"> </span><span class="s">"startup_item",</span><span class="nv"> </span><span class="s">"user"]}'</span>
+
+<span class="w">      </span><span class="s">"module",</span><span class="nv"> </span><span class="s">"network_interfaces",</span><span class="nv"> </span><span class="s">"peripheral_device",</span><span class="nv"> </span><span class="s">"process",</span><span class="nv"> </span><span class="s">"reg_key",</span>
+
+<span class="w">      </span><span class="s">"reg_value",</span><span class="nv"> </span><span class="s">"service",</span><span class="nv"> </span><span class="s">"session",</span><span class="nv"> </span><span class="s">"startup_item",</span><span class="nv"> </span><span class="s">"user"]}'</span>
 <span class="w">  </span><span class="nt">ocsf_extension</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ocsf_extension</span>
 <span class="w">    </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">windows</span>
 <span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The resulting evidence information that was queried.</span>
+<span class="nt">in_subset</span><span class="p">:</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">windows_extension</span>
 <span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="nt">aliases</span><span class="p">:</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Query Evidence</span>
@@ -859,8 +884,12 @@
 <span class="w">          </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">user</span>
 <span class="w">          </span><span class="nt">required</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'OCSF</span><span class="nv"> </span><span class="s">just_one:</span><span class="nv"> </span><span class="s">exactly</span><span class="nv"> </span><span class="s">one</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">[</span><span class="se">''</span><span class="s">connection_info</span><span class="se">''</span><span class="s">,</span><span class="nv"> </span><span class="se">''</span><span class="s">file</span><span class="se">''</span><span class="s">,</span><span class="nv"> </span><span class="se">''</span><span class="s">folder</span><span class="se">''</span><span class="s">,</span>
-<span class="w">    </span><span class="se">''</span><span class="s">group</span><span class="se">''</span><span class="s">,</span><span class="nv"> </span><span class="se">''</span><span class="s">job</span><span class="se">''</span><span class="s">,</span><span class="nv"> </span><span class="se">''</span><span class="s">kernel</span><span class="se">''</span><span class="s">,</span><span class="nv"> </span><span class="se">''</span><span class="s">module</span><span class="se">''</span><span class="s">,</span><span class="nv"> </span><span class="se">''</span><span class="s">network_interfaces</span><span class="se">''</span><span class="s">,</span><span class="nv"> </span><span class="se">''</span><span class="s">peripheral_device</span><span class="se">''</span><span class="s">,</span>
+<span class="w">    </span><span class="se">''</span><span class="s">group</span><span class="se">''</span><span class="s">,</span>
+
+<span class="w">    </span><span class="se">''</span><span class="s">job</span><span class="se">''</span><span class="s">,</span><span class="nv"> </span><span class="se">''</span><span class="s">kernel</span><span class="se">''</span><span class="s">,</span><span class="nv"> </span><span class="se">''</span><span class="s">module</span><span class="se">''</span><span class="s">,</span><span class="nv"> </span><span class="se">''</span><span class="s">network_interfaces</span><span class="se">''</span><span class="s">,</span><span class="nv"> </span><span class="se">''</span><span class="s">peripheral_device</span><span class="se">''</span><span class="s">,</span>
+
 <span class="w">    </span><span class="se">''</span><span class="s">process</span><span class="se">''</span><span class="s">,</span><span class="nv"> </span><span class="se">''</span><span class="s">reg_key</span><span class="se">''</span><span class="s">,</span><span class="nv"> </span><span class="se">''</span><span class="s">reg_value</span><span class="se">''</span><span class="s">,</span><span class="nv"> </span><span class="se">''</span><span class="s">service</span><span class="se">''</span><span class="s">,</span><span class="nv"> </span><span class="se">''</span><span class="s">session</span><span class="se">''</span><span class="s">,</span><span class="nv"> </span><span class="se">''</span><span class="s">startup_item</span><span class="se">''</span><span class="s">,</span>
+
 <span class="w">    </span><span class="se">''</span><span class="s">user</span><span class="se">''</span><span class="s">]</span><span class="nv"> </span><span class="s">must</span><span class="nv"> </span><span class="s">be</span><span class="nv"> </span><span class="s">set.'</span>
 </code></pre></div>
 </details>
@@ -871,12 +900,16 @@
 <span class="w">  </span><span class="nt">ocsf_constraints</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ocsf_constraints</span>
 <span class="w">    </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="s">'{"just_one":</span><span class="nv"> </span><span class="s">["connection_info",</span><span class="nv"> </span><span class="s">"file",</span><span class="nv"> </span><span class="s">"folder",</span><span class="nv"> </span><span class="s">"group",</span><span class="nv"> </span><span class="s">"job",</span><span class="nv"> </span><span class="s">"kernel",</span>
-<span class="w">      </span><span class="s">"module",</span><span class="nv"> </span><span class="s">"network_interfaces",</span><span class="nv"> </span><span class="s">"peripheral_device",</span><span class="nv"> </span><span class="s">"process",</span><span class="nv"> </span><span class="s">"reg_key",</span><span class="nv"> </span><span class="s">"reg_value",</span>
-<span class="w">      </span><span class="s">"service",</span><span class="nv"> </span><span class="s">"session",</span><span class="nv"> </span><span class="s">"startup_item",</span><span class="nv"> </span><span class="s">"user"]}'</span>
+
+<span class="w">      </span><span class="s">"module",</span><span class="nv"> </span><span class="s">"network_interfaces",</span><span class="nv"> </span><span class="s">"peripheral_device",</span><span class="nv"> </span><span class="s">"process",</span><span class="nv"> </span><span class="s">"reg_key",</span>
+
+<span class="w">      </span><span class="s">"reg_value",</span><span class="nv"> </span><span class="s">"service",</span><span class="nv"> </span><span class="s">"session",</span><span class="nv"> </span><span class="s">"startup_item",</span><span class="nv"> </span><span class="s">"user"]}'</span>
 <span class="w">  </span><span class="nt">ocsf_extension</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ocsf_extension</span>
 <span class="w">    </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">windows</span>
 <span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The resulting evidence information that was queried.</span>
+<span class="nt">in_subset</span><span class="p">:</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">windows_extension</span>
 <span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="nt">aliases</span><span class="p">:</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Query Evidence</span>
@@ -973,8 +1006,10 @@
 <span class="w">      </span><span class="nt">group</span><span class="p">:</span>
 <span class="w">        </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">group</span>
 <span class="w">        </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">primary</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The file that is the target of the query when query_type_id indicates</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">a File query.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">file</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">target</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">query</span><span class="nv"> </span><span class="s">when</span><span class="nv"> </span><span class="s">query_type_id</span><span class="nv"> </span><span class="s">indicates</span>
+<span class="w">      </span><span class="s">a</span><span class="nv"> </span><span class="s">File</span>
+
+<span class="w">      </span><span class="s">query.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">File</span>
@@ -1013,8 +1048,10 @@
 <span class="w">      </span><span class="nt">group</span><span class="p">:</span>
 <span class="w">        </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">group</span>
 <span class="w">        </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">primary</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The folder that is the target of the query when query_type_id indicates</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">a Folder query.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">folder</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">target</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">query</span><span class="nv"> </span><span class="s">when</span><span class="nv"> </span><span class="s">query_type_id</span><span class="nv"> </span><span class="s">indicates</span>
+<span class="w">      </span><span class="s">a</span>
+
+<span class="w">      </span><span class="s">Folder</span><span class="nv"> </span><span class="s">query.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Folder</span>
@@ -1032,8 +1069,9 @@
 <span class="w">      </span><span class="nt">group</span><span class="p">:</span>
 <span class="w">        </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">group</span>
 <span class="w">        </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">primary</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The administrative group that is the target of the query when query_type_id</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">indicates an Admin Group query.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">administrative</span><span class="nv"> </span><span class="s">group</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">target</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">query</span><span class="nv"> </span><span class="s">when</span><span class="nv"> </span><span class="s">query_type_id</span>
+
+<span class="w">      </span><span class="s">indicates</span><span class="nv"> </span><span class="s">an</span><span class="nv"> </span><span class="s">Admin</span><span class="nv"> </span><span class="s">Group</span><span class="nv"> </span><span class="s">query.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Group</span>
@@ -1060,8 +1098,10 @@
 <span class="w">      </span><span class="nt">group</span><span class="p">:</span>
 <span class="w">        </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">group</span>
 <span class="w">        </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">primary</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The job object that pertains to the event when query_type_id indicates</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">a Job query.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">job</span><span class="nv"> </span><span class="s">object</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">pertains</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">event</span><span class="nv"> </span><span class="s">when</span><span class="nv"> </span><span class="s">query_type_id</span><span class="nv"> </span><span class="s">indicates</span>
+<span class="w">      </span><span class="s">a</span><span class="nv"> </span><span class="s">Job</span>
+
+<span class="w">      </span><span class="s">query.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Job</span>
@@ -1082,8 +1122,10 @@
 <span class="w">      </span><span class="nt">group</span><span class="p">:</span>
 <span class="w">        </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">group</span>
 <span class="w">        </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">primary</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The kernel object that pertains to the event when query_type_id indicates</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">a Kernel query.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">kernel</span><span class="nv"> </span><span class="s">object</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">pertains</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">event</span><span class="nv"> </span><span class="s">when</span><span class="nv"> </span><span class="s">query_type_id</span>
+<span class="w">      </span><span class="s">indicates</span><span class="nv"> </span><span class="s">a</span>
+
+<span class="w">      </span><span class="s">Kernel</span><span class="nv"> </span><span class="s">query.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Kernel</span>
@@ -1102,8 +1144,10 @@
 <span class="w">      </span><span class="nt">group</span><span class="p">:</span>
 <span class="w">        </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">group</span>
 <span class="w">        </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">primary</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The module that pertains to the event when query_type_id indicates</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">a Module query.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">module</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">pertains</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">event</span><span class="nv"> </span><span class="s">when</span><span class="nv"> </span><span class="s">query_type_id</span><span class="nv"> </span><span class="s">indicates</span>
+<span class="w">      </span><span class="s">a</span><span class="nv"> </span><span class="s">Module</span>
+
+<span class="w">      </span><span class="s">query.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Module</span>
@@ -1123,8 +1167,10 @@
 <span class="w">      </span><span class="nt">group</span><span class="p">:</span>
 <span class="w">        </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">group</span>
 <span class="w">        </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">primary</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The physical or virtual network interfaces that are associated with</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">the device when query_type_id indicates a Network Interfaces query.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">physical</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">virtual</span><span class="nv"> </span><span class="s">network</span><span class="nv"> </span><span class="s">interfaces</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">are</span><span class="nv"> </span><span class="s">associated</span><span class="nv"> </span><span class="s">with</span>
+<span class="w">      </span><span class="s">the</span><span class="nv"> </span><span class="s">device</span>
+
+<span class="w">      </span><span class="s">when</span><span class="nv"> </span><span class="s">query_type_id</span><span class="nv"> </span><span class="s">indicates</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">Network</span><span class="nv"> </span><span class="s">Interfaces</span><span class="nv"> </span><span class="s">query.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Network Interfaces</span>
@@ -1144,8 +1190,10 @@
 <span class="w">      </span><span class="nt">group</span><span class="p">:</span>
 <span class="w">        </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">group</span>
 <span class="w">        </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">primary</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The peripheral device that triggered the event when query_type_id</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">indicates a Peripheral Device query.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">peripheral</span><span class="nv"> </span><span class="s">device</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">triggered</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">event</span><span class="nv"> </span><span class="s">when</span><span class="nv"> </span><span class="s">query_type_id</span>
+<span class="w">      </span><span class="s">indicates</span><span class="nv"> </span><span class="s">a</span>
+
+<span class="w">      </span><span class="s">Peripheral</span><span class="nv"> </span><span class="s">Device</span><span class="nv"> </span><span class="s">query.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Peripheral Device</span>
@@ -1164,8 +1212,10 @@
 <span class="w">      </span><span class="nt">group</span><span class="p">:</span>
 <span class="w">        </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">group</span>
 <span class="w">        </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">primary</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The process that pertains to the event when query_type_id indicates</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">a Process query.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">process</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">pertains</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">event</span><span class="nv"> </span><span class="s">when</span><span class="nv"> </span><span class="s">query_type_id</span><span class="nv"> </span><span class="s">indicates</span>
+<span class="w">      </span><span class="s">a</span><span class="nv"> </span><span class="s">Process</span>
+
+<span class="w">      </span><span class="s">query.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Process</span>
@@ -1209,8 +1259,10 @@
 <span class="w">      </span><span class="nt">group</span><span class="p">:</span>
 <span class="w">        </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">group</span>
 <span class="w">        </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">classification</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The normalized type of system query performed against a device or</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">system component.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">normalized</span><span class="nv"> </span><span class="s">type</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">system</span><span class="nv"> </span><span class="s">query</span><span class="nv"> </span><span class="s">performed</span><span class="nv"> </span><span class="s">against</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">device</span><span class="nv"> </span><span class="s">or</span>
+<span class="w">      </span><span class="s">system</span>
+
+<span class="w">      </span><span class="s">component.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Query Type ID</span>
@@ -1227,8 +1279,10 @@
 <span class="w">      </span><span class="nt">group</span><span class="p">:</span>
 <span class="w">        </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">group</span>
 <span class="w">        </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">primary</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The service that pertains to the event when query_type_id indicates</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">a Service query.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">service</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">pertains</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">event</span><span class="nv"> </span><span class="s">when</span><span class="nv"> </span><span class="s">query_type_id</span><span class="nv"> </span><span class="s">indicates</span>
+<span class="w">      </span><span class="s">a</span><span class="nv"> </span><span class="s">Service</span>
+
+<span class="w">      </span><span class="s">query.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Service</span>
@@ -1251,8 +1305,10 @@
 <span class="w">      </span><span class="nt">group</span><span class="p">:</span>
 <span class="w">        </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">group</span>
 <span class="w">        </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">primary</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The authenticated user or service session when query_type_id indicates</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">a Session query.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">authenticated</span><span class="nv"> </span><span class="s">user</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">service</span><span class="nv"> </span><span class="s">session</span><span class="nv"> </span><span class="s">when</span><span class="nv"> </span><span class="s">query_type_id</span><span class="nv"> </span><span class="s">indicates</span>
+<span class="w">      </span><span class="s">a</span>
+
+<span class="w">      </span><span class="s">Session</span><span class="nv"> </span><span class="s">query.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Session</span>
@@ -1276,8 +1332,10 @@
 <span class="w">      </span><span class="nt">group</span><span class="p">:</span>
 <span class="w">        </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">group</span>
 <span class="w">        </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">primary</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The startup item object that pertains to the event when query_type_id</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">indicates a Startup Item query.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">startup</span><span class="nv"> </span><span class="s">item</span><span class="nv"> </span><span class="s">object</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">pertains</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">event</span><span class="nv"> </span><span class="s">when</span><span class="nv"> </span><span class="s">query_type_id</span>
+<span class="w">      </span><span class="s">indicates</span>
+
+<span class="w">      </span><span class="s">a</span><span class="nv"> </span><span class="s">Startup</span><span class="nv"> </span><span class="s">Item</span><span class="nv"> </span><span class="s">query.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Startup Item</span>
@@ -1295,8 +1353,10 @@
 <span class="w">      </span><span class="nt">group</span><span class="p">:</span>
 <span class="w">        </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">group</span>
 <span class="w">        </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">context</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The state of the socket, normalized to the caption of the state_id</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">value. In the case of 'Other', it is defined by the event source.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">state</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">socket,</span><span class="nv"> </span><span class="s">normalized</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">caption</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">state_id</span>
+<span class="w">      </span><span class="s">value.</span><span class="nv"> </span><span class="s">In</span>
+
+<span class="w">      </span><span class="s">the</span><span class="nv"> </span><span class="s">case</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="se">''</span><span class="s">Other</span><span class="se">''</span><span class="s">,</span><span class="nv"> </span><span class="s">it</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">defined</span><span class="nv"> </span><span class="s">by</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">event</span><span class="nv"> </span><span class="s">source.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">State</span>
@@ -1373,8 +1433,10 @@
 <span class="w">      </span><span class="nt">group</span><span class="p">:</span>
 <span class="w">        </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">group</span>
 <span class="w">        </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">context</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The users that belong to the administrative group when query_type_id</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">indicates a Users query.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">users</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">belong</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">administrative</span><span class="nv"> </span><span class="s">group</span><span class="nv"> </span><span class="s">when</span><span class="nv"> </span><span class="s">query_type_id</span>
+<span class="w">      </span><span class="s">indicates</span>
+
+<span class="w">      </span><span class="s">a</span><span class="nv"> </span><span class="s">Users</span><span class="nv"> </span><span class="s">query.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Users</span>
@@ -1454,8 +1516,12 @@
 <span class="w">          </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">user</span>
 <span class="w">          </span><span class="nt">required</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'OCSF</span><span class="nv"> </span><span class="s">just_one:</span><span class="nv"> </span><span class="s">exactly</span><span class="nv"> </span><span class="s">one</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">[</span><span class="se">''</span><span class="s">connection_info</span><span class="se">''</span><span class="s">,</span><span class="nv"> </span><span class="se">''</span><span class="s">file</span><span class="se">''</span><span class="s">,</span><span class="nv"> </span><span class="se">''</span><span class="s">folder</span><span class="se">''</span><span class="s">,</span>
-<span class="w">    </span><span class="se">''</span><span class="s">group</span><span class="se">''</span><span class="s">,</span><span class="nv"> </span><span class="se">''</span><span class="s">job</span><span class="se">''</span><span class="s">,</span><span class="nv"> </span><span class="se">''</span><span class="s">kernel</span><span class="se">''</span><span class="s">,</span><span class="nv"> </span><span class="se">''</span><span class="s">module</span><span class="se">''</span><span class="s">,</span><span class="nv"> </span><span class="se">''</span><span class="s">network_interfaces</span><span class="se">''</span><span class="s">,</span><span class="nv"> </span><span class="se">''</span><span class="s">peripheral_device</span><span class="se">''</span><span class="s">,</span>
+<span class="w">    </span><span class="se">''</span><span class="s">group</span><span class="se">''</span><span class="s">,</span>
+
+<span class="w">    </span><span class="se">''</span><span class="s">job</span><span class="se">''</span><span class="s">,</span><span class="nv"> </span><span class="se">''</span><span class="s">kernel</span><span class="se">''</span><span class="s">,</span><span class="nv"> </span><span class="se">''</span><span class="s">module</span><span class="se">''</span><span class="s">,</span><span class="nv"> </span><span class="se">''</span><span class="s">network_interfaces</span><span class="se">''</span><span class="s">,</span><span class="nv"> </span><span class="se">''</span><span class="s">peripheral_device</span><span class="se">''</span><span class="s">,</span>
+
 <span class="w">    </span><span class="se">''</span><span class="s">process</span><span class="se">''</span><span class="s">,</span><span class="nv"> </span><span class="se">''</span><span class="s">reg_key</span><span class="se">''</span><span class="s">,</span><span class="nv"> </span><span class="se">''</span><span class="s">reg_value</span><span class="se">''</span><span class="s">,</span><span class="nv"> </span><span class="se">''</span><span class="s">service</span><span class="se">''</span><span class="s">,</span><span class="nv"> </span><span class="se">''</span><span class="s">session</span><span class="se">''</span><span class="s">,</span><span class="nv"> </span><span class="se">''</span><span class="s">startup_item</span><span class="se">''</span><span class="s">,</span>
+
 <span class="w">    </span><span class="se">''</span><span class="s">user</span><span class="se">''</span><span class="s">]</span><span class="nv"> </span><span class="s">must</span><span class="nv"> </span><span class="s">be</span><span class="nv"> </span><span class="s">set.'</span>
 </code></pre></div>
 </details>

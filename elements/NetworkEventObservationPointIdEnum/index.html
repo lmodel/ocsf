@@ -447,7 +447,9 @@
 
 
 <h1 id="enum-networkeventobservationpointidenum">Enum: NetworkEventObservationPointIdEnum</h1>
-<p><em>The normalized identifier of the observation point. The observation point identifier indicates whether the source network endpoint, destination network endpoint, or neither served as the observation point for the activity.</em></p>
+<p><em>The normalized identifier of the observation point. The observation point</em></p>
+<p><em>identifier indicates whether the source network endpoint, destination network</em></p>
+<p><em>endpoint, or neither served as the observation point for the activity.</em></p>
 <p>URI: <a href="https://w3id.org/lmodel/ocsf/NetworkEventObservationPointIdEnum">ocsf:NetworkEventObservationPointIdEnum</a></p>
 <h2 id="permissible-values">Permissible Values</h2>
 <table>
@@ -514,9 +516,12 @@
 <h2 id="linkml-source">LinkML Source</h2>
 <details>
 <div class="highlight"><pre><span></span><code><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">NetworkEventObservationPointIdEnum</span>
-<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The normalized identifier of the observation point. The observation point</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">identifier indicates whether the source network endpoint, destination network endpoint,</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">or neither served as the observation point for the activity.</span>
+<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;The</span><span class="nv"> </span><span class="s">normalized</span><span class="nv"> </span><span class="s">identifier</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">observation</span><span class="nv"> </span><span class="s">point.</span><span class="nv"> </span><span class="s">The</span><span class="nv"> </span><span class="s">observation</span>
+<span class="w">  </span><span class="s">point</span>
+
+<span class="w">  </span><span class="s">identifier</span><span class="nv"> </span><span class="s">indicates</span><span class="nv"> </span><span class="s">whether</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">source</span><span class="nv"> </span><span class="s">network</span><span class="nv"> </span><span class="s">endpoint,</span><span class="nv"> </span><span class="s">destination</span><span class="nv"> </span><span class="s">network</span>
+
+<span class="w">  </span><span class="s">endpoint,</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">neither</span><span class="nv"> </span><span class="s">served</span><span class="nv"> </span><span class="s">as</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">observation</span><span class="nv"> </span><span class="s">point</span><span class="nv"> </span><span class="s">for</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">activity.&#39;</span>
 <span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="nt">rank</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1000</span>
 <span class="nt">permissible_values</span><span class="p">:</span>
@@ -552,8 +557,10 @@
 <span class="w">        </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Destination</span>
 <span class="w">  </span><span class="nt">NEITHER</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">text</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">NEITHER</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Neither the source nor destination network endpoint is the observation</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">point. Refer to the &lt;code&gt;network_observation_point&lt;/code&gt; attribute for details.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;Neither</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">source</span><span class="nv"> </span><span class="s">nor</span><span class="nv"> </span><span class="s">destination</span><span class="nv"> </span><span class="s">network</span><span class="nv"> </span><span class="s">endpoint</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">observation</span>
+<span class="w">      </span><span class="s">point.</span>
+
+<span class="w">      </span><span class="s">Refer</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">&lt;code&gt;network_observation_point&lt;/code&gt;</span><span class="nv"> </span><span class="s">attribute</span><span class="nv"> </span><span class="s">for</span><span class="nv"> </span><span class="s">details.&#39;</span>
 <span class="w">    </span><span class="nt">annotations</span><span class="p">:</span>
 <span class="w">      </span><span class="nt">ocsf_uid</span><span class="p">:</span>
 <span class="w">        </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ocsf_uid</span>
@@ -563,10 +570,14 @@
 <span class="w">        </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Neither</span>
 <span class="w">  </span><span class="nt">BOTH</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">text</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">BOTH</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Both the source and destination network endpoint are the observation</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">point. This typically occurs in localhost or internal communications where the</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">source and destination are the same endpoint, often resulting in a &lt;code&gt;connection_info.direction&lt;/code&gt;</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">of &lt;code&gt;Local&lt;/code&gt;.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;Both</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">source</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">destination</span><span class="nv"> </span><span class="s">network</span><span class="nv"> </span><span class="s">endpoint</span><span class="nv"> </span><span class="s">are</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">observation</span>
+<span class="w">      </span><span class="s">point.</span>
+
+<span class="w">      </span><span class="s">This</span><span class="nv"> </span><span class="s">typically</span><span class="nv"> </span><span class="s">occurs</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">localhost</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">internal</span><span class="nv"> </span><span class="s">communications</span><span class="nv"> </span><span class="s">where</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">source</span>
+
+<span class="w">      </span><span class="s">and</span><span class="nv"> </span><span class="s">destination</span><span class="nv"> </span><span class="s">are</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">same</span><span class="nv"> </span><span class="s">endpoint,</span><span class="nv"> </span><span class="s">often</span><span class="nv"> </span><span class="s">resulting</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">a</span>
+
+<span class="w">      </span><span class="s">&lt;code&gt;connection_info.direction&lt;/code&gt;</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">&lt;code&gt;Local&lt;/code&gt;.&#39;</span>
 <span class="w">    </span><span class="nt">annotations</span><span class="p">:</span>
 <span class="w">      </span><span class="nt">ocsf_uid</span><span class="p">:</span>
 <span class="w">        </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ocsf_uid</span>
@@ -576,8 +587,9 @@
 <span class="w">        </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Both</span>
 <span class="w">  </span><span class="nt">OTHER</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">text</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">OTHER</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The observation point is not mapped. See the &lt;code&gt;observation_point&lt;/code&gt;</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">attribute for a data source specific value.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;The</span><span class="nv"> </span><span class="s">observation</span><span class="nv"> </span><span class="s">point</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">not</span><span class="nv"> </span><span class="s">mapped.</span><span class="nv"> </span><span class="s">See</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">&lt;code&gt;observation_point&lt;/code&gt;</span>
+
+<span class="w">      </span><span class="s">attribute</span><span class="nv"> </span><span class="s">for</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">data</span><span class="nv"> </span><span class="s">source</span><span class="nv"> </span><span class="s">specific</span><span class="nv"> </span><span class="s">value.&#39;</span>
 <span class="w">    </span><span class="nt">annotations</span><span class="p">:</span>
 <span class="w">      </span><span class="nt">ocsf_uid</span><span class="p">:</span>
 <span class="w">        </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ocsf_uid</span>

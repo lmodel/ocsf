@@ -217,6 +217,15 @@
 </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="#in-subsets">
+<span class="md-ellipsis">
+      
+        In Subsets
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#aliases">
 <span class="md-ellipsis">
       
@@ -295,7 +304,8 @@
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
 <h1 id="class-affectedcode">Class: AffectedCode</h1>
-<p><em>The Affected Code object describes details about a code block identified as vulnerable.</em></p>
+<p><em>The Affected Code object describes details about a code block identified as</em></p>
+<p><em>vulnerable.</em></p>
 <p>URI: <a href="https://w3id.org/lmodel/ocsf/AffectedCode">ocsf:AffectedCode</a></p>
 <pre class="mermaid"><code> classDiagram
     class AffectedCode
@@ -380,7 +390,7 @@
 <tr>
 <td><a href="../end_column/">end_column</a></td>
 <td>0..1 <em>recommended</em> <br/> <a href="../Integer/">Integer</a></td>
-<td>The column number of the last part of the assessed code identified as vulnera...</td>
+<td>The column number of the last part of the assessed code identified as</td>
 <td>direct</td>
 </tr>
 <tr>
@@ -416,7 +426,7 @@
 <tr>
 <td><a href="../start_column/">start_column</a></td>
 <td>0..1 <em>recommended</em> <br/> <a href="../Integer/">Integer</a></td>
-<td>The column number of the first part of the assessed code identified as vulner...</td>
+<td>The column number of the first part of the assessed code identified as</td>
 <td>direct</td>
 </tr>
 <tr>
@@ -446,6 +456,10 @@
 </tr>
 </tbody>
 </table>
+<h2 id="in-subsets">In Subsets</h2>
+<ul>
+<li><a href="../Objects/">Objects</a></li>
+</ul>
 <h2 id="aliases">Aliases</h2>
 <ul>
 <li>Affected Code</li>
@@ -487,8 +501,12 @@
 <h3 id="direct">Direct</h3>
 <details>
 <div class="highlight"><pre><span></span><code><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">AffectedCode</span>
-<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The Affected Code object describes details about a code block identified</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">as vulnerable.</span>
+<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">Affected</span><span class="nv"> </span><span class="s">Code</span><span class="nv"> </span><span class="s">object</span><span class="nv"> </span><span class="s">describes</span><span class="nv"> </span><span class="s">details</span><span class="nv"> </span><span class="s">about</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">code</span><span class="nv"> </span><span class="s">block</span><span class="nv"> </span><span class="s">identified</span>
+<span class="w">  </span><span class="s">as</span>
+
+<span class="w">  </span><span class="s">vulnerable.'</span>
+<span class="nt">in_subset</span><span class="p">:</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">objects</span>
 <span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="nt">aliases</span><span class="p">:</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Affected Code</span>
@@ -509,8 +527,10 @@
 <span class="nt">slot_usage</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">end_column</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">end_column</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The column number of the last part of the assessed code identified</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">as vulnerable.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">column</span><span class="nv"> </span><span class="s">number</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">last</span><span class="nv"> </span><span class="s">part</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">assessed</span><span class="nv"> </span><span class="s">code</span><span class="nv"> </span><span class="s">identified</span>
+<span class="w">      </span><span class="s">as</span>
+
+<span class="w">      </span><span class="s">vulnerable.'</span>
 <span class="w">    </span><span class="nt">recommended</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">end_line</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">end_line</span>
@@ -524,13 +544,17 @@
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Details about the user that owns the affected file.</span>
 <span class="w">  </span><span class="nt">rule</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">rule</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Details about the specific rule, e.g., those defined as part of a</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">larger &lt;code&gt;policy&lt;/code&gt;, that triggered the finding.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'Details</span><span class="nv"> </span><span class="s">about</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">specific</span><span class="nv"> </span><span class="s">rule,</span><span class="nv"> </span><span class="s">e.g.,</span><span class="nv"> </span><span class="s">those</span><span class="nv"> </span><span class="s">defined</span><span class="nv"> </span><span class="s">as</span><span class="nv"> </span><span class="s">part</span><span class="nv"> </span><span class="s">of</span>
+<span class="w">      </span><span class="s">a</span><span class="nv"> </span><span class="s">larger</span>
+
+<span class="w">      </span><span class="s">&lt;code&gt;policy&lt;/code&gt;,</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">triggered</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">finding.'</span>
 <span class="w">    </span><span class="nt">recommended</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">start_column</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">start_column</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The column number of the first part of the assessed code identified</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">as vulnerable.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">column</span><span class="nv"> </span><span class="s">number</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">first</span><span class="nv"> </span><span class="s">part</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">assessed</span><span class="nv"> </span><span class="s">code</span><span class="nv"> </span><span class="s">identified</span>
+<span class="w">      </span><span class="s">as</span>
+
+<span class="w">      </span><span class="s">vulnerable.'</span>
 <span class="w">    </span><span class="nt">recommended</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">start_line</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">start_line</span>
@@ -540,8 +564,12 @@
 <h3 id="induced">Induced</h3>
 <details>
 <div class="highlight"><pre><span></span><code><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">AffectedCode</span>
-<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The Affected Code object describes details about a code block identified</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">as vulnerable.</span>
+<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">Affected</span><span class="nv"> </span><span class="s">Code</span><span class="nv"> </span><span class="s">object</span><span class="nv"> </span><span class="s">describes</span><span class="nv"> </span><span class="s">details</span><span class="nv"> </span><span class="s">about</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">code</span><span class="nv"> </span><span class="s">block</span><span class="nv"> </span><span class="s">identified</span>
+<span class="w">  </span><span class="s">as</span>
+
+<span class="w">  </span><span class="s">vulnerable.'</span>
+<span class="nt">in_subset</span><span class="p">:</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">objects</span>
 <span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="nt">aliases</span><span class="p">:</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Affected Code</span>
@@ -553,8 +581,10 @@
 <span class="nt">slot_usage</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">end_column</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">end_column</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The column number of the last part of the assessed code identified</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">as vulnerable.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">column</span><span class="nv"> </span><span class="s">number</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">last</span><span class="nv"> </span><span class="s">part</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">assessed</span><span class="nv"> </span><span class="s">code</span><span class="nv"> </span><span class="s">identified</span>
+<span class="w">      </span><span class="s">as</span>
+
+<span class="w">      </span><span class="s">vulnerable.'</span>
 <span class="w">    </span><span class="nt">recommended</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">end_line</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">end_line</span>
@@ -568,13 +598,17 @@
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Details about the user that owns the affected file.</span>
 <span class="w">  </span><span class="nt">rule</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">rule</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Details about the specific rule, e.g., those defined as part of a</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">larger &lt;code&gt;policy&lt;/code&gt;, that triggered the finding.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'Details</span><span class="nv"> </span><span class="s">about</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">specific</span><span class="nv"> </span><span class="s">rule,</span><span class="nv"> </span><span class="s">e.g.,</span><span class="nv"> </span><span class="s">those</span><span class="nv"> </span><span class="s">defined</span><span class="nv"> </span><span class="s">as</span><span class="nv"> </span><span class="s">part</span><span class="nv"> </span><span class="s">of</span>
+<span class="w">      </span><span class="s">a</span><span class="nv"> </span><span class="s">larger</span>
+
+<span class="w">      </span><span class="s">&lt;code&gt;policy&lt;/code&gt;,</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">triggered</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">finding.'</span>
 <span class="w">    </span><span class="nt">recommended</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">start_column</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">start_column</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The column number of the first part of the assessed code identified</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">as vulnerable.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">column</span><span class="nv"> </span><span class="s">number</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">first</span><span class="nv"> </span><span class="s">part</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">assessed</span><span class="nv"> </span><span class="s">code</span><span class="nv"> </span><span class="s">identified</span>
+<span class="w">      </span><span class="s">as</span>
+
+<span class="w">      </span><span class="s">vulnerable.'</span>
 <span class="w">    </span><span class="nt">recommended</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">start_line</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">start_line</span>
@@ -582,8 +616,10 @@
 <span class="nt">attributes</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">end_column</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">end_column</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The column number of the last part of the assessed code identified</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">as vulnerable.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">column</span><span class="nv"> </span><span class="s">number</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">last</span><span class="nv"> </span><span class="s">part</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">assessed</span><span class="nv"> </span><span class="s">code</span><span class="nv"> </span><span class="s">identified</span>
+<span class="w">      </span><span class="s">as</span>
+
+<span class="w">      </span><span class="s">vulnerable.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">End Column</span>
@@ -684,8 +720,10 @@
 <span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Remediation</span>
 <span class="w">  </span><span class="nt">rule</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">rule</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Details about the specific rule, e.g., those defined as part of a</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">larger &lt;code&gt;policy&lt;/code&gt;, that triggered the finding.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'Details</span><span class="nv"> </span><span class="s">about</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">specific</span><span class="nv"> </span><span class="s">rule,</span><span class="nv"> </span><span class="s">e.g.,</span><span class="nv"> </span><span class="s">those</span><span class="nv"> </span><span class="s">defined</span><span class="nv"> </span><span class="s">as</span><span class="nv"> </span><span class="s">part</span><span class="nv"> </span><span class="s">of</span>
+<span class="w">      </span><span class="s">a</span><span class="nv"> </span><span class="s">larger</span>
+
+<span class="w">      </span><span class="s">&lt;code&gt;policy&lt;/code&gt;,</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">triggered</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">finding.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Rule</span>
@@ -699,8 +737,10 @@
 <span class="w">    </span><span class="nt">recommended</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">start_column</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">start_column</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The column number of the first part of the assessed code identified</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">as vulnerable.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">column</span><span class="nv"> </span><span class="s">number</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">first</span><span class="nv"> </span><span class="s">part</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">assessed</span><span class="nv"> </span><span class="s">code</span><span class="nv"> </span><span class="s">identified</span>
+<span class="w">      </span><span class="s">as</span>
+
+<span class="w">      </span><span class="s">vulnerable.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Start Column</span>

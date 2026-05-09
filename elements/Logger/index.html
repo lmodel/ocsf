@@ -217,6 +217,15 @@
 </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="#in-subsets">
+<span class="md-ellipsis">
+      
+        In Subsets
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#aliases">
 <span class="md-ellipsis">
       
@@ -295,7 +304,10 @@
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
 <h1 id="class-logger">Class: Logger</h1>
-<p><em>The Logger object represents the device and product where events are stored with times for receipt and transmission.  This may be at the source device where the event occurred, a remote scanning device, intermediate hops, or the ultimate destination.</em></p>
+<p><em>The Logger object represents the device and product where events are stored</em></p>
+<p><em>with times for receipt and transmission.  This may be at the source device</em></p>
+<p><em>where the event occurred, a remote scanning device, intermediate hops, or the</em></p>
+<p><em>ultimate destination.</em></p>
 <p>URI: <a href="https://w3id.org/lmodel/ocsf/Logger">ocsf:Logger</a></p>
 <pre class="mermaid"><code> classDiagram
     class Logger
@@ -391,7 +403,7 @@
 <tr>
 <td><a href="../is_truncated/">is_truncated</a></td>
 <td>0..1 <br/> <a href="../Boolean/">Boolean</a></td>
-<td>Indicates whether the OCSF event data has been truncated due to size limitati...</td>
+<td>Indicates whether the OCSF event data has been truncated due to size</td>
 <td>direct</td>
 </tr>
 <tr>
@@ -445,7 +457,7 @@
 <tr>
 <td><a href="../transmit_time/">transmit_time</a></td>
 <td>0..1 <em>recommended</em> <br/> <a href="../TimestampT/">TimestampT</a></td>
-<td>The time when the event was transmitted from the logging device to it's next ...</td>
+<td>The time when the event was transmitted from the logging device to it's next</td>
 <td>direct</td>
 </tr>
 <tr>
@@ -457,7 +469,7 @@
 <tr>
 <td><a href="../untruncated_size/">untruncated_size</a></td>
 <td>0..1 <br/> <a href="../Integer/">Integer</a></td>
-<td>The original size of the OCSF event data in kilobytes before any truncation o...</td>
+<td>The original size of the OCSF event data in kilobytes before any truncation</td>
 <td>direct</td>
 </tr>
 <tr>
@@ -487,6 +499,10 @@
 </tr>
 </tbody>
 </table>
+<h2 id="in-subsets">In Subsets</h2>
+<ul>
+<li><a href="../Objects/">Objects</a></li>
+</ul>
 <h2 id="aliases">Aliases</h2>
 <ul>
 <li>Logger</li>
@@ -520,10 +536,16 @@
 <h3 id="direct">Direct</h3>
 <details>
 <div class="highlight"><pre><span></span><code><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Logger</span>
-<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The Logger object represents the device and product where events are</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">stored with times for receipt and transmission.  This may be at the source device</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">where the event occurred, a remote scanning device, intermediate hops, or the ultimate</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">destination.</span>
+<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">Logger</span><span class="nv"> </span><span class="s">object</span><span class="nv"> </span><span class="s">represents</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">device</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">product</span><span class="nv"> </span><span class="s">where</span><span class="nv"> </span><span class="s">events</span><span class="nv"> </span><span class="s">are</span>
+<span class="w">  </span><span class="s">stored</span>
+
+<span class="w">  </span><span class="s">with</span><span class="nv"> </span><span class="s">times</span><span class="nv"> </span><span class="s">for</span><span class="nv"> </span><span class="s">receipt</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">transmission.</span><span class="nv">  </span><span class="s">This</span><span class="nv"> </span><span class="s">may</span><span class="nv"> </span><span class="s">be</span><span class="nv"> </span><span class="s">at</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">source</span><span class="nv"> </span><span class="s">device</span>
+
+<span class="w">  </span><span class="s">where</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">event</span><span class="nv"> </span><span class="s">occurred,</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">remote</span><span class="nv"> </span><span class="s">scanning</span><span class="nv"> </span><span class="s">device,</span><span class="nv"> </span><span class="s">intermediate</span><span class="nv"> </span><span class="s">hops,</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">the</span>
+
+<span class="w">  </span><span class="s">ultimate</span><span class="nv"> </span><span class="s">destination.'</span>
+<span class="nt">in_subset</span><span class="p">:</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">objects</span>
 <span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="nt">aliases</span><span class="p">:</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Logger</span>
@@ -554,32 +576,43 @@
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The unique identifier of the event assigned by the logger.</span>
 <span class="w">  </span><span class="nt">is_truncated</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">is_truncated</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Indicates whether the OCSF event data has been truncated due to size</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">limitations. When &lt;code&gt;true&lt;/code&gt;, some event data may have been omitted to</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">fit within system constraints.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'Indicates</span><span class="nv"> </span><span class="s">whether</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">OCSF</span><span class="nv"> </span><span class="s">event</span><span class="nv"> </span><span class="s">data</span><span class="nv"> </span><span class="s">has</span><span class="nv"> </span><span class="s">been</span><span class="nv"> </span><span class="s">truncated</span><span class="nv"> </span><span class="s">due</span><span class="nv"> </span><span class="s">to</span>
+<span class="w">      </span><span class="s">size</span>
+
+<span class="w">      </span><span class="s">limitations.</span><span class="nv"> </span><span class="s">When</span><span class="nv"> </span><span class="s">&lt;code&gt;true&lt;/code&gt;,</span><span class="nv"> </span><span class="s">some</span><span class="nv"> </span><span class="s">event</span><span class="nv"> </span><span class="s">data</span><span class="nv"> </span><span class="s">may</span><span class="nv"> </span><span class="s">have</span><span class="nv"> </span><span class="s">been</span><span class="nv"> </span><span class="s">omitted</span><span class="nv"> </span><span class="s">to</span>
+
+<span class="w">      </span><span class="s">fit</span><span class="nv"> </span><span class="s">within</span><span class="nv"> </span><span class="s">system</span><span class="nv"> </span><span class="s">constraints.'</span>
 <span class="w">  </span><span class="nt">log_format</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">log_format</span>
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The format of data in the log. For example JSON, syslog or CSV.</span>
 <span class="w">  </span><span class="nt">log_level</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">log_level</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The level at which an event was logged. This can be log provider</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">specific. For example the audit level.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">level</span><span class="nv"> </span><span class="s">at</span><span class="nv"> </span><span class="s">which</span><span class="nv"> </span><span class="s">an</span><span class="nv"> </span><span class="s">event</span><span class="nv"> </span><span class="s">was</span><span class="nv"> </span><span class="s">logged.</span><span class="nv"> </span><span class="s">This</span><span class="nv"> </span><span class="s">can</span><span class="nv"> </span><span class="s">be</span><span class="nv"> </span><span class="s">log</span><span class="nv"> </span><span class="s">provider</span>
+<span class="w">      </span><span class="s">specific.</span><span class="nv"> </span><span class="s">For</span>
+
+<span class="w">      </span><span class="s">example</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">audit</span><span class="nv"> </span><span class="s">level.'</span>
 <span class="w">  </span><span class="nt">log_name</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">log_name</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The log name for the logging provider log, or the file name of the</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">system log. This may be an intermediate store-and-forward log or a vendor destination</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">log. For example /archive/server1/var/log/messages.0 or /var/log/.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">log</span><span class="nv"> </span><span class="s">name</span><span class="nv"> </span><span class="s">for</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">logging</span><span class="nv"> </span><span class="s">provider</span><span class="nv"> </span><span class="s">log,</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">file</span><span class="nv"> </span><span class="s">name</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span>
+<span class="w">      </span><span class="s">system</span><span class="nv"> </span><span class="s">log.</span>
+
+<span class="w">      </span><span class="s">This</span><span class="nv"> </span><span class="s">may</span><span class="nv"> </span><span class="s">be</span><span class="nv"> </span><span class="s">an</span><span class="nv"> </span><span class="s">intermediate</span><span class="nv"> </span><span class="s">store-and-forward</span><span class="nv"> </span><span class="s">log</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">vendor</span><span class="nv"> </span><span class="s">destination</span><span class="nv"> </span><span class="s">log.</span>
+
+<span class="w">      </span><span class="s">For</span><span class="nv"> </span><span class="s">example</span><span class="nv"> </span><span class="s">/archive/server1/var/log/messages.0</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">/var/log/.'</span>
 <span class="w">    </span><span class="nt">recommended</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">log_provider</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">log_provider</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The logging provider or logging service that logged the event. This</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">may be an intermediate application store-and-forward log or a vendor destination</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">log.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">logging</span><span class="nv"> </span><span class="s">provider</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">logging</span><span class="nv"> </span><span class="s">service</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">logged</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">event.</span><span class="nv"> </span><span class="s">This</span>
+<span class="w">      </span><span class="s">may</span><span class="nv"> </span><span class="s">be</span><span class="nv"> </span><span class="s">an</span>
+
+<span class="w">      </span><span class="s">intermediate</span><span class="nv"> </span><span class="s">application</span><span class="nv"> </span><span class="s">store-and-forward</span><span class="nv"> </span><span class="s">log</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">vendor</span><span class="nv"> </span><span class="s">destination</span><span class="nv"> </span><span class="s">log.'</span>
 <span class="w">    </span><span class="nt">recommended</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">log_version</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">log_version</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The event log schema version of the original event. For example the</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">syslog version or the Cisco Log Schema version</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">event</span><span class="nv"> </span><span class="s">log</span><span class="nv"> </span><span class="s">schema</span><span class="nv"> </span><span class="s">version</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">original</span><span class="nv"> </span><span class="s">event.</span><span class="nv"> </span><span class="s">For</span><span class="nv"> </span><span class="s">example</span>
+<span class="w">      </span><span class="s">the</span><span class="nv"> </span><span class="s">syslog</span>
+
+<span class="w">      </span><span class="s">version</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">Cisco</span><span class="nv"> </span><span class="s">Log</span><span class="nv"> </span><span class="s">Schema</span><span class="nv"> </span><span class="s">version'</span>
 <span class="w">  </span><span class="nt">logged_time</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">logged_time</span>
 <span class="w">    </span><span class="nt">recommended</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
@@ -589,13 +622,17 @@
 <span class="w">    </span><span class="nt">recommended</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">product</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">product</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The product logging the event.  This may be the event source product,</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">a management server product, a scanning product, a SIEM, etc.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">product</span><span class="nv"> </span><span class="s">logging</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">event.</span><span class="nv">  </span><span class="s">This</span><span class="nv"> </span><span class="s">may</span><span class="nv"> </span><span class="s">be</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">event</span><span class="nv"> </span><span class="s">source</span><span class="nv"> </span><span class="s">product,</span>
+<span class="w">      </span><span class="s">a</span>
+
+<span class="w">      </span><span class="s">management</span><span class="nv"> </span><span class="s">server</span><span class="nv"> </span><span class="s">product,</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">scanning</span><span class="nv"> </span><span class="s">product,</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">SIEM,</span><span class="nv"> </span><span class="s">etc.'</span>
 <span class="w">    </span><span class="nt">recommended</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">transmit_time</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">transmit_time</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The time when the event was transmitted from the logging device to</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">it's next destination.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">time</span><span class="nv"> </span><span class="s">when</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">event</span><span class="nv"> </span><span class="s">was</span><span class="nv"> </span><span class="s">transmitted</span><span class="nv"> </span><span class="s">from</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">logging</span><span class="nv"> </span><span class="s">device</span>
+<span class="w">      </span><span class="s">to</span><span class="nv"> </span><span class="s">it</span><span class="se">''</span><span class="s">s</span><span class="nv"> </span><span class="s">next</span>
+
+<span class="w">      </span><span class="s">destination.'</span>
 <span class="w">    </span><span class="nt">recommended</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">uid</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">uid</span>
@@ -603,9 +640,12 @@
 <span class="w">    </span><span class="nt">recommended</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">untruncated_size</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">untruncated_size</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The original size of the OCSF event data in kilobytes before any</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">truncation occurred. This field is typically populated when &lt;code&gt;is_truncated&lt;/code&gt;</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">is &lt;code&gt;true&lt;/code&gt; to indicate the full size of the original event.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">original</span><span class="nv"> </span><span class="s">size</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">OCSF</span><span class="nv"> </span><span class="s">event</span><span class="nv"> </span><span class="s">data</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">kilobytes</span><span class="nv"> </span><span class="s">before</span><span class="nv"> </span><span class="s">any</span>
+<span class="w">      </span><span class="s">truncation</span>
+
+<span class="w">      </span><span class="s">occurred.</span><span class="nv"> </span><span class="s">This</span><span class="nv"> </span><span class="s">field</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">typically</span><span class="nv"> </span><span class="s">populated</span><span class="nv"> </span><span class="s">when</span><span class="nv"> </span><span class="s">&lt;code&gt;is_truncated&lt;/code&gt;</span><span class="nv"> </span><span class="s">is</span>
+
+<span class="w">      </span><span class="s">&lt;code&gt;true&lt;/code&gt;</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">indicate</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">full</span><span class="nv"> </span><span class="s">size</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">original</span><span class="nv"> </span><span class="s">event.'</span>
 <span class="w">  </span><span class="nt">version</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">version</span>
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The version of the logging provider.</span>
@@ -614,10 +654,16 @@
 <h3 id="induced">Induced</h3>
 <details>
 <div class="highlight"><pre><span></span><code><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Logger</span>
-<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The Logger object represents the device and product where events are</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">stored with times for receipt and transmission.  This may be at the source device</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">where the event occurred, a remote scanning device, intermediate hops, or the ultimate</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">destination.</span>
+<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">Logger</span><span class="nv"> </span><span class="s">object</span><span class="nv"> </span><span class="s">represents</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">device</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">product</span><span class="nv"> </span><span class="s">where</span><span class="nv"> </span><span class="s">events</span><span class="nv"> </span><span class="s">are</span>
+<span class="w">  </span><span class="s">stored</span>
+
+<span class="w">  </span><span class="s">with</span><span class="nv"> </span><span class="s">times</span><span class="nv"> </span><span class="s">for</span><span class="nv"> </span><span class="s">receipt</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">transmission.</span><span class="nv">  </span><span class="s">This</span><span class="nv"> </span><span class="s">may</span><span class="nv"> </span><span class="s">be</span><span class="nv"> </span><span class="s">at</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">source</span><span class="nv"> </span><span class="s">device</span>
+
+<span class="w">  </span><span class="s">where</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">event</span><span class="nv"> </span><span class="s">occurred,</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">remote</span><span class="nv"> </span><span class="s">scanning</span><span class="nv"> </span><span class="s">device,</span><span class="nv"> </span><span class="s">intermediate</span><span class="nv"> </span><span class="s">hops,</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">the</span>
+
+<span class="w">  </span><span class="s">ultimate</span><span class="nv"> </span><span class="s">destination.'</span>
+<span class="nt">in_subset</span><span class="p">:</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">objects</span>
 <span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="nt">aliases</span><span class="p">:</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Logger</span>
@@ -632,32 +678,43 @@
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The unique identifier of the event assigned by the logger.</span>
 <span class="w">  </span><span class="nt">is_truncated</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">is_truncated</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Indicates whether the OCSF event data has been truncated due to size</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">limitations. When &lt;code&gt;true&lt;/code&gt;, some event data may have been omitted to</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">fit within system constraints.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'Indicates</span><span class="nv"> </span><span class="s">whether</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">OCSF</span><span class="nv"> </span><span class="s">event</span><span class="nv"> </span><span class="s">data</span><span class="nv"> </span><span class="s">has</span><span class="nv"> </span><span class="s">been</span><span class="nv"> </span><span class="s">truncated</span><span class="nv"> </span><span class="s">due</span><span class="nv"> </span><span class="s">to</span>
+<span class="w">      </span><span class="s">size</span>
+
+<span class="w">      </span><span class="s">limitations.</span><span class="nv"> </span><span class="s">When</span><span class="nv"> </span><span class="s">&lt;code&gt;true&lt;/code&gt;,</span><span class="nv"> </span><span class="s">some</span><span class="nv"> </span><span class="s">event</span><span class="nv"> </span><span class="s">data</span><span class="nv"> </span><span class="s">may</span><span class="nv"> </span><span class="s">have</span><span class="nv"> </span><span class="s">been</span><span class="nv"> </span><span class="s">omitted</span><span class="nv"> </span><span class="s">to</span>
+
+<span class="w">      </span><span class="s">fit</span><span class="nv"> </span><span class="s">within</span><span class="nv"> </span><span class="s">system</span><span class="nv"> </span><span class="s">constraints.'</span>
 <span class="w">  </span><span class="nt">log_format</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">log_format</span>
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The format of data in the log. For example JSON, syslog or CSV.</span>
 <span class="w">  </span><span class="nt">log_level</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">log_level</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The level at which an event was logged. This can be log provider</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">specific. For example the audit level.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">level</span><span class="nv"> </span><span class="s">at</span><span class="nv"> </span><span class="s">which</span><span class="nv"> </span><span class="s">an</span><span class="nv"> </span><span class="s">event</span><span class="nv"> </span><span class="s">was</span><span class="nv"> </span><span class="s">logged.</span><span class="nv"> </span><span class="s">This</span><span class="nv"> </span><span class="s">can</span><span class="nv"> </span><span class="s">be</span><span class="nv"> </span><span class="s">log</span><span class="nv"> </span><span class="s">provider</span>
+<span class="w">      </span><span class="s">specific.</span><span class="nv"> </span><span class="s">For</span>
+
+<span class="w">      </span><span class="s">example</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">audit</span><span class="nv"> </span><span class="s">level.'</span>
 <span class="w">  </span><span class="nt">log_name</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">log_name</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The log name for the logging provider log, or the file name of the</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">system log. This may be an intermediate store-and-forward log or a vendor destination</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">log. For example /archive/server1/var/log/messages.0 or /var/log/.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">log</span><span class="nv"> </span><span class="s">name</span><span class="nv"> </span><span class="s">for</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">logging</span><span class="nv"> </span><span class="s">provider</span><span class="nv"> </span><span class="s">log,</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">file</span><span class="nv"> </span><span class="s">name</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span>
+<span class="w">      </span><span class="s">system</span><span class="nv"> </span><span class="s">log.</span>
+
+<span class="w">      </span><span class="s">This</span><span class="nv"> </span><span class="s">may</span><span class="nv"> </span><span class="s">be</span><span class="nv"> </span><span class="s">an</span><span class="nv"> </span><span class="s">intermediate</span><span class="nv"> </span><span class="s">store-and-forward</span><span class="nv"> </span><span class="s">log</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">vendor</span><span class="nv"> </span><span class="s">destination</span><span class="nv"> </span><span class="s">log.</span>
+
+<span class="w">      </span><span class="s">For</span><span class="nv"> </span><span class="s">example</span><span class="nv"> </span><span class="s">/archive/server1/var/log/messages.0</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">/var/log/.'</span>
 <span class="w">    </span><span class="nt">recommended</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">log_provider</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">log_provider</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The logging provider or logging service that logged the event. This</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">may be an intermediate application store-and-forward log or a vendor destination</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">log.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">logging</span><span class="nv"> </span><span class="s">provider</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">logging</span><span class="nv"> </span><span class="s">service</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">logged</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">event.</span><span class="nv"> </span><span class="s">This</span>
+<span class="w">      </span><span class="s">may</span><span class="nv"> </span><span class="s">be</span><span class="nv"> </span><span class="s">an</span>
+
+<span class="w">      </span><span class="s">intermediate</span><span class="nv"> </span><span class="s">application</span><span class="nv"> </span><span class="s">store-and-forward</span><span class="nv"> </span><span class="s">log</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">vendor</span><span class="nv"> </span><span class="s">destination</span><span class="nv"> </span><span class="s">log.'</span>
 <span class="w">    </span><span class="nt">recommended</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">log_version</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">log_version</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The event log schema version of the original event. For example the</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">syslog version or the Cisco Log Schema version</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">event</span><span class="nv"> </span><span class="s">log</span><span class="nv"> </span><span class="s">schema</span><span class="nv"> </span><span class="s">version</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">original</span><span class="nv"> </span><span class="s">event.</span><span class="nv"> </span><span class="s">For</span><span class="nv"> </span><span class="s">example</span>
+<span class="w">      </span><span class="s">the</span><span class="nv"> </span><span class="s">syslog</span>
+
+<span class="w">      </span><span class="s">version</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">Cisco</span><span class="nv"> </span><span class="s">Log</span><span class="nv"> </span><span class="s">Schema</span><span class="nv"> </span><span class="s">version'</span>
 <span class="w">  </span><span class="nt">logged_time</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">logged_time</span>
 <span class="w">    </span><span class="nt">recommended</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
@@ -667,13 +724,17 @@
 <span class="w">    </span><span class="nt">recommended</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">product</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">product</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The product logging the event.  This may be the event source product,</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">a management server product, a scanning product, a SIEM, etc.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">product</span><span class="nv"> </span><span class="s">logging</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">event.</span><span class="nv">  </span><span class="s">This</span><span class="nv"> </span><span class="s">may</span><span class="nv"> </span><span class="s">be</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">event</span><span class="nv"> </span><span class="s">source</span><span class="nv"> </span><span class="s">product,</span>
+<span class="w">      </span><span class="s">a</span>
+
+<span class="w">      </span><span class="s">management</span><span class="nv"> </span><span class="s">server</span><span class="nv"> </span><span class="s">product,</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">scanning</span><span class="nv"> </span><span class="s">product,</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">SIEM,</span><span class="nv"> </span><span class="s">etc.'</span>
 <span class="w">    </span><span class="nt">recommended</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">transmit_time</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">transmit_time</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The time when the event was transmitted from the logging device to</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">it's next destination.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">time</span><span class="nv"> </span><span class="s">when</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">event</span><span class="nv"> </span><span class="s">was</span><span class="nv"> </span><span class="s">transmitted</span><span class="nv"> </span><span class="s">from</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">logging</span><span class="nv"> </span><span class="s">device</span>
+<span class="w">      </span><span class="s">to</span><span class="nv"> </span><span class="s">it</span><span class="se">''</span><span class="s">s</span><span class="nv"> </span><span class="s">next</span>
+
+<span class="w">      </span><span class="s">destination.'</span>
 <span class="w">    </span><span class="nt">recommended</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">uid</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">uid</span>
@@ -681,9 +742,12 @@
 <span class="w">    </span><span class="nt">recommended</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">untruncated_size</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">untruncated_size</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The original size of the OCSF event data in kilobytes before any</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">truncation occurred. This field is typically populated when &lt;code&gt;is_truncated&lt;/code&gt;</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">is &lt;code&gt;true&lt;/code&gt; to indicate the full size of the original event.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">original</span><span class="nv"> </span><span class="s">size</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">OCSF</span><span class="nv"> </span><span class="s">event</span><span class="nv"> </span><span class="s">data</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">kilobytes</span><span class="nv"> </span><span class="s">before</span><span class="nv"> </span><span class="s">any</span>
+<span class="w">      </span><span class="s">truncation</span>
+
+<span class="w">      </span><span class="s">occurred.</span><span class="nv"> </span><span class="s">This</span><span class="nv"> </span><span class="s">field</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">typically</span><span class="nv"> </span><span class="s">populated</span><span class="nv"> </span><span class="s">when</span><span class="nv"> </span><span class="s">&lt;code&gt;is_truncated&lt;/code&gt;</span><span class="nv"> </span><span class="s">is</span>
+
+<span class="w">      </span><span class="s">&lt;code&gt;true&lt;/code&gt;</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">indicate</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">full</span><span class="nv"> </span><span class="s">size</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">original</span><span class="nv"> </span><span class="s">event.'</span>
 <span class="w">  </span><span class="nt">version</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">version</span>
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The version of the logging provider.</span>
@@ -732,9 +796,12 @@
 <span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">string</span>
 <span class="w">  </span><span class="nt">is_truncated</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">is_truncated</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Indicates whether the OCSF event data has been truncated due to size</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">limitations. When &lt;code&gt;true&lt;/code&gt;, some event data may have been omitted to</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">fit within system constraints.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'Indicates</span><span class="nv"> </span><span class="s">whether</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">OCSF</span><span class="nv"> </span><span class="s">event</span><span class="nv"> </span><span class="s">data</span><span class="nv"> </span><span class="s">has</span><span class="nv"> </span><span class="s">been</span><span class="nv"> </span><span class="s">truncated</span><span class="nv"> </span><span class="s">due</span><span class="nv"> </span><span class="s">to</span>
+<span class="w">      </span><span class="s">size</span>
+
+<span class="w">      </span><span class="s">limitations.</span><span class="nv"> </span><span class="s">When</span><span class="nv"> </span><span class="s">&lt;code&gt;true&lt;/code&gt;,</span><span class="nv"> </span><span class="s">some</span><span class="nv"> </span><span class="s">event</span><span class="nv"> </span><span class="s">data</span><span class="nv"> </span><span class="s">may</span><span class="nv"> </span><span class="s">have</span><span class="nv"> </span><span class="s">been</span><span class="nv"> </span><span class="s">omitted</span><span class="nv"> </span><span class="s">to</span>
+
+<span class="w">      </span><span class="s">fit</span><span class="nv"> </span><span class="s">within</span><span class="nv"> </span><span class="s">system</span><span class="nv"> </span><span class="s">constraints.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Is Truncated</span>
@@ -761,8 +828,10 @@
 <span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">string</span>
 <span class="w">  </span><span class="nt">log_level</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">log_level</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The level at which an event was logged. This can be log provider</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">specific. For example the audit level.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">level</span><span class="nv"> </span><span class="s">at</span><span class="nv"> </span><span class="s">which</span><span class="nv"> </span><span class="s">an</span><span class="nv"> </span><span class="s">event</span><span class="nv"> </span><span class="s">was</span><span class="nv"> </span><span class="s">logged.</span><span class="nv"> </span><span class="s">This</span><span class="nv"> </span><span class="s">can</span><span class="nv"> </span><span class="s">be</span><span class="nv"> </span><span class="s">log</span><span class="nv"> </span><span class="s">provider</span>
+<span class="w">      </span><span class="s">specific.</span><span class="nv"> </span><span class="s">For</span>
+
+<span class="w">      </span><span class="s">example</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">audit</span><span class="nv"> </span><span class="s">level.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Log Level</span>
@@ -775,9 +844,12 @@
 <span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">string</span>
 <span class="w">  </span><span class="nt">log_name</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">log_name</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The log name for the logging provider log, or the file name of the</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">system log. This may be an intermediate store-and-forward log or a vendor destination</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">log. For example /archive/server1/var/log/messages.0 or /var/log/.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">log</span><span class="nv"> </span><span class="s">name</span><span class="nv"> </span><span class="s">for</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">logging</span><span class="nv"> </span><span class="s">provider</span><span class="nv"> </span><span class="s">log,</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">file</span><span class="nv"> </span><span class="s">name</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span>
+<span class="w">      </span><span class="s">system</span><span class="nv"> </span><span class="s">log.</span>
+
+<span class="w">      </span><span class="s">This</span><span class="nv"> </span><span class="s">may</span><span class="nv"> </span><span class="s">be</span><span class="nv"> </span><span class="s">an</span><span class="nv"> </span><span class="s">intermediate</span><span class="nv"> </span><span class="s">store-and-forward</span><span class="nv"> </span><span class="s">log</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">vendor</span><span class="nv"> </span><span class="s">destination</span><span class="nv"> </span><span class="s">log.</span>
+
+<span class="w">      </span><span class="s">For</span><span class="nv"> </span><span class="s">example</span><span class="nv"> </span><span class="s">/archive/server1/var/log/messages.0</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">/var/log/.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Log Name</span>
@@ -792,9 +864,10 @@
 <span class="w">    </span><span class="nt">recommended</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">log_provider</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">log_provider</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The logging provider or logging service that logged the event. This</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">may be an intermediate application store-and-forward log or a vendor destination</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">log.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">logging</span><span class="nv"> </span><span class="s">provider</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">logging</span><span class="nv"> </span><span class="s">service</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">logged</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">event.</span><span class="nv"> </span><span class="s">This</span>
+<span class="w">      </span><span class="s">may</span><span class="nv"> </span><span class="s">be</span><span class="nv"> </span><span class="s">an</span>
+
+<span class="w">      </span><span class="s">intermediate</span><span class="nv"> </span><span class="s">application</span><span class="nv"> </span><span class="s">store-and-forward</span><span class="nv"> </span><span class="s">log</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">vendor</span><span class="nv"> </span><span class="s">destination</span><span class="nv"> </span><span class="s">log.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Log Provider</span>
@@ -809,8 +882,10 @@
 <span class="w">    </span><span class="nt">recommended</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">log_version</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">log_version</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The event log schema version of the original event. For example the</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">syslog version or the Cisco Log Schema version</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">event</span><span class="nv"> </span><span class="s">log</span><span class="nv"> </span><span class="s">schema</span><span class="nv"> </span><span class="s">version</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">original</span><span class="nv"> </span><span class="s">event.</span><span class="nv"> </span><span class="s">For</span><span class="nv"> </span><span class="s">example</span>
+<span class="w">      </span><span class="s">the</span><span class="nv"> </span><span class="s">syslog</span>
+
+<span class="w">      </span><span class="s">version</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">Cisco</span><span class="nv"> </span><span class="s">Log</span><span class="nv"> </span><span class="s">Schema</span><span class="nv"> </span><span class="s">version'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Log Version</span>
@@ -823,10 +898,13 @@
 <span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">string</span>
 <span class="w">  </span><span class="nt">logged_time</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">logged_time</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">&lt;p&gt;The time when the logging system collected and logged the event.&lt;/p&gt;This</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">attribute is distinct from the event time in that event time typically contain</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">the time extracted from the original event. Most of the time, these two times</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">will be different.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'&lt;p&gt;The</span><span class="nv"> </span><span class="s">time</span><span class="nv"> </span><span class="s">when</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">logging</span><span class="nv"> </span><span class="s">system</span><span class="nv"> </span><span class="s">collected</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">logged</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">event.&lt;/p&gt;This</span>
+
+<span class="w">      </span><span class="s">attribute</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">distinct</span><span class="nv"> </span><span class="s">from</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">event</span><span class="nv"> </span><span class="s">time</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">event</span><span class="nv"> </span><span class="s">time</span><span class="nv"> </span><span class="s">typically</span><span class="nv"> </span><span class="s">contain</span>
+
+<span class="w">      </span><span class="s">the</span><span class="nv"> </span><span class="s">time</span><span class="nv"> </span><span class="s">extracted</span><span class="nv"> </span><span class="s">from</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">original</span><span class="nv"> </span><span class="s">event.</span><span class="nv"> </span><span class="s">Most</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">time,</span><span class="nv"> </span><span class="s">these</span><span class="nv"> </span><span class="s">two</span><span class="nv"> </span><span class="s">times</span>
+
+<span class="w">      </span><span class="s">will</span><span class="nv"> </span><span class="s">be</span><span class="nv"> </span><span class="s">different.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Logged Time</span>
@@ -942,8 +1020,10 @@
 <span class="w">    </span><span class="nt">recommended</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">product</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">product</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The product logging the event.  This may be the event source product,</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">a management server product, a scanning product, a SIEM, etc.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">product</span><span class="nv"> </span><span class="s">logging</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">event.</span><span class="nv">  </span><span class="s">This</span><span class="nv"> </span><span class="s">may</span><span class="nv"> </span><span class="s">be</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">event</span><span class="nv"> </span><span class="s">source</span><span class="nv"> </span><span class="s">product,</span>
+<span class="w">      </span><span class="s">a</span>
+
+<span class="w">      </span><span class="s">management</span><span class="nv"> </span><span class="s">server</span><span class="nv"> </span><span class="s">product,</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">scanning</span><span class="nv"> </span><span class="s">product,</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">SIEM,</span><span class="nv"> </span><span class="s">etc.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Product</span>
@@ -967,8 +1047,10 @@
 <span class="w">    </span><span class="nt">recommended</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">transmit_time</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">transmit_time</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The time when the event was transmitted from the logging device to</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">it's next destination.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">time</span><span class="nv"> </span><span class="s">when</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">event</span><span class="nv"> </span><span class="s">was</span><span class="nv"> </span><span class="s">transmitted</span><span class="nv"> </span><span class="s">from</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">logging</span><span class="nv"> </span><span class="s">device</span>
+<span class="w">      </span><span class="s">to</span><span class="nv"> </span><span class="s">it</span><span class="se">''</span><span class="s">s</span><span class="nv"> </span><span class="s">next</span>
+
+<span class="w">      </span><span class="s">destination.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Transmission Time</span>
@@ -1077,9 +1159,12 @@
 <span class="w">    </span><span class="nt">recommended</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">untruncated_size</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">untruncated_size</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The original size of the OCSF event data in kilobytes before any</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">truncation occurred. This field is typically populated when &lt;code&gt;is_truncated&lt;/code&gt;</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">is &lt;code&gt;true&lt;/code&gt; to indicate the full size of the original event.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">original</span><span class="nv"> </span><span class="s">size</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">OCSF</span><span class="nv"> </span><span class="s">event</span><span class="nv"> </span><span class="s">data</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">kilobytes</span><span class="nv"> </span><span class="s">before</span><span class="nv"> </span><span class="s">any</span>
+<span class="w">      </span><span class="s">truncation</span>
+
+<span class="w">      </span><span class="s">occurred.</span><span class="nv"> </span><span class="s">This</span><span class="nv"> </span><span class="s">field</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">typically</span><span class="nv"> </span><span class="s">populated</span><span class="nv"> </span><span class="s">when</span><span class="nv"> </span><span class="s">&lt;code&gt;is_truncated&lt;/code&gt;</span><span class="nv"> </span><span class="s">is</span>
+
+<span class="w">      </span><span class="s">&lt;code&gt;true&lt;/code&gt;</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">indicate</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">full</span><span class="nv"> </span><span class="s">size</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">original</span><span class="nv"> </span><span class="s">event.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Untruncated Size</span>

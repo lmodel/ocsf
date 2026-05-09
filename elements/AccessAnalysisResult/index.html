@@ -217,6 +217,15 @@
 </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="#in-subsets">
+<span class="md-ellipsis">
+      
+        In Subsets
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#aliases">
 <span class="md-ellipsis">
       
@@ -295,7 +304,12 @@
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
 <h1 id="class-accessanalysisresult">Class: AccessAnalysisResult</h1>
-<p><em>The Access Analysis Result object describes access relationships and pathways between identities, resources, focusing on who can access what and through which mechanisms. This evaluates access levels (read/write/admin), access types (direct, cross-account, public, federated), and the conditions under which access is granted. Use this for resource-centric security assessments such as external access discovery, public exposure analysis, etc.</em></p>
+<p><em>The Access Analysis Result object describes access relationships and pathways</em></p>
+<p><em>between identities, resources, focusing on who can access what and through</em></p>
+<p><em>which mechanisms. This evaluates access levels (read/write/admin), access types</em></p>
+<p><em>(direct, cross-account, public, federated), and the conditions under which</em></p>
+<p><em>access is granted. Use this for resource-centric security assessments such as</em></p>
+<p><em>external access discovery, public exposure analysis, etc.</em></p>
 <p>URI: <a href="https://w3id.org/lmodel/ocsf/AccessAnalysisResult">ocsf:AccessAnalysisResult</a></p>
 <pre class="mermaid"><code> classDiagram
     class AccessAnalysisResult
@@ -367,7 +381,7 @@
 <tr>
 <td><a href="../access_level/">access_level</a></td>
 <td>0..1 <em>recommended</em> <br/> <a href="../String/">String</a></td>
-<td>The generalized access level or permission scope granted to the identity thro...</td>
+<td>The generalized access level or permission scope granted to the identity</td>
 <td>direct</td>
 </tr>
 <tr>
@@ -379,25 +393,25 @@
 <tr>
 <td><a href="../accessors/">accessors</a></td>
 <td>1..* <br/> <a href="../User/">User</a></td>
-<td>The identities that are granted access through the analyzed policy configurat...</td>
+<td>The identities that are granted access through the analyzed policy</td>
 <td>direct</td>
 </tr>
 <tr>
 <td><a href="../additional_restrictions/">additional_restrictions</a></td>
 <td>* <br/> <a href="../AdditionalRestriction/">AdditionalRestriction</a></td>
-<td>Details about supplementary restrictions and guardrails that may limit the gr...</td>
+<td>Details about supplementary restrictions and guardrails that may limit the</td>
 <td>direct</td>
 </tr>
 <tr>
 <td><a href="../condition_keys/">condition_keys</a></td>
 <td>* <br/> <a href="../KeyValueObject/">KeyValueObject</a></td>
-<td>The condition keys and their values that constrain when and how the granted a...</td>
+<td>The condition keys and their values that constrain when and how the granted</td>
 <td>direct</td>
 </tr>
 <tr>
 <td><a href="../granted_privileges/">granted_privileges</a></td>
 <td>* <br/> <a href="../String/">String</a></td>
-<td>The specific privileges, actions, or permissions that are granted through the...</td>
+<td>The specific privileges, actions, or permissions that are granted through the</td>
 <td>direct</td>
 </tr>
 </tbody>
@@ -421,6 +435,10 @@
 </tr>
 </tbody>
 </table>
+<h2 id="in-subsets">In Subsets</h2>
+<ul>
+<li><a href="../Objects/">Objects</a></li>
+</ul>
 <h2 id="aliases">Aliases</h2>
 <ul>
 <li>Access Analysis Result</li>
@@ -454,12 +472,20 @@
 <h3 id="direct">Direct</h3>
 <details>
 <div class="highlight"><pre><span></span><code><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">AccessAnalysisResult</span>
-<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The Access Analysis Result object describes access relationships and</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">pathways between identities, resources, focusing on who can access what and through</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">which mechanisms. This evaluates access levels (read/write/admin), access types</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">(direct, cross-account, public, federated), and the conditions under which access</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">is granted. Use this for resource-centric security assessments such as external</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">access discovery, public exposure analysis, etc.</span>
+<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">Access</span><span class="nv"> </span><span class="s">Analysis</span><span class="nv"> </span><span class="s">Result</span><span class="nv"> </span><span class="s">object</span><span class="nv"> </span><span class="s">describes</span><span class="nv"> </span><span class="s">access</span><span class="nv"> </span><span class="s">relationships</span><span class="nv"> </span><span class="s">and</span>
+<span class="w">  </span><span class="s">pathways</span>
+
+<span class="w">  </span><span class="s">between</span><span class="nv"> </span><span class="s">identities,</span><span class="nv"> </span><span class="s">resources,</span><span class="nv"> </span><span class="s">focusing</span><span class="nv"> </span><span class="s">on</span><span class="nv"> </span><span class="s">who</span><span class="nv"> </span><span class="s">can</span><span class="nv"> </span><span class="s">access</span><span class="nv"> </span><span class="s">what</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">through</span>
+
+<span class="w">  </span><span class="s">which</span><span class="nv"> </span><span class="s">mechanisms.</span><span class="nv"> </span><span class="s">This</span><span class="nv"> </span><span class="s">evaluates</span><span class="nv"> </span><span class="s">access</span><span class="nv"> </span><span class="s">levels</span><span class="nv"> </span><span class="s">(read/write/admin),</span><span class="nv"> </span><span class="s">access</span><span class="nv"> </span><span class="s">types</span>
+
+<span class="w">  </span><span class="s">(direct,</span><span class="nv"> </span><span class="s">cross-account,</span><span class="nv"> </span><span class="s">public,</span><span class="nv"> </span><span class="s">federated),</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">conditions</span><span class="nv"> </span><span class="s">under</span><span class="nv"> </span><span class="s">which</span>
+
+<span class="w">  </span><span class="s">access</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">granted.</span><span class="nv"> </span><span class="s">Use</span><span class="nv"> </span><span class="s">this</span><span class="nv"> </span><span class="s">for</span><span class="nv"> </span><span class="s">resource-centric</span><span class="nv"> </span><span class="s">security</span><span class="nv"> </span><span class="s">assessments</span><span class="nv"> </span><span class="s">such</span><span class="nv"> </span><span class="s">as</span>
+
+<span class="w">  </span><span class="s">external</span><span class="nv"> </span><span class="s">access</span><span class="nv"> </span><span class="s">discovery,</span><span class="nv"> </span><span class="s">public</span><span class="nv"> </span><span class="s">exposure</span><span class="nv"> </span><span class="s">analysis,</span><span class="nv"> </span><span class="s">etc.'</span>
+<span class="nt">in_subset</span><span class="p">:</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">objects</span>
 <span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="nt">aliases</span><span class="p">:</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Access Analysis Result</span>
@@ -474,57 +500,96 @@
 <span class="nt">slot_usage</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">access_level</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">access_level</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The generalized access level or permission scope granted to the identity</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">through the analyzed policy configuration. Common examples include Read, Write,</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">List, Delete, Admin, or custom permission levels.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">generalized</span><span class="nv"> </span><span class="s">access</span><span class="nv"> </span><span class="s">level</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">permission</span><span class="nv"> </span><span class="s">scope</span><span class="nv"> </span><span class="s">granted</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">the</span>
+<span class="w">      </span><span class="s">identity</span>
+
+<span class="w">      </span><span class="s">through</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">analyzed</span><span class="nv"> </span><span class="s">policy</span><span class="nv"> </span><span class="s">configuration.</span><span class="nv"> </span><span class="s">Common</span><span class="nv"> </span><span class="s">examples</span><span class="nv"> </span><span class="s">include</span><span class="nv"> </span><span class="s">Read,</span><span class="nv"> </span><span class="s">Write,</span>
+
+<span class="w">      </span><span class="s">List,</span><span class="nv"> </span><span class="s">Delete,</span><span class="nv"> </span><span class="s">Admin,</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">custom</span><span class="nv"> </span><span class="s">permission</span><span class="nv"> </span><span class="s">levels.'</span>
 <span class="w">    </span><span class="nt">recommended</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">access_type</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">access_type</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The type or category of access being granted to the identity. This</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">describes the nature of the access relationship, such as cross-account access,</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">public access, federated access, or third-party integration access. Examples</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">include 'Cross-Account', 'Public', 'Federated', 'Service-to-Service', etc.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">type</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">category</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">access</span><span class="nv"> </span><span class="s">being</span><span class="nv"> </span><span class="s">granted</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">identity.</span><span class="nv"> </span><span class="s">This</span>
+<span class="w">      </span><span class="s">describes</span>
+
+<span class="w">      </span><span class="s">the</span><span class="nv"> </span><span class="s">nature</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">access</span><span class="nv"> </span><span class="s">relationship,</span><span class="nv"> </span><span class="s">such</span><span class="nv"> </span><span class="s">as</span><span class="nv"> </span><span class="s">cross-account</span><span class="nv"> </span><span class="s">access,</span><span class="nv"> </span><span class="s">public</span>
+
+<span class="w">      </span><span class="s">access,</span><span class="nv"> </span><span class="s">federated</span><span class="nv"> </span><span class="s">access,</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">third-party</span><span class="nv"> </span><span class="s">integration</span><span class="nv"> </span><span class="s">access.</span><span class="nv"> </span><span class="s">Examples</span><span class="nv"> </span><span class="s">include</span>
+
+<span class="w">      </span><span class="se">''</span><span class="s">Cross-Account</span><span class="se">''</span><span class="s">,</span><span class="nv"> </span><span class="se">''</span><span class="s">Public</span><span class="se">''</span><span class="s">,</span><span class="nv"> </span><span class="se">''</span><span class="s">Federated</span><span class="se">''</span><span class="s">,</span><span class="nv"> </span><span class="se">''</span><span class="s">Service-to-Service</span><span class="se">''</span><span class="s">,</span><span class="nv"> </span><span class="s">etc.'</span>
 <span class="w">  </span><span class="nt">accessors</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">accessors</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The identities that are granted access through the analyzed policy</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">configuration. This identifies the specific entity that can exercise the permissions</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">and helps assess the access relationship and potential security implications.</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">Examples include user accounts, service principals, roles, account identifiers,</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">or system identities.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">identities</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">are</span><span class="nv"> </span><span class="s">granted</span><span class="nv"> </span><span class="s">access</span><span class="nv"> </span><span class="s">through</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">analyzed</span><span class="nv"> </span><span class="s">policy</span>
+
+<span class="w">      </span><span class="s">configuration.</span><span class="nv"> </span><span class="s">This</span><span class="nv"> </span><span class="s">identifies</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">specific</span><span class="nv"> </span><span class="s">entity</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">can</span><span class="nv"> </span><span class="s">exercise</span><span class="nv"> </span><span class="s">the</span>
+
+<span class="w">      </span><span class="s">permissions</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">helps</span><span class="nv"> </span><span class="s">assess</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">access</span><span class="nv"> </span><span class="s">relationship</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">potential</span><span class="nv"> </span><span class="s">security</span>
+
+<span class="w">      </span><span class="s">implications.</span><span class="nv"> </span><span class="s">Examples</span><span class="nv"> </span><span class="s">include</span><span class="nv"> </span><span class="s">user</span><span class="nv"> </span><span class="s">accounts,</span><span class="nv"> </span><span class="s">service</span><span class="nv"> </span><span class="s">principals,</span><span class="nv"> </span><span class="s">roles,</span>
+
+<span class="w">      </span><span class="s">account</span><span class="nv"> </span><span class="s">identifiers,</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">system</span><span class="nv"> </span><span class="s">identities.'</span>
 <span class="w">    </span><span class="nt">required</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">additional_restrictions</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">additional_restrictions</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Details about supplementary restrictions and guardrails that may</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">limit the granted access, applied through additional policy types such as Resource</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">Control Policies (RCPs) and Service Control Policies (SCPs) in AWS, or other</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">policy constraints.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'Details</span><span class="nv"> </span><span class="s">about</span><span class="nv"> </span><span class="s">supplementary</span><span class="nv"> </span><span class="s">restrictions</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">guardrails</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">may</span>
+<span class="w">      </span><span class="s">limit</span><span class="nv"> </span><span class="s">the</span>
+
+<span class="w">      </span><span class="s">granted</span><span class="nv"> </span><span class="s">access,</span><span class="nv"> </span><span class="s">applied</span><span class="nv"> </span><span class="s">through</span><span class="nv"> </span><span class="s">additional</span><span class="nv"> </span><span class="s">policy</span><span class="nv"> </span><span class="s">types</span><span class="nv"> </span><span class="s">such</span><span class="nv"> </span><span class="s">as</span><span class="nv"> </span><span class="s">Resource</span>
+
+<span class="w">      </span><span class="s">Control</span><span class="nv"> </span><span class="s">Policies</span><span class="nv"> </span><span class="s">(RCPs)</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">Service</span><span class="nv"> </span><span class="s">Control</span><span class="nv"> </span><span class="s">Policies</span><span class="nv"> </span><span class="s">(SCPs)</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">AWS,</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">other</span>
+
+<span class="w">      </span><span class="s">policy</span><span class="nv"> </span><span class="s">constraints.'</span>
 <span class="w">  </span><span class="nt">condition_keys</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">condition_keys</span>
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">condition</span><span class="nv"> </span><span class="s">keys</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">their</span><span class="nv"> </span><span class="s">values</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">constrain</span><span class="nv"> </span><span class="s">when</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">how</span>
-<span class="w">      </span><span class="s">the</span><span class="nv"> </span><span class="s">granted</span><span class="nv"> </span><span class="s">access</span><span class="nv"> </span><span class="s">can</span><span class="nv"> </span><span class="s">be</span><span class="nv"> </span><span class="s">exercised.</span><span class="nv"> </span><span class="s">These</span><span class="nv"> </span><span class="s">conditions</span><span class="nv"> </span><span class="s">define</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">circumstances</span>
-<span class="w">      </span><span class="s">under</span><span class="nv"> </span><span class="s">which</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">access</span><span class="nv"> </span><span class="s">relationship</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">valid</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">privileges</span><span class="nv"> </span><span class="s">can</span><span class="nv"> </span><span class="s">be</span><span class="nv"> </span><span class="s">used.</span>
-<span class="w">      </span><span class="s">Examples:</span><span class="nv"> </span><span class="s">IP</span><span class="nv"> </span><span class="s">address</span><span class="nv"> </span><span class="s">restrictions</span><span class="nv"> </span><span class="s">like</span><span class="nv"> </span><span class="se">''</span><span class="s">aws:SourceIp:192.0.2.0/24</span><span class="se">''</span><span class="s">,</span><span class="nv"> </span><span class="s">time-based</span>
-<span class="w">      </span><span class="s">constraints</span><span class="nv"> </span><span class="s">like</span><span class="nv"> </span><span class="se">''</span><span class="s">aws:RequestedRegion:us-east-1</span><span class="se">''</span><span class="s">,</span><span class="nv"> </span><span class="s">MFA</span><span class="nv"> </span><span class="s">requirements</span><span class="nv"> </span><span class="s">like</span><span class="nv"> </span><span class="se">''</span><span class="s">aws:MultiFactorAuthPresent:true</span><span class="se">''</span><span class="s">,</span>
-<span class="w">      </span><span class="s">or</span><span class="nv"> </span><span class="s">custom</span><span class="nv"> </span><span class="s">conditions</span><span class="nv"> </span><span class="s">based</span><span class="nv"> </span><span class="s">on</span><span class="nv"> </span><span class="s">resource</span><span class="nv"> </span><span class="s">tags</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">request</span><span class="nv"> </span><span class="s">context.'</span>
+<span class="w">      </span><span class="s">the</span><span class="nv"> </span><span class="s">granted</span>
+
+<span class="w">      </span><span class="s">access</span><span class="nv"> </span><span class="s">can</span><span class="nv"> </span><span class="s">be</span><span class="nv"> </span><span class="s">exercised.</span><span class="nv"> </span><span class="s">These</span><span class="nv"> </span><span class="s">conditions</span><span class="nv"> </span><span class="s">define</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">circumstances</span><span class="nv"> </span><span class="s">under</span><span class="nv"> </span><span class="s">which</span>
+
+<span class="w">      </span><span class="s">the</span><span class="nv"> </span><span class="s">access</span><span class="nv"> </span><span class="s">relationship</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">valid</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">privileges</span><span class="nv"> </span><span class="s">can</span><span class="nv"> </span><span class="s">be</span><span class="nv"> </span><span class="s">used.</span><span class="nv"> </span><span class="s">Examples:</span><span class="nv"> </span><span class="s">IP</span>
+
+<span class="w">      </span><span class="s">address</span><span class="nv"> </span><span class="s">restrictions</span><span class="nv"> </span><span class="s">like</span><span class="nv"> </span><span class="se">''</span><span class="s">aws:SourceIp:192.0.2.0/24</span><span class="se">''</span><span class="s">,</span><span class="nv"> </span><span class="s">time-based</span><span class="nv"> </span><span class="s">constraints</span>
+
+<span class="w">      </span><span class="s">like</span><span class="nv"> </span><span class="se">''</span><span class="s">aws:RequestedRegion:us-east-1</span><span class="se">''</span><span class="s">,</span><span class="nv"> </span><span class="s">MFA</span><span class="nv"> </span><span class="s">requirements</span><span class="nv"> </span><span class="s">like</span>
+
+<span class="w">      </span><span class="se">''</span><span class="s">aws:MultiFactorAuthPresent:true</span><span class="se">''</span><span class="s">,</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">custom</span><span class="nv"> </span><span class="s">conditions</span><span class="nv"> </span><span class="s">based</span><span class="nv"> </span><span class="s">on</span><span class="nv"> </span><span class="s">resource</span>
+<span class="w">      </span><span class="s">tags</span>
+
+<span class="w">      </span><span class="s">and</span><span class="nv"> </span><span class="s">request</span><span class="nv"> </span><span class="s">context.'</span>
 <span class="w">  </span><span class="nt">granted_privileges</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">granted_privileges</span>
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">specific</span><span class="nv"> </span><span class="s">privileges,</span><span class="nv"> </span><span class="s">actions,</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">permissions</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">are</span><span class="nv"> </span><span class="s">granted</span>
-<span class="w">      </span><span class="s">through</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">analyzed</span><span class="nv"> </span><span class="s">access</span><span class="nv"> </span><span class="s">relationship.</span><span class="nv"> </span><span class="s">This</span><span class="nv"> </span><span class="s">includes</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">actual</span><span class="nv"> </span><span class="s">operations</span>
-<span class="w">      </span><span class="s">that</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">accessor</span><span class="nv"> </span><span class="s">can</span><span class="nv"> </span><span class="s">perform</span><span class="nv"> </span><span class="s">on</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">target</span><span class="nv"> </span><span class="s">resource.</span><span class="nv"> </span><span class="s">Examples:</span><span class="nv"> </span><span class="s">AWS</span><span class="nv"> </span><span class="s">actions</span>
-<span class="w">      </span><span class="s">like</span><span class="nv"> </span><span class="se">''</span><span class="s">sts:AssumeRole</span><span class="se">''</span><span class="s">,</span><span class="nv"> </span><span class="se">''</span><span class="s">s3:GetObject</span><span class="se">''</span><span class="s">,</span><span class="nv"> </span><span class="se">''</span><span class="s">ec2:DescribeInstances</span><span class="se">''</span><span class="s">;</span><span class="nv"> </span><span class="s">Azure</span>
-<span class="w">      </span><span class="s">actions</span><span class="nv"> </span><span class="s">like</span><span class="nv"> </span><span class="se">''</span><span class="s">Microsoft.Storage/storageAccounts/read</span><span class="se">''</span><span class="s">;</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">GCP</span><span class="nv"> </span><span class="s">permissions</span>
-<span class="w">      </span><span class="s">like</span><span class="nv"> </span><span class="se">''</span><span class="s">storage.objects.get</span><span class="se">''</span><span class="s">.'</span>
+<span class="w">      </span><span class="s">through</span><span class="nv"> </span><span class="s">the</span>
+
+<span class="w">      </span><span class="s">analyzed</span><span class="nv"> </span><span class="s">access</span><span class="nv"> </span><span class="s">relationship.</span><span class="nv"> </span><span class="s">This</span><span class="nv"> </span><span class="s">includes</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">actual</span><span class="nv"> </span><span class="s">operations</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">the</span>
+
+<span class="w">      </span><span class="s">accessor</span><span class="nv"> </span><span class="s">can</span><span class="nv"> </span><span class="s">perform</span><span class="nv"> </span><span class="s">on</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">target</span><span class="nv"> </span><span class="s">resource.</span><span class="nv"> </span><span class="s">Examples:</span><span class="nv"> </span><span class="s">AWS</span><span class="nv"> </span><span class="s">actions</span><span class="nv"> </span><span class="s">like</span>
+
+<span class="w">      </span><span class="se">''</span><span class="s">sts:AssumeRole</span><span class="se">''</span><span class="s">,</span><span class="nv"> </span><span class="se">''</span><span class="s">s3:GetObject</span><span class="se">''</span><span class="s">,</span><span class="nv"> </span><span class="se">''</span><span class="s">ec2:DescribeInstances</span><span class="se">''</span><span class="s">;</span><span class="nv"> </span><span class="s">Azure</span><span class="nv"> </span><span class="s">actions</span>
+<span class="w">      </span><span class="s">like</span>
+
+<span class="w">      </span><span class="se">''</span><span class="s">Microsoft.Storage/storageAccounts/read</span><span class="se">''</span><span class="s">;</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">GCP</span><span class="nv"> </span><span class="s">permissions</span><span class="nv"> </span><span class="s">like</span>
+
+<span class="w">      </span><span class="se">''</span><span class="s">storage.objects.get</span><span class="se">''</span><span class="s">.'</span>
 </code></pre></div>
 </details>
 <h3 id="induced">Induced</h3>
 <details>
 <div class="highlight"><pre><span></span><code><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">AccessAnalysisResult</span>
-<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The Access Analysis Result object describes access relationships and</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">pathways between identities, resources, focusing on who can access what and through</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">which mechanisms. This evaluates access levels (read/write/admin), access types</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">(direct, cross-account, public, federated), and the conditions under which access</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">is granted. Use this for resource-centric security assessments such as external</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">access discovery, public exposure analysis, etc.</span>
+<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">Access</span><span class="nv"> </span><span class="s">Analysis</span><span class="nv"> </span><span class="s">Result</span><span class="nv"> </span><span class="s">object</span><span class="nv"> </span><span class="s">describes</span><span class="nv"> </span><span class="s">access</span><span class="nv"> </span><span class="s">relationships</span><span class="nv"> </span><span class="s">and</span>
+<span class="w">  </span><span class="s">pathways</span>
+
+<span class="w">  </span><span class="s">between</span><span class="nv"> </span><span class="s">identities,</span><span class="nv"> </span><span class="s">resources,</span><span class="nv"> </span><span class="s">focusing</span><span class="nv"> </span><span class="s">on</span><span class="nv"> </span><span class="s">who</span><span class="nv"> </span><span class="s">can</span><span class="nv"> </span><span class="s">access</span><span class="nv"> </span><span class="s">what</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">through</span>
+
+<span class="w">  </span><span class="s">which</span><span class="nv"> </span><span class="s">mechanisms.</span><span class="nv"> </span><span class="s">This</span><span class="nv"> </span><span class="s">evaluates</span><span class="nv"> </span><span class="s">access</span><span class="nv"> </span><span class="s">levels</span><span class="nv"> </span><span class="s">(read/write/admin),</span><span class="nv"> </span><span class="s">access</span><span class="nv"> </span><span class="s">types</span>
+
+<span class="w">  </span><span class="s">(direct,</span><span class="nv"> </span><span class="s">cross-account,</span><span class="nv"> </span><span class="s">public,</span><span class="nv"> </span><span class="s">federated),</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">conditions</span><span class="nv"> </span><span class="s">under</span><span class="nv"> </span><span class="s">which</span>
+
+<span class="w">  </span><span class="s">access</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">granted.</span><span class="nv"> </span><span class="s">Use</span><span class="nv"> </span><span class="s">this</span><span class="nv"> </span><span class="s">for</span><span class="nv"> </span><span class="s">resource-centric</span><span class="nv"> </span><span class="s">security</span><span class="nv"> </span><span class="s">assessments</span><span class="nv"> </span><span class="s">such</span><span class="nv"> </span><span class="s">as</span>
+
+<span class="w">  </span><span class="s">external</span><span class="nv"> </span><span class="s">access</span><span class="nv"> </span><span class="s">discovery,</span><span class="nv"> </span><span class="s">public</span><span class="nv"> </span><span class="s">exposure</span><span class="nv"> </span><span class="s">analysis,</span><span class="nv"> </span><span class="s">etc.'</span>
+<span class="nt">in_subset</span><span class="p">:</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">objects</span>
 <span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="nt">aliases</span><span class="p">:</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Access Analysis Result</span>
@@ -532,52 +597,86 @@
 <span class="nt">slot_usage</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">access_level</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">access_level</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The generalized access level or permission scope granted to the identity</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">through the analyzed policy configuration. Common examples include Read, Write,</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">List, Delete, Admin, or custom permission levels.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">generalized</span><span class="nv"> </span><span class="s">access</span><span class="nv"> </span><span class="s">level</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">permission</span><span class="nv"> </span><span class="s">scope</span><span class="nv"> </span><span class="s">granted</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">the</span>
+<span class="w">      </span><span class="s">identity</span>
+
+<span class="w">      </span><span class="s">through</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">analyzed</span><span class="nv"> </span><span class="s">policy</span><span class="nv"> </span><span class="s">configuration.</span><span class="nv"> </span><span class="s">Common</span><span class="nv"> </span><span class="s">examples</span><span class="nv"> </span><span class="s">include</span><span class="nv"> </span><span class="s">Read,</span><span class="nv"> </span><span class="s">Write,</span>
+
+<span class="w">      </span><span class="s">List,</span><span class="nv"> </span><span class="s">Delete,</span><span class="nv"> </span><span class="s">Admin,</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">custom</span><span class="nv"> </span><span class="s">permission</span><span class="nv"> </span><span class="s">levels.'</span>
 <span class="w">    </span><span class="nt">recommended</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">access_type</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">access_type</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The type or category of access being granted to the identity. This</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">describes the nature of the access relationship, such as cross-account access,</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">public access, federated access, or third-party integration access. Examples</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">include 'Cross-Account', 'Public', 'Federated', 'Service-to-Service', etc.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">type</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">category</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">access</span><span class="nv"> </span><span class="s">being</span><span class="nv"> </span><span class="s">granted</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">identity.</span><span class="nv"> </span><span class="s">This</span>
+<span class="w">      </span><span class="s">describes</span>
+
+<span class="w">      </span><span class="s">the</span><span class="nv"> </span><span class="s">nature</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">access</span><span class="nv"> </span><span class="s">relationship,</span><span class="nv"> </span><span class="s">such</span><span class="nv"> </span><span class="s">as</span><span class="nv"> </span><span class="s">cross-account</span><span class="nv"> </span><span class="s">access,</span><span class="nv"> </span><span class="s">public</span>
+
+<span class="w">      </span><span class="s">access,</span><span class="nv"> </span><span class="s">federated</span><span class="nv"> </span><span class="s">access,</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">third-party</span><span class="nv"> </span><span class="s">integration</span><span class="nv"> </span><span class="s">access.</span><span class="nv"> </span><span class="s">Examples</span><span class="nv"> </span><span class="s">include</span>
+
+<span class="w">      </span><span class="se">''</span><span class="s">Cross-Account</span><span class="se">''</span><span class="s">,</span><span class="nv"> </span><span class="se">''</span><span class="s">Public</span><span class="se">''</span><span class="s">,</span><span class="nv"> </span><span class="se">''</span><span class="s">Federated</span><span class="se">''</span><span class="s">,</span><span class="nv"> </span><span class="se">''</span><span class="s">Service-to-Service</span><span class="se">''</span><span class="s">,</span><span class="nv"> </span><span class="s">etc.'</span>
 <span class="w">  </span><span class="nt">accessors</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">accessors</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The identities that are granted access through the analyzed policy</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">configuration. This identifies the specific entity that can exercise the permissions</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">and helps assess the access relationship and potential security implications.</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">Examples include user accounts, service principals, roles, account identifiers,</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">or system identities.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">identities</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">are</span><span class="nv"> </span><span class="s">granted</span><span class="nv"> </span><span class="s">access</span><span class="nv"> </span><span class="s">through</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">analyzed</span><span class="nv"> </span><span class="s">policy</span>
+
+<span class="w">      </span><span class="s">configuration.</span><span class="nv"> </span><span class="s">This</span><span class="nv"> </span><span class="s">identifies</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">specific</span><span class="nv"> </span><span class="s">entity</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">can</span><span class="nv"> </span><span class="s">exercise</span><span class="nv"> </span><span class="s">the</span>
+
+<span class="w">      </span><span class="s">permissions</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">helps</span><span class="nv"> </span><span class="s">assess</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">access</span><span class="nv"> </span><span class="s">relationship</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">potential</span><span class="nv"> </span><span class="s">security</span>
+
+<span class="w">      </span><span class="s">implications.</span><span class="nv"> </span><span class="s">Examples</span><span class="nv"> </span><span class="s">include</span><span class="nv"> </span><span class="s">user</span><span class="nv"> </span><span class="s">accounts,</span><span class="nv"> </span><span class="s">service</span><span class="nv"> </span><span class="s">principals,</span><span class="nv"> </span><span class="s">roles,</span>
+
+<span class="w">      </span><span class="s">account</span><span class="nv"> </span><span class="s">identifiers,</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">system</span><span class="nv"> </span><span class="s">identities.'</span>
 <span class="w">    </span><span class="nt">required</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">additional_restrictions</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">additional_restrictions</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Details about supplementary restrictions and guardrails that may</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">limit the granted access, applied through additional policy types such as Resource</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">Control Policies (RCPs) and Service Control Policies (SCPs) in AWS, or other</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">policy constraints.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'Details</span><span class="nv"> </span><span class="s">about</span><span class="nv"> </span><span class="s">supplementary</span><span class="nv"> </span><span class="s">restrictions</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">guardrails</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">may</span>
+<span class="w">      </span><span class="s">limit</span><span class="nv"> </span><span class="s">the</span>
+
+<span class="w">      </span><span class="s">granted</span><span class="nv"> </span><span class="s">access,</span><span class="nv"> </span><span class="s">applied</span><span class="nv"> </span><span class="s">through</span><span class="nv"> </span><span class="s">additional</span><span class="nv"> </span><span class="s">policy</span><span class="nv"> </span><span class="s">types</span><span class="nv"> </span><span class="s">such</span><span class="nv"> </span><span class="s">as</span><span class="nv"> </span><span class="s">Resource</span>
+
+<span class="w">      </span><span class="s">Control</span><span class="nv"> </span><span class="s">Policies</span><span class="nv"> </span><span class="s">(RCPs)</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">Service</span><span class="nv"> </span><span class="s">Control</span><span class="nv"> </span><span class="s">Policies</span><span class="nv"> </span><span class="s">(SCPs)</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">AWS,</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">other</span>
+
+<span class="w">      </span><span class="s">policy</span><span class="nv"> </span><span class="s">constraints.'</span>
 <span class="w">  </span><span class="nt">condition_keys</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">condition_keys</span>
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">condition</span><span class="nv"> </span><span class="s">keys</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">their</span><span class="nv"> </span><span class="s">values</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">constrain</span><span class="nv"> </span><span class="s">when</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">how</span>
-<span class="w">      </span><span class="s">the</span><span class="nv"> </span><span class="s">granted</span><span class="nv"> </span><span class="s">access</span><span class="nv"> </span><span class="s">can</span><span class="nv"> </span><span class="s">be</span><span class="nv"> </span><span class="s">exercised.</span><span class="nv"> </span><span class="s">These</span><span class="nv"> </span><span class="s">conditions</span><span class="nv"> </span><span class="s">define</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">circumstances</span>
-<span class="w">      </span><span class="s">under</span><span class="nv"> </span><span class="s">which</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">access</span><span class="nv"> </span><span class="s">relationship</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">valid</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">privileges</span><span class="nv"> </span><span class="s">can</span><span class="nv"> </span><span class="s">be</span><span class="nv"> </span><span class="s">used.</span>
-<span class="w">      </span><span class="s">Examples:</span><span class="nv"> </span><span class="s">IP</span><span class="nv"> </span><span class="s">address</span><span class="nv"> </span><span class="s">restrictions</span><span class="nv"> </span><span class="s">like</span><span class="nv"> </span><span class="se">''</span><span class="s">aws:SourceIp:192.0.2.0/24</span><span class="se">''</span><span class="s">,</span><span class="nv"> </span><span class="s">time-based</span>
-<span class="w">      </span><span class="s">constraints</span><span class="nv"> </span><span class="s">like</span><span class="nv"> </span><span class="se">''</span><span class="s">aws:RequestedRegion:us-east-1</span><span class="se">''</span><span class="s">,</span><span class="nv"> </span><span class="s">MFA</span><span class="nv"> </span><span class="s">requirements</span><span class="nv"> </span><span class="s">like</span><span class="nv"> </span><span class="se">''</span><span class="s">aws:MultiFactorAuthPresent:true</span><span class="se">''</span><span class="s">,</span>
-<span class="w">      </span><span class="s">or</span><span class="nv"> </span><span class="s">custom</span><span class="nv"> </span><span class="s">conditions</span><span class="nv"> </span><span class="s">based</span><span class="nv"> </span><span class="s">on</span><span class="nv"> </span><span class="s">resource</span><span class="nv"> </span><span class="s">tags</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">request</span><span class="nv"> </span><span class="s">context.'</span>
+<span class="w">      </span><span class="s">the</span><span class="nv"> </span><span class="s">granted</span>
+
+<span class="w">      </span><span class="s">access</span><span class="nv"> </span><span class="s">can</span><span class="nv"> </span><span class="s">be</span><span class="nv"> </span><span class="s">exercised.</span><span class="nv"> </span><span class="s">These</span><span class="nv"> </span><span class="s">conditions</span><span class="nv"> </span><span class="s">define</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">circumstances</span><span class="nv"> </span><span class="s">under</span><span class="nv"> </span><span class="s">which</span>
+
+<span class="w">      </span><span class="s">the</span><span class="nv"> </span><span class="s">access</span><span class="nv"> </span><span class="s">relationship</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">valid</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">privileges</span><span class="nv"> </span><span class="s">can</span><span class="nv"> </span><span class="s">be</span><span class="nv"> </span><span class="s">used.</span><span class="nv"> </span><span class="s">Examples:</span><span class="nv"> </span><span class="s">IP</span>
+
+<span class="w">      </span><span class="s">address</span><span class="nv"> </span><span class="s">restrictions</span><span class="nv"> </span><span class="s">like</span><span class="nv"> </span><span class="se">''</span><span class="s">aws:SourceIp:192.0.2.0/24</span><span class="se">''</span><span class="s">,</span><span class="nv"> </span><span class="s">time-based</span><span class="nv"> </span><span class="s">constraints</span>
+
+<span class="w">      </span><span class="s">like</span><span class="nv"> </span><span class="se">''</span><span class="s">aws:RequestedRegion:us-east-1</span><span class="se">''</span><span class="s">,</span><span class="nv"> </span><span class="s">MFA</span><span class="nv"> </span><span class="s">requirements</span><span class="nv"> </span><span class="s">like</span>
+
+<span class="w">      </span><span class="se">''</span><span class="s">aws:MultiFactorAuthPresent:true</span><span class="se">''</span><span class="s">,</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">custom</span><span class="nv"> </span><span class="s">conditions</span><span class="nv"> </span><span class="s">based</span><span class="nv"> </span><span class="s">on</span><span class="nv"> </span><span class="s">resource</span>
+<span class="w">      </span><span class="s">tags</span>
+
+<span class="w">      </span><span class="s">and</span><span class="nv"> </span><span class="s">request</span><span class="nv"> </span><span class="s">context.'</span>
 <span class="w">  </span><span class="nt">granted_privileges</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">granted_privileges</span>
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">specific</span><span class="nv"> </span><span class="s">privileges,</span><span class="nv"> </span><span class="s">actions,</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">permissions</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">are</span><span class="nv"> </span><span class="s">granted</span>
-<span class="w">      </span><span class="s">through</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">analyzed</span><span class="nv"> </span><span class="s">access</span><span class="nv"> </span><span class="s">relationship.</span><span class="nv"> </span><span class="s">This</span><span class="nv"> </span><span class="s">includes</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">actual</span><span class="nv"> </span><span class="s">operations</span>
-<span class="w">      </span><span class="s">that</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">accessor</span><span class="nv"> </span><span class="s">can</span><span class="nv"> </span><span class="s">perform</span><span class="nv"> </span><span class="s">on</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">target</span><span class="nv"> </span><span class="s">resource.</span><span class="nv"> </span><span class="s">Examples:</span><span class="nv"> </span><span class="s">AWS</span><span class="nv"> </span><span class="s">actions</span>
-<span class="w">      </span><span class="s">like</span><span class="nv"> </span><span class="se">''</span><span class="s">sts:AssumeRole</span><span class="se">''</span><span class="s">,</span><span class="nv"> </span><span class="se">''</span><span class="s">s3:GetObject</span><span class="se">''</span><span class="s">,</span><span class="nv"> </span><span class="se">''</span><span class="s">ec2:DescribeInstances</span><span class="se">''</span><span class="s">;</span><span class="nv"> </span><span class="s">Azure</span>
-<span class="w">      </span><span class="s">actions</span><span class="nv"> </span><span class="s">like</span><span class="nv"> </span><span class="se">''</span><span class="s">Microsoft.Storage/storageAccounts/read</span><span class="se">''</span><span class="s">;</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">GCP</span><span class="nv"> </span><span class="s">permissions</span>
-<span class="w">      </span><span class="s">like</span><span class="nv"> </span><span class="se">''</span><span class="s">storage.objects.get</span><span class="se">''</span><span class="s">.'</span>
+<span class="w">      </span><span class="s">through</span><span class="nv"> </span><span class="s">the</span>
+
+<span class="w">      </span><span class="s">analyzed</span><span class="nv"> </span><span class="s">access</span><span class="nv"> </span><span class="s">relationship.</span><span class="nv"> </span><span class="s">This</span><span class="nv"> </span><span class="s">includes</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">actual</span><span class="nv"> </span><span class="s">operations</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">the</span>
+
+<span class="w">      </span><span class="s">accessor</span><span class="nv"> </span><span class="s">can</span><span class="nv"> </span><span class="s">perform</span><span class="nv"> </span><span class="s">on</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">target</span><span class="nv"> </span><span class="s">resource.</span><span class="nv"> </span><span class="s">Examples:</span><span class="nv"> </span><span class="s">AWS</span><span class="nv"> </span><span class="s">actions</span><span class="nv"> </span><span class="s">like</span>
+
+<span class="w">      </span><span class="se">''</span><span class="s">sts:AssumeRole</span><span class="se">''</span><span class="s">,</span><span class="nv"> </span><span class="se">''</span><span class="s">s3:GetObject</span><span class="se">''</span><span class="s">,</span><span class="nv"> </span><span class="se">''</span><span class="s">ec2:DescribeInstances</span><span class="se">''</span><span class="s">;</span><span class="nv"> </span><span class="s">Azure</span><span class="nv"> </span><span class="s">actions</span>
+<span class="w">      </span><span class="s">like</span>
+
+<span class="w">      </span><span class="se">''</span><span class="s">Microsoft.Storage/storageAccounts/read</span><span class="se">''</span><span class="s">;</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">GCP</span><span class="nv"> </span><span class="s">permissions</span><span class="nv"> </span><span class="s">like</span>
+
+<span class="w">      </span><span class="se">''</span><span class="s">storage.objects.get</span><span class="se">''</span><span class="s">.'</span>
 <span class="nt">attributes</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">access_level</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">access_level</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The generalized access level or permission scope granted to the identity</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">through the analyzed policy configuration. Common examples include Read, Write,</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">List, Delete, Admin, or custom permission levels.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">generalized</span><span class="nv"> </span><span class="s">access</span><span class="nv"> </span><span class="s">level</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">permission</span><span class="nv"> </span><span class="s">scope</span><span class="nv"> </span><span class="s">granted</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">the</span>
+<span class="w">      </span><span class="s">identity</span>
+
+<span class="w">      </span><span class="s">through</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">analyzed</span><span class="nv"> </span><span class="s">policy</span><span class="nv"> </span><span class="s">configuration.</span><span class="nv"> </span><span class="s">Common</span><span class="nv"> </span><span class="s">examples</span><span class="nv"> </span><span class="s">include</span><span class="nv"> </span><span class="s">Read,</span><span class="nv"> </span><span class="s">Write,</span>
+
+<span class="w">      </span><span class="s">List,</span><span class="nv"> </span><span class="s">Delete,</span><span class="nv"> </span><span class="s">Admin,</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">custom</span><span class="nv"> </span><span class="s">permission</span><span class="nv"> </span><span class="s">levels.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Access Level</span>
@@ -590,10 +689,14 @@
 <span class="w">    </span><span class="nt">recommended</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">access_type</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">access_type</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The type or category of access being granted to the identity. This</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">describes the nature of the access relationship, such as cross-account access,</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">public access, federated access, or third-party integration access. Examples</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">include 'Cross-Account', 'Public', 'Federated', 'Service-to-Service', etc.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">type</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">category</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">access</span><span class="nv"> </span><span class="s">being</span><span class="nv"> </span><span class="s">granted</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">identity.</span><span class="nv"> </span><span class="s">This</span>
+<span class="w">      </span><span class="s">describes</span>
+
+<span class="w">      </span><span class="s">the</span><span class="nv"> </span><span class="s">nature</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">access</span><span class="nv"> </span><span class="s">relationship,</span><span class="nv"> </span><span class="s">such</span><span class="nv"> </span><span class="s">as</span><span class="nv"> </span><span class="s">cross-account</span><span class="nv"> </span><span class="s">access,</span><span class="nv"> </span><span class="s">public</span>
+
+<span class="w">      </span><span class="s">access,</span><span class="nv"> </span><span class="s">federated</span><span class="nv"> </span><span class="s">access,</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">third-party</span><span class="nv"> </span><span class="s">integration</span><span class="nv"> </span><span class="s">access.</span><span class="nv"> </span><span class="s">Examples</span><span class="nv"> </span><span class="s">include</span>
+
+<span class="w">      </span><span class="se">''</span><span class="s">Cross-Account</span><span class="se">''</span><span class="s">,</span><span class="nv"> </span><span class="se">''</span><span class="s">Public</span><span class="se">''</span><span class="s">,</span><span class="nv"> </span><span class="se">''</span><span class="s">Federated</span><span class="se">''</span><span class="s">,</span><span class="nv"> </span><span class="se">''</span><span class="s">Service-to-Service</span><span class="se">''</span><span class="s">,</span><span class="nv"> </span><span class="s">etc.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Access Type</span>
@@ -605,11 +708,15 @@
 <span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">string</span>
 <span class="w">  </span><span class="nt">accessors</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">accessors</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The identities that are granted access through the analyzed policy</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">configuration. This identifies the specific entity that can exercise the permissions</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">and helps assess the access relationship and potential security implications.</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">Examples include user accounts, service principals, roles, account identifiers,</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">or system identities.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">identities</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">are</span><span class="nv"> </span><span class="s">granted</span><span class="nv"> </span><span class="s">access</span><span class="nv"> </span><span class="s">through</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">analyzed</span><span class="nv"> </span><span class="s">policy</span>
+
+<span class="w">      </span><span class="s">configuration.</span><span class="nv"> </span><span class="s">This</span><span class="nv"> </span><span class="s">identifies</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">specific</span><span class="nv"> </span><span class="s">entity</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">can</span><span class="nv"> </span><span class="s">exercise</span><span class="nv"> </span><span class="s">the</span>
+
+<span class="w">      </span><span class="s">permissions</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">helps</span><span class="nv"> </span><span class="s">assess</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">access</span><span class="nv"> </span><span class="s">relationship</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">potential</span><span class="nv"> </span><span class="s">security</span>
+
+<span class="w">      </span><span class="s">implications.</span><span class="nv"> </span><span class="s">Examples</span><span class="nv"> </span><span class="s">include</span><span class="nv"> </span><span class="s">user</span><span class="nv"> </span><span class="s">accounts,</span><span class="nv"> </span><span class="s">service</span><span class="nv"> </span><span class="s">principals,</span><span class="nv"> </span><span class="s">roles,</span>
+
+<span class="w">      </span><span class="s">account</span><span class="nv"> </span><span class="s">identifiers,</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">system</span><span class="nv"> </span><span class="s">identities.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Accessors</span>
@@ -623,10 +730,14 @@
 <span class="w">    </span><span class="nt">multivalued</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">additional_restrictions</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">additional_restrictions</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Details about supplementary restrictions and guardrails that may</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">limit the granted access, applied through additional policy types such as Resource</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">Control Policies (RCPs) and Service Control Policies (SCPs) in AWS, or other</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">policy constraints.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'Details</span><span class="nv"> </span><span class="s">about</span><span class="nv"> </span><span class="s">supplementary</span><span class="nv"> </span><span class="s">restrictions</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">guardrails</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">may</span>
+<span class="w">      </span><span class="s">limit</span><span class="nv"> </span><span class="s">the</span>
+
+<span class="w">      </span><span class="s">granted</span><span class="nv"> </span><span class="s">access,</span><span class="nv"> </span><span class="s">applied</span><span class="nv"> </span><span class="s">through</span><span class="nv"> </span><span class="s">additional</span><span class="nv"> </span><span class="s">policy</span><span class="nv"> </span><span class="s">types</span><span class="nv"> </span><span class="s">such</span><span class="nv"> </span><span class="s">as</span><span class="nv"> </span><span class="s">Resource</span>
+
+<span class="w">      </span><span class="s">Control</span><span class="nv"> </span><span class="s">Policies</span><span class="nv"> </span><span class="s">(RCPs)</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">Service</span><span class="nv"> </span><span class="s">Control</span><span class="nv"> </span><span class="s">Policies</span><span class="nv"> </span><span class="s">(SCPs)</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">AWS,</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">other</span>
+
+<span class="w">      </span><span class="s">policy</span><span class="nv"> </span><span class="s">constraints.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Additional Restrictions</span>
@@ -640,11 +751,20 @@
 <span class="w">  </span><span class="nt">condition_keys</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">condition_keys</span>
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">condition</span><span class="nv"> </span><span class="s">keys</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">their</span><span class="nv"> </span><span class="s">values</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">constrain</span><span class="nv"> </span><span class="s">when</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">how</span>
-<span class="w">      </span><span class="s">the</span><span class="nv"> </span><span class="s">granted</span><span class="nv"> </span><span class="s">access</span><span class="nv"> </span><span class="s">can</span><span class="nv"> </span><span class="s">be</span><span class="nv"> </span><span class="s">exercised.</span><span class="nv"> </span><span class="s">These</span><span class="nv"> </span><span class="s">conditions</span><span class="nv"> </span><span class="s">define</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">circumstances</span>
-<span class="w">      </span><span class="s">under</span><span class="nv"> </span><span class="s">which</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">access</span><span class="nv"> </span><span class="s">relationship</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">valid</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">privileges</span><span class="nv"> </span><span class="s">can</span><span class="nv"> </span><span class="s">be</span><span class="nv"> </span><span class="s">used.</span>
-<span class="w">      </span><span class="s">Examples:</span><span class="nv"> </span><span class="s">IP</span><span class="nv"> </span><span class="s">address</span><span class="nv"> </span><span class="s">restrictions</span><span class="nv"> </span><span class="s">like</span><span class="nv"> </span><span class="se">''</span><span class="s">aws:SourceIp:192.0.2.0/24</span><span class="se">''</span><span class="s">,</span><span class="nv"> </span><span class="s">time-based</span>
-<span class="w">      </span><span class="s">constraints</span><span class="nv"> </span><span class="s">like</span><span class="nv"> </span><span class="se">''</span><span class="s">aws:RequestedRegion:us-east-1</span><span class="se">''</span><span class="s">,</span><span class="nv"> </span><span class="s">MFA</span><span class="nv"> </span><span class="s">requirements</span><span class="nv"> </span><span class="s">like</span><span class="nv"> </span><span class="se">''</span><span class="s">aws:MultiFactorAuthPresent:true</span><span class="se">''</span><span class="s">,</span>
-<span class="w">      </span><span class="s">or</span><span class="nv"> </span><span class="s">custom</span><span class="nv"> </span><span class="s">conditions</span><span class="nv"> </span><span class="s">based</span><span class="nv"> </span><span class="s">on</span><span class="nv"> </span><span class="s">resource</span><span class="nv"> </span><span class="s">tags</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">request</span><span class="nv"> </span><span class="s">context.'</span>
+<span class="w">      </span><span class="s">the</span><span class="nv"> </span><span class="s">granted</span>
+
+<span class="w">      </span><span class="s">access</span><span class="nv"> </span><span class="s">can</span><span class="nv"> </span><span class="s">be</span><span class="nv"> </span><span class="s">exercised.</span><span class="nv"> </span><span class="s">These</span><span class="nv"> </span><span class="s">conditions</span><span class="nv"> </span><span class="s">define</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">circumstances</span><span class="nv"> </span><span class="s">under</span><span class="nv"> </span><span class="s">which</span>
+
+<span class="w">      </span><span class="s">the</span><span class="nv"> </span><span class="s">access</span><span class="nv"> </span><span class="s">relationship</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">valid</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">privileges</span><span class="nv"> </span><span class="s">can</span><span class="nv"> </span><span class="s">be</span><span class="nv"> </span><span class="s">used.</span><span class="nv"> </span><span class="s">Examples:</span><span class="nv"> </span><span class="s">IP</span>
+
+<span class="w">      </span><span class="s">address</span><span class="nv"> </span><span class="s">restrictions</span><span class="nv"> </span><span class="s">like</span><span class="nv"> </span><span class="se">''</span><span class="s">aws:SourceIp:192.0.2.0/24</span><span class="se">''</span><span class="s">,</span><span class="nv"> </span><span class="s">time-based</span><span class="nv"> </span><span class="s">constraints</span>
+
+<span class="w">      </span><span class="s">like</span><span class="nv"> </span><span class="se">''</span><span class="s">aws:RequestedRegion:us-east-1</span><span class="se">''</span><span class="s">,</span><span class="nv"> </span><span class="s">MFA</span><span class="nv"> </span><span class="s">requirements</span><span class="nv"> </span><span class="s">like</span>
+
+<span class="w">      </span><span class="se">''</span><span class="s">aws:MultiFactorAuthPresent:true</span><span class="se">''</span><span class="s">,</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">custom</span><span class="nv"> </span><span class="s">conditions</span><span class="nv"> </span><span class="s">based</span><span class="nv"> </span><span class="s">on</span><span class="nv"> </span><span class="s">resource</span>
+<span class="w">      </span><span class="s">tags</span>
+
+<span class="w">      </span><span class="s">and</span><span class="nv"> </span><span class="s">request</span><span class="nv"> </span><span class="s">context.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Condition Keys</span>
@@ -659,11 +779,18 @@
 <span class="w">  </span><span class="nt">granted_privileges</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">granted_privileges</span>
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">specific</span><span class="nv"> </span><span class="s">privileges,</span><span class="nv"> </span><span class="s">actions,</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">permissions</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">are</span><span class="nv"> </span><span class="s">granted</span>
-<span class="w">      </span><span class="s">through</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">analyzed</span><span class="nv"> </span><span class="s">access</span><span class="nv"> </span><span class="s">relationship.</span><span class="nv"> </span><span class="s">This</span><span class="nv"> </span><span class="s">includes</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">actual</span><span class="nv"> </span><span class="s">operations</span>
-<span class="w">      </span><span class="s">that</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">accessor</span><span class="nv"> </span><span class="s">can</span><span class="nv"> </span><span class="s">perform</span><span class="nv"> </span><span class="s">on</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">target</span><span class="nv"> </span><span class="s">resource.</span><span class="nv"> </span><span class="s">Examples:</span><span class="nv"> </span><span class="s">AWS</span><span class="nv"> </span><span class="s">actions</span>
-<span class="w">      </span><span class="s">like</span><span class="nv"> </span><span class="se">''</span><span class="s">sts:AssumeRole</span><span class="se">''</span><span class="s">,</span><span class="nv"> </span><span class="se">''</span><span class="s">s3:GetObject</span><span class="se">''</span><span class="s">,</span><span class="nv"> </span><span class="se">''</span><span class="s">ec2:DescribeInstances</span><span class="se">''</span><span class="s">;</span><span class="nv"> </span><span class="s">Azure</span>
-<span class="w">      </span><span class="s">actions</span><span class="nv"> </span><span class="s">like</span><span class="nv"> </span><span class="se">''</span><span class="s">Microsoft.Storage/storageAccounts/read</span><span class="se">''</span><span class="s">;</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">GCP</span><span class="nv"> </span><span class="s">permissions</span>
-<span class="w">      </span><span class="s">like</span><span class="nv"> </span><span class="se">''</span><span class="s">storage.objects.get</span><span class="se">''</span><span class="s">.'</span>
+<span class="w">      </span><span class="s">through</span><span class="nv"> </span><span class="s">the</span>
+
+<span class="w">      </span><span class="s">analyzed</span><span class="nv"> </span><span class="s">access</span><span class="nv"> </span><span class="s">relationship.</span><span class="nv"> </span><span class="s">This</span><span class="nv"> </span><span class="s">includes</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">actual</span><span class="nv"> </span><span class="s">operations</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">the</span>
+
+<span class="w">      </span><span class="s">accessor</span><span class="nv"> </span><span class="s">can</span><span class="nv"> </span><span class="s">perform</span><span class="nv"> </span><span class="s">on</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">target</span><span class="nv"> </span><span class="s">resource.</span><span class="nv"> </span><span class="s">Examples:</span><span class="nv"> </span><span class="s">AWS</span><span class="nv"> </span><span class="s">actions</span><span class="nv"> </span><span class="s">like</span>
+
+<span class="w">      </span><span class="se">''</span><span class="s">sts:AssumeRole</span><span class="se">''</span><span class="s">,</span><span class="nv"> </span><span class="se">''</span><span class="s">s3:GetObject</span><span class="se">''</span><span class="s">,</span><span class="nv"> </span><span class="se">''</span><span class="s">ec2:DescribeInstances</span><span class="se">''</span><span class="s">;</span><span class="nv"> </span><span class="s">Azure</span><span class="nv"> </span><span class="s">actions</span>
+<span class="w">      </span><span class="s">like</span>
+
+<span class="w">      </span><span class="se">''</span><span class="s">Microsoft.Storage/storageAccounts/read</span><span class="se">''</span><span class="s">;</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">GCP</span><span class="nv"> </span><span class="s">permissions</span><span class="nv"> </span><span class="s">like</span>
+
+<span class="w">      </span><span class="se">''</span><span class="s">storage.objects.get</span><span class="se">''</span><span class="s">.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Granted Privileges</span>

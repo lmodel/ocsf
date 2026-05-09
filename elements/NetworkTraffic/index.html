@@ -217,6 +217,15 @@
 </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="#in-subsets">
+<span class="md-ellipsis">
+      
+        In Subsets
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#aliases">
 <span class="md-ellipsis">
       
@@ -313,7 +322,9 @@
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
 <h1 id="class-networktraffic">Class: NetworkTraffic</h1>
-<p><em>The Network Traffic object describes characteristics of network traffic over a time period. The metrics represent network data transferred between source and destination during an observation window.</em></p>
+<p><em>The Network Traffic object describes characteristics of network traffic over a</em></p>
+<p><em>time period. The metrics represent network data transferred between source and</em></p>
+<p><em>destination during an observation window.</em></p>
 <p>URI: <a href="https://w3id.org/lmodel/ocsf/NetworkTraffic">ocsf:NetworkTraffic</a></p>
 <pre class="mermaid"><code> classDiagram
     class NetworkTraffic
@@ -381,25 +392,25 @@
 <tr>
 <td><a href="../bytes/">bytes</a></td>
 <td>0..1 <em>recommended</em> <br/> <a href="../Integer/">Integer</a></td>
-<td>The total number of bytes transferred in both directions (sum of bytes_in and...</td>
+<td>The total number of bytes transferred in both directions (sum of bytes_in and</td>
 <td>direct</td>
 </tr>
 <tr>
 <td><a href="../bytes_in/">bytes_in</a></td>
 <td>0..1 <br/> <a href="../Integer/">Integer</a></td>
-<td>The number of bytes sent from the destination to the source (inbound directio...</td>
+<td>The number of bytes sent from the destination to the source (inbound</td>
 <td>direct</td>
 </tr>
 <tr>
 <td><a href="../bytes_missed/">bytes_missed</a></td>
 <td>0..1 <br/> <a href="../Integer/">Integer</a></td>
-<td>The number of bytes that were missed during observation, typically due to pac...</td>
+<td>The number of bytes that were missed during observation, typically due to</td>
 <td>direct</td>
 </tr>
 <tr>
 <td><a href="../bytes_out/">bytes_out</a></td>
 <td>0..1 <br/> <a href="../Integer/">Integer</a></td>
-<td>The number of bytes sent from the source to the destination (outbound directi...</td>
+<td>The number of bytes sent from the source to the destination (outbound</td>
 <td>direct</td>
 </tr>
 <tr>
@@ -411,13 +422,13 @@
 <tr>
 <td><a href="../chunks_in/">chunks_in</a></td>
 <td>0..1 <br/> <a href="../Integer/">Integer</a></td>
-<td>The number of chunks sent from the destination to the source (inbound directi...</td>
+<td>The number of chunks sent from the destination to the source (inbound</td>
 <td>direct</td>
 </tr>
 <tr>
 <td><a href="../chunks_out/">chunks_out</a></td>
 <td>0..1 <br/> <a href="../Integer/">Integer</a></td>
-<td>The number of chunks sent from the source to the destination (outbound direct...</td>
+<td>The number of chunks sent from the source to the destination (outbound</td>
 <td>direct</td>
 </tr>
 <tr>
@@ -429,19 +440,19 @@
 <tr>
 <td><a href="../packets/">packets</a></td>
 <td>0..1 <em>recommended</em> <br/> <a href="../Integer/">Integer</a></td>
-<td>The total number of packets transferred in both directions (sum of packets_in...</td>
+<td>The total number of packets transferred in both directions (sum of packets_in</td>
 <td>direct</td>
 </tr>
 <tr>
 <td><a href="../packets_in/">packets_in</a></td>
 <td>0..1 <br/> <a href="../Integer/">Integer</a></td>
-<td>The number of packets sent from the destination to the source (inbound direct...</td>
+<td>The number of packets sent from the destination to the source (inbound</td>
 <td>direct</td>
 </tr>
 <tr>
 <td><a href="../packets_out/">packets_out</a></td>
 <td>0..1 <br/> <a href="../Integer/">Integer</a></td>
-<td>The number of packets sent from the source to the destination (outbound direc...</td>
+<td>The number of packets sent from the source to the destination (outbound</td>
 <td>direct</td>
 </tr>
 <tr>
@@ -723,6 +734,10 @@
 </tr>
 </tbody>
 </table>
+<h2 id="in-subsets">In Subsets</h2>
+<ul>
+<li><a href="../Objects/">Objects</a></li>
+</ul>
 <h2 id="aliases">Aliases</h2>
 <ul>
 <li>Network Traffic</li>
@@ -733,7 +748,8 @@
 </ul>
 <h2 id="notes">Notes</h2>
 <ul>
-<li>D3FEND™ Ontology d3f:NetworkTraffic — <a href="https://d3fend.mitre.org/dao/artifact/d3f:NetworkTraffic/">https://d3fend.mitre.org/dao/artifact/d3f:NetworkTraffic/</a></li>
+<li>D3FEND™ Ontology d3f:NetworkTraffic —
+<a href="https://d3fend.mitre.org/dao/artifact/d3f:NetworkTraffic/">https://d3fend.mitre.org/dao/artifact/d3f:NetworkTraffic/</a></li>
 </ul>
 <h2 id="identifier-and-mapping-information">Identifier and Mapping Information</h2>
 <h3 id="schema-source">Schema Source</h3>
@@ -764,11 +780,18 @@
 <h3 id="direct">Direct</h3>
 <details>
 <div class="highlight"><pre><span></span><code><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">NetworkTraffic</span>
-<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The Network Traffic object describes characteristics of network traffic</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">over a time period. The metrics represent network data transferred between source</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">and destination during an observation window.</span>
+<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">Network</span><span class="nv"> </span><span class="s">Traffic</span><span class="nv"> </span><span class="s">object</span><span class="nv"> </span><span class="s">describes</span><span class="nv"> </span><span class="s">characteristics</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">network</span><span class="nv"> </span><span class="s">traffic</span>
+<span class="w">  </span><span class="s">over</span><span class="nv"> </span><span class="s">a</span>
+
+<span class="w">  </span><span class="s">time</span><span class="nv"> </span><span class="s">period.</span><span class="nv"> </span><span class="s">The</span><span class="nv"> </span><span class="s">metrics</span><span class="nv"> </span><span class="s">represent</span><span class="nv"> </span><span class="s">network</span><span class="nv"> </span><span class="s">data</span><span class="nv"> </span><span class="s">transferred</span><span class="nv"> </span><span class="s">between</span><span class="nv"> </span><span class="s">source</span><span class="nv"> </span><span class="s">and</span>
+
+<span class="w">  </span><span class="s">destination</span><span class="nv"> </span><span class="s">during</span><span class="nv"> </span><span class="s">an</span><span class="nv"> </span><span class="s">observation</span><span class="nv"> </span><span class="s">window.'</span>
 <span class="nt">notes</span><span class="p">:</span>
-<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">D3FEND™ Ontology d3f:NetworkTraffic — https://d3fend.mitre.org/dao/artifact/d3f:NetworkTraffic/</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="s">'D3FEND™</span><span class="nv"> </span><span class="s">Ontology</span><span class="nv"> </span><span class="s">d3f:NetworkTraffic</span><span class="nv"> </span><span class="s">—</span>
+
+<span class="w">  </span><span class="s">https://d3fend.mitre.org/dao/artifact/d3f:NetworkTraffic/'</span>
+<span class="nt">in_subset</span><span class="p">:</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">objects</span>
 <span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="nt">see_also</span><span class="p">:</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://d3fend.mitre.org/dao/artifact/d3f:NetworkTraffic/</span>
@@ -792,66 +815,89 @@
 <span class="nt">slot_usage</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">bytes</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">bytes</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The total number of bytes transferred in both directions (sum of</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">bytes_in and bytes_out).</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">total</span><span class="nv"> </span><span class="s">number</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">bytes</span><span class="nv"> </span><span class="s">transferred</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">both</span><span class="nv"> </span><span class="s">directions</span><span class="nv"> </span><span class="s">(sum</span><span class="nv"> </span><span class="s">of</span>
+<span class="w">      </span><span class="s">bytes_in</span><span class="nv"> </span><span class="s">and</span>
+
+<span class="w">      </span><span class="s">bytes_out).'</span>
 <span class="w">    </span><span class="nt">recommended</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">bytes_in</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">bytes_in</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The number of bytes sent from the destination to the source (inbound</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">direction).</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">number</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">bytes</span><span class="nv"> </span><span class="s">sent</span><span class="nv"> </span><span class="s">from</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">destination</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">source</span><span class="nv"> </span><span class="s">(inbound</span>
+
+<span class="w">      </span><span class="s">direction).'</span>
 <span class="w">  </span><span class="nt">bytes_missed</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">bytes_missed</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The number of bytes that were missed during observation, typically</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">due to packet loss or sampling limitations.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">number</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">bytes</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">were</span><span class="nv"> </span><span class="s">missed</span><span class="nv"> </span><span class="s">during</span><span class="nv"> </span><span class="s">observation,</span><span class="nv"> </span><span class="s">typically</span>
+<span class="w">      </span><span class="s">due</span><span class="nv"> </span><span class="s">to</span>
+
+<span class="w">      </span><span class="s">packet</span><span class="nv"> </span><span class="s">loss</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">sampling</span><span class="nv"> </span><span class="s">limitations.'</span>
 <span class="w">  </span><span class="nt">bytes_out</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">bytes_out</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The number of bytes sent from the source to the destination (outbound</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">direction).</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">number</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">bytes</span><span class="nv"> </span><span class="s">sent</span><span class="nv"> </span><span class="s">from</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">source</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">destination</span><span class="nv"> </span><span class="s">(outbound</span>
+
+<span class="w">      </span><span class="s">direction).'</span>
 <span class="w">  </span><span class="nt">chunks</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">chunks</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The total number of chunks transferred in both directions (sum of</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">chunks_in and chunks_out).</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">total</span><span class="nv"> </span><span class="s">number</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">chunks</span><span class="nv"> </span><span class="s">transferred</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">both</span><span class="nv"> </span><span class="s">directions</span><span class="nv"> </span><span class="s">(sum</span><span class="nv"> </span><span class="s">of</span>
+<span class="w">      </span><span class="s">chunks_in</span><span class="nv"> </span><span class="s">and</span>
+
+<span class="w">      </span><span class="s">chunks_out).'</span>
 <span class="w">  </span><span class="nt">chunks_in</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">chunks_in</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The number of chunks sent from the destination to the source (inbound</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">direction).</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">number</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">chunks</span><span class="nv"> </span><span class="s">sent</span><span class="nv"> </span><span class="s">from</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">destination</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">source</span><span class="nv"> </span><span class="s">(inbound</span>
+
+<span class="w">      </span><span class="s">direction).'</span>
 <span class="w">  </span><span class="nt">chunks_out</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">chunks_out</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The number of chunks sent from the source to the destination (outbound</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">direction).</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">number</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">chunks</span><span class="nv"> </span><span class="s">sent</span><span class="nv"> </span><span class="s">from</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">source</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">destination</span><span class="nv"> </span><span class="s">(outbound</span>
+
+<span class="w">      </span><span class="s">direction).'</span>
 <span class="w">  </span><span class="nt">end_time</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">end_time</span>
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The end time of the observation or reporting period.</span>
 <span class="w">  </span><span class="nt">packets</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">packets</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The total number of packets transferred in both directions (sum of</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">packets_in and packets_out).</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">total</span><span class="nv"> </span><span class="s">number</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">packets</span><span class="nv"> </span><span class="s">transferred</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">both</span><span class="nv"> </span><span class="s">directions</span><span class="nv"> </span><span class="s">(sum</span>
+<span class="w">      </span><span class="s">of</span><span class="nv"> </span><span class="s">packets_in</span>
+
+<span class="w">      </span><span class="s">and</span><span class="nv"> </span><span class="s">packets_out).'</span>
 <span class="w">    </span><span class="nt">recommended</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">packets_in</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">packets_in</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The number of packets sent from the destination to the source (inbound</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">direction).</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">number</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">packets</span><span class="nv"> </span><span class="s">sent</span><span class="nv"> </span><span class="s">from</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">destination</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">source</span><span class="nv"> </span><span class="s">(inbound</span>
+
+<span class="w">      </span><span class="s">direction).'</span>
 <span class="w">  </span><span class="nt">packets_out</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">packets_out</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The number of packets sent from the source to the destination (outbound</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">direction).</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">number</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">packets</span><span class="nv"> </span><span class="s">sent</span><span class="nv"> </span><span class="s">from</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">source</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">destination</span><span class="nv"> </span><span class="s">(outbound</span>
+
+<span class="w">      </span><span class="s">direction).'</span>
 <span class="w">  </span><span class="nt">start_time</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">start_time</span>
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The start time of the observation or reporting period.</span>
 <span class="w">  </span><span class="nt">timespan</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">timespan</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The time span object representing the duration of the observation</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">or reporting period.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">time</span><span class="nv"> </span><span class="s">span</span><span class="nv"> </span><span class="s">object</span><span class="nv"> </span><span class="s">representing</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">duration</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">observation</span>
+<span class="w">      </span><span class="s">or</span><span class="nv"> </span><span class="s">reporting</span>
+
+<span class="w">      </span><span class="s">period.'</span>
 </code></pre></div>
 </details>
 <h3 id="induced">Induced</h3>
 <details>
 <div class="highlight"><pre><span></span><code><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">NetworkTraffic</span>
-<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The Network Traffic object describes characteristics of network traffic</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">over a time period. The metrics represent network data transferred between source</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">and destination during an observation window.</span>
+<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">Network</span><span class="nv"> </span><span class="s">Traffic</span><span class="nv"> </span><span class="s">object</span><span class="nv"> </span><span class="s">describes</span><span class="nv"> </span><span class="s">characteristics</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">network</span><span class="nv"> </span><span class="s">traffic</span>
+<span class="w">  </span><span class="s">over</span><span class="nv"> </span><span class="s">a</span>
+
+<span class="w">  </span><span class="s">time</span><span class="nv"> </span><span class="s">period.</span><span class="nv"> </span><span class="s">The</span><span class="nv"> </span><span class="s">metrics</span><span class="nv"> </span><span class="s">represent</span><span class="nv"> </span><span class="s">network</span><span class="nv"> </span><span class="s">data</span><span class="nv"> </span><span class="s">transferred</span><span class="nv"> </span><span class="s">between</span><span class="nv"> </span><span class="s">source</span><span class="nv"> </span><span class="s">and</span>
+
+<span class="w">  </span><span class="s">destination</span><span class="nv"> </span><span class="s">during</span><span class="nv"> </span><span class="s">an</span><span class="nv"> </span><span class="s">observation</span><span class="nv"> </span><span class="s">window.'</span>
 <span class="nt">notes</span><span class="p">:</span>
-<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">D3FEND™ Ontology d3f:NetworkTraffic — https://d3fend.mitre.org/dao/artifact/d3f:NetworkTraffic/</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="s">'D3FEND™</span><span class="nv"> </span><span class="s">Ontology</span><span class="nv"> </span><span class="s">d3f:NetworkTraffic</span><span class="nv"> </span><span class="s">—</span>
+
+<span class="w">  </span><span class="s">https://d3fend.mitre.org/dao/artifact/d3f:NetworkTraffic/'</span>
+<span class="nt">in_subset</span><span class="p">:</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">objects</span>
 <span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="nt">see_also</span><span class="p">:</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://d3fend.mitre.org/dao/artifact/d3f:NetworkTraffic/</span>
@@ -861,61 +907,79 @@
 <span class="nt">slot_usage</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">bytes</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">bytes</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The total number of bytes transferred in both directions (sum of</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">bytes_in and bytes_out).</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">total</span><span class="nv"> </span><span class="s">number</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">bytes</span><span class="nv"> </span><span class="s">transferred</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">both</span><span class="nv"> </span><span class="s">directions</span><span class="nv"> </span><span class="s">(sum</span><span class="nv"> </span><span class="s">of</span>
+<span class="w">      </span><span class="s">bytes_in</span><span class="nv"> </span><span class="s">and</span>
+
+<span class="w">      </span><span class="s">bytes_out).'</span>
 <span class="w">    </span><span class="nt">recommended</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">bytes_in</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">bytes_in</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The number of bytes sent from the destination to the source (inbound</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">direction).</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">number</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">bytes</span><span class="nv"> </span><span class="s">sent</span><span class="nv"> </span><span class="s">from</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">destination</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">source</span><span class="nv"> </span><span class="s">(inbound</span>
+
+<span class="w">      </span><span class="s">direction).'</span>
 <span class="w">  </span><span class="nt">bytes_missed</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">bytes_missed</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The number of bytes that were missed during observation, typically</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">due to packet loss or sampling limitations.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">number</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">bytes</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">were</span><span class="nv"> </span><span class="s">missed</span><span class="nv"> </span><span class="s">during</span><span class="nv"> </span><span class="s">observation,</span><span class="nv"> </span><span class="s">typically</span>
+<span class="w">      </span><span class="s">due</span><span class="nv"> </span><span class="s">to</span>
+
+<span class="w">      </span><span class="s">packet</span><span class="nv"> </span><span class="s">loss</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">sampling</span><span class="nv"> </span><span class="s">limitations.'</span>
 <span class="w">  </span><span class="nt">bytes_out</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">bytes_out</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The number of bytes sent from the source to the destination (outbound</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">direction).</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">number</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">bytes</span><span class="nv"> </span><span class="s">sent</span><span class="nv"> </span><span class="s">from</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">source</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">destination</span><span class="nv"> </span><span class="s">(outbound</span>
+
+<span class="w">      </span><span class="s">direction).'</span>
 <span class="w">  </span><span class="nt">chunks</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">chunks</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The total number of chunks transferred in both directions (sum of</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">chunks_in and chunks_out).</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">total</span><span class="nv"> </span><span class="s">number</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">chunks</span><span class="nv"> </span><span class="s">transferred</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">both</span><span class="nv"> </span><span class="s">directions</span><span class="nv"> </span><span class="s">(sum</span><span class="nv"> </span><span class="s">of</span>
+<span class="w">      </span><span class="s">chunks_in</span><span class="nv"> </span><span class="s">and</span>
+
+<span class="w">      </span><span class="s">chunks_out).'</span>
 <span class="w">  </span><span class="nt">chunks_in</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">chunks_in</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The number of chunks sent from the destination to the source (inbound</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">direction).</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">number</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">chunks</span><span class="nv"> </span><span class="s">sent</span><span class="nv"> </span><span class="s">from</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">destination</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">source</span><span class="nv"> </span><span class="s">(inbound</span>
+
+<span class="w">      </span><span class="s">direction).'</span>
 <span class="w">  </span><span class="nt">chunks_out</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">chunks_out</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The number of chunks sent from the source to the destination (outbound</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">direction).</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">number</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">chunks</span><span class="nv"> </span><span class="s">sent</span><span class="nv"> </span><span class="s">from</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">source</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">destination</span><span class="nv"> </span><span class="s">(outbound</span>
+
+<span class="w">      </span><span class="s">direction).'</span>
 <span class="w">  </span><span class="nt">end_time</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">end_time</span>
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The end time of the observation or reporting period.</span>
 <span class="w">  </span><span class="nt">packets</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">packets</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The total number of packets transferred in both directions (sum of</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">packets_in and packets_out).</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">total</span><span class="nv"> </span><span class="s">number</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">packets</span><span class="nv"> </span><span class="s">transferred</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">both</span><span class="nv"> </span><span class="s">directions</span><span class="nv"> </span><span class="s">(sum</span>
+<span class="w">      </span><span class="s">of</span><span class="nv"> </span><span class="s">packets_in</span>
+
+<span class="w">      </span><span class="s">and</span><span class="nv"> </span><span class="s">packets_out).'</span>
 <span class="w">    </span><span class="nt">recommended</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">packets_in</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">packets_in</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The number of packets sent from the destination to the source (inbound</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">direction).</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">number</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">packets</span><span class="nv"> </span><span class="s">sent</span><span class="nv"> </span><span class="s">from</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">destination</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">source</span><span class="nv"> </span><span class="s">(inbound</span>
+
+<span class="w">      </span><span class="s">direction).'</span>
 <span class="w">  </span><span class="nt">packets_out</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">packets_out</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The number of packets sent from the source to the destination (outbound</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">direction).</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">number</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">packets</span><span class="nv"> </span><span class="s">sent</span><span class="nv"> </span><span class="s">from</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">source</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">destination</span><span class="nv"> </span><span class="s">(outbound</span>
+
+<span class="w">      </span><span class="s">direction).'</span>
 <span class="w">  </span><span class="nt">start_time</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">start_time</span>
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The start time of the observation or reporting period.</span>
 <span class="w">  </span><span class="nt">timespan</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">timespan</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The time span object representing the duration of the observation</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">or reporting period.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">time</span><span class="nv"> </span><span class="s">span</span><span class="nv"> </span><span class="s">object</span><span class="nv"> </span><span class="s">representing</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">duration</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">observation</span>
+<span class="w">      </span><span class="s">or</span><span class="nv"> </span><span class="s">reporting</span>
+
+<span class="w">      </span><span class="s">period.'</span>
 <span class="nt">attributes</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">bytes</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">bytes</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The total number of bytes transferred in both directions (sum of</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">bytes_in and bytes_out).</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">total</span><span class="nv"> </span><span class="s">number</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">bytes</span><span class="nv"> </span><span class="s">transferred</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">both</span><span class="nv"> </span><span class="s">directions</span><span class="nv"> </span><span class="s">(sum</span><span class="nv"> </span><span class="s">of</span>
+<span class="w">      </span><span class="s">bytes_in</span><span class="nv"> </span><span class="s">and</span>
+
+<span class="w">      </span><span class="s">bytes_out).'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Total Bytes</span>
@@ -929,8 +993,9 @@
 <span class="w">    </span><span class="nt">recommended</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">bytes_in</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">bytes_in</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The number of bytes sent from the destination to the source (inbound</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">direction).</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">number</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">bytes</span><span class="nv"> </span><span class="s">sent</span><span class="nv"> </span><span class="s">from</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">destination</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">source</span><span class="nv"> </span><span class="s">(inbound</span>
+
+<span class="w">      </span><span class="s">direction).'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Bytes In</span>
@@ -942,8 +1007,10 @@
 <span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">integer</span>
 <span class="w">  </span><span class="nt">bytes_missed</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">bytes_missed</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The number of bytes that were missed during observation, typically</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">due to packet loss or sampling limitations.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">number</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">bytes</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">were</span><span class="nv"> </span><span class="s">missed</span><span class="nv"> </span><span class="s">during</span><span class="nv"> </span><span class="s">observation,</span><span class="nv"> </span><span class="s">typically</span>
+<span class="w">      </span><span class="s">due</span><span class="nv"> </span><span class="s">to</span>
+
+<span class="w">      </span><span class="s">packet</span><span class="nv"> </span><span class="s">loss</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">sampling</span><span class="nv"> </span><span class="s">limitations.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Bytes Missed</span>
@@ -955,8 +1022,9 @@
 <span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">integer</span>
 <span class="w">  </span><span class="nt">bytes_out</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">bytes_out</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The number of bytes sent from the source to the destination (outbound</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">direction).</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">number</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">bytes</span><span class="nv"> </span><span class="s">sent</span><span class="nv"> </span><span class="s">from</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">source</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">destination</span><span class="nv"> </span><span class="s">(outbound</span>
+
+<span class="w">      </span><span class="s">direction).'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Bytes Out</span>
@@ -968,8 +1036,10 @@
 <span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">integer</span>
 <span class="w">  </span><span class="nt">chunks</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">chunks</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The total number of chunks transferred in both directions (sum of</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">chunks_in and chunks_out).</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">total</span><span class="nv"> </span><span class="s">number</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">chunks</span><span class="nv"> </span><span class="s">transferred</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">both</span><span class="nv"> </span><span class="s">directions</span><span class="nv"> </span><span class="s">(sum</span><span class="nv"> </span><span class="s">of</span>
+<span class="w">      </span><span class="s">chunks_in</span><span class="nv"> </span><span class="s">and</span>
+
+<span class="w">      </span><span class="s">chunks_out).'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Chunks</span>
@@ -981,8 +1051,9 @@
 <span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">integer</span>
 <span class="w">  </span><span class="nt">chunks_in</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">chunks_in</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The number of chunks sent from the destination to the source (inbound</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">direction).</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">number</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">chunks</span><span class="nv"> </span><span class="s">sent</span><span class="nv"> </span><span class="s">from</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">destination</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">source</span><span class="nv"> </span><span class="s">(inbound</span>
+
+<span class="w">      </span><span class="s">direction).'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Chunks In</span>
@@ -994,8 +1065,9 @@
 <span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">integer</span>
 <span class="w">  </span><span class="nt">chunks_out</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">chunks_out</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The number of chunks sent from the source to the destination (outbound</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">direction).</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">number</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">chunks</span><span class="nv"> </span><span class="s">sent</span><span class="nv"> </span><span class="s">from</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">source</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">destination</span><span class="nv"> </span><span class="s">(outbound</span>
+
+<span class="w">      </span><span class="s">direction).'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Chunks Out</span>
@@ -1028,8 +1100,10 @@
 <span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">TimestampT</span>
 <span class="w">  </span><span class="nt">packets</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">packets</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The total number of packets transferred in both directions (sum of</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">packets_in and packets_out).</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">total</span><span class="nv"> </span><span class="s">number</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">packets</span><span class="nv"> </span><span class="s">transferred</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">both</span><span class="nv"> </span><span class="s">directions</span><span class="nv"> </span><span class="s">(sum</span>
+<span class="w">      </span><span class="s">of</span><span class="nv"> </span><span class="s">packets_in</span>
+
+<span class="w">      </span><span class="s">and</span><span class="nv"> </span><span class="s">packets_out).'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Total Packets</span>
@@ -1042,8 +1116,9 @@
 <span class="w">    </span><span class="nt">recommended</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">packets_in</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">packets_in</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The number of packets sent from the destination to the source (inbound</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">direction).</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">number</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">packets</span><span class="nv"> </span><span class="s">sent</span><span class="nv"> </span><span class="s">from</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">destination</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">source</span><span class="nv"> </span><span class="s">(inbound</span>
+
+<span class="w">      </span><span class="s">direction).'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Packets In</span>
@@ -1055,8 +1130,9 @@
 <span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">integer</span>
 <span class="w">  </span><span class="nt">packets_out</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">packets_out</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The number of packets sent from the source to the destination (outbound</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">direction).</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">number</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">packets</span><span class="nv"> </span><span class="s">sent</span><span class="nv"> </span><span class="s">from</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">source</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">destination</span><span class="nv"> </span><span class="s">(outbound</span>
+
+<span class="w">      </span><span class="s">direction).'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Packets Out</span>
@@ -1089,8 +1165,10 @@
 <span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">TimestampT</span>
 <span class="w">  </span><span class="nt">timespan</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">timespan</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The time span object representing the duration of the observation</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">or reporting period.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">time</span><span class="nv"> </span><span class="s">span</span><span class="nv"> </span><span class="s">object</span><span class="nv"> </span><span class="s">representing</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">duration</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">observation</span>
+<span class="w">      </span><span class="s">or</span><span class="nv"> </span><span class="s">reporting</span>
+
+<span class="w">      </span><span class="s">period.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Time Span</span>

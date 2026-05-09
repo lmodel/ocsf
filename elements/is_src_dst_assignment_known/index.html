@@ -497,7 +497,15 @@
 
 
 <h1 id="slot-is_src_dst_assignment_known-deprecated">Slot: is_src_dst_assignment_known  <span style="color: red;"><strong> (DEPRECATED) </strong></span></h1>
-<p><em><code>true</code> denotes that <code>src_endpoint</code> and <code>dst_endpoint</code> correctly identify the initiator and responder respectively. <code>false</code> denotes that the event source has arbitrarily assigned one peer to <code>src_endpoint</code> and the other to <code>dst_endpoint</code>, in other words that initiator and responder are not being asserted. This can occur, for example, when the event source is a network appliance that has not observed the initiation of a given connection. In the absence of this attribute, interpretation of the initiator and responder is implementation-specific.</em></p>
+<p><em><code>true</code> denotes that <code>src_endpoint</code> and</em></p>
+<p><em><code>dst_endpoint</code> correctly identify the initiator and responder</em></p>
+<p><em>respectively. <code>false</code> denotes that the event source has arbitrarily</em></p>
+<p><em>assigned one peer to <code>src_endpoint</code> and the other to</em></p>
+<p><em><code>dst_endpoint</code>, in other words that initiator and responder are not</em></p>
+<p><em>being asserted. This can occur, for example, when the event source is a network</em></p>
+<p><em>appliance that has not observed the initiation of a given connection. In the</em></p>
+<p><em>absence of this attribute, interpretation of the initiator and responder is</em></p>
+<p><em>implementation-specific.</em></p>
 <p>URI: <a href="https://w3id.org/lmodel/ocsf/is_src_dst_assignment_known">ocsf:is_src_dst_assignment_known</a>
 Alias: is_src_dst_assignment_known</p>
 <!-- no inheritance hierarchy -->
@@ -585,16 +593,27 @@ Alias: is_src_dst_assignment_known</p>
 <h2 id="linkml-source">LinkML Source</h2>
 <details>
 <div class="highlight"><pre><span></span><code><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">is_src_dst_assignment_known</span>
-<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">&lt;code&gt;true&lt;/code&gt; denotes that &lt;code&gt;src_endpoint&lt;/code&gt; and &lt;code&gt;dst_endpoint&lt;/code&gt;</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">correctly identify the initiator and responder respectively. &lt;code&gt;false&lt;/code&gt;</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">denotes that the event source has arbitrarily assigned one peer to &lt;code&gt;src_endpoint&lt;/code&gt;</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">and the other to &lt;code&gt;dst_endpoint&lt;/code&gt;, in other words that initiator and responder</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">are not being asserted. This can occur, for example, when the event source is a</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">network appliance that has not observed the initiation of a given connection. In</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">the absence of this attribute, interpretation of the initiator and responder is</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">implementation-specific.</span>
-<span class="nt">deprecated</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Use &lt;code&gt;initiator_id&lt;/code&gt; instead, which provides richer semantics</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">for bi-flow and asymmetric flow scenarios. (since 1.9.0)</span>
+<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;&lt;code&gt;true&lt;/code&gt;</span><span class="nv"> </span><span class="s">denotes</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">&lt;code&gt;src_endpoint&lt;/code&gt;</span><span class="nv"> </span><span class="s">and</span>
+
+<span class="w">  </span><span class="s">&lt;code&gt;dst_endpoint&lt;/code&gt;</span><span class="nv"> </span><span class="s">correctly</span><span class="nv"> </span><span class="s">identify</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">initiator</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">responder</span>
+
+<span class="w">  </span><span class="s">respectively.</span><span class="nv"> </span><span class="s">&lt;code&gt;false&lt;/code&gt;</span><span class="nv"> </span><span class="s">denotes</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">event</span><span class="nv"> </span><span class="s">source</span><span class="nv"> </span><span class="s">has</span><span class="nv"> </span><span class="s">arbitrarily</span>
+
+<span class="w">  </span><span class="s">assigned</span><span class="nv"> </span><span class="s">one</span><span class="nv"> </span><span class="s">peer</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">&lt;code&gt;src_endpoint&lt;/code&gt;</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">other</span><span class="nv"> </span><span class="s">to</span>
+
+<span class="w">  </span><span class="s">&lt;code&gt;dst_endpoint&lt;/code&gt;,</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">other</span><span class="nv"> </span><span class="s">words</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">initiator</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">responder</span><span class="nv"> </span><span class="s">are</span><span class="nv"> </span><span class="s">not</span>
+
+<span class="w">  </span><span class="s">being</span><span class="nv"> </span><span class="s">asserted.</span><span class="nv"> </span><span class="s">This</span><span class="nv"> </span><span class="s">can</span><span class="nv"> </span><span class="s">occur,</span><span class="nv"> </span><span class="s">for</span><span class="nv"> </span><span class="s">example,</span><span class="nv"> </span><span class="s">when</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">event</span><span class="nv"> </span><span class="s">source</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">network</span>
+
+<span class="w">  </span><span class="s">appliance</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">has</span><span class="nv"> </span><span class="s">not</span><span class="nv"> </span><span class="s">observed</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">initiation</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">given</span><span class="nv"> </span><span class="s">connection.</span><span class="nv"> </span><span class="s">In</span><span class="nv"> </span><span class="s">the</span>
+
+<span class="w">  </span><span class="s">absence</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">this</span><span class="nv"> </span><span class="s">attribute,</span><span class="nv"> </span><span class="s">interpretation</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">initiator</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">responder</span><span class="nv"> </span><span class="s">is</span>
+
+<span class="w">  </span><span class="s">implementation-specific.&#39;</span>
+<span class="nt">deprecated</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;Use</span><span class="nv"> </span><span class="s">&lt;code&gt;initiator_id&lt;/code&gt;</span><span class="nv"> </span><span class="s">instead,</span><span class="nv"> </span><span class="s">which</span><span class="nv"> </span><span class="s">provides</span><span class="nv"> </span><span class="s">richer</span><span class="nv"> </span><span class="s">semantics</span>
+<span class="w">  </span><span class="s">for</span>
+
+<span class="w">  </span><span class="s">bi-flow</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">asymmetric</span><span class="nv"> </span><span class="s">flow</span><span class="nv"> </span><span class="s">scenarios.</span><span class="nv"> </span><span class="s">(since</span><span class="nv"> </span><span class="s">1.9.0)&#39;</span>
 <span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="nt">aliases</span><span class="p">:</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Source/Destination Assignment Known</span>

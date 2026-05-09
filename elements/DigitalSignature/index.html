@@ -217,6 +217,15 @@
 </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="#in-subsets">
+<span class="md-ellipsis">
+      
+        In Subsets
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#aliases">
 <span class="md-ellipsis">
       
@@ -295,7 +304,9 @@
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
 <h1 id="class-digitalsignature">Class: DigitalSignature</h1>
-<p><em>The Digital Signature object contains information about the cryptographic mechanism used to verify the authenticity, integrity, and origin of the file or application.</em></p>
+<p><em>The Digital Signature object contains information about the cryptographic</em></p>
+<p><em>mechanism used to verify the authenticity, integrity, and origin of the file or</em></p>
+<p><em>application.</em></p>
 <p>URI: <a href="https://w3id.org/lmodel/ocsf/DigitalSignature">ocsf:DigitalSignature</a></p>
 <pre class="mermaid"><code> classDiagram
     class DigitalSignature
@@ -410,13 +421,13 @@
 <tr>
 <td><a href="../digest/">digest</a></td>
 <td>0..1 <br/> <a href="../Fingerprint/">Fingerprint</a></td>
-<td>The message digest attribute contains the fixed length message hash represent...</td>
+<td>The message digest attribute contains the fixed length message hash</td>
 <td>direct</td>
 </tr>
 <tr>
 <td><a href="../state/">state</a></td>
 <td>0..1 <br/> <a href="../String/">String</a></td>
-<td>The digital signature state defines the signature state, normalized to the ca...</td>
+<td>The digital signature state defines the signature state, normalized to the</td>
 <td>direct</td>
 </tr>
 <tr>
@@ -458,6 +469,10 @@
 </tr>
 </tbody>
 </table>
+<h2 id="in-subsets">In Subsets</h2>
+<ul>
+<li><a href="../Objects/">Objects</a></li>
+</ul>
 <h2 id="aliases">Aliases</h2>
 <ul>
 <li>Digital Signature</li>
@@ -491,9 +506,13 @@
 <h3 id="direct">Direct</h3>
 <details>
 <div class="highlight"><pre><span></span><code><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">DigitalSignature</span>
-<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The Digital Signature object contains information about the cryptographic</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">mechanism used to verify the authenticity, integrity, and origin of the file or</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">application.</span>
+<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">Digital</span><span class="nv"> </span><span class="s">Signature</span><span class="nv"> </span><span class="s">object</span><span class="nv"> </span><span class="s">contains</span><span class="nv"> </span><span class="s">information</span><span class="nv"> </span><span class="s">about</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">cryptographic</span>
+
+<span class="w">  </span><span class="s">mechanism</span><span class="nv"> </span><span class="s">used</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">verify</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">authenticity,</span><span class="nv"> </span><span class="s">integrity,</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">origin</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">file</span><span class="nv"> </span><span class="s">or</span>
+
+<span class="w">  </span><span class="s">application.'</span>
+<span class="nt">in_subset</span><span class="p">:</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">objects</span>
 <span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="nt">aliases</span><span class="p">:</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Digital Signature</span>
@@ -510,9 +529,13 @@
 <span class="nt">slot_usage</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">algorithm</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">algorithm</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The digital signature algorithm used to create the signature, normalized</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">to the caption of 'algorithm_id'. In the case of 'Other', it is defined by the</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">event source.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">digital</span><span class="nv"> </span><span class="s">signature</span><span class="nv"> </span><span class="s">algorithm</span><span class="nv"> </span><span class="s">used</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">create</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">signature,</span><span class="nv"> </span><span class="s">normalized</span>
+<span class="w">      </span><span class="s">to</span><span class="nv"> </span><span class="s">the</span>
+
+<span class="w">      </span><span class="s">caption</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="se">''</span><span class="s">algorithm_id</span><span class="se">''</span><span class="s">.</span><span class="nv"> </span><span class="s">In</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">case</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="se">''</span><span class="s">Other</span><span class="se">''</span><span class="s">,</span><span class="nv"> </span><span class="s">it</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">defined</span><span class="nv"> </span><span class="s">by</span><span class="nv"> </span><span class="s">the</span>
+<span class="w">      </span><span class="s">event</span>
+
+<span class="w">      </span><span class="s">source.'</span>
 <span class="w">  </span><span class="nt">algorithm_id</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">algorithm_id</span>
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The identifier of the normalized digital signature algorithm.</span>
@@ -526,9 +549,12 @@
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The time when the digital signature was created.</span>
 <span class="w">  </span><span class="nt">state</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">state</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The digital signature state defines the signature state, normalized</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">to the caption of 'state_id'. In the case of 'Other', it is defined by the event</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">source.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">digital</span><span class="nv"> </span><span class="s">signature</span><span class="nv"> </span><span class="s">state</span><span class="nv"> </span><span class="s">defines</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">signature</span><span class="nv"> </span><span class="s">state,</span><span class="nv"> </span><span class="s">normalized</span>
+<span class="w">      </span><span class="s">to</span><span class="nv"> </span><span class="s">the</span>
+
+<span class="w">      </span><span class="s">caption</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="se">''</span><span class="s">state_id</span><span class="se">''</span><span class="s">.</span><span class="nv"> </span><span class="s">In</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">case</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="se">''</span><span class="s">Other</span><span class="se">''</span><span class="s">,</span><span class="nv"> </span><span class="s">it</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">defined</span><span class="nv"> </span><span class="s">by</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">event</span>
+
+<span class="w">      </span><span class="s">source.'</span>
 <span class="w">  </span><span class="nt">state_id</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">state_id</span>
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The normalized identifier of the signature state.</span>
@@ -538,9 +564,13 @@
 <h3 id="induced">Induced</h3>
 <details>
 <div class="highlight"><pre><span></span><code><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">DigitalSignature</span>
-<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The Digital Signature object contains information about the cryptographic</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">mechanism used to verify the authenticity, integrity, and origin of the file or</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">application.</span>
+<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">Digital</span><span class="nv"> </span><span class="s">Signature</span><span class="nv"> </span><span class="s">object</span><span class="nv"> </span><span class="s">contains</span><span class="nv"> </span><span class="s">information</span><span class="nv"> </span><span class="s">about</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">cryptographic</span>
+
+<span class="w">  </span><span class="s">mechanism</span><span class="nv"> </span><span class="s">used</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">verify</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">authenticity,</span><span class="nv"> </span><span class="s">integrity,</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">origin</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">file</span><span class="nv"> </span><span class="s">or</span>
+
+<span class="w">  </span><span class="s">application.'</span>
+<span class="nt">in_subset</span><span class="p">:</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">objects</span>
 <span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="nt">aliases</span><span class="p">:</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Digital Signature</span>
@@ -548,9 +578,13 @@
 <span class="nt">slot_usage</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">algorithm</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">algorithm</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The digital signature algorithm used to create the signature, normalized</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">to the caption of 'algorithm_id'. In the case of 'Other', it is defined by the</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">event source.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">digital</span><span class="nv"> </span><span class="s">signature</span><span class="nv"> </span><span class="s">algorithm</span><span class="nv"> </span><span class="s">used</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">create</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">signature,</span><span class="nv"> </span><span class="s">normalized</span>
+<span class="w">      </span><span class="s">to</span><span class="nv"> </span><span class="s">the</span>
+
+<span class="w">      </span><span class="s">caption</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="se">''</span><span class="s">algorithm_id</span><span class="se">''</span><span class="s">.</span><span class="nv"> </span><span class="s">In</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">case</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="se">''</span><span class="s">Other</span><span class="se">''</span><span class="s">,</span><span class="nv"> </span><span class="s">it</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">defined</span><span class="nv"> </span><span class="s">by</span><span class="nv"> </span><span class="s">the</span>
+<span class="w">      </span><span class="s">event</span>
+
+<span class="w">      </span><span class="s">source.'</span>
 <span class="w">  </span><span class="nt">algorithm_id</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">algorithm_id</span>
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The identifier of the normalized digital signature algorithm.</span>
@@ -564,9 +598,12 @@
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The time when the digital signature was created.</span>
 <span class="w">  </span><span class="nt">state</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">state</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The digital signature state defines the signature state, normalized</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">to the caption of 'state_id'. In the case of 'Other', it is defined by the event</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">source.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">digital</span><span class="nv"> </span><span class="s">signature</span><span class="nv"> </span><span class="s">state</span><span class="nv"> </span><span class="s">defines</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">signature</span><span class="nv"> </span><span class="s">state,</span><span class="nv"> </span><span class="s">normalized</span>
+<span class="w">      </span><span class="s">to</span><span class="nv"> </span><span class="s">the</span>
+
+<span class="w">      </span><span class="s">caption</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="se">''</span><span class="s">state_id</span><span class="se">''</span><span class="s">.</span><span class="nv"> </span><span class="s">In</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">case</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="se">''</span><span class="s">Other</span><span class="se">''</span><span class="s">,</span><span class="nv"> </span><span class="s">it</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">defined</span><span class="nv"> </span><span class="s">by</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">event</span>
+
+<span class="w">      </span><span class="s">source.'</span>
 <span class="w">  </span><span class="nt">state_id</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">state_id</span>
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The normalized identifier of the signature state.</span>
@@ -574,9 +611,13 @@
 <span class="nt">attributes</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">algorithm</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">algorithm</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The digital signature algorithm used to create the signature, normalized</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">to the caption of 'algorithm_id'. In the case of 'Other', it is defined by the</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">event source.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">digital</span><span class="nv"> </span><span class="s">signature</span><span class="nv"> </span><span class="s">algorithm</span><span class="nv"> </span><span class="s">used</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">create</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">signature,</span><span class="nv"> </span><span class="s">normalized</span>
+<span class="w">      </span><span class="s">to</span><span class="nv"> </span><span class="s">the</span>
+
+<span class="w">      </span><span class="s">caption</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="se">''</span><span class="s">algorithm_id</span><span class="se">''</span><span class="s">.</span><span class="nv"> </span><span class="s">In</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">case</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="se">''</span><span class="s">Other</span><span class="se">''</span><span class="s">,</span><span class="nv"> </span><span class="s">it</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">defined</span><span class="nv"> </span><span class="s">by</span><span class="nv"> </span><span class="s">the</span>
+<span class="w">      </span><span class="s">event</span>
+
+<span class="w">      </span><span class="s">source.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Algorithm</span>
@@ -677,8 +718,9 @@
 <span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">string</span>
 <span class="w">  </span><span class="nt">digest</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">digest</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The message digest attribute contains the fixed length message hash</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">representation and the corresponding hashing algorithm information.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">message</span><span class="nv"> </span><span class="s">digest</span><span class="nv"> </span><span class="s">attribute</span><span class="nv"> </span><span class="s">contains</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">fixed</span><span class="nv"> </span><span class="s">length</span><span class="nv"> </span><span class="s">message</span><span class="nv"> </span><span class="s">hash</span>
+
+<span class="w">      </span><span class="s">representation</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">corresponding</span><span class="nv"> </span><span class="s">hashing</span><span class="nv"> </span><span class="s">algorithm</span><span class="nv"> </span><span class="s">information.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Message Digest</span>
@@ -690,9 +732,12 @@
 <span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Fingerprint</span>
 <span class="w">  </span><span class="nt">state</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">state</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The digital signature state defines the signature state, normalized</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">to the caption of 'state_id'. In the case of 'Other', it is defined by the event</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">source.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">digital</span><span class="nv"> </span><span class="s">signature</span><span class="nv"> </span><span class="s">state</span><span class="nv"> </span><span class="s">defines</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">signature</span><span class="nv"> </span><span class="s">state,</span><span class="nv"> </span><span class="s">normalized</span>
+<span class="w">      </span><span class="s">to</span><span class="nv"> </span><span class="s">the</span>
+
+<span class="w">      </span><span class="s">caption</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="se">''</span><span class="s">state_id</span><span class="se">''</span><span class="s">.</span><span class="nv"> </span><span class="s">In</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">case</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="se">''</span><span class="s">Other</span><span class="se">''</span><span class="s">,</span><span class="nv"> </span><span class="s">it</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">defined</span><span class="nv"> </span><span class="s">by</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">event</span>
+
+<span class="w">      </span><span class="s">source.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">State</span>

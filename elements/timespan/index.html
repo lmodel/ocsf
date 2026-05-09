@@ -497,7 +497,12 @@
 
 
 <h1 id="slot-timespan">Slot: timespan</h1>
-<p><em>The Time Span object represents different time period durations. If a timespan is fractional, i.e. crosses one period, e.g. a week and 3 days, more than one may be populated since each member is of integral type. In that case <code>type_id</code> if present should be set to <code>Other.</code><P>A timespan may also be defined by its time interval boundaries, <code>start_time</code> and <code>end_time</code>.</em></p>
+<p><em>The Time Span object represents different time period durations. If a timespan</em></p>
+<p><em>is fractional, i.e. crosses one period, e.g. a week and 3 days, more than one</em></p>
+<p><em>may be populated since each member is of integral type. In that case</em></p>
+<p><em><code>type_id</code> if present should be set to <code>Other.</code><P>A</em></p>
+<p><em>timespan may also be defined by its time interval boundaries,</em></p>
+<p><em><code>start_time</code> and <code>end_time</code>.</em></p>
 <p>URI: <a href="https://w3id.org/lmodel/ocsf/timespan">ocsf:timespan</a>
 Alias: timespan</p>
 <!-- no inheritance hierarchy -->
@@ -514,7 +519,7 @@ Alias: timespan</p>
 <tbody>
 <tr>
 <td><a href="../Observation/">Observation</a></td>
-<td>A record of an observed value or event that captures the timing and frequency...</td>
+<td>A record of an observed value or event that captures the timing and frequency</td>
 <td>yes</td>
 </tr>
 <tr>
@@ -590,11 +595,18 @@ Alias: timespan</p>
 <h2 id="linkml-source">LinkML Source</h2>
 <details>
 <div class="highlight"><pre><span></span><code><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">timespan</span>
-<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The Time Span object represents different time period durations. If a</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">timespan is fractional, i.e. crosses one period, e.g. a week and 3 days, more than</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">one may be populated since each member is of integral type. In that case &lt;code&gt;type_id&lt;/code&gt;</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">if present should be set to &lt;code&gt;Other.&lt;/code&gt;&lt;P&gt;A timespan may also be defined</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">by its time interval boundaries, &lt;code&gt;start_time&lt;/code&gt; and &lt;code&gt;end_time&lt;/code&gt;.</span>
+<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;The</span><span class="nv"> </span><span class="s">Time</span><span class="nv"> </span><span class="s">Span</span><span class="nv"> </span><span class="s">object</span><span class="nv"> </span><span class="s">represents</span><span class="nv"> </span><span class="s">different</span><span class="nv"> </span><span class="s">time</span><span class="nv"> </span><span class="s">period</span><span class="nv"> </span><span class="s">durations.</span><span class="nv"> </span><span class="s">If</span>
+<span class="w">  </span><span class="s">a</span><span class="nv"> </span><span class="s">timespan</span>
+
+<span class="w">  </span><span class="s">is</span><span class="nv"> </span><span class="s">fractional,</span><span class="nv"> </span><span class="s">i.e.</span><span class="nv"> </span><span class="s">crosses</span><span class="nv"> </span><span class="s">one</span><span class="nv"> </span><span class="s">period,</span><span class="nv"> </span><span class="s">e.g.</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">week</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">3</span><span class="nv"> </span><span class="s">days,</span><span class="nv"> </span><span class="s">more</span><span class="nv"> </span><span class="s">than</span><span class="nv"> </span><span class="s">one</span>
+
+<span class="w">  </span><span class="s">may</span><span class="nv"> </span><span class="s">be</span><span class="nv"> </span><span class="s">populated</span><span class="nv"> </span><span class="s">since</span><span class="nv"> </span><span class="s">each</span><span class="nv"> </span><span class="s">member</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">integral</span><span class="nv"> </span><span class="s">type.</span><span class="nv"> </span><span class="s">In</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">case</span>
+
+<span class="w">  </span><span class="s">&lt;code&gt;type_id&lt;/code&gt;</span><span class="nv"> </span><span class="s">if</span><span class="nv"> </span><span class="s">present</span><span class="nv"> </span><span class="s">should</span><span class="nv"> </span><span class="s">be</span><span class="nv"> </span><span class="s">set</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">&lt;code&gt;Other.&lt;/code&gt;&lt;P&gt;A</span>
+
+<span class="w">  </span><span class="s">timespan</span><span class="nv"> </span><span class="s">may</span><span class="nv"> </span><span class="s">also</span><span class="nv"> </span><span class="s">be</span><span class="nv"> </span><span class="s">defined</span><span class="nv"> </span><span class="s">by</span><span class="nv"> </span><span class="s">its</span><span class="nv"> </span><span class="s">time</span><span class="nv"> </span><span class="s">interval</span><span class="nv"> </span><span class="s">boundaries,</span>
+
+<span class="w">  </span><span class="s">&lt;code&gt;start_time&lt;/code&gt;</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">&lt;code&gt;end_time&lt;/code&gt;.&#39;</span>
 <span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="nt">aliases</span><span class="p">:</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Time Span</span>

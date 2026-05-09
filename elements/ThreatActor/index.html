@@ -217,6 +217,15 @@
 </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="#in-subsets">
+<span class="md-ellipsis">
+      
+        In Subsets
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#aliases">
 <span class="md-ellipsis">
       
@@ -349,7 +358,7 @@
 <tr>
 <td><a href="../type/">type</a></td>
 <td>0..1 <br/> <a href="../String/">String</a></td>
-<td>The classification of the threat actor based on their motivations, capabiliti...</td>
+<td>The classification of the threat actor based on their motivations,</td>
 <td>direct</td>
 </tr>
 <tr>
@@ -379,6 +388,10 @@
 </tr>
 </tbody>
 </table>
+<h2 id="in-subsets">In Subsets</h2>
+<ul>
+<li><a href="../Objects/">Objects</a></li>
+</ul>
 <h2 id="aliases">Aliases</h2>
 <ul>
 <li>Threat Actor</li>
@@ -421,6 +434,8 @@
 <details>
 <div class="highlight"><pre><span></span><code><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ThreatActor</span>
 <span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Threat actor is responsible for the observed malicious activity.</span>
+<span class="nt">in_subset</span><span class="p">:</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">objects</span>
 <span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="nt">aliases</span><span class="p">:</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Threat Actor</span>
@@ -440,9 +455,11 @@
 <span class="w">    </span><span class="nt">required</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">type</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">type</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The classification of the threat actor based on their motivations,</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">capabilities, or affiliations. Common types include nation-state actors, cybercriminal</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">groups, hacktivists, or insider threats.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">classification</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">threat</span><span class="nv"> </span><span class="s">actor</span><span class="nv"> </span><span class="s">based</span><span class="nv"> </span><span class="s">on</span><span class="nv"> </span><span class="s">their</span><span class="nv"> </span><span class="s">motivations,</span>
+
+<span class="w">      </span><span class="s">capabilities,</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">affiliations.</span><span class="nv"> </span><span class="s">Common</span><span class="nv"> </span><span class="s">types</span><span class="nv"> </span><span class="s">include</span><span class="nv"> </span><span class="s">nation-state</span><span class="nv"> </span><span class="s">actors,</span>
+
+<span class="w">      </span><span class="s">cybercriminal</span><span class="nv"> </span><span class="s">groups,</span><span class="nv"> </span><span class="s">hacktivists,</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">insider</span><span class="nv"> </span><span class="s">threats.'</span>
 <span class="w">  </span><span class="nt">type_id</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">type_id</span>
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The normalized datastore resource type identifier.</span>
@@ -454,6 +471,8 @@
 <details>
 <div class="highlight"><pre><span></span><code><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ThreatActor</span>
 <span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Threat actor is responsible for the observed malicious activity.</span>
+<span class="nt">in_subset</span><span class="p">:</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">objects</span>
 <span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="nt">aliases</span><span class="p">:</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Threat Actor</span>
@@ -469,9 +488,11 @@
 <span class="w">    </span><span class="nt">required</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">type</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">type</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The classification of the threat actor based on their motivations,</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">capabilities, or affiliations. Common types include nation-state actors, cybercriminal</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">groups, hacktivists, or insider threats.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">classification</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">threat</span><span class="nv"> </span><span class="s">actor</span><span class="nv"> </span><span class="s">based</span><span class="nv"> </span><span class="s">on</span><span class="nv"> </span><span class="s">their</span><span class="nv"> </span><span class="s">motivations,</span>
+
+<span class="w">      </span><span class="s">capabilities,</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">affiliations.</span><span class="nv"> </span><span class="s">Common</span><span class="nv"> </span><span class="s">types</span><span class="nv"> </span><span class="s">include</span><span class="nv"> </span><span class="s">nation-state</span><span class="nv"> </span><span class="s">actors,</span>
+
+<span class="w">      </span><span class="s">cybercriminal</span><span class="nv"> </span><span class="s">groups,</span><span class="nv"> </span><span class="s">hacktivists,</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">insider</span><span class="nv"> </span><span class="s">threats.'</span>
 <span class="w">  </span><span class="nt">type_id</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">type_id</span>
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The normalized datastore resource type identifier.</span>
@@ -582,9 +603,11 @@
 <span class="w">    </span><span class="nt">required</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">type</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">type</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The classification of the threat actor based on their motivations,</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">capabilities, or affiliations. Common types include nation-state actors, cybercriminal</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">groups, hacktivists, or insider threats.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">classification</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">threat</span><span class="nv"> </span><span class="s">actor</span><span class="nv"> </span><span class="s">based</span><span class="nv"> </span><span class="s">on</span><span class="nv"> </span><span class="s">their</span><span class="nv"> </span><span class="s">motivations,</span>
+
+<span class="w">      </span><span class="s">capabilities,</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">affiliations.</span><span class="nv"> </span><span class="s">Common</span><span class="nv"> </span><span class="s">types</span><span class="nv"> </span><span class="s">include</span><span class="nv"> </span><span class="s">nation-state</span><span class="nv"> </span><span class="s">actors,</span>
+
+<span class="w">      </span><span class="s">cybercriminal</span><span class="nv"> </span><span class="s">groups,</span><span class="nv"> </span><span class="s">hacktivists,</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">insider</span><span class="nv"> </span><span class="s">threats.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Type</span>

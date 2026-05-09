@@ -217,6 +217,15 @@
 </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="#in-subsets">
+<span class="md-ellipsis">
+      
+        In Subsets
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#aliases">
 <span class="md-ellipsis">
       
@@ -313,7 +322,10 @@
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
 <h1 id="class-certificate">Class: Certificate</h1>
-<p><em>The Digital Certificate, also known as a Public Key Certificate, object contains information about the ownership and usage of a public key. It serves as a means to establish trust in the authenticity and integrity of the public key and the associated entity.</em></p>
+<p><em>The Digital Certificate, also known as a Public Key Certificate, object</em></p>
+<p><em>contains information about the ownership and usage of a public key. It serves</em></p>
+<p><em>as a means to establish trust in the authenticity and integrity of the public</em></p>
+<p><em>key and the associated entity.</em></p>
 <p>URI: <a href="https://w3id.org/lmodel/ocsf/Certificate">ocsf:Certificate</a></p>
 <pre class="mermaid"><code> classDiagram
     class Certificate
@@ -402,7 +414,7 @@
 <tr>
 <td><a href="../is_self_signed/">is_self_signed</a></td>
 <td>0..1 <em>recommended</em> <br/> <a href="../Boolean/">Boolean</a></td>
-<td>Denotes whether a digital certificate is self-signed or signed by a known cer...</td>
+<td>Denotes whether a digital certificate is self-signed or signed by a known</td>
 <td>direct</td>
 </tr>
 <tr>
@@ -414,7 +426,7 @@
 <tr>
 <td><a href="../sans/">sans</a></td>
 <td>* <br/> <a href="../San/">San</a></td>
-<td>The list of subject alternative names that are secured by a specific certific...</td>
+<td>The list of subject alternative names that are secured by a specific</td>
 <td>direct</td>
 </tr>
 <tr>
@@ -480,6 +492,10 @@
 </tr>
 </tbody>
 </table>
+<h2 id="in-subsets">In Subsets</h2>
+<ul>
+<li><a href="../Objects/">Objects</a></li>
+</ul>
 <h2 id="aliases">Aliases</h2>
 <ul>
 <li>Digital Certificate</li>
@@ -490,7 +506,8 @@
 </ul>
 <h2 id="notes">Notes</h2>
 <ul>
-<li>D3FEND™ Ontology d3f:Certificate. — <a href="https://d3fend.mitre.org/dao/artifact/d3f:Certificate/">https://d3fend.mitre.org/dao/artifact/d3f:Certificate/</a></li>
+<li>D3FEND™ Ontology d3f:Certificate. —
+<a href="https://d3fend.mitre.org/dao/artifact/d3f:Certificate/">https://d3fend.mitre.org/dao/artifact/d3f:Certificate/</a></li>
 </ul>
 <h2 id="identifier-and-mapping-information">Identifier and Mapping Information</h2>
 <h3 id="schema-source">Schema Source</h3>
@@ -525,12 +542,19 @@
 <h3 id="direct">Direct</h3>
 <details>
 <div class="highlight"><pre><span></span><code><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Certificate</span>
-<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The Digital Certificate, also known as a Public Key Certificate, object</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">contains information about the ownership and usage of a public key. It serves as</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">a means to establish trust in the authenticity and integrity of the public key and</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">the associated entity.</span>
+<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">Digital</span><span class="nv"> </span><span class="s">Certificate,</span><span class="nv"> </span><span class="s">also</span><span class="nv"> </span><span class="s">known</span><span class="nv"> </span><span class="s">as</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">Public</span><span class="nv"> </span><span class="s">Key</span><span class="nv"> </span><span class="s">Certificate,</span><span class="nv"> </span><span class="s">object</span>
+
+<span class="w">  </span><span class="s">contains</span><span class="nv"> </span><span class="s">information</span><span class="nv"> </span><span class="s">about</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">ownership</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">usage</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">public</span><span class="nv"> </span><span class="s">key.</span><span class="nv"> </span><span class="s">It</span><span class="nv"> </span><span class="s">serves</span>
+
+<span class="w">  </span><span class="s">as</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">means</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">establish</span><span class="nv"> </span><span class="s">trust</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">authenticity</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">integrity</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">public</span>
+
+<span class="w">  </span><span class="s">key</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">associated</span><span class="nv"> </span><span class="s">entity.'</span>
 <span class="nt">notes</span><span class="p">:</span>
-<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">D3FEND™ Ontology d3f:Certificate. — https://d3fend.mitre.org/dao/artifact/d3f:Certificate/</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="s">'D3FEND™</span><span class="nv"> </span><span class="s">Ontology</span><span class="nv"> </span><span class="s">d3f:Certificate.</span><span class="nv"> </span><span class="s">—</span>
+
+<span class="w">  </span><span class="s">https://d3fend.mitre.org/dao/artifact/d3f:Certificate/'</span>
+<span class="nt">in_subset</span><span class="p">:</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">objects</span>
 <span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="nt">see_also</span><span class="p">:</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://d3fend.mitre.org/dao/artifact/d3f:Certificate/</span>
@@ -572,8 +596,9 @@
 <span class="w">    </span><span class="nt">required</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">sans</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">sans</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The list of subject alternative names that are secured by a specific</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">certificate.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">list</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">subject</span><span class="nv"> </span><span class="s">alternative</span><span class="nv"> </span><span class="s">names</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">are</span><span class="nv"> </span><span class="s">secured</span><span class="nv"> </span><span class="s">by</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">specific</span>
+
+<span class="w">      </span><span class="s">certificate.'</span>
 <span class="w">  </span><span class="nt">serial_number</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">serial_number</span>
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The serial number of the certificate used to create the digital signature.</span>
@@ -594,12 +619,19 @@
 <h3 id="induced">Induced</h3>
 <details>
 <div class="highlight"><pre><span></span><code><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Certificate</span>
-<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The Digital Certificate, also known as a Public Key Certificate, object</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">contains information about the ownership and usage of a public key. It serves as</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">a means to establish trust in the authenticity and integrity of the public key and</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">the associated entity.</span>
+<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">Digital</span><span class="nv"> </span><span class="s">Certificate,</span><span class="nv"> </span><span class="s">also</span><span class="nv"> </span><span class="s">known</span><span class="nv"> </span><span class="s">as</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">Public</span><span class="nv"> </span><span class="s">Key</span><span class="nv"> </span><span class="s">Certificate,</span><span class="nv"> </span><span class="s">object</span>
+
+<span class="w">  </span><span class="s">contains</span><span class="nv"> </span><span class="s">information</span><span class="nv"> </span><span class="s">about</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">ownership</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">usage</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">public</span><span class="nv"> </span><span class="s">key.</span><span class="nv"> </span><span class="s">It</span><span class="nv"> </span><span class="s">serves</span>
+
+<span class="w">  </span><span class="s">as</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">means</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">establish</span><span class="nv"> </span><span class="s">trust</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">authenticity</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">integrity</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">public</span>
+
+<span class="w">  </span><span class="s">key</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">associated</span><span class="nv"> </span><span class="s">entity.'</span>
 <span class="nt">notes</span><span class="p">:</span>
-<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">D3FEND™ Ontology d3f:Certificate. — https://d3fend.mitre.org/dao/artifact/d3f:Certificate/</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="s">'D3FEND™</span><span class="nv"> </span><span class="s">Ontology</span><span class="nv"> </span><span class="s">d3f:Certificate.</span><span class="nv"> </span><span class="s">—</span>
+
+<span class="w">  </span><span class="s">https://d3fend.mitre.org/dao/artifact/d3f:Certificate/'</span>
+<span class="nt">in_subset</span><span class="p">:</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">objects</span>
 <span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="nt">see_also</span><span class="p">:</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://d3fend.mitre.org/dao/artifact/d3f:Certificate/</span>
@@ -630,8 +662,9 @@
 <span class="w">    </span><span class="nt">required</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">sans</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">sans</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The list of subject alternative names that are secured by a specific</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">certificate.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">list</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">subject</span><span class="nv"> </span><span class="s">alternative</span><span class="nv"> </span><span class="s">names</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">are</span><span class="nv"> </span><span class="s">secured</span><span class="nv"> </span><span class="s">by</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">specific</span>
+
+<span class="w">      </span><span class="s">certificate.'</span>
 <span class="w">  </span><span class="nt">serial_number</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">serial_number</span>
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The serial number of the certificate used to create the digital signature.</span>
@@ -724,8 +757,10 @@
 <span class="w">    </span><span class="nt">multivalued</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">is_self_signed</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">is_self_signed</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Denotes whether a digital certificate is self-signed or signed by</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">a known certificate authority (CA).</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'Denotes</span><span class="nv"> </span><span class="s">whether</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">digital</span><span class="nv"> </span><span class="s">certificate</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">self-signed</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">signed</span><span class="nv"> </span><span class="s">by</span>
+<span class="w">      </span><span class="s">a</span><span class="nv"> </span><span class="s">known</span>
+
+<span class="w">      </span><span class="s">certificate</span><span class="nv"> </span><span class="s">authority</span><span class="nv"> </span><span class="s">(CA).'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Certificate Self-Signed</span>
@@ -753,8 +788,9 @@
 <span class="w">    </span><span class="nt">required</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">sans</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">sans</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The list of subject alternative names that are secured by a specific</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">certificate.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">list</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">subject</span><span class="nv"> </span><span class="s">alternative</span><span class="nv"> </span><span class="s">names</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">are</span><span class="nv"> </span><span class="s">secured</span><span class="nv"> </span><span class="s">by</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">specific</span>
+
+<span class="w">      </span><span class="s">certificate.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Subject Alternative Names</span>

@@ -497,7 +497,10 @@
 
 
 <h1 id="slot-network_interfaces">Slot: network_interfaces</h1>
-<p><em>The physical or virtual network interfaces that are associated with the device, one for each unique MAC address/IP address/hostname/name combination.<p><b>Note:</b> The first element of the array is the network information that pertains to the event.</p></em></p>
+<p><em>The physical or virtual network interfaces that are associated with the device,</em></p>
+<p><em>one for each unique MAC address/IP address/hostname/name</em></p>
+<p><em>combination.<p><b>Note:</b> The first element of the array is the network</em></p>
+<p><em>information that pertains to the event.</p></em></p>
 <p>URI: <a href="https://w3id.org/lmodel/ocsf/network_interfaces">ocsf:network_interfaces</a>
 Alias: network_interfaces</p>
 <!-- no inheritance hierarchy -->
@@ -513,24 +516,24 @@ Alias: network_interfaces</p>
 </thead>
 <tbody>
 <tr>
-<td><a href="../Device/">Device</a></td>
-<td>The Device object represents an addressable computer system or host, which is...</td>
-<td>no</td>
-</tr>
-<tr>
-<td><a href="../WindowsQueryEvidence/">WindowsQueryEvidence</a></td>
-<td>The resulting evidence information that was queried</td>
-<td>no</td>
-</tr>
-<tr>
 <td><a href="../QueryEvidence/">QueryEvidence</a></td>
 <td>The specific resulting evidence information that was queried or discovered</td>
 <td>yes</td>
 </tr>
 <tr>
+<td><a href="../Device/">Device</a></td>
+<td>The Device object represents an addressable computer system or host, which is</td>
+<td>no</td>
+</tr>
+<tr>
 <td><a href="../NetworksQuery/">NetworksQuery</a></td>
 <td>Networks Query events report information about network adapters</td>
 <td>yes</td>
+</tr>
+<tr>
+<td><a href="../WindowsQueryEvidence/">WindowsQueryEvidence</a></td>
+<td>The resulting evidence information that was queried</td>
+<td>no</td>
 </tr>
 </tbody>
 </table>
@@ -600,9 +603,14 @@ Alias: network_interfaces</p>
 <h2 id="linkml-source">LinkML Source</h2>
 <details>
 <div class="highlight"><pre><span></span><code><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">network_interfaces</span>
-<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The physical or virtual network interfaces that are associated with the</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">device, one for each unique MAC address/IP address/hostname/name combination.&lt;p&gt;&lt;b&gt;Note:&lt;/b&gt;</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">The first element of the array is the network information that pertains to the event.&lt;/p&gt;</span>
+<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;The</span><span class="nv"> </span><span class="s">physical</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">virtual</span><span class="nv"> </span><span class="s">network</span><span class="nv"> </span><span class="s">interfaces</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">are</span><span class="nv"> </span><span class="s">associated</span><span class="nv"> </span><span class="s">with</span>
+<span class="w">  </span><span class="s">the</span><span class="nv"> </span><span class="s">device,</span>
+
+<span class="w">  </span><span class="s">one</span><span class="nv"> </span><span class="s">for</span><span class="nv"> </span><span class="s">each</span><span class="nv"> </span><span class="s">unique</span><span class="nv"> </span><span class="s">MAC</span><span class="nv"> </span><span class="s">address/IP</span><span class="nv"> </span><span class="s">address/hostname/name</span>
+
+<span class="w">  </span><span class="s">combination.&lt;p&gt;&lt;b&gt;Note:&lt;/b&gt;</span><span class="nv"> </span><span class="s">The</span><span class="nv"> </span><span class="s">first</span><span class="nv"> </span><span class="s">element</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">array</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">network</span>
+
+<span class="w">  </span><span class="s">information</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">pertains</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">event.&lt;/p&gt;&#39;</span>
 <span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="nt">aliases</span><span class="p">:</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Network Interfaces</span>

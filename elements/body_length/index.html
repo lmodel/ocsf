@@ -497,7 +497,8 @@
 
 
 <h1 id="slot-body_length">Slot: body_length</h1>
-<p><em>The actual length of the HTTP response/request body, in number of bytes, independent of a potentially existing Content-Length header.</em></p>
+<p><em>The actual length of the HTTP response/request body, in number of bytes,</em></p>
+<p><em>independent of a potentially existing Content-Length header.</em></p>
 <p>URI: <a href="https://w3id.org/lmodel/ocsf/body_length">ocsf:body_length</a>
 Alias: body_length</p>
 <!-- no inheritance hierarchy -->
@@ -513,13 +514,13 @@ Alias: body_length</p>
 </thead>
 <tbody>
 <tr>
-<td><a href="../HttpRequest/">HttpRequest</a></td>
-<td>The HTTP Request object represents the attributes of a request made to a web ...</td>
+<td><a href="../HttpResponse/">HttpResponse</a></td>
+<td>The HTTP Response object contains detailed information about the response sen...</td>
 <td>yes</td>
 </tr>
 <tr>
-<td><a href="../HttpResponse/">HttpResponse</a></td>
-<td>The HTTP Response object contains detailed information about the response sen...</td>
+<td><a href="../HttpRequest/">HttpRequest</a></td>
+<td>The HTTP Request object represents the attributes of a request made to a web</td>
 <td>yes</td>
 </tr>
 </tbody>
@@ -590,8 +591,9 @@ Alias: body_length</p>
 <h2 id="linkml-source">LinkML Source</h2>
 <details>
 <div class="highlight"><pre><span></span><code><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">body_length</span>
-<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The actual length of the HTTP response/request body, in number of bytes,</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">independent of a potentially existing Content-Length header.</span>
+<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;The</span><span class="nv"> </span><span class="s">actual</span><span class="nv"> </span><span class="s">length</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">HTTP</span><span class="nv"> </span><span class="s">response/request</span><span class="nv"> </span><span class="s">body,</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">number</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">bytes,</span>
+
+<span class="w">  </span><span class="s">independent</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">potentially</span><span class="nv"> </span><span class="s">existing</span><span class="nv"> </span><span class="s">Content-Length</span><span class="nv"> </span><span class="s">header.&#39;</span>
 <span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="nt">aliases</span><span class="p">:</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Body Length not including header</span>

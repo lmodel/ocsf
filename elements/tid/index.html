@@ -497,7 +497,8 @@
 
 
 <h1 id="slot-tid-deprecated">Slot: tid  <span style="color: red;"><strong> (DEPRECATED) </strong></span></h1>
-<p><em>The identifier of the thread associated with the event, as returned by the operating system.</em></p>
+<p><em>The identifier of the thread associated with the event, as returned by the</em></p>
+<p><em>operating system.</em></p>
 <p>URI: <a href="https://w3id.org/lmodel/ocsf/tid">ocsf:tid</a>
 Alias: tid</p>
 <!-- no inheritance hierarchy -->
@@ -513,23 +514,23 @@ Alias: tid</p>
 </thead>
 <tbody>
 <tr>
-<td><a href="../LinuxProcess/">LinuxProcess</a></td>
-<td>Extends the process object to add Linux specific fields</td>
-<td>no</td>
-</tr>
-<tr>
 <td><a href="../MacosProcess/">MacosProcess</a></td>
 <td>Extends the process object to add macOS specific fields</td>
 <td>no</td>
 </tr>
 <tr>
-<td><a href="../Process/">Process</a></td>
-<td>The Process object describes a running instance of a launched program</td>
+<td><a href="../WindowsProcess/">WindowsProcess</a></td>
+<td>Extends the process object to add Windows specific fields</td>
 <td>no</td>
 </tr>
 <tr>
-<td><a href="../WindowsProcess/">WindowsProcess</a></td>
-<td>Extends the process object to add Windows specific fields</td>
+<td><a href="../LinuxProcess/">LinuxProcess</a></td>
+<td>Extends the process object to add Linux specific fields</td>
+<td>no</td>
+</tr>
+<tr>
+<td><a href="../Process/">Process</a></td>
+<td>The Process object describes a running instance of a launched program</td>
 <td>no</td>
 </tr>
 </tbody>
@@ -600,11 +601,15 @@ Alias: tid</p>
 <h2 id="linkml-source">LinkML Source</h2>
 <details>
 <div class="highlight"><pre><span></span><code><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">tid</span>
-<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The identifier of the thread associated with the event, as returned by</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">the operating system.</span>
-<span class="nt">deprecated</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">&lt;code&gt;tid&lt;/code&gt; is deprecated in favor of &lt;code&gt;ptid&lt;/code&gt;. &lt;code&gt;ptid&lt;/code&gt;</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">has type &lt;code&gt;long_t&lt;/code&gt; which can accommodate the thread identifiers returned</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">by all platforms (e.g. 64-bit on MacOS). (since 1.6.0)</span>
+<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;The</span><span class="nv"> </span><span class="s">identifier</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">thread</span><span class="nv"> </span><span class="s">associated</span><span class="nv"> </span><span class="s">with</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">event,</span><span class="nv"> </span><span class="s">as</span><span class="nv"> </span><span class="s">returned</span>
+<span class="w">  </span><span class="s">by</span><span class="nv"> </span><span class="s">the</span>
+
+<span class="w">  </span><span class="s">operating</span><span class="nv"> </span><span class="s">system.&#39;</span>
+<span class="nt">deprecated</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;&lt;code&gt;tid&lt;/code&gt;</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">deprecated</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">favor</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">&lt;code&gt;ptid&lt;/code&gt;.</span><span class="nv"> </span><span class="s">&lt;code&gt;ptid&lt;/code&gt;</span>
+
+<span class="w">  </span><span class="s">has</span><span class="nv"> </span><span class="s">type</span><span class="nv"> </span><span class="s">&lt;code&gt;long_t&lt;/code&gt;</span><span class="nv"> </span><span class="s">which</span><span class="nv"> </span><span class="s">can</span><span class="nv"> </span><span class="s">accommodate</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">thread</span><span class="nv"> </span><span class="s">identifiers</span>
+
+<span class="w">  </span><span class="s">returned</span><span class="nv"> </span><span class="s">by</span><span class="nv"> </span><span class="s">all</span><span class="nv"> </span><span class="s">platforms</span><span class="nv"> </span><span class="s">(e.g.</span><span class="nv"> </span><span class="s">64-bit</span><span class="nv"> </span><span class="s">on</span><span class="nv"> </span><span class="s">MacOS).</span><span class="nv"> </span><span class="s">(since</span><span class="nv"> </span><span class="s">1.6.0)&#39;</span>
 <span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="nt">aliases</span><span class="p">:</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Thread ID</span>

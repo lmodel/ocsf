@@ -217,6 +217,15 @@
 </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="#in-subsets">
+<span class="md-ellipsis">
+      
+        In Subsets
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#aliases">
 <span class="md-ellipsis">
       
@@ -295,7 +304,9 @@
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
 <h1 id="class-privilegeattackinfo">Class: PrivilegeAttackInfo</h1>
-<p><em>The Privilege Attack Info object groups privileges by the potential attack they could enable. It maps specific privileges to MITRE ATT&amp;CK techniques, helping identify security risks associated with granted permissions.</em></p>
+<p><em>The Privilege Attack Info object groups privileges by the potential attack they</em></p>
+<p><em>could enable. It maps specific privileges to MITRE ATT&amp;CK techniques, helping</em></p>
+<p><em>identify security risks associated with granted permissions.</em></p>
 <p>URI: <a href="https://w3id.org/lmodel/ocsf/PrivilegeAttackInfo">ocsf:PrivilegeAttackInfo</a></p>
 <pre class="mermaid"><code> classDiagram
     class PrivilegeAttackInfo
@@ -356,7 +367,7 @@
 <tr>
 <td><a href="../privilege_info_list/">privilege_info_list</a></td>
 <td>1..* <br/> <a href="../PrivilegeInfo/">PrivilegeInfo</a></td>
-<td>The list of privilege information objects, where each element describes a spe...</td>
+<td>The list of privilege information objects, where each element describes a</td>
 <td>direct</td>
 </tr>
 </tbody>
@@ -380,6 +391,10 @@
 </tr>
 </tbody>
 </table>
+<h2 id="in-subsets">In Subsets</h2>
+<ul>
+<li><a href="../Objects/">Objects</a></li>
+</ul>
 <h2 id="aliases">Aliases</h2>
 <ul>
 <li>Privilege Attack Info</li>
@@ -413,9 +428,14 @@
 <h3 id="direct">Direct</h3>
 <details>
 <div class="highlight"><pre><span></span><code><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">PrivilegeAttackInfo</span>
-<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The Privilege Attack Info object groups privileges by the potential attack</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">they could enable. It maps specific privileges to MITRE ATT&amp;CK techniques, helping</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">identify security risks associated with granted permissions.</span>
+<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">Privilege</span><span class="nv"> </span><span class="s">Attack</span><span class="nv"> </span><span class="s">Info</span><span class="nv"> </span><span class="s">object</span><span class="nv"> </span><span class="s">groups</span><span class="nv"> </span><span class="s">privileges</span><span class="nv"> </span><span class="s">by</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">potential</span>
+<span class="w">  </span><span class="s">attack</span><span class="nv"> </span><span class="s">they</span>
+
+<span class="w">  </span><span class="s">could</span><span class="nv"> </span><span class="s">enable.</span><span class="nv"> </span><span class="s">It</span><span class="nv"> </span><span class="s">maps</span><span class="nv"> </span><span class="s">specific</span><span class="nv"> </span><span class="s">privileges</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">MITRE</span><span class="nv"> </span><span class="s">ATT&amp;CK</span><span class="nv"> </span><span class="s">techniques,</span><span class="nv"> </span><span class="s">helping</span>
+
+<span class="w">  </span><span class="s">identify</span><span class="nv"> </span><span class="s">security</span><span class="nv"> </span><span class="s">risks</span><span class="nv"> </span><span class="s">associated</span><span class="nv"> </span><span class="s">with</span><span class="nv"> </span><span class="s">granted</span><span class="nv"> </span><span class="s">permissions.'</span>
+<span class="nt">in_subset</span><span class="p">:</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">objects</span>
 <span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="nt">aliases</span><span class="p">:</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Privilege Attack Info</span>
@@ -430,17 +450,24 @@
 <span class="w">    </span><span class="nt">required</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">privilege_info_list</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">privilege_info_list</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The list of privilege information objects, where each element describes</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">a specific privilege that could enable the associated attack technique.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">list</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">privilege</span><span class="nv"> </span><span class="s">information</span><span class="nv"> </span><span class="s">objects,</span><span class="nv"> </span><span class="s">where</span><span class="nv"> </span><span class="s">each</span><span class="nv"> </span><span class="s">element</span><span class="nv"> </span><span class="s">describes</span>
+<span class="w">      </span><span class="s">a</span>
+
+<span class="w">      </span><span class="s">specific</span><span class="nv"> </span><span class="s">privilege</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">could</span><span class="nv"> </span><span class="s">enable</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">associated</span><span class="nv"> </span><span class="s">attack</span><span class="nv"> </span><span class="s">technique.'</span>
 <span class="w">    </span><span class="nt">required</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 </code></pre></div>
 </details>
 <h3 id="induced">Induced</h3>
 <details>
 <div class="highlight"><pre><span></span><code><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">PrivilegeAttackInfo</span>
-<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The Privilege Attack Info object groups privileges by the potential attack</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">they could enable. It maps specific privileges to MITRE ATT&amp;CK techniques, helping</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">identify security risks associated with granted permissions.</span>
+<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">Privilege</span><span class="nv"> </span><span class="s">Attack</span><span class="nv"> </span><span class="s">Info</span><span class="nv"> </span><span class="s">object</span><span class="nv"> </span><span class="s">groups</span><span class="nv"> </span><span class="s">privileges</span><span class="nv"> </span><span class="s">by</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">potential</span>
+<span class="w">  </span><span class="s">attack</span><span class="nv"> </span><span class="s">they</span>
+
+<span class="w">  </span><span class="s">could</span><span class="nv"> </span><span class="s">enable.</span><span class="nv"> </span><span class="s">It</span><span class="nv"> </span><span class="s">maps</span><span class="nv"> </span><span class="s">specific</span><span class="nv"> </span><span class="s">privileges</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">MITRE</span><span class="nv"> </span><span class="s">ATT&amp;CK</span><span class="nv"> </span><span class="s">techniques,</span><span class="nv"> </span><span class="s">helping</span>
+
+<span class="w">  </span><span class="s">identify</span><span class="nv"> </span><span class="s">security</span><span class="nv"> </span><span class="s">risks</span><span class="nv"> </span><span class="s">associated</span><span class="nv"> </span><span class="s">with</span><span class="nv"> </span><span class="s">granted</span><span class="nv"> </span><span class="s">permissions.'</span>
+<span class="nt">in_subset</span><span class="p">:</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">objects</span>
 <span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="nt">aliases</span><span class="p">:</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Privilege Attack Info</span>
@@ -452,8 +479,10 @@
 <span class="w">    </span><span class="nt">required</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">privilege_info_list</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">privilege_info_list</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The list of privilege information objects, where each element describes</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">a specific privilege that could enable the associated attack technique.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">list</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">privilege</span><span class="nv"> </span><span class="s">information</span><span class="nv"> </span><span class="s">objects,</span><span class="nv"> </span><span class="s">where</span><span class="nv"> </span><span class="s">each</span><span class="nv"> </span><span class="s">element</span><span class="nv"> </span><span class="s">describes</span>
+<span class="w">      </span><span class="s">a</span>
+
+<span class="w">      </span><span class="s">specific</span><span class="nv"> </span><span class="s">privilege</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">could</span><span class="nv"> </span><span class="s">enable</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">associated</span><span class="nv"> </span><span class="s">attack</span><span class="nv"> </span><span class="s">technique.'</span>
 <span class="w">    </span><span class="nt">required</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="nt">attributes</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">attack</span><span class="p">:</span>
@@ -471,8 +500,10 @@
 <span class="w">    </span><span class="nt">required</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">privilege_info_list</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">privilege_info_list</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The list of privilege information objects, where each element describes</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">a specific privilege that could enable the associated attack technique.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">list</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">privilege</span><span class="nv"> </span><span class="s">information</span><span class="nv"> </span><span class="s">objects,</span><span class="nv"> </span><span class="s">where</span><span class="nv"> </span><span class="s">each</span><span class="nv"> </span><span class="s">element</span><span class="nv"> </span><span class="s">describes</span>
+<span class="w">      </span><span class="s">a</span>
+
+<span class="w">      </span><span class="s">specific</span><span class="nv"> </span><span class="s">privilege</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">could</span><span class="nv"> </span><span class="s">enable</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">associated</span><span class="nv"> </span><span class="s">attack</span><span class="nv"> </span><span class="s">technique.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Privilege Info List</span>

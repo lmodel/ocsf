@@ -472,7 +472,7 @@
 <tr>
 <td>OPEN</td>
 <td>None</td>
-<td>A request by the actor to obtain a handle or descriptor to a process with the...</td>
+<td>A request by the actor to obtain a handle or descriptor to a process with the</td>
 </tr>
 <tr>
 <td>INJECT</td>
@@ -482,7 +482,7 @@
 <tr>
 <td>SET_USER_ID</td>
 <td>None</td>
-<td>A request by the actor to change its user identity by invoking the <code>setu...</td>
+<td>A request by the actor to change its user identity by invoking the</td>
 </tr>
 <tr>
 <td>UNKNOWN</td>
@@ -525,8 +525,9 @@
 <span class="nt">permissible_values</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">LAUNCH</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">text</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">LAUNCH</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">A request by the actor to launch another process. Refer to the &lt;code&gt;launch_type_id&lt;/code&gt;</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">attribute for details of the specific launch type.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;A</span><span class="nv"> </span><span class="s">request</span><span class="nv"> </span><span class="s">by</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">actor</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">launch</span><span class="nv"> </span><span class="s">another</span><span class="nv"> </span><span class="s">process.</span><span class="nv"> </span><span class="s">Refer</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">the</span>
+
+<span class="w">      </span><span class="s">&lt;code&gt;launch_type_id&lt;/code&gt;</span><span class="nv"> </span><span class="s">attribute</span><span class="nv"> </span><span class="s">for</span><span class="nv"> </span><span class="s">details</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">specific</span><span class="nv"> </span><span class="s">launch</span><span class="nv"> </span><span class="s">type.&#39;</span>
 <span class="w">    </span><span class="nt">annotations</span><span class="p">:</span>
 <span class="w">      </span><span class="nt">ocsf_uid</span><span class="p">:</span>
 <span class="w">        </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ocsf_uid</span>
@@ -536,12 +537,18 @@
 <span class="w">        </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Launch</span>
 <span class="w">  </span><span class="nt">TERMINATE</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">text</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">TERMINATE</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">A request by the actor to terminate a process. This activity is most</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">commonly reflexive, this being the case when a process exits at its own initiation.</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">Note too that Windows security products cannot always identify the actor in</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">the case of inter-process termination. In this case, &lt;code&gt;actor.process&lt;/code&gt;</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">and &lt;code&gt;process&lt;/code&gt; refer to the exiting process, i.e. indistinguishable</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">from the reflexive case.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;A</span><span class="nv"> </span><span class="s">request</span><span class="nv"> </span><span class="s">by</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">actor</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">terminate</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">process.</span><span class="nv"> </span><span class="s">This</span><span class="nv"> </span><span class="s">activity</span><span class="nv"> </span><span class="s">is</span>
+<span class="w">      </span><span class="s">most</span><span class="nv"> </span><span class="s">commonly</span>
+
+<span class="w">      </span><span class="s">reflexive,</span><span class="nv"> </span><span class="s">this</span><span class="nv"> </span><span class="s">being</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">case</span><span class="nv"> </span><span class="s">when</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">process</span><span class="nv"> </span><span class="s">exits</span><span class="nv"> </span><span class="s">at</span><span class="nv"> </span><span class="s">its</span><span class="nv"> </span><span class="s">own</span><span class="nv"> </span><span class="s">initiation.</span><span class="nv"> </span><span class="s">Note</span>
+
+<span class="w">      </span><span class="s">too</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">Windows</span><span class="nv"> </span><span class="s">security</span><span class="nv"> </span><span class="s">products</span><span class="nv"> </span><span class="s">cannot</span><span class="nv"> </span><span class="s">always</span><span class="nv"> </span><span class="s">identify</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">actor</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">case</span>
+
+<span class="w">      </span><span class="s">of</span><span class="nv"> </span><span class="s">inter-process</span><span class="nv"> </span><span class="s">termination.</span><span class="nv"> </span><span class="s">In</span><span class="nv"> </span><span class="s">this</span><span class="nv"> </span><span class="s">case,</span><span class="nv"> </span><span class="s">&lt;code&gt;actor.process&lt;/code&gt;</span><span class="nv"> </span><span class="s">and</span>
+
+<span class="w">      </span><span class="s">&lt;code&gt;process&lt;/code&gt;</span><span class="nv"> </span><span class="s">refer</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">exiting</span><span class="nv"> </span><span class="s">process,</span><span class="nv"> </span><span class="s">i.e.</span><span class="nv"> </span><span class="s">indistinguishable</span><span class="nv"> </span><span class="s">from</span>
+
+<span class="w">      </span><span class="s">the</span><span class="nv"> </span><span class="s">reflexive</span><span class="nv"> </span><span class="s">case.&#39;</span>
 <span class="w">    </span><span class="nt">annotations</span><span class="p">:</span>
 <span class="w">      </span><span class="nt">ocsf_uid</span><span class="p">:</span>
 <span class="w">        </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ocsf_uid</span>
@@ -551,9 +558,12 @@
 <span class="w">        </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Terminate</span>
 <span class="w">  </span><span class="nt">OPEN</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">text</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">OPEN</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">A request by the actor to obtain a handle or descriptor to a process</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">with the aim of performing further actions upon that process. The target is</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">usually a different process but this activity can also be reflexive.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;A</span><span class="nv"> </span><span class="s">request</span><span class="nv"> </span><span class="s">by</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">actor</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">obtain</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">handle</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">descriptor</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">process</span>
+<span class="w">      </span><span class="s">with</span><span class="nv"> </span><span class="s">the</span>
+
+<span class="w">      </span><span class="s">aim</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">performing</span><span class="nv"> </span><span class="s">further</span><span class="nv"> </span><span class="s">actions</span><span class="nv"> </span><span class="s">upon</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">process.</span><span class="nv"> </span><span class="s">The</span><span class="nv"> </span><span class="s">target</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">usually</span><span class="nv"> </span><span class="s">a</span>
+
+<span class="w">      </span><span class="s">different</span><span class="nv"> </span><span class="s">process</span><span class="nv"> </span><span class="s">but</span><span class="nv"> </span><span class="s">this</span><span class="nv"> </span><span class="s">activity</span><span class="nv"> </span><span class="s">can</span><span class="nv"> </span><span class="s">also</span><span class="nv"> </span><span class="s">be</span><span class="nv"> </span><span class="s">reflexive.&#39;</span>
 <span class="w">    </span><span class="nt">annotations</span><span class="p">:</span>
 <span class="w">      </span><span class="nt">ocsf_uid</span><span class="p">:</span>
 <span class="w">        </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ocsf_uid</span>
@@ -563,10 +573,14 @@
 <span class="w">        </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Open</span>
 <span class="w">  </span><span class="nt">INJECT</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">text</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">INJECT</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">A request by the actor to execute code within the context of a process.</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">The target is usually a different process but this activity can also be reflexive.</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">Refer to the &lt;code&gt;injection_type_id&lt;/code&gt; attribute for details of the specific</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">injection type.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;A</span><span class="nv"> </span><span class="s">request</span><span class="nv"> </span><span class="s">by</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">actor</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">execute</span><span class="nv"> </span><span class="s">code</span><span class="nv"> </span><span class="s">within</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">context</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">process.</span>
+<span class="w">      </span><span class="s">The</span>
+
+<span class="w">      </span><span class="s">target</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">usually</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">different</span><span class="nv"> </span><span class="s">process</span><span class="nv"> </span><span class="s">but</span><span class="nv"> </span><span class="s">this</span><span class="nv"> </span><span class="s">activity</span><span class="nv"> </span><span class="s">can</span><span class="nv"> </span><span class="s">also</span><span class="nv"> </span><span class="s">be</span><span class="nv"> </span><span class="s">reflexive.</span>
+
+<span class="w">      </span><span class="s">Refer</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">&lt;code&gt;injection_type_id&lt;/code&gt;</span><span class="nv"> </span><span class="s">attribute</span><span class="nv"> </span><span class="s">for</span><span class="nv"> </span><span class="s">details</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span>
+
+<span class="w">      </span><span class="s">specific</span><span class="nv"> </span><span class="s">injection</span><span class="nv"> </span><span class="s">type.&#39;</span>
 <span class="w">    </span><span class="nt">annotations</span><span class="p">:</span>
 <span class="w">      </span><span class="nt">ocsf_uid</span><span class="p">:</span>
 <span class="w">        </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ocsf_uid</span>
@@ -576,10 +590,15 @@
 <span class="w">        </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Inject</span>
 <span class="w">  </span><span class="nt">SET_USER_ID</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">text</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">SET_USER_ID</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">A request by the actor to change its user identity by invoking the</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">&lt;code&gt;setuid()&lt;/code&gt; system call. Common programs like &lt;code&gt;su&lt;/code&gt; and</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">&lt;code&gt;sudo&lt;/code&gt; use this mechanism. Note that the &lt;em&gt;impersonation&lt;/em&gt; mechanism</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">on Windows is not directly equivalent because it acts at the thread level.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;A</span><span class="nv"> </span><span class="s">request</span><span class="nv"> </span><span class="s">by</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">actor</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">change</span><span class="nv"> </span><span class="s">its</span><span class="nv"> </span><span class="s">user</span><span class="nv"> </span><span class="s">identity</span><span class="nv"> </span><span class="s">by</span><span class="nv"> </span><span class="s">invoking</span><span class="nv"> </span><span class="s">the</span>
+
+<span class="w">      </span><span class="s">&lt;code&gt;setuid()&lt;/code&gt;</span><span class="nv"> </span><span class="s">system</span><span class="nv"> </span><span class="s">call.</span><span class="nv"> </span><span class="s">Common</span><span class="nv"> </span><span class="s">programs</span><span class="nv"> </span><span class="s">like</span><span class="nv"> </span><span class="s">&lt;code&gt;su&lt;/code&gt;</span><span class="nv"> </span><span class="s">and</span>
+
+<span class="w">      </span><span class="s">&lt;code&gt;sudo&lt;/code&gt;</span><span class="nv"> </span><span class="s">use</span><span class="nv"> </span><span class="s">this</span><span class="nv"> </span><span class="s">mechanism.</span><span class="nv"> </span><span class="s">Note</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">&lt;em&gt;impersonation&lt;/em&gt;</span>
+
+<span class="w">      </span><span class="s">mechanism</span><span class="nv"> </span><span class="s">on</span><span class="nv"> </span><span class="s">Windows</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">not</span><span class="nv"> </span><span class="s">directly</span><span class="nv"> </span><span class="s">equivalent</span><span class="nv"> </span><span class="s">because</span><span class="nv"> </span><span class="s">it</span><span class="nv"> </span><span class="s">acts</span><span class="nv"> </span><span class="s">at</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">thread</span>
+
+<span class="w">      </span><span class="s">level.&#39;</span>
 <span class="w">    </span><span class="nt">annotations</span><span class="p">:</span>
 <span class="w">      </span><span class="nt">ocsf_uid</span><span class="p">:</span>
 <span class="w">        </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ocsf_uid</span>
@@ -599,8 +618,10 @@
 <span class="w">        </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Unknown</span>
 <span class="w">  </span><span class="nt">OTHER</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">text</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">OTHER</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The event activity is not mapped. See the &lt;code&gt;activity_name&lt;/code&gt;</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">attribute, which contains a data source specific value.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;The</span><span class="nv"> </span><span class="s">event</span><span class="nv"> </span><span class="s">activity</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">not</span><span class="nv"> </span><span class="s">mapped.</span><span class="nv"> </span><span class="s">See</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">&lt;code&gt;activity_name&lt;/code&gt;</span>
+<span class="w">      </span><span class="s">attribute,</span>
+
+<span class="w">      </span><span class="s">which</span><span class="nv"> </span><span class="s">contains</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">data</span><span class="nv"> </span><span class="s">source</span><span class="nv"> </span><span class="s">specific</span><span class="nv"> </span><span class="s">value.&#39;</span>
 <span class="w">    </span><span class="nt">annotations</span><span class="p">:</span>
 <span class="w">      </span><span class="nt">ocsf_uid</span><span class="p">:</span>
 <span class="w">        </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ocsf_uid</span>

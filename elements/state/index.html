@@ -497,7 +497,9 @@
 
 
 <h1 id="slot-state">Slot: state</h1>
-<p><em>The state of the event or object, normalized to the caption of the state_id value. In the case of 'Other', it is defined by the event source. See specific usage.</em></p>
+<p><em>The state of the event or object, normalized to the caption of the state_id</em></p>
+<p><em>value. In the case of 'Other', it is defined by the event source. See specific</em></p>
+<p><em>usage.</em></p>
 <p>URI: <a href="https://w3id.org/lmodel/ocsf/state">ocsf:state</a>
 Alias: state</p>
 <!-- no inheritance hierarchy -->
@@ -513,28 +515,18 @@ Alias: state</p>
 </thead>
 <tbody>
 <tr>
-<td><a href="../WindowsQueryEvidence/">WindowsQueryEvidence</a></td>
-<td>The resulting evidence information that was queried</td>
-<td>no</td>
-</tr>
-<tr>
-<td><a href="../Idp/">Idp</a></td>
-<td>The Identity Provider object contains detailed information about a provider r...</td>
-<td>yes</td>
-</tr>
-<tr>
-<td><a href="../DeviceConfigStateChange/">DeviceConfigStateChange</a></td>
-<td>Device Config State Change events report state changes that impact the securi...</td>
-<td>yes</td>
-</tr>
-<tr>
 <td><a href="../Scim/">Scim</a></td>
-<td>The System for Cross-domain Identity Management (SCIM) Configuration object p...</td>
+<td>The System for Cross-domain Identity Management (SCIM) Configuration object</td>
 <td>yes</td>
 </tr>
 <tr>
 <td><a href="../DigitalSignature/">DigitalSignature</a></td>
-<td>The Digital Signature object contains information about the cryptographic mec...</td>
+<td>The Digital Signature object contains information about the cryptographic</td>
+<td>yes</td>
+</tr>
+<tr>
+<td><a href="../NetworkConnectionQuery/">NetworkConnectionQuery</a></td>
+<td>Network Connection Query events report information about active network</td>
 <td>yes</td>
 </tr>
 <tr>
@@ -543,8 +535,18 @@ Alias: state</p>
 <td>yes</td>
 </tr>
 <tr>
-<td><a href="../SecurityState/">SecurityState</a></td>
-<td>The Security State object describes the security related state of a managed e...</td>
+<td><a href="../Idp/">Idp</a></td>
+<td>The Identity Provider object contains detailed information about a provider</td>
+<td>yes</td>
+</tr>
+<tr>
+<td><a href="../Analytic/">Analytic</a></td>
+<td>The Analytic object contains details about the analytic technique used to</td>
+<td>yes</td>
+</tr>
+<tr>
+<td><a href="../DeviceConfigStateChange/">DeviceConfigStateChange</a></td>
+<td>Device Config State Change events report state changes that impact the securi...</td>
 <td>yes</td>
 </tr>
 <tr>
@@ -553,13 +555,13 @@ Alias: state</p>
 <td>yes</td>
 </tr>
 <tr>
-<td><a href="../NetworkConnectionQuery/">NetworkConnectionQuery</a></td>
-<td>Network Connection Query events report information about active network conne...</td>
-<td>yes</td>
+<td><a href="../WindowsQueryEvidence/">WindowsQueryEvidence</a></td>
+<td>The resulting evidence information that was queried</td>
+<td>no</td>
 </tr>
 <tr>
-<td><a href="../Analytic/">Analytic</a></td>
-<td>The Analytic object contains details about the analytic technique used to ana...</td>
+<td><a href="../SecurityState/">SecurityState</a></td>
+<td>The Security State object describes the security related state of a managed</td>
 <td>yes</td>
 </tr>
 </tbody>
@@ -630,8 +632,11 @@ Alias: state</p>
 <h2 id="linkml-source">LinkML Source</h2>
 <details>
 <div class="highlight"><pre><span></span><code><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">state</span>
-<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The state of the event or object, normalized to the caption of the state_id</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">value. In the case of &#39;Other&#39;, it is defined by the event source. See specific usage.</span>
+<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;The</span><span class="nv"> </span><span class="s">state</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">event</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">object,</span><span class="nv"> </span><span class="s">normalized</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">caption</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">state_id</span>
+
+<span class="w">  </span><span class="s">value.</span><span class="nv"> </span><span class="s">In</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">case</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="se">&#39;&#39;</span><span class="s">Other</span><span class="se">&#39;&#39;</span><span class="s">,</span><span class="nv"> </span><span class="s">it</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">defined</span><span class="nv"> </span><span class="s">by</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">event</span><span class="nv"> </span><span class="s">source.</span><span class="nv"> </span><span class="s">See</span><span class="nv"> </span><span class="s">specific</span>
+
+<span class="w">  </span><span class="s">usage.&#39;</span>
 <span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="nt">aliases</span><span class="p">:</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">State</span>

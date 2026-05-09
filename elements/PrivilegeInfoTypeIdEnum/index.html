@@ -477,7 +477,7 @@
 <tr>
 <td>EXECUTE</td>
 <td>None</td>
-<td>An execute-type privilege that permits running operations or invoking functio...</td>
+<td>An execute-type privilege that permits running operations or invoking</td>
 </tr>
 <tr>
 <td>OTHER</td>
@@ -526,7 +526,9 @@
 <span class="w">  </span><span class="nt">READ</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">text</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">READ</span>
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;A</span><span class="nv"> </span><span class="s">read-type</span><span class="nv"> </span><span class="s">privilege</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">permits</span><span class="nv"> </span><span class="s">viewing</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">retrieving</span><span class="nv"> </span><span class="s">data.</span><span class="nv"> </span><span class="s">Examples:</span>
+
 <span class="w">      </span><span class="s">&lt;code&gt;s3:GetObject&lt;/code&gt;,</span><span class="nv"> </span><span class="s">&lt;code&gt;Microsoft.Storage/storageAccounts/read&lt;/code&gt;,</span>
+
 <span class="w">      </span><span class="s">&lt;code&gt;storage.objects.get&lt;/code&gt;.&#39;</span>
 <span class="w">    </span><span class="nt">annotations</span><span class="p">:</span>
 <span class="w">      </span><span class="nt">ocsf_uid</span><span class="p">:</span>
@@ -538,7 +540,12 @@
 <span class="w">  </span><span class="nt">WRITE</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">text</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">WRITE</span>
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;A</span><span class="nv"> </span><span class="s">write-type</span><span class="nv"> </span><span class="s">privilege</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">permits</span><span class="nv"> </span><span class="s">creating,</span><span class="nv"> </span><span class="s">modifying,</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">deleting</span>
-<span class="w">      </span><span class="s">data.</span><span class="nv"> </span><span class="s">Examples:</span><span class="nv"> </span><span class="s">&lt;code&gt;s3:PutObject&lt;/code&gt;,</span><span class="nv"> </span><span class="s">&lt;code&gt;Microsoft.Storage/storageAccounts/write&lt;/code&gt;,</span>
+<span class="w">      </span><span class="s">data.</span>
+
+<span class="w">      </span><span class="s">Examples:</span><span class="nv"> </span><span class="s">&lt;code&gt;s3:PutObject&lt;/code&gt;,</span>
+
+<span class="w">      </span><span class="s">&lt;code&gt;Microsoft.Storage/storageAccounts/write&lt;/code&gt;,</span>
+
 <span class="w">      </span><span class="s">&lt;code&gt;storage.objects.create&lt;/code&gt;.&#39;</span>
 <span class="w">    </span><span class="nt">annotations</span><span class="p">:</span>
 <span class="w">      </span><span class="nt">ocsf_uid</span><span class="p">:</span>
@@ -550,7 +557,10 @@
 <span class="w">  </span><span class="nt">EXECUTE</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">text</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">EXECUTE</span>
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;An</span><span class="nv"> </span><span class="s">execute-type</span><span class="nv"> </span><span class="s">privilege</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">permits</span><span class="nv"> </span><span class="s">running</span><span class="nv"> </span><span class="s">operations</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">invoking</span>
-<span class="w">      </span><span class="s">functions.</span><span class="nv"> </span><span class="s">Examples:</span><span class="nv"> </span><span class="s">&lt;code&gt;lambda:InvokeFunction&lt;/code&gt;,</span><span class="nv"> </span><span class="s">&lt;code&gt;Microsoft.Compute/virtualMachines/start/action&lt;/code&gt;.&#39;</span>
+
+<span class="w">      </span><span class="s">functions.</span><span class="nv"> </span><span class="s">Examples:</span><span class="nv"> </span><span class="s">&lt;code&gt;lambda:InvokeFunction&lt;/code&gt;,</span>
+
+<span class="w">      </span><span class="s">&lt;code&gt;Microsoft.Compute/virtualMachines/start/action&lt;/code&gt;.&#39;</span>
 <span class="w">    </span><span class="nt">annotations</span><span class="p">:</span>
 <span class="w">      </span><span class="nt">ocsf_uid</span><span class="p">:</span>
 <span class="w">        </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ocsf_uid</span>
@@ -560,8 +570,10 @@
 <span class="w">        </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Execute</span>
 <span class="w">  </span><span class="nt">OTHER</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">text</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">OTHER</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The privilege type is not mapped. See the &lt;code&gt;type&lt;/code&gt; attribute,</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">which contains a data source specific value.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;The</span><span class="nv"> </span><span class="s">privilege</span><span class="nv"> </span><span class="s">type</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">not</span><span class="nv"> </span><span class="s">mapped.</span><span class="nv"> </span><span class="s">See</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">&lt;code&gt;type&lt;/code&gt;</span><span class="nv"> </span><span class="s">attribute,</span>
+<span class="w">      </span><span class="s">which</span>
+
+<span class="w">      </span><span class="s">contains</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">data</span><span class="nv"> </span><span class="s">source</span><span class="nv"> </span><span class="s">specific</span><span class="nv"> </span><span class="s">value.&#39;</span>
 <span class="w">    </span><span class="nt">annotations</span><span class="p">:</span>
 <span class="w">      </span><span class="nt">ocsf_uid</span><span class="p">:</span>
 <span class="w">        </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ocsf_uid</span>

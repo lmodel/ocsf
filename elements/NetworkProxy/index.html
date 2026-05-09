@@ -217,6 +217,15 @@
 </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="#in-subsets">
+<span class="md-ellipsis">
+      
+        In Subsets
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#aliases">
 <span class="md-ellipsis">
       
@@ -313,7 +322,9 @@
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
 <h1 id="class-networkproxy">Class: NetworkProxy</h1>
-<p><em>The network proxy endpoint object describes a proxy server, which acts as an intermediary between a client requesting a resource and the server providing that resource.</em></p>
+<p><em>The network proxy endpoint object describes a proxy server, which acts as an</em></p>
+<p><em>intermediary between a client requesting a resource and the server providing</em></p>
+<p><em>that resource.</em></p>
 <p>URI: <a href="https://w3id.org/lmodel/ocsf/NetworkProxy">ocsf:NetworkProxy</a></p>
 <pre class="mermaid"><code> classDiagram
     class NetworkProxy
@@ -537,7 +548,7 @@
 <tr>
 <td><a href="../fingerprints/">fingerprints</a></td>
 <td>* <br/> <a href="../Fingerprint/">Fingerprint</a></td>
-<td>Fingerprints that identify the specific application implementation on this en...</td>
+<td>Fingerprints that identify the specific application implementation on this</td>
 <td><a href="../NetworkEndpoint/">NetworkEndpoint</a></td>
 </tr>
 <tr>
@@ -561,7 +572,7 @@
 <tr>
 <td><a href="../network_scope/">network_scope</a></td>
 <td>0..1 <br/> <a href="../String/">String</a></td>
-<td>Indicates whether the endpoint resides inside the customer’s network, outside...</td>
+<td>Indicates whether the endpoint resides inside the customer’s network, outside</td>
 <td><a href="../NetworkEndpoint/">NetworkEndpoint</a></td>
 </tr>
 <tr>
@@ -592,24 +603,24 @@
 <td><a href="../type/">type</a></td>
 <td>0..1 <br/> <a href="../String/">String</a></td>
 <td>The network endpoint type</td>
-<td><a href="../Endpoint/">Endpoint</a>, <a href="../NetworkEndpoint/">NetworkEndpoint</a></td>
+<td><a href="../NetworkEndpoint/">NetworkEndpoint</a>, <a href="../Endpoint/">Endpoint</a></td>
 </tr>
 <tr>
 <td><a href="../type_id/">type_id</a></td>
 <td>0..1 <em>recommended</em> <br/> <a href="../EndpointTypeIdEnum/">EndpointTypeIdEnum</a></td>
 <td>The network endpoint type ID</td>
-<td><a href="../Endpoint/">Endpoint</a>, <a href="../NetworkEndpoint/">NetworkEndpoint</a></td>
+<td><a href="../NetworkEndpoint/">NetworkEndpoint</a>, <a href="../Endpoint/">Endpoint</a></td>
 </tr>
 <tr>
 <td><a href="../uid/">uid</a></td>
 <td>0..1 <em>recommended</em> <br/> <a href="../String/">String</a></td>
 <td>The unique identifier of the endpoint</td>
-<td><a href="../Endpoint/">Endpoint</a>, <a href="../NetworkEndpoint/">NetworkEndpoint</a>, <a href="../Entity/">Entity</a></td>
+<td><a href="../NetworkEndpoint/">NetworkEndpoint</a>, <a href="../Endpoint/">Endpoint</a>, <a href="../Entity/">Entity</a></td>
 </tr>
 <tr>
 <td><a href="../agent_list/">agent_list</a></td>
 <td>* <br/> <a href="../Agent/">Agent</a></td>
-<td>A list of <code>agent</code> objects associated with a device, endpoint, or r...</td>
+<td>A list of <code>agent</code> objects associated with a device, endpoint, or</td>
 <td><a href="../Endpoint/">Endpoint</a></td>
 </tr>
 <tr>
@@ -669,7 +680,7 @@
 <tr>
 <td><a href="../mac_vendor/">mac_vendor</a></td>
 <td>0..1 <br/> <a href="../String/">String</a></td>
-<td>The vendor or manufacturer of the endpoint's network interface controller (NI...</td>
+<td>The vendor or manufacturer of the endpoint's network interface controller</td>
 <td><a href="../Endpoint/">Endpoint</a></td>
 </tr>
 <tr>
@@ -729,7 +740,7 @@
 <tr>
 <td><a href="../namespace_pid/">namespace_pid</a></td>
 <td>0..1 <em>recommended</em> <br/> <a href="../Integer/">Integer</a></td>
-<td>If running under a process namespace (such as in a container), the process id...</td>
+<td>If running under a process namespace (such as in a container), the process</td>
 <td><a href="../ContainerProfile/">ContainerProfile</a></td>
 </tr>
 </tbody>
@@ -945,6 +956,10 @@
 </tr>
 </tbody>
 </table>
+<h2 id="in-subsets">In Subsets</h2>
+<ul>
+<li><a href="../Objects/">Objects</a></li>
+</ul>
 <h2 id="aliases">Aliases</h2>
 <ul>
 <li>Network Proxy Endpoint</li>
@@ -955,7 +970,8 @@
 </ul>
 <h2 id="notes">Notes</h2>
 <ul>
-<li>D3FEND™ Ontology d3f:ProxyServer — <a href="https://d3fend.mitre.org/dao/artifact/d3f:ProxyServer/">https://d3fend.mitre.org/dao/artifact/d3f:ProxyServer/</a></li>
+<li>D3FEND™ Ontology d3f:ProxyServer —
+<a href="https://d3fend.mitre.org/dao/artifact/d3f:ProxyServer/">https://d3fend.mitre.org/dao/artifact/d3f:ProxyServer/</a></li>
 </ul>
 <h2 id="identifier-and-mapping-information">Identifier and Mapping Information</h2>
 <h3 id="schema-source">Schema Source</h3>
@@ -986,11 +1002,18 @@
 <h3 id="direct">Direct</h3>
 <details>
 <div class="highlight"><pre><span></span><code><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">NetworkProxy</span>
-<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The network proxy endpoint object describes a proxy server, which acts</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">as an intermediary between a client requesting a resource and the server providing</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">that resource.</span>
+<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">network</span><span class="nv"> </span><span class="s">proxy</span><span class="nv"> </span><span class="s">endpoint</span><span class="nv"> </span><span class="s">object</span><span class="nv"> </span><span class="s">describes</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">proxy</span><span class="nv"> </span><span class="s">server,</span><span class="nv"> </span><span class="s">which</span><span class="nv"> </span><span class="s">acts</span>
+<span class="w">  </span><span class="s">as</span><span class="nv"> </span><span class="s">an</span>
+
+<span class="w">  </span><span class="s">intermediary</span><span class="nv"> </span><span class="s">between</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">client</span><span class="nv"> </span><span class="s">requesting</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">resource</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">server</span><span class="nv"> </span><span class="s">providing</span>
+
+<span class="w">  </span><span class="s">that</span><span class="nv"> </span><span class="s">resource.'</span>
 <span class="nt">notes</span><span class="p">:</span>
-<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">D3FEND™ Ontology d3f:ProxyServer — https://d3fend.mitre.org/dao/artifact/d3f:ProxyServer/</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="s">'D3FEND™</span><span class="nv"> </span><span class="s">Ontology</span><span class="nv"> </span><span class="s">d3f:ProxyServer</span><span class="nv"> </span><span class="s">—</span>
+
+<span class="w">  </span><span class="s">https://d3fend.mitre.org/dao/artifact/d3f:ProxyServer/'</span>
+<span class="nt">in_subset</span><span class="p">:</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">objects</span>
 <span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="nt">see_also</span><span class="p">:</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://d3fend.mitre.org/dao/artifact/d3f:ProxyServer/</span>
@@ -1002,11 +1025,18 @@
 <h3 id="induced">Induced</h3>
 <details>
 <div class="highlight"><pre><span></span><code><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">NetworkProxy</span>
-<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The network proxy endpoint object describes a proxy server, which acts</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">as an intermediary between a client requesting a resource and the server providing</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">that resource.</span>
+<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">network</span><span class="nv"> </span><span class="s">proxy</span><span class="nv"> </span><span class="s">endpoint</span><span class="nv"> </span><span class="s">object</span><span class="nv"> </span><span class="s">describes</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">proxy</span><span class="nv"> </span><span class="s">server,</span><span class="nv"> </span><span class="s">which</span><span class="nv"> </span><span class="s">acts</span>
+<span class="w">  </span><span class="s">as</span><span class="nv"> </span><span class="s">an</span>
+
+<span class="w">  </span><span class="s">intermediary</span><span class="nv"> </span><span class="s">between</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">client</span><span class="nv"> </span><span class="s">requesting</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">resource</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">server</span><span class="nv"> </span><span class="s">providing</span>
+
+<span class="w">  </span><span class="s">that</span><span class="nv"> </span><span class="s">resource.'</span>
 <span class="nt">notes</span><span class="p">:</span>
-<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">D3FEND™ Ontology d3f:ProxyServer — https://d3fend.mitre.org/dao/artifact/d3f:ProxyServer/</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="s">'D3FEND™</span><span class="nv"> </span><span class="s">Ontology</span><span class="nv"> </span><span class="s">d3f:ProxyServer</span><span class="nv"> </span><span class="s">—</span>
+
+<span class="w">  </span><span class="s">https://d3fend.mitre.org/dao/artifact/d3f:ProxyServer/'</span>
+<span class="nt">in_subset</span><span class="p">:</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">objects</span>
 <span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="nt">see_also</span><span class="p">:</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://d3fend.mitre.org/dao/artifact/d3f:ProxyServer/</span>
@@ -1030,8 +1060,10 @@
 <span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">AutonomousSystem</span>
 <span class="w">  </span><span class="nt">fingerprints</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">fingerprints</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Fingerprints that identify the specific application implementation</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">on this endpoint, such as Cisco NPF or HASSH.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'Fingerprints</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">identify</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">specific</span><span class="nv"> </span><span class="s">application</span><span class="nv"> </span><span class="s">implementation</span>
+<span class="w">      </span><span class="s">on</span><span class="nv"> </span><span class="s">this</span>
+
+<span class="w">      </span><span class="s">endpoint,</span><span class="nv"> </span><span class="s">such</span><span class="nv"> </span><span class="s">as</span><span class="nv"> </span><span class="s">Cisco</span><span class="nv"> </span><span class="s">NPF</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">HASSH.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Fingerprints</span>
@@ -1045,8 +1077,10 @@
 <span class="w">    </span><span class="nt">multivalued</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">intermediate_ips</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">intermediate_ips</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The intermediate IP Addresses. For example, the IP addresses in the</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">HTTP X-Forwarded-For header.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">intermediate</span><span class="nv"> </span><span class="s">IP</span><span class="nv"> </span><span class="s">Addresses.</span><span class="nv"> </span><span class="s">For</span><span class="nv"> </span><span class="s">example,</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">IP</span><span class="nv"> </span><span class="s">addresses</span><span class="nv"> </span><span class="s">in</span>
+<span class="w">      </span><span class="s">the</span><span class="nv"> </span><span class="s">HTTP</span>
+
+<span class="w">      </span><span class="s">X-Forwarded-For</span><span class="nv"> </span><span class="s">header.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Intermediate IP Addresses</span>
@@ -1073,11 +1107,16 @@
 <span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">string</span>
 <span class="w">  </span><span class="nt">isp_org</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">isp_org</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The organization name of the Internet Service Provider (ISP). This</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">represents the parent organization or company that owns/operates the ISP. For</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">example, Comcast Corporation would be the ISP org for Xfinity internet service.</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">This attribute helps identify the ultimate provider when ISPs operate under</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">different brand names.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">organization</span><span class="nv"> </span><span class="s">name</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">Internet</span><span class="nv"> </span><span class="s">Service</span><span class="nv"> </span><span class="s">Provider</span><span class="nv"> </span><span class="s">(ISP).</span><span class="nv"> </span><span class="s">This</span>
+<span class="w">      </span><span class="s">represents</span>
+
+<span class="w">      </span><span class="s">the</span><span class="nv"> </span><span class="s">parent</span><span class="nv"> </span><span class="s">organization</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">company</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">owns/operates</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">ISP.</span><span class="nv"> </span><span class="s">For</span><span class="nv"> </span><span class="s">example,</span>
+
+<span class="w">      </span><span class="s">Comcast</span><span class="nv"> </span><span class="s">Corporation</span><span class="nv"> </span><span class="s">would</span><span class="nv"> </span><span class="s">be</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">ISP</span><span class="nv"> </span><span class="s">org</span><span class="nv"> </span><span class="s">for</span><span class="nv"> </span><span class="s">Xfinity</span><span class="nv"> </span><span class="s">internet</span><span class="nv"> </span><span class="s">service.</span><span class="nv"> </span><span class="s">This</span>
+
+<span class="w">      </span><span class="s">attribute</span><span class="nv"> </span><span class="s">helps</span><span class="nv"> </span><span class="s">identify</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">ultimate</span><span class="nv"> </span><span class="s">provider</span><span class="nv"> </span><span class="s">when</span><span class="nv"> </span><span class="s">ISPs</span><span class="nv"> </span><span class="s">operate</span><span class="nv"> </span><span class="s">under</span>
+
+<span class="w">      </span><span class="s">different</span><span class="nv"> </span><span class="s">brand</span><span class="nv"> </span><span class="s">names.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ISP Org</span>
@@ -1090,9 +1129,14 @@
 <span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">string</span>
 <span class="w">  </span><span class="nt">network_scope</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">network_scope</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Indicates whether the endpoint resides inside the customer’s network,</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">outside on the Internet, or if its location relative to the customer’s network</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">cannot be determined. The value is normalized to the caption of the &lt;code&gt;network_scope_id&lt;/code&gt;.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'Indicates</span><span class="nv"> </span><span class="s">whether</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">endpoint</span><span class="nv"> </span><span class="s">resides</span><span class="nv"> </span><span class="s">inside</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">customer’s</span><span class="nv"> </span><span class="s">network,</span>
+<span class="w">      </span><span class="s">outside</span>
+
+<span class="w">      </span><span class="s">on</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">Internet,</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">if</span><span class="nv"> </span><span class="s">its</span><span class="nv"> </span><span class="s">location</span><span class="nv"> </span><span class="s">relative</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">customer’s</span><span class="nv"> </span><span class="s">network</span><span class="nv"> </span><span class="s">cannot</span>
+
+<span class="w">      </span><span class="s">be</span><span class="nv"> </span><span class="s">determined.</span><span class="nv"> </span><span class="s">The</span><span class="nv"> </span><span class="s">value</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">normalized</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">caption</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span>
+
+<span class="w">      </span><span class="s">&lt;code&gt;network_scope_id&lt;/code&gt;.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Network Scope</span>
@@ -1108,10 +1152,14 @@
 <span class="w">      </span><span class="nt">sibling</span><span class="p">:</span>
 <span class="w">        </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">sibling</span>
 <span class="w">        </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">network_scope</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The normalized identifier of the endpoint’s network scope. The normalized</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">network scope identifier indicates whether the endpoint resides inside the customer’s</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">network, outside on the Internet, or if its location relative to the customer’s</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">network cannot be determined.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">normalized</span><span class="nv"> </span><span class="s">identifier</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">endpoint’s</span><span class="nv"> </span><span class="s">network</span><span class="nv"> </span><span class="s">scope.</span><span class="nv"> </span><span class="s">The</span><span class="nv"> </span><span class="s">normalized</span>
+
+<span class="w">      </span><span class="s">network</span><span class="nv"> </span><span class="s">scope</span><span class="nv"> </span><span class="s">identifier</span><span class="nv"> </span><span class="s">indicates</span><span class="nv"> </span><span class="s">whether</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">endpoint</span><span class="nv"> </span><span class="s">resides</span><span class="nv"> </span><span class="s">inside</span><span class="nv"> </span><span class="s">the</span>
+
+<span class="w">      </span><span class="s">customer’s</span><span class="nv"> </span><span class="s">network,</span><span class="nv"> </span><span class="s">outside</span><span class="nv"> </span><span class="s">on</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">Internet,</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">if</span><span class="nv"> </span><span class="s">its</span><span class="nv"> </span><span class="s">location</span><span class="nv"> </span><span class="s">relative</span><span class="nv"> </span><span class="s">to</span>
+<span class="w">      </span><span class="s">the</span>
+
+<span class="w">      </span><span class="s">customer’s</span><span class="nv"> </span><span class="s">network</span><span class="nv"> </span><span class="s">cannot</span><span class="nv"> </span><span class="s">be</span><span class="nv"> </span><span class="s">determined.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Network Scope ID</span>
@@ -1139,9 +1187,10 @@
 <span class="w">    </span><span class="nt">recommended</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">proxy_endpoint</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">proxy_endpoint</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The network proxy information pertaining to a specific endpoint.</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">This can be used to describe information pertaining to network address translation</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">(NAT).</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">network</span><span class="nv"> </span><span class="s">proxy</span><span class="nv"> </span><span class="s">information</span><span class="nv"> </span><span class="s">pertaining</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">specific</span><span class="nv"> </span><span class="s">endpoint.</span>
+<span class="w">      </span><span class="s">This</span><span class="nv"> </span><span class="s">can</span><span class="nv"> </span><span class="s">be</span>
+
+<span class="w">      </span><span class="s">used</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">describe</span><span class="nv"> </span><span class="s">information</span><span class="nv"> </span><span class="s">pertaining</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">network</span><span class="nv"> </span><span class="s">address</span><span class="nv"> </span><span class="s">translation</span><span class="nv"> </span><span class="s">(NAT).'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Proxy Endpoint</span>
@@ -1155,9 +1204,12 @@
 <span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">NetworkProxy</span>
 <span class="w">  </span><span class="nt">svc_name</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">svc_name</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The service name in service-to-service connections. For example,</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">AWS VPC logs the pkt-src-aws-service and pkt-dst-aws-service fields identify</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">the connection is coming from or going to an AWS service.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">service</span><span class="nv"> </span><span class="s">name</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">service-to-service</span><span class="nv"> </span><span class="s">connections.</span><span class="nv"> </span><span class="s">For</span><span class="nv"> </span><span class="s">example,</span>
+<span class="w">      </span><span class="s">AWS</span><span class="nv"> </span><span class="s">VPC</span><span class="nv"> </span><span class="s">logs</span>
+
+<span class="w">      </span><span class="s">the</span><span class="nv"> </span><span class="s">pkt-src-aws-service</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">pkt-dst-aws-service</span><span class="nv"> </span><span class="s">fields</span><span class="nv"> </span><span class="s">identify</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">connection</span>
+
+<span class="w">      </span><span class="s">is</span><span class="nv"> </span><span class="s">coming</span><span class="nv"> </span><span class="s">from</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">going</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">an</span><span class="nv"> </span><span class="s">AWS</span><span class="nv"> </span><span class="s">service.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Service Name</span>
@@ -1171,9 +1223,13 @@
 <span class="w">    </span><span class="nt">recommended</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">type</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">type</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">network</span><span class="nv"> </span><span class="s">endpoint</span><span class="nv"> </span><span class="s">type.</span><span class="nv"> </span><span class="s">For</span><span class="nv"> </span><span class="s">example:</span><span class="nv"> </span><span class="s">&lt;code&gt;unknown&lt;/code&gt;,</span><span class="nv"> </span><span class="s">&lt;code&gt;server&lt;/code&gt;,</span>
-<span class="w">      </span><span class="s">&lt;code&gt;desktop&lt;/code&gt;,</span><span class="nv"> </span><span class="s">&lt;code&gt;laptop&lt;/code&gt;,</span><span class="nv"> </span><span class="s">&lt;code&gt;tablet&lt;/code&gt;,</span><span class="nv"> </span><span class="s">&lt;code&gt;mobile&lt;/code&gt;,</span>
-<span class="w">      </span><span class="s">&lt;code&gt;virtual&lt;/code&gt;,</span><span class="nv"> </span><span class="s">&lt;code&gt;browser&lt;/code&gt;,</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">&lt;code&gt;other&lt;/code&gt;.'</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">network</span><span class="nv"> </span><span class="s">endpoint</span><span class="nv"> </span><span class="s">type.</span><span class="nv"> </span><span class="s">For</span><span class="nv"> </span><span class="s">example:</span><span class="nv"> </span><span class="s">&lt;code&gt;unknown&lt;/code&gt;,</span>
+
+<span class="w">      </span><span class="s">&lt;code&gt;server&lt;/code&gt;,</span><span class="nv"> </span><span class="s">&lt;code&gt;desktop&lt;/code&gt;,</span><span class="nv"> </span><span class="s">&lt;code&gt;laptop&lt;/code&gt;,</span>
+
+<span class="w">      </span><span class="s">&lt;code&gt;tablet&lt;/code&gt;,</span><span class="nv"> </span><span class="s">&lt;code&gt;mobile&lt;/code&gt;,</span><span class="nv"> </span><span class="s">&lt;code&gt;virtual&lt;/code&gt;,</span>
+
+<span class="w">      </span><span class="s">&lt;code&gt;browser&lt;/code&gt;,</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">&lt;code&gt;other&lt;/code&gt;.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Type</span>
@@ -1392,8 +1448,10 @@
 <span class="w">    </span><span class="nt">recommended</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">agent_list</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">agent_list</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">A list of &lt;code&gt;agent&lt;/code&gt; objects associated with a device, endpoint,</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">or resource.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'A</span><span class="nv"> </span><span class="s">list</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">&lt;code&gt;agent&lt;/code&gt;</span><span class="nv"> </span><span class="s">objects</span><span class="nv"> </span><span class="s">associated</span><span class="nv"> </span><span class="s">with</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">device,</span><span class="nv"> </span><span class="s">endpoint,</span>
+<span class="w">      </span><span class="s">or</span>
+
+<span class="w">      </span><span class="s">resource.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Agent List</span>
@@ -1408,8 +1466,10 @@
 <span class="w">    </span><span class="nt">multivalued</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">domain</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">domain</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The name of the domain that the endpoint belongs to or that corresponds</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">to the endpoint.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">name</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">domain</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">endpoint</span><span class="nv"> </span><span class="s">belongs</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">corresponds</span>
+<span class="w">      </span><span class="s">to</span><span class="nv"> </span><span class="s">the</span>
+
+<span class="w">      </span><span class="s">endpoint.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Domain</span>
@@ -1552,10 +1612,14 @@
 <span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">MacT</span>
 <span class="w">  </span><span class="nt">mac_vendor</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mac_vendor</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The vendor or manufacturer of the endpoint's network interface controller</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">(NIC), as identified from the MAC address.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">vendor</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">manufacturer</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">endpoint</span><span class="se">''</span><span class="s">s</span><span class="nv"> </span><span class="s">network</span><span class="nv"> </span><span class="s">interface</span>
+<span class="w">      </span><span class="s">controller</span>
+
+<span class="w">      </span><span class="s">(NIC),</span><span class="nv"> </span><span class="s">as</span><span class="nv"> </span><span class="s">identified</span><span class="nv"> </span><span class="s">from</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">MAC</span><span class="nv"> </span><span class="s">address.'</span>
 <span class="w">    </span><span class="nt">notes</span><span class="p">:</span>
-<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">IEEE Registration Authority — https://standards.ieee.org/products-programs/regauth/</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">'IEEE</span><span class="nv"> </span><span class="s">Registration</span><span class="nv"> </span><span class="s">Authority</span><span class="nv"> </span><span class="s">—</span>
+
+<span class="w">      </span><span class="s">https://standards.ieee.org/products-programs/regauth/'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">see_also</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://standards.ieee.org/products-programs/regauth/</span>
@@ -1685,8 +1749,10 @@
 <span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Os</span>
 <span class="w">  </span><span class="nt">owner</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">owner</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The identity of the service or user account that owns the endpoint</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">or was last logged into it.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">identity</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">service</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">user</span><span class="nv"> </span><span class="s">account</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">owns</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">endpoint</span>
+<span class="w">      </span><span class="s">or</span><span class="nv"> </span><span class="s">was</span><span class="nv"> </span><span class="s">last</span>
+
+<span class="w">      </span><span class="s">logged</span><span class="nv"> </span><span class="s">into</span><span class="nv"> </span><span class="s">it.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Owner</span>
@@ -1772,9 +1838,12 @@
 <span class="w">      </span><span class="nt">group</span><span class="p">:</span>
 <span class="w">        </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">group</span>
 <span class="w">        </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">context</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The information describing an instance of a container. A container</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">is a prepackaged, portable system image that runs isolated on an existing system</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">using a container runtime like containerd.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">information</span><span class="nv"> </span><span class="s">describing</span><span class="nv"> </span><span class="s">an</span><span class="nv"> </span><span class="s">instance</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">container.</span><span class="nv"> </span><span class="s">A</span><span class="nv"> </span><span class="s">container</span>
+<span class="w">      </span><span class="s">is</span><span class="nv"> </span><span class="s">a</span>
+
+<span class="w">      </span><span class="s">prepackaged,</span><span class="nv"> </span><span class="s">portable</span><span class="nv"> </span><span class="s">system</span><span class="nv"> </span><span class="s">image</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">runs</span><span class="nv"> </span><span class="s">isolated</span><span class="nv"> </span><span class="s">on</span><span class="nv"> </span><span class="s">an</span><span class="nv"> </span><span class="s">existing</span><span class="nv"> </span><span class="s">system</span>
+
+<span class="w">      </span><span class="s">using</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">container</span><span class="nv"> </span><span class="s">runtime</span><span class="nv"> </span><span class="s">like</span><span class="nv"> </span><span class="s">containerd.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Container</span>
@@ -1793,8 +1862,10 @@
 <span class="w">      </span><span class="nt">group</span><span class="p">:</span>
 <span class="w">        </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">group</span>
 <span class="w">        </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">context</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">If running under a process namespace (such as in a container), the</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">process identifier within that process namespace.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'If</span><span class="nv"> </span><span class="s">running</span><span class="nv"> </span><span class="s">under</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">process</span><span class="nv"> </span><span class="s">namespace</span><span class="nv"> </span><span class="s">(such</span><span class="nv"> </span><span class="s">as</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">container),</span><span class="nv"> </span><span class="s">the</span>
+<span class="w">      </span><span class="s">process</span>
+
+<span class="w">      </span><span class="s">identifier</span><span class="nv"> </span><span class="s">within</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">process</span><span class="nv"> </span><span class="s">namespace.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Namespace PID</span>

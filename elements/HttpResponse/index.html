@@ -217,6 +217,15 @@
 </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="#in-subsets">
+<span class="md-ellipsis">
+      
+        In Subsets
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#aliases">
 <span class="md-ellipsis">
       
@@ -313,7 +322,10 @@
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
 <h1 id="class-httpresponse">Class: HttpResponse</h1>
-<p><em>The HTTP Response object contains detailed information about the response sent from a web server to the requester. It encompasses attributes and metadata that describe the response status, headers, body content, and other relevant information.</em></p>
+<p><em>The HTTP Response object contains detailed information about the response sent</em></p>
+<p><em>from a web server to the requester. It encompasses attributes and metadata that</em></p>
+<p><em>describe the response status, headers, body content, and other relevant</em></p>
+<p><em>information.</em></p>
 <p>URI: <a href="https://w3id.org/lmodel/ocsf/HttpResponse">ocsf:HttpResponse</a></p>
 <pre class="mermaid"><code> classDiagram
     class HttpResponse
@@ -383,7 +395,7 @@
 <tr>
 <td><a href="../content_type/">content_type</a></td>
 <td>0..1 <br/> <a href="../String/">String</a></td>
-<td>The request header that identifies the original &lt;a target='_blank' href='http...</td>
+<td>The request header that identifies the original &lt;a target='_blank'</td>
 <td>direct</td>
 </tr>
 <tr>
@@ -611,6 +623,10 @@
 </tr>
 </tbody>
 </table>
+<h2 id="in-subsets">In Subsets</h2>
+<ul>
+<li><a href="../Objects/">Objects</a></li>
+</ul>
 <h2 id="aliases">Aliases</h2>
 <ul>
 <li>HTTP Response</li>
@@ -621,7 +637,8 @@
 </ul>
 <h2 id="notes">Notes</h2>
 <ul>
-<li>D3FEND™ Ontology d3f:InboundInternetNetworkTraffic. — <a href="https://d3fend.mitre.org/dao/artifact/d3f:InboundInternetNetworkTraffic/">https://d3fend.mitre.org/dao/artifact/d3f:InboundInternetNetworkTraffic/</a></li>
+<li>D3FEND™ Ontology d3f:InboundInternetNetworkTraffic. —
+<a href="https://d3fend.mitre.org/dao/artifact/d3f:InboundInternetNetworkTraffic/">https://d3fend.mitre.org/dao/artifact/d3f:InboundInternetNetworkTraffic/</a></li>
 </ul>
 <h2 id="identifier-and-mapping-information">Identifier and Mapping Information</h2>
 <h3 id="schema-source">Schema Source</h3>
@@ -656,11 +673,20 @@
 <h3 id="direct">Direct</h3>
 <details>
 <div class="highlight"><pre><span></span><code><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">HttpResponse</span>
-<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The HTTP Response object contains detailed information about the response</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">sent from a web server to the requester. It encompasses attributes and metadata</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">that describe the response status, headers, body content, and other relevant information.</span>
+<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">HTTP</span><span class="nv"> </span><span class="s">Response</span><span class="nv"> </span><span class="s">object</span><span class="nv"> </span><span class="s">contains</span><span class="nv"> </span><span class="s">detailed</span><span class="nv"> </span><span class="s">information</span><span class="nv"> </span><span class="s">about</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">response</span>
+<span class="w">  </span><span class="s">sent</span>
+
+<span class="w">  </span><span class="s">from</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">web</span><span class="nv"> </span><span class="s">server</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">requester.</span><span class="nv"> </span><span class="s">It</span><span class="nv"> </span><span class="s">encompasses</span><span class="nv"> </span><span class="s">attributes</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">metadata</span><span class="nv"> </span><span class="s">that</span>
+
+<span class="w">  </span><span class="s">describe</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">response</span><span class="nv"> </span><span class="s">status,</span><span class="nv"> </span><span class="s">headers,</span><span class="nv"> </span><span class="s">body</span><span class="nv"> </span><span class="s">content,</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">other</span><span class="nv"> </span><span class="s">relevant</span>
+
+<span class="w">  </span><span class="s">information.'</span>
 <span class="nt">notes</span><span class="p">:</span>
-<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">D3FEND™ Ontology d3f:InboundInternetNetworkTraffic. — https://d3fend.mitre.org/dao/artifact/d3f:InboundInternetNetworkTraffic/</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="s">'D3FEND™</span><span class="nv"> </span><span class="s">Ontology</span><span class="nv"> </span><span class="s">d3f:InboundInternetNetworkTraffic.</span><span class="nv"> </span><span class="s">—</span>
+
+<span class="w">  </span><span class="s">https://d3fend.mitre.org/dao/artifact/d3f:InboundInternetNetworkTraffic/'</span>
+<span class="nt">in_subset</span><span class="p">:</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">objects</span>
 <span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="nt">see_also</span><span class="p">:</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://d3fend.mitre.org/dao/artifact/d3f:InboundInternetNetworkTraffic/</span>
@@ -681,12 +707,16 @@
 <span class="nt">slot_usage</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">body_length</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">body_length</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The actual length of the HTTP response body, in number of bytes,</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">independent of a potentially existing Content-Length header.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">actual</span><span class="nv"> </span><span class="s">length</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">HTTP</span><span class="nv"> </span><span class="s">response</span><span class="nv"> </span><span class="s">body,</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">number</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">bytes,</span>
+<span class="w">      </span><span class="s">independent</span><span class="nv"> </span><span class="s">of</span>
+
+<span class="w">      </span><span class="s">a</span><span class="nv"> </span><span class="s">potentially</span><span class="nv"> </span><span class="s">existing</span><span class="nv"> </span><span class="s">Content-Length</span><span class="nv"> </span><span class="s">header.'</span>
 <span class="w">  </span><span class="nt">code</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">code</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The Hypertext Transfer Protocol (HTTP) status code returned from</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">the web server to the client. For example, 200.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">Hypertext</span><span class="nv"> </span><span class="s">Transfer</span><span class="nv"> </span><span class="s">Protocol</span><span class="nv"> </span><span class="s">(HTTP)</span><span class="nv"> </span><span class="s">status</span><span class="nv"> </span><span class="s">code</span><span class="nv"> </span><span class="s">returned</span><span class="nv"> </span><span class="s">from</span>
+<span class="w">      </span><span class="s">the</span><span class="nv"> </span><span class="s">web</span><span class="nv"> </span><span class="s">server</span>
+
+<span class="w">      </span><span class="s">to</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">client.</span><span class="nv"> </span><span class="s">For</span><span class="nv"> </span><span class="s">example,</span><span class="nv"> </span><span class="s">200.'</span>
 <span class="w">    </span><span class="nt">required</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">http_headers</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">http_headers</span>
@@ -697,17 +727,28 @@
 <span class="w">  </span><span class="nt">status</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">status</span>
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">response</span><span class="nv"> </span><span class="s">status.</span><span class="nv"> </span><span class="s">For</span><span class="nv"> </span><span class="s">example:</span><span class="nv"> </span><span class="s">A</span><span class="nv"> </span><span class="s">successful</span><span class="nv"> </span><span class="s">HTTP</span><span class="nv"> </span><span class="s">status</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="se">''</span><span class="s">OK</span><span class="se">''</span>
-<span class="w">      </span><span class="s">which</span><span class="nv"> </span><span class="s">corresponds</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">code</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">200.'</span>
+<span class="w">      </span><span class="s">which</span>
+
+<span class="w">      </span><span class="s">corresponds</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">code</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">200.'</span>
 </code></pre></div>
 </details>
 <h3 id="induced">Induced</h3>
 <details>
 <div class="highlight"><pre><span></span><code><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">HttpResponse</span>
-<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The HTTP Response object contains detailed information about the response</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">sent from a web server to the requester. It encompasses attributes and metadata</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">that describe the response status, headers, body content, and other relevant information.</span>
+<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">HTTP</span><span class="nv"> </span><span class="s">Response</span><span class="nv"> </span><span class="s">object</span><span class="nv"> </span><span class="s">contains</span><span class="nv"> </span><span class="s">detailed</span><span class="nv"> </span><span class="s">information</span><span class="nv"> </span><span class="s">about</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">response</span>
+<span class="w">  </span><span class="s">sent</span>
+
+<span class="w">  </span><span class="s">from</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">web</span><span class="nv"> </span><span class="s">server</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">requester.</span><span class="nv"> </span><span class="s">It</span><span class="nv"> </span><span class="s">encompasses</span><span class="nv"> </span><span class="s">attributes</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">metadata</span><span class="nv"> </span><span class="s">that</span>
+
+<span class="w">  </span><span class="s">describe</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">response</span><span class="nv"> </span><span class="s">status,</span><span class="nv"> </span><span class="s">headers,</span><span class="nv"> </span><span class="s">body</span><span class="nv"> </span><span class="s">content,</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">other</span><span class="nv"> </span><span class="s">relevant</span>
+
+<span class="w">  </span><span class="s">information.'</span>
 <span class="nt">notes</span><span class="p">:</span>
-<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">D3FEND™ Ontology d3f:InboundInternetNetworkTraffic. — https://d3fend.mitre.org/dao/artifact/d3f:InboundInternetNetworkTraffic/</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="s">'D3FEND™</span><span class="nv"> </span><span class="s">Ontology</span><span class="nv"> </span><span class="s">d3f:InboundInternetNetworkTraffic.</span><span class="nv"> </span><span class="s">—</span>
+
+<span class="w">  </span><span class="s">https://d3fend.mitre.org/dao/artifact/d3f:InboundInternetNetworkTraffic/'</span>
+<span class="nt">in_subset</span><span class="p">:</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">objects</span>
 <span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="nt">see_also</span><span class="p">:</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://d3fend.mitre.org/dao/artifact/d3f:InboundInternetNetworkTraffic/</span>
@@ -719,12 +760,16 @@
 <span class="nt">slot_usage</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">body_length</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">body_length</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The actual length of the HTTP response body, in number of bytes,</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">independent of a potentially existing Content-Length header.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">actual</span><span class="nv"> </span><span class="s">length</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">HTTP</span><span class="nv"> </span><span class="s">response</span><span class="nv"> </span><span class="s">body,</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">number</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">bytes,</span>
+<span class="w">      </span><span class="s">independent</span><span class="nv"> </span><span class="s">of</span>
+
+<span class="w">      </span><span class="s">a</span><span class="nv"> </span><span class="s">potentially</span><span class="nv"> </span><span class="s">existing</span><span class="nv"> </span><span class="s">Content-Length</span><span class="nv"> </span><span class="s">header.'</span>
 <span class="w">  </span><span class="nt">code</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">code</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The Hypertext Transfer Protocol (HTTP) status code returned from</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">the web server to the client. For example, 200.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">Hypertext</span><span class="nv"> </span><span class="s">Transfer</span><span class="nv"> </span><span class="s">Protocol</span><span class="nv"> </span><span class="s">(HTTP)</span><span class="nv"> </span><span class="s">status</span><span class="nv"> </span><span class="s">code</span><span class="nv"> </span><span class="s">returned</span><span class="nv"> </span><span class="s">from</span>
+<span class="w">      </span><span class="s">the</span><span class="nv"> </span><span class="s">web</span><span class="nv"> </span><span class="s">server</span>
+
+<span class="w">      </span><span class="s">to</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">client.</span><span class="nv"> </span><span class="s">For</span><span class="nv"> </span><span class="s">example,</span><span class="nv"> </span><span class="s">200.'</span>
 <span class="w">    </span><span class="nt">required</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">http_headers</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">http_headers</span>
@@ -735,12 +780,16 @@
 <span class="w">  </span><span class="nt">status</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">status</span>
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">response</span><span class="nv"> </span><span class="s">status.</span><span class="nv"> </span><span class="s">For</span><span class="nv"> </span><span class="s">example:</span><span class="nv"> </span><span class="s">A</span><span class="nv"> </span><span class="s">successful</span><span class="nv"> </span><span class="s">HTTP</span><span class="nv"> </span><span class="s">status</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="se">''</span><span class="s">OK</span><span class="se">''</span>
-<span class="w">      </span><span class="s">which</span><span class="nv"> </span><span class="s">corresponds</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">code</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">200.'</span>
+<span class="w">      </span><span class="s">which</span>
+
+<span class="w">      </span><span class="s">corresponds</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">code</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">200.'</span>
 <span class="nt">attributes</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">body_length</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">body_length</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The actual length of the HTTP response body, in number of bytes,</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">independent of a potentially existing Content-Length header.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">actual</span><span class="nv"> </span><span class="s">length</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">HTTP</span><span class="nv"> </span><span class="s">response</span><span class="nv"> </span><span class="s">body,</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">number</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">bytes,</span>
+<span class="w">      </span><span class="s">independent</span><span class="nv"> </span><span class="s">of</span>
+
+<span class="w">      </span><span class="s">a</span><span class="nv"> </span><span class="s">potentially</span><span class="nv"> </span><span class="s">existing</span><span class="nv"> </span><span class="s">Content-Length</span><span class="nv"> </span><span class="s">header.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Body Length not including header</span>
@@ -753,8 +802,10 @@
 <span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">integer</span>
 <span class="w">  </span><span class="nt">code</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">code</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The Hypertext Transfer Protocol (HTTP) status code returned from</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">the web server to the client. For example, 200.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">Hypertext</span><span class="nv"> </span><span class="s">Transfer</span><span class="nv"> </span><span class="s">Protocol</span><span class="nv"> </span><span class="s">(HTTP)</span><span class="nv"> </span><span class="s">status</span><span class="nv"> </span><span class="s">code</span><span class="nv"> </span><span class="s">returned</span><span class="nv"> </span><span class="s">from</span>
+<span class="w">      </span><span class="s">the</span><span class="nv"> </span><span class="s">web</span><span class="nv"> </span><span class="s">server</span>
+
+<span class="w">      </span><span class="s">to</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">client.</span><span class="nv"> </span><span class="s">For</span><span class="nv"> </span><span class="s">example,</span><span class="nv"> </span><span class="s">200.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Response Code</span>
@@ -770,9 +821,11 @@
 <span class="w">    </span><span class="nt">required</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">content_type</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">content_type</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The request header that identifies the original &lt;a target='_blank'</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">href='https://www.iana.org/assignments/media-types/media-types.xhtml'&gt;media</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">type &lt;/a&gt; of the resource (prior to any content encoding applied for sending).</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">request</span><span class="nv"> </span><span class="s">header</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">identifies</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">original</span><span class="nv"> </span><span class="s">&lt;a</span><span class="nv"> </span><span class="s">target=</span><span class="se">''</span><span class="s">_blank</span><span class="se">''</span>
+
+<span class="w">      </span><span class="s">href=</span><span class="se">''</span><span class="s">https://www.iana.org/assignments/media-types/media-types.xhtml</span><span class="se">''</span><span class="s">&gt;media</span>
+
+<span class="w">      </span><span class="s">type</span><span class="nv"> </span><span class="s">&lt;/a&gt;</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">resource</span><span class="nv"> </span><span class="s">(prior</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">any</span><span class="nv"> </span><span class="s">content</span><span class="nv"> </span><span class="s">encoding</span><span class="nv"> </span><span class="s">applied</span><span class="nv"> </span><span class="s">for</span><span class="nv"> </span><span class="s">sending).'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">HTTP Content Type</span>
@@ -843,7 +896,9 @@
 <span class="w">  </span><span class="nt">status</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">status</span>
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">response</span><span class="nv"> </span><span class="s">status.</span><span class="nv"> </span><span class="s">For</span><span class="nv"> </span><span class="s">example:</span><span class="nv"> </span><span class="s">A</span><span class="nv"> </span><span class="s">successful</span><span class="nv"> </span><span class="s">HTTP</span><span class="nv"> </span><span class="s">status</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="se">''</span><span class="s">OK</span><span class="se">''</span>
-<span class="w">      </span><span class="s">which</span><span class="nv"> </span><span class="s">corresponds</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">code</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">200.'</span>
+<span class="w">      </span><span class="s">which</span>
+
+<span class="w">      </span><span class="s">corresponds</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">code</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">200.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Status</span>

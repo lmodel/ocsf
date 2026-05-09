@@ -497,7 +497,9 @@
 
 
 <h1 id="slot-cpe_name">Slot: cpe_name</h1>
-<p><em>The Common Platform Enumeration (CPE) name as described by (<a target='_blank' href='https://nvd.nist.gov/products/cpe'>NIST</a>) For example: <code>cpe:/a:apple:safari:16.2</code>.</em></p>
+<p><em>The Common Platform Enumeration (CPE) name as described by (&lt;a target='_blank'</em></p>
+<p><em>href='<a href="https://nvd.nist.gov/products/cpe">https://nvd.nist.gov/products/cpe</a>'&gt;NIST</a>) For example:</em></p>
+<p><em><code>cpe:/a:apple:safari:16.2</code>.</em></p>
 <p>URI: <a href="https://w3id.org/lmodel/ocsf/cpe_name">ocsf:cpe_name</a>
 Alias: cpe_name</p>
 <!-- no inheritance hierarchy -->
@@ -513,23 +515,23 @@ Alias: cpe_name</p>
 </thead>
 <tbody>
 <tr>
-<td><a href="../Package/">Package</a></td>
-<td>The Software Package object describes details about a software package</td>
+<td><a href="../Product/">Product</a></td>
+<td>The Product object describes characteristics of a software product</td>
 <td>no</td>
 </tr>
 <tr>
 <td><a href="../Os/">Os</a></td>
-<td>The Operating System (OS) object describes characteristics of an OS, such as ...</td>
+<td>The Operating System (OS) object describes characteristics of an OS, such as</td>
 <td>no</td>
 </tr>
 <tr>
 <td><a href="../AffectedPackage/">AffectedPackage</a></td>
-<td>The Affected Package object describes details about a software package identi...</td>
+<td>The Affected Package object describes details about a software package</td>
 <td>no</td>
 </tr>
 <tr>
-<td><a href="../Product/">Product</a></td>
-<td>The Product object describes characteristics of a software product</td>
+<td><a href="../Package/">Package</a></td>
+<td>The Software Package object describes details about a software package</td>
 <td>no</td>
 </tr>
 </tbody>
@@ -601,7 +603,10 @@ Alias: cpe_name</p>
 <details>
 <div class="highlight"><pre><span></span><code><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">cpe_name</span>
 <span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;The</span><span class="nv"> </span><span class="s">Common</span><span class="nv"> </span><span class="s">Platform</span><span class="nv"> </span><span class="s">Enumeration</span><span class="nv"> </span><span class="s">(CPE)</span><span class="nv"> </span><span class="s">name</span><span class="nv"> </span><span class="s">as</span><span class="nv"> </span><span class="s">described</span><span class="nv"> </span><span class="s">by</span><span class="nv"> </span><span class="s">(&lt;a</span><span class="nv"> </span><span class="s">target=</span><span class="se">&#39;&#39;</span><span class="s">_blank</span><span class="se">&#39;&#39;</span>
-<span class="w">  </span><span class="s">href=</span><span class="se">&#39;&#39;</span><span class="s">https://nvd.nist.gov/products/cpe</span><span class="se">&#39;&#39;</span><span class="s">&gt;NIST&lt;/a&gt;)</span><span class="nv"> </span><span class="s">For</span><span class="nv"> </span><span class="s">example:</span><span class="nv"> </span><span class="s">&lt;code&gt;cpe:/a:apple:safari:16.2&lt;/code&gt;.&#39;</span>
+
+<span class="w">  </span><span class="s">href=</span><span class="se">&#39;&#39;</span><span class="s">https://nvd.nist.gov/products/cpe</span><span class="se">&#39;&#39;</span><span class="s">&gt;NIST&lt;/a&gt;)</span><span class="nv"> </span><span class="s">For</span><span class="nv"> </span><span class="s">example:</span>
+
+<span class="w">  </span><span class="s">&lt;code&gt;cpe:/a:apple:safari:16.2&lt;/code&gt;.&#39;</span>
 <span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="nt">aliases</span><span class="p">:</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The product CPE identifier</span>

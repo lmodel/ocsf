@@ -497,7 +497,8 @@
 
 
 <h1 id="slot-mac">Slot: mac</h1>
-<p><em>The Media Access Control (MAC) address that is associated with the network interface.</em></p>
+<p><em>The Media Access Control (MAC) address that is associated with the network</em></p>
+<p><em>interface.</em></p>
 <p>URI: <a href="https://w3id.org/lmodel/ocsf/mac">ocsf:mac</a>
 Alias: mac</p>
 <!-- no inheritance hierarchy -->
@@ -513,9 +514,14 @@ Alias: mac</p>
 </thead>
 <tbody>
 <tr>
-<td><a href="../Endpoint/">Endpoint</a></td>
-<td>The Endpoint object describes a physical or virtual device that connects to a...</td>
+<td><a href="../NetworkInterface/">NetworkInterface</a></td>
+<td>The Network Interface object describes the type and associated attributes of ...</td>
 <td>yes</td>
+</tr>
+<tr>
+<td><a href="../NetworkProxy/">NetworkProxy</a></td>
+<td>The network proxy endpoint object describes a proxy server, which acts as an</td>
+<td>no</td>
 </tr>
 <tr>
 <td><a href="../NetworkEndpoint/">NetworkEndpoint</a></td>
@@ -523,18 +529,13 @@ Alias: mac</p>
 <td>no</td>
 </tr>
 <tr>
-<td><a href="../Device/">Device</a></td>
-<td>The Device object represents an addressable computer system or host, which is...</td>
-<td>no</td>
-</tr>
-<tr>
-<td><a href="../NetworkInterface/">NetworkInterface</a></td>
-<td>The Network Interface object describes the type and associated attributes of ...</td>
+<td><a href="../Endpoint/">Endpoint</a></td>
+<td>The Endpoint object describes a physical or virtual device that connects to a...</td>
 <td>yes</td>
 </tr>
 <tr>
-<td><a href="../NetworkProxy/">NetworkProxy</a></td>
-<td>The network proxy endpoint object describes a proxy server, which acts as an ...</td>
+<td><a href="../Device/">Device</a></td>
+<td>The Device object represents an addressable computer system or host, which is</td>
 <td>no</td>
 </tr>
 </tbody>
@@ -605,8 +606,9 @@ Alias: mac</p>
 <h2 id="linkml-source">LinkML Source</h2>
 <details>
 <div class="highlight"><pre><span></span><code><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mac</span>
-<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The Media Access Control (MAC) address that is associated with the network</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">interface.</span>
+<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;The</span><span class="nv"> </span><span class="s">Media</span><span class="nv"> </span><span class="s">Access</span><span class="nv"> </span><span class="s">Control</span><span class="nv"> </span><span class="s">(MAC)</span><span class="nv"> </span><span class="s">address</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">associated</span><span class="nv"> </span><span class="s">with</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">network</span>
+
+<span class="w">  </span><span class="s">interface.&#39;</span>
 <span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="nt">aliases</span><span class="p">:</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">MAC Address</span>

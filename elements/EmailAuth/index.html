@@ -217,6 +217,15 @@
 </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="#in-subsets">
+<span class="md-ellipsis">
+      
+        In Subsets
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#aliases">
 <span class="md-ellipsis">
       
@@ -295,7 +304,9 @@
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
 <h1 id="class-emailauth">Class: EmailAuth</h1>
-<p><em>The Email Authentication object describes the Sender Policy Framework (SPF), DomainKeys Identified Mail (DKIM) and Domain-based Message Authentication, Reporting and Conformance (DMARC) attributes of an email.</em></p>
+<p><em>The Email Authentication object describes the Sender Policy Framework (SPF),</em></p>
+<p><em>DomainKeys Identified Mail (DKIM) and Domain-based Message Authentication,</em></p>
+<p><em>Reporting and Conformance (DMARC) attributes of an email.</em></p>
 <p>URI: <a href="https://w3id.org/lmodel/ocsf/EmailAuth">ocsf:EmailAuth</a></p>
 <pre class="mermaid"><code> classDiagram
     class EmailAuth
@@ -354,25 +365,25 @@
 <tr>
 <td><a href="../dkim_signature/">dkim_signature</a></td>
 <td>0..1 <em>recommended</em> <br/> <a href="../String/">String</a></td>
-<td>The DomainKeys Identified Mail (DKIM) signature used by the sending/receiving...</td>
+<td>The DomainKeys Identified Mail (DKIM) signature used by the sending/receiving</td>
 <td>direct</td>
 </tr>
 <tr>
 <td><a href="../dmarc/">dmarc</a></td>
 <td>0..1 <em>recommended</em> <br/> <a href="../String/">String</a></td>
-<td>The Domain-based Message Authentication, Reporting and Conformance (DMARC) st...</td>
+<td>The Domain-based Message Authentication, Reporting and Conformance (DMARC)</td>
 <td>direct</td>
 </tr>
 <tr>
 <td><a href="../dmarc_override/">dmarc_override</a></td>
 <td>0..1 <em>recommended</em> <br/> <a href="../String/">String</a></td>
-<td>The Domain-based Message Authentication, Reporting and Conformance (DMARC) ov...</td>
+<td>The Domain-based Message Authentication, Reporting and Conformance (DMARC)</td>
 <td>direct</td>
 </tr>
 <tr>
 <td><a href="../dmarc_policy/">dmarc_policy</a></td>
 <td>0..1 <em>recommended</em> <br/> <a href="../String/">String</a></td>
-<td>The Domain-based Message Authentication, Reporting and Conformance (DMARC) po...</td>
+<td>The Domain-based Message Authentication, Reporting and Conformance (DMARC)</td>
 <td>direct</td>
 </tr>
 <tr>
@@ -408,6 +419,10 @@
 </tr>
 </tbody>
 </table>
+<h2 id="in-subsets">In Subsets</h2>
+<ul>
+<li><a href="../Objects/">Objects</a></li>
+</ul>
 <h2 id="aliases">Aliases</h2>
 <ul>
 <li>Email Authentication</li>
@@ -441,9 +456,14 @@
 <h3 id="direct">Direct</h3>
 <details>
 <div class="highlight"><pre><span></span><code><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">EmailAuth</span>
-<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The Email Authentication object describes the Sender Policy Framework</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">(SPF), DomainKeys Identified Mail (DKIM) and Domain-based Message Authentication,</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">Reporting and Conformance (DMARC) attributes of an email.</span>
+<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">Email</span><span class="nv"> </span><span class="s">Authentication</span><span class="nv"> </span><span class="s">object</span><span class="nv"> </span><span class="s">describes</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">Sender</span><span class="nv"> </span><span class="s">Policy</span><span class="nv"> </span><span class="s">Framework</span>
+<span class="w">  </span><span class="s">(SPF),</span>
+
+<span class="w">  </span><span class="s">DomainKeys</span><span class="nv"> </span><span class="s">Identified</span><span class="nv"> </span><span class="s">Mail</span><span class="nv"> </span><span class="s">(DKIM)</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">Domain-based</span><span class="nv"> </span><span class="s">Message</span><span class="nv"> </span><span class="s">Authentication,</span>
+
+<span class="w">  </span><span class="s">Reporting</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">Conformance</span><span class="nv"> </span><span class="s">(DMARC)</span><span class="nv"> </span><span class="s">attributes</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">an</span><span class="nv"> </span><span class="s">email.'</span>
+<span class="nt">in_subset</span><span class="p">:</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">objects</span>
 <span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="nt">aliases</span><span class="p">:</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Email Authentication</span>
@@ -483,9 +503,14 @@
 <h3 id="induced">Induced</h3>
 <details>
 <div class="highlight"><pre><span></span><code><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">EmailAuth</span>
-<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The Email Authentication object describes the Sender Policy Framework</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">(SPF), DomainKeys Identified Mail (DKIM) and Domain-based Message Authentication,</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">Reporting and Conformance (DMARC) attributes of an email.</span>
+<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">Email</span><span class="nv"> </span><span class="s">Authentication</span><span class="nv"> </span><span class="s">object</span><span class="nv"> </span><span class="s">describes</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">Sender</span><span class="nv"> </span><span class="s">Policy</span><span class="nv"> </span><span class="s">Framework</span>
+<span class="w">  </span><span class="s">(SPF),</span>
+
+<span class="w">  </span><span class="s">DomainKeys</span><span class="nv"> </span><span class="s">Identified</span><span class="nv"> </span><span class="s">Mail</span><span class="nv"> </span><span class="s">(DKIM)</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">Domain-based</span><span class="nv"> </span><span class="s">Message</span><span class="nv"> </span><span class="s">Authentication,</span>
+
+<span class="w">  </span><span class="s">Reporting</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">Conformance</span><span class="nv"> </span><span class="s">(DMARC)</span><span class="nv"> </span><span class="s">attributes</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">an</span><span class="nv"> </span><span class="s">email.'</span>
+<span class="nt">in_subset</span><span class="p">:</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">objects</span>
 <span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="nt">aliases</span><span class="p">:</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Email Authentication</span>
@@ -541,8 +566,9 @@
 <span class="w">    </span><span class="nt">recommended</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">dkim_signature</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">dkim_signature</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The DomainKeys Identified Mail (DKIM) signature used by the sending/receiving</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">system.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">DomainKeys</span><span class="nv"> </span><span class="s">Identified</span><span class="nv"> </span><span class="s">Mail</span><span class="nv"> </span><span class="s">(DKIM)</span><span class="nv"> </span><span class="s">signature</span><span class="nv"> </span><span class="s">used</span><span class="nv"> </span><span class="s">by</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">sending/receiving</span>
+
+<span class="w">      </span><span class="s">system.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">DKIM Signature</span>
@@ -555,8 +581,10 @@
 <span class="w">    </span><span class="nt">recommended</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">dmarc</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">dmarc</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The Domain-based Message Authentication, Reporting and Conformance</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">(DMARC) status of the email.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">Domain-based</span><span class="nv"> </span><span class="s">Message</span><span class="nv"> </span><span class="s">Authentication,</span><span class="nv"> </span><span class="s">Reporting</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">Conformance</span>
+<span class="w">      </span><span class="s">(DMARC)</span>
+
+<span class="w">      </span><span class="s">status</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">email.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">DMARC Status</span>
@@ -569,8 +597,10 @@
 <span class="w">    </span><span class="nt">recommended</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">dmarc_override</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">dmarc_override</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The Domain-based Message Authentication, Reporting and Conformance</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">(DMARC) override action.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">Domain-based</span><span class="nv"> </span><span class="s">Message</span><span class="nv"> </span><span class="s">Authentication,</span><span class="nv"> </span><span class="s">Reporting</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">Conformance</span>
+<span class="w">      </span><span class="s">(DMARC)</span>
+
+<span class="w">      </span><span class="s">override</span><span class="nv"> </span><span class="s">action.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">DMARC Override</span>
@@ -583,8 +613,10 @@
 <span class="w">    </span><span class="nt">recommended</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">dmarc_policy</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">dmarc_policy</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The Domain-based Message Authentication, Reporting and Conformance</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">(DMARC) policy status.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">Domain-based</span><span class="nv"> </span><span class="s">Message</span><span class="nv"> </span><span class="s">Authentication,</span><span class="nv"> </span><span class="s">Reporting</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">Conformance</span>
+<span class="w">      </span><span class="s">(DMARC)</span>
+
+<span class="w">      </span><span class="s">policy</span><span class="nv"> </span><span class="s">status.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">DMARC Policy</span>

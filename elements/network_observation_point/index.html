@@ -497,7 +497,10 @@
 
 
 <h1 id="slot-network_observation_point">Slot: network_observation_point</h1>
-<p><em>The network endpoint that observes or inspects network traffic as a third-party system, used when the observer is neither the source nor the destination of the communication. Examples include network taps, span ports, inline security devices, or packet capture systems.</em></p>
+<p><em>The network endpoint that observes or inspects network traffic as a third-party</em></p>
+<p><em>system, used when the observer is neither the source nor the destination of the</em></p>
+<p><em>communication. Examples include network taps, span ports, inline security</em></p>
+<p><em>devices, or packet capture systems.</em></p>
 <p>URI: <a href="https://w3id.org/lmodel/ocsf/network_observation_point">ocsf:network_observation_point</a>
 Alias: network_observation_point</p>
 <!-- no inheritance hierarchy -->
@@ -513,23 +516,18 @@ Alias: network_observation_point</p>
 </thead>
 <tbody>
 <tr>
-<td><a href="../SshActivity/">SshActivity</a></td>
-<td>SSH Activity events report remote client connections to a server using the Se...</td>
+<td><a href="../HttpActivity/">HttpActivity</a></td>
+<td>HTTP Activity events report HTTP connection and traffic information</td>
 <td>no</td>
 </tr>
 <tr>
-<td><a href="../DhcpActivity/">DhcpActivity</a></td>
-<td>DHCP Activity events report MAC to IP assignment via DHCP from a client or se...</td>
+<td><a href="../SmbActivity/">SmbActivity</a></td>
+<td>Server Message Block (SMB) Protocol Activity events report client/server</td>
 <td>no</td>
 </tr>
 <tr>
-<td><a href="../RdpActivity/">RdpActivity</a></td>
-<td>Remote Desktop Protocol (RDP) Activity events report post-authentication remo...</td>
-<td>no</td>
-</tr>
-<tr>
-<td><a href="../TunnelActivity/">TunnelActivity</a></td>
-<td>Tunnel Activity events report secure tunnel establishment (such as VPN), tear...</td>
+<td><a href="../FtpActivity/">FtpActivity</a></td>
+<td>File Transfer Protocol (FTP) Activity events report file transfers between a</td>
 <td>no</td>
 </tr>
 <tr>
@@ -538,13 +536,8 @@ Alias: network_observation_point</p>
 <td>no</td>
 </tr>
 <tr>
-<td><a href="../NetworkActivity/">NetworkActivity</a></td>
-<td>Network Activity events report network connection and traffic activity</td>
-<td>no</td>
-</tr>
-<tr>
-<td><a href="../NetworkFileActivity/">NetworkFileActivity</a></td>
-<td>Network File Activity events report file activities traversing the network, i...</td>
+<td><a href="../DhcpActivity/">DhcpActivity</a></td>
+<td>DHCP Activity events report MAC to IP assignment via DHCP from a client or</td>
 <td>no</td>
 </tr>
 <tr>
@@ -553,23 +546,33 @@ Alias: network_observation_point</p>
 <td>yes</td>
 </tr>
 <tr>
+<td><a href="../RdpActivity/">RdpActivity</a></td>
+<td>Remote Desktop Protocol (RDP) Activity events report post-authentication remo...</td>
+<td>no</td>
+</tr>
+<tr>
+<td><a href="../NetworkFileActivity/">NetworkFileActivity</a></td>
+<td>Network File Activity events report file activities traversing the network,</td>
+<td>no</td>
+</tr>
+<tr>
+<td><a href="../SshActivity/">SshActivity</a></td>
+<td>SSH Activity events report remote client connections to a server using the</td>
+<td>no</td>
+</tr>
+<tr>
 <td><a href="../NtpActivity/">NtpActivity</a></td>
-<td>The Network Time Protocol (NTP) Activity events report instances of remote cl...</td>
+<td>The Network Time Protocol (NTP) Activity events report instances of remote</td>
 <td>no</td>
 </tr>
 <tr>
-<td><a href="../FtpActivity/">FtpActivity</a></td>
-<td>File Transfer Protocol (FTP) Activity events report file transfers between a ...</td>
+<td><a href="../NetworkActivity/">NetworkActivity</a></td>
+<td>Network Activity events report network connection and traffic activity</td>
 <td>no</td>
 </tr>
 <tr>
-<td><a href="../SmbActivity/">SmbActivity</a></td>
-<td>Server Message Block (SMB) Protocol Activity events report client/server conn...</td>
-<td>no</td>
-</tr>
-<tr>
-<td><a href="../HttpActivity/">HttpActivity</a></td>
-<td>HTTP Activity events report HTTP connection and traffic information</td>
+<td><a href="../TunnelActivity/">TunnelActivity</a></td>
+<td>Tunnel Activity events report secure tunnel establishment (such as VPN),</td>
 <td>no</td>
 </tr>
 </tbody>
@@ -640,10 +643,14 @@ Alias: network_observation_point</p>
 <h2 id="linkml-source">LinkML Source</h2>
 <details>
 <div class="highlight"><pre><span></span><code><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">network_observation_point</span>
-<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The network endpoint that observes or inspects network traffic as a third-party</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">system, used when the observer is neither the source nor the destination of the</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">communication. Examples include network taps, span ports, inline security devices,</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">or packet capture systems.</span>
+<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;The</span><span class="nv"> </span><span class="s">network</span><span class="nv"> </span><span class="s">endpoint</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">observes</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">inspects</span><span class="nv"> </span><span class="s">network</span><span class="nv"> </span><span class="s">traffic</span><span class="nv"> </span><span class="s">as</span><span class="nv"> </span><span class="s">a</span>
+<span class="w">  </span><span class="s">third-party</span>
+
+<span class="w">  </span><span class="s">system,</span><span class="nv"> </span><span class="s">used</span><span class="nv"> </span><span class="s">when</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">observer</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">neither</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">source</span><span class="nv"> </span><span class="s">nor</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">destination</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span>
+
+<span class="w">  </span><span class="s">communication.</span><span class="nv"> </span><span class="s">Examples</span><span class="nv"> </span><span class="s">include</span><span class="nv"> </span><span class="s">network</span><span class="nv"> </span><span class="s">taps,</span><span class="nv"> </span><span class="s">span</span><span class="nv"> </span><span class="s">ports,</span><span class="nv"> </span><span class="s">inline</span><span class="nv"> </span><span class="s">security</span>
+
+<span class="w">  </span><span class="s">devices,</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">packet</span><span class="nv"> </span><span class="s">capture</span><span class="nv"> </span><span class="s">systems.&#39;</span>
 <span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="nt">aliases</span><span class="p">:</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Network Observation Point</span>

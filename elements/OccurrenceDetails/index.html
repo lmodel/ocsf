@@ -236,6 +236,15 @@
 </nav>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="#in-subsets">
+<span class="md-ellipsis">
+      
+        In Subsets
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#aliases">
 <span class="md-ellipsis">
       
@@ -323,7 +332,8 @@
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
 <h1 id="class-occurrencedetails">Class: OccurrenceDetails</h1>
-<p><em>Details about where in the target entity, specified information was discovered. Only the attributes, relevant to the target entity type should be populated.</em></p>
+<p><em>Details about where in the target entity, specified information was discovered.</em></p>
+<p><em>Only the attributes, relevant to the target entity type should be populated.</em></p>
 <p>URI: <a href="https://w3id.org/lmodel/ocsf/OccurrenceDetails">ocsf:OccurrenceDetails</a></p>
 <pre class="mermaid"><code> classDiagram
     class OccurrenceDetails
@@ -386,19 +396,19 @@
 <tr>
 <td><a href="../column_number/">column_number</a></td>
 <td>0..1 <br/> <a href="../Integer/">Integer</a></td>
-<td>The column number in a spreadsheet or a plain text document, where the inform...</td>
+<td>The column number in a spreadsheet or a plain text document, where the</td>
 <td>direct</td>
 </tr>
 <tr>
 <td><a href="../end_line/">end_line</a></td>
 <td>0..1 <br/> <a href="../Integer/">Integer</a></td>
-<td>The line number of the last line of the file, where the information was disco...</td>
+<td>The line number of the last line of the file, where the information was</td>
 <td>direct</td>
 </tr>
 <tr>
 <td><a href="../json_path/">json_path</a></td>
 <td>0..1 <br/> <a href="../String/">String</a></td>
-<td>The JSON path of the attribute in a json record, where the information was di...</td>
+<td>The JSON path of the attribute in a json record, where the information was</td>
 <td>direct</td>
 </tr>
 <tr>
@@ -410,7 +420,7 @@
 <tr>
 <td><a href="../record_index_in_array/">record_index_in_array</a></td>
 <td>0..1 <br/> <a href="../Integer/">Integer</a></td>
-<td>The index of the record in the array of records, where the information was di...</td>
+<td>The index of the record in the array of records, where the information was</td>
 <td>direct</td>
 </tr>
 <tr>
@@ -422,7 +432,7 @@
 <tr>
 <td><a href="../start_line/">start_line</a></td>
 <td>0..1 <br/> <a href="../Integer/">Integer</a></td>
-<td>The line number of the first line of the file, where the information was disc...</td>
+<td>The line number of the first line of the file, where the information was</td>
 <td>direct</td>
 </tr>
 </tbody>
@@ -472,6 +482,10 @@
 </tr>
 </tbody>
 </table>
+<h2 id="in-subsets">In Subsets</h2>
+<ul>
+<li><a href="../Objects/">Objects</a></li>
+</ul>
 <h2 id="aliases">Aliases</h2>
 <ul>
 <li>Occurrence Details</li>
@@ -488,7 +502,15 @@
 <tbody>
 <tr>
 <td>ocsf_constraints</td>
-<td>{"at_least_one": ["cell_name", "column_name", "column_number", "end_line", "json_path", "page_number", "record_index_in_array", "row_number", "start_line"]}</td>
+<td>{"at_least_one": ["cell_name", "column_name", "column_number", "end_line",</td>
+</tr>
+<tr>
+<td>"json_path", "page_number", "record_index_in_array", "row_number",</td>
+<td></td>
+</tr>
+<tr>
+<td>"start_line"]}</td>
+<td></td>
 </tr>
 </tbody>
 </table>
@@ -524,9 +546,16 @@
 <span class="w">  </span><span class="nt">ocsf_constraints</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ocsf_constraints</span>
 <span class="w">    </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="s">'{"at_least_one":</span><span class="nv"> </span><span class="s">["cell_name",</span><span class="nv"> </span><span class="s">"column_name",</span><span class="nv"> </span><span class="s">"column_number",</span><span class="nv"> </span><span class="s">"end_line",</span>
-<span class="w">      </span><span class="s">"json_path",</span><span class="nv"> </span><span class="s">"page_number",</span><span class="nv"> </span><span class="s">"record_index_in_array",</span><span class="nv"> </span><span class="s">"row_number",</span><span class="nv"> </span><span class="s">"start_line"]}'</span>
-<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Details about where in the target entity, specified information was discovered.</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">Only the attributes, relevant to the target entity type should be populated.</span>
+
+<span class="w">      </span><span class="s">"json_path",</span><span class="nv"> </span><span class="s">"page_number",</span><span class="nv"> </span><span class="s">"record_index_in_array",</span><span class="nv"> </span><span class="s">"row_number",</span>
+
+<span class="w">      </span><span class="s">"start_line"]}'</span>
+<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'Details</span><span class="nv"> </span><span class="s">about</span><span class="nv"> </span><span class="s">where</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">target</span><span class="nv"> </span><span class="s">entity,</span><span class="nv"> </span><span class="s">specified</span><span class="nv"> </span><span class="s">information</span><span class="nv"> </span><span class="s">was</span>
+<span class="w">  </span><span class="s">discovered.</span>
+
+<span class="w">  </span><span class="s">Only</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">attributes,</span><span class="nv"> </span><span class="s">relevant</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">target</span><span class="nv"> </span><span class="s">entity</span><span class="nv"> </span><span class="s">type</span><span class="nv"> </span><span class="s">should</span><span class="nv"> </span><span class="s">be</span><span class="nv"> </span><span class="s">populated.'</span>
+<span class="nt">in_subset</span><span class="p">:</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">objects</span>
 <span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="nt">aliases</span><span class="p">:</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Occurrence Details</span>
@@ -550,31 +579,40 @@
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The column name in a spreadsheet, where the information was discovered.</span>
 <span class="w">  </span><span class="nt">column_number</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">column_number</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The column number in a spreadsheet or a plain text document, where</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">the information was discovered.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">column</span><span class="nv"> </span><span class="s">number</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">spreadsheet</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">plain</span><span class="nv"> </span><span class="s">text</span><span class="nv"> </span><span class="s">document,</span><span class="nv"> </span><span class="s">where</span>
+<span class="w">      </span><span class="s">the</span>
+
+<span class="w">      </span><span class="s">information</span><span class="nv"> </span><span class="s">was</span><span class="nv"> </span><span class="s">discovered.'</span>
 <span class="w">  </span><span class="nt">end_line</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">end_line</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The line number of the last line of the file, where the information</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">was discovered.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">line</span><span class="nv"> </span><span class="s">number</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">last</span><span class="nv"> </span><span class="s">line</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">file,</span><span class="nv"> </span><span class="s">where</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">information</span>
+<span class="w">      </span><span class="s">was</span>
+
+<span class="w">      </span><span class="s">discovered.'</span>
 <span class="w">  </span><span class="nt">json_path</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">json_path</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The JSON path of the attribute in a json record, where the information</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">was discovered</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">JSON</span><span class="nv"> </span><span class="s">path</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">attribute</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">json</span><span class="nv"> </span><span class="s">record,</span><span class="nv"> </span><span class="s">where</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">information</span>
+<span class="w">      </span><span class="s">was</span>
+
+<span class="w">      </span><span class="s">discovered'</span>
 <span class="w">  </span><span class="nt">page_number</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">page_number</span>
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The page number in a document, where the information was discovered.</span>
 <span class="w">  </span><span class="nt">record_index_in_array</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">record_index_in_array</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The index of the record in the array of records, where the information</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">was discovered. e.g. the index of a record in an array of JSON records in a</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">file.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">index</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">record</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">array</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">records,</span><span class="nv"> </span><span class="s">where</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">information</span>
+<span class="w">      </span><span class="s">was</span>
+
+<span class="w">      </span><span class="s">discovered.</span><span class="nv"> </span><span class="s">e.g.</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">index</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">record</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">an</span><span class="nv"> </span><span class="s">array</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">JSON</span><span class="nv"> </span><span class="s">records</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">file.'</span>
 <span class="w">  </span><span class="nt">row_number</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">row_number</span>
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The row number in a spreadsheet, where the information was discovered.</span>
 <span class="w">  </span><span class="nt">start_line</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">start_line</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The line number of the first line of the file, where the information</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">was discovered.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">line</span><span class="nv"> </span><span class="s">number</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">first</span><span class="nv"> </span><span class="s">line</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">file,</span><span class="nv"> </span><span class="s">where</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">information</span>
+<span class="w">      </span><span class="s">was</span>
+
+<span class="w">      </span><span class="s">discovered.'</span>
 <span class="nt">rules</span><span class="p">:</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">postconditions</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">any_of</span><span class="p">:</span>
@@ -615,8 +653,10 @@
 <span class="w">          </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">start_line</span>
 <span class="w">          </span><span class="nt">required</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'OCSF</span><span class="nv"> </span><span class="s">at_least_one:</span><span class="nv"> </span><span class="s">at</span><span class="nv"> </span><span class="s">least</span><span class="nv"> </span><span class="s">one</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">[</span><span class="se">''</span><span class="s">cell_name</span><span class="se">''</span><span class="s">,</span><span class="nv"> </span><span class="se">''</span><span class="s">column_name</span><span class="se">''</span><span class="s">,</span>
-<span class="w">    </span><span class="se">''</span><span class="s">column_number</span><span class="se">''</span><span class="s">,</span><span class="nv"> </span><span class="se">''</span><span class="s">end_line</span><span class="se">''</span><span class="s">,</span><span class="nv"> </span><span class="se">''</span><span class="s">json_path</span><span class="se">''</span><span class="s">,</span><span class="nv"> </span><span class="se">''</span><span class="s">page_number</span><span class="se">''</span><span class="s">,</span><span class="nv"> </span><span class="se">''</span><span class="s">record_index_in_array</span><span class="se">''</span><span class="s">,</span>
-<span class="w">    </span><span class="se">''</span><span class="s">row_number</span><span class="se">''</span><span class="s">,</span><span class="nv"> </span><span class="se">''</span><span class="s">start_line</span><span class="se">''</span><span class="s">]</span><span class="nv"> </span><span class="s">must</span><span class="nv"> </span><span class="s">be</span><span class="nv"> </span><span class="s">set.'</span>
+
+<span class="w">    </span><span class="se">''</span><span class="s">column_number</span><span class="se">''</span><span class="s">,</span><span class="nv"> </span><span class="se">''</span><span class="s">end_line</span><span class="se">''</span><span class="s">,</span><span class="nv"> </span><span class="se">''</span><span class="s">json_path</span><span class="se">''</span><span class="s">,</span><span class="nv"> </span><span class="se">''</span><span class="s">page_number</span><span class="se">''</span><span class="s">,</span>
+
+<span class="w">    </span><span class="se">''</span><span class="s">record_index_in_array</span><span class="se">''</span><span class="s">,</span><span class="nv"> </span><span class="se">''</span><span class="s">row_number</span><span class="se">''</span><span class="s">,</span><span class="nv"> </span><span class="se">''</span><span class="s">start_line</span><span class="se">''</span><span class="s">]</span><span class="nv"> </span><span class="s">must</span><span class="nv"> </span><span class="s">be</span><span class="nv"> </span><span class="s">set.'</span>
 </code></pre></div>
 </details>
 <h3 id="induced">Induced</h3>
@@ -626,9 +666,16 @@
 <span class="w">  </span><span class="nt">ocsf_constraints</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ocsf_constraints</span>
 <span class="w">    </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="s">'{"at_least_one":</span><span class="nv"> </span><span class="s">["cell_name",</span><span class="nv"> </span><span class="s">"column_name",</span><span class="nv"> </span><span class="s">"column_number",</span><span class="nv"> </span><span class="s">"end_line",</span>
-<span class="w">      </span><span class="s">"json_path",</span><span class="nv"> </span><span class="s">"page_number",</span><span class="nv"> </span><span class="s">"record_index_in_array",</span><span class="nv"> </span><span class="s">"row_number",</span><span class="nv"> </span><span class="s">"start_line"]}'</span>
-<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Details about where in the target entity, specified information was discovered.</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">Only the attributes, relevant to the target entity type should be populated.</span>
+
+<span class="w">      </span><span class="s">"json_path",</span><span class="nv"> </span><span class="s">"page_number",</span><span class="nv"> </span><span class="s">"record_index_in_array",</span><span class="nv"> </span><span class="s">"row_number",</span>
+
+<span class="w">      </span><span class="s">"start_line"]}'</span>
+<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'Details</span><span class="nv"> </span><span class="s">about</span><span class="nv"> </span><span class="s">where</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">target</span><span class="nv"> </span><span class="s">entity,</span><span class="nv"> </span><span class="s">specified</span><span class="nv"> </span><span class="s">information</span><span class="nv"> </span><span class="s">was</span>
+<span class="w">  </span><span class="s">discovered.</span>
+
+<span class="w">  </span><span class="s">Only</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">attributes,</span><span class="nv"> </span><span class="s">relevant</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">target</span><span class="nv"> </span><span class="s">entity</span><span class="nv"> </span><span class="s">type</span><span class="nv"> </span><span class="s">should</span><span class="nv"> </span><span class="s">be</span><span class="nv"> </span><span class="s">populated.'</span>
+<span class="nt">in_subset</span><span class="p">:</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">objects</span>
 <span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="nt">aliases</span><span class="p">:</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Occurrence Details</span>
@@ -642,31 +689,40 @@
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The column name in a spreadsheet, where the information was discovered.</span>
 <span class="w">  </span><span class="nt">column_number</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">column_number</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The column number in a spreadsheet or a plain text document, where</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">the information was discovered.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">column</span><span class="nv"> </span><span class="s">number</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">spreadsheet</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">plain</span><span class="nv"> </span><span class="s">text</span><span class="nv"> </span><span class="s">document,</span><span class="nv"> </span><span class="s">where</span>
+<span class="w">      </span><span class="s">the</span>
+
+<span class="w">      </span><span class="s">information</span><span class="nv"> </span><span class="s">was</span><span class="nv"> </span><span class="s">discovered.'</span>
 <span class="w">  </span><span class="nt">end_line</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">end_line</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The line number of the last line of the file, where the information</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">was discovered.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">line</span><span class="nv"> </span><span class="s">number</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">last</span><span class="nv"> </span><span class="s">line</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">file,</span><span class="nv"> </span><span class="s">where</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">information</span>
+<span class="w">      </span><span class="s">was</span>
+
+<span class="w">      </span><span class="s">discovered.'</span>
 <span class="w">  </span><span class="nt">json_path</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">json_path</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The JSON path of the attribute in a json record, where the information</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">was discovered</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">JSON</span><span class="nv"> </span><span class="s">path</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">attribute</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">json</span><span class="nv"> </span><span class="s">record,</span><span class="nv"> </span><span class="s">where</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">information</span>
+<span class="w">      </span><span class="s">was</span>
+
+<span class="w">      </span><span class="s">discovered'</span>
 <span class="w">  </span><span class="nt">page_number</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">page_number</span>
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The page number in a document, where the information was discovered.</span>
 <span class="w">  </span><span class="nt">record_index_in_array</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">record_index_in_array</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The index of the record in the array of records, where the information</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">was discovered. e.g. the index of a record in an array of JSON records in a</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">file.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">index</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">record</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">array</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">records,</span><span class="nv"> </span><span class="s">where</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">information</span>
+<span class="w">      </span><span class="s">was</span>
+
+<span class="w">      </span><span class="s">discovered.</span><span class="nv"> </span><span class="s">e.g.</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">index</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">record</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">an</span><span class="nv"> </span><span class="s">array</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">JSON</span><span class="nv"> </span><span class="s">records</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">file.'</span>
 <span class="w">  </span><span class="nt">row_number</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">row_number</span>
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The row number in a spreadsheet, where the information was discovered.</span>
 <span class="w">  </span><span class="nt">start_line</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">start_line</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The line number of the first line of the file, where the information</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">was discovered.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">line</span><span class="nv"> </span><span class="s">number</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">first</span><span class="nv"> </span><span class="s">line</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">file,</span><span class="nv"> </span><span class="s">where</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">information</span>
+<span class="w">      </span><span class="s">was</span>
+
+<span class="w">      </span><span class="s">discovered.'</span>
 <span class="nt">attributes</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">cell_name</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">cell_name</span>
@@ -694,8 +750,10 @@
 <span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">string</span>
 <span class="w">  </span><span class="nt">column_number</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">column_number</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The column number in a spreadsheet or a plain text document, where</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">the information was discovered.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">column</span><span class="nv"> </span><span class="s">number</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">spreadsheet</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">plain</span><span class="nv"> </span><span class="s">text</span><span class="nv"> </span><span class="s">document,</span><span class="nv"> </span><span class="s">where</span>
+<span class="w">      </span><span class="s">the</span>
+
+<span class="w">      </span><span class="s">information</span><span class="nv"> </span><span class="s">was</span><span class="nv"> </span><span class="s">discovered.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Column Number</span>
@@ -707,8 +765,10 @@
 <span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">integer</span>
 <span class="w">  </span><span class="nt">end_line</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">end_line</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The line number of the last line of the file, where the information</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">was discovered.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">line</span><span class="nv"> </span><span class="s">number</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">last</span><span class="nv"> </span><span class="s">line</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">file,</span><span class="nv"> </span><span class="s">where</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">information</span>
+<span class="w">      </span><span class="s">was</span>
+
+<span class="w">      </span><span class="s">discovered.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">End Line</span>
@@ -721,8 +781,10 @@
 <span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">integer</span>
 <span class="w">  </span><span class="nt">json_path</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">json_path</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The JSON path of the attribute in a json record, where the information</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">was discovered</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">JSON</span><span class="nv"> </span><span class="s">path</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">attribute</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">json</span><span class="nv"> </span><span class="s">record,</span><span class="nv"> </span><span class="s">where</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">information</span>
+<span class="w">      </span><span class="s">was</span>
+
+<span class="w">      </span><span class="s">discovered'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">JSON Path</span>
@@ -746,9 +808,10 @@
 <span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">integer</span>
 <span class="w">  </span><span class="nt">record_index_in_array</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">record_index_in_array</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The index of the record in the array of records, where the information</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">was discovered. e.g. the index of a record in an array of JSON records in a</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">file.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">index</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">record</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">array</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">records,</span><span class="nv"> </span><span class="s">where</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">information</span>
+<span class="w">      </span><span class="s">was</span>
+
+<span class="w">      </span><span class="s">discovered.</span><span class="nv"> </span><span class="s">e.g.</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">index</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">record</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">an</span><span class="nv"> </span><span class="s">array</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">JSON</span><span class="nv"> </span><span class="s">records</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">file.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Record Index in Array</span>
@@ -772,8 +835,10 @@
 <span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">integer</span>
 <span class="w">  </span><span class="nt">start_line</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">start_line</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The line number of the first line of the file, where the information</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">was discovered.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">line</span><span class="nv"> </span><span class="s">number</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">first</span><span class="nv"> </span><span class="s">line</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">file,</span><span class="nv"> </span><span class="s">where</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">information</span>
+<span class="w">      </span><span class="s">was</span>
+
+<span class="w">      </span><span class="s">discovered.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Start Line</span>
@@ -824,8 +889,10 @@
 <span class="w">          </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">start_line</span>
 <span class="w">          </span><span class="nt">required</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'OCSF</span><span class="nv"> </span><span class="s">at_least_one:</span><span class="nv"> </span><span class="s">at</span><span class="nv"> </span><span class="s">least</span><span class="nv"> </span><span class="s">one</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">[</span><span class="se">''</span><span class="s">cell_name</span><span class="se">''</span><span class="s">,</span><span class="nv"> </span><span class="se">''</span><span class="s">column_name</span><span class="se">''</span><span class="s">,</span>
-<span class="w">    </span><span class="se">''</span><span class="s">column_number</span><span class="se">''</span><span class="s">,</span><span class="nv"> </span><span class="se">''</span><span class="s">end_line</span><span class="se">''</span><span class="s">,</span><span class="nv"> </span><span class="se">''</span><span class="s">json_path</span><span class="se">''</span><span class="s">,</span><span class="nv"> </span><span class="se">''</span><span class="s">page_number</span><span class="se">''</span><span class="s">,</span><span class="nv"> </span><span class="se">''</span><span class="s">record_index_in_array</span><span class="se">''</span><span class="s">,</span>
-<span class="w">    </span><span class="se">''</span><span class="s">row_number</span><span class="se">''</span><span class="s">,</span><span class="nv"> </span><span class="se">''</span><span class="s">start_line</span><span class="se">''</span><span class="s">]</span><span class="nv"> </span><span class="s">must</span><span class="nv"> </span><span class="s">be</span><span class="nv"> </span><span class="s">set.'</span>
+
+<span class="w">    </span><span class="se">''</span><span class="s">column_number</span><span class="se">''</span><span class="s">,</span><span class="nv"> </span><span class="se">''</span><span class="s">end_line</span><span class="se">''</span><span class="s">,</span><span class="nv"> </span><span class="se">''</span><span class="s">json_path</span><span class="se">''</span><span class="s">,</span><span class="nv"> </span><span class="se">''</span><span class="s">page_number</span><span class="se">''</span><span class="s">,</span>
+
+<span class="w">    </span><span class="se">''</span><span class="s">record_index_in_array</span><span class="se">''</span><span class="s">,</span><span class="nv"> </span><span class="se">''</span><span class="s">row_number</span><span class="se">''</span><span class="s">,</span><span class="nv"> </span><span class="se">''</span><span class="s">start_line</span><span class="se">''</span><span class="s">]</span><span class="nv"> </span><span class="s">must</span><span class="nv"> </span><span class="s">be</span><span class="nv"> </span><span class="s">set.'</span>
 </code></pre></div>
 </details>
 </article>

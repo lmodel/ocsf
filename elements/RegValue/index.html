@@ -217,6 +217,15 @@
 </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="#in-subsets">
+<span class="md-ellipsis">
+      
+        In Subsets
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#aliases">
 <span class="md-ellipsis">
       
@@ -424,31 +433,31 @@
 <tr>
 <td><a href="../reg_binary_data/">reg_binary_data</a></td>
 <td>0..1 <br/> <a href="../String/">String</a></td>
-<td>The data of the registry value when <code>type_id</code> is <code>REG_BINARY&lt;...</code></td>
+<td>The data of the registry value when <code>type_id</code> is</td>
 <td>direct</td>
 </tr>
 <tr>
 <td><a href="../reg_integer_data/">reg_integer_data</a></td>
 <td>0..1 <br/> <a href="../Integer/">Integer</a></td>
-<td>The data of the registry value when <code>type_id</code> is <code>REG_DWORD&lt;/...</code></td>
+<td>The data of the registry value when <code>type_id</code> is</td>
 <td>direct</td>
 </tr>
 <tr>
 <td><a href="../reg_string_data/">reg_string_data</a></td>
 <td>0..1 <br/> <a href="../String/">String</a></td>
-<td>The data of the registry value when <code>type_id</code> is <code>REG_SZ&lt;/cod...</code></td>
+<td>The data of the registry value when <code>type_id</code> is</td>
 <td>direct</td>
 </tr>
 <tr>
 <td><a href="../reg_string_list_data/">reg_string_list_data</a></td>
 <td>* <br/> <a href="../String/">String</a></td>
-<td>The data of the registry value when <code>type_id</code> is <code>REG_MULTI_S...</code></td>
+<td>The data of the registry value when <code>type_id</code> is</td>
 <td>direct</td>
 </tr>
 <tr>
 <td><a href="../type/">type</a></td>
 <td>0..1 <br/> <a href="../String/">String</a></td>
-<td>A string representation of the value type as specified in &lt;a target='_blank' ...</td>
+<td>A string representation of the value type as specified in &lt;a target='_blank'</td>
 <td>direct</td>
 </tr>
 <tr>
@@ -502,6 +511,10 @@
 </tr>
 </tbody>
 </table>
+<h2 id="in-subsets">In Subsets</h2>
+<ul>
+<li><a href="../WindowsExtension/">WindowsExtension</a></li>
+</ul>
 <h2 id="aliases">Aliases</h2>
 <ul>
 <li>Registry Value</li>
@@ -512,7 +525,8 @@
 </ul>
 <h2 id="notes">Notes</h2>
 <ul>
-<li>D3FEND™ Ontology d3f:WindowsRegistryValue. — <a href="https://d3fend.mitre.org/dao/artifact/d3f:WindowsRegistryValue/">https://d3fend.mitre.org/dao/artifact/d3f:WindowsRegistryValue/</a></li>
+<li>D3FEND™ Ontology d3f:WindowsRegistryValue. —
+<a href="https://d3fend.mitre.org/dao/artifact/d3f:WindowsRegistryValue/">https://d3fend.mitre.org/dao/artifact/d3f:WindowsRegistryValue/</a></li>
 </ul>
 <h2 id="identifier-and-mapping-information">Identifier and Mapping Information</h2>
 <h3 id="annotations">Annotations</h3>
@@ -571,7 +585,11 @@
 <span class="w">    </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">windows</span>
 <span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The registry value object describes a Windows registry value.</span>
 <span class="nt">notes</span><span class="p">:</span>
-<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">D3FEND™ Ontology d3f:WindowsRegistryValue. — https://d3fend.mitre.org/dao/artifact/d3f:WindowsRegistryValue/</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="s">'D3FEND™</span><span class="nv"> </span><span class="s">Ontology</span><span class="nv"> </span><span class="s">d3f:WindowsRegistryValue.</span><span class="nv"> </span><span class="s">—</span>
+
+<span class="w">  </span><span class="s">https://d3fend.mitre.org/dao/artifact/d3f:WindowsRegistryValue/'</span>
+<span class="nt">in_subset</span><span class="p">:</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">windows_extension</span>
 <span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="nt">see_also</span><span class="p">:</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://d3fend.mitre.org/dao/artifact/d3f:WindowsRegistryValue/</span>
@@ -594,9 +612,13 @@
 <span class="nt">slot_usage</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">data</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">data</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The data of the registry value. Where the value type is known, implementers</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">should instead use a type-specific attribute, i.e. &lt;code&gt;reg_binary_data&lt;/code&gt;,</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">&lt;code&gt;reg_integer_data&lt;/code&gt;, &lt;code&gt;reg_string_data&lt;/code&gt;, or &lt;code&gt;reg_string_list_data&lt;/code&gt;.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">data</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">registry</span><span class="nv"> </span><span class="s">value.</span><span class="nv"> </span><span class="s">Where</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">value</span><span class="nv"> </span><span class="s">type</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">known,</span><span class="nv"> </span><span class="s">implementers</span>
+
+<span class="w">      </span><span class="s">should</span><span class="nv"> </span><span class="s">instead</span><span class="nv"> </span><span class="s">use</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">type-specific</span><span class="nv"> </span><span class="s">attribute,</span><span class="nv"> </span><span class="s">i.e.</span>
+
+<span class="w">      </span><span class="s">&lt;code&gt;reg_binary_data&lt;/code&gt;,</span><span class="nv"> </span><span class="s">&lt;code&gt;reg_integer_data&lt;/code&gt;,</span>
+
+<span class="w">      </span><span class="s">&lt;code&gt;reg_string_data&lt;/code&gt;,</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">&lt;code&gt;reg_string_list_data&lt;/code&gt;.'</span>
 <span class="w">  </span><span class="nt">modified_time</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">modified_time</span>
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The time when the registry value was last modified.</span>
@@ -610,9 +632,11 @@
 <span class="w">    </span><span class="nt">required</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">type</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">type</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">A string representation of the value type as specified in &lt;a target='_blank'</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">href='https://learn.microsoft.com/en-us/windows/win32/sysinfo/registry-value-types'&gt;Registry</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">Value Types&lt;/a&gt;.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'A</span><span class="nv"> </span><span class="s">string</span><span class="nv"> </span><span class="s">representation</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">value</span><span class="nv"> </span><span class="s">type</span><span class="nv"> </span><span class="s">as</span><span class="nv"> </span><span class="s">specified</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">&lt;a</span><span class="nv"> </span><span class="s">target=</span><span class="se">''</span><span class="s">_blank</span><span class="se">''</span>
+
+<span class="w">      </span><span class="s">href=</span><span class="se">''</span><span class="s">https://learn.microsoft.com/en-us/windows/win32/sysinfo/registry-value-types</span><span class="se">''</span><span class="s">&gt;Registry</span>
+
+<span class="w">      </span><span class="s">Value</span><span class="nv"> </span><span class="s">Types&lt;/a&gt;.'</span>
 <span class="w">  </span><span class="nt">type_id</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">type_id</span>
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The value type ID.</span>
@@ -632,7 +656,11 @@
 <span class="w">    </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">windows</span>
 <span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The registry value object describes a Windows registry value.</span>
 <span class="nt">notes</span><span class="p">:</span>
-<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">D3FEND™ Ontology d3f:WindowsRegistryValue. — https://d3fend.mitre.org/dao/artifact/d3f:WindowsRegistryValue/</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="s">'D3FEND™</span><span class="nv"> </span><span class="s">Ontology</span><span class="nv"> </span><span class="s">d3f:WindowsRegistryValue.</span><span class="nv"> </span><span class="s">—</span>
+
+<span class="w">  </span><span class="s">https://d3fend.mitre.org/dao/artifact/d3f:WindowsRegistryValue/'</span>
+<span class="nt">in_subset</span><span class="p">:</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">windows_extension</span>
 <span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="nt">see_also</span><span class="p">:</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://d3fend.mitre.org/dao/artifact/d3f:WindowsRegistryValue/</span>
@@ -642,9 +670,13 @@
 <span class="nt">slot_usage</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">data</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">data</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The data of the registry value. Where the value type is known, implementers</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">should instead use a type-specific attribute, i.e. &lt;code&gt;reg_binary_data&lt;/code&gt;,</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">&lt;code&gt;reg_integer_data&lt;/code&gt;, &lt;code&gt;reg_string_data&lt;/code&gt;, or &lt;code&gt;reg_string_list_data&lt;/code&gt;.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">data</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">registry</span><span class="nv"> </span><span class="s">value.</span><span class="nv"> </span><span class="s">Where</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">value</span><span class="nv"> </span><span class="s">type</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">known,</span><span class="nv"> </span><span class="s">implementers</span>
+
+<span class="w">      </span><span class="s">should</span><span class="nv"> </span><span class="s">instead</span><span class="nv"> </span><span class="s">use</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">type-specific</span><span class="nv"> </span><span class="s">attribute,</span><span class="nv"> </span><span class="s">i.e.</span>
+
+<span class="w">      </span><span class="s">&lt;code&gt;reg_binary_data&lt;/code&gt;,</span><span class="nv"> </span><span class="s">&lt;code&gt;reg_integer_data&lt;/code&gt;,</span>
+
+<span class="w">      </span><span class="s">&lt;code&gt;reg_string_data&lt;/code&gt;,</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">&lt;code&gt;reg_string_list_data&lt;/code&gt;.'</span>
 <span class="w">  </span><span class="nt">modified_time</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">modified_time</span>
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The time when the registry value was last modified.</span>
@@ -658,9 +690,11 @@
 <span class="w">    </span><span class="nt">required</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">type</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">type</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">A string representation of the value type as specified in &lt;a target='_blank'</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">href='https://learn.microsoft.com/en-us/windows/win32/sysinfo/registry-value-types'&gt;Registry</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">Value Types&lt;/a&gt;.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'A</span><span class="nv"> </span><span class="s">string</span><span class="nv"> </span><span class="s">representation</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">value</span><span class="nv"> </span><span class="s">type</span><span class="nv"> </span><span class="s">as</span><span class="nv"> </span><span class="s">specified</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">&lt;a</span><span class="nv"> </span><span class="s">target=</span><span class="se">''</span><span class="s">_blank</span><span class="se">''</span>
+
+<span class="w">      </span><span class="s">href=</span><span class="se">''</span><span class="s">https://learn.microsoft.com/en-us/windows/win32/sysinfo/registry-value-types</span><span class="se">''</span><span class="s">&gt;Registry</span>
+
+<span class="w">      </span><span class="s">Value</span><span class="nv"> </span><span class="s">Types&lt;/a&gt;.'</span>
 <span class="w">  </span><span class="nt">type_id</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">type_id</span>
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The value type ID.</span>
@@ -669,9 +703,13 @@
 <span class="nt">attributes</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">data</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">data</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The data of the registry value. Where the value type is known, implementers</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">should instead use a type-specific attribute, i.e. &lt;code&gt;reg_binary_data&lt;/code&gt;,</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">&lt;code&gt;reg_integer_data&lt;/code&gt;, &lt;code&gt;reg_string_data&lt;/code&gt;, or &lt;code&gt;reg_string_list_data&lt;/code&gt;.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">data</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">registry</span><span class="nv"> </span><span class="s">value.</span><span class="nv"> </span><span class="s">Where</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">value</span><span class="nv"> </span><span class="s">type</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">known,</span><span class="nv"> </span><span class="s">implementers</span>
+
+<span class="w">      </span><span class="s">should</span><span class="nv"> </span><span class="s">instead</span><span class="nv"> </span><span class="s">use</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">type-specific</span><span class="nv"> </span><span class="s">attribute,</span><span class="nv"> </span><span class="s">i.e.</span>
+
+<span class="w">      </span><span class="s">&lt;code&gt;reg_binary_data&lt;/code&gt;,</span><span class="nv"> </span><span class="s">&lt;code&gt;reg_integer_data&lt;/code&gt;,</span>
+
+<span class="w">      </span><span class="s">&lt;code&gt;reg_string_data&lt;/code&gt;,</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">&lt;code&gt;reg_string_list_data&lt;/code&gt;.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Data</span>
@@ -696,8 +734,10 @@
 <span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">string</span>
 <span class="w">  </span><span class="nt">is_default</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">is_default</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The indication of whether the value is from a default value name.</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">For example, the value name could be missing.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">indication</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">whether</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">value</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">from</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">default</span><span class="nv"> </span><span class="s">value</span><span class="nv"> </span><span class="s">name.</span>
+<span class="w">      </span><span class="s">For</span><span class="nv"> </span><span class="s">example,</span>
+
+<span class="w">      </span><span class="s">the</span><span class="nv"> </span><span class="s">value</span><span class="nv"> </span><span class="s">name</span><span class="nv"> </span><span class="s">could</span><span class="nv"> </span><span class="s">be</span><span class="nv"> </span><span class="s">missing.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Default Value</span>
@@ -883,8 +923,9 @@
 <span class="w">      </span><span class="nt">ocsf_extension</span><span class="p">:</span>
 <span class="w">        </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ocsf_extension</span>
 <span class="w">        </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">windows</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The data of the registry value when &lt;code&gt;type_id&lt;/code&gt; is &lt;code&gt;REG_BINARY&lt;/code&gt;</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">or &lt;code&gt;REG_NONE&lt;/code&gt;.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">data</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">registry</span><span class="nv"> </span><span class="s">value</span><span class="nv"> </span><span class="s">when</span><span class="nv"> </span><span class="s">&lt;code&gt;type_id&lt;/code&gt;</span><span class="nv"> </span><span class="s">is</span>
+
+<span class="w">      </span><span class="s">&lt;code&gt;REG_BINARY&lt;/code&gt;</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">&lt;code&gt;REG_NONE&lt;/code&gt;.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Registry Binary Data</span>
@@ -900,8 +941,11 @@
 <span class="w">      </span><span class="nt">ocsf_extension</span><span class="p">:</span>
 <span class="w">        </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ocsf_extension</span>
 <span class="w">        </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">windows</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The data of the registry value when &lt;code&gt;type_id&lt;/code&gt; is &lt;code&gt;REG_DWORD&lt;/code&gt;,</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">&lt;code&gt;REG_DWORD_BIG_ENDIAN&lt;/code&gt;, or &lt;code&gt;REG_QWORD&lt;/code&gt;.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">data</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">registry</span><span class="nv"> </span><span class="s">value</span><span class="nv"> </span><span class="s">when</span><span class="nv"> </span><span class="s">&lt;code&gt;type_id&lt;/code&gt;</span><span class="nv"> </span><span class="s">is</span>
+
+<span class="w">      </span><span class="s">&lt;code&gt;REG_DWORD&lt;/code&gt;,</span><span class="nv"> </span><span class="s">&lt;code&gt;REG_DWORD_BIG_ENDIAN&lt;/code&gt;,</span><span class="nv"> </span><span class="s">or</span>
+
+<span class="w">      </span><span class="s">&lt;code&gt;REG_QWORD&lt;/code&gt;.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Registry Integer Data</span>
@@ -917,8 +961,9 @@
 <span class="w">      </span><span class="nt">ocsf_extension</span><span class="p">:</span>
 <span class="w">        </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ocsf_extension</span>
 <span class="w">        </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">windows</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The data of the registry value when &lt;code&gt;type_id&lt;/code&gt; is &lt;code&gt;REG_SZ&lt;/code&gt;,</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">&lt;code&gt;REG_EXPAND_SZ&lt;/code&gt;, or &lt;code&gt;REG_LINK&lt;/code&gt;.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">data</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">registry</span><span class="nv"> </span><span class="s">value</span><span class="nv"> </span><span class="s">when</span><span class="nv"> </span><span class="s">&lt;code&gt;type_id&lt;/code&gt;</span><span class="nv"> </span><span class="s">is</span>
+
+<span class="w">      </span><span class="s">&lt;code&gt;REG_SZ&lt;/code&gt;,</span><span class="nv"> </span><span class="s">&lt;code&gt;REG_EXPAND_SZ&lt;/code&gt;,</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">&lt;code&gt;REG_LINK&lt;/code&gt;.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Registry String Data</span>
@@ -934,7 +979,9 @@
 <span class="w">      </span><span class="nt">ocsf_extension</span><span class="p">:</span>
 <span class="w">        </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ocsf_extension</span>
 <span class="w">        </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">windows</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The data of the registry value when &lt;code&gt;type_id&lt;/code&gt; is &lt;code&gt;REG_MULTI_SZ&lt;/code&gt;.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">data</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">registry</span><span class="nv"> </span><span class="s">value</span><span class="nv"> </span><span class="s">when</span><span class="nv"> </span><span class="s">&lt;code&gt;type_id&lt;/code&gt;</span><span class="nv"> </span><span class="s">is</span>
+
+<span class="w">      </span><span class="s">&lt;code&gt;REG_MULTI_SZ&lt;/code&gt;.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Registry String List Data</span>
@@ -947,9 +994,11 @@
 <span class="w">    </span><span class="nt">multivalued</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">type</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">type</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">A string representation of the value type as specified in &lt;a target='_blank'</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">href='https://learn.microsoft.com/en-us/windows/win32/sysinfo/registry-value-types'&gt;Registry</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">Value Types&lt;/a&gt;.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'A</span><span class="nv"> </span><span class="s">string</span><span class="nv"> </span><span class="s">representation</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">value</span><span class="nv"> </span><span class="s">type</span><span class="nv"> </span><span class="s">as</span><span class="nv"> </span><span class="s">specified</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">&lt;a</span><span class="nv"> </span><span class="s">target=</span><span class="se">''</span><span class="s">_blank</span><span class="se">''</span>
+
+<span class="w">      </span><span class="s">href=</span><span class="se">''</span><span class="s">https://learn.microsoft.com/en-us/windows/win32/sysinfo/registry-value-types</span><span class="se">''</span><span class="s">&gt;Registry</span>
+
+<span class="w">      </span><span class="s">Value</span><span class="nv"> </span><span class="s">Types&lt;/a&gt;.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Type</span>

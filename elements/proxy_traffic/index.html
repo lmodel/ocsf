@@ -497,7 +497,8 @@
 
 
 <h1 id="slot-proxy_traffic">Slot: proxy_traffic</h1>
-<p><em>The network traffic refers to the amount of data moving across a network, from proxy to remote server at a given point of time.</em></p>
+<p><em>The network traffic refers to the amount of data moving across a network, from</em></p>
+<p><em>proxy to remote server at a given point of time.</em></p>
 <p>URI: <a href="https://w3id.org/lmodel/ocsf/proxy_traffic">ocsf:proxy_traffic</a>
 Alias: proxy_traffic</p>
 <!-- no inheritance hierarchy -->
@@ -513,29 +514,19 @@ Alias: proxy_traffic</p>
 </thead>
 <tbody>
 <tr>
-<td><a href="../SshActivity/">SshActivity</a></td>
-<td>SSH Activity events report remote client connections to a server using the Se...</td>
+<td><a href="../HttpActivity/">HttpActivity</a></td>
+<td>HTTP Activity events report HTTP connection and traffic information</td>
 <td>no</td>
 </tr>
 <tr>
-<td><a href="../DhcpActivity/">DhcpActivity</a></td>
-<td>DHCP Activity events report MAC to IP assignment via DHCP from a client or se...</td>
+<td><a href="../SmbActivity/">SmbActivity</a></td>
+<td>Server Message Block (SMB) Protocol Activity events report client/server</td>
 <td>no</td>
 </tr>
 <tr>
-<td><a href="../RdpActivity/">RdpActivity</a></td>
-<td>Remote Desktop Protocol (RDP) Activity events report post-authentication remo...</td>
+<td><a href="../FtpActivity/">FtpActivity</a></td>
+<td>File Transfer Protocol (FTP) Activity events report file transfers between a</td>
 <td>no</td>
-</tr>
-<tr>
-<td><a href="../TunnelActivity/">TunnelActivity</a></td>
-<td>Tunnel Activity events report secure tunnel establishment (such as VPN), tear...</td>
-<td>no</td>
-</tr>
-<tr>
-<td><a href="../NetworkProxyProfile/">NetworkProxyProfile</a></td>
-<td>The attributes that identify network proxy attributes</td>
-<td>yes</td>
 </tr>
 <tr>
 <td><a href="../DnsActivity/">DnsActivity</a></td>
@@ -543,23 +534,8 @@ Alias: proxy_traffic</p>
 <td>no</td>
 </tr>
 <tr>
-<td><a href="../NetworkActivity/">NetworkActivity</a></td>
-<td>Network Activity events report network connection and traffic activity</td>
-<td>no</td>
-</tr>
-<tr>
-<td><a href="../WebResourcesActivity/">WebResourcesActivity</a></td>
-<td>Web Resources Activity events describe actions executed on a set of Web Resou...</td>
-<td>no</td>
-</tr>
-<tr>
-<td><a href="../WebResourceAccessActivity/">WebResourceAccessActivity</a></td>
-<td>Web Resource Access Activity events describe successful/failed attempts to ac...</td>
-<td>no</td>
-</tr>
-<tr>
-<td><a href="../NetworkFileActivity/">NetworkFileActivity</a></td>
-<td>Network File Activity events report file activities traversing the network, i...</td>
+<td><a href="../DhcpActivity/">DhcpActivity</a></td>
+<td>DHCP Activity events report MAC to IP assignment via DHCP from a client or</td>
 <td>no</td>
 </tr>
 <tr>
@@ -568,23 +544,48 @@ Alias: proxy_traffic</p>
 <td>no</td>
 </tr>
 <tr>
+<td><a href="../RdpActivity/">RdpActivity</a></td>
+<td>Remote Desktop Protocol (RDP) Activity events report post-authentication remo...</td>
+<td>no</td>
+</tr>
+<tr>
+<td><a href="../NetworkFileActivity/">NetworkFileActivity</a></td>
+<td>Network File Activity events report file activities traversing the network,</td>
+<td>no</td>
+</tr>
+<tr>
+<td><a href="../SshActivity/">SshActivity</a></td>
+<td>SSH Activity events report remote client connections to a server using the</td>
+<td>no</td>
+</tr>
+<tr>
+<td><a href="../NetworkProxyProfile/">NetworkProxyProfile</a></td>
+<td>The attributes that identify network proxy attributes</td>
+<td>yes</td>
+</tr>
+<tr>
+<td><a href="../WebResourcesActivity/">WebResourcesActivity</a></td>
+<td>Web Resources Activity events describe actions executed on a set of Web</td>
+<td>no</td>
+</tr>
+<tr>
 <td><a href="../NtpActivity/">NtpActivity</a></td>
-<td>The Network Time Protocol (NTP) Activity events report instances of remote cl...</td>
+<td>The Network Time Protocol (NTP) Activity events report instances of remote</td>
 <td>no</td>
 </tr>
 <tr>
-<td><a href="../FtpActivity/">FtpActivity</a></td>
-<td>File Transfer Protocol (FTP) Activity events report file transfers between a ...</td>
+<td><a href="../NetworkActivity/">NetworkActivity</a></td>
+<td>Network Activity events report network connection and traffic activity</td>
 <td>no</td>
 </tr>
 <tr>
-<td><a href="../SmbActivity/">SmbActivity</a></td>
-<td>Server Message Block (SMB) Protocol Activity events report client/server conn...</td>
+<td><a href="../TunnelActivity/">TunnelActivity</a></td>
+<td>Tunnel Activity events report secure tunnel establishment (such as VPN),</td>
 <td>no</td>
 </tr>
 <tr>
-<td><a href="../HttpActivity/">HttpActivity</a></td>
-<td>HTTP Activity events report HTTP connection and traffic information</td>
+<td><a href="../WebResourceAccessActivity/">WebResourceAccessActivity</a></td>
+<td>Web Resource Access Activity events describe successful/failed attempts to</td>
 <td>no</td>
 </tr>
 </tbody>
@@ -655,8 +656,10 @@ Alias: proxy_traffic</p>
 <h2 id="linkml-source">LinkML Source</h2>
 <details>
 <div class="highlight"><pre><span></span><code><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">proxy_traffic</span>
-<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The network traffic refers to the amount of data moving across a network,</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">from proxy to remote server at a given point of time.</span>
+<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;The</span><span class="nv"> </span><span class="s">network</span><span class="nv"> </span><span class="s">traffic</span><span class="nv"> </span><span class="s">refers</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">amount</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">data</span><span class="nv"> </span><span class="s">moving</span><span class="nv"> </span><span class="s">across</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">network,</span>
+<span class="w">  </span><span class="s">from</span>
+
+<span class="w">  </span><span class="s">proxy</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">remote</span><span class="nv"> </span><span class="s">server</span><span class="nv"> </span><span class="s">at</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">given</span><span class="nv"> </span><span class="s">point</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">time.&#39;</span>
 <span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="nt">aliases</span><span class="p">:</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Proxy Traffic</span>

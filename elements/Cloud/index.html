@@ -217,6 +217,15 @@
 </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="#in-subsets">
+<span class="md-ellipsis">
+      
+        In Subsets
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#aliases">
 <span class="md-ellipsis">
       
@@ -295,7 +304,11 @@
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
 <h1 id="class-cloud">Class: Cloud</h1>
-<p><em>The Cloud object describes the cloud computing environment where an event or finding originated. It provides comprehensive context about the cloud infrastructure, including the cloud service provider, account or subscription details, organizational structure, geographic regions, availability zones, and logical partitions.</em></p>
+<p><em>The Cloud object describes the cloud computing environment where an event or</em></p>
+<p><em>finding originated. It provides comprehensive context about the cloud</em></p>
+<p><em>infrastructure, including the cloud service provider, account or subscription</em></p>
+<p><em>details, organizational structure, geographic regions, availability zones, and</em></p>
+<p><em>logical partitions.</em></p>
 <p>URI: <a href="https://w3id.org/lmodel/ocsf/Cloud">ocsf:Cloud</a></p>
 <pre class="mermaid"><code> classDiagram
     class Cloud
@@ -366,13 +379,13 @@
 <tr>
 <td><a href="../cloud_partition/">cloud_partition</a></td>
 <td>0..1 <br/> <a href="../String/">String</a></td>
-<td>The logical grouping or isolated segment within a cloud provider's infrastruc...</td>
+<td>The logical grouping or isolated segment within a cloud provider's</td>
 <td>direct</td>
 </tr>
 <tr>
 <td><a href="../org/">org</a></td>
 <td>0..1 <br/> <a href="../Organization/">Organization</a></td>
-<td>The Organization object containing details about the organizational unit or m...</td>
+<td>The Organization object containing details about the organizational unit or</td>
 <td>direct</td>
 </tr>
 <tr>
@@ -384,19 +397,19 @@
 <tr>
 <td><a href="../provider/">provider</a></td>
 <td>1 <br/> <a href="../String/">String</a></td>
-<td>The unique name of the Cloud services provider where the event or finding was...</td>
+<td>The unique name of the Cloud services provider where the event or finding was</td>
 <td>direct</td>
 </tr>
 <tr>
 <td><a href="../region/">region</a></td>
 <td>0..1 <em>recommended</em> <br/> <a href="../String/">String</a></td>
-<td>The cloud region where the event or finding was created, as defined by the cl...</td>
+<td>The cloud region where the event or finding was created, as defined by the</td>
 <td>direct</td>
 </tr>
 <tr>
 <td><a href="../zone/">zone</a></td>
 <td>0..1 <br/> <a href="../String/">String</a></td>
-<td>The availability zone in the cloud region where the event or finding was crea...</td>
+<td>The availability zone in the cloud region where the event or finding was</td>
 <td>direct</td>
 </tr>
 </tbody>
@@ -978,6 +991,10 @@
 </tr>
 </tbody>
 </table>
+<h2 id="in-subsets">In Subsets</h2>
+<ul>
+<li><a href="../Objects/">Objects</a></li>
+</ul>
 <h2 id="aliases">Aliases</h2>
 <ul>
 <li>Cloud</li>
@@ -1011,10 +1028,18 @@
 <h3 id="direct">Direct</h3>
 <details>
 <div class="highlight"><pre><span></span><code><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Cloud</span>
-<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The Cloud object describes the cloud computing environment where an event</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">or finding originated. It provides comprehensive context about the cloud infrastructure,</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">including the cloud service provider, account or subscription details, organizational</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">structure, geographic regions, availability zones, and logical partitions.</span>
+<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">Cloud</span><span class="nv"> </span><span class="s">object</span><span class="nv"> </span><span class="s">describes</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">cloud</span><span class="nv"> </span><span class="s">computing</span><span class="nv"> </span><span class="s">environment</span><span class="nv"> </span><span class="s">where</span><span class="nv"> </span><span class="s">an</span>
+<span class="w">  </span><span class="s">event</span><span class="nv"> </span><span class="s">or</span>
+
+<span class="w">  </span><span class="s">finding</span><span class="nv"> </span><span class="s">originated.</span><span class="nv"> </span><span class="s">It</span><span class="nv"> </span><span class="s">provides</span><span class="nv"> </span><span class="s">comprehensive</span><span class="nv"> </span><span class="s">context</span><span class="nv"> </span><span class="s">about</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">cloud</span>
+
+<span class="w">  </span><span class="s">infrastructure,</span><span class="nv"> </span><span class="s">including</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">cloud</span><span class="nv"> </span><span class="s">service</span><span class="nv"> </span><span class="s">provider,</span><span class="nv"> </span><span class="s">account</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">subscription</span>
+
+<span class="w">  </span><span class="s">details,</span><span class="nv"> </span><span class="s">organizational</span><span class="nv"> </span><span class="s">structure,</span><span class="nv"> </span><span class="s">geographic</span><span class="nv"> </span><span class="s">regions,</span><span class="nv"> </span><span class="s">availability</span><span class="nv"> </span><span class="s">zones,</span><span class="nv"> </span><span class="s">and</span>
+
+<span class="w">  </span><span class="s">logical</span><span class="nv"> </span><span class="s">partitions.'</span>
+<span class="nt">in_subset</span><span class="p">:</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">objects</span>
 <span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="nt">aliases</span><span class="p">:</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Cloud</span>
@@ -1030,75 +1055,152 @@
 <span class="nt">slot_usage</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">account</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">account</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The Account object containing details about the cloud account, subscription,</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">or billing unit where the event or finding was created. This object includes</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">properties such as the account name, unique identifier, type, labels, and tags.&lt;br/&gt;&lt;br/&gt;&lt;strong&gt;Examples:&lt;/strong&gt;&lt;ul&gt;&lt;li&gt;&lt;strong&gt;AWS:&lt;/strong&gt;</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">Account object with &lt;code&gt;name&lt;/code&gt;, &lt;code&gt;uid&lt;/code&gt; (Account ID), &lt;code&gt;type&lt;/code&gt;,</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">and other account properties&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Azure:&lt;/strong&gt; Subscription object</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">with &lt;code&gt;name&lt;/code&gt;, &lt;code&gt;uid&lt;/code&gt; (Subscription ID), &lt;code&gt;type&lt;/code&gt;,</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">and subscription metadata&lt;/li&gt;&lt;li&gt;&lt;strong&gt;GCP:&lt;/strong&gt; Project object with</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">&lt;code&gt;name&lt;/code&gt;, &lt;code&gt;uid&lt;/code&gt; (Project ID), &lt;code&gt;type&lt;/code&gt;, and project</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">attributes&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Oracle Cloud:&lt;/strong&gt; Compartment object with &lt;code&gt;name&lt;/code&gt;,</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">&lt;code&gt;uid&lt;/code&gt; (Tenancy OCID), &lt;code&gt;type&lt;/code&gt;, and compartment details&lt;/li&gt;&lt;/ul&gt;</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">Account</span><span class="nv"> </span><span class="s">object</span><span class="nv"> </span><span class="s">containing</span><span class="nv"> </span><span class="s">details</span><span class="nv"> </span><span class="s">about</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">cloud</span><span class="nv"> </span><span class="s">account,</span><span class="nv"> </span><span class="s">subscription,</span>
+<span class="w">      </span><span class="s">or</span>
+
+<span class="w">      </span><span class="s">billing</span><span class="nv"> </span><span class="s">unit</span><span class="nv"> </span><span class="s">where</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">event</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">finding</span><span class="nv"> </span><span class="s">was</span><span class="nv"> </span><span class="s">created.</span><span class="nv"> </span><span class="s">This</span><span class="nv"> </span><span class="s">object</span><span class="nv"> </span><span class="s">includes</span>
+
+<span class="w">      </span><span class="s">properties</span><span class="nv"> </span><span class="s">such</span><span class="nv"> </span><span class="s">as</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">account</span><span class="nv"> </span><span class="s">name,</span><span class="nv"> </span><span class="s">unique</span><span class="nv"> </span><span class="s">identifier,</span><span class="nv"> </span><span class="s">type,</span><span class="nv"> </span><span class="s">labels,</span><span class="nv"> </span><span class="s">and</span>
+
+<span class="w">      </span><span class="s">tags.&lt;br/&gt;&lt;br/&gt;&lt;strong&gt;Examples:&lt;/strong&gt;&lt;ul&gt;&lt;li&gt;&lt;strong&gt;AWS:&lt;/strong&gt;</span><span class="nv"> </span><span class="s">Account</span>
+
+<span class="w">      </span><span class="s">object</span><span class="nv"> </span><span class="s">with</span><span class="nv"> </span><span class="s">&lt;code&gt;name&lt;/code&gt;,</span><span class="nv"> </span><span class="s">&lt;code&gt;uid&lt;/code&gt;</span><span class="nv"> </span><span class="s">(Account</span><span class="nv"> </span><span class="s">ID),</span>
+
+<span class="w">      </span><span class="s">&lt;code&gt;type&lt;/code&gt;,</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">other</span><span class="nv"> </span><span class="s">account</span><span class="nv"> </span><span class="s">properties&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Azure:&lt;/strong&gt;</span>
+
+<span class="w">      </span><span class="s">Subscription</span><span class="nv"> </span><span class="s">object</span><span class="nv"> </span><span class="s">with</span><span class="nv"> </span><span class="s">&lt;code&gt;name&lt;/code&gt;,</span><span class="nv"> </span><span class="s">&lt;code&gt;uid&lt;/code&gt;</span><span class="nv"> </span><span class="s">(Subscription</span><span class="nv"> </span><span class="s">ID),</span>
+
+<span class="w">      </span><span class="s">&lt;code&gt;type&lt;/code&gt;,</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">subscription</span><span class="nv"> </span><span class="s">metadata&lt;/li&gt;&lt;li&gt;&lt;strong&gt;GCP:&lt;/strong&gt;</span>
+
+<span class="w">      </span><span class="s">Project</span><span class="nv"> </span><span class="s">object</span><span class="nv"> </span><span class="s">with</span><span class="nv"> </span><span class="s">&lt;code&gt;name&lt;/code&gt;,</span><span class="nv"> </span><span class="s">&lt;code&gt;uid&lt;/code&gt;</span><span class="nv"> </span><span class="s">(Project</span><span class="nv"> </span><span class="s">ID),</span>
+
+<span class="w">      </span><span class="s">&lt;code&gt;type&lt;/code&gt;,</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">project</span><span class="nv"> </span><span class="s">attributes&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Oracle</span>
+
+<span class="w">      </span><span class="s">Cloud:&lt;/strong&gt;</span><span class="nv"> </span><span class="s">Compartment</span><span class="nv"> </span><span class="s">object</span><span class="nv"> </span><span class="s">with</span><span class="nv"> </span><span class="s">&lt;code&gt;name&lt;/code&gt;,</span><span class="nv"> </span><span class="s">&lt;code&gt;uid&lt;/code&gt;</span>
+
+<span class="w">      </span><span class="s">(Tenancy</span><span class="nv"> </span><span class="s">OCID),</span><span class="nv"> </span><span class="s">&lt;code&gt;type&lt;/code&gt;,</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">compartment</span><span class="nv"> </span><span class="s">details&lt;/li&gt;&lt;/ul&gt;'</span>
 <span class="w">  </span><span class="nt">cloud_partition</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">cloud_partition</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The logical grouping or isolated segment within a cloud provider's</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">infrastructure where the event or finding was created, often used for compliance,</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">governance, or regional separation.&lt;br/&gt;&lt;br/&gt;&lt;strong&gt;Examples:&lt;/strong&gt;&lt;ul&gt;&lt;li&gt;&lt;strong&gt;AWS:&lt;/strong&gt;</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">Partition where the event occurred (&lt;code&gt;aws&lt;/code&gt;, &lt;code&gt;aws-cn&lt;/code&gt;, &lt;code&gt;aws-us-gov&lt;/code&gt;)&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Azure:&lt;/strong&gt;</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">Cloud environment where the event occurred (&lt;code&gt;AzureCloud&lt;/code&gt;, &lt;code&gt;AzureUSGovernment&lt;/code&gt;,</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">&lt;code&gt;AzureChinaCloud&lt;/code&gt;)&lt;/li&gt;&lt;/ul&gt;</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">logical</span><span class="nv"> </span><span class="s">grouping</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">isolated</span><span class="nv"> </span><span class="s">segment</span><span class="nv"> </span><span class="s">within</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">cloud</span><span class="nv"> </span><span class="s">provider</span><span class="se">''</span><span class="s">s</span>
+
+<span class="w">      </span><span class="s">infrastructure</span><span class="nv"> </span><span class="s">where</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">event</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">finding</span><span class="nv"> </span><span class="s">was</span><span class="nv"> </span><span class="s">created,</span><span class="nv"> </span><span class="s">often</span><span class="nv"> </span><span class="s">used</span><span class="nv"> </span><span class="s">for</span>
+
+<span class="w">      </span><span class="s">compliance,</span><span class="nv"> </span><span class="s">governance,</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">regional</span>
+
+<span class="w">      </span><span class="s">separation.&lt;br/&gt;&lt;br/&gt;&lt;strong&gt;Examples:&lt;/strong&gt;&lt;ul&gt;&lt;li&gt;&lt;strong&gt;AWS:&lt;/strong&gt;</span>
+
+<span class="w">      </span><span class="s">Partition</span><span class="nv"> </span><span class="s">where</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">event</span><span class="nv"> </span><span class="s">occurred</span><span class="nv"> </span><span class="s">(&lt;code&gt;aws&lt;/code&gt;,</span><span class="nv"> </span><span class="s">&lt;code&gt;aws-cn&lt;/code&gt;,</span>
+
+<span class="w">      </span><span class="s">&lt;code&gt;aws-us-gov&lt;/code&gt;)&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Azure:&lt;/strong&gt;</span><span class="nv"> </span><span class="s">Cloud</span><span class="nv"> </span><span class="s">environment</span>
+
+<span class="w">      </span><span class="s">where</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">event</span><span class="nv"> </span><span class="s">occurred</span><span class="nv"> </span><span class="s">(&lt;code&gt;AzureCloud&lt;/code&gt;,</span>
+
+<span class="w">      </span><span class="s">&lt;code&gt;AzureUSGovernment&lt;/code&gt;,</span><span class="nv"> </span><span class="s">&lt;code&gt;AzureChinaCloud&lt;/code&gt;)&lt;/li&gt;&lt;/ul&gt;'</span>
 <span class="w">  </span><span class="nt">org</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">org</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The Organization object containing details about the organizational</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">unit or management structure that governs the account, subscription, or project</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">where the event or finding was created. This object includes properties such</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">as the organization name, unique identifier, type, and other organizational</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">metadata.&lt;br/&gt;&lt;br/&gt;&lt;strong&gt;Examples:&lt;/strong&gt;&lt;ul&gt;&lt;li&gt;&lt;strong&gt;AWS:&lt;/strong&gt; Organization</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">object with &lt;code&gt;name&lt;/code&gt;, &lt;code&gt;uid&lt;/code&gt; (Organization ID), &lt;code&gt;type&lt;/code&gt;,</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">and other organizational properties&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Azure:&lt;/strong&gt; Management</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">Group object with &lt;code&gt;name&lt;/code&gt;, &lt;code&gt;uid&lt;/code&gt; (Management Group ID),</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">&lt;code&gt;type&lt;/code&gt;, and management group metadata&lt;/li&gt;&lt;li&gt;&lt;strong&gt;GCP:&lt;/strong&gt;</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">Organization object with &lt;code&gt;name&lt;/code&gt;, &lt;code&gt;uid&lt;/code&gt; (Organization ID),</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">&lt;code&gt;type&lt;/code&gt;, and organizational attributes&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Oracle Cloud:&lt;/strong&gt;</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">Tenancy object with &lt;code&gt;name&lt;/code&gt;, &lt;code&gt;uid&lt;/code&gt; (Tenancy OCID), &lt;code&gt;type&lt;/code&gt;,</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">and tenancy details&lt;/li&gt;&lt;/ul&gt;</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">Organization</span><span class="nv"> </span><span class="s">object</span><span class="nv"> </span><span class="s">containing</span><span class="nv"> </span><span class="s">details</span><span class="nv"> </span><span class="s">about</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">organizational</span>
+<span class="w">      </span><span class="s">unit</span><span class="nv"> </span><span class="s">or</span>
+
+<span class="w">      </span><span class="s">management</span><span class="nv"> </span><span class="s">structure</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">governs</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">account,</span><span class="nv"> </span><span class="s">subscription,</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">project</span><span class="nv"> </span><span class="s">where</span>
+
+<span class="w">      </span><span class="s">the</span><span class="nv"> </span><span class="s">event</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">finding</span><span class="nv"> </span><span class="s">was</span><span class="nv"> </span><span class="s">created.</span><span class="nv"> </span><span class="s">This</span><span class="nv"> </span><span class="s">object</span><span class="nv"> </span><span class="s">includes</span><span class="nv"> </span><span class="s">properties</span><span class="nv"> </span><span class="s">such</span><span class="nv"> </span><span class="s">as</span><span class="nv"> </span><span class="s">the</span>
+
+<span class="w">      </span><span class="s">organization</span><span class="nv"> </span><span class="s">name,</span><span class="nv"> </span><span class="s">unique</span><span class="nv"> </span><span class="s">identifier,</span><span class="nv"> </span><span class="s">type,</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">other</span><span class="nv"> </span><span class="s">organizational</span>
+
+<span class="w">      </span><span class="s">metadata.&lt;br/&gt;&lt;br/&gt;&lt;strong&gt;Examples:&lt;/strong&gt;&lt;ul&gt;&lt;li&gt;&lt;strong&gt;AWS:&lt;/strong&gt;</span>
+
+<span class="w">      </span><span class="s">Organization</span><span class="nv"> </span><span class="s">object</span><span class="nv"> </span><span class="s">with</span><span class="nv"> </span><span class="s">&lt;code&gt;name&lt;/code&gt;,</span><span class="nv"> </span><span class="s">&lt;code&gt;uid&lt;/code&gt;</span><span class="nv"> </span><span class="s">(Organization</span><span class="nv"> </span><span class="s">ID),</span>
+
+<span class="w">      </span><span class="s">&lt;code&gt;type&lt;/code&gt;,</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">other</span><span class="nv"> </span><span class="s">organizational</span>
+
+<span class="w">      </span><span class="s">properties&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Azure:&lt;/strong&gt;</span><span class="nv"> </span><span class="s">Management</span><span class="nv"> </span><span class="s">Group</span><span class="nv"> </span><span class="s">object</span><span class="nv"> </span><span class="s">with</span>
+
+<span class="w">      </span><span class="s">&lt;code&gt;name&lt;/code&gt;,</span><span class="nv"> </span><span class="s">&lt;code&gt;uid&lt;/code&gt;</span><span class="nv"> </span><span class="s">(Management</span><span class="nv"> </span><span class="s">Group</span><span class="nv"> </span><span class="s">ID),</span><span class="nv"> </span><span class="s">&lt;code&gt;type&lt;/code&gt;,</span>
+
+<span class="w">      </span><span class="s">and</span><span class="nv"> </span><span class="s">management</span><span class="nv"> </span><span class="s">group</span><span class="nv"> </span><span class="s">metadata&lt;/li&gt;&lt;li&gt;&lt;strong&gt;GCP:&lt;/strong&gt;</span><span class="nv"> </span><span class="s">Organization</span><span class="nv"> </span><span class="s">object</span>
+
+<span class="w">      </span><span class="s">with</span><span class="nv"> </span><span class="s">&lt;code&gt;name&lt;/code&gt;,</span><span class="nv"> </span><span class="s">&lt;code&gt;uid&lt;/code&gt;</span><span class="nv"> </span><span class="s">(Organization</span><span class="nv"> </span><span class="s">ID),</span><span class="nv"> </span><span class="s">&lt;code&gt;type&lt;/code&gt;,</span>
+
+<span class="w">      </span><span class="s">and</span><span class="nv"> </span><span class="s">organizational</span><span class="nv"> </span><span class="s">attributes&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Oracle</span><span class="nv"> </span><span class="s">Cloud:&lt;/strong&gt;</span><span class="nv"> </span><span class="s">Tenancy</span>
+
+<span class="w">      </span><span class="s">object</span><span class="nv"> </span><span class="s">with</span><span class="nv"> </span><span class="s">&lt;code&gt;name&lt;/code&gt;,</span><span class="nv"> </span><span class="s">&lt;code&gt;uid&lt;/code&gt;</span><span class="nv"> </span><span class="s">(Tenancy</span><span class="nv"> </span><span class="s">OCID),</span>
+
+<span class="w">      </span><span class="s">&lt;code&gt;type&lt;/code&gt;,</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">tenancy</span><span class="nv"> </span><span class="s">details&lt;/li&gt;&lt;/ul&gt;'</span>
 <span class="w">  </span><span class="nt">provider</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">provider</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The unique name of the Cloud services provider where the event or</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">finding was created. Examples include AWS, Azure, GCP (Google Cloud Platform),</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">Oracle Cloud, IBM Cloud, Alibaba Cloud, or other public, private, or hybrid</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">cloud providers.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">unique</span><span class="nv"> </span><span class="s">name</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">Cloud</span><span class="nv"> </span><span class="s">services</span><span class="nv"> </span><span class="s">provider</span><span class="nv"> </span><span class="s">where</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">event</span><span class="nv"> </span><span class="s">or</span>
+<span class="w">      </span><span class="s">finding</span><span class="nv"> </span><span class="s">was</span>
+
+<span class="w">      </span><span class="s">created.</span><span class="nv"> </span><span class="s">Examples</span><span class="nv"> </span><span class="s">include</span><span class="nv"> </span><span class="s">AWS,</span><span class="nv"> </span><span class="s">Azure,</span><span class="nv"> </span><span class="s">GCP</span><span class="nv"> </span><span class="s">(Google</span><span class="nv"> </span><span class="s">Cloud</span><span class="nv"> </span><span class="s">Platform),</span><span class="nv"> </span><span class="s">Oracle</span>
+
+<span class="w">      </span><span class="s">Cloud,</span><span class="nv"> </span><span class="s">IBM</span><span class="nv"> </span><span class="s">Cloud,</span><span class="nv"> </span><span class="s">Alibaba</span><span class="nv"> </span><span class="s">Cloud,</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">other</span><span class="nv"> </span><span class="s">public,</span><span class="nv"> </span><span class="s">private,</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">hybrid</span><span class="nv"> </span><span class="s">cloud</span>
+
+<span class="w">      </span><span class="s">providers.'</span>
 <span class="w">    </span><span class="nt">required</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">region</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">region</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The cloud region where the event or finding was created, as defined</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">by the cloud provider.&lt;br/&gt;&lt;br/&gt;&lt;strong&gt;Examples:&lt;/strong&gt;&lt;ul&gt;&lt;li&gt;&lt;strong&gt;AWS:&lt;/strong&gt;</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">Region where the event occurred (&lt;code&gt;us-east-1&lt;/code&gt;, &lt;code&gt;eu-west-1&lt;/code&gt;)&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Azure:&lt;/strong&gt;</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">Region where the event occurred (&lt;code&gt;East US&lt;/code&gt;, &lt;code&gt;West Europe&lt;/code&gt;)&lt;/li&gt;&lt;li&gt;&lt;strong&gt;GCP:&lt;/strong&gt;</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">Region where the event occurred (&lt;code&gt;us-central1&lt;/code&gt;, &lt;code&gt;europe-west1&lt;/code&gt;)&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Oracle</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">Cloud:&lt;/strong&gt; Region where the event occurred (&lt;code&gt;us-ashburn-1&lt;/code&gt;,</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">&lt;code&gt;uk-london-1&lt;/code&gt;)&lt;/li&gt;&lt;/ul&gt;</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">cloud</span><span class="nv"> </span><span class="s">region</span><span class="nv"> </span><span class="s">where</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">event</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">finding</span><span class="nv"> </span><span class="s">was</span><span class="nv"> </span><span class="s">created,</span><span class="nv"> </span><span class="s">as</span><span class="nv"> </span><span class="s">defined</span>
+<span class="w">      </span><span class="s">by</span><span class="nv"> </span><span class="s">the</span>
+
+<span class="w">      </span><span class="s">cloud</span>
+
+<span class="w">      </span><span class="s">provider.&lt;br/&gt;&lt;br/&gt;&lt;strong&gt;Examples:&lt;/strong&gt;&lt;ul&gt;&lt;li&gt;&lt;strong&gt;AWS:&lt;/strong&gt;</span>
+
+<span class="w">      </span><span class="s">Region</span><span class="nv"> </span><span class="s">where</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">event</span><span class="nv"> </span><span class="s">occurred</span><span class="nv"> </span><span class="s">(&lt;code&gt;us-east-1&lt;/code&gt;,</span>
+
+<span class="w">      </span><span class="s">&lt;code&gt;eu-west-1&lt;/code&gt;)&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Azure:&lt;/strong&gt;</span><span class="nv"> </span><span class="s">Region</span><span class="nv"> </span><span class="s">where</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">event</span>
+
+<span class="w">      </span><span class="s">occurred</span><span class="nv"> </span><span class="s">(&lt;code&gt;East</span><span class="nv"> </span><span class="s">US&lt;/code&gt;,</span><span class="nv"> </span><span class="s">&lt;code&gt;West</span>
+
+<span class="w">      </span><span class="s">Europe&lt;/code&gt;)&lt;/li&gt;&lt;li&gt;&lt;strong&gt;GCP:&lt;/strong&gt;</span><span class="nv"> </span><span class="s">Region</span><span class="nv"> </span><span class="s">where</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">event</span><span class="nv"> </span><span class="s">occurred</span>
+
+<span class="w">      </span><span class="s">(&lt;code&gt;us-central1&lt;/code&gt;,</span><span class="nv"> </span><span class="s">&lt;code&gt;europe-west1&lt;/code&gt;)&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Oracle</span>
+
+<span class="w">      </span><span class="s">Cloud:&lt;/strong&gt;</span><span class="nv"> </span><span class="s">Region</span><span class="nv"> </span><span class="s">where</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">event</span><span class="nv"> </span><span class="s">occurred</span><span class="nv"> </span><span class="s">(&lt;code&gt;us-ashburn-1&lt;/code&gt;,</span>
+
+<span class="w">      </span><span class="s">&lt;code&gt;uk-london-1&lt;/code&gt;)&lt;/li&gt;&lt;/ul&gt;'</span>
 <span class="w">    </span><span class="nt">recommended</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">zone</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">zone</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The availability zone in the cloud region where the event or finding</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">was created, as defined by the cloud provider.&lt;br/&gt;&lt;br/&gt;&lt;strong&gt;Examples:&lt;/strong&gt;&lt;ul&gt;&lt;li&gt;&lt;strong&gt;AWS:&lt;/strong&gt;</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">Availability zone where the event occurred (&lt;code&gt;us-east-1a&lt;/code&gt;, &lt;code&gt;us-east-1b&lt;/code&gt;)&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Azure:&lt;/strong&gt;</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">Availability zone where the event occurred (&lt;code&gt;1&lt;/code&gt;, &lt;code&gt;2&lt;/code&gt;,</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">&lt;code&gt;3&lt;/code&gt; within a region)&lt;/li&gt;&lt;li&gt;&lt;strong&gt;GCP:&lt;/strong&gt; Availability zone</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">where the event occurred (&lt;code&gt;us-central1-a&lt;/code&gt;, &lt;code&gt;us-central1-b&lt;/code&gt;)&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Oracle</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">Cloud:&lt;/strong&gt; Availability zone where the event occurred (&lt;code&gt;AD-1&lt;/code&gt;,</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">&lt;code&gt;AD-2&lt;/code&gt;, &lt;code&gt;AD-3&lt;/code&gt;)&lt;/li&gt;&lt;/ul&gt;</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">availability</span><span class="nv"> </span><span class="s">zone</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">cloud</span><span class="nv"> </span><span class="s">region</span><span class="nv"> </span><span class="s">where</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">event</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">finding</span>
+<span class="w">      </span><span class="s">was</span>
+
+<span class="w">      </span><span class="s">created,</span><span class="nv"> </span><span class="s">as</span><span class="nv"> </span><span class="s">defined</span><span class="nv"> </span><span class="s">by</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">cloud</span>
+
+<span class="w">      </span><span class="s">provider.&lt;br/&gt;&lt;br/&gt;&lt;strong&gt;Examples:&lt;/strong&gt;&lt;ul&gt;&lt;li&gt;&lt;strong&gt;AWS:&lt;/strong&gt;</span>
+
+<span class="w">      </span><span class="s">Availability</span><span class="nv"> </span><span class="s">zone</span><span class="nv"> </span><span class="s">where</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">event</span><span class="nv"> </span><span class="s">occurred</span><span class="nv"> </span><span class="s">(&lt;code&gt;us-east-1a&lt;/code&gt;,</span>
+
+<span class="w">      </span><span class="s">&lt;code&gt;us-east-1b&lt;/code&gt;)&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Azure:&lt;/strong&gt;</span><span class="nv"> </span><span class="s">Availability</span><span class="nv"> </span><span class="s">zone</span>
+
+<span class="w">      </span><span class="s">where</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">event</span><span class="nv"> </span><span class="s">occurred</span><span class="nv"> </span><span class="s">(&lt;code&gt;1&lt;/code&gt;,</span><span class="nv"> </span><span class="s">&lt;code&gt;2&lt;/code&gt;,</span><span class="nv"> </span><span class="s">&lt;code&gt;3&lt;/code&gt;</span><span class="nv"> </span><span class="s">within</span>
+
+<span class="w">      </span><span class="s">a</span><span class="nv"> </span><span class="s">region)&lt;/li&gt;&lt;li&gt;&lt;strong&gt;GCP:&lt;/strong&gt;</span><span class="nv"> </span><span class="s">Availability</span><span class="nv"> </span><span class="s">zone</span><span class="nv"> </span><span class="s">where</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">event</span>
+
+<span class="w">      </span><span class="s">occurred</span><span class="nv"> </span><span class="s">(&lt;code&gt;us-central1-a&lt;/code&gt;,</span>
+
+<span class="w">      </span><span class="s">&lt;code&gt;us-central1-b&lt;/code&gt;)&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Oracle</span><span class="nv"> </span><span class="s">Cloud:&lt;/strong&gt;</span><span class="nv"> </span><span class="s">Availability</span>
+
+<span class="w">      </span><span class="s">zone</span><span class="nv"> </span><span class="s">where</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">event</span><span class="nv"> </span><span class="s">occurred</span><span class="nv"> </span><span class="s">(&lt;code&gt;AD-1&lt;/code&gt;,</span><span class="nv"> </span><span class="s">&lt;code&gt;AD-2&lt;/code&gt;,</span>
+
+<span class="w">      </span><span class="s">&lt;code&gt;AD-3&lt;/code&gt;)&lt;/li&gt;&lt;/ul&gt;'</span>
 </code></pre></div>
 </details>
 <h3 id="induced">Induced</h3>
 <details>
 <div class="highlight"><pre><span></span><code><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Cloud</span>
-<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The Cloud object describes the cloud computing environment where an event</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">or finding originated. It provides comprehensive context about the cloud infrastructure,</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">including the cloud service provider, account or subscription details, organizational</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">structure, geographic regions, availability zones, and logical partitions.</span>
+<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">Cloud</span><span class="nv"> </span><span class="s">object</span><span class="nv"> </span><span class="s">describes</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">cloud</span><span class="nv"> </span><span class="s">computing</span><span class="nv"> </span><span class="s">environment</span><span class="nv"> </span><span class="s">where</span><span class="nv"> </span><span class="s">an</span>
+<span class="w">  </span><span class="s">event</span><span class="nv"> </span><span class="s">or</span>
+
+<span class="w">  </span><span class="s">finding</span><span class="nv"> </span><span class="s">originated.</span><span class="nv"> </span><span class="s">It</span><span class="nv"> </span><span class="s">provides</span><span class="nv"> </span><span class="s">comprehensive</span><span class="nv"> </span><span class="s">context</span><span class="nv"> </span><span class="s">about</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">cloud</span>
+
+<span class="w">  </span><span class="s">infrastructure,</span><span class="nv"> </span><span class="s">including</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">cloud</span><span class="nv"> </span><span class="s">service</span><span class="nv"> </span><span class="s">provider,</span><span class="nv"> </span><span class="s">account</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">subscription</span>
+
+<span class="w">  </span><span class="s">details,</span><span class="nv"> </span><span class="s">organizational</span><span class="nv"> </span><span class="s">structure,</span><span class="nv"> </span><span class="s">geographic</span><span class="nv"> </span><span class="s">regions,</span><span class="nv"> </span><span class="s">availability</span><span class="nv"> </span><span class="s">zones,</span><span class="nv"> </span><span class="s">and</span>
+
+<span class="w">  </span><span class="s">logical</span><span class="nv"> </span><span class="s">partitions.'</span>
+<span class="nt">in_subset</span><span class="p">:</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">objects</span>
 <span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="nt">aliases</span><span class="p">:</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Cloud</span>
@@ -1106,79 +1208,162 @@
 <span class="nt">slot_usage</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">account</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">account</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The Account object containing details about the cloud account, subscription,</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">or billing unit where the event or finding was created. This object includes</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">properties such as the account name, unique identifier, type, labels, and tags.&lt;br/&gt;&lt;br/&gt;&lt;strong&gt;Examples:&lt;/strong&gt;&lt;ul&gt;&lt;li&gt;&lt;strong&gt;AWS:&lt;/strong&gt;</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">Account object with &lt;code&gt;name&lt;/code&gt;, &lt;code&gt;uid&lt;/code&gt; (Account ID), &lt;code&gt;type&lt;/code&gt;,</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">and other account properties&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Azure:&lt;/strong&gt; Subscription object</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">with &lt;code&gt;name&lt;/code&gt;, &lt;code&gt;uid&lt;/code&gt; (Subscription ID), &lt;code&gt;type&lt;/code&gt;,</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">and subscription metadata&lt;/li&gt;&lt;li&gt;&lt;strong&gt;GCP:&lt;/strong&gt; Project object with</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">&lt;code&gt;name&lt;/code&gt;, &lt;code&gt;uid&lt;/code&gt; (Project ID), &lt;code&gt;type&lt;/code&gt;, and project</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">attributes&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Oracle Cloud:&lt;/strong&gt; Compartment object with &lt;code&gt;name&lt;/code&gt;,</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">&lt;code&gt;uid&lt;/code&gt; (Tenancy OCID), &lt;code&gt;type&lt;/code&gt;, and compartment details&lt;/li&gt;&lt;/ul&gt;</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">Account</span><span class="nv"> </span><span class="s">object</span><span class="nv"> </span><span class="s">containing</span><span class="nv"> </span><span class="s">details</span><span class="nv"> </span><span class="s">about</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">cloud</span><span class="nv"> </span><span class="s">account,</span><span class="nv"> </span><span class="s">subscription,</span>
+<span class="w">      </span><span class="s">or</span>
+
+<span class="w">      </span><span class="s">billing</span><span class="nv"> </span><span class="s">unit</span><span class="nv"> </span><span class="s">where</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">event</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">finding</span><span class="nv"> </span><span class="s">was</span><span class="nv"> </span><span class="s">created.</span><span class="nv"> </span><span class="s">This</span><span class="nv"> </span><span class="s">object</span><span class="nv"> </span><span class="s">includes</span>
+
+<span class="w">      </span><span class="s">properties</span><span class="nv"> </span><span class="s">such</span><span class="nv"> </span><span class="s">as</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">account</span><span class="nv"> </span><span class="s">name,</span><span class="nv"> </span><span class="s">unique</span><span class="nv"> </span><span class="s">identifier,</span><span class="nv"> </span><span class="s">type,</span><span class="nv"> </span><span class="s">labels,</span><span class="nv"> </span><span class="s">and</span>
+
+<span class="w">      </span><span class="s">tags.&lt;br/&gt;&lt;br/&gt;&lt;strong&gt;Examples:&lt;/strong&gt;&lt;ul&gt;&lt;li&gt;&lt;strong&gt;AWS:&lt;/strong&gt;</span><span class="nv"> </span><span class="s">Account</span>
+
+<span class="w">      </span><span class="s">object</span><span class="nv"> </span><span class="s">with</span><span class="nv"> </span><span class="s">&lt;code&gt;name&lt;/code&gt;,</span><span class="nv"> </span><span class="s">&lt;code&gt;uid&lt;/code&gt;</span><span class="nv"> </span><span class="s">(Account</span><span class="nv"> </span><span class="s">ID),</span>
+
+<span class="w">      </span><span class="s">&lt;code&gt;type&lt;/code&gt;,</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">other</span><span class="nv"> </span><span class="s">account</span><span class="nv"> </span><span class="s">properties&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Azure:&lt;/strong&gt;</span>
+
+<span class="w">      </span><span class="s">Subscription</span><span class="nv"> </span><span class="s">object</span><span class="nv"> </span><span class="s">with</span><span class="nv"> </span><span class="s">&lt;code&gt;name&lt;/code&gt;,</span><span class="nv"> </span><span class="s">&lt;code&gt;uid&lt;/code&gt;</span><span class="nv"> </span><span class="s">(Subscription</span><span class="nv"> </span><span class="s">ID),</span>
+
+<span class="w">      </span><span class="s">&lt;code&gt;type&lt;/code&gt;,</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">subscription</span><span class="nv"> </span><span class="s">metadata&lt;/li&gt;&lt;li&gt;&lt;strong&gt;GCP:&lt;/strong&gt;</span>
+
+<span class="w">      </span><span class="s">Project</span><span class="nv"> </span><span class="s">object</span><span class="nv"> </span><span class="s">with</span><span class="nv"> </span><span class="s">&lt;code&gt;name&lt;/code&gt;,</span><span class="nv"> </span><span class="s">&lt;code&gt;uid&lt;/code&gt;</span><span class="nv"> </span><span class="s">(Project</span><span class="nv"> </span><span class="s">ID),</span>
+
+<span class="w">      </span><span class="s">&lt;code&gt;type&lt;/code&gt;,</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">project</span><span class="nv"> </span><span class="s">attributes&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Oracle</span>
+
+<span class="w">      </span><span class="s">Cloud:&lt;/strong&gt;</span><span class="nv"> </span><span class="s">Compartment</span><span class="nv"> </span><span class="s">object</span><span class="nv"> </span><span class="s">with</span><span class="nv"> </span><span class="s">&lt;code&gt;name&lt;/code&gt;,</span><span class="nv"> </span><span class="s">&lt;code&gt;uid&lt;/code&gt;</span>
+
+<span class="w">      </span><span class="s">(Tenancy</span><span class="nv"> </span><span class="s">OCID),</span><span class="nv"> </span><span class="s">&lt;code&gt;type&lt;/code&gt;,</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">compartment</span><span class="nv"> </span><span class="s">details&lt;/li&gt;&lt;/ul&gt;'</span>
 <span class="w">  </span><span class="nt">cloud_partition</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">cloud_partition</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The logical grouping or isolated segment within a cloud provider's</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">infrastructure where the event or finding was created, often used for compliance,</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">governance, or regional separation.&lt;br/&gt;&lt;br/&gt;&lt;strong&gt;Examples:&lt;/strong&gt;&lt;ul&gt;&lt;li&gt;&lt;strong&gt;AWS:&lt;/strong&gt;</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">Partition where the event occurred (&lt;code&gt;aws&lt;/code&gt;, &lt;code&gt;aws-cn&lt;/code&gt;, &lt;code&gt;aws-us-gov&lt;/code&gt;)&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Azure:&lt;/strong&gt;</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">Cloud environment where the event occurred (&lt;code&gt;AzureCloud&lt;/code&gt;, &lt;code&gt;AzureUSGovernment&lt;/code&gt;,</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">&lt;code&gt;AzureChinaCloud&lt;/code&gt;)&lt;/li&gt;&lt;/ul&gt;</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">logical</span><span class="nv"> </span><span class="s">grouping</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">isolated</span><span class="nv"> </span><span class="s">segment</span><span class="nv"> </span><span class="s">within</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">cloud</span><span class="nv"> </span><span class="s">provider</span><span class="se">''</span><span class="s">s</span>
+
+<span class="w">      </span><span class="s">infrastructure</span><span class="nv"> </span><span class="s">where</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">event</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">finding</span><span class="nv"> </span><span class="s">was</span><span class="nv"> </span><span class="s">created,</span><span class="nv"> </span><span class="s">often</span><span class="nv"> </span><span class="s">used</span><span class="nv"> </span><span class="s">for</span>
+
+<span class="w">      </span><span class="s">compliance,</span><span class="nv"> </span><span class="s">governance,</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">regional</span>
+
+<span class="w">      </span><span class="s">separation.&lt;br/&gt;&lt;br/&gt;&lt;strong&gt;Examples:&lt;/strong&gt;&lt;ul&gt;&lt;li&gt;&lt;strong&gt;AWS:&lt;/strong&gt;</span>
+
+<span class="w">      </span><span class="s">Partition</span><span class="nv"> </span><span class="s">where</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">event</span><span class="nv"> </span><span class="s">occurred</span><span class="nv"> </span><span class="s">(&lt;code&gt;aws&lt;/code&gt;,</span><span class="nv"> </span><span class="s">&lt;code&gt;aws-cn&lt;/code&gt;,</span>
+
+<span class="w">      </span><span class="s">&lt;code&gt;aws-us-gov&lt;/code&gt;)&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Azure:&lt;/strong&gt;</span><span class="nv"> </span><span class="s">Cloud</span><span class="nv"> </span><span class="s">environment</span>
+
+<span class="w">      </span><span class="s">where</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">event</span><span class="nv"> </span><span class="s">occurred</span><span class="nv"> </span><span class="s">(&lt;code&gt;AzureCloud&lt;/code&gt;,</span>
+
+<span class="w">      </span><span class="s">&lt;code&gt;AzureUSGovernment&lt;/code&gt;,</span><span class="nv"> </span><span class="s">&lt;code&gt;AzureChinaCloud&lt;/code&gt;)&lt;/li&gt;&lt;/ul&gt;'</span>
 <span class="w">  </span><span class="nt">org</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">org</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The Organization object containing details about the organizational</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">unit or management structure that governs the account, subscription, or project</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">where the event or finding was created. This object includes properties such</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">as the organization name, unique identifier, type, and other organizational</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">metadata.&lt;br/&gt;&lt;br/&gt;&lt;strong&gt;Examples:&lt;/strong&gt;&lt;ul&gt;&lt;li&gt;&lt;strong&gt;AWS:&lt;/strong&gt; Organization</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">object with &lt;code&gt;name&lt;/code&gt;, &lt;code&gt;uid&lt;/code&gt; (Organization ID), &lt;code&gt;type&lt;/code&gt;,</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">and other organizational properties&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Azure:&lt;/strong&gt; Management</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">Group object with &lt;code&gt;name&lt;/code&gt;, &lt;code&gt;uid&lt;/code&gt; (Management Group ID),</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">&lt;code&gt;type&lt;/code&gt;, and management group metadata&lt;/li&gt;&lt;li&gt;&lt;strong&gt;GCP:&lt;/strong&gt;</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">Organization object with &lt;code&gt;name&lt;/code&gt;, &lt;code&gt;uid&lt;/code&gt; (Organization ID),</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">&lt;code&gt;type&lt;/code&gt;, and organizational attributes&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Oracle Cloud:&lt;/strong&gt;</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">Tenancy object with &lt;code&gt;name&lt;/code&gt;, &lt;code&gt;uid&lt;/code&gt; (Tenancy OCID), &lt;code&gt;type&lt;/code&gt;,</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">and tenancy details&lt;/li&gt;&lt;/ul&gt;</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">Organization</span><span class="nv"> </span><span class="s">object</span><span class="nv"> </span><span class="s">containing</span><span class="nv"> </span><span class="s">details</span><span class="nv"> </span><span class="s">about</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">organizational</span>
+<span class="w">      </span><span class="s">unit</span><span class="nv"> </span><span class="s">or</span>
+
+<span class="w">      </span><span class="s">management</span><span class="nv"> </span><span class="s">structure</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">governs</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">account,</span><span class="nv"> </span><span class="s">subscription,</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">project</span><span class="nv"> </span><span class="s">where</span>
+
+<span class="w">      </span><span class="s">the</span><span class="nv"> </span><span class="s">event</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">finding</span><span class="nv"> </span><span class="s">was</span><span class="nv"> </span><span class="s">created.</span><span class="nv"> </span><span class="s">This</span><span class="nv"> </span><span class="s">object</span><span class="nv"> </span><span class="s">includes</span><span class="nv"> </span><span class="s">properties</span><span class="nv"> </span><span class="s">such</span><span class="nv"> </span><span class="s">as</span><span class="nv"> </span><span class="s">the</span>
+
+<span class="w">      </span><span class="s">organization</span><span class="nv"> </span><span class="s">name,</span><span class="nv"> </span><span class="s">unique</span><span class="nv"> </span><span class="s">identifier,</span><span class="nv"> </span><span class="s">type,</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">other</span><span class="nv"> </span><span class="s">organizational</span>
+
+<span class="w">      </span><span class="s">metadata.&lt;br/&gt;&lt;br/&gt;&lt;strong&gt;Examples:&lt;/strong&gt;&lt;ul&gt;&lt;li&gt;&lt;strong&gt;AWS:&lt;/strong&gt;</span>
+
+<span class="w">      </span><span class="s">Organization</span><span class="nv"> </span><span class="s">object</span><span class="nv"> </span><span class="s">with</span><span class="nv"> </span><span class="s">&lt;code&gt;name&lt;/code&gt;,</span><span class="nv"> </span><span class="s">&lt;code&gt;uid&lt;/code&gt;</span><span class="nv"> </span><span class="s">(Organization</span><span class="nv"> </span><span class="s">ID),</span>
+
+<span class="w">      </span><span class="s">&lt;code&gt;type&lt;/code&gt;,</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">other</span><span class="nv"> </span><span class="s">organizational</span>
+
+<span class="w">      </span><span class="s">properties&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Azure:&lt;/strong&gt;</span><span class="nv"> </span><span class="s">Management</span><span class="nv"> </span><span class="s">Group</span><span class="nv"> </span><span class="s">object</span><span class="nv"> </span><span class="s">with</span>
+
+<span class="w">      </span><span class="s">&lt;code&gt;name&lt;/code&gt;,</span><span class="nv"> </span><span class="s">&lt;code&gt;uid&lt;/code&gt;</span><span class="nv"> </span><span class="s">(Management</span><span class="nv"> </span><span class="s">Group</span><span class="nv"> </span><span class="s">ID),</span><span class="nv"> </span><span class="s">&lt;code&gt;type&lt;/code&gt;,</span>
+
+<span class="w">      </span><span class="s">and</span><span class="nv"> </span><span class="s">management</span><span class="nv"> </span><span class="s">group</span><span class="nv"> </span><span class="s">metadata&lt;/li&gt;&lt;li&gt;&lt;strong&gt;GCP:&lt;/strong&gt;</span><span class="nv"> </span><span class="s">Organization</span><span class="nv"> </span><span class="s">object</span>
+
+<span class="w">      </span><span class="s">with</span><span class="nv"> </span><span class="s">&lt;code&gt;name&lt;/code&gt;,</span><span class="nv"> </span><span class="s">&lt;code&gt;uid&lt;/code&gt;</span><span class="nv"> </span><span class="s">(Organization</span><span class="nv"> </span><span class="s">ID),</span><span class="nv"> </span><span class="s">&lt;code&gt;type&lt;/code&gt;,</span>
+
+<span class="w">      </span><span class="s">and</span><span class="nv"> </span><span class="s">organizational</span><span class="nv"> </span><span class="s">attributes&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Oracle</span><span class="nv"> </span><span class="s">Cloud:&lt;/strong&gt;</span><span class="nv"> </span><span class="s">Tenancy</span>
+
+<span class="w">      </span><span class="s">object</span><span class="nv"> </span><span class="s">with</span><span class="nv"> </span><span class="s">&lt;code&gt;name&lt;/code&gt;,</span><span class="nv"> </span><span class="s">&lt;code&gt;uid&lt;/code&gt;</span><span class="nv"> </span><span class="s">(Tenancy</span><span class="nv"> </span><span class="s">OCID),</span>
+
+<span class="w">      </span><span class="s">&lt;code&gt;type&lt;/code&gt;,</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">tenancy</span><span class="nv"> </span><span class="s">details&lt;/li&gt;&lt;/ul&gt;'</span>
 <span class="w">  </span><span class="nt">provider</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">provider</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The unique name of the Cloud services provider where the event or</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">finding was created. Examples include AWS, Azure, GCP (Google Cloud Platform),</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">Oracle Cloud, IBM Cloud, Alibaba Cloud, or other public, private, or hybrid</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">cloud providers.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">unique</span><span class="nv"> </span><span class="s">name</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">Cloud</span><span class="nv"> </span><span class="s">services</span><span class="nv"> </span><span class="s">provider</span><span class="nv"> </span><span class="s">where</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">event</span><span class="nv"> </span><span class="s">or</span>
+<span class="w">      </span><span class="s">finding</span><span class="nv"> </span><span class="s">was</span>
+
+<span class="w">      </span><span class="s">created.</span><span class="nv"> </span><span class="s">Examples</span><span class="nv"> </span><span class="s">include</span><span class="nv"> </span><span class="s">AWS,</span><span class="nv"> </span><span class="s">Azure,</span><span class="nv"> </span><span class="s">GCP</span><span class="nv"> </span><span class="s">(Google</span><span class="nv"> </span><span class="s">Cloud</span><span class="nv"> </span><span class="s">Platform),</span><span class="nv"> </span><span class="s">Oracle</span>
+
+<span class="w">      </span><span class="s">Cloud,</span><span class="nv"> </span><span class="s">IBM</span><span class="nv"> </span><span class="s">Cloud,</span><span class="nv"> </span><span class="s">Alibaba</span><span class="nv"> </span><span class="s">Cloud,</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">other</span><span class="nv"> </span><span class="s">public,</span><span class="nv"> </span><span class="s">private,</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">hybrid</span><span class="nv"> </span><span class="s">cloud</span>
+
+<span class="w">      </span><span class="s">providers.'</span>
 <span class="w">    </span><span class="nt">required</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">region</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">region</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The cloud region where the event or finding was created, as defined</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">by the cloud provider.&lt;br/&gt;&lt;br/&gt;&lt;strong&gt;Examples:&lt;/strong&gt;&lt;ul&gt;&lt;li&gt;&lt;strong&gt;AWS:&lt;/strong&gt;</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">Region where the event occurred (&lt;code&gt;us-east-1&lt;/code&gt;, &lt;code&gt;eu-west-1&lt;/code&gt;)&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Azure:&lt;/strong&gt;</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">Region where the event occurred (&lt;code&gt;East US&lt;/code&gt;, &lt;code&gt;West Europe&lt;/code&gt;)&lt;/li&gt;&lt;li&gt;&lt;strong&gt;GCP:&lt;/strong&gt;</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">Region where the event occurred (&lt;code&gt;us-central1&lt;/code&gt;, &lt;code&gt;europe-west1&lt;/code&gt;)&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Oracle</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">Cloud:&lt;/strong&gt; Region where the event occurred (&lt;code&gt;us-ashburn-1&lt;/code&gt;,</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">&lt;code&gt;uk-london-1&lt;/code&gt;)&lt;/li&gt;&lt;/ul&gt;</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">cloud</span><span class="nv"> </span><span class="s">region</span><span class="nv"> </span><span class="s">where</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">event</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">finding</span><span class="nv"> </span><span class="s">was</span><span class="nv"> </span><span class="s">created,</span><span class="nv"> </span><span class="s">as</span><span class="nv"> </span><span class="s">defined</span>
+<span class="w">      </span><span class="s">by</span><span class="nv"> </span><span class="s">the</span>
+
+<span class="w">      </span><span class="s">cloud</span>
+
+<span class="w">      </span><span class="s">provider.&lt;br/&gt;&lt;br/&gt;&lt;strong&gt;Examples:&lt;/strong&gt;&lt;ul&gt;&lt;li&gt;&lt;strong&gt;AWS:&lt;/strong&gt;</span>
+
+<span class="w">      </span><span class="s">Region</span><span class="nv"> </span><span class="s">where</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">event</span><span class="nv"> </span><span class="s">occurred</span><span class="nv"> </span><span class="s">(&lt;code&gt;us-east-1&lt;/code&gt;,</span>
+
+<span class="w">      </span><span class="s">&lt;code&gt;eu-west-1&lt;/code&gt;)&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Azure:&lt;/strong&gt;</span><span class="nv"> </span><span class="s">Region</span><span class="nv"> </span><span class="s">where</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">event</span>
+
+<span class="w">      </span><span class="s">occurred</span><span class="nv"> </span><span class="s">(&lt;code&gt;East</span><span class="nv"> </span><span class="s">US&lt;/code&gt;,</span><span class="nv"> </span><span class="s">&lt;code&gt;West</span>
+
+<span class="w">      </span><span class="s">Europe&lt;/code&gt;)&lt;/li&gt;&lt;li&gt;&lt;strong&gt;GCP:&lt;/strong&gt;</span><span class="nv"> </span><span class="s">Region</span><span class="nv"> </span><span class="s">where</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">event</span><span class="nv"> </span><span class="s">occurred</span>
+
+<span class="w">      </span><span class="s">(&lt;code&gt;us-central1&lt;/code&gt;,</span><span class="nv"> </span><span class="s">&lt;code&gt;europe-west1&lt;/code&gt;)&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Oracle</span>
+
+<span class="w">      </span><span class="s">Cloud:&lt;/strong&gt;</span><span class="nv"> </span><span class="s">Region</span><span class="nv"> </span><span class="s">where</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">event</span><span class="nv"> </span><span class="s">occurred</span><span class="nv"> </span><span class="s">(&lt;code&gt;us-ashburn-1&lt;/code&gt;,</span>
+
+<span class="w">      </span><span class="s">&lt;code&gt;uk-london-1&lt;/code&gt;)&lt;/li&gt;&lt;/ul&gt;'</span>
 <span class="w">    </span><span class="nt">recommended</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">zone</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">zone</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The availability zone in the cloud region where the event or finding</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">was created, as defined by the cloud provider.&lt;br/&gt;&lt;br/&gt;&lt;strong&gt;Examples:&lt;/strong&gt;&lt;ul&gt;&lt;li&gt;&lt;strong&gt;AWS:&lt;/strong&gt;</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">Availability zone where the event occurred (&lt;code&gt;us-east-1a&lt;/code&gt;, &lt;code&gt;us-east-1b&lt;/code&gt;)&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Azure:&lt;/strong&gt;</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">Availability zone where the event occurred (&lt;code&gt;1&lt;/code&gt;, &lt;code&gt;2&lt;/code&gt;,</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">&lt;code&gt;3&lt;/code&gt; within a region)&lt;/li&gt;&lt;li&gt;&lt;strong&gt;GCP:&lt;/strong&gt; Availability zone</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">where the event occurred (&lt;code&gt;us-central1-a&lt;/code&gt;, &lt;code&gt;us-central1-b&lt;/code&gt;)&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Oracle</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">Cloud:&lt;/strong&gt; Availability zone where the event occurred (&lt;code&gt;AD-1&lt;/code&gt;,</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">&lt;code&gt;AD-2&lt;/code&gt;, &lt;code&gt;AD-3&lt;/code&gt;)&lt;/li&gt;&lt;/ul&gt;</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">availability</span><span class="nv"> </span><span class="s">zone</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">cloud</span><span class="nv"> </span><span class="s">region</span><span class="nv"> </span><span class="s">where</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">event</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">finding</span>
+<span class="w">      </span><span class="s">was</span>
+
+<span class="w">      </span><span class="s">created,</span><span class="nv"> </span><span class="s">as</span><span class="nv"> </span><span class="s">defined</span><span class="nv"> </span><span class="s">by</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">cloud</span>
+
+<span class="w">      </span><span class="s">provider.&lt;br/&gt;&lt;br/&gt;&lt;strong&gt;Examples:&lt;/strong&gt;&lt;ul&gt;&lt;li&gt;&lt;strong&gt;AWS:&lt;/strong&gt;</span>
+
+<span class="w">      </span><span class="s">Availability</span><span class="nv"> </span><span class="s">zone</span><span class="nv"> </span><span class="s">where</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">event</span><span class="nv"> </span><span class="s">occurred</span><span class="nv"> </span><span class="s">(&lt;code&gt;us-east-1a&lt;/code&gt;,</span>
+
+<span class="w">      </span><span class="s">&lt;code&gt;us-east-1b&lt;/code&gt;)&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Azure:&lt;/strong&gt;</span><span class="nv"> </span><span class="s">Availability</span><span class="nv"> </span><span class="s">zone</span>
+
+<span class="w">      </span><span class="s">where</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">event</span><span class="nv"> </span><span class="s">occurred</span><span class="nv"> </span><span class="s">(&lt;code&gt;1&lt;/code&gt;,</span><span class="nv"> </span><span class="s">&lt;code&gt;2&lt;/code&gt;,</span><span class="nv"> </span><span class="s">&lt;code&gt;3&lt;/code&gt;</span><span class="nv"> </span><span class="s">within</span>
+
+<span class="w">      </span><span class="s">a</span><span class="nv"> </span><span class="s">region)&lt;/li&gt;&lt;li&gt;&lt;strong&gt;GCP:&lt;/strong&gt;</span><span class="nv"> </span><span class="s">Availability</span><span class="nv"> </span><span class="s">zone</span><span class="nv"> </span><span class="s">where</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">event</span>
+
+<span class="w">      </span><span class="s">occurred</span><span class="nv"> </span><span class="s">(&lt;code&gt;us-central1-a&lt;/code&gt;,</span>
+
+<span class="w">      </span><span class="s">&lt;code&gt;us-central1-b&lt;/code&gt;)&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Oracle</span><span class="nv"> </span><span class="s">Cloud:&lt;/strong&gt;</span><span class="nv"> </span><span class="s">Availability</span>
+
+<span class="w">      </span><span class="s">zone</span><span class="nv"> </span><span class="s">where</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">event</span><span class="nv"> </span><span class="s">occurred</span><span class="nv"> </span><span class="s">(&lt;code&gt;AD-1&lt;/code&gt;,</span><span class="nv"> </span><span class="s">&lt;code&gt;AD-2&lt;/code&gt;,</span>
+
+<span class="w">      </span><span class="s">&lt;code&gt;AD-3&lt;/code&gt;)&lt;/li&gt;&lt;/ul&gt;'</span>
 <span class="nt">attributes</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">account</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">account</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The Account object containing details about the cloud account, subscription,</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">or billing unit where the event or finding was created. This object includes</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">properties such as the account name, unique identifier, type, labels, and tags.&lt;br/&gt;&lt;br/&gt;&lt;strong&gt;Examples:&lt;/strong&gt;&lt;ul&gt;&lt;li&gt;&lt;strong&gt;AWS:&lt;/strong&gt;</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">Account object with &lt;code&gt;name&lt;/code&gt;, &lt;code&gt;uid&lt;/code&gt; (Account ID), &lt;code&gt;type&lt;/code&gt;,</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">and other account properties&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Azure:&lt;/strong&gt; Subscription object</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">with &lt;code&gt;name&lt;/code&gt;, &lt;code&gt;uid&lt;/code&gt; (Subscription ID), &lt;code&gt;type&lt;/code&gt;,</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">and subscription metadata&lt;/li&gt;&lt;li&gt;&lt;strong&gt;GCP:&lt;/strong&gt; Project object with</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">&lt;code&gt;name&lt;/code&gt;, &lt;code&gt;uid&lt;/code&gt; (Project ID), &lt;code&gt;type&lt;/code&gt;, and project</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">attributes&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Oracle Cloud:&lt;/strong&gt; Compartment object with &lt;code&gt;name&lt;/code&gt;,</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">&lt;code&gt;uid&lt;/code&gt; (Tenancy OCID), &lt;code&gt;type&lt;/code&gt;, and compartment details&lt;/li&gt;&lt;/ul&gt;</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">Account</span><span class="nv"> </span><span class="s">object</span><span class="nv"> </span><span class="s">containing</span><span class="nv"> </span><span class="s">details</span><span class="nv"> </span><span class="s">about</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">cloud</span><span class="nv"> </span><span class="s">account,</span><span class="nv"> </span><span class="s">subscription,</span>
+<span class="w">      </span><span class="s">or</span>
+
+<span class="w">      </span><span class="s">billing</span><span class="nv"> </span><span class="s">unit</span><span class="nv"> </span><span class="s">where</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">event</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">finding</span><span class="nv"> </span><span class="s">was</span><span class="nv"> </span><span class="s">created.</span><span class="nv"> </span><span class="s">This</span><span class="nv"> </span><span class="s">object</span><span class="nv"> </span><span class="s">includes</span>
+
+<span class="w">      </span><span class="s">properties</span><span class="nv"> </span><span class="s">such</span><span class="nv"> </span><span class="s">as</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">account</span><span class="nv"> </span><span class="s">name,</span><span class="nv"> </span><span class="s">unique</span><span class="nv"> </span><span class="s">identifier,</span><span class="nv"> </span><span class="s">type,</span><span class="nv"> </span><span class="s">labels,</span><span class="nv"> </span><span class="s">and</span>
+
+<span class="w">      </span><span class="s">tags.&lt;br/&gt;&lt;br/&gt;&lt;strong&gt;Examples:&lt;/strong&gt;&lt;ul&gt;&lt;li&gt;&lt;strong&gt;AWS:&lt;/strong&gt;</span><span class="nv"> </span><span class="s">Account</span>
+
+<span class="w">      </span><span class="s">object</span><span class="nv"> </span><span class="s">with</span><span class="nv"> </span><span class="s">&lt;code&gt;name&lt;/code&gt;,</span><span class="nv"> </span><span class="s">&lt;code&gt;uid&lt;/code&gt;</span><span class="nv"> </span><span class="s">(Account</span><span class="nv"> </span><span class="s">ID),</span>
+
+<span class="w">      </span><span class="s">&lt;code&gt;type&lt;/code&gt;,</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">other</span><span class="nv"> </span><span class="s">account</span><span class="nv"> </span><span class="s">properties&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Azure:&lt;/strong&gt;</span>
+
+<span class="w">      </span><span class="s">Subscription</span><span class="nv"> </span><span class="s">object</span><span class="nv"> </span><span class="s">with</span><span class="nv"> </span><span class="s">&lt;code&gt;name&lt;/code&gt;,</span><span class="nv"> </span><span class="s">&lt;code&gt;uid&lt;/code&gt;</span><span class="nv"> </span><span class="s">(Subscription</span><span class="nv"> </span><span class="s">ID),</span>
+
+<span class="w">      </span><span class="s">&lt;code&gt;type&lt;/code&gt;,</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">subscription</span><span class="nv"> </span><span class="s">metadata&lt;/li&gt;&lt;li&gt;&lt;strong&gt;GCP:&lt;/strong&gt;</span>
+
+<span class="w">      </span><span class="s">Project</span><span class="nv"> </span><span class="s">object</span><span class="nv"> </span><span class="s">with</span><span class="nv"> </span><span class="s">&lt;code&gt;name&lt;/code&gt;,</span><span class="nv"> </span><span class="s">&lt;code&gt;uid&lt;/code&gt;</span><span class="nv"> </span><span class="s">(Project</span><span class="nv"> </span><span class="s">ID),</span>
+
+<span class="w">      </span><span class="s">&lt;code&gt;type&lt;/code&gt;,</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">project</span><span class="nv"> </span><span class="s">attributes&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Oracle</span>
+
+<span class="w">      </span><span class="s">Cloud:&lt;/strong&gt;</span><span class="nv"> </span><span class="s">Compartment</span><span class="nv"> </span><span class="s">object</span><span class="nv"> </span><span class="s">with</span><span class="nv"> </span><span class="s">&lt;code&gt;name&lt;/code&gt;,</span><span class="nv"> </span><span class="s">&lt;code&gt;uid&lt;/code&gt;</span>
+
+<span class="w">      </span><span class="s">(Tenancy</span><span class="nv"> </span><span class="s">OCID),</span><span class="nv"> </span><span class="s">&lt;code&gt;type&lt;/code&gt;,</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">compartment</span><span class="nv"> </span><span class="s">details&lt;/li&gt;&lt;/ul&gt;'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Account</span>
@@ -1191,12 +1376,21 @@
 <span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Account</span>
 <span class="w">  </span><span class="nt">cloud_partition</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">cloud_partition</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The logical grouping or isolated segment within a cloud provider's</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">infrastructure where the event or finding was created, often used for compliance,</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">governance, or regional separation.&lt;br/&gt;&lt;br/&gt;&lt;strong&gt;Examples:&lt;/strong&gt;&lt;ul&gt;&lt;li&gt;&lt;strong&gt;AWS:&lt;/strong&gt;</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">Partition where the event occurred (&lt;code&gt;aws&lt;/code&gt;, &lt;code&gt;aws-cn&lt;/code&gt;, &lt;code&gt;aws-us-gov&lt;/code&gt;)&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Azure:&lt;/strong&gt;</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">Cloud environment where the event occurred (&lt;code&gt;AzureCloud&lt;/code&gt;, &lt;code&gt;AzureUSGovernment&lt;/code&gt;,</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">&lt;code&gt;AzureChinaCloud&lt;/code&gt;)&lt;/li&gt;&lt;/ul&gt;</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">logical</span><span class="nv"> </span><span class="s">grouping</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">isolated</span><span class="nv"> </span><span class="s">segment</span><span class="nv"> </span><span class="s">within</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">cloud</span><span class="nv"> </span><span class="s">provider</span><span class="se">''</span><span class="s">s</span>
+
+<span class="w">      </span><span class="s">infrastructure</span><span class="nv"> </span><span class="s">where</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">event</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">finding</span><span class="nv"> </span><span class="s">was</span><span class="nv"> </span><span class="s">created,</span><span class="nv"> </span><span class="s">often</span><span class="nv"> </span><span class="s">used</span><span class="nv"> </span><span class="s">for</span>
+
+<span class="w">      </span><span class="s">compliance,</span><span class="nv"> </span><span class="s">governance,</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">regional</span>
+
+<span class="w">      </span><span class="s">separation.&lt;br/&gt;&lt;br/&gt;&lt;strong&gt;Examples:&lt;/strong&gt;&lt;ul&gt;&lt;li&gt;&lt;strong&gt;AWS:&lt;/strong&gt;</span>
+
+<span class="w">      </span><span class="s">Partition</span><span class="nv"> </span><span class="s">where</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">event</span><span class="nv"> </span><span class="s">occurred</span><span class="nv"> </span><span class="s">(&lt;code&gt;aws&lt;/code&gt;,</span><span class="nv"> </span><span class="s">&lt;code&gt;aws-cn&lt;/code&gt;,</span>
+
+<span class="w">      </span><span class="s">&lt;code&gt;aws-us-gov&lt;/code&gt;)&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Azure:&lt;/strong&gt;</span><span class="nv"> </span><span class="s">Cloud</span><span class="nv"> </span><span class="s">environment</span>
+
+<span class="w">      </span><span class="s">where</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">event</span><span class="nv"> </span><span class="s">occurred</span><span class="nv"> </span><span class="s">(&lt;code&gt;AzureCloud&lt;/code&gt;,</span>
+
+<span class="w">      </span><span class="s">&lt;code&gt;AzureUSGovernment&lt;/code&gt;,</span><span class="nv"> </span><span class="s">&lt;code&gt;AzureChinaCloud&lt;/code&gt;)&lt;/li&gt;&lt;/ul&gt;'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Cloud Partition</span>
@@ -1210,19 +1404,34 @@
 <span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">string</span>
 <span class="w">  </span><span class="nt">org</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">org</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The Organization object containing details about the organizational</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">unit or management structure that governs the account, subscription, or project</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">where the event or finding was created. This object includes properties such</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">as the organization name, unique identifier, type, and other organizational</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">metadata.&lt;br/&gt;&lt;br/&gt;&lt;strong&gt;Examples:&lt;/strong&gt;&lt;ul&gt;&lt;li&gt;&lt;strong&gt;AWS:&lt;/strong&gt; Organization</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">object with &lt;code&gt;name&lt;/code&gt;, &lt;code&gt;uid&lt;/code&gt; (Organization ID), &lt;code&gt;type&lt;/code&gt;,</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">and other organizational properties&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Azure:&lt;/strong&gt; Management</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">Group object with &lt;code&gt;name&lt;/code&gt;, &lt;code&gt;uid&lt;/code&gt; (Management Group ID),</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">&lt;code&gt;type&lt;/code&gt;, and management group metadata&lt;/li&gt;&lt;li&gt;&lt;strong&gt;GCP:&lt;/strong&gt;</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">Organization object with &lt;code&gt;name&lt;/code&gt;, &lt;code&gt;uid&lt;/code&gt; (Organization ID),</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">&lt;code&gt;type&lt;/code&gt;, and organizational attributes&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Oracle Cloud:&lt;/strong&gt;</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">Tenancy object with &lt;code&gt;name&lt;/code&gt;, &lt;code&gt;uid&lt;/code&gt; (Tenancy OCID), &lt;code&gt;type&lt;/code&gt;,</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">and tenancy details&lt;/li&gt;&lt;/ul&gt;</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">Organization</span><span class="nv"> </span><span class="s">object</span><span class="nv"> </span><span class="s">containing</span><span class="nv"> </span><span class="s">details</span><span class="nv"> </span><span class="s">about</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">organizational</span>
+<span class="w">      </span><span class="s">unit</span><span class="nv"> </span><span class="s">or</span>
+
+<span class="w">      </span><span class="s">management</span><span class="nv"> </span><span class="s">structure</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">governs</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">account,</span><span class="nv"> </span><span class="s">subscription,</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">project</span><span class="nv"> </span><span class="s">where</span>
+
+<span class="w">      </span><span class="s">the</span><span class="nv"> </span><span class="s">event</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">finding</span><span class="nv"> </span><span class="s">was</span><span class="nv"> </span><span class="s">created.</span><span class="nv"> </span><span class="s">This</span><span class="nv"> </span><span class="s">object</span><span class="nv"> </span><span class="s">includes</span><span class="nv"> </span><span class="s">properties</span><span class="nv"> </span><span class="s">such</span><span class="nv"> </span><span class="s">as</span><span class="nv"> </span><span class="s">the</span>
+
+<span class="w">      </span><span class="s">organization</span><span class="nv"> </span><span class="s">name,</span><span class="nv"> </span><span class="s">unique</span><span class="nv"> </span><span class="s">identifier,</span><span class="nv"> </span><span class="s">type,</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">other</span><span class="nv"> </span><span class="s">organizational</span>
+
+<span class="w">      </span><span class="s">metadata.&lt;br/&gt;&lt;br/&gt;&lt;strong&gt;Examples:&lt;/strong&gt;&lt;ul&gt;&lt;li&gt;&lt;strong&gt;AWS:&lt;/strong&gt;</span>
+
+<span class="w">      </span><span class="s">Organization</span><span class="nv"> </span><span class="s">object</span><span class="nv"> </span><span class="s">with</span><span class="nv"> </span><span class="s">&lt;code&gt;name&lt;/code&gt;,</span><span class="nv"> </span><span class="s">&lt;code&gt;uid&lt;/code&gt;</span><span class="nv"> </span><span class="s">(Organization</span><span class="nv"> </span><span class="s">ID),</span>
+
+<span class="w">      </span><span class="s">&lt;code&gt;type&lt;/code&gt;,</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">other</span><span class="nv"> </span><span class="s">organizational</span>
+
+<span class="w">      </span><span class="s">properties&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Azure:&lt;/strong&gt;</span><span class="nv"> </span><span class="s">Management</span><span class="nv"> </span><span class="s">Group</span><span class="nv"> </span><span class="s">object</span><span class="nv"> </span><span class="s">with</span>
+
+<span class="w">      </span><span class="s">&lt;code&gt;name&lt;/code&gt;,</span><span class="nv"> </span><span class="s">&lt;code&gt;uid&lt;/code&gt;</span><span class="nv"> </span><span class="s">(Management</span><span class="nv"> </span><span class="s">Group</span><span class="nv"> </span><span class="s">ID),</span><span class="nv"> </span><span class="s">&lt;code&gt;type&lt;/code&gt;,</span>
+
+<span class="w">      </span><span class="s">and</span><span class="nv"> </span><span class="s">management</span><span class="nv"> </span><span class="s">group</span><span class="nv"> </span><span class="s">metadata&lt;/li&gt;&lt;li&gt;&lt;strong&gt;GCP:&lt;/strong&gt;</span><span class="nv"> </span><span class="s">Organization</span><span class="nv"> </span><span class="s">object</span>
+
+<span class="w">      </span><span class="s">with</span><span class="nv"> </span><span class="s">&lt;code&gt;name&lt;/code&gt;,</span><span class="nv"> </span><span class="s">&lt;code&gt;uid&lt;/code&gt;</span><span class="nv"> </span><span class="s">(Organization</span><span class="nv"> </span><span class="s">ID),</span><span class="nv"> </span><span class="s">&lt;code&gt;type&lt;/code&gt;,</span>
+
+<span class="w">      </span><span class="s">and</span><span class="nv"> </span><span class="s">organizational</span><span class="nv"> </span><span class="s">attributes&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Oracle</span><span class="nv"> </span><span class="s">Cloud:&lt;/strong&gt;</span><span class="nv"> </span><span class="s">Tenancy</span>
+
+<span class="w">      </span><span class="s">object</span><span class="nv"> </span><span class="s">with</span><span class="nv"> </span><span class="s">&lt;code&gt;name&lt;/code&gt;,</span><span class="nv"> </span><span class="s">&lt;code&gt;uid&lt;/code&gt;</span><span class="nv"> </span><span class="s">(Tenancy</span><span class="nv"> </span><span class="s">OCID),</span>
+
+<span class="w">      </span><span class="s">&lt;code&gt;type&lt;/code&gt;,</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">tenancy</span><span class="nv"> </span><span class="s">details&lt;/li&gt;&lt;/ul&gt;'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Organization</span>
@@ -1251,10 +1460,14 @@
 <span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">string</span>
 <span class="w">  </span><span class="nt">provider</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">provider</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The unique name of the Cloud services provider where the event or</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">finding was created. Examples include AWS, Azure, GCP (Google Cloud Platform),</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">Oracle Cloud, IBM Cloud, Alibaba Cloud, or other public, private, or hybrid</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">cloud providers.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">unique</span><span class="nv"> </span><span class="s">name</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">Cloud</span><span class="nv"> </span><span class="s">services</span><span class="nv"> </span><span class="s">provider</span><span class="nv"> </span><span class="s">where</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">event</span><span class="nv"> </span><span class="s">or</span>
+<span class="w">      </span><span class="s">finding</span><span class="nv"> </span><span class="s">was</span>
+
+<span class="w">      </span><span class="s">created.</span><span class="nv"> </span><span class="s">Examples</span><span class="nv"> </span><span class="s">include</span><span class="nv"> </span><span class="s">AWS,</span><span class="nv"> </span><span class="s">Azure,</span><span class="nv"> </span><span class="s">GCP</span><span class="nv"> </span><span class="s">(Google</span><span class="nv"> </span><span class="s">Cloud</span><span class="nv"> </span><span class="s">Platform),</span><span class="nv"> </span><span class="s">Oracle</span>
+
+<span class="w">      </span><span class="s">Cloud,</span><span class="nv"> </span><span class="s">IBM</span><span class="nv"> </span><span class="s">Cloud,</span><span class="nv"> </span><span class="s">Alibaba</span><span class="nv"> </span><span class="s">Cloud,</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">other</span><span class="nv"> </span><span class="s">public,</span><span class="nv"> </span><span class="s">private,</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">hybrid</span><span class="nv"> </span><span class="s">cloud</span>
+
+<span class="w">      </span><span class="s">providers.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Provider</span>
@@ -1273,13 +1486,26 @@
 <span class="w">    </span><span class="nt">required</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">region</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">region</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The cloud region where the event or finding was created, as defined</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">by the cloud provider.&lt;br/&gt;&lt;br/&gt;&lt;strong&gt;Examples:&lt;/strong&gt;&lt;ul&gt;&lt;li&gt;&lt;strong&gt;AWS:&lt;/strong&gt;</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">Region where the event occurred (&lt;code&gt;us-east-1&lt;/code&gt;, &lt;code&gt;eu-west-1&lt;/code&gt;)&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Azure:&lt;/strong&gt;</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">Region where the event occurred (&lt;code&gt;East US&lt;/code&gt;, &lt;code&gt;West Europe&lt;/code&gt;)&lt;/li&gt;&lt;li&gt;&lt;strong&gt;GCP:&lt;/strong&gt;</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">Region where the event occurred (&lt;code&gt;us-central1&lt;/code&gt;, &lt;code&gt;europe-west1&lt;/code&gt;)&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Oracle</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">Cloud:&lt;/strong&gt; Region where the event occurred (&lt;code&gt;us-ashburn-1&lt;/code&gt;,</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">&lt;code&gt;uk-london-1&lt;/code&gt;)&lt;/li&gt;&lt;/ul&gt;</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">cloud</span><span class="nv"> </span><span class="s">region</span><span class="nv"> </span><span class="s">where</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">event</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">finding</span><span class="nv"> </span><span class="s">was</span><span class="nv"> </span><span class="s">created,</span><span class="nv"> </span><span class="s">as</span><span class="nv"> </span><span class="s">defined</span>
+<span class="w">      </span><span class="s">by</span><span class="nv"> </span><span class="s">the</span>
+
+<span class="w">      </span><span class="s">cloud</span>
+
+<span class="w">      </span><span class="s">provider.&lt;br/&gt;&lt;br/&gt;&lt;strong&gt;Examples:&lt;/strong&gt;&lt;ul&gt;&lt;li&gt;&lt;strong&gt;AWS:&lt;/strong&gt;</span>
+
+<span class="w">      </span><span class="s">Region</span><span class="nv"> </span><span class="s">where</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">event</span><span class="nv"> </span><span class="s">occurred</span><span class="nv"> </span><span class="s">(&lt;code&gt;us-east-1&lt;/code&gt;,</span>
+
+<span class="w">      </span><span class="s">&lt;code&gt;eu-west-1&lt;/code&gt;)&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Azure:&lt;/strong&gt;</span><span class="nv"> </span><span class="s">Region</span><span class="nv"> </span><span class="s">where</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">event</span>
+
+<span class="w">      </span><span class="s">occurred</span><span class="nv"> </span><span class="s">(&lt;code&gt;East</span><span class="nv"> </span><span class="s">US&lt;/code&gt;,</span><span class="nv"> </span><span class="s">&lt;code&gt;West</span>
+
+<span class="w">      </span><span class="s">Europe&lt;/code&gt;)&lt;/li&gt;&lt;li&gt;&lt;strong&gt;GCP:&lt;/strong&gt;</span><span class="nv"> </span><span class="s">Region</span><span class="nv"> </span><span class="s">where</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">event</span><span class="nv"> </span><span class="s">occurred</span>
+
+<span class="w">      </span><span class="s">(&lt;code&gt;us-central1&lt;/code&gt;,</span><span class="nv"> </span><span class="s">&lt;code&gt;europe-west1&lt;/code&gt;)&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Oracle</span>
+
+<span class="w">      </span><span class="s">Cloud:&lt;/strong&gt;</span><span class="nv"> </span><span class="s">Region</span><span class="nv"> </span><span class="s">where</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">event</span><span class="nv"> </span><span class="s">occurred</span><span class="nv"> </span><span class="s">(&lt;code&gt;us-ashburn-1&lt;/code&gt;,</span>
+
+<span class="w">      </span><span class="s">&lt;code&gt;uk-london-1&lt;/code&gt;)&lt;/li&gt;&lt;/ul&gt;'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Region</span>
@@ -1298,14 +1524,28 @@
 <span class="w">    </span><span class="nt">recommended</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">zone</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">zone</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The availability zone in the cloud region where the event or finding</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">was created, as defined by the cloud provider.&lt;br/&gt;&lt;br/&gt;&lt;strong&gt;Examples:&lt;/strong&gt;&lt;ul&gt;&lt;li&gt;&lt;strong&gt;AWS:&lt;/strong&gt;</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">Availability zone where the event occurred (&lt;code&gt;us-east-1a&lt;/code&gt;, &lt;code&gt;us-east-1b&lt;/code&gt;)&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Azure:&lt;/strong&gt;</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">Availability zone where the event occurred (&lt;code&gt;1&lt;/code&gt;, &lt;code&gt;2&lt;/code&gt;,</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">&lt;code&gt;3&lt;/code&gt; within a region)&lt;/li&gt;&lt;li&gt;&lt;strong&gt;GCP:&lt;/strong&gt; Availability zone</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">where the event occurred (&lt;code&gt;us-central1-a&lt;/code&gt;, &lt;code&gt;us-central1-b&lt;/code&gt;)&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Oracle</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">Cloud:&lt;/strong&gt; Availability zone where the event occurred (&lt;code&gt;AD-1&lt;/code&gt;,</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">&lt;code&gt;AD-2&lt;/code&gt;, &lt;code&gt;AD-3&lt;/code&gt;)&lt;/li&gt;&lt;/ul&gt;</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">availability</span><span class="nv"> </span><span class="s">zone</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">cloud</span><span class="nv"> </span><span class="s">region</span><span class="nv"> </span><span class="s">where</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">event</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">finding</span>
+<span class="w">      </span><span class="s">was</span>
+
+<span class="w">      </span><span class="s">created,</span><span class="nv"> </span><span class="s">as</span><span class="nv"> </span><span class="s">defined</span><span class="nv"> </span><span class="s">by</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">cloud</span>
+
+<span class="w">      </span><span class="s">provider.&lt;br/&gt;&lt;br/&gt;&lt;strong&gt;Examples:&lt;/strong&gt;&lt;ul&gt;&lt;li&gt;&lt;strong&gt;AWS:&lt;/strong&gt;</span>
+
+<span class="w">      </span><span class="s">Availability</span><span class="nv"> </span><span class="s">zone</span><span class="nv"> </span><span class="s">where</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">event</span><span class="nv"> </span><span class="s">occurred</span><span class="nv"> </span><span class="s">(&lt;code&gt;us-east-1a&lt;/code&gt;,</span>
+
+<span class="w">      </span><span class="s">&lt;code&gt;us-east-1b&lt;/code&gt;)&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Azure:&lt;/strong&gt;</span><span class="nv"> </span><span class="s">Availability</span><span class="nv"> </span><span class="s">zone</span>
+
+<span class="w">      </span><span class="s">where</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">event</span><span class="nv"> </span><span class="s">occurred</span><span class="nv"> </span><span class="s">(&lt;code&gt;1&lt;/code&gt;,</span><span class="nv"> </span><span class="s">&lt;code&gt;2&lt;/code&gt;,</span><span class="nv"> </span><span class="s">&lt;code&gt;3&lt;/code&gt;</span><span class="nv"> </span><span class="s">within</span>
+
+<span class="w">      </span><span class="s">a</span><span class="nv"> </span><span class="s">region)&lt;/li&gt;&lt;li&gt;&lt;strong&gt;GCP:&lt;/strong&gt;</span><span class="nv"> </span><span class="s">Availability</span><span class="nv"> </span><span class="s">zone</span><span class="nv"> </span><span class="s">where</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">event</span>
+
+<span class="w">      </span><span class="s">occurred</span><span class="nv"> </span><span class="s">(&lt;code&gt;us-central1-a&lt;/code&gt;,</span>
+
+<span class="w">      </span><span class="s">&lt;code&gt;us-central1-b&lt;/code&gt;)&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Oracle</span><span class="nv"> </span><span class="s">Cloud:&lt;/strong&gt;</span><span class="nv"> </span><span class="s">Availability</span>
+
+<span class="w">      </span><span class="s">zone</span><span class="nv"> </span><span class="s">where</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">event</span><span class="nv"> </span><span class="s">occurred</span><span class="nv"> </span><span class="s">(&lt;code&gt;AD-1&lt;/code&gt;,</span><span class="nv"> </span><span class="s">&lt;code&gt;AD-2&lt;/code&gt;,</span>
+
+<span class="w">      </span><span class="s">&lt;code&gt;AD-3&lt;/code&gt;)&lt;/li&gt;&lt;/ul&gt;'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Network Zone</span>

@@ -217,6 +217,15 @@
 </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="#in-subsets">
+<span class="md-ellipsis">
+      
+        In Subsets
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#aliases">
 <span class="md-ellipsis">
       
@@ -313,7 +322,8 @@
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
 <h1 id="class-mitigation">Class: Mitigation</h1>
-<p><em>The MITRE Mitigation object describes the ATT&amp;CK® or ATLAS™ Mitigation ID and/or name that is associated to an attack.</em></p>
+<p><em>The MITRE Mitigation object describes the ATT&amp;CK® or ATLAS™ Mitigation ID</em></p>
+<p><em>and/or name that is associated to an attack.</em></p>
 <p>URI: <a href="https://w3id.org/lmodel/ocsf/Mitigation">ocsf:Mitigation</a></p>
 <pre class="mermaid"><code> classDiagram
     class Mitigation
@@ -408,6 +418,10 @@
 </tr>
 </tbody>
 </table>
+<h2 id="in-subsets">In Subsets</h2>
+<ul>
+<li><a href="../Objects/">Objects</a></li>
+</ul>
 <h2 id="aliases">Aliases</h2>
 <ul>
 <li>MITRE Mitigation</li>
@@ -422,7 +436,8 @@
 <ul>
 <li>ATT&amp;CK® Matrix — <a href="https://attack.mitre.org">https://attack.mitre.org</a></li>
 <li>ATLAS™ Matrix — <a href="https://atlas.mitre.org/matrices/ATLAS">https://atlas.mitre.org/matrices/ATLAS</a></li>
-<li>ATT&amp;CK® Mitigation to D3FEND™ Technique Mappings — <a href="https://d3fend.mitre.org/mappings/attack-mitigations/">https://d3fend.mitre.org/mappings/attack-mitigations/</a></li>
+<li>ATT&amp;CK® Mitigation to D3FEND™ Technique Mappings —
+<a href="https://d3fend.mitre.org/mappings/attack-mitigations/">https://d3fend.mitre.org/mappings/attack-mitigations/</a></li>
 </ul>
 <h2 id="identifier-and-mapping-information">Identifier and Mapping Information</h2>
 <h3 id="schema-source">Schema Source</h3>
@@ -461,12 +476,18 @@
 <h3 id="direct">Direct</h3>
 <details>
 <div class="highlight"><pre><span></span><code><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Mitigation</span>
-<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The MITRE Mitigation object describes the ATT&amp;CK® or ATLAS™ Mitigation</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">ID and/or name that is associated to an attack.</span>
+<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">MITRE</span><span class="nv"> </span><span class="s">Mitigation</span><span class="nv"> </span><span class="s">object</span><span class="nv"> </span><span class="s">describes</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">ATT&amp;CK®</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">ATLAS™</span><span class="nv"> </span><span class="s">Mitigation</span>
+<span class="w">  </span><span class="s">ID</span>
+
+<span class="w">  </span><span class="s">and/or</span><span class="nv"> </span><span class="s">name</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">associated</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">an</span><span class="nv"> </span><span class="s">attack.'</span>
 <span class="nt">notes</span><span class="p">:</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ATT&amp;CK® Matrix — https://attack.mitre.org</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ATLAS™ Matrix — https://atlas.mitre.org/matrices/ATLAS</span>
-<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ATT&amp;CK® Mitigation to D3FEND™ Technique Mappings — https://d3fend.mitre.org/mappings/attack-mitigations/</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="s">'ATT&amp;CK®</span><span class="nv"> </span><span class="s">Mitigation</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">D3FEND™</span><span class="nv"> </span><span class="s">Technique</span><span class="nv"> </span><span class="s">Mappings</span><span class="nv"> </span><span class="s">—</span>
+
+<span class="w">  </span><span class="s">https://d3fend.mitre.org/mappings/attack-mitigations/'</span>
+<span class="nt">in_subset</span><span class="p">:</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">objects</span>
 <span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="nt">see_also</span><span class="p">:</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://attack.mitre.org</span>
@@ -488,30 +509,45 @@
 <span class="w">  </span><span class="nt">countermeasures</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">countermeasures</span>
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">D3FEND</span><span class="nv"> </span><span class="s">countermeasures</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">are</span><span class="nv"> </span><span class="s">associated</span><span class="nv"> </span><span class="s">with</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">attack</span><span class="nv"> </span><span class="s">technique.</span>
-<span class="w">      </span><span class="s">For</span><span class="nv"> </span><span class="s">example:</span><span class="nv"> </span><span class="s">ATT&amp;CK</span><span class="nv"> </span><span class="s">Technique</span><span class="nv"> </span><span class="s">&lt;code&gt;T1003&lt;/code&gt;</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">addressed</span><span class="nv"> </span><span class="s">by</span><span class="nv"> </span><span class="s">Mitigation</span>
+<span class="w">      </span><span class="s">For</span>
+
+<span class="w">      </span><span class="s">example:</span><span class="nv"> </span><span class="s">ATT&amp;CK</span><span class="nv"> </span><span class="s">Technique</span><span class="nv"> </span><span class="s">&lt;code&gt;T1003&lt;/code&gt;</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">addressed</span><span class="nv"> </span><span class="s">by</span><span class="nv"> </span><span class="s">Mitigation</span>
+
 <span class="w">      </span><span class="s">&lt;code&gt;M1027&lt;/code&gt;,</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">D3FEND</span><span class="nv"> </span><span class="s">Technique</span><span class="nv"> </span><span class="s">&lt;code&gt;D3-OTP&lt;/code&gt;.'</span>
 <span class="w">  </span><span class="nt">name</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">name</span>
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">Mitigation</span><span class="nv"> </span><span class="s">name</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">associated</span><span class="nv"> </span><span class="s">with</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">attack</span><span class="nv"> </span><span class="s">technique.</span>
-<span class="w">      </span><span class="s">For</span><span class="nv"> </span><span class="s">example:</span><span class="nv"> </span><span class="s">&lt;code&gt;Password</span><span class="nv"> </span><span class="s">Policies&lt;/code&gt;,</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">&lt;code&gt;Code</span><span class="nv"> </span><span class="s">Signing&lt;/code&gt;.'</span>
+<span class="w">      </span><span class="s">For</span><span class="nv"> </span><span class="s">example:</span>
+
+<span class="w">      </span><span class="s">&lt;code&gt;Password</span><span class="nv"> </span><span class="s">Policies&lt;/code&gt;,</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">&lt;code&gt;Code</span><span class="nv"> </span><span class="s">Signing&lt;/code&gt;.'</span>
 <span class="w">  </span><span class="nt">src_url</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">src_url</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">versioned</span><span class="nv"> </span><span class="s">permalink</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">Mitigation.</span><span class="nv"> </span><span class="s">For</span><span class="nv"> </span><span class="s">example:</span><span class="nv"> </span><span class="s">&lt;code&gt;https://attack.mitre.org/versions/v14/mitigations/M1027&lt;/code&gt;.'</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">versioned</span><span class="nv"> </span><span class="s">permalink</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">Mitigation.</span><span class="nv"> </span><span class="s">For</span><span class="nv"> </span><span class="s">example:</span>
+
+<span class="w">      </span><span class="s">&lt;code&gt;https://attack.mitre.org/versions/v14/mitigations/M1027&lt;/code&gt;.'</span>
 <span class="w">  </span><span class="nt">uid</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">uid</span>
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">Mitigation</span><span class="nv"> </span><span class="s">ID</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">associated</span><span class="nv"> </span><span class="s">with</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">attack</span><span class="nv"> </span><span class="s">technique.</span>
-<span class="w">      </span><span class="s">For</span><span class="nv"> </span><span class="s">example:</span><span class="nv"> </span><span class="s">&lt;code&gt;M1027&lt;/code&gt;,</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">&lt;code&gt;AML.M0013&lt;/code&gt;.'</span>
+<span class="w">      </span><span class="s">For</span><span class="nv"> </span><span class="s">example:</span>
+
+<span class="w">      </span><span class="s">&lt;code&gt;M1027&lt;/code&gt;,</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">&lt;code&gt;AML.M0013&lt;/code&gt;.'</span>
 </code></pre></div>
 </details>
 <h3 id="induced">Induced</h3>
 <details>
 <div class="highlight"><pre><span></span><code><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Mitigation</span>
-<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The MITRE Mitigation object describes the ATT&amp;CK® or ATLAS™ Mitigation</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">ID and/or name that is associated to an attack.</span>
+<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">MITRE</span><span class="nv"> </span><span class="s">Mitigation</span><span class="nv"> </span><span class="s">object</span><span class="nv"> </span><span class="s">describes</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">ATT&amp;CK®</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">ATLAS™</span><span class="nv"> </span><span class="s">Mitigation</span>
+<span class="w">  </span><span class="s">ID</span>
+
+<span class="w">  </span><span class="s">and/or</span><span class="nv"> </span><span class="s">name</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">associated</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">an</span><span class="nv"> </span><span class="s">attack.'</span>
 <span class="nt">notes</span><span class="p">:</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ATT&amp;CK® Matrix — https://attack.mitre.org</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ATLAS™ Matrix — https://atlas.mitre.org/matrices/ATLAS</span>
-<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ATT&amp;CK® Mitigation to D3FEND™ Technique Mappings — https://d3fend.mitre.org/mappings/attack-mitigations/</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="s">'ATT&amp;CK®</span><span class="nv"> </span><span class="s">Mitigation</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">D3FEND™</span><span class="nv"> </span><span class="s">Technique</span><span class="nv"> </span><span class="s">Mappings</span><span class="nv"> </span><span class="s">—</span>
+
+<span class="w">  </span><span class="s">https://d3fend.mitre.org/mappings/attack-mitigations/'</span>
+<span class="nt">in_subset</span><span class="p">:</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">objects</span>
 <span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="nt">see_also</span><span class="p">:</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://attack.mitre.org</span>
@@ -528,24 +564,36 @@
 <span class="w">  </span><span class="nt">countermeasures</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">countermeasures</span>
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">D3FEND</span><span class="nv"> </span><span class="s">countermeasures</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">are</span><span class="nv"> </span><span class="s">associated</span><span class="nv"> </span><span class="s">with</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">attack</span><span class="nv"> </span><span class="s">technique.</span>
-<span class="w">      </span><span class="s">For</span><span class="nv"> </span><span class="s">example:</span><span class="nv"> </span><span class="s">ATT&amp;CK</span><span class="nv"> </span><span class="s">Technique</span><span class="nv"> </span><span class="s">&lt;code&gt;T1003&lt;/code&gt;</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">addressed</span><span class="nv"> </span><span class="s">by</span><span class="nv"> </span><span class="s">Mitigation</span>
+<span class="w">      </span><span class="s">For</span>
+
+<span class="w">      </span><span class="s">example:</span><span class="nv"> </span><span class="s">ATT&amp;CK</span><span class="nv"> </span><span class="s">Technique</span><span class="nv"> </span><span class="s">&lt;code&gt;T1003&lt;/code&gt;</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">addressed</span><span class="nv"> </span><span class="s">by</span><span class="nv"> </span><span class="s">Mitigation</span>
+
 <span class="w">      </span><span class="s">&lt;code&gt;M1027&lt;/code&gt;,</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">D3FEND</span><span class="nv"> </span><span class="s">Technique</span><span class="nv"> </span><span class="s">&lt;code&gt;D3-OTP&lt;/code&gt;.'</span>
 <span class="w">  </span><span class="nt">name</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">name</span>
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">Mitigation</span><span class="nv"> </span><span class="s">name</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">associated</span><span class="nv"> </span><span class="s">with</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">attack</span><span class="nv"> </span><span class="s">technique.</span>
-<span class="w">      </span><span class="s">For</span><span class="nv"> </span><span class="s">example:</span><span class="nv"> </span><span class="s">&lt;code&gt;Password</span><span class="nv"> </span><span class="s">Policies&lt;/code&gt;,</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">&lt;code&gt;Code</span><span class="nv"> </span><span class="s">Signing&lt;/code&gt;.'</span>
+<span class="w">      </span><span class="s">For</span><span class="nv"> </span><span class="s">example:</span>
+
+<span class="w">      </span><span class="s">&lt;code&gt;Password</span><span class="nv"> </span><span class="s">Policies&lt;/code&gt;,</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">&lt;code&gt;Code</span><span class="nv"> </span><span class="s">Signing&lt;/code&gt;.'</span>
 <span class="w">  </span><span class="nt">src_url</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">src_url</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">versioned</span><span class="nv"> </span><span class="s">permalink</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">Mitigation.</span><span class="nv"> </span><span class="s">For</span><span class="nv"> </span><span class="s">example:</span><span class="nv"> </span><span class="s">&lt;code&gt;https://attack.mitre.org/versions/v14/mitigations/M1027&lt;/code&gt;.'</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">versioned</span><span class="nv"> </span><span class="s">permalink</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">Mitigation.</span><span class="nv"> </span><span class="s">For</span><span class="nv"> </span><span class="s">example:</span>
+
+<span class="w">      </span><span class="s">&lt;code&gt;https://attack.mitre.org/versions/v14/mitigations/M1027&lt;/code&gt;.'</span>
 <span class="w">  </span><span class="nt">uid</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">uid</span>
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">Mitigation</span><span class="nv"> </span><span class="s">ID</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">associated</span><span class="nv"> </span><span class="s">with</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">attack</span><span class="nv"> </span><span class="s">technique.</span>
-<span class="w">      </span><span class="s">For</span><span class="nv"> </span><span class="s">example:</span><span class="nv"> </span><span class="s">&lt;code&gt;M1027&lt;/code&gt;,</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">&lt;code&gt;AML.M0013&lt;/code&gt;.'</span>
+<span class="w">      </span><span class="s">For</span><span class="nv"> </span><span class="s">example:</span>
+
+<span class="w">      </span><span class="s">&lt;code&gt;M1027&lt;/code&gt;,</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">&lt;code&gt;AML.M0013&lt;/code&gt;.'</span>
 <span class="nt">attributes</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">countermeasures</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">countermeasures</span>
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">D3FEND</span><span class="nv"> </span><span class="s">countermeasures</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">are</span><span class="nv"> </span><span class="s">associated</span><span class="nv"> </span><span class="s">with</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">attack</span><span class="nv"> </span><span class="s">technique.</span>
-<span class="w">      </span><span class="s">For</span><span class="nv"> </span><span class="s">example:</span><span class="nv"> </span><span class="s">ATT&amp;CK</span><span class="nv"> </span><span class="s">Technique</span><span class="nv"> </span><span class="s">&lt;code&gt;T1003&lt;/code&gt;</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">addressed</span><span class="nv"> </span><span class="s">by</span><span class="nv"> </span><span class="s">Mitigation</span>
+<span class="w">      </span><span class="s">For</span>
+
+<span class="w">      </span><span class="s">example:</span><span class="nv"> </span><span class="s">ATT&amp;CK</span><span class="nv"> </span><span class="s">Technique</span><span class="nv"> </span><span class="s">&lt;code&gt;T1003&lt;/code&gt;</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">addressed</span><span class="nv"> </span><span class="s">by</span><span class="nv"> </span><span class="s">Mitigation</span>
+
 <span class="w">      </span><span class="s">&lt;code&gt;M1027&lt;/code&gt;,</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">D3FEND</span><span class="nv"> </span><span class="s">Technique</span><span class="nv"> </span><span class="s">&lt;code&gt;D3-OTP&lt;/code&gt;.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
@@ -561,7 +609,9 @@
 <span class="w">  </span><span class="nt">name</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">name</span>
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">Mitigation</span><span class="nv"> </span><span class="s">name</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">associated</span><span class="nv"> </span><span class="s">with</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">attack</span><span class="nv"> </span><span class="s">technique.</span>
-<span class="w">      </span><span class="s">For</span><span class="nv"> </span><span class="s">example:</span><span class="nv"> </span><span class="s">&lt;code&gt;Password</span><span class="nv"> </span><span class="s">Policies&lt;/code&gt;,</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">&lt;code&gt;Code</span><span class="nv"> </span><span class="s">Signing&lt;/code&gt;.'</span>
+<span class="w">      </span><span class="s">For</span><span class="nv"> </span><span class="s">example:</span>
+
+<span class="w">      </span><span class="s">&lt;code&gt;Password</span><span class="nv"> </span><span class="s">Policies&lt;/code&gt;,</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">&lt;code&gt;Code</span><span class="nv"> </span><span class="s">Signing&lt;/code&gt;.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Name</span>
@@ -663,7 +713,9 @@
 <span class="w">    </span><span class="nt">recommended</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">src_url</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">src_url</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">versioned</span><span class="nv"> </span><span class="s">permalink</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">Mitigation.</span><span class="nv"> </span><span class="s">For</span><span class="nv"> </span><span class="s">example:</span><span class="nv"> </span><span class="s">&lt;code&gt;https://attack.mitre.org/versions/v14/mitigations/M1027&lt;/code&gt;.'</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">versioned</span><span class="nv"> </span><span class="s">permalink</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">Mitigation.</span><span class="nv"> </span><span class="s">For</span><span class="nv"> </span><span class="s">example:</span>
+
+<span class="w">      </span><span class="s">&lt;code&gt;https://attack.mitre.org/versions/v14/mitigations/M1027&lt;/code&gt;.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Source URL</span>
@@ -694,7 +746,9 @@
 <span class="w">  </span><span class="nt">uid</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">uid</span>
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">Mitigation</span><span class="nv"> </span><span class="s">ID</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">associated</span><span class="nv"> </span><span class="s">with</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">attack</span><span class="nv"> </span><span class="s">technique.</span>
-<span class="w">      </span><span class="s">For</span><span class="nv"> </span><span class="s">example:</span><span class="nv"> </span><span class="s">&lt;code&gt;M1027&lt;/code&gt;,</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">&lt;code&gt;AML.M0013&lt;/code&gt;.'</span>
+<span class="w">      </span><span class="s">For</span><span class="nv"> </span><span class="s">example:</span>
+
+<span class="w">      </span><span class="s">&lt;code&gt;M1027&lt;/code&gt;,</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">&lt;code&gt;AML.M0013&lt;/code&gt;.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Unique ID</span>

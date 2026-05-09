@@ -217,6 +217,15 @@
 </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="#in-subsets">
+<span class="md-ellipsis">
+      
+        In Subsets
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#aliases">
 <span class="md-ellipsis">
       
@@ -313,7 +322,8 @@
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
 <h1 id="class-databucket">Class: Databucket</h1>
-<p><em>The databucket object is a basic container that holds data, typically organized through the use of data partitions.</em></p>
+<p><em>The databucket object is a basic container that holds data, typically organized</em></p>
+<p><em>through the use of data partitions.</em></p>
 <p>URI: <a href="https://w3id.org/lmodel/ocsf/Databucket">ocsf:Databucket</a></p>
 <pre class="mermaid"><code> classDiagram
     class Databucket
@@ -541,13 +551,13 @@
 <tr>
 <td><a href="../agent_list/">agent_list</a></td>
 <td>* <br/> <a href="../Agent/">Agent</a></td>
-<td>A list of <code>agent</code> objects associated with a device, endpoint, or r...</td>
+<td>A list of <code>agent</code> objects associated with a device, endpoint, or</td>
 <td>direct</td>
 </tr>
 <tr>
 <td><a href="../cloud_partition/">cloud_partition</a></td>
 <td>0..1 <br/> <a href="../String/">String</a></td>
-<td>The logical grouping or isolated segment within a cloud provider's infrastruc...</td>
+<td>The logical grouping or isolated segment within a cloud provider's</td>
 <td>direct</td>
 </tr>
 <tr>
@@ -607,7 +617,7 @@
 <tr>
 <td><a href="../is_backed_up/">is_backed_up</a></td>
 <td>0..1 <br/> <a href="../Boolean/">Boolean</a></td>
-<td>Indicates whether the device or resource has a backup enabled, such as an aut...</td>
+<td>Indicates whether the device or resource has a backup enabled, such as an</td>
 <td>direct</td>
 </tr>
 <tr>
@@ -625,7 +635,7 @@
 <tr>
 <td><a href="../modified_time/">modified_time</a></td>
 <td>0..1 <br/> <a href="../TimestampT/">TimestampT</a></td>
-<td>The most recent time when any changes, updates, or modifications were made wi...</td>
+<td>The most recent time when any changes, updates, or modifications were made</td>
 <td>direct</td>
 </tr>
 <tr>
@@ -637,7 +647,7 @@
 <tr>
 <td><a href="../namespace/">namespace</a></td>
 <td>0..1 <br/> <a href="../String/">String</a></td>
-<td>The namespace is useful when similar entities exist that you need to keep sep...</td>
+<td>The namespace is useful when similar entities exist that you need to keep</td>
 <td>direct</td>
 </tr>
 <tr>
@@ -655,7 +665,7 @@
 <tr>
 <td><a href="../resource_relationship/">resource_relationship</a></td>
 <td>0..1 <br/> <a href="../Graph/">Graph</a></td>
-<td>A graph representation showing how this databucket relates to and interacts w...</td>
+<td>A graph representation showing how this databucket relates to and interacts</td>
 <td>direct</td>
 </tr>
 <tr>
@@ -691,19 +701,19 @@
 <tr>
 <td><a href="../zone/">zone</a></td>
 <td>0..1 <br/> <a href="../String/">String</a></td>
-<td>The specific availability zone within a cloud region where the databucket is ...</td>
+<td>The specific availability zone within a cloud region where the databucket is</td>
 <td>direct</td>
 </tr>
 <tr>
 <td><a href="../data_classification/">data_classification</a></td>
 <td>0..1 <em>recommended</em> <br/> <a href="../DataClassification/">DataClassification</a></td>
-<td>The Data Classification object includes information about data classification...</td>
+<td>The Data Classification object includes information about data classification</td>
 <td><a href="../DataClassificationProfile/">DataClassificationProfile</a></td>
 </tr>
 <tr>
 <td><a href="../data_classifications/">data_classifications</a></td>
 <td>* <em>recommended</em> <br/> <a href="../DataClassification/">DataClassification</a></td>
-<td>A list of Data Classification objects, that include information about data cl...</td>
+<td>A list of Data Classification objects, that include information about data</td>
 <td><a href="../DataClassificationProfile/">DataClassificationProfile</a></td>
 </tr>
 <tr>
@@ -715,7 +725,7 @@
 <tr>
 <td><a href="../cloud/">cloud</a></td>
 <td>1 <br/> <a href="../Cloud/">Cloud</a></td>
-<td>Describes details about the Cloud environment where the event or finding was ...</td>
+<td>Describes details about the Cloud environment where the event or finding was</td>
 <td><a href="../CloudProfile/">CloudProfile</a></td>
 </tr>
 <tr>
@@ -787,6 +797,10 @@
 </tr>
 </tbody>
 </table>
+<h2 id="in-subsets">In Subsets</h2>
+<ul>
+<li><a href="../Objects/">Objects</a></li>
+</ul>
 <h2 id="aliases">Aliases</h2>
 <ul>
 <li>Databucket</li>
@@ -797,7 +811,8 @@
 </ul>
 <h2 id="notes">Notes</h2>
 <ul>
-<li>D3FEND™ Ontology d3f:CloudStorage. — <a href="https://d3fend.mitre.org/dao/artifact/d3f:CloudStorage/">https://d3fend.mitre.org/dao/artifact/d3f:CloudStorage/</a></li>
+<li>D3FEND™ Ontology d3f:CloudStorage. —
+<a href="https://d3fend.mitre.org/dao/artifact/d3f:CloudStorage/">https://d3fend.mitre.org/dao/artifact/d3f:CloudStorage/</a></li>
 </ul>
 <h2 id="identifier-and-mapping-information">Identifier and Mapping Information</h2>
 <h3 id="schema-source">Schema Source</h3>
@@ -828,10 +843,16 @@
 <h3 id="direct">Direct</h3>
 <details>
 <div class="highlight"><pre><span></span><code><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Databucket</span>
-<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The databucket object is a basic container that holds data, typically</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">organized through the use of data partitions.</span>
+<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">databucket</span><span class="nv"> </span><span class="s">object</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">basic</span><span class="nv"> </span><span class="s">container</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">holds</span><span class="nv"> </span><span class="s">data,</span><span class="nv"> </span><span class="s">typically</span>
+<span class="w">  </span><span class="s">organized</span>
+
+<span class="w">  </span><span class="s">through</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">use</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">data</span><span class="nv"> </span><span class="s">partitions.'</span>
 <span class="nt">notes</span><span class="p">:</span>
-<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">D3FEND™ Ontology d3f:CloudStorage. — https://d3fend.mitre.org/dao/artifact/d3f:CloudStorage/</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="s">'D3FEND™</span><span class="nv"> </span><span class="s">Ontology</span><span class="nv"> </span><span class="s">d3f:CloudStorage.</span><span class="nv"> </span><span class="s">—</span>
+
+<span class="w">  </span><span class="s">https://d3fend.mitre.org/dao/artifact/d3f:CloudStorage/'</span>
+<span class="nt">in_subset</span><span class="p">:</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">objects</span>
 <span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="nt">see_also</span><span class="p">:</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://d3fend.mitre.org/dao/artifact/d3f:CloudStorage/</span>
@@ -871,8 +892,9 @@
 <span class="nt">slot_usage</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">cloud_partition</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">cloud_partition</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The logical grouping or isolated segment within a cloud provider's</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">infrastructure where the databucket is located.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">logical</span><span class="nv"> </span><span class="s">grouping</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">isolated</span><span class="nv"> </span><span class="s">segment</span><span class="nv"> </span><span class="s">within</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">cloud</span><span class="nv"> </span><span class="s">provider</span><span class="se">''</span><span class="s">s</span>
+
+<span class="w">      </span><span class="s">infrastructure</span><span class="nv"> </span><span class="s">where</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">databucket</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">located.'</span>
 <span class="w">  </span><span class="nt">created_time</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">created_time</span>
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The time when the databucket was known to have been created.</span>
@@ -884,8 +906,10 @@
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The description of the databucket.</span>
 <span class="w">  </span><span class="nt">encryption_details</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">encryption_details</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The encryption details of the databucket. Should be populated if</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">the databucket is encrypted.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">encryption</span><span class="nv"> </span><span class="s">details</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">databucket.</span><span class="nv"> </span><span class="s">Should</span><span class="nv"> </span><span class="s">be</span><span class="nv"> </span><span class="s">populated</span><span class="nv"> </span><span class="s">if</span>
+<span class="w">      </span><span class="s">the</span><span class="nv"> </span><span class="s">databucket</span>
+
+<span class="w">      </span><span class="s">is</span><span class="nv"> </span><span class="s">encrypted.'</span>
 <span class="w">  </span><span class="nt">file</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">file</span>
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Details about the file/object within a databucket.</span>
@@ -913,15 +937,19 @@
 <span class="w">    </span><span class="nt">recommended</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">modified_time</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">modified_time</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The most recent time when any changes, updates, or modifications</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">were made within the databucket.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">most</span><span class="nv"> </span><span class="s">recent</span><span class="nv"> </span><span class="s">time</span><span class="nv"> </span><span class="s">when</span><span class="nv"> </span><span class="s">any</span><span class="nv"> </span><span class="s">changes,</span><span class="nv"> </span><span class="s">updates,</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">modifications</span>
+<span class="w">      </span><span class="s">were</span><span class="nv"> </span><span class="s">made</span>
+
+<span class="w">      </span><span class="s">within</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">databucket.'</span>
 <span class="w">  </span><span class="nt">name</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">name</span>
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The databucket name.</span>
 <span class="w">  </span><span class="nt">namespace</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">namespace</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The namespace is useful when similar entities exist that you need</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">to keep separate.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">namespace</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">useful</span><span class="nv"> </span><span class="s">when</span><span class="nv"> </span><span class="s">similar</span><span class="nv"> </span><span class="s">entities</span><span class="nv"> </span><span class="s">exist</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">you</span><span class="nv"> </span><span class="s">need</span>
+<span class="w">      </span><span class="s">to</span><span class="nv"> </span><span class="s">keep</span>
+
+<span class="w">      </span><span class="s">separate.'</span>
 <span class="w">  </span><span class="nt">owner</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">owner</span>
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The identity of the service or user account that owns the databucket.</span>
@@ -931,9 +959,12 @@
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The cloud region of the databucket.</span>
 <span class="w">  </span><span class="nt">resource_relationship</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">resource_relationship</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">A graph representation showing how this databucket relates to and</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">interacts with other entities in the environment. This can include parent/child</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">relationships, dependencies, or other connections.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'A</span><span class="nv"> </span><span class="s">graph</span><span class="nv"> </span><span class="s">representation</span><span class="nv"> </span><span class="s">showing</span><span class="nv"> </span><span class="s">how</span><span class="nv"> </span><span class="s">this</span><span class="nv"> </span><span class="s">databucket</span><span class="nv"> </span><span class="s">relates</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">and</span>
+<span class="w">      </span><span class="s">interacts</span>
+
+<span class="w">      </span><span class="s">with</span><span class="nv"> </span><span class="s">other</span><span class="nv"> </span><span class="s">entities</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">environment.</span><span class="nv"> </span><span class="s">This</span><span class="nv"> </span><span class="s">can</span><span class="nv"> </span><span class="s">include</span><span class="nv"> </span><span class="s">parent/child</span>
+
+<span class="w">      </span><span class="s">relationships,</span><span class="nv"> </span><span class="s">dependencies,</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">other</span><span class="nv"> </span><span class="s">connections.'</span>
 <span class="w">  </span><span class="nt">size</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">size</span>
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The size of the databucket in bytes.</span>
@@ -954,17 +985,25 @@
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The version of the resource. For example &lt;code&gt;1.2.3&lt;/code&gt;.</span>
 <span class="w">  </span><span class="nt">zone</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">zone</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The specific availability zone within a cloud region where the databucket</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">is located.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">specific</span><span class="nv"> </span><span class="s">availability</span><span class="nv"> </span><span class="s">zone</span><span class="nv"> </span><span class="s">within</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">cloud</span><span class="nv"> </span><span class="s">region</span><span class="nv"> </span><span class="s">where</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">databucket</span>
+<span class="w">      </span><span class="s">is</span>
+
+<span class="w">      </span><span class="s">located.'</span>
 </code></pre></div>
 </details>
 <h3 id="induced">Induced</h3>
 <details>
 <div class="highlight"><pre><span></span><code><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Databucket</span>
-<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The databucket object is a basic container that holds data, typically</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">organized through the use of data partitions.</span>
+<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">databucket</span><span class="nv"> </span><span class="s">object</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">basic</span><span class="nv"> </span><span class="s">container</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">holds</span><span class="nv"> </span><span class="s">data,</span><span class="nv"> </span><span class="s">typically</span>
+<span class="w">  </span><span class="s">organized</span>
+
+<span class="w">  </span><span class="s">through</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">use</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">data</span><span class="nv"> </span><span class="s">partitions.'</span>
 <span class="nt">notes</span><span class="p">:</span>
-<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">D3FEND™ Ontology d3f:CloudStorage. — https://d3fend.mitre.org/dao/artifact/d3f:CloudStorage/</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="s">'D3FEND™</span><span class="nv"> </span><span class="s">Ontology</span><span class="nv"> </span><span class="s">d3f:CloudStorage.</span><span class="nv"> </span><span class="s">—</span>
+
+<span class="w">  </span><span class="s">https://d3fend.mitre.org/dao/artifact/d3f:CloudStorage/'</span>
+<span class="nt">in_subset</span><span class="p">:</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">objects</span>
 <span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="nt">see_also</span><span class="p">:</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://d3fend.mitre.org/dao/artifact/d3f:CloudStorage/</span>
@@ -977,8 +1016,9 @@
 <span class="nt">slot_usage</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">cloud_partition</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">cloud_partition</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The logical grouping or isolated segment within a cloud provider's</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">infrastructure where the databucket is located.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">logical</span><span class="nv"> </span><span class="s">grouping</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">isolated</span><span class="nv"> </span><span class="s">segment</span><span class="nv"> </span><span class="s">within</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">cloud</span><span class="nv"> </span><span class="s">provider</span><span class="se">''</span><span class="s">s</span>
+
+<span class="w">      </span><span class="s">infrastructure</span><span class="nv"> </span><span class="s">where</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">databucket</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">located.'</span>
 <span class="w">  </span><span class="nt">created_time</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">created_time</span>
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The time when the databucket was known to have been created.</span>
@@ -990,8 +1030,10 @@
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The description of the databucket.</span>
 <span class="w">  </span><span class="nt">encryption_details</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">encryption_details</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The encryption details of the databucket. Should be populated if</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">the databucket is encrypted.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">encryption</span><span class="nv"> </span><span class="s">details</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">databucket.</span><span class="nv"> </span><span class="s">Should</span><span class="nv"> </span><span class="s">be</span><span class="nv"> </span><span class="s">populated</span><span class="nv"> </span><span class="s">if</span>
+<span class="w">      </span><span class="s">the</span><span class="nv"> </span><span class="s">databucket</span>
+
+<span class="w">      </span><span class="s">is</span><span class="nv"> </span><span class="s">encrypted.'</span>
 <span class="w">  </span><span class="nt">file</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">file</span>
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Details about the file/object within a databucket.</span>
@@ -1019,15 +1061,19 @@
 <span class="w">    </span><span class="nt">recommended</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">modified_time</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">modified_time</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The most recent time when any changes, updates, or modifications</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">were made within the databucket.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">most</span><span class="nv"> </span><span class="s">recent</span><span class="nv"> </span><span class="s">time</span><span class="nv"> </span><span class="s">when</span><span class="nv"> </span><span class="s">any</span><span class="nv"> </span><span class="s">changes,</span><span class="nv"> </span><span class="s">updates,</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">modifications</span>
+<span class="w">      </span><span class="s">were</span><span class="nv"> </span><span class="s">made</span>
+
+<span class="w">      </span><span class="s">within</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">databucket.'</span>
 <span class="w">  </span><span class="nt">name</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">name</span>
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The databucket name.</span>
 <span class="w">  </span><span class="nt">namespace</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">namespace</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The namespace is useful when similar entities exist that you need</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">to keep separate.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">namespace</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">useful</span><span class="nv"> </span><span class="s">when</span><span class="nv"> </span><span class="s">similar</span><span class="nv"> </span><span class="s">entities</span><span class="nv"> </span><span class="s">exist</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">you</span><span class="nv"> </span><span class="s">need</span>
+<span class="w">      </span><span class="s">to</span><span class="nv"> </span><span class="s">keep</span>
+
+<span class="w">      </span><span class="s">separate.'</span>
 <span class="w">  </span><span class="nt">owner</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">owner</span>
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The identity of the service or user account that owns the databucket.</span>
@@ -1037,9 +1083,12 @@
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The cloud region of the databucket.</span>
 <span class="w">  </span><span class="nt">resource_relationship</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">resource_relationship</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">A graph representation showing how this databucket relates to and</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">interacts with other entities in the environment. This can include parent/child</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">relationships, dependencies, or other connections.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'A</span><span class="nv"> </span><span class="s">graph</span><span class="nv"> </span><span class="s">representation</span><span class="nv"> </span><span class="s">showing</span><span class="nv"> </span><span class="s">how</span><span class="nv"> </span><span class="s">this</span><span class="nv"> </span><span class="s">databucket</span><span class="nv"> </span><span class="s">relates</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">and</span>
+<span class="w">      </span><span class="s">interacts</span>
+
+<span class="w">      </span><span class="s">with</span><span class="nv"> </span><span class="s">other</span><span class="nv"> </span><span class="s">entities</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">environment.</span><span class="nv"> </span><span class="s">This</span><span class="nv"> </span><span class="s">can</span><span class="nv"> </span><span class="s">include</span><span class="nv"> </span><span class="s">parent/child</span>
+
+<span class="w">      </span><span class="s">relationships,</span><span class="nv"> </span><span class="s">dependencies,</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">other</span><span class="nv"> </span><span class="s">connections.'</span>
 <span class="w">  </span><span class="nt">size</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">size</span>
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The size of the databucket in bytes.</span>
@@ -1060,13 +1109,17 @@
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The version of the resource. For example &lt;code&gt;1.2.3&lt;/code&gt;.</span>
 <span class="w">  </span><span class="nt">zone</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">zone</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The specific availability zone within a cloud region where the databucket</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">is located.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">specific</span><span class="nv"> </span><span class="s">availability</span><span class="nv"> </span><span class="s">zone</span><span class="nv"> </span><span class="s">within</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">cloud</span><span class="nv"> </span><span class="s">region</span><span class="nv"> </span><span class="s">where</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">databucket</span>
+<span class="w">      </span><span class="s">is</span>
+
+<span class="w">      </span><span class="s">located.'</span>
 <span class="nt">attributes</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">agent_list</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">agent_list</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">A list of &lt;code&gt;agent&lt;/code&gt; objects associated with a device, endpoint,</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">or resource.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'A</span><span class="nv"> </span><span class="s">list</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">&lt;code&gt;agent&lt;/code&gt;</span><span class="nv"> </span><span class="s">objects</span><span class="nv"> </span><span class="s">associated</span><span class="nv"> </span><span class="s">with</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">device,</span><span class="nv"> </span><span class="s">endpoint,</span>
+<span class="w">      </span><span class="s">or</span>
+
+<span class="w">      </span><span class="s">resource.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Agent List</span>
@@ -1081,8 +1134,9 @@
 <span class="w">    </span><span class="nt">multivalued</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">cloud_partition</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">cloud_partition</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The logical grouping or isolated segment within a cloud provider's</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">infrastructure where the databucket is located.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">logical</span><span class="nv"> </span><span class="s">grouping</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">isolated</span><span class="nv"> </span><span class="s">segment</span><span class="nv"> </span><span class="s">within</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">cloud</span><span class="nv"> </span><span class="s">provider</span><span class="se">''</span><span class="s">s</span>
+
+<span class="w">      </span><span class="s">infrastructure</span><span class="nv"> </span><span class="s">where</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">databucket</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">located.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Cloud Partition</span>
@@ -1190,8 +1244,10 @@
 <span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">string</span>
 <span class="w">  </span><span class="nt">encryption_details</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">encryption_details</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The encryption details of the databucket. Should be populated if</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">the databucket is encrypted.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">encryption</span><span class="nv"> </span><span class="s">details</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">databucket.</span><span class="nv"> </span><span class="s">Should</span><span class="nv"> </span><span class="s">be</span><span class="nv"> </span><span class="s">populated</span><span class="nv"> </span><span class="s">if</span>
+<span class="w">      </span><span class="s">the</span><span class="nv"> </span><span class="s">databucket</span>
+
+<span class="w">      </span><span class="s">is</span><span class="nv"> </span><span class="s">encrypted.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Encryption Details</span>
@@ -1319,10 +1375,14 @@
 <span class="w">    </span><span class="nt">recommended</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">is_backed_up</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">is_backed_up</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Indicates whether the device or resource has a backup enabled, such</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">as an automated snapshot or a cloud backup. For example, this is indicated by</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">the &lt;code&gt;cloudBackupEnabled&lt;/code&gt; value within JAMF Pro mobile devices or</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">the registration of an AWS ARN with the AWS Backup service.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'Indicates</span><span class="nv"> </span><span class="s">whether</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">device</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">resource</span><span class="nv"> </span><span class="s">has</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">backup</span><span class="nv"> </span><span class="s">enabled,</span><span class="nv"> </span><span class="s">such</span>
+<span class="w">      </span><span class="s">as</span><span class="nv"> </span><span class="s">an</span>
+
+<span class="w">      </span><span class="s">automated</span><span class="nv"> </span><span class="s">snapshot</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">cloud</span><span class="nv"> </span><span class="s">backup.</span><span class="nv"> </span><span class="s">For</span><span class="nv"> </span><span class="s">example,</span><span class="nv"> </span><span class="s">this</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">indicated</span><span class="nv"> </span><span class="s">by</span><span class="nv"> </span><span class="s">the</span>
+
+<span class="w">      </span><span class="s">&lt;code&gt;cloudBackupEnabled&lt;/code&gt;</span><span class="nv"> </span><span class="s">value</span><span class="nv"> </span><span class="s">within</span><span class="nv"> </span><span class="s">JAMF</span><span class="nv"> </span><span class="s">Pro</span><span class="nv"> </span><span class="s">mobile</span><span class="nv"> </span><span class="s">devices</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">the</span>
+
+<span class="w">      </span><span class="s">registration</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">an</span><span class="nv"> </span><span class="s">AWS</span><span class="nv"> </span><span class="s">ARN</span><span class="nv"> </span><span class="s">with</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">AWS</span><span class="nv"> </span><span class="s">Backup</span><span class="nv"> </span><span class="s">service.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Back Ups Configured</span>
@@ -1363,8 +1423,10 @@
 <span class="w">    </span><span class="nt">recommended</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">modified_time</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">modified_time</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The most recent time when any changes, updates, or modifications</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">were made within the databucket.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">most</span><span class="nv"> </span><span class="s">recent</span><span class="nv"> </span><span class="s">time</span><span class="nv"> </span><span class="s">when</span><span class="nv"> </span><span class="s">any</span><span class="nv"> </span><span class="s">changes,</span><span class="nv"> </span><span class="s">updates,</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">modifications</span>
+<span class="w">      </span><span class="s">were</span><span class="nv"> </span><span class="s">made</span>
+
+<span class="w">      </span><span class="s">within</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">databucket.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Modified Time</span>
@@ -1496,8 +1558,10 @@
 <span class="w">    </span><span class="nt">recommended</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">namespace</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">namespace</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The namespace is useful when similar entities exist that you need</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">to keep separate.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">namespace</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">useful</span><span class="nv"> </span><span class="s">when</span><span class="nv"> </span><span class="s">similar</span><span class="nv"> </span><span class="s">entities</span><span class="nv"> </span><span class="s">exist</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">you</span><span class="nv"> </span><span class="s">need</span>
+<span class="w">      </span><span class="s">to</span><span class="nv"> </span><span class="s">keep</span>
+
+<span class="w">      </span><span class="s">separate.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Namespace</span>
@@ -1547,9 +1611,12 @@
 <span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">string</span>
 <span class="w">  </span><span class="nt">resource_relationship</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">resource_relationship</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">A graph representation showing how this databucket relates to and</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">interacts with other entities in the environment. This can include parent/child</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">relationships, dependencies, or other connections.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'A</span><span class="nv"> </span><span class="s">graph</span><span class="nv"> </span><span class="s">representation</span><span class="nv"> </span><span class="s">showing</span><span class="nv"> </span><span class="s">how</span><span class="nv"> </span><span class="s">this</span><span class="nv"> </span><span class="s">databucket</span><span class="nv"> </span><span class="s">relates</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">and</span>
+<span class="w">      </span><span class="s">interacts</span>
+
+<span class="w">      </span><span class="s">with</span><span class="nv"> </span><span class="s">other</span><span class="nv"> </span><span class="s">entities</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">environment.</span><span class="nv"> </span><span class="s">This</span><span class="nv"> </span><span class="s">can</span><span class="nv"> </span><span class="s">include</span><span class="nv"> </span><span class="s">parent/child</span>
+
+<span class="w">      </span><span class="s">relationships,</span><span class="nv"> </span><span class="s">dependencies,</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">other</span><span class="nv"> </span><span class="s">connections.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Resource Relationship</span>
@@ -1850,8 +1917,10 @@
 <span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">string</span>
 <span class="w">  </span><span class="nt">zone</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">zone</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The specific availability zone within a cloud region where the databucket</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">is located.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">specific</span><span class="nv"> </span><span class="s">availability</span><span class="nv"> </span><span class="s">zone</span><span class="nv"> </span><span class="s">within</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">cloud</span><span class="nv"> </span><span class="s">region</span><span class="nv"> </span><span class="s">where</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">databucket</span>
+<span class="w">      </span><span class="s">is</span>
+
+<span class="w">      </span><span class="s">located.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Network Zone</span>
@@ -1871,8 +1940,9 @@
 <span class="w">      </span><span class="nt">group</span><span class="p">:</span>
 <span class="w">        </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">group</span>
 <span class="w">        </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">context</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The Data Classification object includes information about data classification</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">levels and data category types.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">Data</span><span class="nv"> </span><span class="s">Classification</span><span class="nv"> </span><span class="s">object</span><span class="nv"> </span><span class="s">includes</span><span class="nv"> </span><span class="s">information</span><span class="nv"> </span><span class="s">about</span><span class="nv"> </span><span class="s">data</span><span class="nv"> </span><span class="s">classification</span>
+
+<span class="w">      </span><span class="s">levels</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">data</span><span class="nv"> </span><span class="s">category</span><span class="nv"> </span><span class="s">types.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Data Classification</span>
@@ -1889,8 +1959,10 @@
 <span class="w">      </span><span class="nt">group</span><span class="p">:</span>
 <span class="w">        </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">group</span>
 <span class="w">        </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">context</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">A list of Data Classification objects, that include information about</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">data classification levels and data category types, identified by a classifier.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'A</span><span class="nv"> </span><span class="s">list</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">Data</span><span class="nv"> </span><span class="s">Classification</span><span class="nv"> </span><span class="s">objects,</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">include</span><span class="nv"> </span><span class="s">information</span>
+<span class="w">      </span><span class="s">about</span><span class="nv"> </span><span class="s">data</span>
+
+<span class="w">      </span><span class="s">classification</span><span class="nv"> </span><span class="s">levels</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">data</span><span class="nv"> </span><span class="s">category</span><span class="nv"> </span><span class="s">types,</span><span class="nv"> </span><span class="s">identified</span><span class="nv"> </span><span class="s">by</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">classifier.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Data Classification</span>
@@ -1927,8 +1999,10 @@
 <span class="w">      </span><span class="nt">group</span><span class="p">:</span>
 <span class="w">        </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">group</span>
 <span class="w">        </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">primary</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Describes details about the Cloud environment where the event or</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">finding was created.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'Describes</span><span class="nv"> </span><span class="s">details</span><span class="nv"> </span><span class="s">about</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">Cloud</span><span class="nv"> </span><span class="s">environment</span><span class="nv"> </span><span class="s">where</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">event</span><span class="nv"> </span><span class="s">or</span>
+<span class="w">      </span><span class="s">finding</span><span class="nv"> </span><span class="s">was</span>
+
+<span class="w">      </span><span class="s">created.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Cloud</span>

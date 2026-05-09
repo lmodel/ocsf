@@ -519,7 +519,10 @@
 
 
 <h1 id="slot-parent_process">Slot: parent_process</h1>
-<p><em>The parent process of this process object. It is recommended to only populate this field for the top-level process object, to prevent deep nesting. Additional ancestry information can be supplied in the <code>ancestry</code> attribute.</em></p>
+<p><em>The parent process of this process object. It is recommended to only populate</em></p>
+<p><em>this field for the top-level process object, to prevent deep nesting.</em></p>
+<p><em>Additional ancestry information can be supplied in the <code>ancestry</code></em></p>
+<p><em>attribute.</em></p>
 <p>URI: <a href="https://w3id.org/lmodel/ocsf/parent_process">ocsf:parent_process</a>
 Alias: parent_process</p>
 <!-- no inheritance hierarchy -->
@@ -535,24 +538,24 @@ Alias: parent_process</p>
 </thead>
 <tbody>
 <tr>
-<td><a href="../LinuxProcess/">LinuxProcess</a></td>
-<td>Extends the process object to add Linux specific fields</td>
+<td><a href="../MacosProcess/">MacosProcess</a></td>
+<td>Extends the process object to add macOS specific fields</td>
 <td>no</td>
 </tr>
 <tr>
-<td><a href="../MacosProcess/">MacosProcess</a></td>
-<td>Extends the process object to add macOS specific fields</td>
+<td><a href="../WindowsProcess/">WindowsProcess</a></td>
+<td>Extends the process object to add Windows specific fields</td>
+<td>no</td>
+</tr>
+<tr>
+<td><a href="../LinuxProcess/">LinuxProcess</a></td>
+<td>Extends the process object to add Linux specific fields</td>
 <td>no</td>
 </tr>
 <tr>
 <td><a href="../Process/">Process</a></td>
 <td>The Process object describes a running instance of a launched program</td>
 <td>yes</td>
-</tr>
-<tr>
-<td><a href="../WindowsProcess/">WindowsProcess</a></td>
-<td>Extends the process object to add Windows specific fields</td>
-<td>no</td>
 </tr>
 </tbody>
 </table>
@@ -601,7 +604,8 @@ Alias: parent_process</p>
 </ul>
 <h2 id="notes">Notes</h2>
 <ul>
-<li>Guidance on Representing Process Parentage — <a href="https://github.com/ocsf/ocsf-docs/blob/main/articles/representing-process-parentage.md">https://github.com/ocsf/ocsf-docs/blob/main/articles/representing-process-parentage.md</a></li>
+<li>Guidance on Representing Process Parentage —
+<a href="https://github.com/ocsf/ocsf-docs/blob/main/articles/representing-process-parentage.md">https://github.com/ocsf/ocsf-docs/blob/main/articles/representing-process-parentage.md</a></li>
 </ul>
 <h2 id="identifier-and-mapping-information">Identifier and Mapping Information</h2>
 <h3 id="schema-source">Schema Source</h3>
@@ -630,11 +634,18 @@ Alias: parent_process</p>
 <h2 id="linkml-source">LinkML Source</h2>
 <details>
 <div class="highlight"><pre><span></span><code><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">parent_process</span>
-<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The parent process of this process object. It is recommended to only</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">populate this field for the top-level process object, to prevent deep nesting. Additional</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">ancestry information can be supplied in the &lt;code&gt;ancestry&lt;/code&gt; attribute.</span>
+<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;The</span><span class="nv"> </span><span class="s">parent</span><span class="nv"> </span><span class="s">process</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">this</span><span class="nv"> </span><span class="s">process</span><span class="nv"> </span><span class="s">object.</span><span class="nv"> </span><span class="s">It</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">recommended</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">only</span>
+<span class="w">  </span><span class="s">populate</span>
+
+<span class="w">  </span><span class="s">this</span><span class="nv"> </span><span class="s">field</span><span class="nv"> </span><span class="s">for</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">top-level</span><span class="nv"> </span><span class="s">process</span><span class="nv"> </span><span class="s">object,</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">prevent</span><span class="nv"> </span><span class="s">deep</span><span class="nv"> </span><span class="s">nesting.</span>
+
+<span class="w">  </span><span class="s">Additional</span><span class="nv"> </span><span class="s">ancestry</span><span class="nv"> </span><span class="s">information</span><span class="nv"> </span><span class="s">can</span><span class="nv"> </span><span class="s">be</span><span class="nv"> </span><span class="s">supplied</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">&lt;code&gt;ancestry&lt;/code&gt;</span>
+
+<span class="w">  </span><span class="s">attribute.&#39;</span>
 <span class="nt">notes</span><span class="p">:</span>
-<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Guidance on Representing Process Parentage — https://github.com/ocsf/ocsf-docs/blob/main/articles/representing-process-parentage.md</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;Guidance</span><span class="nv"> </span><span class="s">on</span><span class="nv"> </span><span class="s">Representing</span><span class="nv"> </span><span class="s">Process</span><span class="nv"> </span><span class="s">Parentage</span><span class="nv"> </span><span class="s">—</span>
+
+<span class="w">  </span><span class="s">https://github.com/ocsf/ocsf-docs/blob/main/articles/representing-process-parentage.md&#39;</span>
 <span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="nt">see_also</span><span class="p">:</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://github.com/ocsf/ocsf-docs/blob/main/articles/representing-process-parentage.md</span>

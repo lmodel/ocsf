@@ -227,6 +227,15 @@
 </nav>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="#in-subsets">
+<span class="md-ellipsis">
+      
+        In Subsets
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#aliases">
 <span class="md-ellipsis">
       
@@ -665,7 +674,7 @@
 <tr>
 <td><a href="../actor/">actor</a></td>
 <td>0..1 <em>recommended</em> <br/> <a href="../Actor/">Actor</a></td>
-<td>Describes details about the user/role/process that was the source of the acti...</td>
+<td>Describes details about the user/role/process that was the source of the</td>
 <td><a href="../Evidences/">Evidences</a></td>
 </tr>
 <tr>
@@ -689,7 +698,7 @@
 <tr>
 <td><a href="../data/">data</a></td>
 <td>0..1 <br/> <a href="../String/">String</a></td>
-<td>Additional evidence data that is not accounted for in the specific evidence a...</td>
+<td>Additional evidence data that is not accounted for in the specific evidence</td>
 <td><a href="../Evidences/">Evidences</a></td>
 </tr>
 <tr>
@@ -701,7 +710,7 @@
 <tr>
 <td><a href="../databucket/">databucket</a></td>
 <td>0..1 <em>recommended</em> <br/> <a href="../Databucket/">Databucket</a></td>
-<td>Describes details about the databucket associated to the activity that trigge...</td>
+<td>Describes details about the databucket associated to the activity that</td>
 <td><a href="../Evidences/">Evidences</a></td>
 </tr>
 <tr>
@@ -731,13 +740,13 @@
 <tr>
 <td><a href="../http_request/">http_request</a></td>
 <td>0..1 <em>recommended</em> <br/> <a href="../HttpRequest/">HttpRequest</a></td>
-<td>Describes details about the http request associated to the activity that trig...</td>
+<td>Describes details about the http request associated to the activity that</td>
 <td><a href="../Evidences/">Evidences</a></td>
 </tr>
 <tr>
 <td><a href="../http_response/">http_response</a></td>
 <td>0..1 <em>recommended</em> <br/> <a href="../HttpResponse/">HttpResponse</a></td>
-<td>Describes details about the http response associated to the activity that tri...</td>
+<td>Describes details about the http response associated to the activity that</td>
 <td><a href="../Evidences/">Evidences</a></td>
 </tr>
 <tr>
@@ -755,13 +764,13 @@
 <tr>
 <td><a href="../name/">name</a></td>
 <td>0..1 <em>recommended</em> <br/> <a href="../String/">String</a></td>
-<td>The naming convention or type identifier of the evidence associated with the ...</td>
+<td>The naming convention or type identifier of the evidence associated with the</td>
 <td><a href="../Entity/">Entity</a>, <a href="../Evidences/">Evidences</a></td>
 </tr>
 <tr>
 <td><a href="../process/">process</a></td>
 <td>0..1 <em>recommended</em> <br/> <a href="../Process/">Process</a></td>
-<td>Describes details about the process associated to the activity that triggered...</td>
+<td>Describes details about the process associated to the activity that triggered</td>
 <td><a href="../Evidences/">Evidences</a></td>
 </tr>
 <tr>
@@ -773,25 +782,25 @@
 <tr>
 <td><a href="../resources/">resources</a></td>
 <td>* <em>recommended</em> <br/> <a href="../ResourceDetails/">ResourceDetails</a></td>
-<td>Describes details about the cloud resources directly related to activity that...</td>
+<td>Describes details about the cloud resources directly related to activity that</td>
 <td><a href="../Evidences/">Evidences</a></td>
 </tr>
 <tr>
 <td><a href="../script/">script</a></td>
 <td>0..1 <em>recommended</em> <br/> <a href="../Script/">Script</a></td>
-<td>Describes details about the script that was associated with the activity that...</td>
+<td>Describes details about the script that was associated with the activity that</td>
 <td><a href="../Evidences/">Evidences</a></td>
 </tr>
 <tr>
 <td><a href="../src_endpoint/">src_endpoint</a></td>
 <td>0..1 <em>recommended</em> <br/> <a href="../NetworkEndpoint/">NetworkEndpoint</a></td>
-<td>Describes details about the source of the network activity that triggered the...</td>
+<td>Describes details about the source of the network activity that triggered the</td>
 <td><a href="../Evidences/">Evidences</a></td>
 </tr>
 <tr>
 <td><a href="../tls/">tls</a></td>
 <td>0..1 <em>recommended</em> <br/> <a href="../Tls/">Tls</a></td>
-<td>Describes details about the Transport Layer Security (TLS) activity that trig...</td>
+<td>Describes details about the Transport Layer Security (TLS) activity that</td>
 <td><a href="../Evidences/">Evidences</a></td>
 </tr>
 <tr>
@@ -821,7 +830,7 @@
 <tr>
 <td><a href="../verdict_id/">verdict_id</a></td>
 <td>0..1 <br/> <a href="../EvidencesVerdictIdEnum/">EvidencesVerdictIdEnum</a></td>
-<td>The normalized verdict (or status) ID of the evidence associated with the sec...</td>
+<td>The normalized verdict (or status) ID of the evidence associated with the</td>
 <td><a href="../Evidences/">Evidences</a></td>
 </tr>
 </tbody>
@@ -846,6 +855,10 @@
 </tr>
 </tbody>
 </table>
+<h2 id="in-subsets">In Subsets</h2>
+<ul>
+<li><a href="../WindowsExtension/">WindowsExtension</a></li>
+</ul>
 <h2 id="aliases">Aliases</h2>
 <ul>
 <li>Windows Evidence Artifacts</li>
@@ -862,7 +875,19 @@
 <tbody>
 <tr>
 <td>ocsf_constraints</td>
-<td>{"at_least_one": ["actor", "api", "connection_info", "data", "database", "databucket", "device", "dst_endpoint", "email", "file", "process", "query", "src_endpoint", "url", "user", "job", "script", "reg_key", "reg_value", "win_service"]}</td>
+<td>{"at_least_one": ["actor", "api", "connection_info", "data", "database",</td>
+</tr>
+<tr>
+<td>"databucket", "device", "dst_endpoint", "email", "file", "process", "query",</td>
+<td></td>
+</tr>
+<tr>
+<td>"src_endpoint", "url", "user", "job", "script", "reg_key", "reg_value",</td>
+<td></td>
+</tr>
+<tr>
+<td>"win_service"]}</td>
+<td></td>
 </tr>
 <tr>
 <td>ocsf_extension</td>
@@ -902,12 +927,18 @@
 <span class="w">  </span><span class="nt">ocsf_constraints</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ocsf_constraints</span>
 <span class="w">    </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="s">'{"at_least_one":</span><span class="nv"> </span><span class="s">["actor",</span><span class="nv"> </span><span class="s">"api",</span><span class="nv"> </span><span class="s">"connection_info",</span><span class="nv"> </span><span class="s">"data",</span><span class="nv"> </span><span class="s">"database",</span>
+
 <span class="w">      </span><span class="s">"databucket",</span><span class="nv"> </span><span class="s">"device",</span><span class="nv"> </span><span class="s">"dst_endpoint",</span><span class="nv"> </span><span class="s">"email",</span><span class="nv"> </span><span class="s">"file",</span><span class="nv"> </span><span class="s">"process",</span><span class="nv"> </span><span class="s">"query",</span>
-<span class="w">      </span><span class="s">"src_endpoint",</span><span class="nv"> </span><span class="s">"url",</span><span class="nv"> </span><span class="s">"user",</span><span class="nv"> </span><span class="s">"job",</span><span class="nv"> </span><span class="s">"script",</span><span class="nv"> </span><span class="s">"reg_key",</span><span class="nv"> </span><span class="s">"reg_value",</span><span class="nv"> </span><span class="s">"win_service"]}'</span>
+
+<span class="w">      </span><span class="s">"src_endpoint",</span><span class="nv"> </span><span class="s">"url",</span><span class="nv"> </span><span class="s">"user",</span><span class="nv"> </span><span class="s">"job",</span><span class="nv"> </span><span class="s">"script",</span><span class="nv"> </span><span class="s">"reg_key",</span><span class="nv"> </span><span class="s">"reg_value",</span>
+
+<span class="w">      </span><span class="s">"win_service"]}'</span>
 <span class="w">  </span><span class="nt">ocsf_extension</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ocsf_extension</span>
 <span class="w">    </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">windows</span>
 <span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Extends the evidences object to add Windows specific fields</span>
+<span class="nt">in_subset</span><span class="p">:</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">windows_extension</span>
 <span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="nt">aliases</span><span class="p">:</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Windows Evidence Artifacts</span>
@@ -1013,9 +1044,14 @@
 <span class="w">          </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">win_service</span>
 <span class="w">          </span><span class="nt">required</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'OCSF</span><span class="nv"> </span><span class="s">at_least_one:</span><span class="nv"> </span><span class="s">at</span><span class="nv"> </span><span class="s">least</span><span class="nv"> </span><span class="s">one</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">[</span><span class="se">''</span><span class="s">actor</span><span class="se">''</span><span class="s">,</span><span class="nv"> </span><span class="se">''</span><span class="s">api</span><span class="se">''</span><span class="s">,</span><span class="nv"> </span><span class="se">''</span><span class="s">connection_info</span><span class="se">''</span><span class="s">,</span>
-<span class="w">    </span><span class="se">''</span><span class="s">data</span><span class="se">''</span><span class="s">,</span><span class="nv"> </span><span class="se">''</span><span class="s">database</span><span class="se">''</span><span class="s">,</span><span class="nv"> </span><span class="se">''</span><span class="s">databucket</span><span class="se">''</span><span class="s">,</span><span class="nv"> </span><span class="se">''</span><span class="s">device</span><span class="se">''</span><span class="s">,</span><span class="nv"> </span><span class="se">''</span><span class="s">dst_endpoint</span><span class="se">''</span><span class="s">,</span><span class="nv"> </span><span class="se">''</span><span class="s">email</span><span class="se">''</span><span class="s">,</span>
-<span class="w">    </span><span class="se">''</span><span class="s">file</span><span class="se">''</span><span class="s">,</span><span class="nv"> </span><span class="se">''</span><span class="s">process</span><span class="se">''</span><span class="s">,</span><span class="nv"> </span><span class="se">''</span><span class="s">query</span><span class="se">''</span><span class="s">,</span><span class="nv"> </span><span class="se">''</span><span class="s">src_endpoint</span><span class="se">''</span><span class="s">,</span><span class="nv"> </span><span class="se">''</span><span class="s">url</span><span class="se">''</span><span class="s">,</span><span class="nv"> </span><span class="se">''</span><span class="s">user</span><span class="se">''</span><span class="s">,</span><span class="nv"> </span><span class="se">''</span><span class="s">job</span><span class="se">''</span><span class="s">,</span>
-<span class="w">    </span><span class="se">''</span><span class="s">script</span><span class="se">''</span><span class="s">,</span><span class="nv"> </span><span class="se">''</span><span class="s">reg_key</span><span class="se">''</span><span class="s">,</span><span class="nv"> </span><span class="se">''</span><span class="s">reg_value</span><span class="se">''</span><span class="s">,</span><span class="nv"> </span><span class="se">''</span><span class="s">win_service</span><span class="se">''</span><span class="s">]</span><span class="nv"> </span><span class="s">must</span><span class="nv"> </span><span class="s">be</span><span class="nv"> </span><span class="s">set.'</span>
+<span class="w">    </span><span class="se">''</span><span class="s">data</span><span class="se">''</span><span class="s">,</span>
+
+<span class="w">    </span><span class="se">''</span><span class="s">database</span><span class="se">''</span><span class="s">,</span><span class="nv"> </span><span class="se">''</span><span class="s">databucket</span><span class="se">''</span><span class="s">,</span><span class="nv"> </span><span class="se">''</span><span class="s">device</span><span class="se">''</span><span class="s">,</span><span class="nv"> </span><span class="se">''</span><span class="s">dst_endpoint</span><span class="se">''</span><span class="s">,</span><span class="nv"> </span><span class="se">''</span><span class="s">email</span><span class="se">''</span><span class="s">,</span><span class="nv"> </span><span class="se">''</span><span class="s">file</span><span class="se">''</span><span class="s">,</span>
+<span class="w">    </span><span class="se">''</span><span class="s">process</span><span class="se">''</span><span class="s">,</span>
+
+<span class="w">    </span><span class="se">''</span><span class="s">query</span><span class="se">''</span><span class="s">,</span><span class="nv"> </span><span class="se">''</span><span class="s">src_endpoint</span><span class="se">''</span><span class="s">,</span><span class="nv"> </span><span class="se">''</span><span class="s">url</span><span class="se">''</span><span class="s">,</span><span class="nv"> </span><span class="se">''</span><span class="s">user</span><span class="se">''</span><span class="s">,</span><span class="nv"> </span><span class="se">''</span><span class="s">job</span><span class="se">''</span><span class="s">,</span><span class="nv"> </span><span class="se">''</span><span class="s">script</span><span class="se">''</span><span class="s">,</span><span class="nv"> </span><span class="se">''</span><span class="s">reg_key</span><span class="se">''</span><span class="s">,</span>
+
+<span class="w">    </span><span class="se">''</span><span class="s">reg_value</span><span class="se">''</span><span class="s">,</span><span class="nv"> </span><span class="se">''</span><span class="s">win_service</span><span class="se">''</span><span class="s">]</span><span class="nv"> </span><span class="s">must</span><span class="nv"> </span><span class="s">be</span><span class="nv"> </span><span class="s">set.'</span>
 </code></pre></div>
 </details>
 <h3 id="induced">Induced</h3>
@@ -1025,12 +1061,18 @@
 <span class="w">  </span><span class="nt">ocsf_constraints</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ocsf_constraints</span>
 <span class="w">    </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="s">'{"at_least_one":</span><span class="nv"> </span><span class="s">["actor",</span><span class="nv"> </span><span class="s">"api",</span><span class="nv"> </span><span class="s">"connection_info",</span><span class="nv"> </span><span class="s">"data",</span><span class="nv"> </span><span class="s">"database",</span>
+
 <span class="w">      </span><span class="s">"databucket",</span><span class="nv"> </span><span class="s">"device",</span><span class="nv"> </span><span class="s">"dst_endpoint",</span><span class="nv"> </span><span class="s">"email",</span><span class="nv"> </span><span class="s">"file",</span><span class="nv"> </span><span class="s">"process",</span><span class="nv"> </span><span class="s">"query",</span>
-<span class="w">      </span><span class="s">"src_endpoint",</span><span class="nv"> </span><span class="s">"url",</span><span class="nv"> </span><span class="s">"user",</span><span class="nv"> </span><span class="s">"job",</span><span class="nv"> </span><span class="s">"script",</span><span class="nv"> </span><span class="s">"reg_key",</span><span class="nv"> </span><span class="s">"reg_value",</span><span class="nv"> </span><span class="s">"win_service"]}'</span>
+
+<span class="w">      </span><span class="s">"src_endpoint",</span><span class="nv"> </span><span class="s">"url",</span><span class="nv"> </span><span class="s">"user",</span><span class="nv"> </span><span class="s">"job",</span><span class="nv"> </span><span class="s">"script",</span><span class="nv"> </span><span class="s">"reg_key",</span><span class="nv"> </span><span class="s">"reg_value",</span>
+
+<span class="w">      </span><span class="s">"win_service"]}'</span>
 <span class="w">  </span><span class="nt">ocsf_extension</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ocsf_extension</span>
 <span class="w">    </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">windows</span>
 <span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Extends the evidences object to add Windows specific fields</span>
+<span class="nt">in_subset</span><span class="p">:</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">windows_extension</span>
 <span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="nt">aliases</span><span class="p">:</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Windows Evidence Artifacts</span>
@@ -1110,8 +1152,10 @@
 <span class="w">    </span><span class="nt">recommended</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">actor</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">actor</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Describes details about the user/role/process that was the source</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">of the activity that triggered the detection.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'Describes</span><span class="nv"> </span><span class="s">details</span><span class="nv"> </span><span class="s">about</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">user/role/process</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">was</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">source</span>
+<span class="w">      </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span>
+
+<span class="w">      </span><span class="s">activity</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">triggered</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">detection.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Actor</span>
@@ -1146,8 +1190,10 @@
 <span class="w">    </span><span class="nt">recommended</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">api</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">api</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Describes details about the API call associated to the activity that</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">triggered the detection.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'Describes</span><span class="nv"> </span><span class="s">details</span><span class="nv"> </span><span class="s">about</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">API</span><span class="nv"> </span><span class="s">call</span><span class="nv"> </span><span class="s">associated</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">activity</span>
+<span class="w">      </span><span class="s">that</span><span class="nv"> </span><span class="s">triggered</span>
+
+<span class="w">      </span><span class="s">the</span><span class="nv"> </span><span class="s">detection.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">API Details</span>
@@ -1162,8 +1208,10 @@
 <span class="w">    </span><span class="nt">recommended</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">connection_info</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">connection_info</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Describes details about the network connection associated to the</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">activity that triggered the detection.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'Describes</span><span class="nv"> </span><span class="s">details</span><span class="nv"> </span><span class="s">about</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">network</span><span class="nv"> </span><span class="s">connection</span><span class="nv"> </span><span class="s">associated</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">the</span>
+<span class="w">      </span><span class="s">activity</span><span class="nv"> </span><span class="s">that</span>
+
+<span class="w">      </span><span class="s">triggered</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">detection.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Connection Info</span>
@@ -1186,8 +1234,10 @@
 <span class="w">    </span><span class="nt">recommended</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">container</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">container</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Describes details about the container associated to the activity</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">that triggered the detection.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'Describes</span><span class="nv"> </span><span class="s">details</span><span class="nv"> </span><span class="s">about</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">container</span><span class="nv"> </span><span class="s">associated</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">activity</span>
+<span class="w">      </span><span class="s">that</span><span class="nv"> </span><span class="s">triggered</span>
+
+<span class="w">      </span><span class="s">the</span><span class="nv"> </span><span class="s">detection.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Container</span>
@@ -1202,8 +1252,10 @@
 <span class="w">    </span><span class="nt">recommended</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">data</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">data</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Additional evidence data that is not accounted for in the specific</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">evidence attributes.&lt;code&gt; Use only when absolutely necessary.&lt;/code&gt;</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'Additional</span><span class="nv"> </span><span class="s">evidence</span><span class="nv"> </span><span class="s">data</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">not</span><span class="nv"> </span><span class="s">accounted</span><span class="nv"> </span><span class="s">for</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">specific</span>
+<span class="w">      </span><span class="s">evidence</span>
+
+<span class="w">      </span><span class="s">attributes.&lt;code&gt;</span><span class="nv"> </span><span class="s">Use</span><span class="nv"> </span><span class="s">only</span><span class="nv"> </span><span class="s">when</span><span class="nv"> </span><span class="s">absolutely</span><span class="nv"> </span><span class="s">necessary.&lt;/code&gt;'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Data</span>
@@ -1228,8 +1280,10 @@
 <span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">string</span>
 <span class="w">  </span><span class="nt">database</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">database</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Describes details about the database associated to the activity that</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">triggered the detection.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'Describes</span><span class="nv"> </span><span class="s">details</span><span class="nv"> </span><span class="s">about</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">database</span><span class="nv"> </span><span class="s">associated</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">activity</span>
+<span class="w">      </span><span class="s">that</span><span class="nv"> </span><span class="s">triggered</span>
+
+<span class="w">      </span><span class="s">the</span><span class="nv"> </span><span class="s">detection.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Database</span>
@@ -1245,8 +1299,10 @@
 <span class="w">    </span><span class="nt">recommended</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">databucket</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">databucket</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Describes details about the databucket associated to the activity</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">that triggered the detection.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'Describes</span><span class="nv"> </span><span class="s">details</span><span class="nv"> </span><span class="s">about</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">databucket</span><span class="nv"> </span><span class="s">associated</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">activity</span>
+<span class="w">      </span><span class="s">that</span>
+
+<span class="w">      </span><span class="s">triggered</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">detection.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Databucket</span>
@@ -1262,8 +1318,10 @@
 <span class="w">    </span><span class="nt">recommended</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">device</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">device</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">An addressable device, computer system or host associated to the</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">activity that triggered the detection.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'An</span><span class="nv"> </span><span class="s">addressable</span><span class="nv"> </span><span class="s">device,</span><span class="nv"> </span><span class="s">computer</span><span class="nv"> </span><span class="s">system</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">host</span><span class="nv"> </span><span class="s">associated</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">the</span>
+<span class="w">      </span><span class="s">activity</span><span class="nv"> </span><span class="s">that</span>
+
+<span class="w">      </span><span class="s">triggered</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">detection.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Device</span>
@@ -1292,8 +1350,10 @@
 <span class="w">    </span><span class="nt">recommended</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">dst_endpoint</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">dst_endpoint</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Describes details about the destination of the network activity that</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">triggered the detection.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'Describes</span><span class="nv"> </span><span class="s">details</span><span class="nv"> </span><span class="s">about</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">destination</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">network</span><span class="nv"> </span><span class="s">activity</span>
+<span class="w">      </span><span class="s">that</span><span class="nv"> </span><span class="s">triggered</span>
+
+<span class="w">      </span><span class="s">the</span><span class="nv"> </span><span class="s">detection.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Destination Endpoint</span>
@@ -1340,8 +1400,10 @@
 <span class="w">    </span><span class="nt">recommended</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">file</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">file</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Describes details about the file associated to the activity that</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">triggered the detection.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'Describes</span><span class="nv"> </span><span class="s">details</span><span class="nv"> </span><span class="s">about</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">file</span><span class="nv"> </span><span class="s">associated</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">activity</span><span class="nv"> </span><span class="s">that</span>
+<span class="w">      </span><span class="s">triggered</span><span class="nv"> </span><span class="s">the</span>
+
+<span class="w">      </span><span class="s">detection.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">File</span>
@@ -1376,8 +1438,10 @@
 <span class="w">    </span><span class="nt">recommended</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">http_request</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">http_request</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Describes details about the http request associated to the activity</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">that triggered the detection.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'Describes</span><span class="nv"> </span><span class="s">details</span><span class="nv"> </span><span class="s">about</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">http</span><span class="nv"> </span><span class="s">request</span><span class="nv"> </span><span class="s">associated</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">activity</span>
+<span class="w">      </span><span class="s">that</span>
+
+<span class="w">      </span><span class="s">triggered</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">detection.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">HTTP Request</span>
@@ -1397,8 +1461,10 @@
 <span class="w">    </span><span class="nt">recommended</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">http_response</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">http_response</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Describes details about the http response associated to the activity</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">that triggered the detection.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'Describes</span><span class="nv"> </span><span class="s">details</span><span class="nv"> </span><span class="s">about</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">http</span><span class="nv"> </span><span class="s">response</span><span class="nv"> </span><span class="s">associated</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">activity</span>
+<span class="w">      </span><span class="s">that</span>
+
+<span class="w">      </span><span class="s">triggered</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">detection.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">HTTP Response</span>
@@ -1434,8 +1500,10 @@
 <span class="w">    </span><span class="nt">multivalued</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">job</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">job</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Describes details about the scheduled job that was associated with</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">the activity that triggered the detection.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'Describes</span><span class="nv"> </span><span class="s">details</span><span class="nv"> </span><span class="s">about</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">scheduled</span><span class="nv"> </span><span class="s">job</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">was</span><span class="nv"> </span><span class="s">associated</span><span class="nv"> </span><span class="s">with</span>
+<span class="w">      </span><span class="s">the</span><span class="nv"> </span><span class="s">activity</span>
+
+<span class="w">      </span><span class="s">that</span><span class="nv"> </span><span class="s">triggered</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">detection.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Job</span>
@@ -1452,10 +1520,14 @@
 <span class="w">    </span><span class="nt">recommended</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">name</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">name</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The naming convention or type identifier of the evidence associated</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">with the security detection. For example, the &lt;code&gt;@odata.type&lt;/code&gt; from</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">Microsoft Graph Alerts V2 or &lt;code&gt;display_name&lt;/code&gt; from CrowdStrike Falcon</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">Incident Behaviors.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">naming</span><span class="nv"> </span><span class="s">convention</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">type</span><span class="nv"> </span><span class="s">identifier</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">evidence</span><span class="nv"> </span><span class="s">associated</span>
+<span class="w">      </span><span class="s">with</span><span class="nv"> </span><span class="s">the</span>
+
+<span class="w">      </span><span class="s">security</span><span class="nv"> </span><span class="s">detection.</span><span class="nv"> </span><span class="s">For</span><span class="nv"> </span><span class="s">example,</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">&lt;code&gt;@odata.type&lt;/code&gt;</span><span class="nv"> </span><span class="s">from</span><span class="nv"> </span><span class="s">Microsoft</span>
+
+<span class="w">      </span><span class="s">Graph</span><span class="nv"> </span><span class="s">Alerts</span><span class="nv"> </span><span class="s">V2</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">&lt;code&gt;display_name&lt;/code&gt;</span><span class="nv"> </span><span class="s">from</span><span class="nv"> </span><span class="s">CrowdStrike</span><span class="nv"> </span><span class="s">Falcon</span><span class="nv"> </span><span class="s">Incident</span>
+
+<span class="w">      </span><span class="s">Behaviors.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Name</span>
@@ -1557,8 +1629,10 @@
 <span class="w">    </span><span class="nt">recommended</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">process</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">process</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Describes details about the process associated to the activity that</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">triggered the detection.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'Describes</span><span class="nv"> </span><span class="s">details</span><span class="nv"> </span><span class="s">about</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">process</span><span class="nv"> </span><span class="s">associated</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">activity</span><span class="nv"> </span><span class="s">that</span>
+<span class="w">      </span><span class="s">triggered</span>
+
+<span class="w">      </span><span class="s">the</span><span class="nv"> </span><span class="s">detection.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Process</span>
@@ -1581,8 +1655,10 @@
 <span class="w">    </span><span class="nt">recommended</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">query</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">query</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Describes details about the DNS query associated to the activity</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">that triggered the detection.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'Describes</span><span class="nv"> </span><span class="s">details</span><span class="nv"> </span><span class="s">about</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">DNS</span><span class="nv"> </span><span class="s">query</span><span class="nv"> </span><span class="s">associated</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">activity</span>
+<span class="w">      </span><span class="s">that</span><span class="nv"> </span><span class="s">triggered</span>
+
+<span class="w">      </span><span class="s">the</span><span class="nv"> </span><span class="s">detection.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">DNS Query</span>
@@ -1596,9 +1672,12 @@
 <span class="w">    </span><span class="nt">recommended</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">resources</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">resources</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Describes details about the cloud resources directly related to activity</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">that triggered the detection. For resources impacted by the detection, use &lt;code&gt;Affected</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">Resources&lt;/code&gt; at the top-level of the finding.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'Describes</span><span class="nv"> </span><span class="s">details</span><span class="nv"> </span><span class="s">about</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">cloud</span><span class="nv"> </span><span class="s">resources</span><span class="nv"> </span><span class="s">directly</span><span class="nv"> </span><span class="s">related</span><span class="nv"> </span><span class="s">to</span>
+<span class="w">      </span><span class="s">activity</span><span class="nv"> </span><span class="s">that</span>
+
+<span class="w">      </span><span class="s">triggered</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">detection.</span><span class="nv"> </span><span class="s">For</span><span class="nv"> </span><span class="s">resources</span><span class="nv"> </span><span class="s">impacted</span><span class="nv"> </span><span class="s">by</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">detection,</span><span class="nv"> </span><span class="s">use</span>
+
+<span class="w">      </span><span class="s">&lt;code&gt;Affected</span><span class="nv"> </span><span class="s">Resources&lt;/code&gt;</span><span class="nv"> </span><span class="s">at</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">top-level</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">finding.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Resources Array</span>
@@ -1622,8 +1701,10 @@
 <span class="w">    </span><span class="nt">multivalued</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">script</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">script</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Describes details about the script that was associated with the activity</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">that triggered the detection.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'Describes</span><span class="nv"> </span><span class="s">details</span><span class="nv"> </span><span class="s">about</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">script</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">was</span><span class="nv"> </span><span class="s">associated</span><span class="nv"> </span><span class="s">with</span><span class="nv"> </span><span class="s">the</span>
+<span class="w">      </span><span class="s">activity</span><span class="nv"> </span><span class="s">that</span>
+
+<span class="w">      </span><span class="s">triggered</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">detection.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Script</span>
@@ -1638,8 +1719,10 @@
 <span class="w">    </span><span class="nt">recommended</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">src_endpoint</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">src_endpoint</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Describes details about the source of the network activity that triggered</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">the detection.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'Describes</span><span class="nv"> </span><span class="s">details</span><span class="nv"> </span><span class="s">about</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">source</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">network</span><span class="nv"> </span><span class="s">activity</span><span class="nv"> </span><span class="s">that</span>
+<span class="w">      </span><span class="s">triggered</span><span class="nv"> </span><span class="s">the</span>
+
+<span class="w">      </span><span class="s">detection.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Source Endpoint</span>
@@ -1669,8 +1752,10 @@
 <span class="w">    </span><span class="nt">recommended</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">tls</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">tls</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Describes details about the Transport Layer Security (TLS) activity</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">that triggered the detection.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'Describes</span><span class="nv"> </span><span class="s">details</span><span class="nv"> </span><span class="s">about</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">Transport</span><span class="nv"> </span><span class="s">Layer</span><span class="nv"> </span><span class="s">Security</span><span class="nv"> </span><span class="s">(TLS)</span><span class="nv"> </span><span class="s">activity</span>
+<span class="w">      </span><span class="s">that</span>
+
+<span class="w">      </span><span class="s">triggered</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">detection.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">TLS</span>
@@ -1687,9 +1772,12 @@
 <span class="w">    </span><span class="nt">recommended</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">uid</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">uid</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The unique identifier of the evidence associated with the security</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">detection. For example, the &lt;code&gt;activity_id&lt;/code&gt; from CrowdStrike Falcon</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">Alerts or &lt;code&gt;behavior_id&lt;/code&gt; from CrowdStrike Falcon Incident Behaviors.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">unique</span><span class="nv"> </span><span class="s">identifier</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">evidence</span><span class="nv"> </span><span class="s">associated</span><span class="nv"> </span><span class="s">with</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">security</span>
+<span class="w">      </span><span class="s">detection.</span>
+
+<span class="w">      </span><span class="s">For</span><span class="nv"> </span><span class="s">example,</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">&lt;code&gt;activity_id&lt;/code&gt;</span><span class="nv"> </span><span class="s">from</span><span class="nv"> </span><span class="s">CrowdStrike</span><span class="nv"> </span><span class="s">Falcon</span><span class="nv"> </span><span class="s">Alerts</span><span class="nv"> </span><span class="s">or</span>
+
+<span class="w">      </span><span class="s">&lt;code&gt;behavior_id&lt;/code&gt;</span><span class="nv"> </span><span class="s">from</span><span class="nv"> </span><span class="s">CrowdStrike</span><span class="nv"> </span><span class="s">Falcon</span><span class="nv"> </span><span class="s">Incident</span><span class="nv"> </span><span class="s">Behaviors.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Unique ID</span>
@@ -1784,8 +1872,10 @@
 <span class="w">    </span><span class="nt">recommended</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">url</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">url</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The URL object that pertains to the event or object associated to</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">the activity that triggered the detection.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">URL</span><span class="nv"> </span><span class="s">object</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">pertains</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">event</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">object</span><span class="nv"> </span><span class="s">associated</span><span class="nv"> </span><span class="s">to</span>
+<span class="w">      </span><span class="s">the</span><span class="nv"> </span><span class="s">activity</span>
+
+<span class="w">      </span><span class="s">that</span><span class="nv"> </span><span class="s">triggered</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">detection.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">URL</span>
@@ -1803,8 +1893,10 @@
 <span class="w">    </span><span class="nt">recommended</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">user</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">user</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Describes details about the user that was the target or somehow else</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">associated with the activity that triggered the detection.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'Describes</span><span class="nv"> </span><span class="s">details</span><span class="nv"> </span><span class="s">about</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">user</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">was</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">target</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">somehow</span>
+<span class="w">      </span><span class="s">else</span><span class="nv"> </span><span class="s">associated</span>
+
+<span class="w">      </span><span class="s">with</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">activity</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">triggered</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">detection.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">User</span>
@@ -1832,8 +1924,8 @@
 <span class="w">    </span><span class="nt">recommended</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">verdict</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">verdict</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">normalized</span><span class="nv"> </span><span class="s">verdict</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">evidence</span><span class="nv"> </span><span class="s">associated</span><span class="nv"> </span><span class="s">with</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">security</span>
-<span class="w">      </span><span class="s">detection.</span><span class="nv"> </span><span class="s">'</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The normalized verdict of the evidence associated with the security</span>
+<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">detection.</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Verdict</span>
@@ -1851,11 +1943,16 @@
 <span class="w">      </span><span class="nt">sibling</span><span class="p">:</span>
 <span class="w">        </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">sibling</span>
 <span class="w">        </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">verdict</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The normalized verdict (or status) ID of the evidence associated</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">with the security detection. For example, Microsoft Graph Security Alerts contain</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">a &lt;code&gt;verdict&lt;/code&gt; enumeration for each type of &lt;code&gt;evidence&lt;/code&gt; associated</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">with the Alert. This is typically set by an automated investigation process</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">or an analyst/investigator assigned to the finding.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">normalized</span><span class="nv"> </span><span class="s">verdict</span><span class="nv"> </span><span class="s">(or</span><span class="nv"> </span><span class="s">status)</span><span class="nv"> </span><span class="s">ID</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">evidence</span><span class="nv"> </span><span class="s">associated</span>
+<span class="w">      </span><span class="s">with</span><span class="nv"> </span><span class="s">the</span>
+
+<span class="w">      </span><span class="s">security</span><span class="nv"> </span><span class="s">detection.</span><span class="nv"> </span><span class="s">For</span><span class="nv"> </span><span class="s">example,</span><span class="nv"> </span><span class="s">Microsoft</span><span class="nv"> </span><span class="s">Graph</span><span class="nv"> </span><span class="s">Security</span><span class="nv"> </span><span class="s">Alerts</span><span class="nv"> </span><span class="s">contain</span><span class="nv"> </span><span class="s">a</span>
+
+<span class="w">      </span><span class="s">&lt;code&gt;verdict&lt;/code&gt;</span><span class="nv"> </span><span class="s">enumeration</span><span class="nv"> </span><span class="s">for</span><span class="nv"> </span><span class="s">each</span><span class="nv"> </span><span class="s">type</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">&lt;code&gt;evidence&lt;/code&gt;</span>
+
+<span class="w">      </span><span class="s">associated</span><span class="nv"> </span><span class="s">with</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">Alert.</span><span class="nv"> </span><span class="s">This</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">typically</span><span class="nv"> </span><span class="s">set</span><span class="nv"> </span><span class="s">by</span><span class="nv"> </span><span class="s">an</span><span class="nv"> </span><span class="s">automated</span><span class="nv"> </span><span class="s">investigation</span>
+
+<span class="w">      </span><span class="s">process</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">an</span><span class="nv"> </span><span class="s">analyst/investigator</span><span class="nv"> </span><span class="s">assigned</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">finding.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Verdict ID</span>
@@ -1951,9 +2048,14 @@
 <span class="w">          </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">win_service</span>
 <span class="w">          </span><span class="nt">required</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'OCSF</span><span class="nv"> </span><span class="s">at_least_one:</span><span class="nv"> </span><span class="s">at</span><span class="nv"> </span><span class="s">least</span><span class="nv"> </span><span class="s">one</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">[</span><span class="se">''</span><span class="s">actor</span><span class="se">''</span><span class="s">,</span><span class="nv"> </span><span class="se">''</span><span class="s">api</span><span class="se">''</span><span class="s">,</span><span class="nv"> </span><span class="se">''</span><span class="s">connection_info</span><span class="se">''</span><span class="s">,</span>
-<span class="w">    </span><span class="se">''</span><span class="s">data</span><span class="se">''</span><span class="s">,</span><span class="nv"> </span><span class="se">''</span><span class="s">database</span><span class="se">''</span><span class="s">,</span><span class="nv"> </span><span class="se">''</span><span class="s">databucket</span><span class="se">''</span><span class="s">,</span><span class="nv"> </span><span class="se">''</span><span class="s">device</span><span class="se">''</span><span class="s">,</span><span class="nv"> </span><span class="se">''</span><span class="s">dst_endpoint</span><span class="se">''</span><span class="s">,</span><span class="nv"> </span><span class="se">''</span><span class="s">email</span><span class="se">''</span><span class="s">,</span>
-<span class="w">    </span><span class="se">''</span><span class="s">file</span><span class="se">''</span><span class="s">,</span><span class="nv"> </span><span class="se">''</span><span class="s">process</span><span class="se">''</span><span class="s">,</span><span class="nv"> </span><span class="se">''</span><span class="s">query</span><span class="se">''</span><span class="s">,</span><span class="nv"> </span><span class="se">''</span><span class="s">src_endpoint</span><span class="se">''</span><span class="s">,</span><span class="nv"> </span><span class="se">''</span><span class="s">url</span><span class="se">''</span><span class="s">,</span><span class="nv"> </span><span class="se">''</span><span class="s">user</span><span class="se">''</span><span class="s">,</span><span class="nv"> </span><span class="se">''</span><span class="s">job</span><span class="se">''</span><span class="s">,</span>
-<span class="w">    </span><span class="se">''</span><span class="s">script</span><span class="se">''</span><span class="s">,</span><span class="nv"> </span><span class="se">''</span><span class="s">reg_key</span><span class="se">''</span><span class="s">,</span><span class="nv"> </span><span class="se">''</span><span class="s">reg_value</span><span class="se">''</span><span class="s">,</span><span class="nv"> </span><span class="se">''</span><span class="s">win_service</span><span class="se">''</span><span class="s">]</span><span class="nv"> </span><span class="s">must</span><span class="nv"> </span><span class="s">be</span><span class="nv"> </span><span class="s">set.'</span>
+<span class="w">    </span><span class="se">''</span><span class="s">data</span><span class="se">''</span><span class="s">,</span>
+
+<span class="w">    </span><span class="se">''</span><span class="s">database</span><span class="se">''</span><span class="s">,</span><span class="nv"> </span><span class="se">''</span><span class="s">databucket</span><span class="se">''</span><span class="s">,</span><span class="nv"> </span><span class="se">''</span><span class="s">device</span><span class="se">''</span><span class="s">,</span><span class="nv"> </span><span class="se">''</span><span class="s">dst_endpoint</span><span class="se">''</span><span class="s">,</span><span class="nv"> </span><span class="se">''</span><span class="s">email</span><span class="se">''</span><span class="s">,</span><span class="nv"> </span><span class="se">''</span><span class="s">file</span><span class="se">''</span><span class="s">,</span>
+<span class="w">    </span><span class="se">''</span><span class="s">process</span><span class="se">''</span><span class="s">,</span>
+
+<span class="w">    </span><span class="se">''</span><span class="s">query</span><span class="se">''</span><span class="s">,</span><span class="nv"> </span><span class="se">''</span><span class="s">src_endpoint</span><span class="se">''</span><span class="s">,</span><span class="nv"> </span><span class="se">''</span><span class="s">url</span><span class="se">''</span><span class="s">,</span><span class="nv"> </span><span class="se">''</span><span class="s">user</span><span class="se">''</span><span class="s">,</span><span class="nv"> </span><span class="se">''</span><span class="s">job</span><span class="se">''</span><span class="s">,</span><span class="nv"> </span><span class="se">''</span><span class="s">script</span><span class="se">''</span><span class="s">,</span><span class="nv"> </span><span class="se">''</span><span class="s">reg_key</span><span class="se">''</span><span class="s">,</span>
+
+<span class="w">    </span><span class="se">''</span><span class="s">reg_value</span><span class="se">''</span><span class="s">,</span><span class="nv"> </span><span class="se">''</span><span class="s">win_service</span><span class="se">''</span><span class="s">]</span><span class="nv"> </span><span class="s">must</span><span class="nv"> </span><span class="s">be</span><span class="nv"> </span><span class="s">set.'</span>
 </code></pre></div>
 </details>
 </article>

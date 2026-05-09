@@ -447,7 +447,12 @@
 
 
 <h1 id="enum-checkseverityidenum">Enum: CheckSeverityIdEnum</h1>
-<p><em>The normalized severity identifier that maps severity levels to standard severity levels. For example CIS Benchmark: <code>Level 2</code> maps to <code>4</code> (High), <code>Level 1</code> maps to <code>3</code> (Medium). For DISA STIG: <code>CAT I</code> maps to <code>5</code> (Critical), <code>CAT II</code> maps to <code>4</code> (High), and <code>CAT III</code> maps to <code>3</code> (Medium).</em></p>
+<p><em>The normalized severity identifier that maps severity levels to standard</em></p>
+<p><em>severity levels. For example CIS Benchmark: <code>Level 2</code> maps to</em></p>
+<p><em><code>4</code> (High), <code>Level 1</code> maps to <code>3</code> (Medium).</em></p>
+<p><em>For DISA STIG: <code>CAT I</code> maps to <code>5</code> (Critical), <code>CAT</em></p>
+<p><em>II</code> maps to <code>4</code> (High), and <code>CAT III</code> maps to</em></p>
+<p><em><code>3</code> (Medium).</em></p>
 <p>URI: <a href="https://w3id.org/lmodel/ocsf/CheckSeverityIdEnum">ocsf:CheckSeverityIdEnum</a></p>
 <h2 id="permissible-values">Permissible Values</h2>
 <table>
@@ -477,17 +482,17 @@
 <tr>
 <td>MEDIUM</td>
 <td>None</td>
-<td>Maps to CIS Benchmark <code>Level 1</code> - Essential security settings reco...</td>
+<td>Maps to CIS Benchmark <code>Level 1</code> - Essential security settings</td>
 </tr>
 <tr>
 <td>HIGH</td>
 <td>None</td>
-<td>Maps to CIS Benchmark <code>Level 2</code> - More restrictive and security-fo...</td>
+<td>Maps to CIS Benchmark <code>Level 2</code> - More restrictive and</td>
 </tr>
 <tr>
 <td>CRITICAL</td>
 <td>None</td>
-<td>Maps to DISA STIG <code>CAT I</code> - Action is required immediately and the...</td>
+<td>Maps to DISA STIG <code>CAT I</code> - Action is required immediately and the</td>
 </tr>
 <tr>
 <td>FATAL</td>
@@ -512,7 +517,7 @@
 <tbody>
 <tr>
 <td><a href="../severity_id/">severity_id</a></td>
-<td>The normalized severity identifier that maps severity levels to standard seve...</td>
+<td>The normalized severity identifier that maps severity levels to standard</td>
 </tr>
 </tbody>
 </table>
@@ -525,10 +530,16 @@
 <details>
 <div class="highlight"><pre><span></span><code><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">CheckSeverityIdEnum</span>
 <span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;The</span><span class="nv"> </span><span class="s">normalized</span><span class="nv"> </span><span class="s">severity</span><span class="nv"> </span><span class="s">identifier</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">maps</span><span class="nv"> </span><span class="s">severity</span><span class="nv"> </span><span class="s">levels</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">standard</span>
-<span class="w">  </span><span class="s">severity</span><span class="nv"> </span><span class="s">levels.</span><span class="nv"> </span><span class="s">For</span><span class="nv"> </span><span class="s">example</span><span class="nv"> </span><span class="s">CIS</span><span class="nv"> </span><span class="s">Benchmark:</span><span class="nv"> </span><span class="s">&lt;code&gt;Level</span><span class="nv"> </span><span class="s">2&lt;/code&gt;</span><span class="nv"> </span><span class="s">maps</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">&lt;code&gt;4&lt;/code&gt;</span>
-<span class="w">  </span><span class="s">(High),</span><span class="nv"> </span><span class="s">&lt;code&gt;Level</span><span class="nv"> </span><span class="s">1&lt;/code&gt;</span><span class="nv"> </span><span class="s">maps</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">&lt;code&gt;3&lt;/code&gt;</span><span class="nv"> </span><span class="s">(Medium).</span><span class="nv"> </span><span class="s">For</span><span class="nv"> </span><span class="s">DISA</span><span class="nv"> </span><span class="s">STIG:</span><span class="nv"> </span><span class="s">&lt;code&gt;CAT</span>
-<span class="w">  </span><span class="s">I&lt;/code&gt;</span><span class="nv"> </span><span class="s">maps</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">&lt;code&gt;5&lt;/code&gt;</span><span class="nv"> </span><span class="s">(Critical),</span><span class="nv"> </span><span class="s">&lt;code&gt;CAT</span><span class="nv"> </span><span class="s">II&lt;/code&gt;</span><span class="nv"> </span><span class="s">maps</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">&lt;code&gt;4&lt;/code&gt;</span>
-<span class="w">  </span><span class="s">(High),</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">&lt;code&gt;CAT</span><span class="nv"> </span><span class="s">III&lt;/code&gt;</span><span class="nv"> </span><span class="s">maps</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">&lt;code&gt;3&lt;/code&gt;</span><span class="nv"> </span><span class="s">(Medium).&#39;</span>
+
+<span class="w">  </span><span class="s">severity</span><span class="nv"> </span><span class="s">levels.</span><span class="nv"> </span><span class="s">For</span><span class="nv"> </span><span class="s">example</span><span class="nv"> </span><span class="s">CIS</span><span class="nv"> </span><span class="s">Benchmark:</span><span class="nv"> </span><span class="s">&lt;code&gt;Level</span><span class="nv"> </span><span class="s">2&lt;/code&gt;</span><span class="nv"> </span><span class="s">maps</span><span class="nv"> </span><span class="s">to</span>
+
+<span class="w">  </span><span class="s">&lt;code&gt;4&lt;/code&gt;</span><span class="nv"> </span><span class="s">(High),</span><span class="nv"> </span><span class="s">&lt;code&gt;Level</span><span class="nv"> </span><span class="s">1&lt;/code&gt;</span><span class="nv"> </span><span class="s">maps</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">&lt;code&gt;3&lt;/code&gt;</span><span class="nv"> </span><span class="s">(Medium).</span>
+
+<span class="w">  </span><span class="s">For</span><span class="nv"> </span><span class="s">DISA</span><span class="nv"> </span><span class="s">STIG:</span><span class="nv"> </span><span class="s">&lt;code&gt;CAT</span><span class="nv"> </span><span class="s">I&lt;/code&gt;</span><span class="nv"> </span><span class="s">maps</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">&lt;code&gt;5&lt;/code&gt;</span><span class="nv"> </span><span class="s">(Critical),</span><span class="nv"> </span><span class="s">&lt;code&gt;CAT</span>
+
+<span class="w">  </span><span class="s">II&lt;/code&gt;</span><span class="nv"> </span><span class="s">maps</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">&lt;code&gt;4&lt;/code&gt;</span><span class="nv"> </span><span class="s">(High),</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">&lt;code&gt;CAT</span><span class="nv"> </span><span class="s">III&lt;/code&gt;</span><span class="nv"> </span><span class="s">maps</span><span class="nv"> </span><span class="s">to</span>
+
+<span class="w">  </span><span class="s">&lt;code&gt;3&lt;/code&gt;</span><span class="nv"> </span><span class="s">(Medium).&#39;</span>
 <span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="nt">rank</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1000</span>
 <span class="nt">permissible_values</span><span class="p">:</span>
@@ -564,9 +575,12 @@
 <span class="w">        </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Low</span>
 <span class="w">  </span><span class="nt">MEDIUM</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">text</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">MEDIUM</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Maps to CIS Benchmark &lt;code&gt;Level 1&lt;/code&gt; - Essential security settings</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">recommended for all systems, or DISA STIG &lt;code&gt;CAT III&lt;/code&gt; - Action is required</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">but the situation is not serious at this time.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;Maps</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">CIS</span><span class="nv"> </span><span class="s">Benchmark</span><span class="nv"> </span><span class="s">&lt;code&gt;Level</span><span class="nv"> </span><span class="s">1&lt;/code&gt;</span><span class="nv"> </span><span class="s">-</span><span class="nv"> </span><span class="s">Essential</span><span class="nv"> </span><span class="s">security</span>
+<span class="w">      </span><span class="s">settings</span>
+
+<span class="w">      </span><span class="s">recommended</span><span class="nv"> </span><span class="s">for</span><span class="nv"> </span><span class="s">all</span><span class="nv"> </span><span class="s">systems,</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">DISA</span><span class="nv"> </span><span class="s">STIG</span><span class="nv"> </span><span class="s">&lt;code&gt;CAT</span><span class="nv"> </span><span class="s">III&lt;/code&gt;</span><span class="nv"> </span><span class="s">-</span><span class="nv"> </span><span class="s">Action</span><span class="nv"> </span><span class="s">is</span>
+
+<span class="w">      </span><span class="s">required</span><span class="nv"> </span><span class="s">but</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">situation</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">not</span><span class="nv"> </span><span class="s">serious</span><span class="nv"> </span><span class="s">at</span><span class="nv"> </span><span class="s">this</span><span class="nv"> </span><span class="s">time.&#39;</span>
 <span class="w">    </span><span class="nt">annotations</span><span class="p">:</span>
 <span class="w">      </span><span class="nt">ocsf_uid</span><span class="p">:</span>
 <span class="w">        </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ocsf_uid</span>
@@ -576,9 +590,11 @@
 <span class="w">        </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Medium</span>
 <span class="w">  </span><span class="nt">HIGH</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">text</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">HIGH</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Maps to CIS Benchmark &lt;code&gt;Level 2&lt;/code&gt; - More restrictive and</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">security-focused settings for sensitive environments, or DISA STIG &lt;code&gt;CAT</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">II&lt;/code&gt; - Action is required immediately.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;Maps</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">CIS</span><span class="nv"> </span><span class="s">Benchmark</span><span class="nv"> </span><span class="s">&lt;code&gt;Level</span><span class="nv"> </span><span class="s">2&lt;/code&gt;</span><span class="nv"> </span><span class="s">-</span><span class="nv"> </span><span class="s">More</span><span class="nv"> </span><span class="s">restrictive</span><span class="nv"> </span><span class="s">and</span>
+
+<span class="w">      </span><span class="s">security-focused</span><span class="nv"> </span><span class="s">settings</span><span class="nv"> </span><span class="s">for</span><span class="nv"> </span><span class="s">sensitive</span><span class="nv"> </span><span class="s">environments,</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">DISA</span><span class="nv"> </span><span class="s">STIG</span><span class="nv"> </span><span class="s">&lt;code&gt;CAT</span>
+
+<span class="w">      </span><span class="s">II&lt;/code&gt;</span><span class="nv"> </span><span class="s">-</span><span class="nv"> </span><span class="s">Action</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">required</span><span class="nv"> </span><span class="s">immediately.&#39;</span>
 <span class="w">    </span><span class="nt">annotations</span><span class="p">:</span>
 <span class="w">      </span><span class="nt">ocsf_uid</span><span class="p">:</span>
 <span class="w">        </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ocsf_uid</span>
@@ -588,8 +604,10 @@
 <span class="w">        </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">High</span>
 <span class="w">  </span><span class="nt">CRITICAL</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">text</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">CRITICAL</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Maps to DISA STIG &lt;code&gt;CAT I&lt;/code&gt; - Action is required immediately</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">and the scope is broad.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;Maps</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">DISA</span><span class="nv"> </span><span class="s">STIG</span><span class="nv"> </span><span class="s">&lt;code&gt;CAT</span><span class="nv"> </span><span class="s">I&lt;/code&gt;</span><span class="nv"> </span><span class="s">-</span><span class="nv"> </span><span class="s">Action</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">required</span><span class="nv"> </span><span class="s">immediately</span>
+<span class="w">      </span><span class="s">and</span><span class="nv"> </span><span class="s">the</span>
+
+<span class="w">      </span><span class="s">scope</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">broad.&#39;</span>
 <span class="w">    </span><span class="nt">annotations</span><span class="p">:</span>
 <span class="w">      </span><span class="nt">ocsf_uid</span><span class="p">:</span>
 <span class="w">        </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ocsf_uid</span>
@@ -609,8 +627,10 @@
 <span class="w">        </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Fatal</span>
 <span class="w">  </span><span class="nt">OTHER</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">text</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">OTHER</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The severity is not mapped. See the &lt;code&gt;severity&lt;/code&gt; attribute,</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">which contains a data source specific value.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;The</span><span class="nv"> </span><span class="s">severity</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">not</span><span class="nv"> </span><span class="s">mapped.</span><span class="nv"> </span><span class="s">See</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">&lt;code&gt;severity&lt;/code&gt;</span><span class="nv"> </span><span class="s">attribute,</span>
+<span class="w">      </span><span class="s">which</span>
+
+<span class="w">      </span><span class="s">contains</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">data</span><span class="nv"> </span><span class="s">source</span><span class="nv"> </span><span class="s">specific</span><span class="nv"> </span><span class="s">value.&#39;</span>
 <span class="w">    </span><span class="nt">annotations</span><span class="p">:</span>
 <span class="w">      </span><span class="nt">ocsf_uid</span><span class="p">:</span>
 <span class="w">        </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ocsf_uid</span>

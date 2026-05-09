@@ -217,6 +217,15 @@
 </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="#in-subsets">
+<span class="md-ellipsis">
+      
+        In Subsets
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#aliases">
 <span class="md-ellipsis">
       
@@ -295,7 +304,13 @@
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
 <h1 id="class-additionalrestriction">Class: AdditionalRestriction</h1>
-<p><em>The Additional Restriction object describes supplementary access controls and guardrails that constrain or limit granted permissions beyond the primary policy. These restrictions are typically applied through hierarchical policy frameworks, organizational controls, or conditional access mechanisms. Examples include AWS Service Control Policies (SCPs), Resource Control Policies (RCPs), Azure Management Group policies, GCP Organization policies, conditional access policies, IP restrictions, time-based constraints, and MFA requirements.</em></p>
+<p><em>The Additional Restriction object describes supplementary access controls and</em></p>
+<p><em>guardrails that constrain or limit granted permissions beyond the primary</em></p>
+<p><em>policy. These restrictions are typically applied through hierarchical policy</em></p>
+<p><em>frameworks, organizational controls, or conditional access mechanisms. Examples</em></p>
+<p><em>include AWS Service Control Policies (SCPs), Resource Control Policies (RCPs),</em></p>
+<p><em>Azure Management Group policies, GCP Organization policies, conditional access</em></p>
+<p><em>policies, IP restrictions, time-based constraints, and MFA requirements.</em></p>
 <p>URI: <a href="https://w3id.org/lmodel/ocsf/AdditionalRestriction">ocsf:AdditionalRestriction</a></p>
 <pre class="mermaid"><code> classDiagram
     class AdditionalRestriction
@@ -352,7 +367,7 @@
 <tr>
 <td><a href="../policy/">policy</a></td>
 <td>1 <br/> <a href="../Policy/">Policy</a></td>
-<td>Detailed information about the policy document that defines this restriction,...</td>
+<td>Detailed information about the policy document that defines this restriction,</td>
 <td>direct</td>
 </tr>
 <tr>
@@ -364,7 +379,7 @@
 <tr>
 <td><a href="../status_id/">status_id</a></td>
 <td>0..1 <em>recommended</em> <br/> <a href="../AdditionalRestrictionStatusIdEnum/">AdditionalRestrictionStatusIdEnum</a></td>
-<td>The normalized status identifier indicating the applicability of this policy ...</td>
+<td>The normalized status identifier indicating the applicability of this policy</td>
 <td>direct</td>
 </tr>
 </tbody>
@@ -388,6 +403,10 @@
 </tr>
 </tbody>
 </table>
+<h2 id="in-subsets">In Subsets</h2>
+<ul>
+<li><a href="../Objects/">Objects</a></li>
+</ul>
 <h2 id="aliases">Aliases</h2>
 <ul>
 <li>Additional Restriction</li>
@@ -421,13 +440,22 @@
 <h3 id="direct">Direct</h3>
 <details>
 <div class="highlight"><pre><span></span><code><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">AdditionalRestriction</span>
-<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The Additional Restriction object describes supplementary access controls</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">and guardrails that constrain or limit granted permissions beyond the primary policy.</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">These restrictions are typically applied through hierarchical policy frameworks,</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">organizational controls, or conditional access mechanisms. Examples include AWS</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">Service Control Policies (SCPs), Resource Control Policies (RCPs), Azure Management</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">Group policies, GCP Organization policies, conditional access policies, IP restrictions,</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">time-based constraints, and MFA requirements.</span>
+<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">Additional</span><span class="nv"> </span><span class="s">Restriction</span><span class="nv"> </span><span class="s">object</span><span class="nv"> </span><span class="s">describes</span><span class="nv"> </span><span class="s">supplementary</span><span class="nv"> </span><span class="s">access</span><span class="nv"> </span><span class="s">controls</span>
+<span class="w">  </span><span class="s">and</span>
+
+<span class="w">  </span><span class="s">guardrails</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">constrain</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">limit</span><span class="nv"> </span><span class="s">granted</span><span class="nv"> </span><span class="s">permissions</span><span class="nv"> </span><span class="s">beyond</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">primary</span>
+
+<span class="w">  </span><span class="s">policy.</span><span class="nv"> </span><span class="s">These</span><span class="nv"> </span><span class="s">restrictions</span><span class="nv"> </span><span class="s">are</span><span class="nv"> </span><span class="s">typically</span><span class="nv"> </span><span class="s">applied</span><span class="nv"> </span><span class="s">through</span><span class="nv"> </span><span class="s">hierarchical</span><span class="nv"> </span><span class="s">policy</span>
+
+<span class="w">  </span><span class="s">frameworks,</span><span class="nv"> </span><span class="s">organizational</span><span class="nv"> </span><span class="s">controls,</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">conditional</span><span class="nv"> </span><span class="s">access</span><span class="nv"> </span><span class="s">mechanisms.</span><span class="nv"> </span><span class="s">Examples</span>
+
+<span class="w">  </span><span class="s">include</span><span class="nv"> </span><span class="s">AWS</span><span class="nv"> </span><span class="s">Service</span><span class="nv"> </span><span class="s">Control</span><span class="nv"> </span><span class="s">Policies</span><span class="nv"> </span><span class="s">(SCPs),</span><span class="nv"> </span><span class="s">Resource</span><span class="nv"> </span><span class="s">Control</span><span class="nv"> </span><span class="s">Policies</span><span class="nv"> </span><span class="s">(RCPs),</span>
+
+<span class="w">  </span><span class="s">Azure</span><span class="nv"> </span><span class="s">Management</span><span class="nv"> </span><span class="s">Group</span><span class="nv"> </span><span class="s">policies,</span><span class="nv"> </span><span class="s">GCP</span><span class="nv"> </span><span class="s">Organization</span><span class="nv"> </span><span class="s">policies,</span><span class="nv"> </span><span class="s">conditional</span><span class="nv"> </span><span class="s">access</span>
+
+<span class="w">  </span><span class="s">policies,</span><span class="nv"> </span><span class="s">IP</span><span class="nv"> </span><span class="s">restrictions,</span><span class="nv"> </span><span class="s">time-based</span><span class="nv"> </span><span class="s">constraints,</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">MFA</span><span class="nv"> </span><span class="s">requirements.'</span>
+<span class="nt">in_subset</span><span class="p">:</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">objects</span>
 <span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="nt">aliases</span><span class="p">:</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Additional Restriction</span>
@@ -439,18 +467,25 @@
 <span class="nt">slot_usage</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">policy</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">policy</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Detailed information about the policy document that defines this</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">restriction, including policy metadata, type, scope, and the specific rules</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">or conditions that implement the access control.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'Detailed</span><span class="nv"> </span><span class="s">information</span><span class="nv"> </span><span class="s">about</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">policy</span><span class="nv"> </span><span class="s">document</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">defines</span><span class="nv"> </span><span class="s">this</span>
+<span class="w">      </span><span class="s">restriction,</span>
+
+<span class="w">      </span><span class="s">including</span><span class="nv"> </span><span class="s">policy</span><span class="nv"> </span><span class="s">metadata,</span><span class="nv"> </span><span class="s">type,</span><span class="nv"> </span><span class="s">scope,</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">specific</span><span class="nv"> </span><span class="s">rules</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">conditions</span>
+
+<span class="w">      </span><span class="s">that</span><span class="nv"> </span><span class="s">implement</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">access</span><span class="nv"> </span><span class="s">control.'</span>
 <span class="w">    </span><span class="nt">required</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">status</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">status</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The current status of the policy restriction, normalized to the caption</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">of the &lt;code&gt;status_id&lt;/code&gt; enum value.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">current</span><span class="nv"> </span><span class="s">status</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">policy</span><span class="nv"> </span><span class="s">restriction,</span><span class="nv"> </span><span class="s">normalized</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">the</span>
+<span class="w">      </span><span class="s">caption</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span>
+
+<span class="w">      </span><span class="s">&lt;code&gt;status_id&lt;/code&gt;</span><span class="nv"> </span><span class="s">enum</span><span class="nv"> </span><span class="s">value.'</span>
 <span class="w">  </span><span class="nt">status_id</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">status_id</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The normalized status identifier indicating the applicability of</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">this policy restriction.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">normalized</span><span class="nv"> </span><span class="s">status</span><span class="nv"> </span><span class="s">identifier</span><span class="nv"> </span><span class="s">indicating</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">applicability</span><span class="nv"> </span><span class="s">of</span>
+<span class="w">      </span><span class="s">this</span><span class="nv"> </span><span class="s">policy</span>
+
+<span class="w">      </span><span class="s">restriction.'</span>
 <span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">AdditionalRestrictionStatusIdEnum</span>
 <span class="w">    </span><span class="nt">recommended</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 </code></pre></div>
@@ -458,13 +493,22 @@
 <h3 id="induced">Induced</h3>
 <details>
 <div class="highlight"><pre><span></span><code><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">AdditionalRestriction</span>
-<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The Additional Restriction object describes supplementary access controls</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">and guardrails that constrain or limit granted permissions beyond the primary policy.</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">These restrictions are typically applied through hierarchical policy frameworks,</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">organizational controls, or conditional access mechanisms. Examples include AWS</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">Service Control Policies (SCPs), Resource Control Policies (RCPs), Azure Management</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">Group policies, GCP Organization policies, conditional access policies, IP restrictions,</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">time-based constraints, and MFA requirements.</span>
+<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">Additional</span><span class="nv"> </span><span class="s">Restriction</span><span class="nv"> </span><span class="s">object</span><span class="nv"> </span><span class="s">describes</span><span class="nv"> </span><span class="s">supplementary</span><span class="nv"> </span><span class="s">access</span><span class="nv"> </span><span class="s">controls</span>
+<span class="w">  </span><span class="s">and</span>
+
+<span class="w">  </span><span class="s">guardrails</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">constrain</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">limit</span><span class="nv"> </span><span class="s">granted</span><span class="nv"> </span><span class="s">permissions</span><span class="nv"> </span><span class="s">beyond</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">primary</span>
+
+<span class="w">  </span><span class="s">policy.</span><span class="nv"> </span><span class="s">These</span><span class="nv"> </span><span class="s">restrictions</span><span class="nv"> </span><span class="s">are</span><span class="nv"> </span><span class="s">typically</span><span class="nv"> </span><span class="s">applied</span><span class="nv"> </span><span class="s">through</span><span class="nv"> </span><span class="s">hierarchical</span><span class="nv"> </span><span class="s">policy</span>
+
+<span class="w">  </span><span class="s">frameworks,</span><span class="nv"> </span><span class="s">organizational</span><span class="nv"> </span><span class="s">controls,</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">conditional</span><span class="nv"> </span><span class="s">access</span><span class="nv"> </span><span class="s">mechanisms.</span><span class="nv"> </span><span class="s">Examples</span>
+
+<span class="w">  </span><span class="s">include</span><span class="nv"> </span><span class="s">AWS</span><span class="nv"> </span><span class="s">Service</span><span class="nv"> </span><span class="s">Control</span><span class="nv"> </span><span class="s">Policies</span><span class="nv"> </span><span class="s">(SCPs),</span><span class="nv"> </span><span class="s">Resource</span><span class="nv"> </span><span class="s">Control</span><span class="nv"> </span><span class="s">Policies</span><span class="nv"> </span><span class="s">(RCPs),</span>
+
+<span class="w">  </span><span class="s">Azure</span><span class="nv"> </span><span class="s">Management</span><span class="nv"> </span><span class="s">Group</span><span class="nv"> </span><span class="s">policies,</span><span class="nv"> </span><span class="s">GCP</span><span class="nv"> </span><span class="s">Organization</span><span class="nv"> </span><span class="s">policies,</span><span class="nv"> </span><span class="s">conditional</span><span class="nv"> </span><span class="s">access</span>
+
+<span class="w">  </span><span class="s">policies,</span><span class="nv"> </span><span class="s">IP</span><span class="nv"> </span><span class="s">restrictions,</span><span class="nv"> </span><span class="s">time-based</span><span class="nv"> </span><span class="s">constraints,</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">MFA</span><span class="nv"> </span><span class="s">requirements.'</span>
+<span class="nt">in_subset</span><span class="p">:</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">objects</span>
 <span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="nt">aliases</span><span class="p">:</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Additional Restriction</span>
@@ -472,26 +516,36 @@
 <span class="nt">slot_usage</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">policy</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">policy</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Detailed information about the policy document that defines this</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">restriction, including policy metadata, type, scope, and the specific rules</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">or conditions that implement the access control.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'Detailed</span><span class="nv"> </span><span class="s">information</span><span class="nv"> </span><span class="s">about</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">policy</span><span class="nv"> </span><span class="s">document</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">defines</span><span class="nv"> </span><span class="s">this</span>
+<span class="w">      </span><span class="s">restriction,</span>
+
+<span class="w">      </span><span class="s">including</span><span class="nv"> </span><span class="s">policy</span><span class="nv"> </span><span class="s">metadata,</span><span class="nv"> </span><span class="s">type,</span><span class="nv"> </span><span class="s">scope,</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">specific</span><span class="nv"> </span><span class="s">rules</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">conditions</span>
+
+<span class="w">      </span><span class="s">that</span><span class="nv"> </span><span class="s">implement</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">access</span><span class="nv"> </span><span class="s">control.'</span>
 <span class="w">    </span><span class="nt">required</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">status</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">status</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The current status of the policy restriction, normalized to the caption</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">of the &lt;code&gt;status_id&lt;/code&gt; enum value.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">current</span><span class="nv"> </span><span class="s">status</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">policy</span><span class="nv"> </span><span class="s">restriction,</span><span class="nv"> </span><span class="s">normalized</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">the</span>
+<span class="w">      </span><span class="s">caption</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span>
+
+<span class="w">      </span><span class="s">&lt;code&gt;status_id&lt;/code&gt;</span><span class="nv"> </span><span class="s">enum</span><span class="nv"> </span><span class="s">value.'</span>
 <span class="w">  </span><span class="nt">status_id</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">status_id</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The normalized status identifier indicating the applicability of</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">this policy restriction.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">normalized</span><span class="nv"> </span><span class="s">status</span><span class="nv"> </span><span class="s">identifier</span><span class="nv"> </span><span class="s">indicating</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">applicability</span><span class="nv"> </span><span class="s">of</span>
+<span class="w">      </span><span class="s">this</span><span class="nv"> </span><span class="s">policy</span>
+
+<span class="w">      </span><span class="s">restriction.'</span>
 <span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">AdditionalRestrictionStatusIdEnum</span>
 <span class="w">    </span><span class="nt">recommended</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="nt">attributes</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">policy</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">policy</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Detailed information about the policy document that defines this</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">restriction, including policy metadata, type, scope, and the specific rules</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">or conditions that implement the access control.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'Detailed</span><span class="nv"> </span><span class="s">information</span><span class="nv"> </span><span class="s">about</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">policy</span><span class="nv"> </span><span class="s">document</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">defines</span><span class="nv"> </span><span class="s">this</span>
+<span class="w">      </span><span class="s">restriction,</span>
+
+<span class="w">      </span><span class="s">including</span><span class="nv"> </span><span class="s">policy</span><span class="nv"> </span><span class="s">metadata,</span><span class="nv"> </span><span class="s">type,</span><span class="nv"> </span><span class="s">scope,</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">specific</span><span class="nv"> </span><span class="s">rules</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">conditions</span>
+
+<span class="w">      </span><span class="s">that</span><span class="nv"> </span><span class="s">implement</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">access</span><span class="nv"> </span><span class="s">control.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Policy</span>
@@ -513,8 +567,10 @@
 <span class="w">    </span><span class="nt">required</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">status</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">status</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The current status of the policy restriction, normalized to the caption</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">of the &lt;code&gt;status_id&lt;/code&gt; enum value.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">current</span><span class="nv"> </span><span class="s">status</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">policy</span><span class="nv"> </span><span class="s">restriction,</span><span class="nv"> </span><span class="s">normalized</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">the</span>
+<span class="w">      </span><span class="s">caption</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span>
+
+<span class="w">      </span><span class="s">&lt;code&gt;status_id&lt;/code&gt;</span><span class="nv"> </span><span class="s">enum</span><span class="nv"> </span><span class="s">value.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Status</span>
@@ -541,8 +597,10 @@
 <span class="w">      </span><span class="nt">sibling</span><span class="p">:</span>
 <span class="w">        </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">sibling</span>
 <span class="w">        </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">status</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The normalized status identifier indicating the applicability of</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">this policy restriction.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">normalized</span><span class="nv"> </span><span class="s">status</span><span class="nv"> </span><span class="s">identifier</span><span class="nv"> </span><span class="s">indicating</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">applicability</span><span class="nv"> </span><span class="s">of</span>
+<span class="w">      </span><span class="s">this</span><span class="nv"> </span><span class="s">policy</span>
+
+<span class="w">      </span><span class="s">restriction.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Status ID</span>

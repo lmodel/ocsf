@@ -217,6 +217,15 @@
 </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="#in-subsets">
+<span class="md-ellipsis">
+      
+        In Subsets
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#aliases">
 <span class="md-ellipsis">
       
@@ -295,7 +304,10 @@
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
 <h1 id="class-ciscsc-deprecated">Class: CisCsc  <span style="color: red;"><strong> (DEPRECATED) </strong></span></h1>
-<p><em>The CIS Critical Security Control (CSC) contains information as defined by the Center for Internet Security Critical Security Control <a href="https://www.cisecurity.org/controls" target="_blank">(CIS CSC)</a>. Prioritized set of actions to protect your organization and data from cyber-attack vectors.</em></p>
+<p><em>The CIS Critical Security Control (CSC) contains information as defined by the</em></p>
+<p><em>Center for Internet Security Critical Security Control &lt;a target='_blank'</em></p>
+<p><em>href='<a href="https://www.cisecurity.org/controls">https://www.cisecurity.org/controls</a>'&gt;(CIS CSC). Prioritized set of</em></p>
+<p><em>actions to protect your organization and data from cyber-attack vectors.</em></p>
 <p>URI: <a href="https://w3id.org/lmodel/ocsf/CisCsc">ocsf:CisCsc</a></p>
 <pre class="mermaid"><code> classDiagram
     class CisCsc
@@ -332,7 +344,7 @@
 <tr>
 <td><a href="../control/">control</a></td>
 <td>1 <br/> <a href="../String/">String</a></td>
-<td>A Control is prescriptive, prioritized, and simplified set of best practices ...</td>
+<td>A Control is prescriptive, prioritized, and simplified set of best practices</td>
 <td>direct</td>
 </tr>
 <tr>
@@ -362,6 +374,10 @@
 </tr>
 </tbody>
 </table>
+<h2 id="in-subsets">In Subsets</h2>
+<ul>
+<li><a href="../Objects/">Objects</a></li>
+</ul>
 <h2 id="aliases">Aliases</h2>
 <ul>
 <li>CIS CSC</li>
@@ -395,11 +411,17 @@
 <h3 id="direct">Direct</h3>
 <details>
 <div class="highlight"><pre><span></span><code><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">CisCsc</span>
-<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The CIS Critical Security Control (CSC) contains information as defined</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">by the Center for Internet Security Critical Security Control &lt;a target='_blank'</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">href='https://www.cisecurity.org/controls'&gt;(CIS CSC)&lt;/a&gt;. Prioritized set of actions</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">to protect your organization and data from cyber-attack vectors.</span>
+<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">CIS</span><span class="nv"> </span><span class="s">Critical</span><span class="nv"> </span><span class="s">Security</span><span class="nv"> </span><span class="s">Control</span><span class="nv"> </span><span class="s">(CSC)</span><span class="nv"> </span><span class="s">contains</span><span class="nv"> </span><span class="s">information</span><span class="nv"> </span><span class="s">as</span><span class="nv"> </span><span class="s">defined</span>
+<span class="w">  </span><span class="s">by</span><span class="nv"> </span><span class="s">the</span>
+
+<span class="w">  </span><span class="s">Center</span><span class="nv"> </span><span class="s">for</span><span class="nv"> </span><span class="s">Internet</span><span class="nv"> </span><span class="s">Security</span><span class="nv"> </span><span class="s">Critical</span><span class="nv"> </span><span class="s">Security</span><span class="nv"> </span><span class="s">Control</span><span class="nv"> </span><span class="s">&lt;a</span><span class="nv"> </span><span class="s">target=</span><span class="se">''</span><span class="s">_blank</span><span class="se">''</span>
+
+<span class="w">  </span><span class="s">href=</span><span class="se">''</span><span class="s">https://www.cisecurity.org/controls</span><span class="se">''</span><span class="s">&gt;(CIS</span><span class="nv"> </span><span class="s">CSC)&lt;/a&gt;.</span><span class="nv"> </span><span class="s">Prioritized</span><span class="nv"> </span><span class="s">set</span><span class="nv"> </span><span class="s">of</span>
+
+<span class="w">  </span><span class="s">actions</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">protect</span><span class="nv"> </span><span class="s">your</span><span class="nv"> </span><span class="s">organization</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">data</span><span class="nv"> </span><span class="s">from</span><span class="nv"> </span><span class="s">cyber-attack</span><span class="nv"> </span><span class="s">vectors.'</span>
 <span class="nt">deprecated</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Use the cis_control object instead. (since 1.5.0)</span>
+<span class="nt">in_subset</span><span class="p">:</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">objects</span>
 <span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="nt">aliases</span><span class="p">:</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">CIS CSC</span>
@@ -420,11 +442,17 @@
 <h3 id="induced">Induced</h3>
 <details>
 <div class="highlight"><pre><span></span><code><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">CisCsc</span>
-<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The CIS Critical Security Control (CSC) contains information as defined</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">by the Center for Internet Security Critical Security Control &lt;a target='_blank'</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">href='https://www.cisecurity.org/controls'&gt;(CIS CSC)&lt;/a&gt;. Prioritized set of actions</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">to protect your organization and data from cyber-attack vectors.</span>
+<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">CIS</span><span class="nv"> </span><span class="s">Critical</span><span class="nv"> </span><span class="s">Security</span><span class="nv"> </span><span class="s">Control</span><span class="nv"> </span><span class="s">(CSC)</span><span class="nv"> </span><span class="s">contains</span><span class="nv"> </span><span class="s">information</span><span class="nv"> </span><span class="s">as</span><span class="nv"> </span><span class="s">defined</span>
+<span class="w">  </span><span class="s">by</span><span class="nv"> </span><span class="s">the</span>
+
+<span class="w">  </span><span class="s">Center</span><span class="nv"> </span><span class="s">for</span><span class="nv"> </span><span class="s">Internet</span><span class="nv"> </span><span class="s">Security</span><span class="nv"> </span><span class="s">Critical</span><span class="nv"> </span><span class="s">Security</span><span class="nv"> </span><span class="s">Control</span><span class="nv"> </span><span class="s">&lt;a</span><span class="nv"> </span><span class="s">target=</span><span class="se">''</span><span class="s">_blank</span><span class="se">''</span>
+
+<span class="w">  </span><span class="s">href=</span><span class="se">''</span><span class="s">https://www.cisecurity.org/controls</span><span class="se">''</span><span class="s">&gt;(CIS</span><span class="nv"> </span><span class="s">CSC)&lt;/a&gt;.</span><span class="nv"> </span><span class="s">Prioritized</span><span class="nv"> </span><span class="s">set</span><span class="nv"> </span><span class="s">of</span>
+
+<span class="w">  </span><span class="s">actions</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">protect</span><span class="nv"> </span><span class="s">your</span><span class="nv"> </span><span class="s">organization</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">data</span><span class="nv"> </span><span class="s">from</span><span class="nv"> </span><span class="s">cyber-attack</span><span class="nv"> </span><span class="s">vectors.'</span>
 <span class="nt">deprecated</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Use the cis_control object instead. (since 1.5.0)</span>
+<span class="nt">in_subset</span><span class="p">:</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">objects</span>
 <span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="nt">aliases</span><span class="p">:</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">CIS CSC</span>
@@ -440,9 +468,12 @@
 <span class="nt">attributes</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">control</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">control</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">A Control is prescriptive, prioritized, and simplified set of best</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">practices that one can use to strengthen their cybersecurity posture. e.g. AWS</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">SecurityHub Controls, CIS Controls.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'A</span><span class="nv"> </span><span class="s">Control</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">prescriptive,</span><span class="nv"> </span><span class="s">prioritized,</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">simplified</span><span class="nv"> </span><span class="s">set</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">best</span>
+<span class="w">      </span><span class="s">practices</span>
+
+<span class="w">      </span><span class="s">that</span><span class="nv"> </span><span class="s">one</span><span class="nv"> </span><span class="s">can</span><span class="nv"> </span><span class="s">use</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">strengthen</span><span class="nv"> </span><span class="s">their</span><span class="nv"> </span><span class="s">cybersecurity</span><span class="nv"> </span><span class="s">posture.</span><span class="nv"> </span><span class="s">e.g.</span><span class="nv"> </span><span class="s">AWS</span>
+
+<span class="w">      </span><span class="s">SecurityHub</span><span class="nv"> </span><span class="s">Controls,</span><span class="nv"> </span><span class="s">CIS</span><span class="nv"> </span><span class="s">Controls.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Security Control</span>

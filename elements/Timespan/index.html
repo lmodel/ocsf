@@ -236,6 +236,15 @@
 </nav>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="#in-subsets">
+<span class="md-ellipsis">
+      
+        In Subsets
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#aliases">
 <span class="md-ellipsis">
       
@@ -323,7 +332,12 @@
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
 <h1 id="class-timespan">Class: Timespan</h1>
-<p><em>The Time Span object represents different time period durations. If a timespan is fractional, i.e. crosses one period, e.g. a week and 3 days, more than one may be populated since each member is of integral type. In that case <code>type_id</code> if present should be set to <code>Other.</code><p>A timespan may also be defined by its time interval boundaries, <code>start_time</code> and <code>end_time</code>.</p></em></p>
+<p><em>The Time Span object represents different time period durations. If a timespan</em></p>
+<p><em>is fractional, i.e. crosses one period, e.g. a week and 3 days, more than one</em></p>
+<p><em>may be populated since each member is of integral type. In that case</em></p>
+<p><em><code>type_id</code> if present should be set to <code>Other.</code><p>A</p></em></p>
+<p><em>timespan may also be defined by its time interval boundaries,</em></p>
+<p><em><code>start_time</code> and <code>end_time</code>.</em></p>
 <p>URI: <a href="https://w3id.org/lmodel/ocsf/Timespan">ocsf:Timespan</a></p>
 <pre class="mermaid"><code> classDiagram
     class Timespan
@@ -523,6 +537,10 @@
 </tr>
 </tbody>
 </table>
+<h2 id="in-subsets">In Subsets</h2>
+<ul>
+<li><a href="../Objects/">Objects</a></li>
+</ul>
 <h2 id="aliases">Aliases</h2>
 <ul>
 <li>Time Span</li>
@@ -539,7 +557,15 @@
 <tbody>
 <tr>
 <td>ocsf_constraints</td>
-<td>{"at_least_one": ["duration", "duration_days", "duration_hours", "duration_mins", "duration_months", "duration_secs", "duration_weeks", "duration_years", "end_time", "start_time"]}</td>
+<td>{"at_least_one": ["duration", "duration_days", "duration_hours",</td>
+</tr>
+<tr>
+<td>"duration_mins", "duration_months", "duration_secs", "duration_weeks",</td>
+<td></td>
+</tr>
+<tr>
+<td>"duration_years", "end_time", "start_time"]}</td>
+<td></td>
 </tr>
 </tbody>
 </table>
@@ -574,14 +600,25 @@
 <span class="nt">annotations</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">ocsf_constraints</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ocsf_constraints</span>
-<span class="w">    </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="s">'{"at_least_one":</span><span class="nv"> </span><span class="s">["duration",</span><span class="nv"> </span><span class="s">"duration_days",</span><span class="nv"> </span><span class="s">"duration_hours",</span><span class="nv"> </span><span class="s">"duration_mins",</span>
-<span class="w">      </span><span class="s">"duration_months",</span><span class="nv"> </span><span class="s">"duration_secs",</span><span class="nv"> </span><span class="s">"duration_weeks",</span><span class="nv"> </span><span class="s">"duration_years",</span><span class="nv"> </span><span class="s">"end_time",</span>
-<span class="w">      </span><span class="s">"start_time"]}'</span>
-<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The Time Span object represents different time period durations. If a</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">timespan is fractional, i.e. crosses one period, e.g. a week and 3 days, more than</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">one may be populated since each member is of integral type. In that case &lt;code&gt;type_id&lt;/code&gt;</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">if present should be set to &lt;code&gt;Other.&lt;/code&gt;&lt;P&gt;A timespan may also be defined</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">by its time interval boundaries, &lt;code&gt;start_time&lt;/code&gt; and &lt;code&gt;end_time&lt;/code&gt;.</span>
+<span class="w">    </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="s">'{"at_least_one":</span><span class="nv"> </span><span class="s">["duration",</span><span class="nv"> </span><span class="s">"duration_days",</span><span class="nv"> </span><span class="s">"duration_hours",</span>
+
+<span class="w">      </span><span class="s">"duration_mins",</span><span class="nv"> </span><span class="s">"duration_months",</span><span class="nv"> </span><span class="s">"duration_secs",</span><span class="nv"> </span><span class="s">"duration_weeks",</span>
+
+<span class="w">      </span><span class="s">"duration_years",</span><span class="nv"> </span><span class="s">"end_time",</span><span class="nv"> </span><span class="s">"start_time"]}'</span>
+<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">Time</span><span class="nv"> </span><span class="s">Span</span><span class="nv"> </span><span class="s">object</span><span class="nv"> </span><span class="s">represents</span><span class="nv"> </span><span class="s">different</span><span class="nv"> </span><span class="s">time</span><span class="nv"> </span><span class="s">period</span><span class="nv"> </span><span class="s">durations.</span><span class="nv"> </span><span class="s">If</span>
+<span class="w">  </span><span class="s">a</span><span class="nv"> </span><span class="s">timespan</span>
+
+<span class="w">  </span><span class="s">is</span><span class="nv"> </span><span class="s">fractional,</span><span class="nv"> </span><span class="s">i.e.</span><span class="nv"> </span><span class="s">crosses</span><span class="nv"> </span><span class="s">one</span><span class="nv"> </span><span class="s">period,</span><span class="nv"> </span><span class="s">e.g.</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">week</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">3</span><span class="nv"> </span><span class="s">days,</span><span class="nv"> </span><span class="s">more</span><span class="nv"> </span><span class="s">than</span><span class="nv"> </span><span class="s">one</span>
+
+<span class="w">  </span><span class="s">may</span><span class="nv"> </span><span class="s">be</span><span class="nv"> </span><span class="s">populated</span><span class="nv"> </span><span class="s">since</span><span class="nv"> </span><span class="s">each</span><span class="nv"> </span><span class="s">member</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">integral</span><span class="nv"> </span><span class="s">type.</span><span class="nv"> </span><span class="s">In</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">case</span>
+
+<span class="w">  </span><span class="s">&lt;code&gt;type_id&lt;/code&gt;</span><span class="nv"> </span><span class="s">if</span><span class="nv"> </span><span class="s">present</span><span class="nv"> </span><span class="s">should</span><span class="nv"> </span><span class="s">be</span><span class="nv"> </span><span class="s">set</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">&lt;code&gt;Other.&lt;/code&gt;&lt;P&gt;A</span>
+
+<span class="w">  </span><span class="s">timespan</span><span class="nv"> </span><span class="s">may</span><span class="nv"> </span><span class="s">also</span><span class="nv"> </span><span class="s">be</span><span class="nv"> </span><span class="s">defined</span><span class="nv"> </span><span class="s">by</span><span class="nv"> </span><span class="s">its</span><span class="nv"> </span><span class="s">time</span><span class="nv"> </span><span class="s">interval</span><span class="nv"> </span><span class="s">boundaries,</span>
+
+<span class="w">  </span><span class="s">&lt;code&gt;start_time&lt;/code&gt;</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">&lt;code&gt;end_time&lt;/code&gt;.'</span>
+<span class="nt">in_subset</span><span class="p">:</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">objects</span>
 <span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="nt">aliases</span><span class="p">:</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Time Span</span>
@@ -692,7 +729,9 @@
 <span class="w">          </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">start_time</span>
 <span class="w">          </span><span class="nt">required</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'OCSF</span><span class="nv"> </span><span class="s">at_least_one:</span><span class="nv"> </span><span class="s">at</span><span class="nv"> </span><span class="s">least</span><span class="nv"> </span><span class="s">one</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">[</span><span class="se">''</span><span class="s">duration</span><span class="se">''</span><span class="s">,</span><span class="nv"> </span><span class="se">''</span><span class="s">duration_days</span><span class="se">''</span><span class="s">,</span>
+
 <span class="w">    </span><span class="se">''</span><span class="s">duration_hours</span><span class="se">''</span><span class="s">,</span><span class="nv"> </span><span class="se">''</span><span class="s">duration_mins</span><span class="se">''</span><span class="s">,</span><span class="nv"> </span><span class="se">''</span><span class="s">duration_months</span><span class="se">''</span><span class="s">,</span><span class="nv"> </span><span class="se">''</span><span class="s">duration_secs</span><span class="se">''</span><span class="s">,</span>
+
 <span class="w">    </span><span class="se">''</span><span class="s">duration_weeks</span><span class="se">''</span><span class="s">,</span><span class="nv"> </span><span class="se">''</span><span class="s">duration_years</span><span class="se">''</span><span class="s">,</span><span class="nv"> </span><span class="se">''</span><span class="s">end_time</span><span class="se">''</span><span class="s">,</span><span class="nv"> </span><span class="se">''</span><span class="s">start_time</span><span class="se">''</span><span class="s">]</span><span class="nv"> </span><span class="s">must</span><span class="nv"> </span><span class="s">be</span>
 <span class="w">    </span><span class="s">set.'</span>
 </code></pre></div>
@@ -703,14 +742,25 @@
 <span class="nt">annotations</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">ocsf_constraints</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ocsf_constraints</span>
-<span class="w">    </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="s">'{"at_least_one":</span><span class="nv"> </span><span class="s">["duration",</span><span class="nv"> </span><span class="s">"duration_days",</span><span class="nv"> </span><span class="s">"duration_hours",</span><span class="nv"> </span><span class="s">"duration_mins",</span>
-<span class="w">      </span><span class="s">"duration_months",</span><span class="nv"> </span><span class="s">"duration_secs",</span><span class="nv"> </span><span class="s">"duration_weeks",</span><span class="nv"> </span><span class="s">"duration_years",</span><span class="nv"> </span><span class="s">"end_time",</span>
-<span class="w">      </span><span class="s">"start_time"]}'</span>
-<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The Time Span object represents different time period durations. If a</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">timespan is fractional, i.e. crosses one period, e.g. a week and 3 days, more than</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">one may be populated since each member is of integral type. In that case &lt;code&gt;type_id&lt;/code&gt;</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">if present should be set to &lt;code&gt;Other.&lt;/code&gt;&lt;P&gt;A timespan may also be defined</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">by its time interval boundaries, &lt;code&gt;start_time&lt;/code&gt; and &lt;code&gt;end_time&lt;/code&gt;.</span>
+<span class="w">    </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="s">'{"at_least_one":</span><span class="nv"> </span><span class="s">["duration",</span><span class="nv"> </span><span class="s">"duration_days",</span><span class="nv"> </span><span class="s">"duration_hours",</span>
+
+<span class="w">      </span><span class="s">"duration_mins",</span><span class="nv"> </span><span class="s">"duration_months",</span><span class="nv"> </span><span class="s">"duration_secs",</span><span class="nv"> </span><span class="s">"duration_weeks",</span>
+
+<span class="w">      </span><span class="s">"duration_years",</span><span class="nv"> </span><span class="s">"end_time",</span><span class="nv"> </span><span class="s">"start_time"]}'</span>
+<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">Time</span><span class="nv"> </span><span class="s">Span</span><span class="nv"> </span><span class="s">object</span><span class="nv"> </span><span class="s">represents</span><span class="nv"> </span><span class="s">different</span><span class="nv"> </span><span class="s">time</span><span class="nv"> </span><span class="s">period</span><span class="nv"> </span><span class="s">durations.</span><span class="nv"> </span><span class="s">If</span>
+<span class="w">  </span><span class="s">a</span><span class="nv"> </span><span class="s">timespan</span>
+
+<span class="w">  </span><span class="s">is</span><span class="nv"> </span><span class="s">fractional,</span><span class="nv"> </span><span class="s">i.e.</span><span class="nv"> </span><span class="s">crosses</span><span class="nv"> </span><span class="s">one</span><span class="nv"> </span><span class="s">period,</span><span class="nv"> </span><span class="s">e.g.</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">week</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">3</span><span class="nv"> </span><span class="s">days,</span><span class="nv"> </span><span class="s">more</span><span class="nv"> </span><span class="s">than</span><span class="nv"> </span><span class="s">one</span>
+
+<span class="w">  </span><span class="s">may</span><span class="nv"> </span><span class="s">be</span><span class="nv"> </span><span class="s">populated</span><span class="nv"> </span><span class="s">since</span><span class="nv"> </span><span class="s">each</span><span class="nv"> </span><span class="s">member</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">integral</span><span class="nv"> </span><span class="s">type.</span><span class="nv"> </span><span class="s">In</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">case</span>
+
+<span class="w">  </span><span class="s">&lt;code&gt;type_id&lt;/code&gt;</span><span class="nv"> </span><span class="s">if</span><span class="nv"> </span><span class="s">present</span><span class="nv"> </span><span class="s">should</span><span class="nv"> </span><span class="s">be</span><span class="nv"> </span><span class="s">set</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">&lt;code&gt;Other.&lt;/code&gt;&lt;P&gt;A</span>
+
+<span class="w">  </span><span class="s">timespan</span><span class="nv"> </span><span class="s">may</span><span class="nv"> </span><span class="s">also</span><span class="nv"> </span><span class="s">be</span><span class="nv"> </span><span class="s">defined</span><span class="nv"> </span><span class="s">by</span><span class="nv"> </span><span class="s">its</span><span class="nv"> </span><span class="s">time</span><span class="nv"> </span><span class="s">interval</span><span class="nv"> </span><span class="s">boundaries,</span>
+
+<span class="w">  </span><span class="s">&lt;code&gt;start_time&lt;/code&gt;</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">&lt;code&gt;end_time&lt;/code&gt;.'</span>
+<span class="nt">in_subset</span><span class="p">:</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">objects</span>
 <span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="nt">aliases</span><span class="p">:</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Time Span</span>
@@ -1087,7 +1137,9 @@
 <span class="w">          </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">start_time</span>
 <span class="w">          </span><span class="nt">required</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'OCSF</span><span class="nv"> </span><span class="s">at_least_one:</span><span class="nv"> </span><span class="s">at</span><span class="nv"> </span><span class="s">least</span><span class="nv"> </span><span class="s">one</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">[</span><span class="se">''</span><span class="s">duration</span><span class="se">''</span><span class="s">,</span><span class="nv"> </span><span class="se">''</span><span class="s">duration_days</span><span class="se">''</span><span class="s">,</span>
+
 <span class="w">    </span><span class="se">''</span><span class="s">duration_hours</span><span class="se">''</span><span class="s">,</span><span class="nv"> </span><span class="se">''</span><span class="s">duration_mins</span><span class="se">''</span><span class="s">,</span><span class="nv"> </span><span class="se">''</span><span class="s">duration_months</span><span class="se">''</span><span class="s">,</span><span class="nv"> </span><span class="se">''</span><span class="s">duration_secs</span><span class="se">''</span><span class="s">,</span>
+
 <span class="w">    </span><span class="se">''</span><span class="s">duration_weeks</span><span class="se">''</span><span class="s">,</span><span class="nv"> </span><span class="se">''</span><span class="s">duration_years</span><span class="se">''</span><span class="s">,</span><span class="nv"> </span><span class="se">''</span><span class="s">end_time</span><span class="se">''</span><span class="s">,</span><span class="nv"> </span><span class="se">''</span><span class="s">start_time</span><span class="se">''</span><span class="s">]</span><span class="nv"> </span><span class="s">must</span><span class="nv"> </span><span class="s">be</span>
 <span class="w">    </span><span class="s">set.'</span>
 </code></pre></div>

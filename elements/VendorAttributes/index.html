@@ -217,6 +217,15 @@
 </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="#in-subsets">
+<span class="md-ellipsis">
+      
+        In Subsets
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#aliases">
 <span class="md-ellipsis">
       
@@ -295,7 +304,12 @@
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
 <h1 id="class-vendorattributes">Class: VendorAttributes</h1>
-<p><em>The Vendor Attributes object can be used to represent values of attributes populated by the Vendor/Finding Provider. It can help distinguish between the vendor-provided values and consumer-updated values, of key attributes like <code>severity_id</code>.<br/>The original finding producer should not populate this object. It should be populated by consuming systems that support data mutability.</em></p>
+<p><em>The Vendor Attributes object can be used to represent values of attributes</em></p>
+<p><em>populated by the Vendor/Finding Provider. It can help distinguish between the</em></p>
+<p><em>vendor-provided values and consumer-updated values, of key attributes like</em></p>
+<p><em><code>severity_id</code>.<br/>The original finding producer should not populate</em></p>
+<p><em>this object. It should be populated by consuming systems that support data</em></p>
+<p><em>mutability.</em></p>
 <p>URI: <a href="https://w3id.org/lmodel/ocsf/VendorAttributes">ocsf:VendorAttributes</a></p>
 <pre class="mermaid"><code> classDiagram
     class VendorAttributes
@@ -413,6 +427,10 @@
 </tr>
 </tbody>
 </table>
+<h2 id="in-subsets">In Subsets</h2>
+<ul>
+<li><a href="../Objects/">Objects</a></li>
+</ul>
 <h2 id="aliases">Aliases</h2>
 <ul>
 <li>Vendor Attributes</li>
@@ -446,11 +464,19 @@
 <h3 id="direct">Direct</h3>
 <details>
 <div class="highlight"><pre><span></span><code><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">VendorAttributes</span>
-<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The Vendor Attributes object can be used to represent values of attributes</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">populated by the Vendor/Finding Provider. It can help distinguish between the vendor-provided</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">values and consumer-updated values, of key attributes like &lt;code&gt;severity_id&lt;/code&gt;.&lt;br&gt;The</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">original finding producer should not populate this object. It should be populated</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">by consuming systems that support data mutability.</span>
+<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">Vendor</span><span class="nv"> </span><span class="s">Attributes</span><span class="nv"> </span><span class="s">object</span><span class="nv"> </span><span class="s">can</span><span class="nv"> </span><span class="s">be</span><span class="nv"> </span><span class="s">used</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">represent</span><span class="nv"> </span><span class="s">values</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">attributes</span>
+
+<span class="w">  </span><span class="s">populated</span><span class="nv"> </span><span class="s">by</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">Vendor/Finding</span><span class="nv"> </span><span class="s">Provider.</span><span class="nv"> </span><span class="s">It</span><span class="nv"> </span><span class="s">can</span><span class="nv"> </span><span class="s">help</span><span class="nv"> </span><span class="s">distinguish</span><span class="nv"> </span><span class="s">between</span><span class="nv"> </span><span class="s">the</span>
+
+<span class="w">  </span><span class="s">vendor-provided</span><span class="nv"> </span><span class="s">values</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">consumer-updated</span><span class="nv"> </span><span class="s">values,</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">key</span><span class="nv"> </span><span class="s">attributes</span><span class="nv"> </span><span class="s">like</span>
+
+<span class="w">  </span><span class="s">&lt;code&gt;severity_id&lt;/code&gt;.&lt;br&gt;The</span><span class="nv"> </span><span class="s">original</span><span class="nv"> </span><span class="s">finding</span><span class="nv"> </span><span class="s">producer</span><span class="nv"> </span><span class="s">should</span><span class="nv"> </span><span class="s">not</span><span class="nv"> </span><span class="s">populate</span>
+
+<span class="w">  </span><span class="s">this</span><span class="nv"> </span><span class="s">object.</span><span class="nv"> </span><span class="s">It</span><span class="nv"> </span><span class="s">should</span><span class="nv"> </span><span class="s">be</span><span class="nv"> </span><span class="s">populated</span><span class="nv"> </span><span class="s">by</span><span class="nv"> </span><span class="s">consuming</span><span class="nv"> </span><span class="s">systems</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">support</span><span class="nv"> </span><span class="s">data</span>
+
+<span class="w">  </span><span class="s">mutability.'</span>
+<span class="nt">in_subset</span><span class="p">:</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">objects</span>
 <span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="nt">aliases</span><span class="p">:</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Vendor Attributes</span>
@@ -461,9 +487,12 @@
 <span class="nt">slot_usage</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">severity</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">severity</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The finding severity, as reported by the Vendor (Finding Provider).</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">The value should be normalized to the caption of the &lt;code&gt;severity_id&lt;/code&gt;</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">value. In the case of 'Other', it is defined by the source.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">finding</span><span class="nv"> </span><span class="s">severity,</span><span class="nv"> </span><span class="s">as</span><span class="nv"> </span><span class="s">reported</span><span class="nv"> </span><span class="s">by</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">Vendor</span><span class="nv"> </span><span class="s">(Finding</span><span class="nv"> </span><span class="s">Provider).</span>
+<span class="w">      </span><span class="s">The</span><span class="nv"> </span><span class="s">value</span>
+
+<span class="w">      </span><span class="s">should</span><span class="nv"> </span><span class="s">be</span><span class="nv"> </span><span class="s">normalized</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">caption</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">&lt;code&gt;severity_id&lt;/code&gt;</span><span class="nv"> </span><span class="s">value.</span><span class="nv"> </span><span class="s">In</span>
+
+<span class="w">      </span><span class="s">the</span><span class="nv"> </span><span class="s">case</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="se">''</span><span class="s">Other</span><span class="se">''</span><span class="s">,</span><span class="nv"> </span><span class="s">it</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">defined</span><span class="nv"> </span><span class="s">by</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">source.'</span>
 <span class="w">  </span><span class="nt">severity_id</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">severity_id</span>
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The finding severity ID, as reported by the Vendor (Finding Provider).</span>
@@ -472,11 +501,19 @@
 <h3 id="induced">Induced</h3>
 <details>
 <div class="highlight"><pre><span></span><code><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">VendorAttributes</span>
-<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The Vendor Attributes object can be used to represent values of attributes</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">populated by the Vendor/Finding Provider. It can help distinguish between the vendor-provided</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">values and consumer-updated values, of key attributes like &lt;code&gt;severity_id&lt;/code&gt;.&lt;br&gt;The</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">original finding producer should not populate this object. It should be populated</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">by consuming systems that support data mutability.</span>
+<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">Vendor</span><span class="nv"> </span><span class="s">Attributes</span><span class="nv"> </span><span class="s">object</span><span class="nv"> </span><span class="s">can</span><span class="nv"> </span><span class="s">be</span><span class="nv"> </span><span class="s">used</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">represent</span><span class="nv"> </span><span class="s">values</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">attributes</span>
+
+<span class="w">  </span><span class="s">populated</span><span class="nv"> </span><span class="s">by</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">Vendor/Finding</span><span class="nv"> </span><span class="s">Provider.</span><span class="nv"> </span><span class="s">It</span><span class="nv"> </span><span class="s">can</span><span class="nv"> </span><span class="s">help</span><span class="nv"> </span><span class="s">distinguish</span><span class="nv"> </span><span class="s">between</span><span class="nv"> </span><span class="s">the</span>
+
+<span class="w">  </span><span class="s">vendor-provided</span><span class="nv"> </span><span class="s">values</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">consumer-updated</span><span class="nv"> </span><span class="s">values,</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">key</span><span class="nv"> </span><span class="s">attributes</span><span class="nv"> </span><span class="s">like</span>
+
+<span class="w">  </span><span class="s">&lt;code&gt;severity_id&lt;/code&gt;.&lt;br&gt;The</span><span class="nv"> </span><span class="s">original</span><span class="nv"> </span><span class="s">finding</span><span class="nv"> </span><span class="s">producer</span><span class="nv"> </span><span class="s">should</span><span class="nv"> </span><span class="s">not</span><span class="nv"> </span><span class="s">populate</span>
+
+<span class="w">  </span><span class="s">this</span><span class="nv"> </span><span class="s">object.</span><span class="nv"> </span><span class="s">It</span><span class="nv"> </span><span class="s">should</span><span class="nv"> </span><span class="s">be</span><span class="nv"> </span><span class="s">populated</span><span class="nv"> </span><span class="s">by</span><span class="nv"> </span><span class="s">consuming</span><span class="nv"> </span><span class="s">systems</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">support</span><span class="nv"> </span><span class="s">data</span>
+
+<span class="w">  </span><span class="s">mutability.'</span>
+<span class="nt">in_subset</span><span class="p">:</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">objects</span>
 <span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="nt">aliases</span><span class="p">:</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Vendor Attributes</span>
@@ -484,18 +521,24 @@
 <span class="nt">slot_usage</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">severity</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">severity</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The finding severity, as reported by the Vendor (Finding Provider).</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">The value should be normalized to the caption of the &lt;code&gt;severity_id&lt;/code&gt;</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">value. In the case of 'Other', it is defined by the source.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">finding</span><span class="nv"> </span><span class="s">severity,</span><span class="nv"> </span><span class="s">as</span><span class="nv"> </span><span class="s">reported</span><span class="nv"> </span><span class="s">by</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">Vendor</span><span class="nv"> </span><span class="s">(Finding</span><span class="nv"> </span><span class="s">Provider).</span>
+<span class="w">      </span><span class="s">The</span><span class="nv"> </span><span class="s">value</span>
+
+<span class="w">      </span><span class="s">should</span><span class="nv"> </span><span class="s">be</span><span class="nv"> </span><span class="s">normalized</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">caption</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">&lt;code&gt;severity_id&lt;/code&gt;</span><span class="nv"> </span><span class="s">value.</span><span class="nv"> </span><span class="s">In</span>
+
+<span class="w">      </span><span class="s">the</span><span class="nv"> </span><span class="s">case</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="se">''</span><span class="s">Other</span><span class="se">''</span><span class="s">,</span><span class="nv"> </span><span class="s">it</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">defined</span><span class="nv"> </span><span class="s">by</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">source.'</span>
 <span class="w">  </span><span class="nt">severity_id</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">severity_id</span>
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The finding severity ID, as reported by the Vendor (Finding Provider).</span>
 <span class="nt">attributes</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">severity</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">severity</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The finding severity, as reported by the Vendor (Finding Provider).</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">The value should be normalized to the caption of the &lt;code&gt;severity_id&lt;/code&gt;</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">value. In the case of 'Other', it is defined by the source.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">finding</span><span class="nv"> </span><span class="s">severity,</span><span class="nv"> </span><span class="s">as</span><span class="nv"> </span><span class="s">reported</span><span class="nv"> </span><span class="s">by</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">Vendor</span><span class="nv"> </span><span class="s">(Finding</span><span class="nv"> </span><span class="s">Provider).</span>
+<span class="w">      </span><span class="s">The</span><span class="nv"> </span><span class="s">value</span>
+
+<span class="w">      </span><span class="s">should</span><span class="nv"> </span><span class="s">be</span><span class="nv"> </span><span class="s">normalized</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">caption</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">&lt;code&gt;severity_id&lt;/code&gt;</span><span class="nv"> </span><span class="s">value.</span><span class="nv"> </span><span class="s">In</span>
+
+<span class="w">      </span><span class="s">the</span><span class="nv"> </span><span class="s">case</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="se">''</span><span class="s">Other</span><span class="se">''</span><span class="s">,</span><span class="nv"> </span><span class="s">it</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">defined</span><span class="nv"> </span><span class="s">by</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">source.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Severity</span>

@@ -519,7 +519,13 @@
 
 
 <h1 id="slot-sender_mailbox">Slot: sender_mailbox</h1>
-<p><em>The human readable email address of the system or server that actually transmitted the email message, extracted from the email headers per RFC 5322. This differs from the <code>from_mailbox</code> field, which shows the message author. The sender mailbox field is most commonly used when multiple addresses appear in the <code> from_mailboxes </code> field, or when the transmitting system is different from the message author (such as when sending on behalf of someone else).</em></p>
+<p><em>The human readable email address of the system or server that actually</em></p>
+<p><em>transmitted the email message, extracted from the email headers per RFC 5322.</em></p>
+<p><em>This differs from the <code>from_mailbox</code> field, which shows the message</em></p>
+<p><em>author. The sender mailbox field is most commonly used when multiple addresses</em></p>
+<p><em>appear in the <code> from_mailboxes </code> field, or when the transmitting</em></p>
+<p><em>system is different from the message author (such as when sending on behalf of</em></p>
+<p><em>someone else).</em></p>
 <p>URI: <a href="https://w3id.org/lmodel/ocsf/sender_mailbox">ocsf:sender_mailbox</a>
 Alias: sender_mailbox</p>
 <!-- no inheritance hierarchy -->
@@ -536,7 +542,7 @@ Alias: sender_mailbox</p>
 <tbody>
 <tr>
 <td><a href="../Email/">Email</a></td>
-<td>The Email object describes the email metadata such as sender, recipients, and...</td>
+<td>The Email object describes the email metadata such as sender, recipients, and</td>
 <td>no</td>
 </tr>
 </tbody>
@@ -615,12 +621,19 @@ Alias: sender_mailbox</p>
 <h2 id="linkml-source">LinkML Source</h2>
 <details>
 <div class="highlight"><pre><span></span><code><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">sender_mailbox</span>
-<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The human readable email address of the system or server that actually</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">transmitted the email message, extracted from the email headers per RFC 5322. This</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">differs from the &lt;code&gt;from_mailbox&lt;/code&gt; field, which shows the message author.</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">The sender mailbox field is most commonly used when multiple addresses appear in</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">the &lt;code&gt; from_mailboxes &lt;/code&gt; field, or when the transmitting system is different</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">from the message author (such as when sending on behalf of someone else).</span>
+<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;The</span><span class="nv"> </span><span class="s">human</span><span class="nv"> </span><span class="s">readable</span><span class="nv"> </span><span class="s">email</span><span class="nv"> </span><span class="s">address</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">system</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">server</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">actually</span>
+
+<span class="w">  </span><span class="s">transmitted</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">email</span><span class="nv"> </span><span class="s">message,</span><span class="nv"> </span><span class="s">extracted</span><span class="nv"> </span><span class="s">from</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">email</span><span class="nv"> </span><span class="s">headers</span><span class="nv"> </span><span class="s">per</span><span class="nv"> </span><span class="s">RFC</span><span class="nv"> </span><span class="s">5322.</span>
+
+<span class="w">  </span><span class="s">This</span><span class="nv"> </span><span class="s">differs</span><span class="nv"> </span><span class="s">from</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">&lt;code&gt;from_mailbox&lt;/code&gt;</span><span class="nv"> </span><span class="s">field,</span><span class="nv"> </span><span class="s">which</span><span class="nv"> </span><span class="s">shows</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">message</span>
+
+<span class="w">  </span><span class="s">author.</span><span class="nv"> </span><span class="s">The</span><span class="nv"> </span><span class="s">sender</span><span class="nv"> </span><span class="s">mailbox</span><span class="nv"> </span><span class="s">field</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">most</span><span class="nv"> </span><span class="s">commonly</span><span class="nv"> </span><span class="s">used</span><span class="nv"> </span><span class="s">when</span><span class="nv"> </span><span class="s">multiple</span><span class="nv"> </span><span class="s">addresses</span>
+
+<span class="w">  </span><span class="s">appear</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">&lt;code&gt;</span><span class="nv"> </span><span class="s">from_mailboxes</span><span class="nv"> </span><span class="s">&lt;/code&gt;</span><span class="nv"> </span><span class="s">field,</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">when</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">transmitting</span>
+
+<span class="w">  </span><span class="s">system</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">different</span><span class="nv"> </span><span class="s">from</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">message</span><span class="nv"> </span><span class="s">author</span><span class="nv"> </span><span class="s">(such</span><span class="nv"> </span><span class="s">as</span><span class="nv"> </span><span class="s">when</span><span class="nv"> </span><span class="s">sending</span><span class="nv"> </span><span class="s">on</span><span class="nv"> </span><span class="s">behalf</span><span class="nv"> </span><span class="s">of</span>
+
+<span class="w">  </span><span class="s">someone</span><span class="nv"> </span><span class="s">else).&#39;</span>
 <span class="nt">notes</span><span class="p">:</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">RFC 5322 — https://www.rfc-editor.org/rfc/rfc5322</span>
 <span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>

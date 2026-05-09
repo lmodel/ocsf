@@ -519,7 +519,9 @@
 
 
 <h1 id="slot-mac_vendor">Slot: mac_vendor</h1>
-<p><em>The vendor or manufacturer of the network interface controller (NIC) identified from the MAC address. For example: <code>Apple, Inc.</code>, <code>Intel Corporate</code>.</em></p>
+<p><em>The vendor or manufacturer of the network interface controller (NIC) identified</em></p>
+<p><em>from the MAC address. For example: <code>Apple, Inc.</code>, <code>Intel</em></p>
+<p><em>Corporate</code>.</em></p>
 <p>URI: <a href="https://w3id.org/lmodel/ocsf/mac_vendor">ocsf:mac_vendor</a>
 Alias: mac_vendor</p>
 <!-- no inheritance hierarchy -->
@@ -535,8 +537,13 @@ Alias: mac_vendor</p>
 </thead>
 <tbody>
 <tr>
-<td><a href="../Device/">Device</a></td>
-<td>The Device object represents an addressable computer system or host, which is...</td>
+<td><a href="../NetworkEndpoint/">NetworkEndpoint</a></td>
+<td>The Network Endpoint object describes characteristics of a network endpoint</td>
+<td>no</td>
+</tr>
+<tr>
+<td><a href="../NetworkProxy/">NetworkProxy</a></td>
+<td>The network proxy endpoint object describes a proxy server, which acts as an</td>
 <td>no</td>
 </tr>
 <tr>
@@ -545,13 +552,8 @@ Alias: mac_vendor</p>
 <td>yes</td>
 </tr>
 <tr>
-<td><a href="../NetworkProxy/">NetworkProxy</a></td>
-<td>The network proxy endpoint object describes a proxy server, which acts as an ...</td>
-<td>no</td>
-</tr>
-<tr>
-<td><a href="../NetworkEndpoint/">NetworkEndpoint</a></td>
-<td>The Network Endpoint object describes characteristics of a network endpoint</td>
+<td><a href="../Device/">Device</a></td>
+<td>The Device object represents an addressable computer system or host, which is</td>
 <td>no</td>
 </tr>
 </tbody>
@@ -601,7 +603,8 @@ Alias: mac_vendor</p>
 </ul>
 <h2 id="notes">Notes</h2>
 <ul>
-<li>IEEE Registration Authority — <a href="https://standards.ieee.org/products-programs/regauth/">https://standards.ieee.org/products-programs/regauth/</a></li>
+<li>IEEE Registration Authority —
+<a href="https://standards.ieee.org/products-programs/regauth/">https://standards.ieee.org/products-programs/regauth/</a></li>
 </ul>
 <h2 id="identifier-and-mapping-information">Identifier and Mapping Information</h2>
 <h3 id="schema-source">Schema Source</h3>
@@ -631,10 +634,15 @@ Alias: mac_vendor</p>
 <details>
 <div class="highlight"><pre><span></span><code><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mac_vendor</span>
 <span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;The</span><span class="nv"> </span><span class="s">vendor</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">manufacturer</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">network</span><span class="nv"> </span><span class="s">interface</span><span class="nv"> </span><span class="s">controller</span><span class="nv"> </span><span class="s">(NIC)</span>
-<span class="w">  </span><span class="s">identified</span><span class="nv"> </span><span class="s">from</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">MAC</span><span class="nv"> </span><span class="s">address.</span><span class="nv"> </span><span class="s">For</span><span class="nv"> </span><span class="s">example:</span><span class="nv"> </span><span class="s">&lt;code&gt;Apple,</span><span class="nv"> </span><span class="s">Inc.&lt;/code&gt;,</span><span class="nv"> </span><span class="s">&lt;code&gt;Intel</span>
+<span class="w">  </span><span class="s">identified</span>
+
+<span class="w">  </span><span class="s">from</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">MAC</span><span class="nv"> </span><span class="s">address.</span><span class="nv"> </span><span class="s">For</span><span class="nv"> </span><span class="s">example:</span><span class="nv"> </span><span class="s">&lt;code&gt;Apple,</span><span class="nv"> </span><span class="s">Inc.&lt;/code&gt;,</span><span class="nv"> </span><span class="s">&lt;code&gt;Intel</span>
+
 <span class="w">  </span><span class="s">Corporate&lt;/code&gt;.&#39;</span>
 <span class="nt">notes</span><span class="p">:</span>
-<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">IEEE Registration Authority — https://standards.ieee.org/products-programs/regauth/</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;IEEE</span><span class="nv"> </span><span class="s">Registration</span><span class="nv"> </span><span class="s">Authority</span><span class="nv"> </span><span class="s">—</span>
+
+<span class="w">  </span><span class="s">https://standards.ieee.org/products-programs/regauth/&#39;</span>
 <span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="nt">see_also</span><span class="p">:</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://standards.ieee.org/products-programs/regauth/</span>

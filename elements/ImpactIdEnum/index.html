@@ -447,7 +447,10 @@
 
 
 <h1 id="enum-impactidenum">Enum: ImpactIdEnum</h1>
-<p><em>The normalized impact of the incident or finding. Per NIST, this is the magnitude of harm that can be expected to result from the consequences of unauthorized disclosure, modification, destruction, or loss of information or information system availability.</em></p>
+<p><em>The normalized impact of the incident or finding. Per NIST, this is the</em></p>
+<p><em>magnitude of harm that can be expected to result from the consequences of</em></p>
+<p><em>unauthorized disclosure, modification, destruction, or loss of information or</em></p>
+<p><em>information system availability.</em></p>
 <p>URI: <a href="https://w3id.org/lmodel/ocsf/ImpactIdEnum">ocsf:ImpactIdEnum</a></p>
 <h2 id="permissible-values">Permissible Values</h2>
 <table>
@@ -514,10 +517,14 @@
 <h2 id="linkml-source">LinkML Source</h2>
 <details>
 <div class="highlight"><pre><span></span><code><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ImpactIdEnum</span>
-<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The normalized impact of the incident or finding. Per NIST, this is the</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">magnitude of harm that can be expected to result from the consequences of unauthorized</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">disclosure, modification, destruction, or loss of information or information system</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">availability.</span>
+<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;The</span><span class="nv"> </span><span class="s">normalized</span><span class="nv"> </span><span class="s">impact</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">incident</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">finding.</span><span class="nv"> </span><span class="s">Per</span><span class="nv"> </span><span class="s">NIST,</span><span class="nv"> </span><span class="s">this</span><span class="nv"> </span><span class="s">is</span>
+<span class="w">  </span><span class="s">the</span>
+
+<span class="w">  </span><span class="s">magnitude</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">harm</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">can</span><span class="nv"> </span><span class="s">be</span><span class="nv"> </span><span class="s">expected</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">result</span><span class="nv"> </span><span class="s">from</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">consequences</span><span class="nv"> </span><span class="s">of</span>
+
+<span class="w">  </span><span class="s">unauthorized</span><span class="nv"> </span><span class="s">disclosure,</span><span class="nv"> </span><span class="s">modification,</span><span class="nv"> </span><span class="s">destruction,</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">loss</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">information</span><span class="nv"> </span><span class="s">or</span>
+
+<span class="w">  </span><span class="s">information</span><span class="nv"> </span><span class="s">system</span><span class="nv"> </span><span class="s">availability.&#39;</span>
 <span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="nt">rank</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1000</span>
 <span class="nt">permissible_values</span><span class="p">:</span>
@@ -573,8 +580,10 @@
 <span class="w">        </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Critical</span>
 <span class="w">  </span><span class="nt">OTHER</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">text</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">OTHER</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The impact is not mapped. See the &lt;code&gt;impact&lt;/code&gt; attribute,</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">which contains a data source specific value.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;The</span><span class="nv"> </span><span class="s">impact</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">not</span><span class="nv"> </span><span class="s">mapped.</span><span class="nv"> </span><span class="s">See</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">&lt;code&gt;impact&lt;/code&gt;</span><span class="nv"> </span><span class="s">attribute,</span>
+<span class="w">      </span><span class="s">which</span><span class="nv"> </span><span class="s">contains</span>
+
+<span class="w">      </span><span class="s">a</span><span class="nv"> </span><span class="s">data</span><span class="nv"> </span><span class="s">source</span><span class="nv"> </span><span class="s">specific</span><span class="nv"> </span><span class="s">value.&#39;</span>
 <span class="w">    </span><span class="nt">annotations</span><span class="p">:</span>
 <span class="w">      </span><span class="nt">ocsf_uid</span><span class="p">:</span>
 <span class="w">        </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ocsf_uid</span>

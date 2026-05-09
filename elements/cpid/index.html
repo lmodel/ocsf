@@ -530,7 +530,8 @@
 
 
 <h1 id="slot-cpid">Slot: cpid</h1>
-<p><em>A unique process identifier that can be assigned deterministically by multiple system data producers.</em></p>
+<p><em>A unique process identifier that can be assigned deterministically by multiple</em></p>
+<p><em>system data producers.</em></p>
 <p>URI: <a href="https://w3id.org/lmodel/ocsf/cpid">ocsf:cpid</a>
 Alias: cpid</p>
 <!-- no inheritance hierarchy -->
@@ -546,18 +547,8 @@ Alias: cpid</p>
 </thead>
 <tbody>
 <tr>
-<td><a href="../ProcessEntity/">ProcessEntity</a></td>
-<td>The Process Entity object provides critical fields for referencing a process</td>
-<td>yes</td>
-</tr>
-<tr>
 <td><a href="../MacosProcess/">MacosProcess</a></td>
 <td>Extends the process object to add macOS specific fields</td>
-<td>no</td>
-</tr>
-<tr>
-<td><a href="../Process/">Process</a></td>
-<td>The Process object describes a running instance of a launched program</td>
 <td>no</td>
 </tr>
 <tr>
@@ -566,9 +557,19 @@ Alias: cpid</p>
 <td>no</td>
 </tr>
 <tr>
+<td><a href="../Process/">Process</a></td>
+<td>The Process object describes a running instance of a launched program</td>
+<td>no</td>
+</tr>
+<tr>
 <td><a href="../WindowsProcess/">WindowsProcess</a></td>
 <td>Extends the process object to add Windows specific fields</td>
 <td>no</td>
+</tr>
+<tr>
+<td><a href="../ProcessEntity/">ProcessEntity</a></td>
+<td>The Process Entity object provides critical fields for referencing a process</td>
+<td>yes</td>
 </tr>
 </tbody>
 </table>
@@ -617,7 +618,8 @@ Alias: cpid</p>
 </ul>
 <h2 id="notes">Notes</h2>
 <ul>
-<li>OCSF Common Process Identifier (CPID) Specification — <a href="https://github.com/ocsf/common-process-id">https://github.com/ocsf/common-process-id</a></li>
+<li>OCSF Common Process Identifier (CPID) Specification —
+<a href="https://github.com/ocsf/common-process-id">https://github.com/ocsf/common-process-id</a></li>
 </ul>
 <h2 id="identifier-and-mapping-information">Identifier and Mapping Information</h2>
 <h3 id="annotations">Annotations</h3>
@@ -665,10 +667,14 @@ Alias: cpid</p>
 <span class="w">  </span><span class="nt">ocsf_source</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ocsf_source</span>
 <span class="w">    </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">cpid</span>
-<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">A unique process identifier that can be assigned deterministically by</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">multiple system data producers.</span>
+<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;A</span><span class="nv"> </span><span class="s">unique</span><span class="nv"> </span><span class="s">process</span><span class="nv"> </span><span class="s">identifier</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">can</span><span class="nv"> </span><span class="s">be</span><span class="nv"> </span><span class="s">assigned</span><span class="nv"> </span><span class="s">deterministically</span><span class="nv"> </span><span class="s">by</span>
+<span class="w">  </span><span class="s">multiple</span>
+
+<span class="w">  </span><span class="s">system</span><span class="nv"> </span><span class="s">data</span><span class="nv"> </span><span class="s">producers.&#39;</span>
 <span class="nt">notes</span><span class="p">:</span>
-<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">OCSF Common Process Identifier (CPID) Specification — https://github.com/ocsf/common-process-id</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;OCSF</span><span class="nv"> </span><span class="s">Common</span><span class="nv"> </span><span class="s">Process</span><span class="nv"> </span><span class="s">Identifier</span><span class="nv"> </span><span class="s">(CPID)</span><span class="nv"> </span><span class="s">Specification</span><span class="nv"> </span><span class="s">—</span>
+
+<span class="w">  </span><span class="s">https://github.com/ocsf/common-process-id&#39;</span>
 <span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="nt">see_also</span><span class="p">:</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://github.com/ocsf/common-process-id</span>

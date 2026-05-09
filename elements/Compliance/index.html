@@ -217,6 +217,15 @@
 </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="#in-subsets">
+<span class="md-ellipsis">
+      
+        In Subsets
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#aliases">
 <span class="md-ellipsis">
       
@@ -295,7 +304,12 @@
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
 <h1 id="class-compliance">Class: Compliance</h1>
-<p><em>The Compliance object contains information about Industry and Regulatory Framework standards, controls and requirements or details about custom assessments utilized in a compliance evaluation. Standards define broad security frameworks, controls represent specific security requirements within those frameworks, and checks are the testable verification points used to determine if controls are properly implemented.</em></p>
+<p><em>The Compliance object contains information about Industry and Regulatory</em></p>
+<p><em>Framework standards, controls and requirements or details about custom</em></p>
+<p><em>assessments utilized in a compliance evaluation. Standards define broad</em></p>
+<p><em>security frameworks, controls represent specific security requirements within</em></p>
+<p><em>those frameworks, and checks are the testable verification points used to</em></p>
+<p><em>determine if controls are properly implemented.</em></p>
 <p>URI: <a href="https://w3id.org/lmodel/ocsf/Compliance">ocsf:Compliance</a></p>
 <pre class="mermaid"><code> classDiagram
     class Compliance
@@ -418,13 +432,13 @@
 <tr>
 <td><a href="../category/">category</a></td>
 <td>0..1 <br/> <a href="../String/">String</a></td>
-<td>The category a control framework pertains to, as reported by the source tool,...</td>
+<td>The category a control framework pertains to, as reported by the source tool,</td>
 <td>direct</td>
 </tr>
 <tr>
 <td><a href="../checks/">checks</a></td>
 <td>* <br/> <a href="../Check/">Check</a></td>
-<td>A list of compliance checks associated with specific industry standards or fr...</td>
+<td>A list of compliance checks associated with specific industry standards or</td>
 <td>direct</td>
 </tr>
 <tr>
@@ -472,7 +486,7 @@
 <tr>
 <td><a href="../status/">status</a></td>
 <td>0..1 <em>recommended</em> <br/> <a href="../String/">String</a></td>
-<td>The resultant status of the compliance check normalized to the caption of the...</td>
+<td>The resultant status of the compliance check normalized to the caption of the</td>
 <td>direct</td>
 </tr>
 <tr>
@@ -490,7 +504,7 @@
 <tr>
 <td><a href="../status_details/">status_details</a></td>
 <td>* <br/> <a href="../String/">String</a></td>
-<td>A list of contextual descriptions of the <code>status, status_code</code> val...</td>
+<td>A list of contextual descriptions of the <code>status, status_code</code></td>
 <td>direct</td>
 </tr>
 <tr>
@@ -532,6 +546,10 @@
 </tr>
 </tbody>
 </table>
+<h2 id="in-subsets">In Subsets</h2>
+<ul>
+<li><a href="../Objects/">Objects</a></li>
+</ul>
 <h2 id="aliases">Aliases</h2>
 <ul>
 <li>Compliance</li>
@@ -569,12 +587,19 @@
 <h3 id="direct">Direct</h3>
 <details>
 <div class="highlight"><pre><span></span><code><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Compliance</span>
-<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The Compliance object contains information about Industry and Regulatory</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">Framework standards, controls and requirements or details about custom assessments</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">utilized in a compliance evaluation. Standards define broad security frameworks,</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">controls represent specific security requirements within those frameworks, and checks</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">are the testable verification points used to determine if controls are properly</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">implemented.</span>
+<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">Compliance</span><span class="nv"> </span><span class="s">object</span><span class="nv"> </span><span class="s">contains</span><span class="nv"> </span><span class="s">information</span><span class="nv"> </span><span class="s">about</span><span class="nv"> </span><span class="s">Industry</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">Regulatory</span>
+
+<span class="w">  </span><span class="s">Framework</span><span class="nv"> </span><span class="s">standards,</span><span class="nv"> </span><span class="s">controls</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">requirements</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">details</span><span class="nv"> </span><span class="s">about</span><span class="nv"> </span><span class="s">custom</span>
+
+<span class="w">  </span><span class="s">assessments</span><span class="nv"> </span><span class="s">utilized</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">compliance</span><span class="nv"> </span><span class="s">evaluation.</span><span class="nv"> </span><span class="s">Standards</span><span class="nv"> </span><span class="s">define</span><span class="nv"> </span><span class="s">broad</span>
+
+<span class="w">  </span><span class="s">security</span><span class="nv"> </span><span class="s">frameworks,</span><span class="nv"> </span><span class="s">controls</span><span class="nv"> </span><span class="s">represent</span><span class="nv"> </span><span class="s">specific</span><span class="nv"> </span><span class="s">security</span><span class="nv"> </span><span class="s">requirements</span><span class="nv"> </span><span class="s">within</span>
+
+<span class="w">  </span><span class="s">those</span><span class="nv"> </span><span class="s">frameworks,</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">checks</span><span class="nv"> </span><span class="s">are</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">testable</span><span class="nv"> </span><span class="s">verification</span><span class="nv"> </span><span class="s">points</span><span class="nv"> </span><span class="s">used</span><span class="nv"> </span><span class="s">to</span>
+
+<span class="w">  </span><span class="s">determine</span><span class="nv"> </span><span class="s">if</span><span class="nv"> </span><span class="s">controls</span><span class="nv"> </span><span class="s">are</span><span class="nv"> </span><span class="s">properly</span><span class="nv"> </span><span class="s">implemented.'</span>
+<span class="nt">in_subset</span><span class="p">:</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">objects</span>
 <span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="nt">aliases</span><span class="p">:</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Compliance</span>
@@ -604,18 +629,28 @@
 <span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">evaluation.</span>
 <span class="w">  </span><span class="nt">category</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">category</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The category a control framework pertains to, as reported by the</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">source tool, such as &lt;code&gt;Asset Management&lt;/code&gt; or &lt;code&gt;Risk Assessment&lt;/code&gt;.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">category</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">control</span><span class="nv"> </span><span class="s">framework</span><span class="nv"> </span><span class="s">pertains</span><span class="nv"> </span><span class="s">to,</span><span class="nv"> </span><span class="s">as</span><span class="nv"> </span><span class="s">reported</span><span class="nv"> </span><span class="s">by</span><span class="nv"> </span><span class="s">the</span>
+<span class="w">      </span><span class="s">source</span><span class="nv"> </span><span class="s">tool,</span>
+
+<span class="w">      </span><span class="s">such</span><span class="nv"> </span><span class="s">as</span><span class="nv"> </span><span class="s">&lt;code&gt;Asset</span><span class="nv"> </span><span class="s">Management&lt;/code&gt;</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">&lt;code&gt;Risk</span><span class="nv"> </span><span class="s">Assessment&lt;/code&gt;.'</span>
 <span class="w">  </span><span class="nt">checks</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">checks</span>
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'A</span><span class="nv"> </span><span class="s">list</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">compliance</span><span class="nv"> </span><span class="s">checks</span><span class="nv"> </span><span class="s">associated</span><span class="nv"> </span><span class="s">with</span><span class="nv"> </span><span class="s">specific</span><span class="nv"> </span><span class="s">industry</span><span class="nv"> </span><span class="s">standards</span>
-<span class="w">      </span><span class="s">or</span><span class="nv"> </span><span class="s">frameworks.</span><span class="nv"> </span><span class="s">Each</span><span class="nv"> </span><span class="s">check</span><span class="nv"> </span><span class="s">represents</span><span class="nv"> </span><span class="s">an</span><span class="nv"> </span><span class="s">individual</span><span class="nv"> </span><span class="s">rule</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">requirement</span><span class="nv"> </span><span class="s">that</span>
-<span class="w">      </span><span class="s">has</span><span class="nv"> </span><span class="s">been</span><span class="nv"> </span><span class="s">evaluated</span><span class="nv"> </span><span class="s">against</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">target</span><span class="nv"> </span><span class="s">device.</span><span class="nv"> </span><span class="s">Checks</span><span class="nv"> </span><span class="s">typically</span><span class="nv"> </span><span class="s">include</span><span class="nv"> </span><span class="s">details</span>
-<span class="w">      </span><span class="s">such</span><span class="nv"> </span><span class="s">as</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">check</span><span class="nv"> </span><span class="s">name</span><span class="nv"> </span><span class="s">(e.g.,</span><span class="nv"> </span><span class="s">CIS:</span><span class="nv"> </span><span class="se">''</span><span class="s">Ensure</span><span class="nv"> </span><span class="s">mounting</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">cramfs</span><span class="nv"> </span><span class="s">filesystems</span><span class="nv"> </span><span class="s">is</span>
+<span class="w">      </span><span class="s">or</span>
+
+<span class="w">      </span><span class="s">frameworks.</span><span class="nv"> </span><span class="s">Each</span><span class="nv"> </span><span class="s">check</span><span class="nv"> </span><span class="s">represents</span><span class="nv"> </span><span class="s">an</span><span class="nv"> </span><span class="s">individual</span><span class="nv"> </span><span class="s">rule</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">requirement</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">has</span>
+
+<span class="w">      </span><span class="s">been</span><span class="nv"> </span><span class="s">evaluated</span><span class="nv"> </span><span class="s">against</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">target</span><span class="nv"> </span><span class="s">device.</span><span class="nv"> </span><span class="s">Checks</span><span class="nv"> </span><span class="s">typically</span><span class="nv"> </span><span class="s">include</span><span class="nv"> </span><span class="s">details</span><span class="nv"> </span><span class="s">such</span>
+
+<span class="w">      </span><span class="s">as</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">check</span><span class="nv"> </span><span class="s">name</span><span class="nv"> </span><span class="s">(e.g.,</span><span class="nv"> </span><span class="s">CIS:</span><span class="nv"> </span><span class="se">''</span><span class="s">Ensure</span><span class="nv"> </span><span class="s">mounting</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">cramfs</span><span class="nv"> </span><span class="s">filesystems</span><span class="nv"> </span><span class="s">is</span>
+
 <span class="w">      </span><span class="s">disabled</span><span class="se">''</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">DISA</span><span class="nv"> </span><span class="s">STIG</span><span class="nv"> </span><span class="s">descriptive</span><span class="nv"> </span><span class="s">titles),</span><span class="nv"> </span><span class="s">unique</span><span class="nv"> </span><span class="s">identifiers</span><span class="nv"> </span><span class="s">(such</span><span class="nv"> </span><span class="s">as</span><span class="nv"> </span><span class="s">CIS</span>
-<span class="w">      </span><span class="s">identifier</span><span class="nv"> </span><span class="se">''</span><span class="s">1.1.1.1</span><span class="se">''</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">DISA</span><span class="nv"> </span><span class="s">STIG</span><span class="nv"> </span><span class="s">identifier</span><span class="nv"> </span><span class="se">''</span><span class="s">V-230234</span><span class="se">''</span><span class="s">),</span><span class="nv"> </span><span class="s">descriptions</span><span class="nv"> </span><span class="s">(detailed</span>
-<span class="w">      </span><span class="s">explanations</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">security</span><span class="nv"> </span><span class="s">requirements</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">vulnerability</span><span class="nv"> </span><span class="s">discussions),</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">version</span>
-<span class="w">      </span><span class="s">information.'</span>
+
+<span class="w">      </span><span class="s">identifier</span><span class="nv"> </span><span class="se">''</span><span class="s">1.1.1.1</span><span class="se">''</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">DISA</span><span class="nv"> </span><span class="s">STIG</span><span class="nv"> </span><span class="s">identifier</span><span class="nv"> </span><span class="se">''</span><span class="s">V-230234</span><span class="se">''</span><span class="s">),</span><span class="nv"> </span><span class="s">descriptions</span>
+
+<span class="w">      </span><span class="s">(detailed</span><span class="nv"> </span><span class="s">explanations</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">security</span><span class="nv"> </span><span class="s">requirements</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">vulnerability</span><span class="nv"> </span><span class="s">discussions),</span>
+
+<span class="w">      </span><span class="s">and</span><span class="nv"> </span><span class="s">version</span><span class="nv"> </span><span class="s">information.'</span>
 <span class="w">  </span><span class="nt">compliance_references</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">compliance_references</span>
 <span class="w">    </span><span class="nt">deprecated</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Use the Compliance object with Check array instead.</span>
@@ -624,36 +659,54 @@
 <span class="w">    </span><span class="nt">deprecated</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Use the Compliance object with Check array instead.</span>
 <span class="w">  </span><span class="nt">control</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">control</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">A Control is a prescriptive, actionable set of specifications that</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">strengthens device posture. The control specifies required security measures,</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">while the specific implementation values are defined in control_parameters.</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">E.g., CIS AWS Foundations Benchmark 1.2.0 - Control 2.1 - Ensure CloudTrail</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">is enabled in all regions</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'A</span><span class="nv"> </span><span class="s">Control</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">prescriptive,</span><span class="nv"> </span><span class="s">actionable</span><span class="nv"> </span><span class="s">set</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">specifications</span><span class="nv"> </span><span class="s">that</span>
+<span class="w">      </span><span class="s">strengthens</span>
+
+<span class="w">      </span><span class="s">device</span><span class="nv"> </span><span class="s">posture.</span><span class="nv"> </span><span class="s">The</span><span class="nv"> </span><span class="s">control</span><span class="nv"> </span><span class="s">specifies</span><span class="nv"> </span><span class="s">required</span><span class="nv"> </span><span class="s">security</span><span class="nv"> </span><span class="s">measures,</span><span class="nv"> </span><span class="s">while</span><span class="nv"> </span><span class="s">the</span>
+
+<span class="w">      </span><span class="s">specific</span><span class="nv"> </span><span class="s">implementation</span><span class="nv"> </span><span class="s">values</span><span class="nv"> </span><span class="s">are</span><span class="nv"> </span><span class="s">defined</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">control_parameters.</span><span class="nv"> </span><span class="s">E.g.,</span><span class="nv"> </span><span class="s">CIS</span>
+<span class="w">      </span><span class="s">AWS</span>
+
+<span class="w">      </span><span class="s">Foundations</span><span class="nv"> </span><span class="s">Benchmark</span><span class="nv"> </span><span class="s">1.2.0</span><span class="nv"> </span><span class="s">-</span><span class="nv"> </span><span class="s">Control</span><span class="nv"> </span><span class="s">2.1</span><span class="nv"> </span><span class="s">-</span><span class="nv"> </span><span class="s">Ensure</span><span class="nv"> </span><span class="s">CloudTrail</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">enabled</span><span class="nv"> </span><span class="s">in</span>
+<span class="w">      </span><span class="s">all</span>
+
+<span class="w">      </span><span class="s">regions'</span>
 <span class="w">    </span><span class="nt">recommended</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">control_parameters</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">control_parameters</span>
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">list</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">control</span><span class="nv"> </span><span class="s">parameters</span><span class="nv"> </span><span class="s">evaluated</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">Compliance</span><span class="nv"> </span><span class="s">check.</span>
-<span class="w">      </span><span class="s">E.g.,</span><span class="nv"> </span><span class="s">parameters</span><span class="nv"> </span><span class="s">for</span><span class="nv"> </span><span class="s">CloudTrail</span><span class="nv"> </span><span class="s">configuration</span><span class="nv"> </span><span class="s">might</span><span class="nv"> </span><span class="s">include</span><span class="nv"> </span><span class="s">&lt;code&gt;multiRegionTrailEnabled:</span>
-<span class="w">      </span><span class="s">true&lt;/code&gt;,</span><span class="nv"> </span><span class="s">&lt;code&gt;logFileValidationEnabled:</span><span class="nv"> </span><span class="s">true&lt;/code&gt;,</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">&lt;code&gt;requiredRegions:</span>
-<span class="w">      </span><span class="s">[us-east-1,</span><span class="nv"> </span><span class="s">us-west-2]&lt;/code&gt;'</span>
+<span class="w">      </span><span class="s">E.g.,</span>
+
+<span class="w">      </span><span class="s">parameters</span><span class="nv"> </span><span class="s">for</span><span class="nv"> </span><span class="s">CloudTrail</span><span class="nv"> </span><span class="s">configuration</span><span class="nv"> </span><span class="s">might</span><span class="nv"> </span><span class="s">include</span>
+
+<span class="w">      </span><span class="s">&lt;code&gt;multiRegionTrailEnabled:</span><span class="nv"> </span><span class="s">true&lt;/code&gt;,</span><span class="nv"> </span><span class="s">&lt;code&gt;logFileValidationEnabled:</span>
+
+<span class="w">      </span><span class="s">true&lt;/code&gt;,</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">&lt;code&gt;requiredRegions:</span><span class="nv"> </span><span class="s">[us-east-1,</span><span class="nv"> </span><span class="s">us-west-2]&lt;/code&gt;'</span>
 <span class="w">  </span><span class="nt">desc</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">desc</span>
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The description or criteria of a control.</span>
 <span class="w">  </span><span class="nt">requirements</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">requirements</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The specific compliance requirements being evaluated. E.g., &lt;code&gt;PCI</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">DSS Requirement 8.2.3 - Passwords must meet minimum complexity requirements&lt;/code&gt;</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">or &lt;code&gt;HIPAA Security Rule 164.312(a)(2)(iv) - Implement encryption and decryption</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">mechanisms&lt;/code&gt;</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">specific</span><span class="nv"> </span><span class="s">compliance</span><span class="nv"> </span><span class="s">requirements</span><span class="nv"> </span><span class="s">being</span><span class="nv"> </span><span class="s">evaluated.</span><span class="nv"> </span><span class="s">E.g.,</span><span class="nv"> </span><span class="s">&lt;code&gt;PCI</span>
+<span class="w">      </span><span class="s">DSS</span>
+
+<span class="w">      </span><span class="s">Requirement</span><span class="nv"> </span><span class="s">8.2.3</span><span class="nv"> </span><span class="s">-</span><span class="nv"> </span><span class="s">Passwords</span><span class="nv"> </span><span class="s">must</span><span class="nv"> </span><span class="s">meet</span><span class="nv"> </span><span class="s">minimum</span><span class="nv"> </span><span class="s">complexity</span><span class="nv"> </span><span class="s">requirements&lt;/code&gt;</span>
+
+<span class="w">      </span><span class="s">or</span><span class="nv"> </span><span class="s">&lt;code&gt;HIPAA</span><span class="nv"> </span><span class="s">Security</span><span class="nv"> </span><span class="s">Rule</span><span class="nv"> </span><span class="s">164.312(a)(2)(iv)</span><span class="nv"> </span><span class="s">-</span><span class="nv"> </span><span class="s">Implement</span><span class="nv"> </span><span class="s">encryption</span><span class="nv"> </span><span class="s">and</span>
+
+<span class="w">      </span><span class="s">decryption</span><span class="nv"> </span><span class="s">mechanisms&lt;/code&gt;'</span>
 <span class="w">  </span><span class="nt">standards</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">standards</span>
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The regulatory or industry standards being evaluated for compliance.</span>
 <span class="w">    </span><span class="nt">recommended</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">status</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">status</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The resultant status of the compliance check normalized to the caption</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">of the &lt;code&gt;status_id&lt;/code&gt; value. In the case of 'Other', it is defined by</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">the event source.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">resultant</span><span class="nv"> </span><span class="s">status</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">compliance</span><span class="nv"> </span><span class="s">check</span><span class="nv"> </span><span class="s">normalized</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">caption</span>
+<span class="w">      </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span>
+
+<span class="w">      </span><span class="s">&lt;code&gt;status_id&lt;/code&gt;</span><span class="nv"> </span><span class="s">value.</span><span class="nv"> </span><span class="s">In</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">case</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="se">''</span><span class="s">Other</span><span class="se">''</span><span class="s">,</span><span class="nv"> </span><span class="s">it</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">defined</span><span class="nv"> </span><span class="s">by</span><span class="nv"> </span><span class="s">the</span>
+
+<span class="w">      </span><span class="s">event</span><span class="nv"> </span><span class="s">source.'</span>
 <span class="w">    </span><span class="nt">recommended</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">status_code</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">status_code</span>
@@ -665,8 +718,9 @@
 <span class="w">    </span><span class="nt">deprecated</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Use the &lt;code&gt; status_details &lt;/code&gt; attribute instead.</span>
 <span class="w">  </span><span class="nt">status_details</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">status_details</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">A list of contextual descriptions of the &lt;code&gt;status, status_code&lt;/code&gt;</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">values.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'A</span><span class="nv"> </span><span class="s">list</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">contextual</span><span class="nv"> </span><span class="s">descriptions</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">&lt;code&gt;status,</span><span class="nv"> </span><span class="s">status_code&lt;/code&gt;</span>
+
+<span class="w">      </span><span class="s">values.'</span>
 <span class="w">  </span><span class="nt">status_id</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">status_id</span>
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The normalized status identifier of the compliance check.</span>
@@ -677,12 +731,19 @@
 <h3 id="induced">Induced</h3>
 <details>
 <div class="highlight"><pre><span></span><code><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Compliance</span>
-<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The Compliance object contains information about Industry and Regulatory</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">Framework standards, controls and requirements or details about custom assessments</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">utilized in a compliance evaluation. Standards define broad security frameworks,</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">controls represent specific security requirements within those frameworks, and checks</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">are the testable verification points used to determine if controls are properly</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">implemented.</span>
+<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">Compliance</span><span class="nv"> </span><span class="s">object</span><span class="nv"> </span><span class="s">contains</span><span class="nv"> </span><span class="s">information</span><span class="nv"> </span><span class="s">about</span><span class="nv"> </span><span class="s">Industry</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">Regulatory</span>
+
+<span class="w">  </span><span class="s">Framework</span><span class="nv"> </span><span class="s">standards,</span><span class="nv"> </span><span class="s">controls</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">requirements</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">details</span><span class="nv"> </span><span class="s">about</span><span class="nv"> </span><span class="s">custom</span>
+
+<span class="w">  </span><span class="s">assessments</span><span class="nv"> </span><span class="s">utilized</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">compliance</span><span class="nv"> </span><span class="s">evaluation.</span><span class="nv"> </span><span class="s">Standards</span><span class="nv"> </span><span class="s">define</span><span class="nv"> </span><span class="s">broad</span>
+
+<span class="w">  </span><span class="s">security</span><span class="nv"> </span><span class="s">frameworks,</span><span class="nv"> </span><span class="s">controls</span><span class="nv"> </span><span class="s">represent</span><span class="nv"> </span><span class="s">specific</span><span class="nv"> </span><span class="s">security</span><span class="nv"> </span><span class="s">requirements</span><span class="nv"> </span><span class="s">within</span>
+
+<span class="w">  </span><span class="s">those</span><span class="nv"> </span><span class="s">frameworks,</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">checks</span><span class="nv"> </span><span class="s">are</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">testable</span><span class="nv"> </span><span class="s">verification</span><span class="nv"> </span><span class="s">points</span><span class="nv"> </span><span class="s">used</span><span class="nv"> </span><span class="s">to</span>
+
+<span class="w">  </span><span class="s">determine</span><span class="nv"> </span><span class="s">if</span><span class="nv"> </span><span class="s">controls</span><span class="nv"> </span><span class="s">are</span><span class="nv"> </span><span class="s">properly</span><span class="nv"> </span><span class="s">implemented.'</span>
+<span class="nt">in_subset</span><span class="p">:</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">objects</span>
 <span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="nt">aliases</span><span class="p">:</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Compliance</span>
@@ -696,18 +757,28 @@
 <span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">evaluation.</span>
 <span class="w">  </span><span class="nt">category</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">category</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The category a control framework pertains to, as reported by the</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">source tool, such as &lt;code&gt;Asset Management&lt;/code&gt; or &lt;code&gt;Risk Assessment&lt;/code&gt;.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">category</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">control</span><span class="nv"> </span><span class="s">framework</span><span class="nv"> </span><span class="s">pertains</span><span class="nv"> </span><span class="s">to,</span><span class="nv"> </span><span class="s">as</span><span class="nv"> </span><span class="s">reported</span><span class="nv"> </span><span class="s">by</span><span class="nv"> </span><span class="s">the</span>
+<span class="w">      </span><span class="s">source</span><span class="nv"> </span><span class="s">tool,</span>
+
+<span class="w">      </span><span class="s">such</span><span class="nv"> </span><span class="s">as</span><span class="nv"> </span><span class="s">&lt;code&gt;Asset</span><span class="nv"> </span><span class="s">Management&lt;/code&gt;</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">&lt;code&gt;Risk</span><span class="nv"> </span><span class="s">Assessment&lt;/code&gt;.'</span>
 <span class="w">  </span><span class="nt">checks</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">checks</span>
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'A</span><span class="nv"> </span><span class="s">list</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">compliance</span><span class="nv"> </span><span class="s">checks</span><span class="nv"> </span><span class="s">associated</span><span class="nv"> </span><span class="s">with</span><span class="nv"> </span><span class="s">specific</span><span class="nv"> </span><span class="s">industry</span><span class="nv"> </span><span class="s">standards</span>
-<span class="w">      </span><span class="s">or</span><span class="nv"> </span><span class="s">frameworks.</span><span class="nv"> </span><span class="s">Each</span><span class="nv"> </span><span class="s">check</span><span class="nv"> </span><span class="s">represents</span><span class="nv"> </span><span class="s">an</span><span class="nv"> </span><span class="s">individual</span><span class="nv"> </span><span class="s">rule</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">requirement</span><span class="nv"> </span><span class="s">that</span>
-<span class="w">      </span><span class="s">has</span><span class="nv"> </span><span class="s">been</span><span class="nv"> </span><span class="s">evaluated</span><span class="nv"> </span><span class="s">against</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">target</span><span class="nv"> </span><span class="s">device.</span><span class="nv"> </span><span class="s">Checks</span><span class="nv"> </span><span class="s">typically</span><span class="nv"> </span><span class="s">include</span><span class="nv"> </span><span class="s">details</span>
-<span class="w">      </span><span class="s">such</span><span class="nv"> </span><span class="s">as</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">check</span><span class="nv"> </span><span class="s">name</span><span class="nv"> </span><span class="s">(e.g.,</span><span class="nv"> </span><span class="s">CIS:</span><span class="nv"> </span><span class="se">''</span><span class="s">Ensure</span><span class="nv"> </span><span class="s">mounting</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">cramfs</span><span class="nv"> </span><span class="s">filesystems</span><span class="nv"> </span><span class="s">is</span>
+<span class="w">      </span><span class="s">or</span>
+
+<span class="w">      </span><span class="s">frameworks.</span><span class="nv"> </span><span class="s">Each</span><span class="nv"> </span><span class="s">check</span><span class="nv"> </span><span class="s">represents</span><span class="nv"> </span><span class="s">an</span><span class="nv"> </span><span class="s">individual</span><span class="nv"> </span><span class="s">rule</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">requirement</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">has</span>
+
+<span class="w">      </span><span class="s">been</span><span class="nv"> </span><span class="s">evaluated</span><span class="nv"> </span><span class="s">against</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">target</span><span class="nv"> </span><span class="s">device.</span><span class="nv"> </span><span class="s">Checks</span><span class="nv"> </span><span class="s">typically</span><span class="nv"> </span><span class="s">include</span><span class="nv"> </span><span class="s">details</span><span class="nv"> </span><span class="s">such</span>
+
+<span class="w">      </span><span class="s">as</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">check</span><span class="nv"> </span><span class="s">name</span><span class="nv"> </span><span class="s">(e.g.,</span><span class="nv"> </span><span class="s">CIS:</span><span class="nv"> </span><span class="se">''</span><span class="s">Ensure</span><span class="nv"> </span><span class="s">mounting</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">cramfs</span><span class="nv"> </span><span class="s">filesystems</span><span class="nv"> </span><span class="s">is</span>
+
 <span class="w">      </span><span class="s">disabled</span><span class="se">''</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">DISA</span><span class="nv"> </span><span class="s">STIG</span><span class="nv"> </span><span class="s">descriptive</span><span class="nv"> </span><span class="s">titles),</span><span class="nv"> </span><span class="s">unique</span><span class="nv"> </span><span class="s">identifiers</span><span class="nv"> </span><span class="s">(such</span><span class="nv"> </span><span class="s">as</span><span class="nv"> </span><span class="s">CIS</span>
-<span class="w">      </span><span class="s">identifier</span><span class="nv"> </span><span class="se">''</span><span class="s">1.1.1.1</span><span class="se">''</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">DISA</span><span class="nv"> </span><span class="s">STIG</span><span class="nv"> </span><span class="s">identifier</span><span class="nv"> </span><span class="se">''</span><span class="s">V-230234</span><span class="se">''</span><span class="s">),</span><span class="nv"> </span><span class="s">descriptions</span><span class="nv"> </span><span class="s">(detailed</span>
-<span class="w">      </span><span class="s">explanations</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">security</span><span class="nv"> </span><span class="s">requirements</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">vulnerability</span><span class="nv"> </span><span class="s">discussions),</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">version</span>
-<span class="w">      </span><span class="s">information.'</span>
+
+<span class="w">      </span><span class="s">identifier</span><span class="nv"> </span><span class="se">''</span><span class="s">1.1.1.1</span><span class="se">''</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">DISA</span><span class="nv"> </span><span class="s">STIG</span><span class="nv"> </span><span class="s">identifier</span><span class="nv"> </span><span class="se">''</span><span class="s">V-230234</span><span class="se">''</span><span class="s">),</span><span class="nv"> </span><span class="s">descriptions</span>
+
+<span class="w">      </span><span class="s">(detailed</span><span class="nv"> </span><span class="s">explanations</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">security</span><span class="nv"> </span><span class="s">requirements</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">vulnerability</span><span class="nv"> </span><span class="s">discussions),</span>
+
+<span class="w">      </span><span class="s">and</span><span class="nv"> </span><span class="s">version</span><span class="nv"> </span><span class="s">information.'</span>
 <span class="w">  </span><span class="nt">compliance_references</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">compliance_references</span>
 <span class="w">    </span><span class="nt">deprecated</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Use the Compliance object with Check array instead.</span>
@@ -716,36 +787,54 @@
 <span class="w">    </span><span class="nt">deprecated</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Use the Compliance object with Check array instead.</span>
 <span class="w">  </span><span class="nt">control</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">control</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">A Control is a prescriptive, actionable set of specifications that</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">strengthens device posture. The control specifies required security measures,</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">while the specific implementation values are defined in control_parameters.</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">E.g., CIS AWS Foundations Benchmark 1.2.0 - Control 2.1 - Ensure CloudTrail</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">is enabled in all regions</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'A</span><span class="nv"> </span><span class="s">Control</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">prescriptive,</span><span class="nv"> </span><span class="s">actionable</span><span class="nv"> </span><span class="s">set</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">specifications</span><span class="nv"> </span><span class="s">that</span>
+<span class="w">      </span><span class="s">strengthens</span>
+
+<span class="w">      </span><span class="s">device</span><span class="nv"> </span><span class="s">posture.</span><span class="nv"> </span><span class="s">The</span><span class="nv"> </span><span class="s">control</span><span class="nv"> </span><span class="s">specifies</span><span class="nv"> </span><span class="s">required</span><span class="nv"> </span><span class="s">security</span><span class="nv"> </span><span class="s">measures,</span><span class="nv"> </span><span class="s">while</span><span class="nv"> </span><span class="s">the</span>
+
+<span class="w">      </span><span class="s">specific</span><span class="nv"> </span><span class="s">implementation</span><span class="nv"> </span><span class="s">values</span><span class="nv"> </span><span class="s">are</span><span class="nv"> </span><span class="s">defined</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">control_parameters.</span><span class="nv"> </span><span class="s">E.g.,</span><span class="nv"> </span><span class="s">CIS</span>
+<span class="w">      </span><span class="s">AWS</span>
+
+<span class="w">      </span><span class="s">Foundations</span><span class="nv"> </span><span class="s">Benchmark</span><span class="nv"> </span><span class="s">1.2.0</span><span class="nv"> </span><span class="s">-</span><span class="nv"> </span><span class="s">Control</span><span class="nv"> </span><span class="s">2.1</span><span class="nv"> </span><span class="s">-</span><span class="nv"> </span><span class="s">Ensure</span><span class="nv"> </span><span class="s">CloudTrail</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">enabled</span><span class="nv"> </span><span class="s">in</span>
+<span class="w">      </span><span class="s">all</span>
+
+<span class="w">      </span><span class="s">regions'</span>
 <span class="w">    </span><span class="nt">recommended</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">control_parameters</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">control_parameters</span>
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">list</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">control</span><span class="nv"> </span><span class="s">parameters</span><span class="nv"> </span><span class="s">evaluated</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">Compliance</span><span class="nv"> </span><span class="s">check.</span>
-<span class="w">      </span><span class="s">E.g.,</span><span class="nv"> </span><span class="s">parameters</span><span class="nv"> </span><span class="s">for</span><span class="nv"> </span><span class="s">CloudTrail</span><span class="nv"> </span><span class="s">configuration</span><span class="nv"> </span><span class="s">might</span><span class="nv"> </span><span class="s">include</span><span class="nv"> </span><span class="s">&lt;code&gt;multiRegionTrailEnabled:</span>
-<span class="w">      </span><span class="s">true&lt;/code&gt;,</span><span class="nv"> </span><span class="s">&lt;code&gt;logFileValidationEnabled:</span><span class="nv"> </span><span class="s">true&lt;/code&gt;,</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">&lt;code&gt;requiredRegions:</span>
-<span class="w">      </span><span class="s">[us-east-1,</span><span class="nv"> </span><span class="s">us-west-2]&lt;/code&gt;'</span>
+<span class="w">      </span><span class="s">E.g.,</span>
+
+<span class="w">      </span><span class="s">parameters</span><span class="nv"> </span><span class="s">for</span><span class="nv"> </span><span class="s">CloudTrail</span><span class="nv"> </span><span class="s">configuration</span><span class="nv"> </span><span class="s">might</span><span class="nv"> </span><span class="s">include</span>
+
+<span class="w">      </span><span class="s">&lt;code&gt;multiRegionTrailEnabled:</span><span class="nv"> </span><span class="s">true&lt;/code&gt;,</span><span class="nv"> </span><span class="s">&lt;code&gt;logFileValidationEnabled:</span>
+
+<span class="w">      </span><span class="s">true&lt;/code&gt;,</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">&lt;code&gt;requiredRegions:</span><span class="nv"> </span><span class="s">[us-east-1,</span><span class="nv"> </span><span class="s">us-west-2]&lt;/code&gt;'</span>
 <span class="w">  </span><span class="nt">desc</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">desc</span>
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The description or criteria of a control.</span>
 <span class="w">  </span><span class="nt">requirements</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">requirements</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The specific compliance requirements being evaluated. E.g., &lt;code&gt;PCI</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">DSS Requirement 8.2.3 - Passwords must meet minimum complexity requirements&lt;/code&gt;</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">or &lt;code&gt;HIPAA Security Rule 164.312(a)(2)(iv) - Implement encryption and decryption</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">mechanisms&lt;/code&gt;</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">specific</span><span class="nv"> </span><span class="s">compliance</span><span class="nv"> </span><span class="s">requirements</span><span class="nv"> </span><span class="s">being</span><span class="nv"> </span><span class="s">evaluated.</span><span class="nv"> </span><span class="s">E.g.,</span><span class="nv"> </span><span class="s">&lt;code&gt;PCI</span>
+<span class="w">      </span><span class="s">DSS</span>
+
+<span class="w">      </span><span class="s">Requirement</span><span class="nv"> </span><span class="s">8.2.3</span><span class="nv"> </span><span class="s">-</span><span class="nv"> </span><span class="s">Passwords</span><span class="nv"> </span><span class="s">must</span><span class="nv"> </span><span class="s">meet</span><span class="nv"> </span><span class="s">minimum</span><span class="nv"> </span><span class="s">complexity</span><span class="nv"> </span><span class="s">requirements&lt;/code&gt;</span>
+
+<span class="w">      </span><span class="s">or</span><span class="nv"> </span><span class="s">&lt;code&gt;HIPAA</span><span class="nv"> </span><span class="s">Security</span><span class="nv"> </span><span class="s">Rule</span><span class="nv"> </span><span class="s">164.312(a)(2)(iv)</span><span class="nv"> </span><span class="s">-</span><span class="nv"> </span><span class="s">Implement</span><span class="nv"> </span><span class="s">encryption</span><span class="nv"> </span><span class="s">and</span>
+
+<span class="w">      </span><span class="s">decryption</span><span class="nv"> </span><span class="s">mechanisms&lt;/code&gt;'</span>
 <span class="w">  </span><span class="nt">standards</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">standards</span>
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The regulatory or industry standards being evaluated for compliance.</span>
 <span class="w">    </span><span class="nt">recommended</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">status</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">status</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The resultant status of the compliance check normalized to the caption</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">of the &lt;code&gt;status_id&lt;/code&gt; value. In the case of 'Other', it is defined by</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">the event source.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">resultant</span><span class="nv"> </span><span class="s">status</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">compliance</span><span class="nv"> </span><span class="s">check</span><span class="nv"> </span><span class="s">normalized</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">caption</span>
+<span class="w">      </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span>
+
+<span class="w">      </span><span class="s">&lt;code&gt;status_id&lt;/code&gt;</span><span class="nv"> </span><span class="s">value.</span><span class="nv"> </span><span class="s">In</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">case</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="se">''</span><span class="s">Other</span><span class="se">''</span><span class="s">,</span><span class="nv"> </span><span class="s">it</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">defined</span><span class="nv"> </span><span class="s">by</span><span class="nv"> </span><span class="s">the</span>
+
+<span class="w">      </span><span class="s">event</span><span class="nv"> </span><span class="s">source.'</span>
 <span class="w">    </span><span class="nt">recommended</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">status_code</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">status_code</span>
@@ -757,8 +846,9 @@
 <span class="w">    </span><span class="nt">deprecated</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Use the &lt;code&gt; status_details &lt;/code&gt; attribute instead.</span>
 <span class="w">  </span><span class="nt">status_details</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">status_details</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">A list of contextual descriptions of the &lt;code&gt;status, status_code&lt;/code&gt;</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">values.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'A</span><span class="nv"> </span><span class="s">list</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">contextual</span><span class="nv"> </span><span class="s">descriptions</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">&lt;code&gt;status,</span><span class="nv"> </span><span class="s">status_code&lt;/code&gt;</span>
+
+<span class="w">      </span><span class="s">values.'</span>
 <span class="w">  </span><span class="nt">status_id</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">status_id</span>
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The normalized status identifier of the compliance check.</span>
@@ -782,8 +872,10 @@
 <span class="w">    </span><span class="nt">multivalued</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">category</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">category</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The category a control framework pertains to, as reported by the</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">source tool, such as &lt;code&gt;Asset Management&lt;/code&gt; or &lt;code&gt;Risk Assessment&lt;/code&gt;.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">category</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">control</span><span class="nv"> </span><span class="s">framework</span><span class="nv"> </span><span class="s">pertains</span><span class="nv"> </span><span class="s">to,</span><span class="nv"> </span><span class="s">as</span><span class="nv"> </span><span class="s">reported</span><span class="nv"> </span><span class="s">by</span><span class="nv"> </span><span class="s">the</span>
+<span class="w">      </span><span class="s">source</span><span class="nv"> </span><span class="s">tool,</span>
+
+<span class="w">      </span><span class="s">such</span><span class="nv"> </span><span class="s">as</span><span class="nv"> </span><span class="s">&lt;code&gt;Asset</span><span class="nv"> </span><span class="s">Management&lt;/code&gt;</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">&lt;code&gt;Risk</span><span class="nv"> </span><span class="s">Assessment&lt;/code&gt;.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Category</span>
@@ -803,13 +895,21 @@
 <span class="w">  </span><span class="nt">checks</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">checks</span>
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'A</span><span class="nv"> </span><span class="s">list</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">compliance</span><span class="nv"> </span><span class="s">checks</span><span class="nv"> </span><span class="s">associated</span><span class="nv"> </span><span class="s">with</span><span class="nv"> </span><span class="s">specific</span><span class="nv"> </span><span class="s">industry</span><span class="nv"> </span><span class="s">standards</span>
-<span class="w">      </span><span class="s">or</span><span class="nv"> </span><span class="s">frameworks.</span><span class="nv"> </span><span class="s">Each</span><span class="nv"> </span><span class="s">check</span><span class="nv"> </span><span class="s">represents</span><span class="nv"> </span><span class="s">an</span><span class="nv"> </span><span class="s">individual</span><span class="nv"> </span><span class="s">rule</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">requirement</span><span class="nv"> </span><span class="s">that</span>
-<span class="w">      </span><span class="s">has</span><span class="nv"> </span><span class="s">been</span><span class="nv"> </span><span class="s">evaluated</span><span class="nv"> </span><span class="s">against</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">target</span><span class="nv"> </span><span class="s">device.</span><span class="nv"> </span><span class="s">Checks</span><span class="nv"> </span><span class="s">typically</span><span class="nv"> </span><span class="s">include</span><span class="nv"> </span><span class="s">details</span>
-<span class="w">      </span><span class="s">such</span><span class="nv"> </span><span class="s">as</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">check</span><span class="nv"> </span><span class="s">name</span><span class="nv"> </span><span class="s">(e.g.,</span><span class="nv"> </span><span class="s">CIS:</span><span class="nv"> </span><span class="se">''</span><span class="s">Ensure</span><span class="nv"> </span><span class="s">mounting</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">cramfs</span><span class="nv"> </span><span class="s">filesystems</span><span class="nv"> </span><span class="s">is</span>
+<span class="w">      </span><span class="s">or</span>
+
+<span class="w">      </span><span class="s">frameworks.</span><span class="nv"> </span><span class="s">Each</span><span class="nv"> </span><span class="s">check</span><span class="nv"> </span><span class="s">represents</span><span class="nv"> </span><span class="s">an</span><span class="nv"> </span><span class="s">individual</span><span class="nv"> </span><span class="s">rule</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">requirement</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">has</span>
+
+<span class="w">      </span><span class="s">been</span><span class="nv"> </span><span class="s">evaluated</span><span class="nv"> </span><span class="s">against</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">target</span><span class="nv"> </span><span class="s">device.</span><span class="nv"> </span><span class="s">Checks</span><span class="nv"> </span><span class="s">typically</span><span class="nv"> </span><span class="s">include</span><span class="nv"> </span><span class="s">details</span><span class="nv"> </span><span class="s">such</span>
+
+<span class="w">      </span><span class="s">as</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">check</span><span class="nv"> </span><span class="s">name</span><span class="nv"> </span><span class="s">(e.g.,</span><span class="nv"> </span><span class="s">CIS:</span><span class="nv"> </span><span class="se">''</span><span class="s">Ensure</span><span class="nv"> </span><span class="s">mounting</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">cramfs</span><span class="nv"> </span><span class="s">filesystems</span><span class="nv"> </span><span class="s">is</span>
+
 <span class="w">      </span><span class="s">disabled</span><span class="se">''</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">DISA</span><span class="nv"> </span><span class="s">STIG</span><span class="nv"> </span><span class="s">descriptive</span><span class="nv"> </span><span class="s">titles),</span><span class="nv"> </span><span class="s">unique</span><span class="nv"> </span><span class="s">identifiers</span><span class="nv"> </span><span class="s">(such</span><span class="nv"> </span><span class="s">as</span><span class="nv"> </span><span class="s">CIS</span>
-<span class="w">      </span><span class="s">identifier</span><span class="nv"> </span><span class="se">''</span><span class="s">1.1.1.1</span><span class="se">''</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">DISA</span><span class="nv"> </span><span class="s">STIG</span><span class="nv"> </span><span class="s">identifier</span><span class="nv"> </span><span class="se">''</span><span class="s">V-230234</span><span class="se">''</span><span class="s">),</span><span class="nv"> </span><span class="s">descriptions</span><span class="nv"> </span><span class="s">(detailed</span>
-<span class="w">      </span><span class="s">explanations</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">security</span><span class="nv"> </span><span class="s">requirements</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">vulnerability</span><span class="nv"> </span><span class="s">discussions),</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">version</span>
-<span class="w">      </span><span class="s">information.'</span>
+
+<span class="w">      </span><span class="s">identifier</span><span class="nv"> </span><span class="se">''</span><span class="s">1.1.1.1</span><span class="se">''</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">DISA</span><span class="nv"> </span><span class="s">STIG</span><span class="nv"> </span><span class="s">identifier</span><span class="nv"> </span><span class="se">''</span><span class="s">V-230234</span><span class="se">''</span><span class="s">),</span><span class="nv"> </span><span class="s">descriptions</span>
+
+<span class="w">      </span><span class="s">(detailed</span><span class="nv"> </span><span class="s">explanations</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">security</span><span class="nv"> </span><span class="s">requirements</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">vulnerability</span><span class="nv"> </span><span class="s">discussions),</span>
+
+<span class="w">      </span><span class="s">and</span><span class="nv"> </span><span class="s">version</span><span class="nv"> </span><span class="s">information.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Compliance Checks</span>
@@ -822,9 +922,12 @@
 <span class="w">    </span><span class="nt">multivalued</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">compliance_references</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">compliance_references</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">A list of reference KB articles that provide information to help</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">organizations understand, interpret, and implement compliance standards. They</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">provide guidance, best practices, and examples.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'A</span><span class="nv"> </span><span class="s">list</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">reference</span><span class="nv"> </span><span class="s">KB</span><span class="nv"> </span><span class="s">articles</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">provide</span><span class="nv"> </span><span class="s">information</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">help</span>
+<span class="w">      </span><span class="s">organizations</span>
+
+<span class="w">      </span><span class="s">understand,</span><span class="nv"> </span><span class="s">interpret,</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">implement</span><span class="nv"> </span><span class="s">compliance</span><span class="nv"> </span><span class="s">standards.</span><span class="nv"> </span><span class="s">They</span><span class="nv"> </span><span class="s">provide</span>
+
+<span class="w">      </span><span class="s">guidance,</span><span class="nv"> </span><span class="s">best</span><span class="nv"> </span><span class="s">practices,</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">examples.'</span>
 <span class="w">    </span><span class="nt">deprecated</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Use the Compliance object with Check array instead.</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
@@ -838,8 +941,10 @@
 <span class="w">    </span><span class="nt">multivalued</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">compliance_standards</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">compliance_standards</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">A list of established guidelines or criteria that define specific</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">requirements an organization must follow.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'A</span><span class="nv"> </span><span class="s">list</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">established</span><span class="nv"> </span><span class="s">guidelines</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">criteria</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">define</span><span class="nv"> </span><span class="s">specific</span>
+<span class="w">      </span><span class="s">requirements</span>
+
+<span class="w">      </span><span class="s">an</span><span class="nv"> </span><span class="s">organization</span><span class="nv"> </span><span class="s">must</span><span class="nv"> </span><span class="s">follow.'</span>
 <span class="w">    </span><span class="nt">deprecated</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Use the Compliance object with Check array instead.</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
@@ -853,11 +958,18 @@
 <span class="w">    </span><span class="nt">multivalued</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">control</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">control</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">A Control is a prescriptive, actionable set of specifications that</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">strengthens device posture. The control specifies required security measures,</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">while the specific implementation values are defined in control_parameters.</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">E.g., CIS AWS Foundations Benchmark 1.2.0 - Control 2.1 - Ensure CloudTrail</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">is enabled in all regions</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'A</span><span class="nv"> </span><span class="s">Control</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">prescriptive,</span><span class="nv"> </span><span class="s">actionable</span><span class="nv"> </span><span class="s">set</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">specifications</span><span class="nv"> </span><span class="s">that</span>
+<span class="w">      </span><span class="s">strengthens</span>
+
+<span class="w">      </span><span class="s">device</span><span class="nv"> </span><span class="s">posture.</span><span class="nv"> </span><span class="s">The</span><span class="nv"> </span><span class="s">control</span><span class="nv"> </span><span class="s">specifies</span><span class="nv"> </span><span class="s">required</span><span class="nv"> </span><span class="s">security</span><span class="nv"> </span><span class="s">measures,</span><span class="nv"> </span><span class="s">while</span><span class="nv"> </span><span class="s">the</span>
+
+<span class="w">      </span><span class="s">specific</span><span class="nv"> </span><span class="s">implementation</span><span class="nv"> </span><span class="s">values</span><span class="nv"> </span><span class="s">are</span><span class="nv"> </span><span class="s">defined</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">control_parameters.</span><span class="nv"> </span><span class="s">E.g.,</span><span class="nv"> </span><span class="s">CIS</span>
+<span class="w">      </span><span class="s">AWS</span>
+
+<span class="w">      </span><span class="s">Foundations</span><span class="nv"> </span><span class="s">Benchmark</span><span class="nv"> </span><span class="s">1.2.0</span><span class="nv"> </span><span class="s">-</span><span class="nv"> </span><span class="s">Control</span><span class="nv"> </span><span class="s">2.1</span><span class="nv"> </span><span class="s">-</span><span class="nv"> </span><span class="s">Ensure</span><span class="nv"> </span><span class="s">CloudTrail</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">enabled</span><span class="nv"> </span><span class="s">in</span>
+<span class="w">      </span><span class="s">all</span>
+
+<span class="w">      </span><span class="s">regions'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Security Control</span>
@@ -872,9 +984,13 @@
 <span class="w">  </span><span class="nt">control_parameters</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">control_parameters</span>
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">list</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">control</span><span class="nv"> </span><span class="s">parameters</span><span class="nv"> </span><span class="s">evaluated</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">Compliance</span><span class="nv"> </span><span class="s">check.</span>
-<span class="w">      </span><span class="s">E.g.,</span><span class="nv"> </span><span class="s">parameters</span><span class="nv"> </span><span class="s">for</span><span class="nv"> </span><span class="s">CloudTrail</span><span class="nv"> </span><span class="s">configuration</span><span class="nv"> </span><span class="s">might</span><span class="nv"> </span><span class="s">include</span><span class="nv"> </span><span class="s">&lt;code&gt;multiRegionTrailEnabled:</span>
-<span class="w">      </span><span class="s">true&lt;/code&gt;,</span><span class="nv"> </span><span class="s">&lt;code&gt;logFileValidationEnabled:</span><span class="nv"> </span><span class="s">true&lt;/code&gt;,</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">&lt;code&gt;requiredRegions:</span>
-<span class="w">      </span><span class="s">[us-east-1,</span><span class="nv"> </span><span class="s">us-west-2]&lt;/code&gt;'</span>
+<span class="w">      </span><span class="s">E.g.,</span>
+
+<span class="w">      </span><span class="s">parameters</span><span class="nv"> </span><span class="s">for</span><span class="nv"> </span><span class="s">CloudTrail</span><span class="nv"> </span><span class="s">configuration</span><span class="nv"> </span><span class="s">might</span><span class="nv"> </span><span class="s">include</span>
+
+<span class="w">      </span><span class="s">&lt;code&gt;multiRegionTrailEnabled:</span><span class="nv"> </span><span class="s">true&lt;/code&gt;,</span><span class="nv"> </span><span class="s">&lt;code&gt;logFileValidationEnabled:</span>
+
+<span class="w">      </span><span class="s">true&lt;/code&gt;,</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">&lt;code&gt;requiredRegions:</span><span class="nv"> </span><span class="s">[us-east-1,</span><span class="nv"> </span><span class="s">us-west-2]&lt;/code&gt;'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Control Parameters</span>
@@ -929,10 +1045,14 @@
 <span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">string</span>
 <span class="w">  </span><span class="nt">requirements</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">requirements</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The specific compliance requirements being evaluated. E.g., &lt;code&gt;PCI</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">DSS Requirement 8.2.3 - Passwords must meet minimum complexity requirements&lt;/code&gt;</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">or &lt;code&gt;HIPAA Security Rule 164.312(a)(2)(iv) - Implement encryption and decryption</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">mechanisms&lt;/code&gt;</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">specific</span><span class="nv"> </span><span class="s">compliance</span><span class="nv"> </span><span class="s">requirements</span><span class="nv"> </span><span class="s">being</span><span class="nv"> </span><span class="s">evaluated.</span><span class="nv"> </span><span class="s">E.g.,</span><span class="nv"> </span><span class="s">&lt;code&gt;PCI</span>
+<span class="w">      </span><span class="s">DSS</span>
+
+<span class="w">      </span><span class="s">Requirement</span><span class="nv"> </span><span class="s">8.2.3</span><span class="nv"> </span><span class="s">-</span><span class="nv"> </span><span class="s">Passwords</span><span class="nv"> </span><span class="s">must</span><span class="nv"> </span><span class="s">meet</span><span class="nv"> </span><span class="s">minimum</span><span class="nv"> </span><span class="s">complexity</span><span class="nv"> </span><span class="s">requirements&lt;/code&gt;</span>
+
+<span class="w">      </span><span class="s">or</span><span class="nv"> </span><span class="s">&lt;code&gt;HIPAA</span><span class="nv"> </span><span class="s">Security</span><span class="nv"> </span><span class="s">Rule</span><span class="nv"> </span><span class="s">164.312(a)(2)(iv)</span><span class="nv"> </span><span class="s">-</span><span class="nv"> </span><span class="s">Implement</span><span class="nv"> </span><span class="s">encryption</span><span class="nv"> </span><span class="s">and</span>
+
+<span class="w">      </span><span class="s">decryption</span><span class="nv"> </span><span class="s">mechanisms&lt;/code&gt;'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Compliance Requirements</span>
@@ -960,9 +1080,12 @@
 <span class="w">    </span><span class="nt">multivalued</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">status</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">status</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The resultant status of the compliance check normalized to the caption</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">of the &lt;code&gt;status_id&lt;/code&gt; value. In the case of 'Other', it is defined by</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">the event source.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">resultant</span><span class="nv"> </span><span class="s">status</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">compliance</span><span class="nv"> </span><span class="s">check</span><span class="nv"> </span><span class="s">normalized</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">caption</span>
+<span class="w">      </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span>
+
+<span class="w">      </span><span class="s">&lt;code&gt;status_id&lt;/code&gt;</span><span class="nv"> </span><span class="s">value.</span><span class="nv"> </span><span class="s">In</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">case</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="se">''</span><span class="s">Other</span><span class="se">''</span><span class="s">,</span><span class="nv"> </span><span class="s">it</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">defined</span><span class="nv"> </span><span class="s">by</span><span class="nv"> </span><span class="s">the</span>
+
+<span class="w">      </span><span class="s">event</span><span class="nv"> </span><span class="s">source.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Status</span>
@@ -1019,8 +1142,9 @@
 <span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">string</span>
 <span class="w">  </span><span class="nt">status_details</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">status_details</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">A list of contextual descriptions of the &lt;code&gt;status, status_code&lt;/code&gt;</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">values.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'A</span><span class="nv"> </span><span class="s">list</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">contextual</span><span class="nv"> </span><span class="s">descriptions</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">&lt;code&gt;status,</span><span class="nv"> </span><span class="s">status_code&lt;/code&gt;</span>
+
+<span class="w">      </span><span class="s">values.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Status Details</span>

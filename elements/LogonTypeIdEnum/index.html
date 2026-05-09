@@ -482,7 +482,7 @@
 <tr>
 <td>BATCH</td>
 <td>None</td>
-<td>A batch server logon, where processes may be executing on behalf of a user wi...</td>
+<td>A batch server logon, where processes may be executing on behalf of a user</td>
 </tr>
 <tr>
 <td>OS_SERVICE</td>
@@ -502,7 +502,7 @@
 <tr>
 <td>NEW_CREDENTIALS</td>
 <td>None</td>
-<td>A caller cloned its current token and specified new credentials for outbound ...</td>
+<td>A caller cloned its current token and specified new credentials for outbound</td>
 </tr>
 <tr>
 <td>REMOTE_INTERACTIVE</td>
@@ -512,7 +512,7 @@
 <tr>
 <td>CACHED_INTERACTIVE</td>
 <td>None</td>
-<td>A user logged on to this device with network credentials that were stored loc...</td>
+<td>A user logged on to this device with network credentials that were stored</td>
 </tr>
 <tr>
 <td>CACHED_REMOTE_INTERACTIVE</td>
@@ -600,8 +600,10 @@
 <span class="w">        </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Network</span>
 <span class="w">  </span><span class="nt">BATCH</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">text</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">BATCH</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">A batch server logon, where processes may be executing on behalf</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">of a user without their direct intervention.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;A</span><span class="nv"> </span><span class="s">batch</span><span class="nv"> </span><span class="s">server</span><span class="nv"> </span><span class="s">logon,</span><span class="nv"> </span><span class="s">where</span><span class="nv"> </span><span class="s">processes</span><span class="nv"> </span><span class="s">may</span><span class="nv"> </span><span class="s">be</span><span class="nv"> </span><span class="s">executing</span><span class="nv"> </span><span class="s">on</span><span class="nv"> </span><span class="s">behalf</span>
+<span class="w">      </span><span class="s">of</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">user</span>
+
+<span class="w">      </span><span class="s">without</span><span class="nv"> </span><span class="s">their</span><span class="nv"> </span><span class="s">direct</span><span class="nv"> </span><span class="s">intervention.&#39;</span>
 <span class="w">    </span><span class="nt">annotations</span><span class="p">:</span>
 <span class="w">      </span><span class="nt">ocsf_uid</span><span class="p">:</span>
 <span class="w">        </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ocsf_uid</span>
@@ -631,8 +633,10 @@
 <span class="w">        </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Unlock</span>
 <span class="w">  </span><span class="nt">NETWORK_CLEARTEXT</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">text</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">NETWORK_CLEARTEXT</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">A user logged on to this device from the network. The user&#39;s password</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">in the authentication package was not hashed.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;A</span><span class="nv"> </span><span class="s">user</span><span class="nv"> </span><span class="s">logged</span><span class="nv"> </span><span class="s">on</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">this</span><span class="nv"> </span><span class="s">device</span><span class="nv"> </span><span class="s">from</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">network.</span><span class="nv"> </span><span class="s">The</span><span class="nv"> </span><span class="s">user</span><span class="se">&#39;&#39;</span><span class="s">s</span><span class="nv"> </span><span class="s">password</span>
+<span class="w">      </span><span class="s">in</span><span class="nv"> </span><span class="s">the</span>
+
+<span class="w">      </span><span class="s">authentication</span><span class="nv"> </span><span class="s">package</span><span class="nv"> </span><span class="s">was</span><span class="nv"> </span><span class="s">not</span><span class="nv"> </span><span class="s">hashed.&#39;</span>
 <span class="w">    </span><span class="nt">annotations</span><span class="p">:</span>
 <span class="w">      </span><span class="nt">ocsf_uid</span><span class="p">:</span>
 <span class="w">        </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ocsf_uid</span>
@@ -642,9 +646,12 @@
 <span class="w">        </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Network Cleartext</span>
 <span class="w">  </span><span class="nt">NEW_CREDENTIALS</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">text</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">NEW_CREDENTIALS</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">A caller cloned its current token and specified new credentials for</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">outbound connections. The new logon session has the same local identity, but</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">uses different credentials for other network connections.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;A</span><span class="nv"> </span><span class="s">caller</span><span class="nv"> </span><span class="s">cloned</span><span class="nv"> </span><span class="s">its</span><span class="nv"> </span><span class="s">current</span><span class="nv"> </span><span class="s">token</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">specified</span><span class="nv"> </span><span class="s">new</span><span class="nv"> </span><span class="s">credentials</span>
+<span class="w">      </span><span class="s">for</span><span class="nv"> </span><span class="s">outbound</span>
+
+<span class="w">      </span><span class="s">connections.</span><span class="nv"> </span><span class="s">The</span><span class="nv"> </span><span class="s">new</span><span class="nv"> </span><span class="s">logon</span><span class="nv"> </span><span class="s">session</span><span class="nv"> </span><span class="s">has</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">same</span><span class="nv"> </span><span class="s">local</span><span class="nv"> </span><span class="s">identity,</span><span class="nv"> </span><span class="s">but</span><span class="nv"> </span><span class="s">uses</span>
+
+<span class="w">      </span><span class="s">different</span><span class="nv"> </span><span class="s">credentials</span><span class="nv"> </span><span class="s">for</span><span class="nv"> </span><span class="s">other</span><span class="nv"> </span><span class="s">network</span><span class="nv"> </span><span class="s">connections.&#39;</span>
 <span class="w">    </span><span class="nt">annotations</span><span class="p">:</span>
 <span class="w">      </span><span class="nt">ocsf_uid</span><span class="p">:</span>
 <span class="w">        </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ocsf_uid</span>
@@ -664,9 +671,13 @@
 <span class="w">        </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Remote Interactive</span>
 <span class="w">  </span><span class="nt">CACHED_INTERACTIVE</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">text</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">CACHED_INTERACTIVE</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">A user logged on to this device with network credentials that were</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">stored locally on the device and the domain controller was not contacted to</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">verify the credentials.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;A</span><span class="nv"> </span><span class="s">user</span><span class="nv"> </span><span class="s">logged</span><span class="nv"> </span><span class="s">on</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">this</span><span class="nv"> </span><span class="s">device</span><span class="nv"> </span><span class="s">with</span><span class="nv"> </span><span class="s">network</span><span class="nv"> </span><span class="s">credentials</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">were</span>
+<span class="w">      </span><span class="s">stored</span>
+
+<span class="w">      </span><span class="s">locally</span><span class="nv"> </span><span class="s">on</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">device</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">domain</span><span class="nv"> </span><span class="s">controller</span><span class="nv"> </span><span class="s">was</span><span class="nv"> </span><span class="s">not</span><span class="nv"> </span><span class="s">contacted</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">verify</span>
+<span class="w">      </span><span class="s">the</span>
+
+<span class="w">      </span><span class="s">credentials.&#39;</span>
 <span class="w">    </span><span class="nt">annotations</span><span class="p">:</span>
 <span class="w">      </span><span class="nt">ocsf_uid</span><span class="p">:</span>
 <span class="w">        </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ocsf_uid</span>
@@ -696,8 +707,10 @@
 <span class="w">        </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Cached Unlock</span>
 <span class="w">  </span><span class="nt">OTHER</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">text</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">OTHER</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The logon type is not mapped. See the &lt;code&gt;logon_type&lt;/code&gt; attribute,</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">which contains a data source specific value.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;The</span><span class="nv"> </span><span class="s">logon</span><span class="nv"> </span><span class="s">type</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">not</span><span class="nv"> </span><span class="s">mapped.</span><span class="nv"> </span><span class="s">See</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">&lt;code&gt;logon_type&lt;/code&gt;</span><span class="nv"> </span><span class="s">attribute,</span>
+<span class="w">      </span><span class="s">which</span>
+
+<span class="w">      </span><span class="s">contains</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">data</span><span class="nv"> </span><span class="s">source</span><span class="nv"> </span><span class="s">specific</span><span class="nv"> </span><span class="s">value.&#39;</span>
 <span class="w">    </span><span class="nt">annotations</span><span class="p">:</span>
 <span class="w">      </span><span class="nt">ocsf_uid</span><span class="p">:</span>
 <span class="w">        </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ocsf_uid</span>

@@ -519,7 +519,10 @@
 
 
 <h1 id="slot-kerberos_flags">Slot: kerberos_flags</h1>
-<p><em>A bitmask, either in hexadecimal or decimal form, which encodes various attributes or permissions associated with a Kerberos ticket. These flags delineate specific characteristics of the ticket, such as its renewability or forwardability.</em></p>
+<p><em>A bitmask, either in hexadecimal or decimal form, which encodes various</em></p>
+<p><em>attributes or permissions associated with a Kerberos ticket. These flags</em></p>
+<p><em>delineate specific characteristics of the ticket, such as its renewability or</em></p>
+<p><em>forwardability.</em></p>
 <p>URI: <a href="https://w3id.org/lmodel/ocsf/kerberos_flags">ocsf:kerberos_flags</a>
 Alias: kerberos_flags</p>
 <!-- no inheritance hierarchy -->
@@ -587,8 +590,10 @@ Alias: kerberos_flags</p>
 </ul>
 <h2 id="notes">Notes</h2>
 <ul>
-<li>RFC 4120: 5.2.8.  KerberosFlags — <a href="https://www.rfc-editor.org/rfc/rfc4120#section-5.2.8">https://www.rfc-editor.org/rfc/rfc4120#section-5.2.8</a></li>
-<li>Microsoft Windows Security 4769 (see 'Ticket Options') — <a href="https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/auditing/event-4769">https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/auditing/event-4769</a></li>
+<li>RFC 4120: 5.2.8.  KerberosFlags —
+<a href="https://www.rfc-editor.org/rfc/rfc4120#section-5.2.8">https://www.rfc-editor.org/rfc/rfc4120#section-5.2.8</a></li>
+<li>Microsoft Windows Security 4769 (see 'Ticket Options') —
+<a href="https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/auditing/event-4769">https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/auditing/event-4769</a></li>
 </ul>
 <h2 id="identifier-and-mapping-information">Identifier and Mapping Information</h2>
 <h3 id="schema-source">Schema Source</h3>
@@ -617,12 +622,20 @@ Alias: kerberos_flags</p>
 <h2 id="linkml-source">LinkML Source</h2>
 <details>
 <div class="highlight"><pre><span></span><code><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">kerberos_flags</span>
-<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">A bitmask, either in hexadecimal or decimal form, which encodes various</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">attributes or permissions associated with a Kerberos ticket. These flags delineate</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">specific characteristics of the ticket, such as its renewability or forwardability.</span>
+<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;A</span><span class="nv"> </span><span class="s">bitmask,</span><span class="nv"> </span><span class="s">either</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">hexadecimal</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">decimal</span><span class="nv"> </span><span class="s">form,</span><span class="nv"> </span><span class="s">which</span><span class="nv"> </span><span class="s">encodes</span><span class="nv"> </span><span class="s">various</span>
+
+<span class="w">  </span><span class="s">attributes</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">permissions</span><span class="nv"> </span><span class="s">associated</span><span class="nv"> </span><span class="s">with</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">Kerberos</span><span class="nv"> </span><span class="s">ticket.</span><span class="nv"> </span><span class="s">These</span><span class="nv"> </span><span class="s">flags</span>
+
+<span class="w">  </span><span class="s">delineate</span><span class="nv"> </span><span class="s">specific</span><span class="nv"> </span><span class="s">characteristics</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">ticket,</span><span class="nv"> </span><span class="s">such</span><span class="nv"> </span><span class="s">as</span><span class="nv"> </span><span class="s">its</span><span class="nv"> </span><span class="s">renewability</span><span class="nv"> </span><span class="s">or</span>
+
+<span class="w">  </span><span class="s">forwardability.&#39;</span>
 <span class="nt">notes</span><span class="p">:</span>
-<span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;RFC</span><span class="nv"> </span><span class="s">4120:</span><span class="nv"> </span><span class="s">5.2.8.</span><span class="nv">  </span><span class="s">KerberosFlags</span><span class="nv"> </span><span class="s">—</span><span class="nv"> </span><span class="s">https://www.rfc-editor.org/rfc/rfc4120#section-5.2.8&#39;</span>
-<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Microsoft Windows Security 4769 (see &#39;Ticket Options&#39;) — https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/auditing/event-4769</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;RFC</span><span class="nv"> </span><span class="s">4120:</span><span class="nv"> </span><span class="s">5.2.8.</span><span class="nv">  </span><span class="s">KerberosFlags</span><span class="nv"> </span><span class="s">—</span>
+
+<span class="w">  </span><span class="s">https://www.rfc-editor.org/rfc/rfc4120#section-5.2.8&#39;</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;Microsoft</span><span class="nv"> </span><span class="s">Windows</span><span class="nv"> </span><span class="s">Security</span><span class="nv"> </span><span class="s">4769</span><span class="nv"> </span><span class="s">(see</span><span class="nv"> </span><span class="se">&#39;&#39;</span><span class="s">Ticket</span><span class="nv"> </span><span class="s">Options</span><span class="se">&#39;&#39;</span><span class="s">)</span><span class="nv"> </span><span class="s">—</span>
+
+<span class="w">  </span><span class="s">https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/auditing/event-4769&#39;</span>
 <span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="nt">see_also</span><span class="p">:</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://www.rfc-editor.org/rfc/rfc4120#section-5.2.8</span>

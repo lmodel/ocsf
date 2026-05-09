@@ -519,7 +519,13 @@
 
 
 <h1 id="slot-ancestry">Slot: ancestry</h1>
-<p><em>An array of Process Entities describing the extended parentage of this process object. Direct parent information should be expressed through the <code>parent_process</code> attribute. The first array element is the direct parent of this process object. Subsequent list elements go up the process parentage hierarchy. That is, the array is sorted from newest to oldest process. It is recommended to only populate this field for the top-level process object.</em></p>
+<p><em>An array of Process Entities describing the extended parentage of this process</em></p>
+<p><em>object. Direct parent information should be expressed through the</em></p>
+<p><em><code>parent_process</code> attribute. The first array element is the direct</em></p>
+<p><em>parent of this process object. Subsequent list elements go up the process</em></p>
+<p><em>parentage hierarchy. That is, the array is sorted from newest to oldest</em></p>
+<p><em>process. It is recommended to only populate this field for the top-level</em></p>
+<p><em>process object.</em></p>
 <p>URI: <a href="https://w3id.org/lmodel/ocsf/ancestry">ocsf:ancestry</a>
 Alias: ancestry</p>
 <!-- no inheritance hierarchy -->
@@ -535,23 +541,23 @@ Alias: ancestry</p>
 </thead>
 <tbody>
 <tr>
-<td><a href="../LinuxProcess/">LinuxProcess</a></td>
-<td>Extends the process object to add Linux specific fields</td>
-<td>no</td>
-</tr>
-<tr>
 <td><a href="../MacosProcess/">MacosProcess</a></td>
 <td>Extends the process object to add macOS specific fields</td>
 <td>no</td>
 </tr>
 <tr>
-<td><a href="../Process/">Process</a></td>
-<td>The Process object describes a running instance of a launched program</td>
+<td><a href="../WindowsProcess/">WindowsProcess</a></td>
+<td>Extends the process object to add Windows specific fields</td>
 <td>no</td>
 </tr>
 <tr>
-<td><a href="../WindowsProcess/">WindowsProcess</a></td>
-<td>Extends the process object to add Windows specific fields</td>
+<td><a href="../LinuxProcess/">LinuxProcess</a></td>
+<td>Extends the process object to add Linux specific fields</td>
+<td>no</td>
+</tr>
+<tr>
+<td><a href="../Process/">Process</a></td>
+<td>The Process object describes a running instance of a launched program</td>
 <td>no</td>
 </tr>
 </tbody>
@@ -601,7 +607,8 @@ Alias: ancestry</p>
 </ul>
 <h2 id="notes">Notes</h2>
 <ul>
-<li>Guidance on Representing Process Parentage — <a href="https://github.com/ocsf/ocsf-docs/blob/main/articles/representing-process-parentage.md">https://github.com/ocsf/ocsf-docs/blob/main/articles/representing-process-parentage.md</a></li>
+<li>Guidance on Representing Process Parentage —
+<a href="https://github.com/ocsf/ocsf-docs/blob/main/articles/representing-process-parentage.md">https://github.com/ocsf/ocsf-docs/blob/main/articles/representing-process-parentage.md</a></li>
 </ul>
 <h2 id="identifier-and-mapping-information">Identifier and Mapping Information</h2>
 <h3 id="schema-source">Schema Source</h3>
@@ -630,14 +637,24 @@ Alias: ancestry</p>
 <h2 id="linkml-source">LinkML Source</h2>
 <details>
 <div class="highlight"><pre><span></span><code><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ancestry</span>
-<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">An array of Process Entities describing the extended parentage of this</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">process object. Direct parent information should be expressed through the &lt;code&gt;parent_process&lt;/code&gt;</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">attribute. The first array element is the direct parent of this process object.</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">Subsequent list elements go up the process parentage hierarchy. That is, the array</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">is sorted from newest to oldest process. It is recommended to only populate this</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">field for the top-level process object.</span>
+<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;An</span><span class="nv"> </span><span class="s">array</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">Process</span><span class="nv"> </span><span class="s">Entities</span><span class="nv"> </span><span class="s">describing</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">extended</span><span class="nv"> </span><span class="s">parentage</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">this</span>
+<span class="w">  </span><span class="s">process</span>
+
+<span class="w">  </span><span class="s">object.</span><span class="nv"> </span><span class="s">Direct</span><span class="nv"> </span><span class="s">parent</span><span class="nv"> </span><span class="s">information</span><span class="nv"> </span><span class="s">should</span><span class="nv"> </span><span class="s">be</span><span class="nv"> </span><span class="s">expressed</span><span class="nv"> </span><span class="s">through</span><span class="nv"> </span><span class="s">the</span>
+
+<span class="w">  </span><span class="s">&lt;code&gt;parent_process&lt;/code&gt;</span><span class="nv"> </span><span class="s">attribute.</span><span class="nv"> </span><span class="s">The</span><span class="nv"> </span><span class="s">first</span><span class="nv"> </span><span class="s">array</span><span class="nv"> </span><span class="s">element</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">direct</span>
+
+<span class="w">  </span><span class="s">parent</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">this</span><span class="nv"> </span><span class="s">process</span><span class="nv"> </span><span class="s">object.</span><span class="nv"> </span><span class="s">Subsequent</span><span class="nv"> </span><span class="s">list</span><span class="nv"> </span><span class="s">elements</span><span class="nv"> </span><span class="s">go</span><span class="nv"> </span><span class="s">up</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">process</span>
+
+<span class="w">  </span><span class="s">parentage</span><span class="nv"> </span><span class="s">hierarchy.</span><span class="nv"> </span><span class="s">That</span><span class="nv"> </span><span class="s">is,</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">array</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">sorted</span><span class="nv"> </span><span class="s">from</span><span class="nv"> </span><span class="s">newest</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">oldest</span>
+
+<span class="w">  </span><span class="s">process.</span><span class="nv"> </span><span class="s">It</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">recommended</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">only</span><span class="nv"> </span><span class="s">populate</span><span class="nv"> </span><span class="s">this</span><span class="nv"> </span><span class="s">field</span><span class="nv"> </span><span class="s">for</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">top-level</span>
+
+<span class="w">  </span><span class="s">process</span><span class="nv"> </span><span class="s">object.&#39;</span>
 <span class="nt">notes</span><span class="p">:</span>
-<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Guidance on Representing Process Parentage — https://github.com/ocsf/ocsf-docs/blob/main/articles/representing-process-parentage.md</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;Guidance</span><span class="nv"> </span><span class="s">on</span><span class="nv"> </span><span class="s">Representing</span><span class="nv"> </span><span class="s">Process</span><span class="nv"> </span><span class="s">Parentage</span><span class="nv"> </span><span class="s">—</span>
+
+<span class="w">  </span><span class="s">https://github.com/ocsf/ocsf-docs/blob/main/articles/representing-process-parentage.md&#39;</span>
 <span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="nt">see_also</span><span class="p">:</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://github.com/ocsf/ocsf-docs/blob/main/articles/representing-process-parentage.md</span>

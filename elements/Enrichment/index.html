@@ -217,6 +217,15 @@
 </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="#in-subsets">
+<span class="md-ellipsis">
+      
+        In Subsets
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#aliases">
 <span class="md-ellipsis">
       
@@ -295,7 +304,10 @@
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
 <h1 id="class-enrichment">Class: Enrichment</h1>
-<p><em>The Enrichment object provides inline enrichment data for specific attributes of interest within an event. It serves as a mechanism to enhance or supplement the information associated with the event by adding additional relevant details or context.</em></p>
+<p><em>The Enrichment object provides inline enrichment data for specific attributes</em></p>
+<p><em>of interest within an event. It serves as a mechanism to enhance or supplement</em></p>
+<p><em>the information associated with the event by adding additional relevant details</em></p>
+<p><em>or context.</em></p>
 <p>URI: <a href="https://w3id.org/lmodel/ocsf/Enrichment">ocsf:Enrichment</a></p>
 <pre class="mermaid"><code> classDiagram
     class Enrichment
@@ -975,6 +987,10 @@
 </tr>
 </tbody>
 </table>
+<h2 id="in-subsets">In Subsets</h2>
+<ul>
+<li><a href="../Objects/">Objects</a></li>
+</ul>
 <h2 id="aliases">Aliases</h2>
 <ul>
 <li>Enrichment</li>
@@ -1008,9 +1024,15 @@
 <h3 id="direct">Direct</h3>
 <details>
 <div class="highlight"><pre><span></span><code><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Enrichment</span>
-<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The Enrichment object provides inline enrichment data for specific attributes</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">of interest within an event. It serves as a mechanism to enhance or supplement the</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">information associated with the event by adding additional relevant details or context.</span>
+<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">Enrichment</span><span class="nv"> </span><span class="s">object</span><span class="nv"> </span><span class="s">provides</span><span class="nv"> </span><span class="s">inline</span><span class="nv"> </span><span class="s">enrichment</span><span class="nv"> </span><span class="s">data</span><span class="nv"> </span><span class="s">for</span><span class="nv"> </span><span class="s">specific</span><span class="nv"> </span><span class="s">attributes</span>
+
+<span class="w">  </span><span class="s">of</span><span class="nv"> </span><span class="s">interest</span><span class="nv"> </span><span class="s">within</span><span class="nv"> </span><span class="s">an</span><span class="nv"> </span><span class="s">event.</span><span class="nv"> </span><span class="s">It</span><span class="nv"> </span><span class="s">serves</span><span class="nv"> </span><span class="s">as</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">mechanism</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">enhance</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">supplement</span>
+
+<span class="w">  </span><span class="s">the</span><span class="nv"> </span><span class="s">information</span><span class="nv"> </span><span class="s">associated</span><span class="nv"> </span><span class="s">with</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">event</span><span class="nv"> </span><span class="s">by</span><span class="nv"> </span><span class="s">adding</span><span class="nv"> </span><span class="s">additional</span><span class="nv"> </span><span class="s">relevant</span><span class="nv"> </span><span class="s">details</span>
+
+<span class="w">  </span><span class="s">or</span><span class="nv"> </span><span class="s">context.'</span>
+<span class="nt">in_subset</span><span class="p">:</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">objects</span>
 <span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="nt">aliases</span><span class="p">:</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Enrichment</span>
@@ -1033,8 +1055,10 @@
 <span class="w">    </span><span class="nt">recommended</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">data</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">data</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The enrichment data associated with the attribute and value. The</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">meaning of this data depends on the type the enrichment record.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">enrichment</span><span class="nv"> </span><span class="s">data</span><span class="nv"> </span><span class="s">associated</span><span class="nv"> </span><span class="s">with</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">attribute</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">value.</span><span class="nv"> </span><span class="s">The</span>
+<span class="w">      </span><span class="s">meaning</span><span class="nv"> </span><span class="s">of</span>
+
+<span class="w">      </span><span class="s">this</span><span class="nv"> </span><span class="s">data</span><span class="nv"> </span><span class="s">depends</span><span class="nv"> </span><span class="s">on</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">type</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">enrichment</span><span class="nv"> </span><span class="s">record.'</span>
 <span class="w">    </span><span class="nt">required</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">desc</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">desc</span>
@@ -1071,9 +1095,15 @@
 <h3 id="induced">Induced</h3>
 <details>
 <div class="highlight"><pre><span></span><code><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Enrichment</span>
-<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The Enrichment object provides inline enrichment data for specific attributes</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">of interest within an event. It serves as a mechanism to enhance or supplement the</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">information associated with the event by adding additional relevant details or context.</span>
+<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">Enrichment</span><span class="nv"> </span><span class="s">object</span><span class="nv"> </span><span class="s">provides</span><span class="nv"> </span><span class="s">inline</span><span class="nv"> </span><span class="s">enrichment</span><span class="nv"> </span><span class="s">data</span><span class="nv"> </span><span class="s">for</span><span class="nv"> </span><span class="s">specific</span><span class="nv"> </span><span class="s">attributes</span>
+
+<span class="w">  </span><span class="s">of</span><span class="nv"> </span><span class="s">interest</span><span class="nv"> </span><span class="s">within</span><span class="nv"> </span><span class="s">an</span><span class="nv"> </span><span class="s">event.</span><span class="nv"> </span><span class="s">It</span><span class="nv"> </span><span class="s">serves</span><span class="nv"> </span><span class="s">as</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">mechanism</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">enhance</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">supplement</span>
+
+<span class="w">  </span><span class="s">the</span><span class="nv"> </span><span class="s">information</span><span class="nv"> </span><span class="s">associated</span><span class="nv"> </span><span class="s">with</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">event</span><span class="nv"> </span><span class="s">by</span><span class="nv"> </span><span class="s">adding</span><span class="nv"> </span><span class="s">additional</span><span class="nv"> </span><span class="s">relevant</span><span class="nv"> </span><span class="s">details</span>
+
+<span class="w">  </span><span class="s">or</span><span class="nv"> </span><span class="s">context.'</span>
+<span class="nt">in_subset</span><span class="p">:</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">objects</span>
 <span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="nt">aliases</span><span class="p">:</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Enrichment</span>
@@ -1085,8 +1115,10 @@
 <span class="w">    </span><span class="nt">recommended</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">data</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">data</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The enrichment data associated with the attribute and value. The</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">meaning of this data depends on the type the enrichment record.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">enrichment</span><span class="nv"> </span><span class="s">data</span><span class="nv"> </span><span class="s">associated</span><span class="nv"> </span><span class="s">with</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">attribute</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">value.</span><span class="nv"> </span><span class="s">The</span>
+<span class="w">      </span><span class="s">meaning</span><span class="nv"> </span><span class="s">of</span>
+
+<span class="w">      </span><span class="s">this</span><span class="nv"> </span><span class="s">data</span><span class="nv"> </span><span class="s">depends</span><span class="nv"> </span><span class="s">on</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">type</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">enrichment</span><span class="nv"> </span><span class="s">record.'</span>
 <span class="w">    </span><span class="nt">required</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">desc</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">desc</span>
@@ -1160,8 +1192,10 @@
 <span class="w">    </span><span class="nt">recommended</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">data</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">data</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The enrichment data associated with the attribute and value. The</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">meaning of this data depends on the type the enrichment record.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">enrichment</span><span class="nv"> </span><span class="s">data</span><span class="nv"> </span><span class="s">associated</span><span class="nv"> </span><span class="s">with</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">attribute</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">value.</span><span class="nv"> </span><span class="s">The</span>
+<span class="w">      </span><span class="s">meaning</span><span class="nv"> </span><span class="s">of</span>
+
+<span class="w">      </span><span class="s">this</span><span class="nv"> </span><span class="s">data</span><span class="nv"> </span><span class="s">depends</span><span class="nv"> </span><span class="s">on</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">type</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">enrichment</span><span class="nv"> </span><span class="s">record.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Data</span>

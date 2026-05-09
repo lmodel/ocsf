@@ -497,7 +497,8 @@
 
 
 <h1 id="slot-load_balancer">Slot: load_balancer</h1>
-<p><em>The Load Balancer object contains information related to the device that is distributing incoming traffic to specified destinations.</em></p>
+<p><em>The Load Balancer object contains information related to the device that is</em></p>
+<p><em>distributing incoming traffic to specified destinations.</em></p>
 <p>URI: <a href="https://w3id.org/lmodel/ocsf/load_balancer">ocsf:load_balancer</a>
 Alias: load_balancer</p>
 <!-- no inheritance hierarchy -->
@@ -513,33 +514,18 @@ Alias: load_balancer</p>
 </thead>
 <tbody>
 <tr>
-<td><a href="../SshActivity/">SshActivity</a></td>
-<td>SSH Activity events report remote client connections to a server using the Se...</td>
+<td><a href="../HttpActivity/">HttpActivity</a></td>
+<td>HTTP Activity events report HTTP connection and traffic information</td>
 <td>no</td>
 </tr>
 <tr>
-<td><a href="../DhcpActivity/">DhcpActivity</a></td>
-<td>DHCP Activity events report MAC to IP assignment via DHCP from a client or se...</td>
+<td><a href="../SmbActivity/">SmbActivity</a></td>
+<td>Server Message Block (SMB) Protocol Activity events report client/server</td>
 <td>no</td>
 </tr>
 <tr>
-<td><a href="../RdpActivity/">RdpActivity</a></td>
-<td>Remote Desktop Protocol (RDP) Activity events report post-authentication remo...</td>
-<td>no</td>
-</tr>
-<tr>
-<td><a href="../TunnelActivity/">TunnelActivity</a></td>
-<td>Tunnel Activity events report secure tunnel establishment (such as VPN), tear...</td>
-<td>no</td>
-</tr>
-<tr>
-<td><a href="../DnsActivity/">DnsActivity</a></td>
-<td>DNS Activity events report DNS queries and answers as seen on the network</td>
-<td>no</td>
-</tr>
-<tr>
-<td><a href="../NetworkActivity/">NetworkActivity</a></td>
-<td>Network Activity events report network connection and traffic activity</td>
+<td><a href="../FtpActivity/">FtpActivity</a></td>
+<td>File Transfer Protocol (FTP) Activity events report file transfers between a</td>
 <td>no</td>
 </tr>
 <tr>
@@ -548,8 +534,13 @@ Alias: load_balancer</p>
 <td>yes</td>
 </tr>
 <tr>
-<td><a href="../NetworkFileActivity/">NetworkFileActivity</a></td>
-<td>Network File Activity events report file activities traversing the network, i...</td>
+<td><a href="../DnsActivity/">DnsActivity</a></td>
+<td>DNS Activity events report DNS queries and answers as seen on the network</td>
+<td>no</td>
+</tr>
+<tr>
+<td><a href="../DhcpActivity/">DhcpActivity</a></td>
+<td>DHCP Activity events report MAC to IP assignment via DHCP from a client or</td>
 <td>no</td>
 </tr>
 <tr>
@@ -558,23 +549,33 @@ Alias: load_balancer</p>
 <td>no</td>
 </tr>
 <tr>
+<td><a href="../RdpActivity/">RdpActivity</a></td>
+<td>Remote Desktop Protocol (RDP) Activity events report post-authentication remo...</td>
+<td>no</td>
+</tr>
+<tr>
+<td><a href="../NetworkFileActivity/">NetworkFileActivity</a></td>
+<td>Network File Activity events report file activities traversing the network,</td>
+<td>no</td>
+</tr>
+<tr>
+<td><a href="../SshActivity/">SshActivity</a></td>
+<td>SSH Activity events report remote client connections to a server using the</td>
+<td>no</td>
+</tr>
+<tr>
 <td><a href="../NtpActivity/">NtpActivity</a></td>
-<td>The Network Time Protocol (NTP) Activity events report instances of remote cl...</td>
+<td>The Network Time Protocol (NTP) Activity events report instances of remote</td>
 <td>no</td>
 </tr>
 <tr>
-<td><a href="../FtpActivity/">FtpActivity</a></td>
-<td>File Transfer Protocol (FTP) Activity events report file transfers between a ...</td>
+<td><a href="../NetworkActivity/">NetworkActivity</a></td>
+<td>Network Activity events report network connection and traffic activity</td>
 <td>no</td>
 </tr>
 <tr>
-<td><a href="../SmbActivity/">SmbActivity</a></td>
-<td>Server Message Block (SMB) Protocol Activity events report client/server conn...</td>
-<td>no</td>
-</tr>
-<tr>
-<td><a href="../HttpActivity/">HttpActivity</a></td>
-<td>HTTP Activity events report HTTP connection and traffic information</td>
+<td><a href="../TunnelActivity/">TunnelActivity</a></td>
+<td>Tunnel Activity events report secure tunnel establishment (such as VPN),</td>
 <td>no</td>
 </tr>
 </tbody>
@@ -645,8 +646,10 @@ Alias: load_balancer</p>
 <h2 id="linkml-source">LinkML Source</h2>
 <details>
 <div class="highlight"><pre><span></span><code><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">load_balancer</span>
-<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The Load Balancer object contains information related to the device that</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">is distributing incoming traffic to specified destinations.</span>
+<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;The</span><span class="nv"> </span><span class="s">Load</span><span class="nv"> </span><span class="s">Balancer</span><span class="nv"> </span><span class="s">object</span><span class="nv"> </span><span class="s">contains</span><span class="nv"> </span><span class="s">information</span><span class="nv"> </span><span class="s">related</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">device</span>
+<span class="w">  </span><span class="s">that</span><span class="nv"> </span><span class="s">is</span>
+
+<span class="w">  </span><span class="s">distributing</span><span class="nv"> </span><span class="s">incoming</span><span class="nv"> </span><span class="s">traffic</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">specified</span><span class="nv"> </span><span class="s">destinations.&#39;</span>
 <span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="nt">aliases</span><span class="p">:</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Load Balancer</span>

@@ -217,6 +217,15 @@
 </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="#in-subsets">
+<span class="md-ellipsis">
+      
+        In Subsets
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#aliases">
 <span class="md-ellipsis">
       
@@ -295,7 +304,8 @@
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
 <h1 id="class-relatedevent">Class: RelatedEvent</h1>
-<p><em>The Related Event object describes an event or another finding related to a finding. It may or may not be an OCSF event.</em></p>
+<p><em>The Related Event object describes an event or another finding related to a</em></p>
+<p><em>finding. It may or may not be an OCSF event.</em></p>
 <p>URI: <a href="https://w3id.org/lmodel/ocsf/RelatedEvent">ocsf:RelatedEvent</a></p>
 <pre class="mermaid"><code> classDiagram
     class RelatedEvent
@@ -433,13 +443,13 @@
 <tr>
 <td><a href="../attacks/">attacks</a></td>
 <td>* <br/> <a href="../Attack/">Attack</a></td>
-<td>An array of MITRE ATT&amp;CK® objects describing identified tactics, techniques &amp;...</td>
+<td>An array of MITRE ATT&amp;CK® objects describing identified tactics, techniques &amp;</td>
 <td>direct</td>
 </tr>
 <tr>
 <td><a href="../count/">count</a></td>
 <td>0..1 <br/> <a href="../Integer/">Integer</a></td>
-<td>The number of times that activity in the same logical group occurred, as repo...</td>
+<td>The number of times that activity in the same logical group occurred, as</td>
 <td>direct</td>
 </tr>
 <tr>
@@ -463,7 +473,7 @@
 <tr>
 <td><a href="../kill_chain/">kill_chain</a></td>
 <td>* <br/> <a href="../KillChainPhase/">KillChainPhase</a></td>
-<td>The &lt;a target='_blank' href='<a href="https://www">https://www</a></td>
+<td>The &lt;a target='_blank'</td>
 <td>direct</td>
 </tr>
 <tr>
@@ -499,7 +509,7 @@
 <tr>
 <td><a href="../severity/">severity</a></td>
 <td>0..1 <br/> <a href="../String/">String</a></td>
-<td>The event/finding severity, normalized to the caption of the <code>severity_i...</code></td>
+<td>The event/finding severity, normalized to the caption of the</td>
 <td>direct</td>
 </tr>
 <tr>
@@ -517,7 +527,7 @@
 <tr>
 <td><a href="../tags/">tags</a></td>
 <td>* <br/> <a href="../KeyValueObject/">KeyValueObject</a></td>
-<td>The list of tags; <code>{key:value}</code> pairs associated with the related ...</td>
+<td>The list of tags; <code>{key:value}</code> pairs associated with the related</td>
 <td>direct</td>
 </tr>
 <tr>
@@ -529,7 +539,7 @@
 <tr>
 <td><a href="../traits/">traits</a></td>
 <td>* <br/> <a href="../Trait/">Trait</a></td>
-<td>The list of key traits or characteristics extracted from the related event/fi...</td>
+<td>The list of key traits or characteristics extracted from the related</td>
 <td>direct</td>
 </tr>
 <tr>
@@ -583,6 +593,10 @@
 </tr>
 </tbody>
 </table>
+<h2 id="in-subsets">In Subsets</h2>
+<ul>
+<li><a href="../Objects/">Objects</a></li>
+</ul>
 <h2 id="aliases">Aliases</h2>
 <ul>
 <li>Related Event/Finding</li>
@@ -616,8 +630,12 @@
 <h3 id="direct">Direct</h3>
 <details>
 <div class="highlight"><pre><span></span><code><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">RelatedEvent</span>
-<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The Related Event object describes an event or another finding related</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">to a finding. It may or may not be an OCSF event.</span>
+<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">Related</span><span class="nv"> </span><span class="s">Event</span><span class="nv"> </span><span class="s">object</span><span class="nv"> </span><span class="s">describes</span><span class="nv"> </span><span class="s">an</span><span class="nv"> </span><span class="s">event</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">another</span><span class="nv"> </span><span class="s">finding</span><span class="nv"> </span><span class="s">related</span>
+<span class="w">  </span><span class="s">to</span><span class="nv"> </span><span class="s">a</span>
+
+<span class="w">  </span><span class="s">finding.</span><span class="nv"> </span><span class="s">It</span><span class="nv"> </span><span class="s">may</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">may</span><span class="nv"> </span><span class="s">not</span><span class="nv"> </span><span class="s">be</span><span class="nv"> </span><span class="s">an</span><span class="nv"> </span><span class="s">OCSF</span><span class="nv"> </span><span class="s">event.'</span>
+<span class="nt">in_subset</span><span class="p">:</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">objects</span>
 <span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="nt">aliases</span><span class="p">:</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Related Event/Finding</span>
@@ -647,28 +665,45 @@
 <span class="nt">slot_usage</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">count</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">count</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The number of times that activity in the same logical group occurred,</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">as reported by the related Finding.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">number</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">times</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">activity</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">same</span><span class="nv"> </span><span class="s">logical</span><span class="nv"> </span><span class="s">group</span><span class="nv"> </span><span class="s">occurred,</span>
+<span class="w">      </span><span class="s">as</span>
+
+<span class="w">      </span><span class="s">reported</span><span class="nv"> </span><span class="s">by</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">related</span><span class="nv"> </span><span class="s">Finding.'</span>
 <span class="w">  </span><span class="nt">created_time</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">created_time</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">&lt;p&gt;The time when the related event/finding was created.&lt;/p&gt; If the</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">related event/finding is in OCSF and is a Finding, then this value should be</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">equal to &lt;code&gt;finding_info.created_time&lt;/code&gt; in the corresponding Finding.</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">If the related event/finding is in OCSF and is not a Finding, then this value</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">should be equal to &lt;code&gt;time&lt;/code&gt; in the corresponding event.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'&lt;p&gt;The</span><span class="nv"> </span><span class="s">time</span><span class="nv"> </span><span class="s">when</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">related</span><span class="nv"> </span><span class="s">event/finding</span><span class="nv"> </span><span class="s">was</span><span class="nv"> </span><span class="s">created.&lt;/p&gt;</span><span class="nv"> </span><span class="s">If</span><span class="nv"> </span><span class="s">the</span>
+<span class="w">      </span><span class="s">related</span>
+
+<span class="w">      </span><span class="s">event/finding</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">OCSF</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">Finding,</span><span class="nv"> </span><span class="s">then</span><span class="nv"> </span><span class="s">this</span><span class="nv"> </span><span class="s">value</span><span class="nv"> </span><span class="s">should</span><span class="nv"> </span><span class="s">be</span><span class="nv"> </span><span class="s">equal</span><span class="nv"> </span><span class="s">to</span>
+
+<span class="w">      </span><span class="s">&lt;code&gt;finding_info.created_time&lt;/code&gt;</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">corresponding</span><span class="nv"> </span><span class="s">Finding.</span><span class="nv"> </span><span class="s">If</span><span class="nv"> </span><span class="s">the</span>
+
+<span class="w">      </span><span class="s">related</span><span class="nv"> </span><span class="s">event/finding</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">OCSF</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">not</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">Finding,</span><span class="nv"> </span><span class="s">then</span><span class="nv"> </span><span class="s">this</span><span class="nv"> </span><span class="s">value</span><span class="nv"> </span><span class="s">should</span>
+
+<span class="w">      </span><span class="s">be</span><span class="nv"> </span><span class="s">equal</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">&lt;code&gt;time&lt;/code&gt;</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">corresponding</span><span class="nv"> </span><span class="s">event.'</span>
 <span class="w">  </span><span class="nt">desc</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">desc</span>
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">A description of the related event/finding.</span>
 <span class="w">  </span><span class="nt">first_seen_time</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">first_seen_time</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The time when the finding was first observed. e.g. The time when</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">a vulnerability was first observed.&lt;br&gt;It can differ from the &lt;code&gt;created_time&lt;/code&gt;</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">timestamp, which reflects the time this finding was created.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">time</span><span class="nv"> </span><span class="s">when</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">finding</span><span class="nv"> </span><span class="s">was</span><span class="nv"> </span><span class="s">first</span><span class="nv"> </span><span class="s">observed.</span><span class="nv"> </span><span class="s">e.g.</span><span class="nv"> </span><span class="s">The</span><span class="nv"> </span><span class="s">time</span><span class="nv"> </span><span class="s">when</span>
+<span class="w">      </span><span class="s">a</span>
+
+<span class="w">      </span><span class="s">vulnerability</span><span class="nv"> </span><span class="s">was</span><span class="nv"> </span><span class="s">first</span><span class="nv"> </span><span class="s">observed.&lt;br&gt;It</span><span class="nv"> </span><span class="s">can</span><span class="nv"> </span><span class="s">differ</span><span class="nv"> </span><span class="s">from</span><span class="nv"> </span><span class="s">the</span>
+
+<span class="w">      </span><span class="s">&lt;code&gt;created_time&lt;/code&gt;</span><span class="nv"> </span><span class="s">timestamp,</span><span class="nv"> </span><span class="s">which</span><span class="nv"> </span><span class="s">reflects</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">time</span><span class="nv"> </span><span class="s">this</span><span class="nv"> </span><span class="s">finding</span><span class="nv"> </span><span class="s">was</span>
+
+<span class="w">      </span><span class="s">created.'</span>
 <span class="w">  </span><span class="nt">last_seen_time</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">last_seen_time</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The time when the finding was most recently observed. e.g. The time</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">when a vulnerability was most recently observed.&lt;br&gt;It can differ from the &lt;code&gt;modified_time&lt;/code&gt;</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">timestamp, which reflects the time this finding was last modified.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">time</span><span class="nv"> </span><span class="s">when</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">finding</span><span class="nv"> </span><span class="s">was</span><span class="nv"> </span><span class="s">most</span><span class="nv"> </span><span class="s">recently</span><span class="nv"> </span><span class="s">observed.</span><span class="nv"> </span><span class="s">e.g.</span><span class="nv"> </span><span class="s">The</span><span class="nv"> </span><span class="s">time</span>
+<span class="w">      </span><span class="s">when</span><span class="nv"> </span><span class="s">a</span>
+
+<span class="w">      </span><span class="s">vulnerability</span><span class="nv"> </span><span class="s">was</span><span class="nv"> </span><span class="s">most</span><span class="nv"> </span><span class="s">recently</span><span class="nv"> </span><span class="s">observed.&lt;br&gt;It</span><span class="nv"> </span><span class="s">can</span><span class="nv"> </span><span class="s">differ</span><span class="nv"> </span><span class="s">from</span><span class="nv"> </span><span class="s">the</span>
+
+<span class="w">      </span><span class="s">&lt;code&gt;modified_time&lt;/code&gt;</span><span class="nv"> </span><span class="s">timestamp,</span><span class="nv"> </span><span class="s">which</span><span class="nv"> </span><span class="s">reflects</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">time</span><span class="nv"> </span><span class="s">this</span><span class="nv"> </span><span class="s">finding</span><span class="nv"> </span><span class="s">was</span>
+
+<span class="w">      </span><span class="s">last</span><span class="nv"> </span><span class="s">modified.'</span>
 <span class="w">  </span><span class="nt">modified_time</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">modified_time</span>
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The time when the related event/finding was last modified.</span>
@@ -683,47 +718,64 @@
 <span class="w">    </span><span class="nt">recommended</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">status</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">status</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The related event status. Should correspond to the label of the status_id</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">(or 'Other' status value for status_id = 99) of the related event.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">related</span><span class="nv"> </span><span class="s">event</span><span class="nv"> </span><span class="s">status.</span><span class="nv"> </span><span class="s">Should</span><span class="nv"> </span><span class="s">correspond</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">label</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span>
+<span class="w">      </span><span class="s">status_id</span><span class="nv"> </span><span class="s">(or</span>
+
+<span class="w">      </span><span class="se">''</span><span class="s">Other</span><span class="se">''</span><span class="nv"> </span><span class="s">status</span><span class="nv"> </span><span class="s">value</span><span class="nv"> </span><span class="s">for</span><span class="nv"> </span><span class="s">status_id</span><span class="nv"> </span><span class="s">=</span><span class="nv"> </span><span class="s">99)</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">related</span><span class="nv"> </span><span class="s">event.'</span>
 <span class="w">  </span><span class="nt">tags</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">tags</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The list of tags; &lt;code&gt;{key:value}&lt;/code&gt; pairs associated with</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">the related event/finding.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">list</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">tags;</span><span class="nv"> </span><span class="s">&lt;code&gt;{key:value}&lt;/code&gt;</span><span class="nv"> </span><span class="s">pairs</span><span class="nv"> </span><span class="s">associated</span><span class="nv"> </span><span class="s">with</span>
+<span class="w">      </span><span class="s">the</span><span class="nv"> </span><span class="s">related</span>
+
+<span class="w">      </span><span class="s">event/finding.'</span>
 <span class="w">  </span><span class="nt">title</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">title</span>
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">A title or a brief phrase summarizing the related event/finding.</span>
 <span class="w">  </span><span class="nt">traits</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">traits</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The list of key traits or characteristics extracted from the related</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">event/finding that influenced or contributed to the overall finding's outcome.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">list</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">key</span><span class="nv"> </span><span class="s">traits</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">characteristics</span><span class="nv"> </span><span class="s">extracted</span><span class="nv"> </span><span class="s">from</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">related</span>
+
+<span class="w">      </span><span class="s">event/finding</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">influenced</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">contributed</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">overall</span><span class="nv"> </span><span class="s">finding</span><span class="se">''</span><span class="s">s</span><span class="nv"> </span><span class="s">outcome.'</span>
 <span class="w">  </span><span class="nt">type</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">type</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">&lt;p&gt;The type of the related event/finding.&lt;/p&gt;Populate if the related</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">event/finding is &lt;code&gt;NOT&lt;/code&gt; in OCSF. If it is in OCSF, then utilize &lt;code&gt;type_name,</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">type_uid&lt;/code&gt; instead.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'&lt;p&gt;The</span><span class="nv"> </span><span class="s">type</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">related</span><span class="nv"> </span><span class="s">event/finding.&lt;/p&gt;Populate</span><span class="nv"> </span><span class="s">if</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">related</span>
+
+<span class="w">      </span><span class="s">event/finding</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">&lt;code&gt;NOT&lt;/code&gt;</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">OCSF.</span><span class="nv"> </span><span class="s">If</span><span class="nv"> </span><span class="s">it</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">OCSF,</span><span class="nv"> </span><span class="s">then</span><span class="nv"> </span><span class="s">utilize</span>
+
+<span class="w">      </span><span class="s">&lt;code&gt;type_name,</span><span class="nv"> </span><span class="s">type_uid&lt;/code&gt;</span><span class="nv"> </span><span class="s">instead.'</span>
 <span class="w">  </span><span class="nt">type_name</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">type_name</span>
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">type</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">related</span><span class="nv"> </span><span class="s">OCSF</span><span class="nv"> </span><span class="s">event,</span><span class="nv"> </span><span class="s">as</span><span class="nv"> </span><span class="s">defined</span><span class="nv"> </span><span class="s">by</span><span class="nv"> </span><span class="s">&lt;code&gt;type_uid&lt;/code&gt;.&lt;p&gt;For</span>
-<span class="w">      </span><span class="s">example:</span><span class="nv"> </span><span class="s">&lt;code&gt;Process</span><span class="nv"> </span><span class="s">Activity:</span><span class="nv"> </span><span class="s">Launch.&lt;/code&gt;&lt;/p&gt;Populate</span><span class="nv"> </span><span class="s">if</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">related</span><span class="nv"> </span><span class="s">event/finding</span>
-<span class="w">      </span><span class="s">is</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">OCSF.'</span>
+
+<span class="w">      </span><span class="s">example:</span><span class="nv"> </span><span class="s">&lt;code&gt;Process</span><span class="nv"> </span><span class="s">Activity:</span><span class="nv"> </span><span class="s">Launch.&lt;/code&gt;&lt;/p&gt;Populate</span><span class="nv"> </span><span class="s">if</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">related</span>
+
+<span class="w">      </span><span class="s">event/finding</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">OCSF.'</span>
 <span class="w">  </span><span class="nt">type_uid</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">type_uid</span>
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">unique</span><span class="nv"> </span><span class="s">identifier</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">related</span><span class="nv"> </span><span class="s">OCSF</span><span class="nv"> </span><span class="s">event</span><span class="nv"> </span><span class="s">type.</span><span class="nv"> </span><span class="s">&lt;p&gt;For</span><span class="nv"> </span><span class="s">example:</span>
+
 <span class="w">      </span><span class="s">&lt;code&gt;100701.&lt;/code&gt;&lt;/p&gt;Populate</span><span class="nv"> </span><span class="s">if</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">related</span><span class="nv"> </span><span class="s">event/finding</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">OCSF.'</span>
 <span class="w">    </span><span class="nt">recommended</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">uid</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">uid</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">&lt;p&gt;The unique identifier of the related event/finding.&lt;/p&gt; If the</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">related event/finding is in OCSF, then this value must be equal to &lt;code&gt;metadata.uid&lt;/code&gt;</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">in the corresponding event.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'&lt;p&gt;The</span><span class="nv"> </span><span class="s">unique</span><span class="nv"> </span><span class="s">identifier</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">related</span><span class="nv"> </span><span class="s">event/finding.&lt;/p&gt;</span><span class="nv"> </span><span class="s">If</span><span class="nv"> </span><span class="s">the</span>
+<span class="w">      </span><span class="s">related</span>
+
+<span class="w">      </span><span class="s">event/finding</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">OCSF,</span><span class="nv"> </span><span class="s">then</span><span class="nv"> </span><span class="s">this</span><span class="nv"> </span><span class="s">value</span><span class="nv"> </span><span class="s">must</span><span class="nv"> </span><span class="s">be</span><span class="nv"> </span><span class="s">equal</span><span class="nv"> </span><span class="s">to</span>
+
+<span class="w">      </span><span class="s">&lt;code&gt;metadata.uid&lt;/code&gt;</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">corresponding</span><span class="nv"> </span><span class="s">event.'</span>
 <span class="w">    </span><span class="nt">required</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 </code></pre></div>
 </details>
 <h3 id="induced">Induced</h3>
 <details>
 <div class="highlight"><pre><span></span><code><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">RelatedEvent</span>
-<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The Related Event object describes an event or another finding related</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">to a finding. It may or may not be an OCSF event.</span>
+<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">Related</span><span class="nv"> </span><span class="s">Event</span><span class="nv"> </span><span class="s">object</span><span class="nv"> </span><span class="s">describes</span><span class="nv"> </span><span class="s">an</span><span class="nv"> </span><span class="s">event</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">another</span><span class="nv"> </span><span class="s">finding</span><span class="nv"> </span><span class="s">related</span>
+<span class="w">  </span><span class="s">to</span><span class="nv"> </span><span class="s">a</span>
+
+<span class="w">  </span><span class="s">finding.</span><span class="nv"> </span><span class="s">It</span><span class="nv"> </span><span class="s">may</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">may</span><span class="nv"> </span><span class="s">not</span><span class="nv"> </span><span class="s">be</span><span class="nv"> </span><span class="s">an</span><span class="nv"> </span><span class="s">OCSF</span><span class="nv"> </span><span class="s">event.'</span>
+<span class="nt">in_subset</span><span class="p">:</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">objects</span>
 <span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="nt">aliases</span><span class="p">:</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Related Event/Finding</span>
@@ -731,28 +783,45 @@
 <span class="nt">slot_usage</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">count</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">count</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The number of times that activity in the same logical group occurred,</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">as reported by the related Finding.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">number</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">times</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">activity</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">same</span><span class="nv"> </span><span class="s">logical</span><span class="nv"> </span><span class="s">group</span><span class="nv"> </span><span class="s">occurred,</span>
+<span class="w">      </span><span class="s">as</span>
+
+<span class="w">      </span><span class="s">reported</span><span class="nv"> </span><span class="s">by</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">related</span><span class="nv"> </span><span class="s">Finding.'</span>
 <span class="w">  </span><span class="nt">created_time</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">created_time</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">&lt;p&gt;The time when the related event/finding was created.&lt;/p&gt; If the</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">related event/finding is in OCSF and is a Finding, then this value should be</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">equal to &lt;code&gt;finding_info.created_time&lt;/code&gt; in the corresponding Finding.</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">If the related event/finding is in OCSF and is not a Finding, then this value</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">should be equal to &lt;code&gt;time&lt;/code&gt; in the corresponding event.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'&lt;p&gt;The</span><span class="nv"> </span><span class="s">time</span><span class="nv"> </span><span class="s">when</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">related</span><span class="nv"> </span><span class="s">event/finding</span><span class="nv"> </span><span class="s">was</span><span class="nv"> </span><span class="s">created.&lt;/p&gt;</span><span class="nv"> </span><span class="s">If</span><span class="nv"> </span><span class="s">the</span>
+<span class="w">      </span><span class="s">related</span>
+
+<span class="w">      </span><span class="s">event/finding</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">OCSF</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">Finding,</span><span class="nv"> </span><span class="s">then</span><span class="nv"> </span><span class="s">this</span><span class="nv"> </span><span class="s">value</span><span class="nv"> </span><span class="s">should</span><span class="nv"> </span><span class="s">be</span><span class="nv"> </span><span class="s">equal</span><span class="nv"> </span><span class="s">to</span>
+
+<span class="w">      </span><span class="s">&lt;code&gt;finding_info.created_time&lt;/code&gt;</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">corresponding</span><span class="nv"> </span><span class="s">Finding.</span><span class="nv"> </span><span class="s">If</span><span class="nv"> </span><span class="s">the</span>
+
+<span class="w">      </span><span class="s">related</span><span class="nv"> </span><span class="s">event/finding</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">OCSF</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">not</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">Finding,</span><span class="nv"> </span><span class="s">then</span><span class="nv"> </span><span class="s">this</span><span class="nv"> </span><span class="s">value</span><span class="nv"> </span><span class="s">should</span>
+
+<span class="w">      </span><span class="s">be</span><span class="nv"> </span><span class="s">equal</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">&lt;code&gt;time&lt;/code&gt;</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">corresponding</span><span class="nv"> </span><span class="s">event.'</span>
 <span class="w">  </span><span class="nt">desc</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">desc</span>
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">A description of the related event/finding.</span>
 <span class="w">  </span><span class="nt">first_seen_time</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">first_seen_time</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The time when the finding was first observed. e.g. The time when</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">a vulnerability was first observed.&lt;br&gt;It can differ from the &lt;code&gt;created_time&lt;/code&gt;</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">timestamp, which reflects the time this finding was created.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">time</span><span class="nv"> </span><span class="s">when</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">finding</span><span class="nv"> </span><span class="s">was</span><span class="nv"> </span><span class="s">first</span><span class="nv"> </span><span class="s">observed.</span><span class="nv"> </span><span class="s">e.g.</span><span class="nv"> </span><span class="s">The</span><span class="nv"> </span><span class="s">time</span><span class="nv"> </span><span class="s">when</span>
+<span class="w">      </span><span class="s">a</span>
+
+<span class="w">      </span><span class="s">vulnerability</span><span class="nv"> </span><span class="s">was</span><span class="nv"> </span><span class="s">first</span><span class="nv"> </span><span class="s">observed.&lt;br&gt;It</span><span class="nv"> </span><span class="s">can</span><span class="nv"> </span><span class="s">differ</span><span class="nv"> </span><span class="s">from</span><span class="nv"> </span><span class="s">the</span>
+
+<span class="w">      </span><span class="s">&lt;code&gt;created_time&lt;/code&gt;</span><span class="nv"> </span><span class="s">timestamp,</span><span class="nv"> </span><span class="s">which</span><span class="nv"> </span><span class="s">reflects</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">time</span><span class="nv"> </span><span class="s">this</span><span class="nv"> </span><span class="s">finding</span><span class="nv"> </span><span class="s">was</span>
+
+<span class="w">      </span><span class="s">created.'</span>
 <span class="w">  </span><span class="nt">last_seen_time</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">last_seen_time</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The time when the finding was most recently observed. e.g. The time</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">when a vulnerability was most recently observed.&lt;br&gt;It can differ from the &lt;code&gt;modified_time&lt;/code&gt;</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">timestamp, which reflects the time this finding was last modified.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">time</span><span class="nv"> </span><span class="s">when</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">finding</span><span class="nv"> </span><span class="s">was</span><span class="nv"> </span><span class="s">most</span><span class="nv"> </span><span class="s">recently</span><span class="nv"> </span><span class="s">observed.</span><span class="nv"> </span><span class="s">e.g.</span><span class="nv"> </span><span class="s">The</span><span class="nv"> </span><span class="s">time</span>
+<span class="w">      </span><span class="s">when</span><span class="nv"> </span><span class="s">a</span>
+
+<span class="w">      </span><span class="s">vulnerability</span><span class="nv"> </span><span class="s">was</span><span class="nv"> </span><span class="s">most</span><span class="nv"> </span><span class="s">recently</span><span class="nv"> </span><span class="s">observed.&lt;br&gt;It</span><span class="nv"> </span><span class="s">can</span><span class="nv"> </span><span class="s">differ</span><span class="nv"> </span><span class="s">from</span><span class="nv"> </span><span class="s">the</span>
+
+<span class="w">      </span><span class="s">&lt;code&gt;modified_time&lt;/code&gt;</span><span class="nv"> </span><span class="s">timestamp,</span><span class="nv"> </span><span class="s">which</span><span class="nv"> </span><span class="s">reflects</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">time</span><span class="nv"> </span><span class="s">this</span><span class="nv"> </span><span class="s">finding</span><span class="nv"> </span><span class="s">was</span>
+
+<span class="w">      </span><span class="s">last</span><span class="nv"> </span><span class="s">modified.'</span>
 <span class="w">  </span><span class="nt">modified_time</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">modified_time</span>
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The time when the related event/finding was last modified.</span>
@@ -767,46 +836,62 @@
 <span class="w">    </span><span class="nt">recommended</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">status</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">status</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The related event status. Should correspond to the label of the status_id</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">(or 'Other' status value for status_id = 99) of the related event.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">related</span><span class="nv"> </span><span class="s">event</span><span class="nv"> </span><span class="s">status.</span><span class="nv"> </span><span class="s">Should</span><span class="nv"> </span><span class="s">correspond</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">label</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span>
+<span class="w">      </span><span class="s">status_id</span><span class="nv"> </span><span class="s">(or</span>
+
+<span class="w">      </span><span class="se">''</span><span class="s">Other</span><span class="se">''</span><span class="nv"> </span><span class="s">status</span><span class="nv"> </span><span class="s">value</span><span class="nv"> </span><span class="s">for</span><span class="nv"> </span><span class="s">status_id</span><span class="nv"> </span><span class="s">=</span><span class="nv"> </span><span class="s">99)</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">related</span><span class="nv"> </span><span class="s">event.'</span>
 <span class="w">  </span><span class="nt">tags</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">tags</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The list of tags; &lt;code&gt;{key:value}&lt;/code&gt; pairs associated with</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">the related event/finding.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">list</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">tags;</span><span class="nv"> </span><span class="s">&lt;code&gt;{key:value}&lt;/code&gt;</span><span class="nv"> </span><span class="s">pairs</span><span class="nv"> </span><span class="s">associated</span><span class="nv"> </span><span class="s">with</span>
+<span class="w">      </span><span class="s">the</span><span class="nv"> </span><span class="s">related</span>
+
+<span class="w">      </span><span class="s">event/finding.'</span>
 <span class="w">  </span><span class="nt">title</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">title</span>
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">A title or a brief phrase summarizing the related event/finding.</span>
 <span class="w">  </span><span class="nt">traits</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">traits</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The list of key traits or characteristics extracted from the related</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">event/finding that influenced or contributed to the overall finding's outcome.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">list</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">key</span><span class="nv"> </span><span class="s">traits</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">characteristics</span><span class="nv"> </span><span class="s">extracted</span><span class="nv"> </span><span class="s">from</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">related</span>
+
+<span class="w">      </span><span class="s">event/finding</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">influenced</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">contributed</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">overall</span><span class="nv"> </span><span class="s">finding</span><span class="se">''</span><span class="s">s</span><span class="nv"> </span><span class="s">outcome.'</span>
 <span class="w">  </span><span class="nt">type</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">type</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">&lt;p&gt;The type of the related event/finding.&lt;/p&gt;Populate if the related</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">event/finding is &lt;code&gt;NOT&lt;/code&gt; in OCSF. If it is in OCSF, then utilize &lt;code&gt;type_name,</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">type_uid&lt;/code&gt; instead.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'&lt;p&gt;The</span><span class="nv"> </span><span class="s">type</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">related</span><span class="nv"> </span><span class="s">event/finding.&lt;/p&gt;Populate</span><span class="nv"> </span><span class="s">if</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">related</span>
+
+<span class="w">      </span><span class="s">event/finding</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">&lt;code&gt;NOT&lt;/code&gt;</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">OCSF.</span><span class="nv"> </span><span class="s">If</span><span class="nv"> </span><span class="s">it</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">OCSF,</span><span class="nv"> </span><span class="s">then</span><span class="nv"> </span><span class="s">utilize</span>
+
+<span class="w">      </span><span class="s">&lt;code&gt;type_name,</span><span class="nv"> </span><span class="s">type_uid&lt;/code&gt;</span><span class="nv"> </span><span class="s">instead.'</span>
 <span class="w">  </span><span class="nt">type_name</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">type_name</span>
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">type</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">related</span><span class="nv"> </span><span class="s">OCSF</span><span class="nv"> </span><span class="s">event,</span><span class="nv"> </span><span class="s">as</span><span class="nv"> </span><span class="s">defined</span><span class="nv"> </span><span class="s">by</span><span class="nv"> </span><span class="s">&lt;code&gt;type_uid&lt;/code&gt;.&lt;p&gt;For</span>
-<span class="w">      </span><span class="s">example:</span><span class="nv"> </span><span class="s">&lt;code&gt;Process</span><span class="nv"> </span><span class="s">Activity:</span><span class="nv"> </span><span class="s">Launch.&lt;/code&gt;&lt;/p&gt;Populate</span><span class="nv"> </span><span class="s">if</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">related</span><span class="nv"> </span><span class="s">event/finding</span>
-<span class="w">      </span><span class="s">is</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">OCSF.'</span>
+
+<span class="w">      </span><span class="s">example:</span><span class="nv"> </span><span class="s">&lt;code&gt;Process</span><span class="nv"> </span><span class="s">Activity:</span><span class="nv"> </span><span class="s">Launch.&lt;/code&gt;&lt;/p&gt;Populate</span><span class="nv"> </span><span class="s">if</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">related</span>
+
+<span class="w">      </span><span class="s">event/finding</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">OCSF.'</span>
 <span class="w">  </span><span class="nt">type_uid</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">type_uid</span>
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">unique</span><span class="nv"> </span><span class="s">identifier</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">related</span><span class="nv"> </span><span class="s">OCSF</span><span class="nv"> </span><span class="s">event</span><span class="nv"> </span><span class="s">type.</span><span class="nv"> </span><span class="s">&lt;p&gt;For</span><span class="nv"> </span><span class="s">example:</span>
+
 <span class="w">      </span><span class="s">&lt;code&gt;100701.&lt;/code&gt;&lt;/p&gt;Populate</span><span class="nv"> </span><span class="s">if</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">related</span><span class="nv"> </span><span class="s">event/finding</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">OCSF.'</span>
 <span class="w">    </span><span class="nt">recommended</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">uid</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">uid</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">&lt;p&gt;The unique identifier of the related event/finding.&lt;/p&gt; If the</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">related event/finding is in OCSF, then this value must be equal to &lt;code&gt;metadata.uid&lt;/code&gt;</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">in the corresponding event.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'&lt;p&gt;The</span><span class="nv"> </span><span class="s">unique</span><span class="nv"> </span><span class="s">identifier</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">related</span><span class="nv"> </span><span class="s">event/finding.&lt;/p&gt;</span><span class="nv"> </span><span class="s">If</span><span class="nv"> </span><span class="s">the</span>
+<span class="w">      </span><span class="s">related</span>
+
+<span class="w">      </span><span class="s">event/finding</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">OCSF,</span><span class="nv"> </span><span class="s">then</span><span class="nv"> </span><span class="s">this</span><span class="nv"> </span><span class="s">value</span><span class="nv"> </span><span class="s">must</span><span class="nv"> </span><span class="s">be</span><span class="nv"> </span><span class="s">equal</span><span class="nv"> </span><span class="s">to</span>
+
+<span class="w">      </span><span class="s">&lt;code&gt;metadata.uid&lt;/code&gt;</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">corresponding</span><span class="nv"> </span><span class="s">event.'</span>
 <span class="w">    </span><span class="nt">required</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="nt">attributes</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">attacks</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">attacks</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">An array of MITRE ATT&amp;CK® objects describing identified tactics,</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">techniques &amp; sub-techniques. The objects are compatible with MITRE ATLAS™ tactics,</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">techniques &amp; sub-techniques.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'An</span><span class="nv"> </span><span class="s">array</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">MITRE</span><span class="nv"> </span><span class="s">ATT&amp;CK®</span><span class="nv"> </span><span class="s">objects</span><span class="nv"> </span><span class="s">describing</span><span class="nv"> </span><span class="s">identified</span><span class="nv"> </span><span class="s">tactics,</span>
+<span class="w">      </span><span class="s">techniques</span><span class="nv"> </span><span class="s">&amp;</span>
+
+<span class="w">      </span><span class="s">sub-techniques.</span><span class="nv"> </span><span class="s">The</span><span class="nv"> </span><span class="s">objects</span><span class="nv"> </span><span class="s">are</span><span class="nv"> </span><span class="s">compatible</span><span class="nv"> </span><span class="s">with</span><span class="nv"> </span><span class="s">MITRE</span><span class="nv"> </span><span class="s">ATLAS™</span><span class="nv"> </span><span class="s">tactics,</span>
+
+<span class="w">      </span><span class="s">techniques</span><span class="nv"> </span><span class="s">&amp;</span><span class="nv"> </span><span class="s">sub-techniques.'</span>
 <span class="w">    </span><span class="nt">notes</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">MITRE ATT&amp;CK® — https://attack.mitre.org</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">MITRE ATLAS — https://atlas.mitre.org/matrices/ATLAS</span>
@@ -830,8 +915,10 @@
 <span class="w">    </span><span class="nt">multivalued</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">count</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">count</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The number of times that activity in the same logical group occurred,</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">as reported by the related Finding.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">number</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">times</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">activity</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">same</span><span class="nv"> </span><span class="s">logical</span><span class="nv"> </span><span class="s">group</span><span class="nv"> </span><span class="s">occurred,</span>
+<span class="w">      </span><span class="s">as</span>
+
+<span class="w">      </span><span class="s">reported</span><span class="nv"> </span><span class="s">by</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">related</span><span class="nv"> </span><span class="s">Finding.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Count</span>
@@ -848,11 +935,16 @@
 <span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">integer</span>
 <span class="w">  </span><span class="nt">created_time</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">created_time</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">&lt;p&gt;The time when the related event/finding was created.&lt;/p&gt; If the</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">related event/finding is in OCSF and is a Finding, then this value should be</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">equal to &lt;code&gt;finding_info.created_time&lt;/code&gt; in the corresponding Finding.</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">If the related event/finding is in OCSF and is not a Finding, then this value</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">should be equal to &lt;code&gt;time&lt;/code&gt; in the corresponding event.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'&lt;p&gt;The</span><span class="nv"> </span><span class="s">time</span><span class="nv"> </span><span class="s">when</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">related</span><span class="nv"> </span><span class="s">event/finding</span><span class="nv"> </span><span class="s">was</span><span class="nv"> </span><span class="s">created.&lt;/p&gt;</span><span class="nv"> </span><span class="s">If</span><span class="nv"> </span><span class="s">the</span>
+<span class="w">      </span><span class="s">related</span>
+
+<span class="w">      </span><span class="s">event/finding</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">OCSF</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">Finding,</span><span class="nv"> </span><span class="s">then</span><span class="nv"> </span><span class="s">this</span><span class="nv"> </span><span class="s">value</span><span class="nv"> </span><span class="s">should</span><span class="nv"> </span><span class="s">be</span><span class="nv"> </span><span class="s">equal</span><span class="nv"> </span><span class="s">to</span>
+
+<span class="w">      </span><span class="s">&lt;code&gt;finding_info.created_time&lt;/code&gt;</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">corresponding</span><span class="nv"> </span><span class="s">Finding.</span><span class="nv"> </span><span class="s">If</span><span class="nv"> </span><span class="s">the</span>
+
+<span class="w">      </span><span class="s">related</span><span class="nv"> </span><span class="s">event/finding</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">OCSF</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">not</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">Finding,</span><span class="nv"> </span><span class="s">then</span><span class="nv"> </span><span class="s">this</span><span class="nv"> </span><span class="s">value</span><span class="nv"> </span><span class="s">should</span>
+
+<span class="w">      </span><span class="s">be</span><span class="nv"> </span><span class="s">equal</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">&lt;code&gt;time&lt;/code&gt;</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">corresponding</span><span class="nv"> </span><span class="s">event.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Created Time</span>
@@ -932,9 +1024,14 @@
 <span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">string</span>
 <span class="w">  </span><span class="nt">first_seen_time</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">first_seen_time</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The time when the finding was first observed. e.g. The time when</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">a vulnerability was first observed.&lt;br&gt;It can differ from the &lt;code&gt;created_time&lt;/code&gt;</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">timestamp, which reflects the time this finding was created.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">time</span><span class="nv"> </span><span class="s">when</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">finding</span><span class="nv"> </span><span class="s">was</span><span class="nv"> </span><span class="s">first</span><span class="nv"> </span><span class="s">observed.</span><span class="nv"> </span><span class="s">e.g.</span><span class="nv"> </span><span class="s">The</span><span class="nv"> </span><span class="s">time</span><span class="nv"> </span><span class="s">when</span>
+<span class="w">      </span><span class="s">a</span>
+
+<span class="w">      </span><span class="s">vulnerability</span><span class="nv"> </span><span class="s">was</span><span class="nv"> </span><span class="s">first</span><span class="nv"> </span><span class="s">observed.&lt;br&gt;It</span><span class="nv"> </span><span class="s">can</span><span class="nv"> </span><span class="s">differ</span><span class="nv"> </span><span class="s">from</span><span class="nv"> </span><span class="s">the</span>
+
+<span class="w">      </span><span class="s">&lt;code&gt;created_time&lt;/code&gt;</span><span class="nv"> </span><span class="s">timestamp,</span><span class="nv"> </span><span class="s">which</span><span class="nv"> </span><span class="s">reflects</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">time</span><span class="nv"> </span><span class="s">this</span><span class="nv"> </span><span class="s">finding</span><span class="nv"> </span><span class="s">was</span>
+
+<span class="w">      </span><span class="s">created.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">First Seen</span>
@@ -951,9 +1048,13 @@
 <span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">TimestampT</span>
 <span class="w">  </span><span class="nt">kill_chain</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">kill_chain</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The &lt;a target='_blank' href='https://www.lockheedmartin.com/en-us/capabilities/cyber/cyber-kill-chain.html'&gt;Cyber</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">Kill Chain®&lt;/a&gt; provides a detailed description of each phase and its associated</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">activities within the broader context of a cyber attack.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">&lt;a</span><span class="nv"> </span><span class="s">target=</span><span class="se">''</span><span class="s">_blank</span><span class="se">''</span>
+
+<span class="w">      </span><span class="s">href=</span><span class="se">''</span><span class="s">https://www.lockheedmartin.com/en-us/capabilities/cyber/cyber-kill-chain.html</span><span class="se">''</span><span class="s">&gt;Cyber</span>
+
+<span class="w">      </span><span class="s">Kill</span><span class="nv"> </span><span class="s">Chain®&lt;/a&gt;</span><span class="nv"> </span><span class="s">provides</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">detailed</span><span class="nv"> </span><span class="s">description</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">each</span><span class="nv"> </span><span class="s">phase</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">its</span>
+
+<span class="w">      </span><span class="s">associated</span><span class="nv"> </span><span class="s">activities</span><span class="nv"> </span><span class="s">within</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">broader</span><span class="nv"> </span><span class="s">context</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">cyber</span><span class="nv"> </span><span class="s">attack.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Kill Chain</span>
@@ -969,9 +1070,14 @@
 <span class="w">    </span><span class="nt">multivalued</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">last_seen_time</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">last_seen_time</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The time when the finding was most recently observed. e.g. The time</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">when a vulnerability was most recently observed.&lt;br&gt;It can differ from the &lt;code&gt;modified_time&lt;/code&gt;</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">timestamp, which reflects the time this finding was last modified.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">time</span><span class="nv"> </span><span class="s">when</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">finding</span><span class="nv"> </span><span class="s">was</span><span class="nv"> </span><span class="s">most</span><span class="nv"> </span><span class="s">recently</span><span class="nv"> </span><span class="s">observed.</span><span class="nv"> </span><span class="s">e.g.</span><span class="nv"> </span><span class="s">The</span><span class="nv"> </span><span class="s">time</span>
+<span class="w">      </span><span class="s">when</span><span class="nv"> </span><span class="s">a</span>
+
+<span class="w">      </span><span class="s">vulnerability</span><span class="nv"> </span><span class="s">was</span><span class="nv"> </span><span class="s">most</span><span class="nv"> </span><span class="s">recently</span><span class="nv"> </span><span class="s">observed.&lt;br&gt;It</span><span class="nv"> </span><span class="s">can</span><span class="nv"> </span><span class="s">differ</span><span class="nv"> </span><span class="s">from</span><span class="nv"> </span><span class="s">the</span>
+
+<span class="w">      </span><span class="s">&lt;code&gt;modified_time&lt;/code&gt;</span><span class="nv"> </span><span class="s">timestamp,</span><span class="nv"> </span><span class="s">which</span><span class="nv"> </span><span class="s">reflects</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">time</span><span class="nv"> </span><span class="s">this</span><span class="nv"> </span><span class="s">finding</span><span class="nv"> </span><span class="s">was</span>
+
+<span class="w">      </span><span class="s">last</span><span class="nv"> </span><span class="s">modified.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Last Seen</span>
@@ -1021,7 +1127,9 @@
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">observables</span>
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The observables associated with the event or a finding.</span>
 <span class="w">    </span><span class="nt">notes</span><span class="p">:</span>
-<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">OCSF Observables FAQ — https://github.com/ocsf/ocsf-docs/blob/main/articles/defining-and-using-observables.md</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">'OCSF</span><span class="nv"> </span><span class="s">Observables</span><span class="nv"> </span><span class="s">FAQ</span><span class="nv"> </span><span class="s">—</span>
+
+<span class="w">      </span><span class="s">https://github.com/ocsf/ocsf-docs/blob/main/articles/defining-and-using-observables.md'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">see_also</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://github.com/ocsf/ocsf-docs/blob/main/articles/defining-and-using-observables.md</span>
@@ -1061,8 +1169,10 @@
 <span class="w">  </span><span class="nt">product_uid</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">product_uid</span>
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The unique identifier of the product that reported the related event.</span>
-<span class="w">    </span><span class="nt">deprecated</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Use the &lt;code&gt;uid&lt;/code&gt; attribute in the &lt;code&gt;product&lt;/code&gt; object</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">instead. See specific usage. (since 1.4.0)</span>
+<span class="w">    </span><span class="nt">deprecated</span><span class="p">:</span><span class="w"> </span><span class="s">'Use</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">&lt;code&gt;uid&lt;/code&gt;</span><span class="nv"> </span><span class="s">attribute</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">&lt;code&gt;product&lt;/code&gt;</span><span class="nv"> </span><span class="s">object</span>
+<span class="w">      </span><span class="s">instead.</span>
+
+<span class="w">      </span><span class="s">See</span><span class="nv"> </span><span class="s">specific</span><span class="nv"> </span><span class="s">usage.</span><span class="nv"> </span><span class="s">(since</span><span class="nv"> </span><span class="s">1.4.0)'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Product Identifier</span>
@@ -1076,8 +1186,11 @@
 <span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">string</span>
 <span class="w">  </span><span class="nt">severity</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">severity</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The event/finding severity, normalized to the caption of the &lt;code&gt;severity_id&lt;/code&gt;</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">value. In the case of 'Other', it is defined by the source.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">event/finding</span><span class="nv"> </span><span class="s">severity,</span><span class="nv"> </span><span class="s">normalized</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">caption</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span>
+
+<span class="w">      </span><span class="s">&lt;code&gt;severity_id&lt;/code&gt;</span><span class="nv"> </span><span class="s">value.</span><span class="nv"> </span><span class="s">In</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">case</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="se">''</span><span class="s">Other</span><span class="se">''</span><span class="s">,</span><span class="nv"> </span><span class="s">it</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">defined</span><span class="nv"> </span><span class="s">by</span><span class="nv"> </span><span class="s">the</span>
+
+<span class="w">      </span><span class="s">source.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Severity</span>
@@ -1101,10 +1214,14 @@
 <span class="w">      </span><span class="nt">sibling</span><span class="p">:</span>
 <span class="w">        </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">sibling</span>
 <span class="w">        </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">severity</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">&lt;p&gt;The normalized identifier of the event/finding severity.&lt;/p&gt;The</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">normalized severity is a measurement the effort and expense required to manage</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">and resolve an event or incident. Smaller numerical values represent lower impact</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">events, and larger numerical values represent higher impact events.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'&lt;p&gt;The</span><span class="nv"> </span><span class="s">normalized</span><span class="nv"> </span><span class="s">identifier</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">event/finding</span><span class="nv"> </span><span class="s">severity.&lt;/p&gt;The</span>
+<span class="w">      </span><span class="s">normalized</span>
+
+<span class="w">      </span><span class="s">severity</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">measurement</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">effort</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">expense</span><span class="nv"> </span><span class="s">required</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">manage</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">resolve</span>
+
+<span class="w">      </span><span class="s">an</span><span class="nv"> </span><span class="s">event</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">incident.</span><span class="nv"> </span><span class="s">Smaller</span><span class="nv"> </span><span class="s">numerical</span><span class="nv"> </span><span class="s">values</span><span class="nv"> </span><span class="s">represent</span><span class="nv"> </span><span class="s">lower</span><span class="nv"> </span><span class="s">impact</span><span class="nv"> </span><span class="s">events,</span>
+
+<span class="w">      </span><span class="s">and</span><span class="nv"> </span><span class="s">larger</span><span class="nv"> </span><span class="s">numerical</span><span class="nv"> </span><span class="s">values</span><span class="nv"> </span><span class="s">represent</span><span class="nv"> </span><span class="s">higher</span><span class="nv"> </span><span class="s">impact</span><span class="nv"> </span><span class="s">events.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Severity ID</span>
@@ -1122,8 +1239,10 @@
 <span class="w">    </span><span class="nt">recommended</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">status</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">status</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The related event status. Should correspond to the label of the status_id</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">(or 'Other' status value for status_id = 99) of the related event.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">related</span><span class="nv"> </span><span class="s">event</span><span class="nv"> </span><span class="s">status.</span><span class="nv"> </span><span class="s">Should</span><span class="nv"> </span><span class="s">correspond</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">label</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span>
+<span class="w">      </span><span class="s">status_id</span><span class="nv"> </span><span class="s">(or</span>
+
+<span class="w">      </span><span class="se">''</span><span class="s">Other</span><span class="se">''</span><span class="nv"> </span><span class="s">status</span><span class="nv"> </span><span class="s">value</span><span class="nv"> </span><span class="s">for</span><span class="nv"> </span><span class="s">status_id</span><span class="nv"> </span><span class="s">=</span><span class="nv"> </span><span class="s">99)</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">related</span><span class="nv"> </span><span class="s">event.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Status</span>
@@ -1146,8 +1265,10 @@
 <span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">string</span>
 <span class="w">  </span><span class="nt">tags</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">tags</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The list of tags; &lt;code&gt;{key:value}&lt;/code&gt; pairs associated with</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">the related event/finding.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">list</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">tags;</span><span class="nv"> </span><span class="s">&lt;code&gt;{key:value}&lt;/code&gt;</span><span class="nv"> </span><span class="s">pairs</span><span class="nv"> </span><span class="s">associated</span><span class="nv"> </span><span class="s">with</span>
+<span class="w">      </span><span class="s">the</span><span class="nv"> </span><span class="s">related</span>
+
+<span class="w">      </span><span class="s">event/finding.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Tags</span>
@@ -1189,8 +1310,9 @@
 <span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">string</span>
 <span class="w">  </span><span class="nt">traits</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">traits</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The list of key traits or characteristics extracted from the related</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">event/finding that influenced or contributed to the overall finding's outcome.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">list</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">key</span><span class="nv"> </span><span class="s">traits</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">characteristics</span><span class="nv"> </span><span class="s">extracted</span><span class="nv"> </span><span class="s">from</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">related</span>
+
+<span class="w">      </span><span class="s">event/finding</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">influenced</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">contributed</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">overall</span><span class="nv"> </span><span class="s">finding</span><span class="se">''</span><span class="s">s</span><span class="nv"> </span><span class="s">outcome.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Traits</span>
@@ -1204,9 +1326,11 @@
 <span class="w">    </span><span class="nt">multivalued</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">type</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">type</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">&lt;p&gt;The type of the related event/finding.&lt;/p&gt;Populate if the related</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">event/finding is &lt;code&gt;NOT&lt;/code&gt; in OCSF. If it is in OCSF, then utilize &lt;code&gt;type_name,</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">type_uid&lt;/code&gt; instead.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'&lt;p&gt;The</span><span class="nv"> </span><span class="s">type</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">related</span><span class="nv"> </span><span class="s">event/finding.&lt;/p&gt;Populate</span><span class="nv"> </span><span class="s">if</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">related</span>
+
+<span class="w">      </span><span class="s">event/finding</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">&lt;code&gt;NOT&lt;/code&gt;</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">OCSF.</span><span class="nv"> </span><span class="s">If</span><span class="nv"> </span><span class="s">it</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">OCSF,</span><span class="nv"> </span><span class="s">then</span><span class="nv"> </span><span class="s">utilize</span>
+
+<span class="w">      </span><span class="s">&lt;code&gt;type_name,</span><span class="nv"> </span><span class="s">type_uid&lt;/code&gt;</span><span class="nv"> </span><span class="s">instead.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Type</span>
@@ -1278,8 +1402,10 @@
 <span class="w">  </span><span class="nt">type_name</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">type_name</span>
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">type</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">related</span><span class="nv"> </span><span class="s">OCSF</span><span class="nv"> </span><span class="s">event,</span><span class="nv"> </span><span class="s">as</span><span class="nv"> </span><span class="s">defined</span><span class="nv"> </span><span class="s">by</span><span class="nv"> </span><span class="s">&lt;code&gt;type_uid&lt;/code&gt;.&lt;p&gt;For</span>
-<span class="w">      </span><span class="s">example:</span><span class="nv"> </span><span class="s">&lt;code&gt;Process</span><span class="nv"> </span><span class="s">Activity:</span><span class="nv"> </span><span class="s">Launch.&lt;/code&gt;&lt;/p&gt;Populate</span><span class="nv"> </span><span class="s">if</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">related</span><span class="nv"> </span><span class="s">event/finding</span>
-<span class="w">      </span><span class="s">is</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">OCSF.'</span>
+
+<span class="w">      </span><span class="s">example:</span><span class="nv"> </span><span class="s">&lt;code&gt;Process</span><span class="nv"> </span><span class="s">Activity:</span><span class="nv"> </span><span class="s">Launch.&lt;/code&gt;&lt;/p&gt;Populate</span><span class="nv"> </span><span class="s">if</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">related</span>
+
+<span class="w">      </span><span class="s">event/finding</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">OCSF.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Type Name</span>
@@ -1297,6 +1423,7 @@
 <span class="w">        </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">sibling</span>
 <span class="w">        </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">type_name</span>
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">unique</span><span class="nv"> </span><span class="s">identifier</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">related</span><span class="nv"> </span><span class="s">OCSF</span><span class="nv"> </span><span class="s">event</span><span class="nv"> </span><span class="s">type.</span><span class="nv"> </span><span class="s">&lt;p&gt;For</span><span class="nv"> </span><span class="s">example:</span>
+
 <span class="w">      </span><span class="s">&lt;code&gt;100701.&lt;/code&gt;&lt;/p&gt;Populate</span><span class="nv"> </span><span class="s">if</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">related</span><span class="nv"> </span><span class="s">event/finding</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">OCSF.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
@@ -1312,9 +1439,12 @@
 <span class="w">    </span><span class="nt">recommended</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">uid</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">uid</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">&lt;p&gt;The unique identifier of the related event/finding.&lt;/p&gt; If the</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">related event/finding is in OCSF, then this value must be equal to &lt;code&gt;metadata.uid&lt;/code&gt;</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">in the corresponding event.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'&lt;p&gt;The</span><span class="nv"> </span><span class="s">unique</span><span class="nv"> </span><span class="s">identifier</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">related</span><span class="nv"> </span><span class="s">event/finding.&lt;/p&gt;</span><span class="nv"> </span><span class="s">If</span><span class="nv"> </span><span class="s">the</span>
+<span class="w">      </span><span class="s">related</span>
+
+<span class="w">      </span><span class="s">event/finding</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">OCSF,</span><span class="nv"> </span><span class="s">then</span><span class="nv"> </span><span class="s">this</span><span class="nv"> </span><span class="s">value</span><span class="nv"> </span><span class="s">must</span><span class="nv"> </span><span class="s">be</span><span class="nv"> </span><span class="s">equal</span><span class="nv"> </span><span class="s">to</span>
+
+<span class="w">      </span><span class="s">&lt;code&gt;metadata.uid&lt;/code&gt;</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">corresponding</span><span class="nv"> </span><span class="s">event.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Unique ID</span>

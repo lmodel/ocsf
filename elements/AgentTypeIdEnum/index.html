@@ -447,7 +447,8 @@
 
 
 <h1 id="enum-agenttypeidenum">Enum: AgentTypeIdEnum</h1>
-<p><em>The normalized representation of an agent or sensor. E.g., EDR, vulnerability management, APM, backup &amp; recovery, etc.</em></p>
+<p><em>The normalized representation of an agent or sensor. E.g., EDR, vulnerability</em></p>
+<p><em>management, APM, backup &amp; recovery, etc.</em></p>
 <p>URI: <a href="https://w3id.org/lmodel/ocsf/AgentTypeIdEnum">ocsf:AgentTypeIdEnum</a></p>
 <h2 id="permissible-values">Permissible Values</h2>
 <table>
@@ -477,12 +478,12 @@
 <tr>
 <td>PERFORMANCE_MONITORING_OBSERVABILITY</td>
 <td>None</td>
-<td>Any agent or sensor that provides Application Performance Monitoring (APM), a...</td>
+<td>Any agent or sensor that provides Application Performance Monitoring (APM),</td>
 </tr>
 <tr>
 <td>VULNERABILITY_MANAGEMENT</td>
 <td>None</td>
-<td>Any agent or sensor that provides vulnerability management or scanning capabi...</td>
+<td>Any agent or sensor that provides vulnerability management or scanning</td>
 </tr>
 <tr>
 <td>LOG_FORWARDING</td>
@@ -539,16 +540,20 @@
 <h2 id="linkml-source">LinkML Source</h2>
 <details>
 <div class="highlight"><pre><span></span><code><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">AgentTypeIdEnum</span>
-<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The normalized representation of an agent or sensor. E.g., EDR, vulnerability</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">management, APM, backup &amp; recovery, etc.</span>
+<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;The</span><span class="nv"> </span><span class="s">normalized</span><span class="nv"> </span><span class="s">representation</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">an</span><span class="nv"> </span><span class="s">agent</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">sensor.</span><span class="nv"> </span><span class="s">E.g.,</span><span class="nv"> </span><span class="s">EDR,</span><span class="nv"> </span><span class="s">vulnerability</span>
+
+<span class="w">  </span><span class="s">management,</span><span class="nv"> </span><span class="s">APM,</span><span class="nv"> </span><span class="s">backup</span><span class="nv"> </span><span class="s">&amp;</span><span class="nv"> </span><span class="s">recovery,</span><span class="nv"> </span><span class="s">etc.&#39;</span>
 <span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="nt">rank</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1000</span>
 <span class="nt">permissible_values</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">ENDPOINT_DETECTION_AND_RESPONSE</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">text</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ENDPOINT_DETECTION_AND_RESPONSE</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Any EDR sensor or agent. Or any tool that provides similar threat</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">detection, anti-malware, anti-ransomware, or similar capabilities. E.g., Crowdstrike</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">Falcon, Microsoft Defender for Endpoint, Wazuh.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;Any</span><span class="nv"> </span><span class="s">EDR</span><span class="nv"> </span><span class="s">sensor</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">agent.</span><span class="nv"> </span><span class="s">Or</span><span class="nv"> </span><span class="s">any</span><span class="nv"> </span><span class="s">tool</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">provides</span><span class="nv"> </span><span class="s">similar</span><span class="nv"> </span><span class="s">threat</span>
+<span class="w">      </span><span class="s">detection,</span>
+
+<span class="w">      </span><span class="s">anti-malware,</span><span class="nv"> </span><span class="s">anti-ransomware,</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">similar</span><span class="nv"> </span><span class="s">capabilities.</span><span class="nv"> </span><span class="s">E.g.,</span><span class="nv"> </span><span class="s">Crowdstrike</span>
+
+<span class="w">      </span><span class="s">Falcon,</span><span class="nv"> </span><span class="s">Microsoft</span><span class="nv"> </span><span class="s">Defender</span><span class="nv"> </span><span class="s">for</span><span class="nv"> </span><span class="s">Endpoint,</span><span class="nv"> </span><span class="s">Wazuh.&#39;</span>
 <span class="w">    </span><span class="nt">annotations</span><span class="p">:</span>
 <span class="w">      </span><span class="nt">ocsf_uid</span><span class="p">:</span>
 <span class="w">        </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ocsf_uid</span>
@@ -558,9 +563,12 @@
 <span class="w">        </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Endpoint Detection and Response</span>
 <span class="w">  </span><span class="nt">DATA_LOSS_PREVENTION</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">text</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">DATA_LOSS_PREVENTION</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Any DLP sensor or agent. Or any tool that provides similar data classification,</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">data loss detection, and/or data loss prevention capabilities. E.g., Forcepoint</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">DLP, Microsoft Purview, Symantec DLP.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;Any</span><span class="nv"> </span><span class="s">DLP</span><span class="nv"> </span><span class="s">sensor</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">agent.</span><span class="nv"> </span><span class="s">Or</span><span class="nv"> </span><span class="s">any</span><span class="nv"> </span><span class="s">tool</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">provides</span><span class="nv"> </span><span class="s">similar</span><span class="nv"> </span><span class="s">data</span>
+<span class="w">      </span><span class="s">classification,</span>
+
+<span class="w">      </span><span class="s">data</span><span class="nv"> </span><span class="s">loss</span><span class="nv"> </span><span class="s">detection,</span><span class="nv"> </span><span class="s">and/or</span><span class="nv"> </span><span class="s">data</span><span class="nv"> </span><span class="s">loss</span><span class="nv"> </span><span class="s">prevention</span><span class="nv"> </span><span class="s">capabilities.</span><span class="nv"> </span><span class="s">E.g.,</span><span class="nv"> </span><span class="s">Forcepoint</span>
+
+<span class="w">      </span><span class="s">DLP,</span><span class="nv"> </span><span class="s">Microsoft</span><span class="nv"> </span><span class="s">Purview,</span><span class="nv"> </span><span class="s">Symantec</span><span class="nv"> </span><span class="s">DLP.&#39;</span>
 <span class="w">    </span><span class="nt">annotations</span><span class="p">:</span>
 <span class="w">      </span><span class="nt">ocsf_uid</span><span class="p">:</span>
 <span class="w">        </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ocsf_uid</span>
@@ -570,8 +578,10 @@
 <span class="w">        </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Data Loss Prevention</span>
 <span class="w">  </span><span class="nt">BACKUP_RECOVERY</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">text</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">BACKUP_RECOVERY</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Any agent or sensor that provides backups, archival, or recovery</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">capabilities. E.g., Azure Backup, AWS Backint Agent.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;Any</span><span class="nv"> </span><span class="s">agent</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">sensor</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">provides</span><span class="nv"> </span><span class="s">backups,</span><span class="nv"> </span><span class="s">archival,</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">recovery</span>
+<span class="w">      </span><span class="s">capabilities.</span>
+
+<span class="w">      </span><span class="s">E.g.,</span><span class="nv"> </span><span class="s">Azure</span><span class="nv"> </span><span class="s">Backup,</span><span class="nv"> </span><span class="s">AWS</span><span class="nv"> </span><span class="s">Backint</span><span class="nv"> </span><span class="s">Agent.&#39;</span>
 <span class="w">    </span><span class="nt">annotations</span><span class="p">:</span>
 <span class="w">      </span><span class="nt">ocsf_uid</span><span class="p">:</span>
 <span class="w">        </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ocsf_uid</span>
@@ -581,9 +591,12 @@
 <span class="w">        </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Backup &amp; Recovery</span>
 <span class="w">  </span><span class="nt">PERFORMANCE_MONITORING_OBSERVABILITY</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">text</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">PERFORMANCE_MONITORING_OBSERVABILITY</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Any agent or sensor that provides Application Performance Monitoring</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">(APM), active tracing, profiling, or other observability use cases and optionally</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">forwards the logs. E.g., New Relic Agent, Datadog Agent, Azure Monitor Agent.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;Any</span><span class="nv"> </span><span class="s">agent</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">sensor</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">provides</span><span class="nv"> </span><span class="s">Application</span><span class="nv"> </span><span class="s">Performance</span><span class="nv"> </span><span class="s">Monitoring</span>
+<span class="w">      </span><span class="s">(APM),</span>
+
+<span class="w">      </span><span class="s">active</span><span class="nv"> </span><span class="s">tracing,</span><span class="nv"> </span><span class="s">profiling,</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">other</span><span class="nv"> </span><span class="s">observability</span><span class="nv"> </span><span class="s">use</span><span class="nv"> </span><span class="s">cases</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">optionally</span>
+
+<span class="w">      </span><span class="s">forwards</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">logs.</span><span class="nv"> </span><span class="s">E.g.,</span><span class="nv"> </span><span class="s">New</span><span class="nv"> </span><span class="s">Relic</span><span class="nv"> </span><span class="s">Agent,</span><span class="nv"> </span><span class="s">Datadog</span><span class="nv"> </span><span class="s">Agent,</span><span class="nv"> </span><span class="s">Azure</span><span class="nv"> </span><span class="s">Monitor</span><span class="nv"> </span><span class="s">Agent.&#39;</span>
 <span class="w">    </span><span class="nt">annotations</span><span class="p">:</span>
 <span class="w">      </span><span class="nt">ocsf_uid</span><span class="p">:</span>
 <span class="w">        </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ocsf_uid</span>
@@ -593,9 +606,11 @@
 <span class="w">        </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Performance Monitoring &amp; Observability</span>
 <span class="w">  </span><span class="nt">VULNERABILITY_MANAGEMENT</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">text</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">VULNERABILITY_MANAGEMENT</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Any agent or sensor that provides vulnerability management or scanning</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">capabilities. E.g., Qualys VMDR, Microsoft Defender for Endpoint, Crowdstrike</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">Spotlight, Amazon Inspector Agent.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;Any</span><span class="nv"> </span><span class="s">agent</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">sensor</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">provides</span><span class="nv"> </span><span class="s">vulnerability</span><span class="nv"> </span><span class="s">management</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">scanning</span>
+
+<span class="w">      </span><span class="s">capabilities.</span><span class="nv"> </span><span class="s">E.g.,</span><span class="nv"> </span><span class="s">Qualys</span><span class="nv"> </span><span class="s">VMDR,</span><span class="nv"> </span><span class="s">Microsoft</span><span class="nv"> </span><span class="s">Defender</span><span class="nv"> </span><span class="s">for</span><span class="nv"> </span><span class="s">Endpoint,</span><span class="nv"> </span><span class="s">Crowdstrike</span>
+
+<span class="w">      </span><span class="s">Spotlight,</span><span class="nv"> </span><span class="s">Amazon</span><span class="nv"> </span><span class="s">Inspector</span><span class="nv"> </span><span class="s">Agent.&#39;</span>
 <span class="w">    </span><span class="nt">annotations</span><span class="p">:</span>
 <span class="w">      </span><span class="nt">ocsf_uid</span><span class="p">:</span>
 <span class="w">        </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ocsf_uid</span>
@@ -605,9 +620,12 @@
 <span class="w">        </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Vulnerability Management</span>
 <span class="w">  </span><span class="nt">LOG_FORWARDING</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">text</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">LOG_FORWARDING</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Any agent or sensor that forwards logs to a 3rd party storage system</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">such as a data lake or SIEM. E.g., Splunk Universal Forwarder, Tenzir, FluentBit,</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">Amazon CloudWatch Agent, Amazon Kinesis Agent.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;Any</span><span class="nv"> </span><span class="s">agent</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">sensor</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">forwards</span><span class="nv"> </span><span class="s">logs</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">3rd</span><span class="nv"> </span><span class="s">party</span><span class="nv"> </span><span class="s">storage</span><span class="nv"> </span><span class="s">system</span>
+<span class="w">      </span><span class="s">such</span><span class="nv"> </span><span class="s">as</span><span class="nv"> </span><span class="s">a</span>
+
+<span class="w">      </span><span class="s">data</span><span class="nv"> </span><span class="s">lake</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">SIEM.</span><span class="nv"> </span><span class="s">E.g.,</span><span class="nv"> </span><span class="s">Splunk</span><span class="nv"> </span><span class="s">Universal</span><span class="nv"> </span><span class="s">Forwarder,</span><span class="nv"> </span><span class="s">Tenzir,</span><span class="nv"> </span><span class="s">FluentBit,</span><span class="nv"> </span><span class="s">Amazon</span>
+
+<span class="w">      </span><span class="s">CloudWatch</span><span class="nv"> </span><span class="s">Agent,</span><span class="nv"> </span><span class="s">Amazon</span><span class="nv"> </span><span class="s">Kinesis</span><span class="nv"> </span><span class="s">Agent.&#39;</span>
 <span class="w">    </span><span class="nt">annotations</span><span class="p">:</span>
 <span class="w">      </span><span class="nt">ocsf_uid</span><span class="p">:</span>
 <span class="w">        </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ocsf_uid</span>
@@ -617,9 +635,12 @@
 <span class="w">        </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Log Forwarding</span>
 <span class="w">  </span><span class="nt">MOBILE_DEVICE_MANAGEMENT</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">text</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">MOBILE_DEVICE_MANAGEMENT</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Any agent or sensor responsible for providing Mobile Device Management</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">(MDM) or Mobile Enterprise Management (MEM) capabilities. E.g., JumpCloud Agent,</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">Esper Agent, Jamf Pro binary.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;Any</span><span class="nv"> </span><span class="s">agent</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">sensor</span><span class="nv"> </span><span class="s">responsible</span><span class="nv"> </span><span class="s">for</span><span class="nv"> </span><span class="s">providing</span><span class="nv"> </span><span class="s">Mobile</span><span class="nv"> </span><span class="s">Device</span><span class="nv"> </span><span class="s">Management</span>
+<span class="w">      </span><span class="s">(MDM)</span><span class="nv"> </span><span class="s">or</span>
+
+<span class="w">      </span><span class="s">Mobile</span><span class="nv"> </span><span class="s">Enterprise</span><span class="nv"> </span><span class="s">Management</span><span class="nv"> </span><span class="s">(MEM)</span><span class="nv"> </span><span class="s">capabilities.</span><span class="nv"> </span><span class="s">E.g.,</span><span class="nv"> </span><span class="s">JumpCloud</span><span class="nv"> </span><span class="s">Agent,</span><span class="nv"> </span><span class="s">Esper</span>
+
+<span class="w">      </span><span class="s">Agent,</span><span class="nv"> </span><span class="s">Jamf</span><span class="nv"> </span><span class="s">Pro</span><span class="nv"> </span><span class="s">binary.&#39;</span>
 <span class="w">    </span><span class="nt">annotations</span><span class="p">:</span>
 <span class="w">      </span><span class="nt">ocsf_uid</span><span class="p">:</span>
 <span class="w">        </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ocsf_uid</span>
@@ -629,9 +650,12 @@
 <span class="w">        </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Mobile Device Management</span>
 <span class="w">  </span><span class="nt">CONFIGURATION_MANAGEMENT</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">text</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">CONFIGURATION_MANAGEMENT</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Any agent or sensor that provides configuration management of a device,</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">such as scanning for software, license management, or applying configurations.</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">E.g., AWS Systems Manager Agent, Flexera, ServiceNow MID Server.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;Any</span><span class="nv"> </span><span class="s">agent</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">sensor</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">provides</span><span class="nv"> </span><span class="s">configuration</span><span class="nv"> </span><span class="s">management</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">a</span>
+<span class="w">      </span><span class="s">device,</span><span class="nv"> </span><span class="s">such</span><span class="nv"> </span><span class="s">as</span>
+
+<span class="w">      </span><span class="s">scanning</span><span class="nv"> </span><span class="s">for</span><span class="nv"> </span><span class="s">software,</span><span class="nv"> </span><span class="s">license</span><span class="nv"> </span><span class="s">management,</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">applying</span><span class="nv"> </span><span class="s">configurations.</span><span class="nv"> </span><span class="s">E.g.,</span>
+
+<span class="w">      </span><span class="s">AWS</span><span class="nv"> </span><span class="s">Systems</span><span class="nv"> </span><span class="s">Manager</span><span class="nv"> </span><span class="s">Agent,</span><span class="nv"> </span><span class="s">Flexera,</span><span class="nv"> </span><span class="s">ServiceNow</span><span class="nv"> </span><span class="s">MID</span><span class="nv"> </span><span class="s">Server.&#39;</span>
 <span class="w">    </span><span class="nt">annotations</span><span class="p">:</span>
 <span class="w">      </span><span class="nt">ocsf_uid</span><span class="p">:</span>
 <span class="w">        </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ocsf_uid</span>
@@ -641,8 +665,10 @@
 <span class="w">        </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Configuration Management</span>
 <span class="w">  </span><span class="nt">REMOTE_ACCESS</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">text</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">REMOTE_ACCESS</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Any agent or sensor that provides remote access capabilities to a</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">device. E.g., BeyondTrust, Amazon Systems Manager Agent, Verkada Agent.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;Any</span><span class="nv"> </span><span class="s">agent</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">sensor</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">provides</span><span class="nv"> </span><span class="s">remote</span><span class="nv"> </span><span class="s">access</span><span class="nv"> </span><span class="s">capabilities</span><span class="nv"> </span><span class="s">to</span>
+<span class="w">      </span><span class="s">a</span><span class="nv"> </span><span class="s">device.</span><span class="nv"> </span><span class="s">E.g.,</span>
+
+<span class="w">      </span><span class="s">BeyondTrust,</span><span class="nv"> </span><span class="s">Amazon</span><span class="nv"> </span><span class="s">Systems</span><span class="nv"> </span><span class="s">Manager</span><span class="nv"> </span><span class="s">Agent,</span><span class="nv"> </span><span class="s">Verkada</span><span class="nv"> </span><span class="s">Agent.&#39;</span>
 <span class="w">    </span><span class="nt">annotations</span><span class="p">:</span>
 <span class="w">      </span><span class="nt">ocsf_uid</span><span class="p">:</span>
 <span class="w">        </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ocsf_uid</span>
@@ -662,8 +688,10 @@
 <span class="w">        </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Unknown</span>
 <span class="w">  </span><span class="nt">OTHER</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">text</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">OTHER</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The type is not mapped. See the &lt;code&gt;type&lt;/code&gt; attribute, which</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">contains a data source specific value.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;The</span><span class="nv"> </span><span class="s">type</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">not</span><span class="nv"> </span><span class="s">mapped.</span><span class="nv"> </span><span class="s">See</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">&lt;code&gt;type&lt;/code&gt;</span><span class="nv"> </span><span class="s">attribute,</span><span class="nv"> </span><span class="s">which</span>
+<span class="w">      </span><span class="s">contains</span><span class="nv"> </span><span class="s">a</span>
+
+<span class="w">      </span><span class="s">data</span><span class="nv"> </span><span class="s">source</span><span class="nv"> </span><span class="s">specific</span><span class="nv"> </span><span class="s">value.&#39;</span>
 <span class="w">    </span><span class="nt">annotations</span><span class="p">:</span>
 <span class="w">      </span><span class="nt">ocsf_uid</span><span class="p">:</span>
 <span class="w">        </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ocsf_uid</span>

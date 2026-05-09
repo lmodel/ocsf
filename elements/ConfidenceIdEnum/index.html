@@ -447,7 +447,9 @@
 
 
 <h1 id="enum-confidenceidenum">Enum: ConfidenceIdEnum</h1>
-<p><em>The normalized confidence refers to the accuracy of the rule that created the finding. A rule with a low confidence means that the finding scope is wide and may create finding reports that may not be malicious in nature.</em></p>
+<p><em>The normalized confidence refers to the accuracy of the rule that created the</em></p>
+<p><em>finding. A rule with a low confidence means that the finding scope is wide and</em></p>
+<p><em>may create finding reports that may not be malicious in nature.</em></p>
 <p>URI: <a href="https://w3id.org/lmodel/ocsf/ConfidenceIdEnum">ocsf:ConfidenceIdEnum</a></p>
 <h2 id="permissible-values">Permissible Values</h2>
 <table>
@@ -497,7 +499,7 @@
 <tbody>
 <tr>
 <td><a href="../confidence_id/">confidence_id</a></td>
-<td>The normalized confidence refers to the accuracy of the rule that created the...</td>
+<td>The normalized confidence refers to the accuracy of the rule that created the</td>
 </tr>
 </tbody>
 </table>
@@ -509,9 +511,12 @@
 <h2 id="linkml-source">LinkML Source</h2>
 <details>
 <div class="highlight"><pre><span></span><code><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ConfidenceIdEnum</span>
-<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The normalized confidence refers to the accuracy of the rule that created</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">the finding. A rule with a low confidence means that the finding scope is wide and</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">may create finding reports that may not be malicious in nature.</span>
+<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;The</span><span class="nv"> </span><span class="s">normalized</span><span class="nv"> </span><span class="s">confidence</span><span class="nv"> </span><span class="s">refers</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">accuracy</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">rule</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">created</span>
+<span class="w">  </span><span class="s">the</span>
+
+<span class="w">  </span><span class="s">finding.</span><span class="nv"> </span><span class="s">A</span><span class="nv"> </span><span class="s">rule</span><span class="nv"> </span><span class="s">with</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">low</span><span class="nv"> </span><span class="s">confidence</span><span class="nv"> </span><span class="s">means</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">finding</span><span class="nv"> </span><span class="s">scope</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">wide</span><span class="nv"> </span><span class="s">and</span>
+
+<span class="w">  </span><span class="s">may</span><span class="nv"> </span><span class="s">create</span><span class="nv"> </span><span class="s">finding</span><span class="nv"> </span><span class="s">reports</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">may</span><span class="nv"> </span><span class="s">not</span><span class="nv"> </span><span class="s">be</span><span class="nv"> </span><span class="s">malicious</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">nature.&#39;</span>
 <span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="nt">rank</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1000</span>
 <span class="nt">permissible_values</span><span class="p">:</span>
@@ -557,8 +562,9 @@
 <span class="w">        </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">High</span>
 <span class="w">  </span><span class="nt">OTHER</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">text</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">OTHER</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The confidence is not mapped to the defined enum values. See the</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">&lt;code&gt;confidence&lt;/code&gt; attribute, which contains a data source specific value.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;The</span><span class="nv"> </span><span class="s">confidence</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">not</span><span class="nv"> </span><span class="s">mapped</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">defined</span><span class="nv"> </span><span class="s">enum</span><span class="nv"> </span><span class="s">values.</span><span class="nv"> </span><span class="s">See</span><span class="nv"> </span><span class="s">the</span>
+
+<span class="w">      </span><span class="s">&lt;code&gt;confidence&lt;/code&gt;</span><span class="nv"> </span><span class="s">attribute,</span><span class="nv"> </span><span class="s">which</span><span class="nv"> </span><span class="s">contains</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">data</span><span class="nv"> </span><span class="s">source</span><span class="nv"> </span><span class="s">specific</span><span class="nv"> </span><span class="s">value.&#39;</span>
 <span class="w">    </span><span class="nt">annotations</span><span class="p">:</span>
 <span class="w">      </span><span class="nt">ocsf_uid</span><span class="p">:</span>
 <span class="w">        </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ocsf_uid</span>

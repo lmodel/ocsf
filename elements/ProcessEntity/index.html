@@ -236,6 +236,15 @@
 </nav>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="#in-subsets">
+<span class="md-ellipsis">
+      
+        In Subsets
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#aliases">
 <span class="md-ellipsis">
       
@@ -485,6 +494,10 @@
 </tr>
 </tbody>
 </table>
+<h2 id="in-subsets">In Subsets</h2>
+<ul>
+<li><a href="../Objects/">Objects</a></li>
+</ul>
 <h2 id="aliases">Aliases</h2>
 <ul>
 <li>Process Entity</li>
@@ -539,6 +552,8 @@
 <span class="w">    </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="s">'{"at_least_one":</span><span class="nv"> </span><span class="s">["cmd_line",</span><span class="nv"> </span><span class="s">"name",</span><span class="nv"> </span><span class="s">"path",</span><span class="nv"> </span><span class="s">"pid",</span><span class="nv"> </span><span class="s">"uid",</span><span class="nv"> </span><span class="s">"cpid"]}'</span>
 <span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The Process Entity object provides critical fields for referencing a</span>
 <span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">process.</span>
+<span class="nt">in_subset</span><span class="p">:</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">objects</span>
 <span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="nt">aliases</span><span class="p">:</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Process Entity</span>
@@ -573,8 +588,9 @@
 <span class="w">    </span><span class="nt">recommended</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">uid</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">uid</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">A unique identifier for this process assigned by the producer (tool).  Facilitates</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">correlation of a process event with other events for that process.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'A</span><span class="nv"> </span><span class="s">unique</span><span class="nv"> </span><span class="s">identifier</span><span class="nv"> </span><span class="s">for</span><span class="nv"> </span><span class="s">this</span><span class="nv"> </span><span class="s">process</span><span class="nv"> </span><span class="s">assigned</span><span class="nv"> </span><span class="s">by</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">producer</span><span class="nv"> </span><span class="s">(tool).</span>
+
+<span class="w">      </span><span class="s">Facilitates</span><span class="nv"> </span><span class="s">correlation</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">process</span><span class="nv"> </span><span class="s">event</span><span class="nv"> </span><span class="s">with</span><span class="nv"> </span><span class="s">other</span><span class="nv"> </span><span class="s">events</span><span class="nv"> </span><span class="s">for</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">process.'</span>
 <span class="nt">rules</span><span class="p">:</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">postconditions</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">any_of</span><span class="p">:</span>
@@ -603,7 +619,9 @@
 <span class="w">          </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">cpid</span>
 <span class="w">          </span><span class="nt">required</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'OCSF</span><span class="nv"> </span><span class="s">at_least_one:</span><span class="nv"> </span><span class="s">at</span><span class="nv"> </span><span class="s">least</span><span class="nv"> </span><span class="s">one</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">[</span><span class="se">''</span><span class="s">cmd_line</span><span class="se">''</span><span class="s">,</span><span class="nv"> </span><span class="se">''</span><span class="s">name</span><span class="se">''</span><span class="s">,</span><span class="nv"> </span><span class="se">''</span><span class="s">path</span><span class="se">''</span><span class="s">,</span>
-<span class="w">    </span><span class="se">''</span><span class="s">pid</span><span class="se">''</span><span class="s">,</span><span class="nv"> </span><span class="se">''</span><span class="s">uid</span><span class="se">''</span><span class="s">,</span><span class="nv"> </span><span class="se">''</span><span class="s">cpid</span><span class="se">''</span><span class="s">]</span><span class="nv"> </span><span class="s">must</span><span class="nv"> </span><span class="s">be</span><span class="nv"> </span><span class="s">set.'</span>
+<span class="w">    </span><span class="se">''</span><span class="s">pid</span><span class="se">''</span><span class="s">,</span><span class="nv"> </span><span class="se">''</span><span class="s">uid</span><span class="se">''</span><span class="s">,</span>
+
+<span class="w">    </span><span class="se">''</span><span class="s">cpid</span><span class="se">''</span><span class="s">]</span><span class="nv"> </span><span class="s">must</span><span class="nv"> </span><span class="s">be</span><span class="nv"> </span><span class="s">set.'</span>
 </code></pre></div>
 </details>
 <h3 id="induced">Induced</h3>
@@ -615,6 +633,8 @@
 <span class="w">    </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="s">'{"at_least_one":</span><span class="nv"> </span><span class="s">["cmd_line",</span><span class="nv"> </span><span class="s">"name",</span><span class="nv"> </span><span class="s">"path",</span><span class="nv"> </span><span class="s">"pid",</span><span class="nv"> </span><span class="s">"uid",</span><span class="nv"> </span><span class="s">"cpid"]}'</span>
 <span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The Process Entity object provides critical fields for referencing a</span>
 <span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">process.</span>
+<span class="nt">in_subset</span><span class="p">:</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">objects</span>
 <span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="nt">aliases</span><span class="p">:</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Process Entity</span>
@@ -641,8 +661,9 @@
 <span class="w">    </span><span class="nt">recommended</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">uid</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">uid</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">A unique identifier for this process assigned by the producer (tool).  Facilitates</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">correlation of a process event with other events for that process.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'A</span><span class="nv"> </span><span class="s">unique</span><span class="nv"> </span><span class="s">identifier</span><span class="nv"> </span><span class="s">for</span><span class="nv"> </span><span class="s">this</span><span class="nv"> </span><span class="s">process</span><span class="nv"> </span><span class="s">assigned</span><span class="nv"> </span><span class="s">by</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">producer</span><span class="nv"> </span><span class="s">(tool).</span>
+
+<span class="w">      </span><span class="s">Facilitates</span><span class="nv"> </span><span class="s">correlation</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">process</span><span class="nv"> </span><span class="s">event</span><span class="nv"> </span><span class="s">with</span><span class="nv"> </span><span class="s">other</span><span class="nv"> </span><span class="s">events</span><span class="nv"> </span><span class="s">for</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">process.'</span>
 <span class="nt">attributes</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">cmd_line</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">cmd_line</span>
@@ -651,7 +672,10 @@
 <span class="w">        </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">observable_id</span>
 <span class="w">        </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">13</span>
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">full</span><span class="nv"> </span><span class="s">command</span><span class="nv"> </span><span class="s">line</span><span class="nv"> </span><span class="s">used</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">launch</span><span class="nv"> </span><span class="s">an</span><span class="nv"> </span><span class="s">application,</span><span class="nv"> </span><span class="s">service,</span><span class="nv"> </span><span class="s">process,</span>
-<span class="w">      </span><span class="s">or</span><span class="nv"> </span><span class="s">job.</span><span class="nv"> </span><span class="s">For</span><span class="nv"> </span><span class="s">example:</span><span class="nv"> </span><span class="s">&lt;code&gt;ssh</span><span class="nv"> </span><span class="s">user@10.0.0.10&lt;/code&gt;.</span><span class="nv"> </span><span class="s">If</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">command</span><span class="nv"> </span><span class="s">line</span><span class="nv"> </span><span class="s">is</span>
+<span class="w">      </span><span class="s">or</span><span class="nv"> </span><span class="s">job.</span>
+
+<span class="w">      </span><span class="s">For</span><span class="nv"> </span><span class="s">example:</span><span class="nv"> </span><span class="s">&lt;code&gt;ssh</span><span class="nv"> </span><span class="s">user@10.0.0.10&lt;/code&gt;.</span><span class="nv"> </span><span class="s">If</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">command</span><span class="nv"> </span><span class="s">line</span><span class="nv"> </span><span class="s">is</span>
+
 <span class="w">      </span><span class="s">unavailable</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">missing,</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">empty</span><span class="nv"> </span><span class="s">string</span><span class="nv"> </span><span class="s">&lt;code&gt;</span><span class="se">''''</span><span class="s">&lt;/code&gt;</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">be</span><span class="nv"> </span><span class="s">used.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
@@ -671,10 +695,14 @@
 <span class="w">      </span><span class="nt">ocsf_source</span><span class="p">:</span>
 <span class="w">        </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ocsf_source</span>
 <span class="w">        </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">cpid</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">A unique process identifier that can be assigned deterministically</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">by multiple system data producers.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'A</span><span class="nv"> </span><span class="s">unique</span><span class="nv"> </span><span class="s">process</span><span class="nv"> </span><span class="s">identifier</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">can</span><span class="nv"> </span><span class="s">be</span><span class="nv"> </span><span class="s">assigned</span><span class="nv"> </span><span class="s">deterministically</span>
+<span class="w">      </span><span class="s">by</span><span class="nv"> </span><span class="s">multiple</span>
+
+<span class="w">      </span><span class="s">system</span><span class="nv"> </span><span class="s">data</span><span class="nv"> </span><span class="s">producers.'</span>
 <span class="w">    </span><span class="nt">notes</span><span class="p">:</span>
-<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">OCSF Common Process Identifier (CPID) Specification — https://github.com/ocsf/common-process-id</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">'OCSF</span><span class="nv"> </span><span class="s">Common</span><span class="nv"> </span><span class="s">Process</span><span class="nv"> </span><span class="s">Identifier</span><span class="nv"> </span><span class="s">(CPID)</span><span class="nv"> </span><span class="s">Specification</span><span class="nv"> </span><span class="s">—</span>
+
+<span class="w">      </span><span class="s">https://github.com/ocsf/common-process-id'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">see_also</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://github.com/ocsf/common-process-id</span>
@@ -856,9 +884,12 @@
 <span class="w">      </span><span class="nt">observable_id</span><span class="p">:</span>
 <span class="w">        </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">observable_id</span>
 <span class="w">        </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">15</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The process identifier, as reported by the operating system. Process</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">ID (PID) is a number used by the operating system to uniquely identify an active</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">process.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">process</span><span class="nv"> </span><span class="s">identifier,</span><span class="nv"> </span><span class="s">as</span><span class="nv"> </span><span class="s">reported</span><span class="nv"> </span><span class="s">by</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">operating</span><span class="nv"> </span><span class="s">system.</span><span class="nv"> </span><span class="s">Process</span>
+<span class="w">      </span><span class="s">ID</span><span class="nv"> </span><span class="s">(PID)</span>
+
+<span class="w">      </span><span class="s">is</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">number</span><span class="nv"> </span><span class="s">used</span><span class="nv"> </span><span class="s">by</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">operating</span><span class="nv"> </span><span class="s">system</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">uniquely</span><span class="nv"> </span><span class="s">identify</span><span class="nv"> </span><span class="s">an</span><span class="nv"> </span><span class="s">active</span>
+
+<span class="w">      </span><span class="s">process.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Process ID</span>
@@ -871,8 +902,9 @@
 <span class="w">    </span><span class="nt">recommended</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">uid</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">uid</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">A unique identifier for this process assigned by the producer (tool).  Facilitates</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">correlation of a process event with other events for that process.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'A</span><span class="nv"> </span><span class="s">unique</span><span class="nv"> </span><span class="s">identifier</span><span class="nv"> </span><span class="s">for</span><span class="nv"> </span><span class="s">this</span><span class="nv"> </span><span class="s">process</span><span class="nv"> </span><span class="s">assigned</span><span class="nv"> </span><span class="s">by</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">producer</span><span class="nv"> </span><span class="s">(tool).</span>
+
+<span class="w">      </span><span class="s">Facilitates</span><span class="nv"> </span><span class="s">correlation</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">process</span><span class="nv"> </span><span class="s">event</span><span class="nv"> </span><span class="s">with</span><span class="nv"> </span><span class="s">other</span><span class="nv"> </span><span class="s">events</span><span class="nv"> </span><span class="s">for</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">process.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Unique ID</span>
@@ -993,7 +1025,9 @@
 <span class="w">          </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">cpid</span>
 <span class="w">          </span><span class="nt">required</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'OCSF</span><span class="nv"> </span><span class="s">at_least_one:</span><span class="nv"> </span><span class="s">at</span><span class="nv"> </span><span class="s">least</span><span class="nv"> </span><span class="s">one</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">[</span><span class="se">''</span><span class="s">cmd_line</span><span class="se">''</span><span class="s">,</span><span class="nv"> </span><span class="se">''</span><span class="s">name</span><span class="se">''</span><span class="s">,</span><span class="nv"> </span><span class="se">''</span><span class="s">path</span><span class="se">''</span><span class="s">,</span>
-<span class="w">    </span><span class="se">''</span><span class="s">pid</span><span class="se">''</span><span class="s">,</span><span class="nv"> </span><span class="se">''</span><span class="s">uid</span><span class="se">''</span><span class="s">,</span><span class="nv"> </span><span class="se">''</span><span class="s">cpid</span><span class="se">''</span><span class="s">]</span><span class="nv"> </span><span class="s">must</span><span class="nv"> </span><span class="s">be</span><span class="nv"> </span><span class="s">set.'</span>
+<span class="w">    </span><span class="se">''</span><span class="s">pid</span><span class="se">''</span><span class="s">,</span><span class="nv"> </span><span class="se">''</span><span class="s">uid</span><span class="se">''</span><span class="s">,</span>
+
+<span class="w">    </span><span class="se">''</span><span class="s">cpid</span><span class="se">''</span><span class="s">]</span><span class="nv"> </span><span class="s">must</span><span class="nv"> </span><span class="s">be</span><span class="nv"> </span><span class="s">set.'</span>
 </code></pre></div>
 </details>
 </article>

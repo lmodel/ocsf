@@ -447,7 +447,8 @@
 
 
 <h1 id="enum-packetencodingidenum">Enum: PacketEncodingIdEnum</h1>
-<p><em>The normalized identifier of the encoding method used to represent the packet data as a string.</em></p>
+<p><em>The normalized identifier of the encoding method used to represent the packet</em></p>
+<p><em>data as a string.</em></p>
 <p>URI: <a href="https://w3id.org/lmodel/ocsf/PacketEncodingIdEnum">ocsf:PacketEncodingIdEnum</a></p>
 <h2 id="permissible-values">Permissible Values</h2>
 <table>
@@ -472,7 +473,7 @@
 <tr>
 <td>HEXADECIMAL</td>
 <td>None</td>
-<td>The packet data is encoded as a hexadecimal string representation of the raw ...</td>
+<td>The packet data is encoded as a hexadecimal string representation of the raw</td>
 </tr>
 <tr>
 <td>URL_ENCODED</td>
@@ -497,7 +498,7 @@
 <tbody>
 <tr>
 <td><a href="../encoding_id/">encoding_id</a></td>
-<td>The normalized identifier of the encoding method used to represent the packet...</td>
+<td>The normalized identifier of the encoding method used to represent the packet</td>
 </tr>
 </tbody>
 </table>
@@ -509,8 +510,10 @@
 <h2 id="linkml-source">LinkML Source</h2>
 <details>
 <div class="highlight"><pre><span></span><code><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">PacketEncodingIdEnum</span>
-<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The normalized identifier of the encoding method used to represent the</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">packet data as a string.</span>
+<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;The</span><span class="nv"> </span><span class="s">normalized</span><span class="nv"> </span><span class="s">identifier</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">encoding</span><span class="nv"> </span><span class="s">method</span><span class="nv"> </span><span class="s">used</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">represent</span><span class="nv"> </span><span class="s">the</span>
+<span class="w">  </span><span class="s">packet</span>
+
+<span class="w">  </span><span class="s">data</span><span class="nv"> </span><span class="s">as</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">string.&#39;</span>
 <span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="nt">rank</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1000</span>
 <span class="nt">permissible_values</span><span class="p">:</span>
@@ -536,8 +539,10 @@
 <span class="w">        </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Base64</span>
 <span class="w">  </span><span class="nt">HEXADECIMAL</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">text</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">HEXADECIMAL</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The packet data is encoded as a hexadecimal string representation</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">of the raw bytes.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;The</span><span class="nv"> </span><span class="s">packet</span><span class="nv"> </span><span class="s">data</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">encoded</span><span class="nv"> </span><span class="s">as</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">hexadecimal</span><span class="nv"> </span><span class="s">string</span><span class="nv"> </span><span class="s">representation</span>
+<span class="w">      </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">raw</span>
+
+<span class="w">      </span><span class="s">bytes.&#39;</span>
 <span class="w">    </span><span class="nt">annotations</span><span class="p">:</span>
 <span class="w">      </span><span class="nt">ocsf_uid</span><span class="p">:</span>
 <span class="w">        </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ocsf_uid</span>
@@ -557,8 +562,10 @@
 <span class="w">        </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">URL Encoded</span>
 <span class="w">  </span><span class="nt">OTHER</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">text</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">OTHER</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The encoding method is not mapped. Refer to the &lt;code&gt;encoding&lt;/code&gt;</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">field for the original source-specific value.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;The</span><span class="nv"> </span><span class="s">encoding</span><span class="nv"> </span><span class="s">method</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">not</span><span class="nv"> </span><span class="s">mapped.</span><span class="nv"> </span><span class="s">Refer</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">&lt;code&gt;encoding&lt;/code&gt;</span>
+<span class="w">      </span><span class="s">field</span><span class="nv"> </span><span class="s">for</span>
+
+<span class="w">      </span><span class="s">the</span><span class="nv"> </span><span class="s">original</span><span class="nv"> </span><span class="s">source-specific</span><span class="nv"> </span><span class="s">value.&#39;</span>
 <span class="w">    </span><span class="nt">annotations</span><span class="p">:</span>
 <span class="w">      </span><span class="nt">ocsf_uid</span><span class="p">:</span>
 <span class="w">        </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ocsf_uid</span>

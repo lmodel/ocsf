@@ -492,12 +492,12 @@
 <tr>
 <td>SYSTEM_EXTENSION</td>
 <td>None</td>
-<td>System extensions on macOS enables 3rd parties to extend the capabilities of ...</td>
+<td>System extensions on macOS enables 3rd parties to extend the capabilities of</td>
 </tr>
 <tr>
 <td>KERNEL_EXTENSION</td>
 <td>None</td>
-<td>Kernel extensions on macOS includes Apple provided pre-installs and 3rd party...</td>
+<td>Kernel extensions on macOS includes Apple provided pre-installs and 3rd party</td>
 </tr>
 <tr>
 <td>SCHEDULED_JOB_TASK</td>
@@ -570,8 +570,10 @@
 <span class="w">        </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">User Mode Driver</span>
 <span class="w">  </span><span class="nt">SERVICE</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">text</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">SERVICE</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">A background process typically managed by the operating system, e.g.,</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">a service process on Windows or a systemd-managed daemon on Linux.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;A</span><span class="nv"> </span><span class="s">background</span><span class="nv"> </span><span class="s">process</span><span class="nv"> </span><span class="s">typically</span><span class="nv"> </span><span class="s">managed</span><span class="nv"> </span><span class="s">by</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">operating</span><span class="nv"> </span><span class="s">system,</span>
+<span class="w">      </span><span class="s">e.g.,</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">service</span>
+
+<span class="w">      </span><span class="s">process</span><span class="nv"> </span><span class="s">on</span><span class="nv"> </span><span class="s">Windows</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">systemd-managed</span><span class="nv"> </span><span class="s">daemon</span><span class="nv"> </span><span class="s">on</span><span class="nv"> </span><span class="s">Linux.&#39;</span>
 <span class="w">    </span><span class="nt">annotations</span><span class="p">:</span>
 <span class="w">      </span><span class="nt">ocsf_uid</span><span class="p">:</span>
 <span class="w">        </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ocsf_uid</span>
@@ -601,8 +603,10 @@
 <span class="w">        </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Autoload</span>
 <span class="w">  </span><span class="nt">SYSTEM_EXTENSION</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">text</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">SYSTEM_EXTENSION</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">System extensions on macOS enables 3rd parties to extend the capabilities</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">of macOS.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;System</span><span class="nv"> </span><span class="s">extensions</span><span class="nv"> </span><span class="s">on</span><span class="nv"> </span><span class="s">macOS</span><span class="nv"> </span><span class="s">enables</span><span class="nv"> </span><span class="s">3rd</span><span class="nv"> </span><span class="s">parties</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">extend</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">capabilities</span>
+<span class="w">      </span><span class="s">of</span>
+
+<span class="w">      </span><span class="s">macOS.&#39;</span>
 <span class="w">    </span><span class="nt">annotations</span><span class="p">:</span>
 <span class="w">      </span><span class="nt">ocsf_uid</span><span class="p">:</span>
 <span class="w">        </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ocsf_uid</span>
@@ -612,9 +616,12 @@
 <span class="w">        </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">System Extension</span>
 <span class="w">  </span><span class="nt">KERNEL_EXTENSION</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">text</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">KERNEL_EXTENSION</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Kernel extensions on macOS includes Apple provided pre-installs and</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">3rd party installs which enables support for specific hardware or software features</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">not natively supported by macOS.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;Kernel</span><span class="nv"> </span><span class="s">extensions</span><span class="nv"> </span><span class="s">on</span><span class="nv"> </span><span class="s">macOS</span><span class="nv"> </span><span class="s">includes</span><span class="nv"> </span><span class="s">Apple</span><span class="nv"> </span><span class="s">provided</span><span class="nv"> </span><span class="s">pre-installs</span>
+<span class="w">      </span><span class="s">and</span><span class="nv"> </span><span class="s">3rd</span><span class="nv"> </span><span class="s">party</span>
+
+<span class="w">      </span><span class="s">installs</span><span class="nv"> </span><span class="s">which</span><span class="nv"> </span><span class="s">enables</span><span class="nv"> </span><span class="s">support</span><span class="nv"> </span><span class="s">for</span><span class="nv"> </span><span class="s">specific</span><span class="nv"> </span><span class="s">hardware</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">software</span><span class="nv"> </span><span class="s">features</span><span class="nv"> </span><span class="s">not</span>
+
+<span class="w">      </span><span class="s">natively</span><span class="nv"> </span><span class="s">supported</span><span class="nv"> </span><span class="s">by</span><span class="nv"> </span><span class="s">macOS.&#39;</span>
 <span class="w">    </span><span class="nt">annotations</span><span class="p">:</span>
 <span class="w">      </span><span class="nt">ocsf_uid</span><span class="p">:</span>
 <span class="w">        </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ocsf_uid</span>
@@ -634,8 +641,10 @@
 <span class="w">        </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Scheduled Job, Task</span>
 <span class="w">  </span><span class="nt">OTHER</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">text</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">OTHER</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The startup item type is not mapped. See the &lt;code&gt;type&lt;/code&gt; attribute,</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">which contains data source specific values.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;The</span><span class="nv"> </span><span class="s">startup</span><span class="nv"> </span><span class="s">item</span><span class="nv"> </span><span class="s">type</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">not</span><span class="nv"> </span><span class="s">mapped.</span><span class="nv"> </span><span class="s">See</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">&lt;code&gt;type&lt;/code&gt;</span><span class="nv"> </span><span class="s">attribute,</span>
+<span class="w">      </span><span class="s">which</span>
+
+<span class="w">      </span><span class="s">contains</span><span class="nv"> </span><span class="s">data</span><span class="nv"> </span><span class="s">source</span><span class="nv"> </span><span class="s">specific</span><span class="nv"> </span><span class="s">values.&#39;</span>
 <span class="w">    </span><span class="nt">annotations</span><span class="p">:</span>
 <span class="w">      </span><span class="nt">ocsf_uid</span><span class="p">:</span>
 <span class="w">        </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ocsf_uid</span>

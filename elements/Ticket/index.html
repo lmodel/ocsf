@@ -236,6 +236,15 @@
 </nav>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="#in-subsets">
+<span class="md-ellipsis">
+      
+        In Subsets
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#aliases">
 <span class="md-ellipsis">
       
@@ -323,7 +332,8 @@
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
 <h1 id="class-ticket">Class: Ticket</h1>
-<p><em>The Ticket object represents ticket in the customer's IT Service Management (ITSM) systems like ServiceNow, Jira, etc.</em></p>
+<p><em>The Ticket object represents ticket in the customer's IT Service Management</em></p>
+<p><em>(ITSM) systems like ServiceNow, Jira, etc.</em></p>
 <p>URI: <a href="https://w3id.org/lmodel/ocsf/Ticket">ocsf:Ticket</a></p>
 <pre class="mermaid"><code> classDiagram
     class Ticket
@@ -396,7 +406,7 @@
 <tr>
 <td><a href="../status/">status</a></td>
 <td>0..1 <br/> <a href="../String/">String</a></td>
-<td>The status of the ticket normalized to the caption of the <code>status_id&lt;/co...</code></td>
+<td>The status of the ticket normalized to the caption of the</td>
 <td>direct</td>
 </tr>
 <tr>
@@ -420,7 +430,7 @@
 <tr>
 <td><a href="../type/">type</a></td>
 <td>0..1 <br/> <a href="../String/">String</a></td>
-<td>The linked ticket type determines whether the ticket is internal or in an ext...</td>
+<td>The linked ticket type determines whether the ticket is internal or in an</td>
 <td>direct</td>
 </tr>
 <tr>
@@ -578,6 +588,10 @@
 </tr>
 </tbody>
 </table>
+<h2 id="in-subsets">In Subsets</h2>
+<ul>
+<li><a href="../Objects/">Objects</a></li>
+</ul>
 <h2 id="aliases">Aliases</h2>
 <ul>
 <li>Ticket</li>
@@ -630,8 +644,11 @@
 <span class="w">  </span><span class="nt">ocsf_constraints</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ocsf_constraints</span>
 <span class="w">    </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="s">'{"at_least_one":</span><span class="nv"> </span><span class="s">["src_url",</span><span class="nv"> </span><span class="s">"uid"]}'</span>
-<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The Ticket object represents ticket in the customer's IT Service Management</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">(ITSM) systems like ServiceNow, Jira, etc.</span>
+<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">Ticket</span><span class="nv"> </span><span class="s">object</span><span class="nv"> </span><span class="s">represents</span><span class="nv"> </span><span class="s">ticket</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">customer</span><span class="se">''</span><span class="s">s</span><span class="nv"> </span><span class="s">IT</span><span class="nv"> </span><span class="s">Service</span><span class="nv"> </span><span class="s">Management</span>
+
+<span class="w">  </span><span class="s">(ITSM)</span><span class="nv"> </span><span class="s">systems</span><span class="nv"> </span><span class="s">like</span><span class="nv"> </span><span class="s">ServiceNow,</span><span class="nv"> </span><span class="s">Jira,</span><span class="nv"> </span><span class="s">etc.'</span>
+<span class="nt">in_subset</span><span class="p">:</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">objects</span>
 <span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="nt">aliases</span><span class="p">:</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Ticket</span>
@@ -652,8 +669,11 @@
 <span class="w">    </span><span class="nt">recommended</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">status</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">status</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The status of the ticket normalized to the caption of the &lt;code&gt;status_id&lt;/code&gt;</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">value. In the case of &lt;code&gt;99&lt;/code&gt;, this value should as defined by the source.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">status</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">ticket</span><span class="nv"> </span><span class="s">normalized</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">caption</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span>
+
+<span class="w">      </span><span class="s">&lt;code&gt;status_id&lt;/code&gt;</span><span class="nv"> </span><span class="s">value.</span><span class="nv"> </span><span class="s">In</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">case</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">&lt;code&gt;99&lt;/code&gt;,</span><span class="nv"> </span><span class="s">this</span><span class="nv"> </span><span class="s">value</span><span class="nv"> </span><span class="s">should</span>
+
+<span class="w">      </span><span class="s">as</span><span class="nv"> </span><span class="s">defined</span><span class="nv"> </span><span class="s">by</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">source.'</span>
 <span class="w">  </span><span class="nt">status_details</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">status_details</span>
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">A list of contextual descriptions of the &lt;code&gt;status, status_id&lt;/code&gt;</span>
@@ -667,8 +687,10 @@
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The title of the ticket.</span>
 <span class="w">  </span><span class="nt">type</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">type</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The linked ticket type determines whether the ticket is internal</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">or in an external ticketing system.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">linked</span><span class="nv"> </span><span class="s">ticket</span><span class="nv"> </span><span class="s">type</span><span class="nv"> </span><span class="s">determines</span><span class="nv"> </span><span class="s">whether</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">ticket</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">internal</span>
+<span class="w">      </span><span class="s">or</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">an</span>
+
+<span class="w">      </span><span class="s">external</span><span class="nv"> </span><span class="s">ticketing</span><span class="nv"> </span><span class="s">system.'</span>
 <span class="w">  </span><span class="nt">type_id</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">type_id</span>
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The normalized identifier for the ticket type.</span>
@@ -699,8 +721,11 @@
 <span class="w">  </span><span class="nt">ocsf_constraints</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ocsf_constraints</span>
 <span class="w">    </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="s">'{"at_least_one":</span><span class="nv"> </span><span class="s">["src_url",</span><span class="nv"> </span><span class="s">"uid"]}'</span>
-<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The Ticket object represents ticket in the customer's IT Service Management</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">(ITSM) systems like ServiceNow, Jira, etc.</span>
+<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">Ticket</span><span class="nv"> </span><span class="s">object</span><span class="nv"> </span><span class="s">represents</span><span class="nv"> </span><span class="s">ticket</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">customer</span><span class="se">''</span><span class="s">s</span><span class="nv"> </span><span class="s">IT</span><span class="nv"> </span><span class="s">Service</span><span class="nv"> </span><span class="s">Management</span>
+
+<span class="w">  </span><span class="s">(ITSM)</span><span class="nv"> </span><span class="s">systems</span><span class="nv"> </span><span class="s">like</span><span class="nv"> </span><span class="s">ServiceNow,</span><span class="nv"> </span><span class="s">Jira,</span><span class="nv"> </span><span class="s">etc.'</span>
+<span class="nt">in_subset</span><span class="p">:</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">objects</span>
 <span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="nt">aliases</span><span class="p">:</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Ticket</span>
@@ -712,8 +737,11 @@
 <span class="w">    </span><span class="nt">recommended</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">status</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">status</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The status of the ticket normalized to the caption of the &lt;code&gt;status_id&lt;/code&gt;</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">value. In the case of &lt;code&gt;99&lt;/code&gt;, this value should as defined by the source.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">status</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">ticket</span><span class="nv"> </span><span class="s">normalized</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">caption</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span>
+
+<span class="w">      </span><span class="s">&lt;code&gt;status_id&lt;/code&gt;</span><span class="nv"> </span><span class="s">value.</span><span class="nv"> </span><span class="s">In</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">case</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">&lt;code&gt;99&lt;/code&gt;,</span><span class="nv"> </span><span class="s">this</span><span class="nv"> </span><span class="s">value</span><span class="nv"> </span><span class="s">should</span>
+
+<span class="w">      </span><span class="s">as</span><span class="nv"> </span><span class="s">defined</span><span class="nv"> </span><span class="s">by</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">source.'</span>
 <span class="w">  </span><span class="nt">status_details</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">status_details</span>
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">A list of contextual descriptions of the &lt;code&gt;status, status_id&lt;/code&gt;</span>
@@ -727,8 +755,10 @@
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The title of the ticket.</span>
 <span class="w">  </span><span class="nt">type</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">type</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The linked ticket type determines whether the ticket is internal</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">or in an external ticketing system.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">linked</span><span class="nv"> </span><span class="s">ticket</span><span class="nv"> </span><span class="s">type</span><span class="nv"> </span><span class="s">determines</span><span class="nv"> </span><span class="s">whether</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">ticket</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">internal</span>
+<span class="w">      </span><span class="s">or</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">an</span>
+
+<span class="w">      </span><span class="s">external</span><span class="nv"> </span><span class="s">ticketing</span><span class="nv"> </span><span class="s">system.'</span>
 <span class="w">  </span><span class="nt">type_id</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">type_id</span>
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The normalized identifier for the ticket type.</span>
@@ -771,8 +801,11 @@
 <span class="w">    </span><span class="nt">recommended</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">status</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">status</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The status of the ticket normalized to the caption of the &lt;code&gt;status_id&lt;/code&gt;</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">value. In the case of &lt;code&gt;99&lt;/code&gt;, this value should as defined by the source.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">status</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">ticket</span><span class="nv"> </span><span class="s">normalized</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">caption</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span>
+
+<span class="w">      </span><span class="s">&lt;code&gt;status_id&lt;/code&gt;</span><span class="nv"> </span><span class="s">value.</span><span class="nv"> </span><span class="s">In</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">case</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">&lt;code&gt;99&lt;/code&gt;,</span><span class="nv"> </span><span class="s">this</span><span class="nv"> </span><span class="s">value</span><span class="nv"> </span><span class="s">should</span>
+
+<span class="w">      </span><span class="s">as</span><span class="nv"> </span><span class="s">defined</span><span class="nv"> </span><span class="s">by</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">source.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Status</span>
@@ -855,8 +888,10 @@
 <span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">string</span>
 <span class="w">  </span><span class="nt">type</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">type</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The linked ticket type determines whether the ticket is internal</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">or in an external ticketing system.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">linked</span><span class="nv"> </span><span class="s">ticket</span><span class="nv"> </span><span class="s">type</span><span class="nv"> </span><span class="s">determines</span><span class="nv"> </span><span class="s">whether</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">ticket</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">internal</span>
+<span class="w">      </span><span class="s">or</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">an</span>
+
+<span class="w">      </span><span class="s">external</span><span class="nv"> </span><span class="s">ticketing</span><span class="nv"> </span><span class="s">system.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Type</span>

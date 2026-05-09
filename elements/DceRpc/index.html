@@ -217,6 +217,15 @@
 </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="#in-subsets">
+<span class="md-ellipsis">
+      
+        In Subsets
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#aliases">
 <span class="md-ellipsis">
       
@@ -313,7 +322,9 @@
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
 <h1 id="class-dcerpc">Class: DceRpc</h1>
-<p><em>The DCE/RPC, or Distributed Computing Environment/Remote Procedure Call, object describes the remote procedure call system for distributed computing environments.</em></p>
+<p><em>The DCE/RPC, or Distributed Computing Environment/Remote Procedure Call, object</em></p>
+<p><em>describes the remote procedure call system for distributed computing</em></p>
+<p><em>environments.</em></p>
 <p>URI: <a href="https://w3id.org/lmodel/ocsf/DceRpc">ocsf:DceRpc</a></p>
 <pre class="mermaid"><code> classDiagram
     class DceRpc
@@ -383,13 +394,13 @@
 <tr>
 <td><a href="../opnum/">opnum</a></td>
 <td>0..1 <em>recommended</em> <br/> <a href="../Integer/">Integer</a></td>
-<td>An operation number used to identify a specific remote procedure call (RPC) m...</td>
+<td>An operation number used to identify a specific remote procedure call (RPC)</td>
 <td>direct</td>
 </tr>
 <tr>
 <td><a href="../rpc_interface/">rpc_interface</a></td>
 <td>1 <br/> <a href="../RpcInterface/">RpcInterface</a></td>
-<td>The RPC Interface object describes the details pertaining to the remote proce...</td>
+<td>The RPC Interface object describes the details pertaining to the remote</td>
 <td>direct</td>
 </tr>
 </tbody>
@@ -413,6 +424,10 @@
 </tr>
 </tbody>
 </table>
+<h2 id="in-subsets">In Subsets</h2>
+<ul>
+<li><a href="../Objects/">Objects</a></li>
+</ul>
 <h2 id="aliases">Aliases</h2>
 <ul>
 <li>DCE/RPC</li>
@@ -423,7 +438,8 @@
 </ul>
 <h2 id="notes">Notes</h2>
 <ul>
-<li>D3FEND™ Ontology d3f:RemoteProcedureCall. — <a href="https://d3fend.mitre.org/dao/artifact/d3f:RemoteProcedureCall/">https://d3fend.mitre.org/dao/artifact/d3f:RemoteProcedureCall/</a></li>
+<li>D3FEND™ Ontology d3f:RemoteProcedureCall. —
+<a href="https://d3fend.mitre.org/dao/artifact/d3f:RemoteProcedureCall/">https://d3fend.mitre.org/dao/artifact/d3f:RemoteProcedureCall/</a></li>
 </ul>
 <h2 id="identifier-and-mapping-information">Identifier and Mapping Information</h2>
 <h3 id="schema-source">Schema Source</h3>
@@ -454,10 +470,18 @@
 <h3 id="direct">Direct</h3>
 <details>
 <div class="highlight"><pre><span></span><code><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">DceRpc</span>
-<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The DCE/RPC, or Distributed Computing Environment/Remote Procedure Call,</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">object describes the remote procedure call system for distributed computing environments.</span>
+<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">DCE/RPC,</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">Distributed</span><span class="nv"> </span><span class="s">Computing</span><span class="nv"> </span><span class="s">Environment/Remote</span><span class="nv"> </span><span class="s">Procedure</span><span class="nv"> </span><span class="s">Call,</span>
+<span class="w">  </span><span class="s">object</span>
+
+<span class="w">  </span><span class="s">describes</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">remote</span><span class="nv"> </span><span class="s">procedure</span><span class="nv"> </span><span class="s">call</span><span class="nv"> </span><span class="s">system</span><span class="nv"> </span><span class="s">for</span><span class="nv"> </span><span class="s">distributed</span><span class="nv"> </span><span class="s">computing</span>
+
+<span class="w">  </span><span class="s">environments.'</span>
 <span class="nt">notes</span><span class="p">:</span>
-<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">D3FEND™ Ontology d3f:RemoteProcedureCall. — https://d3fend.mitre.org/dao/artifact/d3f:RemoteProcedureCall/</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="s">'D3FEND™</span><span class="nv"> </span><span class="s">Ontology</span><span class="nv"> </span><span class="s">d3f:RemoteProcedureCall.</span><span class="nv"> </span><span class="s">—</span>
+
+<span class="w">  </span><span class="s">https://d3fend.mitre.org/dao/artifact/d3f:RemoteProcedureCall/'</span>
+<span class="nt">in_subset</span><span class="p">:</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">objects</span>
 <span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="nt">see_also</span><span class="p">:</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://d3fend.mitre.org/dao/artifact/d3f:RemoteProcedureCall/</span>
@@ -494,10 +518,18 @@
 <h3 id="induced">Induced</h3>
 <details>
 <div class="highlight"><pre><span></span><code><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">DceRpc</span>
-<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The DCE/RPC, or Distributed Computing Environment/Remote Procedure Call,</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">object describes the remote procedure call system for distributed computing environments.</span>
+<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">DCE/RPC,</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">Distributed</span><span class="nv"> </span><span class="s">Computing</span><span class="nv"> </span><span class="s">Environment/Remote</span><span class="nv"> </span><span class="s">Procedure</span><span class="nv"> </span><span class="s">Call,</span>
+<span class="w">  </span><span class="s">object</span>
+
+<span class="w">  </span><span class="s">describes</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">remote</span><span class="nv"> </span><span class="s">procedure</span><span class="nv"> </span><span class="s">call</span><span class="nv"> </span><span class="s">system</span><span class="nv"> </span><span class="s">for</span><span class="nv"> </span><span class="s">distributed</span><span class="nv"> </span><span class="s">computing</span>
+
+<span class="w">  </span><span class="s">environments.'</span>
 <span class="nt">notes</span><span class="p">:</span>
-<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">D3FEND™ Ontology d3f:RemoteProcedureCall. — https://d3fend.mitre.org/dao/artifact/d3f:RemoteProcedureCall/</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="s">'D3FEND™</span><span class="nv"> </span><span class="s">Ontology</span><span class="nv"> </span><span class="s">d3f:RemoteProcedureCall.</span><span class="nv"> </span><span class="s">—</span>
+
+<span class="w">  </span><span class="s">https://d3fend.mitre.org/dao/artifact/d3f:RemoteProcedureCall/'</span>
+<span class="nt">in_subset</span><span class="p">:</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">objects</span>
 <span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="nt">see_also</span><span class="p">:</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://d3fend.mitre.org/dao/artifact/d3f:RemoteProcedureCall/</span>
@@ -573,8 +605,10 @@
 <span class="w">    </span><span class="nt">multivalued</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">opnum</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">opnum</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">An operation number used to identify a specific remote procedure</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">call (RPC) method or a method in an interface.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'An</span><span class="nv"> </span><span class="s">operation</span><span class="nv"> </span><span class="s">number</span><span class="nv"> </span><span class="s">used</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">identify</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">specific</span><span class="nv"> </span><span class="s">remote</span><span class="nv"> </span><span class="s">procedure</span>
+<span class="w">      </span><span class="s">call</span><span class="nv"> </span><span class="s">(RPC)</span>
+
+<span class="w">      </span><span class="s">method</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">method</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">an</span><span class="nv"> </span><span class="s">interface.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Opnum</span>
@@ -587,8 +621,10 @@
 <span class="w">    </span><span class="nt">recommended</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">rpc_interface</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">rpc_interface</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The RPC Interface object describes the details pertaining to the</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">remote procedure call interface.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">RPC</span><span class="nv"> </span><span class="s">Interface</span><span class="nv"> </span><span class="s">object</span><span class="nv"> </span><span class="s">describes</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">details</span><span class="nv"> </span><span class="s">pertaining</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">the</span>
+<span class="w">      </span><span class="s">remote</span>
+
+<span class="w">      </span><span class="s">procedure</span><span class="nv"> </span><span class="s">call</span><span class="nv"> </span><span class="s">interface.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Remote Procedure Call Interface</span>

@@ -497,7 +497,15 @@
 
 
 <h1 id="slot-xattributes">Slot: xattributes</h1>
-<p><em>An unordered collection of zero or more name/value pairs where each pair represents a file or folder extended attribute.</p>For example: Windows alternate data stream attributes (ADS stream name, ADS size, etc.), user-defined or application-defined attributes, ACL, owner, primary group, etc. Examples from DCS: </p><ul><li><strong>ads_name</strong></li><li><strong>ads_size</strong></li><li><strong>dacl</strong></li><li><strong>owner</strong></li><li><strong>primary_group</strong></li><li><strong>link_name</strong> - name of the link associated to the file.</li><li><strong>hard_link_count</strong> - the number of links that are associated to the file.</li></ul></em></p>
+<p><em>An unordered collection of zero or more name/value pairs where each pair</em></p>
+<p><em>represents a file or folder extended attribute.</p>For example: Windows</em></p>
+<p><em>alternate data stream attributes (ADS stream name, ADS size, etc.),</em></p>
+<p><em>user-defined or application-defined attributes, ACL, owner, primary group, etc.</em></p>
+<p><em>Examples from DCS:</em></p>
+<p><em></p><ul><li><strong>ads_name</strong></li><li><strong>ads_size</strong></li><li><strong>dacl</strong></li><li><strong>owner</strong></li><li><strong>primary_group</strong></li><li><strong>link_name</strong></em></p>
+<p><em>- name of the link associated to the</em></p>
+<p><em>file.</li><li><strong>hard_link_count</strong> - the number of links that are</em></p>
+<p><em>associated to the file.</li></ul></em></p>
 <p>URI: <a href="https://w3id.org/lmodel/ocsf/xattributes">ocsf:xattributes</a>
 Alias: xattributes</p>
 <!-- no inheritance hierarchy -->
@@ -513,13 +521,13 @@ Alias: xattributes</p>
 </thead>
 <tbody>
 <tr>
-<td><a href="../File/">File</a></td>
-<td>The File object represents the metadata associated with a file stored in a co...</td>
+<td><a href="../MacosProcess/">MacosProcess</a></td>
+<td>Extends the process object to add macOS specific fields</td>
 <td>no</td>
 </tr>
 <tr>
-<td><a href="../MacosProcess/">MacosProcess</a></td>
-<td>Extends the process object to add macOS specific fields</td>
+<td><a href="../LinuxProcess/">LinuxProcess</a></td>
+<td>Extends the process object to add Linux specific fields</td>
 <td>no</td>
 </tr>
 <tr>
@@ -528,8 +536,8 @@ Alias: xattributes</p>
 <td>yes</td>
 </tr>
 <tr>
-<td><a href="../LinuxProcess/">LinuxProcess</a></td>
-<td>Extends the process object to add Linux specific fields</td>
+<td><a href="../File/">File</a></td>
+<td>The File object represents the metadata associated with a file stored in a</td>
 <td>no</td>
 </tr>
 <tr>
@@ -606,11 +614,23 @@ Alias: xattributes</p>
 <details>
 <div class="highlight"><pre><span></span><code><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">xattributes</span>
 <span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;An</span><span class="nv"> </span><span class="s">unordered</span><span class="nv"> </span><span class="s">collection</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">zero</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">more</span><span class="nv"> </span><span class="s">name/value</span><span class="nv"> </span><span class="s">pairs</span><span class="nv"> </span><span class="s">where</span><span class="nv"> </span><span class="s">each</span>
-<span class="w">  </span><span class="s">pair</span><span class="nv"> </span><span class="s">represents</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">file</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">folder</span><span class="nv"> </span><span class="s">extended</span><span class="nv"> </span><span class="s">attribute.&lt;/p&gt;For</span><span class="nv"> </span><span class="s">example:</span><span class="nv"> </span><span class="s">Windows</span><span class="nv"> </span><span class="s">alternate</span>
-<span class="w">  </span><span class="s">data</span><span class="nv"> </span><span class="s">stream</span><span class="nv"> </span><span class="s">attributes</span><span class="nv"> </span><span class="s">(ADS</span><span class="nv"> </span><span class="s">stream</span><span class="nv"> </span><span class="s">name,</span><span class="nv"> </span><span class="s">ADS</span><span class="nv"> </span><span class="s">size,</span><span class="nv"> </span><span class="s">etc.),</span><span class="nv"> </span><span class="s">user-defined</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">application-defined</span>
-<span class="w">  </span><span class="s">attributes,</span><span class="nv"> </span><span class="s">ACL,</span><span class="nv"> </span><span class="s">owner,</span><span class="nv"> </span><span class="s">primary</span><span class="nv"> </span><span class="s">group,</span><span class="nv"> </span><span class="s">etc.</span><span class="nv"> </span><span class="s">Examples</span><span class="nv"> </span><span class="s">from</span><span class="nv"> </span><span class="s">DCS:</span><span class="nv"> </span><span class="s">&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;strong&gt;ads_name&lt;/strong&gt;&lt;/li&gt;&lt;li&gt;&lt;strong&gt;ads_size&lt;/strong&gt;&lt;/li&gt;&lt;li&gt;&lt;strong&gt;dacl&lt;/strong&gt;&lt;/li&gt;&lt;li&gt;&lt;strong&gt;owner&lt;/strong&gt;&lt;/li&gt;&lt;li&gt;&lt;strong&gt;primary_group&lt;/strong&gt;&lt;/li&gt;&lt;li&gt;&lt;strong&gt;link_name&lt;/strong&gt;</span>
-<span class="w">  </span><span class="s">-</span><span class="nv"> </span><span class="s">name</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">link</span><span class="nv"> </span><span class="s">associated</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">file.&lt;/li&gt;&lt;li&gt;&lt;strong&gt;hard_link_count&lt;/strong&gt;</span>
-<span class="w">  </span><span class="s">-</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">number</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">links</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">are</span><span class="nv"> </span><span class="s">associated</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">file.&lt;/li&gt;&lt;/ul&gt;&#39;</span>
+<span class="w">  </span><span class="s">pair</span>
+
+<span class="w">  </span><span class="s">represents</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">file</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">folder</span><span class="nv"> </span><span class="s">extended</span><span class="nv"> </span><span class="s">attribute.&lt;/p&gt;For</span><span class="nv"> </span><span class="s">example:</span><span class="nv"> </span><span class="s">Windows</span>
+
+<span class="w">  </span><span class="s">alternate</span><span class="nv"> </span><span class="s">data</span><span class="nv"> </span><span class="s">stream</span><span class="nv"> </span><span class="s">attributes</span><span class="nv"> </span><span class="s">(ADS</span><span class="nv"> </span><span class="s">stream</span><span class="nv"> </span><span class="s">name,</span><span class="nv"> </span><span class="s">ADS</span><span class="nv"> </span><span class="s">size,</span><span class="nv"> </span><span class="s">etc.),</span>
+
+<span class="w">  </span><span class="s">user-defined</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">application-defined</span><span class="nv"> </span><span class="s">attributes,</span><span class="nv"> </span><span class="s">ACL,</span><span class="nv"> </span><span class="s">owner,</span><span class="nv"> </span><span class="s">primary</span><span class="nv"> </span><span class="s">group,</span><span class="nv"> </span><span class="s">etc.</span>
+
+<span class="w">  </span><span class="s">Examples</span><span class="nv"> </span><span class="s">from</span><span class="nv"> </span><span class="s">DCS:</span>
+
+<span class="w">  </span><span class="s">&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;strong&gt;ads_name&lt;/strong&gt;&lt;/li&gt;&lt;li&gt;&lt;strong&gt;ads_size&lt;/strong&gt;&lt;/li&gt;&lt;li&gt;&lt;strong&gt;dacl&lt;/strong&gt;&lt;/li&gt;&lt;li&gt;&lt;strong&gt;owner&lt;/strong&gt;&lt;/li&gt;&lt;li&gt;&lt;strong&gt;primary_group&lt;/strong&gt;&lt;/li&gt;&lt;li&gt;&lt;strong&gt;link_name&lt;/strong&gt;</span>
+
+<span class="w">  </span><span class="s">-</span><span class="nv"> </span><span class="s">name</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">link</span><span class="nv"> </span><span class="s">associated</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">the</span>
+
+<span class="w">  </span><span class="s">file.&lt;/li&gt;&lt;li&gt;&lt;strong&gt;hard_link_count&lt;/strong&gt;</span><span class="nv"> </span><span class="s">-</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">number</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">links</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">are</span>
+
+<span class="w">  </span><span class="s">associated</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">file.&lt;/li&gt;&lt;/ul&gt;&#39;</span>
 <span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="nt">aliases</span><span class="p">:</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Extended Attributes</span>

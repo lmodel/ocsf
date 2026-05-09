@@ -217,6 +217,15 @@
 </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="#in-subsets">
+<span class="md-ellipsis">
+      
+        In Subsets
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#aliases">
 <span class="md-ellipsis">
       
@@ -295,7 +304,9 @@
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
 <h1 id="class-observation">Class: Observation</h1>
-<p><em>A record of an observed value or event that captures the timing and frequency of its occurrence. Used to track when values/events were first detected, last detected, and their total occurrence count.</em></p>
+<p><em>A record of an observed value or event that captures the timing and frequency</em></p>
+<p><em>of its occurrence. Used to track when values/events were first detected, last</em></p>
+<p><em>detected, and their total occurrence count.</em></p>
 <p>URI: <a href="https://w3id.org/lmodel/ocsf/Observation">ocsf:Observation</a></p>
 <pre class="mermaid"><code> classDiagram
     class Observation
@@ -343,7 +354,7 @@
 <tr>
 <td><a href="../count/">count</a></td>
 <td>0..1 <em>recommended</em> <br/> <a href="../Integer/">Integer</a></td>
-<td>Integer representing the total number of times this specific value/event was ...</td>
+<td>Integer representing the total number of times this specific value/event was</td>
 <td>direct</td>
 </tr>
 <tr>
@@ -355,7 +366,7 @@
 <tr>
 <td><a href="../value/">value</a></td>
 <td>1 <br/> <a href="../String/">String</a></td>
-<td>The specific value, event, indicator or data point that was observed and reco...</td>
+<td>The specific value, event, indicator or data point that was observed and</td>
 <td>direct</td>
 </tr>
 </tbody>
@@ -385,6 +396,10 @@
 </tr>
 </tbody>
 </table>
+<h2 id="in-subsets">In Subsets</h2>
+<ul>
+<li><a href="../Objects/">Objects</a></li>
+</ul>
 <h2 id="aliases">Aliases</h2>
 <ul>
 <li>Observation</li>
@@ -422,9 +437,14 @@
 <h3 id="direct">Direct</h3>
 <details>
 <div class="highlight"><pre><span></span><code><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Observation</span>
-<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">A record of an observed value or event that captures the timing and frequency</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">of its occurrence. Used to track when values/events were first detected, last detected,</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">and their total occurrence count.</span>
+<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'A</span><span class="nv"> </span><span class="s">record</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">an</span><span class="nv"> </span><span class="s">observed</span><span class="nv"> </span><span class="s">value</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">event</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">captures</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">timing</span><span class="nv"> </span><span class="s">and</span>
+<span class="w">  </span><span class="s">frequency</span>
+
+<span class="w">  </span><span class="s">of</span><span class="nv"> </span><span class="s">its</span><span class="nv"> </span><span class="s">occurrence.</span><span class="nv"> </span><span class="s">Used</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">track</span><span class="nv"> </span><span class="s">when</span><span class="nv"> </span><span class="s">values/events</span><span class="nv"> </span><span class="s">were</span><span class="nv"> </span><span class="s">first</span><span class="nv"> </span><span class="s">detected,</span><span class="nv"> </span><span class="s">last</span>
+
+<span class="w">  </span><span class="s">detected,</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">their</span><span class="nv"> </span><span class="s">total</span><span class="nv"> </span><span class="s">occurrence</span><span class="nv"> </span><span class="s">count.'</span>
+<span class="nt">in_subset</span><span class="p">:</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">objects</span>
 <span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="nt">aliases</span><span class="p">:</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Observation</span>
@@ -438,28 +458,40 @@
 <span class="nt">slot_usage</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">count</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">count</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Integer representing the total number of times this specific value/event</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">was observed across all occurrences. Helps establish prevalence and patterns.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'Integer</span><span class="nv"> </span><span class="s">representing</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">total</span><span class="nv"> </span><span class="s">number</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">times</span><span class="nv"> </span><span class="s">this</span><span class="nv"> </span><span class="s">specific</span><span class="nv"> </span><span class="s">value/event</span>
+<span class="w">      </span><span class="s">was</span>
+
+<span class="w">      </span><span class="s">observed</span><span class="nv"> </span><span class="s">across</span><span class="nv"> </span><span class="s">all</span><span class="nv"> </span><span class="s">occurrences.</span><span class="nv"> </span><span class="s">Helps</span><span class="nv"> </span><span class="s">establish</span><span class="nv"> </span><span class="s">prevalence</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">patterns.'</span>
 <span class="w">    </span><span class="nt">recommended</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">timespan</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">timespan</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The time window when the value or event was first observed. It is</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">used to analyze activity patterns, detect trends, or correlate events within</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">a specific timeframe.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">time</span><span class="nv"> </span><span class="s">window</span><span class="nv"> </span><span class="s">when</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">value</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">event</span><span class="nv"> </span><span class="s">was</span><span class="nv"> </span><span class="s">first</span><span class="nv"> </span><span class="s">observed.</span><span class="nv"> </span><span class="s">It</span><span class="nv"> </span><span class="s">is</span>
+<span class="w">      </span><span class="s">used</span><span class="nv"> </span><span class="s">to</span>
+
+<span class="w">      </span><span class="s">analyze</span><span class="nv"> </span><span class="s">activity</span><span class="nv"> </span><span class="s">patterns,</span><span class="nv"> </span><span class="s">detect</span><span class="nv"> </span><span class="s">trends,</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">correlate</span><span class="nv"> </span><span class="s">events</span><span class="nv"> </span><span class="s">within</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">specific</span>
+
+<span class="w">      </span><span class="s">timeframe.'</span>
 <span class="w">    </span><span class="nt">recommended</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">value</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">value</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The specific value, event, indicator or data point that was observed</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">and recorded. This is the core piece of information being tracked.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">specific</span><span class="nv"> </span><span class="s">value,</span><span class="nv"> </span><span class="s">event,</span><span class="nv"> </span><span class="s">indicator</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">data</span><span class="nv"> </span><span class="s">point</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">was</span><span class="nv"> </span><span class="s">observed</span>
+<span class="w">      </span><span class="s">and</span>
+
+<span class="w">      </span><span class="s">recorded.</span><span class="nv"> </span><span class="s">This</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">core</span><span class="nv"> </span><span class="s">piece</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">information</span><span class="nv"> </span><span class="s">being</span><span class="nv"> </span><span class="s">tracked.'</span>
 <span class="w">    </span><span class="nt">required</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 </code></pre></div>
 </details>
 <h3 id="induced">Induced</h3>
 <details>
 <div class="highlight"><pre><span></span><code><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Observation</span>
-<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">A record of an observed value or event that captures the timing and frequency</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">of its occurrence. Used to track when values/events were first detected, last detected,</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">and their total occurrence count.</span>
+<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'A</span><span class="nv"> </span><span class="s">record</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">an</span><span class="nv"> </span><span class="s">observed</span><span class="nv"> </span><span class="s">value</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">event</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">captures</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">timing</span><span class="nv"> </span><span class="s">and</span>
+<span class="w">  </span><span class="s">frequency</span>
+
+<span class="w">  </span><span class="s">of</span><span class="nv"> </span><span class="s">its</span><span class="nv"> </span><span class="s">occurrence.</span><span class="nv"> </span><span class="s">Used</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">track</span><span class="nv"> </span><span class="s">when</span><span class="nv"> </span><span class="s">values/events</span><span class="nv"> </span><span class="s">were</span><span class="nv"> </span><span class="s">first</span><span class="nv"> </span><span class="s">detected,</span><span class="nv"> </span><span class="s">last</span>
+
+<span class="w">  </span><span class="s">detected,</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">their</span><span class="nv"> </span><span class="s">total</span><span class="nv"> </span><span class="s">occurrence</span><span class="nv"> </span><span class="s">count.'</span>
+<span class="nt">in_subset</span><span class="p">:</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">objects</span>
 <span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="nt">aliases</span><span class="p">:</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Observation</span>
@@ -469,25 +501,34 @@
 <span class="nt">slot_usage</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">count</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">count</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Integer representing the total number of times this specific value/event</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">was observed across all occurrences. Helps establish prevalence and patterns.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'Integer</span><span class="nv"> </span><span class="s">representing</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">total</span><span class="nv"> </span><span class="s">number</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">times</span><span class="nv"> </span><span class="s">this</span><span class="nv"> </span><span class="s">specific</span><span class="nv"> </span><span class="s">value/event</span>
+<span class="w">      </span><span class="s">was</span>
+
+<span class="w">      </span><span class="s">observed</span><span class="nv"> </span><span class="s">across</span><span class="nv"> </span><span class="s">all</span><span class="nv"> </span><span class="s">occurrences.</span><span class="nv"> </span><span class="s">Helps</span><span class="nv"> </span><span class="s">establish</span><span class="nv"> </span><span class="s">prevalence</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">patterns.'</span>
 <span class="w">    </span><span class="nt">recommended</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">timespan</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">timespan</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The time window when the value or event was first observed. It is</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">used to analyze activity patterns, detect trends, or correlate events within</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">a specific timeframe.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">time</span><span class="nv"> </span><span class="s">window</span><span class="nv"> </span><span class="s">when</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">value</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">event</span><span class="nv"> </span><span class="s">was</span><span class="nv"> </span><span class="s">first</span><span class="nv"> </span><span class="s">observed.</span><span class="nv"> </span><span class="s">It</span><span class="nv"> </span><span class="s">is</span>
+<span class="w">      </span><span class="s">used</span><span class="nv"> </span><span class="s">to</span>
+
+<span class="w">      </span><span class="s">analyze</span><span class="nv"> </span><span class="s">activity</span><span class="nv"> </span><span class="s">patterns,</span><span class="nv"> </span><span class="s">detect</span><span class="nv"> </span><span class="s">trends,</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">correlate</span><span class="nv"> </span><span class="s">events</span><span class="nv"> </span><span class="s">within</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">specific</span>
+
+<span class="w">      </span><span class="s">timeframe.'</span>
 <span class="w">    </span><span class="nt">recommended</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">value</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">value</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The specific value, event, indicator or data point that was observed</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">and recorded. This is the core piece of information being tracked.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">specific</span><span class="nv"> </span><span class="s">value,</span><span class="nv"> </span><span class="s">event,</span><span class="nv"> </span><span class="s">indicator</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">data</span><span class="nv"> </span><span class="s">point</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">was</span><span class="nv"> </span><span class="s">observed</span>
+<span class="w">      </span><span class="s">and</span>
+
+<span class="w">      </span><span class="s">recorded.</span><span class="nv"> </span><span class="s">This</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">core</span><span class="nv"> </span><span class="s">piece</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">information</span><span class="nv"> </span><span class="s">being</span><span class="nv"> </span><span class="s">tracked.'</span>
 <span class="w">    </span><span class="nt">required</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="nt">attributes</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">count</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">count</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Integer representing the total number of times this specific value/event</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">was observed across all occurrences. Helps establish prevalence and patterns.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'Integer</span><span class="nv"> </span><span class="s">representing</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">total</span><span class="nv"> </span><span class="s">number</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">times</span><span class="nv"> </span><span class="s">this</span><span class="nv"> </span><span class="s">specific</span><span class="nv"> </span><span class="s">value/event</span>
+<span class="w">      </span><span class="s">was</span>
+
+<span class="w">      </span><span class="s">observed</span><span class="nv"> </span><span class="s">across</span><span class="nv"> </span><span class="s">all</span><span class="nv"> </span><span class="s">occurrences.</span><span class="nv"> </span><span class="s">Helps</span><span class="nv"> </span><span class="s">establish</span><span class="nv"> </span><span class="s">prevalence</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">patterns.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Count</span>
@@ -505,9 +546,12 @@
 <span class="w">    </span><span class="nt">recommended</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">timespan</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">timespan</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The time window when the value or event was first observed. It is</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">used to analyze activity patterns, detect trends, or correlate events within</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">a specific timeframe.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">time</span><span class="nv"> </span><span class="s">window</span><span class="nv"> </span><span class="s">when</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">value</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">event</span><span class="nv"> </span><span class="s">was</span><span class="nv"> </span><span class="s">first</span><span class="nv"> </span><span class="s">observed.</span><span class="nv"> </span><span class="s">It</span><span class="nv"> </span><span class="s">is</span>
+<span class="w">      </span><span class="s">used</span><span class="nv"> </span><span class="s">to</span>
+
+<span class="w">      </span><span class="s">analyze</span><span class="nv"> </span><span class="s">activity</span><span class="nv"> </span><span class="s">patterns,</span><span class="nv"> </span><span class="s">detect</span><span class="nv"> </span><span class="s">trends,</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">correlate</span><span class="nv"> </span><span class="s">events</span><span class="nv"> </span><span class="s">within</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">specific</span>
+
+<span class="w">      </span><span class="s">timeframe.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Time Span</span>
@@ -521,8 +565,10 @@
 <span class="w">    </span><span class="nt">recommended</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">value</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">value</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The specific value, event, indicator or data point that was observed</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">and recorded. This is the core piece of information being tracked.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">specific</span><span class="nv"> </span><span class="s">value,</span><span class="nv"> </span><span class="s">event,</span><span class="nv"> </span><span class="s">indicator</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">data</span><span class="nv"> </span><span class="s">point</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">was</span><span class="nv"> </span><span class="s">observed</span>
+<span class="w">      </span><span class="s">and</span>
+
+<span class="w">      </span><span class="s">recorded.</span><span class="nv"> </span><span class="s">This</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">core</span><span class="nv"> </span><span class="s">piece</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">information</span><span class="nv"> </span><span class="s">being</span><span class="nv"> </span><span class="s">tracked.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Value</span>

@@ -217,6 +217,15 @@
 </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="#in-subsets">
+<span class="md-ellipsis">
+      
+        In Subsets
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#aliases">
 <span class="md-ellipsis">
       
@@ -313,7 +322,12 @@
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
 <h1 id="class-script">Class: Script</h1>
-<p><em>The Script object describes a script or command that can be executed by a shell, script engine, or interpreter. Examples include Bash, JavsScript, PowerShell, Python, VBScript, etc. Note that the term <em>script</em> here denotes not only a script contained within a file but also a script or command typed interactively by a user, supplied on the command line, or provided by some other file-less mechanism.</em></p>
+<p><em>The Script object describes a script or command that can be executed by a</em></p>
+<p><em>shell, script engine, or interpreter. Examples include Bash, JavsScript,</em></p>
+<p><em>PowerShell, Python, VBScript, etc. Note that the term <em>script</em> here</em></p>
+<p><em>denotes not only a script contained within a file but also a script or command</em></p>
+<p><em>typed interactively by a user, supplied on the command line, or provided by</em></p>
+<p><em>some other file-less mechanism.</em></p>
 <p>URI: <a href="https://w3id.org/lmodel/ocsf/Script">ocsf:Script</a></p>
 <pre class="mermaid"><code> classDiagram
     class Script
@@ -416,13 +430,13 @@
 <tr>
 <td><a href="../parent_uid/">parent_uid</a></td>
 <td>0..1 <br/> <a href="../String/">String</a></td>
-<td>This attribute relates a sub-script to a parent script having the matching &lt;c...</td>
+<td>This attribute relates a sub-script to a parent script having the matching</td>
 <td>direct</td>
 </tr>
 <tr>
 <td><a href="../script_content/">script_content</a></td>
 <td>1 <br/> <a href="../LongString/">LongString</a></td>
-<td>The script content, normalized to UTF-8 encoding irrespective of its original...</td>
+<td>The script content, normalized to UTF-8 encoding irrespective of its original</td>
 <td>direct</td>
 </tr>
 <tr>
@@ -482,6 +496,10 @@
 </tr>
 </tbody>
 </table>
+<h2 id="in-subsets">In Subsets</h2>
+<ul>
+<li><a href="../Objects/">Objects</a></li>
+</ul>
 <h2 id="aliases">Aliases</h2>
 <ul>
 <li>Script</li>
@@ -492,7 +510,8 @@
 </ul>
 <h2 id="notes">Notes</h2>
 <ul>
-<li>D3FEND™ Ontology d3f:ExecutableScript. — <a href="https://d3fend.mitre.org/dao/artifact/d3f:ExecutableScript/">https://d3fend.mitre.org/dao/artifact/d3f:ExecutableScript/</a></li>
+<li>D3FEND™ Ontology d3f:ExecutableScript. —
+<a href="https://d3fend.mitre.org/dao/artifact/d3f:ExecutableScript/">https://d3fend.mitre.org/dao/artifact/d3f:ExecutableScript/</a></li>
 </ul>
 <h2 id="identifier-and-mapping-information">Identifier and Mapping Information</h2>
 <h3 id="schema-source">Schema Source</h3>
@@ -523,13 +542,24 @@
 <h3 id="direct">Direct</h3>
 <details>
 <div class="highlight"><pre><span></span><code><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Script</span>
-<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The Script object describes a script or command that can be executed</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">by a shell, script engine, or interpreter. Examples include Bash, JavsScript, PowerShell,</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">Python, VBScript, etc. Note that the term &lt;em&gt;script&lt;/em&gt; here denotes not only</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">a script contained within a file but also a script or command typed interactively</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">by a user, supplied on the command line, or provided by some other file-less mechanism.</span>
+<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">Script</span><span class="nv"> </span><span class="s">object</span><span class="nv"> </span><span class="s">describes</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">script</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">command</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">can</span><span class="nv"> </span><span class="s">be</span><span class="nv"> </span><span class="s">executed</span>
+<span class="w">  </span><span class="s">by</span><span class="nv"> </span><span class="s">a</span>
+
+<span class="w">  </span><span class="s">shell,</span><span class="nv"> </span><span class="s">script</span><span class="nv"> </span><span class="s">engine,</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">interpreter.</span><span class="nv"> </span><span class="s">Examples</span><span class="nv"> </span><span class="s">include</span><span class="nv"> </span><span class="s">Bash,</span><span class="nv"> </span><span class="s">JavsScript,</span>
+
+<span class="w">  </span><span class="s">PowerShell,</span><span class="nv"> </span><span class="s">Python,</span><span class="nv"> </span><span class="s">VBScript,</span><span class="nv"> </span><span class="s">etc.</span><span class="nv"> </span><span class="s">Note</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">term</span><span class="nv"> </span><span class="s">&lt;em&gt;script&lt;/em&gt;</span><span class="nv"> </span><span class="s">here</span>
+
+<span class="w">  </span><span class="s">denotes</span><span class="nv"> </span><span class="s">not</span><span class="nv"> </span><span class="s">only</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">script</span><span class="nv"> </span><span class="s">contained</span><span class="nv"> </span><span class="s">within</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">file</span><span class="nv"> </span><span class="s">but</span><span class="nv"> </span><span class="s">also</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">script</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">command</span>
+
+<span class="w">  </span><span class="s">typed</span><span class="nv"> </span><span class="s">interactively</span><span class="nv"> </span><span class="s">by</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">user,</span><span class="nv"> </span><span class="s">supplied</span><span class="nv"> </span><span class="s">on</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">command</span><span class="nv"> </span><span class="s">line,</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">provided</span><span class="nv"> </span><span class="s">by</span>
+
+<span class="w">  </span><span class="s">some</span><span class="nv"> </span><span class="s">other</span><span class="nv"> </span><span class="s">file-less</span><span class="nv"> </span><span class="s">mechanism.'</span>
 <span class="nt">notes</span><span class="p">:</span>
-<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">D3FEND™ Ontology d3f:ExecutableScript. — https://d3fend.mitre.org/dao/artifact/d3f:ExecutableScript/</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="s">'D3FEND™</span><span class="nv"> </span><span class="s">Ontology</span><span class="nv"> </span><span class="s">d3f:ExecutableScript.</span><span class="nv"> </span><span class="s">—</span>
+
+<span class="w">  </span><span class="s">https://d3fend.mitre.org/dao/artifact/d3f:ExecutableScript/'</span>
+<span class="nt">in_subset</span><span class="p">:</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">objects</span>
 <span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="nt">see_also</span><span class="p">:</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://d3fend.mitre.org/dao/artifact/d3f:ExecutableScript/</span>
@@ -548,31 +578,45 @@
 <span class="nt">slot_usage</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">file</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">file</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Present if this script is associated with a file. Not present in</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">the case of a file-less script.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'Present</span><span class="nv"> </span><span class="s">if</span><span class="nv"> </span><span class="s">this</span><span class="nv"> </span><span class="s">script</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">associated</span><span class="nv"> </span><span class="s">with</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">file.</span><span class="nv"> </span><span class="s">Not</span><span class="nv"> </span><span class="s">present</span><span class="nv"> </span><span class="s">in</span>
+<span class="w">      </span><span class="s">the</span><span class="nv"> </span><span class="s">case</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">a</span>
+
+<span class="w">      </span><span class="s">file-less</span><span class="nv"> </span><span class="s">script.'</span>
 <span class="w">  </span><span class="nt">hashes</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">hashes</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">An array of the script's cryptographic hashes. Note that these hashes</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">are calculated on the script in its original encoding, and not on the normalized</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">UTF-8 encoding found in the &lt;code&gt;script_content&lt;/code&gt; attribute.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'An</span><span class="nv"> </span><span class="s">array</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">script</span><span class="se">''</span><span class="s">s</span><span class="nv"> </span><span class="s">cryptographic</span><span class="nv"> </span><span class="s">hashes.</span><span class="nv"> </span><span class="s">Note</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">these</span>
+<span class="w">      </span><span class="s">hashes</span><span class="nv"> </span><span class="s">are</span>
+
+<span class="w">      </span><span class="s">calculated</span><span class="nv"> </span><span class="s">on</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">script</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">its</span><span class="nv"> </span><span class="s">original</span><span class="nv"> </span><span class="s">encoding,</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">not</span><span class="nv"> </span><span class="s">on</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">normalized</span>
+
+<span class="w">      </span><span class="s">UTF-8</span><span class="nv"> </span><span class="s">encoding</span><span class="nv"> </span><span class="s">found</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">&lt;code&gt;script_content&lt;/code&gt;</span><span class="nv"> </span><span class="s">attribute.'</span>
 <span class="w">    </span><span class="nt">recommended</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">name</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">name</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Unique identifier for the script or macro, independent of the containing</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">file, used for tracking, auditing, and security analysis.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'Unique</span><span class="nv"> </span><span class="s">identifier</span><span class="nv"> </span><span class="s">for</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">script</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">macro,</span><span class="nv"> </span><span class="s">independent</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">containing</span>
+<span class="w">      </span><span class="s">file,</span>
+
+<span class="w">      </span><span class="s">used</span><span class="nv"> </span><span class="s">for</span><span class="nv"> </span><span class="s">tracking,</span><span class="nv"> </span><span class="s">auditing,</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">security</span><span class="nv"> </span><span class="s">analysis.'</span>
 <span class="w">  </span><span class="nt">parent_uid</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">parent_uid</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">This attribute relates a sub-script to a parent script having the</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">matching &lt;code&gt;uid&lt;/code&gt; attribute. In the case of PowerShell, sub-script execution</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">can be identified by matching the activity correlation ID of the raw ETW events</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">provided by the OS.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'This</span><span class="nv"> </span><span class="s">attribute</span><span class="nv"> </span><span class="s">relates</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">sub-script</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">parent</span><span class="nv"> </span><span class="s">script</span><span class="nv"> </span><span class="s">having</span><span class="nv"> </span><span class="s">the</span>
+<span class="w">      </span><span class="s">matching</span>
+
+<span class="w">      </span><span class="s">&lt;code&gt;uid&lt;/code&gt;</span><span class="nv"> </span><span class="s">attribute.</span><span class="nv"> </span><span class="s">In</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">case</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">PowerShell,</span><span class="nv"> </span><span class="s">sub-script</span><span class="nv"> </span><span class="s">execution</span>
+<span class="w">      </span><span class="s">can</span>
+
+<span class="w">      </span><span class="s">be</span><span class="nv"> </span><span class="s">identified</span><span class="nv"> </span><span class="s">by</span><span class="nv"> </span><span class="s">matching</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">activity</span><span class="nv"> </span><span class="s">correlation</span><span class="nv"> </span><span class="s">ID</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">raw</span><span class="nv"> </span><span class="s">ETW</span><span class="nv"> </span><span class="s">events</span>
+
+<span class="w">      </span><span class="s">provided</span><span class="nv"> </span><span class="s">by</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">OS.'</span>
 <span class="w">  </span><span class="nt">script_content</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">script_content</span>
 <span class="w">    </span><span class="nt">required</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">type</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">type</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The script type, normalized to the caption of the &lt;code&gt;type_id&lt;/code&gt;</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">value. In the case of 'Other', it is defined by the event source.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">script</span><span class="nv"> </span><span class="s">type,</span><span class="nv"> </span><span class="s">normalized</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">caption</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">&lt;code&gt;type_id&lt;/code&gt;</span>
+<span class="w">      </span><span class="s">value.</span>
+
+<span class="w">      </span><span class="s">In</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">case</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="se">''</span><span class="s">Other</span><span class="se">''</span><span class="s">,</span><span class="nv"> </span><span class="s">it</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">defined</span><span class="nv"> </span><span class="s">by</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">event</span><span class="nv"> </span><span class="s">source.'</span>
 <span class="w">  </span><span class="nt">type_id</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">type_id</span>
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The normalized script type ID.</span>
@@ -580,22 +624,37 @@
 <span class="w">    </span><span class="nt">required</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">uid</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">uid</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Some script engines assign a unique ID to each individual execution</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">of a given script. This attribute captures that unique ID. In the case of PowerShell,</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">the unique ID corresponds to the &lt;code&gt;ScriptBlockId&lt;/code&gt; in the raw ETW events</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">provided by the OS.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'Some</span><span class="nv"> </span><span class="s">script</span><span class="nv"> </span><span class="s">engines</span><span class="nv"> </span><span class="s">assign</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">unique</span><span class="nv"> </span><span class="s">ID</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">each</span><span class="nv"> </span><span class="s">individual</span><span class="nv"> </span><span class="s">execution</span>
+<span class="w">      </span><span class="s">of</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">given</span>
+
+<span class="w">      </span><span class="s">script.</span><span class="nv"> </span><span class="s">This</span><span class="nv"> </span><span class="s">attribute</span><span class="nv"> </span><span class="s">captures</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">unique</span><span class="nv"> </span><span class="s">ID.</span><span class="nv"> </span><span class="s">In</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">case</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">PowerShell,</span><span class="nv"> </span><span class="s">the</span>
+
+<span class="w">      </span><span class="s">unique</span><span class="nv"> </span><span class="s">ID</span><span class="nv"> </span><span class="s">corresponds</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">&lt;code&gt;ScriptBlockId&lt;/code&gt;</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">raw</span><span class="nv"> </span><span class="s">ETW</span><span class="nv"> </span><span class="s">events</span>
+
+<span class="w">      </span><span class="s">provided</span><span class="nv"> </span><span class="s">by</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">OS.'</span>
 </code></pre></div>
 </details>
 <h3 id="induced">Induced</h3>
 <details>
 <div class="highlight"><pre><span></span><code><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Script</span>
-<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The Script object describes a script or command that can be executed</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">by a shell, script engine, or interpreter. Examples include Bash, JavsScript, PowerShell,</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">Python, VBScript, etc. Note that the term &lt;em&gt;script&lt;/em&gt; here denotes not only</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">a script contained within a file but also a script or command typed interactively</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">by a user, supplied on the command line, or provided by some other file-less mechanism.</span>
+<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">Script</span><span class="nv"> </span><span class="s">object</span><span class="nv"> </span><span class="s">describes</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">script</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">command</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">can</span><span class="nv"> </span><span class="s">be</span><span class="nv"> </span><span class="s">executed</span>
+<span class="w">  </span><span class="s">by</span><span class="nv"> </span><span class="s">a</span>
+
+<span class="w">  </span><span class="s">shell,</span><span class="nv"> </span><span class="s">script</span><span class="nv"> </span><span class="s">engine,</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">interpreter.</span><span class="nv"> </span><span class="s">Examples</span><span class="nv"> </span><span class="s">include</span><span class="nv"> </span><span class="s">Bash,</span><span class="nv"> </span><span class="s">JavsScript,</span>
+
+<span class="w">  </span><span class="s">PowerShell,</span><span class="nv"> </span><span class="s">Python,</span><span class="nv"> </span><span class="s">VBScript,</span><span class="nv"> </span><span class="s">etc.</span><span class="nv"> </span><span class="s">Note</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">term</span><span class="nv"> </span><span class="s">&lt;em&gt;script&lt;/em&gt;</span><span class="nv"> </span><span class="s">here</span>
+
+<span class="w">  </span><span class="s">denotes</span><span class="nv"> </span><span class="s">not</span><span class="nv"> </span><span class="s">only</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">script</span><span class="nv"> </span><span class="s">contained</span><span class="nv"> </span><span class="s">within</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">file</span><span class="nv"> </span><span class="s">but</span><span class="nv"> </span><span class="s">also</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">script</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">command</span>
+
+<span class="w">  </span><span class="s">typed</span><span class="nv"> </span><span class="s">interactively</span><span class="nv"> </span><span class="s">by</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">user,</span><span class="nv"> </span><span class="s">supplied</span><span class="nv"> </span><span class="s">on</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">command</span><span class="nv"> </span><span class="s">line,</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">provided</span><span class="nv"> </span><span class="s">by</span>
+
+<span class="w">  </span><span class="s">some</span><span class="nv"> </span><span class="s">other</span><span class="nv"> </span><span class="s">file-less</span><span class="nv"> </span><span class="s">mechanism.'</span>
 <span class="nt">notes</span><span class="p">:</span>
-<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">D3FEND™ Ontology d3f:ExecutableScript. — https://d3fend.mitre.org/dao/artifact/d3f:ExecutableScript/</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="s">'D3FEND™</span><span class="nv"> </span><span class="s">Ontology</span><span class="nv"> </span><span class="s">d3f:ExecutableScript.</span><span class="nv"> </span><span class="s">—</span>
+
+<span class="w">  </span><span class="s">https://d3fend.mitre.org/dao/artifact/d3f:ExecutableScript/'</span>
+<span class="nt">in_subset</span><span class="p">:</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">objects</span>
 <span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="nt">see_also</span><span class="p">:</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://d3fend.mitre.org/dao/artifact/d3f:ExecutableScript/</span>
@@ -605,31 +664,45 @@
 <span class="nt">slot_usage</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">file</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">file</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Present if this script is associated with a file. Not present in</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">the case of a file-less script.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'Present</span><span class="nv"> </span><span class="s">if</span><span class="nv"> </span><span class="s">this</span><span class="nv"> </span><span class="s">script</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">associated</span><span class="nv"> </span><span class="s">with</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">file.</span><span class="nv"> </span><span class="s">Not</span><span class="nv"> </span><span class="s">present</span><span class="nv"> </span><span class="s">in</span>
+<span class="w">      </span><span class="s">the</span><span class="nv"> </span><span class="s">case</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">a</span>
+
+<span class="w">      </span><span class="s">file-less</span><span class="nv"> </span><span class="s">script.'</span>
 <span class="w">  </span><span class="nt">hashes</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">hashes</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">An array of the script's cryptographic hashes. Note that these hashes</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">are calculated on the script in its original encoding, and not on the normalized</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">UTF-8 encoding found in the &lt;code&gt;script_content&lt;/code&gt; attribute.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'An</span><span class="nv"> </span><span class="s">array</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">script</span><span class="se">''</span><span class="s">s</span><span class="nv"> </span><span class="s">cryptographic</span><span class="nv"> </span><span class="s">hashes.</span><span class="nv"> </span><span class="s">Note</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">these</span>
+<span class="w">      </span><span class="s">hashes</span><span class="nv"> </span><span class="s">are</span>
+
+<span class="w">      </span><span class="s">calculated</span><span class="nv"> </span><span class="s">on</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">script</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">its</span><span class="nv"> </span><span class="s">original</span><span class="nv"> </span><span class="s">encoding,</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">not</span><span class="nv"> </span><span class="s">on</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">normalized</span>
+
+<span class="w">      </span><span class="s">UTF-8</span><span class="nv"> </span><span class="s">encoding</span><span class="nv"> </span><span class="s">found</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">&lt;code&gt;script_content&lt;/code&gt;</span><span class="nv"> </span><span class="s">attribute.'</span>
 <span class="w">    </span><span class="nt">recommended</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">name</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">name</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Unique identifier for the script or macro, independent of the containing</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">file, used for tracking, auditing, and security analysis.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'Unique</span><span class="nv"> </span><span class="s">identifier</span><span class="nv"> </span><span class="s">for</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">script</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">macro,</span><span class="nv"> </span><span class="s">independent</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">containing</span>
+<span class="w">      </span><span class="s">file,</span>
+
+<span class="w">      </span><span class="s">used</span><span class="nv"> </span><span class="s">for</span><span class="nv"> </span><span class="s">tracking,</span><span class="nv"> </span><span class="s">auditing,</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">security</span><span class="nv"> </span><span class="s">analysis.'</span>
 <span class="w">  </span><span class="nt">parent_uid</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">parent_uid</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">This attribute relates a sub-script to a parent script having the</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">matching &lt;code&gt;uid&lt;/code&gt; attribute. In the case of PowerShell, sub-script execution</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">can be identified by matching the activity correlation ID of the raw ETW events</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">provided by the OS.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'This</span><span class="nv"> </span><span class="s">attribute</span><span class="nv"> </span><span class="s">relates</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">sub-script</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">parent</span><span class="nv"> </span><span class="s">script</span><span class="nv"> </span><span class="s">having</span><span class="nv"> </span><span class="s">the</span>
+<span class="w">      </span><span class="s">matching</span>
+
+<span class="w">      </span><span class="s">&lt;code&gt;uid&lt;/code&gt;</span><span class="nv"> </span><span class="s">attribute.</span><span class="nv"> </span><span class="s">In</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">case</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">PowerShell,</span><span class="nv"> </span><span class="s">sub-script</span><span class="nv"> </span><span class="s">execution</span>
+<span class="w">      </span><span class="s">can</span>
+
+<span class="w">      </span><span class="s">be</span><span class="nv"> </span><span class="s">identified</span><span class="nv"> </span><span class="s">by</span><span class="nv"> </span><span class="s">matching</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">activity</span><span class="nv"> </span><span class="s">correlation</span><span class="nv"> </span><span class="s">ID</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">raw</span><span class="nv"> </span><span class="s">ETW</span><span class="nv"> </span><span class="s">events</span>
+
+<span class="w">      </span><span class="s">provided</span><span class="nv"> </span><span class="s">by</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">OS.'</span>
 <span class="w">  </span><span class="nt">script_content</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">script_content</span>
 <span class="w">    </span><span class="nt">required</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">type</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">type</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The script type, normalized to the caption of the &lt;code&gt;type_id&lt;/code&gt;</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">value. In the case of 'Other', it is defined by the event source.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">script</span><span class="nv"> </span><span class="s">type,</span><span class="nv"> </span><span class="s">normalized</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">caption</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">&lt;code&gt;type_id&lt;/code&gt;</span>
+<span class="w">      </span><span class="s">value.</span>
+
+<span class="w">      </span><span class="s">In</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">case</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="se">''</span><span class="s">Other</span><span class="se">''</span><span class="s">,</span><span class="nv"> </span><span class="s">it</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">defined</span><span class="nv"> </span><span class="s">by</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">event</span><span class="nv"> </span><span class="s">source.'</span>
 <span class="w">  </span><span class="nt">type_id</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">type_id</span>
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The normalized script type ID.</span>
@@ -637,15 +710,21 @@
 <span class="w">    </span><span class="nt">required</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">uid</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">uid</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Some script engines assign a unique ID to each individual execution</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">of a given script. This attribute captures that unique ID. In the case of PowerShell,</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">the unique ID corresponds to the &lt;code&gt;ScriptBlockId&lt;/code&gt; in the raw ETW events</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">provided by the OS.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'Some</span><span class="nv"> </span><span class="s">script</span><span class="nv"> </span><span class="s">engines</span><span class="nv"> </span><span class="s">assign</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">unique</span><span class="nv"> </span><span class="s">ID</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">each</span><span class="nv"> </span><span class="s">individual</span><span class="nv"> </span><span class="s">execution</span>
+<span class="w">      </span><span class="s">of</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">given</span>
+
+<span class="w">      </span><span class="s">script.</span><span class="nv"> </span><span class="s">This</span><span class="nv"> </span><span class="s">attribute</span><span class="nv"> </span><span class="s">captures</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">unique</span><span class="nv"> </span><span class="s">ID.</span><span class="nv"> </span><span class="s">In</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">case</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">PowerShell,</span><span class="nv"> </span><span class="s">the</span>
+
+<span class="w">      </span><span class="s">unique</span><span class="nv"> </span><span class="s">ID</span><span class="nv"> </span><span class="s">corresponds</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">&lt;code&gt;ScriptBlockId&lt;/code&gt;</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">raw</span><span class="nv"> </span><span class="s">ETW</span><span class="nv"> </span><span class="s">events</span>
+
+<span class="w">      </span><span class="s">provided</span><span class="nv"> </span><span class="s">by</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">OS.'</span>
 <span class="nt">attributes</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">file</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">file</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Present if this script is associated with a file. Not present in</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">the case of a file-less script.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'Present</span><span class="nv"> </span><span class="s">if</span><span class="nv"> </span><span class="s">this</span><span class="nv"> </span><span class="s">script</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">associated</span><span class="nv"> </span><span class="s">with</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">file.</span><span class="nv"> </span><span class="s">Not</span><span class="nv"> </span><span class="s">present</span><span class="nv"> </span><span class="s">in</span>
+<span class="w">      </span><span class="s">the</span><span class="nv"> </span><span class="s">case</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">a</span>
+
+<span class="w">      </span><span class="s">file-less</span><span class="nv"> </span><span class="s">script.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">File</span>
@@ -679,9 +758,12 @@
 <span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">File</span>
 <span class="w">  </span><span class="nt">hashes</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">hashes</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">An array of the script's cryptographic hashes. Note that these hashes</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">are calculated on the script in its original encoding, and not on the normalized</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">UTF-8 encoding found in the &lt;code&gt;script_content&lt;/code&gt; attribute.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'An</span><span class="nv"> </span><span class="s">array</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">script</span><span class="se">''</span><span class="s">s</span><span class="nv"> </span><span class="s">cryptographic</span><span class="nv"> </span><span class="s">hashes.</span><span class="nv"> </span><span class="s">Note</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">these</span>
+<span class="w">      </span><span class="s">hashes</span><span class="nv"> </span><span class="s">are</span>
+
+<span class="w">      </span><span class="s">calculated</span><span class="nv"> </span><span class="s">on</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">script</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">its</span><span class="nv"> </span><span class="s">original</span><span class="nv"> </span><span class="s">encoding,</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">not</span><span class="nv"> </span><span class="s">on</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">normalized</span>
+
+<span class="w">      </span><span class="s">UTF-8</span><span class="nv"> </span><span class="s">encoding</span><span class="nv"> </span><span class="s">found</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">&lt;code&gt;script_content&lt;/code&gt;</span><span class="nv"> </span><span class="s">attribute.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Hashes</span>
@@ -696,8 +778,10 @@
 <span class="w">    </span><span class="nt">multivalued</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">name</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">name</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Unique identifier for the script or macro, independent of the containing</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">file, used for tracking, auditing, and security analysis.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'Unique</span><span class="nv"> </span><span class="s">identifier</span><span class="nv"> </span><span class="s">for</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">script</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">macro,</span><span class="nv"> </span><span class="s">independent</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">containing</span>
+<span class="w">      </span><span class="s">file,</span>
+
+<span class="w">      </span><span class="s">used</span><span class="nv"> </span><span class="s">for</span><span class="nv"> </span><span class="s">tracking,</span><span class="nv"> </span><span class="s">auditing,</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">security</span><span class="nv"> </span><span class="s">analysis.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Name</span>
@@ -798,10 +882,15 @@
 <span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">string</span>
 <span class="w">  </span><span class="nt">parent_uid</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">parent_uid</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">This attribute relates a sub-script to a parent script having the</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">matching &lt;code&gt;uid&lt;/code&gt; attribute. In the case of PowerShell, sub-script execution</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">can be identified by matching the activity correlation ID of the raw ETW events</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">provided by the OS.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'This</span><span class="nv"> </span><span class="s">attribute</span><span class="nv"> </span><span class="s">relates</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">sub-script</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">parent</span><span class="nv"> </span><span class="s">script</span><span class="nv"> </span><span class="s">having</span><span class="nv"> </span><span class="s">the</span>
+<span class="w">      </span><span class="s">matching</span>
+
+<span class="w">      </span><span class="s">&lt;code&gt;uid&lt;/code&gt;</span><span class="nv"> </span><span class="s">attribute.</span><span class="nv"> </span><span class="s">In</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">case</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">PowerShell,</span><span class="nv"> </span><span class="s">sub-script</span><span class="nv"> </span><span class="s">execution</span>
+<span class="w">      </span><span class="s">can</span>
+
+<span class="w">      </span><span class="s">be</span><span class="nv"> </span><span class="s">identified</span><span class="nv"> </span><span class="s">by</span><span class="nv"> </span><span class="s">matching</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">activity</span><span class="nv"> </span><span class="s">correlation</span><span class="nv"> </span><span class="s">ID</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">raw</span><span class="nv"> </span><span class="s">ETW</span><span class="nv"> </span><span class="s">events</span>
+
+<span class="w">      </span><span class="s">provided</span><span class="nv"> </span><span class="s">by</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">OS.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Parent Unique ID</span>
@@ -818,10 +907,12 @@
 <span class="w">      </span><span class="nt">observable_id</span><span class="p">:</span>
 <span class="w">        </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">observable_id</span>
 <span class="w">        </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">36</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The script content, normalized to UTF-8 encoding irrespective of</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">its original encoding. When emitting this attribute, it may be appropriate to</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">truncate large scripts. When consuming this attribute, large scripts should</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">be anticipated.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">script</span><span class="nv"> </span><span class="s">content,</span><span class="nv"> </span><span class="s">normalized</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">UTF-8</span><span class="nv"> </span><span class="s">encoding</span><span class="nv"> </span><span class="s">irrespective</span><span class="nv"> </span><span class="s">of</span>
+<span class="w">      </span><span class="s">its</span><span class="nv"> </span><span class="s">original</span>
+
+<span class="w">      </span><span class="s">encoding.</span><span class="nv"> </span><span class="s">When</span><span class="nv"> </span><span class="s">emitting</span><span class="nv"> </span><span class="s">this</span><span class="nv"> </span><span class="s">attribute,</span><span class="nv"> </span><span class="s">it</span><span class="nv"> </span><span class="s">may</span><span class="nv"> </span><span class="s">be</span><span class="nv"> </span><span class="s">appropriate</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">truncate</span><span class="nv"> </span><span class="s">large</span>
+
+<span class="w">      </span><span class="s">scripts.</span><span class="nv"> </span><span class="s">When</span><span class="nv"> </span><span class="s">consuming</span><span class="nv"> </span><span class="s">this</span><span class="nv"> </span><span class="s">attribute,</span><span class="nv"> </span><span class="s">large</span><span class="nv"> </span><span class="s">scripts</span><span class="nv"> </span><span class="s">should</span><span class="nv"> </span><span class="s">be</span><span class="nv"> </span><span class="s">anticipated.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Script Content</span>
@@ -834,8 +925,10 @@
 <span class="w">    </span><span class="nt">required</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">type</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">type</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The script type, normalized to the caption of the &lt;code&gt;type_id&lt;/code&gt;</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">value. In the case of 'Other', it is defined by the event source.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">script</span><span class="nv"> </span><span class="s">type,</span><span class="nv"> </span><span class="s">normalized</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">caption</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">&lt;code&gt;type_id&lt;/code&gt;</span>
+<span class="w">      </span><span class="s">value.</span>
+
+<span class="w">      </span><span class="s">In</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">case</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="se">''</span><span class="s">Other</span><span class="se">''</span><span class="s">,</span><span class="nv"> </span><span class="s">it</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">defined</span><span class="nv"> </span><span class="s">by</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">event</span><span class="nv"> </span><span class="s">source.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Type</span>
@@ -959,10 +1052,14 @@
 <span class="w">    </span><span class="nt">required</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">uid</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">uid</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Some script engines assign a unique ID to each individual execution</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">of a given script. This attribute captures that unique ID. In the case of PowerShell,</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">the unique ID corresponds to the &lt;code&gt;ScriptBlockId&lt;/code&gt; in the raw ETW events</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">provided by the OS.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'Some</span><span class="nv"> </span><span class="s">script</span><span class="nv"> </span><span class="s">engines</span><span class="nv"> </span><span class="s">assign</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">unique</span><span class="nv"> </span><span class="s">ID</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">each</span><span class="nv"> </span><span class="s">individual</span><span class="nv"> </span><span class="s">execution</span>
+<span class="w">      </span><span class="s">of</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">given</span>
+
+<span class="w">      </span><span class="s">script.</span><span class="nv"> </span><span class="s">This</span><span class="nv"> </span><span class="s">attribute</span><span class="nv"> </span><span class="s">captures</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">unique</span><span class="nv"> </span><span class="s">ID.</span><span class="nv"> </span><span class="s">In</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">case</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">PowerShell,</span><span class="nv"> </span><span class="s">the</span>
+
+<span class="w">      </span><span class="s">unique</span><span class="nv"> </span><span class="s">ID</span><span class="nv"> </span><span class="s">corresponds</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">&lt;code&gt;ScriptBlockId&lt;/code&gt;</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">raw</span><span class="nv"> </span><span class="s">ETW</span><span class="nv"> </span><span class="s">events</span>
+
+<span class="w">      </span><span class="s">provided</span><span class="nv"> </span><span class="s">by</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">OS.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Unique ID</span>

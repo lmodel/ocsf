@@ -236,6 +236,15 @@
 </nav>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="#in-subsets">
+<span class="md-ellipsis">
+      
+        In Subsets
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#aliases">
 <span class="md-ellipsis">
       
@@ -323,7 +332,9 @@
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
 <h1 id="class-datasecurity">Class: DataSecurity</h1>
-<p><em>The Data Security object describes the characteristics, techniques and content of a Data Loss Prevention (DLP), Data Loss Detection (DLD), Data Classification, or similar tools' finding, alert, or detection mechanism(s).</em></p>
+<p><em>The Data Security object describes the characteristics, techniques and content</em></p>
+<p><em>of a Data Loss Prevention (DLP), Data Loss Detection (DLD), Data</em></p>
+<p><em>Classification, or similar tools' finding, alert, or detection mechanism(s).</em></p>
 <p>URI: <a href="https://w3id.org/lmodel/ocsf/DataSecurity">ocsf:DataSecurity</a></p>
 <pre class="mermaid"><code> classDiagram
     class DataSecurity
@@ -477,7 +488,7 @@
 <tr>
 <td><a href="../data_lifecycle_state_id/">data_lifecycle_state_id</a></td>
 <td>0..1 <em>recommended</em> <br/> <a href="../DataLifecycleStateIdEnum/">DataLifecycleStateIdEnum</a></td>
-<td>The stage or state that the data was in when it was assessed or scanned by a ...</td>
+<td>The stage or state that the data was in when it was assessed or scanned by a</td>
 <td>direct</td>
 </tr>
 <tr>
@@ -489,7 +500,7 @@
 <tr>
 <td><a href="../detection_system/">detection_system</a></td>
 <td>0..1 <br/> <a href="../String/">String</a></td>
-<td>The name of the type of data security tool or system that the finding, detect...</td>
+<td>The name of the type of data security tool or system that the finding,</td>
 <td>direct</td>
 </tr>
 <tr>
@@ -629,6 +640,10 @@
 </tr>
 </tbody>
 </table>
+<h2 id="in-subsets">In Subsets</h2>
+<ul>
+<li><a href="../Objects/">Objects</a></li>
+</ul>
 <h2 id="aliases">Aliases</h2>
 <ul>
 <li>Data Security</li>
@@ -645,7 +660,11 @@
 <tbody>
 <tr>
 <td>ocsf_constraints</td>
-<td>{"at_least_one": ["data_lifecycle_state_id", "detection_pattern", "detection_system_id", "policy"]}</td>
+<td>{"at_least_one": ["data_lifecycle_state_id", "detection_pattern",</td>
+</tr>
+<tr>
+<td>"detection_system_id", "policy"]}</td>
+<td></td>
 </tr>
 </tbody>
 </table>
@@ -680,11 +699,17 @@
 <span class="nt">annotations</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">ocsf_constraints</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ocsf_constraints</span>
-<span class="w">    </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="s">'{"at_least_one":</span><span class="nv"> </span><span class="s">["data_lifecycle_state_id",</span><span class="nv"> </span><span class="s">"detection_pattern",</span><span class="nv"> </span><span class="s">"detection_system_id",</span>
-<span class="w">      </span><span class="s">"policy"]}'</span>
-<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The Data Security object describes the characteristics, techniques and</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">content of a Data Loss Prevention (DLP), Data Loss Detection (DLD), Data Classification,</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">or similar tools' finding, alert, or detection mechanism(s).</span>
+<span class="w">    </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="s">'{"at_least_one":</span><span class="nv"> </span><span class="s">["data_lifecycle_state_id",</span><span class="nv"> </span><span class="s">"detection_pattern",</span>
+
+<span class="w">      </span><span class="s">"detection_system_id",</span><span class="nv"> </span><span class="s">"policy"]}'</span>
+<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">Data</span><span class="nv"> </span><span class="s">Security</span><span class="nv"> </span><span class="s">object</span><span class="nv"> </span><span class="s">describes</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">characteristics,</span><span class="nv"> </span><span class="s">techniques</span><span class="nv"> </span><span class="s">and</span>
+<span class="w">  </span><span class="s">content</span>
+
+<span class="w">  </span><span class="s">of</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">Data</span><span class="nv"> </span><span class="s">Loss</span><span class="nv"> </span><span class="s">Prevention</span><span class="nv"> </span><span class="s">(DLP),</span><span class="nv"> </span><span class="s">Data</span><span class="nv"> </span><span class="s">Loss</span><span class="nv"> </span><span class="s">Detection</span><span class="nv"> </span><span class="s">(DLD),</span><span class="nv"> </span><span class="s">Data</span>
+
+<span class="w">  </span><span class="s">Classification,</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">similar</span><span class="nv"> </span><span class="s">tools</span><span class="se">''</span><span class="nv"> </span><span class="s">finding,</span><span class="nv"> </span><span class="s">alert,</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">detection</span><span class="nv"> </span><span class="s">mechanism(s).'</span>
+<span class="nt">in_subset</span><span class="p">:</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">objects</span>
 <span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="nt">aliases</span><span class="p">:</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Data Security</span>
@@ -730,8 +755,9 @@
 <span class="w">        </span><span class="nt">policy</span><span class="p">:</span>
 <span class="w">          </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">policy</span>
 <span class="w">          </span><span class="nt">required</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
-<span class="w">  </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'OCSF</span><span class="nv"> </span><span class="s">at_least_one:</span><span class="nv"> </span><span class="s">at</span><span class="nv"> </span><span class="s">least</span><span class="nv"> </span><span class="s">one</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">[</span><span class="se">''</span><span class="s">data_lifecycle_state_id</span><span class="se">''</span><span class="s">,</span><span class="nv"> </span><span class="se">''</span><span class="s">detection_pattern</span><span class="se">''</span><span class="s">,</span>
-<span class="w">    </span><span class="se">''</span><span class="s">detection_system_id</span><span class="se">''</span><span class="s">,</span><span class="nv"> </span><span class="se">''</span><span class="s">policy</span><span class="se">''</span><span class="s">]</span><span class="nv"> </span><span class="s">must</span><span class="nv"> </span><span class="s">be</span><span class="nv"> </span><span class="s">set.'</span>
+<span class="w">  </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'OCSF</span><span class="nv"> </span><span class="s">at_least_one:</span><span class="nv"> </span><span class="s">at</span><span class="nv"> </span><span class="s">least</span><span class="nv"> </span><span class="s">one</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">[</span><span class="se">''</span><span class="s">data_lifecycle_state_id</span><span class="se">''</span><span class="s">,</span>
+
+<span class="w">    </span><span class="se">''</span><span class="s">detection_pattern</span><span class="se">''</span><span class="s">,</span><span class="nv"> </span><span class="se">''</span><span class="s">detection_system_id</span><span class="se">''</span><span class="s">,</span><span class="nv"> </span><span class="se">''</span><span class="s">policy</span><span class="se">''</span><span class="s">]</span><span class="nv"> </span><span class="s">must</span><span class="nv"> </span><span class="s">be</span><span class="nv"> </span><span class="s">set.'</span>
 </code></pre></div>
 </details>
 <h3 id="induced">Induced</h3>
@@ -740,11 +766,17 @@
 <span class="nt">annotations</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">ocsf_constraints</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ocsf_constraints</span>
-<span class="w">    </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="s">'{"at_least_one":</span><span class="nv"> </span><span class="s">["data_lifecycle_state_id",</span><span class="nv"> </span><span class="s">"detection_pattern",</span><span class="nv"> </span><span class="s">"detection_system_id",</span>
-<span class="w">      </span><span class="s">"policy"]}'</span>
-<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The Data Security object describes the characteristics, techniques and</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">content of a Data Loss Prevention (DLP), Data Loss Detection (DLD), Data Classification,</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">or similar tools' finding, alert, or detection mechanism(s).</span>
+<span class="w">    </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="s">'{"at_least_one":</span><span class="nv"> </span><span class="s">["data_lifecycle_state_id",</span><span class="nv"> </span><span class="s">"detection_pattern",</span>
+
+<span class="w">      </span><span class="s">"detection_system_id",</span><span class="nv"> </span><span class="s">"policy"]}'</span>
+<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">Data</span><span class="nv"> </span><span class="s">Security</span><span class="nv"> </span><span class="s">object</span><span class="nv"> </span><span class="s">describes</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">characteristics,</span><span class="nv"> </span><span class="s">techniques</span><span class="nv"> </span><span class="s">and</span>
+<span class="w">  </span><span class="s">content</span>
+
+<span class="w">  </span><span class="s">of</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">Data</span><span class="nv"> </span><span class="s">Loss</span><span class="nv"> </span><span class="s">Prevention</span><span class="nv"> </span><span class="s">(DLP),</span><span class="nv"> </span><span class="s">Data</span><span class="nv"> </span><span class="s">Loss</span><span class="nv"> </span><span class="s">Detection</span><span class="nv"> </span><span class="s">(DLD),</span><span class="nv"> </span><span class="s">Data</span>
+
+<span class="w">  </span><span class="s">Classification,</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">similar</span><span class="nv"> </span><span class="s">tools</span><span class="se">''</span><span class="nv"> </span><span class="s">finding,</span><span class="nv"> </span><span class="s">alert,</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">detection</span><span class="nv"> </span><span class="s">mechanism(s).'</span>
+<span class="nt">in_subset</span><span class="p">:</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">objects</span>
 <span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="nt">aliases</span><span class="p">:</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Data Security</span>
@@ -766,8 +798,9 @@
 <span class="nt">attributes</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">data_lifecycle_state</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">data_lifecycle_state</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The name of the stage or state that the data was in. E.g., Data-at-Rest,</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">Data-in-Transit, etc.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">name</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">stage</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">state</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">data</span><span class="nv"> </span><span class="s">was</span><span class="nv"> </span><span class="s">in.</span><span class="nv"> </span><span class="s">E.g.,</span><span class="nv"> </span><span class="s">Data-at-Rest,</span>
+
+<span class="w">      </span><span class="s">Data-in-Transit,</span><span class="nv"> </span><span class="s">etc.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Data Lifecycle State</span>
@@ -783,8 +816,10 @@
 <span class="w">      </span><span class="nt">sibling</span><span class="p">:</span>
 <span class="w">        </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">sibling</span>
 <span class="w">        </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">data_lifecycle_state</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The stage or state that the data was in when it was assessed or scanned</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">by a data security tool.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">stage</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">state</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">data</span><span class="nv"> </span><span class="s">was</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">when</span><span class="nv"> </span><span class="s">it</span><span class="nv"> </span><span class="s">was</span><span class="nv"> </span><span class="s">assessed</span><span class="nv"> </span><span class="s">or</span>
+<span class="w">      </span><span class="s">scanned</span><span class="nv"> </span><span class="s">by</span><span class="nv"> </span><span class="s">a</span>
+
+<span class="w">      </span><span class="s">data</span><span class="nv"> </span><span class="s">security</span><span class="nv"> </span><span class="s">tool.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Data Lifecycle State ID</span>
@@ -811,8 +846,9 @@
 <span class="w">    </span><span class="nt">recommended</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">detection_system</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">detection_system</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The name of the type of data security tool or system that the finding,</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">detection, or alert originated from. E.g., Endpoint, Secure Email Gateway, etc.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">name</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">type</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">data</span><span class="nv"> </span><span class="s">security</span><span class="nv"> </span><span class="s">tool</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">system</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">finding,</span>
+
+<span class="w">      </span><span class="s">detection,</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">alert</span><span class="nv"> </span><span class="s">originated</span><span class="nv"> </span><span class="s">from.</span><span class="nv"> </span><span class="s">E.g.,</span><span class="nv"> </span><span class="s">Endpoint,</span><span class="nv"> </span><span class="s">Secure</span><span class="nv"> </span><span class="s">Email</span><span class="nv"> </span><span class="s">Gateway,</span><span class="nv"> </span><span class="s">etc.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Detection System</span>
@@ -828,8 +864,10 @@
 <span class="w">      </span><span class="nt">sibling</span><span class="p">:</span>
 <span class="w">        </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">sibling</span>
 <span class="w">        </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">detection_system</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The type of data security tool or system that the finding, detection,</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">or alert originated from.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">type</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">data</span><span class="nv"> </span><span class="s">security</span><span class="nv"> </span><span class="s">tool</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">system</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">finding,</span><span class="nv"> </span><span class="s">detection,</span>
+<span class="w">      </span><span class="s">or</span><span class="nv"> </span><span class="s">alert</span>
+
+<span class="w">      </span><span class="s">originated</span><span class="nv"> </span><span class="s">from.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Detection System ID</span>
@@ -877,8 +915,10 @@
 <span class="w">    </span><span class="nt">recommended</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">category</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">category</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The name of the data classification category that data matched into,</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">e.g. Financial, Personal, Governmental, etc.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">name</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">data</span><span class="nv"> </span><span class="s">classification</span><span class="nv"> </span><span class="s">category</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">data</span><span class="nv"> </span><span class="s">matched</span><span class="nv"> </span><span class="s">into,</span>
+<span class="w">      </span><span class="s">e.g.</span>
+
+<span class="w">      </span><span class="s">Financial,</span><span class="nv"> </span><span class="s">Personal,</span><span class="nv"> </span><span class="s">Governmental,</span><span class="nv"> </span><span class="s">etc.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Category</span>
@@ -927,8 +967,10 @@
 <span class="w">    </span><span class="nt">recommended</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">confidentiality</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">confidentiality</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The file content confidentiality, normalized to the confidentiality_id</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">value. In the case of 'Other', it is defined by the event source.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">file</span><span class="nv"> </span><span class="s">content</span><span class="nv"> </span><span class="s">confidentiality,</span><span class="nv"> </span><span class="s">normalized</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">confidentiality_id</span>
+<span class="w">      </span><span class="s">value.</span>
+
+<span class="w">      </span><span class="s">In</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">case</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="se">''</span><span class="s">Other</span><span class="se">''</span><span class="s">,</span><span class="nv"> </span><span class="s">it</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">defined</span><span class="nv"> </span><span class="s">by</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">event</span><span class="nv"> </span><span class="s">source.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Confidentiality</span>
@@ -1024,9 +1066,12 @@
 <span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">UrlT</span>
 <span class="w">  </span><span class="nt">status</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">status</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The resultant status of the classification job normalized to the</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">caption of the &lt;code&gt;status_id&lt;/code&gt; value. In the case of 'Other', it is defined</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">by the event source.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">resultant</span><span class="nv"> </span><span class="s">status</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">classification</span><span class="nv"> </span><span class="s">job</span><span class="nv"> </span><span class="s">normalized</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">the</span>
+<span class="w">      </span><span class="s">caption</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span>
+
+<span class="w">      </span><span class="s">&lt;code&gt;status_id&lt;/code&gt;</span><span class="nv"> </span><span class="s">value.</span><span class="nv"> </span><span class="s">In</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">case</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="se">''</span><span class="s">Other</span><span class="se">''</span><span class="s">,</span><span class="nv"> </span><span class="s">it</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">defined</span><span class="nv"> </span><span class="s">by</span><span class="nv"> </span><span class="s">the</span>
+
+<span class="w">      </span><span class="s">event</span><span class="nv"> </span><span class="s">source.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Status</span>
@@ -1216,8 +1261,9 @@
 <span class="w">        </span><span class="nt">policy</span><span class="p">:</span>
 <span class="w">          </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">policy</span>
 <span class="w">          </span><span class="nt">required</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
-<span class="w">  </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'OCSF</span><span class="nv"> </span><span class="s">at_least_one:</span><span class="nv"> </span><span class="s">at</span><span class="nv"> </span><span class="s">least</span><span class="nv"> </span><span class="s">one</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">[</span><span class="se">''</span><span class="s">data_lifecycle_state_id</span><span class="se">''</span><span class="s">,</span><span class="nv"> </span><span class="se">''</span><span class="s">detection_pattern</span><span class="se">''</span><span class="s">,</span>
-<span class="w">    </span><span class="se">''</span><span class="s">detection_system_id</span><span class="se">''</span><span class="s">,</span><span class="nv"> </span><span class="se">''</span><span class="s">policy</span><span class="se">''</span><span class="s">]</span><span class="nv"> </span><span class="s">must</span><span class="nv"> </span><span class="s">be</span><span class="nv"> </span><span class="s">set.'</span>
+<span class="w">  </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'OCSF</span><span class="nv"> </span><span class="s">at_least_one:</span><span class="nv"> </span><span class="s">at</span><span class="nv"> </span><span class="s">least</span><span class="nv"> </span><span class="s">one</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">[</span><span class="se">''</span><span class="s">data_lifecycle_state_id</span><span class="se">''</span><span class="s">,</span>
+
+<span class="w">    </span><span class="se">''</span><span class="s">detection_pattern</span><span class="se">''</span><span class="s">,</span><span class="nv"> </span><span class="se">''</span><span class="s">detection_system_id</span><span class="se">''</span><span class="s">,</span><span class="nv"> </span><span class="se">''</span><span class="s">policy</span><span class="se">''</span><span class="s">]</span><span class="nv"> </span><span class="s">must</span><span class="nv"> </span><span class="s">be</span><span class="nv"> </span><span class="s">set.'</span>
 </code></pre></div>
 </details>
 </article>

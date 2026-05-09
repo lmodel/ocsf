@@ -497,7 +497,9 @@
 
 
 <h1 id="slot-ai_model">Slot: ai_model</h1>
-<p><em>The AI Model object describes the characteristics of an AI/ML model. Examples include language models like GPT-4, embedding models like text-embedding-ada-002, and computer vision models like CLIP.</em></p>
+<p><em>The AI Model object describes the characteristics of an AI/ML model. Examples</em></p>
+<p><em>include language models like GPT-4, embedding models like</em></p>
+<p><em>text-embedding-ada-002, and computer vision models like CLIP.</em></p>
 <p>URI: <a href="https://w3id.org/lmodel/ocsf/ai_model">ocsf:ai_model</a>
 Alias: ai_model</p>
 <!-- no inheritance hierarchy -->
@@ -518,19 +520,19 @@ Alias: ai_model</p>
 <td>no</td>
 </tr>
 <tr>
-<td><a href="../DatastoreActivity/">DatastoreActivity</a></td>
-<td>Datastore events describe general activities (Read, Update, Query, Delete, et...</td>
-<td>no</td>
+<td><a href="../AiOperationProfile/">AiOperationProfile</a></td>
+<td>AI-specific attributes for model operations, retrieval systems, and agent</td>
+<td>yes</td>
 </tr>
 <tr>
 <td><a href="../ProcessActivity/">ProcessActivity</a></td>
-<td>Process Activity events report when a process launches, injects, opens or ter...</td>
+<td>Process Activity events report when a process launches, injects, opens or</td>
 <td>no</td>
 </tr>
 <tr>
-<td><a href="../AiOperationProfile/">AiOperationProfile</a></td>
-<td>AI-specific attributes for model operations, retrieval systems, and agent act...</td>
-<td>yes</td>
+<td><a href="../DatastoreActivity/">DatastoreActivity</a></td>
+<td>Datastore events describe general activities (Read, Update, Query, Delete,</td>
+<td>no</td>
 </tr>
 </tbody>
 </table>
@@ -600,9 +602,12 @@ Alias: ai_model</p>
 <h2 id="linkml-source">LinkML Source</h2>
 <details>
 <div class="highlight"><pre><span></span><code><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ai_model</span>
-<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The AI Model object describes the characteristics of an AI/ML model.</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">Examples include language models like GPT-4, embedding models like text-embedding-ada-002,</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">and computer vision models like CLIP.</span>
+<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;The</span><span class="nv"> </span><span class="s">AI</span><span class="nv"> </span><span class="s">Model</span><span class="nv"> </span><span class="s">object</span><span class="nv"> </span><span class="s">describes</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">characteristics</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">an</span><span class="nv"> </span><span class="s">AI/ML</span><span class="nv"> </span><span class="s">model.</span>
+<span class="w">  </span><span class="s">Examples</span>
+
+<span class="w">  </span><span class="s">include</span><span class="nv"> </span><span class="s">language</span><span class="nv"> </span><span class="s">models</span><span class="nv"> </span><span class="s">like</span><span class="nv"> </span><span class="s">GPT-4,</span><span class="nv"> </span><span class="s">embedding</span><span class="nv"> </span><span class="s">models</span><span class="nv"> </span><span class="s">like</span>
+
+<span class="w">  </span><span class="s">text-embedding-ada-002,</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">computer</span><span class="nv"> </span><span class="s">vision</span><span class="nv"> </span><span class="s">models</span><span class="nv"> </span><span class="s">like</span><span class="nv"> </span><span class="s">CLIP.&#39;</span>
 <span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="nt">aliases</span><span class="p">:</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">AI Model</span>

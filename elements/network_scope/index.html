@@ -497,7 +497,10 @@
 
 
 <h1 id="slot-network_scope">Slot: network_scope</h1>
-<p><em>Indicates whether the endpoint resides inside the customer’s network, outside on the Internet, or if its location relative to the customer’s network cannot be determined. The value is normalized to the caption of the <code>network_scope_id</code>.</em></p>
+<p><em>Indicates whether the endpoint resides inside the customer’s network, outside</em></p>
+<p><em>on the Internet, or if its location relative to the customer’s network cannot</em></p>
+<p><em>be determined. The value is normalized to the caption of the</em></p>
+<p><em><code>network_scope_id</code>.</em></p>
 <p>URI: <a href="https://w3id.org/lmodel/ocsf/network_scope">ocsf:network_scope</a>
 Alias: network_scope</p>
 <!-- no inheritance hierarchy -->
@@ -513,13 +516,13 @@ Alias: network_scope</p>
 </thead>
 <tbody>
 <tr>
-<td><a href="../NetworkProxy/">NetworkProxy</a></td>
-<td>The network proxy endpoint object describes a proxy server, which acts as an ...</td>
+<td><a href="../NetworkEndpoint/">NetworkEndpoint</a></td>
+<td>The Network Endpoint object describes characteristics of a network endpoint</td>
 <td>no</td>
 </tr>
 <tr>
-<td><a href="../NetworkEndpoint/">NetworkEndpoint</a></td>
-<td>The Network Endpoint object describes characteristics of a network endpoint</td>
+<td><a href="../NetworkProxy/">NetworkProxy</a></td>
+<td>The network proxy endpoint object describes a proxy server, which acts as an</td>
 <td>no</td>
 </tr>
 </tbody>
@@ -590,9 +593,14 @@ Alias: network_scope</p>
 <h2 id="linkml-source">LinkML Source</h2>
 <details>
 <div class="highlight"><pre><span></span><code><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">network_scope</span>
-<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Indicates whether the endpoint resides inside the customer’s network,</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">outside on the Internet, or if its location relative to the customer’s network cannot</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">be determined. The value is normalized to the caption of the &lt;code&gt;network_scope_id&lt;/code&gt;.</span>
+<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;Indicates</span><span class="nv"> </span><span class="s">whether</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">endpoint</span><span class="nv"> </span><span class="s">resides</span><span class="nv"> </span><span class="s">inside</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">customer’s</span><span class="nv"> </span><span class="s">network,</span>
+<span class="w">  </span><span class="s">outside</span>
+
+<span class="w">  </span><span class="s">on</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">Internet,</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">if</span><span class="nv"> </span><span class="s">its</span><span class="nv"> </span><span class="s">location</span><span class="nv"> </span><span class="s">relative</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">customer’s</span><span class="nv"> </span><span class="s">network</span><span class="nv"> </span><span class="s">cannot</span>
+
+<span class="w">  </span><span class="s">be</span><span class="nv"> </span><span class="s">determined.</span><span class="nv"> </span><span class="s">The</span><span class="nv"> </span><span class="s">value</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">normalized</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">caption</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span>
+
+<span class="w">  </span><span class="s">&lt;code&gt;network_scope_id&lt;/code&gt;.&#39;</span>
 <span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="nt">aliases</span><span class="p">:</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Network Scope</span>

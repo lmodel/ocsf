@@ -236,6 +236,15 @@
 </nav>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="#in-subsets">
+<span class="md-ellipsis">
+      
+        In Subsets
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#aliases">
 <span class="md-ellipsis">
       
@@ -498,7 +507,7 @@
 <tr>
 <td><a href="../service_category/">service_category</a></td>
 <td>0..1 <br/> <a href="../String/">String</a></td>
-<td>The service category, normalized to the caption of the service_category_id va...</td>
+<td>The service category, normalized to the caption of the service_category_id</td>
 <td>direct</td>
 </tr>
 <tr>
@@ -522,7 +531,7 @@
 <tr>
 <td><a href="../service_error_control/">service_error_control</a></td>
 <td>0..1 <br/> <a href="../String/">String</a></td>
-<td>The service error control, normalized to the caption of the <code>service_err...</code></td>
+<td>The service error control, normalized to the caption of the</td>
 <td>direct</td>
 </tr>
 <tr>
@@ -534,19 +543,19 @@
 <tr>
 <td><a href="../service_file/">service_file</a></td>
 <td>0..1 <em>recommended</em> <br/> <a href="../File/">File</a></td>
-<td>For a user mode service (<code>service_type_id</code> 3 or 4) this is the exe...</td>
+<td>For a user mode service (<code>service_type_id</code> 3 or 4) this is the</td>
 <td>direct</td>
 </tr>
 <tr>
 <td><a href="../service_start_name/">service_start_name</a></td>
 <td>0..1 <em>recommended</em> <br/> <a href="../String/">String</a></td>
-<td>For a user mode service, this attribute represents the name of the account un...</td>
+<td>For a user mode service, this attribute represents the name of the account</td>
 <td>direct</td>
 </tr>
 <tr>
 <td><a href="../service_start_type/">service_start_type</a></td>
 <td>0..1 <br/> <a href="../String/">String</a></td>
-<td>The service start type, normalized to the caption of the <code>service_start_...</code></td>
+<td>The service start type, normalized to the caption of the</td>
 <td>direct</td>
 </tr>
 <tr>
@@ -583,7 +592,7 @@
 <td><a href="../uid/">uid</a></td>
 <td>0..1 <em>recommended</em> <br/> <a href="../String/">String</a></td>
 <td>The unique identifier of the service</td>
-<td><a href="../Service/">Service</a>, <a href="../Entity/">Entity</a></td>
+<td><a href="../Entity/">Entity</a>, <a href="../Service/">Service</a></td>
 </tr>
 <tr>
 <td><a href="../version/">version</a></td>
@@ -650,6 +659,10 @@
 </tr>
 </tbody>
 </table>
+<h2 id="in-subsets">In Subsets</h2>
+<ul>
+<li><a href="../WindowsExtension/">WindowsExtension</a></li>
+</ul>
 <h2 id="aliases">Aliases</h2>
 <ul>
 <li>Windows Service</li>
@@ -666,7 +679,15 @@
 <tbody>
 <tr>
 <td>ocsf_constraints</td>
-<td>{"at_least_one": ["cmd_line", "service_category_id", "service_dependencies", "service_error_control_id", "service_start_name", "service_start_type_id", "service_type_id"]}</td>
+<td>{"at_least_one": ["cmd_line", "service_category_id", "service_dependencies",</td>
+</tr>
+<tr>
+<td>"service_error_control_id", "service_start_name", "service_start_type_id",</td>
+<td></td>
+</tr>
+<tr>
+<td>"service_type_id"]}</td>
+<td></td>
 </tr>
 <tr>
 <td>ocsf_extension</td>
@@ -710,11 +731,16 @@
 <span class="w">  </span><span class="nt">ocsf_constraints</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ocsf_constraints</span>
 <span class="w">    </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="s">'{"at_least_one":</span><span class="nv"> </span><span class="s">["cmd_line",</span><span class="nv"> </span><span class="s">"service_category_id",</span><span class="nv"> </span><span class="s">"service_dependencies",</span>
-<span class="w">      </span><span class="s">"service_error_control_id",</span><span class="nv"> </span><span class="s">"service_start_name",</span><span class="nv"> </span><span class="s">"service_start_type_id",</span><span class="nv"> </span><span class="s">"service_type_id"]}'</span>
+
+<span class="w">      </span><span class="s">"service_error_control_id",</span><span class="nv"> </span><span class="s">"service_start_name",</span><span class="nv"> </span><span class="s">"service_start_type_id",</span>
+
+<span class="w">      </span><span class="s">"service_type_id"]}'</span>
 <span class="w">  </span><span class="nt">ocsf_extension</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ocsf_extension</span>
 <span class="w">    </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">windows</span>
 <span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The Windows Service object describes a Windows service.</span>
+<span class="nt">in_subset</span><span class="p">:</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">windows_extension</span>
 <span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="nt">aliases</span><span class="p">:</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Windows Service</span>
@@ -803,7 +829,9 @@
 <span class="w">          </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">service_type_id</span>
 <span class="w">          </span><span class="nt">required</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'OCSF</span><span class="nv"> </span><span class="s">at_least_one:</span><span class="nv"> </span><span class="s">at</span><span class="nv"> </span><span class="s">least</span><span class="nv"> </span><span class="s">one</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">[</span><span class="se">''</span><span class="s">cmd_line</span><span class="se">''</span><span class="s">,</span><span class="nv"> </span><span class="se">''</span><span class="s">service_category_id</span><span class="se">''</span><span class="s">,</span>
+
 <span class="w">    </span><span class="se">''</span><span class="s">service_dependencies</span><span class="se">''</span><span class="s">,</span><span class="nv"> </span><span class="se">''</span><span class="s">service_error_control_id</span><span class="se">''</span><span class="s">,</span><span class="nv"> </span><span class="se">''</span><span class="s">service_start_name</span><span class="se">''</span><span class="s">,</span>
+
 <span class="w">    </span><span class="se">''</span><span class="s">service_start_type_id</span><span class="se">''</span><span class="s">,</span><span class="nv"> </span><span class="se">''</span><span class="s">service_type_id</span><span class="se">''</span><span class="s">]</span><span class="nv"> </span><span class="s">must</span><span class="nv"> </span><span class="s">be</span><span class="nv"> </span><span class="s">set.'</span>
 </code></pre></div>
 </details>
@@ -814,11 +842,16 @@
 <span class="w">  </span><span class="nt">ocsf_constraints</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ocsf_constraints</span>
 <span class="w">    </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="s">'{"at_least_one":</span><span class="nv"> </span><span class="s">["cmd_line",</span><span class="nv"> </span><span class="s">"service_category_id",</span><span class="nv"> </span><span class="s">"service_dependencies",</span>
-<span class="w">      </span><span class="s">"service_error_control_id",</span><span class="nv"> </span><span class="s">"service_start_name",</span><span class="nv"> </span><span class="s">"service_start_type_id",</span><span class="nv"> </span><span class="s">"service_type_id"]}'</span>
+
+<span class="w">      </span><span class="s">"service_error_control_id",</span><span class="nv"> </span><span class="s">"service_start_name",</span><span class="nv"> </span><span class="s">"service_start_type_id",</span>
+
+<span class="w">      </span><span class="s">"service_type_id"]}'</span>
 <span class="w">  </span><span class="nt">ocsf_extension</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ocsf_extension</span>
 <span class="w">    </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">windows</span>
 <span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The Windows Service object describes a Windows service.</span>
+<span class="nt">in_subset</span><span class="p">:</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">windows_extension</span>
 <span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="nt">aliases</span><span class="p">:</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Windows Service</span>
@@ -1020,8 +1053,9 @@
 <span class="w">      </span><span class="nt">ocsf_extension</span><span class="p">:</span>
 <span class="w">        </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ocsf_extension</span>
 <span class="w">        </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">windows</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The service category, normalized to the caption of the service_category_id</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">value. In the case of 'Other', it is defined by the event source.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">service</span><span class="nv"> </span><span class="s">category,</span><span class="nv"> </span><span class="s">normalized</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">caption</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">service_category_id</span>
+
+<span class="w">      </span><span class="s">value.</span><span class="nv"> </span><span class="s">In</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">case</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="se">''</span><span class="s">Other</span><span class="se">''</span><span class="s">,</span><span class="nv"> </span><span class="s">it</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">defined</span><span class="nv"> </span><span class="s">by</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">event</span><span class="nv"> </span><span class="s">source.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Service Category</span>
@@ -1072,9 +1106,12 @@
 <span class="w">      </span><span class="nt">ocsf_extension</span><span class="p">:</span>
 <span class="w">        </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ocsf_extension</span>
 <span class="w">        </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">windows</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">For a shared user mode service (&lt;code&gt;service_type_id&lt;/code&gt; is 4)</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">this is the DLL that gets loaded by the generic service host process (e.g. &lt;code&gt;svchost.exe&lt;/code&gt;)</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">to implement the service.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'For</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">shared</span><span class="nv"> </span><span class="s">user</span><span class="nv"> </span><span class="s">mode</span><span class="nv"> </span><span class="s">service</span><span class="nv"> </span><span class="s">(&lt;code&gt;service_type_id&lt;/code&gt;</span><span class="nv"> </span><span class="s">is</span>
+<span class="w">      </span><span class="s">4)</span><span class="nv"> </span><span class="s">this</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">the</span>
+
+<span class="w">      </span><span class="s">DLL</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">gets</span><span class="nv"> </span><span class="s">loaded</span><span class="nv"> </span><span class="s">by</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">generic</span><span class="nv"> </span><span class="s">service</span><span class="nv"> </span><span class="s">host</span><span class="nv"> </span><span class="s">process</span><span class="nv"> </span><span class="s">(e.g.</span>
+
+<span class="w">      </span><span class="s">&lt;code&gt;svchost.exe&lt;/code&gt;)</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">implement</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">service.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Service DLL</span>
@@ -1090,8 +1127,11 @@
 <span class="w">      </span><span class="nt">ocsf_extension</span><span class="p">:</span>
 <span class="w">        </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ocsf_extension</span>
 <span class="w">        </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">windows</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The service error control, normalized to the caption of the &lt;code&gt;service_error_control_id&lt;/code&gt;</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">value. In the case of 'Other', it is defined by the event source.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">service</span><span class="nv"> </span><span class="s">error</span><span class="nv"> </span><span class="s">control,</span><span class="nv"> </span><span class="s">normalized</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">caption</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span>
+
+<span class="w">      </span><span class="s">&lt;code&gt;service_error_control_id&lt;/code&gt;</span><span class="nv"> </span><span class="s">value.</span><span class="nv"> </span><span class="s">In</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">case</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="se">''</span><span class="s">Other</span><span class="se">''</span><span class="s">,</span><span class="nv"> </span><span class="s">it</span><span class="nv"> </span><span class="s">is</span>
+
+<span class="w">      </span><span class="s">defined</span><span class="nv"> </span><span class="s">by</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">event</span><span class="nv"> </span><span class="s">source.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Service Error Control</span>
@@ -1125,9 +1165,13 @@
 <span class="w">        </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ocsf_extension</span>
 <span class="w">        </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">windows</span>
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'For</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">user</span><span class="nv"> </span><span class="s">mode</span><span class="nv"> </span><span class="s">service</span><span class="nv"> </span><span class="s">(&lt;code&gt;service_type_id&lt;/code&gt;</span><span class="nv"> </span><span class="s">3</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">4)</span><span class="nv"> </span><span class="s">this</span>
-<span class="w">      </span><span class="s">is</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">executable</span><span class="nv"> </span><span class="s">program</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">SCM</span><span class="nv"> </span><span class="s">launches</span><span class="nv"> </span><span class="s">as</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">service</span><span class="nv"> </span><span class="s">process.&lt;br&gt;For</span>
-<span class="w">      </span><span class="s">a</span><span class="nv"> </span><span class="s">kernel</span><span class="nv"> </span><span class="s">mode</span><span class="nv"> </span><span class="s">driver</span><span class="nv"> </span><span class="s">(&lt;code&gt;service_type_id&lt;/code&gt;</span><span class="nv"> </span><span class="s">1</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">2)</span><span class="nv"> </span><span class="s">this</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">driver</span>
-<span class="w">      </span><span class="s">file</span><span class="nv"> </span><span class="s">loaded</span><span class="nv"> </span><span class="s">into</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">kernel</span><span class="nv"> </span><span class="s">at</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">request</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">SCM.</span><span class="nv"> </span><span class="s">'</span>
+<span class="w">      </span><span class="s">is</span><span class="nv"> </span><span class="s">the</span>
+
+<span class="w">      </span><span class="s">executable</span><span class="nv"> </span><span class="s">program</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">SCM</span><span class="nv"> </span><span class="s">launches</span><span class="nv"> </span><span class="s">as</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">service</span><span class="nv"> </span><span class="s">process.&lt;br&gt;For</span><span class="nv"> </span><span class="s">a</span>
+
+<span class="w">      </span><span class="s">kernel</span><span class="nv"> </span><span class="s">mode</span><span class="nv"> </span><span class="s">driver</span><span class="nv"> </span><span class="s">(&lt;code&gt;service_type_id&lt;/code&gt;</span><span class="nv"> </span><span class="s">1</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">2)</span><span class="nv"> </span><span class="s">this</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">driver</span>
+
+<span class="w">      </span><span class="s">file</span><span class="nv"> </span><span class="s">loaded</span><span class="nv"> </span><span class="s">into</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">kernel</span><span class="nv"> </span><span class="s">at</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">request</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">SCM.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Service File</span>
@@ -1144,9 +1188,12 @@
 <span class="w">      </span><span class="nt">ocsf_extension</span><span class="p">:</span>
 <span class="w">        </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ocsf_extension</span>
 <span class="w">        </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">windows</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">For a user mode service, this attribute represents the name of the</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">account under which the service is run. For a kernel mode driver, this attribute</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">represents the object name used to load the driver.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'For</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">user</span><span class="nv"> </span><span class="s">mode</span><span class="nv"> </span><span class="s">service,</span><span class="nv"> </span><span class="s">this</span><span class="nv"> </span><span class="s">attribute</span><span class="nv"> </span><span class="s">represents</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">name</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span>
+<span class="w">      </span><span class="s">account</span>
+
+<span class="w">      </span><span class="s">under</span><span class="nv"> </span><span class="s">which</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">service</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">run.</span><span class="nv"> </span><span class="s">For</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">kernel</span><span class="nv"> </span><span class="s">mode</span><span class="nv"> </span><span class="s">driver,</span><span class="nv"> </span><span class="s">this</span><span class="nv"> </span><span class="s">attribute</span>
+
+<span class="w">      </span><span class="s">represents</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">object</span><span class="nv"> </span><span class="s">name</span><span class="nv"> </span><span class="s">used</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">load</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">driver.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Service Start Name</span>
@@ -1163,8 +1210,11 @@
 <span class="w">      </span><span class="nt">ocsf_extension</span><span class="p">:</span>
 <span class="w">        </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ocsf_extension</span>
 <span class="w">        </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">windows</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The service start type, normalized to the caption of the &lt;code&gt;service_start_type_id&lt;/code&gt;</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">value. In the case of 'Other', it is defined by the event source.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">service</span><span class="nv"> </span><span class="s">start</span><span class="nv"> </span><span class="s">type,</span><span class="nv"> </span><span class="s">normalized</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">caption</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span>
+
+<span class="w">      </span><span class="s">&lt;code&gt;service_start_type_id&lt;/code&gt;</span><span class="nv"> </span><span class="s">value.</span><span class="nv"> </span><span class="s">In</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">case</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="se">''</span><span class="s">Other</span><span class="se">''</span><span class="s">,</span><span class="nv"> </span><span class="s">it</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">defined</span>
+
+<span class="w">      </span><span class="s">by</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">event</span><span class="nv"> </span><span class="s">source.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Service Start Type</span>
@@ -1197,8 +1247,10 @@
 <span class="w">      </span><span class="nt">ocsf_extension</span><span class="p">:</span>
 <span class="w">        </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ocsf_extension</span>
 <span class="w">        </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">windows</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The service type, normalized to the caption of the service_type_id</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">value. In the case of 'Other', it is defined by the event source.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">service</span><span class="nv"> </span><span class="s">type,</span><span class="nv"> </span><span class="s">normalized</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">caption</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">service_type_id</span>
+<span class="w">      </span><span class="s">value.</span><span class="nv"> </span><span class="s">In</span>
+
+<span class="w">      </span><span class="s">the</span><span class="nv"> </span><span class="s">case</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="se">''</span><span class="s">Other</span><span class="se">''</span><span class="s">,</span><span class="nv"> </span><span class="s">it</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">defined</span><span class="nv"> </span><span class="s">by</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">event</span><span class="nv"> </span><span class="s">source.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Service Type</span>
@@ -1443,7 +1495,9 @@
 <span class="w">          </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">service_type_id</span>
 <span class="w">          </span><span class="nt">required</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'OCSF</span><span class="nv"> </span><span class="s">at_least_one:</span><span class="nv"> </span><span class="s">at</span><span class="nv"> </span><span class="s">least</span><span class="nv"> </span><span class="s">one</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">[</span><span class="se">''</span><span class="s">cmd_line</span><span class="se">''</span><span class="s">,</span><span class="nv"> </span><span class="se">''</span><span class="s">service_category_id</span><span class="se">''</span><span class="s">,</span>
+
 <span class="w">    </span><span class="se">''</span><span class="s">service_dependencies</span><span class="se">''</span><span class="s">,</span><span class="nv"> </span><span class="se">''</span><span class="s">service_error_control_id</span><span class="se">''</span><span class="s">,</span><span class="nv"> </span><span class="se">''</span><span class="s">service_start_name</span><span class="se">''</span><span class="s">,</span>
+
 <span class="w">    </span><span class="se">''</span><span class="s">service_start_type_id</span><span class="se">''</span><span class="s">,</span><span class="nv"> </span><span class="se">''</span><span class="s">service_type_id</span><span class="se">''</span><span class="s">]</span><span class="nv"> </span><span class="s">must</span><span class="nv"> </span><span class="s">be</span><span class="nv"> </span><span class="s">set.'</span>
 </code></pre></div>
 </details>

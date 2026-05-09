@@ -497,7 +497,8 @@
 
 
 <h1 id="slot-traffic">Slot: traffic</h1>
-<p><em>The network traffic refers to the amount of data moving across a network at a given point of time. Intended to be used alongside Network Connection.</em></p>
+<p><em>The network traffic refers to the amount of data moving across a network at a</em></p>
+<p><em>given point of time. Intended to be used alongside Network Connection.</em></p>
 <p>URI: <a href="https://w3id.org/lmodel/ocsf/traffic">ocsf:traffic</a>
 Alias: traffic</p>
 <!-- no inheritance hierarchy -->
@@ -513,34 +514,19 @@ Alias: traffic</p>
 </thead>
 <tbody>
 <tr>
-<td><a href="../DroneFlightsActivity/">DroneFlightsActivity</a></td>
-<td>Drone Flights Activity events report the activity of Unmanned Aerial Systems ...</td>
-<td>yes</td>
-</tr>
-<tr>
-<td><a href="../AirborneBroadcastActivity/">AirborneBroadcastActivity</a></td>
-<td>Airborne Broadcast Activity events report the activity of any aircraft or unm...</td>
-<td>yes</td>
-</tr>
-<tr>
-<td><a href="../SshActivity/">SshActivity</a></td>
-<td>SSH Activity events report remote client connections to a server using the Se...</td>
+<td><a href="../HttpActivity/">HttpActivity</a></td>
+<td>HTTP Activity events report HTTP connection and traffic information</td>
 <td>no</td>
 </tr>
 <tr>
-<td><a href="../DhcpActivity/">DhcpActivity</a></td>
-<td>DHCP Activity events report MAC to IP assignment via DHCP from a client or se...</td>
+<td><a href="../SmbActivity/">SmbActivity</a></td>
+<td>Server Message Block (SMB) Protocol Activity events report client/server</td>
 <td>no</td>
 </tr>
 <tr>
-<td><a href="../RdpActivity/">RdpActivity</a></td>
-<td>Remote Desktop Protocol (RDP) Activity events report post-authentication remo...</td>
+<td><a href="../FtpActivity/">FtpActivity</a></td>
+<td>File Transfer Protocol (FTP) Activity events report file transfers between a</td>
 <td>no</td>
-</tr>
-<tr>
-<td><a href="../TunnelActivity/">TunnelActivity</a></td>
-<td>Tunnel Activity events report secure tunnel establishment (such as VPN), tear...</td>
-<td>yes</td>
 </tr>
 <tr>
 <td><a href="../DnsActivity/">DnsActivity</a></td>
@@ -548,8 +534,28 @@ Alias: traffic</p>
 <td>yes</td>
 </tr>
 <tr>
-<td><a href="../NetworkActivity/">NetworkActivity</a></td>
-<td>Network Activity events report network connection and traffic activity</td>
+<td><a href="../DroneFlightsActivity/">DroneFlightsActivity</a></td>
+<td>Drone Flights Activity events report the activity of Unmanned Aerial Systems</td>
+<td>yes</td>
+</tr>
+<tr>
+<td><a href="../DhcpActivity/">DhcpActivity</a></td>
+<td>DHCP Activity events report MAC to IP assignment via DHCP from a client or</td>
+<td>no</td>
+</tr>
+<tr>
+<td><a href="../NetworkEvent/">NetworkEvent</a></td>
+<td>Network event is a generic event that defines a set of attributes available i...</td>
+<td>yes</td>
+</tr>
+<tr>
+<td><a href="../AirborneBroadcastActivity/">AirborneBroadcastActivity</a></td>
+<td>Airborne Broadcast Activity events report the activity of any aircraft or</td>
+<td>yes</td>
+</tr>
+<tr>
+<td><a href="../RdpActivity/">RdpActivity</a></td>
+<td>Remote Desktop Protocol (RDP) Activity events report post-authentication remo...</td>
 <td>no</td>
 </tr>
 <tr>
@@ -559,33 +565,28 @@ Alias: traffic</p>
 </tr>
 <tr>
 <td><a href="../NetworkFileActivity/">NetworkFileActivity</a></td>
-<td>Network File Activity events report file activities traversing the network, i...</td>
+<td>Network File Activity events report file activities traversing the network,</td>
 <td>no</td>
 </tr>
 <tr>
-<td><a href="../NetworkEvent/">NetworkEvent</a></td>
-<td>Network event is a generic event that defines a set of attributes available i...</td>
-<td>yes</td>
+<td><a href="../SshActivity/">SshActivity</a></td>
+<td>SSH Activity events report remote client connections to a server using the</td>
+<td>no</td>
 </tr>
 <tr>
 <td><a href="../NtpActivity/">NtpActivity</a></td>
-<td>The Network Time Protocol (NTP) Activity events report instances of remote cl...</td>
+<td>The Network Time Protocol (NTP) Activity events report instances of remote</td>
 <td>no</td>
 </tr>
 <tr>
-<td><a href="../FtpActivity/">FtpActivity</a></td>
-<td>File Transfer Protocol (FTP) Activity events report file transfers between a ...</td>
+<td><a href="../NetworkActivity/">NetworkActivity</a></td>
+<td>Network Activity events report network connection and traffic activity</td>
 <td>no</td>
 </tr>
 <tr>
-<td><a href="../SmbActivity/">SmbActivity</a></td>
-<td>Server Message Block (SMB) Protocol Activity events report client/server conn...</td>
-<td>no</td>
-</tr>
-<tr>
-<td><a href="../HttpActivity/">HttpActivity</a></td>
-<td>HTTP Activity events report HTTP connection and traffic information</td>
-<td>no</td>
+<td><a href="../TunnelActivity/">TunnelActivity</a></td>
+<td>Tunnel Activity events report secure tunnel establishment (such as VPN),</td>
+<td>yes</td>
 </tr>
 </tbody>
 </table>
@@ -655,8 +656,10 @@ Alias: traffic</p>
 <h2 id="linkml-source">LinkML Source</h2>
 <details>
 <div class="highlight"><pre><span></span><code><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">traffic</span>
-<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The network traffic refers to the amount of data moving across a network</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">at a given point of time. Intended to be used alongside Network Connection.</span>
+<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;The</span><span class="nv"> </span><span class="s">network</span><span class="nv"> </span><span class="s">traffic</span><span class="nv"> </span><span class="s">refers</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">amount</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">data</span><span class="nv"> </span><span class="s">moving</span><span class="nv"> </span><span class="s">across</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">network</span>
+<span class="w">  </span><span class="s">at</span><span class="nv"> </span><span class="s">a</span>
+
+<span class="w">  </span><span class="s">given</span><span class="nv"> </span><span class="s">point</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">time.</span><span class="nv"> </span><span class="s">Intended</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">be</span><span class="nv"> </span><span class="s">used</span><span class="nv"> </span><span class="s">alongside</span><span class="nv"> </span><span class="s">Network</span><span class="nv"> </span><span class="s">Connection.&#39;</span>
 <span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="nt">aliases</span><span class="p">:</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Traffic</span>

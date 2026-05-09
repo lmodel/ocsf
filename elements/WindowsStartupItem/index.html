@@ -227,6 +227,15 @@
 </nav>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="#in-subsets">
+<span class="md-ellipsis">
+      
+        In Subsets
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#aliases">
 <span class="md-ellipsis">
       
@@ -314,7 +323,8 @@
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
 <h1 id="class-windowsstartupitem">Class: WindowsStartupItem</h1>
-<p><em>The startup item object describes an application component that has associated startup criteria and configurations.</em></p>
+<p><em>The startup item object describes an application component that has associated</em></p>
+<p><em>startup criteria and configurations.</em></p>
 <p>URI: <a href="https://w3id.org/lmodel/ocsf/WindowsStartupItem">ocsf:WindowsStartupItem</a></p>
 <pre class="mermaid"><code> classDiagram
     class WindowsStartupItem
@@ -542,6 +552,10 @@
 </tr>
 </tbody>
 </table>
+<h2 id="in-subsets">In Subsets</h2>
+<ul>
+<li><a href="../WindowsExtension/">WindowsExtension</a></li>
+</ul>
 <h2 id="aliases">Aliases</h2>
 <ul>
 <li>Startup Item</li>
@@ -601,8 +615,12 @@
 <span class="w">  </span><span class="nt">ocsf_extension</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ocsf_extension</span>
 <span class="w">    </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">windows</span>
-<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The startup item object describes an application component that has associated</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">startup criteria and configurations.</span>
+<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">startup</span><span class="nv"> </span><span class="s">item</span><span class="nv"> </span><span class="s">object</span><span class="nv"> </span><span class="s">describes</span><span class="nv"> </span><span class="s">an</span><span class="nv"> </span><span class="s">application</span><span class="nv"> </span><span class="s">component</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">has</span>
+<span class="w">  </span><span class="s">associated</span>
+
+<span class="w">  </span><span class="s">startup</span><span class="nv"> </span><span class="s">criteria</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">configurations.'</span>
+<span class="nt">in_subset</span><span class="p">:</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">windows_extension</span>
 <span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="nt">aliases</span><span class="p">:</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Startup Item</span>
@@ -633,7 +651,9 @@
 <span class="w">          </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">win_service</span>
 <span class="w">          </span><span class="nt">required</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'OCSF</span><span class="nv"> </span><span class="s">just_one:</span><span class="nv"> </span><span class="s">exactly</span><span class="nv"> </span><span class="s">one</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">[</span><span class="se">''</span><span class="s">driver</span><span class="se">''</span><span class="s">,</span><span class="nv"> </span><span class="se">''</span><span class="s">job</span><span class="se">''</span><span class="s">,</span><span class="nv"> </span><span class="se">''</span><span class="s">process</span><span class="se">''</span><span class="s">,</span><span class="nv"> </span><span class="se">''</span><span class="s">win_service</span><span class="se">''</span><span class="s">]</span>
-<span class="w">    </span><span class="s">must</span><span class="nv"> </span><span class="s">be</span><span class="nv"> </span><span class="s">set.'</span>
+<span class="w">    </span><span class="s">must</span>
+
+<span class="w">    </span><span class="s">be</span><span class="nv"> </span><span class="s">set.'</span>
 </code></pre></div>
 </details>
 <h3 id="induced">Induced</h3>
@@ -646,8 +666,12 @@
 <span class="w">  </span><span class="nt">ocsf_extension</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ocsf_extension</span>
 <span class="w">    </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">windows</span>
-<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The startup item object describes an application component that has associated</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">startup criteria and configurations.</span>
+<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">startup</span><span class="nv"> </span><span class="s">item</span><span class="nv"> </span><span class="s">object</span><span class="nv"> </span><span class="s">describes</span><span class="nv"> </span><span class="s">an</span><span class="nv"> </span><span class="s">application</span><span class="nv"> </span><span class="s">component</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">has</span>
+<span class="w">  </span><span class="s">associated</span>
+
+<span class="w">  </span><span class="s">startup</span><span class="nv"> </span><span class="s">criteria</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">configurations.'</span>
+<span class="nt">in_subset</span><span class="p">:</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">windows_extension</span>
 <span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="nt">aliases</span><span class="p">:</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Startup Item</span>
@@ -834,10 +858,14 @@
 <span class="w">      </span><span class="nt">sibling</span><span class="p">:</span>
 <span class="w">        </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">sibling</span>
 <span class="w">        </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">run_modes</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The list of normalized identifiers that describe the startup items'</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">properties when it is running.  Use this field to capture extended information</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">about the process, which may depend on the type of startup item.  E.g., A Windows</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">service that interacts with the desktop.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">list</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">normalized</span><span class="nv"> </span><span class="s">identifiers</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">describe</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">startup</span><span class="nv"> </span><span class="s">items</span><span class="se">''</span>
+<span class="w">      </span><span class="s">properties</span>
+
+<span class="w">      </span><span class="s">when</span><span class="nv"> </span><span class="s">it</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">running.</span><span class="nv">  </span><span class="s">Use</span><span class="nv"> </span><span class="s">this</span><span class="nv"> </span><span class="s">field</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">capture</span><span class="nv"> </span><span class="s">extended</span><span class="nv"> </span><span class="s">information</span><span class="nv"> </span><span class="s">about</span><span class="nv"> </span><span class="s">the</span>
+
+<span class="w">      </span><span class="s">process,</span><span class="nv"> </span><span class="s">which</span><span class="nv"> </span><span class="s">may</span><span class="nv"> </span><span class="s">depend</span><span class="nv"> </span><span class="s">on</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">type</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">startup</span><span class="nv"> </span><span class="s">item.</span><span class="nv">  </span><span class="s">E.g.,</span><span class="nv"> </span><span class="s">A</span><span class="nv"> </span><span class="s">Windows</span><span class="nv"> </span><span class="s">service</span>
+
+<span class="w">      </span><span class="s">that</span><span class="nv"> </span><span class="s">interacts</span><span class="nv"> </span><span class="s">with</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">desktop.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Run Mode IDs</span>
@@ -850,8 +878,10 @@
 <span class="w">    </span><span class="nt">multivalued</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">run_modes</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">run_modes</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The list of run_modes, normalized to the captions of the run_mode_id</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">values.  In the case of 'Other', they are defined by the event source.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">list</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">run_modes,</span><span class="nv"> </span><span class="s">normalized</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">captions</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">run_mode_id</span>
+<span class="w">      </span><span class="s">values.</span>
+
+<span class="w">      </span><span class="s">In</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">case</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="se">''</span><span class="s">Other</span><span class="se">''</span><span class="s">,</span><span class="nv"> </span><span class="s">they</span><span class="nv"> </span><span class="s">are</span><span class="nv"> </span><span class="s">defined</span><span class="nv"> </span><span class="s">by</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">event</span><span class="nv"> </span><span class="s">source.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Run Modes</span>
@@ -1066,7 +1096,9 @@
 <span class="w">          </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">win_service</span>
 <span class="w">          </span><span class="nt">required</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'OCSF</span><span class="nv"> </span><span class="s">just_one:</span><span class="nv"> </span><span class="s">exactly</span><span class="nv"> </span><span class="s">one</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">[</span><span class="se">''</span><span class="s">driver</span><span class="se">''</span><span class="s">,</span><span class="nv"> </span><span class="se">''</span><span class="s">job</span><span class="se">''</span><span class="s">,</span><span class="nv"> </span><span class="se">''</span><span class="s">process</span><span class="se">''</span><span class="s">,</span><span class="nv"> </span><span class="se">''</span><span class="s">win_service</span><span class="se">''</span><span class="s">]</span>
-<span class="w">    </span><span class="s">must</span><span class="nv"> </span><span class="s">be</span><span class="nv"> </span><span class="s">set.'</span>
+<span class="w">    </span><span class="s">must</span>
+
+<span class="w">    </span><span class="s">be</span><span class="nv"> </span><span class="s">set.'</span>
 </code></pre></div>
 </details>
 </article>

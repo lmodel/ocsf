@@ -217,6 +217,15 @@
 </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="#in-subsets">
+<span class="md-ellipsis">
+      
+        In Subsets
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#aliases">
 <span class="md-ellipsis">
       
@@ -295,7 +304,8 @@
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
 <h1 id="class-resourcedetails">Class: ResourceDetails</h1>
-<p><em>The Resource Details object describes details about resources that were affected by the activity/event.</em></p>
+<p><em>The Resource Details object describes details about resources that were</em></p>
+<p><em>affected by the activity/event.</em></p>
 <p>URI: <a href="https://w3id.org/lmodel/ocsf/ResourceDetails">ocsf:ResourceDetails</a></p>
 <pre class="mermaid"><code> classDiagram
     class ResourceDetails
@@ -484,13 +494,13 @@
 <tr>
 <td><a href="../agent_list/">agent_list</a></td>
 <td>* <br/> <a href="../Agent/">Agent</a></td>
-<td>A list of <code>agent</code> objects associated with a device, endpoint, or r...</td>
+<td>A list of <code>agent</code> objects associated with a device, endpoint, or</td>
 <td>direct</td>
 </tr>
 <tr>
 <td><a href="../cloud_partition/">cloud_partition</a></td>
 <td>0..1 <br/> <a href="../String/">String</a></td>
-<td>The logical grouping or isolated segment within a cloud provider's infrastruc...</td>
+<td>The logical grouping or isolated segment within a cloud provider's</td>
 <td>direct</td>
 </tr>
 <tr>
@@ -520,7 +530,7 @@
 <tr>
 <td><a href="../is_backed_up/">is_backed_up</a></td>
 <td>0..1 <br/> <a href="../Boolean/">Boolean</a></td>
-<td>Indicates whether the device or resource has a backup enabled, such as an aut...</td>
+<td>Indicates whether the device or resource has a backup enabled, such as an</td>
 <td>direct</td>
 </tr>
 <tr>
@@ -532,7 +542,7 @@
 <tr>
 <td><a href="../namespace/">namespace</a></td>
 <td>0..1 <br/> <a href="../String/">String</a></td>
-<td>The namespace is useful when similar entities exist that you need to keep sep...</td>
+<td>The namespace is useful when similar entities exist that you need to keep</td>
 <td>direct</td>
 </tr>
 <tr>
@@ -550,7 +560,7 @@
 <tr>
 <td><a href="../region/">region</a></td>
 <td>0..1 <br/> <a href="../String/">String</a></td>
-<td>The cloud region where the resource is hosted, as defined by the cloud provid...</td>
+<td>The cloud region where the resource is hosted, as defined by the cloud</td>
 <td>direct</td>
 </tr>
 <tr>
@@ -592,7 +602,7 @@
 <tr>
 <td><a href="../cloud/">cloud</a></td>
 <td>1 <br/> <a href="../Cloud/">Cloud</a></td>
-<td>Describes details about the Cloud environment where the event or finding was ...</td>
+<td>Describes details about the Cloud environment where the event or finding was</td>
 <td><a href="../CloudProfile/">CloudProfile</a></td>
 </tr>
 <tr>
@@ -646,13 +656,13 @@
 <tr>
 <td><a href="../data_classification/">data_classification</a></td>
 <td>0..1 <em>recommended</em> <br/> <a href="../DataClassification/">DataClassification</a></td>
-<td>The Data Classification object includes information about data classification...</td>
+<td>The Data Classification object includes information about data classification</td>
 <td><a href="../DataClassificationProfile/">DataClassificationProfile</a></td>
 </tr>
 <tr>
 <td><a href="../data_classifications/">data_classifications</a></td>
 <td>* <em>recommended</em> <br/> <a href="../DataClassification/">DataClassification</a></td>
-<td>A list of Data Classification objects, that include information about data cl...</td>
+<td>A list of Data Classification objects, that include information about data</td>
 <td><a href="../DataClassificationProfile/">DataClassificationProfile</a></td>
 </tr>
 </tbody>
@@ -772,6 +782,10 @@
 </tr>
 </tbody>
 </table>
+<h2 id="in-subsets">In Subsets</h2>
+<ul>
+<li><a href="../Objects/">Objects</a></li>
+</ul>
 <h2 id="aliases">Aliases</h2>
 <ul>
 <li>Resource Details</li>
@@ -805,8 +819,11 @@
 <h3 id="direct">Direct</h3>
 <details>
 <div class="highlight"><pre><span></span><code><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ResourceDetails</span>
-<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The Resource Details object describes details about resources that were</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">affected by the activity/event.</span>
+<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">Resource</span><span class="nv"> </span><span class="s">Details</span><span class="nv"> </span><span class="s">object</span><span class="nv"> </span><span class="s">describes</span><span class="nv"> </span><span class="s">details</span><span class="nv"> </span><span class="s">about</span><span class="nv"> </span><span class="s">resources</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">were</span>
+
+<span class="w">  </span><span class="s">affected</span><span class="nv"> </span><span class="s">by</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">activity/event.'</span>
+<span class="nt">in_subset</span><span class="p">:</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">objects</span>
 <span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="nt">aliases</span><span class="p">:</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Resource Details</span>
@@ -834,10 +851,15 @@
 <span class="nt">slot_usage</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">cloud_partition</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">cloud_partition</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The logical grouping or isolated segment within a cloud provider's</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">infrastructure where the resource is located. Examples include AWS partitions</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">(aws, aws-cn, aws-us-gov), Azure cloud environments (AzureCloud, AzureUSGovernment,</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">AzureChinaCloud), or similar logical divisions in other cloud providers.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">logical</span><span class="nv"> </span><span class="s">grouping</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">isolated</span><span class="nv"> </span><span class="s">segment</span><span class="nv"> </span><span class="s">within</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">cloud</span><span class="nv"> </span><span class="s">provider</span><span class="se">''</span><span class="s">s</span>
+
+<span class="w">      </span><span class="s">infrastructure</span><span class="nv"> </span><span class="s">where</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">resource</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">located.</span><span class="nv"> </span><span class="s">Examples</span><span class="nv"> </span><span class="s">include</span><span class="nv"> </span><span class="s">AWS</span><span class="nv"> </span><span class="s">partitions</span>
+
+<span class="w">      </span><span class="s">(aws,</span><span class="nv"> </span><span class="s">aws-cn,</span><span class="nv"> </span><span class="s">aws-us-gov),</span><span class="nv"> </span><span class="s">Azure</span><span class="nv"> </span><span class="s">cloud</span><span class="nv"> </span><span class="s">environments</span><span class="nv"> </span><span class="s">(AzureCloud,</span>
+
+<span class="w">      </span><span class="s">AzureUSGovernment,</span><span class="nv"> </span><span class="s">AzureChinaCloud),</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">similar</span><span class="nv"> </span><span class="s">logical</span><span class="nv"> </span><span class="s">divisions</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">other</span>
+
+<span class="w">      </span><span class="s">cloud</span><span class="nv"> </span><span class="s">providers.'</span>
 <span class="w">  </span><span class="nt">criticality</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">criticality</span>
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The criticality of the resource as defined by the event source.</span>
@@ -857,42 +879,69 @@
 <span class="w">    </span><span class="nt">recommended</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">namespace</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">namespace</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The namespace is useful when similar entities exist that you need</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">to keep separate.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">namespace</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">useful</span><span class="nv"> </span><span class="s">when</span><span class="nv"> </span><span class="s">similar</span><span class="nv"> </span><span class="s">entities</span><span class="nv"> </span><span class="s">exist</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">you</span><span class="nv"> </span><span class="s">need</span>
+<span class="w">      </span><span class="s">to</span><span class="nv"> </span><span class="s">keep</span>
+
+<span class="w">      </span><span class="s">separate.'</span>
 <span class="w">  </span><span class="nt">owner</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">owner</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The details of the entity that owns the resource. This object includes</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">properties such as the owner's name, unique identifier, type, domain, and other</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">relevant attributes that help identify the resource owner within the environment.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">details</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">entity</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">owns</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">resource.</span><span class="nv"> </span><span class="s">This</span><span class="nv"> </span><span class="s">object</span><span class="nv"> </span><span class="s">includes</span>
+
+<span class="w">      </span><span class="s">properties</span><span class="nv"> </span><span class="s">such</span><span class="nv"> </span><span class="s">as</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">owner</span><span class="se">''</span><span class="s">s</span><span class="nv"> </span><span class="s">name,</span><span class="nv"> </span><span class="s">unique</span><span class="nv"> </span><span class="s">identifier,</span><span class="nv"> </span><span class="s">type,</span><span class="nv"> </span><span class="s">domain,</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">other</span>
+
+<span class="w">      </span><span class="s">relevant</span><span class="nv"> </span><span class="s">attributes</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">help</span><span class="nv"> </span><span class="s">identify</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">resource</span><span class="nv"> </span><span class="s">owner</span><span class="nv"> </span><span class="s">within</span><span class="nv"> </span><span class="s">the</span>
+
+<span class="w">      </span><span class="s">environment.'</span>
 <span class="w">    </span><span class="nt">recommended</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">provider</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">provider</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The cloud service provider that hosts or manages the resource. This</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">field is typically used when the resource is managed by a different provider</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">than the one generating the event or finding. Examples include AWS, Azure, GCP</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">(Google Cloud Platform), Oracle Cloud, IBM Cloud, Alibaba Cloud, or other public,</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">private, or hybrid cloud providers.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">cloud</span><span class="nv"> </span><span class="s">service</span><span class="nv"> </span><span class="s">provider</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">hosts</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">manages</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">resource.</span><span class="nv"> </span><span class="s">This</span>
+<span class="w">      </span><span class="s">field</span><span class="nv"> </span><span class="s">is</span>
+
+<span class="w">      </span><span class="s">typically</span><span class="nv"> </span><span class="s">used</span><span class="nv"> </span><span class="s">when</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">resource</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">managed</span><span class="nv"> </span><span class="s">by</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">different</span><span class="nv"> </span><span class="s">provider</span><span class="nv"> </span><span class="s">than</span><span class="nv"> </span><span class="s">the</span>
+
+<span class="w">      </span><span class="s">one</span><span class="nv"> </span><span class="s">generating</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">event</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">finding.</span><span class="nv"> </span><span class="s">Examples</span><span class="nv"> </span><span class="s">include</span><span class="nv"> </span><span class="s">AWS,</span><span class="nv"> </span><span class="s">Azure,</span><span class="nv"> </span><span class="s">GCP</span><span class="nv"> </span><span class="s">(Google</span>
+
+<span class="w">      </span><span class="s">Cloud</span><span class="nv"> </span><span class="s">Platform),</span><span class="nv"> </span><span class="s">Oracle</span><span class="nv"> </span><span class="s">Cloud,</span><span class="nv"> </span><span class="s">IBM</span><span class="nv"> </span><span class="s">Cloud,</span><span class="nv"> </span><span class="s">Alibaba</span><span class="nv"> </span><span class="s">Cloud,</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">other</span><span class="nv"> </span><span class="s">public,</span>
+
+<span class="w">      </span><span class="s">private,</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">hybrid</span><span class="nv"> </span><span class="s">cloud</span><span class="nv"> </span><span class="s">providers.'</span>
 <span class="w">  </span><span class="nt">region</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">region</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The cloud region where the resource is hosted, as defined by the</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">cloud provider. This represents the physical or logical geographic area containing</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">the infrastructure supporting the resource. Examples include AWS regions (us-east-1,</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">eu-west-1), Azure regions (East US, West Europe), GCP regions (us-central1,</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">europe-west1), or Oracle Cloud regions (us-ashburn-1, uk-london-1).</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">cloud</span><span class="nv"> </span><span class="s">region</span><span class="nv"> </span><span class="s">where</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">resource</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">hosted,</span><span class="nv"> </span><span class="s">as</span><span class="nv"> </span><span class="s">defined</span><span class="nv"> </span><span class="s">by</span><span class="nv"> </span><span class="s">the</span>
+<span class="w">      </span><span class="s">cloud</span>
+
+<span class="w">      </span><span class="s">provider.</span><span class="nv"> </span><span class="s">This</span><span class="nv"> </span><span class="s">represents</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">physical</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">logical</span><span class="nv"> </span><span class="s">geographic</span><span class="nv"> </span><span class="s">area</span><span class="nv"> </span><span class="s">containing</span>
+
+<span class="w">      </span><span class="s">the</span><span class="nv"> </span><span class="s">infrastructure</span><span class="nv"> </span><span class="s">supporting</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">resource.</span><span class="nv"> </span><span class="s">Examples</span><span class="nv"> </span><span class="s">include</span><span class="nv"> </span><span class="s">AWS</span><span class="nv"> </span><span class="s">regions</span>
+
+<span class="w">      </span><span class="s">(us-east-1,</span><span class="nv"> </span><span class="s">eu-west-1),</span><span class="nv"> </span><span class="s">Azure</span><span class="nv"> </span><span class="s">regions</span><span class="nv"> </span><span class="s">(East</span><span class="nv"> </span><span class="s">US,</span><span class="nv"> </span><span class="s">West</span><span class="nv"> </span><span class="s">Europe),</span><span class="nv"> </span><span class="s">GCP</span><span class="nv"> </span><span class="s">regions</span>
+
+<span class="w">      </span><span class="s">(us-central1,</span><span class="nv"> </span><span class="s">europe-west1),</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">Oracle</span><span class="nv"> </span><span class="s">Cloud</span><span class="nv"> </span><span class="s">regions</span><span class="nv"> </span><span class="s">(us-ashburn-1,</span>
+
+<span class="w">      </span><span class="s">uk-london-1).'</span>
 <span class="w">  </span><span class="nt">resource_relationship</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">resource_relationship</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">A graph representation showing how this resource relates to and interacts</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">with other entities in the environment. This can include parent/child relationships,</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">dependencies, or other connections.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'A</span><span class="nv"> </span><span class="s">graph</span><span class="nv"> </span><span class="s">representation</span><span class="nv"> </span><span class="s">showing</span><span class="nv"> </span><span class="s">how</span><span class="nv"> </span><span class="s">this</span><span class="nv"> </span><span class="s">resource</span><span class="nv"> </span><span class="s">relates</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">and</span>
+<span class="w">      </span><span class="s">interacts</span><span class="nv"> </span><span class="s">with</span>
+
+<span class="w">      </span><span class="s">other</span><span class="nv"> </span><span class="s">entities</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">environment.</span><span class="nv"> </span><span class="s">This</span><span class="nv"> </span><span class="s">can</span><span class="nv"> </span><span class="s">include</span><span class="nv"> </span><span class="s">parent/child</span><span class="nv"> </span><span class="s">relationships,</span>
+
+<span class="w">      </span><span class="s">dependencies,</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">other</span><span class="nv"> </span><span class="s">connections.'</span>
 <span class="w">  </span><span class="nt">role</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">role</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The role of the resource in the context of the event or finding,</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">normalized to the caption of the role_id value. In the case of 'Other', it is</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">defined by the event source.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">role</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">resource</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">context</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">event</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">finding,</span>
+<span class="w">      </span><span class="s">normalized</span><span class="nv"> </span><span class="s">to</span>
+
+<span class="w">      </span><span class="s">the</span><span class="nv"> </span><span class="s">caption</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">role_id</span><span class="nv"> </span><span class="s">value.</span><span class="nv"> </span><span class="s">In</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">case</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="se">''</span><span class="s">Other</span><span class="se">''</span><span class="s">,</span><span class="nv"> </span><span class="s">it</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">defined</span><span class="nv"> </span><span class="s">by</span>
+<span class="w">      </span><span class="s">the</span>
+
+<span class="w">      </span><span class="s">event</span><span class="nv"> </span><span class="s">source.'</span>
 <span class="w">  </span><span class="nt">role_id</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">role_id</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The normalized identifier of the resource's role in the context of</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">the event or finding.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">normalized</span><span class="nv"> </span><span class="s">identifier</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">resource</span><span class="se">''</span><span class="s">s</span><span class="nv"> </span><span class="s">role</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">context</span>
+<span class="w">      </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">event</span><span class="nv"> </span><span class="s">or</span>
+
+<span class="w">      </span><span class="s">finding.'</span>
 <span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ResourceDetailsRoleIdEnum</span>
 <span class="w">    </span><span class="nt">recommended</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">version</span><span class="p">:</span>
@@ -900,17 +949,24 @@
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The version of the resource. For example &lt;code&gt;1.2.3&lt;/code&gt;.</span>
 <span class="w">  </span><span class="nt">zone</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">zone</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The availability zone within a cloud region where the resource is</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">located. Examples include AWS availability zones (us-east-1a, us-east-1b), Azure</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">availability zones (1, 2, 3 within a region), GCP zones (us-central1-a, us-central1-b),</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">or Oracle Cloud availability domains (AD-1, AD-2, AD-3).</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">availability</span><span class="nv"> </span><span class="s">zone</span><span class="nv"> </span><span class="s">within</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">cloud</span><span class="nv"> </span><span class="s">region</span><span class="nv"> </span><span class="s">where</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">resource</span><span class="nv"> </span><span class="s">is</span>
+<span class="w">      </span><span class="s">located.</span>
+
+<span class="w">      </span><span class="s">Examples</span><span class="nv"> </span><span class="s">include</span><span class="nv"> </span><span class="s">AWS</span><span class="nv"> </span><span class="s">availability</span><span class="nv"> </span><span class="s">zones</span><span class="nv"> </span><span class="s">(us-east-1a,</span><span class="nv"> </span><span class="s">us-east-1b),</span><span class="nv"> </span><span class="s">Azure</span>
+
+<span class="w">      </span><span class="s">availability</span><span class="nv"> </span><span class="s">zones</span><span class="nv"> </span><span class="s">(1,</span><span class="nv"> </span><span class="s">2,</span><span class="nv"> </span><span class="s">3</span><span class="nv"> </span><span class="s">within</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">region),</span><span class="nv"> </span><span class="s">GCP</span><span class="nv"> </span><span class="s">zones</span><span class="nv"> </span><span class="s">(us-central1-a,</span>
+
+<span class="w">      </span><span class="s">us-central1-b),</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">Oracle</span><span class="nv"> </span><span class="s">Cloud</span><span class="nv"> </span><span class="s">availability</span><span class="nv"> </span><span class="s">domains</span><span class="nv"> </span><span class="s">(AD-1,</span><span class="nv"> </span><span class="s">AD-2,</span><span class="nv"> </span><span class="s">AD-3).'</span>
 </code></pre></div>
 </details>
 <h3 id="induced">Induced</h3>
 <details>
 <div class="highlight"><pre><span></span><code><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ResourceDetails</span>
-<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The Resource Details object describes details about resources that were</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">affected by the activity/event.</span>
+<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">Resource</span><span class="nv"> </span><span class="s">Details</span><span class="nv"> </span><span class="s">object</span><span class="nv"> </span><span class="s">describes</span><span class="nv"> </span><span class="s">details</span><span class="nv"> </span><span class="s">about</span><span class="nv"> </span><span class="s">resources</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">were</span>
+
+<span class="w">  </span><span class="s">affected</span><span class="nv"> </span><span class="s">by</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">activity/event.'</span>
+<span class="nt">in_subset</span><span class="p">:</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">objects</span>
 <span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="nt">aliases</span><span class="p">:</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Resource Details</span>
@@ -920,10 +976,15 @@
 <span class="nt">slot_usage</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">cloud_partition</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">cloud_partition</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The logical grouping or isolated segment within a cloud provider's</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">infrastructure where the resource is located. Examples include AWS partitions</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">(aws, aws-cn, aws-us-gov), Azure cloud environments (AzureCloud, AzureUSGovernment,</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">AzureChinaCloud), or similar logical divisions in other cloud providers.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">logical</span><span class="nv"> </span><span class="s">grouping</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">isolated</span><span class="nv"> </span><span class="s">segment</span><span class="nv"> </span><span class="s">within</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">cloud</span><span class="nv"> </span><span class="s">provider</span><span class="se">''</span><span class="s">s</span>
+
+<span class="w">      </span><span class="s">infrastructure</span><span class="nv"> </span><span class="s">where</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">resource</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">located.</span><span class="nv"> </span><span class="s">Examples</span><span class="nv"> </span><span class="s">include</span><span class="nv"> </span><span class="s">AWS</span><span class="nv"> </span><span class="s">partitions</span>
+
+<span class="w">      </span><span class="s">(aws,</span><span class="nv"> </span><span class="s">aws-cn,</span><span class="nv"> </span><span class="s">aws-us-gov),</span><span class="nv"> </span><span class="s">Azure</span><span class="nv"> </span><span class="s">cloud</span><span class="nv"> </span><span class="s">environments</span><span class="nv"> </span><span class="s">(AzureCloud,</span>
+
+<span class="w">      </span><span class="s">AzureUSGovernment,</span><span class="nv"> </span><span class="s">AzureChinaCloud),</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">similar</span><span class="nv"> </span><span class="s">logical</span><span class="nv"> </span><span class="s">divisions</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">other</span>
+
+<span class="w">      </span><span class="s">cloud</span><span class="nv"> </span><span class="s">providers.'</span>
 <span class="w">  </span><span class="nt">criticality</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">criticality</span>
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The criticality of the resource as defined by the event source.</span>
@@ -943,42 +1004,69 @@
 <span class="w">    </span><span class="nt">recommended</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">namespace</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">namespace</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The namespace is useful when similar entities exist that you need</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">to keep separate.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">namespace</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">useful</span><span class="nv"> </span><span class="s">when</span><span class="nv"> </span><span class="s">similar</span><span class="nv"> </span><span class="s">entities</span><span class="nv"> </span><span class="s">exist</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">you</span><span class="nv"> </span><span class="s">need</span>
+<span class="w">      </span><span class="s">to</span><span class="nv"> </span><span class="s">keep</span>
+
+<span class="w">      </span><span class="s">separate.'</span>
 <span class="w">  </span><span class="nt">owner</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">owner</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The details of the entity that owns the resource. This object includes</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">properties such as the owner's name, unique identifier, type, domain, and other</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">relevant attributes that help identify the resource owner within the environment.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">details</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">entity</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">owns</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">resource.</span><span class="nv"> </span><span class="s">This</span><span class="nv"> </span><span class="s">object</span><span class="nv"> </span><span class="s">includes</span>
+
+<span class="w">      </span><span class="s">properties</span><span class="nv"> </span><span class="s">such</span><span class="nv"> </span><span class="s">as</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">owner</span><span class="se">''</span><span class="s">s</span><span class="nv"> </span><span class="s">name,</span><span class="nv"> </span><span class="s">unique</span><span class="nv"> </span><span class="s">identifier,</span><span class="nv"> </span><span class="s">type,</span><span class="nv"> </span><span class="s">domain,</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">other</span>
+
+<span class="w">      </span><span class="s">relevant</span><span class="nv"> </span><span class="s">attributes</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">help</span><span class="nv"> </span><span class="s">identify</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">resource</span><span class="nv"> </span><span class="s">owner</span><span class="nv"> </span><span class="s">within</span><span class="nv"> </span><span class="s">the</span>
+
+<span class="w">      </span><span class="s">environment.'</span>
 <span class="w">    </span><span class="nt">recommended</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">provider</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">provider</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The cloud service provider that hosts or manages the resource. This</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">field is typically used when the resource is managed by a different provider</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">than the one generating the event or finding. Examples include AWS, Azure, GCP</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">(Google Cloud Platform), Oracle Cloud, IBM Cloud, Alibaba Cloud, or other public,</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">private, or hybrid cloud providers.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">cloud</span><span class="nv"> </span><span class="s">service</span><span class="nv"> </span><span class="s">provider</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">hosts</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">manages</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">resource.</span><span class="nv"> </span><span class="s">This</span>
+<span class="w">      </span><span class="s">field</span><span class="nv"> </span><span class="s">is</span>
+
+<span class="w">      </span><span class="s">typically</span><span class="nv"> </span><span class="s">used</span><span class="nv"> </span><span class="s">when</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">resource</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">managed</span><span class="nv"> </span><span class="s">by</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">different</span><span class="nv"> </span><span class="s">provider</span><span class="nv"> </span><span class="s">than</span><span class="nv"> </span><span class="s">the</span>
+
+<span class="w">      </span><span class="s">one</span><span class="nv"> </span><span class="s">generating</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">event</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">finding.</span><span class="nv"> </span><span class="s">Examples</span><span class="nv"> </span><span class="s">include</span><span class="nv"> </span><span class="s">AWS,</span><span class="nv"> </span><span class="s">Azure,</span><span class="nv"> </span><span class="s">GCP</span><span class="nv"> </span><span class="s">(Google</span>
+
+<span class="w">      </span><span class="s">Cloud</span><span class="nv"> </span><span class="s">Platform),</span><span class="nv"> </span><span class="s">Oracle</span><span class="nv"> </span><span class="s">Cloud,</span><span class="nv"> </span><span class="s">IBM</span><span class="nv"> </span><span class="s">Cloud,</span><span class="nv"> </span><span class="s">Alibaba</span><span class="nv"> </span><span class="s">Cloud,</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">other</span><span class="nv"> </span><span class="s">public,</span>
+
+<span class="w">      </span><span class="s">private,</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">hybrid</span><span class="nv"> </span><span class="s">cloud</span><span class="nv"> </span><span class="s">providers.'</span>
 <span class="w">  </span><span class="nt">region</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">region</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The cloud region where the resource is hosted, as defined by the</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">cloud provider. This represents the physical or logical geographic area containing</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">the infrastructure supporting the resource. Examples include AWS regions (us-east-1,</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">eu-west-1), Azure regions (East US, West Europe), GCP regions (us-central1,</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">europe-west1), or Oracle Cloud regions (us-ashburn-1, uk-london-1).</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">cloud</span><span class="nv"> </span><span class="s">region</span><span class="nv"> </span><span class="s">where</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">resource</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">hosted,</span><span class="nv"> </span><span class="s">as</span><span class="nv"> </span><span class="s">defined</span><span class="nv"> </span><span class="s">by</span><span class="nv"> </span><span class="s">the</span>
+<span class="w">      </span><span class="s">cloud</span>
+
+<span class="w">      </span><span class="s">provider.</span><span class="nv"> </span><span class="s">This</span><span class="nv"> </span><span class="s">represents</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">physical</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">logical</span><span class="nv"> </span><span class="s">geographic</span><span class="nv"> </span><span class="s">area</span><span class="nv"> </span><span class="s">containing</span>
+
+<span class="w">      </span><span class="s">the</span><span class="nv"> </span><span class="s">infrastructure</span><span class="nv"> </span><span class="s">supporting</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">resource.</span><span class="nv"> </span><span class="s">Examples</span><span class="nv"> </span><span class="s">include</span><span class="nv"> </span><span class="s">AWS</span><span class="nv"> </span><span class="s">regions</span>
+
+<span class="w">      </span><span class="s">(us-east-1,</span><span class="nv"> </span><span class="s">eu-west-1),</span><span class="nv"> </span><span class="s">Azure</span><span class="nv"> </span><span class="s">regions</span><span class="nv"> </span><span class="s">(East</span><span class="nv"> </span><span class="s">US,</span><span class="nv"> </span><span class="s">West</span><span class="nv"> </span><span class="s">Europe),</span><span class="nv"> </span><span class="s">GCP</span><span class="nv"> </span><span class="s">regions</span>
+
+<span class="w">      </span><span class="s">(us-central1,</span><span class="nv"> </span><span class="s">europe-west1),</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">Oracle</span><span class="nv"> </span><span class="s">Cloud</span><span class="nv"> </span><span class="s">regions</span><span class="nv"> </span><span class="s">(us-ashburn-1,</span>
+
+<span class="w">      </span><span class="s">uk-london-1).'</span>
 <span class="w">  </span><span class="nt">resource_relationship</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">resource_relationship</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">A graph representation showing how this resource relates to and interacts</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">with other entities in the environment. This can include parent/child relationships,</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">dependencies, or other connections.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'A</span><span class="nv"> </span><span class="s">graph</span><span class="nv"> </span><span class="s">representation</span><span class="nv"> </span><span class="s">showing</span><span class="nv"> </span><span class="s">how</span><span class="nv"> </span><span class="s">this</span><span class="nv"> </span><span class="s">resource</span><span class="nv"> </span><span class="s">relates</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">and</span>
+<span class="w">      </span><span class="s">interacts</span><span class="nv"> </span><span class="s">with</span>
+
+<span class="w">      </span><span class="s">other</span><span class="nv"> </span><span class="s">entities</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">environment.</span><span class="nv"> </span><span class="s">This</span><span class="nv"> </span><span class="s">can</span><span class="nv"> </span><span class="s">include</span><span class="nv"> </span><span class="s">parent/child</span><span class="nv"> </span><span class="s">relationships,</span>
+
+<span class="w">      </span><span class="s">dependencies,</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">other</span><span class="nv"> </span><span class="s">connections.'</span>
 <span class="w">  </span><span class="nt">role</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">role</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The role of the resource in the context of the event or finding,</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">normalized to the caption of the role_id value. In the case of 'Other', it is</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">defined by the event source.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">role</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">resource</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">context</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">event</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">finding,</span>
+<span class="w">      </span><span class="s">normalized</span><span class="nv"> </span><span class="s">to</span>
+
+<span class="w">      </span><span class="s">the</span><span class="nv"> </span><span class="s">caption</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">role_id</span><span class="nv"> </span><span class="s">value.</span><span class="nv"> </span><span class="s">In</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">case</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="se">''</span><span class="s">Other</span><span class="se">''</span><span class="s">,</span><span class="nv"> </span><span class="s">it</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">defined</span><span class="nv"> </span><span class="s">by</span>
+<span class="w">      </span><span class="s">the</span>
+
+<span class="w">      </span><span class="s">event</span><span class="nv"> </span><span class="s">source.'</span>
 <span class="w">  </span><span class="nt">role_id</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">role_id</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The normalized identifier of the resource's role in the context of</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">the event or finding.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">normalized</span><span class="nv"> </span><span class="s">identifier</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">resource</span><span class="se">''</span><span class="s">s</span><span class="nv"> </span><span class="s">role</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">context</span>
+<span class="w">      </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">event</span><span class="nv"> </span><span class="s">or</span>
+
+<span class="w">      </span><span class="s">finding.'</span>
 <span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ResourceDetailsRoleIdEnum</span>
 <span class="w">    </span><span class="nt">recommended</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">version</span><span class="p">:</span>
@@ -986,15 +1074,21 @@
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The version of the resource. For example &lt;code&gt;1.2.3&lt;/code&gt;.</span>
 <span class="w">  </span><span class="nt">zone</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">zone</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The availability zone within a cloud region where the resource is</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">located. Examples include AWS availability zones (us-east-1a, us-east-1b), Azure</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">availability zones (1, 2, 3 within a region), GCP zones (us-central1-a, us-central1-b),</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">or Oracle Cloud availability domains (AD-1, AD-2, AD-3).</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">availability</span><span class="nv"> </span><span class="s">zone</span><span class="nv"> </span><span class="s">within</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">cloud</span><span class="nv"> </span><span class="s">region</span><span class="nv"> </span><span class="s">where</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">resource</span><span class="nv"> </span><span class="s">is</span>
+<span class="w">      </span><span class="s">located.</span>
+
+<span class="w">      </span><span class="s">Examples</span><span class="nv"> </span><span class="s">include</span><span class="nv"> </span><span class="s">AWS</span><span class="nv"> </span><span class="s">availability</span><span class="nv"> </span><span class="s">zones</span><span class="nv"> </span><span class="s">(us-east-1a,</span><span class="nv"> </span><span class="s">us-east-1b),</span><span class="nv"> </span><span class="s">Azure</span>
+
+<span class="w">      </span><span class="s">availability</span><span class="nv"> </span><span class="s">zones</span><span class="nv"> </span><span class="s">(1,</span><span class="nv"> </span><span class="s">2,</span><span class="nv"> </span><span class="s">3</span><span class="nv"> </span><span class="s">within</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">region),</span><span class="nv"> </span><span class="s">GCP</span><span class="nv"> </span><span class="s">zones</span><span class="nv"> </span><span class="s">(us-central1-a,</span>
+
+<span class="w">      </span><span class="s">us-central1-b),</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">Oracle</span><span class="nv"> </span><span class="s">Cloud</span><span class="nv"> </span><span class="s">availability</span><span class="nv"> </span><span class="s">domains</span><span class="nv"> </span><span class="s">(AD-1,</span><span class="nv"> </span><span class="s">AD-2,</span><span class="nv"> </span><span class="s">AD-3).'</span>
 <span class="nt">attributes</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">agent_list</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">agent_list</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">A list of &lt;code&gt;agent&lt;/code&gt; objects associated with a device, endpoint,</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">or resource.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'A</span><span class="nv"> </span><span class="s">list</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">&lt;code&gt;agent&lt;/code&gt;</span><span class="nv"> </span><span class="s">objects</span><span class="nv"> </span><span class="s">associated</span><span class="nv"> </span><span class="s">with</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">device,</span><span class="nv"> </span><span class="s">endpoint,</span>
+<span class="w">      </span><span class="s">or</span>
+
+<span class="w">      </span><span class="s">resource.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Agent List</span>
@@ -1009,10 +1103,15 @@
 <span class="w">    </span><span class="nt">multivalued</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">cloud_partition</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">cloud_partition</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The logical grouping or isolated segment within a cloud provider's</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">infrastructure where the resource is located. Examples include AWS partitions</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">(aws, aws-cn, aws-us-gov), Azure cloud environments (AzureCloud, AzureUSGovernment,</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">AzureChinaCloud), or similar logical divisions in other cloud providers.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">logical</span><span class="nv"> </span><span class="s">grouping</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">isolated</span><span class="nv"> </span><span class="s">segment</span><span class="nv"> </span><span class="s">within</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">cloud</span><span class="nv"> </span><span class="s">provider</span><span class="se">''</span><span class="s">s</span>
+
+<span class="w">      </span><span class="s">infrastructure</span><span class="nv"> </span><span class="s">where</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">resource</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">located.</span><span class="nv"> </span><span class="s">Examples</span><span class="nv"> </span><span class="s">include</span><span class="nv"> </span><span class="s">AWS</span><span class="nv"> </span><span class="s">partitions</span>
+
+<span class="w">      </span><span class="s">(aws,</span><span class="nv"> </span><span class="s">aws-cn,</span><span class="nv"> </span><span class="s">aws-us-gov),</span><span class="nv"> </span><span class="s">Azure</span><span class="nv"> </span><span class="s">cloud</span><span class="nv"> </span><span class="s">environments</span><span class="nv"> </span><span class="s">(AzureCloud,</span>
+
+<span class="w">      </span><span class="s">AzureUSGovernment,</span><span class="nv"> </span><span class="s">AzureChinaCloud),</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">similar</span><span class="nv"> </span><span class="s">logical</span><span class="nv"> </span><span class="s">divisions</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">other</span>
+
+<span class="w">      </span><span class="s">cloud</span><span class="nv"> </span><span class="s">providers.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Cloud Partition</span>
@@ -1102,10 +1201,14 @@
 <span class="w">    </span><span class="nt">recommended</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">is_backed_up</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">is_backed_up</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Indicates whether the device or resource has a backup enabled, such</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">as an automated snapshot or a cloud backup. For example, this is indicated by</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">the &lt;code&gt;cloudBackupEnabled&lt;/code&gt; value within JAMF Pro mobile devices or</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">the registration of an AWS ARN with the AWS Backup service.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'Indicates</span><span class="nv"> </span><span class="s">whether</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">device</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">resource</span><span class="nv"> </span><span class="s">has</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">backup</span><span class="nv"> </span><span class="s">enabled,</span><span class="nv"> </span><span class="s">such</span>
+<span class="w">      </span><span class="s">as</span><span class="nv"> </span><span class="s">an</span>
+
+<span class="w">      </span><span class="s">automated</span><span class="nv"> </span><span class="s">snapshot</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">cloud</span><span class="nv"> </span><span class="s">backup.</span><span class="nv"> </span><span class="s">For</span><span class="nv"> </span><span class="s">example,</span><span class="nv"> </span><span class="s">this</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">indicated</span><span class="nv"> </span><span class="s">by</span><span class="nv"> </span><span class="s">the</span>
+
+<span class="w">      </span><span class="s">&lt;code&gt;cloudBackupEnabled&lt;/code&gt;</span><span class="nv"> </span><span class="s">value</span><span class="nv"> </span><span class="s">within</span><span class="nv"> </span><span class="s">JAMF</span><span class="nv"> </span><span class="s">Pro</span><span class="nv"> </span><span class="s">mobile</span><span class="nv"> </span><span class="s">devices</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">the</span>
+
+<span class="w">      </span><span class="s">registration</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">an</span><span class="nv"> </span><span class="s">AWS</span><span class="nv"> </span><span class="s">ARN</span><span class="nv"> </span><span class="s">with</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">AWS</span><span class="nv"> </span><span class="s">Backup</span><span class="nv"> </span><span class="s">service.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Back Ups Configured</span>
@@ -1221,8 +1324,10 @@
 <span class="w">    </span><span class="nt">recommended</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">namespace</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">namespace</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The namespace is useful when similar entities exist that you need</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">to keep separate.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">namespace</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">useful</span><span class="nv"> </span><span class="s">when</span><span class="nv"> </span><span class="s">similar</span><span class="nv"> </span><span class="s">entities</span><span class="nv"> </span><span class="s">exist</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">you</span><span class="nv"> </span><span class="s">need</span>
+<span class="w">      </span><span class="s">to</span><span class="nv"> </span><span class="s">keep</span>
+
+<span class="w">      </span><span class="s">separate.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Namespace</span>
@@ -1236,9 +1341,13 @@
 <span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">string</span>
 <span class="w">  </span><span class="nt">owner</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">owner</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The details of the entity that owns the resource. This object includes</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">properties such as the owner's name, unique identifier, type, domain, and other</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">relevant attributes that help identify the resource owner within the environment.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">details</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">entity</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">owns</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">resource.</span><span class="nv"> </span><span class="s">This</span><span class="nv"> </span><span class="s">object</span><span class="nv"> </span><span class="s">includes</span>
+
+<span class="w">      </span><span class="s">properties</span><span class="nv"> </span><span class="s">such</span><span class="nv"> </span><span class="s">as</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">owner</span><span class="se">''</span><span class="s">s</span><span class="nv"> </span><span class="s">name,</span><span class="nv"> </span><span class="s">unique</span><span class="nv"> </span><span class="s">identifier,</span><span class="nv"> </span><span class="s">type,</span><span class="nv"> </span><span class="s">domain,</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">other</span>
+
+<span class="w">      </span><span class="s">relevant</span><span class="nv"> </span><span class="s">attributes</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">help</span><span class="nv"> </span><span class="s">identify</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">resource</span><span class="nv"> </span><span class="s">owner</span><span class="nv"> </span><span class="s">within</span><span class="nv"> </span><span class="s">the</span>
+
+<span class="w">      </span><span class="s">environment.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Owner</span>
@@ -1256,11 +1365,16 @@
 <span class="w">    </span><span class="nt">recommended</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">provider</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">provider</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The cloud service provider that hosts or manages the resource. This</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">field is typically used when the resource is managed by a different provider</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">than the one generating the event or finding. Examples include AWS, Azure, GCP</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">(Google Cloud Platform), Oracle Cloud, IBM Cloud, Alibaba Cloud, or other public,</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">private, or hybrid cloud providers.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">cloud</span><span class="nv"> </span><span class="s">service</span><span class="nv"> </span><span class="s">provider</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">hosts</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">manages</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">resource.</span><span class="nv"> </span><span class="s">This</span>
+<span class="w">      </span><span class="s">field</span><span class="nv"> </span><span class="s">is</span>
+
+<span class="w">      </span><span class="s">typically</span><span class="nv"> </span><span class="s">used</span><span class="nv"> </span><span class="s">when</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">resource</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">managed</span><span class="nv"> </span><span class="s">by</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">different</span><span class="nv"> </span><span class="s">provider</span><span class="nv"> </span><span class="s">than</span><span class="nv"> </span><span class="s">the</span>
+
+<span class="w">      </span><span class="s">one</span><span class="nv"> </span><span class="s">generating</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">event</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">finding.</span><span class="nv"> </span><span class="s">Examples</span><span class="nv"> </span><span class="s">include</span><span class="nv"> </span><span class="s">AWS,</span><span class="nv"> </span><span class="s">Azure,</span><span class="nv"> </span><span class="s">GCP</span><span class="nv"> </span><span class="s">(Google</span>
+
+<span class="w">      </span><span class="s">Cloud</span><span class="nv"> </span><span class="s">Platform),</span><span class="nv"> </span><span class="s">Oracle</span><span class="nv"> </span><span class="s">Cloud,</span><span class="nv"> </span><span class="s">IBM</span><span class="nv"> </span><span class="s">Cloud,</span><span class="nv"> </span><span class="s">Alibaba</span><span class="nv"> </span><span class="s">Cloud,</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">other</span><span class="nv"> </span><span class="s">public,</span>
+
+<span class="w">      </span><span class="s">private,</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">hybrid</span><span class="nv"> </span><span class="s">cloud</span><span class="nv"> </span><span class="s">providers.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Provider</span>
@@ -1278,11 +1392,18 @@
 <span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">string</span>
 <span class="w">  </span><span class="nt">region</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">region</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The cloud region where the resource is hosted, as defined by the</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">cloud provider. This represents the physical or logical geographic area containing</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">the infrastructure supporting the resource. Examples include AWS regions (us-east-1,</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">eu-west-1), Azure regions (East US, West Europe), GCP regions (us-central1,</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">europe-west1), or Oracle Cloud regions (us-ashburn-1, uk-london-1).</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">cloud</span><span class="nv"> </span><span class="s">region</span><span class="nv"> </span><span class="s">where</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">resource</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">hosted,</span><span class="nv"> </span><span class="s">as</span><span class="nv"> </span><span class="s">defined</span><span class="nv"> </span><span class="s">by</span><span class="nv"> </span><span class="s">the</span>
+<span class="w">      </span><span class="s">cloud</span>
+
+<span class="w">      </span><span class="s">provider.</span><span class="nv"> </span><span class="s">This</span><span class="nv"> </span><span class="s">represents</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">physical</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">logical</span><span class="nv"> </span><span class="s">geographic</span><span class="nv"> </span><span class="s">area</span><span class="nv"> </span><span class="s">containing</span>
+
+<span class="w">      </span><span class="s">the</span><span class="nv"> </span><span class="s">infrastructure</span><span class="nv"> </span><span class="s">supporting</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">resource.</span><span class="nv"> </span><span class="s">Examples</span><span class="nv"> </span><span class="s">include</span><span class="nv"> </span><span class="s">AWS</span><span class="nv"> </span><span class="s">regions</span>
+
+<span class="w">      </span><span class="s">(us-east-1,</span><span class="nv"> </span><span class="s">eu-west-1),</span><span class="nv"> </span><span class="s">Azure</span><span class="nv"> </span><span class="s">regions</span><span class="nv"> </span><span class="s">(East</span><span class="nv"> </span><span class="s">US,</span><span class="nv"> </span><span class="s">West</span><span class="nv"> </span><span class="s">Europe),</span><span class="nv"> </span><span class="s">GCP</span><span class="nv"> </span><span class="s">regions</span>
+
+<span class="w">      </span><span class="s">(us-central1,</span><span class="nv"> </span><span class="s">europe-west1),</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">Oracle</span><span class="nv"> </span><span class="s">Cloud</span><span class="nv"> </span><span class="s">regions</span><span class="nv"> </span><span class="s">(us-ashburn-1,</span>
+
+<span class="w">      </span><span class="s">uk-london-1).'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Region</span>
@@ -1300,9 +1421,12 @@
 <span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">string</span>
 <span class="w">  </span><span class="nt">resource_relationship</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">resource_relationship</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">A graph representation showing how this resource relates to and interacts</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">with other entities in the environment. This can include parent/child relationships,</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">dependencies, or other connections.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'A</span><span class="nv"> </span><span class="s">graph</span><span class="nv"> </span><span class="s">representation</span><span class="nv"> </span><span class="s">showing</span><span class="nv"> </span><span class="s">how</span><span class="nv"> </span><span class="s">this</span><span class="nv"> </span><span class="s">resource</span><span class="nv"> </span><span class="s">relates</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">and</span>
+<span class="w">      </span><span class="s">interacts</span><span class="nv"> </span><span class="s">with</span>
+
+<span class="w">      </span><span class="s">other</span><span class="nv"> </span><span class="s">entities</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">environment.</span><span class="nv"> </span><span class="s">This</span><span class="nv"> </span><span class="s">can</span><span class="nv"> </span><span class="s">include</span><span class="nv"> </span><span class="s">parent/child</span><span class="nv"> </span><span class="s">relationships,</span>
+
+<span class="w">      </span><span class="s">dependencies,</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">other</span><span class="nv"> </span><span class="s">connections.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Resource Relationship</span>
@@ -1316,9 +1440,13 @@
 <span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Graph</span>
 <span class="w">  </span><span class="nt">role</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">role</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The role of the resource in the context of the event or finding,</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">normalized to the caption of the role_id value. In the case of 'Other', it is</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">defined by the event source.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">role</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">resource</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">context</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">event</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">finding,</span>
+<span class="w">      </span><span class="s">normalized</span><span class="nv"> </span><span class="s">to</span>
+
+<span class="w">      </span><span class="s">the</span><span class="nv"> </span><span class="s">caption</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">role_id</span><span class="nv"> </span><span class="s">value.</span><span class="nv"> </span><span class="s">In</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">case</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="se">''</span><span class="s">Other</span><span class="se">''</span><span class="s">,</span><span class="nv"> </span><span class="s">it</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">defined</span><span class="nv"> </span><span class="s">by</span>
+<span class="w">      </span><span class="s">the</span>
+
+<span class="w">      </span><span class="s">event</span><span class="nv"> </span><span class="s">source.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Role</span>
@@ -1334,8 +1462,10 @@
 <span class="w">      </span><span class="nt">sibling</span><span class="p">:</span>
 <span class="w">        </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">sibling</span>
 <span class="w">        </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">role</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The normalized identifier of the resource's role in the context of</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">the event or finding.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">normalized</span><span class="nv"> </span><span class="s">identifier</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">resource</span><span class="se">''</span><span class="s">s</span><span class="nv"> </span><span class="s">role</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">context</span>
+<span class="w">      </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">event</span><span class="nv"> </span><span class="s">or</span>
+
+<span class="w">      </span><span class="s">finding.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Role ID</span>
@@ -1393,10 +1523,14 @@
 <span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">string</span>
 <span class="w">  </span><span class="nt">zone</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">zone</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The availability zone within a cloud region where the resource is</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">located. Examples include AWS availability zones (us-east-1a, us-east-1b), Azure</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">availability zones (1, 2, 3 within a region), GCP zones (us-central1-a, us-central1-b),</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">or Oracle Cloud availability domains (AD-1, AD-2, AD-3).</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">availability</span><span class="nv"> </span><span class="s">zone</span><span class="nv"> </span><span class="s">within</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">cloud</span><span class="nv"> </span><span class="s">region</span><span class="nv"> </span><span class="s">where</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">resource</span><span class="nv"> </span><span class="s">is</span>
+<span class="w">      </span><span class="s">located.</span>
+
+<span class="w">      </span><span class="s">Examples</span><span class="nv"> </span><span class="s">include</span><span class="nv"> </span><span class="s">AWS</span><span class="nv"> </span><span class="s">availability</span><span class="nv"> </span><span class="s">zones</span><span class="nv"> </span><span class="s">(us-east-1a,</span><span class="nv"> </span><span class="s">us-east-1b),</span><span class="nv"> </span><span class="s">Azure</span>
+
+<span class="w">      </span><span class="s">availability</span><span class="nv"> </span><span class="s">zones</span><span class="nv"> </span><span class="s">(1,</span><span class="nv"> </span><span class="s">2,</span><span class="nv"> </span><span class="s">3</span><span class="nv"> </span><span class="s">within</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">region),</span><span class="nv"> </span><span class="s">GCP</span><span class="nv"> </span><span class="s">zones</span><span class="nv"> </span><span class="s">(us-central1-a,</span>
+
+<span class="w">      </span><span class="s">us-central1-b),</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">Oracle</span><span class="nv"> </span><span class="s">Cloud</span><span class="nv"> </span><span class="s">availability</span><span class="nv"> </span><span class="s">domains</span><span class="nv"> </span><span class="s">(AD-1,</span><span class="nv"> </span><span class="s">AD-2,</span><span class="nv"> </span><span class="s">AD-3).'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Network Zone</span>
@@ -1435,8 +1569,10 @@
 <span class="w">      </span><span class="nt">group</span><span class="p">:</span>
 <span class="w">        </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">group</span>
 <span class="w">        </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">primary</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Describes details about the Cloud environment where the event or</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">finding was created.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'Describes</span><span class="nv"> </span><span class="s">details</span><span class="nv"> </span><span class="s">about</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">Cloud</span><span class="nv"> </span><span class="s">environment</span><span class="nv"> </span><span class="s">where</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">event</span><span class="nv"> </span><span class="s">or</span>
+<span class="w">      </span><span class="s">finding</span><span class="nv"> </span><span class="s">was</span>
+
+<span class="w">      </span><span class="s">created.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Cloud</span>
@@ -1780,8 +1916,9 @@
 <span class="w">      </span><span class="nt">group</span><span class="p">:</span>
 <span class="w">        </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">group</span>
 <span class="w">        </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">context</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The Data Classification object includes information about data classification</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">levels and data category types.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">Data</span><span class="nv"> </span><span class="s">Classification</span><span class="nv"> </span><span class="s">object</span><span class="nv"> </span><span class="s">includes</span><span class="nv"> </span><span class="s">information</span><span class="nv"> </span><span class="s">about</span><span class="nv"> </span><span class="s">data</span><span class="nv"> </span><span class="s">classification</span>
+
+<span class="w">      </span><span class="s">levels</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">data</span><span class="nv"> </span><span class="s">category</span><span class="nv"> </span><span class="s">types.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Data Classification</span>
@@ -1798,8 +1935,10 @@
 <span class="w">      </span><span class="nt">group</span><span class="p">:</span>
 <span class="w">        </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">group</span>
 <span class="w">        </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">context</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">A list of Data Classification objects, that include information about</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">data classification levels and data category types, identified by a classifier.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'A</span><span class="nv"> </span><span class="s">list</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">Data</span><span class="nv"> </span><span class="s">Classification</span><span class="nv"> </span><span class="s">objects,</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">include</span><span class="nv"> </span><span class="s">information</span>
+<span class="w">      </span><span class="s">about</span><span class="nv"> </span><span class="s">data</span>
+
+<span class="w">      </span><span class="s">classification</span><span class="nv"> </span><span class="s">levels</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">data</span><span class="nv"> </span><span class="s">category</span><span class="nv"> </span><span class="s">types,</span><span class="nv"> </span><span class="s">identified</span><span class="nv"> </span><span class="s">by</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">classifier.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Data Classification</span>

@@ -217,6 +217,15 @@
 </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="#in-subsets">
+<span class="md-ellipsis">
+      
+        In Subsets
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#aliases">
 <span class="md-ellipsis">
       
@@ -295,7 +304,8 @@
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
 <h1 id="class-sso">Class: Sso</h1>
-<p><em>The Single Sign-On (SSO) object provides a structure for normalizing SSO attributes, configuration, and/or settings from Identity Providers.</em></p>
+<p><em>The Single Sign-On (SSO) object provides a structure for normalizing SSO</em></p>
+<p><em>attributes, configuration, and/or settings from Identity Providers.</em></p>
 <p>URI: <a href="https://w3id.org/lmodel/ocsf/Sso">ocsf:Sso</a></p>
 <pre class="mermaid"><code> classDiagram
     class Sso
@@ -376,13 +386,13 @@
 <tr>
 <td><a href="../auth_protocol/">auth_protocol</a></td>
 <td>0..1 <br/> <a href="../String/">String</a></td>
-<td>The authorization protocol as defined by the caption of <code>auth_protocol_i...</code></td>
+<td>The authorization protocol as defined by the caption of</td>
 <td>direct</td>
 </tr>
 <tr>
 <td><a href="../auth_protocol_id/">auth_protocol_id</a></td>
 <td>0..1 <br/> <a href="../AuthProtocolIdEnum/">AuthProtocolIdEnum</a></td>
-<td>The normalized identifier of the authentication protocol used by the SSO reso...</td>
+<td>The normalized identifier of the authentication protocol used by the SSO</td>
 <td>direct</td>
 </tr>
 <tr>
@@ -418,7 +428,7 @@
 <tr>
 <td><a href="../logout_endpoint/">logout_endpoint</a></td>
 <td>0..1 <br/> <a href="../UrlT/">UrlT</a></td>
-<td>URL for initiating an SSO logout request, allowing sessions to be terminated ...</td>
+<td>URL for initiating an SSO logout request, allowing sessions to be terminated</td>
 <td>direct</td>
 </tr>
 <tr>
@@ -484,6 +494,10 @@
 </tr>
 </tbody>
 </table>
+<h2 id="in-subsets">In Subsets</h2>
+<ul>
+<li><a href="../Objects/">Objects</a></li>
+</ul>
 <h2 id="aliases">Aliases</h2>
 <ul>
 <li>SSO</li>
@@ -517,8 +531,12 @@
 <h3 id="direct">Direct</h3>
 <details>
 <div class="highlight"><pre><span></span><code><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Sso</span>
-<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The Single Sign-On (SSO) object provides a structure for normalizing</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">SSO attributes, configuration, and/or settings from Identity Providers.</span>
+<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">Single</span><span class="nv"> </span><span class="s">Sign-On</span><span class="nv"> </span><span class="s">(SSO)</span><span class="nv"> </span><span class="s">object</span><span class="nv"> </span><span class="s">provides</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">structure</span><span class="nv"> </span><span class="s">for</span><span class="nv"> </span><span class="s">normalizing</span>
+<span class="w">  </span><span class="s">SSO</span>
+
+<span class="w">  </span><span class="s">attributes,</span><span class="nv"> </span><span class="s">configuration,</span><span class="nv"> </span><span class="s">and/or</span><span class="nv"> </span><span class="s">settings</span><span class="nv"> </span><span class="s">from</span><span class="nv"> </span><span class="s">Identity</span><span class="nv"> </span><span class="s">Providers.'</span>
+<span class="nt">in_subset</span><span class="p">:</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">objects</span>
 <span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="nt">aliases</span><span class="p">:</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">SSO</span>
@@ -542,39 +560,53 @@
 <span class="nt">slot_usage</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">auth_protocol</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">auth_protocol</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The authorization protocol as defined by the caption of &lt;code&gt;auth_protocol_id&lt;/code&gt;.</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">In the case of &lt;code&gt;Other&lt;/code&gt;, it is defined by the event source.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">authorization</span><span class="nv"> </span><span class="s">protocol</span><span class="nv"> </span><span class="s">as</span><span class="nv"> </span><span class="s">defined</span><span class="nv"> </span><span class="s">by</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">caption</span><span class="nv"> </span><span class="s">of</span>
+
+<span class="w">      </span><span class="s">&lt;code&gt;auth_protocol_id&lt;/code&gt;.</span><span class="nv"> </span><span class="s">In</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">case</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">&lt;code&gt;Other&lt;/code&gt;,</span><span class="nv"> </span><span class="s">it</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">defined</span>
+
+<span class="w">      </span><span class="s">by</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">event</span><span class="nv"> </span><span class="s">source.'</span>
 <span class="w">  </span><span class="nt">auth_protocol_id</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">auth_protocol_id</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The normalized identifier of the authentication protocol used by</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">the SSO resource.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">normalized</span><span class="nv"> </span><span class="s">identifier</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">authentication</span><span class="nv"> </span><span class="s">protocol</span><span class="nv"> </span><span class="s">used</span><span class="nv"> </span><span class="s">by</span>
+<span class="w">      </span><span class="s">the</span><span class="nv"> </span><span class="s">SSO</span>
+
+<span class="w">      </span><span class="s">resource.'</span>
 <span class="w">  </span><span class="nt">certificate</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">certificate</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Digital Signature associated with the SSO resource, e.g., SAML X.509</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">certificate details.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'Digital</span><span class="nv"> </span><span class="s">Signature</span><span class="nv"> </span><span class="s">associated</span><span class="nv"> </span><span class="s">with</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">SSO</span><span class="nv"> </span><span class="s">resource,</span><span class="nv"> </span><span class="s">e.g.,</span><span class="nv"> </span><span class="s">SAML</span><span class="nv"> </span><span class="s">X.509</span>
+
+<span class="w">      </span><span class="s">certificate</span><span class="nv"> </span><span class="s">details.'</span>
 <span class="w">    </span><span class="nt">recommended</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">created_time</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">created_time</span>
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">When the SSO resource was created.</span>
 <span class="w">  </span><span class="nt">duration_mins</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">duration_mins</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The duration (in minutes) for an SSO session, after which re-authentication</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">is required.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">duration</span><span class="nv"> </span><span class="s">(in</span><span class="nv"> </span><span class="s">minutes)</span><span class="nv"> </span><span class="s">for</span><span class="nv"> </span><span class="s">an</span><span class="nv"> </span><span class="s">SSO</span><span class="nv"> </span><span class="s">session,</span><span class="nv"> </span><span class="s">after</span><span class="nv"> </span><span class="s">which</span><span class="nv"> </span><span class="s">re-authentication</span>
+<span class="w">      </span><span class="s">is</span>
+
+<span class="w">      </span><span class="s">required.'</span>
 <span class="w">  </span><span class="nt">idle_timeout</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">idle_timeout</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Duration (in minutes) of allowed inactivity before Single Sign-On</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">(SSO) session expiration.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'Duration</span><span class="nv"> </span><span class="s">(in</span><span class="nv"> </span><span class="s">minutes)</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">allowed</span><span class="nv"> </span><span class="s">inactivity</span><span class="nv"> </span><span class="s">before</span><span class="nv"> </span><span class="s">Single</span><span class="nv"> </span><span class="s">Sign-On</span>
+<span class="w">      </span><span class="s">(SSO)</span><span class="nv"> </span><span class="s">session</span>
+
+<span class="w">      </span><span class="s">expiration.'</span>
 <span class="w">  </span><span class="nt">login_endpoint</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">login_endpoint</span>
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">URL for initiating an SSO login request.</span>
 <span class="w">  </span><span class="nt">logout_endpoint</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">logout_endpoint</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">URL for initiating an SSO logout request, allowing sessions to be</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">terminated across applications.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'URL</span><span class="nv"> </span><span class="s">for</span><span class="nv"> </span><span class="s">initiating</span><span class="nv"> </span><span class="s">an</span><span class="nv"> </span><span class="s">SSO</span><span class="nv"> </span><span class="s">logout</span><span class="nv"> </span><span class="s">request,</span><span class="nv"> </span><span class="s">allowing</span><span class="nv"> </span><span class="s">sessions</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">be</span>
+<span class="w">      </span><span class="s">terminated</span>
+
+<span class="w">      </span><span class="s">across</span><span class="nv"> </span><span class="s">applications.'</span>
 <span class="w">  </span><span class="nt">metadata_endpoint</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">metadata_endpoint</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">URL where metadata about the SSO configuration is available (e.g.,</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">for SAML configurations).</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'URL</span><span class="nv"> </span><span class="s">where</span><span class="nv"> </span><span class="s">metadata</span><span class="nv"> </span><span class="s">about</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">SSO</span><span class="nv"> </span><span class="s">configuration</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">available</span><span class="nv"> </span><span class="s">(e.g.,</span>
+<span class="w">      </span><span class="s">for</span><span class="nv"> </span><span class="s">SAML</span>
+
+<span class="w">      </span><span class="s">configurations).'</span>
 <span class="w">  </span><span class="nt">modified_time</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">modified_time</span>
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The most recent time when the SSO resource was updated.</span>
@@ -584,23 +616,30 @@
 <span class="w">    </span><span class="nt">recommended</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">protocol_name</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">protocol_name</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The supported protocol for the SSO resource. E.g., &lt;code&gt;SAML&lt;/code&gt;</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">or &lt;code&gt;OIDC&lt;/code&gt;.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">supported</span><span class="nv"> </span><span class="s">protocol</span><span class="nv"> </span><span class="s">for</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">SSO</span><span class="nv"> </span><span class="s">resource.</span><span class="nv"> </span><span class="s">E.g.,</span><span class="nv"> </span><span class="s">&lt;code&gt;SAML&lt;/code&gt;</span>
+<span class="w">      </span><span class="s">or</span>
+
+<span class="w">      </span><span class="s">&lt;code&gt;OIDC&lt;/code&gt;.'</span>
 <span class="w">  </span><span class="nt">uid</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">uid</span>
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">A unique identifier for a SSO resource.</span>
 <span class="w">    </span><span class="nt">recommended</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">vendor_name</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">vendor_name</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Name of the vendor or service provider implementing SSO. E.g., &lt;code&gt;Okta&lt;/code&gt;,</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">&lt;code&gt;Auth0&lt;/code&gt;, &lt;code&gt;Microsoft&lt;/code&gt;.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'Name</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">vendor</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">service</span><span class="nv"> </span><span class="s">provider</span><span class="nv"> </span><span class="s">implementing</span><span class="nv"> </span><span class="s">SSO.</span><span class="nv"> </span><span class="s">E.g.,</span>
+
+<span class="w">      </span><span class="s">&lt;code&gt;Okta&lt;/code&gt;,</span><span class="nv"> </span><span class="s">&lt;code&gt;Auth0&lt;/code&gt;,</span><span class="nv"> </span><span class="s">&lt;code&gt;Microsoft&lt;/code&gt;.'</span>
 </code></pre></div>
 </details>
 <h3 id="induced">Induced</h3>
 <details>
 <div class="highlight"><pre><span></span><code><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Sso</span>
-<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The Single Sign-On (SSO) object provides a structure for normalizing</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">SSO attributes, configuration, and/or settings from Identity Providers.</span>
+<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">Single</span><span class="nv"> </span><span class="s">Sign-On</span><span class="nv"> </span><span class="s">(SSO)</span><span class="nv"> </span><span class="s">object</span><span class="nv"> </span><span class="s">provides</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">structure</span><span class="nv"> </span><span class="s">for</span><span class="nv"> </span><span class="s">normalizing</span>
+<span class="w">  </span><span class="s">SSO</span>
+
+<span class="w">  </span><span class="s">attributes,</span><span class="nv"> </span><span class="s">configuration,</span><span class="nv"> </span><span class="s">and/or</span><span class="nv"> </span><span class="s">settings</span><span class="nv"> </span><span class="s">from</span><span class="nv"> </span><span class="s">Identity</span><span class="nv"> </span><span class="s">Providers.'</span>
+<span class="nt">in_subset</span><span class="p">:</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">objects</span>
 <span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="nt">aliases</span><span class="p">:</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">SSO</span>
@@ -608,39 +647,53 @@
 <span class="nt">slot_usage</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">auth_protocol</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">auth_protocol</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The authorization protocol as defined by the caption of &lt;code&gt;auth_protocol_id&lt;/code&gt;.</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">In the case of &lt;code&gt;Other&lt;/code&gt;, it is defined by the event source.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">authorization</span><span class="nv"> </span><span class="s">protocol</span><span class="nv"> </span><span class="s">as</span><span class="nv"> </span><span class="s">defined</span><span class="nv"> </span><span class="s">by</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">caption</span><span class="nv"> </span><span class="s">of</span>
+
+<span class="w">      </span><span class="s">&lt;code&gt;auth_protocol_id&lt;/code&gt;.</span><span class="nv"> </span><span class="s">In</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">case</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">&lt;code&gt;Other&lt;/code&gt;,</span><span class="nv"> </span><span class="s">it</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">defined</span>
+
+<span class="w">      </span><span class="s">by</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">event</span><span class="nv"> </span><span class="s">source.'</span>
 <span class="w">  </span><span class="nt">auth_protocol_id</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">auth_protocol_id</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The normalized identifier of the authentication protocol used by</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">the SSO resource.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">normalized</span><span class="nv"> </span><span class="s">identifier</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">authentication</span><span class="nv"> </span><span class="s">protocol</span><span class="nv"> </span><span class="s">used</span><span class="nv"> </span><span class="s">by</span>
+<span class="w">      </span><span class="s">the</span><span class="nv"> </span><span class="s">SSO</span>
+
+<span class="w">      </span><span class="s">resource.'</span>
 <span class="w">  </span><span class="nt">certificate</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">certificate</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Digital Signature associated with the SSO resource, e.g., SAML X.509</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">certificate details.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'Digital</span><span class="nv"> </span><span class="s">Signature</span><span class="nv"> </span><span class="s">associated</span><span class="nv"> </span><span class="s">with</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">SSO</span><span class="nv"> </span><span class="s">resource,</span><span class="nv"> </span><span class="s">e.g.,</span><span class="nv"> </span><span class="s">SAML</span><span class="nv"> </span><span class="s">X.509</span>
+
+<span class="w">      </span><span class="s">certificate</span><span class="nv"> </span><span class="s">details.'</span>
 <span class="w">    </span><span class="nt">recommended</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">created_time</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">created_time</span>
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">When the SSO resource was created.</span>
 <span class="w">  </span><span class="nt">duration_mins</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">duration_mins</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The duration (in minutes) for an SSO session, after which re-authentication</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">is required.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">duration</span><span class="nv"> </span><span class="s">(in</span><span class="nv"> </span><span class="s">minutes)</span><span class="nv"> </span><span class="s">for</span><span class="nv"> </span><span class="s">an</span><span class="nv"> </span><span class="s">SSO</span><span class="nv"> </span><span class="s">session,</span><span class="nv"> </span><span class="s">after</span><span class="nv"> </span><span class="s">which</span><span class="nv"> </span><span class="s">re-authentication</span>
+<span class="w">      </span><span class="s">is</span>
+
+<span class="w">      </span><span class="s">required.'</span>
 <span class="w">  </span><span class="nt">idle_timeout</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">idle_timeout</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Duration (in minutes) of allowed inactivity before Single Sign-On</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">(SSO) session expiration.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'Duration</span><span class="nv"> </span><span class="s">(in</span><span class="nv"> </span><span class="s">minutes)</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">allowed</span><span class="nv"> </span><span class="s">inactivity</span><span class="nv"> </span><span class="s">before</span><span class="nv"> </span><span class="s">Single</span><span class="nv"> </span><span class="s">Sign-On</span>
+<span class="w">      </span><span class="s">(SSO)</span><span class="nv"> </span><span class="s">session</span>
+
+<span class="w">      </span><span class="s">expiration.'</span>
 <span class="w">  </span><span class="nt">login_endpoint</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">login_endpoint</span>
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">URL for initiating an SSO login request.</span>
 <span class="w">  </span><span class="nt">logout_endpoint</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">logout_endpoint</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">URL for initiating an SSO logout request, allowing sessions to be</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">terminated across applications.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'URL</span><span class="nv"> </span><span class="s">for</span><span class="nv"> </span><span class="s">initiating</span><span class="nv"> </span><span class="s">an</span><span class="nv"> </span><span class="s">SSO</span><span class="nv"> </span><span class="s">logout</span><span class="nv"> </span><span class="s">request,</span><span class="nv"> </span><span class="s">allowing</span><span class="nv"> </span><span class="s">sessions</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">be</span>
+<span class="w">      </span><span class="s">terminated</span>
+
+<span class="w">      </span><span class="s">across</span><span class="nv"> </span><span class="s">applications.'</span>
 <span class="w">  </span><span class="nt">metadata_endpoint</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">metadata_endpoint</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">URL where metadata about the SSO configuration is available (e.g.,</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">for SAML configurations).</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'URL</span><span class="nv"> </span><span class="s">where</span><span class="nv"> </span><span class="s">metadata</span><span class="nv"> </span><span class="s">about</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">SSO</span><span class="nv"> </span><span class="s">configuration</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">available</span><span class="nv"> </span><span class="s">(e.g.,</span>
+<span class="w">      </span><span class="s">for</span><span class="nv"> </span><span class="s">SAML</span>
+
+<span class="w">      </span><span class="s">configurations).'</span>
 <span class="w">  </span><span class="nt">modified_time</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">modified_time</span>
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The most recent time when the SSO resource was updated.</span>
@@ -650,21 +703,27 @@
 <span class="w">    </span><span class="nt">recommended</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">protocol_name</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">protocol_name</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The supported protocol for the SSO resource. E.g., &lt;code&gt;SAML&lt;/code&gt;</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">or &lt;code&gt;OIDC&lt;/code&gt;.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">supported</span><span class="nv"> </span><span class="s">protocol</span><span class="nv"> </span><span class="s">for</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">SSO</span><span class="nv"> </span><span class="s">resource.</span><span class="nv"> </span><span class="s">E.g.,</span><span class="nv"> </span><span class="s">&lt;code&gt;SAML&lt;/code&gt;</span>
+<span class="w">      </span><span class="s">or</span>
+
+<span class="w">      </span><span class="s">&lt;code&gt;OIDC&lt;/code&gt;.'</span>
 <span class="w">  </span><span class="nt">uid</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">uid</span>
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">A unique identifier for a SSO resource.</span>
 <span class="w">    </span><span class="nt">recommended</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">vendor_name</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">vendor_name</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Name of the vendor or service provider implementing SSO. E.g., &lt;code&gt;Okta&lt;/code&gt;,</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">&lt;code&gt;Auth0&lt;/code&gt;, &lt;code&gt;Microsoft&lt;/code&gt;.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'Name</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">vendor</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">service</span><span class="nv"> </span><span class="s">provider</span><span class="nv"> </span><span class="s">implementing</span><span class="nv"> </span><span class="s">SSO.</span><span class="nv"> </span><span class="s">E.g.,</span>
+
+<span class="w">      </span><span class="s">&lt;code&gt;Okta&lt;/code&gt;,</span><span class="nv"> </span><span class="s">&lt;code&gt;Auth0&lt;/code&gt;,</span><span class="nv"> </span><span class="s">&lt;code&gt;Microsoft&lt;/code&gt;.'</span>
 <span class="nt">attributes</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">auth_protocol</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">auth_protocol</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The authorization protocol as defined by the caption of &lt;code&gt;auth_protocol_id&lt;/code&gt;.</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">In the case of &lt;code&gt;Other&lt;/code&gt;, it is defined by the event source.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">authorization</span><span class="nv"> </span><span class="s">protocol</span><span class="nv"> </span><span class="s">as</span><span class="nv"> </span><span class="s">defined</span><span class="nv"> </span><span class="s">by</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">caption</span><span class="nv"> </span><span class="s">of</span>
+
+<span class="w">      </span><span class="s">&lt;code&gt;auth_protocol_id&lt;/code&gt;.</span><span class="nv"> </span><span class="s">In</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">case</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">&lt;code&gt;Other&lt;/code&gt;,</span><span class="nv"> </span><span class="s">it</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">defined</span>
+
+<span class="w">      </span><span class="s">by</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">event</span><span class="nv"> </span><span class="s">source.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Auth Protocol</span>
@@ -683,8 +742,10 @@
 <span class="w">      </span><span class="nt">sibling</span><span class="p">:</span>
 <span class="w">        </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">sibling</span>
 <span class="w">        </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">auth_protocol</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The normalized identifier of the authentication protocol used by</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">the SSO resource.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">normalized</span><span class="nv"> </span><span class="s">identifier</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">authentication</span><span class="nv"> </span><span class="s">protocol</span><span class="nv"> </span><span class="s">used</span><span class="nv"> </span><span class="s">by</span>
+<span class="w">      </span><span class="s">the</span><span class="nv"> </span><span class="s">SSO</span>
+
+<span class="w">      </span><span class="s">resource.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Auth Protocol ID</span>
@@ -699,8 +760,9 @@
 <span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">AuthProtocolIdEnum</span>
 <span class="w">  </span><span class="nt">certificate</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">certificate</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Digital Signature associated with the SSO resource, e.g., SAML X.509</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">certificate details.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'Digital</span><span class="nv"> </span><span class="s">Signature</span><span class="nv"> </span><span class="s">associated</span><span class="nv"> </span><span class="s">with</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">SSO</span><span class="nv"> </span><span class="s">resource,</span><span class="nv"> </span><span class="s">e.g.,</span><span class="nv"> </span><span class="s">SAML</span><span class="nv"> </span><span class="s">X.509</span>
+
+<span class="w">      </span><span class="s">certificate</span><span class="nv"> </span><span class="s">details.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Certificate</span>
@@ -754,8 +816,10 @@
 <span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">TimestampT</span>
 <span class="w">  </span><span class="nt">duration_mins</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">duration_mins</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The duration (in minutes) for an SSO session, after which re-authentication</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">is required.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">duration</span><span class="nv"> </span><span class="s">(in</span><span class="nv"> </span><span class="s">minutes)</span><span class="nv"> </span><span class="s">for</span><span class="nv"> </span><span class="s">an</span><span class="nv"> </span><span class="s">SSO</span><span class="nv"> </span><span class="s">session,</span><span class="nv"> </span><span class="s">after</span><span class="nv"> </span><span class="s">which</span><span class="nv"> </span><span class="s">re-authentication</span>
+<span class="w">      </span><span class="s">is</span>
+
+<span class="w">      </span><span class="s">required.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Duration Minutes</span>
@@ -768,8 +832,10 @@
 <span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">integer</span>
 <span class="w">  </span><span class="nt">idle_timeout</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">idle_timeout</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Duration (in minutes) of allowed inactivity before Single Sign-On</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">(SSO) session expiration.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'Duration</span><span class="nv"> </span><span class="s">(in</span><span class="nv"> </span><span class="s">minutes)</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">allowed</span><span class="nv"> </span><span class="s">inactivity</span><span class="nv"> </span><span class="s">before</span><span class="nv"> </span><span class="s">Single</span><span class="nv"> </span><span class="s">Sign-On</span>
+<span class="w">      </span><span class="s">(SSO)</span><span class="nv"> </span><span class="s">session</span>
+
+<span class="w">      </span><span class="s">expiration.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">SSO Idle Timeout</span>
@@ -793,8 +859,10 @@
 <span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">UrlT</span>
 <span class="w">  </span><span class="nt">logout_endpoint</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">logout_endpoint</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">URL for initiating an SSO logout request, allowing sessions to be</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">terminated across applications.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'URL</span><span class="nv"> </span><span class="s">for</span><span class="nv"> </span><span class="s">initiating</span><span class="nv"> </span><span class="s">an</span><span class="nv"> </span><span class="s">SSO</span><span class="nv"> </span><span class="s">logout</span><span class="nv"> </span><span class="s">request,</span><span class="nv"> </span><span class="s">allowing</span><span class="nv"> </span><span class="s">sessions</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">be</span>
+<span class="w">      </span><span class="s">terminated</span>
+
+<span class="w">      </span><span class="s">across</span><span class="nv"> </span><span class="s">applications.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Logout Endpoint</span>
@@ -806,8 +874,10 @@
 <span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">UrlT</span>
 <span class="w">  </span><span class="nt">metadata_endpoint</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">metadata_endpoint</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">URL where metadata about the SSO configuration is available (e.g.,</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">for SAML configurations).</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'URL</span><span class="nv"> </span><span class="s">where</span><span class="nv"> </span><span class="s">metadata</span><span class="nv"> </span><span class="s">about</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">SSO</span><span class="nv"> </span><span class="s">configuration</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">available</span><span class="nv"> </span><span class="s">(e.g.,</span>
+<span class="w">      </span><span class="s">for</span><span class="nv"> </span><span class="s">SAML</span>
+
+<span class="w">      </span><span class="s">configurations).'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Metadata Endpoint</span>
@@ -951,8 +1021,10 @@
 <span class="w">    </span><span class="nt">recommended</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">protocol_name</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">protocol_name</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The supported protocol for the SSO resource. E.g., &lt;code&gt;SAML&lt;/code&gt;</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">or &lt;code&gt;OIDC&lt;/code&gt;.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">supported</span><span class="nv"> </span><span class="s">protocol</span><span class="nv"> </span><span class="s">for</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">SSO</span><span class="nv"> </span><span class="s">resource.</span><span class="nv"> </span><span class="s">E.g.,</span><span class="nv"> </span><span class="s">&lt;code&gt;SAML&lt;/code&gt;</span>
+<span class="w">      </span><span class="s">or</span>
+
+<span class="w">      </span><span class="s">&lt;code&gt;OIDC&lt;/code&gt;.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Protocol Name</span>
@@ -972,10 +1044,14 @@
 <span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">string</span>
 <span class="w">  </span><span class="nt">scopes</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">scopes</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Scopes define the specific permissions or actions that the client</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">is allowed to perform on behalf of the user. Each scope represents a different</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">set of permissions, and the user can selectively grant or deny access to specific</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">scopes during the authorization process.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'Scopes</span><span class="nv"> </span><span class="s">define</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">specific</span><span class="nv"> </span><span class="s">permissions</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">actions</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">client</span>
+<span class="w">      </span><span class="s">is</span><span class="nv"> </span><span class="s">allowed</span><span class="nv"> </span><span class="s">to</span>
+
+<span class="w">      </span><span class="s">perform</span><span class="nv"> </span><span class="s">on</span><span class="nv"> </span><span class="s">behalf</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">user.</span><span class="nv"> </span><span class="s">Each</span><span class="nv"> </span><span class="s">scope</span><span class="nv"> </span><span class="s">represents</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">different</span><span class="nv"> </span><span class="s">set</span><span class="nv"> </span><span class="s">of</span>
+
+<span class="w">      </span><span class="s">permissions,</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">user</span><span class="nv"> </span><span class="s">can</span><span class="nv"> </span><span class="s">selectively</span><span class="nv"> </span><span class="s">grant</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">deny</span><span class="nv"> </span><span class="s">access</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">specific</span>
+
+<span class="w">      </span><span class="s">scopes</span><span class="nv"> </span><span class="s">during</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">authorization</span><span class="nv"> </span><span class="s">process.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Scopes</span>
@@ -1083,8 +1159,9 @@
 <span class="w">    </span><span class="nt">recommended</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">vendor_name</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">vendor_name</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Name of the vendor or service provider implementing SSO. E.g., &lt;code&gt;Okta&lt;/code&gt;,</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">&lt;code&gt;Auth0&lt;/code&gt;, &lt;code&gt;Microsoft&lt;/code&gt;.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'Name</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">vendor</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">service</span><span class="nv"> </span><span class="s">provider</span><span class="nv"> </span><span class="s">implementing</span><span class="nv"> </span><span class="s">SSO.</span><span class="nv"> </span><span class="s">E.g.,</span>
+
+<span class="w">      </span><span class="s">&lt;code&gt;Okta&lt;/code&gt;,</span><span class="nv"> </span><span class="s">&lt;code&gt;Auth0&lt;/code&gt;,</span><span class="nv"> </span><span class="s">&lt;code&gt;Microsoft&lt;/code&gt;.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Vendor Name</span>

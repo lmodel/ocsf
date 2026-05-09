@@ -236,6 +236,15 @@
 </nav>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="#in-subsets">
+<span class="md-ellipsis">
+      
+        In Subsets
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#aliases">
 <span class="md-ellipsis">
       
@@ -341,7 +350,11 @@
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
 <h1 id="class-applicationobject">Class: ApplicationObject</h1>
-<p><em>An Application describes the details for an inventoried application as reported by an Application Security tool or other Developer-centric tooling. Applications can be defined as Kubernetes resources, Containerized resources, or application hosting-specific cloud sources such as AWS Elastic BeanStalk, AWS Lightsail, or Azure Logic Apps.</em></p>
+<p><em>An Application describes the details for an inventoried application as reported</em></p>
+<p><em>by an Application Security tool or other Developer-centric tooling.</em></p>
+<p><em>Applications can be defined as Kubernetes resources, Containerized resources,</em></p>
+<p><em>or application hosting-specific cloud sources such as AWS Elastic BeanStalk,</em></p>
+<p><em>AWS Lightsail, or Azure Logic Apps.</em></p>
 <p>URI: <a href="https://w3id.org/lmodel/ocsf/ApplicationObject">ocsf:ApplicationObject</a></p>
 <pre class="mermaid"><code> classDiagram
     class ApplicationObject
@@ -489,7 +502,7 @@
 <tr>
 <td><a href="../desc/">desc</a></td>
 <td>0..1 <br/> <a href="../String/">String</a></td>
-<td>A description or commentary for an application, usually retrieved from an ups...</td>
+<td>A description or commentary for an application, usually retrieved from an</td>
 <td>direct</td>
 </tr>
 <tr>
@@ -531,7 +544,7 @@
 <tr>
 <td><a href="../resource_relationship/">resource_relationship</a></td>
 <td>0..1 <br/> <a href="../Graph/">Graph</a></td>
-<td>A graph representation showing how this application relates to and interacts ...</td>
+<td>A graph representation showing how this application relates to and interacts</td>
 <td>direct</td>
 </tr>
 <tr>
@@ -579,7 +592,7 @@
 <tr>
 <td><a href="../uid_alt/">uid_alt</a></td>
 <td>0..1 <br/> <a href="../String/">String</a></td>
-<td>An alternative or contextual identifier for the application, such as a config...</td>
+<td>An alternative or contextual identifier for the application, such as a</td>
 <td>direct</td>
 </tr>
 <tr>
@@ -647,6 +660,10 @@
 </tr>
 </tbody>
 </table>
+<h2 id="in-subsets">In Subsets</h2>
+<ul>
+<li><a href="../Objects/">Objects</a></li>
+</ul>
 <h2 id="aliases">Aliases</h2>
 <ul>
 <li>Application</li>
@@ -657,7 +674,8 @@
 </ul>
 <h2 id="notes">Notes</h2>
 <ul>
-<li>D3FEND™ Ontology d3f:Application. — <a href="https://d3fend.mitre.org/dao/artifact/d3f:Application/">https://d3fend.mitre.org/dao/artifact/d3f:Application/</a></li>
+<li>D3FEND™ Ontology d3f:Application. —
+<a href="https://d3fend.mitre.org/dao/artifact/d3f:Application/">https://d3fend.mitre.org/dao/artifact/d3f:Application/</a></li>
 </ul>
 <h2 id="identifier-and-mapping-information">Identifier and Mapping Information</h2>
 <h3 id="annotations">Annotations</h3>
@@ -711,13 +729,22 @@
 <span class="w">  </span><span class="nt">ocsf_constraints</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ocsf_constraints</span>
 <span class="w">    </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="s">'{"at_least_one":</span><span class="nv"> </span><span class="s">["uid",</span><span class="nv"> </span><span class="s">"name"]}'</span>
-<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">An Application describes the details for an inventoried application as</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">reported by an Application Security tool or other Developer-centric tooling. Applications</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">can be defined as Kubernetes resources, Containerized resources, or application</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">hosting-specific cloud sources such as AWS Elastic BeanStalk, AWS Lightsail, or</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">Azure Logic Apps.</span>
+<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'An</span><span class="nv"> </span><span class="s">Application</span><span class="nv"> </span><span class="s">describes</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">details</span><span class="nv"> </span><span class="s">for</span><span class="nv"> </span><span class="s">an</span><span class="nv"> </span><span class="s">inventoried</span><span class="nv"> </span><span class="s">application</span>
+<span class="w">  </span><span class="s">as</span><span class="nv"> </span><span class="s">reported</span>
+
+<span class="w">  </span><span class="s">by</span><span class="nv"> </span><span class="s">an</span><span class="nv"> </span><span class="s">Application</span><span class="nv"> </span><span class="s">Security</span><span class="nv"> </span><span class="s">tool</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">other</span><span class="nv"> </span><span class="s">Developer-centric</span><span class="nv"> </span><span class="s">tooling.</span>
+
+<span class="w">  </span><span class="s">Applications</span><span class="nv"> </span><span class="s">can</span><span class="nv"> </span><span class="s">be</span><span class="nv"> </span><span class="s">defined</span><span class="nv"> </span><span class="s">as</span><span class="nv"> </span><span class="s">Kubernetes</span><span class="nv"> </span><span class="s">resources,</span><span class="nv"> </span><span class="s">Containerized</span><span class="nv"> </span><span class="s">resources,</span>
+
+<span class="w">  </span><span class="s">or</span><span class="nv"> </span><span class="s">application</span><span class="nv"> </span><span class="s">hosting-specific</span><span class="nv"> </span><span class="s">cloud</span><span class="nv"> </span><span class="s">sources</span><span class="nv"> </span><span class="s">such</span><span class="nv"> </span><span class="s">as</span><span class="nv"> </span><span class="s">AWS</span><span class="nv"> </span><span class="s">Elastic</span><span class="nv"> </span><span class="s">BeanStalk,</span>
+
+<span class="w">  </span><span class="s">AWS</span><span class="nv"> </span><span class="s">Lightsail,</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">Azure</span><span class="nv"> </span><span class="s">Logic</span><span class="nv"> </span><span class="s">Apps.'</span>
 <span class="nt">notes</span><span class="p">:</span>
-<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">D3FEND™ Ontology d3f:Application. — https://d3fend.mitre.org/dao/artifact/d3f:Application/</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="s">'D3FEND™</span><span class="nv"> </span><span class="s">Ontology</span><span class="nv"> </span><span class="s">d3f:Application.</span><span class="nv"> </span><span class="s">—</span>
+
+<span class="w">  </span><span class="s">https://d3fend.mitre.org/dao/artifact/d3f:Application/'</span>
+<span class="nt">in_subset</span><span class="p">:</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">objects</span>
 <span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="nt">see_also</span><span class="p">:</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://d3fend.mitre.org/dao/artifact/d3f:Application/</span>
@@ -756,8 +783,10 @@
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Additional data describing the application.</span>
 <span class="w">  </span><span class="nt">desc</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">desc</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">A description or commentary for an application, usually retrieved</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">from an upstream system.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'A</span><span class="nv"> </span><span class="s">description</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">commentary</span><span class="nv"> </span><span class="s">for</span><span class="nv"> </span><span class="s">an</span><span class="nv"> </span><span class="s">application,</span><span class="nv"> </span><span class="s">usually</span><span class="nv"> </span><span class="s">retrieved</span>
+<span class="w">      </span><span class="s">from</span><span class="nv"> </span><span class="s">an</span>
+
+<span class="w">      </span><span class="s">upstream</span><span class="nv"> </span><span class="s">system.'</span>
 <span class="w">  </span><span class="nt">group</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">group</span>
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The name of the related application or associated resource group.</span>
@@ -780,9 +809,12 @@
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The cloud region of the resource.</span>
 <span class="w">  </span><span class="nt">resource_relationship</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">resource_relationship</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">A graph representation showing how this application relates to and</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">interacts with other entities in the environment. This can include parent/child</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">relationships, dependencies, or other connections.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'A</span><span class="nv"> </span><span class="s">graph</span><span class="nv"> </span><span class="s">representation</span><span class="nv"> </span><span class="s">showing</span><span class="nv"> </span><span class="s">how</span><span class="nv"> </span><span class="s">this</span><span class="nv"> </span><span class="s">application</span><span class="nv"> </span><span class="s">relates</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">and</span>
+<span class="w">      </span><span class="s">interacts</span>
+
+<span class="w">      </span><span class="s">with</span><span class="nv"> </span><span class="s">other</span><span class="nv"> </span><span class="s">entities</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">environment.</span><span class="nv"> </span><span class="s">This</span><span class="nv"> </span><span class="s">can</span><span class="nv"> </span><span class="s">include</span><span class="nv"> </span><span class="s">parent/child</span>
+
+<span class="w">      </span><span class="s">relationships,</span><span class="nv"> </span><span class="s">dependencies,</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">other</span><span class="nv"> </span><span class="s">connections.'</span>
 <span class="w">  </span><span class="nt">sbom</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">sbom</span>
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The Software Bill of Materials (SBOM) associated with the application</span>
@@ -792,16 +824,21 @@
 <span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">application.</span>
 <span class="w">  </span><span class="nt">type</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">type</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The type of application as defined by the event source, e.g., &lt;code&gt;GitHub&lt;/code&gt;,</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">&lt;code&gt;Azure Logic App&lt;/code&gt;, or &lt;code&gt;Amazon Elastic BeanStalk&lt;/code&gt;.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">type</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">application</span><span class="nv"> </span><span class="s">as</span><span class="nv"> </span><span class="s">defined</span><span class="nv"> </span><span class="s">by</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">event</span><span class="nv"> </span><span class="s">source,</span><span class="nv"> </span><span class="s">e.g.,</span>
+
+<span class="w">      </span><span class="s">&lt;code&gt;GitHub&lt;/code&gt;,</span><span class="nv"> </span><span class="s">&lt;code&gt;Azure</span><span class="nv"> </span><span class="s">Logic</span><span class="nv"> </span><span class="s">App&lt;/code&gt;,</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">&lt;code&gt;Amazon</span><span class="nv"> </span><span class="s">Elastic</span>
+
+<span class="w">      </span><span class="s">BeanStalk&lt;/code&gt;.'</span>
 <span class="w">  </span><span class="nt">uid</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">uid</span>
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The unique identifier for the application.</span>
 <span class="w">    </span><span class="nt">recommended</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">uid_alt</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">uid_alt</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">An alternative or contextual identifier for the application, such</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">as a configuration, organization, or license UID.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'An</span><span class="nv"> </span><span class="s">alternative</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">contextual</span><span class="nv"> </span><span class="s">identifier</span><span class="nv"> </span><span class="s">for</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">application,</span><span class="nv"> </span><span class="s">such</span>
+<span class="w">      </span><span class="s">as</span><span class="nv"> </span><span class="s">a</span>
+
+<span class="w">      </span><span class="s">configuration,</span><span class="nv"> </span><span class="s">organization,</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">license</span><span class="nv"> </span><span class="s">UID.'</span>
 <span class="w">  </span><span class="nt">url</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">url</span>
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The URL of the application.</span>
@@ -829,13 +866,22 @@
 <span class="w">  </span><span class="nt">ocsf_constraints</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ocsf_constraints</span>
 <span class="w">    </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="s">'{"at_least_one":</span><span class="nv"> </span><span class="s">["uid",</span><span class="nv"> </span><span class="s">"name"]}'</span>
-<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">An Application describes the details for an inventoried application as</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">reported by an Application Security tool or other Developer-centric tooling. Applications</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">can be defined as Kubernetes resources, Containerized resources, or application</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">hosting-specific cloud sources such as AWS Elastic BeanStalk, AWS Lightsail, or</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">Azure Logic Apps.</span>
+<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'An</span><span class="nv"> </span><span class="s">Application</span><span class="nv"> </span><span class="s">describes</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">details</span><span class="nv"> </span><span class="s">for</span><span class="nv"> </span><span class="s">an</span><span class="nv"> </span><span class="s">inventoried</span><span class="nv"> </span><span class="s">application</span>
+<span class="w">  </span><span class="s">as</span><span class="nv"> </span><span class="s">reported</span>
+
+<span class="w">  </span><span class="s">by</span><span class="nv"> </span><span class="s">an</span><span class="nv"> </span><span class="s">Application</span><span class="nv"> </span><span class="s">Security</span><span class="nv"> </span><span class="s">tool</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">other</span><span class="nv"> </span><span class="s">Developer-centric</span><span class="nv"> </span><span class="s">tooling.</span>
+
+<span class="w">  </span><span class="s">Applications</span><span class="nv"> </span><span class="s">can</span><span class="nv"> </span><span class="s">be</span><span class="nv"> </span><span class="s">defined</span><span class="nv"> </span><span class="s">as</span><span class="nv"> </span><span class="s">Kubernetes</span><span class="nv"> </span><span class="s">resources,</span><span class="nv"> </span><span class="s">Containerized</span><span class="nv"> </span><span class="s">resources,</span>
+
+<span class="w">  </span><span class="s">or</span><span class="nv"> </span><span class="s">application</span><span class="nv"> </span><span class="s">hosting-specific</span><span class="nv"> </span><span class="s">cloud</span><span class="nv"> </span><span class="s">sources</span><span class="nv"> </span><span class="s">such</span><span class="nv"> </span><span class="s">as</span><span class="nv"> </span><span class="s">AWS</span><span class="nv"> </span><span class="s">Elastic</span><span class="nv"> </span><span class="s">BeanStalk,</span>
+
+<span class="w">  </span><span class="s">AWS</span><span class="nv"> </span><span class="s">Lightsail,</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">Azure</span><span class="nv"> </span><span class="s">Logic</span><span class="nv"> </span><span class="s">Apps.'</span>
 <span class="nt">notes</span><span class="p">:</span>
-<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">D3FEND™ Ontology d3f:Application. — https://d3fend.mitre.org/dao/artifact/d3f:Application/</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="s">'D3FEND™</span><span class="nv"> </span><span class="s">Ontology</span><span class="nv"> </span><span class="s">d3f:Application.</span><span class="nv"> </span><span class="s">—</span>
+
+<span class="w">  </span><span class="s">https://d3fend.mitre.org/dao/artifact/d3f:Application/'</span>
+<span class="nt">in_subset</span><span class="p">:</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">objects</span>
 <span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="nt">see_also</span><span class="p">:</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://d3fend.mitre.org/dao/artifact/d3f:Application/</span>
@@ -853,8 +899,10 @@
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Additional data describing the application.</span>
 <span class="w">  </span><span class="nt">desc</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">desc</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">A description or commentary for an application, usually retrieved</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">from an upstream system.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'A</span><span class="nv"> </span><span class="s">description</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">commentary</span><span class="nv"> </span><span class="s">for</span><span class="nv"> </span><span class="s">an</span><span class="nv"> </span><span class="s">application,</span><span class="nv"> </span><span class="s">usually</span><span class="nv"> </span><span class="s">retrieved</span>
+<span class="w">      </span><span class="s">from</span><span class="nv"> </span><span class="s">an</span>
+
+<span class="w">      </span><span class="s">upstream</span><span class="nv"> </span><span class="s">system.'</span>
 <span class="w">  </span><span class="nt">group</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">group</span>
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The name of the related application or associated resource group.</span>
@@ -877,9 +925,12 @@
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The cloud region of the resource.</span>
 <span class="w">  </span><span class="nt">resource_relationship</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">resource_relationship</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">A graph representation showing how this application relates to and</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">interacts with other entities in the environment. This can include parent/child</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">relationships, dependencies, or other connections.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'A</span><span class="nv"> </span><span class="s">graph</span><span class="nv"> </span><span class="s">representation</span><span class="nv"> </span><span class="s">showing</span><span class="nv"> </span><span class="s">how</span><span class="nv"> </span><span class="s">this</span><span class="nv"> </span><span class="s">application</span><span class="nv"> </span><span class="s">relates</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">and</span>
+<span class="w">      </span><span class="s">interacts</span>
+
+<span class="w">      </span><span class="s">with</span><span class="nv"> </span><span class="s">other</span><span class="nv"> </span><span class="s">entities</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">environment.</span><span class="nv"> </span><span class="s">This</span><span class="nv"> </span><span class="s">can</span><span class="nv"> </span><span class="s">include</span><span class="nv"> </span><span class="s">parent/child</span>
+
+<span class="w">      </span><span class="s">relationships,</span><span class="nv"> </span><span class="s">dependencies,</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">other</span><span class="nv"> </span><span class="s">connections.'</span>
 <span class="w">  </span><span class="nt">sbom</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">sbom</span>
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The Software Bill of Materials (SBOM) associated with the application</span>
@@ -889,16 +940,21 @@
 <span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">application.</span>
 <span class="w">  </span><span class="nt">type</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">type</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The type of application as defined by the event source, e.g., &lt;code&gt;GitHub&lt;/code&gt;,</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">&lt;code&gt;Azure Logic App&lt;/code&gt;, or &lt;code&gt;Amazon Elastic BeanStalk&lt;/code&gt;.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">type</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">application</span><span class="nv"> </span><span class="s">as</span><span class="nv"> </span><span class="s">defined</span><span class="nv"> </span><span class="s">by</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">event</span><span class="nv"> </span><span class="s">source,</span><span class="nv"> </span><span class="s">e.g.,</span>
+
+<span class="w">      </span><span class="s">&lt;code&gt;GitHub&lt;/code&gt;,</span><span class="nv"> </span><span class="s">&lt;code&gt;Azure</span><span class="nv"> </span><span class="s">Logic</span><span class="nv"> </span><span class="s">App&lt;/code&gt;,</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">&lt;code&gt;Amazon</span><span class="nv"> </span><span class="s">Elastic</span>
+
+<span class="w">      </span><span class="s">BeanStalk&lt;/code&gt;.'</span>
 <span class="w">  </span><span class="nt">uid</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">uid</span>
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The unique identifier for the application.</span>
 <span class="w">    </span><span class="nt">recommended</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">uid_alt</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">uid_alt</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">An alternative or contextual identifier for the application, such</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">as a configuration, organization, or license UID.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'An</span><span class="nv"> </span><span class="s">alternative</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">contextual</span><span class="nv"> </span><span class="s">identifier</span><span class="nv"> </span><span class="s">for</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">application,</span><span class="nv"> </span><span class="s">such</span>
+<span class="w">      </span><span class="s">as</span><span class="nv"> </span><span class="s">a</span>
+
+<span class="w">      </span><span class="s">configuration,</span><span class="nv"> </span><span class="s">organization,</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">license</span><span class="nv"> </span><span class="s">UID.'</span>
 <span class="w">  </span><span class="nt">url</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">url</span>
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The URL of the application.</span>
@@ -947,8 +1003,10 @@
 <span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">string</span>
 <span class="w">  </span><span class="nt">desc</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">desc</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">A description or commentary for an application, usually retrieved</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">from an upstream system.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'A</span><span class="nv"> </span><span class="s">description</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">commentary</span><span class="nv"> </span><span class="s">for</span><span class="nv"> </span><span class="s">an</span><span class="nv"> </span><span class="s">application,</span><span class="nv"> </span><span class="s">usually</span><span class="nv"> </span><span class="s">retrieved</span>
+<span class="w">      </span><span class="s">from</span><span class="nv"> </span><span class="s">an</span>
+
+<span class="w">      </span><span class="s">upstream</span><span class="nv"> </span><span class="s">system.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Description</span>
@@ -1191,9 +1249,12 @@
 <span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">string</span>
 <span class="w">  </span><span class="nt">resource_relationship</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">resource_relationship</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">A graph representation showing how this application relates to and</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">interacts with other entities in the environment. This can include parent/child</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">relationships, dependencies, or other connections.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'A</span><span class="nv"> </span><span class="s">graph</span><span class="nv"> </span><span class="s">representation</span><span class="nv"> </span><span class="s">showing</span><span class="nv"> </span><span class="s">how</span><span class="nv"> </span><span class="s">this</span><span class="nv"> </span><span class="s">application</span><span class="nv"> </span><span class="s">relates</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">and</span>
+<span class="w">      </span><span class="s">interacts</span>
+
+<span class="w">      </span><span class="s">with</span><span class="nv"> </span><span class="s">other</span><span class="nv"> </span><span class="s">entities</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">environment.</span><span class="nv"> </span><span class="s">This</span><span class="nv"> </span><span class="s">can</span><span class="nv"> </span><span class="s">include</span><span class="nv"> </span><span class="s">parent/child</span>
+
+<span class="w">      </span><span class="s">relationships,</span><span class="nv"> </span><span class="s">dependencies,</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">other</span><span class="nv"> </span><span class="s">connections.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Resource Relationship</span>
@@ -1306,8 +1367,11 @@
 <span class="w">    </span><span class="nt">multivalued</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">type</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">type</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The type of application as defined by the event source, e.g., &lt;code&gt;GitHub&lt;/code&gt;,</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">&lt;code&gt;Azure Logic App&lt;/code&gt;, or &lt;code&gt;Amazon Elastic BeanStalk&lt;/code&gt;.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">type</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">application</span><span class="nv"> </span><span class="s">as</span><span class="nv"> </span><span class="s">defined</span><span class="nv"> </span><span class="s">by</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">event</span><span class="nv"> </span><span class="s">source,</span><span class="nv"> </span><span class="s">e.g.,</span>
+
+<span class="w">      </span><span class="s">&lt;code&gt;GitHub&lt;/code&gt;,</span><span class="nv"> </span><span class="s">&lt;code&gt;Azure</span><span class="nv"> </span><span class="s">Logic</span><span class="nv"> </span><span class="s">App&lt;/code&gt;,</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">&lt;code&gt;Amazon</span><span class="nv"> </span><span class="s">Elastic</span>
+
+<span class="w">      </span><span class="s">BeanStalk&lt;/code&gt;.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Type</span>
@@ -1473,8 +1537,10 @@
 <span class="w">    </span><span class="nt">recommended</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">uid_alt</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">uid_alt</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">An alternative or contextual identifier for the application, such</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">as a configuration, organization, or license UID.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'An</span><span class="nv"> </span><span class="s">alternative</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">contextual</span><span class="nv"> </span><span class="s">identifier</span><span class="nv"> </span><span class="s">for</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">application,</span><span class="nv"> </span><span class="s">such</span>
+<span class="w">      </span><span class="s">as</span><span class="nv"> </span><span class="s">a</span>
+
+<span class="w">      </span><span class="s">configuration,</span><span class="nv"> </span><span class="s">organization,</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">license</span><span class="nv"> </span><span class="s">UID.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Alternate ID</span>

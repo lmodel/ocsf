@@ -217,6 +217,15 @@
 </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="#in-subsets">
+<span class="md-ellipsis">
+      
+        In Subsets
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#aliases">
 <span class="md-ellipsis">
       
@@ -295,7 +304,10 @@
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
 <h1 id="class-advisory">Class: Advisory</h1>
-<p><em>The Advisory object represents publicly disclosed cybersecurity vulnerabilities defined in a Security advisory. e.g. <code> Microsoft KB Article</code>, <code>Apple Security Advisory</code>, or a <code>GitHub Security Advisory (GHSA)</code></em></p>
+<p><em>The Advisory object represents publicly disclosed cybersecurity vulnerabilities</em></p>
+<p><em>defined in a Security advisory. e.g. <code> Microsoft KB Article</code>,</em></p>
+<p><em><code>Apple Security Advisory</code>, or a <code>GitHub Security Advisory</code></em></p>
+<p><em>(GHSA)</em></p>
 <p>URI: <a href="https://w3id.org/lmodel/ocsf/Advisory">ocsf:Advisory</a></p>
 <pre class="mermaid"><code> classDiagram
     class Advisory
@@ -490,13 +502,13 @@
 <tr>
 <td><a href="../related_cves/">related_cves</a></td>
 <td>* <br/> <a href="../Cve/">Cve</a></td>
-<td>A list of Common Vulnerabilities and Exposures &lt;a target='_blank' href='https...</td>
+<td>A list of Common Vulnerabilities and Exposures &lt;a target='_blank'</td>
 <td>direct</td>
 </tr>
 <tr>
 <td><a href="../related_cwes/">related_cwes</a></td>
 <td>* <br/> <a href="../Cwe/">Cwe</a></td>
-<td>A list of Common Weakness Enumeration &lt;a target='_blank' href='<a href="https://cwe">https://cwe</a></td>
+<td>A list of Common Weakness Enumeration &lt;a target='_blank'</td>
 <td>direct</td>
 </tr>
 <tr>
@@ -544,6 +556,10 @@
 </tr>
 </tbody>
 </table>
+<h2 id="in-subsets">In Subsets</h2>
+<ul>
+<li><a href="../Objects/">Objects</a></li>
+</ul>
 <h2 id="aliases">Aliases</h2>
 <ul>
 <li>Advisory</li>
@@ -581,9 +597,15 @@
 <h3 id="direct">Direct</h3>
 <details>
 <div class="highlight"><pre><span></span><code><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Advisory</span>
-<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The Advisory object represents publicly disclosed cybersecurity vulnerabilities</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">defined in a Security advisory. e.g. &lt;code&gt; Microsoft KB Article&lt;/code&gt;, &lt;code&gt;Apple</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">Security Advisory&lt;/code&gt;, or a &lt;code&gt;GitHub Security Advisory (GHSA)&lt;/code&gt;</span>
+<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">Advisory</span><span class="nv"> </span><span class="s">object</span><span class="nv"> </span><span class="s">represents</span><span class="nv"> </span><span class="s">publicly</span><span class="nv"> </span><span class="s">disclosed</span><span class="nv"> </span><span class="s">cybersecurity</span><span class="nv"> </span><span class="s">vulnerabilities</span>
+
+<span class="w">  </span><span class="s">defined</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">Security</span><span class="nv"> </span><span class="s">advisory.</span><span class="nv"> </span><span class="s">e.g.</span><span class="nv"> </span><span class="s">&lt;code&gt;</span><span class="nv"> </span><span class="s">Microsoft</span><span class="nv"> </span><span class="s">KB</span><span class="nv"> </span><span class="s">Article&lt;/code&gt;,</span>
+
+<span class="w">  </span><span class="s">&lt;code&gt;Apple</span><span class="nv"> </span><span class="s">Security</span><span class="nv"> </span><span class="s">Advisory&lt;/code&gt;,</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">&lt;code&gt;GitHub</span><span class="nv"> </span><span class="s">Security</span><span class="nv"> </span><span class="s">Advisory</span>
+
+<span class="w">  </span><span class="s">(GHSA)&lt;/code&gt;'</span>
+<span class="nt">in_subset</span><span class="p">:</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">objects</span>
 <span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="nt">aliases</span><span class="p">:</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Advisory</span>
@@ -649,18 +671,24 @@
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The product where the vulnerability was discovered.</span>
 <span class="w">  </span><span class="nt">references</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">references</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">A list of reference URLs with additional information about the vulnerabilities</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">disclosed in the Advisory.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'A</span><span class="nv"> </span><span class="s">list</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">reference</span><span class="nv"> </span><span class="s">URLs</span><span class="nv"> </span><span class="s">with</span><span class="nv"> </span><span class="s">additional</span><span class="nv"> </span><span class="s">information</span><span class="nv"> </span><span class="s">about</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">vulnerabilities</span>
+
+<span class="w">      </span><span class="s">disclosed</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">Advisory.'</span>
 <span class="w">    </span><span class="nt">recommended</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">related_cves</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">related_cves</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">A list of Common Vulnerabilities and Exposures &lt;a target='_blank'</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">href='https://cve.mitre.org/'&gt;(CVE)&lt;/a&gt; identifiers related to the vulnerabilities</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">disclosed in the Advisory.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'A</span><span class="nv"> </span><span class="s">list</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">Common</span><span class="nv"> </span><span class="s">Vulnerabilities</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">Exposures</span><span class="nv"> </span><span class="s">&lt;a</span><span class="nv"> </span><span class="s">target=</span><span class="se">''</span><span class="s">_blank</span><span class="se">''</span>
+
+<span class="w">      </span><span class="s">href=</span><span class="se">''</span><span class="s">https://cve.mitre.org/</span><span class="se">''</span><span class="s">&gt;(CVE)&lt;/a&gt;</span><span class="nv"> </span><span class="s">identifiers</span><span class="nv"> </span><span class="s">related</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">the</span>
+
+<span class="w">      </span><span class="s">vulnerabilities</span><span class="nv"> </span><span class="s">disclosed</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">Advisory.'</span>
 <span class="w">  </span><span class="nt">related_cwes</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">related_cwes</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">A list of Common Weakness Enumeration &lt;a target='_blank' href='https://cwe.mitre.org/'&gt;(CWE)&lt;/a&gt;</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">identifiers related to the vulnerabilities disclosed in the Advisory.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'A</span><span class="nv"> </span><span class="s">list</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">Common</span><span class="nv"> </span><span class="s">Weakness</span><span class="nv"> </span><span class="s">Enumeration</span><span class="nv"> </span><span class="s">&lt;a</span><span class="nv"> </span><span class="s">target=</span><span class="se">''</span><span class="s">_blank</span><span class="se">''</span>
+
+<span class="w">      </span><span class="s">href=</span><span class="se">''</span><span class="s">https://cwe.mitre.org/</span><span class="se">''</span><span class="s">&gt;(CWE)&lt;/a&gt;</span><span class="nv"> </span><span class="s">identifiers</span><span class="nv"> </span><span class="s">related</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">the</span>
+
+<span class="w">      </span><span class="s">vulnerabilities</span><span class="nv"> </span><span class="s">disclosed</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">Advisory.'</span>
 <span class="w">  </span><span class="nt">size</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">size</span>
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The size in bytes for the Advisory. Usually populated for a KB Article</span>
@@ -674,17 +702,25 @@
 <span class="w">    </span><span class="nt">recommended</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">uid</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">uid</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The unique identifier assigned to the advisory or disclosed vulnerability,</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">e.g, &lt;code&gt;GHSA-5mrr-rgp6-x4gr&lt;/code&gt;.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">unique</span><span class="nv"> </span><span class="s">identifier</span><span class="nv"> </span><span class="s">assigned</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">advisory</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">disclosed</span><span class="nv"> </span><span class="s">vulnerability,</span>
+<span class="w">      </span><span class="s">e.g,</span>
+
+<span class="w">      </span><span class="s">&lt;code&gt;GHSA-5mrr-rgp6-x4gr&lt;/code&gt;.'</span>
 <span class="w">    </span><span class="nt">required</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 </code></pre></div>
 </details>
 <h3 id="induced">Induced</h3>
 <details>
 <div class="highlight"><pre><span></span><code><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Advisory</span>
-<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The Advisory object represents publicly disclosed cybersecurity vulnerabilities</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">defined in a Security advisory. e.g. &lt;code&gt; Microsoft KB Article&lt;/code&gt;, &lt;code&gt;Apple</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">Security Advisory&lt;/code&gt;, or a &lt;code&gt;GitHub Security Advisory (GHSA)&lt;/code&gt;</span>
+<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">Advisory</span><span class="nv"> </span><span class="s">object</span><span class="nv"> </span><span class="s">represents</span><span class="nv"> </span><span class="s">publicly</span><span class="nv"> </span><span class="s">disclosed</span><span class="nv"> </span><span class="s">cybersecurity</span><span class="nv"> </span><span class="s">vulnerabilities</span>
+
+<span class="w">  </span><span class="s">defined</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">Security</span><span class="nv"> </span><span class="s">advisory.</span><span class="nv"> </span><span class="s">e.g.</span><span class="nv"> </span><span class="s">&lt;code&gt;</span><span class="nv"> </span><span class="s">Microsoft</span><span class="nv"> </span><span class="s">KB</span><span class="nv"> </span><span class="s">Article&lt;/code&gt;,</span>
+
+<span class="w">  </span><span class="s">&lt;code&gt;Apple</span><span class="nv"> </span><span class="s">Security</span><span class="nv"> </span><span class="s">Advisory&lt;/code&gt;,</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">&lt;code&gt;GitHub</span><span class="nv"> </span><span class="s">Security</span><span class="nv"> </span><span class="s">Advisory</span>
+
+<span class="w">  </span><span class="s">(GHSA)&lt;/code&gt;'</span>
+<span class="nt">in_subset</span><span class="p">:</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">objects</span>
 <span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="nt">aliases</span><span class="p">:</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Advisory</span>
@@ -731,18 +767,24 @@
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The product where the vulnerability was discovered.</span>
 <span class="w">  </span><span class="nt">references</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">references</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">A list of reference URLs with additional information about the vulnerabilities</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">disclosed in the Advisory.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'A</span><span class="nv"> </span><span class="s">list</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">reference</span><span class="nv"> </span><span class="s">URLs</span><span class="nv"> </span><span class="s">with</span><span class="nv"> </span><span class="s">additional</span><span class="nv"> </span><span class="s">information</span><span class="nv"> </span><span class="s">about</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">vulnerabilities</span>
+
+<span class="w">      </span><span class="s">disclosed</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">Advisory.'</span>
 <span class="w">    </span><span class="nt">recommended</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">related_cves</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">related_cves</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">A list of Common Vulnerabilities and Exposures &lt;a target='_blank'</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">href='https://cve.mitre.org/'&gt;(CVE)&lt;/a&gt; identifiers related to the vulnerabilities</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">disclosed in the Advisory.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'A</span><span class="nv"> </span><span class="s">list</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">Common</span><span class="nv"> </span><span class="s">Vulnerabilities</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">Exposures</span><span class="nv"> </span><span class="s">&lt;a</span><span class="nv"> </span><span class="s">target=</span><span class="se">''</span><span class="s">_blank</span><span class="se">''</span>
+
+<span class="w">      </span><span class="s">href=</span><span class="se">''</span><span class="s">https://cve.mitre.org/</span><span class="se">''</span><span class="s">&gt;(CVE)&lt;/a&gt;</span><span class="nv"> </span><span class="s">identifiers</span><span class="nv"> </span><span class="s">related</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">the</span>
+
+<span class="w">      </span><span class="s">vulnerabilities</span><span class="nv"> </span><span class="s">disclosed</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">Advisory.'</span>
 <span class="w">  </span><span class="nt">related_cwes</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">related_cwes</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">A list of Common Weakness Enumeration &lt;a target='_blank' href='https://cwe.mitre.org/'&gt;(CWE)&lt;/a&gt;</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">identifiers related to the vulnerabilities disclosed in the Advisory.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'A</span><span class="nv"> </span><span class="s">list</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">Common</span><span class="nv"> </span><span class="s">Weakness</span><span class="nv"> </span><span class="s">Enumeration</span><span class="nv"> </span><span class="s">&lt;a</span><span class="nv"> </span><span class="s">target=</span><span class="se">''</span><span class="s">_blank</span><span class="se">''</span>
+
+<span class="w">      </span><span class="s">href=</span><span class="se">''</span><span class="s">https://cwe.mitre.org/</span><span class="se">''</span><span class="s">&gt;(CWE)&lt;/a&gt;</span><span class="nv"> </span><span class="s">identifiers</span><span class="nv"> </span><span class="s">related</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">the</span>
+
+<span class="w">      </span><span class="s">vulnerabilities</span><span class="nv"> </span><span class="s">disclosed</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">Advisory.'</span>
 <span class="w">  </span><span class="nt">size</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">size</span>
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The size in bytes for the Advisory. Usually populated for a KB Article</span>
@@ -756,8 +798,10 @@
 <span class="w">    </span><span class="nt">recommended</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">uid</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">uid</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The unique identifier assigned to the advisory or disclosed vulnerability,</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">e.g, &lt;code&gt;GHSA-5mrr-rgp6-x4gr&lt;/code&gt;.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">unique</span><span class="nv"> </span><span class="s">identifier</span><span class="nv"> </span><span class="s">assigned</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">advisory</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">disclosed</span><span class="nv"> </span><span class="s">vulnerability,</span>
+<span class="w">      </span><span class="s">e.g,</span>
+
+<span class="w">      </span><span class="s">&lt;code&gt;GHSA-5mrr-rgp6-x4gr&lt;/code&gt;.'</span>
 <span class="w">    </span><span class="nt">required</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="nt">attributes</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">avg_timespan</span><span class="p">:</span>
@@ -997,8 +1041,9 @@
 <span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Product</span>
 <span class="w">  </span><span class="nt">references</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">references</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">A list of reference URLs with additional information about the vulnerabilities</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">disclosed in the Advisory.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'A</span><span class="nv"> </span><span class="s">list</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">reference</span><span class="nv"> </span><span class="s">URLs</span><span class="nv"> </span><span class="s">with</span><span class="nv"> </span><span class="s">additional</span><span class="nv"> </span><span class="s">information</span><span class="nv"> </span><span class="s">about</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">vulnerabilities</span>
+
+<span class="w">      </span><span class="s">disclosed</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">Advisory.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">References</span>
@@ -1016,9 +1061,11 @@
 <span class="w">    </span><span class="nt">multivalued</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">related_cves</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">related_cves</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">A list of Common Vulnerabilities and Exposures &lt;a target='_blank'</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">href='https://cve.mitre.org/'&gt;(CVE)&lt;/a&gt; identifiers related to the vulnerabilities</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">disclosed in the Advisory.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'A</span><span class="nv"> </span><span class="s">list</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">Common</span><span class="nv"> </span><span class="s">Vulnerabilities</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">Exposures</span><span class="nv"> </span><span class="s">&lt;a</span><span class="nv"> </span><span class="s">target=</span><span class="se">''</span><span class="s">_blank</span><span class="se">''</span>
+
+<span class="w">      </span><span class="s">href=</span><span class="se">''</span><span class="s">https://cve.mitre.org/</span><span class="se">''</span><span class="s">&gt;(CVE)&lt;/a&gt;</span><span class="nv"> </span><span class="s">identifiers</span><span class="nv"> </span><span class="s">related</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">the</span>
+
+<span class="w">      </span><span class="s">vulnerabilities</span><span class="nv"> </span><span class="s">disclosed</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">Advisory.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Related CVEs</span>
@@ -1031,8 +1078,11 @@
 <span class="w">    </span><span class="nt">multivalued</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">related_cwes</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">related_cwes</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">A list of Common Weakness Enumeration &lt;a target='_blank' href='https://cwe.mitre.org/'&gt;(CWE)&lt;/a&gt;</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">identifiers related to the vulnerabilities disclosed in the Advisory.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'A</span><span class="nv"> </span><span class="s">list</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">Common</span><span class="nv"> </span><span class="s">Weakness</span><span class="nv"> </span><span class="s">Enumeration</span><span class="nv"> </span><span class="s">&lt;a</span><span class="nv"> </span><span class="s">target=</span><span class="se">''</span><span class="s">_blank</span><span class="se">''</span>
+
+<span class="w">      </span><span class="s">href=</span><span class="se">''</span><span class="s">https://cwe.mitre.org/</span><span class="se">''</span><span class="s">&gt;(CWE)&lt;/a&gt;</span><span class="nv"> </span><span class="s">identifiers</span><span class="nv"> </span><span class="s">related</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">the</span>
+
+<span class="w">      </span><span class="s">vulnerabilities</span><span class="nv"> </span><span class="s">disclosed</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">Advisory.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Related CWEs</span>
@@ -1119,8 +1169,10 @@
 <span class="w">    </span><span class="nt">recommended</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">uid</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">uid</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The unique identifier assigned to the advisory or disclosed vulnerability,</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">e.g, &lt;code&gt;GHSA-5mrr-rgp6-x4gr&lt;/code&gt;.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">unique</span><span class="nv"> </span><span class="s">identifier</span><span class="nv"> </span><span class="s">assigned</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">advisory</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">disclosed</span><span class="nv"> </span><span class="s">vulnerability,</span>
+<span class="w">      </span><span class="s">e.g,</span>
+
+<span class="w">      </span><span class="s">&lt;code&gt;GHSA-5mrr-rgp6-x4gr&lt;/code&gt;.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Unique ID</span>

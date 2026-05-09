@@ -497,7 +497,9 @@
 
 
 <h1 id="slot-svc_name">Slot: svc_name</h1>
-<p><em>The service name in service-to-service connections. For example, AWS VPC logs the pkt-src-aws-service and pkt-dst-aws-service fields identify the connection is coming from or going to an AWS service.</em></p>
+<p><em>The service name in service-to-service connections. For example, AWS VPC logs</em></p>
+<p><em>the pkt-src-aws-service and pkt-dst-aws-service fields identify the connection</em></p>
+<p><em>is coming from or going to an AWS service.</em></p>
 <p>URI: <a href="https://w3id.org/lmodel/ocsf/svc_name">ocsf:svc_name</a>
 Alias: svc_name</p>
 <!-- no inheritance hierarchy -->
@@ -513,18 +515,18 @@ Alias: svc_name</p>
 </thead>
 <tbody>
 <tr>
-<td><a href="../WinResource/">WinResource</a></td>
-<td>The Windows resource object describes a resource object managed by Windows, s...</td>
+<td><a href="../NetworkEndpoint/">NetworkEndpoint</a></td>
+<td>The Network Endpoint object describes characteristics of a network endpoint</td>
 <td>yes</td>
 </tr>
 <tr>
 <td><a href="../NetworkProxy/">NetworkProxy</a></td>
-<td>The network proxy endpoint object describes a proxy server, which acts as an ...</td>
+<td>The network proxy endpoint object describes a proxy server, which acts as an</td>
 <td>no</td>
 </tr>
 <tr>
-<td><a href="../NetworkEndpoint/">NetworkEndpoint</a></td>
-<td>The Network Endpoint object describes characteristics of a network endpoint</td>
+<td><a href="../WinResource/">WinResource</a></td>
+<td>The Windows resource object describes a resource object managed by Windows,</td>
 <td>yes</td>
 </tr>
 </tbody>
@@ -595,9 +597,12 @@ Alias: svc_name</p>
 <h2 id="linkml-source">LinkML Source</h2>
 <details>
 <div class="highlight"><pre><span></span><code><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">svc_name</span>
-<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The service name in service-to-service connections. For example, AWS</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">VPC logs the pkt-src-aws-service and pkt-dst-aws-service fields identify the connection</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">is coming from or going to an AWS service.</span>
+<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;The</span><span class="nv"> </span><span class="s">service</span><span class="nv"> </span><span class="s">name</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">service-to-service</span><span class="nv"> </span><span class="s">connections.</span><span class="nv"> </span><span class="s">For</span><span class="nv"> </span><span class="s">example,</span><span class="nv"> </span><span class="s">AWS</span>
+<span class="w">  </span><span class="s">VPC</span><span class="nv"> </span><span class="s">logs</span>
+
+<span class="w">  </span><span class="s">the</span><span class="nv"> </span><span class="s">pkt-src-aws-service</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">pkt-dst-aws-service</span><span class="nv"> </span><span class="s">fields</span><span class="nv"> </span><span class="s">identify</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">connection</span>
+
+<span class="w">  </span><span class="s">is</span><span class="nv"> </span><span class="s">coming</span><span class="nv"> </span><span class="s">from</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">going</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">an</span><span class="nv"> </span><span class="s">AWS</span><span class="nv"> </span><span class="s">service.&#39;</span>
 <span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="nt">aliases</span><span class="p">:</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Service Name</span>

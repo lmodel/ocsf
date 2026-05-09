@@ -236,6 +236,15 @@
 </nav>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="#in-subsets">
+<span class="md-ellipsis">
+      
+        In Subsets
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#aliases">
 <span class="md-ellipsis">
       
@@ -323,7 +332,12 @@
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
 <h1 id="class-managedentity">Class: ManagedEntity</h1>
-<p><em>The Managed Entity object describes the type and version of an entity, such as a user, device, or policy.  For types in the <code>type_id</code> enum list, an associated attribute should be populated.  If the type of entity is not in the <code>type_id</code> list, information can be put into the <code>data</code> attribute, <code>type_id</code> should be 'Other' and the <code>type</code> attribute should label the entity type.</em></p>
+<p><em>The Managed Entity object describes the type and version of an entity, such as</em></p>
+<p><em>a user, device, or policy.  For types in the <code>type_id</code> enum list, an</em></p>
+<p><em>associated attribute should be populated.  If the type of entity is not in the</em></p>
+<p><em><code>type_id</code> list, information can be put into the <code>data</code></em></p>
+<p><em>attribute, <code>type_id</code> should be 'Other' and the <code>type</code></em></p>
+<p><em>attribute should label the entity type.</em></p>
 <p>URI: <a href="https://w3id.org/lmodel/ocsf/ManagedEntity">ocsf:ManagedEntity</a></p>
 <pre class="mermaid"><code> classDiagram
     class ManagedEntity
@@ -493,7 +507,7 @@
 <tr>
 <td><a href="../org/">org</a></td>
 <td>0..1 <em>recommended</em> <br/> <a href="../Organization/">Organization</a></td>
-<td>The Organization object containing details about the managed organizational e...</td>
+<td>The Organization object containing details about the managed organizational</td>
 <td>direct</td>
 </tr>
 <tr>
@@ -579,6 +593,10 @@
 </tr>
 </tbody>
 </table>
+<h2 id="in-subsets">In Subsets</h2>
+<ul>
+<li><a href="../Objects/">Objects</a></li>
+</ul>
 <h2 id="aliases">Aliases</h2>
 <ul>
 <li>Managed Entity</li>
@@ -631,12 +649,20 @@
 <span class="w">  </span><span class="nt">ocsf_constraints</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ocsf_constraints</span>
 <span class="w">    </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="s">'{"at_least_one":</span><span class="nv"> </span><span class="s">["name",</span><span class="nv"> </span><span class="s">"uid",</span><span class="nv"> </span><span class="s">"device",</span><span class="nv"> </span><span class="s">"group",</span><span class="nv"> </span><span class="s">"org",</span><span class="nv"> </span><span class="s">"policy",</span><span class="nv"> </span><span class="s">"user"]}'</span>
-<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The Managed Entity object describes the type and version of an entity,</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">such as a user, device, or policy.  For types in the &lt;code&gt;type_id&lt;/code&gt; enum list,</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">an associated attribute should be populated.  If the type of entity is not in the</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">&lt;code&gt;type_id&lt;/code&gt; list, information can be put into the &lt;code&gt;data&lt;/code&gt; attribute,</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">&lt;code&gt;type_id&lt;/code&gt; should be 'Other' and the &lt;code&gt;type&lt;/code&gt; attribute should</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">label the entity type.</span>
+<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">Managed</span><span class="nv"> </span><span class="s">Entity</span><span class="nv"> </span><span class="s">object</span><span class="nv"> </span><span class="s">describes</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">type</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">version</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">an</span><span class="nv"> </span><span class="s">entity,</span>
+<span class="w">  </span><span class="s">such</span><span class="nv"> </span><span class="s">as</span>
+
+<span class="w">  </span><span class="s">a</span><span class="nv"> </span><span class="s">user,</span><span class="nv"> </span><span class="s">device,</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">policy.</span><span class="nv">  </span><span class="s">For</span><span class="nv"> </span><span class="s">types</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">&lt;code&gt;type_id&lt;/code&gt;</span><span class="nv"> </span><span class="s">enum</span><span class="nv"> </span><span class="s">list,</span><span class="nv"> </span><span class="s">an</span>
+
+<span class="w">  </span><span class="s">associated</span><span class="nv"> </span><span class="s">attribute</span><span class="nv"> </span><span class="s">should</span><span class="nv"> </span><span class="s">be</span><span class="nv"> </span><span class="s">populated.</span><span class="nv">  </span><span class="s">If</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">type</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">entity</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">not</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">the</span>
+
+<span class="w">  </span><span class="s">&lt;code&gt;type_id&lt;/code&gt;</span><span class="nv"> </span><span class="s">list,</span><span class="nv"> </span><span class="s">information</span><span class="nv"> </span><span class="s">can</span><span class="nv"> </span><span class="s">be</span><span class="nv"> </span><span class="s">put</span><span class="nv"> </span><span class="s">into</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">&lt;code&gt;data&lt;/code&gt;</span>
+
+<span class="w">  </span><span class="s">attribute,</span><span class="nv"> </span><span class="s">&lt;code&gt;type_id&lt;/code&gt;</span><span class="nv"> </span><span class="s">should</span><span class="nv"> </span><span class="s">be</span><span class="nv"> </span><span class="se">''</span><span class="s">Other</span><span class="se">''</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">&lt;code&gt;type&lt;/code&gt;</span>
+
+<span class="w">  </span><span class="s">attribute</span><span class="nv"> </span><span class="s">should</span><span class="nv"> </span><span class="s">label</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">entity</span><span class="nv"> </span><span class="s">type.'</span>
+<span class="nt">in_subset</span><span class="p">:</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">objects</span>
 <span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="nt">aliases</span><span class="p">:</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Managed Entity</span>
@@ -670,15 +696,21 @@
 <span class="w">    </span><span class="nt">recommended</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">name</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">name</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The name of the managed entity. It should match the name of the specific</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">entity object's name if populated, or the name of the managed entity if the</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">&lt;code&gt;type_id&lt;/code&gt; is 'Other'.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">name</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">managed</span><span class="nv"> </span><span class="s">entity.</span><span class="nv"> </span><span class="s">It</span><span class="nv"> </span><span class="s">should</span><span class="nv"> </span><span class="s">match</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">name</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span>
+<span class="w">      </span><span class="s">specific</span><span class="nv"> </span><span class="s">entity</span>
+
+<span class="w">      </span><span class="s">object</span><span class="se">''</span><span class="s">s</span><span class="nv"> </span><span class="s">name</span><span class="nv"> </span><span class="s">if</span><span class="nv"> </span><span class="s">populated,</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">name</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">managed</span><span class="nv"> </span><span class="s">entity</span><span class="nv"> </span><span class="s">if</span><span class="nv"> </span><span class="s">the</span>
+
+<span class="w">      </span><span class="s">&lt;code&gt;type_id&lt;/code&gt;</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="se">''</span><span class="s">Other</span><span class="se">''</span><span class="s">.'</span>
 <span class="w">  </span><span class="nt">org</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">org</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The Organization object containing details about the managed organizational</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">entity. This object includes properties such as the organization name, unique</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">identifier, type, and other organizational metadata. This attribute should be</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">populated when &lt;code&gt;type_id&lt;/code&gt; is &lt;code&gt;4&lt;/code&gt; (Organization).</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">Organization</span><span class="nv"> </span><span class="s">object</span><span class="nv"> </span><span class="s">containing</span><span class="nv"> </span><span class="s">details</span><span class="nv"> </span><span class="s">about</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">managed</span><span class="nv"> </span><span class="s">organizational</span>
+
+<span class="w">      </span><span class="s">entity.</span><span class="nv"> </span><span class="s">This</span><span class="nv"> </span><span class="s">object</span><span class="nv"> </span><span class="s">includes</span><span class="nv"> </span><span class="s">properties</span><span class="nv"> </span><span class="s">such</span><span class="nv"> </span><span class="s">as</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">organization</span><span class="nv"> </span><span class="s">name,</span><span class="nv"> </span><span class="s">unique</span>
+
+<span class="w">      </span><span class="s">identifier,</span><span class="nv"> </span><span class="s">type,</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">other</span><span class="nv"> </span><span class="s">organizational</span><span class="nv"> </span><span class="s">metadata.</span><span class="nv"> </span><span class="s">This</span><span class="nv"> </span><span class="s">attribute</span><span class="nv"> </span><span class="s">should</span><span class="nv"> </span><span class="s">be</span>
+
+<span class="w">      </span><span class="s">populated</span><span class="nv"> </span><span class="s">when</span><span class="nv"> </span><span class="s">&lt;code&gt;type_id&lt;/code&gt;</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">&lt;code&gt;4&lt;/code&gt;</span><span class="nv"> </span><span class="s">(Organization).'</span>
 <span class="w">    </span><span class="nt">recommended</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">policy</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">policy</span>
@@ -687,20 +719,28 @@
 <span class="w">  </span><span class="nt">type</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">type</span>
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">managed</span><span class="nv"> </span><span class="s">entity</span><span class="nv"> </span><span class="s">type.</span><span class="nv"> </span><span class="s">For</span><span class="nv"> </span><span class="s">example:</span><span class="nv"> </span><span class="s">&lt;code&gt;Policy&lt;/code&gt;,</span><span class="nv"> </span><span class="s">&lt;code&gt;User&lt;/code&gt;,</span>
+
 <span class="w">      </span><span class="s">&lt;code&gt;Organization&lt;/code&gt;,</span><span class="nv"> </span><span class="s">&lt;code&gt;Device&lt;/code&gt;.'</span>
 <span class="w">    </span><span class="nt">recommended</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">type_id</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">type_id</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The type of the Managed Entity. It is recommended to also populate</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">the &lt;code&gt;type&lt;/code&gt; attribute with the associated label, or the source specific</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">name if &lt;code&gt;Other&lt;/code&gt;.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">type</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">Managed</span><span class="nv"> </span><span class="s">Entity.</span><span class="nv"> </span><span class="s">It</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">recommended</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">also</span><span class="nv"> </span><span class="s">populate</span>
+<span class="w">      </span><span class="s">the</span>
+
+<span class="w">      </span><span class="s">&lt;code&gt;type&lt;/code&gt;</span><span class="nv"> </span><span class="s">attribute</span><span class="nv"> </span><span class="s">with</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">associated</span><span class="nv"> </span><span class="s">label,</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">source</span><span class="nv"> </span><span class="s">specific</span>
+
+<span class="w">      </span><span class="s">name</span><span class="nv"> </span><span class="s">if</span><span class="nv"> </span><span class="s">&lt;code&gt;Other&lt;/code&gt;.'</span>
 <span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ManagedEntityTypeIdEnum</span>
 <span class="w">    </span><span class="nt">recommended</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">uid</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">uid</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The identifier of the managed entity. It should match the &lt;code&gt;uid&lt;/code&gt;</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">of the specific entity's object UID if populated, or the source specific ID</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">if the &lt;code&gt;type_id&lt;/code&gt; is 'Other'.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">identifier</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">managed</span><span class="nv"> </span><span class="s">entity.</span><span class="nv"> </span><span class="s">It</span><span class="nv"> </span><span class="s">should</span><span class="nv"> </span><span class="s">match</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">&lt;code&gt;uid&lt;/code&gt;</span>
+<span class="w">      </span><span class="s">of</span>
+
+<span class="w">      </span><span class="s">the</span><span class="nv"> </span><span class="s">specific</span><span class="nv"> </span><span class="s">entity</span><span class="se">''</span><span class="s">s</span><span class="nv"> </span><span class="s">object</span><span class="nv"> </span><span class="s">UID</span><span class="nv"> </span><span class="s">if</span><span class="nv"> </span><span class="s">populated,</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">source</span><span class="nv"> </span><span class="s">specific</span><span class="nv"> </span><span class="s">ID</span><span class="nv"> </span><span class="s">if</span>
+<span class="w">      </span><span class="s">the</span>
+
+<span class="w">      </span><span class="s">&lt;code&gt;type_id&lt;/code&gt;</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="se">''</span><span class="s">Other</span><span class="se">''</span><span class="s">.'</span>
 <span class="w">  </span><span class="nt">user</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">user</span>
 <span class="w">    </span><span class="nt">recommended</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
@@ -740,7 +780,9 @@
 <span class="w">          </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">user</span>
 <span class="w">          </span><span class="nt">required</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'OCSF</span><span class="nv"> </span><span class="s">at_least_one:</span><span class="nv"> </span><span class="s">at</span><span class="nv"> </span><span class="s">least</span><span class="nv"> </span><span class="s">one</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">[</span><span class="se">''</span><span class="s">name</span><span class="se">''</span><span class="s">,</span><span class="nv"> </span><span class="se">''</span><span class="s">uid</span><span class="se">''</span><span class="s">,</span><span class="nv"> </span><span class="se">''</span><span class="s">device</span><span class="se">''</span><span class="s">,</span>
-<span class="w">    </span><span class="se">''</span><span class="s">group</span><span class="se">''</span><span class="s">,</span><span class="nv"> </span><span class="se">''</span><span class="s">org</span><span class="se">''</span><span class="s">,</span><span class="nv"> </span><span class="se">''</span><span class="s">policy</span><span class="se">''</span><span class="s">,</span><span class="nv"> </span><span class="se">''</span><span class="s">user</span><span class="se">''</span><span class="s">]</span><span class="nv"> </span><span class="s">must</span><span class="nv"> </span><span class="s">be</span><span class="nv"> </span><span class="s">set.'</span>
+<span class="w">    </span><span class="se">''</span><span class="s">group</span><span class="se">''</span><span class="s">,</span><span class="nv"> </span><span class="se">''</span><span class="s">org</span><span class="se">''</span><span class="s">,</span>
+
+<span class="w">    </span><span class="se">''</span><span class="s">policy</span><span class="se">''</span><span class="s">,</span><span class="nv"> </span><span class="se">''</span><span class="s">user</span><span class="se">''</span><span class="s">]</span><span class="nv"> </span><span class="s">must</span><span class="nv"> </span><span class="s">be</span><span class="nv"> </span><span class="s">set.'</span>
 </code></pre></div>
 </details>
 <h3 id="induced">Induced</h3>
@@ -750,12 +792,20 @@
 <span class="w">  </span><span class="nt">ocsf_constraints</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ocsf_constraints</span>
 <span class="w">    </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="s">'{"at_least_one":</span><span class="nv"> </span><span class="s">["name",</span><span class="nv"> </span><span class="s">"uid",</span><span class="nv"> </span><span class="s">"device",</span><span class="nv"> </span><span class="s">"group",</span><span class="nv"> </span><span class="s">"org",</span><span class="nv"> </span><span class="s">"policy",</span><span class="nv"> </span><span class="s">"user"]}'</span>
-<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The Managed Entity object describes the type and version of an entity,</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">such as a user, device, or policy.  For types in the &lt;code&gt;type_id&lt;/code&gt; enum list,</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">an associated attribute should be populated.  If the type of entity is not in the</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">&lt;code&gt;type_id&lt;/code&gt; list, information can be put into the &lt;code&gt;data&lt;/code&gt; attribute,</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">&lt;code&gt;type_id&lt;/code&gt; should be 'Other' and the &lt;code&gt;type&lt;/code&gt; attribute should</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">label the entity type.</span>
+<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">Managed</span><span class="nv"> </span><span class="s">Entity</span><span class="nv"> </span><span class="s">object</span><span class="nv"> </span><span class="s">describes</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">type</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">version</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">an</span><span class="nv"> </span><span class="s">entity,</span>
+<span class="w">  </span><span class="s">such</span><span class="nv"> </span><span class="s">as</span>
+
+<span class="w">  </span><span class="s">a</span><span class="nv"> </span><span class="s">user,</span><span class="nv"> </span><span class="s">device,</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">policy.</span><span class="nv">  </span><span class="s">For</span><span class="nv"> </span><span class="s">types</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">&lt;code&gt;type_id&lt;/code&gt;</span><span class="nv"> </span><span class="s">enum</span><span class="nv"> </span><span class="s">list,</span><span class="nv"> </span><span class="s">an</span>
+
+<span class="w">  </span><span class="s">associated</span><span class="nv"> </span><span class="s">attribute</span><span class="nv"> </span><span class="s">should</span><span class="nv"> </span><span class="s">be</span><span class="nv"> </span><span class="s">populated.</span><span class="nv">  </span><span class="s">If</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">type</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">entity</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">not</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">the</span>
+
+<span class="w">  </span><span class="s">&lt;code&gt;type_id&lt;/code&gt;</span><span class="nv"> </span><span class="s">list,</span><span class="nv"> </span><span class="s">information</span><span class="nv"> </span><span class="s">can</span><span class="nv"> </span><span class="s">be</span><span class="nv"> </span><span class="s">put</span><span class="nv"> </span><span class="s">into</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">&lt;code&gt;data&lt;/code&gt;</span>
+
+<span class="w">  </span><span class="s">attribute,</span><span class="nv"> </span><span class="s">&lt;code&gt;type_id&lt;/code&gt;</span><span class="nv"> </span><span class="s">should</span><span class="nv"> </span><span class="s">be</span><span class="nv"> </span><span class="se">''</span><span class="s">Other</span><span class="se">''</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">&lt;code&gt;type&lt;/code&gt;</span>
+
+<span class="w">  </span><span class="s">attribute</span><span class="nv"> </span><span class="s">should</span><span class="nv"> </span><span class="s">label</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">entity</span><span class="nv"> </span><span class="s">type.'</span>
+<span class="nt">in_subset</span><span class="p">:</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">objects</span>
 <span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="nt">aliases</span><span class="p">:</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Managed Entity</span>
@@ -775,15 +825,21 @@
 <span class="w">    </span><span class="nt">recommended</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">name</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">name</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The name of the managed entity. It should match the name of the specific</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">entity object's name if populated, or the name of the managed entity if the</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">&lt;code&gt;type_id&lt;/code&gt; is 'Other'.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">name</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">managed</span><span class="nv"> </span><span class="s">entity.</span><span class="nv"> </span><span class="s">It</span><span class="nv"> </span><span class="s">should</span><span class="nv"> </span><span class="s">match</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">name</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span>
+<span class="w">      </span><span class="s">specific</span><span class="nv"> </span><span class="s">entity</span>
+
+<span class="w">      </span><span class="s">object</span><span class="se">''</span><span class="s">s</span><span class="nv"> </span><span class="s">name</span><span class="nv"> </span><span class="s">if</span><span class="nv"> </span><span class="s">populated,</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">name</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">managed</span><span class="nv"> </span><span class="s">entity</span><span class="nv"> </span><span class="s">if</span><span class="nv"> </span><span class="s">the</span>
+
+<span class="w">      </span><span class="s">&lt;code&gt;type_id&lt;/code&gt;</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="se">''</span><span class="s">Other</span><span class="se">''</span><span class="s">.'</span>
 <span class="w">  </span><span class="nt">org</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">org</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The Organization object containing details about the managed organizational</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">entity. This object includes properties such as the organization name, unique</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">identifier, type, and other organizational metadata. This attribute should be</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">populated when &lt;code&gt;type_id&lt;/code&gt; is &lt;code&gt;4&lt;/code&gt; (Organization).</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">Organization</span><span class="nv"> </span><span class="s">object</span><span class="nv"> </span><span class="s">containing</span><span class="nv"> </span><span class="s">details</span><span class="nv"> </span><span class="s">about</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">managed</span><span class="nv"> </span><span class="s">organizational</span>
+
+<span class="w">      </span><span class="s">entity.</span><span class="nv"> </span><span class="s">This</span><span class="nv"> </span><span class="s">object</span><span class="nv"> </span><span class="s">includes</span><span class="nv"> </span><span class="s">properties</span><span class="nv"> </span><span class="s">such</span><span class="nv"> </span><span class="s">as</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">organization</span><span class="nv"> </span><span class="s">name,</span><span class="nv"> </span><span class="s">unique</span>
+
+<span class="w">      </span><span class="s">identifier,</span><span class="nv"> </span><span class="s">type,</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">other</span><span class="nv"> </span><span class="s">organizational</span><span class="nv"> </span><span class="s">metadata.</span><span class="nv"> </span><span class="s">This</span><span class="nv"> </span><span class="s">attribute</span><span class="nv"> </span><span class="s">should</span><span class="nv"> </span><span class="s">be</span>
+
+<span class="w">      </span><span class="s">populated</span><span class="nv"> </span><span class="s">when</span><span class="nv"> </span><span class="s">&lt;code&gt;type_id&lt;/code&gt;</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">&lt;code&gt;4&lt;/code&gt;</span><span class="nv"> </span><span class="s">(Organization).'</span>
 <span class="w">    </span><span class="nt">recommended</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">policy</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">policy</span>
@@ -792,20 +848,28 @@
 <span class="w">  </span><span class="nt">type</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">type</span>
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">managed</span><span class="nv"> </span><span class="s">entity</span><span class="nv"> </span><span class="s">type.</span><span class="nv"> </span><span class="s">For</span><span class="nv"> </span><span class="s">example:</span><span class="nv"> </span><span class="s">&lt;code&gt;Policy&lt;/code&gt;,</span><span class="nv"> </span><span class="s">&lt;code&gt;User&lt;/code&gt;,</span>
+
 <span class="w">      </span><span class="s">&lt;code&gt;Organization&lt;/code&gt;,</span><span class="nv"> </span><span class="s">&lt;code&gt;Device&lt;/code&gt;.'</span>
 <span class="w">    </span><span class="nt">recommended</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">type_id</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">type_id</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The type of the Managed Entity. It is recommended to also populate</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">the &lt;code&gt;type&lt;/code&gt; attribute with the associated label, or the source specific</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">name if &lt;code&gt;Other&lt;/code&gt;.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">type</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">Managed</span><span class="nv"> </span><span class="s">Entity.</span><span class="nv"> </span><span class="s">It</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">recommended</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">also</span><span class="nv"> </span><span class="s">populate</span>
+<span class="w">      </span><span class="s">the</span>
+
+<span class="w">      </span><span class="s">&lt;code&gt;type&lt;/code&gt;</span><span class="nv"> </span><span class="s">attribute</span><span class="nv"> </span><span class="s">with</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">associated</span><span class="nv"> </span><span class="s">label,</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">source</span><span class="nv"> </span><span class="s">specific</span>
+
+<span class="w">      </span><span class="s">name</span><span class="nv"> </span><span class="s">if</span><span class="nv"> </span><span class="s">&lt;code&gt;Other&lt;/code&gt;.'</span>
 <span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ManagedEntityTypeIdEnum</span>
 <span class="w">    </span><span class="nt">recommended</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">uid</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">uid</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The identifier of the managed entity. It should match the &lt;code&gt;uid&lt;/code&gt;</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">of the specific entity's object UID if populated, or the source specific ID</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">if the &lt;code&gt;type_id&lt;/code&gt; is 'Other'.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">identifier</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">managed</span><span class="nv"> </span><span class="s">entity.</span><span class="nv"> </span><span class="s">It</span><span class="nv"> </span><span class="s">should</span><span class="nv"> </span><span class="s">match</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">&lt;code&gt;uid&lt;/code&gt;</span>
+<span class="w">      </span><span class="s">of</span>
+
+<span class="w">      </span><span class="s">the</span><span class="nv"> </span><span class="s">specific</span><span class="nv"> </span><span class="s">entity</span><span class="se">''</span><span class="s">s</span><span class="nv"> </span><span class="s">object</span><span class="nv"> </span><span class="s">UID</span><span class="nv"> </span><span class="s">if</span><span class="nv"> </span><span class="s">populated,</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">source</span><span class="nv"> </span><span class="s">specific</span><span class="nv"> </span><span class="s">ID</span><span class="nv"> </span><span class="s">if</span>
+<span class="w">      </span><span class="s">the</span>
+
+<span class="w">      </span><span class="s">&lt;code&gt;type_id&lt;/code&gt;</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="se">''</span><span class="s">Other</span><span class="se">''</span><span class="s">.'</span>
 <span class="w">  </span><span class="nt">user</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">user</span>
 <span class="w">    </span><span class="nt">recommended</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
@@ -930,9 +994,12 @@
 <span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Location</span>
 <span class="w">  </span><span class="nt">name</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">name</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The name of the managed entity. It should match the name of the specific</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">entity object's name if populated, or the name of the managed entity if the</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">&lt;code&gt;type_id&lt;/code&gt; is 'Other'.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">name</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">managed</span><span class="nv"> </span><span class="s">entity.</span><span class="nv"> </span><span class="s">It</span><span class="nv"> </span><span class="s">should</span><span class="nv"> </span><span class="s">match</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">name</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span>
+<span class="w">      </span><span class="s">specific</span><span class="nv"> </span><span class="s">entity</span>
+
+<span class="w">      </span><span class="s">object</span><span class="se">''</span><span class="s">s</span><span class="nv"> </span><span class="s">name</span><span class="nv"> </span><span class="s">if</span><span class="nv"> </span><span class="s">populated,</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">name</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">managed</span><span class="nv"> </span><span class="s">entity</span><span class="nv"> </span><span class="s">if</span><span class="nv"> </span><span class="s">the</span>
+
+<span class="w">      </span><span class="s">&lt;code&gt;type_id&lt;/code&gt;</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="se">''</span><span class="s">Other</span><span class="se">''</span><span class="s">.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Name</span>
@@ -1034,10 +1101,13 @@
 <span class="w">    </span><span class="nt">recommended</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">org</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">org</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The Organization object containing details about the managed organizational</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">entity. This object includes properties such as the organization name, unique</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">identifier, type, and other organizational metadata. This attribute should be</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">populated when &lt;code&gt;type_id&lt;/code&gt; is &lt;code&gt;4&lt;/code&gt; (Organization).</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">Organization</span><span class="nv"> </span><span class="s">object</span><span class="nv"> </span><span class="s">containing</span><span class="nv"> </span><span class="s">details</span><span class="nv"> </span><span class="s">about</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">managed</span><span class="nv"> </span><span class="s">organizational</span>
+
+<span class="w">      </span><span class="s">entity.</span><span class="nv"> </span><span class="s">This</span><span class="nv"> </span><span class="s">object</span><span class="nv"> </span><span class="s">includes</span><span class="nv"> </span><span class="s">properties</span><span class="nv"> </span><span class="s">such</span><span class="nv"> </span><span class="s">as</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">organization</span><span class="nv"> </span><span class="s">name,</span><span class="nv"> </span><span class="s">unique</span>
+
+<span class="w">      </span><span class="s">identifier,</span><span class="nv"> </span><span class="s">type,</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">other</span><span class="nv"> </span><span class="s">organizational</span><span class="nv"> </span><span class="s">metadata.</span><span class="nv"> </span><span class="s">This</span><span class="nv"> </span><span class="s">attribute</span><span class="nv"> </span><span class="s">should</span><span class="nv"> </span><span class="s">be</span>
+
+<span class="w">      </span><span class="s">populated</span><span class="nv"> </span><span class="s">when</span><span class="nv"> </span><span class="s">&lt;code&gt;type_id&lt;/code&gt;</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">&lt;code&gt;4&lt;/code&gt;</span><span class="nv"> </span><span class="s">(Organization).'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Organization</span>
@@ -1077,6 +1147,7 @@
 <span class="w">  </span><span class="nt">type</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">type</span>
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">managed</span><span class="nv"> </span><span class="s">entity</span><span class="nv"> </span><span class="s">type.</span><span class="nv"> </span><span class="s">For</span><span class="nv"> </span><span class="s">example:</span><span class="nv"> </span><span class="s">&lt;code&gt;Policy&lt;/code&gt;,</span><span class="nv"> </span><span class="s">&lt;code&gt;User&lt;/code&gt;,</span>
+
 <span class="w">      </span><span class="s">&lt;code&gt;Organization&lt;/code&gt;,</span><span class="nv"> </span><span class="s">&lt;code&gt;Device&lt;/code&gt;.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
@@ -1153,9 +1224,12 @@
 <span class="w">      </span><span class="nt">sibling</span><span class="p">:</span>
 <span class="w">        </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">sibling</span>
 <span class="w">        </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">type</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The type of the Managed Entity. It is recommended to also populate</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">the &lt;code&gt;type&lt;/code&gt; attribute with the associated label, or the source specific</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">name if &lt;code&gt;Other&lt;/code&gt;.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">type</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">Managed</span><span class="nv"> </span><span class="s">Entity.</span><span class="nv"> </span><span class="s">It</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">recommended</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">also</span><span class="nv"> </span><span class="s">populate</span>
+<span class="w">      </span><span class="s">the</span>
+
+<span class="w">      </span><span class="s">&lt;code&gt;type&lt;/code&gt;</span><span class="nv"> </span><span class="s">attribute</span><span class="nv"> </span><span class="s">with</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">associated</span><span class="nv"> </span><span class="s">label,</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">source</span><span class="nv"> </span><span class="s">specific</span>
+
+<span class="w">      </span><span class="s">name</span><span class="nv"> </span><span class="s">if</span><span class="nv"> </span><span class="s">&lt;code&gt;Other&lt;/code&gt;.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Type ID</span>
@@ -1204,9 +1278,13 @@
 <span class="w">    </span><span class="nt">recommended</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">uid</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">uid</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The identifier of the managed entity. It should match the &lt;code&gt;uid&lt;/code&gt;</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">of the specific entity's object UID if populated, or the source specific ID</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">if the &lt;code&gt;type_id&lt;/code&gt; is 'Other'.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">identifier</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">managed</span><span class="nv"> </span><span class="s">entity.</span><span class="nv"> </span><span class="s">It</span><span class="nv"> </span><span class="s">should</span><span class="nv"> </span><span class="s">match</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">&lt;code&gt;uid&lt;/code&gt;</span>
+<span class="w">      </span><span class="s">of</span>
+
+<span class="w">      </span><span class="s">the</span><span class="nv"> </span><span class="s">specific</span><span class="nv"> </span><span class="s">entity</span><span class="se">''</span><span class="s">s</span><span class="nv"> </span><span class="s">object</span><span class="nv"> </span><span class="s">UID</span><span class="nv"> </span><span class="s">if</span><span class="nv"> </span><span class="s">populated,</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">source</span><span class="nv"> </span><span class="s">specific</span><span class="nv"> </span><span class="s">ID</span><span class="nv"> </span><span class="s">if</span>
+<span class="w">      </span><span class="s">the</span>
+
+<span class="w">      </span><span class="s">&lt;code&gt;type_id&lt;/code&gt;</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="se">''</span><span class="s">Other</span><span class="se">''</span><span class="s">.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Unique ID</span>
@@ -1405,7 +1483,9 @@
 <span class="w">          </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">user</span>
 <span class="w">          </span><span class="nt">required</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'OCSF</span><span class="nv"> </span><span class="s">at_least_one:</span><span class="nv"> </span><span class="s">at</span><span class="nv"> </span><span class="s">least</span><span class="nv"> </span><span class="s">one</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">[</span><span class="se">''</span><span class="s">name</span><span class="se">''</span><span class="s">,</span><span class="nv"> </span><span class="se">''</span><span class="s">uid</span><span class="se">''</span><span class="s">,</span><span class="nv"> </span><span class="se">''</span><span class="s">device</span><span class="se">''</span><span class="s">,</span>
-<span class="w">    </span><span class="se">''</span><span class="s">group</span><span class="se">''</span><span class="s">,</span><span class="nv"> </span><span class="se">''</span><span class="s">org</span><span class="se">''</span><span class="s">,</span><span class="nv"> </span><span class="se">''</span><span class="s">policy</span><span class="se">''</span><span class="s">,</span><span class="nv"> </span><span class="se">''</span><span class="s">user</span><span class="se">''</span><span class="s">]</span><span class="nv"> </span><span class="s">must</span><span class="nv"> </span><span class="s">be</span><span class="nv"> </span><span class="s">set.'</span>
+<span class="w">    </span><span class="se">''</span><span class="s">group</span><span class="se">''</span><span class="s">,</span><span class="nv"> </span><span class="se">''</span><span class="s">org</span><span class="se">''</span><span class="s">,</span>
+
+<span class="w">    </span><span class="se">''</span><span class="s">policy</span><span class="se">''</span><span class="s">,</span><span class="nv"> </span><span class="se">''</span><span class="s">user</span><span class="se">''</span><span class="s">]</span><span class="nv"> </span><span class="s">must</span><span class="nv"> </span><span class="s">be</span><span class="nv"> </span><span class="s">set.'</span>
 </code></pre></div>
 </details>
 </article>

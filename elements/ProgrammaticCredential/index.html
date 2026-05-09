@@ -217,6 +217,15 @@
 </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="#in-subsets">
+<span class="md-ellipsis">
+      
+        In Subsets
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#aliases">
 <span class="md-ellipsis">
       
@@ -295,7 +304,12 @@
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
 <h1 id="class-programmaticcredential">Class: ProgrammaticCredential</h1>
-<p><em>The Programmatic Credential object describes service-specific credentials used for direct API access and system integration. These credentials are typically issued by individual services or platforms for accessing their APIs and resources, focusing on credential lifecycle management and usage tracking. Examples include API keys, service account keys, client certificates, and vendor-specific access tokens.</em></p>
+<p><em>The Programmatic Credential object describes service-specific credentials used</em></p>
+<p><em>for direct API access and system integration. These credentials are typically</em></p>
+<p><em>issued by individual services or platforms for accessing their APIs and</em></p>
+<p><em>resources, focusing on credential lifecycle management and usage tracking.</em></p>
+<p><em>Examples include API keys, service account keys, client certificates, and</em></p>
+<p><em>vendor-specific access tokens.</em></p>
 <p>URI: <a href="https://w3id.org/lmodel/ocsf/ProgrammaticCredential">ocsf:ProgrammaticCredential</a></p>
 <pre class="mermaid"><code> classDiagram
     class ProgrammaticCredential
@@ -334,13 +348,13 @@
 <tr>
 <td><a href="../last_used_time/">last_used_time</a></td>
 <td>0..1 <br/> <a href="../TimestampT/">TimestampT</a></td>
-<td>The timestamp when this programmatic credential was last used for authenticat...</td>
+<td>The timestamp when this programmatic credential was last used for</td>
 <td>direct</td>
 </tr>
 <tr>
 <td><a href="../type/">type</a></td>
 <td>0..1 <em>recommended</em> <br/> <a href="../String/">String</a></td>
-<td>The type or category of programmatic credential, normalized to the caption of...</td>
+<td>The type or category of programmatic credential, normalized to the caption of</td>
 <td>direct</td>
 </tr>
 <tr>
@@ -376,6 +390,10 @@
 </tr>
 </tbody>
 </table>
+<h2 id="in-subsets">In Subsets</h2>
+<ul>
+<li><a href="../Objects/">Objects</a></li>
+</ul>
 <h2 id="aliases">Aliases</h2>
 <ul>
 <li>Programmatic Credential</li>
@@ -409,12 +427,20 @@
 <h3 id="direct">Direct</h3>
 <details>
 <div class="highlight"><pre><span></span><code><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ProgrammaticCredential</span>
-<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The Programmatic Credential object describes service-specific credentials</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">used for direct API access and system integration. These credentials are typically</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">issued by individual services or platforms for accessing their APIs and resources,</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">focusing on credential lifecycle management and usage tracking. Examples include</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">API keys, service account keys, client certificates, and vendor-specific access</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">tokens.</span>
+<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">Programmatic</span><span class="nv"> </span><span class="s">Credential</span><span class="nv"> </span><span class="s">object</span><span class="nv"> </span><span class="s">describes</span><span class="nv"> </span><span class="s">service-specific</span><span class="nv"> </span><span class="s">credentials</span>
+<span class="w">  </span><span class="s">used</span>
+
+<span class="w">  </span><span class="s">for</span><span class="nv"> </span><span class="s">direct</span><span class="nv"> </span><span class="s">API</span><span class="nv"> </span><span class="s">access</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">system</span><span class="nv"> </span><span class="s">integration.</span><span class="nv"> </span><span class="s">These</span><span class="nv"> </span><span class="s">credentials</span><span class="nv"> </span><span class="s">are</span><span class="nv"> </span><span class="s">typically</span>
+
+<span class="w">  </span><span class="s">issued</span><span class="nv"> </span><span class="s">by</span><span class="nv"> </span><span class="s">individual</span><span class="nv"> </span><span class="s">services</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">platforms</span><span class="nv"> </span><span class="s">for</span><span class="nv"> </span><span class="s">accessing</span><span class="nv"> </span><span class="s">their</span><span class="nv"> </span><span class="s">APIs</span><span class="nv"> </span><span class="s">and</span>
+
+<span class="w">  </span><span class="s">resources,</span><span class="nv"> </span><span class="s">focusing</span><span class="nv"> </span><span class="s">on</span><span class="nv"> </span><span class="s">credential</span><span class="nv"> </span><span class="s">lifecycle</span><span class="nv"> </span><span class="s">management</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">usage</span><span class="nv"> </span><span class="s">tracking.</span>
+
+<span class="w">  </span><span class="s">Examples</span><span class="nv"> </span><span class="s">include</span><span class="nv"> </span><span class="s">API</span><span class="nv"> </span><span class="s">keys,</span><span class="nv"> </span><span class="s">service</span><span class="nv"> </span><span class="s">account</span><span class="nv"> </span><span class="s">keys,</span><span class="nv"> </span><span class="s">client</span><span class="nv"> </span><span class="s">certificates,</span><span class="nv"> </span><span class="s">and</span>
+
+<span class="w">  </span><span class="s">vendor-specific</span><span class="nv"> </span><span class="s">access</span><span class="nv"> </span><span class="s">tokens.'</span>
+<span class="nt">in_subset</span><span class="p">:</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">objects</span>
 <span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="nt">aliases</span><span class="p">:</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Programmatic Credential</span>
@@ -426,37 +452,58 @@
 <span class="nt">slot_usage</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">last_used_time</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">last_used_time</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The timestamp when this programmatic credential was last used for</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">authentication or API access. This helps track credential usage patterns, identify</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">dormant credentials that may pose security risks, and support credential lifecycle</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">management. The timestamp should reflect the most recent successful authentication</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">or API call using this credential.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">timestamp</span><span class="nv"> </span><span class="s">when</span><span class="nv"> </span><span class="s">this</span><span class="nv"> </span><span class="s">programmatic</span><span class="nv"> </span><span class="s">credential</span><span class="nv"> </span><span class="s">was</span><span class="nv"> </span><span class="s">last</span><span class="nv"> </span><span class="s">used</span><span class="nv"> </span><span class="s">for</span>
+
+<span class="w">      </span><span class="s">authentication</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">API</span><span class="nv"> </span><span class="s">access.</span><span class="nv"> </span><span class="s">This</span><span class="nv"> </span><span class="s">helps</span><span class="nv"> </span><span class="s">track</span><span class="nv"> </span><span class="s">credential</span><span class="nv"> </span><span class="s">usage</span><span class="nv"> </span><span class="s">patterns,</span>
+
+<span class="w">      </span><span class="s">identify</span><span class="nv"> </span><span class="s">dormant</span><span class="nv"> </span><span class="s">credentials</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">may</span><span class="nv"> </span><span class="s">pose</span><span class="nv"> </span><span class="s">security</span><span class="nv"> </span><span class="s">risks,</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">support</span>
+
+<span class="w">      </span><span class="s">credential</span><span class="nv"> </span><span class="s">lifecycle</span><span class="nv"> </span><span class="s">management.</span><span class="nv"> </span><span class="s">The</span><span class="nv"> </span><span class="s">timestamp</span><span class="nv"> </span><span class="s">should</span><span class="nv"> </span><span class="s">reflect</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">most</span><span class="nv"> </span><span class="s">recent</span>
+
+<span class="w">      </span><span class="s">successful</span><span class="nv"> </span><span class="s">authentication</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">API</span><span class="nv"> </span><span class="s">call</span><span class="nv"> </span><span class="s">using</span><span class="nv"> </span><span class="s">this</span><span class="nv"> </span><span class="s">credential.'</span>
 <span class="w">  </span><span class="nt">type</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">type</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The type or category of programmatic credential, normalized to the</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">caption of the type_id value. In the case of 'Other', it is defined by the event</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">source. Examples include 'API Key', 'Service Account Key', 'Access Token', 'Client</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">Certificate', 'OAuth Token', 'Personal Access Token', etc.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">type</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">category</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">programmatic</span><span class="nv"> </span><span class="s">credential,</span><span class="nv"> </span><span class="s">normalized</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">the</span>
+<span class="w">      </span><span class="s">caption</span><span class="nv"> </span><span class="s">of</span>
+
+<span class="w">      </span><span class="s">the</span><span class="nv"> </span><span class="s">type_id</span><span class="nv"> </span><span class="s">value.</span><span class="nv"> </span><span class="s">In</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">case</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="se">''</span><span class="s">Other</span><span class="se">''</span><span class="s">,</span><span class="nv"> </span><span class="s">it</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">defined</span><span class="nv"> </span><span class="s">by</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">event</span><span class="nv"> </span><span class="s">source.</span>
+
+<span class="w">      </span><span class="s">Examples</span><span class="nv"> </span><span class="s">include</span><span class="nv"> </span><span class="se">''</span><span class="s">API</span><span class="nv"> </span><span class="s">Key</span><span class="se">''</span><span class="s">,</span><span class="nv"> </span><span class="se">''</span><span class="s">Service</span><span class="nv"> </span><span class="s">Account</span><span class="nv"> </span><span class="s">Key</span><span class="se">''</span><span class="s">,</span><span class="nv"> </span><span class="se">''</span><span class="s">Access</span><span class="nv"> </span><span class="s">Token</span><span class="se">''</span><span class="s">,</span><span class="nv"> </span><span class="se">''</span><span class="s">Client</span>
+
+<span class="w">      </span><span class="s">Certificate</span><span class="se">''</span><span class="s">,</span><span class="nv"> </span><span class="se">''</span><span class="s">OAuth</span><span class="nv"> </span><span class="s">Token</span><span class="se">''</span><span class="s">,</span><span class="nv"> </span><span class="se">''</span><span class="s">Personal</span><span class="nv"> </span><span class="s">Access</span><span class="nv"> </span><span class="s">Token</span><span class="se">''</span><span class="s">,</span><span class="nv"> </span><span class="s">etc.'</span>
 <span class="w">    </span><span class="nt">recommended</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">uid</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">uid</span>
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">unique</span><span class="nv"> </span><span class="s">identifier</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">programmatic</span><span class="nv"> </span><span class="s">credential.</span><span class="nv"> </span><span class="s">This</span><span class="nv"> </span><span class="s">could</span>
-<span class="w">      </span><span class="s">be</span><span class="nv"> </span><span class="s">an</span><span class="nv"> </span><span class="s">API</span><span class="nv"> </span><span class="s">key</span><span class="nv"> </span><span class="s">ID,</span><span class="nv"> </span><span class="s">service</span><span class="nv"> </span><span class="s">account</span><span class="nv"> </span><span class="s">key</span><span class="nv"> </span><span class="s">ID,</span><span class="nv"> </span><span class="s">access</span><span class="nv"> </span><span class="s">token</span><span class="nv"> </span><span class="s">identifier,</span><span class="nv"> </span><span class="s">certificate</span>
-<span class="w">      </span><span class="s">serial</span><span class="nv"> </span><span class="s">number,</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">other</span><span class="nv"> </span><span class="s">unique</span><span class="nv"> </span><span class="s">identifier</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">distinguishes</span><span class="nv"> </span><span class="s">this</span><span class="nv"> </span><span class="s">credential</span>
-<span class="w">      </span><span class="s">from</span><span class="nv"> </span><span class="s">others.</span><span class="nv"> </span><span class="s">Examples:</span><span class="nv"> </span><span class="s">AWS</span><span class="nv"> </span><span class="s">Access</span><span class="nv"> </span><span class="s">Key</span><span class="nv"> </span><span class="s">ID,</span><span class="nv"> </span><span class="s">GCP</span><span class="nv"> </span><span class="s">Service</span><span class="nv"> </span><span class="s">Account</span><span class="nv"> </span><span class="s">Key</span><span class="nv"> </span><span class="s">ID,</span><span class="nv"> </span><span class="s">Azure</span>
-<span class="w">      </span><span class="s">Application</span><span class="nv"> </span><span class="s">ID,</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">OAuth2</span><span class="nv"> </span><span class="s">token</span><span class="nv"> </span><span class="s">identifier.'</span>
+<span class="w">      </span><span class="s">be</span><span class="nv"> </span><span class="s">an</span><span class="nv"> </span><span class="s">API</span><span class="nv"> </span><span class="s">key</span>
+
+<span class="w">      </span><span class="s">ID,</span><span class="nv"> </span><span class="s">service</span><span class="nv"> </span><span class="s">account</span><span class="nv"> </span><span class="s">key</span><span class="nv"> </span><span class="s">ID,</span><span class="nv"> </span><span class="s">access</span><span class="nv"> </span><span class="s">token</span><span class="nv"> </span><span class="s">identifier,</span><span class="nv"> </span><span class="s">certificate</span><span class="nv"> </span><span class="s">serial</span><span class="nv"> </span><span class="s">number,</span>
+
+<span class="w">      </span><span class="s">or</span><span class="nv"> </span><span class="s">other</span><span class="nv"> </span><span class="s">unique</span><span class="nv"> </span><span class="s">identifier</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">distinguishes</span><span class="nv"> </span><span class="s">this</span><span class="nv"> </span><span class="s">credential</span><span class="nv"> </span><span class="s">from</span><span class="nv"> </span><span class="s">others.</span>
+
+<span class="w">      </span><span class="s">Examples:</span><span class="nv"> </span><span class="s">AWS</span><span class="nv"> </span><span class="s">Access</span><span class="nv"> </span><span class="s">Key</span><span class="nv"> </span><span class="s">ID,</span><span class="nv"> </span><span class="s">GCP</span><span class="nv"> </span><span class="s">Service</span><span class="nv"> </span><span class="s">Account</span><span class="nv"> </span><span class="s">Key</span><span class="nv"> </span><span class="s">ID,</span><span class="nv"> </span><span class="s">Azure</span><span class="nv"> </span><span class="s">Application</span><span class="nv"> </span><span class="s">ID,</span>
+
+<span class="w">      </span><span class="s">or</span><span class="nv"> </span><span class="s">OAuth2</span><span class="nv"> </span><span class="s">token</span><span class="nv"> </span><span class="s">identifier.'</span>
 <span class="w">    </span><span class="nt">required</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 </code></pre></div>
 </details>
 <h3 id="induced">Induced</h3>
 <details>
 <div class="highlight"><pre><span></span><code><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ProgrammaticCredential</span>
-<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The Programmatic Credential object describes service-specific credentials</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">used for direct API access and system integration. These credentials are typically</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">issued by individual services or platforms for accessing their APIs and resources,</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">focusing on credential lifecycle management and usage tracking. Examples include</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">API keys, service account keys, client certificates, and vendor-specific access</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">tokens.</span>
+<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">Programmatic</span><span class="nv"> </span><span class="s">Credential</span><span class="nv"> </span><span class="s">object</span><span class="nv"> </span><span class="s">describes</span><span class="nv"> </span><span class="s">service-specific</span><span class="nv"> </span><span class="s">credentials</span>
+<span class="w">  </span><span class="s">used</span>
+
+<span class="w">  </span><span class="s">for</span><span class="nv"> </span><span class="s">direct</span><span class="nv"> </span><span class="s">API</span><span class="nv"> </span><span class="s">access</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">system</span><span class="nv"> </span><span class="s">integration.</span><span class="nv"> </span><span class="s">These</span><span class="nv"> </span><span class="s">credentials</span><span class="nv"> </span><span class="s">are</span><span class="nv"> </span><span class="s">typically</span>
+
+<span class="w">  </span><span class="s">issued</span><span class="nv"> </span><span class="s">by</span><span class="nv"> </span><span class="s">individual</span><span class="nv"> </span><span class="s">services</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">platforms</span><span class="nv"> </span><span class="s">for</span><span class="nv"> </span><span class="s">accessing</span><span class="nv"> </span><span class="s">their</span><span class="nv"> </span><span class="s">APIs</span><span class="nv"> </span><span class="s">and</span>
+
+<span class="w">  </span><span class="s">resources,</span><span class="nv"> </span><span class="s">focusing</span><span class="nv"> </span><span class="s">on</span><span class="nv"> </span><span class="s">credential</span><span class="nv"> </span><span class="s">lifecycle</span><span class="nv"> </span><span class="s">management</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">usage</span><span class="nv"> </span><span class="s">tracking.</span>
+
+<span class="w">  </span><span class="s">Examples</span><span class="nv"> </span><span class="s">include</span><span class="nv"> </span><span class="s">API</span><span class="nv"> </span><span class="s">keys,</span><span class="nv"> </span><span class="s">service</span><span class="nv"> </span><span class="s">account</span><span class="nv"> </span><span class="s">keys,</span><span class="nv"> </span><span class="s">client</span><span class="nv"> </span><span class="s">certificates,</span><span class="nv"> </span><span class="s">and</span>
+
+<span class="w">  </span><span class="s">vendor-specific</span><span class="nv"> </span><span class="s">access</span><span class="nv"> </span><span class="s">tokens.'</span>
+<span class="nt">in_subset</span><span class="p">:</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">objects</span>
 <span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="nt">aliases</span><span class="p">:</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Programmatic Credential</span>
@@ -464,34 +511,51 @@
 <span class="nt">slot_usage</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">last_used_time</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">last_used_time</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The timestamp when this programmatic credential was last used for</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">authentication or API access. This helps track credential usage patterns, identify</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">dormant credentials that may pose security risks, and support credential lifecycle</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">management. The timestamp should reflect the most recent successful authentication</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">or API call using this credential.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">timestamp</span><span class="nv"> </span><span class="s">when</span><span class="nv"> </span><span class="s">this</span><span class="nv"> </span><span class="s">programmatic</span><span class="nv"> </span><span class="s">credential</span><span class="nv"> </span><span class="s">was</span><span class="nv"> </span><span class="s">last</span><span class="nv"> </span><span class="s">used</span><span class="nv"> </span><span class="s">for</span>
+
+<span class="w">      </span><span class="s">authentication</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">API</span><span class="nv"> </span><span class="s">access.</span><span class="nv"> </span><span class="s">This</span><span class="nv"> </span><span class="s">helps</span><span class="nv"> </span><span class="s">track</span><span class="nv"> </span><span class="s">credential</span><span class="nv"> </span><span class="s">usage</span><span class="nv"> </span><span class="s">patterns,</span>
+
+<span class="w">      </span><span class="s">identify</span><span class="nv"> </span><span class="s">dormant</span><span class="nv"> </span><span class="s">credentials</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">may</span><span class="nv"> </span><span class="s">pose</span><span class="nv"> </span><span class="s">security</span><span class="nv"> </span><span class="s">risks,</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">support</span>
+
+<span class="w">      </span><span class="s">credential</span><span class="nv"> </span><span class="s">lifecycle</span><span class="nv"> </span><span class="s">management.</span><span class="nv"> </span><span class="s">The</span><span class="nv"> </span><span class="s">timestamp</span><span class="nv"> </span><span class="s">should</span><span class="nv"> </span><span class="s">reflect</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">most</span><span class="nv"> </span><span class="s">recent</span>
+
+<span class="w">      </span><span class="s">successful</span><span class="nv"> </span><span class="s">authentication</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">API</span><span class="nv"> </span><span class="s">call</span><span class="nv"> </span><span class="s">using</span><span class="nv"> </span><span class="s">this</span><span class="nv"> </span><span class="s">credential.'</span>
 <span class="w">  </span><span class="nt">type</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">type</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The type or category of programmatic credential, normalized to the</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">caption of the type_id value. In the case of 'Other', it is defined by the event</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">source. Examples include 'API Key', 'Service Account Key', 'Access Token', 'Client</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">Certificate', 'OAuth Token', 'Personal Access Token', etc.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">type</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">category</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">programmatic</span><span class="nv"> </span><span class="s">credential,</span><span class="nv"> </span><span class="s">normalized</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">the</span>
+<span class="w">      </span><span class="s">caption</span><span class="nv"> </span><span class="s">of</span>
+
+<span class="w">      </span><span class="s">the</span><span class="nv"> </span><span class="s">type_id</span><span class="nv"> </span><span class="s">value.</span><span class="nv"> </span><span class="s">In</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">case</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="se">''</span><span class="s">Other</span><span class="se">''</span><span class="s">,</span><span class="nv"> </span><span class="s">it</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">defined</span><span class="nv"> </span><span class="s">by</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">event</span><span class="nv"> </span><span class="s">source.</span>
+
+<span class="w">      </span><span class="s">Examples</span><span class="nv"> </span><span class="s">include</span><span class="nv"> </span><span class="se">''</span><span class="s">API</span><span class="nv"> </span><span class="s">Key</span><span class="se">''</span><span class="s">,</span><span class="nv"> </span><span class="se">''</span><span class="s">Service</span><span class="nv"> </span><span class="s">Account</span><span class="nv"> </span><span class="s">Key</span><span class="se">''</span><span class="s">,</span><span class="nv"> </span><span class="se">''</span><span class="s">Access</span><span class="nv"> </span><span class="s">Token</span><span class="se">''</span><span class="s">,</span><span class="nv"> </span><span class="se">''</span><span class="s">Client</span>
+
+<span class="w">      </span><span class="s">Certificate</span><span class="se">''</span><span class="s">,</span><span class="nv"> </span><span class="se">''</span><span class="s">OAuth</span><span class="nv"> </span><span class="s">Token</span><span class="se">''</span><span class="s">,</span><span class="nv"> </span><span class="se">''</span><span class="s">Personal</span><span class="nv"> </span><span class="s">Access</span><span class="nv"> </span><span class="s">Token</span><span class="se">''</span><span class="s">,</span><span class="nv"> </span><span class="s">etc.'</span>
 <span class="w">    </span><span class="nt">recommended</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">uid</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">uid</span>
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">unique</span><span class="nv"> </span><span class="s">identifier</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">programmatic</span><span class="nv"> </span><span class="s">credential.</span><span class="nv"> </span><span class="s">This</span><span class="nv"> </span><span class="s">could</span>
-<span class="w">      </span><span class="s">be</span><span class="nv"> </span><span class="s">an</span><span class="nv"> </span><span class="s">API</span><span class="nv"> </span><span class="s">key</span><span class="nv"> </span><span class="s">ID,</span><span class="nv"> </span><span class="s">service</span><span class="nv"> </span><span class="s">account</span><span class="nv"> </span><span class="s">key</span><span class="nv"> </span><span class="s">ID,</span><span class="nv"> </span><span class="s">access</span><span class="nv"> </span><span class="s">token</span><span class="nv"> </span><span class="s">identifier,</span><span class="nv"> </span><span class="s">certificate</span>
-<span class="w">      </span><span class="s">serial</span><span class="nv"> </span><span class="s">number,</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">other</span><span class="nv"> </span><span class="s">unique</span><span class="nv"> </span><span class="s">identifier</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">distinguishes</span><span class="nv"> </span><span class="s">this</span><span class="nv"> </span><span class="s">credential</span>
-<span class="w">      </span><span class="s">from</span><span class="nv"> </span><span class="s">others.</span><span class="nv"> </span><span class="s">Examples:</span><span class="nv"> </span><span class="s">AWS</span><span class="nv"> </span><span class="s">Access</span><span class="nv"> </span><span class="s">Key</span><span class="nv"> </span><span class="s">ID,</span><span class="nv"> </span><span class="s">GCP</span><span class="nv"> </span><span class="s">Service</span><span class="nv"> </span><span class="s">Account</span><span class="nv"> </span><span class="s">Key</span><span class="nv"> </span><span class="s">ID,</span><span class="nv"> </span><span class="s">Azure</span>
-<span class="w">      </span><span class="s">Application</span><span class="nv"> </span><span class="s">ID,</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">OAuth2</span><span class="nv"> </span><span class="s">token</span><span class="nv"> </span><span class="s">identifier.'</span>
+<span class="w">      </span><span class="s">be</span><span class="nv"> </span><span class="s">an</span><span class="nv"> </span><span class="s">API</span><span class="nv"> </span><span class="s">key</span>
+
+<span class="w">      </span><span class="s">ID,</span><span class="nv"> </span><span class="s">service</span><span class="nv"> </span><span class="s">account</span><span class="nv"> </span><span class="s">key</span><span class="nv"> </span><span class="s">ID,</span><span class="nv"> </span><span class="s">access</span><span class="nv"> </span><span class="s">token</span><span class="nv"> </span><span class="s">identifier,</span><span class="nv"> </span><span class="s">certificate</span><span class="nv"> </span><span class="s">serial</span><span class="nv"> </span><span class="s">number,</span>
+
+<span class="w">      </span><span class="s">or</span><span class="nv"> </span><span class="s">other</span><span class="nv"> </span><span class="s">unique</span><span class="nv"> </span><span class="s">identifier</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">distinguishes</span><span class="nv"> </span><span class="s">this</span><span class="nv"> </span><span class="s">credential</span><span class="nv"> </span><span class="s">from</span><span class="nv"> </span><span class="s">others.</span>
+
+<span class="w">      </span><span class="s">Examples:</span><span class="nv"> </span><span class="s">AWS</span><span class="nv"> </span><span class="s">Access</span><span class="nv"> </span><span class="s">Key</span><span class="nv"> </span><span class="s">ID,</span><span class="nv"> </span><span class="s">GCP</span><span class="nv"> </span><span class="s">Service</span><span class="nv"> </span><span class="s">Account</span><span class="nv"> </span><span class="s">Key</span><span class="nv"> </span><span class="s">ID,</span><span class="nv"> </span><span class="s">Azure</span><span class="nv"> </span><span class="s">Application</span><span class="nv"> </span><span class="s">ID,</span>
+
+<span class="w">      </span><span class="s">or</span><span class="nv"> </span><span class="s">OAuth2</span><span class="nv"> </span><span class="s">token</span><span class="nv"> </span><span class="s">identifier.'</span>
 <span class="w">    </span><span class="nt">required</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="nt">attributes</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">last_used_time</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">last_used_time</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The timestamp when this programmatic credential was last used for</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">authentication or API access. This helps track credential usage patterns, identify</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">dormant credentials that may pose security risks, and support credential lifecycle</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">management. The timestamp should reflect the most recent successful authentication</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">or API call using this credential.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">timestamp</span><span class="nv"> </span><span class="s">when</span><span class="nv"> </span><span class="s">this</span><span class="nv"> </span><span class="s">programmatic</span><span class="nv"> </span><span class="s">credential</span><span class="nv"> </span><span class="s">was</span><span class="nv"> </span><span class="s">last</span><span class="nv"> </span><span class="s">used</span><span class="nv"> </span><span class="s">for</span>
+
+<span class="w">      </span><span class="s">authentication</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">API</span><span class="nv"> </span><span class="s">access.</span><span class="nv"> </span><span class="s">This</span><span class="nv"> </span><span class="s">helps</span><span class="nv"> </span><span class="s">track</span><span class="nv"> </span><span class="s">credential</span><span class="nv"> </span><span class="s">usage</span><span class="nv"> </span><span class="s">patterns,</span>
+
+<span class="w">      </span><span class="s">identify</span><span class="nv"> </span><span class="s">dormant</span><span class="nv"> </span><span class="s">credentials</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">may</span><span class="nv"> </span><span class="s">pose</span><span class="nv"> </span><span class="s">security</span><span class="nv"> </span><span class="s">risks,</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">support</span>
+
+<span class="w">      </span><span class="s">credential</span><span class="nv"> </span><span class="s">lifecycle</span><span class="nv"> </span><span class="s">management.</span><span class="nv"> </span><span class="s">The</span><span class="nv"> </span><span class="s">timestamp</span><span class="nv"> </span><span class="s">should</span><span class="nv"> </span><span class="s">reflect</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">most</span><span class="nv"> </span><span class="s">recent</span>
+
+<span class="w">      </span><span class="s">successful</span><span class="nv"> </span><span class="s">authentication</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">API</span><span class="nv"> </span><span class="s">call</span><span class="nv"> </span><span class="s">using</span><span class="nv"> </span><span class="s">this</span><span class="nv"> </span><span class="s">credential.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Last Used Time</span>
@@ -505,10 +569,14 @@
 <span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">TimestampT</span>
 <span class="w">  </span><span class="nt">type</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">type</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The type or category of programmatic credential, normalized to the</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">caption of the type_id value. In the case of 'Other', it is defined by the event</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">source. Examples include 'API Key', 'Service Account Key', 'Access Token', 'Client</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">Certificate', 'OAuth Token', 'Personal Access Token', etc.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">type</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">category</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">programmatic</span><span class="nv"> </span><span class="s">credential,</span><span class="nv"> </span><span class="s">normalized</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">the</span>
+<span class="w">      </span><span class="s">caption</span><span class="nv"> </span><span class="s">of</span>
+
+<span class="w">      </span><span class="s">the</span><span class="nv"> </span><span class="s">type_id</span><span class="nv"> </span><span class="s">value.</span><span class="nv"> </span><span class="s">In</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">case</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="se">''</span><span class="s">Other</span><span class="se">''</span><span class="s">,</span><span class="nv"> </span><span class="s">it</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">defined</span><span class="nv"> </span><span class="s">by</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">event</span><span class="nv"> </span><span class="s">source.</span>
+
+<span class="w">      </span><span class="s">Examples</span><span class="nv"> </span><span class="s">include</span><span class="nv"> </span><span class="se">''</span><span class="s">API</span><span class="nv"> </span><span class="s">Key</span><span class="se">''</span><span class="s">,</span><span class="nv"> </span><span class="se">''</span><span class="s">Service</span><span class="nv"> </span><span class="s">Account</span><span class="nv"> </span><span class="s">Key</span><span class="se">''</span><span class="s">,</span><span class="nv"> </span><span class="se">''</span><span class="s">Access</span><span class="nv"> </span><span class="s">Token</span><span class="se">''</span><span class="s">,</span><span class="nv"> </span><span class="se">''</span><span class="s">Client</span>
+
+<span class="w">      </span><span class="s">Certificate</span><span class="se">''</span><span class="s">,</span><span class="nv"> </span><span class="se">''</span><span class="s">OAuth</span><span class="nv"> </span><span class="s">Token</span><span class="se">''</span><span class="s">,</span><span class="nv"> </span><span class="se">''</span><span class="s">Personal</span><span class="nv"> </span><span class="s">Access</span><span class="nv"> </span><span class="s">Token</span><span class="se">''</span><span class="s">,</span><span class="nv"> </span><span class="s">etc.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Type</span>
@@ -581,10 +649,15 @@
 <span class="w">  </span><span class="nt">uid</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">uid</span>
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">unique</span><span class="nv"> </span><span class="s">identifier</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">programmatic</span><span class="nv"> </span><span class="s">credential.</span><span class="nv"> </span><span class="s">This</span><span class="nv"> </span><span class="s">could</span>
-<span class="w">      </span><span class="s">be</span><span class="nv"> </span><span class="s">an</span><span class="nv"> </span><span class="s">API</span><span class="nv"> </span><span class="s">key</span><span class="nv"> </span><span class="s">ID,</span><span class="nv"> </span><span class="s">service</span><span class="nv"> </span><span class="s">account</span><span class="nv"> </span><span class="s">key</span><span class="nv"> </span><span class="s">ID,</span><span class="nv"> </span><span class="s">access</span><span class="nv"> </span><span class="s">token</span><span class="nv"> </span><span class="s">identifier,</span><span class="nv"> </span><span class="s">certificate</span>
-<span class="w">      </span><span class="s">serial</span><span class="nv"> </span><span class="s">number,</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">other</span><span class="nv"> </span><span class="s">unique</span><span class="nv"> </span><span class="s">identifier</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">distinguishes</span><span class="nv"> </span><span class="s">this</span><span class="nv"> </span><span class="s">credential</span>
-<span class="w">      </span><span class="s">from</span><span class="nv"> </span><span class="s">others.</span><span class="nv"> </span><span class="s">Examples:</span><span class="nv"> </span><span class="s">AWS</span><span class="nv"> </span><span class="s">Access</span><span class="nv"> </span><span class="s">Key</span><span class="nv"> </span><span class="s">ID,</span><span class="nv"> </span><span class="s">GCP</span><span class="nv"> </span><span class="s">Service</span><span class="nv"> </span><span class="s">Account</span><span class="nv"> </span><span class="s">Key</span><span class="nv"> </span><span class="s">ID,</span><span class="nv"> </span><span class="s">Azure</span>
-<span class="w">      </span><span class="s">Application</span><span class="nv"> </span><span class="s">ID,</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">OAuth2</span><span class="nv"> </span><span class="s">token</span><span class="nv"> </span><span class="s">identifier.'</span>
+<span class="w">      </span><span class="s">be</span><span class="nv"> </span><span class="s">an</span><span class="nv"> </span><span class="s">API</span><span class="nv"> </span><span class="s">key</span>
+
+<span class="w">      </span><span class="s">ID,</span><span class="nv"> </span><span class="s">service</span><span class="nv"> </span><span class="s">account</span><span class="nv"> </span><span class="s">key</span><span class="nv"> </span><span class="s">ID,</span><span class="nv"> </span><span class="s">access</span><span class="nv"> </span><span class="s">token</span><span class="nv"> </span><span class="s">identifier,</span><span class="nv"> </span><span class="s">certificate</span><span class="nv"> </span><span class="s">serial</span><span class="nv"> </span><span class="s">number,</span>
+
+<span class="w">      </span><span class="s">or</span><span class="nv"> </span><span class="s">other</span><span class="nv"> </span><span class="s">unique</span><span class="nv"> </span><span class="s">identifier</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">distinguishes</span><span class="nv"> </span><span class="s">this</span><span class="nv"> </span><span class="s">credential</span><span class="nv"> </span><span class="s">from</span><span class="nv"> </span><span class="s">others.</span>
+
+<span class="w">      </span><span class="s">Examples:</span><span class="nv"> </span><span class="s">AWS</span><span class="nv"> </span><span class="s">Access</span><span class="nv"> </span><span class="s">Key</span><span class="nv"> </span><span class="s">ID,</span><span class="nv"> </span><span class="s">GCP</span><span class="nv"> </span><span class="s">Service</span><span class="nv"> </span><span class="s">Account</span><span class="nv"> </span><span class="s">Key</span><span class="nv"> </span><span class="s">ID,</span><span class="nv"> </span><span class="s">Azure</span><span class="nv"> </span><span class="s">Application</span><span class="nv"> </span><span class="s">ID,</span>
+
+<span class="w">      </span><span class="s">or</span><span class="nv"> </span><span class="s">OAuth2</span><span class="nv"> </span><span class="s">token</span><span class="nv"> </span><span class="s">identifier.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Unique ID</span>

@@ -217,6 +217,15 @@
 </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="#in-subsets">
+<span class="md-ellipsis">
+      
+        In Subsets
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#aliases">
 <span class="md-ellipsis">
       
@@ -313,7 +322,8 @@
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
 <h1 id="class-networkconnectioninfo">Class: NetworkConnectionInfo</h1>
-<p><em>The Network Connection Information object describes characteristics of an OSI Transport Layer communication, including TCP and UDP.</em></p>
+<p><em>The Network Connection Information object describes characteristics of an OSI</em></p>
+<p><em>Transport Layer communication, including TCP and UDP.</em></p>
 <p>URI: <a href="https://w3id.org/lmodel/ocsf/NetworkConnectionInfo">ocsf:NetworkConnectionInfo</a></p>
 <pre class="mermaid"><code> classDiagram
     class NetworkConnectionInfo
@@ -432,7 +442,7 @@
 <tr>
 <td><a href="../direction_id/">direction_id</a></td>
 <td>1 <br/> <a href="../DirectionIdEnum/">DirectionIdEnum</a></td>
-<td>The normalized identifier of the direction of the initiated connection, traff...</td>
+<td>The normalized identifier of the direction of the initiated connection,</td>
 <td>direct</td>
 </tr>
 <tr>
@@ -450,7 +460,7 @@
 <tr>
 <td><a href="../protocol_num/">protocol_num</a></td>
 <td>0..1 <em>recommended</em> <br/> <a href="../Integer/">Integer</a></td>
-<td>The IP protocol number, as defined by the Internet Assigned Numbers Authority...</td>
+<td>The IP protocol number, as defined by the Internet Assigned Numbers Authority</td>
 <td>direct</td>
 </tr>
 <tr>
@@ -720,6 +730,10 @@
 </tr>
 </tbody>
 </table>
+<h2 id="in-subsets">In Subsets</h2>
+<ul>
+<li><a href="../Objects/">Objects</a></li>
+</ul>
 <h2 id="aliases">Aliases</h2>
 <ul>
 <li>Network Connection Information</li>
@@ -730,7 +744,8 @@
 </ul>
 <h2 id="notes">Notes</h2>
 <ul>
-<li>D3FEND™ Ontology d3f:NetworkSession — <a href="https://d3fend.mitre.org/dao/artifact/d3f:NetworkSession/">https://d3fend.mitre.org/dao/artifact/d3f:NetworkSession/</a></li>
+<li>D3FEND™ Ontology d3f:NetworkSession —
+<a href="https://d3fend.mitre.org/dao/artifact/d3f:NetworkSession/">https://d3fend.mitre.org/dao/artifact/d3f:NetworkSession/</a></li>
 </ul>
 <h2 id="identifier-and-mapping-information">Identifier and Mapping Information</h2>
 <h3 id="schema-source">Schema Source</h3>
@@ -769,10 +784,16 @@
 <h3 id="direct">Direct</h3>
 <details>
 <div class="highlight"><pre><span></span><code><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">NetworkConnectionInfo</span>
-<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The Network Connection Information object describes characteristics of</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">an OSI Transport Layer communication, including TCP and UDP.</span>
+<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">Network</span><span class="nv"> </span><span class="s">Connection</span><span class="nv"> </span><span class="s">Information</span><span class="nv"> </span><span class="s">object</span><span class="nv"> </span><span class="s">describes</span><span class="nv"> </span><span class="s">characteristics</span>
+<span class="w">  </span><span class="s">of</span><span class="nv"> </span><span class="s">an</span><span class="nv"> </span><span class="s">OSI</span>
+
+<span class="w">  </span><span class="s">Transport</span><span class="nv"> </span><span class="s">Layer</span><span class="nv"> </span><span class="s">communication,</span><span class="nv"> </span><span class="s">including</span><span class="nv"> </span><span class="s">TCP</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">UDP.'</span>
 <span class="nt">notes</span><span class="p">:</span>
-<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">D3FEND™ Ontology d3f:NetworkSession — https://d3fend.mitre.org/dao/artifact/d3f:NetworkSession/</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="s">'D3FEND™</span><span class="nv"> </span><span class="s">Ontology</span><span class="nv"> </span><span class="s">d3f:NetworkSession</span><span class="nv"> </span><span class="s">—</span>
+
+<span class="w">  </span><span class="s">https://d3fend.mitre.org/dao/artifact/d3f:NetworkSession/'</span>
+<span class="nt">in_subset</span><span class="p">:</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">objects</span>
 <span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="nt">see_also</span><span class="p">:</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://d3fend.mitre.org/dao/artifact/d3f:NetworkSession/</span>
@@ -807,7 +828,9 @@
 <span class="w">  </span><span class="nt">protocol_name</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">protocol_name</span>
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">IP</span><span class="nv"> </span><span class="s">protocol</span><span class="nv"> </span><span class="s">name</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">lowercase,</span><span class="nv"> </span><span class="s">as</span><span class="nv"> </span><span class="s">defined</span><span class="nv"> </span><span class="s">by</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">Internet</span><span class="nv"> </span><span class="s">Assigned</span>
-<span class="w">      </span><span class="s">Numbers</span><span class="nv"> </span><span class="s">Authority</span><span class="nv"> </span><span class="s">(IANA).</span><span class="nv"> </span><span class="s">For</span><span class="nv"> </span><span class="s">example:</span><span class="nv"> </span><span class="s">&lt;code&gt;tcp&lt;/code&gt;</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">&lt;code&gt;udp&lt;/code&gt;.'</span>
+<span class="w">      </span><span class="s">Numbers</span>
+
+<span class="w">      </span><span class="s">Authority</span><span class="nv"> </span><span class="s">(IANA).</span><span class="nv"> </span><span class="s">For</span><span class="nv"> </span><span class="s">example:</span><span class="nv"> </span><span class="s">&lt;code&gt;tcp&lt;/code&gt;</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">&lt;code&gt;udp&lt;/code&gt;.'</span>
 <span class="w">    </span><span class="nt">recommended</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">protocol_num</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">protocol_num</span>
@@ -829,10 +852,16 @@
 <h3 id="induced">Induced</h3>
 <details>
 <div class="highlight"><pre><span></span><code><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">NetworkConnectionInfo</span>
-<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The Network Connection Information object describes characteristics of</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">an OSI Transport Layer communication, including TCP and UDP.</span>
+<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">Network</span><span class="nv"> </span><span class="s">Connection</span><span class="nv"> </span><span class="s">Information</span><span class="nv"> </span><span class="s">object</span><span class="nv"> </span><span class="s">describes</span><span class="nv"> </span><span class="s">characteristics</span>
+<span class="w">  </span><span class="s">of</span><span class="nv"> </span><span class="s">an</span><span class="nv"> </span><span class="s">OSI</span>
+
+<span class="w">  </span><span class="s">Transport</span><span class="nv"> </span><span class="s">Layer</span><span class="nv"> </span><span class="s">communication,</span><span class="nv"> </span><span class="s">including</span><span class="nv"> </span><span class="s">TCP</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">UDP.'</span>
 <span class="nt">notes</span><span class="p">:</span>
-<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">D3FEND™ Ontology d3f:NetworkSession — https://d3fend.mitre.org/dao/artifact/d3f:NetworkSession/</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="s">'D3FEND™</span><span class="nv"> </span><span class="s">Ontology</span><span class="nv"> </span><span class="s">d3f:NetworkSession</span><span class="nv"> </span><span class="s">—</span>
+
+<span class="w">  </span><span class="s">https://d3fend.mitre.org/dao/artifact/d3f:NetworkSession/'</span>
+<span class="nt">in_subset</span><span class="p">:</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">objects</span>
 <span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="nt">see_also</span><span class="p">:</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://d3fend.mitre.org/dao/artifact/d3f:NetworkSession/</span>
@@ -853,7 +882,9 @@
 <span class="w">  </span><span class="nt">protocol_name</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">protocol_name</span>
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">IP</span><span class="nv"> </span><span class="s">protocol</span><span class="nv"> </span><span class="s">name</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">lowercase,</span><span class="nv"> </span><span class="s">as</span><span class="nv"> </span><span class="s">defined</span><span class="nv"> </span><span class="s">by</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">Internet</span><span class="nv"> </span><span class="s">Assigned</span>
-<span class="w">      </span><span class="s">Numbers</span><span class="nv"> </span><span class="s">Authority</span><span class="nv"> </span><span class="s">(IANA).</span><span class="nv"> </span><span class="s">For</span><span class="nv"> </span><span class="s">example:</span><span class="nv"> </span><span class="s">&lt;code&gt;tcp&lt;/code&gt;</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">&lt;code&gt;udp&lt;/code&gt;.'</span>
+<span class="w">      </span><span class="s">Numbers</span>
+
+<span class="w">      </span><span class="s">Authority</span><span class="nv"> </span><span class="s">(IANA).</span><span class="nv"> </span><span class="s">For</span><span class="nv"> </span><span class="s">example:</span><span class="nv"> </span><span class="s">&lt;code&gt;tcp&lt;/code&gt;</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">&lt;code&gt;udp&lt;/code&gt;.'</span>
 <span class="w">    </span><span class="nt">recommended</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">protocol_num</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">protocol_num</span>
@@ -873,10 +904,16 @@
 <span class="nt">attributes</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">boundary</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">boundary</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The boundary of the connection, normalized to the caption of 'boundary_id'.</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">In the case of 'Other', it is defined by the event source. &lt;p&gt; For cloud connections,</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">this translates to the traffic-boundary(same VPC, through IGW, etc.). For traditional</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">networks, this is described as Local, Internal, or External.&lt;/p&gt;</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">boundary</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">connection,</span><span class="nv"> </span><span class="s">normalized</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">caption</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="se">''</span><span class="s">boundary_id</span><span class="se">''</span><span class="s">.</span>
+<span class="w">      </span><span class="s">In</span>
+
+<span class="w">      </span><span class="s">the</span><span class="nv"> </span><span class="s">case</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="se">''</span><span class="s">Other</span><span class="se">''</span><span class="s">,</span><span class="nv"> </span><span class="s">it</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">defined</span><span class="nv"> </span><span class="s">by</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">event</span><span class="nv"> </span><span class="s">source.</span><span class="nv"> </span><span class="s">&lt;p&gt;</span><span class="nv"> </span><span class="s">For</span><span class="nv"> </span><span class="s">cloud</span>
+
+<span class="w">      </span><span class="s">connections,</span><span class="nv"> </span><span class="s">this</span><span class="nv"> </span><span class="s">translates</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">traffic-boundary(same</span><span class="nv"> </span><span class="s">VPC,</span><span class="nv"> </span><span class="s">through</span><span class="nv"> </span><span class="s">IGW,</span>
+
+<span class="w">      </span><span class="s">etc.).</span><span class="nv"> </span><span class="s">For</span><span class="nv"> </span><span class="s">traditional</span><span class="nv"> </span><span class="s">networks,</span><span class="nv"> </span><span class="s">this</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">described</span><span class="nv"> </span><span class="s">as</span><span class="nv"> </span><span class="s">Local,</span><span class="nv"> </span><span class="s">Internal,</span><span class="nv"> </span><span class="s">or</span>
+
+<span class="w">      </span><span class="s">External.&lt;/p&gt;'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Boundary</span>
@@ -892,10 +929,15 @@
 <span class="w">      </span><span class="nt">sibling</span><span class="p">:</span>
 <span class="w">        </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">sibling</span>
 <span class="w">        </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">boundary</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">&lt;p&gt;The normalized identifier of the boundary of the connection. &lt;/p&gt;&lt;p&gt;</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">For cloud connections, this translates to the traffic-boundary (same VPC, through</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">IGW, etc.). For traditional networks, this is described as Local, Internal,</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">or External.&lt;/p&gt;</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'&lt;p&gt;The</span><span class="nv"> </span><span class="s">normalized</span><span class="nv"> </span><span class="s">identifier</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">boundary</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">connection.</span>
+<span class="w">      </span><span class="s">&lt;/p&gt;&lt;p&gt;</span><span class="nv"> </span><span class="s">For</span>
+
+<span class="w">      </span><span class="s">cloud</span><span class="nv"> </span><span class="s">connections,</span><span class="nv"> </span><span class="s">this</span><span class="nv"> </span><span class="s">translates</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">traffic-boundary</span><span class="nv"> </span><span class="s">(same</span><span class="nv"> </span><span class="s">VPC,</span><span class="nv"> </span><span class="s">through</span>
+
+<span class="w">      </span><span class="s">IGW,</span><span class="nv"> </span><span class="s">etc.).</span><span class="nv"> </span><span class="s">For</span><span class="nv"> </span><span class="s">traditional</span><span class="nv"> </span><span class="s">networks,</span><span class="nv"> </span><span class="s">this</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">described</span><span class="nv"> </span><span class="s">as</span><span class="nv"> </span><span class="s">Local,</span><span class="nv"> </span><span class="s">Internal,</span>
+<span class="w">      </span><span class="s">or</span>
+
+<span class="w">      </span><span class="s">External.&lt;/p&gt;'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Boundary ID</span>
@@ -928,9 +970,13 @@
 <span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">string</span>
 <span class="w">  </span><span class="nt">direction</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">direction</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The direction of the initiated connection, traffic, or email, normalized</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">to the caption of the direction_id value. In the case of 'Other', it is defined</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">by the event source.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">direction</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">initiated</span><span class="nv"> </span><span class="s">connection,</span><span class="nv"> </span><span class="s">traffic,</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">email,</span><span class="nv"> </span><span class="s">normalized</span>
+<span class="w">      </span><span class="s">to</span><span class="nv"> </span><span class="s">the</span>
+
+<span class="w">      </span><span class="s">caption</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">direction_id</span><span class="nv"> </span><span class="s">value.</span><span class="nv"> </span><span class="s">In</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">case</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="se">''</span><span class="s">Other</span><span class="se">''</span><span class="s">,</span><span class="nv"> </span><span class="s">it</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">defined</span><span class="nv"> </span><span class="s">by</span>
+<span class="w">      </span><span class="s">the</span>
+
+<span class="w">      </span><span class="s">event</span><span class="nv"> </span><span class="s">source.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Direction</span>
@@ -947,8 +993,9 @@
 <span class="w">      </span><span class="nt">sibling</span><span class="p">:</span>
 <span class="w">        </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">sibling</span>
 <span class="w">        </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">direction</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The normalized identifier of the direction of the initiated connection,</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">traffic, or email.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">normalized</span><span class="nv"> </span><span class="s">identifier</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">direction</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">initiated</span><span class="nv"> </span><span class="s">connection,</span>
+
+<span class="w">      </span><span class="s">traffic,</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">email.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Direction ID</span>
@@ -962,11 +1009,16 @@
 <span class="w">    </span><span class="nt">required</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">flag_history</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">flag_history</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The Connection Flag History summarizes events in a network connection.</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">For example flags &lt;code&gt; ShAD &lt;/code&gt; representing SYN, SYN/ACK, ACK and Data</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">exchange.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">Connection</span><span class="nv"> </span><span class="s">Flag</span><span class="nv"> </span><span class="s">History</span><span class="nv"> </span><span class="s">summarizes</span><span class="nv"> </span><span class="s">events</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">network</span><span class="nv"> </span><span class="s">connection.</span>
+<span class="w">      </span><span class="s">For</span>
+
+<span class="w">      </span><span class="s">example</span><span class="nv"> </span><span class="s">flags</span><span class="nv"> </span><span class="s">&lt;code&gt;</span><span class="nv"> </span><span class="s">ShAD</span><span class="nv"> </span><span class="s">&lt;/code&gt;</span><span class="nv"> </span><span class="s">representing</span><span class="nv"> </span><span class="s">SYN,</span><span class="nv"> </span><span class="s">SYN/ACK,</span><span class="nv"> </span><span class="s">ACK</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">Data</span>
+
+<span class="w">      </span><span class="s">exchange.'</span>
 <span class="w">    </span><span class="nt">notes</span><span class="p">:</span>
-<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Zeek History — https://docs.zeek.org/en/master/scripts/base/protocols/conn/main.zeek.html#detailed-interface:~:text=Records%20the%20state%20history%20of%20connections%20as%20a%20string%20of%20letters.%20The%20meaning%20of%20those%20letters%20is</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">'Zeek</span><span class="nv"> </span><span class="s">History</span><span class="nv"> </span><span class="s">—</span>
+
+<span class="w">      </span><span class="s">https://docs.zeek.org/en/master/scripts/base/protocols/conn/main.zeek.html#detailed-interface:~:text=Records%20the%20state%20history%20of%20connections%20as%20a%20string%20of%20letters.%20The%20meaning%20of%20those%20letters%20is'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">see_also</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://docs.zeek.org/en/master/scripts/base/protocols/conn/main.zeek.html#detailed-interface:~:text=Records%20the%20state%20history%20of%20connections%20as%20a%20string%20of%20letters.%20The%20meaning%20of%20those%20letters%20is</span>
@@ -981,7 +1033,9 @@
 <span class="w">  </span><span class="nt">protocol_name</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">protocol_name</span>
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">IP</span><span class="nv"> </span><span class="s">protocol</span><span class="nv"> </span><span class="s">name</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">lowercase,</span><span class="nv"> </span><span class="s">as</span><span class="nv"> </span><span class="s">defined</span><span class="nv"> </span><span class="s">by</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">Internet</span><span class="nv"> </span><span class="s">Assigned</span>
-<span class="w">      </span><span class="s">Numbers</span><span class="nv"> </span><span class="s">Authority</span><span class="nv"> </span><span class="s">(IANA).</span><span class="nv"> </span><span class="s">For</span><span class="nv"> </span><span class="s">example:</span><span class="nv"> </span><span class="s">&lt;code&gt;tcp&lt;/code&gt;</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">&lt;code&gt;udp&lt;/code&gt;.'</span>
+<span class="w">      </span><span class="s">Numbers</span>
+
+<span class="w">      </span><span class="s">Authority</span><span class="nv"> </span><span class="s">(IANA).</span><span class="nv"> </span><span class="s">For</span><span class="nv"> </span><span class="s">example:</span><span class="nv"> </span><span class="s">&lt;code&gt;tcp&lt;/code&gt;</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">&lt;code&gt;udp&lt;/code&gt;.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Protocol Name</span>
@@ -1003,10 +1057,13 @@
 <span class="w">  </span><span class="nt">protocol_num</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">protocol_num</span>
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">IP</span><span class="nv"> </span><span class="s">protocol</span><span class="nv"> </span><span class="s">number,</span><span class="nv"> </span><span class="s">as</span><span class="nv"> </span><span class="s">defined</span><span class="nv"> </span><span class="s">by</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">Internet</span><span class="nv"> </span><span class="s">Assigned</span><span class="nv"> </span><span class="s">Numbers</span>
-<span class="w">      </span><span class="s">Authority</span><span class="nv"> </span><span class="s">(IANA).</span><span class="nv"> </span><span class="s">For</span><span class="nv"> </span><span class="s">example:</span><span class="nv"> </span><span class="s">&lt;code&gt;6&lt;/code&gt;</span><span class="nv"> </span><span class="s">for</span><span class="nv"> </span><span class="s">TCP</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">&lt;code&gt;17&lt;/code&gt;</span><span class="nv"> </span><span class="s">for</span>
-<span class="w">      </span><span class="s">UDP.'</span>
+<span class="w">      </span><span class="s">Authority</span>
+
+<span class="w">      </span><span class="s">(IANA).</span><span class="nv"> </span><span class="s">For</span><span class="nv"> </span><span class="s">example:</span><span class="nv"> </span><span class="s">&lt;code&gt;6&lt;/code&gt;</span><span class="nv"> </span><span class="s">for</span><span class="nv"> </span><span class="s">TCP</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">&lt;code&gt;17&lt;/code&gt;</span><span class="nv"> </span><span class="s">for</span><span class="nv"> </span><span class="s">UDP.'</span>
 <span class="w">    </span><span class="nt">notes</span><span class="p">:</span>
-<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">IANA Protocol Numbers — https://www.iana.org/assignments/protocol-numbers/protocol-numbers.xhtml</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">'IANA</span><span class="nv"> </span><span class="s">Protocol</span><span class="nv"> </span><span class="s">Numbers</span><span class="nv"> </span><span class="s">—</span>
+
+<span class="w">      </span><span class="s">https://www.iana.org/assignments/protocol-numbers/protocol-numbers.xhtml'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">see_also</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://www.iana.org/assignments/protocol-numbers/protocol-numbers.xhtml</span>

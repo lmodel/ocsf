@@ -236,6 +236,15 @@
 </nav>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="#in-subsets">
+<span class="md-ellipsis">
+      
+        In Subsets
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#aliases">
 <span class="md-ellipsis">
       
@@ -341,7 +350,8 @@
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
 <h1 id="class-attack">Class: Attack</h1>
-<p><em>The MITRE ATT&amp;CK® &amp; ATLAS™ object describes the tactic, technique, sub-technique &amp; mitigation associated to an attack.</em></p>
+<p><em>The MITRE ATT&amp;CK® &amp; ATLAS™ object describes the tactic, technique,</em></p>
+<p><em>sub-technique &amp; mitigation associated to an attack.</em></p>
 <p>URI: <a href="https://w3id.org/lmodel/ocsf/Attack">ocsf:Attack</a></p>
 <pre class="mermaid"><code> classDiagram
     class Attack
@@ -431,7 +441,7 @@
 <tr>
 <td><a href="../mitigation/">mitigation</a></td>
 <td>0..1 <br/> <a href="../Mitigation/">Mitigation</a></td>
-<td>The Mitigation object describes the MITRE ATT&amp;CK® or ATLAS™ Mitigation ID and...</td>
+<td>The Mitigation object describes the MITRE ATT&amp;CK® or ATLAS™ Mitigation ID</td>
 <td>direct</td>
 </tr>
 <tr>
@@ -443,13 +453,13 @@
 <tr>
 <td><a href="../tactic/">tactic</a></td>
 <td>0..1 <em>recommended</em> <br/> <a href="../Tactic/">Tactic</a></td>
-<td>The Tactic object describes the MITRE ATT&amp;CK® or ATLAS™ Tactic ID and/or name...</td>
+<td>The Tactic object describes the MITRE ATT&amp;CK® or ATLAS™ Tactic ID and/or name</td>
 <td>direct</td>
 </tr>
 <tr>
 <td><a href="../tactics/">tactics</a></td>
 <td>* <br/> <a href="../Tactic/">Tactic</a></td>
-<td>The Tactic object describes the tactic ID and/or tactic name that are associa...</td>
+<td>The Tactic object describes the tactic ID and/or tactic name that are</td>
 <td>direct</td>
 </tr>
 <tr>
@@ -1075,6 +1085,10 @@
 </tr>
 </tbody>
 </table>
+<h2 id="in-subsets">In Subsets</h2>
+<ul>
+<li><a href="../Objects/">Objects</a></li>
+</ul>
 <h2 id="aliases">Aliases</h2>
 <ul>
 <li>MITRE ATT&amp;CK® &amp; ATLAS™</li>
@@ -1141,11 +1155,14 @@
 <span class="w">  </span><span class="nt">ocsf_constraints</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ocsf_constraints</span>
 <span class="w">    </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="s">'{"at_least_one":</span><span class="nv"> </span><span class="s">["tactic",</span><span class="nv"> </span><span class="s">"technique",</span><span class="nv"> </span><span class="s">"sub_technique"]}'</span>
-<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The MITRE ATT&amp;CK® &amp; ATLAS™ object describes the tactic, technique, sub-technique</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">&amp; mitigation associated to an attack.</span>
+<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">MITRE</span><span class="nv"> </span><span class="s">ATT&amp;CK®</span><span class="nv"> </span><span class="s">&amp;</span><span class="nv"> </span><span class="s">ATLAS™</span><span class="nv"> </span><span class="s">object</span><span class="nv"> </span><span class="s">describes</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">tactic,</span><span class="nv"> </span><span class="s">technique,</span>
+
+<span class="w">  </span><span class="s">sub-technique</span><span class="nv"> </span><span class="s">&amp;</span><span class="nv"> </span><span class="s">mitigation</span><span class="nv"> </span><span class="s">associated</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">an</span><span class="nv"> </span><span class="s">attack.'</span>
 <span class="nt">notes</span><span class="p">:</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ATT&amp;CK® Matrix — https://attack.mitre.org</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ATLAS™ Matrix — https://atlas.mitre.org/matrices/ATLAS</span>
+<span class="nt">in_subset</span><span class="p">:</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">objects</span>
 <span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="nt">see_also</span><span class="p">:</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://attack.mitre.org</span>
@@ -1194,6 +1211,7 @@
 <span class="w">          </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">sub_technique</span>
 <span class="w">          </span><span class="nt">required</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'OCSF</span><span class="nv"> </span><span class="s">at_least_one:</span><span class="nv"> </span><span class="s">at</span><span class="nv"> </span><span class="s">least</span><span class="nv"> </span><span class="s">one</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">[</span><span class="se">''</span><span class="s">tactic</span><span class="se">''</span><span class="s">,</span><span class="nv"> </span><span class="se">''</span><span class="s">technique</span><span class="se">''</span><span class="s">,</span><span class="nv"> </span><span class="se">''</span><span class="s">sub_technique</span><span class="se">''</span><span class="s">]</span>
+
 <span class="w">    </span><span class="s">must</span><span class="nv"> </span><span class="s">be</span><span class="nv"> </span><span class="s">set.'</span>
 </code></pre></div>
 </details>
@@ -1204,11 +1222,14 @@
 <span class="w">  </span><span class="nt">ocsf_constraints</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ocsf_constraints</span>
 <span class="w">    </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="s">'{"at_least_one":</span><span class="nv"> </span><span class="s">["tactic",</span><span class="nv"> </span><span class="s">"technique",</span><span class="nv"> </span><span class="s">"sub_technique"]}'</span>
-<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The MITRE ATT&amp;CK® &amp; ATLAS™ object describes the tactic, technique, sub-technique</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">&amp; mitigation associated to an attack.</span>
+<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">MITRE</span><span class="nv"> </span><span class="s">ATT&amp;CK®</span><span class="nv"> </span><span class="s">&amp;</span><span class="nv"> </span><span class="s">ATLAS™</span><span class="nv"> </span><span class="s">object</span><span class="nv"> </span><span class="s">describes</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">tactic,</span><span class="nv"> </span><span class="s">technique,</span>
+
+<span class="w">  </span><span class="s">sub-technique</span><span class="nv"> </span><span class="s">&amp;</span><span class="nv"> </span><span class="s">mitigation</span><span class="nv"> </span><span class="s">associated</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">an</span><span class="nv"> </span><span class="s">attack.'</span>
 <span class="nt">notes</span><span class="p">:</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ATT&amp;CK® Matrix — https://attack.mitre.org</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ATLAS™ Matrix — https://atlas.mitre.org/matrices/ATLAS</span>
+<span class="nt">in_subset</span><span class="p">:</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">objects</span>
 <span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="nt">see_also</span><span class="p">:</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://attack.mitre.org</span>
@@ -1237,8 +1258,10 @@
 <span class="nt">attributes</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">mitigation</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mitigation</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The Mitigation object describes the MITRE ATT&amp;CK® or ATLAS™ Mitigation</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">ID and/or name that is associated to an attack.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">Mitigation</span><span class="nv"> </span><span class="s">object</span><span class="nv"> </span><span class="s">describes</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">MITRE</span><span class="nv"> </span><span class="s">ATT&amp;CK®</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">ATLAS™</span><span class="nv"> </span><span class="s">Mitigation</span>
+<span class="w">      </span><span class="s">ID</span>
+
+<span class="w">      </span><span class="s">and/or</span><span class="nv"> </span><span class="s">name</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">associated</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">an</span><span class="nv"> </span><span class="s">attack.'</span>
 <span class="w">    </span><span class="nt">notes</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ATT&amp;CK® Matrix — https://attack.mitre.org</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ATLAS™ Matrix — https://atlas.mitre.org/matrices/ATLAS</span>
@@ -1256,8 +1279,10 @@
 <span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Mitigation</span>
 <span class="w">  </span><span class="nt">sub_technique</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">sub_technique</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The Sub-technique object describes the MITRE ATT&amp;CK® or ATLAS™ Sub-technique</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">ID and/or name associated to an attack.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">Sub-technique</span><span class="nv"> </span><span class="s">object</span><span class="nv"> </span><span class="s">describes</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">MITRE</span><span class="nv"> </span><span class="s">ATT&amp;CK®</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">ATLAS™</span><span class="nv"> </span><span class="s">Sub-technique</span>
+<span class="w">      </span><span class="s">ID</span>
+
+<span class="w">      </span><span class="s">and/or</span><span class="nv"> </span><span class="s">name</span><span class="nv"> </span><span class="s">associated</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">an</span><span class="nv"> </span><span class="s">attack.'</span>
 <span class="w">    </span><span class="nt">notes</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ATT&amp;CK® Matrix — https://attack.mitre.org</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ATLAS™ Matrix — https://atlas.mitre.org/matrices/ATLAS</span>
@@ -1276,8 +1301,10 @@
 <span class="w">    </span><span class="nt">recommended</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">tactic</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">tactic</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The Tactic object describes the MITRE ATT&amp;CK® or ATLAS™ Tactic ID</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">and/or name that is associated to an attack.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">Tactic</span><span class="nv"> </span><span class="s">object</span><span class="nv"> </span><span class="s">describes</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">MITRE</span><span class="nv"> </span><span class="s">ATT&amp;CK®</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">ATLAS™</span><span class="nv"> </span><span class="s">Tactic</span><span class="nv"> </span><span class="s">ID</span>
+<span class="w">      </span><span class="s">and/or</span><span class="nv"> </span><span class="s">name</span>
+
+<span class="w">      </span><span class="s">that</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">associated</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">an</span><span class="nv"> </span><span class="s">attack.'</span>
 <span class="w">    </span><span class="nt">notes</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ATT&amp;CK® Matrix — https://attack.mitre.org</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ATLAS™ Matrix — https://atlas.mitre.org/matrices/ATLAS</span>
@@ -1296,9 +1323,12 @@
 <span class="w">    </span><span class="nt">recommended</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">tactics</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">tactics</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The Tactic object describes the tactic ID and/or tactic name that</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">are associated with the attack technique, as defined by &lt;a target='_blank' href='https://attack.mitre.org/wiki/ATT&amp;CK_Matrix'&gt;ATT&amp;CK®</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">Matrix&lt;/a&gt;.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">Tactic</span><span class="nv"> </span><span class="s">object</span><span class="nv"> </span><span class="s">describes</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">tactic</span><span class="nv"> </span><span class="s">ID</span><span class="nv"> </span><span class="s">and/or</span><span class="nv"> </span><span class="s">tactic</span><span class="nv"> </span><span class="s">name</span><span class="nv"> </span><span class="s">that</span>
+<span class="w">      </span><span class="s">are</span>
+
+<span class="w">      </span><span class="s">associated</span><span class="nv"> </span><span class="s">with</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">attack</span><span class="nv"> </span><span class="s">technique,</span><span class="nv"> </span><span class="s">as</span><span class="nv"> </span><span class="s">defined</span><span class="nv"> </span><span class="s">by</span><span class="nv"> </span><span class="s">&lt;a</span><span class="nv"> </span><span class="s">target=</span><span class="se">''</span><span class="s">_blank</span><span class="se">''</span>
+
+<span class="w">      </span><span class="s">href=</span><span class="se">''</span><span class="s">https://attack.mitre.org/wiki/ATT&amp;CK_Matrix</span><span class="se">''</span><span class="s">&gt;ATT&amp;CK®</span><span class="nv"> </span><span class="s">Matrix&lt;/a&gt;.'</span>
 <span class="w">    </span><span class="nt">deprecated</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Use the &lt;code&gt;tactic&lt;/code&gt; attribute instead. (since 1.1.0)</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
@@ -1312,8 +1342,10 @@
 <span class="w">    </span><span class="nt">multivalued</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">technique</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">technique</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The Technique object describes the MITRE ATT&amp;CK® or ATLAS™ Technique</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">ID and/or name associated to an attack.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">Technique</span><span class="nv"> </span><span class="s">object</span><span class="nv"> </span><span class="s">describes</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">MITRE</span><span class="nv"> </span><span class="s">ATT&amp;CK®</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">ATLAS™</span><span class="nv"> </span><span class="s">Technique</span>
+<span class="w">      </span><span class="s">ID</span><span class="nv"> </span><span class="s">and/or</span>
+
+<span class="w">      </span><span class="s">name</span><span class="nv"> </span><span class="s">associated</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">an</span><span class="nv"> </span><span class="s">attack.'</span>
 <span class="w">    </span><span class="nt">notes</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ATT&amp;CK® Matrix — https://attack.mitre.org</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ATLAS™ Matrix — https://atlas.mitre.org/matrices/ATLAS</span>
@@ -1392,6 +1424,7 @@
 <span class="w">          </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">sub_technique</span>
 <span class="w">          </span><span class="nt">required</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'OCSF</span><span class="nv"> </span><span class="s">at_least_one:</span><span class="nv"> </span><span class="s">at</span><span class="nv"> </span><span class="s">least</span><span class="nv"> </span><span class="s">one</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">[</span><span class="se">''</span><span class="s">tactic</span><span class="se">''</span><span class="s">,</span><span class="nv"> </span><span class="se">''</span><span class="s">technique</span><span class="se">''</span><span class="s">,</span><span class="nv"> </span><span class="se">''</span><span class="s">sub_technique</span><span class="se">''</span><span class="s">]</span>
+
 <span class="w">    </span><span class="s">must</span><span class="nv"> </span><span class="s">be</span><span class="nv"> </span><span class="s">set.'</span>
 </code></pre></div>
 </details>

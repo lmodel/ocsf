@@ -497,7 +497,10 @@
 
 
 <h1 id="slot-tags">Slot: tags</h1>
-<p><em>The list of tags; <code>{key:value}</code> pairs attached to an entity. A Tag may be used to categorize, filter, and search for entities. For e.g. <code>"Environment": "Production"</code>, <code>"Owner": "007"</code>. See specific usage.</em></p>
+<p><em>The list of tags; <code>{key:value}</code> pairs attached to an entity. A Tag</em></p>
+<p><em>may be used to categorize, filter, and search for entities. For e.g.</em></p>
+<p><em><code>"Environment": "Production"</code>, <code>"Owner": "007"</code>. See</em></p>
+<p><em>specific usage.</em></p>
 <p>URI: <a href="https://w3id.org/lmodel/ocsf/tags">ocsf:tags</a>
 Alias: tags</p>
 <!-- no inheritance hierarchy -->
@@ -513,24 +516,74 @@ Alias: tags</p>
 </thead>
 <tbody>
 <tr>
+<td><a href="../Metadata/">Metadata</a></td>
+<td>The Metadata object describes the metadata associated with the event</td>
+<td>yes</td>
+</tr>
+<tr>
+<td><a href="../Container/">Container</a></td>
+<td>The Container object describes an instance of a specific container</td>
+<td>yes</td>
+</tr>
+<tr>
+<td><a href="../RelatedEvent/">RelatedEvent</a></td>
+<td>The Related Event object describes an event or another finding related to a</td>
+<td>yes</td>
+</tr>
+<tr>
 <td><a href="../LdapPerson/">LdapPerson</a></td>
 <td>The additional LDAP attributes that describe a person</td>
 <td>yes</td>
 </tr>
 <tr>
-<td><a href="../RelatedEvent/">RelatedEvent</a></td>
-<td>The Related Event object describes an event or another finding related to a f...</td>
+<td><a href="../WinService/">WinService</a></td>
+<td>The Windows Service object describes a Windows service</td>
+<td>no</td>
+</tr>
+<tr>
+<td><a href="../File/">File</a></td>
+<td>The File object represents the metadata associated with a file stored in a</td>
+<td>yes</td>
+</tr>
+<tr>
+<td><a href="../WinResource/">WinResource</a></td>
+<td>The Windows resource object describes a resource object managed by Windows,</td>
+<td>no</td>
+</tr>
+<tr>
+<td><a href="../Databucket/">Databucket</a></td>
+<td>The databucket object is a basic container that holds data, typically organiz...</td>
+<td>no</td>
+</tr>
+<tr>
+<td><a href="../Resource/">Resource</a></td>
+<td>The Resource object contains attributes that provide information about a</td>
 <td>yes</td>
 </tr>
 <tr>
 <td><a href="../Account/">Account</a></td>
-<td>The Account object contains details about the account that initiated or perfo...</td>
+<td>The Account object contains details about the account that initiated or</td>
 <td>yes</td>
 </tr>
 <tr>
-<td><a href="../File/">File</a></td>
-<td>The File object represents the metadata associated with a file stored in a co...</td>
+<td><a href="../Image/">Image</a></td>
+<td>The Image object provides a description of a specific Virtual Machine (VM) or</td>
 <td>yes</td>
+</tr>
+<tr>
+<td><a href="../WebResource/">WebResource</a></td>
+<td>The Web Resource object describes characteristics of a web resource that was</td>
+<td>no</td>
+</tr>
+<tr>
+<td><a href="../FindingInfo/">FindingInfo</a></td>
+<td>The Finding Information object describes metadata related to a security findi...</td>
+<td>yes</td>
+</tr>
+<tr>
+<td><a href="../ResourceDetails/">ResourceDetails</a></td>
+<td>The Resource Details object describes details about resources that were</td>
+<td>no</td>
 </tr>
 <tr>
 <td><a href="../ApplicationObject/">ApplicationObject</a></td>
@@ -540,56 +593,6 @@ Alias: tags</p>
 <tr>
 <td><a href="../Service/">Service</a></td>
 <td>The Service object describes characteristics of a service, <code> e</td>
-<td>yes</td>
-</tr>
-<tr>
-<td><a href="../WebResource/">WebResource</a></td>
-<td>The Web Resource object describes characteristics of a web resource that was ...</td>
-<td>no</td>
-</tr>
-<tr>
-<td><a href="../Resource/">Resource</a></td>
-<td>The Resource object contains attributes that provide information about a part...</td>
-<td>yes</td>
-</tr>
-<tr>
-<td><a href="../Databucket/">Databucket</a></td>
-<td>The databucket object is a basic container that holds data, typically organiz...</td>
-<td>no</td>
-</tr>
-<tr>
-<td><a href="../WinResource/">WinResource</a></td>
-<td>The Windows resource object describes a resource object managed by Windows, s...</td>
-<td>no</td>
-</tr>
-<tr>
-<td><a href="../Metadata/">Metadata</a></td>
-<td>The Metadata object describes the metadata associated with the event</td>
-<td>yes</td>
-</tr>
-<tr>
-<td><a href="../Image/">Image</a></td>
-<td>The Image object provides a description of a specific Virtual Machine (VM) or...</td>
-<td>yes</td>
-</tr>
-<tr>
-<td><a href="../ResourceDetails/">ResourceDetails</a></td>
-<td>The Resource Details object describes details about resources that were affec...</td>
-<td>no</td>
-</tr>
-<tr>
-<td><a href="../Container/">Container</a></td>
-<td>The Container object describes an instance of a specific container</td>
-<td>yes</td>
-</tr>
-<tr>
-<td><a href="../WinService/">WinService</a></td>
-<td>The Windows Service object describes a Windows service</td>
-<td>no</td>
-</tr>
-<tr>
-<td><a href="../FindingInfo/">FindingInfo</a></td>
-<td>The Finding Information object describes metadata related to a security findi...</td>
 <td>yes</td>
 </tr>
 </tbody>
@@ -661,8 +664,13 @@ Alias: tags</p>
 <details>
 <div class="highlight"><pre><span></span><code><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">tags</span>
 <span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;The</span><span class="nv"> </span><span class="s">list</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">tags;</span><span class="nv"> </span><span class="s">&lt;code&gt;{key:value}&lt;/code&gt;</span><span class="nv"> </span><span class="s">pairs</span><span class="nv"> </span><span class="s">attached</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">an</span><span class="nv"> </span><span class="s">entity.</span>
-<span class="w">  </span><span class="s">A</span><span class="nv"> </span><span class="s">Tag</span><span class="nv"> </span><span class="s">may</span><span class="nv"> </span><span class="s">be</span><span class="nv"> </span><span class="s">used</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">categorize,</span><span class="nv"> </span><span class="s">filter,</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">search</span><span class="nv"> </span><span class="s">for</span><span class="nv"> </span><span class="s">entities.</span><span class="nv"> </span><span class="s">For</span><span class="nv"> </span><span class="s">e.g.</span><span class="nv"> </span><span class="s">&lt;code&gt;&quot;Environment&quot;:</span>
-<span class="w">  </span><span class="s">&quot;Production&quot;&lt;/code&gt;,</span><span class="nv"> </span><span class="s">&lt;code&gt;&quot;Owner&quot;:</span><span class="nv"> </span><span class="s">&quot;007&quot;&lt;/code&gt;.</span><span class="nv"> </span><span class="s">See</span><span class="nv"> </span><span class="s">specific</span><span class="nv"> </span><span class="s">usage.&#39;</span>
+<span class="w">  </span><span class="s">A</span><span class="nv"> </span><span class="s">Tag</span>
+
+<span class="w">  </span><span class="s">may</span><span class="nv"> </span><span class="s">be</span><span class="nv"> </span><span class="s">used</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">categorize,</span><span class="nv"> </span><span class="s">filter,</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">search</span><span class="nv"> </span><span class="s">for</span><span class="nv"> </span><span class="s">entities.</span><span class="nv"> </span><span class="s">For</span><span class="nv"> </span><span class="s">e.g.</span>
+
+<span class="w">  </span><span class="s">&lt;code&gt;&quot;Environment&quot;:</span><span class="nv"> </span><span class="s">&quot;Production&quot;&lt;/code&gt;,</span><span class="nv"> </span><span class="s">&lt;code&gt;&quot;Owner&quot;:</span><span class="nv"> </span><span class="s">&quot;007&quot;&lt;/code&gt;.</span><span class="nv"> </span><span class="s">See</span>
+
+<span class="w">  </span><span class="s">specific</span><span class="nv"> </span><span class="s">usage.&#39;</span>
 <span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="nt">aliases</span><span class="p">:</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Tags</span>

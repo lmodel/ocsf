@@ -519,7 +519,10 @@
 
 
 <h1 id="slot-attack_graph">Slot: attack_graph</h1>
-<p><em>An Attack Graph describes possible routes an attacker could take through an environment. It describes relationships between resources and their findings, such as malware detections, vulnerabilities, misconfigurations, and other security actions.</em></p>
+<p><em>An Attack Graph describes possible routes an attacker could take through an</em></p>
+<p><em>environment. It describes relationships between resources and their findings,</em></p>
+<p><em>such as malware detections, vulnerabilities, misconfigurations, and other</em></p>
+<p><em>security actions.</em></p>
 <p>URI: <a href="https://w3id.org/lmodel/ocsf/attack_graph">ocsf:attack_graph</a>
 Alias: attack_graph</p>
 <!-- no inheritance hierarchy -->
@@ -587,8 +590,10 @@ Alias: attack_graph</p>
 </ul>
 <h2 id="notes">Notes</h2>
 <ul>
-<li>MS Defender description of Attack Path — <a href="https://learn.microsoft.com/en-us/azure/defender-for-cloud/how-to-manage-attack-path">https://learn.microsoft.com/en-us/azure/defender-for-cloud/how-to-manage-attack-path</a></li>
-<li>SentinelOne Attack Path documentation — <a href="https://www.sentinelone.com/cybersecurity-101/cybersecurity/attack-path-analysis/">https://www.sentinelone.com/cybersecurity-101/cybersecurity/attack-path-analysis/</a></li>
+<li>MS Defender description of Attack Path —
+<a href="https://learn.microsoft.com/en-us/azure/defender-for-cloud/how-to-manage-attack-path">https://learn.microsoft.com/en-us/azure/defender-for-cloud/how-to-manage-attack-path</a></li>
+<li>SentinelOne Attack Path documentation —
+<a href="https://www.sentinelone.com/cybersecurity-101/cybersecurity/attack-path-analysis/">https://www.sentinelone.com/cybersecurity-101/cybersecurity/attack-path-analysis/</a></li>
 </ul>
 <h2 id="identifier-and-mapping-information">Identifier and Mapping Information</h2>
 <h3 id="schema-source">Schema Source</h3>
@@ -617,13 +622,21 @@ Alias: attack_graph</p>
 <h2 id="linkml-source">LinkML Source</h2>
 <details>
 <div class="highlight"><pre><span></span><code><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">attack_graph</span>
-<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">An Attack Graph describes possible routes an attacker could take through</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">an environment. It describes relationships between resources and their findings,</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">such as malware detections, vulnerabilities, misconfigurations, and other security</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">actions.</span>
+<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;An</span><span class="nv"> </span><span class="s">Attack</span><span class="nv"> </span><span class="s">Graph</span><span class="nv"> </span><span class="s">describes</span><span class="nv"> </span><span class="s">possible</span><span class="nv"> </span><span class="s">routes</span><span class="nv"> </span><span class="s">an</span><span class="nv"> </span><span class="s">attacker</span><span class="nv"> </span><span class="s">could</span><span class="nv"> </span><span class="s">take</span><span class="nv"> </span><span class="s">through</span>
+<span class="w">  </span><span class="s">an</span>
+
+<span class="w">  </span><span class="s">environment.</span><span class="nv"> </span><span class="s">It</span><span class="nv"> </span><span class="s">describes</span><span class="nv"> </span><span class="s">relationships</span><span class="nv"> </span><span class="s">between</span><span class="nv"> </span><span class="s">resources</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">their</span><span class="nv"> </span><span class="s">findings,</span>
+
+<span class="w">  </span><span class="s">such</span><span class="nv"> </span><span class="s">as</span><span class="nv"> </span><span class="s">malware</span><span class="nv"> </span><span class="s">detections,</span><span class="nv"> </span><span class="s">vulnerabilities,</span><span class="nv"> </span><span class="s">misconfigurations,</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">other</span>
+
+<span class="w">  </span><span class="s">security</span><span class="nv"> </span><span class="s">actions.&#39;</span>
 <span class="nt">notes</span><span class="p">:</span>
-<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">MS Defender description of Attack Path — https://learn.microsoft.com/en-us/azure/defender-for-cloud/how-to-manage-attack-path</span>
-<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">SentinelOne Attack Path documentation — https://www.sentinelone.com/cybersecurity-101/cybersecurity/attack-path-analysis/</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;MS</span><span class="nv"> </span><span class="s">Defender</span><span class="nv"> </span><span class="s">description</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">Attack</span><span class="nv"> </span><span class="s">Path</span><span class="nv"> </span><span class="s">—</span>
+
+<span class="w">  </span><span class="s">https://learn.microsoft.com/en-us/azure/defender-for-cloud/how-to-manage-attack-path&#39;</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;SentinelOne</span><span class="nv"> </span><span class="s">Attack</span><span class="nv"> </span><span class="s">Path</span><span class="nv"> </span><span class="s">documentation</span><span class="nv"> </span><span class="s">—</span>
+
+<span class="w">  </span><span class="s">https://www.sentinelone.com/cybersecurity-101/cybersecurity/attack-path-analysis/&#39;</span>
 <span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="nt">see_also</span><span class="p">:</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://learn.microsoft.com/en-us/azure/defender-for-cloud/how-to-manage-attack-path</span>

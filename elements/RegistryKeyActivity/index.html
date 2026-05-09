@@ -208,6 +208,15 @@
 </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="#in-subsets">
+<span class="md-ellipsis">
+      
+        In Subsets
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#aliases">
 <span class="md-ellipsis">
       
@@ -295,7 +304,8 @@
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
 <h1 id="class-registrykeyactivity">Class: RegistryKeyActivity</h1>
-<p><em>Registry Key Activity events report when a process performs an action on a Windows registry key.</em></p>
+<p><em>Registry Key Activity events report when a process performs an action on a</em></p>
+<p><em>Windows registry key.</em></p>
 <p>URI: <a href="https://w3id.org/lmodel/ocsf/RegistryKeyActivity">ocsf:RegistryKeyActivity</a></p>
 <pre class="mermaid"><code> classDiagram
     class RegistryKeyActivity
@@ -726,7 +736,7 @@
 <td><a href="../device/">device</a></td>
 <td>1 <em>recommended</em> <br/> <a href="../Device/">Device</a></td>
 <td>An addressable device, computer system or host</td>
-<td><a href="../SystemEvent/">SystemEvent</a>, <a href="../HostProfile/">HostProfile</a></td>
+<td><a href="../HostProfile/">HostProfile</a>, <a href="../SystemEvent/">SystemEvent</a></td>
 </tr>
 <tr>
 <td><a href="../activity_name/">activity_name</a></td>
@@ -761,7 +771,7 @@
 <tr>
 <td><a href="../count/">count</a></td>
 <td>0..1 <br/> <a href="../Integer/">Integer</a></td>
-<td>The number of times that events in the same logical group occurred during the...</td>
+<td>The number of times that events in the same logical group occurred during the</td>
 <td><a href="../BaseEvent/">BaseEvent</a></td>
 </tr>
 <tr>
@@ -779,7 +789,7 @@
 <tr>
 <td><a href="../enrichments/">enrichments</a></td>
 <td>* <br/> <a href="../Enrichment/">Enrichment</a></td>
-<td>The additional information from an external data source, which is associated ...</td>
+<td>The additional information from an external data source, which is associated</td>
 <td><a href="../BaseEvent/">BaseEvent</a></td>
 </tr>
 <tr>
@@ -821,7 +831,7 @@
 <tr>
 <td><a href="../severity/">severity</a></td>
 <td>0..1 <br/> <a href="../String/">String</a></td>
-<td>The event/finding severity, normalized to the caption of the <code>severity_i...</code></td>
+<td>The event/finding severity, normalized to the caption of the</td>
 <td><a href="../BaseEvent/">BaseEvent</a></td>
 </tr>
 <tr>
@@ -851,7 +861,7 @@
 <tr>
 <td><a href="../status_detail/">status_detail</a></td>
 <td>0..1 <em>recommended</em> <br/> <a href="../String/">String</a></td>
-<td>The status detail contains additional information about the event/finding out...</td>
+<td>The status detail contains additional information about the event/finding</td>
 <td><a href="../BaseEvent/">BaseEvent</a></td>
 </tr>
 <tr>
@@ -869,7 +879,7 @@
 <tr>
 <td><a href="../timezone_offset/">timezone_offset</a></td>
 <td>0..1 <em>recommended</em> <br/> <a href="../Integer/">Integer</a></td>
-<td>The number of minutes that the reported event <code>time</code> is ahead or b...</td>
+<td>The number of minutes that the reported event <code>time</code> is ahead or</td>
 <td><a href="../BaseEvent/">BaseEvent</a></td>
 </tr>
 <tr>
@@ -899,13 +909,13 @@
 <tr>
 <td><a href="../cloud/">cloud</a></td>
 <td>1 <br/> <a href="../Cloud/">Cloud</a></td>
-<td>Describes details about the Cloud environment where the event or finding was ...</td>
+<td>Describes details about the Cloud environment where the event or finding was</td>
 <td><a href="../CloudProfile/">CloudProfile</a></td>
 </tr>
 <tr>
 <td><a href="../osint/">osint</a></td>
 <td>1..* <br/> <a href="../Osint/">Osint</a></td>
-<td>The OSINT (Open Source Intelligence) object contains details related to an in...</td>
+<td>The OSINT (Open Source Intelligence) object contains details related to an</td>
 <td><a href="../OsintProfile/">OsintProfile</a></td>
 </tr>
 <tr>
@@ -917,13 +927,13 @@
 <tr>
 <td><a href="../action_id/">action_id</a></td>
 <td>0..1 <em>recommended</em> <br/> <a href="../ActionIdEnum/">ActionIdEnum</a></td>
-<td>The action taken by a control or other policy-based system leading to an outc...</td>
+<td>The action taken by a control or other policy-based system leading to an</td>
 <td><a href="../SecurityControlProfile/">SecurityControlProfile</a></td>
 </tr>
 <tr>
 <td><a href="../attacks/">attacks</a></td>
 <td>* <br/> <a href="../Attack/">Attack</a></td>
-<td>An array of MITRE ATT&amp;CK® objects describing identified tactics, techniques &amp;...</td>
+<td>An array of MITRE ATT&amp;CK® objects describing identified tactics, techniques &amp;</td>
 <td><a href="../SecurityControlProfile/">SecurityControlProfile</a></td>
 </tr>
 <tr>
@@ -941,7 +951,7 @@
 <tr>
 <td><a href="../confidence_id/">confidence_id</a></td>
 <td>0..1 <em>recommended</em> <br/> <a href="../ConfidenceIdEnum/">ConfidenceIdEnum</a></td>
-<td>The normalized confidence refers to the accuracy of the rule that created the...</td>
+<td>The normalized confidence refers to the accuracy of the rule that created the</td>
 <td><a href="../SecurityControlProfile/">SecurityControlProfile</a></td>
 </tr>
 <tr>
@@ -959,13 +969,13 @@
 <tr>
 <td><a href="../disposition_id/">disposition_id</a></td>
 <td>0..1 <em>recommended</em> <br/> <a href="../DispositionIdEnum/">DispositionIdEnum</a></td>
-<td>Describes the outcome or action taken by a security control, such as access c...</td>
+<td>Describes the outcome or action taken by a security control, such as access</td>
 <td><a href="../SecurityControlProfile/">SecurityControlProfile</a></td>
 </tr>
 <tr>
 <td><a href="../firewall_rule/">firewall_rule</a></td>
 <td>0..1 <br/> <a href="../FirewallRule/">FirewallRule</a></td>
-<td>The firewall rule that pertains to the control that triggered the event, if a...</td>
+<td>The firewall rule that pertains to the control that triggered the event, if</td>
 <td><a href="../SecurityControlProfile/">SecurityControlProfile</a></td>
 </tr>
 <tr>
@@ -983,13 +993,13 @@
 <tr>
 <td><a href="../malware_scan_info/">malware_scan_info</a></td>
 <td>0..1 <br/> <a href="../MalwareScanInfo/">MalwareScanInfo</a></td>
-<td>Describes details about the scan job that identified malware on the target sy...</td>
+<td>Describes details about the scan job that identified malware on the target</td>
 <td><a href="../SecurityControlProfile/">SecurityControlProfile</a></td>
 </tr>
 <tr>
 <td><a href="../policy/">policy</a></td>
 <td>0..1 <br/> <a href="../Policy/">Policy</a></td>
-<td>The policy that pertains to the control that triggered the event, if applicab...</td>
+<td>The policy that pertains to the control that triggered the event, if</td>
 <td><a href="../SecurityControlProfile/">SecurityControlProfile</a></td>
 </tr>
 <tr>
@@ -1018,6 +1028,10 @@
 </tr>
 </tbody>
 </table>
+<h2 id="in-subsets">In Subsets</h2>
+<ul>
+<li><a href="../WindowsExtension/">WindowsExtension</a></li>
+</ul>
 <h2 id="aliases">Aliases</h2>
 <ul>
 <li>Registry Key Activity</li>
@@ -1077,8 +1091,12 @@
 <span class="w">  </span><span class="nt">ocsf_extension</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ocsf_extension</span>
 <span class="w">    </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">windows</span>
-<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Registry Key Activity events report when a process performs an action</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">on a Windows registry key.</span>
+<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'Registry</span><span class="nv"> </span><span class="s">Key</span><span class="nv"> </span><span class="s">Activity</span><span class="nv"> </span><span class="s">events</span><span class="nv"> </span><span class="s">report</span><span class="nv"> </span><span class="s">when</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">process</span><span class="nv"> </span><span class="s">performs</span><span class="nv"> </span><span class="s">an</span><span class="nv"> </span><span class="s">action</span>
+<span class="w">  </span><span class="s">on</span><span class="nv"> </span><span class="s">a</span>
+
+<span class="w">  </span><span class="s">Windows</span><span class="nv"> </span><span class="s">registry</span><span class="nv"> </span><span class="s">key.'</span>
+<span class="nt">in_subset</span><span class="p">:</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">windows_extension</span>
 <span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="nt">aliases</span><span class="p">:</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Registry Key Activity</span>
@@ -1147,8 +1165,12 @@
 <span class="w">  </span><span class="nt">ocsf_extension</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ocsf_extension</span>
 <span class="w">    </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">windows</span>
-<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Registry Key Activity events report when a process performs an action</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">on a Windows registry key.</span>
+<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'Registry</span><span class="nv"> </span><span class="s">Key</span><span class="nv"> </span><span class="s">Activity</span><span class="nv"> </span><span class="s">events</span><span class="nv"> </span><span class="s">report</span><span class="nv"> </span><span class="s">when</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">process</span><span class="nv"> </span><span class="s">performs</span><span class="nv"> </span><span class="s">an</span><span class="nv"> </span><span class="s">action</span>
+<span class="w">  </span><span class="s">on</span><span class="nv"> </span><span class="s">a</span>
+
+<span class="w">  </span><span class="s">Windows</span><span class="nv"> </span><span class="s">registry</span><span class="nv"> </span><span class="s">key.'</span>
+<span class="nt">in_subset</span><span class="p">:</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">windows_extension</span>
 <span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="nt">aliases</span><span class="p">:</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Registry Key Activity</span>
@@ -1506,8 +1528,10 @@
 <span class="w">      </span><span class="nt">group</span><span class="p">:</span>
 <span class="w">        </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">group</span>
 <span class="w">        </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">classification</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The unique identifier of a class. A class describes the attributes</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">available in an event.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">unique</span><span class="nv"> </span><span class="s">identifier</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">class.</span><span class="nv"> </span><span class="s">A</span><span class="nv"> </span><span class="s">class</span><span class="nv"> </span><span class="s">describes</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">attributes</span>
+<span class="w">      </span><span class="s">available</span><span class="nv"> </span><span class="s">in</span>
+
+<span class="w">      </span><span class="s">an</span><span class="nv"> </span><span class="s">event.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Class ID</span>
@@ -1524,8 +1548,10 @@
 <span class="w">      </span><span class="nt">group</span><span class="p">:</span>
 <span class="w">        </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">group</span>
 <span class="w">        </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">occurrence</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The number of times that events in the same logical group occurred</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">during the event &lt;strong&gt;Start Time&lt;/strong&gt; to &lt;strong&gt;End Time&lt;/strong&gt; period.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">number</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">times</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">events</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">same</span><span class="nv"> </span><span class="s">logical</span><span class="nv"> </span><span class="s">group</span><span class="nv"> </span><span class="s">occurred</span>
+<span class="w">      </span><span class="s">during</span><span class="nv"> </span><span class="s">the</span>
+
+<span class="w">      </span><span class="s">event</span><span class="nv"> </span><span class="s">&lt;strong&gt;Start</span><span class="nv"> </span><span class="s">Time&lt;/strong&gt;</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">&lt;strong&gt;End</span><span class="nv"> </span><span class="s">Time&lt;/strong&gt;</span><span class="nv"> </span><span class="s">period.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Count</span>
@@ -1546,8 +1572,10 @@
 <span class="w">      </span><span class="nt">group</span><span class="p">:</span>
 <span class="w">        </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">group</span>
 <span class="w">        </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">occurrence</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The event duration or aggregate time, the amount of time the event</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">covers from &lt;code&gt;start_time&lt;/code&gt; to &lt;code&gt;end_time&lt;/code&gt; in milliseconds.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">event</span><span class="nv"> </span><span class="s">duration</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">aggregate</span><span class="nv"> </span><span class="s">time,</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">amount</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">time</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">event</span>
+<span class="w">      </span><span class="s">covers</span><span class="nv"> </span><span class="s">from</span>
+
+<span class="w">      </span><span class="s">&lt;code&gt;start_time&lt;/code&gt;</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">&lt;code&gt;end_time&lt;/code&gt;</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">milliseconds.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Duration Milliseconds</span>
@@ -1568,8 +1596,10 @@
 <span class="w">      </span><span class="nt">group</span><span class="p">:</span>
 <span class="w">        </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">group</span>
 <span class="w">        </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">occurrence</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The end time of a time period, or the time of the most recent event</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">included in the aggregate event.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">end</span><span class="nv"> </span><span class="s">time</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">time</span><span class="nv"> </span><span class="s">period,</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">time</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">most</span><span class="nv"> </span><span class="s">recent</span><span class="nv"> </span><span class="s">event</span>
+<span class="w">      </span><span class="s">included</span><span class="nv"> </span><span class="s">in</span>
+
+<span class="w">      </span><span class="s">the</span><span class="nv"> </span><span class="s">aggregate</span><span class="nv"> </span><span class="s">event.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">End Time</span>
@@ -1595,10 +1625,17 @@
 <span class="w">        </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">group</span>
 <span class="w">        </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">context</span>
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">additional</span><span class="nv"> </span><span class="s">information</span><span class="nv"> </span><span class="s">from</span><span class="nv"> </span><span class="s">an</span><span class="nv"> </span><span class="s">external</span><span class="nv"> </span><span class="s">data</span><span class="nv"> </span><span class="s">source,</span><span class="nv"> </span><span class="s">which</span><span class="nv"> </span><span class="s">is</span>
-<span class="w">      </span><span class="s">associated</span><span class="nv"> </span><span class="s">with</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">event</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">finding.</span><span class="nv"> </span><span class="s">For</span><span class="nv"> </span><span class="s">example</span><span class="nv"> </span><span class="s">add</span><span class="nv"> </span><span class="s">location</span><span class="nv"> </span><span class="s">information</span>
-<span class="w">      </span><span class="s">for</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">IP</span><span class="nv"> </span><span class="s">address</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">DNS</span><span class="nv"> </span><span class="s">answers:&lt;/p&gt;&lt;code&gt;[{"name":</span><span class="nv"> </span><span class="s">"answers.ip",</span><span class="nv"> </span><span class="s">"value":</span>
+<span class="w">      </span><span class="s">associated</span>
+
+<span class="w">      </span><span class="s">with</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">event</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">finding.</span><span class="nv"> </span><span class="s">For</span><span class="nv"> </span><span class="s">example</span><span class="nv"> </span><span class="s">add</span><span class="nv"> </span><span class="s">location</span><span class="nv"> </span><span class="s">information</span><span class="nv"> </span><span class="s">for</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">IP</span>
+
+<span class="w">      </span><span class="s">address</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">DNS</span><span class="nv"> </span><span class="s">answers:&lt;/p&gt;&lt;code&gt;[{"name":</span><span class="nv"> </span><span class="s">"answers.ip",</span><span class="nv"> </span><span class="s">"value":</span>
+
 <span class="w">      </span><span class="s">"92.24.47.250",</span><span class="nv"> </span><span class="s">"type":</span><span class="nv"> </span><span class="s">"location",</span><span class="nv"> </span><span class="s">"data":</span><span class="nv"> </span><span class="s">{"city":</span><span class="nv"> </span><span class="s">"Socotra",</span><span class="nv"> </span><span class="s">"continent":</span>
-<span class="w">      </span><span class="s">"Asia",</span><span class="nv"> </span><span class="s">"coordinates":</span><span class="nv"> </span><span class="s">[-25.4153,</span><span class="nv"> </span><span class="s">17.0743],</span><span class="nv"> </span><span class="s">"country":</span><span class="nv"> </span><span class="s">"YE",</span><span class="nv"> </span><span class="s">"desc":</span><span class="nv"> </span><span class="s">"Yemen"}}]&lt;/code&gt;'</span>
+
+<span class="w">      </span><span class="s">"Asia",</span><span class="nv"> </span><span class="s">"coordinates":</span><span class="nv"> </span><span class="s">[-25.4153,</span><span class="nv"> </span><span class="s">17.0743],</span><span class="nv"> </span><span class="s">"country":</span><span class="nv"> </span><span class="s">"YE",</span><span class="nv"> </span><span class="s">"desc":</span>
+
+<span class="w">      </span><span class="s">"Yemen"}}]&lt;/code&gt;'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Enrichments</span>
@@ -1656,7 +1693,9 @@
 <span class="w">        </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">primary</span>
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The observables associated with the event or a finding.</span>
 <span class="w">    </span><span class="nt">notes</span><span class="p">:</span>
-<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">OCSF Observables FAQ — https://github.com/ocsf/ocsf-docs/blob/main/articles/defining-and-using-observables.md</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">'OCSF</span><span class="nv"> </span><span class="s">Observables</span><span class="nv"> </span><span class="s">FAQ</span><span class="nv"> </span><span class="s">—</span>
+
+<span class="w">      </span><span class="s">https://github.com/ocsf/ocsf-docs/blob/main/articles/defining-and-using-observables.md'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">see_also</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://github.com/ocsf/ocsf-docs/blob/main/articles/defining-and-using-observables.md</span>
@@ -1726,8 +1765,11 @@
 <span class="w">      </span><span class="nt">group</span><span class="p">:</span>
 <span class="w">        </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">group</span>
 <span class="w">        </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">classification</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The event/finding severity, normalized to the caption of the &lt;code&gt;severity_id&lt;/code&gt;</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">value. In the case of 'Other', it is defined by the source.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">event/finding</span><span class="nv"> </span><span class="s">severity,</span><span class="nv"> </span><span class="s">normalized</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">caption</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span>
+
+<span class="w">      </span><span class="s">&lt;code&gt;severity_id&lt;/code&gt;</span><span class="nv"> </span><span class="s">value.</span><span class="nv"> </span><span class="s">In</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">case</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="se">''</span><span class="s">Other</span><span class="se">''</span><span class="s">,</span><span class="nv"> </span><span class="s">it</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">defined</span><span class="nv"> </span><span class="s">by</span><span class="nv"> </span><span class="s">the</span>
+
+<span class="w">      </span><span class="s">source.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Severity</span>
@@ -1751,10 +1793,14 @@
 <span class="w">      </span><span class="nt">group</span><span class="p">:</span>
 <span class="w">        </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">group</span>
 <span class="w">        </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">classification</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">&lt;p&gt;The normalized identifier of the event/finding severity.&lt;/p&gt;The</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">normalized severity is a measurement the effort and expense required to manage</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">and resolve an event or incident. Smaller numerical values represent lower impact</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">events, and larger numerical values represent higher impact events.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'&lt;p&gt;The</span><span class="nv"> </span><span class="s">normalized</span><span class="nv"> </span><span class="s">identifier</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">event/finding</span><span class="nv"> </span><span class="s">severity.&lt;/p&gt;The</span>
+<span class="w">      </span><span class="s">normalized</span>
+
+<span class="w">      </span><span class="s">severity</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">measurement</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">effort</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">expense</span><span class="nv"> </span><span class="s">required</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">manage</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">resolve</span>
+
+<span class="w">      </span><span class="s">an</span><span class="nv"> </span><span class="s">event</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">incident.</span><span class="nv"> </span><span class="s">Smaller</span><span class="nv"> </span><span class="s">numerical</span><span class="nv"> </span><span class="s">values</span><span class="nv"> </span><span class="s">represent</span><span class="nv"> </span><span class="s">lower</span><span class="nv"> </span><span class="s">impact</span><span class="nv"> </span><span class="s">events,</span>
+
+<span class="w">      </span><span class="s">and</span><span class="nv"> </span><span class="s">larger</span><span class="nv"> </span><span class="s">numerical</span><span class="nv"> </span><span class="s">values</span><span class="nv"> </span><span class="s">represent</span><span class="nv"> </span><span class="s">higher</span><span class="nv"> </span><span class="s">impact</span><span class="nv"> </span><span class="s">events.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Severity ID</span>
@@ -1776,8 +1822,10 @@
 <span class="w">      </span><span class="nt">group</span><span class="p">:</span>
 <span class="w">        </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">group</span>
 <span class="w">        </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">occurrence</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The start time of a time period, or the time of the least recent</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">event included in the aggregate event.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">start</span><span class="nv"> </span><span class="s">time</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">time</span><span class="nv"> </span><span class="s">period,</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">time</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">least</span><span class="nv"> </span><span class="s">recent</span>
+<span class="w">      </span><span class="s">event</span><span class="nv"> </span><span class="s">included</span>
+
+<span class="w">      </span><span class="s">in</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">aggregate</span><span class="nv"> </span><span class="s">event.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Start Time</span>
@@ -1802,8 +1850,10 @@
 <span class="w">      </span><span class="nt">group</span><span class="p">:</span>
 <span class="w">        </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">group</span>
 <span class="w">        </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">primary</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The event status, normalized to the caption of the status_id value.</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">In the case of 'Other', it is defined by the event source.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">event</span><span class="nv"> </span><span class="s">status,</span><span class="nv"> </span><span class="s">normalized</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">caption</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">status_id</span><span class="nv"> </span><span class="s">value.</span>
+<span class="w">      </span><span class="s">In</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">case</span>
+
+<span class="w">      </span><span class="s">of</span><span class="nv"> </span><span class="se">''</span><span class="s">Other</span><span class="se">''</span><span class="s">,</span><span class="nv"> </span><span class="s">it</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">defined</span><span class="nv"> </span><span class="s">by</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">event</span><span class="nv"> </span><span class="s">source.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Status</span>
@@ -1831,9 +1881,12 @@
 <span class="w">      </span><span class="nt">group</span><span class="p">:</span>
 <span class="w">        </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">group</span>
 <span class="w">        </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">primary</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The event status code, as reported by the event source.&lt;br /&gt;&lt;br</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">/&gt;For example, in a Windows Failed Authentication event, this would be the value</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">of 'Failure Code', e.g. 0x18.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">event</span><span class="nv"> </span><span class="s">status</span><span class="nv"> </span><span class="s">code,</span><span class="nv"> </span><span class="s">as</span><span class="nv"> </span><span class="s">reported</span><span class="nv"> </span><span class="s">by</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">event</span><span class="nv"> </span><span class="s">source.&lt;br</span><span class="nv"> </span><span class="s">/&gt;&lt;br</span>
+<span class="w">      </span><span class="s">/&gt;For</span><span class="nv"> </span><span class="s">example,</span>
+
+<span class="w">      </span><span class="s">in</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">Windows</span><span class="nv"> </span><span class="s">Failed</span><span class="nv"> </span><span class="s">Authentication</span><span class="nv"> </span><span class="s">event,</span><span class="nv"> </span><span class="s">this</span><span class="nv"> </span><span class="s">would</span><span class="nv"> </span><span class="s">be</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">value</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="se">''</span><span class="s">Failure</span>
+
+<span class="w">      </span><span class="s">Code</span><span class="se">''</span><span class="s">,</span><span class="nv"> </span><span class="s">e.g.</span><span class="nv"> </span><span class="s">0x18.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Status Code</span>
@@ -1853,8 +1906,9 @@
 <span class="w">      </span><span class="nt">group</span><span class="p">:</span>
 <span class="w">        </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">group</span>
 <span class="w">        </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">primary</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The status detail contains additional information about the event/finding</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">outcome.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">status</span><span class="nv"> </span><span class="s">detail</span><span class="nv"> </span><span class="s">contains</span><span class="nv"> </span><span class="s">additional</span><span class="nv"> </span><span class="s">information</span><span class="nv"> </span><span class="s">about</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">event/finding</span>
+
+<span class="w">      </span><span class="s">outcome.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Status Detail</span>
@@ -1919,8 +1973,10 @@
 <span class="w">      </span><span class="nt">group</span><span class="p">:</span>
 <span class="w">        </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">group</span>
 <span class="w">        </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">occurrence</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The number of minutes that the reported event &lt;code&gt;time&lt;/code&gt; is</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">ahead or behind UTC, in the range -1,080 to +1,080.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">number</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">minutes</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">reported</span><span class="nv"> </span><span class="s">event</span><span class="nv"> </span><span class="s">&lt;code&gt;time&lt;/code&gt;</span>
+<span class="w">      </span><span class="s">is</span><span class="nv"> </span><span class="s">ahead</span><span class="nv"> </span><span class="s">or</span>
+
+<span class="w">      </span><span class="s">behind</span><span class="nv"> </span><span class="s">UTC,</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">range</span><span class="nv"> </span><span class="s">-1,080</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">+1,080.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Timezone Offset</span>
@@ -1955,8 +2011,11 @@
 <span class="w">        </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">group</span>
 <span class="w">        </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">classification</span>
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">event/finding</span><span class="nv"> </span><span class="s">type</span><span class="nv"> </span><span class="s">ID.</span><span class="nv"> </span><span class="s">It</span><span class="nv"> </span><span class="s">identifies</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">event</span><span class="se">''</span><span class="s">s</span><span class="nv"> </span><span class="s">semantics</span>
-<span class="w">      </span><span class="s">and</span><span class="nv"> </span><span class="s">structure.</span><span class="nv"> </span><span class="s">The</span><span class="nv"> </span><span class="s">value</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">calculated</span><span class="nv"> </span><span class="s">by</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">logging</span><span class="nv"> </span><span class="s">system</span><span class="nv"> </span><span class="s">as:</span><span class="nv"> </span><span class="s">&lt;code&gt;class_uid</span>
-<span class="w">      </span><span class="s">*</span><span class="nv"> </span><span class="s">100</span><span class="nv"> </span><span class="s">+</span><span class="nv"> </span><span class="s">activity_id&lt;/code&gt;.'</span>
+<span class="w">      </span><span class="s">and</span><span class="nv"> </span><span class="s">structure.</span>
+
+<span class="w">      </span><span class="s">The</span><span class="nv"> </span><span class="s">value</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">calculated</span><span class="nv"> </span><span class="s">by</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">logging</span><span class="nv"> </span><span class="s">system</span><span class="nv"> </span><span class="s">as:</span><span class="nv"> </span><span class="s">&lt;code&gt;class_uid</span><span class="nv"> </span><span class="s">*</span><span class="nv"> </span><span class="s">100</span><span class="nv"> </span><span class="s">+</span>
+
+<span class="w">      </span><span class="s">activity_id&lt;/code&gt;.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Type ID</span>
@@ -1975,8 +2034,10 @@
 <span class="w">      </span><span class="nt">group</span><span class="p">:</span>
 <span class="w">        </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">group</span>
 <span class="w">        </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">context</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The attributes that are not mapped to the event schema. The names</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">and values of those attributes are specific to the event source.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">attributes</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">are</span><span class="nv"> </span><span class="s">not</span><span class="nv"> </span><span class="s">mapped</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">event</span><span class="nv"> </span><span class="s">schema.</span><span class="nv"> </span><span class="s">The</span><span class="nv"> </span><span class="s">names</span>
+<span class="w">      </span><span class="s">and</span><span class="nv"> </span><span class="s">values</span><span class="nv"> </span><span class="s">of</span>
+
+<span class="w">      </span><span class="s">those</span><span class="nv"> </span><span class="s">attributes</span><span class="nv"> </span><span class="s">are</span><span class="nv"> </span><span class="s">specific</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">event</span><span class="nv"> </span><span class="s">source.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Unmapped Data</span>
@@ -2011,8 +2072,10 @@
 <span class="w">      </span><span class="nt">group</span><span class="p">:</span>
 <span class="w">        </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">group</span>
 <span class="w">        </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">primary</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Describes details about the Cloud environment where the event or</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">finding was created.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'Describes</span><span class="nv"> </span><span class="s">details</span><span class="nv"> </span><span class="s">about</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">Cloud</span><span class="nv"> </span><span class="s">environment</span><span class="nv"> </span><span class="s">where</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">event</span><span class="nv"> </span><span class="s">or</span>
+<span class="w">      </span><span class="s">finding</span><span class="nv"> </span><span class="s">was</span>
+
+<span class="w">      </span><span class="s">created.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Cloud</span>
@@ -2030,11 +2093,16 @@
 <span class="w">      </span><span class="nt">group</span><span class="p">:</span>
 <span class="w">        </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">group</span>
 <span class="w">        </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">primary</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The OSINT (Open Source Intelligence) object contains details related</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">to an indicator such as the indicator itself, related indicators, geolocation,</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">registrar information, subdomains, analyst commentary, and other contextual</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">information. This information can be used to further enrich a detection or finding</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">by providing decisioning support to other analysts and engineers.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">OSINT</span><span class="nv"> </span><span class="s">(Open</span><span class="nv"> </span><span class="s">Source</span><span class="nv"> </span><span class="s">Intelligence)</span><span class="nv"> </span><span class="s">object</span><span class="nv"> </span><span class="s">contains</span><span class="nv"> </span><span class="s">details</span><span class="nv"> </span><span class="s">related</span>
+<span class="w">      </span><span class="s">to</span><span class="nv"> </span><span class="s">an</span>
+
+<span class="w">      </span><span class="s">indicator</span><span class="nv"> </span><span class="s">such</span><span class="nv"> </span><span class="s">as</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">indicator</span><span class="nv"> </span><span class="s">itself,</span><span class="nv"> </span><span class="s">related</span><span class="nv"> </span><span class="s">indicators,</span><span class="nv"> </span><span class="s">geolocation,</span>
+
+<span class="w">      </span><span class="s">registrar</span><span class="nv"> </span><span class="s">information,</span><span class="nv"> </span><span class="s">subdomains,</span><span class="nv"> </span><span class="s">analyst</span><span class="nv"> </span><span class="s">commentary,</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">other</span><span class="nv"> </span><span class="s">contextual</span>
+
+<span class="w">      </span><span class="s">information.</span><span class="nv"> </span><span class="s">This</span><span class="nv"> </span><span class="s">information</span><span class="nv"> </span><span class="s">can</span><span class="nv"> </span><span class="s">be</span><span class="nv"> </span><span class="s">used</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">further</span><span class="nv"> </span><span class="s">enrich</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">detection</span><span class="nv"> </span><span class="s">or</span>
+
+<span class="w">      </span><span class="s">finding</span><span class="nv"> </span><span class="s">by</span><span class="nv"> </span><span class="s">providing</span><span class="nv"> </span><span class="s">decisioning</span><span class="nv"> </span><span class="s">support</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">other</span><span class="nv"> </span><span class="s">analysts</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">engineers.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">OSINT</span>
@@ -2065,9 +2133,14 @@
 <span class="w">      </span><span class="nt">sibling</span><span class="p">:</span>
 <span class="w">        </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">sibling</span>
 <span class="w">        </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">action</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The action taken by a control or other policy-based system leading</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">to an outcome or disposition. An unknown action may still correspond to a known</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">disposition. Refer to &lt;code&gt;disposition_id&lt;/code&gt; for the outcome of the action.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">action</span><span class="nv"> </span><span class="s">taken</span><span class="nv"> </span><span class="s">by</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">control</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">other</span><span class="nv"> </span><span class="s">policy-based</span><span class="nv"> </span><span class="s">system</span><span class="nv"> </span><span class="s">leading</span>
+<span class="w">      </span><span class="s">to</span><span class="nv"> </span><span class="s">an</span>
+
+<span class="w">      </span><span class="s">outcome</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">disposition.</span><span class="nv"> </span><span class="s">An</span><span class="nv"> </span><span class="s">unknown</span><span class="nv"> </span><span class="s">action</span><span class="nv"> </span><span class="s">may</span><span class="nv"> </span><span class="s">still</span><span class="nv"> </span><span class="s">correspond</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">known</span>
+
+<span class="w">      </span><span class="s">disposition.</span><span class="nv"> </span><span class="s">Refer</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">&lt;code&gt;disposition_id&lt;/code&gt;</span><span class="nv"> </span><span class="s">for</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">outcome</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span>
+
+<span class="w">      </span><span class="s">action.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Action ID</span>
@@ -2080,9 +2153,12 @@
 <span class="w">    </span><span class="nt">recommended</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">attacks</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">attacks</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">An array of MITRE ATT&amp;CK® objects describing identified tactics,</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">techniques &amp; sub-techniques. The objects are compatible with MITRE ATLAS™ tactics,</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">techniques &amp; sub-techniques.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'An</span><span class="nv"> </span><span class="s">array</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">MITRE</span><span class="nv"> </span><span class="s">ATT&amp;CK®</span><span class="nv"> </span><span class="s">objects</span><span class="nv"> </span><span class="s">describing</span><span class="nv"> </span><span class="s">identified</span><span class="nv"> </span><span class="s">tactics,</span>
+<span class="w">      </span><span class="s">techniques</span><span class="nv"> </span><span class="s">&amp;</span>
+
+<span class="w">      </span><span class="s">sub-techniques.</span><span class="nv"> </span><span class="s">The</span><span class="nv"> </span><span class="s">objects</span><span class="nv"> </span><span class="s">are</span><span class="nv"> </span><span class="s">compatible</span><span class="nv"> </span><span class="s">with</span><span class="nv"> </span><span class="s">MITRE</span><span class="nv"> </span><span class="s">ATLAS™</span><span class="nv"> </span><span class="s">tactics,</span>
+
+<span class="w">      </span><span class="s">techniques</span><span class="nv"> </span><span class="s">&amp;</span><span class="nv"> </span><span class="s">sub-techniques.'</span>
 <span class="w">    </span><span class="nt">notes</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">MITRE ATT&amp;CK® — https://attack.mitre.org</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">MITRE ATLAS — https://atlas.mitre.org/matrices/ATLAS</span>
@@ -2106,8 +2182,10 @@
 <span class="w">    </span><span class="nt">multivalued</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">authorizations</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">authorizations</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Provides details about an authorization, such as authorization outcome,</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">and any associated policies related to the activity/event.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'Provides</span><span class="nv"> </span><span class="s">details</span><span class="nv"> </span><span class="s">about</span><span class="nv"> </span><span class="s">an</span><span class="nv"> </span><span class="s">authorization,</span><span class="nv"> </span><span class="s">such</span><span class="nv"> </span><span class="s">as</span><span class="nv"> </span><span class="s">authorization</span><span class="nv"> </span><span class="s">outcome,</span>
+<span class="w">      </span><span class="s">and</span><span class="nv"> </span><span class="s">any</span>
+
+<span class="w">      </span><span class="s">associated</span><span class="nv"> </span><span class="s">policies</span><span class="nv"> </span><span class="s">related</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">activity/event.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Authorization Information</span>
@@ -2125,8 +2203,10 @@
 <span class="w">      </span><span class="nt">group</span><span class="p">:</span>
 <span class="w">        </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">group</span>
 <span class="w">        </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">context</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The confidence, normalized to the caption of the confidence_id value.</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">In the case of 'Other', it is defined by the event source.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">confidence,</span><span class="nv"> </span><span class="s">normalized</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">caption</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">confidence_id</span><span class="nv"> </span><span class="s">value.</span>
+<span class="w">      </span><span class="s">In</span><span class="nv"> </span><span class="s">the</span>
+
+<span class="w">      </span><span class="s">case</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="se">''</span><span class="s">Other</span><span class="se">''</span><span class="s">,</span><span class="nv"> </span><span class="s">it</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">defined</span><span class="nv"> </span><span class="s">by</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">event</span><span class="nv"> </span><span class="s">source.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Confidence</span>
@@ -2148,9 +2228,12 @@
 <span class="w">      </span><span class="nt">group</span><span class="p">:</span>
 <span class="w">        </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">group</span>
 <span class="w">        </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">context</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The normalized confidence refers to the accuracy of the rule that</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">created the finding. A rule with a low confidence means that the finding scope</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">is wide and may create finding reports that may not be malicious in nature.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">normalized</span><span class="nv"> </span><span class="s">confidence</span><span class="nv"> </span><span class="s">refers</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">accuracy</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">rule</span><span class="nv"> </span><span class="s">that</span>
+<span class="w">      </span><span class="s">created</span><span class="nv"> </span><span class="s">the</span>
+
+<span class="w">      </span><span class="s">finding.</span><span class="nv"> </span><span class="s">A</span><span class="nv"> </span><span class="s">rule</span><span class="nv"> </span><span class="s">with</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">low</span><span class="nv"> </span><span class="s">confidence</span><span class="nv"> </span><span class="s">means</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">finding</span><span class="nv"> </span><span class="s">scope</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">wide</span><span class="nv"> </span><span class="s">and</span>
+
+<span class="w">      </span><span class="s">may</span><span class="nv"> </span><span class="s">create</span><span class="nv"> </span><span class="s">finding</span><span class="nv"> </span><span class="s">reports</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">may</span><span class="nv"> </span><span class="s">not</span><span class="nv"> </span><span class="s">be</span><span class="nv"> </span><span class="s">malicious</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">nature.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Confidence ID</span>
@@ -2190,8 +2273,10 @@
 <span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">integer</span>
 <span class="w">  </span><span class="nt">disposition</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">disposition</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The disposition name, normalized to the caption of the disposition_id</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">value. In the case of 'Other', it is defined by the event source.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">disposition</span><span class="nv"> </span><span class="s">name,</span><span class="nv"> </span><span class="s">normalized</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">caption</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">disposition_id</span>
+<span class="w">      </span><span class="s">value.</span><span class="nv"> </span><span class="s">In</span>
+
+<span class="w">      </span><span class="s">the</span><span class="nv"> </span><span class="s">case</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="se">''</span><span class="s">Other</span><span class="se">''</span><span class="s">,</span><span class="nv"> </span><span class="s">it</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">defined</span><span class="nv"> </span><span class="s">by</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">event</span><span class="nv"> </span><span class="s">source.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Disposition</span>
@@ -2207,8 +2292,10 @@
 <span class="w">      </span><span class="nt">sibling</span><span class="p">:</span>
 <span class="w">        </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">sibling</span>
 <span class="w">        </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">disposition</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Describes the outcome or action taken by a security control, such</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">as access control checks, malware detections or various types of policy violations.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'Describes</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">outcome</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">action</span><span class="nv"> </span><span class="s">taken</span><span class="nv"> </span><span class="s">by</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">security</span><span class="nv"> </span><span class="s">control,</span><span class="nv"> </span><span class="s">such</span>
+<span class="w">      </span><span class="s">as</span><span class="nv"> </span><span class="s">access</span>
+
+<span class="w">      </span><span class="s">control</span><span class="nv"> </span><span class="s">checks,</span><span class="nv"> </span><span class="s">malware</span><span class="nv"> </span><span class="s">detections</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">various</span><span class="nv"> </span><span class="s">types</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">policy</span><span class="nv"> </span><span class="s">violations.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Disposition ID</span>
@@ -2221,8 +2308,10 @@
 <span class="w">    </span><span class="nt">recommended</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">firewall_rule</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">firewall_rule</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The firewall rule that pertains to the control that triggered the</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">event, if applicable.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">firewall</span><span class="nv"> </span><span class="s">rule</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">pertains</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">control</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">triggered</span><span class="nv"> </span><span class="s">the</span>
+<span class="w">      </span><span class="s">event,</span><span class="nv"> </span><span class="s">if</span>
+
+<span class="w">      </span><span class="s">applicable.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Firewall Rule</span>
@@ -2234,11 +2323,20 @@
 <span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">FirewallRule</span>
 <span class="w">  </span><span class="nt">is_alert</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">is_alert</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Indicates that the event is considered to be an alertable signal.</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">Should be set to &lt;code&gt;true&lt;/code&gt; if &lt;code&gt;disposition_id = Alert&lt;/code&gt; among</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">other dispositions, and/or &lt;code&gt;risk_level_id&lt;/code&gt; or &lt;code&gt;severity_id&lt;/code&gt;</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">of the event is elevated. Not all control events will be alertable, for example</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">if &lt;code&gt;disposition_id = Exonerated&lt;/code&gt; or &lt;code&gt;disposition_id = Allowed&lt;/code&gt;.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'Indicates</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">event</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">considered</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">be</span><span class="nv"> </span><span class="s">an</span><span class="nv"> </span><span class="s">alertable</span><span class="nv"> </span><span class="s">signal.</span>
+<span class="w">      </span><span class="s">Should</span><span class="nv"> </span><span class="s">be</span><span class="nv"> </span><span class="s">set</span>
+
+<span class="w">      </span><span class="s">to</span><span class="nv"> </span><span class="s">&lt;code&gt;true&lt;/code&gt;</span><span class="nv"> </span><span class="s">if</span><span class="nv"> </span><span class="s">&lt;code&gt;disposition_id</span><span class="nv"> </span><span class="s">=</span><span class="nv"> </span><span class="s">Alert&lt;/code&gt;</span><span class="nv"> </span><span class="s">among</span><span class="nv"> </span><span class="s">other</span>
+
+<span class="w">      </span><span class="s">dispositions,</span><span class="nv"> </span><span class="s">and/or</span><span class="nv"> </span><span class="s">&lt;code&gt;risk_level_id&lt;/code&gt;</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">&lt;code&gt;severity_id&lt;/code&gt;</span>
+<span class="w">      </span><span class="s">of</span>
+
+<span class="w">      </span><span class="s">the</span><span class="nv"> </span><span class="s">event</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">elevated.</span><span class="nv"> </span><span class="s">Not</span><span class="nv"> </span><span class="s">all</span><span class="nv"> </span><span class="s">control</span><span class="nv"> </span><span class="s">events</span><span class="nv"> </span><span class="s">will</span><span class="nv"> </span><span class="s">be</span><span class="nv"> </span><span class="s">alertable,</span><span class="nv"> </span><span class="s">for</span><span class="nv"> </span><span class="s">example</span>
+<span class="w">      </span><span class="s">if</span>
+
+<span class="w">      </span><span class="s">&lt;code&gt;disposition_id</span><span class="nv"> </span><span class="s">=</span><span class="nv"> </span><span class="s">Exonerated&lt;/code&gt;</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">&lt;code&gt;disposition_id</span><span class="nv"> </span><span class="s">=</span>
+
+<span class="w">      </span><span class="s">Allowed&lt;/code&gt;.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Alert</span>
@@ -2270,8 +2368,10 @@
 <span class="w">    </span><span class="nt">multivalued</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">malware_scan_info</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">malware_scan_info</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Describes details about the scan job that identified malware on the</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">target system.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'Describes</span><span class="nv"> </span><span class="s">details</span><span class="nv"> </span><span class="s">about</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">scan</span><span class="nv"> </span><span class="s">job</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">identified</span><span class="nv"> </span><span class="s">malware</span><span class="nv"> </span><span class="s">on</span>
+<span class="w">      </span><span class="s">the</span><span class="nv"> </span><span class="s">target</span>
+
+<span class="w">      </span><span class="s">system.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Malware Scan Info</span>
@@ -2284,9 +2384,12 @@
 <span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">MalwareScanInfo</span>
 <span class="w">  </span><span class="nt">policy</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">policy</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The policy that pertains to the control that triggered the event,</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">if applicable. For example the name of an anti-malware policy or an access control</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">policy.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">policy</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">pertains</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">control</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">triggered</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">event,</span>
+<span class="w">      </span><span class="s">if</span>
+
+<span class="w">      </span><span class="s">applicable.</span><span class="nv"> </span><span class="s">For</span><span class="nv"> </span><span class="s">example</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">name</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">an</span><span class="nv"> </span><span class="s">anti-malware</span><span class="nv"> </span><span class="s">policy</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">an</span><span class="nv"> </span><span class="s">access</span><span class="nv"> </span><span class="s">control</span>
+
+<span class="w">      </span><span class="s">policy.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Policy</span>

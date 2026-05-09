@@ -208,6 +208,15 @@
 </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="#in-subsets">
+<span class="md-ellipsis">
+      
+        In Subsets
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#aliases">
 <span class="md-ellipsis">
       
@@ -529,7 +538,7 @@
 <tr>
 <td><a href="../integrity/">integrity</a></td>
 <td>0..1 <br/> <a href="../String/">String</a></td>
-<td>The process integrity level, normalized to the caption of the integrity_id va...</td>
+<td>The process integrity level, normalized to the caption of the integrity_id</td>
 <td><a href="../Process/">Process</a></td>
 </tr>
 <tr>
@@ -541,7 +550,7 @@
 <tr>
 <td><a href="../lineage/">lineage</a></td>
 <td>* <br/> <a href="../FilePathT/">FilePathT</a></td>
-<td>The lineage of the process, represented by a list of paths for each ancestor ...</td>
+<td>The lineage of the process, represented by a list of paths for each ancestor</td>
 <td><a href="../Process/">Process</a></td>
 </tr>
 <tr>
@@ -583,7 +592,7 @@
 <tr>
 <td><a href="../tid/">tid</a></td>
 <td>0..1 <br/> <a href="../Integer/">Integer</a></td>
-<td>The identifier of the thread associated with the event, as returned by the op...</td>
+<td>The identifier of the thread associated with the event, as returned by the</td>
 <td><a href="../Process/">Process</a></td>
 </tr>
 <tr>
@@ -601,7 +610,7 @@
 <tr>
 <td><a href="../xattributes/">xattributes</a></td>
 <td>0..1 <br/> <a href="../Object/">Object</a></td>
-<td>An unordered collection of zero or more name/value pairs that represent a pro...</td>
+<td>An unordered collection of zero or more name/value pairs that represent a</td>
 <td><a href="../Process/">Process</a></td>
 </tr>
 <tr>
@@ -613,7 +622,7 @@
 <tr>
 <td><a href="../namespace_pid/">namespace_pid</a></td>
 <td>0..1 <em>recommended</em> <br/> <a href="../Integer/">Integer</a></td>
-<td>If running under a process namespace (such as in a container), the process id...</td>
+<td>If running under a process namespace (such as in a container), the process</td>
 <td><a href="../ContainerProfile/">ContainerProfile</a></td>
 </tr>
 <tr>
@@ -660,6 +669,10 @@
 </tr>
 </tbody>
 </table>
+<h2 id="in-subsets">In Subsets</h2>
+<ul>
+<li><a href="../LinuxExtension/">LinuxExtension</a></li>
+</ul>
 <h2 id="aliases">Aliases</h2>
 <ul>
 <li>Linux Process</li>
@@ -717,6 +730,8 @@
 <span class="w">    </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ocsf_extension</span>
 <span class="w">    </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">linux</span>
 <span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Extends the process object to add Linux specific fields</span>
+<span class="nt">in_subset</span><span class="p">:</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">linux_extension</span>
 <span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="nt">aliases</span><span class="p">:</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Linux Process</span>
@@ -735,6 +750,8 @@
 <span class="w">    </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ocsf_extension</span>
 <span class="w">    </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">linux</span>
 <span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Extends the process object to add Linux specific fields</span>
+<span class="nt">in_subset</span><span class="p">:</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">linux_extension</span>
 <span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="nt">aliases</span><span class="p">:</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Linux Process</span>
@@ -807,14 +824,24 @@
 <span class="w">    </span><span class="nt">recommended</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">ancestry</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ancestry</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">An array of Process Entities describing the extended parentage of</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">this process object. Direct parent information should be expressed through the</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">&lt;code&gt;parent_process&lt;/code&gt; attribute. The first array element is the direct</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">parent of this process object. Subsequent list elements go up the process parentage</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">hierarchy. That is, the array is sorted from newest to oldest process. It is</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">recommended to only populate this field for the top-level process object.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'An</span><span class="nv"> </span><span class="s">array</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">Process</span><span class="nv"> </span><span class="s">Entities</span><span class="nv"> </span><span class="s">describing</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">extended</span><span class="nv"> </span><span class="s">parentage</span><span class="nv"> </span><span class="s">of</span>
+<span class="w">      </span><span class="s">this</span><span class="nv"> </span><span class="s">process</span>
+
+<span class="w">      </span><span class="s">object.</span><span class="nv"> </span><span class="s">Direct</span><span class="nv"> </span><span class="s">parent</span><span class="nv"> </span><span class="s">information</span><span class="nv"> </span><span class="s">should</span><span class="nv"> </span><span class="s">be</span><span class="nv"> </span><span class="s">expressed</span><span class="nv"> </span><span class="s">through</span><span class="nv"> </span><span class="s">the</span>
+
+<span class="w">      </span><span class="s">&lt;code&gt;parent_process&lt;/code&gt;</span><span class="nv"> </span><span class="s">attribute.</span><span class="nv"> </span><span class="s">The</span><span class="nv"> </span><span class="s">first</span><span class="nv"> </span><span class="s">array</span><span class="nv"> </span><span class="s">element</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">direct</span>
+
+<span class="w">      </span><span class="s">parent</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">this</span><span class="nv"> </span><span class="s">process</span><span class="nv"> </span><span class="s">object.</span><span class="nv"> </span><span class="s">Subsequent</span><span class="nv"> </span><span class="s">list</span><span class="nv"> </span><span class="s">elements</span><span class="nv"> </span><span class="s">go</span><span class="nv"> </span><span class="s">up</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">process</span>
+
+<span class="w">      </span><span class="s">parentage</span><span class="nv"> </span><span class="s">hierarchy.</span><span class="nv"> </span><span class="s">That</span><span class="nv"> </span><span class="s">is,</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">array</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">sorted</span><span class="nv"> </span><span class="s">from</span><span class="nv"> </span><span class="s">newest</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">oldest</span>
+
+<span class="w">      </span><span class="s">process.</span><span class="nv"> </span><span class="s">It</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">recommended</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">only</span><span class="nv"> </span><span class="s">populate</span><span class="nv"> </span><span class="s">this</span><span class="nv"> </span><span class="s">field</span><span class="nv"> </span><span class="s">for</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">top-level</span>
+
+<span class="w">      </span><span class="s">process</span><span class="nv"> </span><span class="s">object.'</span>
 <span class="w">    </span><span class="nt">notes</span><span class="p">:</span>
-<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Guidance on Representing Process Parentage — https://github.com/ocsf/ocsf-docs/blob/main/articles/representing-process-parentage.md</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">'Guidance</span><span class="nv"> </span><span class="s">on</span><span class="nv"> </span><span class="s">Representing</span><span class="nv"> </span><span class="s">Process</span><span class="nv"> </span><span class="s">Parentage</span><span class="nv"> </span><span class="s">—</span>
+
+<span class="w">      </span><span class="s">https://github.com/ocsf/ocsf-docs/blob/main/articles/representing-process-parentage.md'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">see_also</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://github.com/ocsf/ocsf-docs/blob/main/articles/representing-process-parentage.md</span>
@@ -877,8 +904,11 @@
 <span class="w">    </span><span class="nt">recommended</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">integrity</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">integrity</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The process integrity level, normalized to the caption of the integrity_id</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">value. In the case of 'Other', it is defined by the event source (Windows only).</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">process</span><span class="nv"> </span><span class="s">integrity</span><span class="nv"> </span><span class="s">level,</span><span class="nv"> </span><span class="s">normalized</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">caption</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">integrity_id</span>
+
+<span class="w">      </span><span class="s">value.</span><span class="nv"> </span><span class="s">In</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">case</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="se">''</span><span class="s">Other</span><span class="se">''</span><span class="s">,</span><span class="nv"> </span><span class="s">it</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">defined</span><span class="nv"> </span><span class="s">by</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">event</span><span class="nv"> </span><span class="s">source</span><span class="nv"> </span><span class="s">(Windows</span>
+
+<span class="w">      </span><span class="s">only).'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Integrity</span>
@@ -908,7 +938,10 @@
 <span class="w">  </span><span class="nt">lineage</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">lineage</span>
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">lineage</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">process,</span><span class="nv"> </span><span class="s">represented</span><span class="nv"> </span><span class="s">by</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">list</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">paths</span><span class="nv"> </span><span class="s">for</span><span class="nv"> </span><span class="s">each</span>
-<span class="w">      </span><span class="s">ancestor</span><span class="nv"> </span><span class="s">process.</span><span class="nv"> </span><span class="s">For</span><span class="nv"> </span><span class="s">example:</span><span class="nv"> </span><span class="s">&lt;code&gt;[</span><span class="se">''</span><span class="s">/usr/sbin/sshd</span><span class="se">''</span><span class="s">,</span><span class="nv"> </span><span class="se">''</span><span class="s">/usr/bin/bash</span><span class="se">''</span><span class="s">,</span>
+<span class="w">      </span><span class="s">ancestor</span>
+
+<span class="w">      </span><span class="s">process.</span><span class="nv"> </span><span class="s">For</span><span class="nv"> </span><span class="s">example:</span><span class="nv"> </span><span class="s">&lt;code&gt;[</span><span class="se">''</span><span class="s">/usr/sbin/sshd</span><span class="se">''</span><span class="s">,</span><span class="nv"> </span><span class="se">''</span><span class="s">/usr/bin/bash</span><span class="se">''</span><span class="s">,</span>
+
 <span class="w">      </span><span class="se">''</span><span class="s">/usr/bin/whoami</span><span class="se">''</span><span class="s">]&lt;/code&gt;.'</span>
 <span class="w">    </span><span class="nt">deprecated</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Use the &lt;code&gt;ancestry&lt;/code&gt; attribute.</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
@@ -936,12 +969,18 @@
 <span class="w">    </span><span class="nt">multivalued</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">parent_process</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">parent_process</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The parent process of this process object. It is recommended to only</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">populate this field for the top-level process object, to prevent deep nesting.</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">Additional ancestry information can be supplied in the &lt;code&gt;ancestry&lt;/code&gt;</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">attribute.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">parent</span><span class="nv"> </span><span class="s">process</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">this</span><span class="nv"> </span><span class="s">process</span><span class="nv"> </span><span class="s">object.</span><span class="nv"> </span><span class="s">It</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">recommended</span><span class="nv"> </span><span class="s">to</span>
+<span class="w">      </span><span class="s">only</span><span class="nv"> </span><span class="s">populate</span>
+
+<span class="w">      </span><span class="s">this</span><span class="nv"> </span><span class="s">field</span><span class="nv"> </span><span class="s">for</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">top-level</span><span class="nv"> </span><span class="s">process</span><span class="nv"> </span><span class="s">object,</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">prevent</span><span class="nv"> </span><span class="s">deep</span><span class="nv"> </span><span class="s">nesting.</span>
+
+<span class="w">      </span><span class="s">Additional</span><span class="nv"> </span><span class="s">ancestry</span><span class="nv"> </span><span class="s">information</span><span class="nv"> </span><span class="s">can</span><span class="nv"> </span><span class="s">be</span><span class="nv"> </span><span class="s">supplied</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">&lt;code&gt;ancestry&lt;/code&gt;</span>
+
+<span class="w">      </span><span class="s">attribute.'</span>
 <span class="w">    </span><span class="nt">notes</span><span class="p">:</span>
-<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Guidance on Representing Process Parentage — https://github.com/ocsf/ocsf-docs/blob/main/articles/representing-process-parentage.md</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">'Guidance</span><span class="nv"> </span><span class="s">on</span><span class="nv"> </span><span class="s">Representing</span><span class="nv"> </span><span class="s">Process</span><span class="nv"> </span><span class="s">Parentage</span><span class="nv"> </span><span class="s">—</span>
+
+<span class="w">      </span><span class="s">https://github.com/ocsf/ocsf-docs/blob/main/articles/representing-process-parentage.md'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">see_also</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://github.com/ocsf/ocsf-docs/blob/main/articles/representing-process-parentage.md</span>
@@ -956,8 +995,10 @@
 <span class="w">    </span><span class="nt">recommended</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">ptid</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ptid</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The identifier of the process thread associated with the event, as</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">returned by the operating system.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">identifier</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">process</span><span class="nv"> </span><span class="s">thread</span><span class="nv"> </span><span class="s">associated</span><span class="nv"> </span><span class="s">with</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">event,</span>
+<span class="w">      </span><span class="s">as</span><span class="nv"> </span><span class="s">returned</span><span class="nv"> </span><span class="s">by</span>
+
+<span class="w">      </span><span class="s">the</span><span class="nv"> </span><span class="s">operating</span><span class="nv"> </span><span class="s">system.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Process Thread ID</span>
@@ -969,8 +1010,9 @@
 <span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">integer</span>
 <span class="w">  </span><span class="nt">sandbox</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">sandbox</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The name of the containment jail (i.e., sandbox). For example, hardened_ps,</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">high_security_ps, oracle_ps, netsvcs_ps, or default_ps.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">name</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">containment</span><span class="nv"> </span><span class="s">jail</span><span class="nv"> </span><span class="s">(i.e.,</span><span class="nv"> </span><span class="s">sandbox).</span><span class="nv"> </span><span class="s">For</span><span class="nv"> </span><span class="s">example,</span><span class="nv"> </span><span class="s">hardened_ps,</span>
+
+<span class="w">      </span><span class="s">high_security_ps,</span><span class="nv"> </span><span class="s">oracle_ps,</span><span class="nv"> </span><span class="s">netsvcs_ps,</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">default_ps.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Sandbox</span>
@@ -1013,11 +1055,15 @@
 <span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">TimestampT</span>
 <span class="w">  </span><span class="nt">tid</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">tid</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The identifier of the thread associated with the event, as returned</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">by the operating system.</span>
-<span class="w">    </span><span class="nt">deprecated</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">&lt;code&gt;tid&lt;/code&gt; is deprecated in favor of &lt;code&gt;ptid&lt;/code&gt;. &lt;code&gt;ptid&lt;/code&gt;</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">has type &lt;code&gt;long_t&lt;/code&gt; which can accommodate the thread identifiers returned</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">by all platforms (e.g. 64-bit on MacOS). (since 1.6.0)</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">identifier</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">thread</span><span class="nv"> </span><span class="s">associated</span><span class="nv"> </span><span class="s">with</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">event,</span><span class="nv"> </span><span class="s">as</span><span class="nv"> </span><span class="s">returned</span>
+<span class="w">      </span><span class="s">by</span><span class="nv"> </span><span class="s">the</span>
+
+<span class="w">      </span><span class="s">operating</span><span class="nv"> </span><span class="s">system.'</span>
+<span class="w">    </span><span class="nt">deprecated</span><span class="p">:</span><span class="w"> </span><span class="s">'&lt;code&gt;tid&lt;/code&gt;</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">deprecated</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">favor</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">&lt;code&gt;ptid&lt;/code&gt;.</span><span class="nv"> </span><span class="s">&lt;code&gt;ptid&lt;/code&gt;</span>
+
+<span class="w">      </span><span class="s">has</span><span class="nv"> </span><span class="s">type</span><span class="nv"> </span><span class="s">&lt;code&gt;long_t&lt;/code&gt;</span><span class="nv"> </span><span class="s">which</span><span class="nv"> </span><span class="s">can</span><span class="nv"> </span><span class="s">accommodate</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">thread</span><span class="nv"> </span><span class="s">identifiers</span>
+
+<span class="w">      </span><span class="s">returned</span><span class="nv"> </span><span class="s">by</span><span class="nv"> </span><span class="s">all</span><span class="nv"> </span><span class="s">platforms</span><span class="nv"> </span><span class="s">(e.g.</span><span class="nv"> </span><span class="s">64-bit</span><span class="nv"> </span><span class="s">on</span><span class="nv"> </span><span class="s">MacOS).</span><span class="nv"> </span><span class="s">(since</span><span class="nv"> </span><span class="s">1.6.0)'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Thread ID</span>
@@ -1069,8 +1115,10 @@
 <span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">string</span>
 <span class="w">  </span><span class="nt">xattributes</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">xattributes</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">An unordered collection of zero or more name/value pairs that represent</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">a process extended attribute.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'An</span><span class="nv"> </span><span class="s">unordered</span><span class="nv"> </span><span class="s">collection</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">zero</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">more</span><span class="nv"> </span><span class="s">name/value</span><span class="nv"> </span><span class="s">pairs</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">represent</span>
+<span class="w">      </span><span class="s">a</span>
+
+<span class="w">      </span><span class="s">process</span><span class="nv"> </span><span class="s">extended</span><span class="nv"> </span><span class="s">attribute.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Extended Attributes</span>
@@ -1087,9 +1135,12 @@
 <span class="w">      </span><span class="nt">group</span><span class="p">:</span>
 <span class="w">        </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">group</span>
 <span class="w">        </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">context</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The information describing an instance of a container. A container</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">is a prepackaged, portable system image that runs isolated on an existing system</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">using a container runtime like containerd.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">information</span><span class="nv"> </span><span class="s">describing</span><span class="nv"> </span><span class="s">an</span><span class="nv"> </span><span class="s">instance</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">container.</span><span class="nv"> </span><span class="s">A</span><span class="nv"> </span><span class="s">container</span>
+<span class="w">      </span><span class="s">is</span><span class="nv"> </span><span class="s">a</span>
+
+<span class="w">      </span><span class="s">prepackaged,</span><span class="nv"> </span><span class="s">portable</span><span class="nv"> </span><span class="s">system</span><span class="nv"> </span><span class="s">image</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">runs</span><span class="nv"> </span><span class="s">isolated</span><span class="nv"> </span><span class="s">on</span><span class="nv"> </span><span class="s">an</span><span class="nv"> </span><span class="s">existing</span><span class="nv"> </span><span class="s">system</span>
+
+<span class="w">      </span><span class="s">using</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">container</span><span class="nv"> </span><span class="s">runtime</span><span class="nv"> </span><span class="s">like</span><span class="nv"> </span><span class="s">containerd.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Container</span>
@@ -1108,8 +1159,10 @@
 <span class="w">      </span><span class="nt">group</span><span class="p">:</span>
 <span class="w">        </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">group</span>
 <span class="w">        </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">context</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">If running under a process namespace (such as in a container), the</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">process identifier within that process namespace.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'If</span><span class="nv"> </span><span class="s">running</span><span class="nv"> </span><span class="s">under</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">process</span><span class="nv"> </span><span class="s">namespace</span><span class="nv"> </span><span class="s">(such</span><span class="nv"> </span><span class="s">as</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">container),</span><span class="nv"> </span><span class="s">the</span>
+<span class="w">      </span><span class="s">process</span>
+
+<span class="w">      </span><span class="s">identifier</span><span class="nv"> </span><span class="s">within</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">process</span><span class="nv"> </span><span class="s">namespace.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Namespace PID</span>
@@ -1127,7 +1180,10 @@
 <span class="w">        </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">observable_id</span>
 <span class="w">        </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">13</span>
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">full</span><span class="nv"> </span><span class="s">command</span><span class="nv"> </span><span class="s">line</span><span class="nv"> </span><span class="s">used</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">launch</span><span class="nv"> </span><span class="s">an</span><span class="nv"> </span><span class="s">application,</span><span class="nv"> </span><span class="s">service,</span><span class="nv"> </span><span class="s">process,</span>
-<span class="w">      </span><span class="s">or</span><span class="nv"> </span><span class="s">job.</span><span class="nv"> </span><span class="s">For</span><span class="nv"> </span><span class="s">example:</span><span class="nv"> </span><span class="s">&lt;code&gt;ssh</span><span class="nv"> </span><span class="s">user@10.0.0.10&lt;/code&gt;.</span><span class="nv"> </span><span class="s">If</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">command</span><span class="nv"> </span><span class="s">line</span><span class="nv"> </span><span class="s">is</span>
+<span class="w">      </span><span class="s">or</span><span class="nv"> </span><span class="s">job.</span>
+
+<span class="w">      </span><span class="s">For</span><span class="nv"> </span><span class="s">example:</span><span class="nv"> </span><span class="s">&lt;code&gt;ssh</span><span class="nv"> </span><span class="s">user@10.0.0.10&lt;/code&gt;.</span><span class="nv"> </span><span class="s">If</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">command</span><span class="nv"> </span><span class="s">line</span><span class="nv"> </span><span class="s">is</span>
+
 <span class="w">      </span><span class="s">unavailable</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">missing,</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">empty</span><span class="nv"> </span><span class="s">string</span><span class="nv"> </span><span class="s">&lt;code&gt;</span><span class="se">''''</span><span class="s">&lt;/code&gt;</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">be</span><span class="nv"> </span><span class="s">used.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
@@ -1147,10 +1203,14 @@
 <span class="w">      </span><span class="nt">ocsf_source</span><span class="p">:</span>
 <span class="w">        </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ocsf_source</span>
 <span class="w">        </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">cpid</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">A unique process identifier that can be assigned deterministically</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">by multiple system data producers.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'A</span><span class="nv"> </span><span class="s">unique</span><span class="nv"> </span><span class="s">process</span><span class="nv"> </span><span class="s">identifier</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">can</span><span class="nv"> </span><span class="s">be</span><span class="nv"> </span><span class="s">assigned</span><span class="nv"> </span><span class="s">deterministically</span>
+<span class="w">      </span><span class="s">by</span><span class="nv"> </span><span class="s">multiple</span>
+
+<span class="w">      </span><span class="s">system</span><span class="nv"> </span><span class="s">data</span><span class="nv"> </span><span class="s">producers.'</span>
 <span class="w">    </span><span class="nt">notes</span><span class="p">:</span>
-<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">OCSF Common Process Identifier (CPID) Specification — https://github.com/ocsf/common-process-id</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">'OCSF</span><span class="nv"> </span><span class="s">Common</span><span class="nv"> </span><span class="s">Process</span><span class="nv"> </span><span class="s">Identifier</span><span class="nv"> </span><span class="s">(CPID)</span><span class="nv"> </span><span class="s">Specification</span><span class="nv"> </span><span class="s">—</span>
+
+<span class="w">      </span><span class="s">https://github.com/ocsf/common-process-id'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">see_also</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://github.com/ocsf/common-process-id</span>
@@ -1332,9 +1392,12 @@
 <span class="w">      </span><span class="nt">observable_id</span><span class="p">:</span>
 <span class="w">        </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">observable_id</span>
 <span class="w">        </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">15</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The process identifier, as reported by the operating system. Process</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">ID (PID) is a number used by the operating system to uniquely identify an active</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">process.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">process</span><span class="nv"> </span><span class="s">identifier,</span><span class="nv"> </span><span class="s">as</span><span class="nv"> </span><span class="s">reported</span><span class="nv"> </span><span class="s">by</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">operating</span><span class="nv"> </span><span class="s">system.</span><span class="nv"> </span><span class="s">Process</span>
+<span class="w">      </span><span class="s">ID</span><span class="nv"> </span><span class="s">(PID)</span>
+
+<span class="w">      </span><span class="s">is</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">number</span><span class="nv"> </span><span class="s">used</span><span class="nv"> </span><span class="s">by</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">operating</span><span class="nv"> </span><span class="s">system</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">uniquely</span><span class="nv"> </span><span class="s">identify</span><span class="nv"> </span><span class="s">an</span><span class="nv"> </span><span class="s">active</span>
+
+<span class="w">      </span><span class="s">process.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Process ID</span>
@@ -1347,8 +1410,9 @@
 <span class="w">    </span><span class="nt">recommended</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">uid</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">uid</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">A unique identifier for this process assigned by the producer (tool).  Facilitates</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">correlation of a process event with other events for that process.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'A</span><span class="nv"> </span><span class="s">unique</span><span class="nv"> </span><span class="s">identifier</span><span class="nv"> </span><span class="s">for</span><span class="nv"> </span><span class="s">this</span><span class="nv"> </span><span class="s">process</span><span class="nv"> </span><span class="s">assigned</span><span class="nv"> </span><span class="s">by</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">producer</span><span class="nv"> </span><span class="s">(tool).</span>
+
+<span class="w">      </span><span class="s">Facilitates</span><span class="nv"> </span><span class="s">correlation</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">process</span><span class="nv"> </span><span class="s">event</span><span class="nv"> </span><span class="s">with</span><span class="nv"> </span><span class="s">other</span><span class="nv"> </span><span class="s">events</span><span class="nv"> </span><span class="s">for</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">process.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Unique ID</span>

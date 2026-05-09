@@ -236,6 +236,15 @@
 </nav>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="#in-subsets">
+<span class="md-ellipsis">
+      
+        In Subsets
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#aliases">
 <span class="md-ellipsis">
       
@@ -323,7 +332,11 @@
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
 <h1 id="class-aircraft">Class: Aircraft</h1>
-<p><em>The Aircraft object represents any aircraft or otherwise airborne asset such as an unmanned system, airplane, balloon, spacecraft, or otherwise. The Aircraft object is intended to normalized data captured or otherwise logged from active radar, passive radar, multi-spectral systems, or the Automatic Dependant Broadcast - Surveillance (ADS-B), and/or Mode S systems.</em></p>
+<p><em>The Aircraft object represents any aircraft or otherwise airborne asset such as</em></p>
+<p><em>an unmanned system, airplane, balloon, spacecraft, or otherwise. The Aircraft</em></p>
+<p><em>object is intended to normalized data captured or otherwise logged from active</em></p>
+<p><em>radar, passive radar, multi-spectral systems, or the Automatic Dependant</em></p>
+<p><em>Broadcast - Surveillance (ADS-B), and/or Mode S systems.</em></p>
 <p>URI: <a href="https://w3id.org/lmodel/ocsf/Aircraft">ocsf:Aircraft</a></p>
 <pre class="mermaid"><code> classDiagram
     class Aircraft
@@ -438,19 +451,19 @@
 <tr>
 <td><a href="../uid/">uid</a></td>
 <td>0..1 <em>recommended</em> <br/> <a href="../String/">String</a></td>
-<td>The primary identification identifier for an aircraft, such as the 24-bit Int...</td>
+<td>The primary identification identifier for an aircraft, such as the 24-bit</td>
 <td>direct</td>
 </tr>
 <tr>
 <td><a href="../uid_alt/">uid_alt</a></td>
 <td>0..1 <br/> <a href="../String/">String</a></td>
-<td>A secondary identification identifier for an aircraft, such as the 4-digit sq...</td>
+<td>A secondary identification identifier for an aircraft, such as the 4-digit</td>
 <td>direct</td>
 </tr>
 <tr>
 <td><a href="../vertical_speed/">vertical_speed</a></td>
 <td>0..1 <br/> <a href="../String/">String</a></td>
-<td>Vertical speed upward relative to the WGS-84 datum, measured in meters per se...</td>
+<td>Vertical speed upward relative to the WGS-84 datum, measured in meters per</td>
 <td>direct</td>
 </tr>
 </tbody>
@@ -494,6 +507,10 @@
 </tr>
 </tbody>
 </table>
+<h2 id="in-subsets">In Subsets</h2>
+<ul>
+<li><a href="../Objects/">Objects</a></li>
+</ul>
 <h2 id="aliases">Aliases</h2>
 <ul>
 <li>Aircraft</li>
@@ -546,11 +563,18 @@
 <span class="w">  </span><span class="nt">ocsf_constraints</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ocsf_constraints</span>
 <span class="w">    </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="s">'{"at_least_one":</span><span class="nv"> </span><span class="s">["name",</span><span class="nv"> </span><span class="s">"serial_number",</span><span class="nv"> </span><span class="s">"uid",</span><span class="nv"> </span><span class="s">"uid_alt"]}'</span>
-<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The Aircraft object represents any aircraft or otherwise airborne asset</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">such as an unmanned system, airplane, balloon, spacecraft, or otherwise. The Aircraft</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">object is intended to normalized data captured or otherwise logged from active radar,</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">passive radar, multi-spectral systems, or the Automatic Dependant Broadcast - Surveillance</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">(ADS-B), and/or Mode S systems.</span>
+<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">Aircraft</span><span class="nv"> </span><span class="s">object</span><span class="nv"> </span><span class="s">represents</span><span class="nv"> </span><span class="s">any</span><span class="nv"> </span><span class="s">aircraft</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">otherwise</span><span class="nv"> </span><span class="s">airborne</span><span class="nv"> </span><span class="s">asset</span>
+<span class="w">  </span><span class="s">such</span><span class="nv"> </span><span class="s">as</span>
+
+<span class="w">  </span><span class="s">an</span><span class="nv"> </span><span class="s">unmanned</span><span class="nv"> </span><span class="s">system,</span><span class="nv"> </span><span class="s">airplane,</span><span class="nv"> </span><span class="s">balloon,</span><span class="nv"> </span><span class="s">spacecraft,</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">otherwise.</span><span class="nv"> </span><span class="s">The</span><span class="nv"> </span><span class="s">Aircraft</span>
+
+<span class="w">  </span><span class="s">object</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">intended</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">normalized</span><span class="nv"> </span><span class="s">data</span><span class="nv"> </span><span class="s">captured</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">otherwise</span><span class="nv"> </span><span class="s">logged</span><span class="nv"> </span><span class="s">from</span><span class="nv"> </span><span class="s">active</span>
+
+<span class="w">  </span><span class="s">radar,</span><span class="nv"> </span><span class="s">passive</span><span class="nv"> </span><span class="s">radar,</span><span class="nv"> </span><span class="s">multi-spectral</span><span class="nv"> </span><span class="s">systems,</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">Automatic</span><span class="nv"> </span><span class="s">Dependant</span>
+
+<span class="w">  </span><span class="s">Broadcast</span><span class="nv"> </span><span class="s">-</span><span class="nv"> </span><span class="s">Surveillance</span><span class="nv"> </span><span class="s">(ADS-B),</span><span class="nv"> </span><span class="s">and/or</span><span class="nv"> </span><span class="s">Mode</span><span class="nv"> </span><span class="s">S</span><span class="nv"> </span><span class="s">systems.'</span>
+<span class="nt">in_subset</span><span class="p">:</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">objects</span>
 <span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="nt">aliases</span><span class="p">:</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Aircraft</span>
@@ -583,14 +607,20 @@
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The serial number of the aircraft.</span>
 <span class="w">  </span><span class="nt">uid</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">uid</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The primary identification identifier for an aircraft, such as the</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">24-bit International Civil Aviation Organization (ICAO) identifier of the aircraft,</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">as 6 hex digits.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">primary</span><span class="nv"> </span><span class="s">identification</span><span class="nv"> </span><span class="s">identifier</span><span class="nv"> </span><span class="s">for</span><span class="nv"> </span><span class="s">an</span><span class="nv"> </span><span class="s">aircraft,</span><span class="nv"> </span><span class="s">such</span><span class="nv"> </span><span class="s">as</span><span class="nv"> </span><span class="s">the</span>
+<span class="w">      </span><span class="s">24-bit</span>
+
+<span class="w">      </span><span class="s">International</span><span class="nv"> </span><span class="s">Civil</span><span class="nv"> </span><span class="s">Aviation</span><span class="nv"> </span><span class="s">Organization</span><span class="nv"> </span><span class="s">(ICAO)</span><span class="nv"> </span><span class="s">identifier</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">aircraft,</span>
+<span class="w">      </span><span class="s">as</span>
+
+<span class="w">      </span><span class="s">6</span><span class="nv"> </span><span class="s">hex</span><span class="nv"> </span><span class="s">digits.'</span>
 <span class="w">    </span><span class="nt">recommended</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">uid_alt</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">uid_alt</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">A secondary identification identifier for an aircraft, such as the</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">4-digit squawk (octal representation).</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'A</span><span class="nv"> </span><span class="s">secondary</span><span class="nv"> </span><span class="s">identification</span><span class="nv"> </span><span class="s">identifier</span><span class="nv"> </span><span class="s">for</span><span class="nv"> </span><span class="s">an</span><span class="nv"> </span><span class="s">aircraft,</span><span class="nv"> </span><span class="s">such</span><span class="nv"> </span><span class="s">as</span><span class="nv"> </span><span class="s">the</span>
+<span class="w">      </span><span class="s">4-digit</span>
+
+<span class="w">      </span><span class="s">squawk</span><span class="nv"> </span><span class="s">(octal</span><span class="nv"> </span><span class="s">representation).'</span>
 <span class="nt">rules</span><span class="p">:</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">postconditions</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">any_of</span><span class="p">:</span>
@@ -611,7 +641,9 @@
 <span class="w">          </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">uid_alt</span>
 <span class="w">          </span><span class="nt">required</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'OCSF</span><span class="nv"> </span><span class="s">at_least_one:</span><span class="nv"> </span><span class="s">at</span><span class="nv"> </span><span class="s">least</span><span class="nv"> </span><span class="s">one</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">[</span><span class="se">''</span><span class="s">name</span><span class="se">''</span><span class="s">,</span><span class="nv"> </span><span class="se">''</span><span class="s">serial_number</span><span class="se">''</span><span class="s">,</span><span class="nv"> </span><span class="se">''</span><span class="s">uid</span><span class="se">''</span><span class="s">,</span>
-<span class="w">    </span><span class="se">''</span><span class="s">uid_alt</span><span class="se">''</span><span class="s">]</span><span class="nv"> </span><span class="s">must</span><span class="nv"> </span><span class="s">be</span><span class="nv"> </span><span class="s">set.'</span>
+<span class="w">    </span><span class="se">''</span><span class="s">uid_alt</span><span class="se">''</span><span class="s">]</span>
+
+<span class="w">    </span><span class="s">must</span><span class="nv"> </span><span class="s">be</span><span class="nv"> </span><span class="s">set.'</span>
 </code></pre></div>
 </details>
 <h3 id="induced">Induced</h3>
@@ -621,11 +653,18 @@
 <span class="w">  </span><span class="nt">ocsf_constraints</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ocsf_constraints</span>
 <span class="w">    </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="s">'{"at_least_one":</span><span class="nv"> </span><span class="s">["name",</span><span class="nv"> </span><span class="s">"serial_number",</span><span class="nv"> </span><span class="s">"uid",</span><span class="nv"> </span><span class="s">"uid_alt"]}'</span>
-<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The Aircraft object represents any aircraft or otherwise airborne asset</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">such as an unmanned system, airplane, balloon, spacecraft, or otherwise. The Aircraft</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">object is intended to normalized data captured or otherwise logged from active radar,</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">passive radar, multi-spectral systems, or the Automatic Dependant Broadcast - Surveillance</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">(ADS-B), and/or Mode S systems.</span>
+<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">Aircraft</span><span class="nv"> </span><span class="s">object</span><span class="nv"> </span><span class="s">represents</span><span class="nv"> </span><span class="s">any</span><span class="nv"> </span><span class="s">aircraft</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">otherwise</span><span class="nv"> </span><span class="s">airborne</span><span class="nv"> </span><span class="s">asset</span>
+<span class="w">  </span><span class="s">such</span><span class="nv"> </span><span class="s">as</span>
+
+<span class="w">  </span><span class="s">an</span><span class="nv"> </span><span class="s">unmanned</span><span class="nv"> </span><span class="s">system,</span><span class="nv"> </span><span class="s">airplane,</span><span class="nv"> </span><span class="s">balloon,</span><span class="nv"> </span><span class="s">spacecraft,</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">otherwise.</span><span class="nv"> </span><span class="s">The</span><span class="nv"> </span><span class="s">Aircraft</span>
+
+<span class="w">  </span><span class="s">object</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">intended</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">normalized</span><span class="nv"> </span><span class="s">data</span><span class="nv"> </span><span class="s">captured</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">otherwise</span><span class="nv"> </span><span class="s">logged</span><span class="nv"> </span><span class="s">from</span><span class="nv"> </span><span class="s">active</span>
+
+<span class="w">  </span><span class="s">radar,</span><span class="nv"> </span><span class="s">passive</span><span class="nv"> </span><span class="s">radar,</span><span class="nv"> </span><span class="s">multi-spectral</span><span class="nv"> </span><span class="s">systems,</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">Automatic</span><span class="nv"> </span><span class="s">Dependant</span>
+
+<span class="w">  </span><span class="s">Broadcast</span><span class="nv"> </span><span class="s">-</span><span class="nv"> </span><span class="s">Surveillance</span><span class="nv"> </span><span class="s">(ADS-B),</span><span class="nv"> </span><span class="s">and/or</span><span class="nv"> </span><span class="s">Mode</span><span class="nv"> </span><span class="s">S</span><span class="nv"> </span><span class="s">systems.'</span>
+<span class="nt">in_subset</span><span class="p">:</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">objects</span>
 <span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="nt">aliases</span><span class="p">:</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Aircraft</span>
@@ -647,14 +686,20 @@
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The serial number of the aircraft.</span>
 <span class="w">  </span><span class="nt">uid</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">uid</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The primary identification identifier for an aircraft, such as the</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">24-bit International Civil Aviation Organization (ICAO) identifier of the aircraft,</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">as 6 hex digits.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">primary</span><span class="nv"> </span><span class="s">identification</span><span class="nv"> </span><span class="s">identifier</span><span class="nv"> </span><span class="s">for</span><span class="nv"> </span><span class="s">an</span><span class="nv"> </span><span class="s">aircraft,</span><span class="nv"> </span><span class="s">such</span><span class="nv"> </span><span class="s">as</span><span class="nv"> </span><span class="s">the</span>
+<span class="w">      </span><span class="s">24-bit</span>
+
+<span class="w">      </span><span class="s">International</span><span class="nv"> </span><span class="s">Civil</span><span class="nv"> </span><span class="s">Aviation</span><span class="nv"> </span><span class="s">Organization</span><span class="nv"> </span><span class="s">(ICAO)</span><span class="nv"> </span><span class="s">identifier</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">aircraft,</span>
+<span class="w">      </span><span class="s">as</span>
+
+<span class="w">      </span><span class="s">6</span><span class="nv"> </span><span class="s">hex</span><span class="nv"> </span><span class="s">digits.'</span>
 <span class="w">    </span><span class="nt">recommended</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">uid_alt</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">uid_alt</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">A secondary identification identifier for an aircraft, such as the</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">4-digit squawk (octal representation).</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'A</span><span class="nv"> </span><span class="s">secondary</span><span class="nv"> </span><span class="s">identification</span><span class="nv"> </span><span class="s">identifier</span><span class="nv"> </span><span class="s">for</span><span class="nv"> </span><span class="s">an</span><span class="nv"> </span><span class="s">aircraft,</span><span class="nv"> </span><span class="s">such</span><span class="nv"> </span><span class="s">as</span><span class="nv"> </span><span class="s">the</span>
+<span class="w">      </span><span class="s">4-digit</span>
+
+<span class="w">      </span><span class="s">squawk</span><span class="nv"> </span><span class="s">(octal</span><span class="nv"> </span><span class="s">representation).'</span>
 <span class="nt">attributes</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">location</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">location</span>
@@ -818,8 +863,11 @@
 <span class="w">  </span><span class="nt">speed</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">speed</span>
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'Ground</span><span class="nv"> </span><span class="s">speed</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">flight.</span><span class="nv"> </span><span class="s">This</span><span class="nv"> </span><span class="s">value</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">provided</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">meters</span><span class="nv"> </span><span class="s">per</span><span class="nv"> </span><span class="s">second</span>
-<span class="w">      </span><span class="s">with</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">minimum</span><span class="nv"> </span><span class="s">resolution</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">0.25</span><span class="nv"> </span><span class="s">m/s.</span><span class="nv"> </span><span class="s">Special</span><span class="nv"> </span><span class="s">Values:</span><span class="nv"> </span><span class="s">&lt;code&gt;Invalid&lt;/code&gt;,</span>
-<span class="w">      </span><span class="s">&lt;code&gt;No</span><span class="nv"> </span><span class="s">Value&lt;/code&gt;,</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">&lt;code&gt;Unknown:</span><span class="nv"> </span><span class="s">255</span><span class="nv"> </span><span class="s">m/s&lt;/code&gt;.'</span>
+<span class="w">      </span><span class="s">with</span><span class="nv"> </span><span class="s">a</span>
+
+<span class="w">      </span><span class="s">minimum</span><span class="nv"> </span><span class="s">resolution</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">0.25</span><span class="nv"> </span><span class="s">m/s.</span><span class="nv"> </span><span class="s">Special</span><span class="nv"> </span><span class="s">Values:</span><span class="nv"> </span><span class="s">&lt;code&gt;Invalid&lt;/code&gt;,</span><span class="nv"> </span><span class="s">&lt;code&gt;No</span>
+
+<span class="w">      </span><span class="s">Value&lt;/code&gt;,</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">&lt;code&gt;Unknown:</span><span class="nv"> </span><span class="s">255</span><span class="nv"> </span><span class="s">m/s&lt;/code&gt;.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Speed</span>
@@ -831,8 +879,10 @@
 <span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">string</span>
 <span class="w">  </span><span class="nt">speed_accuracy</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">speed_accuracy</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Provides quality/containment on horizontal ground speed. Measured</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">in meters/second.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'Provides</span><span class="nv"> </span><span class="s">quality/containment</span><span class="nv"> </span><span class="s">on</span><span class="nv"> </span><span class="s">horizontal</span><span class="nv"> </span><span class="s">ground</span><span class="nv"> </span><span class="s">speed.</span><span class="nv"> </span><span class="s">Measured</span>
+<span class="w">      </span><span class="s">in</span>
+
+<span class="w">      </span><span class="s">meters/second.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Speed Accuracy</span>
@@ -844,9 +894,12 @@
 <span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">string</span>
 <span class="w">  </span><span class="nt">track_direction</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">track_direction</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Direction of flight expressed as a “True North-based” ground track</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">angle. This value is provided in clockwise degrees with a minimum resolution</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">of 1 degree. If aircraft is not moving horizontally, use the “Unknown” value</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'Direction</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">flight</span><span class="nv"> </span><span class="s">expressed</span><span class="nv"> </span><span class="s">as</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">“True</span><span class="nv"> </span><span class="s">North-based”</span><span class="nv"> </span><span class="s">ground</span><span class="nv"> </span><span class="s">track</span>
+<span class="w">      </span><span class="s">angle.</span><span class="nv"> </span><span class="s">This</span>
+
+<span class="w">      </span><span class="s">value</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">provided</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">clockwise</span><span class="nv"> </span><span class="s">degrees</span><span class="nv"> </span><span class="s">with</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">minimum</span><span class="nv"> </span><span class="s">resolution</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">1</span><span class="nv"> </span><span class="s">degree.</span>
+
+<span class="w">      </span><span class="s">If</span><span class="nv"> </span><span class="s">aircraft</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">not</span><span class="nv"> </span><span class="s">moving</span><span class="nv"> </span><span class="s">horizontally,</span><span class="nv"> </span><span class="s">use</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">“Unknown”</span><span class="nv"> </span><span class="s">value'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Track Direction</span>
@@ -858,9 +911,13 @@
 <span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">string</span>
 <span class="w">  </span><span class="nt">uid</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">uid</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The primary identification identifier for an aircraft, such as the</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">24-bit International Civil Aviation Organization (ICAO) identifier of the aircraft,</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">as 6 hex digits.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">primary</span><span class="nv"> </span><span class="s">identification</span><span class="nv"> </span><span class="s">identifier</span><span class="nv"> </span><span class="s">for</span><span class="nv"> </span><span class="s">an</span><span class="nv"> </span><span class="s">aircraft,</span><span class="nv"> </span><span class="s">such</span><span class="nv"> </span><span class="s">as</span><span class="nv"> </span><span class="s">the</span>
+<span class="w">      </span><span class="s">24-bit</span>
+
+<span class="w">      </span><span class="s">International</span><span class="nv"> </span><span class="s">Civil</span><span class="nv"> </span><span class="s">Aviation</span><span class="nv"> </span><span class="s">Organization</span><span class="nv"> </span><span class="s">(ICAO)</span><span class="nv"> </span><span class="s">identifier</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">aircraft,</span>
+<span class="w">      </span><span class="s">as</span>
+
+<span class="w">      </span><span class="s">6</span><span class="nv"> </span><span class="s">hex</span><span class="nv"> </span><span class="s">digits.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Unique ID</span>
@@ -955,8 +1012,10 @@
 <span class="w">    </span><span class="nt">recommended</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">uid_alt</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">uid_alt</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">A secondary identification identifier for an aircraft, such as the</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">4-digit squawk (octal representation).</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'A</span><span class="nv"> </span><span class="s">secondary</span><span class="nv"> </span><span class="s">identification</span><span class="nv"> </span><span class="s">identifier</span><span class="nv"> </span><span class="s">for</span><span class="nv"> </span><span class="s">an</span><span class="nv"> </span><span class="s">aircraft,</span><span class="nv"> </span><span class="s">such</span><span class="nv"> </span><span class="s">as</span><span class="nv"> </span><span class="s">the</span>
+<span class="w">      </span><span class="s">4-digit</span>
+
+<span class="w">      </span><span class="s">squawk</span><span class="nv"> </span><span class="s">(octal</span><span class="nv"> </span><span class="s">representation).'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Alternate ID</span>
@@ -979,8 +1038,11 @@
 <span class="w">  </span><span class="nt">vertical_speed</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">vertical_speed</span>
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'Vertical</span><span class="nv"> </span><span class="s">speed</span><span class="nv"> </span><span class="s">upward</span><span class="nv"> </span><span class="s">relative</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">WGS-84</span><span class="nv"> </span><span class="s">datum,</span><span class="nv"> </span><span class="s">measured</span><span class="nv"> </span><span class="s">in</span>
-<span class="w">      </span><span class="s">meters</span><span class="nv"> </span><span class="s">per</span><span class="nv"> </span><span class="s">second.</span><span class="nv"> </span><span class="s">Special</span><span class="nv"> </span><span class="s">Values:</span><span class="nv"> </span><span class="s">&lt;code&gt;Invalid&lt;/code&gt;,</span><span class="nv"> </span><span class="s">&lt;code&gt;No</span><span class="nv"> </span><span class="s">Value&lt;/code&gt;,</span>
-<span class="w">      </span><span class="s">or</span><span class="nv"> </span><span class="s">&lt;code&gt;Unknown:</span><span class="nv"> </span><span class="s">63</span><span class="nv"> </span><span class="s">m/s&lt;/code&gt;.'</span>
+<span class="w">      </span><span class="s">meters</span><span class="nv"> </span><span class="s">per</span>
+
+<span class="w">      </span><span class="s">second.</span><span class="nv"> </span><span class="s">Special</span><span class="nv"> </span><span class="s">Values:</span><span class="nv"> </span><span class="s">&lt;code&gt;Invalid&lt;/code&gt;,</span><span class="nv"> </span><span class="s">&lt;code&gt;No</span><span class="nv"> </span><span class="s">Value&lt;/code&gt;,</span><span class="nv"> </span><span class="s">or</span>
+
+<span class="w">      </span><span class="s">&lt;code&gt;Unknown:</span><span class="nv"> </span><span class="s">63</span><span class="nv"> </span><span class="s">m/s&lt;/code&gt;.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Vertical Speed</span>
@@ -1010,7 +1072,9 @@
 <span class="w">          </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">uid_alt</span>
 <span class="w">          </span><span class="nt">required</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'OCSF</span><span class="nv"> </span><span class="s">at_least_one:</span><span class="nv"> </span><span class="s">at</span><span class="nv"> </span><span class="s">least</span><span class="nv"> </span><span class="s">one</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">[</span><span class="se">''</span><span class="s">name</span><span class="se">''</span><span class="s">,</span><span class="nv"> </span><span class="se">''</span><span class="s">serial_number</span><span class="se">''</span><span class="s">,</span><span class="nv"> </span><span class="se">''</span><span class="s">uid</span><span class="se">''</span><span class="s">,</span>
-<span class="w">    </span><span class="se">''</span><span class="s">uid_alt</span><span class="se">''</span><span class="s">]</span><span class="nv"> </span><span class="s">must</span><span class="nv"> </span><span class="s">be</span><span class="nv"> </span><span class="s">set.'</span>
+<span class="w">    </span><span class="se">''</span><span class="s">uid_alt</span><span class="se">''</span><span class="s">]</span>
+
+<span class="w">    </span><span class="s">must</span><span class="nv"> </span><span class="s">be</span><span class="nv"> </span><span class="s">set.'</span>
 </code></pre></div>
 </details>
 </article>

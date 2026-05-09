@@ -217,6 +217,15 @@
 </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="#in-subsets">
+<span class="md-ellipsis">
+      
+        In Subsets
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#aliases">
 <span class="md-ellipsis">
       
@@ -295,7 +304,11 @@
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
 <h1 id="class-epss">Class: Epss</h1>
-<p><em>The Exploit Prediction Scoring System (EPSS) object describes the estimated probability a vulnerability will be exploited. EPSS is a community-driven effort to combine descriptive information about vulnerabilities (CVEs) with evidence of actual exploitation in-the-wild. (<a href="https://www.first.org/epss/" target="_blank">EPSS</a>).</em></p>
+<p><em>The Exploit Prediction Scoring System (EPSS) object describes the estimated</em></p>
+<p><em>probability a vulnerability will be exploited. EPSS is a community-driven</em></p>
+<p><em>effort to combine descriptive information about vulnerabilities (CVEs) with</em></p>
+<p><em>evidence of actual exploitation in-the-wild. (&lt;a target='_blank'</em></p>
+<p><em>href='<a href="https://www.first.org/epss/">https://www.first.org/epss/</a>'&gt;EPSS).</em></p>
 <p>URI: <a href="https://w3id.org/lmodel/ocsf/Epss">ocsf:Epss</a></p>
 <pre class="mermaid"><code> classDiagram
     class Epss
@@ -348,7 +361,7 @@
 <tr>
 <td><a href="../score/">score</a></td>
 <td>1 <br/> <a href="../String/">String</a></td>
-<td>The EPSS score representing the probability [0-1] of exploitation in the wild...</td>
+<td>The EPSS score representing the probability [0-1] of exploitation in the wild</td>
 <td>direct</td>
 </tr>
 <tr>
@@ -378,6 +391,10 @@
 </tr>
 </tbody>
 </table>
+<h2 id="in-subsets">In Subsets</h2>
+<ul>
+<li><a href="../Objects/">Objects</a></li>
+</ul>
 <h2 id="aliases">Aliases</h2>
 <ul>
 <li>EPSS</li>
@@ -415,10 +432,17 @@
 <h3 id="direct">Direct</h3>
 <details>
 <div class="highlight"><pre><span></span><code><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Epss</span>
-<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The Exploit Prediction Scoring System (EPSS) object describes the estimated</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">probability a vulnerability will be exploited. EPSS is a community-driven effort</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">to combine descriptive information about vulnerabilities (CVEs) with evidence of</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">actual exploitation in-the-wild. (&lt;a target='_blank' href='https://www.first.org/epss/'&gt;EPSS&lt;/a&gt;).</span>
+<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">Exploit</span><span class="nv"> </span><span class="s">Prediction</span><span class="nv"> </span><span class="s">Scoring</span><span class="nv"> </span><span class="s">System</span><span class="nv"> </span><span class="s">(EPSS)</span><span class="nv"> </span><span class="s">object</span><span class="nv"> </span><span class="s">describes</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">estimated</span>
+
+<span class="w">  </span><span class="s">probability</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">vulnerability</span><span class="nv"> </span><span class="s">will</span><span class="nv"> </span><span class="s">be</span><span class="nv"> </span><span class="s">exploited.</span><span class="nv"> </span><span class="s">EPSS</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">community-driven</span>
+
+<span class="w">  </span><span class="s">effort</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">combine</span><span class="nv"> </span><span class="s">descriptive</span><span class="nv"> </span><span class="s">information</span><span class="nv"> </span><span class="s">about</span><span class="nv"> </span><span class="s">vulnerabilities</span><span class="nv"> </span><span class="s">(CVEs)</span><span class="nv"> </span><span class="s">with</span>
+
+<span class="w">  </span><span class="s">evidence</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">actual</span><span class="nv"> </span><span class="s">exploitation</span><span class="nv"> </span><span class="s">in-the-wild.</span><span class="nv"> </span><span class="s">(&lt;a</span><span class="nv"> </span><span class="s">target=</span><span class="se">''</span><span class="s">_blank</span><span class="se">''</span>
+
+<span class="w">  </span><span class="s">href=</span><span class="se">''</span><span class="s">https://www.first.org/epss/</span><span class="se">''</span><span class="s">&gt;EPSS&lt;/a&gt;).'</span>
+<span class="nt">in_subset</span><span class="p">:</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">objects</span>
 <span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="nt">aliases</span><span class="p">:</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">EPSS</span>
@@ -439,8 +463,10 @@
 <span class="w">    </span><span class="nt">recommended</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">score</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">score</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The EPSS score representing the probability [0-1] of exploitation</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">in the wild in the next 30 days (following score publication).</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">EPSS</span><span class="nv"> </span><span class="s">score</span><span class="nv"> </span><span class="s">representing</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">probability</span><span class="nv"> </span><span class="s">[0-1]</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">exploitation</span>
+<span class="w">      </span><span class="s">in</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">wild</span>
+
+<span class="w">      </span><span class="s">in</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">next</span><span class="nv"> </span><span class="s">30</span><span class="nv"> </span><span class="s">days</span><span class="nv"> </span><span class="s">(following</span><span class="nv"> </span><span class="s">score</span><span class="nv"> </span><span class="s">publication).'</span>
 <span class="w">    </span><span class="nt">required</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">version</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">version</span>
@@ -451,10 +477,17 @@
 <h3 id="induced">Induced</h3>
 <details>
 <div class="highlight"><pre><span></span><code><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Epss</span>
-<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The Exploit Prediction Scoring System (EPSS) object describes the estimated</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">probability a vulnerability will be exploited. EPSS is a community-driven effort</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">to combine descriptive information about vulnerabilities (CVEs) with evidence of</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">actual exploitation in-the-wild. (&lt;a target='_blank' href='https://www.first.org/epss/'&gt;EPSS&lt;/a&gt;).</span>
+<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">Exploit</span><span class="nv"> </span><span class="s">Prediction</span><span class="nv"> </span><span class="s">Scoring</span><span class="nv"> </span><span class="s">System</span><span class="nv"> </span><span class="s">(EPSS)</span><span class="nv"> </span><span class="s">object</span><span class="nv"> </span><span class="s">describes</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">estimated</span>
+
+<span class="w">  </span><span class="s">probability</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">vulnerability</span><span class="nv"> </span><span class="s">will</span><span class="nv"> </span><span class="s">be</span><span class="nv"> </span><span class="s">exploited.</span><span class="nv"> </span><span class="s">EPSS</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">community-driven</span>
+
+<span class="w">  </span><span class="s">effort</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">combine</span><span class="nv"> </span><span class="s">descriptive</span><span class="nv"> </span><span class="s">information</span><span class="nv"> </span><span class="s">about</span><span class="nv"> </span><span class="s">vulnerabilities</span><span class="nv"> </span><span class="s">(CVEs)</span><span class="nv"> </span><span class="s">with</span>
+
+<span class="w">  </span><span class="s">evidence</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">actual</span><span class="nv"> </span><span class="s">exploitation</span><span class="nv"> </span><span class="s">in-the-wild.</span><span class="nv"> </span><span class="s">(&lt;a</span><span class="nv"> </span><span class="s">target=</span><span class="se">''</span><span class="s">_blank</span><span class="se">''</span>
+
+<span class="w">  </span><span class="s">href=</span><span class="se">''</span><span class="s">https://www.first.org/epss/</span><span class="se">''</span><span class="s">&gt;EPSS&lt;/a&gt;).'</span>
+<span class="nt">in_subset</span><span class="p">:</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">objects</span>
 <span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="nt">aliases</span><span class="p">:</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">EPSS</span>
@@ -470,8 +503,10 @@
 <span class="w">    </span><span class="nt">recommended</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">score</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">score</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The EPSS score representing the probability [0-1] of exploitation</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">in the wild in the next 30 days (following score publication).</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">EPSS</span><span class="nv"> </span><span class="s">score</span><span class="nv"> </span><span class="s">representing</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">probability</span><span class="nv"> </span><span class="s">[0-1]</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">exploitation</span>
+<span class="w">      </span><span class="s">in</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">wild</span>
+
+<span class="w">      </span><span class="s">in</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">next</span><span class="nv"> </span><span class="s">30</span><span class="nv"> </span><span class="s">days</span><span class="nv"> </span><span class="s">(following</span><span class="nv"> </span><span class="s">score</span><span class="nv"> </span><span class="s">publication).'</span>
 <span class="w">    </span><span class="nt">required</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">version</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">version</span>
@@ -519,8 +554,10 @@
 <span class="w">    </span><span class="nt">recommended</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">percentile</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">percentile</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The EPSS score's percentile representing relative importance and</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">ranking of the score in the larger EPSS dataset.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">EPSS</span><span class="nv"> </span><span class="s">score</span><span class="se">''</span><span class="s">s</span><span class="nv"> </span><span class="s">percentile</span><span class="nv"> </span><span class="s">representing</span><span class="nv"> </span><span class="s">relative</span><span class="nv"> </span><span class="s">importance</span><span class="nv"> </span><span class="s">and</span>
+<span class="w">      </span><span class="s">ranking</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span>
+
+<span class="w">      </span><span class="s">score</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">larger</span><span class="nv"> </span><span class="s">EPSS</span><span class="nv"> </span><span class="s">dataset.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">EPSS Percentile</span>
@@ -532,8 +569,10 @@
 <span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">float</span>
 <span class="w">  </span><span class="nt">score</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">score</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The EPSS score representing the probability [0-1] of exploitation</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">in the wild in the next 30 days (following score publication).</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">EPSS</span><span class="nv"> </span><span class="s">score</span><span class="nv"> </span><span class="s">representing</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">probability</span><span class="nv"> </span><span class="s">[0-1]</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">exploitation</span>
+<span class="w">      </span><span class="s">in</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">wild</span>
+
+<span class="w">      </span><span class="s">in</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">next</span><span class="nv"> </span><span class="s">30</span><span class="nv"> </span><span class="s">days</span><span class="nv"> </span><span class="s">(following</span><span class="nv"> </span><span class="s">score</span><span class="nv"> </span><span class="s">publication).'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Reputation Score</span>

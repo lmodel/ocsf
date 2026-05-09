@@ -217,6 +217,15 @@
 </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="#in-subsets">
+<span class="md-ellipsis">
+      
+        In Subsets
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#aliases">
 <span class="md-ellipsis">
       
@@ -549,6 +558,10 @@
 </tr>
 </tbody>
 </table>
+<h2 id="in-subsets">In Subsets</h2>
+<ul>
+<li><a href="../Objects/">Objects</a></li>
+</ul>
 <h2 id="aliases">Aliases</h2>
 <ul>
 <li>LDAP Person</li>
@@ -587,6 +600,8 @@
 <details>
 <div class="highlight"><pre><span></span><code><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">LdapPerson</span>
 <span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The additional LDAP attributes that describe a person.</span>
+<span class="nt">in_subset</span><span class="p">:</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">objects</span>
 <span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="nt">aliases</span><span class="p">:</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">LDAP Person</span>
@@ -625,24 +640,32 @@
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The name of the department in which the user works.</span>
 <span class="w">  </span><span class="nt">display_name</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">display_name</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The display name of the LDAP person. According to RFC 2798, this</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">is the preferred name of a person to be used when displaying entries.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">display</span><span class="nv"> </span><span class="s">name</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">LDAP</span><span class="nv"> </span><span class="s">person.</span><span class="nv"> </span><span class="s">According</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">RFC</span><span class="nv"> </span><span class="s">2798,</span><span class="nv"> </span><span class="s">this</span>
+<span class="w">      </span><span class="s">is</span><span class="nv"> </span><span class="s">the</span>
+
+<span class="w">      </span><span class="s">preferred</span><span class="nv"> </span><span class="s">name</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">person</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">be</span><span class="nv"> </span><span class="s">used</span><span class="nv"> </span><span class="s">when</span><span class="nv"> </span><span class="s">displaying</span><span class="nv"> </span><span class="s">entries.'</span>
 <span class="w">  </span><span class="nt">labels</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">labels</span>
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">labels</span><span class="nv"> </span><span class="s">associated</span><span class="nv"> </span><span class="s">with</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">user.</span><span class="nv"> </span><span class="s">For</span><span class="nv"> </span><span class="s">example</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">AD</span><span class="nv"> </span><span class="s">this</span><span class="nv"> </span><span class="s">could</span>
-<span class="w">      </span><span class="s">be</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">&lt;code&gt;userType&lt;/code&gt;,</span><span class="nv"> </span><span class="s">&lt;code&gt;employeeType&lt;/code&gt;.</span><span class="nv"> </span><span class="s">For</span><span class="nv"> </span><span class="s">example:</span><span class="nv"> </span><span class="s">&lt;code&gt;Member,</span>
+<span class="w">      </span><span class="s">be</span><span class="nv"> </span><span class="s">the</span>
+
+<span class="w">      </span><span class="s">&lt;code&gt;userType&lt;/code&gt;,</span><span class="nv"> </span><span class="s">&lt;code&gt;employeeType&lt;/code&gt;.</span><span class="nv"> </span><span class="s">For</span><span class="nv"> </span><span class="s">example:</span><span class="nv"> </span><span class="s">&lt;code&gt;Member,</span>
+
 <span class="w">      </span><span class="s">Employee&lt;/code&gt;.'</span>
 <span class="w">  </span><span class="nt">location</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">location</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The geographical location associated with a user. This is typically</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">the user's usual work location.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">geographical</span><span class="nv"> </span><span class="s">location</span><span class="nv"> </span><span class="s">associated</span><span class="nv"> </span><span class="s">with</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">user.</span><span class="nv"> </span><span class="s">This</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">typically</span>
+<span class="w">      </span><span class="s">the</span><span class="nv"> </span><span class="s">user</span><span class="se">''</span><span class="s">s</span>
+
+<span class="w">      </span><span class="s">usual</span><span class="nv"> </span><span class="s">work</span><span class="nv"> </span><span class="s">location.'</span>
 <span class="w">  </span><span class="nt">modified_time</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">modified_time</span>
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The timestamp when the user entry was last modified.</span>
 <span class="w">  </span><span class="nt">phone_number</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">phone_number</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The telephone number of the user. Corresponds to the LDAP &lt;code&gt;Telephone-Number&lt;/code&gt;</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">CN.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">telephone</span><span class="nv"> </span><span class="s">number</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">user.</span><span class="nv"> </span><span class="s">Corresponds</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">LDAP</span>
+
+<span class="w">      </span><span class="s">&lt;code&gt;Telephone-Number&lt;/code&gt;</span><span class="nv"> </span><span class="s">CN.'</span>
 <span class="w">  </span><span class="nt">tags</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">tags</span>
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The list of tags; &lt;code&gt;{key:value}&lt;/code&gt; pairs associated to the</span>
@@ -653,6 +676,8 @@
 <details>
 <div class="highlight"><pre><span></span><code><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">LdapPerson</span>
 <span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The additional LDAP attributes that describe a person.</span>
+<span class="nt">in_subset</span><span class="p">:</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">objects</span>
 <span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="nt">aliases</span><span class="p">:</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">LDAP Person</span>
@@ -668,24 +693,32 @@
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The name of the department in which the user works.</span>
 <span class="w">  </span><span class="nt">display_name</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">display_name</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The display name of the LDAP person. According to RFC 2798, this</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">is the preferred name of a person to be used when displaying entries.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">display</span><span class="nv"> </span><span class="s">name</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">LDAP</span><span class="nv"> </span><span class="s">person.</span><span class="nv"> </span><span class="s">According</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">RFC</span><span class="nv"> </span><span class="s">2798,</span><span class="nv"> </span><span class="s">this</span>
+<span class="w">      </span><span class="s">is</span><span class="nv"> </span><span class="s">the</span>
+
+<span class="w">      </span><span class="s">preferred</span><span class="nv"> </span><span class="s">name</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">person</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">be</span><span class="nv"> </span><span class="s">used</span><span class="nv"> </span><span class="s">when</span><span class="nv"> </span><span class="s">displaying</span><span class="nv"> </span><span class="s">entries.'</span>
 <span class="w">  </span><span class="nt">labels</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">labels</span>
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">labels</span><span class="nv"> </span><span class="s">associated</span><span class="nv"> </span><span class="s">with</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">user.</span><span class="nv"> </span><span class="s">For</span><span class="nv"> </span><span class="s">example</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">AD</span><span class="nv"> </span><span class="s">this</span><span class="nv"> </span><span class="s">could</span>
-<span class="w">      </span><span class="s">be</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">&lt;code&gt;userType&lt;/code&gt;,</span><span class="nv"> </span><span class="s">&lt;code&gt;employeeType&lt;/code&gt;.</span><span class="nv"> </span><span class="s">For</span><span class="nv"> </span><span class="s">example:</span><span class="nv"> </span><span class="s">&lt;code&gt;Member,</span>
+<span class="w">      </span><span class="s">be</span><span class="nv"> </span><span class="s">the</span>
+
+<span class="w">      </span><span class="s">&lt;code&gt;userType&lt;/code&gt;,</span><span class="nv"> </span><span class="s">&lt;code&gt;employeeType&lt;/code&gt;.</span><span class="nv"> </span><span class="s">For</span><span class="nv"> </span><span class="s">example:</span><span class="nv"> </span><span class="s">&lt;code&gt;Member,</span>
+
 <span class="w">      </span><span class="s">Employee&lt;/code&gt;.'</span>
 <span class="w">  </span><span class="nt">location</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">location</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The geographical location associated with a user. This is typically</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">the user's usual work location.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">geographical</span><span class="nv"> </span><span class="s">location</span><span class="nv"> </span><span class="s">associated</span><span class="nv"> </span><span class="s">with</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">user.</span><span class="nv"> </span><span class="s">This</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">typically</span>
+<span class="w">      </span><span class="s">the</span><span class="nv"> </span><span class="s">user</span><span class="se">''</span><span class="s">s</span>
+
+<span class="w">      </span><span class="s">usual</span><span class="nv"> </span><span class="s">work</span><span class="nv"> </span><span class="s">location.'</span>
 <span class="w">  </span><span class="nt">modified_time</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">modified_time</span>
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The timestamp when the user entry was last modified.</span>
 <span class="w">  </span><span class="nt">phone_number</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">phone_number</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The telephone number of the user. Corresponds to the LDAP &lt;code&gt;Telephone-Number&lt;/code&gt;</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">CN.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">telephone</span><span class="nv"> </span><span class="s">number</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">user.</span><span class="nv"> </span><span class="s">Corresponds</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">LDAP</span>
+
+<span class="w">      </span><span class="s">&lt;code&gt;Telephone-Number&lt;/code&gt;</span><span class="nv"> </span><span class="s">CN.'</span>
 <span class="w">  </span><span class="nt">tags</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">tags</span>
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The list of tags; &lt;code&gt;{key:value}&lt;/code&gt; pairs associated to the</span>
@@ -743,10 +776,14 @@
 <span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">TimestampT</span>
 <span class="w">  </span><span class="nt">deleted_time</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">deleted_time</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The timestamp when the user was deleted. In Active Directory (AD),</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">when a user is deleted they are moved to a temporary container and then removed</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">after 30 days. So, this field can be populated even after a user is deleted</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">for the next 30 days.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">timestamp</span><span class="nv"> </span><span class="s">when</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">user</span><span class="nv"> </span><span class="s">was</span><span class="nv"> </span><span class="s">deleted.</span><span class="nv"> </span><span class="s">In</span><span class="nv"> </span><span class="s">Active</span><span class="nv"> </span><span class="s">Directory</span><span class="nv"> </span><span class="s">(AD),</span>
+<span class="w">      </span><span class="s">when</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">user</span>
+
+<span class="w">      </span><span class="s">is</span><span class="nv"> </span><span class="s">deleted</span><span class="nv"> </span><span class="s">they</span><span class="nv"> </span><span class="s">are</span><span class="nv"> </span><span class="s">moved</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">temporary</span><span class="nv"> </span><span class="s">container</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">then</span><span class="nv"> </span><span class="s">removed</span><span class="nv"> </span><span class="s">after</span><span class="nv"> </span><span class="s">30</span>
+
+<span class="w">      </span><span class="s">days.</span><span class="nv"> </span><span class="s">So,</span><span class="nv"> </span><span class="s">this</span><span class="nv"> </span><span class="s">field</span><span class="nv"> </span><span class="s">can</span><span class="nv"> </span><span class="s">be</span><span class="nv"> </span><span class="s">populated</span><span class="nv"> </span><span class="s">even</span><span class="nv"> </span><span class="s">after</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">user</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">deleted</span><span class="nv"> </span><span class="s">for</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">next</span>
+
+<span class="w">      </span><span class="s">30</span><span class="nv"> </span><span class="s">days.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Deleted Time</span>
@@ -770,8 +807,10 @@
 <span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">string</span>
 <span class="w">  </span><span class="nt">display_name</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">display_name</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The display name of the LDAP person. According to RFC 2798, this</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">is the preferred name of a person to be used when displaying entries.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">display</span><span class="nv"> </span><span class="s">name</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">LDAP</span><span class="nv"> </span><span class="s">person.</span><span class="nv"> </span><span class="s">According</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">RFC</span><span class="nv"> </span><span class="s">2798,</span><span class="nv"> </span><span class="s">this</span>
+<span class="w">      </span><span class="s">is</span><span class="nv"> </span><span class="s">the</span>
+
+<span class="w">      </span><span class="s">preferred</span><span class="nv"> </span><span class="s">name</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">person</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">be</span><span class="nv"> </span><span class="s">used</span><span class="nv"> </span><span class="s">when</span><span class="nv"> </span><span class="s">displaying</span><span class="nv"> </span><span class="s">entries.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Display Name</span>
@@ -846,7 +885,10 @@
 <span class="w">  </span><span class="nt">labels</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">labels</span>
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">labels</span><span class="nv"> </span><span class="s">associated</span><span class="nv"> </span><span class="s">with</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">user.</span><span class="nv"> </span><span class="s">For</span><span class="nv"> </span><span class="s">example</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">AD</span><span class="nv"> </span><span class="s">this</span><span class="nv"> </span><span class="s">could</span>
-<span class="w">      </span><span class="s">be</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">&lt;code&gt;userType&lt;/code&gt;,</span><span class="nv"> </span><span class="s">&lt;code&gt;employeeType&lt;/code&gt;.</span><span class="nv"> </span><span class="s">For</span><span class="nv"> </span><span class="s">example:</span><span class="nv"> </span><span class="s">&lt;code&gt;Member,</span>
+<span class="w">      </span><span class="s">be</span><span class="nv"> </span><span class="s">the</span>
+
+<span class="w">      </span><span class="s">&lt;code&gt;userType&lt;/code&gt;,</span><span class="nv"> </span><span class="s">&lt;code&gt;employeeType&lt;/code&gt;.</span><span class="nv"> </span><span class="s">For</span><span class="nv"> </span><span class="s">example:</span><span class="nv"> </span><span class="s">&lt;code&gt;Member,</span>
+
 <span class="w">      </span><span class="s">Employee&lt;/code&gt;.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
@@ -880,8 +922,10 @@
 <span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">TimestampT</span>
 <span class="w">  </span><span class="nt">ldap_cn</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ldap_cn</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The LDAP and X.500 &lt;code&gt;commonName&lt;/code&gt; attribute, typically the</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">full name of the person. For example, &lt;code&gt;John Doe&lt;/code&gt;.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">LDAP</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">X.500</span><span class="nv"> </span><span class="s">&lt;code&gt;commonName&lt;/code&gt;</span><span class="nv"> </span><span class="s">attribute,</span><span class="nv"> </span><span class="s">typically</span>
+<span class="w">      </span><span class="s">the</span><span class="nv"> </span><span class="s">full</span><span class="nv"> </span><span class="s">name</span>
+
+<span class="w">      </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">person.</span><span class="nv"> </span><span class="s">For</span><span class="nv"> </span><span class="s">example,</span><span class="nv"> </span><span class="s">&lt;code&gt;John</span><span class="nv"> </span><span class="s">Doe&lt;/code&gt;.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">LDAP Common Name</span>
@@ -893,9 +937,11 @@
 <span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">string</span>
 <span class="w">  </span><span class="nt">ldap_dn</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ldap_dn</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The X.500 Distinguished Name (DN) is a structured string that uniquely</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">identifies an entry, such as a user, in an X.500 directory service For example,</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">&lt;code&gt;cn=John Doe,ou=People,dc=example,dc=com&lt;/code&gt;.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">X.500</span><span class="nv"> </span><span class="s">Distinguished</span><span class="nv"> </span><span class="s">Name</span><span class="nv"> </span><span class="s">(DN)</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">structured</span><span class="nv"> </span><span class="s">string</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">uniquely</span>
+
+<span class="w">      </span><span class="s">identifies</span><span class="nv"> </span><span class="s">an</span><span class="nv"> </span><span class="s">entry,</span><span class="nv"> </span><span class="s">such</span><span class="nv"> </span><span class="s">as</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">user,</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">an</span><span class="nv"> </span><span class="s">X.500</span><span class="nv"> </span><span class="s">directory</span><span class="nv"> </span><span class="s">service</span><span class="nv"> </span><span class="s">For</span><span class="nv"> </span><span class="s">example,</span>
+
+<span class="w">      </span><span class="s">&lt;code&gt;cn=John</span><span class="nv"> </span><span class="s">Doe,ou=People,dc=example,dc=com&lt;/code&gt;.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">LDAP Distinguished Name</span>
@@ -919,8 +965,10 @@
 <span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">TimestampT</span>
 <span class="w">  </span><span class="nt">location</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">location</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The geographical location associated with a user. This is typically</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">the user's usual work location.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">geographical</span><span class="nv"> </span><span class="s">location</span><span class="nv"> </span><span class="s">associated</span><span class="nv"> </span><span class="s">with</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">user.</span><span class="nv"> </span><span class="s">This</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">typically</span>
+<span class="w">      </span><span class="s">the</span><span class="nv"> </span><span class="s">user</span><span class="se">''</span><span class="s">s</span>
+
+<span class="w">      </span><span class="s">usual</span><span class="nv"> </span><span class="s">work</span><span class="nv"> </span><span class="s">location.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Geo Location</span>
@@ -939,9 +987,12 @@
 <span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Location</span>
 <span class="w">  </span><span class="nt">manager</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">manager</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The user's manager. This helps in understanding an org hierarchy.</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">This should only ever be populated once in an event. I.e. there should not be</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">a manager's manager in an event.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">user</span><span class="se">''</span><span class="s">s</span><span class="nv"> </span><span class="s">manager.</span><span class="nv"> </span><span class="s">This</span><span class="nv"> </span><span class="s">helps</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">understanding</span><span class="nv"> </span><span class="s">an</span><span class="nv"> </span><span class="s">org</span><span class="nv"> </span><span class="s">hierarchy.</span>
+<span class="w">      </span><span class="s">This</span><span class="nv"> </span><span class="s">should</span>
+
+<span class="w">      </span><span class="s">only</span><span class="nv"> </span><span class="s">ever</span><span class="nv"> </span><span class="s">be</span><span class="nv"> </span><span class="s">populated</span><span class="nv"> </span><span class="s">once</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">an</span><span class="nv"> </span><span class="s">event.</span><span class="nv"> </span><span class="s">I.e.</span><span class="nv"> </span><span class="s">there</span><span class="nv"> </span><span class="s">should</span><span class="nv"> </span><span class="s">not</span><span class="nv"> </span><span class="s">be</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">manager</span><span class="se">''</span><span class="s">s</span>
+
+<span class="w">      </span><span class="s">manager</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">an</span><span class="nv"> </span><span class="s">event.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Manager</span>
@@ -983,8 +1034,10 @@
 <span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">TimestampT</span>
 <span class="w">  </span><span class="nt">office_location</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">office_location</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The primary office location associated with the user. This could</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">be any string and isn't a specific address. For example, &lt;code&gt;South East Virtual&lt;/code&gt;.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">primary</span><span class="nv"> </span><span class="s">office</span><span class="nv"> </span><span class="s">location</span><span class="nv"> </span><span class="s">associated</span><span class="nv"> </span><span class="s">with</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">user.</span><span class="nv"> </span><span class="s">This</span><span class="nv"> </span><span class="s">could</span>
+<span class="w">      </span><span class="s">be</span><span class="nv"> </span><span class="s">any</span><span class="nv"> </span><span class="s">string</span>
+
+<span class="w">      </span><span class="s">and</span><span class="nv"> </span><span class="s">isn</span><span class="se">''</span><span class="s">t</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">specific</span><span class="nv"> </span><span class="s">address.</span><span class="nv"> </span><span class="s">For</span><span class="nv"> </span><span class="s">example,</span><span class="nv"> </span><span class="s">&lt;code&gt;South</span><span class="nv"> </span><span class="s">East</span><span class="nv"> </span><span class="s">Virtual&lt;/code&gt;.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Office Location</span>
@@ -996,8 +1049,9 @@
 <span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">string</span>
 <span class="w">  </span><span class="nt">phone_number</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">phone_number</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The telephone number of the user. Corresponds to the LDAP &lt;code&gt;Telephone-Number&lt;/code&gt;</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">CN.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">telephone</span><span class="nv"> </span><span class="s">number</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">user.</span><span class="nv"> </span><span class="s">Corresponds</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">LDAP</span>
+
+<span class="w">      </span><span class="s">&lt;code&gt;Telephone-Number&lt;/code&gt;</span><span class="nv"> </span><span class="s">CN.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Phone Number</span>

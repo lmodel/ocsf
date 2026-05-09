@@ -236,6 +236,15 @@
 </nav>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="#in-subsets">
+<span class="md-ellipsis">
+      
+        In Subsets
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#aliases">
 <span class="md-ellipsis">
       
@@ -341,7 +350,8 @@
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
 <h1 id="class-email">Class: Email</h1>
-<p><em>The Email object describes the email metadata such as sender, recipients, and direction, and can include embedded URLs and files.</em></p>
+<p><em>The Email object describes the email metadata such as sender, recipients, and</em></p>
+<p><em>direction, and can include embedded URLs and files.</em></p>
 <p>URI: <a href="https://w3id.org/lmodel/ocsf/Email">ocsf:Email</a></p>
 <pre class="mermaid"><code> classDiagram
     class Email
@@ -577,19 +587,19 @@
 <tr>
 <td><a href="../return_path/">return_path</a></td>
 <td>0..1 <br/> <a href="../EmailT/">EmailT</a></td>
-<td>The address found in the 'Return-Path' header, which indicates where bounce m...</td>
+<td>The address found in the 'Return-Path' header, which indicates where bounce</td>
 <td>direct</td>
 </tr>
 <tr>
 <td><a href="../sender/">sender</a></td>
 <td>0..1 <br/> <a href="../EmailT/">EmailT</a></td>
-<td>The machine readable email address of the system or server that actually tran...</td>
+<td>The machine readable email address of the system or server that actually</td>
 <td>direct</td>
 </tr>
 <tr>
 <td><a href="../sender_mailbox/">sender_mailbox</a></td>
 <td>0..1 <br/> <a href="../String/">String</a></td>
-<td>The human readable email address of the system or server that actually transm...</td>
+<td>The human readable email address of the system or server that actually</td>
 <td>direct</td>
 </tr>
 <tr>
@@ -649,13 +659,13 @@
 <tr>
 <td><a href="../data_classification/">data_classification</a></td>
 <td>0..1 <em>recommended</em> <br/> <a href="../DataClassification/">DataClassification</a></td>
-<td>The Data Classification object includes information about data classification...</td>
+<td>The Data Classification object includes information about data classification</td>
 <td><a href="../DataClassificationProfile/">DataClassificationProfile</a></td>
 </tr>
 <tr>
 <td><a href="../data_classifications/">data_classifications</a></td>
 <td>* <em>recommended</em> <br/> <a href="../DataClassification/">DataClassification</a></td>
-<td>A list of Data Classification objects, that include information about data cl...</td>
+<td>A list of Data Classification objects, that include information about data</td>
 <td><a href="../DataClassificationProfile/">DataClassificationProfile</a></td>
 </tr>
 </tbody>
@@ -723,6 +733,10 @@
 </tr>
 </tbody>
 </table>
+<h2 id="in-subsets">In Subsets</h2>
+<ul>
+<li><a href="../Objects/">Objects</a></li>
+</ul>
 <h2 id="aliases">Aliases</h2>
 <ul>
 <li>Email</li>
@@ -794,10 +808,14 @@
 <span class="w">  </span><span class="nt">observable_id</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">observable_id</span>
 <span class="w">    </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">22</span>
-<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The Email object describes the email metadata such as sender, recipients,</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">and direction, and can include embedded URLs and files.</span>
+<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">Email</span><span class="nv"> </span><span class="s">object</span><span class="nv"> </span><span class="s">describes</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">email</span><span class="nv"> </span><span class="s">metadata</span><span class="nv"> </span><span class="s">such</span><span class="nv"> </span><span class="s">as</span><span class="nv"> </span><span class="s">sender,</span><span class="nv"> </span><span class="s">recipients,</span>
+<span class="w">  </span><span class="s">and</span>
+
+<span class="w">  </span><span class="s">direction,</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">can</span><span class="nv"> </span><span class="s">include</span><span class="nv"> </span><span class="s">embedded</span><span class="nv"> </span><span class="s">URLs</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">files.'</span>
 <span class="nt">notes</span><span class="p">:</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">D3FEND™ Ontology d3f:Email. — https://d3fend.mitre.org/dao/artifact/d3f:Email/</span>
+<span class="nt">in_subset</span><span class="p">:</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">objects</span>
 <span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="nt">see_also</span><span class="p">:</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://d3fend.mitre.org/dao/artifact/d3f:Email/</span>
@@ -905,10 +923,14 @@
 <span class="w">  </span><span class="nt">observable_id</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">observable_id</span>
 <span class="w">    </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">22</span>
-<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The Email object describes the email metadata such as sender, recipients,</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">and direction, and can include embedded URLs and files.</span>
+<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">Email</span><span class="nv"> </span><span class="s">object</span><span class="nv"> </span><span class="s">describes</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">email</span><span class="nv"> </span><span class="s">metadata</span><span class="nv"> </span><span class="s">such</span><span class="nv"> </span><span class="s">as</span><span class="nv"> </span><span class="s">sender,</span><span class="nv"> </span><span class="s">recipients,</span>
+<span class="w">  </span><span class="s">and</span>
+
+<span class="w">  </span><span class="s">direction,</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">can</span><span class="nv"> </span><span class="s">include</span><span class="nv"> </span><span class="s">embedded</span><span class="nv"> </span><span class="s">URLs</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">files.'</span>
 <span class="nt">notes</span><span class="p">:</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">D3FEND™ Ontology d3f:Email. — https://d3fend.mitre.org/dao/artifact/d3f:Email/</span>
+<span class="nt">in_subset</span><span class="p">:</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">objects</span>
 <span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="nt">see_also</span><span class="p">:</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://d3fend.mitre.org/dao/artifact/d3f:Email/</span>
@@ -966,8 +988,10 @@
 <span class="nt">attributes</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">cc</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">cc</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The machine-readable email header Cc values, as defined by RFC 5322.</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">For example &lt;code&gt;example.user@usersdomain.com&lt;/code&gt;.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">machine-readable</span><span class="nv"> </span><span class="s">email</span><span class="nv"> </span><span class="s">header</span><span class="nv"> </span><span class="s">Cc</span><span class="nv"> </span><span class="s">values,</span><span class="nv"> </span><span class="s">as</span><span class="nv"> </span><span class="s">defined</span><span class="nv"> </span><span class="s">by</span><span class="nv"> </span><span class="s">RFC</span><span class="nv"> </span><span class="s">5322.</span>
+<span class="w">      </span><span class="s">For</span>
+
+<span class="w">      </span><span class="s">example</span><span class="nv"> </span><span class="s">&lt;code&gt;example.user@usersdomain.com&lt;/code&gt;.'</span>
 <span class="w">    </span><span class="nt">notes</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">RFC 5322 — https://www.rfc-editor.org/rfc/rfc5322</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
@@ -984,8 +1008,9 @@
 <span class="w">    </span><span class="nt">multivalued</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">cc_mailboxes</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">cc_mailboxes</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The human-readable email header Cc Mailbox values. For example &lt;code&gt;'Example</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">User &amp;lt;example.user@usersdomain.com&amp;gt;'&lt;/code&gt;.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">human-readable</span><span class="nv"> </span><span class="s">email</span><span class="nv"> </span><span class="s">header</span><span class="nv"> </span><span class="s">Cc</span><span class="nv"> </span><span class="s">Mailbox</span><span class="nv"> </span><span class="s">values.</span><span class="nv"> </span><span class="s">For</span><span class="nv"> </span><span class="s">example</span><span class="nv"> </span><span class="s">&lt;code&gt;</span><span class="se">''</span><span class="s">Example</span>
+
+<span class="w">      </span><span class="s">User</span><span class="nv"> </span><span class="s">&amp;lt;example.user@usersdomain.com&amp;gt;</span><span class="se">''</span><span class="s">&lt;/code&gt;.'</span>
 <span class="w">    </span><span class="nt">notes</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">RFC 5322 — https://www.rfc-editor.org/rfc/rfc5322#section-3.4</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
@@ -1002,8 +1027,10 @@
 <span class="w">    </span><span class="nt">multivalued</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">delivered_to</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">delivered_to</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The machine-readable &lt;strong&gt;Delivered-To&lt;/strong&gt; email header field.</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">For example &lt;code&gt;example.user@usersdomain.com&lt;/code&gt;</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">machine-readable</span><span class="nv"> </span><span class="s">&lt;strong&gt;Delivered-To&lt;/strong&gt;</span><span class="nv"> </span><span class="s">email</span><span class="nv"> </span><span class="s">header</span>
+<span class="w">      </span><span class="s">field.</span><span class="nv"> </span><span class="s">For</span>
+
+<span class="w">      </span><span class="s">example</span><span class="nv"> </span><span class="s">&lt;code&gt;example.user@usersdomain.com&lt;/code&gt;'</span>
 <span class="w">    </span><span class="nt">deprecated</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Use the &lt;code&gt; delivered_to_list &lt;/code&gt; attribute instead.</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
@@ -1016,8 +1043,10 @@
 <span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">EmailT</span>
 <span class="w">  </span><span class="nt">delivered_to_list</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">delivered_to_list</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The machine-readable &lt;strong&gt;Delivered-To&lt;/strong&gt; email header values.</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">For example &lt;code&gt;example.user@usersdomain.com&lt;/code&gt;</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">machine-readable</span><span class="nv"> </span><span class="s">&lt;strong&gt;Delivered-To&lt;/strong&gt;</span><span class="nv"> </span><span class="s">email</span><span class="nv"> </span><span class="s">header</span>
+<span class="w">      </span><span class="s">values.</span><span class="nv"> </span><span class="s">For</span>
+
+<span class="w">      </span><span class="s">example</span><span class="nv"> </span><span class="s">&lt;code&gt;example.user@usersdomain.com&lt;/code&gt;'</span>
 <span class="w">    </span><span class="nt">notes</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">RFC 9228 — https://www.rfc-editor.org/rfc/rfc9228</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
@@ -1048,8 +1077,10 @@
 <span class="w">    </span><span class="nt">multivalued</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">from_</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">from_</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The machine-readable email header From value, as defined by RFC 5322.</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">For example &lt;code&gt;example.user@usersdomain.com&lt;/code&gt;.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">machine-readable</span><span class="nv"> </span><span class="s">email</span><span class="nv"> </span><span class="s">header</span><span class="nv"> </span><span class="s">From</span><span class="nv"> </span><span class="s">value,</span><span class="nv"> </span><span class="s">as</span><span class="nv"> </span><span class="s">defined</span><span class="nv"> </span><span class="s">by</span><span class="nv"> </span><span class="s">RFC</span>
+<span class="w">      </span><span class="s">5322.</span><span class="nv"> </span><span class="s">For</span>
+
+<span class="w">      </span><span class="s">example</span><span class="nv"> </span><span class="s">&lt;code&gt;example.user@usersdomain.com&lt;/code&gt;.'</span>
 <span class="w">    </span><span class="nt">notes</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">RFC 5322 — https://www.rfc-editor.org/rfc/rfc5322</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
@@ -1067,8 +1098,12 @@
 <span class="w">    </span><span class="nt">recommended</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">from_list</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">from_list</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The machine-readable email header From values. This array should</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">contain the value in &lt;code&gt;from&lt;/code&gt;. For example &lt;code&gt;example.user@usersdomain.com&lt;/code&gt;.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">machine-readable</span><span class="nv"> </span><span class="s">email</span><span class="nv"> </span><span class="s">header</span><span class="nv"> </span><span class="s">From</span><span class="nv"> </span><span class="s">values.</span><span class="nv"> </span><span class="s">This</span><span class="nv"> </span><span class="s">array</span><span class="nv"> </span><span class="s">should</span>
+<span class="w">      </span><span class="s">contain</span><span class="nv"> </span><span class="s">the</span>
+
+<span class="w">      </span><span class="s">value</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">&lt;code&gt;from&lt;/code&gt;.</span><span class="nv"> </span><span class="s">For</span><span class="nv"> </span><span class="s">example</span>
+
+<span class="w">      </span><span class="s">&lt;code&gt;example.user@usersdomain.com&lt;/code&gt;.'</span>
 <span class="w">    </span><span class="nt">notes</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">RFC 5322 — https://www.rfc-editor.org/rfc/rfc5322#section-3.4</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
@@ -1085,8 +1120,10 @@
 <span class="w">    </span><span class="nt">multivalued</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">from_mailbox</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">from_mailbox</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The human-readable email header From Mailbox value. For example &lt;code&gt;'Example</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">User &amp;lt;example.user@usersdomain.com&amp;gt;'&lt;/code&gt;.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">human-readable</span><span class="nv"> </span><span class="s">email</span><span class="nv"> </span><span class="s">header</span><span class="nv"> </span><span class="s">From</span><span class="nv"> </span><span class="s">Mailbox</span><span class="nv"> </span><span class="s">value.</span><span class="nv"> </span><span class="s">For</span><span class="nv"> </span><span class="s">example</span>
+<span class="w">      </span><span class="s">&lt;code&gt;</span><span class="se">''</span><span class="s">Example</span>
+
+<span class="w">      </span><span class="s">User</span><span class="nv"> </span><span class="s">&amp;lt;example.user@usersdomain.com&amp;gt;</span><span class="se">''</span><span class="s">&lt;/code&gt;.'</span>
 <span class="w">    </span><span class="nt">notes</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">RFC 5322 — https://www.rfc-editor.org/rfc/rfc5322#section-3.4</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
@@ -1102,9 +1139,12 @@
 <span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">string</span>
 <span class="w">  </span><span class="nt">from_mailboxes</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">from_mailboxes</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The human-readable email header From Mailbox values. This array should</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">contain the value in &lt;code&gt;from_mailbox&lt;/code&gt;. For example &lt;code&gt;'Example User</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">&amp;lt;example.user@usersdomain.com&amp;gt;'&lt;/code&gt;.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">human-readable</span><span class="nv"> </span><span class="s">email</span><span class="nv"> </span><span class="s">header</span><span class="nv"> </span><span class="s">From</span><span class="nv"> </span><span class="s">Mailbox</span><span class="nv"> </span><span class="s">values.</span><span class="nv"> </span><span class="s">This</span><span class="nv"> </span><span class="s">array</span>
+<span class="w">      </span><span class="s">should</span><span class="nv"> </span><span class="s">contain</span>
+
+<span class="w">      </span><span class="s">the</span><span class="nv"> </span><span class="s">value</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">&lt;code&gt;from_mailbox&lt;/code&gt;.</span><span class="nv"> </span><span class="s">For</span><span class="nv"> </span><span class="s">example</span><span class="nv"> </span><span class="s">&lt;code&gt;</span><span class="se">''</span><span class="s">Example</span><span class="nv"> </span><span class="s">User</span>
+
+<span class="w">      </span><span class="s">&amp;lt;example.user@usersdomain.com&amp;gt;</span><span class="se">''</span><span class="s">&lt;/code&gt;.'</span>
 <span class="w">    </span><span class="nt">notes</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">RFC 5322 — https://www.rfc-editor.org/rfc/rfc5322#section-3.4</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
@@ -1184,8 +1224,10 @@
 <span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">string</span>
 <span class="w">  </span><span class="nt">reply_to</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">reply_to</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The machine-readable email header Reply-To value, as defined by RFC</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">5322. For example &lt;code&gt;example.user@usersdomain.com&lt;/code&gt;</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">machine-readable</span><span class="nv"> </span><span class="s">email</span><span class="nv"> </span><span class="s">header</span><span class="nv"> </span><span class="s">Reply-To</span><span class="nv"> </span><span class="s">value,</span><span class="nv"> </span><span class="s">as</span><span class="nv"> </span><span class="s">defined</span><span class="nv"> </span><span class="s">by</span>
+<span class="w">      </span><span class="s">RFC</span><span class="nv"> </span><span class="s">5322.</span><span class="nv"> </span><span class="s">For</span>
+
+<span class="w">      </span><span class="s">example</span><span class="nv"> </span><span class="s">&lt;code&gt;example.user@usersdomain.com&lt;/code&gt;'</span>
 <span class="w">    </span><span class="nt">deprecated</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Use the &lt;code&gt; reply_to_list &lt;/code&gt; attribute instead.</span>
 <span class="w">    </span><span class="nt">notes</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">RFC 5322 — https://www.rfc-editor.org/rfc/rfc5322</span>
@@ -1203,8 +1245,10 @@
 <span class="w">    </span><span class="nt">recommended</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">reply_to_list</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">reply_to_list</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The machine-readable email header Reply-To values, as defined by</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">RFC 5322. For example &lt;code&gt;example.user@usersdomain.com&lt;/code&gt;</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">machine-readable</span><span class="nv"> </span><span class="s">email</span><span class="nv"> </span><span class="s">header</span><span class="nv"> </span><span class="s">Reply-To</span><span class="nv"> </span><span class="s">values,</span><span class="nv"> </span><span class="s">as</span><span class="nv"> </span><span class="s">defined</span><span class="nv"> </span><span class="s">by</span>
+<span class="w">      </span><span class="s">RFC</span><span class="nv"> </span><span class="s">5322.</span><span class="nv"> </span><span class="s">For</span>
+
+<span class="w">      </span><span class="s">example</span><span class="nv"> </span><span class="s">&lt;code&gt;example.user@usersdomain.com&lt;/code&gt;'</span>
 <span class="w">    </span><span class="nt">notes</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">RFC 5322 — https://www.rfc-editor.org/rfc/rfc5322</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
@@ -1221,8 +1265,9 @@
 <span class="w">    </span><span class="nt">multivalued</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">reply_to_mailboxes</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">reply_to_mailboxes</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The human-readable email header Reply To Mailbox values. For example</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">&lt;code&gt;'Example User &amp;lt;example.user@usersdomain.com&amp;gt;'&lt;/code&gt;.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">human-readable</span><span class="nv"> </span><span class="s">email</span><span class="nv"> </span><span class="s">header</span><span class="nv"> </span><span class="s">Reply</span><span class="nv"> </span><span class="s">To</span><span class="nv"> </span><span class="s">Mailbox</span><span class="nv"> </span><span class="s">values.</span><span class="nv"> </span><span class="s">For</span><span class="nv"> </span><span class="s">example</span>
+
+<span class="w">      </span><span class="s">&lt;code&gt;</span><span class="se">''</span><span class="s">Example</span><span class="nv"> </span><span class="s">User</span><span class="nv"> </span><span class="s">&amp;lt;example.user@usersdomain.com&amp;gt;</span><span class="se">''</span><span class="s">&lt;/code&gt;.'</span>
 <span class="w">    </span><span class="nt">notes</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">RFC 5322 — https://www.rfc-editor.org/rfc/rfc5322#section-3.4</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
@@ -1239,13 +1284,20 @@
 <span class="w">    </span><span class="nt">multivalued</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">return_path</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">return_path</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The address found in the 'Return-Path' header, which indicates where</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">bounce messages (non-delivery reports) should be sent. This address is often</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">set by the sending system and may differ from the 'From' or 'Sender' addresses.</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">For example, &lt;code&gt;mailer-daemon@senderserver.com&lt;/code&gt;.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">address</span><span class="nv"> </span><span class="s">found</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="se">''</span><span class="s">Return-Path</span><span class="se">''</span><span class="nv"> </span><span class="s">header,</span><span class="nv"> </span><span class="s">which</span><span class="nv"> </span><span class="s">indicates</span>
+<span class="w">      </span><span class="s">where</span><span class="nv"> </span><span class="s">bounce</span>
+
+<span class="w">      </span><span class="s">messages</span><span class="nv"> </span><span class="s">(non-delivery</span><span class="nv"> </span><span class="s">reports)</span><span class="nv"> </span><span class="s">should</span><span class="nv"> </span><span class="s">be</span><span class="nv"> </span><span class="s">sent.</span><span class="nv"> </span><span class="s">This</span><span class="nv"> </span><span class="s">address</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">often</span><span class="nv"> </span><span class="s">set</span><span class="nv"> </span><span class="s">by</span>
+
+<span class="w">      </span><span class="s">the</span><span class="nv"> </span><span class="s">sending</span><span class="nv"> </span><span class="s">system</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">may</span><span class="nv"> </span><span class="s">differ</span><span class="nv"> </span><span class="s">from</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="se">''</span><span class="s">From</span><span class="se">''</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="se">''</span><span class="s">Sender</span><span class="se">''</span><span class="nv"> </span><span class="s">addresses.</span>
+<span class="w">      </span><span class="s">For</span>
+
+<span class="w">      </span><span class="s">example,</span><span class="nv"> </span><span class="s">&lt;code&gt;mailer-daemon@senderserver.com&lt;/code&gt;.'</span>
 <span class="w">    </span><span class="nt">notes</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">RFC 5322 — https://www.rfc-editor.org/rfc/rfc5322</span>
-<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">RFC 5321 - Simple Mail Transfer Protocol — https://datatracker.ietf.org/doc/html/rfc5321#section-4.4</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">'RFC</span><span class="nv"> </span><span class="s">5321</span><span class="nv"> </span><span class="s">-</span><span class="nv"> </span><span class="s">Simple</span><span class="nv"> </span><span class="s">Mail</span><span class="nv"> </span><span class="s">Transfer</span><span class="nv"> </span><span class="s">Protocol</span><span class="nv"> </span><span class="s">—</span>
+
+<span class="w">      </span><span class="s">https://datatracker.ietf.org/doc/html/rfc5321#section-4.4'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">see_also</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://www.rfc-editor.org/rfc/rfc5322</span>
@@ -1260,12 +1312,18 @@
 <span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">EmailT</span>
 <span class="w">  </span><span class="nt">sender</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">sender</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The machine readable email address of the system or server that actually</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">transmitted the email message, extracted from the email headers per RFC 5322.</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">This differs from the &lt;code&gt;from&lt;/code&gt; field, which shows the message author.</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">The sender field is most commonly used when multiple addresses appear in the</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">&lt;code&gt; from_list &lt;/code&gt; field, or when the transmitting system is different</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">from the message author (such as when sending on behalf of someone else).</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">machine</span><span class="nv"> </span><span class="s">readable</span><span class="nv"> </span><span class="s">email</span><span class="nv"> </span><span class="s">address</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">system</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">server</span><span class="nv"> </span><span class="s">that</span>
+<span class="w">      </span><span class="s">actually</span>
+
+<span class="w">      </span><span class="s">transmitted</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">email</span><span class="nv"> </span><span class="s">message,</span><span class="nv"> </span><span class="s">extracted</span><span class="nv"> </span><span class="s">from</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">email</span><span class="nv"> </span><span class="s">headers</span><span class="nv"> </span><span class="s">per</span><span class="nv"> </span><span class="s">RFC</span><span class="nv"> </span><span class="s">5322.</span>
+
+<span class="w">      </span><span class="s">This</span><span class="nv"> </span><span class="s">differs</span><span class="nv"> </span><span class="s">from</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">&lt;code&gt;from&lt;/code&gt;</span><span class="nv"> </span><span class="s">field,</span><span class="nv"> </span><span class="s">which</span><span class="nv"> </span><span class="s">shows</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">message</span><span class="nv"> </span><span class="s">author.</span>
+
+<span class="w">      </span><span class="s">The</span><span class="nv"> </span><span class="s">sender</span><span class="nv"> </span><span class="s">field</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">most</span><span class="nv"> </span><span class="s">commonly</span><span class="nv"> </span><span class="s">used</span><span class="nv"> </span><span class="s">when</span><span class="nv"> </span><span class="s">multiple</span><span class="nv"> </span><span class="s">addresses</span><span class="nv"> </span><span class="s">appear</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">the</span>
+
+<span class="w">      </span><span class="s">&lt;code&gt;</span><span class="nv"> </span><span class="s">from_list</span><span class="nv"> </span><span class="s">&lt;/code&gt;</span><span class="nv"> </span><span class="s">field,</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">when</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">transmitting</span><span class="nv"> </span><span class="s">system</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">different</span>
+
+<span class="w">      </span><span class="s">from</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">message</span><span class="nv"> </span><span class="s">author</span><span class="nv"> </span><span class="s">(such</span><span class="nv"> </span><span class="s">as</span><span class="nv"> </span><span class="s">when</span><span class="nv"> </span><span class="s">sending</span><span class="nv"> </span><span class="s">on</span><span class="nv"> </span><span class="s">behalf</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">someone</span><span class="nv"> </span><span class="s">else).'</span>
 <span class="w">    </span><span class="nt">notes</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">RFC 5322 — https://www.rfc-editor.org/rfc/rfc5322</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
@@ -1281,13 +1339,20 @@
 <span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">EmailT</span>
 <span class="w">  </span><span class="nt">sender_mailbox</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">sender_mailbox</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The human readable email address of the system or server that actually</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">transmitted the email message, extracted from the email headers per RFC 5322.</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">This differs from the &lt;code&gt;from_mailbox&lt;/code&gt; field, which shows the message</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">author. The sender mailbox field is most commonly used when multiple addresses</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">appear in the &lt;code&gt; from_mailboxes &lt;/code&gt; field, or when the transmitting</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">system is different from the message author (such as when sending on behalf</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">of someone else).</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">human</span><span class="nv"> </span><span class="s">readable</span><span class="nv"> </span><span class="s">email</span><span class="nv"> </span><span class="s">address</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">system</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">server</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">actually</span>
+
+<span class="w">      </span><span class="s">transmitted</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">email</span><span class="nv"> </span><span class="s">message,</span><span class="nv"> </span><span class="s">extracted</span><span class="nv"> </span><span class="s">from</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">email</span><span class="nv"> </span><span class="s">headers</span><span class="nv"> </span><span class="s">per</span><span class="nv"> </span><span class="s">RFC</span><span class="nv"> </span><span class="s">5322.</span>
+
+<span class="w">      </span><span class="s">This</span><span class="nv"> </span><span class="s">differs</span><span class="nv"> </span><span class="s">from</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">&lt;code&gt;from_mailbox&lt;/code&gt;</span><span class="nv"> </span><span class="s">field,</span><span class="nv"> </span><span class="s">which</span><span class="nv"> </span><span class="s">shows</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">message</span>
+
+<span class="w">      </span><span class="s">author.</span><span class="nv"> </span><span class="s">The</span><span class="nv"> </span><span class="s">sender</span><span class="nv"> </span><span class="s">mailbox</span><span class="nv"> </span><span class="s">field</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">most</span><span class="nv"> </span><span class="s">commonly</span><span class="nv"> </span><span class="s">used</span><span class="nv"> </span><span class="s">when</span><span class="nv"> </span><span class="s">multiple</span><span class="nv"> </span><span class="s">addresses</span>
+
+<span class="w">      </span><span class="s">appear</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">&lt;code&gt;</span><span class="nv"> </span><span class="s">from_mailboxes</span><span class="nv"> </span><span class="s">&lt;/code&gt;</span><span class="nv"> </span><span class="s">field,</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">when</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">transmitting</span>
+
+<span class="w">      </span><span class="s">system</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">different</span><span class="nv"> </span><span class="s">from</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">message</span><span class="nv"> </span><span class="s">author</span><span class="nv"> </span><span class="s">(such</span><span class="nv"> </span><span class="s">as</span><span class="nv"> </span><span class="s">when</span><span class="nv"> </span><span class="s">sending</span><span class="nv"> </span><span class="s">on</span><span class="nv"> </span><span class="s">behalf</span>
+<span class="w">      </span><span class="s">of</span>
+
+<span class="w">      </span><span class="s">someone</span><span class="nv"> </span><span class="s">else).'</span>
 <span class="w">    </span><span class="nt">notes</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">RFC 5322 — https://www.rfc-editor.org/rfc/rfc5322</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
@@ -1369,8 +1434,10 @@
 <span class="w">    </span><span class="nt">recommended</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">to</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">to</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The machine-readable email header To values, as defined by RFC 5322.</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">For example &lt;code&gt;example.user@usersdomain.com&lt;/code&gt;</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">machine-readable</span><span class="nv"> </span><span class="s">email</span><span class="nv"> </span><span class="s">header</span><span class="nv"> </span><span class="s">To</span><span class="nv"> </span><span class="s">values,</span><span class="nv"> </span><span class="s">as</span><span class="nv"> </span><span class="s">defined</span><span class="nv"> </span><span class="s">by</span><span class="nv"> </span><span class="s">RFC</span><span class="nv"> </span><span class="s">5322.</span>
+<span class="w">      </span><span class="s">For</span>
+
+<span class="w">      </span><span class="s">example</span><span class="nv"> </span><span class="s">&lt;code&gt;example.user@usersdomain.com&lt;/code&gt;'</span>
 <span class="w">    </span><span class="nt">notes</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">RFC 5322 — https://www.rfc-editor.org/rfc/rfc5322</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
@@ -1389,8 +1456,9 @@
 <span class="w">    </span><span class="nt">multivalued</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">to_mailboxes</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">to_mailboxes</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The human-readable email header To Mailbox values. For example &lt;code&gt;'Example</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">User &amp;lt;example.user@usersdomain.com&amp;gt;'&lt;/code&gt;.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">human-readable</span><span class="nv"> </span><span class="s">email</span><span class="nv"> </span><span class="s">header</span><span class="nv"> </span><span class="s">To</span><span class="nv"> </span><span class="s">Mailbox</span><span class="nv"> </span><span class="s">values.</span><span class="nv"> </span><span class="s">For</span><span class="nv"> </span><span class="s">example</span><span class="nv"> </span><span class="s">&lt;code&gt;</span><span class="se">''</span><span class="s">Example</span>
+
+<span class="w">      </span><span class="s">User</span><span class="nv"> </span><span class="s">&amp;lt;example.user@usersdomain.com&amp;gt;</span><span class="se">''</span><span class="s">&lt;/code&gt;.'</span>
 <span class="w">    </span><span class="nt">notes</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">RFC 5322 — https://www.rfc-editor.org/rfc/rfc5322#section-3.4</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
@@ -1533,8 +1601,9 @@
 <span class="w">      </span><span class="nt">group</span><span class="p">:</span>
 <span class="w">        </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">group</span>
 <span class="w">        </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">context</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The Data Classification object includes information about data classification</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">levels and data category types.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">Data</span><span class="nv"> </span><span class="s">Classification</span><span class="nv"> </span><span class="s">object</span><span class="nv"> </span><span class="s">includes</span><span class="nv"> </span><span class="s">information</span><span class="nv"> </span><span class="s">about</span><span class="nv"> </span><span class="s">data</span><span class="nv"> </span><span class="s">classification</span>
+
+<span class="w">      </span><span class="s">levels</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">data</span><span class="nv"> </span><span class="s">category</span><span class="nv"> </span><span class="s">types.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Data Classification</span>
@@ -1551,8 +1620,10 @@
 <span class="w">      </span><span class="nt">group</span><span class="p">:</span>
 <span class="w">        </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">group</span>
 <span class="w">        </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">context</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">A list of Data Classification objects, that include information about</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">data classification levels and data category types, identified by a classifier.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'A</span><span class="nv"> </span><span class="s">list</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">Data</span><span class="nv"> </span><span class="s">Classification</span><span class="nv"> </span><span class="s">objects,</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">include</span><span class="nv"> </span><span class="s">information</span>
+<span class="w">      </span><span class="s">about</span><span class="nv"> </span><span class="s">data</span>
+
+<span class="w">      </span><span class="s">classification</span><span class="nv"> </span><span class="s">levels</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">data</span><span class="nv"> </span><span class="s">category</span><span class="nv"> </span><span class="s">types,</span><span class="nv"> </span><span class="s">identified</span><span class="nv"> </span><span class="s">by</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">classifier.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Data Classification</span>

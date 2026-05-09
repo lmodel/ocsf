@@ -217,6 +217,15 @@
 </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="#in-subsets">
+<span class="md-ellipsis">
+      
+        In Subsets
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#aliases">
 <span class="md-ellipsis">
       
@@ -295,7 +304,12 @@
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
 <h1 id="class-idp">Class: Idp</h1>
-<p><em>The Identity Provider object contains detailed information about a provider responsible for creating, maintaining, and managing identity information while offering authentication services to applications. An Identity Provider (IdP) serves as a trusted authority that verifies the identity of users and issues authentication tokens or assertions to enable secure access to applications or services.</em></p>
+<p><em>The Identity Provider object contains detailed information about a provider</em></p>
+<p><em>responsible for creating, maintaining, and managing identity information while</em></p>
+<p><em>offering authentication services to applications. An Identity Provider (IdP)</em></p>
+<p><em>serves as a trusted authority that verifies the identity of users and issues</em></p>
+<p><em>authentication tokens or assertions to enable secure access to applications or</em></p>
+<p><em>services.</em></p>
 <p>URI: <a href="https://w3id.org/lmodel/ocsf/Idp">ocsf:Idp</a></p>
 <pre class="mermaid"><code> classDiagram
     class Idp
@@ -428,7 +442,7 @@
 <tr>
 <td><a href="../issuer/">issuer</a></td>
 <td>0..1 <br/> <a href="../String/">String</a></td>
-<td>The unique identifier (often a URL) used by the Identity Provider as its issu...</td>
+<td>The unique identifier (often a URL) used by the Identity Provider as its</td>
 <td>direct</td>
 </tr>
 <tr>
@@ -452,7 +466,7 @@
 <tr>
 <td><a href="../sso/">sso</a></td>
 <td>0..1 <br/> <a href="../Sso/">Sso</a></td>
-<td>The Single Sign-On (SSO) object provides a structure for normalizing SSO attr...</td>
+<td>The Single Sign-On (SSO) object provides a structure for normalizing SSO</td>
 <td>direct</td>
 </tr>
 <tr>
@@ -464,7 +478,7 @@
 <tr>
 <td><a href="../state_id/">state_id</a></td>
 <td>0..1 <br/> <a href="../IdpStateIdEnum/">IdpStateIdEnum</a></td>
-<td>The normalized state ID of the Identity Provider to reflect its configuration...</td>
+<td>The normalized state ID of the Identity Provider to reflect its configuration</td>
 <td>direct</td>
 </tr>
 <tr>
@@ -512,6 +526,10 @@
 </tr>
 </tbody>
 </table>
+<h2 id="in-subsets">In Subsets</h2>
+<ul>
+<li><a href="../Objects/">Objects</a></li>
+</ul>
 <h2 id="aliases">Aliases</h2>
 <ul>
 <li>Identity Provider</li>
@@ -545,11 +563,19 @@
 <h3 id="direct">Direct</h3>
 <details>
 <div class="highlight"><pre><span></span><code><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Idp</span>
-<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The Identity Provider object contains detailed information about a provider</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">responsible for creating, maintaining, and managing identity information while offering</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">authentication services to applications. An Identity Provider (IdP) serves as a</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">trusted authority that verifies the identity of users and issues authentication</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">tokens or assertions to enable secure access to applications or services.</span>
+<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">Identity</span><span class="nv"> </span><span class="s">Provider</span><span class="nv"> </span><span class="s">object</span><span class="nv"> </span><span class="s">contains</span><span class="nv"> </span><span class="s">detailed</span><span class="nv"> </span><span class="s">information</span><span class="nv"> </span><span class="s">about</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">provider</span>
+
+<span class="w">  </span><span class="s">responsible</span><span class="nv"> </span><span class="s">for</span><span class="nv"> </span><span class="s">creating,</span><span class="nv"> </span><span class="s">maintaining,</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">managing</span><span class="nv"> </span><span class="s">identity</span><span class="nv"> </span><span class="s">information</span><span class="nv"> </span><span class="s">while</span>
+
+<span class="w">  </span><span class="s">offering</span><span class="nv"> </span><span class="s">authentication</span><span class="nv"> </span><span class="s">services</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">applications.</span><span class="nv"> </span><span class="s">An</span><span class="nv"> </span><span class="s">Identity</span><span class="nv"> </span><span class="s">Provider</span><span class="nv"> </span><span class="s">(IdP)</span>
+
+<span class="w">  </span><span class="s">serves</span><span class="nv"> </span><span class="s">as</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">trusted</span><span class="nv"> </span><span class="s">authority</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">verifies</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">identity</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">users</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">issues</span>
+
+<span class="w">  </span><span class="s">authentication</span><span class="nv"> </span><span class="s">tokens</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">assertions</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">enable</span><span class="nv"> </span><span class="s">secure</span><span class="nv"> </span><span class="s">access</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">applications</span><span class="nv"> </span><span class="s">or</span>
+
+<span class="w">  </span><span class="s">services.'</span>
+<span class="nt">in_subset</span><span class="p">:</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">objects</span>
 <span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="nt">aliases</span><span class="p">:</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Identity Provider</span>
@@ -572,9 +598,10 @@
 <span class="nt">slot_usage</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">auth_factors</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">auth_factors</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The Authentication Factors object describes the different types of</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">Multi-Factor Authentication (MFA) methods and/or devices supported by the Identity</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">Provider.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">Authentication</span><span class="nv"> </span><span class="s">Factors</span><span class="nv"> </span><span class="s">object</span><span class="nv"> </span><span class="s">describes</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">different</span><span class="nv"> </span><span class="s">types</span>
+<span class="w">      </span><span class="s">of</span><span class="nv"> </span><span class="s">Multi-Factor</span>
+
+<span class="w">      </span><span class="s">Authentication</span><span class="nv"> </span><span class="s">(MFA)</span><span class="nv"> </span><span class="s">methods</span><span class="nv"> </span><span class="s">and/or</span><span class="nv"> </span><span class="s">devices</span><span class="nv"> </span><span class="s">supported</span><span class="nv"> </span><span class="s">by</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">Identity</span><span class="nv"> </span><span class="s">Provider.'</span>
 <span class="w">  </span><span class="nt">domain</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">domain</span>
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The primary domain associated with the Identity Provider.</span>
@@ -586,25 +613,33 @@
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The Identity Provider enforces Multi Factor Authentication (MFA).</span>
 <span class="w">  </span><span class="nt">issuer</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">issuer</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The unique identifier (often a URL) used by the Identity Provider</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">as its issuer.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">unique</span><span class="nv"> </span><span class="s">identifier</span><span class="nv"> </span><span class="s">(often</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">URL)</span><span class="nv"> </span><span class="s">used</span><span class="nv"> </span><span class="s">by</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">Identity</span><span class="nv"> </span><span class="s">Provider</span>
+<span class="w">      </span><span class="s">as</span><span class="nv"> </span><span class="s">its</span>
+
+<span class="w">      </span><span class="s">issuer.'</span>
 <span class="w">  </span><span class="nt">name</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">name</span>
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The name of the Identity Provider.</span>
 <span class="w">    </span><span class="nt">recommended</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">protocol_name</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">protocol_name</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The supported protocol of the Identity Provider. E.g., &lt;code&gt;SAML&lt;/code&gt;,</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">&lt;code&gt;OIDC&lt;/code&gt;, or &lt;code&gt;OAuth2&lt;/code&gt;.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">supported</span><span class="nv"> </span><span class="s">protocol</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">Identity</span><span class="nv"> </span><span class="s">Provider.</span><span class="nv"> </span><span class="s">E.g.,</span><span class="nv"> </span><span class="s">&lt;code&gt;SAML&lt;/code&gt;,</span>
+
+<span class="w">      </span><span class="s">&lt;code&gt;OIDC&lt;/code&gt;,</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">&lt;code&gt;OAuth2&lt;/code&gt;.'</span>
 <span class="w">  </span><span class="nt">state</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">state</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The configuration state of the Identity Provider, normalized to the</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">caption of the &lt;code&gt;state_id&lt;/code&gt; value. In the case of &lt;code&gt;Other&lt;/code&gt;,</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">it is defined by the event source.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">configuration</span><span class="nv"> </span><span class="s">state</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">Identity</span><span class="nv"> </span><span class="s">Provider,</span><span class="nv"> </span><span class="s">normalized</span><span class="nv"> </span><span class="s">to</span>
+<span class="w">      </span><span class="s">the</span><span class="nv"> </span><span class="s">caption</span><span class="nv"> </span><span class="s">of</span>
+
+<span class="w">      </span><span class="s">the</span><span class="nv"> </span><span class="s">&lt;code&gt;state_id&lt;/code&gt;</span><span class="nv"> </span><span class="s">value.</span><span class="nv"> </span><span class="s">In</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">case</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">&lt;code&gt;Other&lt;/code&gt;,</span><span class="nv"> </span><span class="s">it</span><span class="nv"> </span><span class="s">is</span>
+
+<span class="w">      </span><span class="s">defined</span><span class="nv"> </span><span class="s">by</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">event</span><span class="nv"> </span><span class="s">source.'</span>
 <span class="w">  </span><span class="nt">state_id</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">state_id</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The normalized state ID of the Identity Provider to reflect its configuration</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">or activation status.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">normalized</span><span class="nv"> </span><span class="s">state</span><span class="nv"> </span><span class="s">ID</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">Identity</span><span class="nv"> </span><span class="s">Provider</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">reflect</span><span class="nv"> </span><span class="s">its</span>
+<span class="w">      </span><span class="s">configuration</span>
+
+<span class="w">      </span><span class="s">or</span><span class="nv"> </span><span class="s">activation</span><span class="nv"> </span><span class="s">status.'</span>
 <span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">IdpStateIdEnum</span>
 <span class="w">  </span><span class="nt">tenant_uid</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">tenant_uid</span>
@@ -622,11 +657,19 @@
 <h3 id="induced">Induced</h3>
 <details>
 <div class="highlight"><pre><span></span><code><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Idp</span>
-<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The Identity Provider object contains detailed information about a provider</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">responsible for creating, maintaining, and managing identity information while offering</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">authentication services to applications. An Identity Provider (IdP) serves as a</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">trusted authority that verifies the identity of users and issues authentication</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">tokens or assertions to enable secure access to applications or services.</span>
+<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">Identity</span><span class="nv"> </span><span class="s">Provider</span><span class="nv"> </span><span class="s">object</span><span class="nv"> </span><span class="s">contains</span><span class="nv"> </span><span class="s">detailed</span><span class="nv"> </span><span class="s">information</span><span class="nv"> </span><span class="s">about</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">provider</span>
+
+<span class="w">  </span><span class="s">responsible</span><span class="nv"> </span><span class="s">for</span><span class="nv"> </span><span class="s">creating,</span><span class="nv"> </span><span class="s">maintaining,</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">managing</span><span class="nv"> </span><span class="s">identity</span><span class="nv"> </span><span class="s">information</span><span class="nv"> </span><span class="s">while</span>
+
+<span class="w">  </span><span class="s">offering</span><span class="nv"> </span><span class="s">authentication</span><span class="nv"> </span><span class="s">services</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">applications.</span><span class="nv"> </span><span class="s">An</span><span class="nv"> </span><span class="s">Identity</span><span class="nv"> </span><span class="s">Provider</span><span class="nv"> </span><span class="s">(IdP)</span>
+
+<span class="w">  </span><span class="s">serves</span><span class="nv"> </span><span class="s">as</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">trusted</span><span class="nv"> </span><span class="s">authority</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">verifies</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">identity</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">users</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">issues</span>
+
+<span class="w">  </span><span class="s">authentication</span><span class="nv"> </span><span class="s">tokens</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">assertions</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">enable</span><span class="nv"> </span><span class="s">secure</span><span class="nv"> </span><span class="s">access</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">applications</span><span class="nv"> </span><span class="s">or</span>
+
+<span class="w">  </span><span class="s">services.'</span>
+<span class="nt">in_subset</span><span class="p">:</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">objects</span>
 <span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="nt">aliases</span><span class="p">:</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Identity Provider</span>
@@ -634,9 +677,10 @@
 <span class="nt">slot_usage</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">auth_factors</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">auth_factors</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The Authentication Factors object describes the different types of</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">Multi-Factor Authentication (MFA) methods and/or devices supported by the Identity</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">Provider.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">Authentication</span><span class="nv"> </span><span class="s">Factors</span><span class="nv"> </span><span class="s">object</span><span class="nv"> </span><span class="s">describes</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">different</span><span class="nv"> </span><span class="s">types</span>
+<span class="w">      </span><span class="s">of</span><span class="nv"> </span><span class="s">Multi-Factor</span>
+
+<span class="w">      </span><span class="s">Authentication</span><span class="nv"> </span><span class="s">(MFA)</span><span class="nv"> </span><span class="s">methods</span><span class="nv"> </span><span class="s">and/or</span><span class="nv"> </span><span class="s">devices</span><span class="nv"> </span><span class="s">supported</span><span class="nv"> </span><span class="s">by</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">Identity</span><span class="nv"> </span><span class="s">Provider.'</span>
 <span class="w">  </span><span class="nt">domain</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">domain</span>
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The primary domain associated with the Identity Provider.</span>
@@ -648,25 +692,33 @@
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The Identity Provider enforces Multi Factor Authentication (MFA).</span>
 <span class="w">  </span><span class="nt">issuer</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">issuer</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The unique identifier (often a URL) used by the Identity Provider</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">as its issuer.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">unique</span><span class="nv"> </span><span class="s">identifier</span><span class="nv"> </span><span class="s">(often</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">URL)</span><span class="nv"> </span><span class="s">used</span><span class="nv"> </span><span class="s">by</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">Identity</span><span class="nv"> </span><span class="s">Provider</span>
+<span class="w">      </span><span class="s">as</span><span class="nv"> </span><span class="s">its</span>
+
+<span class="w">      </span><span class="s">issuer.'</span>
 <span class="w">  </span><span class="nt">name</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">name</span>
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The name of the Identity Provider.</span>
 <span class="w">    </span><span class="nt">recommended</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">protocol_name</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">protocol_name</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The supported protocol of the Identity Provider. E.g., &lt;code&gt;SAML&lt;/code&gt;,</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">&lt;code&gt;OIDC&lt;/code&gt;, or &lt;code&gt;OAuth2&lt;/code&gt;.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">supported</span><span class="nv"> </span><span class="s">protocol</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">Identity</span><span class="nv"> </span><span class="s">Provider.</span><span class="nv"> </span><span class="s">E.g.,</span><span class="nv"> </span><span class="s">&lt;code&gt;SAML&lt;/code&gt;,</span>
+
+<span class="w">      </span><span class="s">&lt;code&gt;OIDC&lt;/code&gt;,</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">&lt;code&gt;OAuth2&lt;/code&gt;.'</span>
 <span class="w">  </span><span class="nt">state</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">state</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The configuration state of the Identity Provider, normalized to the</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">caption of the &lt;code&gt;state_id&lt;/code&gt; value. In the case of &lt;code&gt;Other&lt;/code&gt;,</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">it is defined by the event source.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">configuration</span><span class="nv"> </span><span class="s">state</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">Identity</span><span class="nv"> </span><span class="s">Provider,</span><span class="nv"> </span><span class="s">normalized</span><span class="nv"> </span><span class="s">to</span>
+<span class="w">      </span><span class="s">the</span><span class="nv"> </span><span class="s">caption</span><span class="nv"> </span><span class="s">of</span>
+
+<span class="w">      </span><span class="s">the</span><span class="nv"> </span><span class="s">&lt;code&gt;state_id&lt;/code&gt;</span><span class="nv"> </span><span class="s">value.</span><span class="nv"> </span><span class="s">In</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">case</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">&lt;code&gt;Other&lt;/code&gt;,</span><span class="nv"> </span><span class="s">it</span><span class="nv"> </span><span class="s">is</span>
+
+<span class="w">      </span><span class="s">defined</span><span class="nv"> </span><span class="s">by</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">event</span><span class="nv"> </span><span class="s">source.'</span>
 <span class="w">  </span><span class="nt">state_id</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">state_id</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The normalized state ID of the Identity Provider to reflect its configuration</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">or activation status.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">normalized</span><span class="nv"> </span><span class="s">state</span><span class="nv"> </span><span class="s">ID</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">Identity</span><span class="nv"> </span><span class="s">Provider</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">reflect</span><span class="nv"> </span><span class="s">its</span>
+<span class="w">      </span><span class="s">configuration</span>
+
+<span class="w">      </span><span class="s">or</span><span class="nv"> </span><span class="s">activation</span><span class="nv"> </span><span class="s">status.'</span>
 <span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">IdpStateIdEnum</span>
 <span class="w">  </span><span class="nt">tenant_uid</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">tenant_uid</span>
@@ -682,9 +734,10 @@
 <span class="nt">attributes</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">auth_factors</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">auth_factors</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The Authentication Factors object describes the different types of</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">Multi-Factor Authentication (MFA) methods and/or devices supported by the Identity</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">Provider.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">Authentication</span><span class="nv"> </span><span class="s">Factors</span><span class="nv"> </span><span class="s">object</span><span class="nv"> </span><span class="s">describes</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">different</span><span class="nv"> </span><span class="s">types</span>
+<span class="w">      </span><span class="s">of</span><span class="nv"> </span><span class="s">Multi-Factor</span>
+
+<span class="w">      </span><span class="s">Authentication</span><span class="nv"> </span><span class="s">(MFA)</span><span class="nv"> </span><span class="s">methods</span><span class="nv"> </span><span class="s">and/or</span><span class="nv"> </span><span class="s">devices</span><span class="nv"> </span><span class="s">supported</span><span class="nv"> </span><span class="s">by</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">Identity</span><span class="nv"> </span><span class="s">Provider.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Authentication Factors</span>
@@ -744,8 +797,10 @@
 <span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">boolean</span>
 <span class="w">  </span><span class="nt">issuer</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">issuer</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The unique identifier (often a URL) used by the Identity Provider</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">as its issuer.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">unique</span><span class="nv"> </span><span class="s">identifier</span><span class="nv"> </span><span class="s">(often</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">URL)</span><span class="nv"> </span><span class="s">used</span><span class="nv"> </span><span class="s">by</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">Identity</span><span class="nv"> </span><span class="s">Provider</span>
+<span class="w">      </span><span class="s">as</span><span class="nv"> </span><span class="s">its</span>
+
+<span class="w">      </span><span class="s">issuer.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Issuer Details</span>
@@ -861,8 +916,9 @@
 <span class="w">    </span><span class="nt">recommended</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">protocol_name</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">protocol_name</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The supported protocol of the Identity Provider. E.g., &lt;code&gt;SAML&lt;/code&gt;,</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">&lt;code&gt;OIDC&lt;/code&gt;, or &lt;code&gt;OAuth2&lt;/code&gt;.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">supported</span><span class="nv"> </span><span class="s">protocol</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">Identity</span><span class="nv"> </span><span class="s">Provider.</span><span class="nv"> </span><span class="s">E.g.,</span><span class="nv"> </span><span class="s">&lt;code&gt;SAML&lt;/code&gt;,</span>
+
+<span class="w">      </span><span class="s">&lt;code&gt;OIDC&lt;/code&gt;,</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">&lt;code&gt;OAuth2&lt;/code&gt;.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Protocol Name</span>
@@ -882,14 +938,25 @@
 <span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">string</span>
 <span class="w">  </span><span class="nt">scim</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">scim</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The System for Cross-domain Identity Management (SCIM) resource object</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">provides a structured set of attributes related to SCIM protocols used for identity</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">provisioning and management across cloud-based platforms. It standardizes user</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">and group provisioning details, enabling identity synchronization and lifecycle</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">management with compatible Identity Providers (IdPs) and applications. SCIM</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">is defined in &lt;a target='_blank' href='https://datatracker.ietf.org/doc/html/rfc7643'&gt;RFC-7634&lt;/a&gt;</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">System</span><span class="nv"> </span><span class="s">for</span><span class="nv"> </span><span class="s">Cross-domain</span><span class="nv"> </span><span class="s">Identity</span><span class="nv"> </span><span class="s">Management</span><span class="nv"> </span><span class="s">(SCIM)</span><span class="nv"> </span><span class="s">resource</span>
+<span class="w">      </span><span class="s">object</span><span class="nv"> </span><span class="s">provides</span>
+
+<span class="w">      </span><span class="s">a</span><span class="nv"> </span><span class="s">structured</span><span class="nv"> </span><span class="s">set</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">attributes</span><span class="nv"> </span><span class="s">related</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">SCIM</span><span class="nv"> </span><span class="s">protocols</span><span class="nv"> </span><span class="s">used</span><span class="nv"> </span><span class="s">for</span><span class="nv"> </span><span class="s">identity</span>
+
+<span class="w">      </span><span class="s">provisioning</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">management</span><span class="nv"> </span><span class="s">across</span><span class="nv"> </span><span class="s">cloud-based</span><span class="nv"> </span><span class="s">platforms.</span><span class="nv"> </span><span class="s">It</span><span class="nv"> </span><span class="s">standardizes</span><span class="nv"> </span><span class="s">user</span>
+
+<span class="w">      </span><span class="s">and</span><span class="nv"> </span><span class="s">group</span><span class="nv"> </span><span class="s">provisioning</span><span class="nv"> </span><span class="s">details,</span><span class="nv"> </span><span class="s">enabling</span><span class="nv"> </span><span class="s">identity</span><span class="nv"> </span><span class="s">synchronization</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">lifecycle</span>
+
+<span class="w">      </span><span class="s">management</span><span class="nv"> </span><span class="s">with</span><span class="nv"> </span><span class="s">compatible</span><span class="nv"> </span><span class="s">Identity</span><span class="nv"> </span><span class="s">Providers</span><span class="nv"> </span><span class="s">(IdPs)</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">applications.</span><span class="nv"> </span><span class="s">SCIM</span>
+<span class="w">      </span><span class="s">is</span>
+
+<span class="w">      </span><span class="s">defined</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">&lt;a</span><span class="nv"> </span><span class="s">target=</span><span class="se">''</span><span class="s">_blank</span><span class="se">''</span>
+
+<span class="w">      </span><span class="s">href=</span><span class="se">''</span><span class="s">https://datatracker.ietf.org/doc/html/rfc7643</span><span class="se">''</span><span class="s">&gt;RFC-7634&lt;/a&gt;'</span>
 <span class="w">    </span><span class="nt">notes</span><span class="p">:</span>
-<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">System for Cross-domain Identity Management (SCIM) RFC. — https://datatracker.ietf.org/doc/html/rfc7643</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">'System</span><span class="nv"> </span><span class="s">for</span><span class="nv"> </span><span class="s">Cross-domain</span><span class="nv"> </span><span class="s">Identity</span><span class="nv"> </span><span class="s">Management</span><span class="nv"> </span><span class="s">(SCIM)</span><span class="nv"> </span><span class="s">RFC.</span><span class="nv"> </span><span class="s">—</span>
+
+<span class="w">      </span><span class="s">https://datatracker.ietf.org/doc/html/rfc7643'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">see_also</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://datatracker.ietf.org/doc/html/rfc7643</span>
@@ -903,8 +970,10 @@
 <span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Scim</span>
 <span class="w">  </span><span class="nt">sso</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">sso</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The Single Sign-On (SSO) object provides a structure for normalizing</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">SSO attributes, configuration, and/or settings from Identity Providers.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">Single</span><span class="nv"> </span><span class="s">Sign-On</span><span class="nv"> </span><span class="s">(SSO)</span><span class="nv"> </span><span class="s">object</span><span class="nv"> </span><span class="s">provides</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">structure</span><span class="nv"> </span><span class="s">for</span><span class="nv"> </span><span class="s">normalizing</span>
+<span class="w">      </span><span class="s">SSO</span>
+
+<span class="w">      </span><span class="s">attributes,</span><span class="nv"> </span><span class="s">configuration,</span><span class="nv"> </span><span class="s">and/or</span><span class="nv"> </span><span class="s">settings</span><span class="nv"> </span><span class="s">from</span><span class="nv"> </span><span class="s">Identity</span><span class="nv"> </span><span class="s">Providers.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">SSO</span>
@@ -916,9 +985,12 @@
 <span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Sso</span>
 <span class="w">  </span><span class="nt">state</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">state</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The configuration state of the Identity Provider, normalized to the</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">caption of the &lt;code&gt;state_id&lt;/code&gt; value. In the case of &lt;code&gt;Other&lt;/code&gt;,</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">it is defined by the event source.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">configuration</span><span class="nv"> </span><span class="s">state</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">Identity</span><span class="nv"> </span><span class="s">Provider,</span><span class="nv"> </span><span class="s">normalized</span><span class="nv"> </span><span class="s">to</span>
+<span class="w">      </span><span class="s">the</span><span class="nv"> </span><span class="s">caption</span><span class="nv"> </span><span class="s">of</span>
+
+<span class="w">      </span><span class="s">the</span><span class="nv"> </span><span class="s">&lt;code&gt;state_id&lt;/code&gt;</span><span class="nv"> </span><span class="s">value.</span><span class="nv"> </span><span class="s">In</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">case</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">&lt;code&gt;Other&lt;/code&gt;,</span><span class="nv"> </span><span class="s">it</span><span class="nv"> </span><span class="s">is</span>
+
+<span class="w">      </span><span class="s">defined</span><span class="nv"> </span><span class="s">by</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">event</span><span class="nv"> </span><span class="s">source.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">State</span>
@@ -942,8 +1014,10 @@
 <span class="w">      </span><span class="nt">sibling</span><span class="p">:</span>
 <span class="w">        </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">sibling</span>
 <span class="w">        </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">state</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The normalized state ID of the Identity Provider to reflect its configuration</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">or activation status.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">normalized</span><span class="nv"> </span><span class="s">state</span><span class="nv"> </span><span class="s">ID</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">Identity</span><span class="nv"> </span><span class="s">Provider</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">reflect</span><span class="nv"> </span><span class="s">its</span>
+<span class="w">      </span><span class="s">configuration</span>
+
+<span class="w">      </span><span class="s">or</span><span class="nv"> </span><span class="s">activation</span><span class="nv"> </span><span class="s">status.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">State ID</span>

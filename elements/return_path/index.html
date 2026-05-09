@@ -519,7 +519,10 @@
 
 
 <h1 id="slot-return_path">Slot: return_path</h1>
-<p><em>The address found in the 'Return-Path' header, which indicates where bounce messages (non-delivery reports) should be sent. This address is often set by the sending system and may differ from the 'From' or 'Sender' addresses. For example, <code><a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#109;&#97;&#105;&#108;&#101;&#114;&#45;&#100;&#97;&#101;&#109;&#111;&#110;&#64;&#115;&#101;&#110;&#100;&#101;&#114;&#115;&#101;&#114;&#118;&#101;&#114;&#46;&#99;&#111;&#109;">&#109;&#97;&#105;&#108;&#101;&#114;&#45;&#100;&#97;&#101;&#109;&#111;&#110;&#64;&#115;&#101;&#110;&#100;&#101;&#114;&#115;&#101;&#114;&#118;&#101;&#114;&#46;&#99;&#111;&#109;</a></code>.</em></p>
+<p><em>The address found in the 'Return-Path' header, which indicates where bounce</em></p>
+<p><em>messages (non-delivery reports) should be sent. This address is often set by</em></p>
+<p><em>the sending system and may differ from the 'From' or 'Sender' addresses. For</em></p>
+<p><em>example, <code><a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#109;&#97;&#105;&#108;&#101;&#114;&#45;&#100;&#97;&#101;&#109;&#111;&#110;&#64;&#115;&#101;&#110;&#100;&#101;&#114;&#115;&#101;&#114;&#118;&#101;&#114;&#46;&#99;&#111;&#109;">&#109;&#97;&#105;&#108;&#101;&#114;&#45;&#100;&#97;&#101;&#109;&#111;&#110;&#64;&#115;&#101;&#110;&#100;&#101;&#114;&#115;&#101;&#114;&#118;&#101;&#114;&#46;&#99;&#111;&#109;</a></code>.</em></p>
 <p>URI: <a href="https://w3id.org/lmodel/ocsf/return_path">ocsf:return_path</a>
 Alias: return_path</p>
 <!-- no inheritance hierarchy -->
@@ -536,7 +539,7 @@ Alias: return_path</p>
 <tbody>
 <tr>
 <td><a href="../Email/">Email</a></td>
-<td>The Email object describes the email metadata such as sender, recipients, and...</td>
+<td>The Email object describes the email metadata such as sender, recipients, and</td>
 <td>no</td>
 </tr>
 </tbody>
@@ -588,7 +591,8 @@ Alias: return_path</p>
 <h2 id="notes">Notes</h2>
 <ul>
 <li>RFC 5322 — <a href="https://www.rfc-editor.org/rfc/rfc5322">https://www.rfc-editor.org/rfc/rfc5322</a></li>
-<li>RFC 5321 - Simple Mail Transfer Protocol — <a href="https://datatracker.ietf.org/doc/html/rfc5321#section-4.4">https://datatracker.ietf.org/doc/html/rfc5321#section-4.4</a></li>
+<li>RFC 5321 - Simple Mail Transfer Protocol —
+<a href="https://datatracker.ietf.org/doc/html/rfc5321#section-4.4">https://datatracker.ietf.org/doc/html/rfc5321#section-4.4</a></li>
 </ul>
 <h2 id="identifier-and-mapping-information">Identifier and Mapping Information</h2>
 <h3 id="schema-source">Schema Source</h3>
@@ -617,13 +621,19 @@ Alias: return_path</p>
 <h2 id="linkml-source">LinkML Source</h2>
 <details>
 <div class="highlight"><pre><span></span><code><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">return_path</span>
-<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The address found in the &#39;Return-Path&#39; header, which indicates where</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">bounce messages (non-delivery reports) should be sent. This address is often set</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">by the sending system and may differ from the &#39;From&#39; or &#39;Sender&#39; addresses. For</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">example, &lt;code&gt;mailer-daemon@senderserver.com&lt;/code&gt;.</span>
+<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;The</span><span class="nv"> </span><span class="s">address</span><span class="nv"> </span><span class="s">found</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="se">&#39;&#39;</span><span class="s">Return-Path</span><span class="se">&#39;&#39;</span><span class="nv"> </span><span class="s">header,</span><span class="nv"> </span><span class="s">which</span><span class="nv"> </span><span class="s">indicates</span><span class="nv"> </span><span class="s">where</span>
+<span class="w">  </span><span class="s">bounce</span>
+
+<span class="w">  </span><span class="s">messages</span><span class="nv"> </span><span class="s">(non-delivery</span><span class="nv"> </span><span class="s">reports)</span><span class="nv"> </span><span class="s">should</span><span class="nv"> </span><span class="s">be</span><span class="nv"> </span><span class="s">sent.</span><span class="nv"> </span><span class="s">This</span><span class="nv"> </span><span class="s">address</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">often</span><span class="nv"> </span><span class="s">set</span><span class="nv"> </span><span class="s">by</span>
+
+<span class="w">  </span><span class="s">the</span><span class="nv"> </span><span class="s">sending</span><span class="nv"> </span><span class="s">system</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">may</span><span class="nv"> </span><span class="s">differ</span><span class="nv"> </span><span class="s">from</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="se">&#39;&#39;</span><span class="s">From</span><span class="se">&#39;&#39;</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="se">&#39;&#39;</span><span class="s">Sender</span><span class="se">&#39;&#39;</span><span class="nv"> </span><span class="s">addresses.</span><span class="nv"> </span><span class="s">For</span>
+
+<span class="w">  </span><span class="s">example,</span><span class="nv"> </span><span class="s">&lt;code&gt;mailer-daemon@senderserver.com&lt;/code&gt;.&#39;</span>
 <span class="nt">notes</span><span class="p">:</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">RFC 5322 — https://www.rfc-editor.org/rfc/rfc5322</span>
-<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">RFC 5321 - Simple Mail Transfer Protocol — https://datatracker.ietf.org/doc/html/rfc5321#section-4.4</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;RFC</span><span class="nv"> </span><span class="s">5321</span><span class="nv"> </span><span class="s">-</span><span class="nv"> </span><span class="s">Simple</span><span class="nv"> </span><span class="s">Mail</span><span class="nv"> </span><span class="s">Transfer</span><span class="nv"> </span><span class="s">Protocol</span><span class="nv"> </span><span class="s">—</span>
+
+<span class="w">  </span><span class="s">https://datatracker.ietf.org/doc/html/rfc5321#section-4.4&#39;</span>
 <span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="nt">see_also</span><span class="p">:</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://www.rfc-editor.org/rfc/rfc5322</span>

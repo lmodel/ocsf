@@ -508,7 +508,9 @@
 
 
 <h1 id="slot-cmd_line">Slot: cmd_line</h1>
-<p><em>The full command line used to launch an application, service, process, or job. For example: <code>ssh user@10.0.0.10</code>. If the command line is unavailable or missing, the empty string <code>''</code> is to be used.</em></p>
+<p><em>The full command line used to launch an application, service, process, or job.</em></p>
+<p><em>For example: <code>ssh user@10.0.0.10</code>. If the command line is</em></p>
+<p><em>unavailable or missing, the empty string <code>''</code> is to be used.</em></p>
 <p>URI: <a href="https://w3id.org/lmodel/ocsf/cmd_line">ocsf:cmd_line</a>
 Alias: cmd_line</p>
 <!-- no inheritance hierarchy -->
@@ -524,14 +526,9 @@ Alias: cmd_line</p>
 </thead>
 <tbody>
 <tr>
-<td><a href="../ProcessEntity/">ProcessEntity</a></td>
-<td>The Process Entity object provides critical fields for referencing a process</td>
-<td>yes</td>
-</tr>
-<tr>
-<td><a href="../Job/">Job</a></td>
-<td>The Job object provides information about a scheduled job or task, including ...</td>
-<td>yes</td>
+<td><a href="../LinuxProcess/">LinuxProcess</a></td>
+<td>Extends the process object to add Linux specific fields</td>
+<td>no</td>
 </tr>
 <tr>
 <td><a href="../MacosProcess/">MacosProcess</a></td>
@@ -549,14 +546,19 @@ Alias: cmd_line</p>
 <td>yes</td>
 </tr>
 <tr>
-<td><a href="../LinuxProcess/">LinuxProcess</a></td>
-<td>Extends the process object to add Linux specific fields</td>
-<td>no</td>
-</tr>
-<tr>
 <td><a href="../WindowsProcess/">WindowsProcess</a></td>
 <td>Extends the process object to add Windows specific fields</td>
 <td>no</td>
+</tr>
+<tr>
+<td><a href="../Job/">Job</a></td>
+<td>The Job object provides information about a scheduled job or task, including</td>
+<td>yes</td>
+</tr>
+<tr>
+<td><a href="../ProcessEntity/">ProcessEntity</a></td>
+<td>The Process Entity object provides critical fields for referencing a process</td>
+<td>yes</td>
 </tr>
 </tbody>
 </table>
@@ -646,8 +648,11 @@ Alias: cmd_line</p>
 <span class="w">    </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">observable_id</span>
 <span class="w">    </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">13</span>
 <span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;The</span><span class="nv"> </span><span class="s">full</span><span class="nv"> </span><span class="s">command</span><span class="nv"> </span><span class="s">line</span><span class="nv"> </span><span class="s">used</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">launch</span><span class="nv"> </span><span class="s">an</span><span class="nv"> </span><span class="s">application,</span><span class="nv"> </span><span class="s">service,</span><span class="nv"> </span><span class="s">process,</span>
-<span class="w">  </span><span class="s">or</span><span class="nv"> </span><span class="s">job.</span><span class="nv"> </span><span class="s">For</span><span class="nv"> </span><span class="s">example:</span><span class="nv"> </span><span class="s">&lt;code&gt;ssh</span><span class="nv"> </span><span class="s">user@10.0.0.10&lt;/code&gt;.</span><span class="nv"> </span><span class="s">If</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">command</span><span class="nv"> </span><span class="s">line</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">unavailable</span>
-<span class="w">  </span><span class="s">or</span><span class="nv"> </span><span class="s">missing,</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">empty</span><span class="nv"> </span><span class="s">string</span><span class="nv"> </span><span class="s">&lt;code&gt;</span><span class="se">&#39;&#39;&#39;&#39;</span><span class="s">&lt;/code&gt;</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">be</span><span class="nv"> </span><span class="s">used.&#39;</span>
+<span class="w">  </span><span class="s">or</span><span class="nv"> </span><span class="s">job.</span>
+
+<span class="w">  </span><span class="s">For</span><span class="nv"> </span><span class="s">example:</span><span class="nv"> </span><span class="s">&lt;code&gt;ssh</span><span class="nv"> </span><span class="s">user@10.0.0.10&lt;/code&gt;.</span><span class="nv"> </span><span class="s">If</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">command</span><span class="nv"> </span><span class="s">line</span><span class="nv"> </span><span class="s">is</span>
+
+<span class="w">  </span><span class="s">unavailable</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">missing,</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">empty</span><span class="nv"> </span><span class="s">string</span><span class="nv"> </span><span class="s">&lt;code&gt;</span><span class="se">&#39;&#39;&#39;&#39;</span><span class="s">&lt;/code&gt;</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">be</span><span class="nv"> </span><span class="s">used.&#39;</span>
 <span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="nt">aliases</span><span class="p">:</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Command Line</span>

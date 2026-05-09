@@ -447,7 +447,8 @@
 
 
 <h1 id="enum-detectionsystemidenum">Enum: DetectionSystemIdEnum</h1>
-<p><em>The type of data security tool or system that the finding, detection, or alert originated from.</em></p>
+<p><em>The type of data security tool or system that the finding, detection, or alert</em></p>
+<p><em>originated from.</em></p>
 <p>URI: <a href="https://w3id.org/lmodel/ocsf/DetectionSystemIdEnum">ocsf:DetectionSystemIdEnum</a></p>
 <h2 id="permissible-values">Permissible Values</h2>
 <table>
@@ -467,17 +468,17 @@
 <tr>
 <td>ENDPOINT</td>
 <td>None</td>
-<td>A dedicated agent or sensor installed on a device, either a dedicated data se...</td>
+<td>A dedicated agent or sensor installed on a device, either a dedicated data</td>
 </tr>
 <tr>
 <td>DLP_GATEWAY</td>
 <td>None</td>
-<td>A Data Loss Prevention (DLP) gateway that is positioned in-line of an informa...</td>
+<td>A Data Loss Prevention (DLP) gateway that is positioned in-line of an</td>
 </tr>
 <tr>
 <td>MOBILE_DEVICE_MANAGEMENT</td>
 <td>None</td>
-<td>A Mobile Device Management (MDM) or Enterprise Mobility Management (EMM) tool...</td>
+<td>A Mobile Device Management (MDM) or Enterprise Mobility Management (EMM) tool</td>
 </tr>
 <tr>
 <td>DATA_DISCOVERY_CLASSIFICATION</td>
@@ -487,7 +488,7 @@
 <tr>
 <td>SECURE_WEB_GATEWAY</td>
 <td>None</td>
-<td>A Secure Web Gateway (SWG) is any tool that can detect sensitive data and/or ...</td>
+<td>A Secure Web Gateway (SWG) is any tool that can detect sensitive data and/or</td>
 </tr>
 <tr>
 <td>SECURE_EMAIL_GATEWAY</td>
@@ -502,7 +503,7 @@
 <tr>
 <td>CLOUD_ACCESS_SECURITY_BROKER</td>
 <td>None</td>
-<td>A Cloud Access Security Broker (CASB) that can detect sensitive data and/or e...</td>
+<td>A Cloud Access Security Broker (CASB) that can detect sensitive data and/or</td>
 </tr>
 <tr>
 <td>DATABASE_ACTIVITY_MONITORING</td>
@@ -517,12 +518,12 @@
 <tr>
 <td>DEVELOPER_SECURITY</td>
 <td>None</td>
-<td>Any Developer Security tool such as an Infrastructure-as-Code (IAC) security ...</td>
+<td>Any Developer Security tool such as an Infrastructure-as-Code (IAC) security</td>
 </tr>
 <tr>
 <td>DATA_SECURITY_POSTURE_MANAGEMENT</td>
 <td>None</td>
-<td>A Data Security Posture Management (DSPM) tool is a continuous monitoring and...</td>
+<td>A Data Security Posture Management (DSPM) tool is a continuous monitoring and</td>
 </tr>
 <tr>
 <td>OTHER</td>
@@ -554,15 +555,19 @@
 <h2 id="linkml-source">LinkML Source</h2>
 <details>
 <div class="highlight"><pre><span></span><code><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">DetectionSystemIdEnum</span>
-<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The type of data security tool or system that the finding, detection,</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">or alert originated from.</span>
+<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;The</span><span class="nv"> </span><span class="s">type</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">data</span><span class="nv"> </span><span class="s">security</span><span class="nv"> </span><span class="s">tool</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">system</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">finding,</span><span class="nv"> </span><span class="s">detection,</span>
+<span class="w">  </span><span class="s">or</span><span class="nv"> </span><span class="s">alert</span>
+
+<span class="w">  </span><span class="s">originated</span><span class="nv"> </span><span class="s">from.&#39;</span>
 <span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="nt">rank</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1000</span>
 <span class="nt">permissible_values</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">UNKNOWN</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">text</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">UNKNOWN</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The type is not mapped. See the &lt;code&gt;detection_system&lt;/code&gt; attribute,</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">which contains a data source specific value.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;The</span><span class="nv"> </span><span class="s">type</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">not</span><span class="nv"> </span><span class="s">mapped.</span><span class="nv"> </span><span class="s">See</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">&lt;code&gt;detection_system&lt;/code&gt;</span><span class="nv"> </span><span class="s">attribute,</span>
+<span class="w">      </span><span class="s">which</span>
+
+<span class="w">      </span><span class="s">contains</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">data</span><span class="nv"> </span><span class="s">source</span><span class="nv"> </span><span class="s">specific</span><span class="nv"> </span><span class="s">value.&#39;</span>
 <span class="w">    </span><span class="nt">annotations</span><span class="p">:</span>
 <span class="w">      </span><span class="nt">ocsf_uid</span><span class="p">:</span>
 <span class="w">        </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ocsf_uid</span>
@@ -572,10 +577,14 @@
 <span class="w">        </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Unknown</span>
 <span class="w">  </span><span class="nt">ENDPOINT</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">text</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ENDPOINT</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">A dedicated agent or sensor installed on a device, either a dedicated</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">data security tool or an Endpoint Detection &amp; Response (EDR) tool that can detect</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">sensitive data and/or enforce data security policies. E.g., Forcepoint DLP,</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">Symantec DLP, Microsoft Defender for Endpoint (MDE).</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;A</span><span class="nv"> </span><span class="s">dedicated</span><span class="nv"> </span><span class="s">agent</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">sensor</span><span class="nv"> </span><span class="s">installed</span><span class="nv"> </span><span class="s">on</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">device,</span><span class="nv"> </span><span class="s">either</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">dedicated</span>
+<span class="w">      </span><span class="s">data</span>
+
+<span class="w">      </span><span class="s">security</span><span class="nv"> </span><span class="s">tool</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">an</span><span class="nv"> </span><span class="s">Endpoint</span><span class="nv"> </span><span class="s">Detection</span><span class="nv"> </span><span class="s">&amp;</span><span class="nv"> </span><span class="s">Response</span><span class="nv"> </span><span class="s">(EDR)</span><span class="nv"> </span><span class="s">tool</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">can</span><span class="nv"> </span><span class="s">detect</span>
+
+<span class="w">      </span><span class="s">sensitive</span><span class="nv"> </span><span class="s">data</span><span class="nv"> </span><span class="s">and/or</span><span class="nv"> </span><span class="s">enforce</span><span class="nv"> </span><span class="s">data</span><span class="nv"> </span><span class="s">security</span><span class="nv"> </span><span class="s">policies.</span><span class="nv"> </span><span class="s">E.g.,</span><span class="nv"> </span><span class="s">Forcepoint</span><span class="nv"> </span><span class="s">DLP,</span>
+
+<span class="w">      </span><span class="s">Symantec</span><span class="nv"> </span><span class="s">DLP,</span><span class="nv"> </span><span class="s">Microsoft</span><span class="nv"> </span><span class="s">Defender</span><span class="nv"> </span><span class="s">for</span><span class="nv"> </span><span class="s">Endpoint</span><span class="nv"> </span><span class="s">(MDE).&#39;</span>
 <span class="w">    </span><span class="nt">annotations</span><span class="p">:</span>
 <span class="w">      </span><span class="nt">ocsf_uid</span><span class="p">:</span>
 <span class="w">        </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ocsf_uid</span>
@@ -585,9 +594,12 @@
 <span class="w">        </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Endpoint</span>
 <span class="w">  </span><span class="nt">DLP_GATEWAY</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">text</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">DLP_GATEWAY</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">A Data Loss Prevention (DLP) gateway that is positioned in-line of</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">an information store such as a network share, a database, or otherwise that</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">can detect sensitive data and/or enforce data security policies.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;A</span><span class="nv"> </span><span class="s">Data</span><span class="nv"> </span><span class="s">Loss</span><span class="nv"> </span><span class="s">Prevention</span><span class="nv"> </span><span class="s">(DLP)</span><span class="nv"> </span><span class="s">gateway</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">positioned</span><span class="nv"> </span><span class="s">in-line</span>
+<span class="w">      </span><span class="s">of</span><span class="nv"> </span><span class="s">an</span>
+
+<span class="w">      </span><span class="s">information</span><span class="nv"> </span><span class="s">store</span><span class="nv"> </span><span class="s">such</span><span class="nv"> </span><span class="s">as</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">network</span><span class="nv"> </span><span class="s">share,</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">database,</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">otherwise</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">can</span>
+
+<span class="w">      </span><span class="s">detect</span><span class="nv"> </span><span class="s">sensitive</span><span class="nv"> </span><span class="s">data</span><span class="nv"> </span><span class="s">and/or</span><span class="nv"> </span><span class="s">enforce</span><span class="nv"> </span><span class="s">data</span><span class="nv"> </span><span class="s">security</span><span class="nv"> </span><span class="s">policies.&#39;</span>
 <span class="w">    </span><span class="nt">annotations</span><span class="p">:</span>
 <span class="w">      </span><span class="nt">ocsf_uid</span><span class="p">:</span>
 <span class="w">        </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ocsf_uid</span>
@@ -597,9 +609,12 @@
 <span class="w">        </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">DLP Gateway</span>
 <span class="w">  </span><span class="nt">MOBILE_DEVICE_MANAGEMENT</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">text</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">MOBILE_DEVICE_MANAGEMENT</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">A Mobile Device Management (MDM) or Enterprise Mobility Management</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">(EMM) tool that can detect sensitive data and/or enforce data security policies</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">on mobile devices (e.g., cellphones, tablets, End User Devices [EUDs]).</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;A</span><span class="nv"> </span><span class="s">Mobile</span><span class="nv"> </span><span class="s">Device</span><span class="nv"> </span><span class="s">Management</span><span class="nv"> </span><span class="s">(MDM)</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">Enterprise</span><span class="nv"> </span><span class="s">Mobility</span><span class="nv"> </span><span class="s">Management</span>
+<span class="w">      </span><span class="s">(EMM)</span><span class="nv"> </span><span class="s">tool</span>
+
+<span class="w">      </span><span class="s">that</span><span class="nv"> </span><span class="s">can</span><span class="nv"> </span><span class="s">detect</span><span class="nv"> </span><span class="s">sensitive</span><span class="nv"> </span><span class="s">data</span><span class="nv"> </span><span class="s">and/or</span><span class="nv"> </span><span class="s">enforce</span><span class="nv"> </span><span class="s">data</span><span class="nv"> </span><span class="s">security</span><span class="nv"> </span><span class="s">policies</span><span class="nv"> </span><span class="s">on</span><span class="nv"> </span><span class="s">mobile</span>
+
+<span class="w">      </span><span class="s">devices</span><span class="nv"> </span><span class="s">(e.g.,</span><span class="nv"> </span><span class="s">cellphones,</span><span class="nv"> </span><span class="s">tablets,</span><span class="nv"> </span><span class="s">End</span><span class="nv"> </span><span class="s">User</span><span class="nv"> </span><span class="s">Devices</span><span class="nv"> </span><span class="s">[EUDs]).&#39;</span>
 <span class="w">    </span><span class="nt">annotations</span><span class="p">:</span>
 <span class="w">      </span><span class="nt">ocsf_uid</span><span class="p">:</span>
 <span class="w">        </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ocsf_uid</span>
@@ -609,9 +624,12 @@
 <span class="w">        </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Mobile Device Management</span>
 <span class="w">  </span><span class="nt">DATA_DISCOVERY_CLASSIFICATION</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">text</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">DATA_DISCOVERY_CLASSIFICATION</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">A tool that actively identifies and classifies sensitive data in</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">digital media and information stores in accordance with a policy or automated</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">functionality. E.g, Amazon Macie, Microsoft Purview.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;A</span><span class="nv"> </span><span class="s">tool</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">actively</span><span class="nv"> </span><span class="s">identifies</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">classifies</span><span class="nv"> </span><span class="s">sensitive</span><span class="nv"> </span><span class="s">data</span><span class="nv"> </span><span class="s">in</span>
+<span class="w">      </span><span class="s">digital</span><span class="nv"> </span><span class="s">media</span>
+
+<span class="w">      </span><span class="s">and</span><span class="nv"> </span><span class="s">information</span><span class="nv"> </span><span class="s">stores</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">accordance</span><span class="nv"> </span><span class="s">with</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">policy</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">automated</span><span class="nv"> </span><span class="s">functionality.</span>
+
+<span class="w">      </span><span class="s">E.g,</span><span class="nv"> </span><span class="s">Amazon</span><span class="nv"> </span><span class="s">Macie,</span><span class="nv"> </span><span class="s">Microsoft</span><span class="nv"> </span><span class="s">Purview.&#39;</span>
 <span class="w">    </span><span class="nt">annotations</span><span class="p">:</span>
 <span class="w">      </span><span class="nt">ocsf_uid</span><span class="p">:</span>
 <span class="w">        </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ocsf_uid</span>
@@ -621,9 +639,12 @@
 <span class="w">        </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Data Discovery &amp; Classification</span>
 <span class="w">  </span><span class="nt">SECURE_WEB_GATEWAY</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">text</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">SECURE_WEB_GATEWAY</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">A Secure Web Gateway (SWG) is any tool that can detect sensitive</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">data and/or enforce data security policies at a network-edge such as within</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">a proxy or firewall service.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;A</span><span class="nv"> </span><span class="s">Secure</span><span class="nv"> </span><span class="s">Web</span><span class="nv"> </span><span class="s">Gateway</span><span class="nv"> </span><span class="s">(SWG)</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">any</span><span class="nv"> </span><span class="s">tool</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">can</span><span class="nv"> </span><span class="s">detect</span><span class="nv"> </span><span class="s">sensitive</span>
+<span class="w">      </span><span class="s">data</span><span class="nv"> </span><span class="s">and/or</span>
+
+<span class="w">      </span><span class="s">enforce</span><span class="nv"> </span><span class="s">data</span><span class="nv"> </span><span class="s">security</span><span class="nv"> </span><span class="s">policies</span><span class="nv"> </span><span class="s">at</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">network-edge</span><span class="nv"> </span><span class="s">such</span><span class="nv"> </span><span class="s">as</span><span class="nv"> </span><span class="s">within</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">proxy</span><span class="nv"> </span><span class="s">or</span>
+
+<span class="w">      </span><span class="s">firewall</span><span class="nv"> </span><span class="s">service.&#39;</span>
 <span class="w">    </span><span class="nt">annotations</span><span class="p">:</span>
 <span class="w">      </span><span class="nt">ocsf_uid</span><span class="p">:</span>
 <span class="w">        </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ocsf_uid</span>
@@ -633,9 +654,12 @@
 <span class="w">        </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Secure Web Gateway</span>
 <span class="w">  </span><span class="nt">SECURE_EMAIL_GATEWAY</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">text</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">SECURE_EMAIL_GATEWAY</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">A Secure Email Gateway (SEG) is any tool that can detect sensitive</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">data and/or enforce data security policies within email systems. E.g., Microsoft</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">Defender for Office, Google Workspaces.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;A</span><span class="nv"> </span><span class="s">Secure</span><span class="nv"> </span><span class="s">Email</span><span class="nv"> </span><span class="s">Gateway</span><span class="nv"> </span><span class="s">(SEG)</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">any</span><span class="nv"> </span><span class="s">tool</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">can</span><span class="nv"> </span><span class="s">detect</span><span class="nv"> </span><span class="s">sensitive</span>
+<span class="w">      </span><span class="s">data</span><span class="nv"> </span><span class="s">and/or</span>
+
+<span class="w">      </span><span class="s">enforce</span><span class="nv"> </span><span class="s">data</span><span class="nv"> </span><span class="s">security</span><span class="nv"> </span><span class="s">policies</span><span class="nv"> </span><span class="s">within</span><span class="nv"> </span><span class="s">email</span><span class="nv"> </span><span class="s">systems.</span><span class="nv"> </span><span class="s">E.g.,</span><span class="nv"> </span><span class="s">Microsoft</span><span class="nv"> </span><span class="s">Defender</span>
+
+<span class="w">      </span><span class="s">for</span><span class="nv"> </span><span class="s">Office,</span><span class="nv"> </span><span class="s">Google</span><span class="nv"> </span><span class="s">Workspaces.&#39;</span>
 <span class="w">    </span><span class="nt">annotations</span><span class="p">:</span>
 <span class="w">      </span><span class="nt">ocsf_uid</span><span class="p">:</span>
 <span class="w">        </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ocsf_uid</span>
@@ -645,9 +669,12 @@
 <span class="w">        </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Secure Email Gateway</span>
 <span class="w">  </span><span class="nt">DIGITAL_RIGHTS_MANAGEMENT</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">text</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">DIGITAL_RIGHTS_MANAGEMENT</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">A Digital Rights Management (DRM) or a dedicated Information Rights</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">Management (IRM) are tools which can detect sensitive data and/or enforce data</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">security policies on digital media via policy or user access rights.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;A</span><span class="nv"> </span><span class="s">Digital</span><span class="nv"> </span><span class="s">Rights</span><span class="nv"> </span><span class="s">Management</span><span class="nv"> </span><span class="s">(DRM)</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">dedicated</span><span class="nv"> </span><span class="s">Information</span><span class="nv"> </span><span class="s">Rights</span>
+<span class="w">      </span><span class="s">Management</span>
+
+<span class="w">      </span><span class="s">(IRM)</span><span class="nv"> </span><span class="s">are</span><span class="nv"> </span><span class="s">tools</span><span class="nv"> </span><span class="s">which</span><span class="nv"> </span><span class="s">can</span><span class="nv"> </span><span class="s">detect</span><span class="nv"> </span><span class="s">sensitive</span><span class="nv"> </span><span class="s">data</span><span class="nv"> </span><span class="s">and/or</span><span class="nv"> </span><span class="s">enforce</span><span class="nv"> </span><span class="s">data</span><span class="nv"> </span><span class="s">security</span>
+
+<span class="w">      </span><span class="s">policies</span><span class="nv"> </span><span class="s">on</span><span class="nv"> </span><span class="s">digital</span><span class="nv"> </span><span class="s">media</span><span class="nv"> </span><span class="s">via</span><span class="nv"> </span><span class="s">policy</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">user</span><span class="nv"> </span><span class="s">access</span><span class="nv"> </span><span class="s">rights.&#39;</span>
 <span class="w">    </span><span class="nt">annotations</span><span class="p">:</span>
 <span class="w">      </span><span class="nt">ocsf_uid</span><span class="p">:</span>
 <span class="w">        </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ocsf_uid</span>
@@ -657,9 +684,14 @@
 <span class="w">        </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Digital Rights Management</span>
 <span class="w">  </span><span class="nt">CLOUD_ACCESS_SECURITY_BROKER</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">text</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">CLOUD_ACCESS_SECURITY_BROKER</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">A Cloud Access Security Broker (CASB) that can detect sensitive data</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">and/or enforce data security policies in-line to cloud systems such as the public</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">cloud or Software-as-a-Service (SaaS) tool. E.g., Forcepoint CASB, SkyHigh Security.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;A</span><span class="nv"> </span><span class="s">Cloud</span><span class="nv"> </span><span class="s">Access</span><span class="nv"> </span><span class="s">Security</span><span class="nv"> </span><span class="s">Broker</span><span class="nv"> </span><span class="s">(CASB)</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">can</span><span class="nv"> </span><span class="s">detect</span><span class="nv"> </span><span class="s">sensitive</span>
+<span class="w">      </span><span class="s">data</span><span class="nv"> </span><span class="s">and/or</span>
+
+<span class="w">      </span><span class="s">enforce</span><span class="nv"> </span><span class="s">data</span><span class="nv"> </span><span class="s">security</span><span class="nv"> </span><span class="s">policies</span><span class="nv"> </span><span class="s">in-line</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">cloud</span><span class="nv"> </span><span class="s">systems</span><span class="nv"> </span><span class="s">such</span><span class="nv"> </span><span class="s">as</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">public</span>
+
+<span class="w">      </span><span class="s">cloud</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">Software-as-a-Service</span><span class="nv"> </span><span class="s">(SaaS)</span><span class="nv"> </span><span class="s">tool.</span><span class="nv"> </span><span class="s">E.g.,</span><span class="nv"> </span><span class="s">Forcepoint</span><span class="nv"> </span><span class="s">CASB,</span><span class="nv"> </span><span class="s">SkyHigh</span>
+
+<span class="w">      </span><span class="s">Security.&#39;</span>
 <span class="w">    </span><span class="nt">annotations</span><span class="p">:</span>
 <span class="w">      </span><span class="nt">ocsf_uid</span><span class="p">:</span>
 <span class="w">        </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ocsf_uid</span>
@@ -669,9 +701,12 @@
 <span class="w">        </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Cloud Access Security Broker</span>
 <span class="w">  </span><span class="nt">DATABASE_ACTIVITY_MONITORING</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">text</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">DATABASE_ACTIVITY_MONITORING</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">A Database Activity Monitoring (DAM) tool that can detect sensitive</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">data and/or enforce data security policies as part of a dedicated database or</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">warehouse monitoring solution.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;A</span><span class="nv"> </span><span class="s">Database</span><span class="nv"> </span><span class="s">Activity</span><span class="nv"> </span><span class="s">Monitoring</span><span class="nv"> </span><span class="s">(DAM)</span><span class="nv"> </span><span class="s">tool</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">can</span><span class="nv"> </span><span class="s">detect</span><span class="nv"> </span><span class="s">sensitive</span>
+<span class="w">      </span><span class="s">data</span><span class="nv"> </span><span class="s">and/or</span>
+
+<span class="w">      </span><span class="s">enforce</span><span class="nv"> </span><span class="s">data</span><span class="nv"> </span><span class="s">security</span><span class="nv"> </span><span class="s">policies</span><span class="nv"> </span><span class="s">as</span><span class="nv"> </span><span class="s">part</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">dedicated</span><span class="nv"> </span><span class="s">database</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">warehouse</span>
+
+<span class="w">      </span><span class="s">monitoring</span><span class="nv"> </span><span class="s">solution.&#39;</span>
 <span class="w">    </span><span class="nt">annotations</span><span class="p">:</span>
 <span class="w">      </span><span class="nt">ocsf_uid</span><span class="p">:</span>
 <span class="w">        </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ocsf_uid</span>
@@ -681,10 +716,14 @@
 <span class="w">        </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Database Activity Monitoring</span>
 <span class="w">  </span><span class="nt">APPLICATION_LEVEL_DLP</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">text</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">APPLICATION_LEVEL_DLP</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">A built in Data Loss Prevention (DLP) or other data security capability</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">within a tool or platform such as an Enterprise Resource Planning (ERP) or Customer</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">Relations Management (CRM) tool that can detect sensitive data and/or enforce</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">data security policies.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;A</span><span class="nv"> </span><span class="s">built</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">Data</span><span class="nv"> </span><span class="s">Loss</span><span class="nv"> </span><span class="s">Prevention</span><span class="nv"> </span><span class="s">(DLP)</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">other</span><span class="nv"> </span><span class="s">data</span><span class="nv"> </span><span class="s">security</span><span class="nv"> </span><span class="s">capability</span>
+<span class="w">      </span><span class="s">within</span>
+
+<span class="w">      </span><span class="s">a</span><span class="nv"> </span><span class="s">tool</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">platform</span><span class="nv"> </span><span class="s">such</span><span class="nv"> </span><span class="s">as</span><span class="nv"> </span><span class="s">an</span><span class="nv"> </span><span class="s">Enterprise</span><span class="nv"> </span><span class="s">Resource</span><span class="nv"> </span><span class="s">Planning</span><span class="nv"> </span><span class="s">(ERP)</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">Customer</span>
+
+<span class="w">      </span><span class="s">Relations</span><span class="nv"> </span><span class="s">Management</span><span class="nv"> </span><span class="s">(CRM)</span><span class="nv"> </span><span class="s">tool</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">can</span><span class="nv"> </span><span class="s">detect</span><span class="nv"> </span><span class="s">sensitive</span><span class="nv"> </span><span class="s">data</span><span class="nv"> </span><span class="s">and/or</span><span class="nv"> </span><span class="s">enforce</span>
+
+<span class="w">      </span><span class="s">data</span><span class="nv"> </span><span class="s">security</span><span class="nv"> </span><span class="s">policies.&#39;</span>
 <span class="w">    </span><span class="nt">annotations</span><span class="p">:</span>
 <span class="w">      </span><span class="nt">ocsf_uid</span><span class="p">:</span>
 <span class="w">        </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ocsf_uid</span>
@@ -694,10 +733,14 @@
 <span class="w">        </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Application-Level DLP</span>
 <span class="w">  </span><span class="nt">DEVELOPER_SECURITY</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">text</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">DEVELOPER_SECURITY</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Any Developer Security tool such as an Infrastructure-as-Code (IAC)</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">security scanner, Secrets Detection, or Secure Software Development Lifecycle</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">(SSDLC) tool that can detect sensitive data and/or enforce data security policies.</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">E.g., TruffleHog, GitGuardian, Git-Secrets.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;Any</span><span class="nv"> </span><span class="s">Developer</span><span class="nv"> </span><span class="s">Security</span><span class="nv"> </span><span class="s">tool</span><span class="nv"> </span><span class="s">such</span><span class="nv"> </span><span class="s">as</span><span class="nv"> </span><span class="s">an</span><span class="nv"> </span><span class="s">Infrastructure-as-Code</span><span class="nv"> </span><span class="s">(IAC)</span>
+<span class="w">      </span><span class="s">security</span>
+
+<span class="w">      </span><span class="s">scanner,</span><span class="nv"> </span><span class="s">Secrets</span><span class="nv"> </span><span class="s">Detection,</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">Secure</span><span class="nv"> </span><span class="s">Software</span><span class="nv"> </span><span class="s">Development</span><span class="nv"> </span><span class="s">Lifecycle</span><span class="nv"> </span><span class="s">(SSDLC)</span>
+
+<span class="w">      </span><span class="s">tool</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">can</span><span class="nv"> </span><span class="s">detect</span><span class="nv"> </span><span class="s">sensitive</span><span class="nv"> </span><span class="s">data</span><span class="nv"> </span><span class="s">and/or</span><span class="nv"> </span><span class="s">enforce</span><span class="nv"> </span><span class="s">data</span><span class="nv"> </span><span class="s">security</span><span class="nv"> </span><span class="s">policies.</span>
+
+<span class="w">      </span><span class="s">E.g.,</span><span class="nv"> </span><span class="s">TruffleHog,</span><span class="nv"> </span><span class="s">GitGuardian,</span><span class="nv"> </span><span class="s">Git-Secrets.&#39;</span>
 <span class="w">    </span><span class="nt">annotations</span><span class="p">:</span>
 <span class="w">      </span><span class="nt">ocsf_uid</span><span class="p">:</span>
 <span class="w">        </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ocsf_uid</span>
@@ -707,10 +750,14 @@
 <span class="w">        </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Developer Security</span>
 <span class="w">  </span><span class="nt">DATA_SECURITY_POSTURE_MANAGEMENT</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">text</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">DATA_SECURITY_POSTURE_MANAGEMENT</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">A Data Security Posture Management (DSPM) tool is a continuous monitoring</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">and data discovery solution that can detect sensitive data and/or enforce data</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">security policies for local and cloud environments. E.g., Cyera, Sentra, IBM</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">Polar Security.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;A</span><span class="nv"> </span><span class="s">Data</span><span class="nv"> </span><span class="s">Security</span><span class="nv"> </span><span class="s">Posture</span><span class="nv"> </span><span class="s">Management</span><span class="nv"> </span><span class="s">(DSPM)</span><span class="nv"> </span><span class="s">tool</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">continuous</span><span class="nv"> </span><span class="s">monitoring</span>
+<span class="w">      </span><span class="s">and</span>
+
+<span class="w">      </span><span class="s">data</span><span class="nv"> </span><span class="s">discovery</span><span class="nv"> </span><span class="s">solution</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">can</span><span class="nv"> </span><span class="s">detect</span><span class="nv"> </span><span class="s">sensitive</span><span class="nv"> </span><span class="s">data</span><span class="nv"> </span><span class="s">and/or</span><span class="nv"> </span><span class="s">enforce</span><span class="nv"> </span><span class="s">data</span>
+
+<span class="w">      </span><span class="s">security</span><span class="nv"> </span><span class="s">policies</span><span class="nv"> </span><span class="s">for</span><span class="nv"> </span><span class="s">local</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">cloud</span><span class="nv"> </span><span class="s">environments.</span><span class="nv"> </span><span class="s">E.g.,</span><span class="nv"> </span><span class="s">Cyera,</span><span class="nv"> </span><span class="s">Sentra,</span><span class="nv"> </span><span class="s">IBM</span>
+
+<span class="w">      </span><span class="s">Polar</span><span class="nv"> </span><span class="s">Security.&#39;</span>
 <span class="w">    </span><span class="nt">annotations</span><span class="p">:</span>
 <span class="w">      </span><span class="nt">ocsf_uid</span><span class="p">:</span>
 <span class="w">        </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ocsf_uid</span>
@@ -720,8 +767,10 @@
 <span class="w">        </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Data Security Posture Management</span>
 <span class="w">  </span><span class="nt">OTHER</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">text</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">OTHER</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Any other type of detection system or a multi-variate system made</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">up of several other systems.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;Any</span><span class="nv"> </span><span class="s">other</span><span class="nv"> </span><span class="s">type</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">detection</span><span class="nv"> </span><span class="s">system</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">multi-variate</span><span class="nv"> </span><span class="s">system</span><span class="nv"> </span><span class="s">made</span>
+<span class="w">      </span><span class="s">up</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">several</span>
+
+<span class="w">      </span><span class="s">other</span><span class="nv"> </span><span class="s">systems.&#39;</span>
 <span class="w">    </span><span class="nt">annotations</span><span class="p">:</span>
 <span class="w">      </span><span class="nt">ocsf_uid</span><span class="p">:</span>
 <span class="w">        </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ocsf_uid</span>

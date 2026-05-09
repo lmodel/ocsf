@@ -447,7 +447,11 @@
 
 
 <h1 id="enum-evidencesverdictidenum">Enum: EvidencesVerdictIdEnum</h1>
-<p><em>The normalized verdict (or status) ID of the evidence associated with the security detection. For example, Microsoft Graph Security Alerts contain a <code>verdict</code> enumeration for each type of <code>evidence</code> associated with the Alert. This is typically set by an automated investigation process or an analyst/investigator assigned to the finding.</em></p>
+<p><em>The normalized verdict (or status) ID of the evidence associated with the</em></p>
+<p><em>security detection. For example, Microsoft Graph Security Alerts contain a</em></p>
+<p><em><code>verdict</code> enumeration for each type of <code>evidence</code></em></p>
+<p><em>associated with the Alert. This is typically set by an automated investigation</em></p>
+<p><em>process or an analyst/investigator assigned to the finding.</em></p>
 <p>URI: <a href="https://w3id.org/lmodel/ocsf/EvidencesVerdictIdEnum">ocsf:EvidencesVerdictIdEnum</a></p>
 <h2 id="permissible-values">Permissible Values</h2>
 <table>
@@ -482,12 +486,12 @@
 <tr>
 <td>SUSPICIOUS</td>
 <td>None</td>
-<td>The verdict for the evidence is that the behavior has been identified as Susp...</td>
+<td>The verdict for the evidence is that the behavior has been identified as</td>
 </tr>
 <tr>
 <td>BENIGN</td>
 <td>None</td>
-<td>The verdict for the evidence is that the behavior has been identified as Beni...</td>
+<td>The verdict for the evidence is that the behavior has been identified as</td>
 </tr>
 <tr>
 <td>TEST</td>
@@ -502,12 +506,12 @@
 <tr>
 <td>SECURITY_RISK</td>
 <td>None</td>
-<td>The verdict for the evidence is that the behavior has been identified as a Se...</td>
+<td>The verdict for the evidence is that the behavior has been identified as a</td>
 </tr>
 <tr>
 <td>MANAGED_EXTERNALLY</td>
 <td>None</td>
-<td>The verdict for the evidence is Managed Externally, such as in a case managem...</td>
+<td>The verdict for the evidence is Managed Externally, such as in a case</td>
 </tr>
 <tr>
 <td>DUPLICATE</td>
@@ -532,7 +536,7 @@
 <tbody>
 <tr>
 <td><a href="../verdict_id/">verdict_id</a></td>
-<td>The normalized verdict (or status) ID of the evidence associated with the sec...</td>
+<td>The normalized verdict (or status) ID of the evidence associated with the</td>
 </tr>
 </tbody>
 </table>
@@ -544,11 +548,16 @@
 <h2 id="linkml-source">LinkML Source</h2>
 <details>
 <div class="highlight"><pre><span></span><code><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">EvidencesVerdictIdEnum</span>
-<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The normalized verdict (or status) ID of the evidence associated with</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">the security detection. For example, Microsoft Graph Security Alerts contain a &lt;code&gt;verdict&lt;/code&gt;</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">enumeration for each type of &lt;code&gt;evidence&lt;/code&gt; associated with the Alert. This</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">is typically set by an automated investigation process or an analyst/investigator</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">assigned to the finding.</span>
+<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;The</span><span class="nv"> </span><span class="s">normalized</span><span class="nv"> </span><span class="s">verdict</span><span class="nv"> </span><span class="s">(or</span><span class="nv"> </span><span class="s">status)</span><span class="nv"> </span><span class="s">ID</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">evidence</span><span class="nv"> </span><span class="s">associated</span><span class="nv"> </span><span class="s">with</span>
+<span class="w">  </span><span class="s">the</span>
+
+<span class="w">  </span><span class="s">security</span><span class="nv"> </span><span class="s">detection.</span><span class="nv"> </span><span class="s">For</span><span class="nv"> </span><span class="s">example,</span><span class="nv"> </span><span class="s">Microsoft</span><span class="nv"> </span><span class="s">Graph</span><span class="nv"> </span><span class="s">Security</span><span class="nv"> </span><span class="s">Alerts</span><span class="nv"> </span><span class="s">contain</span><span class="nv"> </span><span class="s">a</span>
+
+<span class="w">  </span><span class="s">&lt;code&gt;verdict&lt;/code&gt;</span><span class="nv"> </span><span class="s">enumeration</span><span class="nv"> </span><span class="s">for</span><span class="nv"> </span><span class="s">each</span><span class="nv"> </span><span class="s">type</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">&lt;code&gt;evidence&lt;/code&gt;</span>
+
+<span class="w">  </span><span class="s">associated</span><span class="nv"> </span><span class="s">with</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">Alert.</span><span class="nv"> </span><span class="s">This</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">typically</span><span class="nv"> </span><span class="s">set</span><span class="nv"> </span><span class="s">by</span><span class="nv"> </span><span class="s">an</span><span class="nv"> </span><span class="s">automated</span><span class="nv"> </span><span class="s">investigation</span>
+
+<span class="w">  </span><span class="s">process</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">an</span><span class="nv"> </span><span class="s">analyst/investigator</span><span class="nv"> </span><span class="s">assigned</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">finding.&#39;</span>
 <span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="nt">rank</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1000</span>
 <span class="nt">permissible_values</span><span class="p">:</span>
@@ -594,8 +603,10 @@
 <span class="w">        </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Disregard</span>
 <span class="w">  </span><span class="nt">SUSPICIOUS</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">text</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">SUSPICIOUS</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The verdict for the evidence is that the behavior has been identified</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">as Suspicious.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;The</span><span class="nv"> </span><span class="s">verdict</span><span class="nv"> </span><span class="s">for</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">evidence</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">behavior</span><span class="nv"> </span><span class="s">has</span><span class="nv"> </span><span class="s">been</span><span class="nv"> </span><span class="s">identified</span>
+<span class="w">      </span><span class="s">as</span>
+
+<span class="w">      </span><span class="s">Suspicious.&#39;</span>
 <span class="w">    </span><span class="nt">annotations</span><span class="p">:</span>
 <span class="w">      </span><span class="nt">ocsf_uid</span><span class="p">:</span>
 <span class="w">        </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ocsf_uid</span>
@@ -605,8 +616,10 @@
 <span class="w">        </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Suspicious</span>
 <span class="w">  </span><span class="nt">BENIGN</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">text</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">BENIGN</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The verdict for the evidence is that the behavior has been identified</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">as Benign.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;The</span><span class="nv"> </span><span class="s">verdict</span><span class="nv"> </span><span class="s">for</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">evidence</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">behavior</span><span class="nv"> </span><span class="s">has</span><span class="nv"> </span><span class="s">been</span><span class="nv"> </span><span class="s">identified</span>
+<span class="w">      </span><span class="s">as</span>
+
+<span class="w">      </span><span class="s">Benign.&#39;</span>
 <span class="w">    </span><span class="nt">annotations</span><span class="p">:</span>
 <span class="w">      </span><span class="nt">ocsf_uid</span><span class="p">:</span>
 <span class="w">        </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ocsf_uid</span>
@@ -636,8 +649,10 @@
 <span class="w">        </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Insufficient Data</span>
 <span class="w">  </span><span class="nt">SECURITY_RISK</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">text</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">SECURITY_RISK</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The verdict for the evidence is that the behavior has been identified</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">as a Security Risk.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;The</span><span class="nv"> </span><span class="s">verdict</span><span class="nv"> </span><span class="s">for</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">evidence</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">behavior</span><span class="nv"> </span><span class="s">has</span><span class="nv"> </span><span class="s">been</span><span class="nv"> </span><span class="s">identified</span>
+<span class="w">      </span><span class="s">as</span><span class="nv"> </span><span class="s">a</span>
+
+<span class="w">      </span><span class="s">Security</span><span class="nv"> </span><span class="s">Risk.&#39;</span>
 <span class="w">    </span><span class="nt">annotations</span><span class="p">:</span>
 <span class="w">      </span><span class="nt">ocsf_uid</span><span class="p">:</span>
 <span class="w">        </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ocsf_uid</span>
@@ -647,8 +662,10 @@
 <span class="w">        </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Security Risk</span>
 <span class="w">  </span><span class="nt">MANAGED_EXTERNALLY</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">text</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">MANAGED_EXTERNALLY</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The verdict for the evidence is Managed Externally, such as in a</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">case management tool.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;The</span><span class="nv"> </span><span class="s">verdict</span><span class="nv"> </span><span class="s">for</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">evidence</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">Managed</span><span class="nv"> </span><span class="s">Externally,</span><span class="nv"> </span><span class="s">such</span><span class="nv"> </span><span class="s">as</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">a</span>
+<span class="w">      </span><span class="s">case</span>
+
+<span class="w">      </span><span class="s">management</span><span class="nv"> </span><span class="s">tool.&#39;</span>
 <span class="w">    </span><span class="nt">annotations</span><span class="p">:</span>
 <span class="w">      </span><span class="nt">ocsf_uid</span><span class="p">:</span>
 <span class="w">        </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ocsf_uid</span>
@@ -668,8 +685,10 @@
 <span class="w">        </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Duplicate</span>
 <span class="w">  </span><span class="nt">OTHER</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">text</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">OTHER</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The type is not mapped. See the &lt;code&gt;type&lt;/code&gt; attribute, which</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">contains a data source specific value.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;The</span><span class="nv"> </span><span class="s">type</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">not</span><span class="nv"> </span><span class="s">mapped.</span><span class="nv"> </span><span class="s">See</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">&lt;code&gt;type&lt;/code&gt;</span><span class="nv"> </span><span class="s">attribute,</span><span class="nv"> </span><span class="s">which</span>
+<span class="w">      </span><span class="s">contains</span><span class="nv"> </span><span class="s">a</span>
+
+<span class="w">      </span><span class="s">data</span><span class="nv"> </span><span class="s">source</span><span class="nv"> </span><span class="s">specific</span><span class="nv"> </span><span class="s">value.&#39;</span>
 <span class="w">    </span><span class="nt">annotations</span><span class="p">:</span>
 <span class="w">      </span><span class="nt">ocsf_uid</span><span class="p">:</span>
 <span class="w">        </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ocsf_uid</span>

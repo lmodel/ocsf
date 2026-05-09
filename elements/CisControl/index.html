@@ -217,6 +217,15 @@
 </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="#in-subsets">
+<span class="md-ellipsis">
+      
+        In Subsets
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#aliases">
 <span class="md-ellipsis">
       
@@ -295,7 +304,10 @@
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
 <h1 id="class-ciscontrol">Class: CisControl</h1>
-<p><em>The CIS Control (aka Critical Security Control) object describes a prioritized set of actions to protect your organization and data from cyber-attack vectors. The <a href="https://www.cisecurity.org/controls" target="_blank">CIS Controls</a> are defined by the Center for Internet Security.</em></p>
+<p><em>The CIS Control (aka Critical Security Control) object describes a prioritized</em></p>
+<p><em>set of actions to protect your organization and data from cyber-attack vectors.</em></p>
+<p><em>The <a href="https://www.cisecurity.org/controls" target="_blank">CIS</a></em></p>
+<p><em>Controls are defined by the Center for Internet Security.</em></p>
 <p>URI: <a href="https://w3id.org/lmodel/ocsf/CisControl">ocsf:CisControl</a></p>
 <pre class="mermaid"><code> classDiagram
     class CisControl
@@ -376,6 +388,10 @@
 </tr>
 </tbody>
 </table>
+<h2 id="in-subsets">In Subsets</h2>
+<ul>
+<li><a href="../Objects/">Objects</a></li>
+</ul>
 <h2 id="aliases">Aliases</h2>
 <ul>
 <li>CIS Control</li>
@@ -413,10 +429,15 @@
 <h3 id="direct">Direct</h3>
 <details>
 <div class="highlight"><pre><span></span><code><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">CisControl</span>
-<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The CIS Control (aka Critical Security Control) object describes a prioritized</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">set of actions to protect your organization and data from cyber-attack vectors.</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">The &lt;a target='_blank' href='https://www.cisecurity.org/controls'&gt;CIS Controls&lt;/a&gt;</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">are defined by the Center for Internet Security.</span>
+<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">CIS</span><span class="nv"> </span><span class="s">Control</span><span class="nv"> </span><span class="s">(aka</span><span class="nv"> </span><span class="s">Critical</span><span class="nv"> </span><span class="s">Security</span><span class="nv"> </span><span class="s">Control)</span><span class="nv"> </span><span class="s">object</span><span class="nv"> </span><span class="s">describes</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">prioritized</span>
+
+<span class="w">  </span><span class="s">set</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">actions</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">protect</span><span class="nv"> </span><span class="s">your</span><span class="nv"> </span><span class="s">organization</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">data</span><span class="nv"> </span><span class="s">from</span><span class="nv"> </span><span class="s">cyber-attack</span><span class="nv"> </span><span class="s">vectors.</span>
+
+<span class="w">  </span><span class="s">The</span><span class="nv"> </span><span class="s">&lt;a</span><span class="nv"> </span><span class="s">target=</span><span class="se">''</span><span class="s">_blank</span><span class="se">''</span><span class="nv"> </span><span class="s">href=</span><span class="se">''</span><span class="s">https://www.cisecurity.org/controls</span><span class="se">''</span><span class="s">&gt;CIS</span>
+
+<span class="w">  </span><span class="s">Controls&lt;/a&gt;</span><span class="nv"> </span><span class="s">are</span><span class="nv"> </span><span class="s">defined</span><span class="nv"> </span><span class="s">by</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">Center</span><span class="nv"> </span><span class="s">for</span><span class="nv"> </span><span class="s">Internet</span><span class="nv"> </span><span class="s">Security.'</span>
+<span class="nt">in_subset</span><span class="p">:</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">objects</span>
 <span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="nt">aliases</span><span class="p">:</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">CIS Control</span>
@@ -431,11 +452,15 @@
 <span class="w">  </span><span class="nt">desc</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">desc</span>
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">CIS</span><span class="nv"> </span><span class="s">Control</span><span class="nv"> </span><span class="s">description.</span><span class="nv"> </span><span class="s">For</span><span class="nv"> </span><span class="s">example:</span><span class="nv"> </span><span class="s">&lt;i&gt;Uninstall</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">disable</span>
-<span class="w">      </span><span class="s">unnecessary</span><span class="nv"> </span><span class="s">services</span><span class="nv"> </span><span class="s">on</span><span class="nv"> </span><span class="s">enterprise</span><span class="nv"> </span><span class="s">assets</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">software,</span><span class="nv"> </span><span class="s">such</span><span class="nv"> </span><span class="s">as</span><span class="nv"> </span><span class="s">an</span><span class="nv"> </span><span class="s">unused</span><span class="nv"> </span><span class="s">file</span>
-<span class="w">      </span><span class="s">sharing</span><span class="nv"> </span><span class="s">service,</span><span class="nv"> </span><span class="s">web</span><span class="nv"> </span><span class="s">application</span><span class="nv"> </span><span class="s">module,</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">service</span><span class="nv"> </span><span class="s">function.&lt;/i&gt;'</span>
+<span class="w">      </span><span class="s">unnecessary</span>
+
+<span class="w">      </span><span class="s">services</span><span class="nv"> </span><span class="s">on</span><span class="nv"> </span><span class="s">enterprise</span><span class="nv"> </span><span class="s">assets</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">software,</span><span class="nv"> </span><span class="s">such</span><span class="nv"> </span><span class="s">as</span><span class="nv"> </span><span class="s">an</span><span class="nv"> </span><span class="s">unused</span><span class="nv"> </span><span class="s">file</span><span class="nv"> </span><span class="s">sharing</span>
+
+<span class="w">      </span><span class="s">service,</span><span class="nv"> </span><span class="s">web</span><span class="nv"> </span><span class="s">application</span><span class="nv"> </span><span class="s">module,</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">service</span><span class="nv"> </span><span class="s">function.&lt;/i&gt;'</span>
 <span class="w">  </span><span class="nt">name</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">name</span>
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">CIS</span><span class="nv"> </span><span class="s">Control</span><span class="nv"> </span><span class="s">name.</span><span class="nv"> </span><span class="s">For</span><span class="nv"> </span><span class="s">example:</span><span class="nv"> </span><span class="s">&lt;i&gt;4.8</span><span class="nv"> </span><span class="s">Uninstall</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">Disable</span><span class="nv"> </span><span class="s">Unnecessary</span>
+
 <span class="w">      </span><span class="s">Services</span><span class="nv"> </span><span class="s">on</span><span class="nv"> </span><span class="s">Enterprise</span><span class="nv"> </span><span class="s">Assets</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">Software.&lt;/i&gt;'</span>
 <span class="w">    </span><span class="nt">required</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">version</span><span class="p">:</span>
@@ -447,10 +472,15 @@
 <h3 id="induced">Induced</h3>
 <details>
 <div class="highlight"><pre><span></span><code><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">CisControl</span>
-<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The CIS Control (aka Critical Security Control) object describes a prioritized</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">set of actions to protect your organization and data from cyber-attack vectors.</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">The &lt;a target='_blank' href='https://www.cisecurity.org/controls'&gt;CIS Controls&lt;/a&gt;</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">are defined by the Center for Internet Security.</span>
+<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">CIS</span><span class="nv"> </span><span class="s">Control</span><span class="nv"> </span><span class="s">(aka</span><span class="nv"> </span><span class="s">Critical</span><span class="nv"> </span><span class="s">Security</span><span class="nv"> </span><span class="s">Control)</span><span class="nv"> </span><span class="s">object</span><span class="nv"> </span><span class="s">describes</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">prioritized</span>
+
+<span class="w">  </span><span class="s">set</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">actions</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">protect</span><span class="nv"> </span><span class="s">your</span><span class="nv"> </span><span class="s">organization</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">data</span><span class="nv"> </span><span class="s">from</span><span class="nv"> </span><span class="s">cyber-attack</span><span class="nv"> </span><span class="s">vectors.</span>
+
+<span class="w">  </span><span class="s">The</span><span class="nv"> </span><span class="s">&lt;a</span><span class="nv"> </span><span class="s">target=</span><span class="se">''</span><span class="s">_blank</span><span class="se">''</span><span class="nv"> </span><span class="s">href=</span><span class="se">''</span><span class="s">https://www.cisecurity.org/controls</span><span class="se">''</span><span class="s">&gt;CIS</span>
+
+<span class="w">  </span><span class="s">Controls&lt;/a&gt;</span><span class="nv"> </span><span class="s">are</span><span class="nv"> </span><span class="s">defined</span><span class="nv"> </span><span class="s">by</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">Center</span><span class="nv"> </span><span class="s">for</span><span class="nv"> </span><span class="s">Internet</span><span class="nv"> </span><span class="s">Security.'</span>
+<span class="nt">in_subset</span><span class="p">:</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">objects</span>
 <span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="nt">aliases</span><span class="p">:</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">CIS Control</span>
@@ -461,11 +491,15 @@
 <span class="w">  </span><span class="nt">desc</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">desc</span>
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">CIS</span><span class="nv"> </span><span class="s">Control</span><span class="nv"> </span><span class="s">description.</span><span class="nv"> </span><span class="s">For</span><span class="nv"> </span><span class="s">example:</span><span class="nv"> </span><span class="s">&lt;i&gt;Uninstall</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">disable</span>
-<span class="w">      </span><span class="s">unnecessary</span><span class="nv"> </span><span class="s">services</span><span class="nv"> </span><span class="s">on</span><span class="nv"> </span><span class="s">enterprise</span><span class="nv"> </span><span class="s">assets</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">software,</span><span class="nv"> </span><span class="s">such</span><span class="nv"> </span><span class="s">as</span><span class="nv"> </span><span class="s">an</span><span class="nv"> </span><span class="s">unused</span><span class="nv"> </span><span class="s">file</span>
-<span class="w">      </span><span class="s">sharing</span><span class="nv"> </span><span class="s">service,</span><span class="nv"> </span><span class="s">web</span><span class="nv"> </span><span class="s">application</span><span class="nv"> </span><span class="s">module,</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">service</span><span class="nv"> </span><span class="s">function.&lt;/i&gt;'</span>
+<span class="w">      </span><span class="s">unnecessary</span>
+
+<span class="w">      </span><span class="s">services</span><span class="nv"> </span><span class="s">on</span><span class="nv"> </span><span class="s">enterprise</span><span class="nv"> </span><span class="s">assets</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">software,</span><span class="nv"> </span><span class="s">such</span><span class="nv"> </span><span class="s">as</span><span class="nv"> </span><span class="s">an</span><span class="nv"> </span><span class="s">unused</span><span class="nv"> </span><span class="s">file</span><span class="nv"> </span><span class="s">sharing</span>
+
+<span class="w">      </span><span class="s">service,</span><span class="nv"> </span><span class="s">web</span><span class="nv"> </span><span class="s">application</span><span class="nv"> </span><span class="s">module,</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">service</span><span class="nv"> </span><span class="s">function.&lt;/i&gt;'</span>
 <span class="w">  </span><span class="nt">name</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">name</span>
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">CIS</span><span class="nv"> </span><span class="s">Control</span><span class="nv"> </span><span class="s">name.</span><span class="nv"> </span><span class="s">For</span><span class="nv"> </span><span class="s">example:</span><span class="nv"> </span><span class="s">&lt;i&gt;4.8</span><span class="nv"> </span><span class="s">Uninstall</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">Disable</span><span class="nv"> </span><span class="s">Unnecessary</span>
+
 <span class="w">      </span><span class="s">Services</span><span class="nv"> </span><span class="s">on</span><span class="nv"> </span><span class="s">Enterprise</span><span class="nv"> </span><span class="s">Assets</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">Software.&lt;/i&gt;'</span>
 <span class="w">    </span><span class="nt">required</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">version</span><span class="p">:</span>
@@ -476,8 +510,11 @@
 <span class="w">  </span><span class="nt">desc</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">desc</span>
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">CIS</span><span class="nv"> </span><span class="s">Control</span><span class="nv"> </span><span class="s">description.</span><span class="nv"> </span><span class="s">For</span><span class="nv"> </span><span class="s">example:</span><span class="nv"> </span><span class="s">&lt;i&gt;Uninstall</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">disable</span>
-<span class="w">      </span><span class="s">unnecessary</span><span class="nv"> </span><span class="s">services</span><span class="nv"> </span><span class="s">on</span><span class="nv"> </span><span class="s">enterprise</span><span class="nv"> </span><span class="s">assets</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">software,</span><span class="nv"> </span><span class="s">such</span><span class="nv"> </span><span class="s">as</span><span class="nv"> </span><span class="s">an</span><span class="nv"> </span><span class="s">unused</span><span class="nv"> </span><span class="s">file</span>
-<span class="w">      </span><span class="s">sharing</span><span class="nv"> </span><span class="s">service,</span><span class="nv"> </span><span class="s">web</span><span class="nv"> </span><span class="s">application</span><span class="nv"> </span><span class="s">module,</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">service</span><span class="nv"> </span><span class="s">function.&lt;/i&gt;'</span>
+<span class="w">      </span><span class="s">unnecessary</span>
+
+<span class="w">      </span><span class="s">services</span><span class="nv"> </span><span class="s">on</span><span class="nv"> </span><span class="s">enterprise</span><span class="nv"> </span><span class="s">assets</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">software,</span><span class="nv"> </span><span class="s">such</span><span class="nv"> </span><span class="s">as</span><span class="nv"> </span><span class="s">an</span><span class="nv"> </span><span class="s">unused</span><span class="nv"> </span><span class="s">file</span><span class="nv"> </span><span class="s">sharing</span>
+
+<span class="w">      </span><span class="s">service,</span><span class="nv"> </span><span class="s">web</span><span class="nv"> </span><span class="s">application</span><span class="nv"> </span><span class="s">module,</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">service</span><span class="nv"> </span><span class="s">function.&lt;/i&gt;'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Description</span>
@@ -520,6 +557,7 @@
 <span class="w">  </span><span class="nt">name</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">name</span>
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">CIS</span><span class="nv"> </span><span class="s">Control</span><span class="nv"> </span><span class="s">name.</span><span class="nv"> </span><span class="s">For</span><span class="nv"> </span><span class="s">example:</span><span class="nv"> </span><span class="s">&lt;i&gt;4.8</span><span class="nv"> </span><span class="s">Uninstall</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">Disable</span><span class="nv"> </span><span class="s">Unnecessary</span>
+
 <span class="w">      </span><span class="s">Services</span><span class="nv"> </span><span class="s">on</span><span class="nv"> </span><span class="s">Enterprise</span><span class="nv"> </span><span class="s">Assets</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">Software.&lt;/i&gt;'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>

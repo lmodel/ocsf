@@ -217,6 +217,15 @@
 </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="#in-subsets">
+<span class="md-ellipsis">
+      
+        In Subsets
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#aliases">
 <span class="md-ellipsis">
       
@@ -295,7 +304,10 @@
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
 <h1 id="class-devicehwinfo">Class: DeviceHwInfo</h1>
-<p><em>The Device Hardware Information object contains details and specifications of the physical components that make up a device. This information provides an overview of the hardware capabilities, configuration, and characteristics of the device.</em></p>
+<p><em>The Device Hardware Information object contains details and specifications of</em></p>
+<p><em>the physical components that make up a device. This information provides an</em></p>
+<p><em>overview of the hardware capabilities, configuration, and characteristics of</em></p>
+<p><em>the device.</em></p>
 <p>URI: <a href="https://w3id.org/lmodel/ocsf/DeviceHwInfo">ocsf:DeviceHwInfo</a></p>
 <pre class="mermaid"><code> classDiagram
     class DeviceHwInfo
@@ -426,7 +438,7 @@
 <tr>
 <td><a href="../cpu_architecture/">cpu_architecture</a></td>
 <td>0..1 <br/> <a href="../String/">String</a></td>
-<td>The CPU architecture, normalized to the caption of the <code>cpu_architecture...</code></td>
+<td>The CPU architecture, normalized to the caption of the</td>
 <td>direct</td>
 </tr>
 <tr>
@@ -480,7 +492,7 @@
 <tr>
 <td><a href="../gpu_info_list/">gpu_info_list</a></td>
 <td>* <br/> <a href="../GpuInfo/">GpuInfo</a></td>
-<td>A list of GPU objects describing the hardware properties of each graphics pro...</td>
+<td>A list of GPU objects describing the hardware properties of each graphics</td>
 <td>direct</td>
 </tr>
 <tr>
@@ -558,6 +570,10 @@
 </tr>
 </tbody>
 </table>
+<h2 id="in-subsets">In Subsets</h2>
+<ul>
+<li><a href="../Objects/">Objects</a></li>
+</ul>
 <h2 id="aliases">Aliases</h2>
 <ul>
 <li>Device Hardware Info</li>
@@ -591,9 +607,16 @@
 <h3 id="direct">Direct</h3>
 <details>
 <div class="highlight"><pre><span></span><code><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">DeviceHwInfo</span>
-<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The Device Hardware Information object contains details and specifications</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">of the physical components that make up a device. This information provides an overview</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">of the hardware capabilities, configuration, and characteristics of the device.</span>
+<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">Device</span><span class="nv"> </span><span class="s">Hardware</span><span class="nv"> </span><span class="s">Information</span><span class="nv"> </span><span class="s">object</span><span class="nv"> </span><span class="s">contains</span><span class="nv"> </span><span class="s">details</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">specifications</span>
+<span class="w">  </span><span class="s">of</span>
+
+<span class="w">  </span><span class="s">the</span><span class="nv"> </span><span class="s">physical</span><span class="nv"> </span><span class="s">components</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">make</span><span class="nv"> </span><span class="s">up</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">device.</span><span class="nv"> </span><span class="s">This</span><span class="nv"> </span><span class="s">information</span><span class="nv"> </span><span class="s">provides</span><span class="nv"> </span><span class="s">an</span>
+
+<span class="w">  </span><span class="s">overview</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">hardware</span><span class="nv"> </span><span class="s">capabilities,</span><span class="nv"> </span><span class="s">configuration,</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">characteristics</span><span class="nv"> </span><span class="s">of</span>
+
+<span class="w">  </span><span class="s">the</span><span class="nv"> </span><span class="s">device.'</span>
+<span class="nt">in_subset</span><span class="p">:</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">objects</span>
 <span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="nt">aliases</span><span class="p">:</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Device Hardware Info</span>
@@ -621,18 +644,26 @@
 <span class="nt">slot_usage</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">gpu_info_list</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">gpu_info_list</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">A list of GPU objects describing the hardware properties of each</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">graphics processor installed on the device.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'A</span><span class="nv"> </span><span class="s">list</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">GPU</span><span class="nv"> </span><span class="s">objects</span><span class="nv"> </span><span class="s">describing</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">hardware</span><span class="nv"> </span><span class="s">properties</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">each</span>
+<span class="w">      </span><span class="s">graphics</span>
+
+<span class="w">      </span><span class="s">processor</span><span class="nv"> </span><span class="s">installed</span><span class="nv"> </span><span class="s">on</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">device.'</span>
 <span class="w">  </span><span class="nt">serial_number</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">serial_number</span>
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The device manufacturer serial number.</span>
 <span class="w">  </span><span class="nt">uuid</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">uuid</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The device manufacturer assigned universally unique hardware identifier.</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">For SMBIOS compatible devices such as those running Linux and Windows, it is</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">the UUID member of the System Information structure in the SMBIOS information.</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">For macOS devices, it is the Hardware UUID (also known as IOPlatformUUID in</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">the I/O Registry).</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">device</span><span class="nv"> </span><span class="s">manufacturer</span><span class="nv"> </span><span class="s">assigned</span><span class="nv"> </span><span class="s">universally</span><span class="nv"> </span><span class="s">unique</span><span class="nv"> </span><span class="s">hardware</span><span class="nv"> </span><span class="s">identifier.</span>
+<span class="w">      </span><span class="s">For</span>
+
+<span class="w">      </span><span class="s">SMBIOS</span><span class="nv"> </span><span class="s">compatible</span><span class="nv"> </span><span class="s">devices</span><span class="nv"> </span><span class="s">such</span><span class="nv"> </span><span class="s">as</span><span class="nv"> </span><span class="s">those</span><span class="nv"> </span><span class="s">running</span><span class="nv"> </span><span class="s">Linux</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">Windows,</span><span class="nv"> </span><span class="s">it</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">the</span>
+
+<span class="w">      </span><span class="s">UUID</span><span class="nv"> </span><span class="s">member</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">System</span><span class="nv"> </span><span class="s">Information</span><span class="nv"> </span><span class="s">structure</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">SMBIOS</span><span class="nv"> </span><span class="s">information.</span><span class="nv"> </span><span class="s">For</span>
+
+<span class="w">      </span><span class="s">macOS</span><span class="nv"> </span><span class="s">devices,</span><span class="nv"> </span><span class="s">it</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">Hardware</span><span class="nv"> </span><span class="s">UUID</span><span class="nv"> </span><span class="s">(also</span><span class="nv"> </span><span class="s">known</span><span class="nv"> </span><span class="s">as</span><span class="nv"> </span><span class="s">IOPlatformUUID</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">the</span>
+<span class="w">      </span><span class="s">I/O</span>
+
+<span class="w">      </span><span class="s">Registry).'</span>
 <span class="w">  </span><span class="nt">vendor_name</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">vendor_name</span>
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The device manufacturer.</span>
@@ -641,9 +672,16 @@
 <h3 id="induced">Induced</h3>
 <details>
 <div class="highlight"><pre><span></span><code><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">DeviceHwInfo</span>
-<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The Device Hardware Information object contains details and specifications</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">of the physical components that make up a device. This information provides an overview</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">of the hardware capabilities, configuration, and characteristics of the device.</span>
+<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">Device</span><span class="nv"> </span><span class="s">Hardware</span><span class="nv"> </span><span class="s">Information</span><span class="nv"> </span><span class="s">object</span><span class="nv"> </span><span class="s">contains</span><span class="nv"> </span><span class="s">details</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">specifications</span>
+<span class="w">  </span><span class="s">of</span>
+
+<span class="w">  </span><span class="s">the</span><span class="nv"> </span><span class="s">physical</span><span class="nv"> </span><span class="s">components</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">make</span><span class="nv"> </span><span class="s">up</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">device.</span><span class="nv"> </span><span class="s">This</span><span class="nv"> </span><span class="s">information</span><span class="nv"> </span><span class="s">provides</span><span class="nv"> </span><span class="s">an</span>
+
+<span class="w">  </span><span class="s">overview</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">hardware</span><span class="nv"> </span><span class="s">capabilities,</span><span class="nv"> </span><span class="s">configuration,</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">characteristics</span><span class="nv"> </span><span class="s">of</span>
+
+<span class="w">  </span><span class="s">the</span><span class="nv"> </span><span class="s">device.'</span>
+<span class="nt">in_subset</span><span class="p">:</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">objects</span>
 <span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="nt">aliases</span><span class="p">:</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Device Hardware Info</span>
@@ -651,18 +689,26 @@
 <span class="nt">slot_usage</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">gpu_info_list</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">gpu_info_list</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">A list of GPU objects describing the hardware properties of each</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">graphics processor installed on the device.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'A</span><span class="nv"> </span><span class="s">list</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">GPU</span><span class="nv"> </span><span class="s">objects</span><span class="nv"> </span><span class="s">describing</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">hardware</span><span class="nv"> </span><span class="s">properties</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">each</span>
+<span class="w">      </span><span class="s">graphics</span>
+
+<span class="w">      </span><span class="s">processor</span><span class="nv"> </span><span class="s">installed</span><span class="nv"> </span><span class="s">on</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">device.'</span>
 <span class="w">  </span><span class="nt">serial_number</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">serial_number</span>
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The device manufacturer serial number.</span>
 <span class="w">  </span><span class="nt">uuid</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">uuid</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The device manufacturer assigned universally unique hardware identifier.</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">For SMBIOS compatible devices such as those running Linux and Windows, it is</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">the UUID member of the System Information structure in the SMBIOS information.</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">For macOS devices, it is the Hardware UUID (also known as IOPlatformUUID in</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">the I/O Registry).</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">device</span><span class="nv"> </span><span class="s">manufacturer</span><span class="nv"> </span><span class="s">assigned</span><span class="nv"> </span><span class="s">universally</span><span class="nv"> </span><span class="s">unique</span><span class="nv"> </span><span class="s">hardware</span><span class="nv"> </span><span class="s">identifier.</span>
+<span class="w">      </span><span class="s">For</span>
+
+<span class="w">      </span><span class="s">SMBIOS</span><span class="nv"> </span><span class="s">compatible</span><span class="nv"> </span><span class="s">devices</span><span class="nv"> </span><span class="s">such</span><span class="nv"> </span><span class="s">as</span><span class="nv"> </span><span class="s">those</span><span class="nv"> </span><span class="s">running</span><span class="nv"> </span><span class="s">Linux</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">Windows,</span><span class="nv"> </span><span class="s">it</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">the</span>
+
+<span class="w">      </span><span class="s">UUID</span><span class="nv"> </span><span class="s">member</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">System</span><span class="nv"> </span><span class="s">Information</span><span class="nv"> </span><span class="s">structure</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">SMBIOS</span><span class="nv"> </span><span class="s">information.</span><span class="nv"> </span><span class="s">For</span>
+
+<span class="w">      </span><span class="s">macOS</span><span class="nv"> </span><span class="s">devices,</span><span class="nv"> </span><span class="s">it</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">Hardware</span><span class="nv"> </span><span class="s">UUID</span><span class="nv"> </span><span class="s">(also</span><span class="nv"> </span><span class="s">known</span><span class="nv"> </span><span class="s">as</span><span class="nv"> </span><span class="s">IOPlatformUUID</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">the</span>
+<span class="w">      </span><span class="s">I/O</span>
+
+<span class="w">      </span><span class="s">Registry).'</span>
 <span class="w">  </span><span class="nt">vendor_name</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">vendor_name</span>
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The device manufacturer.</span>
@@ -705,9 +751,14 @@
 <span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">string</span>
 <span class="w">  </span><span class="nt">chassis</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">chassis</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The chassis type describes the system enclosure or physical form</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">factor. Such as the following examples for Windows &lt;a target='_blank' href='https://docs.microsoft.com/en-us/windows/win32/cimwin32prov/win32-systemenclosure'&gt;Windows</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">Chassis Types&lt;/a&gt;</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">chassis</span><span class="nv"> </span><span class="s">type</span><span class="nv"> </span><span class="s">describes</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">system</span><span class="nv"> </span><span class="s">enclosure</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">physical</span><span class="nv"> </span><span class="s">form</span>
+<span class="w">      </span><span class="s">factor.</span><span class="nv"> </span><span class="s">Such</span>
+
+<span class="w">      </span><span class="s">as</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">following</span><span class="nv"> </span><span class="s">examples</span><span class="nv"> </span><span class="s">for</span><span class="nv"> </span><span class="s">Windows</span><span class="nv"> </span><span class="s">&lt;a</span><span class="nv"> </span><span class="s">target=</span><span class="se">''</span><span class="s">_blank</span><span class="se">''</span>
+
+<span class="w">      </span><span class="s">href=</span><span class="se">''</span><span class="s">https://docs.microsoft.com/en-us/windows/win32/cimwin32prov/win32-systemenclosure</span><span class="se">''</span><span class="s">&gt;Windows</span>
+
+<span class="w">      </span><span class="s">Chassis</span><span class="nv"> </span><span class="s">Types&lt;/a&gt;'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Chassis</span>
@@ -719,8 +770,11 @@
 <span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">string</span>
 <span class="w">  </span><span class="nt">cpu_architecture</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">cpu_architecture</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The CPU architecture, normalized to the caption of the &lt;code&gt;cpu_architecture_id&lt;/code&gt;</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">value. In the case of &lt;code&gt;Other&lt;/code&gt;, it is defined by the source.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">CPU</span><span class="nv"> </span><span class="s">architecture,</span><span class="nv"> </span><span class="s">normalized</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">caption</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span>
+
+<span class="w">      </span><span class="s">&lt;code&gt;cpu_architecture_id&lt;/code&gt;</span><span class="nv"> </span><span class="s">value.</span><span class="nv"> </span><span class="s">In</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">case</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">&lt;code&gt;Other&lt;/code&gt;,</span><span class="nv"> </span><span class="s">it</span>
+
+<span class="w">      </span><span class="s">is</span><span class="nv"> </span><span class="s">defined</span><span class="nv"> </span><span class="s">by</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">source.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">CPU Architecture</span>
@@ -749,7 +803,9 @@
 <span class="w">  </span><span class="nt">cpu_bits</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">cpu_bits</span>
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">cpu</span><span class="nv"> </span><span class="s">architecture,</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">number</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">bits</span><span class="nv"> </span><span class="s">used</span><span class="nv"> </span><span class="s">for</span><span class="nv"> </span><span class="s">addressing</span><span class="nv"> </span><span class="s">in</span>
-<span class="w">      </span><span class="s">memory.</span><span class="nv"> </span><span class="s">For</span><span class="nv"> </span><span class="s">example:</span><span class="nv"> </span><span class="s">&lt;code&gt;32&lt;/code&gt;</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">&lt;code&gt;64&lt;/code&gt;.'</span>
+<span class="w">      </span><span class="s">memory.</span><span class="nv"> </span><span class="s">For</span>
+
+<span class="w">      </span><span class="s">example:</span><span class="nv"> </span><span class="s">&lt;code&gt;32&lt;/code&gt;</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">&lt;code&gt;64&lt;/code&gt;.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">CPU Bits</span>
@@ -763,6 +819,7 @@
 <span class="w">  </span><span class="nt">cpu_cores</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">cpu_cores</span>
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">number</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">processor</span><span class="nv"> </span><span class="s">cores</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">all</span><span class="nv"> </span><span class="s">installed</span><span class="nv"> </span><span class="s">processors.</span><span class="nv"> </span><span class="s">For</span><span class="nv"> </span><span class="s">Example:</span>
+
 <span class="w">      </span><span class="s">&lt;code&gt;42&lt;/code&gt;.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
@@ -836,8 +893,10 @@
 <span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">integer</span>
 <span class="w">  </span><span class="nt">gpu_info_list</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">gpu_info_list</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">A list of GPU objects describing the hardware properties of each</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">graphics processor installed on the device.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'A</span><span class="nv"> </span><span class="s">list</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">GPU</span><span class="nv"> </span><span class="s">objects</span><span class="nv"> </span><span class="s">describing</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">hardware</span><span class="nv"> </span><span class="s">properties</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">each</span>
+<span class="w">      </span><span class="s">graphics</span>
+
+<span class="w">      </span><span class="s">processor</span><span class="nv"> </span><span class="s">installed</span><span class="nv"> </span><span class="s">on</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">device.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">GPU information</span>
@@ -863,7 +922,9 @@
 <span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">KeyboardInfo</span>
 <span class="w">  </span><span class="nt">ram_size</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ram_size</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">total</span><span class="nv"> </span><span class="s">amount</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">installed</span><span class="nv"> </span><span class="s">RAM,</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">Megabytes.</span><span class="nv"> </span><span class="s">For</span><span class="nv"> </span><span class="s">example:</span><span class="nv"> </span><span class="s">&lt;code&gt;2048&lt;/code&gt;.'</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">total</span><span class="nv"> </span><span class="s">amount</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">installed</span><span class="nv"> </span><span class="s">RAM,</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">Megabytes.</span><span class="nv"> </span><span class="s">For</span><span class="nv"> </span><span class="s">example:</span>
+
+<span class="w">      </span><span class="s">&lt;code&gt;2048&lt;/code&gt;.'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">RAM Size</span>
@@ -895,11 +956,17 @@
 <span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">string</span>
 <span class="w">  </span><span class="nt">uuid</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">uuid</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The device manufacturer assigned universally unique hardware identifier.</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">For SMBIOS compatible devices such as those running Linux and Windows, it is</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">the UUID member of the System Information structure in the SMBIOS information.</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">For macOS devices, it is the Hardware UUID (also known as IOPlatformUUID in</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">the I/O Registry).</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'The</span><span class="nv"> </span><span class="s">device</span><span class="nv"> </span><span class="s">manufacturer</span><span class="nv"> </span><span class="s">assigned</span><span class="nv"> </span><span class="s">universally</span><span class="nv"> </span><span class="s">unique</span><span class="nv"> </span><span class="s">hardware</span><span class="nv"> </span><span class="s">identifier.</span>
+<span class="w">      </span><span class="s">For</span>
+
+<span class="w">      </span><span class="s">SMBIOS</span><span class="nv"> </span><span class="s">compatible</span><span class="nv"> </span><span class="s">devices</span><span class="nv"> </span><span class="s">such</span><span class="nv"> </span><span class="s">as</span><span class="nv"> </span><span class="s">those</span><span class="nv"> </span><span class="s">running</span><span class="nv"> </span><span class="s">Linux</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">Windows,</span><span class="nv"> </span><span class="s">it</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">the</span>
+
+<span class="w">      </span><span class="s">UUID</span><span class="nv"> </span><span class="s">member</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">System</span><span class="nv"> </span><span class="s">Information</span><span class="nv"> </span><span class="s">structure</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">SMBIOS</span><span class="nv"> </span><span class="s">information.</span><span class="nv"> </span><span class="s">For</span>
+
+<span class="w">      </span><span class="s">macOS</span><span class="nv"> </span><span class="s">devices,</span><span class="nv"> </span><span class="s">it</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">Hardware</span><span class="nv"> </span><span class="s">UUID</span><span class="nv"> </span><span class="s">(also</span><span class="nv"> </span><span class="s">known</span><span class="nv"> </span><span class="s">as</span><span class="nv"> </span><span class="s">IOPlatformUUID</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">the</span>
+<span class="w">      </span><span class="s">I/O</span>
+
+<span class="w">      </span><span class="s">Registry).'</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="w">    </span><span class="nt">aliases</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">UUID</span>

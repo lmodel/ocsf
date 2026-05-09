@@ -447,7 +447,9 @@
 
 
 <h1 id="enum-messagecontextairoleidenum">Enum: MessageContextAiRoleIdEnum</h1>
-<p><em>Specifies the functional role of the AI within the context of this message, such as retrieving information, assisting reasoning, executing a tool, or generating content.</em></p>
+<p><em>Specifies the functional role of the AI within the context of this message,</em></p>
+<p><em>such as retrieving information, assisting reasoning, executing a tool, or</em></p>
+<p><em>generating content.</em></p>
 <p>URI: <a href="https://w3id.org/lmodel/ocsf/MessageContextAiRoleIdEnum">ocsf:MessageContextAiRoleIdEnum</a></p>
 <h2 id="permissible-values">Permissible Values</h2>
 <table>
@@ -492,7 +494,7 @@
 <tr>
 <td>RETRIEVER</td>
 <td>None</td>
-<td>A component that retrieves information or context from a knowledge source (e</td>
+<td>A component that retrieves information or context from a knowledge source</td>
 </tr>
 <tr>
 <td>OTHER</td>
@@ -512,7 +514,7 @@
 <tbody>
 <tr>
 <td><a href="../ai_role_id/">ai_role_id</a></td>
-<td>Specifies the functional role of the AI within the context of this message, s...</td>
+<td>Specifies the functional role of the AI within the context of this message,</td>
 </tr>
 </tbody>
 </table>
@@ -524,9 +526,11 @@
 <h2 id="linkml-source">LinkML Source</h2>
 <details>
 <div class="highlight"><pre><span></span><code><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">MessageContextAiRoleIdEnum</span>
-<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Specifies the functional role of the AI within the context of this message,</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">such as retrieving information, assisting reasoning, executing a tool, or generating</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">content.</span>
+<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;Specifies</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">functional</span><span class="nv"> </span><span class="s">role</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">AI</span><span class="nv"> </span><span class="s">within</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">context</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">this</span><span class="nv"> </span><span class="s">message,</span>
+
+<span class="w">  </span><span class="s">such</span><span class="nv"> </span><span class="s">as</span><span class="nv"> </span><span class="s">retrieving</span><span class="nv"> </span><span class="s">information,</span><span class="nv"> </span><span class="s">assisting</span><span class="nv"> </span><span class="s">reasoning,</span><span class="nv"> </span><span class="s">executing</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">tool,</span><span class="nv"> </span><span class="s">or</span>
+
+<span class="w">  </span><span class="s">generating</span><span class="nv"> </span><span class="s">content.&#39;</span>
 <span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="nt">rank</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1000</span>
 <span class="nt">permissible_values</span><span class="p">:</span>
@@ -592,8 +596,10 @@
 <span class="w">        </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Orchestrator</span>
 <span class="w">  </span><span class="nt">RETRIEVER</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">text</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">RETRIEVER</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">A component that retrieves information or context from a knowledge</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">source (e.g., vector DB, search system, or API).</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;A</span><span class="nv"> </span><span class="s">component</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">retrieves</span><span class="nv"> </span><span class="s">information</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">context</span><span class="nv"> </span><span class="s">from</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">knowledge</span>
+<span class="w">      </span><span class="s">source</span>
+
+<span class="w">      </span><span class="s">(e.g.,</span><span class="nv"> </span><span class="s">vector</span><span class="nv"> </span><span class="s">DB,</span><span class="nv"> </span><span class="s">search</span><span class="nv"> </span><span class="s">system,</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">API).&#39;</span>
 <span class="w">    </span><span class="nt">annotations</span><span class="p">:</span>
 <span class="w">      </span><span class="nt">ocsf_uid</span><span class="p">:</span>
 <span class="w">        </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ocsf_uid</span>
