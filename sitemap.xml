@@ -141,10 +141,6 @@
          <lastmod>2026-05-09</lastmod>
     </url>
     <url>
-         <loc>https://lmodel.github.io/ocsf/elements/Application/</loc>
-         <lastmod>2026-05-09</lastmod>
-    </url>
-    <url>
          <loc>https://lmodel.github.io/ocsf/elements/ApplicationError/</loc>
          <lastmod>2026-05-09</lastmod>
     </url>
@@ -525,10 +521,6 @@
          <lastmod>2026-05-09</lastmod>
     </url>
     <url>
-         <loc>https://lmodel.github.io/ocsf/elements/Discovery/</loc>
-         <lastmod>2026-05-09</lastmod>
-    </url>
-    <url>
          <loc>https://lmodel.github.io/ocsf/elements/DiscoveryDetails/</loc>
          <lastmod>2026-05-09</lastmod>
     </url>
@@ -805,10 +797,6 @@
          <lastmod>2026-05-09</lastmod>
     </url>
     <url>
-         <loc>https://lmodel.github.io/ocsf/elements/Findings/</loc>
-         <lastmod>2026-05-09</lastmod>
-    </url>
-    <url>
          <loc>https://lmodel.github.io/ocsf/elements/Fingerprint/</loc>
          <lastmod>2026-05-09</lastmod>
     </url>
@@ -922,10 +910,6 @@
     </url>
     <url>
          <loc>https://lmodel.github.io/ocsf/elements/HttpResponse/</loc>
-         <lastmod>2026-05-09</lastmod>
-    </url>
-    <url>
-         <loc>https://lmodel.github.io/ocsf/elements/Iam/</loc>
          <lastmod>2026-05-09</lastmod>
     </url>
     <url>
@@ -1085,10 +1069,6 @@
          <lastmod>2026-05-09</lastmod>
     </url>
     <url>
-         <loc>https://lmodel.github.io/ocsf/elements/LinuxExtension/</loc>
-         <lastmod>2026-05-09</lastmod>
-    </url>
-    <url>
          <loc>https://lmodel.github.io/ocsf/elements/LinuxProcess/</loc>
          <lastmod>2026-05-09</lastmod>
     </url>
@@ -1130,10 +1110,6 @@
     </url>
     <url>
          <loc>https://lmodel.github.io/ocsf/elements/MacT/</loc>
-         <lastmod>2026-05-09</lastmod>
-    </url>
-    <url>
-         <loc>https://lmodel.github.io/ocsf/elements/MacosExtension/</loc>
          <lastmod>2026-05-09</lastmod>
     </url>
     <url>
@@ -1214,10 +1190,6 @@
     </url>
     <url>
          <loc>https://lmodel.github.io/ocsf/elements/Ncname/</loc>
-         <lastmod>2026-05-09</lastmod>
-    </url>
-    <url>
-         <loc>https://lmodel.github.io/ocsf/elements/Network/</loc>
          <lastmod>2026-05-09</lastmod>
     </url>
     <url>
@@ -1322,10 +1294,6 @@
     </url>
     <url>
          <loc>https://lmodel.github.io/ocsf/elements/Objectidentifier/</loc>
-         <lastmod>2026-05-09</lastmod>
-    </url>
-    <url>
-         <loc>https://lmodel.github.io/ocsf/elements/Objects/</loc>
          <lastmod>2026-05-09</lastmod>
     </url>
     <url>
@@ -1885,10 +1853,6 @@
          <lastmod>2026-05-09</lastmod>
     </url>
     <url>
-         <loc>https://lmodel.github.io/ocsf/elements/System/</loc>
-         <lastmod>2026-05-09</lastmod>
-    </url>
-    <url>
          <loc>https://lmodel.github.io/ocsf/elements/SystemEvent/</loc>
          <lastmod>2026-05-09</lastmod>
     </url>
@@ -2017,10 +1981,6 @@
          <lastmod>2026-05-09</lastmod>
     </url>
     <url>
-         <loc>https://lmodel.github.io/ocsf/elements/UnmannedSystems/</loc>
-         <lastmod>2026-05-09</lastmod>
-    </url>
-    <url>
          <loc>https://lmodel.github.io/ocsf/elements/UnmannedSystemsEvent/</loc>
          <lastmod>2026-05-09</lastmod>
     </url>
@@ -2134,10 +2094,6 @@
     </url>
     <url>
          <loc>https://lmodel.github.io/ocsf/elements/WindowsEvidences/</loc>
-         <lastmod>2026-05-09</lastmod>
-    </url>
-    <url>
-         <loc>https://lmodel.github.io/ocsf/elements/WindowsExtension/</loc>
          <lastmod>2026-05-09</lastmod>
     </url>
     <url>
@@ -2297,6 +2253,10 @@
          <lastmod>2026-05-09</lastmod>
     </url>
     <url>
+         <loc>https://lmodel.github.io/ocsf/elements/ai_operation_profile_subset/</loc>
+         <lastmod>2026-05-09</lastmod>
+    </url>
+    <url>
          <loc>https://lmodel.github.io/ocsf/elements/ai_provider/</loc>
          <lastmod>2026-05-09</lastmod>
     </url>
@@ -2386,6 +2346,10 @@
     </url>
     <url>
          <loc>https://lmodel.github.io/ocsf/elements/application/</loc>
+         <lastmod>2026-05-09</lastmod>
+    </url>
+    <url>
+         <loc>https://lmodel.github.io/ocsf/elements/application_subset/</loc>
          <lastmod>2026-05-09</lastmod>
     </url>
     <url>
@@ -2713,6 +2677,10 @@
          <lastmod>2026-05-09</lastmod>
     </url>
     <url>
+         <loc>https://lmodel.github.io/ocsf/elements/cloud_profile_subset/</loc>
+         <lastmod>2026-05-09</lastmod>
+    </url>
+    <url>
          <loc>https://lmodel.github.io/ocsf/elements/cmd_line/</loc>
          <lastmod>2026-05-09</lastmod>
     </url>
@@ -2822,6 +2790,10 @@
     </url>
     <url>
          <loc>https://lmodel.github.io/ocsf/elements/container/</loc>
+         <lastmod>2026-05-09</lastmod>
+    </url>
+    <url>
+         <loc>https://lmodel.github.io/ocsf/elements/container_profile_subset/</loc>
          <lastmod>2026-05-09</lastmod>
     </url>
     <url>
@@ -2977,6 +2949,10 @@
          <lastmod>2026-05-09</lastmod>
     </url>
     <url>
+         <loc>https://lmodel.github.io/ocsf/elements/data_classification_profile_subset/</loc>
+         <lastmod>2026-05-09</lastmod>
+    </url>
+    <url>
          <loc>https://lmodel.github.io/ocsf/elements/data_classifications/</loc>
          <lastmod>2026-05-09</lastmod>
     </url>
@@ -3002,6 +2978,10 @@
     </url>
     <url>
          <loc>https://lmodel.github.io/ocsf/elements/databucket/</loc>
+         <lastmod>2026-05-09</lastmod>
+    </url>
+    <url>
+         <loc>https://lmodel.github.io/ocsf/elements/datetime_profile_subset/</loc>
          <lastmod>2026-05-09</lastmod>
     </url>
     <url>
@@ -3110,6 +3090,10 @@
     </url>
     <url>
          <loc>https://lmodel.github.io/ocsf/elements/discovery_details/</loc>
+         <lastmod>2026-05-09</lastmod>
+    </url>
+    <url>
+         <loc>https://lmodel.github.io/ocsf/elements/discovery_subset/</loc>
          <lastmod>2026-05-09</lastmod>
     </url>
     <url>
@@ -3441,6 +3425,10 @@
          <lastmod>2026-05-09</lastmod>
     </url>
     <url>
+         <loc>https://lmodel.github.io/ocsf/elements/findings_subset/</loc>
+         <lastmod>2026-05-09</lastmod>
+    </url>
+    <url>
          <loc>https://lmodel.github.io/ocsf/elements/fingerprint/</loc>
          <lastmod>2026-05-09</lastmod>
     </url>
@@ -3601,6 +3589,10 @@
          <lastmod>2026-05-09</lastmod>
     </url>
     <url>
+         <loc>https://lmodel.github.io/ocsf/elements/host_profile_subset/</loc>
+         <lastmod>2026-05-09</lastmod>
+    </url>
+    <url>
          <loc>https://lmodel.github.io/ocsf/elements/hosted_services/</loc>
          <lastmod>2026-05-09</lastmod>
     </url>
@@ -3646,6 +3638,10 @@
     </url>
     <url>
          <loc>https://lmodel.github.io/ocsf/elements/hypervisor/</loc>
+         <lastmod>2026-05-09</lastmod>
+    </url>
+    <url>
+         <loc>https://lmodel.github.io/ocsf/elements/iam_subset/</loc>
          <lastmod>2026-05-09</lastmod>
     </url>
     <url>
@@ -3698,6 +3694,10 @@
     </url>
     <url>
          <loc>https://lmodel.github.io/ocsf/elements/imported_symbols/</loc>
+         <lastmod>2026-05-09</lastmod>
+    </url>
+    <url>
+         <loc>https://lmodel.github.io/ocsf/elements/incident_profile_subset/</loc>
          <lastmod>2026-05-09</lastmod>
     </url>
     <url>
@@ -4101,7 +4101,15 @@
          <lastmod>2026-05-09</lastmod>
     </url>
     <url>
+         <loc>https://lmodel.github.io/ocsf/elements/linux_extension_subset/</loc>
+         <lastmod>2026-05-09</lastmod>
+    </url>
+    <url>
          <loc>https://lmodel.github.io/ocsf/elements/load_balancer/</loc>
+         <lastmod>2026-05-09</lastmod>
+    </url>
+    <url>
+         <loc>https://lmodel.github.io/ocsf/elements/load_balancer_profile_subset/</loc>
          <lastmod>2026-05-09</lastmod>
     </url>
     <url>
@@ -4198,6 +4206,10 @@
     </url>
     <url>
          <loc>https://lmodel.github.io/ocsf/elements/mac_vendor/</loc>
+         <lastmod>2026-05-09</lastmod>
+    </url>
+    <url>
+         <loc>https://lmodel.github.io/ocsf/elements/macos_extension_subset/</loc>
          <lastmod>2026-05-09</lastmod>
     </url>
     <url>
@@ -4313,11 +4325,19 @@
          <lastmod>2026-05-09</lastmod>
     </url>
     <url>
+         <loc>https://lmodel.github.io/ocsf/elements/network_proxy_profile_subset/</loc>
+         <lastmod>2026-05-09</lastmod>
+    </url>
+    <url>
          <loc>https://lmodel.github.io/ocsf/elements/network_scope/</loc>
          <lastmod>2026-05-09</lastmod>
     </url>
     <url>
          <loc>https://lmodel.github.io/ocsf/elements/network_scope_id/</loc>
+         <lastmod>2026-05-09</lastmod>
+    </url>
+    <url>
+         <loc>https://lmodel.github.io/ocsf/elements/network_subset/</loc>
          <lastmod>2026-05-09</lastmod>
     </url>
     <url>
@@ -4382,6 +4402,10 @@
     </url>
     <url>
          <loc>https://lmodel.github.io/ocsf/elements/number/</loc>
+         <lastmod>2026-05-09</lastmod>
+    </url>
+    <url>
+         <loc>https://lmodel.github.io/ocsf/elements/objects_subset/</loc>
          <lastmod>2026-05-09</lastmod>
     </url>
     <url>
@@ -4482,6 +4506,10 @@
     </url>
     <url>
          <loc>https://lmodel.github.io/ocsf/elements/osint/</loc>
+         <lastmod>2026-05-09</lastmod>
+    </url>
+    <url>
+         <loc>https://lmodel.github.io/ocsf/elements/osint_profile_subset/</loc>
          <lastmod>2026-05-09</lastmod>
     </url>
     <url>
@@ -4981,6 +5009,10 @@
          <lastmod>2026-05-09</lastmod>
     </url>
     <url>
+         <loc>https://lmodel.github.io/ocsf/elements/remediation_subset/</loc>
+         <lastmod>2026-05-09</lastmod>
+    </url>
+    <url>
          <loc>https://lmodel.github.io/ocsf/elements/remote_display/</loc>
          <lastmod>2026-05-09</lastmod>
     </url>
@@ -5198,6 +5230,10 @@
     </url>
     <url>
          <loc>https://lmodel.github.io/ocsf/elements/secure/</loc>
+         <lastmod>2026-05-09</lastmod>
+    </url>
+    <url>
+         <loc>https://lmodel.github.io/ocsf/elements/security_control_profile_subset/</loc>
          <lastmod>2026-05-09</lastmod>
     </url>
     <url>
@@ -5541,6 +5577,10 @@
          <lastmod>2026-05-09</lastmod>
     </url>
     <url>
+         <loc>https://lmodel.github.io/ocsf/elements/system_subset/</loc>
+         <lastmod>2026-05-09</lastmod>
+    </url>
+    <url>
          <loc>https://lmodel.github.io/ocsf/elements/table/</loc>
          <lastmod>2026-05-09</lastmod>
     </url>
@@ -5665,6 +5705,10 @@
          <lastmod>2026-05-09</lastmod>
     </url>
     <url>
+         <loc>https://lmodel.github.io/ocsf/elements/trace_profile_subset/</loc>
+         <lastmod>2026-05-09</lastmod>
+    </url>
+    <url>
          <loc>https://lmodel.github.io/ocsf/elements/track_direction/</loc>
          <lastmod>2026-05-09</lastmod>
     </url>
@@ -5754,6 +5798,10 @@
     </url>
     <url>
          <loc>https://lmodel.github.io/ocsf/elements/unmanned_system_operator/</loc>
+         <lastmod>2026-05-09</lastmod>
+    </url>
+    <url>
+         <loc>https://lmodel.github.io/ocsf/elements/unmanned_systems_subset/</loc>
          <lastmod>2026-05-09</lastmod>
     </url>
     <url>
@@ -5902,6 +5950,10 @@
     </url>
     <url>
          <loc>https://lmodel.github.io/ocsf/elements/win_service/</loc>
+         <lastmod>2026-05-09</lastmod>
+    </url>
+    <url>
+         <loc>https://lmodel.github.io/ocsf/elements/windows_extension_subset/</loc>
          <lastmod>2026-05-09</lastmod>
     </url>
     <url>

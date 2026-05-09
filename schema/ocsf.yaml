@@ -80,32 +80,32 @@ prefixes:
 default_prefix: ocsf
 default_range: string
 subsets:
-  application:
-    name: application
-    definition_uri: https://w3id.org/lmodel/ocsf/Application
+  application_subset:
+    name: application_subset
+    definition_uri: https://w3id.org/lmodel/ocsf/ApplicationSubset
     description: 'Application Activity events report detailed information about the
       behavior of
 
       applications and services.'
     from_schema: https://w3id.org/lmodel/ocsf
-  discovery:
-    name: discovery
-    definition_uri: https://w3id.org/lmodel/ocsf/Discovery
+  discovery_subset:
+    name: discovery_subset
+    definition_uri: https://w3id.org/lmodel/ocsf/DiscoverySubset
     description: 'Discovery events report the existence and state of devices, files,
 
       configurations, processes, registry keys, and other objects.'
     from_schema: https://w3id.org/lmodel/ocsf
-  findings:
-    name: findings
-    definition_uri: https://w3id.org/lmodel/ocsf/Findings
+  findings_subset:
+    name: findings_subset
+    definition_uri: https://w3id.org/lmodel/ocsf/FindingsSubset
     description: 'Findings events report findings, detections, and possible resolutions
       of
 
       malware, anomalies, or other actions performed by security products.'
     from_schema: https://w3id.org/lmodel/ocsf
-  iam:
-    name: iam
-    definition_uri: https://w3id.org/lmodel/ocsf/Iam
+  iam_subset:
+    name: iam_subset
+    definition_uri: https://w3id.org/lmodel/ocsf/IamSubset
     description: 'Identity & Access Management (IAM) events relate to the supervision
       of the
 
@@ -115,60 +115,60 @@ subsets:
 
       change, entity change, privileged use etc.'
     from_schema: https://w3id.org/lmodel/ocsf
-  network:
-    name: network
-    definition_uri: https://w3id.org/lmodel/ocsf/Network
+  network_subset:
+    name: network_subset
+    definition_uri: https://w3id.org/lmodel/ocsf/NetworkSubset
     description: Network Activity events.
     from_schema: https://w3id.org/lmodel/ocsf
-  remediation:
-    name: remediation
-    definition_uri: https://w3id.org/lmodel/ocsf/Remediation
+  remediation_subset:
+    name: remediation_subset
+    definition_uri: https://w3id.org/lmodel/ocsf/RemediationSubset
     description: 'Remediation events report the results of remediation commands targeting
       files,
 
       processes, and other objects.'
     from_schema: https://w3id.org/lmodel/ocsf
-  system:
-    name: system
-    definition_uri: https://w3id.org/lmodel/ocsf/System
+  system_subset:
+    name: system_subset
+    definition_uri: https://w3id.org/lmodel/ocsf/SystemSubset
     description: System Activity events.
     from_schema: https://w3id.org/lmodel/ocsf
-  unmanned_systems:
-    name: unmanned_systems
-    definition_uri: https://w3id.org/lmodel/ocsf/UnmannedSystems
+  unmanned_systems_subset:
+    name: unmanned_systems_subset
+    definition_uri: https://w3id.org/lmodel/ocsf/UnmannedSystemsSubset
     description: 'Unmanned Systems events report the activity, existence, and/or state
       of
 
       unmanned systems for tracking, mission planning, and other related activities.'
     from_schema: https://w3id.org/lmodel/ocsf
-  objects:
-    name: objects
-    definition_uri: https://w3id.org/lmodel/ocsf/Objects
+  objects_subset:
+    name: objects_subset
+    definition_uri: https://w3id.org/lmodel/ocsf/ObjectsSubset
     description: Reusable OCSF object definitions (mirrors upstream objects/ directory).
     from_schema: https://w3id.org/lmodel/ocsf
-  ai_operation_profile:
-    name: ai_operation_profile
-    definition_uri: https://w3id.org/lmodel/ocsf/AiOperationProfile
+  ai_operation_profile_subset:
+    name: ai_operation_profile_subset
+    definition_uri: https://w3id.org/lmodel/ocsf/AiOperationProfileSubset
     description: 'AI-specific attributes for model operations, retrieval systems,
       and agent
 
       activities. e.g. model_name, total_token_counts etc.'
     from_schema: https://w3id.org/lmodel/ocsf
-  cloud_profile:
-    name: cloud_profile
-    definition_uri: https://w3id.org/lmodel/ocsf/CloudProfile
+  cloud_profile_subset:
+    name: cloud_profile_subset
+    definition_uri: https://w3id.org/lmodel/ocsf/CloudProfileSubset
     description: 'The attributes that describe information specific to Cloud
 
       services/applications.'
     from_schema: https://w3id.org/lmodel/ocsf
-  container_profile:
-    name: container_profile
-    definition_uri: https://w3id.org/lmodel/ocsf/ContainerProfile
+  container_profile_subset:
+    name: container_profile_subset
+    definition_uri: https://w3id.org/lmodel/ocsf/ContainerProfileSubset
     description: The container context for a process.
     from_schema: https://w3id.org/lmodel/ocsf
-  data_classification_profile:
-    name: data_classification_profile
-    definition_uri: https://w3id.org/lmodel/ocsf/DataClassificationProfile
+  data_classification_profile_subset:
+    name: data_classification_profile_subset
+    definition_uri: https://w3id.org/lmodel/ocsf/DataClassificationProfileSubset
     description: 'The Data Classification profile adds attributes to specific resource
       objects,
 
@@ -176,37 +176,37 @@ subsets:
 
       results.'
     from_schema: https://w3id.org/lmodel/ocsf
-  datetime_profile:
-    name: datetime_profile
-    definition_uri: https://w3id.org/lmodel/ocsf/DatetimeProfile
+  datetime_profile_subset:
+    name: datetime_profile_subset
+    definition_uri: https://w3id.org/lmodel/ocsf/DatetimeProfileSubset
     description: 'This profile defines date/time attributes as defined in RFC-3339.
       For example
 
       1985-04-12T23:20:50.52Z.'
     from_schema: https://w3id.org/lmodel/ocsf
-  host_profile:
-    name: host_profile
-    definition_uri: https://w3id.org/lmodel/ocsf/HostProfile
+  host_profile_subset:
+    name: host_profile_subset
+    definition_uri: https://w3id.org/lmodel/ocsf/HostProfileSubset
     description: The attributes that identify host/device attributes.
     from_schema: https://w3id.org/lmodel/ocsf
-  incident_profile:
-    name: incident_profile
-    definition_uri: https://w3id.org/lmodel/ocsf/IncidentProfile
+  incident_profile_subset:
+    name: incident_profile_subset
+    definition_uri: https://w3id.org/lmodel/ocsf/IncidentProfileSubset
     description: The attributes that add incident handling semantics to a Finding.
     from_schema: https://w3id.org/lmodel/ocsf
-  load_balancer_profile:
-    name: load_balancer_profile
-    definition_uri: https://w3id.org/lmodel/ocsf/LoadBalancerProfile
+  load_balancer_profile_subset:
+    name: load_balancer_profile_subset
+    definition_uri: https://w3id.org/lmodel/ocsf/LoadBalancerProfileSubset
     description: The attributes that describe information specific to load balancers.
     from_schema: https://w3id.org/lmodel/ocsf
-  network_proxy_profile:
-    name: network_proxy_profile
-    definition_uri: https://w3id.org/lmodel/ocsf/NetworkProxyProfile
+  network_proxy_profile_subset:
+    name: network_proxy_profile_subset
+    definition_uri: https://w3id.org/lmodel/ocsf/NetworkProxyProfileSubset
     description: The attributes that identify network proxy attributes.
     from_schema: https://w3id.org/lmodel/ocsf
-  osint_profile:
-    name: osint_profile
-    definition_uri: https://w3id.org/lmodel/ocsf/OsintProfile
+  osint_profile_subset:
+    name: osint_profile_subset
+    definition_uri: https://w3id.org/lmodel/ocsf/OsintProfileSubset
     description: 'The OSINT (Open Source Intelligence) profile contains one or more
       indicators
 
@@ -221,9 +221,9 @@ subsets:
 
       engineers within the profile itself.'
     from_schema: https://w3id.org/lmodel/ocsf
-  security_control_profile:
-    name: security_control_profile
-    definition_uri: https://w3id.org/lmodel/ocsf/SecurityControlProfile
+  security_control_profile_subset:
+    name: security_control_profile_subset
+    definition_uri: https://w3id.org/lmodel/ocsf/SecurityControlProfileSubset
     description: 'The attributes including disposition that represent the outcome
       of a security
 
@@ -242,9 +242,9 @@ subsets:
 
       <code>true</code>.'
     from_schema: https://w3id.org/lmodel/ocsf
-  trace_profile:
-    name: trace_profile
-    definition_uri: https://w3id.org/lmodel/ocsf/TraceProfile
+  trace_profile_subset:
+    name: trace_profile_subset
+    definition_uri: https://w3id.org/lmodel/ocsf/TraceProfileSubset
     description: 'The Trace Profile extends the OCSF framework to capture and standardize
 
       observability events, specifically targeting trace-level data. This profile
@@ -255,25 +255,25 @@ subsets:
 
       relationships, and service dependencies.'
     from_schema: https://w3id.org/lmodel/ocsf
-  linux_extension:
-    name: linux_extension
-    definition_uri: https://w3id.org/lmodel/ocsf/LinuxExtension
+  linux_extension_subset:
+    name: linux_extension_subset
+    definition_uri: https://w3id.org/lmodel/ocsf/LinuxExtensionSubset
     description: 'The Linux extension defines Linux specific attributes, profiles,
       objects, and
 
       classes.'
     from_schema: https://w3id.org/lmodel/ocsf
-  macos_extension:
-    name: macos_extension
-    definition_uri: https://w3id.org/lmodel/ocsf/MacosExtension
+  macos_extension_subset:
+    name: macos_extension_subset
+    definition_uri: https://w3id.org/lmodel/ocsf/MacosExtensionSubset
     description: 'The macOS extension defines macOS specific attributes, profiles,
       objects, and
 
       classes.'
     from_schema: https://w3id.org/lmodel/ocsf
-  windows_extension:
-    name: windows_extension
-    definition_uri: https://w3id.org/lmodel/ocsf/WindowsExtension
+  windows_extension_subset:
+    name: windows_extension_subset
+    definition_uri: https://w3id.org/lmodel/ocsf/WindowsExtensionSubset
     description: 'The Windows extension defines Windows specific attributes, objects,
       and
 
@@ -78891,7 +78891,7 @@ classes:
     definition_uri: https://w3id.org/lmodel/ocsf/OcsfObject
     description: Abstract root for every OCSF object class.
     in_subset:
-    - objects
+    - objects_subset
     from_schema: https://w3id.org/lmodel/ocsf/objects
     abstract: true
     class_uri: ocsf:OcsfObject
@@ -78903,7 +78903,7 @@ classes:
 
       entity, system or process is analyzed for activity patterns.'
     in_subset:
-    - objects
+    - objects_subset
     from_schema: https://w3id.org/lmodel/ocsf/objects
     aliases:
     - Analysis Target
@@ -78942,7 +78942,7 @@ classes:
 
       measured indicators.'
     in_subset:
-    - objects
+    - objects_subset
     from_schema: https://w3id.org/lmodel/ocsf/objects
     aliases:
     - Anomaly Analysis
@@ -78997,7 +78997,7 @@ classes:
 
       not otherwise defined by the schema.'
     in_subset:
-    - objects
+    - objects_subset
     from_schema: https://w3id.org/lmodel/ocsf/objects
     aliases:
     - Object
@@ -79013,7 +79013,7 @@ classes:
     - "OCSF Observables FAQ \u2014\nhttps://github.com/ocsf/ocsf-docs/blob/main/Articles/Defining\
       \ and Using\nObservables.md"
     in_subset:
-    - objects
+    - objects_subset
     from_schema: https://w3id.org/lmodel/ocsf/objects
     see_also:
     - https://github.com/ocsf/ocsf-docs/blob/main/Articles/Defining%20and%20Using%20Observables.md
@@ -79096,7 +79096,7 @@ classes:
 
       detected, and their total occurrence count.'
     in_subset:
-    - objects
+    - objects_subset
     from_schema: https://w3id.org/lmodel/ocsf/objects
     aliases:
     - Observation
@@ -79148,7 +79148,7 @@ classes:
 
       Only the attributes, relevant to the target entity type should be populated.'
     in_subset:
-    - objects
+    - objects_subset
     from_schema: https://w3id.org/lmodel/ocsf/objects
     aliases:
     - Occurrence Details
@@ -79262,7 +79262,7 @@ classes:
     notes:
     - "D3FEND\u2122 Ontology d3f:OperatingSystem \u2014\nhttps://d3fend.mitre.org/dao/artifact/d3f:OperatingSystem/"
     in_subset:
-    - objects
+    - objects_subset
     from_schema: https://w3id.org/lmodel/ocsf/objects
     see_also:
     - https://d3fend.mitre.org/dao/artifact/d3f:OperatingSystem/
@@ -79329,7 +79329,7 @@ classes:
 
       finding by providing decisioning support to other analysts and engineers.'
     in_subset:
-    - objects
+    - objects_subset
     from_schema: https://w3id.org/lmodel/ocsf/objects
     aliases:
     - OSINT
@@ -79607,7 +79607,7 @@ classes:
     notes:
     - "D3FEND\u2122 Ontology d3f:SoftwarePackage. \u2014\nhttps://d3fend.mitre.org/dao/artifact/d3f:SoftwarePackage/"
     in_subset:
-    - objects
+    - objects_subset
     from_schema: https://w3id.org/lmodel/ocsf/objects
     see_also:
     - https://d3fend.mitre.org/dao/artifact/d3f:SoftwarePackage/
@@ -79703,7 +79703,7 @@ classes:
     - "D3FEND\u2122 Ontology d3f:PacketCaptureFile. \u2014\nhttps://d3fend.mitre.org/dao/artifact/d3f:PacketCaptureFile/"
     - "D3FEND\u2122 Ontology d3f:PacketLog. \u2014\nhttps://d3fend.mitre.org/dao/artifact/d3f:PacketLog/"
     in_subset:
-    - objects
+    - objects_subset
     from_schema: https://w3id.org/lmodel/ocsf/objects
     see_also:
     - https://d3fend.mitre.org/dao/artifact/d3f:NetworkPacket/
@@ -79803,7 +79803,7 @@ classes:
     description: The Parameter object provides details regarding a parameter of a
       a function.
     in_subset:
-    - objects
+    - objects_subset
     from_schema: https://w3id.org/lmodel/ocsf/objects
     aliases:
     - Parameter
@@ -79859,7 +79859,7 @@ classes:
 
       least-privilege compliance analysis.'
     in_subset:
-    - objects
+    - objects_subset
     from_schema: https://w3id.org/lmodel/ocsf/objects
     aliases:
     - Permission Analysis Result
@@ -79958,7 +79958,7 @@ classes:
 
       details.'
     in_subset:
-    - objects
+    - objects_subset
     from_schema: https://w3id.org/lmodel/ocsf/objects
     aliases:
     - Port Information
@@ -79992,7 +79992,7 @@ classes:
 
       identify security risks associated with granted permissions.'
     in_subset:
-    - objects
+    - objects_subset
     from_schema: https://w3id.org/lmodel/ocsf/objects
     aliases:
     - Privilege Attack Info
@@ -80023,7 +80023,7 @@ classes:
 
       when it was last used.'
     in_subset:
-    - objects
+    - objects_subset
     from_schema: https://w3id.org/lmodel/ocsf/objects
     aliases:
     - Privilege Info
@@ -80082,7 +80082,7 @@ classes:
 
       vendor-specific access tokens.'
     in_subset:
-    - objects
+    - objects_subset
     from_schema: https://w3id.org/lmodel/ocsf/objects
     aliases:
     - Programmatic Credential
@@ -80152,7 +80152,7 @@ classes:
 
       object that best matches the evidence type as defined by query_type_id.'
     in_subset:
-    - objects
+    - objects_subset
     from_schema: https://w3id.org/lmodel/ocsf/objects
     aliases:
     - Query Evidence
@@ -80449,7 +80449,7 @@ classes:
 
       finding. It may or may not be an OCSF event.'
     in_subset:
-    - objects
+    - objects_subset
     from_schema: https://w3id.org/lmodel/ocsf/objects
     aliases:
     - Related Event/Finding
@@ -80596,7 +80596,7 @@ classes:
 
       identified issue(s).'
     in_subset:
-    - objects
+    - objects_subset
     from_schema: https://w3id.org/lmodel/ocsf/objects
     aliases:
     - Remediation
@@ -80638,7 +80638,7 @@ classes:
 
       device, user, domain).'
     in_subset:
-    - objects
+    - objects_subset
     from_schema: https://w3id.org/lmodel/ocsf/objects
     aliases:
     - Reputation
@@ -80666,7 +80666,7 @@ classes:
     definition_uri: https://w3id.org/lmodel/ocsf/Request
     description: The Request Elements object describes characteristics of an API request.
     in_subset:
-    - objects
+    - objects_subset
     from_schema: https://w3id.org/lmodel/ocsf/objects
     aliases:
     - Request Elements
@@ -80694,7 +80694,7 @@ classes:
     description: The Response Elements object describes characteristics of an API
       response.
     in_subset:
-    - objects
+    - objects_subset
     from_schema: https://w3id.org/lmodel/ocsf/objects
     aliases:
     - Response Elements
@@ -80735,7 +80735,7 @@ classes:
 
       DCE/RPC session.'
     in_subset:
-    - objects
+    - objects_subset
     from_schema: https://w3id.org/lmodel/ocsf/objects
     aliases:
     - RPC Interface
@@ -80769,7 +80769,7 @@ classes:
 
       certificate'
     in_subset:
-    - objects
+    - objects_subset
     from_schema: https://w3id.org/lmodel/ocsf/objects
     aliases:
     - Subject Alternative Name
@@ -80795,7 +80795,7 @@ classes:
 
       SBOM.'
     in_subset:
-    - objects
+    - objects_subset
     from_schema: https://w3id.org/lmodel/ocsf/objects
     aliases:
     - Software Bill of Materials
@@ -80871,7 +80871,7 @@ classes:
 
       href=''https://datatracker.ietf.org/doc/html/rfc7643''>RFC-7634</a>'
     in_subset:
-    - objects
+    - objects_subset
     from_schema: https://w3id.org/lmodel/ocsf/objects
     aliases:
     - SCIM
@@ -81026,7 +81026,7 @@ classes:
     notes:
     - "D3FEND\u2122 Ontology d3f:ExecutableScript. \u2014\nhttps://d3fend.mitre.org/dao/artifact/d3f:ExecutableScript/"
     in_subset:
-    - objects
+    - objects_subset
     from_schema: https://w3id.org/lmodel/ocsf/objects
     see_also:
     - https://d3fend.mitre.org/dao/artifact/d3f:ExecutableScript/
@@ -81109,7 +81109,7 @@ classes:
 
       entity.'
     in_subset:
-    - objects
+    - objects_subset
     from_schema: https://w3id.org/lmodel/ocsf/objects
     aliases:
     - Security State
@@ -81140,7 +81140,7 @@ classes:
 
       usage, counts by type, and mappings to potential attack techniques.'
     in_subset:
-    - objects
+    - objects_subset
     from_schema: https://w3id.org/lmodel/ocsf/objects
     aliases:
     - Service Privilege Analysis
@@ -81199,7 +81199,7 @@ classes:
     notes:
     - "D3FEND\u2122 Ontology d3f:Session \u2014\nhttps://d3fend.mitre.org/dao/artifact/d3f:Session/"
     in_subset:
-    - objects
+    - objects_subset
     from_schema: https://w3id.org/lmodel/ocsf/objects
     see_also:
     - https://d3fend.mitre.org/dao/artifact/d3f:Session/
@@ -81270,7 +81270,7 @@ classes:
 
       within a software package.'
     in_subset:
-    - objects
+    - objects_subset
     from_schema: https://w3id.org/lmodel/ocsf/objects
     aliases:
     - Software Component
@@ -81356,7 +81356,7 @@ classes:
 
       bottlenecks in complex distributed systems.'
     in_subset:
-    - objects
+    - objects_subset
     from_schema: https://w3id.org/lmodel/ocsf/objects
     aliases:
     - Span
@@ -81486,7 +81486,7 @@ classes:
 
       attributes, configuration, and/or settings from Identity Providers.'
     in_subset:
-    - objects
+    - objects_subset
     from_schema: https://w3id.org/lmodel/ocsf/objects
     aliases:
     - SSO
@@ -81594,7 +81594,7 @@ classes:
 
       startup criteria and configurations.'
     in_subset:
-    - objects
+    - objects_subset
     from_schema: https://w3id.org/lmodel/ocsf/objects
     aliases:
     - Startup Item
@@ -81691,7 +81691,7 @@ classes:
     definition_uri: https://w3id.org/lmodel/ocsf/ThreatActor
     description: Threat actor is responsible for the observed malicious activity.
     in_subset:
-    - objects
+    - objects_subset
     from_schema: https://w3id.org/lmodel/ocsf/objects
     aliases:
     - Threat Actor
@@ -81734,7 +81734,7 @@ classes:
 
       (ITSM) systems like ServiceNow, Jira, etc.'
     in_subset:
-    - objects
+    - objects_subset
     from_schema: https://w3id.org/lmodel/ocsf/objects
     aliases:
     - Ticket
@@ -81824,7 +81824,7 @@ classes:
 
       <code>start_time</code> and <code>end_time</code>.'
     in_subset:
-    - objects
+    - objects_subset
     from_schema: https://w3id.org/lmodel/ocsf/objects
     aliases:
     - Time Span
@@ -81949,7 +81949,7 @@ classes:
 
       used for secure communications over an establish network connection.'
     in_subset:
-    - objects
+    - objects_subset
     from_schema: https://w3id.org/lmodel/ocsf/objects
     aliases:
     - Transport Layer Security (TLS)
@@ -82008,7 +82008,7 @@ classes:
 
       Transport Layer Security (TLS) object.'
     in_subset:
-    - objects
+    - objects_subset
     from_schema: https://w3id.org/lmodel/ocsf/objects
     aliases:
     - TLS Extension
@@ -82069,7 +82069,7 @@ classes:
 
       instead.'
     in_subset:
-    - objects
+    - objects_subset
     from_schema: https://w3id.org/lmodel/ocsf/objects
     aliases:
     - Token
@@ -82173,7 +82173,7 @@ classes:
 
       in complex, distributed environments.'
     in_subset:
-    - objects
+    - objects_subset
     from_schema: https://w3id.org/lmodel/ocsf/objects
     aliases:
     - Trace
@@ -82307,7 +82307,7 @@ classes:
     - "Defined in RFC 1738 \u2014 https://datatracker.ietf.org/doc/html/rfc1738"
     - "D3FEND\u2122 Ontology d3f:URL \u2014 https://d3fend.mitre.org/dao/artifact/d3f:URL/"
     in_subset:
-    - objects
+    - objects_subset
     from_schema: https://w3id.org/lmodel/ocsf/objects
     see_also:
     - https://datatracker.ietf.org/doc/html/rfc1738
@@ -82408,7 +82408,7 @@ classes:
 
       mutability.'
     in_subset:
-    - objects
+    - objects_subset
     from_schema: https://w3id.org/lmodel/ocsf/objects
     aliases:
     - Vendor Attributes
@@ -82446,7 +82446,7 @@ classes:
 
       with new system components.'
     in_subset:
-    - objects
+    - objects_subset
     from_schema: https://w3id.org/lmodel/ocsf/objects
     aliases:
     - Vulnerability Details
@@ -82582,7 +82582,7 @@ classes:
 
       registration information for a domain.'
     in_subset:
-    - objects
+    - objects_subset
     from_schema: https://w3id.org/lmodel/ocsf/objects
     aliases:
     - WHOIS
@@ -82657,7 +82657,7 @@ classes:
 
       associated with the DNS query and answer objects.'
     in_subset:
-    - objects
+    - objects_subset
     from_schema: https://w3id.org/lmodel/ocsf/objects
     aliases:
     - DNS
@@ -82708,7 +82708,7 @@ classes:
 
       and default constraints available in all objects that extend it.'
     in_subset:
-    - objects
+    - objects_subset
     from_schema: https://w3id.org/lmodel/ocsf/objects
     aliases:
     - Entity
@@ -82749,7 +82749,7 @@ classes:
 
       identify and classify the resource effectively.'
     in_subset:
-    - objects
+    - objects_subset
     from_schema: https://w3id.org/lmodel/ocsf/objects
     aliases:
     - Resource
@@ -82816,7 +82816,7 @@ classes:
 
       external access discovery, public exposure analysis, etc.'
     in_subset:
-    - objects
+    - objects_subset
     from_schema: https://w3id.org/lmodel/ocsf/objects
     aliases:
     - Access Analysis Result
@@ -82925,7 +82925,7 @@ classes:
     - "D3FEND\u2122 Ontology d3f:UserAccount. \u2014\nhttps://d3fend.mitre.org/dao/artifact/d3f:UserAccount/"
     - "D3FEND\u2122 Ontology d3f:CloudUserAccount. \u2014\nhttps://d3fend.mitre.org/dao/artifact/d3f:CloudUserAccount/"
     in_subset:
-    - objects
+    - objects_subset
     from_schema: https://w3id.org/lmodel/ocsf/objects
     see_also:
     - https://d3fend.mitre.org/dao/artifact/d3f:UserAccount/
@@ -83013,7 +83013,7 @@ classes:
     notes:
     - "D3FEND\u2122 Ontology d3f:Agent. \u2014 https://next.d3fend.mitre.org/agent/d3f:Agent/"
     in_subset:
-    - objects
+    - objects_subset
     from_schema: https://w3id.org/lmodel/ocsf/objects
     see_also:
     - https://next.d3fend.mitre.org/agent/d3f:Agent/
@@ -83115,7 +83115,7 @@ classes:
 
       policies, IP restrictions, time-based constraints, and MFA requirements.'
     in_subset:
-    - objects
+    - objects_subset
     from_schema: https://w3id.org/lmodel/ocsf/objects
     aliases:
     - Additional Restriction
@@ -83161,7 +83161,7 @@ classes:
 
       (GHSA)</code>'
     in_subset:
-    - objects
+    - objects_subset
     from_schema: https://w3id.org/lmodel/ocsf/objects
     aliases:
     - Advisory
@@ -83273,7 +83273,7 @@ classes:
 
       vulnerable.'
     in_subset:
-    - objects
+    - objects_subset
     from_schema: https://w3id.org/lmodel/ocsf/objects
     aliases:
     - Affected Code
@@ -83334,7 +83334,7 @@ classes:
 
       identified as affected by a vulnerability/vulnerabilities.'
     in_subset:
-    - objects
+    - objects_subset
     from_schema: https://w3id.org/lmodel/ocsf/objects
     aliases:
     - Affected Software Package
@@ -83395,7 +83395,7 @@ classes:
     notes:
     - "D3FEND\u2122 Ontology d3f:Sensor. \u2014\nhttps://d3fend.mitre.org/dao/artifact/d3f:Sensor/"
     in_subset:
-    - objects
+    - objects_subset
     from_schema: https://w3id.org/lmodel/ocsf/objects
     see_also:
     - https://d3fend.mitre.org/dao/artifact/d3f:Sensor/
@@ -83487,7 +83487,7 @@ classes:
     - "AI Model Registry and Documentation Standards \u2014\nhttps://huggingface.co/docs/hub/models"
     - "OpenAI Model Documentation \u2014 https://platform.openai.com/docs/models"
     in_subset:
-    - objects
+    - objects_subset
     from_schema: https://w3id.org/lmodel/ocsf/objects
     see_also:
     - https://huggingface.co/docs/hub/models
@@ -83543,7 +83543,7 @@ classes:
 
       Broadcast - Surveillance (ADS-B), and/or Mode S systems.'
     in_subset:
-    - objects
+    - objects_subset
     from_schema: https://w3id.org/lmodel/ocsf/objects
     aliases:
     - Aircraft
@@ -83626,7 +83626,7 @@ classes:
 
       creation of a finding or conclusion.'
     in_subset:
-    - objects
+    - objects_subset
     from_schema: https://w3id.org/lmodel/ocsf/objects
     aliases:
     - Analytic
@@ -83698,7 +83698,7 @@ classes:
 
       attention.'
     in_subset:
-    - objects
+    - objects_subset
     from_schema: https://w3id.org/lmodel/ocsf/objects
     aliases:
     - Anomaly
@@ -83764,7 +83764,7 @@ classes:
 
       pertaining to an API request and response.'
     in_subset:
-    - objects
+    - objects_subset
     from_schema: https://w3id.org/lmodel/ocsf/objects
     aliases:
     - API
@@ -83842,7 +83842,7 @@ classes:
     notes:
     - "D3FEND\u2122 Ontology d3f:Application. \u2014\nhttps://d3fend.mitre.org/dao/artifact/d3f:Application/"
     in_subset:
-    - objects
+    - objects_subset
     from_schema: https://w3id.org/lmodel/ocsf/objects
     see_also:
     - https://d3fend.mitre.org/dao/artifact/d3f:Application/
@@ -83973,7 +83973,7 @@ classes:
 
       Microsoft Intune configuration policies.'
     in_subset:
-    - objects
+    - objects_subset
     from_schema: https://w3id.org/lmodel/ocsf/objects
     aliases:
     - Assessment
@@ -84044,7 +84044,7 @@ classes:
     - "ATT&CK\xAE Matrix \u2014 https://attack.mitre.org"
     - "ATLAS\u2122 Matrix \u2014 https://atlas.mitre.org/matrices/ATLAS"
     in_subset:
-    - objects
+    - objects_subset
     from_schema: https://w3id.org/lmodel/ocsf/objects
     see_also:
     - https://attack.mitre.org
@@ -84105,7 +84105,7 @@ classes:
 
       identity verification in an authentication attempt.'
     in_subset:
-    - objects
+    - objects_subset
     from_schema: https://w3id.org/lmodel/ocsf/objects
     aliases:
     - Authentication Factor
@@ -84229,7 +84229,7 @@ classes:
 
       keys - use the base <code>token</code> object instead.'
     in_subset:
-    - objects
+    - objects_subset
     from_schema: https://w3id.org/lmodel/ocsf/objects
     aliases:
     - Authentication Token
@@ -84306,7 +84306,7 @@ classes:
 
       outcome and associated policies related to activity.'
     in_subset:
-    - objects
+    - objects_subset
     from_schema: https://w3id.org/lmodel/ocsf/objects
     aliases:
     - Authorization Result
@@ -84340,7 +84340,7 @@ classes:
 
       defined routing policy to the internet.'
     in_subset:
-    - objects
+    - objects_subset
     from_schema: https://w3id.org/lmodel/ocsf/objects
     aliases:
     - Autonomous System
@@ -84394,7 +84394,7 @@ classes:
 
       patterns.'
     in_subset:
-    - objects
+    - objects_subset
     from_schema: https://w3id.org/lmodel/ocsf/objects
     aliases:
     - Baseline
@@ -84457,7 +84457,7 @@ classes:
 
       and procedures (TTPs).'
     in_subset:
-    - objects
+    - objects_subset
     from_schema: https://w3id.org/lmodel/ocsf/objects
     aliases:
     - Campaign
@@ -84487,7 +84487,7 @@ classes:
     notes:
     - "D3FEND\u2122 Ontology d3f:Certificate. \u2014\nhttps://d3fend.mitre.org/dao/artifact/d3f:Certificate/"
     in_subset:
-    - objects
+    - objects_subset
     from_schema: https://w3id.org/lmodel/ocsf/objects
     see_also:
     - https://d3fend.mitre.org/dao/artifact/d3f:Certificate/
@@ -84568,7 +84568,7 @@ classes:
 
       mapping nor control_parameters are required for a valid check.'
     in_subset:
-    - objects
+    - objects_subset
     from_schema: https://w3id.org/lmodel/ocsf/objects
     aliases:
     - Check
@@ -84712,7 +84712,7 @@ classes:
       to Know the CIS Benchmarks</a>.'
     deprecated: Use the Compliance object with Checks object instead. (since 1.5.0)
     in_subset:
-    - objects
+    - objects_subset
     from_schema: https://w3id.org/lmodel/ocsf/objects
     aliases:
     - CIS Benchmark
@@ -84757,7 +84757,7 @@ classes:
       systems, software, networks, and cloud infrastructure.'
     deprecated: Use the Compliance object with Checks object instead. (since 1.5.0)
     in_subset:
-    - objects
+    - objects_subset
     from_schema: https://w3id.org/lmodel/ocsf/objects
     aliases:
     - CIS Benchmark Result
@@ -84791,7 +84791,7 @@ classes:
 
       Controls</a> are defined by the Center for Internet Security.'
     in_subset:
-    - objects
+    - objects_subset
     from_schema: https://w3id.org/lmodel/ocsf/objects
     aliases:
     - CIS Control
@@ -84837,7 +84837,7 @@ classes:
       actions to protect your organization and data from cyber-attack vectors.'
     deprecated: Use the cis_control object instead. (since 1.5.0)
     in_subset:
-    - objects
+    - objects_subset
     from_schema: https://w3id.org/lmodel/ocsf/objects
     aliases:
     - CIS CSC
@@ -84862,7 +84862,7 @@ classes:
 
       data classification.'
     in_subset:
-    - objects
+    - objects_subset
     from_schema: https://w3id.org/lmodel/ocsf/objects
     aliases:
     - Classifier Details
@@ -84899,7 +84899,7 @@ classes:
 
       logical partitions.'
     in_subset:
-    - objects
+    - objects_subset
     from_schema: https://w3id.org/lmodel/ocsf/objects
     aliases:
     - Cloud
@@ -85067,7 +85067,7 @@ classes:
 
       determine if controls are properly implemented.'
     in_subset:
-    - objects
+    - objects_subset
     from_schema: https://w3id.org/lmodel/ocsf/objects
     aliases:
     - Compliance
@@ -85219,7 +85219,7 @@ classes:
     notes:
     - "D3FEND\u2122 Ontology d3f:ContainerProcess. \u2014\nhttps://d3fend.mitre.org/dao/artifact/d3f:ContainerProcess/"
     in_subset:
-    - objects
+    - objects_subset
     from_schema: https://w3id.org/lmodel/ocsf/objects
     see_also:
     - https://d3fend.mitre.org/dao/artifact/d3f:ContainerProcess/
@@ -85310,7 +85310,7 @@ classes:
 
       for each vulnerability in the catalog.'
     in_subset:
-    - objects
+    - objects_subset
     from_schema: https://w3id.org/lmodel/ocsf/objects
     aliases:
     - CVE
@@ -85430,7 +85430,7 @@ classes:
 
       reflecting its severity.'
     in_subset:
-    - objects
+    - objects_subset
     from_schema: https://w3id.org/lmodel/ocsf/objects
     aliases:
     - CVSS Score
@@ -85515,7 +85515,7 @@ classes:
 
       (CWE)</a> catalog.'
     in_subset:
-    - objects
+    - objects_subset
     from_schema: https://w3id.org/lmodel/ocsf/objects
     aliases:
     - CWE
@@ -85559,7 +85559,7 @@ classes:
     notes:
     - "D3FEND\u2122 Matrix \u2014 https://d3fend.mitre.org"
     in_subset:
-    - objects
+    - objects_subset
     from_schema: https://w3id.org/lmodel/ocsf/objects
     see_also:
     - https://d3fend.mitre.org
@@ -85596,7 +85596,7 @@ classes:
     notes:
     - "D3FEND\u2122 Matrix \u2014 href='https://d3fend.mitre.org"
     in_subset:
-    - objects
+    - objects_subset
     from_schema: https://w3id.org/lmodel/ocsf/objects
     aliases:
     - "MITRE D3FEND\u2122 Technique"
@@ -85636,7 +85636,7 @@ classes:
     notes:
     - "D3FEND\u2122 Matrix \u2014 https://d3fend.mitre.org"
     in_subset:
-    - objects
+    - objects_subset
     from_schema: https://w3id.org/lmodel/ocsf/objects
     see_also:
     - https://d3fend.mitre.org
@@ -85691,7 +85691,7 @@ classes:
 
       levels and data category types.'
     in_subset:
-    - objects
+    - objects_subset
     from_schema: https://w3id.org/lmodel/ocsf/objects
     aliases:
     - Data Classification
@@ -85804,7 +85804,7 @@ classes:
 
       Classification, or similar tools'' finding, alert, or detection mechanism(s).'
     in_subset:
-    - objects
+    - objects_subset
     from_schema: https://w3id.org/lmodel/ocsf/objects
     aliases:
     - Data Security
@@ -85879,7 +85879,7 @@ classes:
     notes:
     - "D3FEND\u2122 Ontology d3f:Database. \u2014\nhttps://d3fend.mitre.org/dao/artifact/d3f:Database/"
     in_subset:
-    - objects
+    - objects_subset
     from_schema: https://w3id.org/lmodel/ocsf/objects
     see_also:
     - https://d3fend.mitre.org/dao/artifact/d3f:Database/
@@ -85953,7 +85953,7 @@ classes:
     notes:
     - "D3FEND\u2122 Ontology d3f:CloudStorage. \u2014\nhttps://d3fend.mitre.org/dao/artifact/d3f:CloudStorage/"
     in_subset:
-    - objects
+    - objects_subset
     from_schema: https://w3id.org/lmodel/ocsf/objects
     see_also:
     - https://d3fend.mitre.org/dao/artifact/d3f:CloudStorage/
@@ -86114,7 +86114,7 @@ classes:
     notes:
     - "D3FEND\u2122 Ontology d3f:RemoteProcedureCall. \u2014\nhttps://d3fend.mitre.org/dao/artifact/d3f:RemoteProcedureCall/"
     in_subset:
-    - objects
+    - objects_subset
     from_schema: https://w3id.org/lmodel/ocsf/objects
     see_also:
     - https://d3fend.mitre.org/dao/artifact/d3f:RemoteProcedureCall/
@@ -86159,7 +86159,7 @@ classes:
 
       the device.'
     in_subset:
-    - objects
+    - objects_subset
     from_schema: https://w3id.org/lmodel/ocsf/objects
     aliases:
     - Device Hardware Info
@@ -86223,7 +86223,7 @@ classes:
 
       application.'
     in_subset:
-    - objects
+    - objects_subset
     from_schema: https://w3id.org/lmodel/ocsf/objects
     aliases:
     - Digital Signature
@@ -86277,7 +86277,7 @@ classes:
     definition_uri: https://w3id.org/lmodel/ocsf/DiscoveryDetails
     description: The Discovery Details object describes results of a discovery task/job.
     in_subset:
-    - objects
+    - objects_subset
     from_schema: https://w3id.org/lmodel/ocsf/objects
     aliases:
     - Discovery Details
@@ -86325,7 +86325,7 @@ classes:
 
       connected to a computer system.'
     in_subset:
-    - objects
+    - objects_subset
     from_schema: https://w3id.org/lmodel/ocsf/objects
     aliases:
     - Display
@@ -86352,7 +86352,7 @@ classes:
     notes:
     - "D3FEND\u2122 Ontology d3f:InboundInternetDNSResponseTraffic. \u2014\nhttps://d3fend.mitre.org/dao/artifact/d3f:InboundInternetDNSResponseTraffic/"
     in_subset:
-    - objects
+    - objects_subset
     from_schema: https://w3id.org/lmodel/ocsf/objects
     see_also:
     - https://d3fend.mitre.org/dao/artifact/d3f:InboundInternetDNSResponseTraffic/
@@ -86418,7 +86418,7 @@ classes:
     notes:
     - "D3FEND\u2122 Ontology d3f:DNSLookup. \u2014\nhttps://d3fend.mitre.org/dao/artifact/d3f:DNSLookup/"
     in_subset:
-    - objects
+    - objects_subset
     from_schema: https://w3id.org/lmodel/ocsf/objects
     see_also:
     - https://d3fend.mitre.org/dao/artifact/d3f:DNSLookup/
@@ -86449,7 +86449,7 @@ classes:
 
       administrator, abuse, billing, or technical contact.'
     in_subset:
-    - objects
+    - objects_subset
     from_schema: https://w3id.org/lmodel/ocsf/objects
     aliases:
     - Domain Contact
@@ -86502,7 +86502,7 @@ classes:
     notes:
     - "JSON graph specification. \u2014\nhttps://github.com/jsongraph/json-graph-specification/"
     in_subset:
-    - objects
+    - objects_subset
     from_schema: https://w3id.org/lmodel/ocsf/objects
     see_also:
     - https://github.com/jsongraph/json-graph-specification/
@@ -86568,7 +86568,7 @@ classes:
     notes:
     - "D3FEND\u2122 Ontology d3f:Email. \u2014 https://d3fend.mitre.org/dao/artifact/d3f:Email/"
     in_subset:
-    - objects
+    - objects_subset
     from_schema: https://w3id.org/lmodel/ocsf/objects
     see_also:
     - https://d3fend.mitre.org/dao/artifact/d3f:Email/
@@ -86678,7 +86678,7 @@ classes:
 
       Reporting and Conformance (DMARC) attributes of an email.'
     in_subset:
-    - objects
+    - objects_subset
     from_schema: https://w3id.org/lmodel/ocsf/objects
     aliases:
     - Email Authentication
@@ -86719,7 +86719,7 @@ classes:
     definition_uri: https://w3id.org/lmodel/ocsf/EncryptionDetails
     description: Details about the encryption methodology utilized.
     in_subset:
-    - objects
+    - objects_subset
     from_schema: https://w3id.org/lmodel/ocsf/objects
     aliases:
     - Encryption Details
@@ -86774,7 +86774,7 @@ classes:
     notes:
     - "D3FEND\u2122 Ontology d3f:Host. \u2014\nhttps://d3fend.mitre.org/dao/artifact/d3f:ComputerNetworkNode/"
     in_subset:
-    - objects
+    - objects_subset
     from_schema: https://w3id.org/lmodel/ocsf/objects
     see_also:
     - https://d3fend.mitre.org/dao/artifact/d3f:ComputerNetworkNode/
@@ -86934,7 +86934,7 @@ classes:
 
       attempt to an endpoint.'
     in_subset:
-    - objects
+    - objects_subset
     from_schema: https://w3id.org/lmodel/ocsf/objects
     aliases:
     - Endpoint Connection
@@ -86978,7 +86978,7 @@ classes:
 
       or context.'
     in_subset:
-    - objects
+    - objects_subset
     from_schema: https://w3id.org/lmodel/ocsf/objects
     aliases:
     - Enrichment
@@ -87042,7 +87042,7 @@ classes:
     definition_uri: https://w3id.org/lmodel/ocsf/EnvironmentVariable
     description: An environment variable.
     in_subset:
-    - objects
+    - objects_subset
     from_schema: https://w3id.org/lmodel/ocsf/objects
     aliases:
     - Environment Variable
@@ -87076,7 +87076,7 @@ classes:
 
       href=''https://www.first.org/epss/''>EPSS</a>).'
     in_subset:
-    - objects
+    - objects_subset
     from_schema: https://w3id.org/lmodel/ocsf/objects
     aliases:
     - EPSS
@@ -87123,7 +87123,7 @@ classes:
 
       triggered a security detection.'
     in_subset:
-    - objects
+    - objects_subset
     from_schema: https://w3id.org/lmodel/ocsf/objects
     aliases:
     - Evidence Artifacts
@@ -87455,7 +87455,7 @@ classes:
 
       file.'
     in_subset:
-    - objects
+    - objects_subset
     from_schema: https://w3id.org/lmodel/ocsf/objects
     aliases:
     - Schema Extension
@@ -87490,7 +87490,7 @@ classes:
 
       with the feature.'
     in_subset:
-    - objects
+    - objects_subset
     from_schema: https://w3id.org/lmodel/ocsf/objects
     aliases:
     - Feature
@@ -87529,7 +87529,7 @@ classes:
     notes:
     - "D3FEND\u2122 Ontology d3f:File \u2014\nhttps://next.d3fend.mitre.org/dao/artifact/d3f:File/"
     in_subset:
-    - objects
+    - objects_subset
     from_schema: https://w3id.org/lmodel/ocsf/objects
     see_also:
     - https://next.d3fend.mitre.org/dao/artifact/d3f:File/
@@ -87734,7 +87734,7 @@ classes:
       by a security tool or system.'
     deprecated: Use the new <code>finding_info</code> object. (since 1.0.0)
     in_subset:
-    - objects
+    - objects_subset
     from_schema: https://w3id.org/lmodel/ocsf/objects
     aliases:
     - Finding
@@ -87799,7 +87799,7 @@ classes:
 
       generated by a security tool or system.'
     in_subset:
-    - objects
+    - objects_subset
     from_schema: https://w3id.org/lmodel/ocsf/objects
     aliases:
     - Finding Information
@@ -87927,7 +87927,7 @@ classes:
     notes:
     - "D3FEND\u2122 Ontology d3f:DigitalFingerprint. \u2014\nhttps://d3fend.mitre.org/dao/artifact/d3f:DigitalFingerprint/"
     in_subset:
-    - objects
+    - objects_subset
     from_schema: https://w3id.org/lmodel/ocsf/objects
     see_also:
     - https://d3fend.mitre.org/dao/artifact/d3f:DigitalFingerprint/
@@ -87980,7 +87980,7 @@ classes:
 
       function.'
     in_subset:
-    - objects
+    - objects_subset
     from_schema: https://w3id.org/lmodel/ocsf/objects
     aliases:
     - Function Invocation
@@ -88024,7 +88024,7 @@ classes:
 
       hardware.'
     in_subset:
-    - objects
+    - objects_subset
     from_schema: https://w3id.org/lmodel/ocsf/objects
     aliases:
     - GPU Information
@@ -88074,7 +88074,7 @@ classes:
     notes:
     - "JSON graph specification. \u2014\nhttps://github.com/jsongraph/json-graph-specification/"
     in_subset:
-    - objects
+    - objects_subset
     from_schema: https://w3id.org/lmodel/ocsf/objects
     see_also:
     - https://github.com/jsongraph/json-graph-specification/
@@ -88161,7 +88161,7 @@ classes:
     notes:
     - "D3FEND\u2122 Ontology d3f:AccessControlGroup. \u2014\nhttps://d3fend.mitre.org/dao/artifact/d3f:AccessControlGroup/"
     in_subset:
-    - objects
+    - objects_subset
     from_schema: https://w3id.org/lmodel/ocsf/objects
     see_also:
     - https://d3fend.mitre.org/dao/artifact/d3f:AccessControlGroup/
@@ -88222,7 +88222,7 @@ classes:
 
       behavior.'
     in_subset:
-    - objects
+    - objects_subset
     from_schema: https://w3id.org/lmodel/ocsf/objects
     aliases:
     - HASSH
@@ -88266,7 +88266,7 @@ classes:
     notes:
     - "D3FEND\u2122 Ontology d3f:SessionCookie. \u2014\nhttps://d3fend.mitre.org/dao/artifact/d3f:SessionCookie/"
     in_subset:
-    - objects
+    - objects_subset
     from_schema: https://w3id.org/lmodel/ocsf/objects
     see_also:
     - https://d3fend.mitre.org/dao/artifact/d3f:SessionCookie/
@@ -88318,7 +88318,7 @@ classes:
 
       authentication, encoding, and other aspects of the communication.'
     in_subset:
-    - objects
+    - objects_subset
     from_schema: https://w3id.org/lmodel/ocsf/objects
     aliases:
     - HTTP Header
@@ -88350,7 +88350,7 @@ classes:
     notes:
     - "D3FEND\u2122 Ontology d3f:OutboundInternetNetworkTraffic. \u2014\nhttps://d3fend.mitre.org/dao/artifact/d3f:OutboundInternetNetworkTraffic/"
     in_subset:
-    - objects
+    - objects_subset
     from_schema: https://w3id.org/lmodel/ocsf/objects
     see_also:
     - https://d3fend.mitre.org/dao/artifact/d3f:OutboundInternetNetworkTraffic/
@@ -88423,7 +88423,7 @@ classes:
     notes:
     - "D3FEND\u2122 Ontology d3f:InboundInternetNetworkTraffic. \u2014\nhttps://d3fend.mitre.org/dao/artifact/d3f:InboundInternetNetworkTraffic/"
     in_subset:
-    - objects
+    - objects_subset
     from_schema: https://w3id.org/lmodel/ocsf/objects
     see_also:
     - https://d3fend.mitre.org/dao/artifact/d3f:InboundInternetNetworkTraffic/
@@ -88481,7 +88481,7 @@ classes:
 
       accounts.'
     in_subset:
-    - objects
+    - objects_subset
     from_schema: https://w3id.org/lmodel/ocsf/objects
     aliases:
     - Identity Activity Metrics
@@ -88553,7 +88553,7 @@ classes:
 
       services.'
     in_subset:
-    - objects
+    - objects_subset
     from_schema: https://w3id.org/lmodel/ocsf/objects
     aliases:
     - Identity Provider
@@ -88644,7 +88644,7 @@ classes:
     notes:
     - "D3FEND\u2122 Ontology d3f:ContainerImage \u2014\nhttps://d3fend.mitre.org/dao/artifact/d3f:ContainerImage/"
     in_subset:
-    - objects
+    - objects_subset
     from_schema: https://w3id.org/lmodel/ocsf/objects
     see_also:
     - https://d3fend.mitre.org/dao/artifact/d3f:ContainerImage/
@@ -88689,7 +88689,7 @@ classes:
 
       various aspects of network traffic which is both machine and human readable.'
     in_subset:
-    - objects
+    - objects_subset
     from_schema: https://w3id.org/lmodel/ocsf/objects
     aliases:
     - JA4+ Fingerprint
@@ -88735,7 +88735,7 @@ classes:
     notes:
     - "D3FEND\u2122 Ontology d3f:ScheduledJob. \u2014\nhttps://d3fend.mitre.org/dao/artifact/d3f:ScheduledJob/"
     in_subset:
-    - objects
+    - objects_subset
     from_schema: https://w3id.org/lmodel/ocsf/objects
     see_also:
     - https://d3fend.mitre.org/dao/artifact/d3f:ScheduledJob/
@@ -88802,7 +88802,7 @@ classes:
     description: The KB Article object contains metadata that describes the patch
       or update.
     in_subset:
-    - objects
+    - objects_subset
     from_schema: https://w3id.org/lmodel/ocsf/objects
     aliases:
     - KB Article
@@ -88897,7 +88897,7 @@ classes:
     notes:
     - "D3FEND\u2122 Ontology d3f:Kernel \u2014 https://d3fend.mitre.org/dao/artifact/d3f:Kernel/"
     in_subset:
-    - objects
+    - objects_subset
     from_schema: https://w3id.org/lmodel/ocsf/objects
     see_also:
     - https://d3fend.mitre.org/dao/artifact/d3f:Kernel/
@@ -88940,7 +88940,7 @@ classes:
     notes:
     - "D3FEND\u2122 Ontology d3f:KernelModule \u2014\nhttps://d3fend.mitre.org/dao/artifact/d3f:KernelModule/"
     in_subset:
-    - objects
+    - objects_subset
     from_schema: https://w3id.org/lmodel/ocsf/objects
     see_also:
     - https://d3fend.mitre.org/dao/artifact/d3f:KernelModule/
@@ -88970,7 +88970,7 @@ classes:
         value: '{"at_least_one": ["value", "values"]}'
     description: A generic object allowing to define a <code>{key:value}</code> pair.
     in_subset:
-    - objects
+    - objects_subset
     from_schema: https://w3id.org/lmodel/ocsf/objects
     aliases:
     - Key:Value object
@@ -89019,7 +89019,7 @@ classes:
 
       characteristics, capabilities, and configuration of the keyboard.'
     in_subset:
-    - objects
+    - objects_subset
     from_schema: https://w3id.org/lmodel/ocsf/objects
     aliases:
     - Keyboard Information
@@ -89041,7 +89041,7 @@ classes:
       \ attack. See <a\ntarget='_blank'\nhref='https://www.lockheedmartin.com/en-us/capabilities/cyber/cyber-kill-chain.html'>Cyber\n\
       Kill Chain\xAE</a>."
     in_subset:
-    - objects
+    - objects_subset
     from_schema: https://w3id.org/lmodel/ocsf/objects
     aliases:
     - Kill Chain Phase
@@ -89064,7 +89064,7 @@ classes:
     definition_uri: https://w3id.org/lmodel/ocsf/LdapPerson
     description: The additional LDAP attributes that describe a person.
     in_subset:
-    - objects
+    - objects_subset
     from_schema: https://w3id.org/lmodel/ocsf/objects
     aliases:
     - LDAP Person
@@ -89142,7 +89142,7 @@ classes:
 
       additional information regarding the distribution of traffic across a network.'
     in_subset:
-    - objects
+    - objects_subset
     from_schema: https://w3id.org/lmodel/ocsf/objects
     aliases:
     - Load Balancer
@@ -89227,7 +89227,7 @@ classes:
 
       with an IP address.'
     in_subset:
-    - objects
+    - objects_subset
     from_schema: https://w3id.org/lmodel/ocsf/objects
     aliases:
     - Geo Location
@@ -89318,7 +89318,7 @@ classes:
 
       ultimate destination.'
     in_subset:
-    - objects
+    - objects_subset
     from_schema: https://w3id.org/lmodel/ocsf/objects
     aliases:
     - Logger
@@ -89436,7 +89436,7 @@ classes:
 
       product due to their length.'
     in_subset:
-    - objects
+    - objects_subset
     from_schema: https://w3id.org/lmodel/ocsf/objects
     aliases:
     - Long String
@@ -89473,7 +89473,7 @@ classes:
 
       or computer network.'
     in_subset:
-    - objects
+    - objects_subset
     from_schema: https://w3id.org/lmodel/ocsf/objects
     aliases:
     - Malware
@@ -89587,7 +89587,7 @@ classes:
 
       attribute should label the entity type.'
     in_subset:
-    - objects
+    - objects_subset
     from_schema: https://w3id.org/lmodel/ocsf/objects
     aliases:
     - Managed Entity
@@ -89728,7 +89728,7 @@ classes:
     - "OWASP AI Security and Privacy Guide - Agent Security \u2014\nhttps://owasp.org/www-project-ai-security-and-privacy-guide/"
     - "Model Context Protocol (MCP) Specification \u2014 https://modelcontextprotocol.io/"
     in_subset:
-    - objects
+    - objects_subset
     from_schema: https://w3id.org/lmodel/ocsf/objects
     see_also:
     - https://owasp.org/www-project-ai-security-and-privacy-guide/
@@ -89824,7 +89824,7 @@ classes:
     notes:
     - "D3FEND\u2122 Ontology d3f:Metadata \u2014\nhttps://d3fend.mitre.org/dao/artifact/d3f:Metadata/"
     in_subset:
-    - objects
+    - objects_subset
     from_schema: https://w3id.org/lmodel/ocsf/objects
     see_also:
     - https://d3fend.mitre.org/dao/artifact/d3f:Metadata/
@@ -90042,7 +90042,7 @@ classes:
     definition_uri: https://w3id.org/lmodel/ocsf/Metric
     description: The Metric object defines a simple name/value pair entity for a metric.
     in_subset:
-    - objects
+    - objects_subset
     from_schema: https://w3id.org/lmodel/ocsf/objects
     aliases:
     - Metric
@@ -90070,7 +90070,7 @@ classes:
     - "ATLAS\u2122 Matrix \u2014 https://atlas.mitre.org/matrices/ATLAS"
     - "ATT&CK\xAE Mitigation to D3FEND\u2122 Technique Mappings \u2014\nhttps://d3fend.mitre.org/mappings/attack-mitigations/"
     in_subset:
-    - objects
+    - objects_subset
     from_schema: https://w3id.org/lmodel/ocsf/objects
     see_also:
     - https://attack.mitre.org
@@ -90126,7 +90126,7 @@ classes:
         value: '{"at_least_one": ["load_type_id", "function_name"]}'
     description: The Module object describes the attributes of a module.
     in_subset:
-    - objects
+    - objects_subset
     from_schema: https://w3id.org/lmodel/ocsf/objects
     aliases:
     - Module
@@ -90202,7 +90202,7 @@ classes:
     notes:
     - "D3FEND\u2122 Ontology d3f:NetworkSession \u2014\nhttps://d3fend.mitre.org/dao/artifact/d3f:NetworkSession/"
     in_subset:
-    - objects
+    - objects_subset
     from_schema: https://w3id.org/lmodel/ocsf/objects
     see_also:
     - https://d3fend.mitre.org/dao/artifact/d3f:NetworkSession/
@@ -90273,7 +90273,7 @@ classes:
     notes:
     - "D3FEND\u2122 Ontology d3f:ComputerNetworkNode. \u2014\nhttps://d3fend.mitre.org/dao/artifact/d3f:ComputerNetworkNode/"
     in_subset:
-    - objects
+    - objects_subset
     from_schema: https://w3id.org/lmodel/ocsf/objects
     see_also:
     - https://d3fend.mitre.org/dao/artifact/d3f:ComputerNetworkNode/
@@ -90410,7 +90410,7 @@ classes:
     notes:
     - "D3FEND\u2122 Ontology d3f:NetworkInterfaceCard. \u2014\nhttps://d3fend.mitre.org/dao/artifact/d3f:NetworkInterfaceCard/"
     in_subset:
-    - objects
+    - objects_subset
     from_schema: https://w3id.org/lmodel/ocsf/objects
     see_also:
     - https://d3fend.mitre.org/dao/artifact/d3f:NetworkInterfaceCard/
@@ -90499,7 +90499,7 @@ classes:
     notes:
     - "D3FEND\u2122 Ontology d3f:ProxyServer \u2014\nhttps://d3fend.mitre.org/dao/artifact/d3f:ProxyServer/"
     in_subset:
-    - objects
+    - objects_subset
     from_schema: https://w3id.org/lmodel/ocsf/objects
     see_also:
     - https://d3fend.mitre.org/dao/artifact/d3f:ProxyServer/
@@ -90554,7 +90554,7 @@ classes:
     notes:
     - "D3FEND\u2122 Ontology d3f:NetworkTraffic \u2014\nhttps://d3fend.mitre.org/dao/artifact/d3f:NetworkTraffic/"
     in_subset:
-    - objects
+    - objects_subset
     from_schema: https://w3id.org/lmodel/ocsf/objects
     see_also:
     - https://d3fend.mitre.org/dao/artifact/d3f:NetworkTraffic/
@@ -90658,7 +90658,7 @@ classes:
     notes:
     - "JSON graph specification. \u2014\nhttps://github.com/jsongraph/json-graph-specification/"
     in_subset:
-    - objects
+    - objects_subset
     from_schema: https://w3id.org/lmodel/ocsf/objects
     see_also:
     - https://github.com/jsongraph/json-graph-specification/
@@ -90715,7 +90715,7 @@ classes:
 
       Google Cloud Organizations, Oracle Cloud Tenancies, and similar constructs.'
     in_subset:
-    - objects
+    - objects_subset
     from_schema: https://w3id.org/lmodel/ocsf/objects
     aliases:
     - Organization
@@ -90773,7 +90773,7 @@ classes:
 
       and detachable hardware.'
     in_subset:
-    - objects
+    - objects_subset
     from_schema: https://w3id.org/lmodel/ocsf/objects
     aliases:
     - Peripheral Device
@@ -90848,7 +90848,7 @@ classes:
 
       troubleshooting, and policy tuning/adjustments.</p>'
     in_subset:
-    - objects
+    - objects_subset
     from_schema: https://w3id.org/lmodel/ocsf/objects
     aliases:
     - Policy
@@ -90930,7 +90930,7 @@ classes:
     description: The Process Entity object provides critical fields for referencing
       a process.
     in_subset:
-    - objects
+    - objects_subset
     from_schema: https://w3id.org/lmodel/ocsf/objects
     aliases:
     - Process Entity
@@ -91008,7 +91008,7 @@ classes:
     definition_uri: https://w3id.org/lmodel/ocsf/Product
     description: The Product object describes characteristics of a software product.
     in_subset:
-    - objects
+    - objects_subset
     from_schema: https://w3id.org/lmodel/ocsf/objects
     aliases:
     - Product
@@ -91065,7 +91065,7 @@ classes:
 
       query must be written using a specific syntax.'
     in_subset:
-    - objects
+    - objects_subset
     from_schema: https://w3id.org/lmodel/ocsf/objects
     aliases:
     - Query Information
@@ -91112,7 +91112,7 @@ classes:
         value: '{"at_least_one": ["hostname", "ip", "name", "uid"]}'
     description: The entity from which an event or finding was reported.
     in_subset:
-    - objects
+    - objects_subset
     from_schema: https://w3id.org/lmodel/ocsf/objects
     aliases:
     - Reporter
@@ -91183,7 +91183,7 @@ classes:
 
       affected by the activity/event.'
     in_subset:
-    - objects
+    - objects_subset
     from_schema: https://w3id.org/lmodel/ocsf/objects
     aliases:
     - Resource Details
@@ -91341,7 +91341,7 @@ classes:
 
       an event.'
     in_subset:
-    - objects
+    - objects_subset
     from_schema: https://w3id.org/lmodel/ocsf/objects
     aliases:
     - Rule
@@ -91380,7 +91380,7 @@ classes:
     definition_uri: https://w3id.org/lmodel/ocsf/Scan
     description: The Scan object describes characteristics of a proactive scan.
     in_subset:
-    - objects
+    - objects_subset
     from_schema: https://w3id.org/lmodel/ocsf/objects
     aliases:
     - Scan
@@ -91424,7 +91424,7 @@ classes:
     notes:
     - "D3FEND\u2122 Ontology d3f:ServiceApplication. \u2014\nhttps://d3fend.mitre.org/dao/artifact/d3f:ServiceApplication/"
     in_subset:
-    - objects
+    - objects_subset
     from_schema: https://w3id.org/lmodel/ocsf/objects
     see_also:
     - https://d3fend.mitre.org/dao/artifact/d3f:ServiceApplication/
@@ -91469,7 +91469,7 @@ classes:
     - "ATT&CK\xAE Matrix \u2014 https://attack.mitre.org"
     - "ATLAS\u2122 Matrix \u2014 https://atlas.mitre.org/matrices/ATLAS"
     in_subset:
-    - objects
+    - objects_subset
     from_schema: https://w3id.org/lmodel/ocsf/objects
     see_also:
     - https://attack.mitre.org
@@ -91515,7 +91515,7 @@ classes:
 
       updated, deleted and queried.'
     in_subset:
-    - objects
+    - objects_subset
     from_schema: https://w3id.org/lmodel/ocsf/objects
     aliases:
     - Table
@@ -91565,7 +91565,7 @@ classes:
     - "ATT&CK\xAE Matrix \u2014 https://attack.mitre.org"
     - "ATLAS\u2122 Matrix \u2014 https://atlas.mitre.org/matrices/ATLAS"
     in_subset:
-    - objects
+    - objects_subset
     from_schema: https://w3id.org/lmodel/ocsf/objects
     see_also:
     - https://attack.mitre.org
@@ -91611,7 +91611,7 @@ classes:
     - "ATT&CK\xAE Matrix \u2014 https://attack.mitre.org"
     - "ATLAS\u2122 Matrix \u2014 https://atlas.mitre.org/matrices/ATLAS"
     in_subset:
-    - objects
+    - objects_subset
     from_schema: https://w3id.org/lmodel/ocsf/objects
     see_also:
     - https://attack.mitre.org
@@ -91659,7 +91659,7 @@ classes:
 
       entity in question.'
     in_subset:
-    - objects
+    - objects_subset
     from_schema: https://w3id.org/lmodel/ocsf/objects
     aliases:
     - Trait
@@ -91702,7 +91702,7 @@ classes:
     description: The transformation_info object represents the mapping or transformation
       used.
     in_subset:
-    - objects
+    - objects_subset
     from_schema: https://w3id.org/lmodel/ocsf/objects
     aliases:
     - Transformation Info
@@ -91759,7 +91759,7 @@ classes:
 
       F3411-22a</a>.'
     in_subset:
-    - objects
+    - objects_subset
     from_schema: https://w3id.org/lmodel/ocsf/objects
     aliases:
     - Unmanned Aerial System
@@ -91842,7 +91842,7 @@ classes:
 
       area of operations for a UAS flight or mission.'
     in_subset:
-    - objects
+    - objects_subset
     from_schema: https://w3id.org/lmodel/ocsf/objects
     aliases:
     - Unmanned System Operating Area
@@ -91929,7 +91929,7 @@ classes:
     notes:
     - "D3FEND\u2122 Ontology d3f:UserAccount \u2014\nhttps://d3fend.mitre.org/dao/artifact/d3f:UserAccount/"
     in_subset:
-    - objects
+    - objects_subset
     from_schema: https://w3id.org/lmodel/ocsf/objects
     see_also:
     - https://d3fend.mitre.org/dao/artifact/d3f:UserAccount/
@@ -92056,7 +92056,7 @@ classes:
     notes:
     - "D3FEND\u2122 Ontology d3f:WebResource. \u2014\nhttps://d3fend.mitre.org/dao/artifact/d3f:WebResource/"
     in_subset:
-    - objects
+    - objects_subset
     from_schema: https://w3id.org/lmodel/ocsf/objects
     see_also:
     - https://d3fend.mitre.org/dao/artifact/d3f:WebResource/
@@ -92114,7 +92114,7 @@ classes:
     notes:
     - "D3FEND\u2122 Ontology d3f:Host. \u2014 https://d3fend.mitre.org/dao/artifact/d3f:Host/"
     in_subset:
-    - objects
+    - objects_subset
     from_schema: https://w3id.org/lmodel/ocsf/objects
     see_also:
     - https://d3fend.mitre.org/dao/artifact/d3f:Host/
@@ -92297,7 +92297,7 @@ classes:
 
       associated actions that define how network traffic is handled by the firewall.'
     in_subset:
-    - objects
+    - objects_subset
     from_schema: https://w3id.org/lmodel/ocsf/objects
     aliases:
     - Firewall Rule
@@ -92332,7 +92332,7 @@ classes:
 
       malware scanning job.'
     in_subset:
-    - objects
+    - objects_subset
     from_schema: https://w3id.org/lmodel/ocsf/objects
     aliases:
     - Malware Scan Info
@@ -92388,7 +92388,7 @@ classes:
     notes:
     - "D3FEND\u2122 Ontology d3f:Process \u2014\nhttps://d3fend.mitre.org/dao/artifact/d3f:Process/"
     in_subset:
-    - objects
+    - objects_subset
     from_schema: https://w3id.org/lmodel/ocsf/objects
     see_also:
     - https://d3fend.mitre.org/dao/artifact/d3f:Process/
@@ -92486,7 +92486,7 @@ classes:
 
       activities. e.g. model_name, total_token_counts etc.'
     in_subset:
-    - ai_operation_profile
+    - ai_operation_profile_subset
     from_schema: https://w3id.org/lmodel/ocsf/profiles
     aliases:
     - AI Operation
@@ -92520,7 +92520,7 @@ classes:
 
       services/applications.'
     in_subset:
-    - cloud_profile
+    - cloud_profile_subset
     from_schema: https://w3id.org/lmodel/ocsf/profiles
     aliases:
     - Cloud
@@ -92552,7 +92552,7 @@ classes:
         value: container
     description: The container context for a process.
     in_subset:
-    - container_profile
+    - container_profile_subset
     from_schema: https://w3id.org/lmodel/ocsf/profiles
     aliases:
     - Container
@@ -92590,7 +92590,7 @@ classes:
 
       results.'
     in_subset:
-    - data_classification_profile
+    - data_classification_profile_subset
     from_schema: https://w3id.org/lmodel/ocsf/profiles
     aliases:
     - Data Classification
@@ -92626,7 +92626,7 @@ classes:
 
       1985-04-12T23:20:50.52Z.'
     in_subset:
-    - datetime_profile
+    - datetime_profile_subset
     from_schema: https://w3id.org/lmodel/ocsf/profiles
     aliases:
     - Date/Time
@@ -92644,7 +92644,7 @@ classes:
         value: primary
     description: The attributes that identify host/device attributes.
     in_subset:
-    - host_profile
+    - host_profile_subset
     from_schema: https://w3id.org/lmodel/ocsf/profiles
     aliases:
     - Host
@@ -92669,7 +92669,7 @@ classes:
         value: primary
     description: The attributes that add incident handling semantics to a Finding.
     in_subset:
-    - incident_profile
+    - incident_profile_subset
     from_schema: https://w3id.org/lmodel/ocsf/profiles
     aliases:
     - Incident
@@ -92788,7 +92788,7 @@ classes:
         value: primary
     description: The attributes that describe information specific to load balancers.
     in_subset:
-    - load_balancer_profile
+    - load_balancer_profile_subset
     from_schema: https://w3id.org/lmodel/ocsf/profiles
     aliases:
     - Load Balancer
@@ -92812,7 +92812,7 @@ classes:
         value: context
     description: The attributes that identify network proxy attributes.
     in_subset:
-    - network_proxy_profile
+    - network_proxy_profile_subset
     from_schema: https://w3id.org/lmodel/ocsf/profiles
     aliases:
     - Network Proxy
@@ -92873,7 +92873,7 @@ classes:
 
       engineers within the profile itself.'
     in_subset:
-    - osint_profile
+    - osint_profile_subset
     from_schema: https://w3id.org/lmodel/ocsf/profiles
     aliases:
     - OSINT
@@ -92917,7 +92917,7 @@ classes:
 
       <code>true</code>.'
     in_subset:
-    - security_control_profile
+    - security_control_profile_subset
     from_schema: https://w3id.org/lmodel/ocsf/profiles
     aliases:
     - Security Control
@@ -93055,7 +93055,7 @@ classes:
 
       relationships, and service dependencies.'
     in_subset:
-    - trace_profile
+    - trace_profile_subset
     from_schema: https://w3id.org/lmodel/ocsf/profiles
     aliases:
     - Trace
@@ -93356,7 +93356,7 @@ classes:
         tag: category
         value: application
     in_subset:
-    - application
+    - application_subset
     from_schema: https://w3id.org/lmodel/ocsf/events
     aliases:
     - Application Activity
@@ -93426,7 +93426,7 @@ classes:
 
       e.g. (AWS Cloudtrail)'
     in_subset:
-    - application
+    - application_subset
     from_schema: https://w3id.org/lmodel/ocsf/events
     aliases:
     - API Activity
@@ -93576,7 +93576,7 @@ classes:
 
       products and services.'
     in_subset:
-    - application
+    - application_subset
     from_schema: https://w3id.org/lmodel/ocsf/events
     aliases:
     - Application Error
@@ -93657,7 +93657,7 @@ classes:
     notes:
     - "D3FEND\u2122 Ontology d3f:ApplicationEvent \u2014\nhttps://d3fend.mitre.org/event/d3f:ApplicationEvent/"
     in_subset:
-    - application
+    - application_subset
     from_schema: https://w3id.org/lmodel/ocsf/events
     see_also:
     - https://d3fend.mitre.org/event/d3f:ApplicationEvent/
@@ -93752,7 +93752,7 @@ classes:
 
       AWS S3).'
     in_subset:
-    - application
+    - application_subset
     from_schema: https://w3id.org/lmodel/ocsf/events
     aliases:
     - Datastore Activity
@@ -93937,7 +93937,7 @@ classes:
 
       as Box, MS OneDrive, Google Drive, or network file share services.'
     in_subset:
-    - application
+    - application_subset
     from_schema: https://w3id.org/lmodel/ocsf/events
     aliases:
     - File Hosting Activity
@@ -94129,7 +94129,7 @@ classes:
 
       detections that were resolved.'
     in_subset:
-    - application
+    - application_subset
     from_schema: https://w3id.org/lmodel/ocsf/events
     aliases:
     - Scan Activity
@@ -94345,7 +94345,7 @@ classes:
 
       Control</code> and/or <code>Network Proxy</code> profile instead. (since 1.1.0)'
     in_subset:
-    - application
+    - application_subset
     from_schema: https://w3id.org/lmodel/ocsf/events
     aliases:
     - Web Resource Access Activity
@@ -94479,7 +94479,7 @@ classes:
 
       Resources.'
     in_subset:
-    - application
+    - application_subset
     from_schema: https://w3id.org/lmodel/ocsf/events
     aliases:
     - Web Resources Activity
@@ -94625,7 +94625,7 @@ classes:
 
       classes.'
     in_subset:
-    - discovery
+    - discovery_subset
     from_schema: https://w3id.org/lmodel/ocsf/events
     aliases:
     - Discovery
@@ -94699,7 +94699,7 @@ classes:
       groups.
     deprecated: Use the <code>Live Evidence Info</code> class. (since 1.5.0)
     in_subset:
-    - discovery
+    - discovery_subset
     from_schema: https://w3id.org/lmodel/ocsf/events
     aliases:
     - Admin Group Query
@@ -94805,7 +94805,7 @@ classes:
 
       (SaaS) APIs, or otherwise.'
     in_subset:
-    - discovery
+    - discovery_subset
     from_schema: https://w3id.org/lmodel/ocsf/events
     aliases:
     - Cloud Resources Inventory Info
@@ -95002,7 +95002,7 @@ classes:
       assessments, and/or CIS Benchmark results.'
     deprecated: Use <code>Compliance Finding</code> class. (since 1.5.0)
     in_subset:
-    - discovery
+    - discovery_subset
     from_schema: https://w3id.org/lmodel/ocsf/events
     aliases:
     - Device Config State
@@ -95104,7 +95104,7 @@ classes:
 
       of the device.'
     in_subset:
-    - discovery
+    - discovery_subset
     from_schema: https://w3id.org/lmodel/ocsf/events
     aliases:
     - Device Config State Change
@@ -95250,7 +95250,7 @@ classes:
         value: discovery
     description: Discovery Result events report the results of a discovery request.
     in_subset:
-    - discovery
+    - discovery_subset
     from_schema: https://w3id.org/lmodel/ocsf/events
     aliases:
     - Discovery Result
@@ -95358,7 +95358,7 @@ classes:
 
       appropriate child object that best matches the evidence type.'
     in_subset:
-    - discovery
+    - discovery_subset
     from_schema: https://w3id.org/lmodel/ocsf/events
     aliases:
     - Live Evidence Info
@@ -95460,7 +95460,7 @@ classes:
       system.'
     deprecated: Use the <code>Live Evidence Info</code> class. (since 1.5.0)
     in_subset:
-    - discovery
+    - discovery_subset
     from_schema: https://w3id.org/lmodel/ocsf/events
     aliases:
     - File Query
@@ -95544,7 +95544,7 @@ classes:
       system.'
     deprecated: Use the <code>Live Evidence Info</code> class. (since 1.5.0)
     in_subset:
-    - discovery
+    - discovery_subset
     from_schema: https://w3id.org/lmodel/ocsf/events
     aliases:
     - Folder Query
@@ -95629,7 +95629,7 @@ classes:
 
       a CMDB or running a network sweep of connected devices.'
     in_subset:
-    - discovery
+    - discovery_subset
     from_schema: https://w3id.org/lmodel/ocsf/events
     aliases:
     - Device Inventory Info
@@ -95713,7 +95713,7 @@ classes:
     description: Job Query events report information about scheduled jobs.
     deprecated: Use the <code>Live Evidence Info</code> class. (since 1.5.0)
     in_subset:
-    - discovery
+    - discovery_subset
     from_schema: https://w3id.org/lmodel/ocsf/events
     aliases:
     - Job Query
@@ -95795,7 +95795,7 @@ classes:
       resources.'
     deprecated: Use the <code>Live Evidence Info</code> class. (since 1.5.0)
     in_subset:
-    - discovery
+    - discovery_subset
     from_schema: https://w3id.org/lmodel/ocsf/events
     aliases:
     - Kernel Object Query
@@ -95876,7 +95876,7 @@ classes:
     description: Module Query events report information about loaded modules.
     deprecated: Use the <code>Live Evidence Info</code> class. (since 1.5.0)
     in_subset:
-    - discovery
+    - discovery_subset
     from_schema: https://w3id.org/lmodel/ocsf/events
     aliases:
     - Module Query
@@ -95968,7 +95968,7 @@ classes:
       connections.'
     deprecated: Use the <code>Live Evidence Info</code> class. (since 1.5.0)
     in_subset:
-    - discovery
+    - discovery_subset
     from_schema: https://w3id.org/lmodel/ocsf/events
     aliases:
     - Network Connection Query
@@ -96079,7 +96079,7 @@ classes:
     description: Networks Query events report information about network adapters.
     deprecated: Use the <code>Live Evidence Info</code> class. (since 1.5.0)
     in_subset:
-    - discovery
+    - discovery_subset
     from_schema: https://w3id.org/lmodel/ocsf/events
     aliases:
     - Networks Query
@@ -96169,7 +96169,7 @@ classes:
 
       APIs and datastores.'
     in_subset:
-    - discovery
+    - discovery_subset
     from_schema: https://w3id.org/lmodel/ocsf/events
     aliases:
     - OSINT Inventory Info
@@ -96272,7 +96272,7 @@ classes:
 
       device and any associated knowledgebase articles.'
     in_subset:
-    - discovery
+    - discovery_subset
     from_schema: https://w3id.org/lmodel/ocsf/events
     aliases:
     - Operating System Patch State
@@ -96376,7 +96376,7 @@ classes:
       devices.
     deprecated: Use the <code>Live Evidence Info</code> class. (since 1.5.0)
     in_subset:
-    - discovery
+    - discovery_subset
     from_schema: https://w3id.org/lmodel/ocsf/events
     aliases:
     - Peripheral Device Query
@@ -96456,7 +96456,7 @@ classes:
     description: Process Query events report information about running processes.
     deprecated: Use the <code>Live Evidence Info</code> class. (since 1.5.0)
     in_subset:
-    - discovery
+    - discovery_subset
     from_schema: https://w3id.org/lmodel/ocsf/events
     aliases:
     - Process Query
@@ -96536,7 +96536,7 @@ classes:
     description: Service Query events report information about running services.
     deprecated: Use the <code>Live Evidence Info</code> class. (since 1.5.0)
     in_subset:
-    - discovery
+    - discovery_subset
     from_schema: https://w3id.org/lmodel/ocsf/events
     aliases:
     - Service Query
@@ -96617,7 +96617,7 @@ classes:
       sessions.
     deprecated: Use the <code>Live Evidence Info</code> class. (since 1.5.0)
     in_subset:
-    - discovery
+    - discovery_subset
     from_schema: https://w3id.org/lmodel/ocsf/events
     aliases:
     - User Session Query
@@ -96701,7 +96701,7 @@ classes:
 
       information from a CMDB or running a network sweep of connected devices.'
     in_subset:
-    - discovery
+    - discovery_subset
     from_schema: https://w3id.org/lmodel/ocsf/events
     aliases:
     - Software Inventory Info
@@ -96822,7 +96822,7 @@ classes:
       application components that are generally configured to run automatically.'
     deprecated: Use the <code>Live Evidence Info</code> class. (since 1.5.0)
     in_subset:
-    - discovery
+    - discovery_subset
     from_schema: https://w3id.org/lmodel/ocsf/events
     aliases:
     - Startup Item Query
@@ -96906,7 +96906,7 @@ classes:
 
       Active Directory entries.'
     in_subset:
-    - discovery
+    - discovery_subset
     from_schema: https://w3id.org/lmodel/ocsf/events
     aliases:
     - User Inventory Info
@@ -97003,7 +97003,7 @@ classes:
       of a targeted search by filtering a subset of user attributes.'
     deprecated: Use the <code>Live Evidence Info</code> class. (since 1.5.0)
     in_subset:
-    - discovery
+    - discovery_subset
     from_schema: https://w3id.org/lmodel/ocsf/events
     aliases:
     - User Query
@@ -97115,7 +97115,7 @@ classes:
 
       Finding</code>.'
     in_subset:
-    - findings
+    - findings_subset
     from_schema: https://w3id.org/lmodel/ocsf/events
     aliases:
     - Application Security Posture Finding
@@ -97298,7 +97298,7 @@ classes:
 
       Finding</code>.'
     in_subset:
-    - findings
+    - findings_subset
     from_schema: https://w3id.org/lmodel/ocsf/events
     aliases:
     - Compliance Finding
@@ -97462,7 +97462,7 @@ classes:
 
       Finding</code>.'
     in_subset:
-    - findings
+    - findings_subset
     from_schema: https://w3id.org/lmodel/ocsf/events
     aliases:
     - Data Security Finding
@@ -97798,7 +97798,7 @@ classes:
 
       Finding</code>.'
     in_subset:
-    - findings
+    - findings_subset
     from_schema: https://w3id.org/lmodel/ocsf/events
     aliases:
     - Detection Finding
@@ -98042,7 +98042,7 @@ classes:
 
       in the Findings category.'
     in_subset:
-    - findings
+    - findings_subset
     from_schema: https://w3id.org/lmodel/ocsf/events
     aliases:
     - Finding
@@ -98255,7 +98255,7 @@ classes:
 
       aggregate this finding into an <code>Incident Finding</code>.'
     in_subset:
-    - findings
+    - findings_subset
     from_schema: https://w3id.org/lmodel/ocsf/events
     aliases:
     - IAM Analysis Finding
@@ -98452,7 +98452,7 @@ classes:
 
       <code>metadata.profiles[]</code> array.'
     in_subset:
-    - findings
+    - findings_subset
     from_schema: https://w3id.org/lmodel/ocsf/events
     aliases:
     - Incident Finding
@@ -98757,7 +98757,7 @@ classes:
 
       Finding.</code> (since 1.1.0)'
     in_subset:
-    - findings
+    - findings_subset
     from_schema: https://w3id.org/lmodel/ocsf/events
     aliases:
     - Security Finding
@@ -99031,7 +99031,7 @@ classes:
 
       this finding into an <code>Incident Finding</code>.'
     in_subset:
-    - findings
+    - findings_subset
     from_schema: https://w3id.org/lmodel/ocsf/events
     aliases:
     - Vulnerability Finding
@@ -99161,7 +99161,7 @@ classes:
 
       be used to log events that are not otherwise defined by the IAM category.'
     in_subset:
-    - iam
+    - iam_subset
     from_schema: https://w3id.org/lmodel/ocsf/events
     aliases:
     - Identity & Access Management
@@ -99266,7 +99266,7 @@ classes:
 
       disabled, enabled, locked out or unlocked.'
     in_subset:
-    - iam
+    - iam_subset
     from_schema: https://w3id.org/lmodel/ocsf/events
     aliases:
     - Account Change
@@ -99411,7 +99411,7 @@ classes:
     notes:
     - "D3FEND\u2122 Ontology d3f:AuthenticationEvent \u2014\nhttps://d3fend.mitre.org/event/d3f:AuthenticationEvent"
     in_subset:
-    - iam
+    - iam_subset
     from_schema: https://w3id.org/lmodel/ocsf/events
     see_also:
     - https://d3fend.mitre.org/event/d3f:AuthenticationEvent
@@ -99675,7 +99675,7 @@ classes:
     notes:
     - "D3FEND\u2122 Ontology d3f:AuthorizationEvent \u2014\nhttps://d3fend.mitre.org/event/d3f:AuthorizationEvent/"
     in_subset:
-    - iam
+    - iam_subset
     from_schema: https://w3id.org/lmodel/ocsf/events
     see_also:
     - https://d3fend.mitre.org/event/d3f:AuthorizationEvent/
@@ -99814,7 +99814,7 @@ classes:
 
       and delete operation on a managed entity.'
     in_subset:
-    - iam
+    - iam_subset
     from_schema: https://w3id.org/lmodel/ocsf/events
     aliases:
     - Entity Management
@@ -99933,7 +99933,7 @@ classes:
     notes:
     - "D3FEND\u2122 Ontology d3f:GroupManagementEvent \u2014\nhttps://d3fend.mitre.org/event/d3f:GroupManagementEvent/"
     in_subset:
-    - iam
+    - iam_subset
     from_schema: https://w3id.org/lmodel/ocsf/events
     see_also:
     - https://d3fend.mitre.org/event/d3f:GroupManagementEvent/
@@ -100058,7 +100058,7 @@ classes:
     notes:
     - "D3FEND\u2122 Ontology d3f:PermissionGrantingEvent \u2014\nhttps://d3fend.mitre.org/event/d3f:PermissionGrantingEvent/"
     in_subset:
-    - iam
+    - iam_subset
     from_schema: https://w3id.org/lmodel/ocsf/events
     see_also:
     - https://d3fend.mitre.org/event/d3f:PermissionGrantingEvent/
@@ -100180,7 +100180,7 @@ classes:
     notes:
     - "D3FEND\u2122 Ontology d3f:NetworkEvent \u2014\nhttps://d3fend.mitre.org/event/d3f:NetworkEvent/"
     in_subset:
-    - network
+    - network_subset
     from_schema: https://w3id.org/lmodel/ocsf/events
     see_also:
     - https://d3fend.mitre.org/event/d3f:NetworkEvent/
@@ -100450,7 +100450,7 @@ classes:
     notes:
     - "D3FEND\u2122 Ontology d3f:DHCPEvent \u2014 https://d3fend.mitre.org/event/d3f:DHCPEvent/"
     in_subset:
-    - network
+    - network_subset
     from_schema: https://w3id.org/lmodel/ocsf/events
     see_also:
     - https://d3fend.mitre.org/event/d3f:DHCPEvent/
@@ -100606,7 +100606,7 @@ classes:
     notes:
     - "D3FEND\u2122 Ontology d3f:DNSEvent \u2014 https://d3fend.mitre.org/event/d3f:DNSEvent/"
     in_subset:
-    - network
+    - network_subset
     from_schema: https://w3id.org/lmodel/ocsf/events
     see_also:
     - https://d3fend.mitre.org/event/d3f:DNSEvent/
@@ -100786,7 +100786,7 @@ classes:
     notes:
     - "D3FEND\u2122 Ontology d3f:EmailEvent \u2014\nhttps://d3fend.mitre.org/event/d3f:EmailEvent/"
     in_subset:
-    - network
+    - network_subset
     from_schema: https://w3id.org/lmodel/ocsf/events
     see_also:
     - https://d3fend.mitre.org/event/d3f:EmailEvent/
@@ -101012,7 +101012,7 @@ classes:
 
       array instead. (since 1.3.0)'
     in_subset:
-    - network
+    - network_subset
     from_schema: https://w3id.org/lmodel/ocsf/events
     aliases:
     - Email File Activity
@@ -101109,7 +101109,7 @@ classes:
 
       array instead. (since 1.3.0)'
     in_subset:
-    - network
+    - network_subset
     from_schema: https://w3id.org/lmodel/ocsf/events
     aliases:
     - Email URL Activity
@@ -101205,7 +101205,7 @@ classes:
     notes:
     - "D3FEND\u2122 Ontology d3f:FTPEvent \u2014 https://d3fend.mitre.org/event/d3f:FTPEvent/"
     in_subset:
-    - network
+    - network_subset
     from_schema: https://w3id.org/lmodel/ocsf/events
     see_also:
     - https://d3fend.mitre.org/event/d3f:FTPEvent/
@@ -101367,7 +101367,7 @@ classes:
     notes:
     - "D3FEND\u2122 Ontology d3f:HTTPEvent \u2014 https://d3fend.mitre.org/event/d3f:HTTPEvent/"
     in_subset:
-    - network
+    - network_subset
     from_schema: https://w3id.org/lmodel/ocsf/events
     see_also:
     - https://d3fend.mitre.org/event/d3f:HTTPEvent/
@@ -101522,7 +101522,7 @@ classes:
     notes:
     - "D3FEND\u2122 Ontology d3f:NetworkConnectionEvent \u2014\nhttps://d3fend.mitre.org/event/d3f:NetworkConnectionEvent/"
     in_subset:
-    - network
+    - network_subset
     from_schema: https://w3id.org/lmodel/ocsf/events
     see_also:
     - https://d3fend.mitre.org/event/d3f:NetworkConnectionEvent/
@@ -101685,7 +101685,7 @@ classes:
 
       category.</code> (since 1.1.0)'
     in_subset:
-    - network
+    - network_subset
     from_schema: https://w3id.org/lmodel/ocsf/events
     aliases:
     - Network File Activity
@@ -101831,7 +101831,7 @@ classes:
     notes:
     - "D3FEND\u2122 Ontology d3f:NTPEvent \u2014 https://d3fend.mitre.org/event/d3f:NTPEvent/"
     in_subset:
-    - network
+    - network_subset
     from_schema: https://w3id.org/lmodel/ocsf/events
     see_also:
     - https://d3fend.mitre.org/event/d3f:NTPEvent/
@@ -101984,7 +101984,7 @@ classes:
     notes:
     - "D3FEND\u2122 Ontology d3f:RDPEvent \u2014 https://d3fend.mitre.org/event/d3f:RDPEvent/"
     in_subset:
-    - network
+    - network_subset
     from_schema: https://w3id.org/lmodel/ocsf/events
     see_also:
     - https://d3fend.mitre.org/event/d3f:RDPEvent/
@@ -102180,7 +102180,7 @@ classes:
     notes:
     - "D3FEND\u2122 Ontology d3f:SMBEvent \u2014 https://d3fend.mitre.org/event/d3f:SMBEvent/"
     in_subset:
-    - network
+    - network_subset
     from_schema: https://w3id.org/lmodel/ocsf/events
     see_also:
     - https://d3fend.mitre.org/event/d3f:SMBEvent/
@@ -102377,7 +102377,7 @@ classes:
     notes:
     - "D3FEND\u2122 Ontology d3f:SSHEvent \u2014 https://d3fend.mitre.org/event/d3f:SSHEvent/"
     in_subset:
-    - network
+    - network_subset
     from_schema: https://w3id.org/lmodel/ocsf/events
     see_also:
     - https://d3fend.mitre.org/event/d3f:SSHEvent/
@@ -102540,7 +102540,7 @@ classes:
     notes:
     - "D3FEND\u2122 Ontology d3f:TunnelEvent \u2014\nhttps://d3fend.mitre.org/event/d3f:TunnelEvent/"
     in_subset:
-    - network
+    - network_subset
     from_schema: https://w3id.org/lmodel/ocsf/events
     see_also:
     - https://d3fend.mitre.org/event/d3f:TunnelEvent/
@@ -102786,7 +102786,7 @@ classes:
       \ target='_blank'\nhref='https://d3fend.mitre.org/'>Matrix</a>. Sub-techniques\
       \ will include File,\nsuch as File Removal or Restore File."
     in_subset:
-    - remediation
+    - remediation_subset
     from_schema: https://w3id.org/lmodel/ocsf/events
     aliases:
     - File Remediation Activity
@@ -102871,7 +102871,7 @@ classes:
       \ and\nSub-techniques will include Network, such as Network Isolation or Network\n\
       Traffic Filtering."
     in_subset:
-    - remediation
+    - remediation_subset
     from_schema: https://w3id.org/lmodel/ocsf/events
     aliases:
     - Network Remediation Activity
@@ -102956,7 +102956,7 @@ classes:
       will include Process, such as Process Termination or Kernel-based Process\n\
       Isolation."
     in_subset:
-    - remediation
+    - remediation_subset
     from_schema: https://w3id.org/lmodel/ocsf/events
     aliases:
     - Process Remediation Activity
@@ -103042,7 +103042,7 @@ classes:
       \ compromised\ndevice or computer network. It follows the MITRE countermeasures\
       \ defined by the\nD3FEND\u2122 <a target='_blank' href='https://d3fend.mitre.org/'>Matrix</a>."
     in_subset:
-    - remediation
+    - remediation_subset
     from_schema: https://w3id.org/lmodel/ocsf/events
     aliases:
     - Remediation Activity
@@ -103162,7 +103162,7 @@ classes:
 
       to log events that are not otherwise defined by the System Activity category.'
     in_subset:
-    - system
+    - system_subset
     from_schema: https://w3id.org/lmodel/ocsf/events
     aliases:
     - System Activity
@@ -103255,7 +103255,7 @@ classes:
     notes:
     - "D3FEND\u2122 Ontology d3f:EventLogEvent \u2014\nhttps://d3fend.mitre.org/event/d3f:EventLogEvent/"
     in_subset:
-    - system
+    - system_subset
     from_schema: https://w3id.org/lmodel/ocsf/events
     see_also:
     - https://d3fend.mitre.org/event/d3f:EventLogEvent/
@@ -103487,7 +103487,7 @@ classes:
     notes:
     - "D3FEND\u2122 Ontology d3f:FileEvent \u2014 https://d3fend.mitre.org/event/d3f:FileEvent/"
     in_subset:
-    - system
+    - system_subset
     from_schema: https://w3id.org/lmodel/ocsf/events
     see_also:
     - https://d3fend.mitre.org/event/d3f:FileEvent/
@@ -103636,7 +103636,7 @@ classes:
     notes:
     - "D3FEND\u2122 Ontology d3f:KernelEvent \u2014\nhttps://d3fend.mitre.org/event/d3f:KernelEvent/"
     in_subset:
-    - system
+    - system_subset
     from_schema: https://w3id.org/lmodel/ocsf/events
     see_also:
     - https://d3fend.mitre.org/event/d3f:KernelEvent/
@@ -103724,7 +103724,7 @@ classes:
     notes:
     - "D3FEND\u2122 Ontology d3f:KernelModuleEvent \u2014\nhttps://d3fend.mitre.org/event/d3f:KernelModuleEvent/"
     in_subset:
-    - system
+    - system_subset
     from_schema: https://w3id.org/lmodel/ocsf/events
     see_also:
     - https://d3fend.mitre.org/event/d3f:KernelModuleEvent/
@@ -103818,7 +103818,7 @@ classes:
     notes:
     - "D3FEND\u2122 Ontology d3f:MemoryEvent \u2014\nhttps://d3fend.mitre.org/event/d3f:MemoryEvent/"
     in_subset:
-    - system
+    - system_subset
     from_schema: https://w3id.org/lmodel/ocsf/events
     see_also:
     - https://d3fend.mitre.org/event/d3f:MemoryEvent/
@@ -103945,7 +103945,7 @@ classes:
     - "D3FEND\u2122 Ontology d3f:LoadLibraryEvent \u2014\nhttps://d3fend.mitre.org/event/d3f:LoadLibraryEvent/"
     - "D3FEND\u2122 Ontology d3f:UnloadLibraryEvent \u2014\nhttps://d3fend.mitre.org/event/d3f:UnloadLibraryEvent/"
     in_subset:
-    - system
+    - system_subset
     from_schema: https://w3id.org/lmodel/ocsf/events
     see_also:
     - https://d3fend.mitre.org/event/d3f:LoadLibraryEvent/
@@ -104041,7 +104041,7 @@ classes:
 
       external devices connected to and used by a system.'
     in_subset:
-    - system
+    - system_subset
     from_schema: https://w3id.org/lmodel/ocsf/events
     aliases:
     - Peripheral Activity
@@ -104127,7 +104127,7 @@ classes:
     notes:
     - "D3FEND\u2122 Ontology d3f:ProcessEvent \u2014\nhttps://d3fend.mitre.org/event/d3f:ProcessEvent/"
     in_subset:
-    - system
+    - system_subset
     from_schema: https://w3id.org/lmodel/ocsf/events
     see_also:
     - https://d3fend.mitre.org/event/d3f:ProcessEvent/
@@ -104296,7 +104296,7 @@ classes:
     notes:
     - "D3FEND\u2122 Ontology d3f:ScheduledJobEvent \u2014\nhttps://d3fend.mitre.org/event/d3f:ScheduledJobEvent/"
     in_subset:
-    - system
+    - system_subset
     from_schema: https://w3id.org/lmodel/ocsf/events
     see_also:
     - https://d3fend.mitre.org/event/d3f:ScheduledJobEvent/
@@ -104387,7 +104387,7 @@ classes:
         value: 9
     description: Script Activity events report when a process executes a script.
     in_subset:
-    - system
+    - system_subset
     from_schema: https://w3id.org/lmodel/ocsf/events
     aliases:
     - Script Activity
@@ -104471,7 +104471,7 @@ classes:
 
       available in the Unmanned Systems category.'
     in_subset:
-    - unmanned_systems
+    - unmanned_systems_subset
     from_schema: https://w3id.org/lmodel/ocsf/events
     aliases:
     - Unmanned Systems
@@ -104622,7 +104622,7 @@ classes:
 
       href=''https://www.faa.gov/about/office_org/headquarters_offices/avs/offices/afx/afs/afs400/afs410/ads-b''>here</a>.'
     in_subset:
-    - unmanned_systems
+    - unmanned_systems_subset
     from_schema: https://w3id.org/lmodel/ocsf/events
     aliases:
     - Airborne Broadcast Activity
@@ -104830,7 +104830,7 @@ classes:
 
       F3411-22a</a>'
     in_subset:
-    - unmanned_systems
+    - unmanned_systems_subset
     from_schema: https://w3id.org/lmodel/ocsf/events
     aliases:
     - Drone Flights Activity
@@ -105069,7 +105069,7 @@ classes:
         value: linux
     description: The attributes that Linux uses to identify user information.
     in_subset:
-    - linux_extension
+    - linux_extension_subset
     from_schema: https://w3id.org/lmodel/ocsf/extensions
     aliases:
     - Linux Users
@@ -105094,7 +105094,7 @@ classes:
         value: linux
     description: Extends the process object to add Linux specific fields
     in_subset:
-    - linux_extension
+    - linux_extension_subset
     from_schema: https://w3id.org/lmodel/ocsf/extensions
     aliases:
     - Linux Process
@@ -105146,7 +105146,7 @@ classes:
         value: macos
     description: The attributes that macOS uses to identify user information.
     in_subset:
-    - macos_extension
+    - macos_extension_subset
     from_schema: https://w3id.org/lmodel/ocsf/extensions
     aliases:
     - macOS Users
@@ -105164,7 +105164,7 @@ classes:
         value: macos
     description: Extends the process object to add macOS specific fields
     in_subset:
-    - macos_extension
+    - macos_extension_subset
     from_schema: https://w3id.org/lmodel/ocsf/extensions
     aliases:
     - macOS Process
@@ -105220,7 +105220,7 @@ classes:
         value: windows
     description: Extends the evidences object to add Windows specific fields
     in_subset:
-    - windows_extension
+    - windows_extension_subset
     from_schema: https://w3id.org/lmodel/ocsf/extensions
     aliases:
     - Windows Evidence Artifacts
@@ -105376,7 +105376,7 @@ classes:
         value: windows
     description: Extends the process object to add Windows specific fields.
     in_subset:
-    - windows_extension
+    - windows_extension_subset
     from_schema: https://w3id.org/lmodel/ocsf/extensions
     aliases:
     - Process
@@ -105445,7 +105445,7 @@ classes:
         value: windows
     description: The resulting evidence information that was queried.
     in_subset:
-    - windows_extension
+    - windows_extension_subset
     from_schema: https://w3id.org/lmodel/ocsf/extensions
     aliases:
     - Query Evidence
@@ -105579,7 +105579,7 @@ classes:
     notes:
     - "D3FEND\u2122 Ontology d3f:WindowsRegistryKey. \u2014\nhttps://d3fend.mitre.org/dao/artifact/d3f:WindowsRegistryKey/"
     in_subset:
-    - windows_extension
+    - windows_extension_subset
     from_schema: https://w3id.org/lmodel/ocsf/extensions
     see_also:
     - https://d3fend.mitre.org/dao/artifact/d3f:WindowsRegistryKey/
@@ -105620,7 +105620,7 @@ classes:
     notes:
     - "D3FEND\u2122 Ontology d3f:WindowsRegistryValue. \u2014\nhttps://d3fend.mitre.org/dao/artifact/d3f:WindowsRegistryValue/"
     in_subset:
-    - windows_extension
+    - windows_extension_subset
     from_schema: https://w3id.org/lmodel/ocsf/extensions
     see_also:
     - https://d3fend.mitre.org/dao/artifact/d3f:WindowsRegistryValue/
@@ -105691,7 +105691,7 @@ classes:
 
       startup criteria and configurations.'
     in_subset:
-    - windows_extension
+    - windows_extension_subset
     from_schema: https://w3id.org/lmodel/ocsf/extensions
     aliases:
     - Startup Item
@@ -105750,7 +105750,7 @@ classes:
 
       such as mutant or timer.'
     in_subset:
-    - windows_extension
+    - windows_extension_subset
     from_schema: https://w3id.org/lmodel/ocsf/extensions
     aliases:
     - Windows Resource
@@ -105813,7 +105813,7 @@ classes:
         value: windows
     description: The Windows Service object describes a Windows service.
     in_subset:
-    - windows_extension
+    - windows_extension_subset
     from_schema: https://w3id.org/lmodel/ocsf/extensions
     aliases:
     - Windows Service
@@ -105926,7 +105926,7 @@ classes:
 
       object populated with <code>File</code> instead. (since 1.5.0)'
     in_subset:
-    - windows_extension
+    - windows_extension_subset
     from_schema: https://w3id.org/lmodel/ocsf/extensions
     aliases:
     - Prefetch Query
@@ -106029,7 +106029,7 @@ classes:
 
       Windows registry key.'
     in_subset:
-    - windows_extension
+    - windows_extension_subset
     from_schema: https://w3id.org/lmodel/ocsf/extensions
     aliases:
     - Registry Key Activity
@@ -106156,7 +106156,7 @@ classes:
 
       object populated with <code>Registry Key</code> instead. (since 1.5.0)'
     in_subset:
-    - windows_extension
+    - windows_extension_subset
     from_schema: https://w3id.org/lmodel/ocsf/extensions
     aliases:
     - Registry Key Query
@@ -106242,7 +106242,7 @@ classes:
 
       Windows registry value.'
     in_subset:
-    - windows_extension
+    - windows_extension_subset
     from_schema: https://w3id.org/lmodel/ocsf/extensions
     aliases:
     - Registry Value Activity
@@ -106334,7 +106334,7 @@ classes:
 
       object populated with <code>Registry Value</code> instead. (since 1.5.0)'
     in_subset:
-    - windows_extension
+    - windows_extension_subset
     from_schema: https://w3id.org/lmodel/ocsf/extensions
     aliases:
     - Registry Value Query
@@ -106420,7 +106420,7 @@ classes:
 
       managed resource object, successful or otherwise.'
     in_subset:
-    - windows_extension
+    - windows_extension_subset
     from_schema: https://w3id.org/lmodel/ocsf/extensions
     aliases:
     - Windows Resource Activity
@@ -106506,7 +106506,7 @@ classes:
 
       Service Control Manager.'
     in_subset:
-    - windows_extension
+    - windows_extension_subset
     from_schema: https://w3id.org/lmodel/ocsf/extensions
     aliases:
     - Windows Service Activity
@@ -106579,7 +106579,7 @@ classes:
     class_uri: ocsf:WindowsServiceActivity
 metamodel_version: 1.7.0
 source_file: ocsf.yaml
-source_file_date: '2026-05-09T06:33:16'
-source_file_size: 6139
-generation_date: '2026-05-09T06:33:26'
+source_file_date: '2026-05-09T21:47:43'
+source_file_size: 6307
+generation_date: '2026-05-09T21:47:55'
 

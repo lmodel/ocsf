@@ -993,25 +993,25 @@
 <td><a href="../confidence/">confidence</a></td>
 <td>0..1 <br/> <a href="../String/">String</a></td>
 <td>The confidence, normalized to the caption of the confidence_id value</td>
-<td><a href="../Finding/">Finding</a>, <a href="../SecurityControlProfile/">SecurityControlProfile</a></td>
+<td><a href="../SecurityControlProfile/">SecurityControlProfile</a>, <a href="../Finding/">Finding</a></td>
 </tr>
 <tr>
 <td><a href="../confidence_id/">confidence_id</a></td>
 <td>0..1 <em>recommended</em> <br/> <a href="../ConfidenceIdEnum/">ConfidenceIdEnum</a></td>
 <td>The normalized confidence refers to the accuracy of the rule that created the</td>
-<td><a href="../Finding/">Finding</a>, <a href="../SecurityControlProfile/">SecurityControlProfile</a></td>
+<td><a href="../SecurityControlProfile/">SecurityControlProfile</a>, <a href="../Finding/">Finding</a></td>
 </tr>
 <tr>
 <td><a href="../confidence_score/">confidence_score</a></td>
 <td>0..1 <br/> <a href="../Integer/">Integer</a></td>
 <td>The confidence score as reported by the event source</td>
-<td><a href="../Finding/">Finding</a>, <a href="../SecurityControlProfile/">SecurityControlProfile</a></td>
+<td><a href="../SecurityControlProfile/">SecurityControlProfile</a>, <a href="../Finding/">Finding</a></td>
 </tr>
 <tr>
 <td><a href="../device/">device</a></td>
 <td>0..1 <em>recommended</em> <br/> <a href="../Device/">Device</a></td>
 <td>Describes the affected device/host</td>
-<td><a href="../Finding/">Finding</a>, <a href="../HostProfile/">HostProfile</a></td>
+<td><a href="../HostProfile/">HostProfile</a>, <a href="../Finding/">Finding</a></td>
 </tr>
 <tr>
 <td><a href="../end_time/">end_time</a></td>
@@ -1319,7 +1319,7 @@
 </table>
 <h2 id="in-subsets">In Subsets</h2>
 <ul>
-<li><a href="../Findings/">Findings</a></li>
+<li><a href="../findings_subset/">findings_subset</a></li>
 </ul>
 <h2 id="aliases">Aliases</h2>
 <ul>
@@ -1415,7 +1415,7 @@
 
 <span class="w">  </span><span class="s">Finding&lt;/code&gt;.'</span>
 <span class="nt">in_subset</span><span class="p">:</span>
-<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">findings</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">findings_subset</span>
 <span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="nt">aliases</span><span class="p">:</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Application Security Posture Finding</span>
@@ -1543,7 +1543,7 @@
 
 <span class="w">  </span><span class="s">Finding&lt;/code&gt;.'</span>
 <span class="nt">in_subset</span><span class="p">:</span>
-<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">findings</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">findings_subset</span>
 <span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ocsf</span>
 <span class="nt">aliases</span><span class="p">:</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Application Security Posture Finding</span>

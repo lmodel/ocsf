@@ -513,18 +513,13 @@ Alias: tls</p>
 </thead>
 <tbody>
 <tr>
-<td><a href="../DnsActivity/">DnsActivity</a></td>
-<td>DNS Activity events report DNS queries and answers as seen on the network</td>
+<td><a href="../HttpActivity/">HttpActivity</a></td>
+<td>HTTP Activity events report HTTP connection and traffic information</td>
 <td>no</td>
 </tr>
 <tr>
-<td><a href="../RdpActivity/">RdpActivity</a></td>
-<td>Remote Desktop Protocol (RDP) Activity events report post-authentication remo...</td>
-<td>no</td>
-</tr>
-<tr>
-<td><a href="../DhcpActivity/">DhcpActivity</a></td>
-<td>DHCP Activity events report MAC to IP assignment via DHCP from a client or</td>
+<td><a href="../NtpActivity/">NtpActivity</a></td>
+<td>The Network Time Protocol (NTP) Activity events report instances of remote</td>
 <td>no</td>
 </tr>
 <tr>
@@ -533,13 +528,8 @@ Alias: tls</p>
 <td>yes</td>
 </tr>
 <tr>
-<td><a href="../NtpActivity/">NtpActivity</a></td>
-<td>The Network Time Protocol (NTP) Activity events report instances of remote</td>
-<td>no</td>
-</tr>
-<tr>
-<td><a href="../NetworkActivity/">NetworkActivity</a></td>
-<td>Network Activity events report network connection and traffic activity</td>
+<td><a href="../DnsActivity/">DnsActivity</a></td>
+<td>DNS Activity events report DNS queries and answers as seen on the network</td>
 <td>no</td>
 </tr>
 <tr>
@@ -548,13 +538,13 @@ Alias: tls</p>
 <td>yes</td>
 </tr>
 <tr>
-<td><a href="../WindowsEvidences/">WindowsEvidences</a></td>
-<td>Extends the evidences object to add Windows specific fields</td>
-<td>no</td>
+<td><a href="../NetworkEvent/">NetworkEvent</a></td>
+<td>Network event is a generic event that defines a set of attributes available i...</td>
+<td>yes</td>
 </tr>
 <tr>
-<td><a href="../TunnelActivity/">TunnelActivity</a></td>
-<td>Tunnel Activity events report secure tunnel establishment (such as VPN),</td>
+<td><a href="../FtpActivity/">FtpActivity</a></td>
+<td>File Transfer Protocol (FTP) Activity events report file transfers between a</td>
 <td>no</td>
 </tr>
 <tr>
@@ -563,38 +553,23 @@ Alias: tls</p>
 <td>no</td>
 </tr>
 <tr>
-<td><a href="../SmbActivity/">SmbActivity</a></td>
-<td>Server Message Block (SMB) Protocol Activity events report client/server</td>
-<td>no</td>
-</tr>
-<tr>
-<td><a href="../DroneFlightsActivity/">DroneFlightsActivity</a></td>
-<td>Drone Flights Activity events report the activity of Unmanned Aerial Systems</td>
-<td>no</td>
-</tr>
-<tr>
-<td><a href="../SshActivity/">SshActivity</a></td>
-<td>SSH Activity events report remote client connections to a server using the</td>
-<td>no</td>
-</tr>
-<tr>
 <td><a href="../NetworkFileActivity/">NetworkFileActivity</a></td>
 <td>Network File Activity events report file activities traversing the network,</td>
 <td>no</td>
 </tr>
 <tr>
-<td><a href="../NetworkEvent/">NetworkEvent</a></td>
-<td>Network event is a generic event that defines a set of attributes available i...</td>
-<td>yes</td>
-</tr>
-<tr>
-<td><a href="../HttpActivity/">HttpActivity</a></td>
-<td>HTTP Activity events report HTTP connection and traffic information</td>
+<td><a href="../SmbActivity/">SmbActivity</a></td>
+<td>Server Message Block (SMB) Protocol Activity events report client/server</td>
 <td>no</td>
 </tr>
 <tr>
-<td><a href="../FtpActivity/">FtpActivity</a></td>
-<td>File Transfer Protocol (FTP) Activity events report file transfers between a</td>
+<td><a href="../RdpActivity/">RdpActivity</a></td>
+<td>Remote Desktop Protocol (RDP) Activity events report post-authentication remo...</td>
+<td>no</td>
+</tr>
+<tr>
+<td><a href="../NetworkActivity/">NetworkActivity</a></td>
+<td>Network Activity events report network connection and traffic activity</td>
 <td>no</td>
 </tr>
 <tr>
@@ -606,6 +581,31 @@ Alias: tls</p>
 <td><a href="../Evidences/">Evidences</a></td>
 <td>A collection of evidence artifacts associated to the activity/activities that</td>
 <td>yes</td>
+</tr>
+<tr>
+<td><a href="../SshActivity/">SshActivity</a></td>
+<td>SSH Activity events report remote client connections to a server using the</td>
+<td>no</td>
+</tr>
+<tr>
+<td><a href="../TunnelActivity/">TunnelActivity</a></td>
+<td>Tunnel Activity events report secure tunnel establishment (such as VPN),</td>
+<td>no</td>
+</tr>
+<tr>
+<td><a href="../DroneFlightsActivity/">DroneFlightsActivity</a></td>
+<td>Drone Flights Activity events report the activity of Unmanned Aerial Systems</td>
+<td>no</td>
+</tr>
+<tr>
+<td><a href="../WindowsEvidences/">WindowsEvidences</a></td>
+<td>Extends the evidences object to add Windows specific fields</td>
+<td>no</td>
+</tr>
+<tr>
+<td><a href="../DhcpActivity/">DhcpActivity</a></td>
+<td>DHCP Activity events report MAC to IP assignment via DHCP from a client or</td>
+<td>no</td>
 </tr>
 </tbody>
 </table>
