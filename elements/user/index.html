@@ -513,73 +513,13 @@ Alias: user</p>
 </thead>
 <tbody>
 <tr>
-<td><a href="../IamAnalysisFinding/">IamAnalysisFinding</a></td>
-<td>This finding represents an IAM analysis result, which evaluates IAM policies,</td>
-<td>yes</td>
-</tr>
-<tr>
-<td><a href="../UserInventory/">UserInventory</a></td>
-<td>User Inventory Info events report user inventory data that is either logged o...</td>
-<td>yes</td>
-</tr>
-<tr>
-<td><a href="../WindowsProcess/">WindowsProcess</a></td>
-<td>Extends the process object to add Windows specific fields</td>
-<td>no</td>
-</tr>
-<tr>
-<td><a href="../AccountChange/">AccountChange</a></td>
-<td>Account Change events report when specific user account management tasks are</td>
-<td>yes</td>
-</tr>
-<tr>
 <td><a href="../MacosProcess/">MacosProcess</a></td>
 <td>Extends the process object to add macOS specific fields</td>
 <td>no</td>
 </tr>
 <tr>
-<td><a href="../WindowsQueryEvidence/">WindowsQueryEvidence</a></td>
-<td>The resulting evidence information that was queried</td>
-<td>no</td>
-</tr>
-<tr>
-<td><a href="../LinuxProcess/">LinuxProcess</a></td>
-<td>Extends the process object to add Linux specific fields</td>
-<td>no</td>
-</tr>
-<tr>
-<td><a href="../UserQuery/">UserQuery</a></td>
-<td>User Query events report user data that have been discovered, queried, polled</td>
-<td>yes</td>
-</tr>
-<tr>
-<td><a href="../TunnelActivity/">TunnelActivity</a></td>
-<td>Tunnel Activity events report secure tunnel establishment (such as VPN),</td>
-<td>yes</td>
-</tr>
-<tr>
-<td><a href="../Job/">Job</a></td>
-<td>The Job object provides information about a scheduled job or task, including</td>
-<td>yes</td>
-</tr>
-<tr>
 <td><a href="../RdpActivity/">RdpActivity</a></td>
 <td>Remote Desktop Protocol (RDP) Activity events report post-authentication remo...</td>
-<td>yes</td>
-</tr>
-<tr>
-<td><a href="../Process/">Process</a></td>
-<td>The Process object describes a running instance of a launched program</td>
-<td>yes</td>
-</tr>
-<tr>
-<td><a href="../GroupManagement/">GroupManagement</a></td>
-<td>Group Management events report management updates to a group, including updat...</td>
-<td>yes</td>
-</tr>
-<tr>
-<td><a href="../Authentication/">Authentication</a></td>
-<td>Authentication events report authentication session activities, including use...</td>
 <td>yes</td>
 </tr>
 <tr>
@@ -588,23 +528,13 @@ Alias: user</p>
 <td>yes</td>
 </tr>
 <tr>
-<td><a href="../QueryEvidence/">QueryEvidence</a></td>
-<td>The specific resulting evidence information that was queried or discovered</td>
-<td>yes</td>
-</tr>
-<tr>
-<td><a href="../Evidences/">Evidences</a></td>
-<td>A collection of evidence artifacts associated to the activity/activities that</td>
-<td>yes</td>
-</tr>
-<tr>
 <td><a href="../Actor/">Actor</a></td>
 <td>The Actor object contains details about the user, role, application, service,</td>
 <td>yes</td>
 </tr>
 <tr>
-<td><a href="../UserAccess/">UserAccess</a></td>
-<td>User Access Management events report management updates to a user's privilege...</td>
+<td><a href="../Process/">Process</a></td>
+<td>The Process object describes a running instance of a launched program</td>
 <td>yes</td>
 </tr>
 <tr>
@@ -616,6 +546,76 @@ Alias: user</p>
 <td><a href="../WindowsEvidences/">WindowsEvidences</a></td>
 <td>Extends the evidences object to add Windows specific fields</td>
 <td>no</td>
+</tr>
+<tr>
+<td><a href="../IamAnalysisFinding/">IamAnalysisFinding</a></td>
+<td>This finding represents an IAM analysis result, which evaluates IAM policies,</td>
+<td>yes</td>
+</tr>
+<tr>
+<td><a href="../TunnelActivity/">TunnelActivity</a></td>
+<td>Tunnel Activity events report secure tunnel establishment (such as VPN),</td>
+<td>yes</td>
+</tr>
+<tr>
+<td><a href="../UserQuery/">UserQuery</a></td>
+<td>User Query events report user data that have been discovered, queried, polled</td>
+<td>yes</td>
+</tr>
+<tr>
+<td><a href="../WindowsProcess/">WindowsProcess</a></td>
+<td>Extends the process object to add Windows specific fields</td>
+<td>no</td>
+</tr>
+<tr>
+<td><a href="../LinuxProcess/">LinuxProcess</a></td>
+<td>Extends the process object to add Linux specific fields</td>
+<td>no</td>
+</tr>
+<tr>
+<td><a href="../GroupManagement/">GroupManagement</a></td>
+<td>Group Management events report management updates to a group, including updat...</td>
+<td>yes</td>
+</tr>
+<tr>
+<td><a href="../QueryEvidence/">QueryEvidence</a></td>
+<td>The specific resulting evidence information that was queried or discovered</td>
+<td>yes</td>
+</tr>
+<tr>
+<td><a href="../UserAccess/">UserAccess</a></td>
+<td>User Access Management events report management updates to a user's privilege...</td>
+<td>yes</td>
+</tr>
+<tr>
+<td><a href="../UserInventory/">UserInventory</a></td>
+<td>User Inventory Info events report user inventory data that is either logged o...</td>
+<td>yes</td>
+</tr>
+<tr>
+<td><a href="../WindowsQueryEvidence/">WindowsQueryEvidence</a></td>
+<td>The resulting evidence information that was queried</td>
+<td>no</td>
+</tr>
+<tr>
+<td><a href="../Authentication/">Authentication</a></td>
+<td>Authentication events report authentication session activities, including use...</td>
+<td>yes</td>
+</tr>
+<tr>
+<td><a href="../Job/">Job</a></td>
+<td>The Job object provides information about a scheduled job or task, including</td>
+<td>yes</td>
+</tr>
+<tr>
+<td><a href="../AccountChange/">AccountChange</a></td>
+<td>Account Change events report when specific user account management tasks are</td>
+<td>yes</td>
+</tr>
+<tr>
+<td><a href="../Evidences/">Evidences</a></td>
+<td>A collection of evidence artifacts associated to the activity/activities that</td>
+<td>yes</td>
 </tr>
 </tbody>
 </table>
