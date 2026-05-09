@@ -16,7 +16,7 @@ see_also:
   - https://github.com/ocsf/ocsf-schema
 
 annotations:
-  copyright: © OCSF a Series of LF Projects, LLC
+  copyright: Source schema © OCSF a Series of LF Projects, LLC
 
 prefixes:
   ocsf: https://w3id.org/lmodel/ocsf/

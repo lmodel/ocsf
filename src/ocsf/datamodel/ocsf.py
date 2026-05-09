@@ -1,5 +1,5 @@
 # Auto generated from ocsf.yaml by pythongen.py version: 0.0.1
-# Generation date: 2026-05-09T01:05:33
+# Generation date: 2026-05-09T02:02:38
 # Schema: ocsf
 #
 # id: https://w3id.org/lmodel/ocsf
@@ -300,7 +300,7 @@ class Observable(Object):
     def __post_init__(self, *_: str, **kwargs: Any):
         if self._is_empty(self.type_id):
             self.MissingRequiredField("type_id")
-        if not isinstance(self.type_id, ObservableTypeIdEnum):
+        if isinstance(self.type_id, str):
             self.type_id = ObservableTypeIdEnum(self.type_id)
 
         if self.event_uid is not None and not isinstance(self.event_uid, str):
@@ -446,7 +446,7 @@ class Os(Object):
 
         if self._is_empty(self.type_id):
             self.MissingRequiredField("type_id")
-        if not isinstance(self.type_id, OsTypeIdEnum):
+        if isinstance(self.type_id, str):
             self.type_id = OsTypeIdEnum(self.type_id)
 
         if self.build is not None and not isinstance(self.build, str):
@@ -552,7 +552,7 @@ class Osint(Object):
     def __post_init__(self, *_: str, **kwargs: Any):
         if self._is_empty(self.type_id):
             self.MissingRequiredField("type_id")
-        if not isinstance(self.type_id, OsintTypeIdEnum):
+        if isinstance(self.type_id, str):
             self.type_id = OsintTypeIdEnum(self.type_id)
 
         if self._is_empty(self.value):
@@ -581,7 +581,7 @@ class Osint(Object):
         if self.confidence is not None and not isinstance(self.confidence, str):
             self.confidence = str(self.confidence)
 
-        if self.confidence_id is not None and not isinstance(self.confidence_id, ConfidenceIdEnum):
+        if isinstance(self.confidence_id, str):
             self.confidence_id = ConfidenceIdEnum(self.confidence_id)
 
         if self.created_time is not None and not isinstance(self.created_time, TimestampT):
@@ -599,7 +599,7 @@ class Osint(Object):
         if self.detection_pattern_type is not None and not isinstance(self.detection_pattern_type, str):
             self.detection_pattern_type = str(self.detection_pattern_type)
 
-        if self.detection_pattern_type_id is not None and not isinstance(self.detection_pattern_type_id, DetectionPatternTypeIdEnum):
+        if isinstance(self.detection_pattern_type_id, str):
             self.detection_pattern_type_id = DetectionPatternTypeIdEnum(self.detection_pattern_type_id)
 
         if self.email is not None and not isinstance(self.email, Email):
@@ -656,7 +656,7 @@ class Osint(Object):
         if self.severity is not None and not isinstance(self.severity, str):
             self.severity = str(self.severity)
 
-        if self.severity_id is not None and not isinstance(self.severity_id, SeverityIdEnum):
+        if isinstance(self.severity_id, str):
             self.severity_id = SeverityIdEnum(self.severity_id)
 
         self._normalize_inlined_as_list(slot_name="signatures", slot_type=DigitalSignature, key_name="algorithm_id", keyed=False)
@@ -674,7 +674,7 @@ class Osint(Object):
         if self.threat_actor is not None and not isinstance(self.threat_actor, ThreatActor):
             self.threat_actor = ThreatActor(**as_dict(self.threat_actor))
 
-        if self.tlp is not None and not isinstance(self.tlp, OsintTlpEnum):
+        if isinstance(self.tlp, str):
             self.tlp = OsintTlpEnum(self.tlp)
 
         if self.type is not None and not isinstance(self.type, str):
@@ -776,7 +776,7 @@ class Package(Object):
         if self.type is not None and not isinstance(self.type, str):
             self.type = str(self.type)
 
-        if self.type_id is not None and not isinstance(self.type_id, PackageTypeIdEnum):
+        if isinstance(self.type_id, str):
             self.type_id = PackageTypeIdEnum(self.type_id)
 
         if self.uid is not None and not isinstance(self.uid, str):
@@ -824,7 +824,7 @@ class Packet(Object):
         if self.encoding is not None and not isinstance(self.encoding, str):
             self.encoding = str(self.encoding)
 
-        if self.encoding_id is not None and not isinstance(self.encoding_id, PacketEncodingIdEnum):
+        if isinstance(self.encoding_id, str):
             self.encoding_id = PacketEncodingIdEnum(self.encoding_id)
 
         if self.end_offset is not None and not isinstance(self.end_offset, int):
@@ -833,7 +833,7 @@ class Packet(Object):
         if self.format is not None and not isinstance(self.format, str):
             self.format = str(self.format)
 
-        if self.format_id is not None and not isinstance(self.format_id, PacketFormatIdEnum):
+        if isinstance(self.format_id, str):
             self.format_id = PacketFormatIdEnum(self.format_id)
 
         if self.sequence_number is not None and not isinstance(self.sequence_number, int):
@@ -842,7 +842,7 @@ class Packet(Object):
         if self.source is not None and not isinstance(self.source, str):
             self.source = str(self.source)
 
-        if self.source_id is not None and not isinstance(self.source_id, PacketSourceIdEnum):
+        if isinstance(self.source_id, str):
             self.source_id = PacketSourceIdEnum(self.source_id)
 
         if self.start_offset is not None and not isinstance(self.start_offset, int):
@@ -1031,7 +1031,7 @@ class PrivilegeInfo(Object):
         if self.type is not None and not isinstance(self.type, str):
             self.type = str(self.type)
 
-        if self.type_id is not None and not isinstance(self.type_id, PrivilegeInfoTypeIdEnum):
+        if isinstance(self.type_id, str):
             self.type_id = PrivilegeInfoTypeIdEnum(self.type_id)
 
         super().__post_init__(**kwargs)
@@ -1110,7 +1110,7 @@ class QueryEvidence(OcsfObject):
     def __post_init__(self, *_: str, **kwargs: Any):
         if self._is_empty(self.query_type_id):
             self.MissingRequiredField("query_type_id")
-        if not isinstance(self.query_type_id, QueryEvidenceQueryTypeIdEnum):
+        if isinstance(self.query_type_id, str):
             self.query_type_id = QueryEvidenceQueryTypeIdEnum(self.query_type_id)
 
         if self.connection_info is not None and not isinstance(self.connection_info, NetworkConnectionInfo):
@@ -1159,7 +1159,7 @@ class QueryEvidence(OcsfObject):
         if self.state is not None and not isinstance(self.state, str):
             self.state = str(self.state)
 
-        if self.tcp_state_id is not None and not isinstance(self.tcp_state_id, TcpStateIdEnum):
+        if isinstance(self.tcp_state_id, str):
             self.tcp_state_id = TcpStateIdEnum(self.tcp_state_id)
 
         if self.user is not None and not isinstance(self.user, User):
@@ -1248,7 +1248,7 @@ class RelatedEvent(Object):
         if self.severity is not None and not isinstance(self.severity, str):
             self.severity = str(self.severity)
 
-        if self.severity_id is not None and not isinstance(self.severity_id, SeverityIdEnum):
+        if isinstance(self.severity_id, str):
             self.severity_id = SeverityIdEnum(self.severity_id)
 
         if self.status is not None and not isinstance(self.status, str):
@@ -1343,7 +1343,7 @@ class Reputation(Object):
 
         if self._is_empty(self.score_id):
             self.MissingRequiredField("score_id")
-        if not isinstance(self.score_id, ScoreIdEnum):
+        if isinstance(self.score_id, str):
             self.score_id = ScoreIdEnum(self.score_id)
 
         if self.provider is not None and not isinstance(self.provider, str):
@@ -1548,7 +1548,7 @@ class Sbom(Object):
         if self.type is not None and not isinstance(self.type, str):
             self.type = str(self.type)
 
-        if self.type_id is not None and not isinstance(self.type_id, SbomTypeIdEnum):
+        if isinstance(self.type_id, str):
             self.type_id = SbomTypeIdEnum(self.type_id)
 
         if self.uid is not None and not isinstance(self.uid, str):
@@ -1603,7 +1603,7 @@ class Scim(Object):
         if self.auth_protocol is not None and not isinstance(self.auth_protocol, str):
             self.auth_protocol = str(self.auth_protocol)
 
-        if self.auth_protocol_id is not None and not isinstance(self.auth_protocol_id, AuthProtocolIdEnum):
+        if isinstance(self.auth_protocol_id, str):
             self.auth_protocol_id = AuthProtocolIdEnum(self.auth_protocol_id)
 
         if self.created_time is not None and not isinstance(self.created_time, TimestampT):
@@ -1642,7 +1642,7 @@ class Scim(Object):
         if self.state is not None and not isinstance(self.state, str):
             self.state = str(self.state)
 
-        if self.state_id is not None and not isinstance(self.state_id, ScimStateIdEnum):
+        if isinstance(self.state_id, str):
             self.state_id = ScimStateIdEnum(self.state_id)
 
         if self.uid is not None and not isinstance(self.uid, str):
@@ -1697,7 +1697,7 @@ class Script(Object):
 
         if self._is_empty(self.type_id):
             self.MissingRequiredField("type_id")
-        if not isinstance(self.type_id, ScriptTypeIdEnum):
+        if isinstance(self.type_id, str):
             self.type_id = ScriptTypeIdEnum(self.type_id)
 
         if self.file is not None and not isinstance(self.file, File):
@@ -1740,7 +1740,7 @@ class SecurityState(Object):
         if self.state is not None and not isinstance(self.state, str):
             self.state = str(self.state)
 
-        if self.state_id is not None and not isinstance(self.state_id, SecurityStateStateIdEnum):
+        if isinstance(self.state_id, str):
             self.state_id = SecurityStateStateIdEnum(self.state_id)
 
         super().__post_init__(**kwargs)
@@ -1928,13 +1928,13 @@ class SoftwareComponent(Object):
         if self.relationship is not None and not isinstance(self.relationship, str):
             self.relationship = str(self.relationship)
 
-        if self.relationship_id is not None and not isinstance(self.relationship_id, RelationshipIdEnum):
+        if isinstance(self.relationship_id, str):
             self.relationship_id = RelationshipIdEnum(self.relationship_id)
 
         if self.type is not None and not isinstance(self.type, str):
             self.type = str(self.type)
 
-        if self.type_id is not None and not isinstance(self.type_id, SoftwareComponentTypeIdEnum):
+        if isinstance(self.type_id, str):
             self.type_id = SoftwareComponentTypeIdEnum(self.type_id)
 
         super().__post_init__(**kwargs)
@@ -2038,7 +2038,7 @@ class Sso(Object):
         if self.auth_protocol is not None and not isinstance(self.auth_protocol, str):
             self.auth_protocol = str(self.auth_protocol)
 
-        if self.auth_protocol_id is not None and not isinstance(self.auth_protocol_id, AuthProtocolIdEnum):
+        if isinstance(self.auth_protocol_id, str):
             self.auth_protocol_id = AuthProtocolIdEnum(self.auth_protocol_id)
 
         if self.certificate is not None and not isinstance(self.certificate, Certificate):
@@ -2118,7 +2118,7 @@ class StartupItem(OcsfObject):
 
         if self._is_empty(self.start_type_id):
             self.MissingRequiredField("start_type_id")
-        if not isinstance(self.start_type_id, StartTypeIdEnum):
+        if isinstance(self.start_type_id, str):
             self.start_type_id = StartTypeIdEnum(self.start_type_id)
 
         if self.driver is not None and not isinstance(self.driver, KernelDriver):
@@ -2141,7 +2141,7 @@ class StartupItem(OcsfObject):
         if self.run_state is not None and not isinstance(self.run_state, str):
             self.run_state = str(self.run_state)
 
-        if self.run_state_id is not None and not isinstance(self.run_state_id, StartupItemRunStateIdEnum):
+        if isinstance(self.run_state_id, str):
             self.run_state_id = StartupItemRunStateIdEnum(self.run_state_id)
 
         if self.start_type is not None and not isinstance(self.start_type, str):
@@ -2150,7 +2150,7 @@ class StartupItem(OcsfObject):
         if self.type is not None and not isinstance(self.type, str):
             self.type = str(self.type)
 
-        if self.type_id is not None and not isinstance(self.type_id, StartupItemTypeIdEnum):
+        if isinstance(self.type_id, str):
             self.type_id = StartupItemTypeIdEnum(self.type_id)
 
         super().__post_init__(**kwargs)
@@ -2181,7 +2181,7 @@ class ThreatActor(Object):
         if self.type is not None and not isinstance(self.type, str):
             self.type = str(self.type)
 
-        if self.type_id is not None and not isinstance(self.type_id, ThreatActorTypeIdEnum):
+        if isinstance(self.type_id, str):
             self.type_id = ThreatActorTypeIdEnum(self.type_id)
 
         super().__post_init__(**kwargs)
@@ -2220,7 +2220,7 @@ class Ticket(Object):
             self.status_details = [self.status_details] if self.status_details is not None else []
         self.status_details = [v if isinstance(v, str) else str(v) for v in self.status_details]
 
-        if self.status_id is not None and not isinstance(self.status_id, TicketStatusIdEnum):
+        if isinstance(self.status_id, str):
             self.status_id = TicketStatusIdEnum(self.status_id)
 
         if self.title is not None and not isinstance(self.title, str):
@@ -2229,7 +2229,7 @@ class Ticket(Object):
         if self.type is not None and not isinstance(self.type, str):
             self.type = str(self.type)
 
-        if self.type_id is not None and not isinstance(self.type_id, TicketTypeIdEnum):
+        if isinstance(self.type_id, str):
             self.type_id = TicketTypeIdEnum(self.type_id)
 
         if self.uid is not None and not isinstance(self.uid, str):
@@ -2302,7 +2302,7 @@ class Timespan(Object):
         if self.type is not None and not isinstance(self.type, str):
             self.type = str(self.type)
 
-        if self.type_id is not None and not isinstance(self.type_id, TimespanTypeIdEnum):
+        if isinstance(self.type_id, str):
             self.type_id = TimespanTypeIdEnum(self.type_id)
 
         super().__post_init__(**kwargs)
@@ -2408,7 +2408,7 @@ class TlsExtension(Object):
     def __post_init__(self, *_: str, **kwargs: Any):
         if self._is_empty(self.type_id):
             self.MissingRequiredField("type_id")
-        if not isinstance(self.type_id, TlsExtensionTypeIdEnum):
+        if isinstance(self.type_id, str):
             self.type_id = TlsExtensionTypeIdEnum(self.type_id)
 
         if self.data is not None and not isinstance(self.data, str):
@@ -2478,7 +2478,7 @@ class Token(Object):
         if self.type is not None and not isinstance(self.type, str):
             self.type = str(self.type)
 
-        if self.type_id is not None and not isinstance(self.type_id, TokenTypeIdEnum):
+        if isinstance(self.type_id, str):
             self.type_id = TokenTypeIdEnum(self.type_id)
 
         if self.uid is not None and not isinstance(self.uid, str):
@@ -2632,7 +2632,7 @@ class VendorAttributes(Object):
         if self.severity is not None and not isinstance(self.severity, str):
             self.severity = str(self.severity)
 
-        if self.severity_id is not None and not isinstance(self.severity_id, SeverityIdEnum):
+        if isinstance(self.severity_id, str):
             self.severity_id = SeverityIdEnum(self.severity_id)
 
         super().__post_init__(**kwargs)
@@ -2728,7 +2728,7 @@ class Vulnerability(Object):
         if self.fix_coverage is not None and not isinstance(self.fix_coverage, str):
             self.fix_coverage = str(self.fix_coverage)
 
-        if self.fix_coverage_id is not None and not isinstance(self.fix_coverage_id, VulnerabilityFixCoverageIdEnum):
+        if isinstance(self.fix_coverage_id, str):
             self.fix_coverage_id = VulnerabilityFixCoverageIdEnum(self.fix_coverage_id)
 
         if self.is_exploit_available is not None and not isinstance(self.is_exploit_available, Bool):
@@ -2814,7 +2814,7 @@ class Whois(Object):
         if self.dnssec_status is not None and not isinstance(self.dnssec_status, str):
             self.dnssec_status = str(self.dnssec_status)
 
-        if self.dnssec_status_id is not None and not isinstance(self.dnssec_status_id, DnssecStatusIdEnum):
+        if isinstance(self.dnssec_status_id, str):
             self.dnssec_status_id = DnssecStatusIdEnum(self.dnssec_status_id)
 
         if self.domain is not None and not isinstance(self.domain, str):
@@ -3082,7 +3082,7 @@ class Account(Entity):
         if self.type is not None and not isinstance(self.type, str):
             self.type = str(self.type)
 
-        if self.type_id is not None and not isinstance(self.type_id, AccountTypeIdEnum):
+        if isinstance(self.type_id, str):
             self.type_id = AccountTypeIdEnum(self.type_id)
 
         if self.uid is not None and not isinstance(self.uid, str):
@@ -3180,7 +3180,7 @@ class AdditionalRestriction(Object):
         if self.status is not None and not isinstance(self.status, str):
             self.status = str(self.status)
 
-        if self.status_id is not None and not isinstance(self.status_id, AdditionalRestrictionStatusIdEnum):
+        if isinstance(self.status_id, str):
             self.status_id = AdditionalRestrictionStatusIdEnum(self.status_id)
 
         super().__post_init__(**kwargs)
@@ -3244,7 +3244,7 @@ class Advisory(Object):
         if self.install_state is not None and not isinstance(self.install_state, str):
             self.install_state = str(self.install_state)
 
-        if self.install_state_id is not None and not isinstance(self.install_state_id, InstallStateIdEnum):
+        if isinstance(self.install_state_id, str):
             self.install_state_id = InstallStateIdEnum(self.install_state_id)
 
         if self.is_superseded is not None and not isinstance(self.is_superseded, Bool):
@@ -3401,7 +3401,7 @@ class Agent(Object):
         if self.type is not None and not isinstance(self.type, str):
             self.type = str(self.type)
 
-        if self.type_id is not None and not isinstance(self.type_id, AgentTypeIdEnum):
+        if isinstance(self.type_id, str):
             self.type_id = AgentTypeIdEnum(self.type_id)
 
         if self.uid is not None and not isinstance(self.uid, str):
@@ -3560,7 +3560,7 @@ class Analytic(Entity):
     def __post_init__(self, *_: str, **kwargs: Any):
         if self._is_empty(self.type_id):
             self.MissingRequiredField("type_id")
-        if not isinstance(self.type_id, AnalyticTypeIdEnum):
+        if isinstance(self.type_id, str):
             self.type_id = AnalyticTypeIdEnum(self.type_id)
 
         if self.algorithm is not None and not isinstance(self.algorithm, str):
@@ -3580,7 +3580,7 @@ class Analytic(Entity):
         if self.state is not None and not isinstance(self.state, str):
             self.state = str(self.state)
 
-        if self.state_id is not None and not isinstance(self.state_id, AnalyticStateIdEnum):
+        if isinstance(self.state_id, str):
             self.state_id = AnalyticStateIdEnum(self.state_id)
 
         if self.type is not None and not isinstance(self.type, str):
@@ -3759,7 +3759,7 @@ class ApplicationObject(Object):
         if self.risk_level is not None and not isinstance(self.risk_level, str):
             self.risk_level = str(self.risk_level)
 
-        if self.risk_level_id is not None and not isinstance(self.risk_level_id, RiskLevelIdEnum):
+        if isinstance(self.risk_level_id, str):
             self.risk_level_id = RiskLevelIdEnum(self.risk_level_id)
 
         if self.risk_score is not None and not isinstance(self.risk_score, int):
@@ -3911,7 +3911,7 @@ class AuthFactor(Object):
     def __post_init__(self, *_: str, **kwargs: Any):
         if self._is_empty(self.factor_type_id):
             self.MissingRequiredField("factor_type_id")
-        if not isinstance(self.factor_type_id, FactorTypeIdEnum):
+        if isinstance(self.factor_type_id, str):
             self.factor_type_id = FactorTypeIdEnum(self.factor_type_id)
 
         if self.device is not None and not isinstance(self.device, Device):
@@ -3999,9 +3999,6 @@ class AuthenticationToken(Token):
         if self.type is not None and not isinstance(self.type, str):
             self.type = str(self.type)
 
-        if self.type_id is not None and not isinstance(self.type_id, TypeIdEnum):
-            self.type_id = TypeIdEnum(self.type_id)
-
         if self.created_time is not None and not isinstance(self.created_time, TimestampT):
             self.created_time = TimestampT(self.created_time)
 
@@ -4014,7 +4011,7 @@ class AuthenticationToken(Token):
         if self.type is not None and not isinstance(self.type, str):
             self.type = str(self.type)
 
-        if self.type_id is not None and not isinstance(self.type_id, AuthenticationTokenTypeIdEnum):
+        if isinstance(self.type_id, str):
             self.type_id = AuthenticationTokenTypeIdEnum(self.type_id)
 
         super().__post_init__(**kwargs)
@@ -4242,7 +4239,7 @@ class Check(Object):
         if self.severity is not None and not isinstance(self.severity, str):
             self.severity = str(self.severity)
 
-        if self.severity_id is not None and not isinstance(self.severity_id, CheckSeverityIdEnum):
+        if isinstance(self.severity_id, str):
             self.severity_id = CheckSeverityIdEnum(self.severity_id)
 
         if not isinstance(self.standards, list):
@@ -4252,7 +4249,7 @@ class Check(Object):
         if self.status is not None and not isinstance(self.status, str):
             self.status = str(self.status)
 
-        if self.status_id is not None and not isinstance(self.status_id, CheckStatusIdEnum):
+        if isinstance(self.status_id, str):
             self.status_id = CheckStatusIdEnum(self.status_id)
 
         if self.uid is not None and not isinstance(self.uid, str):
@@ -4565,7 +4562,7 @@ class Compliance(Object):
             self.status_details = [self.status_details] if self.status_details is not None else []
         self.status_details = [v if isinstance(v, str) else str(v) for v in self.status_details]
 
-        if self.status_id is not None and not isinstance(self.status_id, ComplianceStatusIdEnum):
+        if isinstance(self.status_id, str):
             self.status_id = ComplianceStatusIdEnum(self.status_id)
 
         super().__post_init__(**kwargs)
@@ -4751,7 +4748,7 @@ class Cvss(Object):
         if not isinstance(self.version, str):
             self.version = str(self.version)
 
-        if self.depth is not None and not isinstance(self.depth, DepthEnum):
+        if isinstance(self.depth, str):
             self.depth = DepthEnum(self.depth)
 
         self._normalize_inlined_as_list(slot_name="metrics", slot_type=Metric, key_name="name", keyed=False)
@@ -4942,7 +4939,7 @@ class DataClassification(Object):
         if self.category is not None and not isinstance(self.category, str):
             self.category = str(self.category)
 
-        if self.category_id is not None and not isinstance(self.category_id, DataClassificationCategoryIdEnum):
+        if isinstance(self.category_id, str):
             self.category_id = DataClassificationCategoryIdEnum(self.category_id)
 
         if self.classifier_details is not None and not isinstance(self.classifier_details, ClassifierDetails):
@@ -4951,7 +4948,7 @@ class DataClassification(Object):
         if self.confidentiality is not None and not isinstance(self.confidentiality, str):
             self.confidentiality = str(self.confidentiality)
 
-        if self.confidentiality_id is not None and not isinstance(self.confidentiality_id, ConfidentialityIdEnum):
+        if isinstance(self.confidentiality_id, str):
             self.confidentiality_id = ConfidentialityIdEnum(self.confidentiality_id)
 
         if not isinstance(self.discovery_details, list):
@@ -4974,7 +4971,7 @@ class DataClassification(Object):
             self.status_details = [self.status_details] if self.status_details is not None else []
         self.status_details = [v if isinstance(v, str) else str(v) for v in self.status_details]
 
-        if self.status_id is not None and not isinstance(self.status_id, DataClassificationStatusIdEnum):
+        if isinstance(self.status_id, str):
             self.status_id = DataClassificationStatusIdEnum(self.status_id)
 
         if self.total is not None and not isinstance(self.total, int):
@@ -5012,7 +5009,7 @@ class DataSecurity(DataClassification):
         if self.data_lifecycle_state is not None and not isinstance(self.data_lifecycle_state, str):
             self.data_lifecycle_state = str(self.data_lifecycle_state)
 
-        if self.data_lifecycle_state_id is not None and not isinstance(self.data_lifecycle_state_id, DataLifecycleStateIdEnum):
+        if isinstance(self.data_lifecycle_state_id, str):
             self.data_lifecycle_state_id = DataLifecycleStateIdEnum(self.data_lifecycle_state_id)
 
         if self.detection_pattern is not None and not isinstance(self.detection_pattern, str):
@@ -5021,7 +5018,7 @@ class DataSecurity(DataClassification):
         if self.detection_system is not None and not isinstance(self.detection_system, str):
             self.detection_system = str(self.detection_system)
 
-        if self.detection_system_id is not None and not isinstance(self.detection_system_id, DetectionSystemIdEnum):
+        if isinstance(self.detection_system_id, str):
             self.detection_system_id = DetectionSystemIdEnum(self.detection_system_id)
 
         if self.pattern_match is not None and not isinstance(self.pattern_match, str):
@@ -5066,7 +5063,7 @@ class Database(Entity):
     def __post_init__(self, *_: str, **kwargs: Any):
         if self._is_empty(self.type_id):
             self.MissingRequiredField("type_id")
-        if not isinstance(self.type_id, DatabaseTypeIdEnum):
+        if isinstance(self.type_id, str):
             self.type_id = DatabaseTypeIdEnum(self.type_id)
 
         if self.created_time is not None and not isinstance(self.created_time, TimestampT):
@@ -5160,7 +5157,7 @@ class Databucket(Resource):
     def __post_init__(self, *_: str, **kwargs: Any):
         if self._is_empty(self.type_id):
             self.MissingRequiredField("type_id")
-        if not isinstance(self.type_id, DatabucketTypeIdEnum):
+        if isinstance(self.type_id, str):
             self.type_id = DatabucketTypeIdEnum(self.type_id)
 
         if self._is_empty(self.cloud):
@@ -5362,7 +5359,7 @@ class DeviceHwInfo(Object):
         if self.cpu_architecture is not None and not isinstance(self.cpu_architecture, str):
             self.cpu_architecture = str(self.cpu_architecture)
 
-        if self.cpu_architecture_id is not None and not isinstance(self.cpu_architecture_id, CpuArchitectureIdEnum):
+        if isinstance(self.cpu_architecture_id, str):
             self.cpu_architecture_id = CpuArchitectureIdEnum(self.cpu_architecture_id)
 
         if self.cpu_bits is not None and not isinstance(self.cpu_bits, int):
@@ -5434,7 +5431,7 @@ class DigitalSignature(Object):
     def __post_init__(self, *_: str, **kwargs: Any):
         if self._is_empty(self.algorithm_id):
             self.MissingRequiredField("algorithm_id")
-        if not isinstance(self.algorithm_id, DigitalSignatureAlgorithmIdEnum):
+        if isinstance(self.algorithm_id, str):
             self.algorithm_id = DigitalSignatureAlgorithmIdEnum(self.algorithm_id)
 
         if self.algorithm is not None and not isinstance(self.algorithm, str):
@@ -5455,7 +5452,7 @@ class DigitalSignature(Object):
         if self.state is not None and not isinstance(self.state, str):
             self.state = str(self.state)
 
-        if self.state_id is not None and not isinstance(self.state_id, DigitalSignatureStateIdEnum):
+        if isinstance(self.state_id, str):
             self.state_id = DigitalSignatureStateIdEnum(self.state_id)
 
         super().__post_init__(**kwargs)
@@ -5619,7 +5616,7 @@ class DnsQuery(Dns):
         if self.opcode is not None and not isinstance(self.opcode, str):
             self.opcode = str(self.opcode)
 
-        if self.opcode_id is not None and not isinstance(self.opcode_id, OpcodeIdEnum):
+        if isinstance(self.opcode_id, str):
             self.opcode_id = OpcodeIdEnum(self.opcode_id)
 
         super().__post_init__(**kwargs)
@@ -5649,7 +5646,7 @@ class DomainContact(Object):
     def __post_init__(self, *_: str, **kwargs: Any):
         if self._is_empty(self.type_id):
             self.MissingRequiredField("type_id")
-        if not isinstance(self.type_id, DomainContactTypeIdEnum):
+        if isinstance(self.type_id, str):
             self.type_id = DomainContactTypeIdEnum(self.type_id)
 
         if self.email_addr is not None and not isinstance(self.email_addr, str):
@@ -5946,7 +5943,7 @@ class EncryptionDetails(Object):
         if self.algorithm is not None and not isinstance(self.algorithm, str):
             self.algorithm = str(self.algorithm)
 
-        if self.algorithm_id is not None and not isinstance(self.algorithm_id, EncryptionDetailsAlgorithmIdEnum):
+        if isinstance(self.algorithm_id, str):
             self.algorithm_id = EncryptionDetailsAlgorithmIdEnum(self.algorithm_id)
 
         if self.key_length is not None and not isinstance(self.key_length, int):
@@ -6055,7 +6052,7 @@ class Endpoint(Entity):
         if self.type is not None and not isinstance(self.type, str):
             self.type = str(self.type)
 
-        if self.type_id is not None and not isinstance(self.type_id, EndpointTypeIdEnum):
+        if isinstance(self.type_id, str):
             self.type_id = EndpointTypeIdEnum(self.type_id)
 
         if self.uid is not None and not isinstance(self.uid, str):
@@ -6365,7 +6362,7 @@ class Evidences(Entity):
         if self.verdict is not None and not isinstance(self.verdict, str):
             self.verdict = str(self.verdict)
 
-        if self.verdict_id is not None and not isinstance(self.verdict_id, EvidencesVerdictIdEnum):
+        if isinstance(self.verdict_id, str):
             self.verdict_id = EvidencesVerdictIdEnum(self.verdict_id)
 
         if self.name is not None and not isinstance(self.name, str):
@@ -6519,7 +6516,7 @@ class File(Entity):
     def __post_init__(self, *_: str, **kwargs: Any):
         if self._is_empty(self.type_id):
             self.MissingRequiredField("type_id")
-        if not isinstance(self.type_id, FileTypeIdEnum):
+        if isinstance(self.type_id, str):
             self.type_id = FileTypeIdEnum(self.type_id)
 
         if self._is_empty(self.name):
@@ -6542,7 +6539,7 @@ class File(Entity):
         if self.confidentiality is not None and not isinstance(self.confidentiality, str):
             self.confidentiality = str(self.confidentiality)
 
-        if self.confidentiality_id is not None and not isinstance(self.confidentiality_id, ConfidentialityIdEnum):
+        if isinstance(self.confidentiality_id, str):
             self.confidentiality_id = ConfidentialityIdEnum(self.confidentiality_id)
 
         if self.created_time is not None and not isinstance(self.created_time, TimestampT):
@@ -6557,7 +6554,7 @@ class File(Entity):
         if self.drive_type is not None and not isinstance(self.drive_type, str):
             self.drive_type = str(self.drive_type)
 
-        if self.drive_type_id is not None and not isinstance(self.drive_type_id, DriveTypeIdEnum):
+        if isinstance(self.drive_type_id, str):
             self.drive_type_id = DriveTypeIdEnum(self.drive_type_id)
 
         if self.encryption_details is not None and not isinstance(self.encryption_details, EncryptionDetails):
@@ -6873,7 +6870,7 @@ class Fingerprint(Object):
     def __post_init__(self, *_: str, **kwargs: Any):
         if self._is_empty(self.algorithm_id):
             self.MissingRequiredField("algorithm_id")
-        if not isinstance(self.algorithm_id, FingerprintAlgorithmIdEnum):
+        if isinstance(self.algorithm_id, str):
             self.algorithm_id = FingerprintAlgorithmIdEnum(self.algorithm_id)
 
         if self._is_empty(self.value):
@@ -6944,7 +6941,7 @@ class GpuInfo(Object):
         if self.bus_type is not None and not isinstance(self.bus_type, str):
             self.bus_type = str(self.bus_type)
 
-        if self.bus_type_id is not None and not isinstance(self.bus_type_id, GpuInfoBusTypeIdEnum):
+        if isinstance(self.bus_type_id, str):
             self.bus_type_id = GpuInfoBusTypeIdEnum(self.bus_type_id)
 
         if self.cores is not None and not isinstance(self.cores, int):
@@ -6959,7 +6956,7 @@ class GpuInfo(Object):
         if self.vram_mode is not None and not isinstance(self.vram_mode, str):
             self.vram_mode = str(self.vram_mode)
 
-        if self.vram_mode_id is not None and not isinstance(self.vram_mode_id, GpuInfoVramModeIdEnum):
+        if isinstance(self.vram_mode_id, str):
             self.vram_mode_id = GpuInfoVramModeIdEnum(self.vram_mode_id)
 
         if self.vram_size is not None and not isinstance(self.vram_size, int):
@@ -7009,7 +7006,7 @@ class Graph(Entity):
         if self.query_language is not None and not isinstance(self.query_language, str):
             self.query_language = str(self.query_language)
 
-        if self.query_language_id is not None and not isinstance(self.query_language_id, GraphQueryLanguageIdEnum):
+        if isinstance(self.query_language_id, str):
             self.query_language_id = GraphQueryLanguageIdEnum(self.query_language_id)
 
         if self.type is not None and not isinstance(self.type, str):
@@ -7246,7 +7243,7 @@ class HttpRequest(Object):
 
         self._normalize_inlined_as_list(slot_name="http_headers", slot_type=HttpHeader, key_name="name", keyed=False)
 
-        if self.http_method is not None and not isinstance(self.http_method, HttpRequestHttpMethodEnum):
+        if isinstance(self.http_method, str):
             self.http_method = HttpRequestHttpMethodEnum(self.http_method)
 
         if self.length is not None and not isinstance(self.length, int):
@@ -7429,7 +7426,7 @@ class Idp(Entity):
         if self.state is not None and not isinstance(self.state, str):
             self.state = str(self.state)
 
-        if self.state_id is not None and not isinstance(self.state_id, IdpStateIdEnum):
+        if isinstance(self.state_id, str):
             self.state_id = IdpStateIdEnum(self.state_id)
 
         if self.tenant_uid is not None and not isinstance(self.tenant_uid, str):
@@ -7524,7 +7521,7 @@ class Ja4Fingerprint(Object):
     def __post_init__(self, *_: str, **kwargs: Any):
         if self._is_empty(self.type_id):
             self.MissingRequiredField("type_id")
-        if not isinstance(self.type_id, Ja4FingerprintTypeIdEnum):
+        if isinstance(self.type_id, str):
             self.type_id = Ja4FingerprintTypeIdEnum(self.type_id)
 
         if self._is_empty(self.value):
@@ -7602,7 +7599,7 @@ class Job(Object):
         if self.run_state is not None and not isinstance(self.run_state, str):
             self.run_state = str(self.run_state)
 
-        if self.run_state_id is not None and not isinstance(self.run_state_id, JobRunStateIdEnum):
+        if isinstance(self.run_state_id, str):
             self.run_state_id = JobRunStateIdEnum(self.run_state_id)
 
         if self.user is not None and not isinstance(self.user, User):
@@ -7654,7 +7651,7 @@ class KbArticle(Object):
         if self.install_state is not None and not isinstance(self.install_state, str):
             self.install_state = str(self.install_state)
 
-        if self.install_state_id is not None and not isinstance(self.install_state_id, InstallStateIdEnum):
+        if isinstance(self.install_state_id, str):
             self.install_state_id = InstallStateIdEnum(self.install_state_id)
 
         if self.is_superseded is not None and not isinstance(self.is_superseded, Bool):
@@ -7713,7 +7710,7 @@ class Kernel(Object):
 
         if self._is_empty(self.type_id):
             self.MissingRequiredField("type_id")
-        if not isinstance(self.type_id, KernelTypeIdEnum):
+        if isinstance(self.type_id, str):
             self.type_id = KernelTypeIdEnum(self.type_id)
 
         if self.is_system is not None and not isinstance(self.is_system, Bool):
@@ -7850,7 +7847,7 @@ class KillChainPhase(Object):
     def __post_init__(self, *_: str, **kwargs: Any):
         if self._is_empty(self.phase_id):
             self.MissingRequiredField("phase_id")
-        if not isinstance(self.phase_id, PhaseIdEnum):
+        if isinstance(self.phase_id, str):
             self.phase_id = PhaseIdEnum(self.phase_id)
 
         if self.phase is not None and not isinstance(self.phase, str):
@@ -8298,7 +8295,7 @@ class Malware(Entity):
         if self.severity is not None and not isinstance(self.severity, str):
             self.severity = str(self.severity)
 
-        if self.severity_id is not None and not isinstance(self.severity_id, SeverityIdEnum):
+        if isinstance(self.severity_id, str):
             self.severity_id = SeverityIdEnum(self.severity_id)
 
         if self.uid is not None and not isinstance(self.uid, str):
@@ -8372,7 +8369,7 @@ class ManagedEntity(Entity):
         if self.type is not None and not isinstance(self.type, str):
             self.type = str(self.type)
 
-        if self.type_id is not None and not isinstance(self.type_id, ManagedEntityTypeIdEnum):
+        if isinstance(self.type_id, str):
             self.type_id = ManagedEntityTypeIdEnum(self.type_id)
 
         if self.uid is not None and not isinstance(self.uid, str):
@@ -8420,7 +8417,7 @@ class MessageContext(Entity):
         if self.ai_role is not None and not isinstance(self.ai_role, str):
             self.ai_role = str(self.ai_role)
 
-        if self.ai_role_id is not None and not isinstance(self.ai_role_id, MessageContextAiRoleIdEnum):
+        if isinstance(self.ai_role_id, str):
             self.ai_role_id = MessageContextAiRoleIdEnum(self.ai_role_id)
 
         if self.application is not None and not isinstance(self.application, ApplicationObject):
@@ -8725,7 +8722,7 @@ class Module(Object):
         if self.load_type is not None and not isinstance(self.load_type, str):
             self.load_type = str(self.load_type)
 
-        if self.load_type_id is not None and not isinstance(self.load_type_id, ModuleLoadTypeIdEnum):
+        if isinstance(self.load_type_id, str):
             self.load_type_id = ModuleLoadTypeIdEnum(self.load_type_id)
 
         if self.start_address is not None and not isinstance(self.start_address, str):
@@ -8767,13 +8764,13 @@ class NetworkConnectionInfo(Object):
     def __post_init__(self, *_: str, **kwargs: Any):
         if self._is_empty(self.direction_id):
             self.MissingRequiredField("direction_id")
-        if not isinstance(self.direction_id, DirectionIdEnum):
+        if isinstance(self.direction_id, str):
             self.direction_id = DirectionIdEnum(self.direction_id)
 
         if self.boundary is not None and not isinstance(self.boundary, str):
             self.boundary = str(self.boundary)
 
-        if self.boundary_id is not None and not isinstance(self.boundary_id, BoundaryIdEnum):
+        if isinstance(self.boundary_id, str):
             self.boundary_id = BoundaryIdEnum(self.boundary_id)
 
         if self.community_uid is not None and not isinstance(self.community_uid, str):
@@ -8794,7 +8791,7 @@ class NetworkConnectionInfo(Object):
         if self.protocol_ver is not None and not isinstance(self.protocol_ver, str):
             self.protocol_ver = str(self.protocol_ver)
 
-        if self.protocol_ver_id is not None and not isinstance(self.protocol_ver_id, NetworkConnectionInfoProtocolVerIdEnum):
+        if isinstance(self.protocol_ver_id, str):
             self.protocol_ver_id = NetworkConnectionInfoProtocolVerIdEnum(self.protocol_ver_id)
 
         if self.session is not None and not isinstance(self.session, Session):
@@ -8855,7 +8852,7 @@ class NetworkEndpoint(Endpoint):
         if self.network_scope is not None and not isinstance(self.network_scope, str):
             self.network_scope = str(self.network_scope)
 
-        if self.network_scope_id is not None and not isinstance(self.network_scope_id, NetworkScopeIdEnum):
+        if isinstance(self.network_scope_id, str):
             self.network_scope_id = NetworkScopeIdEnum(self.network_scope_id)
 
         if self.port is not None and not isinstance(self.port, int):
@@ -8870,16 +8867,13 @@ class NetworkEndpoint(Endpoint):
         if self.type is not None and not isinstance(self.type, str):
             self.type = str(self.type)
 
-        if self.type_id is not None and not isinstance(self.type_id, TypeIdEnum):
-            self.type_id = TypeIdEnum(self.type_id)
-
         if self.uid is not None and not isinstance(self.uid, str):
             self.uid = str(self.uid)
 
         if self.type is not None and not isinstance(self.type, str):
             self.type = str(self.type)
 
-        if self.type_id is not None and not isinstance(self.type_id, EndpointTypeIdEnum):
+        if isinstance(self.type_id, str):
             self.type_id = EndpointTypeIdEnum(self.type_id)
 
         super().__post_init__(**kwargs)
@@ -8933,7 +8927,7 @@ class NetworkInterface(Entity):
         if self.type is not None and not isinstance(self.type, str):
             self.type = str(self.type)
 
-        if self.type_id is not None and not isinstance(self.type_id, NetworkInterfaceTypeIdEnum):
+        if isinstance(self.type_id, str):
             self.type_id = NetworkInterfaceTypeIdEnum(self.type_id)
 
         if self.uid is not None and not isinstance(self.uid, str):
@@ -9158,7 +9152,7 @@ class PeripheralDevice(Entity):
         if self.type is not None and not isinstance(self.type, str):
             self.type = str(self.type)
 
-        if self.type_id is not None and not isinstance(self.type_id, PeripheralDeviceTypeIdEnum):
+        if isinstance(self.type_id, str):
             self.type_id = PeripheralDeviceTypeIdEnum(self.type_id)
 
         if self.uid is not None and not isinstance(self.uid, str):
@@ -9530,7 +9524,7 @@ class ResourceDetails(Resource):
         if self.role is not None and not isinstance(self.role, str):
             self.role = str(self.role)
 
-        if self.role_id is not None and not isinstance(self.role_id, ResourceDetailsRoleIdEnum):
+        if isinstance(self.role_id, str):
             self.role_id = ResourceDetailsRoleIdEnum(self.role_id)
 
         if self.version is not None and not isinstance(self.version, str):
@@ -9613,7 +9607,7 @@ class Scan(Entity):
     def __post_init__(self, *_: str, **kwargs: Any):
         if self._is_empty(self.type_id):
             self.MissingRequiredField("type_id")
-        if not isinstance(self.type_id, ScanTypeIdEnum):
+        if isinstance(self.type_id, str):
             self.type_id = ScanTypeIdEnum(self.type_id)
 
         if self.name is not None and not isinstance(self.name, str):
@@ -9978,7 +9972,7 @@ class UnmannedAerialSystem(Aircraft):
         if self.type is not None and not isinstance(self.type, str):
             self.type = str(self.type)
 
-        if self.type_id is not None and not isinstance(self.type_id, UnmannedAerialSystemTypeIdEnum):
+        if isinstance(self.type_id, str):
             self.type_id = UnmannedAerialSystemTypeIdEnum(self.type_id)
 
         if self.uid is not None and not isinstance(self.uid, str):
@@ -10051,7 +10045,7 @@ class UnmannedSystemOperatingArea(Location):
         if self.type is not None and not isinstance(self.type, str):
             self.type = str(self.type)
 
-        if self.type_id is not None and not isinstance(self.type_id, UnmannedSystemOperatingAreaTypeIdEnum):
+        if isinstance(self.type_id, str):
             self.type_id = UnmannedSystemOperatingAreaTypeIdEnum(self.type_id)
 
         super().__post_init__(**kwargs)
@@ -10138,7 +10132,7 @@ class User(Entity):
         if self.risk_level is not None and not isinstance(self.risk_level, str):
             self.risk_level = str(self.risk_level)
 
-        if self.risk_level_id is not None and not isinstance(self.risk_level_id, RiskLevelIdEnum):
+        if isinstance(self.risk_level_id, str):
             self.risk_level_id = RiskLevelIdEnum(self.risk_level_id)
 
         if self.risk_score is not None and not isinstance(self.risk_score, int):
@@ -10147,7 +10141,7 @@ class User(Entity):
         if self.type is not None and not isinstance(self.type, str):
             self.type = str(self.type)
 
-        if self.type_id is not None and not isinstance(self.type_id, UserTypeIdEnum):
+        if isinstance(self.type_id, str):
             self.type_id = UserTypeIdEnum(self.type_id)
 
         if self.uid is not None and not isinstance(self.uid, str):
@@ -10275,7 +10269,7 @@ class Device(Endpoint):
     def __post_init__(self, *_: str, **kwargs: Any):
         if self._is_empty(self.type_id):
             self.MissingRequiredField("type_id")
-        if not isinstance(self.type_id, EndpointTypeIdEnum):
+        if isinstance(self.type_id, str):
             self.type_id = EndpointTypeIdEnum(self.type_id)
 
         if self.autoscale_uid is not None and not isinstance(self.autoscale_uid, str):
@@ -10386,7 +10380,7 @@ class Device(Endpoint):
         if self.risk_level is not None and not isinstance(self.risk_level, str):
             self.risk_level = str(self.risk_level)
 
-        if self.risk_level_id is not None and not isinstance(self.risk_level_id, RiskLevelIdEnum):
+        if isinstance(self.risk_level_id, str):
             self.risk_level_id = RiskLevelIdEnum(self.risk_level_id)
 
         if self.risk_score is not None and not isinstance(self.risk_score, int):
@@ -10397,9 +10391,6 @@ class Device(Endpoint):
 
         if self.type is not None and not isinstance(self.type, str):
             self.type = str(self.type)
-
-        if self.type_id is not None and not isinstance(self.type_id, TypeIdEnum):
-            self.type_id = TypeIdEnum(self.type_id)
 
         if self.udid is not None and not isinstance(self.udid, str):
             self.udid = str(self.udid)
@@ -10566,7 +10557,7 @@ class Process(ProcessEntity):
         if self.integrity is not None and not isinstance(self.integrity, str):
             self.integrity = str(self.integrity)
 
-        if self.integrity_id is not None and not isinstance(self.integrity_id, IntegrityIdEnum):
+        if isinstance(self.integrity_id, str):
             self.integrity_id = IntegrityIdEnum(self.integrity_id)
 
         if not isinstance(self.lineage, list):
@@ -10794,7 +10785,7 @@ class IncidentProfile(YAMLRoot):
         if self.impact is not None and not isinstance(self.impact, str):
             self.impact = str(self.impact)
 
-        if self.impact_id is not None and not isinstance(self.impact_id, ImpactIdEnum):
+        if isinstance(self.impact_id, str):
             self.impact_id = ImpactIdEnum(self.impact_id)
 
         if self.impact_score is not None and not isinstance(self.impact_score, int):
@@ -10806,7 +10797,7 @@ class IncidentProfile(YAMLRoot):
         if self.priority is not None and not isinstance(self.priority, str):
             self.priority = str(self.priority)
 
-        if self.priority_id is not None and not isinstance(self.priority_id, PriorityIdEnum):
+        if isinstance(self.priority_id, str):
             self.priority_id = PriorityIdEnum(self.priority_id)
 
         if self.src_url is not None and not isinstance(self.src_url, str):
@@ -10822,7 +10813,7 @@ class IncidentProfile(YAMLRoot):
         if self.verdict is not None and not isinstance(self.verdict, str):
             self.verdict = str(self.verdict)
 
-        if self.verdict_id is not None and not isinstance(self.verdict_id, VerdictIdEnum):
+        if isinstance(self.verdict_id, str):
             self.verdict_id = VerdictIdEnum(self.verdict_id)
 
         super().__post_init__(**kwargs)
@@ -10959,7 +10950,7 @@ class SecurityControlProfile(YAMLRoot):
         if self.action is not None and not isinstance(self.action, str):
             self.action = str(self.action)
 
-        if self.action_id is not None and not isinstance(self.action_id, ActionIdEnum):
+        if isinstance(self.action_id, str):
             self.action_id = ActionIdEnum(self.action_id)
 
         if not isinstance(self.attacks, list):
@@ -10973,7 +10964,7 @@ class SecurityControlProfile(YAMLRoot):
         if self.confidence is not None and not isinstance(self.confidence, str):
             self.confidence = str(self.confidence)
 
-        if self.confidence_id is not None and not isinstance(self.confidence_id, ConfidenceIdEnum):
+        if isinstance(self.confidence_id, str):
             self.confidence_id = ConfidenceIdEnum(self.confidence_id)
 
         if self.confidence_score is not None and not isinstance(self.confidence_score, int):
@@ -10982,7 +10973,7 @@ class SecurityControlProfile(YAMLRoot):
         if self.disposition is not None and not isinstance(self.disposition, str):
             self.disposition = str(self.disposition)
 
-        if self.disposition_id is not None and not isinstance(self.disposition_id, DispositionIdEnum):
+        if isinstance(self.disposition_id, str):
             self.disposition_id = DispositionIdEnum(self.disposition_id)
 
         if self.firewall_rule is not None and not isinstance(self.firewall_rule, FirewallRule):
@@ -11005,7 +10996,7 @@ class SecurityControlProfile(YAMLRoot):
         if self.risk_level is not None and not isinstance(self.risk_level, str):
             self.risk_level = str(self.risk_level)
 
-        if self.risk_level_id is not None and not isinstance(self.risk_level_id, RiskLevelIdEnum):
+        if isinstance(self.risk_level_id, str):
             self.risk_level_id = RiskLevelIdEnum(self.risk_level_id)
 
         if self.risk_score is not None and not isinstance(self.risk_score, int):
@@ -11109,17 +11100,17 @@ class BaseEvent(YAMLRoot):
     def __post_init__(self, *_: str, **kwargs: Any):
         if self._is_empty(self.activity_id):
             self.MissingRequiredField("activity_id")
-        if not isinstance(self.activity_id, BaseEventActivityIdEnum):
+        if isinstance(self.activity_id, str):
             self.activity_id = BaseEventActivityIdEnum(self.activity_id)
 
         if self._is_empty(self.category_uid):
             self.MissingRequiredField("category_uid")
-        if not isinstance(self.category_uid, BaseEventCategoryUidEnum):
+        if isinstance(self.category_uid, str):
             self.category_uid = BaseEventCategoryUidEnum(self.category_uid)
 
         if self._is_empty(self.class_uid):
             self.MissingRequiredField("class_uid")
-        if not isinstance(self.class_uid, BaseEventClassUidEnum):
+        if isinstance(self.class_uid, str):
             self.class_uid = BaseEventClassUidEnum(self.class_uid)
 
         if self._is_empty(self.metadata):
@@ -11129,7 +11120,7 @@ class BaseEvent(YAMLRoot):
 
         if self._is_empty(self.severity_id):
             self.MissingRequiredField("severity_id")
-        if not isinstance(self.severity_id, SeverityIdEnum):
+        if isinstance(self.severity_id, str):
             self.severity_id = SeverityIdEnum(self.severity_id)
 
         if self._is_empty(self.time):
@@ -11200,7 +11191,7 @@ class BaseEvent(YAMLRoot):
         if self.status_detail is not None and not isinstance(self.status_detail, str):
             self.status_detail = str(self.status_detail)
 
-        if self.status_id is not None and not isinstance(self.status_id, StatusIdEnum):
+        if isinstance(self.status_id, str):
             self.status_id = StatusIdEnum(self.status_id)
 
         if self.timezone_offset is not None and not isinstance(self.timezone_offset, int):
@@ -11224,7 +11215,7 @@ class BaseEvent(YAMLRoot):
         if self.action is not None and not isinstance(self.action, str):
             self.action = str(self.action)
 
-        if self.action_id is not None and not isinstance(self.action_id, ActionIdEnum):
+        if isinstance(self.action_id, str):
             self.action_id = ActionIdEnum(self.action_id)
 
         if not isinstance(self.attacks, list):
@@ -11238,7 +11229,7 @@ class BaseEvent(YAMLRoot):
         if self.confidence is not None and not isinstance(self.confidence, str):
             self.confidence = str(self.confidence)
 
-        if self.confidence_id is not None and not isinstance(self.confidence_id, ConfidenceIdEnum):
+        if isinstance(self.confidence_id, str):
             self.confidence_id = ConfidenceIdEnum(self.confidence_id)
 
         if self.confidence_score is not None and not isinstance(self.confidence_score, int):
@@ -11247,7 +11238,7 @@ class BaseEvent(YAMLRoot):
         if self.disposition is not None and not isinstance(self.disposition, str):
             self.disposition = str(self.disposition)
 
-        if self.disposition_id is not None and not isinstance(self.disposition_id, DispositionIdEnum):
+        if isinstance(self.disposition_id, str):
             self.disposition_id = DispositionIdEnum(self.disposition_id)
 
         if self.firewall_rule is not None and not isinstance(self.firewall_rule, FirewallRule):
@@ -11270,7 +11261,7 @@ class BaseEvent(YAMLRoot):
         if self.risk_level is not None and not isinstance(self.risk_level, str):
             self.risk_level = str(self.risk_level)
 
-        if self.risk_level_id is not None and not isinstance(self.risk_level_id, RiskLevelIdEnum):
+        if isinstance(self.risk_level_id, str):
             self.risk_level_id = RiskLevelIdEnum(self.risk_level_id)
 
         if self.risk_score is not None and not isinstance(self.risk_score, int):
@@ -11344,16 +11335,13 @@ class ApiActivity(ApplicationEvent):
 
         if self._is_empty(self.activity_id):
             self.MissingRequiredField("activity_id")
-        if not isinstance(self.activity_id, ApiActivityActivityIdEnum):
+        if isinstance(self.activity_id, str):
             self.activity_id = ApiActivityActivityIdEnum(self.activity_id)
 
         if self._is_empty(self.api):
             self.MissingRequiredField("api")
         if not isinstance(self.api, Api):
             self.api = Api(**as_dict(self.api))
-
-        if self.activity_id is not None and not isinstance(self.activity_id, ActivityIdEnum):
-            self.activity_id = ActivityIdEnum(self.activity_id)
 
         if self.api is not None and not isinstance(self.api, Api):
             self.api = Api(**as_dict(self.api))
@@ -11415,11 +11403,8 @@ class ApplicationError(ApplicationEvent):
     def __post_init__(self, *_: str, **kwargs: Any):
         if self._is_empty(self.activity_id):
             self.MissingRequiredField("activity_id")
-        if not isinstance(self.activity_id, ApplicationErrorActivityIdEnum):
+        if isinstance(self.activity_id, str):
             self.activity_id = ApplicationErrorActivityIdEnum(self.activity_id)
-
-        if self.activity_id is not None and not isinstance(self.activity_id, ActivityIdEnum):
-            self.activity_id = ActivityIdEnum(self.activity_id)
 
         if self.message is not None and not isinstance(self.message, str):
             self.message = str(self.message)
@@ -11462,11 +11447,8 @@ class ApplicationLifecycle(ApplicationEvent):
 
         if self._is_empty(self.activity_id):
             self.MissingRequiredField("activity_id")
-        if not isinstance(self.activity_id, ApplicationLifecycleActivityIdEnum):
+        if isinstance(self.activity_id, str):
             self.activity_id = ApplicationLifecycleActivityIdEnum(self.activity_id)
-
-        if self.activity_id is not None and not isinstance(self.activity_id, ActivityIdEnum):
-            self.activity_id = ActivityIdEnum(self.activity_id)
 
         super().__post_init__(**kwargs)
 
@@ -11521,11 +11503,8 @@ class DatastoreActivity(ApplicationEvent):
 
         if self._is_empty(self.activity_id):
             self.MissingRequiredField("activity_id")
-        if not isinstance(self.activity_id, DatastoreActivityActivityIdEnum):
+        if isinstance(self.activity_id, str):
             self.activity_id = DatastoreActivityActivityIdEnum(self.activity_id)
-
-        if self.activity_id is not None and not isinstance(self.activity_id, ActivityIdEnum):
-            self.activity_id = ActivityIdEnum(self.activity_id)
 
         if self.database is not None and not isinstance(self.database, Database):
             self.database = Database(**as_dict(self.database))
@@ -11551,7 +11530,7 @@ class DatastoreActivity(ApplicationEvent):
         if self.type is not None and not isinstance(self.type, str):
             self.type = str(self.type)
 
-        if self.type_id is not None and not isinstance(self.type_id, DatastoreActivityTypeIdEnum):
+        if isinstance(self.type_id, str):
             self.type_id = DatastoreActivityTypeIdEnum(self.type_id)
 
         if self.ai_model is not None and not isinstance(self.ai_model, AiModel):
@@ -11620,7 +11599,7 @@ class FileHosting(ApplicationEvent):
 
         if self._is_empty(self.activity_id):
             self.MissingRequiredField("activity_id")
-        if not isinstance(self.activity_id, FileHostingActivityIdEnum):
+        if isinstance(self.activity_id, str):
             self.activity_id = FileHostingActivityIdEnum(self.activity_id)
 
         if not isinstance(self.access_list, list):
@@ -11632,9 +11611,6 @@ class FileHosting(ApplicationEvent):
 
         if self.access_result is not None and not isinstance(self.access_result, str):
             self.access_result = str(self.access_result)
-
-        if self.activity_id is not None and not isinstance(self.activity_id, ActivityIdEnum):
-            self.activity_id = ActivityIdEnum(self.activity_id)
 
         if self.connection_info is not None and not isinstance(self.connection_info, NetworkConnectionInfo):
             self.connection_info = NetworkConnectionInfo(**as_dict(self.connection_info))
@@ -11660,7 +11636,7 @@ class FileHosting(ApplicationEvent):
         if self.share_type is not None and not isinstance(self.share_type, str):
             self.share_type = str(self.share_type)
 
-        if self.share_type_id is not None and not isinstance(self.share_type_id, ShareTypeIdEnum):
+        if isinstance(self.share_type_id, str):
             self.share_type_id = ShareTypeIdEnum(self.share_type_id)
 
         super().__post_init__(**kwargs)
@@ -11715,11 +11691,8 @@ class ScanActivity(ApplicationEvent):
 
         if self._is_empty(self.activity_id):
             self.MissingRequiredField("activity_id")
-        if not isinstance(self.activity_id, ScanActivityActivityIdEnum):
+        if isinstance(self.activity_id, str):
             self.activity_id = ScanActivityActivityIdEnum(self.activity_id)
-
-        if self.activity_id is not None and not isinstance(self.activity_id, ActivityIdEnum):
-            self.activity_id = ActivityIdEnum(self.activity_id)
 
         if self.command_uid is not None and not isinstance(self.command_uid, str):
             self.command_uid = str(self.command_uid)
@@ -11833,11 +11806,8 @@ class WebResourceAccessActivity(ApplicationEvent):
 
         if self._is_empty(self.activity_id):
             self.MissingRequiredField("activity_id")
-        if not isinstance(self.activity_id, WebResourceAccessActivityActivityIdEnum):
+        if isinstance(self.activity_id, str):
             self.activity_id = WebResourceAccessActivityActivityIdEnum(self.activity_id)
-
-        if self.activity_id is not None and not isinstance(self.activity_id, ActivityIdEnum):
-            self.activity_id = ActivityIdEnum(self.activity_id)
 
         if self.http_response is not None and not isinstance(self.http_response, HttpResponse):
             self.http_response = HttpResponse(**as_dict(self.http_response))
@@ -11917,11 +11887,8 @@ class WebResourcesActivity(ApplicationEvent):
 
         if self._is_empty(self.activity_id):
             self.MissingRequiredField("activity_id")
-        if not isinstance(self.activity_id, WebResourcesActivityActivityIdEnum):
+        if isinstance(self.activity_id, str):
             self.activity_id = WebResourcesActivityActivityIdEnum(self.activity_id)
-
-        if self.activity_id is not None and not isinstance(self.activity_id, ActivityIdEnum):
-            self.activity_id = ActivityIdEnum(self.activity_id)
 
         if self.dst_endpoint is not None and not isinstance(self.dst_endpoint, NetworkEndpoint):
             self.dst_endpoint = NetworkEndpoint(**as_dict(self.dst_endpoint))
@@ -11991,11 +11958,8 @@ class DiscoveryEvent(BaseEvent):
     def __post_init__(self, *_: str, **kwargs: Any):
         if self._is_empty(self.activity_id):
             self.MissingRequiredField("activity_id")
-        if not isinstance(self.activity_id, DiscoveryEventActivityIdEnum):
+        if isinstance(self.activity_id, str):
             self.activity_id = DiscoveryEventActivityIdEnum(self.activity_id)
-
-        if self.activity_id is not None and not isinstance(self.activity_id, ActivityIdEnum):
-            self.activity_id = ActivityIdEnum(self.activity_id)
 
         super().__post_init__(**kwargs)
 
@@ -12163,7 +12127,7 @@ class DeviceConfigStateChange(DiscoveryEvent):
         if self.prev_security_level is not None and not isinstance(self.prev_security_level, str):
             self.prev_security_level = str(self.prev_security_level)
 
-        if self.prev_security_level_id is not None and not isinstance(self.prev_security_level_id, PrevSecurityLevelIdEnum):
+        if isinstance(self.prev_security_level_id, str):
             self.prev_security_level_id = PrevSecurityLevelIdEnum(self.prev_security_level_id)
 
         if not isinstance(self.prev_security_states, list):
@@ -12173,7 +12137,7 @@ class DeviceConfigStateChange(DiscoveryEvent):
         if self.security_level is not None and not isinstance(self.security_level, str):
             self.security_level = str(self.security_level)
 
-        if self.security_level_id is not None and not isinstance(self.security_level_id, SecurityLevelIdEnum):
+        if isinstance(self.security_level_id, str):
             self.security_level_id = SecurityLevelIdEnum(self.security_level_id)
 
         if not isinstance(self.security_states, list):
@@ -12183,7 +12147,7 @@ class DeviceConfigStateChange(DiscoveryEvent):
         if self.state is not None and not isinstance(self.state, str):
             self.state = str(self.state)
 
-        if self.state_id is not None and not isinstance(self.state_id, DeviceConfigStateChangeStateIdEnum):
+        if isinstance(self.state_id, str):
             self.state_id = DeviceConfigStateChangeStateIdEnum(self.state_id)
 
         super().__post_init__(**kwargs)
@@ -12217,16 +12181,13 @@ class DiscoveryResult(BaseEvent):
     def __post_init__(self, *_: str, **kwargs: Any):
         if self._is_empty(self.query_result_id):
             self.MissingRequiredField("query_result_id")
-        if not isinstance(self.query_result_id, QueryResultIdEnum):
+        if isinstance(self.query_result_id, str):
             self.query_result_id = QueryResultIdEnum(self.query_result_id)
 
         if self._is_empty(self.activity_id):
             self.MissingRequiredField("activity_id")
-        if not isinstance(self.activity_id, DiscoveryResultActivityIdEnum):
+        if isinstance(self.activity_id, str):
             self.activity_id = DiscoveryResultActivityIdEnum(self.activity_id)
-
-        if self.activity_id is not None and not isinstance(self.activity_id, ActivityIdEnum):
-            self.activity_id = ActivityIdEnum(self.activity_id)
 
         if self.query_info is not None and not isinstance(self.query_info, QueryInfo):
             self.query_info = QueryInfo(**as_dict(self.query_info))
@@ -12578,7 +12539,7 @@ class NetworkConnectionQuery(DiscoveryResult):
 
         if self._is_empty(self.state_id):
             self.MissingRequiredField("state_id")
-        if not isinstance(self.state_id, NetworkConnectionQueryStateIdEnum):
+        if isinstance(self.state_id, str):
             self.state_id = NetworkConnectionQueryStateIdEnum(self.state_id)
 
         if self.state is not None and not isinstance(self.state, str):
@@ -13051,11 +13012,8 @@ class Finding(BaseEvent):
 
         if self._is_empty(self.activity_id):
             self.MissingRequiredField("activity_id")
-        if not isinstance(self.activity_id, FindingActivityIdEnum):
+        if isinstance(self.activity_id, str):
             self.activity_id = FindingActivityIdEnum(self.activity_id)
-
-        if self.activity_id is not None and not isinstance(self.activity_id, ActivityIdEnum):
-            self.activity_id = ActivityIdEnum(self.activity_id)
 
         if self.activity_name is not None and not isinstance(self.activity_name, str):
             self.activity_name = str(self.activity_name)
@@ -13066,9 +13024,6 @@ class Finding(BaseEvent):
         if self.confidence is not None and not isinstance(self.confidence, str):
             self.confidence = str(self.confidence)
 
-        if self.confidence_id is not None and not isinstance(self.confidence_id, ConfidenceIdEnum):
-            self.confidence_id = ConfidenceIdEnum(self.confidence_id)
-
         if self.confidence_score is not None and not isinstance(self.confidence_score, int):
             self.confidence_score = int(self.confidence_score)
 
@@ -13083,9 +13038,6 @@ class Finding(BaseEvent):
 
         if self.status is not None and not isinstance(self.status, str):
             self.status = str(self.status)
-
-        if self.status_id is not None and not isinstance(self.status_id, StatusIdEnum):
-            self.status_id = StatusIdEnum(self.status_id)
 
         if self.vendor_attributes is not None and not isinstance(self.vendor_attributes, VendorAttributes):
             self.vendor_attributes = VendorAttributes(**as_dict(self.vendor_attributes))
@@ -13096,7 +13048,7 @@ class Finding(BaseEvent):
         if self.confidence is not None and not isinstance(self.confidence, str):
             self.confidence = str(self.confidence)
 
-        if self.confidence_id is not None and not isinstance(self.confidence_id, ConfidenceIdEnum):
+        if isinstance(self.confidence_id, str):
             self.confidence_id = ConfidenceIdEnum(self.confidence_id)
 
         if self.confidence_score is not None and not isinstance(self.confidence_score, int):
@@ -13114,7 +13066,7 @@ class Finding(BaseEvent):
         if self.status is not None and not isinstance(self.status, str):
             self.status = str(self.status)
 
-        if self.status_id is not None and not isinstance(self.status_id, FindingStatusIdEnum):
+        if isinstance(self.status_id, str):
             self.status_id = FindingStatusIdEnum(self.status_id)
 
         if self.assignee is not None and not isinstance(self.assignee, User):
@@ -13126,7 +13078,7 @@ class Finding(BaseEvent):
         if self.impact is not None and not isinstance(self.impact, str):
             self.impact = str(self.impact)
 
-        if self.impact_id is not None and not isinstance(self.impact_id, ImpactIdEnum):
+        if isinstance(self.impact_id, str):
             self.impact_id = ImpactIdEnum(self.impact_id)
 
         if self.impact_score is not None and not isinstance(self.impact_score, int):
@@ -13138,7 +13090,7 @@ class Finding(BaseEvent):
         if self.priority is not None and not isinstance(self.priority, str):
             self.priority = str(self.priority)
 
-        if self.priority_id is not None and not isinstance(self.priority_id, PriorityIdEnum):
+        if isinstance(self.priority_id, str):
             self.priority_id = PriorityIdEnum(self.priority_id)
 
         if self.src_url is not None and not isinstance(self.src_url, str):
@@ -13154,7 +13106,7 @@ class Finding(BaseEvent):
         if self.verdict is not None and not isinstance(self.verdict, str):
             self.verdict = str(self.verdict)
 
-        if self.verdict_id is not None and not isinstance(self.verdict_id, VerdictIdEnum):
+        if isinstance(self.verdict_id, str):
             self.verdict_id = VerdictIdEnum(self.verdict_id)
 
         super().__post_init__(**kwargs)
@@ -13224,7 +13176,7 @@ class ApplicationSecurityPostureFinding(Finding):
         if self.impact is not None and not isinstance(self.impact, str):
             self.impact = str(self.impact)
 
-        if self.impact_id is not None and not isinstance(self.impact_id, ImpactIdEnum):
+        if isinstance(self.impact_id, str):
             self.impact_id = ImpactIdEnum(self.impact_id)
 
         if self.impact_score is not None and not isinstance(self.impact_score, int):
@@ -13236,7 +13188,7 @@ class ApplicationSecurityPostureFinding(Finding):
         if self.priority is not None and not isinstance(self.priority, str):
             self.priority = str(self.priority)
 
-        if self.priority_id is not None and not isinstance(self.priority_id, PriorityIdEnum):
+        if isinstance(self.priority_id, str):
             self.priority_id = PriorityIdEnum(self.priority_id)
 
         if self.src_url is not None and not isinstance(self.src_url, str):
@@ -13252,7 +13204,7 @@ class ApplicationSecurityPostureFinding(Finding):
         if self.verdict is not None and not isinstance(self.verdict, str):
             self.verdict = str(self.verdict)
 
-        if self.verdict_id is not None and not isinstance(self.verdict_id, VerdictIdEnum):
+        if isinstance(self.verdict_id, str):
             self.verdict_id = VerdictIdEnum(self.verdict_id)
 
         if self.application is not None and not isinstance(self.application, ApplicationObject):
@@ -13396,7 +13348,7 @@ class DataSecurityFinding(Finding):
     def __post_init__(self, *_: str, **kwargs: Any):
         if self._is_empty(self.activity_id):
             self.MissingRequiredField("activity_id")
-        if not isinstance(self.activity_id, DataSecurityFindingActivityIdEnum):
+        if isinstance(self.activity_id, str):
             self.activity_id = DataSecurityFindingActivityIdEnum(self.activity_id)
 
         if self.activity_name is not None and not isinstance(self.activity_name, str):
@@ -13408,7 +13360,7 @@ class DataSecurityFinding(Finding):
         if self.confidence is not None and not isinstance(self.confidence, str):
             self.confidence = str(self.confidence)
 
-        if self.confidence_id is not None and not isinstance(self.confidence_id, ConfidenceIdEnum):
+        if isinstance(self.confidence_id, str):
             self.confidence_id = ConfidenceIdEnum(self.confidence_id)
 
         if self.confidence_score is not None and not isinstance(self.confidence_score, int):
@@ -13435,9 +13387,6 @@ class DataSecurityFinding(Finding):
         if self.impact is not None and not isinstance(self.impact, str):
             self.impact = str(self.impact)
 
-        if self.impact_id is not None and not isinstance(self.impact_id, ImpactIdEnum):
-            self.impact_id = ImpactIdEnum(self.impact_id)
-
         if self.impact_score is not None and not isinstance(self.impact_score, int):
             self.impact_score = int(self.impact_score)
 
@@ -13454,9 +13403,6 @@ class DataSecurityFinding(Finding):
         if self.risk_level is not None and not isinstance(self.risk_level, str):
             self.risk_level = str(self.risk_level)
 
-        if self.risk_level_id is not None and not isinstance(self.risk_level_id, RiskLevelIdEnum):
-            self.risk_level_id = RiskLevelIdEnum(self.risk_level_id)
-
         if self.risk_score is not None and not isinstance(self.risk_score, int):
             self.risk_score = int(self.risk_score)
 
@@ -13469,7 +13415,7 @@ class DataSecurityFinding(Finding):
         if self.impact is not None and not isinstance(self.impact, str):
             self.impact = str(self.impact)
 
-        if self.impact_id is not None and not isinstance(self.impact_id, ImpactIdEnum):
+        if isinstance(self.impact_id, str):
             self.impact_id = ImpactIdEnum(self.impact_id)
 
         if self.impact_score is not None and not isinstance(self.impact_score, int):
@@ -13484,7 +13430,7 @@ class DataSecurityFinding(Finding):
         if self.risk_level is not None and not isinstance(self.risk_level, str):
             self.risk_level = str(self.risk_level)
 
-        if self.risk_level_id is not None and not isinstance(self.risk_level_id, RiskLevelIdEnum):
+        if isinstance(self.risk_level_id, str):
             self.risk_level_id = RiskLevelIdEnum(self.risk_level_id)
 
         if self.risk_score is not None and not isinstance(self.risk_score, int):
@@ -13550,7 +13496,7 @@ class DetectionFinding(Finding):
         if self.confidence is not None and not isinstance(self.confidence, str):
             self.confidence = str(self.confidence)
 
-        if self.confidence_id is not None and not isinstance(self.confidence_id, ConfidenceIdEnum):
+        if isinstance(self.confidence_id, str):
             self.confidence_id = ConfidenceIdEnum(self.confidence_id)
 
         if self.confidence_score is not None and not isinstance(self.confidence_score, int):
@@ -13562,9 +13508,6 @@ class DetectionFinding(Finding):
 
         if self.impact is not None and not isinstance(self.impact, str):
             self.impact = str(self.impact)
-
-        if self.impact_id is not None and not isinstance(self.impact_id, ImpactIdEnum):
-            self.impact_id = ImpactIdEnum(self.impact_id)
 
         if self.impact_score is not None and not isinstance(self.impact_score, int):
             self.impact_score = int(self.impact_score)
@@ -13590,9 +13533,6 @@ class DetectionFinding(Finding):
         if self.risk_level is not None and not isinstance(self.risk_level, str):
             self.risk_level = str(self.risk_level)
 
-        if self.risk_level_id is not None and not isinstance(self.risk_level_id, RiskLevelIdEnum):
-            self.risk_level_id = RiskLevelIdEnum(self.risk_level_id)
-
         if self.risk_score is not None and not isinstance(self.risk_score, int):
             self.risk_score = int(self.risk_score)
 
@@ -13603,7 +13543,7 @@ class DetectionFinding(Finding):
         if self.impact is not None and not isinstance(self.impact, str):
             self.impact = str(self.impact)
 
-        if self.impact_id is not None and not isinstance(self.impact_id, ImpactIdEnum):
+        if isinstance(self.impact_id, str):
             self.impact_id = ImpactIdEnum(self.impact_id)
 
         if self.impact_score is not None and not isinstance(self.impact_score, int):
@@ -13618,7 +13558,7 @@ class DetectionFinding(Finding):
         if self.risk_level is not None and not isinstance(self.risk_level, str):
             self.risk_level = str(self.risk_level)
 
-        if self.risk_level_id is not None and not isinstance(self.risk_level_id, RiskLevelIdEnum):
+        if isinstance(self.risk_level_id, str):
             self.risk_level_id = RiskLevelIdEnum(self.risk_level_id)
 
         if self.risk_score is not None and not isinstance(self.risk_score, int):
@@ -13755,16 +13695,13 @@ class IncidentFinding(BaseEvent):
 
         if self._is_empty(self.activity_id):
             self.MissingRequiredField("activity_id")
-        if not isinstance(self.activity_id, IncidentFindingActivityIdEnum):
+        if isinstance(self.activity_id, str):
             self.activity_id = IncidentFindingActivityIdEnum(self.activity_id)
 
         if self._is_empty(self.status_id):
             self.MissingRequiredField("status_id")
-        if not isinstance(self.status_id, IncidentFindingStatusIdEnum):
+        if isinstance(self.status_id, str):
             self.status_id = IncidentFindingStatusIdEnum(self.status_id)
-
-        if self.activity_id is not None and not isinstance(self.activity_id, ActivityIdEnum):
-            self.activity_id = ActivityIdEnum(self.activity_id)
 
         if self.activity_name is not None and not isinstance(self.activity_name, str):
             self.activity_name = str(self.activity_name)
@@ -13785,9 +13722,6 @@ class IncidentFinding(BaseEvent):
         if self.confidence is not None and not isinstance(self.confidence, str):
             self.confidence = str(self.confidence)
 
-        if self.confidence_id is not None and not isinstance(self.confidence_id, ConfidenceIdEnum):
-            self.confidence_id = ConfidenceIdEnum(self.confidence_id)
-
         if self.confidence_score is not None and not isinstance(self.confidence_score, int):
             self.confidence_score = int(self.confidence_score)
 
@@ -13800,9 +13734,6 @@ class IncidentFinding(BaseEvent):
         if self.impact is not None and not isinstance(self.impact, str):
             self.impact = str(self.impact)
 
-        if self.impact_id is not None and not isinstance(self.impact_id, ImpactIdEnum):
-            self.impact_id = ImpactIdEnum(self.impact_id)
-
         if self.impact_score is not None and not isinstance(self.impact_score, int):
             self.impact_score = int(self.impact_score)
 
@@ -13812,9 +13743,6 @@ class IncidentFinding(BaseEvent):
         if self.priority is not None and not isinstance(self.priority, str):
             self.priority = str(self.priority)
 
-        if self.priority_id is not None and not isinstance(self.priority_id, PriorityIdEnum):
-            self.priority_id = PriorityIdEnum(self.priority_id)
-
         if self.src_url is not None and not isinstance(self.src_url, str):
             self.src_url = str(self.src_url)
 
@@ -13823,9 +13751,6 @@ class IncidentFinding(BaseEvent):
 
         if self.status is not None and not isinstance(self.status, str):
             self.status = str(self.status)
-
-        if self.status_id is not None and not isinstance(self.status_id, StatusIdEnum):
-            self.status_id = StatusIdEnum(self.status_id)
 
         if self.ticket is not None and not isinstance(self.ticket, Ticket):
             self.ticket = Ticket(**as_dict(self.ticket))
@@ -13840,9 +13765,6 @@ class IncidentFinding(BaseEvent):
         if self.verdict is not None and not isinstance(self.verdict, str):
             self.verdict = str(self.verdict)
 
-        if self.verdict_id is not None and not isinstance(self.verdict_id, VerdictIdEnum):
-            self.verdict_id = VerdictIdEnum(self.verdict_id)
-
         if self.activity_name is not None and not isinstance(self.activity_name, str):
             self.activity_name = str(self.activity_name)
 
@@ -13855,7 +13777,7 @@ class IncidentFinding(BaseEvent):
         if self.confidence is not None and not isinstance(self.confidence, str):
             self.confidence = str(self.confidence)
 
-        if self.confidence_id is not None and not isinstance(self.confidence_id, ConfidenceIdEnum):
+        if isinstance(self.confidence_id, str):
             self.confidence_id = ConfidenceIdEnum(self.confidence_id)
 
         if self.confidence_score is not None and not isinstance(self.confidence_score, int):
@@ -13867,7 +13789,7 @@ class IncidentFinding(BaseEvent):
         if self.impact is not None and not isinstance(self.impact, str):
             self.impact = str(self.impact)
 
-        if self.impact_id is not None and not isinstance(self.impact_id, ImpactIdEnum):
+        if isinstance(self.impact_id, str):
             self.impact_id = ImpactIdEnum(self.impact_id)
 
         if self.impact_score is not None and not isinstance(self.impact_score, int):
@@ -13879,7 +13801,7 @@ class IncidentFinding(BaseEvent):
         if self.priority is not None and not isinstance(self.priority, str):
             self.priority = str(self.priority)
 
-        if self.priority_id is not None and not isinstance(self.priority_id, PriorityIdEnum):
+        if isinstance(self.priority_id, str):
             self.priority_id = PriorityIdEnum(self.priority_id)
 
         if self.src_url is not None and not isinstance(self.src_url, str):
@@ -13901,7 +13823,7 @@ class IncidentFinding(BaseEvent):
         if self.verdict is not None and not isinstance(self.verdict, str):
             self.verdict = str(self.verdict)
 
-        if self.verdict_id is not None and not isinstance(self.verdict_id, VerdictIdEnum):
+        if isinstance(self.verdict_id, str):
             self.verdict_id = VerdictIdEnum(self.verdict_id)
 
         super().__post_init__(**kwargs)
@@ -13962,16 +13884,13 @@ class SecurityFinding(BaseEvent):
 
         if self._is_empty(self.state_id):
             self.MissingRequiredField("state_id")
-        if not isinstance(self.state_id, SecurityFindingStateIdEnum):
+        if isinstance(self.state_id, str):
             self.state_id = SecurityFindingStateIdEnum(self.state_id)
 
         if self._is_empty(self.activity_id):
             self.MissingRequiredField("activity_id")
-        if not isinstance(self.activity_id, SecurityFindingActivityIdEnum):
+        if isinstance(self.activity_id, str):
             self.activity_id = SecurityFindingActivityIdEnum(self.activity_id)
-
-        if self.activity_id is not None and not isinstance(self.activity_id, ActivityIdEnum):
-            self.activity_id = ActivityIdEnum(self.activity_id)
 
         if self.analytic is not None and not isinstance(self.analytic, Analytic):
             self.analytic = Analytic(**as_dict(self.analytic))
@@ -13988,9 +13907,6 @@ class SecurityFinding(BaseEvent):
         if self.confidence is not None and not isinstance(self.confidence, str):
             self.confidence = str(self.confidence)
 
-        if self.confidence_id is not None and not isinstance(self.confidence_id, ConfidenceIdEnum):
-            self.confidence_id = ConfidenceIdEnum(self.confidence_id)
-
         if self.confidence_score is not None and not isinstance(self.confidence_score, int):
             self.confidence_score = int(self.confidence_score)
 
@@ -14004,7 +13920,7 @@ class SecurityFinding(BaseEvent):
         if self.impact is not None and not isinstance(self.impact, str):
             self.impact = str(self.impact)
 
-        if self.impact_id is not None and not isinstance(self.impact_id, ImpactIdEnum):
+        if isinstance(self.impact_id, str):
             self.impact_id = ImpactIdEnum(self.impact_id)
 
         if self.impact_score is not None and not isinstance(self.impact_score, int):
@@ -14028,9 +13944,6 @@ class SecurityFinding(BaseEvent):
         if self.risk_level is not None and not isinstance(self.risk_level, str):
             self.risk_level = str(self.risk_level)
 
-        if self.risk_level_id is not None and not isinstance(self.risk_level_id, RiskLevelIdEnum):
-            self.risk_level_id = RiskLevelIdEnum(self.risk_level_id)
-
         if self.risk_score is not None and not isinstance(self.risk_score, int):
             self.risk_score = int(self.risk_score)
 
@@ -14044,7 +13957,7 @@ class SecurityFinding(BaseEvent):
         if self.confidence is not None and not isinstance(self.confidence, str):
             self.confidence = str(self.confidence)
 
-        if self.confidence_id is not None and not isinstance(self.confidence_id, ConfidenceIdEnum):
+        if isinstance(self.confidence_id, str):
             self.confidence_id = ConfidenceIdEnum(self.confidence_id)
 
         if self.confidence_score is not None and not isinstance(self.confidence_score, int):
@@ -14053,7 +13966,7 @@ class SecurityFinding(BaseEvent):
         if self.risk_level is not None and not isinstance(self.risk_level, str):
             self.risk_level = str(self.risk_level)
 
-        if self.risk_level_id is not None and not isinstance(self.risk_level_id, RiskLevelIdEnum):
+        if isinstance(self.risk_level_id, str):
             self.risk_level_id = RiskLevelIdEnum(self.risk_level_id)
 
         if self.risk_score is not None and not isinstance(self.risk_score, int):
@@ -14194,11 +14107,8 @@ class AccountChange(IamEvent):
 
         if self._is_empty(self.activity_id):
             self.MissingRequiredField("activity_id")
-        if not isinstance(self.activity_id, AccountChangeActivityIdEnum):
+        if isinstance(self.activity_id, str):
             self.activity_id = AccountChangeActivityIdEnum(self.activity_id)
-
-        if self.activity_id is not None and not isinstance(self.activity_id, ActivityIdEnum):
-            self.activity_id = ActivityIdEnum(self.activity_id)
 
         self._normalize_inlined_as_list(slot_name="auth_factors", slot_type=AuthFactor, key_name="factor_type_id", keyed=False)
 
@@ -14272,24 +14182,21 @@ class Authentication(IamEvent):
 
         if self._is_empty(self.activity_id):
             self.MissingRequiredField("activity_id")
-        if not isinstance(self.activity_id, AuthenticationActivityIdEnum):
+        if isinstance(self.activity_id, str):
             self.activity_id = AuthenticationActivityIdEnum(self.activity_id)
 
         if self.account_switch_type is not None and not isinstance(self.account_switch_type, str):
             self.account_switch_type = str(self.account_switch_type)
 
-        if self.account_switch_type_id is not None and not isinstance(self.account_switch_type_id, AccountSwitchTypeIdEnum):
+        if isinstance(self.account_switch_type_id, str):
             self.account_switch_type_id = AccountSwitchTypeIdEnum(self.account_switch_type_id)
-
-        if self.activity_id is not None and not isinstance(self.activity_id, ActivityIdEnum):
-            self.activity_id = ActivityIdEnum(self.activity_id)
 
         self._normalize_inlined_as_list(slot_name="auth_factors", slot_type=AuthFactor, key_name="factor_type_id", keyed=False)
 
         if self.auth_protocol is not None and not isinstance(self.auth_protocol, str):
             self.auth_protocol = str(self.auth_protocol)
 
-        if self.auth_protocol_id is not None and not isinstance(self.auth_protocol_id, AuthProtocolIdEnum):
+        if isinstance(self.auth_protocol_id, str):
             self.auth_protocol_id = AuthProtocolIdEnum(self.auth_protocol_id)
 
         if self.authentication_token is not None and not isinstance(self.authentication_token, AuthenticationToken):
@@ -14319,7 +14226,7 @@ class Authentication(IamEvent):
         if self.logon_type is not None and not isinstance(self.logon_type, str):
             self.logon_type = str(self.logon_type)
 
-        if self.logon_type_id is not None and not isinstance(self.logon_type_id, LogonTypeIdEnum):
+        if isinstance(self.logon_type_id, str):
             self.logon_type_id = LogonTypeIdEnum(self.logon_type_id)
 
         if self.service is not None and not isinstance(self.service, Service):
@@ -14373,11 +14280,8 @@ class AuthorizeSession(IamEvent):
 
         if self._is_empty(self.activity_id):
             self.MissingRequiredField("activity_id")
-        if not isinstance(self.activity_id, AuthorizeSessionActivityIdEnum):
+        if isinstance(self.activity_id, str):
             self.activity_id = AuthorizeSessionActivityIdEnum(self.activity_id)
-
-        if self.activity_id is not None and not isinstance(self.activity_id, ActivityIdEnum):
-            self.activity_id = ActivityIdEnum(self.activity_id)
 
         if self.dst_endpoint is not None and not isinstance(self.dst_endpoint, NetworkEndpoint):
             self.dst_endpoint = NetworkEndpoint(**as_dict(self.dst_endpoint))
@@ -14432,7 +14336,7 @@ class EntityManagement(IamEvent):
 
         if self._is_empty(self.activity_id):
             self.MissingRequiredField("activity_id")
-        if not isinstance(self.activity_id, EntityManagementActivityIdEnum):
+        if isinstance(self.activity_id, str):
             self.activity_id = EntityManagementActivityIdEnum(self.activity_id)
 
         if not isinstance(self.access_list, list):
@@ -14441,9 +14345,6 @@ class EntityManagement(IamEvent):
 
         if self.access_mask is not None and not isinstance(self.access_mask, int):
             self.access_mask = int(self.access_mask)
-
-        if self.activity_id is not None and not isinstance(self.activity_id, ActivityIdEnum):
-            self.activity_id = ActivityIdEnum(self.activity_id)
 
         if self.comment is not None and not isinstance(self.comment, str):
             self.comment = str(self.comment)
@@ -14490,11 +14391,8 @@ class GroupManagement(IamEvent):
 
         if self._is_empty(self.activity_id):
             self.MissingRequiredField("activity_id")
-        if not isinstance(self.activity_id, GroupManagementActivityIdEnum):
+        if isinstance(self.activity_id, str):
             self.activity_id = GroupManagementActivityIdEnum(self.activity_id)
-
-        if self.activity_id is not None and not isinstance(self.activity_id, ActivityIdEnum):
-            self.activity_id = ActivityIdEnum(self.activity_id)
 
         if not isinstance(self.privileges, list):
             self.privileges = [self.privileges] if self.privileges is not None else []
@@ -14552,11 +14450,8 @@ class UserAccess(IamEvent):
 
         if self._is_empty(self.activity_id):
             self.MissingRequiredField("activity_id")
-        if not isinstance(self.activity_id, UserAccessActivityIdEnum):
+        if isinstance(self.activity_id, str):
             self.activity_id = UserAccessActivityIdEnum(self.activity_id)
-
-        if self.activity_id is not None and not isinstance(self.activity_id, ActivityIdEnum):
-            self.activity_id = ActivityIdEnum(self.activity_id)
 
         if self.resource is not None and not isinstance(self.resource, ResourceDetails):
             self.resource = ResourceDetails(**as_dict(self.resource))
@@ -14636,7 +14531,7 @@ class NetworkEvent(BaseEvent):
         if self.observation_point is not None and not isinstance(self.observation_point, str):
             self.observation_point = str(self.observation_point)
 
-        if self.observation_point_id is not None and not isinstance(self.observation_point_id, NetworkEventObservationPointIdEnum):
+        if isinstance(self.observation_point_id, str):
             self.observation_point_id = NetworkEventObservationPointIdEnum(self.observation_point_id)
 
         self._normalize_inlined_as_list(slot_name="packet_list", slot_type=Packet, key_name="value", keyed=False)
@@ -14715,14 +14610,11 @@ class DhcpActivity(NetworkEvent):
 
         if self._is_empty(self.activity_id):
             self.MissingRequiredField("activity_id")
-        if not isinstance(self.activity_id, DhcpActivityActivityIdEnum):
+        if isinstance(self.activity_id, str):
             self.activity_id = DhcpActivityActivityIdEnum(self.activity_id)
 
         if self.api is not None and not isinstance(self.api, Api):
             self.api = Api(**as_dict(self.api))
-
-        if self.activity_id is not None and not isinstance(self.activity_id, ActivityIdEnum):
-            self.activity_id = ActivityIdEnum(self.activity_id)
 
         if self.dst_endpoint is not None and not isinstance(self.dst_endpoint, NetworkEndpoint):
             self.dst_endpoint = NetworkEndpoint(**as_dict(self.dst_endpoint))
@@ -14785,11 +14677,8 @@ class DnsActivity(NetworkEvent):
     def __post_init__(self, *_: str, **kwargs: Any):
         if self._is_empty(self.activity_id):
             self.MissingRequiredField("activity_id")
-        if not isinstance(self.activity_id, DnsActivityActivityIdEnum):
+        if isinstance(self.activity_id, str):
             self.activity_id = DnsActivityActivityIdEnum(self.activity_id)
-
-        if self.activity_id is not None and not isinstance(self.activity_id, ActivityIdEnum):
-            self.activity_id = ActivityIdEnum(self.activity_id)
 
         self._normalize_inlined_as_list(slot_name="answers", slot_type=DnsAnswer, key_name="rdata", keyed=False)
 
@@ -14808,7 +14697,7 @@ class DnsActivity(NetworkEvent):
         if self.rcode is not None and not isinstance(self.rcode, str):
             self.rcode = str(self.rcode)
 
-        if self.rcode_id is not None and not isinstance(self.rcode_id, DnsActivityRcodeIdEnum):
+        if isinstance(self.rcode_id, str):
             self.rcode_id = DnsActivityRcodeIdEnum(self.rcode_id)
 
         if self.response_time is not None and not isinstance(self.response_time, TimestampT):
@@ -14869,7 +14758,7 @@ class EmailActivity(BaseEvent):
     def __post_init__(self, *_: str, **kwargs: Any):
         if self._is_empty(self.direction_id):
             self.MissingRequiredField("direction_id")
-        if not isinstance(self.direction_id, EmailActivityDirectionIdEnum):
+        if isinstance(self.direction_id, str):
             self.direction_id = EmailActivityDirectionIdEnum(self.direction_id)
 
         if self._is_empty(self.email):
@@ -14879,11 +14768,8 @@ class EmailActivity(BaseEvent):
 
         if self._is_empty(self.activity_id):
             self.MissingRequiredField("activity_id")
-        if not isinstance(self.activity_id, EmailActivityActivityIdEnum):
+        if isinstance(self.activity_id, str):
             self.activity_id = EmailActivityActivityIdEnum(self.activity_id)
-
-        if self.activity_id is not None and not isinstance(self.activity_id, ActivityIdEnum):
-            self.activity_id = ActivityIdEnum(self.activity_id)
 
         if self.attempt is not None and not isinstance(self.attempt, int):
             self.attempt = int(self.attempt)
@@ -14962,11 +14848,8 @@ class EmailFileActivity(BaseEvent):
 
         if self._is_empty(self.activity_id):
             self.MissingRequiredField("activity_id")
-        if not isinstance(self.activity_id, EmailFileActivityActivityIdEnum):
+        if isinstance(self.activity_id, str):
             self.activity_id = EmailFileActivityActivityIdEnum(self.activity_id)
-
-        if self.activity_id is not None and not isinstance(self.activity_id, ActivityIdEnum):
-            self.activity_id = ActivityIdEnum(self.activity_id)
 
         super().__post_init__(**kwargs)
 
@@ -15008,11 +14891,8 @@ class EmailUrlActivity(BaseEvent):
 
         if self._is_empty(self.activity_id):
             self.MissingRequiredField("activity_id")
-        if not isinstance(self.activity_id, EmailUrlActivityActivityIdEnum):
+        if isinstance(self.activity_id, str):
             self.activity_id = EmailUrlActivityActivityIdEnum(self.activity_id)
-
-        if self.activity_id is not None and not isinstance(self.activity_id, ActivityIdEnum):
-            self.activity_id = ActivityIdEnum(self.activity_id)
 
         super().__post_init__(**kwargs)
 
@@ -15050,11 +14930,8 @@ class FtpActivity(NetworkEvent):
     def __post_init__(self, *_: str, **kwargs: Any):
         if self._is_empty(self.activity_id):
             self.MissingRequiredField("activity_id")
-        if not isinstance(self.activity_id, FtpActivityActivityIdEnum):
+        if isinstance(self.activity_id, str):
             self.activity_id = FtpActivityActivityIdEnum(self.activity_id)
-
-        if self.activity_id is not None and not isinstance(self.activity_id, ActivityIdEnum):
-            self.activity_id = ActivityIdEnum(self.activity_id)
 
         if not isinstance(self.codes, list):
             self.codes = [self.codes] if self.codes is not None else []
@@ -15113,11 +14990,8 @@ class HttpActivity(NetworkEvent):
     def __post_init__(self, *_: str, **kwargs: Any):
         if self._is_empty(self.activity_id):
             self.MissingRequiredField("activity_id")
-        if not isinstance(self.activity_id, HttpActivityActivityIdEnum):
+        if isinstance(self.activity_id, str):
             self.activity_id = HttpActivityActivityIdEnum(self.activity_id)
-
-        if self.activity_id is not None and not isinstance(self.activity_id, ActivityIdEnum):
-            self.activity_id = ActivityIdEnum(self.activity_id)
 
         if self.file is not None and not isinstance(self.file, File):
             self.file = File(**as_dict(self.file))
@@ -15170,11 +15044,8 @@ class NetworkActivity(NetworkEvent):
     def __post_init__(self, *_: str, **kwargs: Any):
         if self._is_empty(self.activity_id):
             self.MissingRequiredField("activity_id")
-        if not isinstance(self.activity_id, NetworkActivityActivityIdEnum):
+        if isinstance(self.activity_id, str):
             self.activity_id = NetworkActivityActivityIdEnum(self.activity_id)
-
-        if self.activity_id is not None and not isinstance(self.activity_id, ActivityIdEnum):
-            self.activity_id = ActivityIdEnum(self.activity_id)
 
         if self.dst_endpoint is not None and not isinstance(self.dst_endpoint, NetworkEndpoint):
             self.dst_endpoint = NetworkEndpoint(**as_dict(self.dst_endpoint))
@@ -15182,7 +15053,7 @@ class NetworkActivity(NetworkEvent):
         if self.initiator is not None and not isinstance(self.initiator, str):
             self.initiator = str(self.initiator)
 
-        if self.initiator_id is not None and not isinstance(self.initiator_id, NetworkActivityInitiatorIdEnum):
+        if isinstance(self.initiator_id, str):
             self.initiator_id = NetworkActivityInitiatorIdEnum(self.initiator_id)
 
         if self.is_src_dst_assignment_known is not None and not isinstance(self.is_src_dst_assignment_known, Bool):
@@ -15245,16 +15116,13 @@ class NetworkFileActivity(NetworkEvent):
 
         if self._is_empty(self.activity_id):
             self.MissingRequiredField("activity_id")
-        if not isinstance(self.activity_id, NetworkFileActivityActivityIdEnum):
+        if isinstance(self.activity_id, str):
             self.activity_id = NetworkFileActivityActivityIdEnum(self.activity_id)
 
         if self._is_empty(self.src_endpoint):
             self.MissingRequiredField("src_endpoint")
         if not isinstance(self.src_endpoint, NetworkEndpoint):
             self.src_endpoint = NetworkEndpoint(**as_dict(self.src_endpoint))
-
-        if self.activity_id is not None and not isinstance(self.activity_id, ActivityIdEnum):
-            self.activity_id = ActivityIdEnum(self.activity_id)
 
         if self.connection_info is not None and not isinstance(self.connection_info, NetworkConnectionInfo):
             self.connection_info = NetworkConnectionInfo(**as_dict(self.connection_info))
@@ -15315,11 +15183,8 @@ class NtpActivity(NetworkEvent):
 
         if self._is_empty(self.activity_id):
             self.MissingRequiredField("activity_id")
-        if not isinstance(self.activity_id, NtpActivityActivityIdEnum):
+        if isinstance(self.activity_id, str):
             self.activity_id = NtpActivityActivityIdEnum(self.activity_id)
-
-        if self.activity_id is not None and not isinstance(self.activity_id, ActivityIdEnum):
-            self.activity_id = ActivityIdEnum(self.activity_id)
 
         if self.delay is not None and not isinstance(self.delay, int):
             self.delay = int(self.delay)
@@ -15333,7 +15198,7 @@ class NtpActivity(NetworkEvent):
         if self.stratum is not None and not isinstance(self.stratum, str):
             self.stratum = str(self.stratum)
 
-        if self.stratum_id is not None and not isinstance(self.stratum_id, StratumIdEnum):
+        if isinstance(self.stratum_id, str):
             self.stratum_id = StratumIdEnum(self.stratum_id)
 
         super().__post_init__(**kwargs)
@@ -15377,11 +15242,8 @@ class RdpActivity(NetworkEvent):
     def __post_init__(self, *_: str, **kwargs: Any):
         if self._is_empty(self.activity_id):
             self.MissingRequiredField("activity_id")
-        if not isinstance(self.activity_id, RdpActivityActivityIdEnum):
+        if isinstance(self.activity_id, str):
             self.activity_id = RdpActivityActivityIdEnum(self.activity_id)
-
-        if self.activity_id is not None and not isinstance(self.activity_id, ActivityIdEnum):
-            self.activity_id = ActivityIdEnum(self.activity_id)
 
         if not isinstance(self.capabilities, list):
             self.capabilities = [self.capabilities] if self.capabilities is not None else []
@@ -15467,11 +15329,8 @@ class SmbActivity(NetworkEvent):
     def __post_init__(self, *_: str, **kwargs: Any):
         if self._is_empty(self.activity_id):
             self.MissingRequiredField("activity_id")
-        if not isinstance(self.activity_id, SmbActivityActivityIdEnum):
+        if isinstance(self.activity_id, str):
             self.activity_id = SmbActivityActivityIdEnum(self.activity_id)
-
-        if self.activity_id is not None and not isinstance(self.activity_id, ActivityIdEnum):
-            self.activity_id = ActivityIdEnum(self.activity_id)
 
         if not isinstance(self.client_dialects, list):
             self.client_dialects = [self.client_dialects] if self.client_dialects is not None else []
@@ -15501,7 +15360,7 @@ class SmbActivity(NetworkEvent):
         if self.share_type is not None and not isinstance(self.share_type, str):
             self.share_type = str(self.share_type)
 
-        if self.share_type_id is not None and not isinstance(self.share_type_id, ShareTypeIdEnum):
+        if isinstance(self.share_type_id, str):
             self.share_type_id = ShareTypeIdEnum(self.share_type_id)
 
         if self.tree_uid is not None and not isinstance(self.tree_uid, str):
@@ -15542,16 +15401,13 @@ class SshActivity(NetworkEvent):
     def __post_init__(self, *_: str, **kwargs: Any):
         if self._is_empty(self.activity_id):
             self.MissingRequiredField("activity_id")
-        if not isinstance(self.activity_id, SshActivityActivityIdEnum):
+        if isinstance(self.activity_id, str):
             self.activity_id = SshActivityActivityIdEnum(self.activity_id)
-
-        if self.activity_id is not None and not isinstance(self.activity_id, ActivityIdEnum):
-            self.activity_id = ActivityIdEnum(self.activity_id)
 
         if self.auth_type is not None and not isinstance(self.auth_type, str):
             self.auth_type = str(self.auth_type)
 
-        if self.auth_type_id is not None and not isinstance(self.auth_type_id, SshActivityAuthTypeIdEnum):
+        if isinstance(self.auth_type_id, str):
             self.auth_type_id = SshActivityAuthTypeIdEnum(self.auth_type_id)
 
         if self.client_hassh is not None and not isinstance(self.client_hassh, Hassh):
@@ -15606,11 +15462,8 @@ class TunnelActivity(NetworkEvent):
     def __post_init__(self, *_: str, **kwargs: Any):
         if self._is_empty(self.activity_id):
             self.MissingRequiredField("activity_id")
-        if not isinstance(self.activity_id, TunnelActivityActivityIdEnum):
+        if isinstance(self.activity_id, str):
             self.activity_id = TunnelActivityActivityIdEnum(self.activity_id)
-
-        if self.activity_id is not None and not isinstance(self.activity_id, ActivityIdEnum):
-            self.activity_id = ActivityIdEnum(self.activity_id)
 
         if self.connection_info is not None and not isinstance(self.connection_info, NetworkConnectionInfo):
             self.connection_info = NetworkConnectionInfo(**as_dict(self.connection_info))
@@ -15639,7 +15492,7 @@ class TunnelActivity(NetworkEvent):
         if self.tunnel_type is not None and not isinstance(self.tunnel_type, str):
             self.tunnel_type = str(self.tunnel_type)
 
-        if self.tunnel_type_id is not None and not isinstance(self.tunnel_type_id, TunnelActivityTunnelTypeIdEnum):
+        if isinstance(self.tunnel_type_id, str):
             self.tunnel_type_id = TunnelActivityTunnelTypeIdEnum(self.tunnel_type_id)
 
         if self.user is not None and not isinstance(self.user, User):
@@ -15700,11 +15553,8 @@ class RemediationActivity(BaseEvent):
 
         if self._is_empty(self.activity_id):
             self.MissingRequiredField("activity_id")
-        if not isinstance(self.activity_id, RemediationActivityActivityIdEnum):
+        if isinstance(self.activity_id, str):
             self.activity_id = RemediationActivityActivityIdEnum(self.activity_id)
-
-        if self.activity_id is not None and not isinstance(self.activity_id, ActivityIdEnum):
-            self.activity_id = ActivityIdEnum(self.activity_id)
 
         if not isinstance(self.countermeasures, list):
             self.countermeasures = [self.countermeasures] if self.countermeasures is not None else []
@@ -15716,10 +15566,7 @@ class RemediationActivity(BaseEvent):
         if self.scan is not None and not isinstance(self.scan, Scan):
             self.scan = Scan(**as_dict(self.scan))
 
-        if self.status_id is not None and not isinstance(self.status_id, StatusIdEnum):
-            self.status_id = StatusIdEnum(self.status_id)
-
-        if self.status_id is not None and not isinstance(self.status_id, RemediationActivityStatusIdEnum):
+        if isinstance(self.status_id, str):
             self.status_id = RemediationActivityStatusIdEnum(self.status_id)
 
         super().__post_init__(**kwargs)
@@ -15915,16 +15762,13 @@ class EventLogActvity(SystemEvent):
     def __post_init__(self, *_: str, **kwargs: Any):
         if self._is_empty(self.activity_id):
             self.MissingRequiredField("activity_id")
-        if not isinstance(self.activity_id, EventLogActvityActivityIdEnum):
+        if isinstance(self.activity_id, str):
             self.activity_id = EventLogActvityActivityIdEnum(self.activity_id)
 
         if self._is_empty(self.actor):
             self.MissingRequiredField("actor")
         if not isinstance(self.actor, Actor):
             self.actor = Actor(**as_dict(self.actor))
-
-        if self.activity_id is not None and not isinstance(self.activity_id, ActivityIdEnum):
-            self.activity_id = ActivityIdEnum(self.activity_id)
 
         if self.actor is not None and not isinstance(self.actor, Actor):
             self.actor = Actor(**as_dict(self.actor))
@@ -15947,7 +15791,7 @@ class EventLogActvity(SystemEvent):
         if self.log_type is not None and not isinstance(self.log_type, str):
             self.log_type = str(self.log_type)
 
-        if self.log_type_id is not None and not isinstance(self.log_type_id, LogTypeIdEnum):
+        if isinstance(self.log_type_id, str):
             self.log_type_id = LogTypeIdEnum(self.log_type_id)
 
         if self.src_endpoint is not None and not isinstance(self.src_endpoint, NetworkEndpoint):
@@ -16008,7 +15852,7 @@ class FileActivity(SystemEvent):
 
         if self._is_empty(self.activity_id):
             self.MissingRequiredField("activity_id")
-        if not isinstance(self.activity_id, FileActivityActivityIdEnum):
+        if isinstance(self.activity_id, str):
             self.activity_id = FileActivityActivityIdEnum(self.activity_id)
 
         if self._is_empty(self.actor):
@@ -16018,9 +15862,6 @@ class FileActivity(SystemEvent):
 
         if self.access_mask is not None and not isinstance(self.access_mask, int):
             self.access_mask = int(self.access_mask)
-
-        if self.activity_id is not None and not isinstance(self.activity_id, ActivityIdEnum):
-            self.activity_id = ActivityIdEnum(self.activity_id)
 
         if self.actor is not None and not isinstance(self.actor, Actor):
             self.actor = Actor(**as_dict(self.actor))
@@ -16077,11 +15918,8 @@ class KernelActivity(SystemEvent):
 
         if self._is_empty(self.activity_id):
             self.MissingRequiredField("activity_id")
-        if not isinstance(self.activity_id, KernelActivityActivityIdEnum):
+        if isinstance(self.activity_id, str):
             self.activity_id = KernelActivityActivityIdEnum(self.activity_id)
-
-        if self.activity_id is not None and not isinstance(self.activity_id, ActivityIdEnum):
-            self.activity_id = ActivityIdEnum(self.activity_id)
 
         super().__post_init__(**kwargs)
 
@@ -16120,16 +15958,13 @@ class KernelExtensionActivity(SystemEvent):
 
         if self._is_empty(self.activity_id):
             self.MissingRequiredField("activity_id")
-        if not isinstance(self.activity_id, KernelExtensionActivityActivityIdEnum):
+        if isinstance(self.activity_id, str):
             self.activity_id = KernelExtensionActivityActivityIdEnum(self.activity_id)
 
         if self._is_empty(self.actor):
             self.MissingRequiredField("actor")
         if not isinstance(self.actor, Actor):
             self.actor = Actor(**as_dict(self.actor))
-
-        if self.activity_id is not None and not isinstance(self.activity_id, ActivityIdEnum):
-            self.activity_id = ActivityIdEnum(self.activity_id)
 
         if self.actor is not None and not isinstance(self.actor, Actor):
             self.actor = Actor(**as_dict(self.actor))
@@ -16176,11 +16011,8 @@ class MemoryActivity(SystemEvent):
 
         if self._is_empty(self.activity_id):
             self.MissingRequiredField("activity_id")
-        if not isinstance(self.activity_id, MemoryActivityActivityIdEnum):
+        if isinstance(self.activity_id, str):
             self.activity_id = MemoryActivityActivityIdEnum(self.activity_id)
-
-        if self.activity_id is not None and not isinstance(self.activity_id, ActivityIdEnum):
-            self.activity_id = ActivityIdEnum(self.activity_id)
 
         if self.actual_permissions is not None and not isinstance(self.actual_permissions, int):
             self.actual_permissions = int(self.actual_permissions)
@@ -16231,16 +16063,13 @@ class ModuleActivity(SystemEvent):
 
         if self._is_empty(self.activity_id):
             self.MissingRequiredField("activity_id")
-        if not isinstance(self.activity_id, ModuleActivityActivityIdEnum):
+        if isinstance(self.activity_id, str):
             self.activity_id = ModuleActivityActivityIdEnum(self.activity_id)
 
         if self._is_empty(self.actor):
             self.MissingRequiredField("actor")
         if not isinstance(self.actor, Actor):
             self.actor = Actor(**as_dict(self.actor))
-
-        if self.activity_id is not None and not isinstance(self.activity_id, ActivityIdEnum):
-            self.activity_id = ActivityIdEnum(self.activity_id)
 
         if self.actor is not None and not isinstance(self.actor, Actor):
             self.actor = Actor(**as_dict(self.actor))
@@ -16283,11 +16112,8 @@ class PeripheralActivity(SystemEvent):
 
         if self._is_empty(self.activity_id):
             self.MissingRequiredField("activity_id")
-        if not isinstance(self.activity_id, PeripheralActivityActivityIdEnum):
+        if isinstance(self.activity_id, str):
             self.activity_id = PeripheralActivityActivityIdEnum(self.activity_id)
-
-        if self.activity_id is not None and not isinstance(self.activity_id, ActivityIdEnum):
-            self.activity_id = ActivityIdEnum(self.activity_id)
 
         super().__post_init__(**kwargs)
 
@@ -16336,16 +16162,13 @@ class ProcessActivity(SystemEvent):
 
         if self._is_empty(self.activity_id):
             self.MissingRequiredField("activity_id")
-        if not isinstance(self.activity_id, ProcessActivityActivityIdEnum):
+        if isinstance(self.activity_id, str):
             self.activity_id = ProcessActivityActivityIdEnum(self.activity_id)
 
         if self._is_empty(self.actor):
             self.MissingRequiredField("actor")
         if not isinstance(self.actor, Actor):
             self.actor = Actor(**as_dict(self.actor))
-
-        if self.activity_id is not None and not isinstance(self.activity_id, ActivityIdEnum):
-            self.activity_id = ActivityIdEnum(self.activity_id)
 
         if self.actor is not None and not isinstance(self.actor, Actor):
             self.actor = Actor(**as_dict(self.actor))
@@ -16359,13 +16182,13 @@ class ProcessActivity(SystemEvent):
         if self.injection_type is not None and not isinstance(self.injection_type, str):
             self.injection_type = str(self.injection_type)
 
-        if self.injection_type_id is not None and not isinstance(self.injection_type_id, InjectionTypeIdEnum):
+        if isinstance(self.injection_type_id, str):
             self.injection_type_id = InjectionTypeIdEnum(self.injection_type_id)
 
         if self.launch_type is not None and not isinstance(self.launch_type, str):
             self.launch_type = str(self.launch_type)
 
-        if self.launch_type_id is not None and not isinstance(self.launch_type_id, LaunchTypeIdEnum):
+        if isinstance(self.launch_type_id, str):
             self.launch_type_id = LaunchTypeIdEnum(self.launch_type_id)
 
         if self.module is not None and not isinstance(self.module, Module):
@@ -16417,16 +16240,13 @@ class ScheduledJobActivity(SystemEvent):
 
         if self._is_empty(self.activity_id):
             self.MissingRequiredField("activity_id")
-        if not isinstance(self.activity_id, ScheduledJobActivityActivityIdEnum):
+        if isinstance(self.activity_id, str):
             self.activity_id = ScheduledJobActivityActivityIdEnum(self.activity_id)
 
         if self._is_empty(self.actor):
             self.MissingRequiredField("actor")
         if not isinstance(self.actor, Actor):
             self.actor = Actor(**as_dict(self.actor))
-
-        if self.activity_id is not None and not isinstance(self.activity_id, ActivityIdEnum):
-            self.activity_id = ActivityIdEnum(self.activity_id)
 
         if self.actor is not None and not isinstance(self.actor, Actor):
             self.actor = Actor(**as_dict(self.actor))
@@ -16467,11 +16287,8 @@ class ScriptActivity(SystemEvent):
 
         if self._is_empty(self.activity_id):
             self.MissingRequiredField("activity_id")
-        if not isinstance(self.activity_id, ScriptActivityActivityIdEnum):
+        if isinstance(self.activity_id, str):
             self.activity_id = ScriptActivityActivityIdEnum(self.activity_id)
-
-        if self.activity_id is not None and not isinstance(self.activity_id, ActivityIdEnum):
-            self.activity_id = ActivityIdEnum(self.activity_id)
 
         super().__post_init__(**kwargs)
 
@@ -16581,16 +16398,13 @@ class AirborneBroadcastActivity(UnmannedSystemsEvent):
 
         if self._is_empty(self.activity_id):
             self.MissingRequiredField("activity_id")
-        if not isinstance(self.activity_id, AirborneBroadcastActivityActivityIdEnum):
+        if isinstance(self.activity_id, str):
             self.activity_id = AirborneBroadcastActivityActivityIdEnum(self.activity_id)
 
         if self._is_empty(self.dst_endpoint):
             self.MissingRequiredField("dst_endpoint")
         if not isinstance(self.dst_endpoint, NetworkEndpoint):
             self.dst_endpoint = NetworkEndpoint(**as_dict(self.dst_endpoint))
-
-        if self.activity_id is not None and not isinstance(self.activity_id, ActivityIdEnum):
-            self.activity_id = ActivityIdEnum(self.activity_id)
 
         if self.aircraft is not None and not isinstance(self.aircraft, Aircraft):
             self.aircraft = Aircraft(**as_dict(self.aircraft))
@@ -16677,16 +16491,13 @@ class DroneFlightsActivity(UnmannedSystemsEvent):
 
         if self._is_empty(self.activity_id):
             self.MissingRequiredField("activity_id")
-        if not isinstance(self.activity_id, DroneFlightsActivityActivityIdEnum):
+        if isinstance(self.activity_id, str):
             self.activity_id = DroneFlightsActivityActivityIdEnum(self.activity_id)
-
-        if self.activity_id is not None and not isinstance(self.activity_id, ActivityIdEnum):
-            self.activity_id = ActivityIdEnum(self.activity_id)
 
         if self.auth_protocol is not None and not isinstance(self.auth_protocol, str):
             self.auth_protocol = str(self.auth_protocol)
 
-        if self.auth_protocol_id is not None and not isinstance(self.auth_protocol_id, DroneFlightsActivityAuthProtocolIdEnum):
+        if isinstance(self.auth_protocol_id, str):
             self.auth_protocol_id = DroneFlightsActivityAuthProtocolIdEnum(self.auth_protocol_id)
 
         if self.classification is not None and not isinstance(self.classification, str):
@@ -16704,9 +16515,6 @@ class DroneFlightsActivity(UnmannedSystemsEvent):
         if self.status is not None and not isinstance(self.status, str):
             self.status = str(self.status)
 
-        if self.status_id is not None and not isinstance(self.status_id, StatusIdEnum):
-            self.status_id = StatusIdEnum(self.status_id)
-
         if self.traffic is not None and not isinstance(self.traffic, NetworkTraffic):
             self.traffic = NetworkTraffic(**as_dict(self.traffic))
 
@@ -16719,7 +16527,7 @@ class DroneFlightsActivity(UnmannedSystemsEvent):
         if self.status is not None and not isinstance(self.status, str):
             self.status = str(self.status)
 
-        if self.status_id is not None and not isinstance(self.status_id, DroneFlightsActivityStatusIdEnum):
+        if isinstance(self.status_id, str):
             self.status_id = DroneFlightsActivityStatusIdEnum(self.status_id)
 
         if self.traffic is not None and not isinstance(self.traffic, NetworkTraffic):
@@ -17018,7 +16826,7 @@ class RegValue(Object):
         if self.type is not None and not isinstance(self.type, str):
             self.type = str(self.type)
 
-        if self.type_id is not None and not isinstance(self.type_id, RegValueTypeIdEnum):
+        if isinstance(self.type_id, str):
             self.type_id = RegValueTypeIdEnum(self.type_id)
 
         super().__post_init__(**kwargs)
@@ -17071,7 +16879,7 @@ class WinResource(Resource):
     def __post_init__(self, *_: str, **kwargs: Any):
         if self._is_empty(self.type_id):
             self.MissingRequiredField("type_id")
-        if not isinstance(self.type_id, WinResourceTypeIdEnum):
+        if isinstance(self.type_id, str):
             self.type_id = WinResourceTypeIdEnum(self.type_id)
 
         if self.details is not None and not isinstance(self.details, str):
@@ -17142,7 +16950,7 @@ class WinService(Service):
         if self.service_category is not None and not isinstance(self.service_category, str):
             self.service_category = str(self.service_category)
 
-        if self.service_category_id is not None and not isinstance(self.service_category_id, WindowsServiceCategoryIdEnum):
+        if isinstance(self.service_category_id, str):
             self.service_category_id = WindowsServiceCategoryIdEnum(self.service_category_id)
 
         if not isinstance(self.service_dependencies, list):
@@ -17155,7 +16963,7 @@ class WinService(Service):
         if self.service_error_control is not None and not isinstance(self.service_error_control, str):
             self.service_error_control = str(self.service_error_control)
 
-        if self.service_error_control_id is not None and not isinstance(self.service_error_control_id, WindowsServiceErrorControlIdEnum):
+        if isinstance(self.service_error_control_id, str):
             self.service_error_control_id = WindowsServiceErrorControlIdEnum(self.service_error_control_id)
 
         if self.service_file is not None and not isinstance(self.service_file, File):
@@ -17167,13 +16975,13 @@ class WinService(Service):
         if self.service_start_type is not None and not isinstance(self.service_start_type, str):
             self.service_start_type = str(self.service_start_type)
 
-        if self.service_start_type_id is not None and not isinstance(self.service_start_type_id, WindowsServiceStartTypeIdEnum):
+        if isinstance(self.service_start_type_id, str):
             self.service_start_type_id = WindowsServiceStartTypeIdEnum(self.service_start_type_id)
 
         if self.service_type is not None and not isinstance(self.service_type, str):
             self.service_type = str(self.service_type)
 
-        if self.service_type_id is not None and not isinstance(self.service_type_id, WindowsServiceTypeIdEnum):
+        if isinstance(self.service_type_id, str):
             self.service_type_id = WindowsServiceTypeIdEnum(self.service_type_id)
 
         super().__post_init__(**kwargs)
@@ -17258,7 +17066,7 @@ class RegistryKeyActivity(SystemEvent):
 
         if self._is_empty(self.activity_id):
             self.MissingRequiredField("activity_id")
-        if not isinstance(self.activity_id, RegistryKeyActivityActivityIdEnum):
+        if isinstance(self.activity_id, str):
             self.activity_id = RegistryKeyActivityActivityIdEnum(self.activity_id)
 
         if self._is_empty(self.actor):
@@ -17268,9 +17076,6 @@ class RegistryKeyActivity(SystemEvent):
 
         if self.access_mask is not None and not isinstance(self.access_mask, int):
             self.access_mask = int(self.access_mask)
-
-        if self.activity_id is not None and not isinstance(self.activity_id, ActivityIdEnum):
-            self.activity_id = ActivityIdEnum(self.activity_id)
 
         if self.actor is not None and not isinstance(self.actor, Actor):
             self.actor = Actor(**as_dict(self.actor))
@@ -17356,16 +17161,13 @@ class RegistryValueActivity(SystemEvent):
 
         if self._is_empty(self.activity_id):
             self.MissingRequiredField("activity_id")
-        if not isinstance(self.activity_id, RegistryValueActivityActivityIdEnum):
+        if isinstance(self.activity_id, str):
             self.activity_id = RegistryValueActivityActivityIdEnum(self.activity_id)
 
         if self._is_empty(self.actor):
             self.MissingRequiredField("actor")
         if not isinstance(self.actor, Actor):
             self.actor = Actor(**as_dict(self.actor))
-
-        if self.activity_id is not None and not isinstance(self.activity_id, ActivityIdEnum):
-            self.activity_id = ActivityIdEnum(self.activity_id)
 
         if self.actor is not None and not isinstance(self.actor, Actor):
             self.actor = Actor(**as_dict(self.actor))
@@ -17444,11 +17246,8 @@ class WindowsResourceActivity(SystemEvent):
 
         if self._is_empty(self.activity_id):
             self.MissingRequiredField("activity_id")
-        if not isinstance(self.activity_id, WindowsResourceActivityActivityIdEnum):
+        if isinstance(self.activity_id, str):
             self.activity_id = WindowsResourceActivityActivityIdEnum(self.activity_id)
-
-        if self.activity_id is not None and not isinstance(self.activity_id, ActivityIdEnum):
-            self.activity_id = ActivityIdEnum(self.activity_id)
 
         super().__post_init__(**kwargs)
 
@@ -17487,11 +17286,8 @@ class WindowsServiceActivity(SystemEvent):
 
         if self._is_empty(self.activity_id):
             self.MissingRequiredField("activity_id")
-        if not isinstance(self.activity_id, WindowsServiceActivityActivityIdEnum):
+        if isinstance(self.activity_id, str):
             self.activity_id = WindowsServiceActivityActivityIdEnum(self.activity_id)
-
-        if self.activity_id is not None and not isinstance(self.activity_id, ActivityIdEnum):
-            self.activity_id = ActivityIdEnum(self.activity_id)
 
         super().__post_init__(**kwargs)
 

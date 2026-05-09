@@ -177,6 +177,17 @@ def to_perm_value(caption: str) -> str:
     return cleaned or "UNKNOWN"
 
 
+def to_subset_name(name: str) -> str:
+    """Normalize any identifier to snake_case for use as a LinkML subset name.
+
+    Handles PascalCase, camelCase, spaces, and hyphens so that subset names
+    never collide with PascalCase class names even under case-folding generators.
+    """
+    s = re.sub(r"([A-Z]+)([A-Z][a-z])", r"\1_\2", name)
+    s = re.sub(r"([a-z\d])([A-Z])", r"\1_\2", s)
+    return re.sub(r"[^a-z0-9]+", "_", s.lower()).strip("_")
+
+
 # ---------------------------------------------------------------------------
 # OCSF type → LinkML range.
 # ---------------------------------------------------------------------------
@@ -576,6 +587,7 @@ def _with_in_subset(
     cls: "OrderedDict[str, Any]", subsets: list[str]
 ) -> "OrderedDict[str, Any]":
     """Return *cls* rebuilt with ``in_subset`` inserted before structural keys."""
+    subsets = [to_subset_name(s) for s in subsets]
     new: "OrderedDict[str, Any]" = OrderedDict()
     inserted = False
     for k, v in cls.items():
@@ -1455,16 +1467,16 @@ def build_root(upstream: Upstream) -> str:
     subsets: "OrderedDict[str, Any]" = OrderedDict()
     for cat_name, cat_body in upstream.categories["attributes"].items():
         desc = cat_body.get("description") or cat_body.get("caption", cat_name)
-        subsets[cat_name] = OrderedDict(description=desc)
-    subsets["objects"] = OrderedDict(
+        subsets[to_subset_name(cat_name)] = OrderedDict(description=desc)
+    subsets[to_subset_name("objects")] = OrderedDict(
         description="Reusable OCSF object definitions (mirrors upstream objects/ directory)."
     )
     for pname, pbody in upstream.profiles.items():
-        key = f"{pname}_profile"
+        key = to_subset_name(f"{pname}_profile")
         desc = pbody.get("description") or pbody.get("caption") or f"OCSF '{pname}' profile."
         subsets[key] = OrderedDict(description=desc)
     for ext_name, ext in upstream.extensions.items():
-        key = f"{ext_name}_extension"
+        key = to_subset_name(f"{ext_name}_extension")
         manifest = ext.get("manifest") or {}
         desc = manifest.get("description") or manifest.get("caption") or f"OCSF '{ext_name}' extension."
         subsets[key] = OrderedDict(description=desc)

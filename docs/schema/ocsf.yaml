@@ -2,7 +2,7 @@ name: ocsf
 annotations:
   copyright:
     tag: copyright
-    value: "\xA9 OCSF a Series of LF Projects, LLC"
+    value: "Source schema \xA9 OCSF a Series of LF Projects, LLC"
 description: "Open Cybersecurity Schema Framework (OCSF) \u2014 LinkML schema. Generated\
   \ from\nupstream OCSF JSON at version 1.9.0-dev. Each top-level concern is one module:\n\
   types, dictionary (slots), enums, categories, objects, profiles, events,\nextensions."
@@ -106579,7 +106579,7 @@ classes:
     class_uri: ocsf:WindowsServiceActivity
 metamodel_version: 1.7.0
 source_file: ocsf.yaml
-source_file_date: '2026-05-09T00:40:14'
-source_file_size: 6125
-generation_date: '2026-05-09T01:09:41'
+source_file_date: '2026-05-09T01:42:04'
+source_file_size: 6139
+generation_date: '2026-05-09T01:47:28'
 

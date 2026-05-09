@@ -11556,8 +11556,8 @@ CREATE TABLE "AnomalyAnalysis_analysis_targets" (
 	FOREIGN KEY("AnomalyAnalysis_id") REFERENCES "AnomalyAnalysis" (id),
 	FOREIGN KEY(analysis_targets_id) REFERENCES "AnalysisTarget" (id)
 );
-CREATE INDEX "ix_AnomalyAnalysis_analysis_targets_analysis_targets_id" ON "AnomalyAnalysis_analysis_targets" (analysis_targets_id);
 CREATE INDEX "ix_AnomalyAnalysis_analysis_targets_AnomalyAnalysis_id" ON "AnomalyAnalysis_analysis_targets" ("AnomalyAnalysis_id");
+CREATE INDEX "ix_AnomalyAnalysis_analysis_targets_analysis_targets_id" ON "AnomalyAnalysis_analysis_targets" (analysis_targets_id);
 
 CREATE TABLE "AnomalyAnalysis_anomalies" (
 	"AnomalyAnalysis_id" INTEGER,
@@ -11576,8 +11576,8 @@ CREATE TABLE "AnomalyAnalysis_baselines" (
 	FOREIGN KEY("AnomalyAnalysis_id") REFERENCES "AnomalyAnalysis" (id),
 	FOREIGN KEY(baselines_id) REFERENCES "Baseline" (id)
 );
-CREATE INDEX "ix_AnomalyAnalysis_baselines_baselines_id" ON "AnomalyAnalysis_baselines" (baselines_id);
 CREATE INDEX "ix_AnomalyAnalysis_baselines_AnomalyAnalysis_id" ON "AnomalyAnalysis_baselines" ("AnomalyAnalysis_id");
+CREATE INDEX "ix_AnomalyAnalysis_baselines_baselines_id" ON "AnomalyAnalysis_baselines" (baselines_id);
 
 CREATE TABLE "Remediation_cis_controls" (
 	"Remediation_id" INTEGER,
@@ -11586,8 +11586,8 @@ CREATE TABLE "Remediation_cis_controls" (
 	FOREIGN KEY("Remediation_id") REFERENCES "Remediation" (id),
 	FOREIGN KEY(cis_controls_id) REFERENCES "CisControl" (id)
 );
-CREATE INDEX "ix_Remediation_cis_controls_cis_controls_id" ON "Remediation_cis_controls" (cis_controls_id);
 CREATE INDEX "ix_Remediation_cis_controls_Remediation_id" ON "Remediation_cis_controls" ("Remediation_id");
+CREATE INDEX "ix_Remediation_cis_controls_cis_controls_id" ON "Remediation_cis_controls" (cis_controls_id);
 
 CREATE TABLE "Remediation_kb_articles" (
 	"Remediation_id" INTEGER,
@@ -11604,8 +11604,8 @@ CREATE TABLE "Remediation_references" (
 	PRIMARY KEY ("Remediation_id", "references"),
 	FOREIGN KEY("Remediation_id") REFERENCES "Remediation" (id)
 );
-CREATE INDEX "ix_Remediation_references_references" ON "Remediation_references" ("references");
 CREATE INDEX "ix_Remediation_references_Remediation_id" ON "Remediation_references" ("Remediation_id");
+CREATE INDEX "ix_Remediation_references_references" ON "Remediation_references" ("references");
 
 CREATE TABLE "Request_flags" (
 	"Request_id" INTEGER,
@@ -11613,8 +11613,8 @@ CREATE TABLE "Request_flags" (
 	PRIMARY KEY ("Request_id", flags),
 	FOREIGN KEY("Request_id") REFERENCES "Request" (id)
 );
-CREATE INDEX "ix_Request_flags_flags" ON "Request_flags" (flags);
 CREATE INDEX "ix_Request_flags_Request_id" ON "Request_flags" ("Request_id");
+CREATE INDEX "ix_Request_flags_flags" ON "Request_flags" (flags);
 
 CREATE TABLE "Response_flags" (
 	"Response_id" INTEGER,
@@ -11659,8 +11659,8 @@ CREATE TABLE "AccessAnalysisResult_accessors" (
 	FOREIGN KEY("AccessAnalysisResult_id") REFERENCES "AccessAnalysisResult" (id),
 	FOREIGN KEY(accessors_id) REFERENCES "User" (id)
 );
-CREATE INDEX "ix_AccessAnalysisResult_accessors_AccessAnalysisResult_id" ON "AccessAnalysisResult_accessors" ("AccessAnalysisResult_id");
 CREATE INDEX "ix_AccessAnalysisResult_accessors_accessors_id" ON "AccessAnalysisResult_accessors" (accessors_id);
+CREATE INDEX "ix_AccessAnalysisResult_accessors_AccessAnalysisResult_id" ON "AccessAnalysisResult_accessors" ("AccessAnalysisResult_id");
 
 CREATE TABLE "AccessAnalysisResult_condition_keys" (
 	"AccessAnalysisResult_id" INTEGER,
@@ -11669,8 +11669,8 @@ CREATE TABLE "AccessAnalysisResult_condition_keys" (
 	FOREIGN KEY("AccessAnalysisResult_id") REFERENCES "AccessAnalysisResult" (id),
 	FOREIGN KEY(condition_keys_id) REFERENCES "KeyValueObject" (id)
 );
-CREATE INDEX "ix_AccessAnalysisResult_condition_keys_condition_keys_id" ON "AccessAnalysisResult_condition_keys" (condition_keys_id);
 CREATE INDEX "ix_AccessAnalysisResult_condition_keys_AccessAnalysisResult_id" ON "AccessAnalysisResult_condition_keys" ("AccessAnalysisResult_id");
+CREATE INDEX "ix_AccessAnalysisResult_condition_keys_condition_keys_id" ON "AccessAnalysisResult_condition_keys" (condition_keys_id);
 
 CREATE TABLE "AccessAnalysisResult_granted_privileges" (
 	"AccessAnalysisResult_id" INTEGER,
@@ -11717,8 +11717,8 @@ CREATE TABLE "Certificate_fingerprints" (
 	FOREIGN KEY("Certificate_id") REFERENCES "Certificate" (id),
 	FOREIGN KEY(fingerprints_id) REFERENCES "Fingerprint" (id)
 );
-CREATE INDEX "ix_Certificate_fingerprints_Certificate_id" ON "Certificate_fingerprints" ("Certificate_id");
 CREATE INDEX "ix_Certificate_fingerprints_fingerprints_id" ON "Certificate_fingerprints" (fingerprints_id);
+CREATE INDEX "ix_Certificate_fingerprints_Certificate_id" ON "Certificate_fingerprints" ("Certificate_id");
 
 CREATE TABLE "Certificate_sans" (
 	"Certificate_id" INTEGER,
@@ -12417,8 +12417,8 @@ CREATE TABLE "Request_containers" (
 	FOREIGN KEY("Request_id") REFERENCES "Request" (id),
 	FOREIGN KEY(containers_id) REFERENCES "Container" (id)
 );
-CREATE INDEX "ix_Request_containers_Request_id" ON "Request_containers" ("Request_id");
 CREATE INDEX "ix_Request_containers_containers_id" ON "Request_containers" (containers_id);
+CREATE INDEX "ix_Request_containers_Request_id" ON "Request_containers" ("Request_id");
 
 CREATE TABLE "Response_containers" (
 	"Response_id" INTEGER,
@@ -12436,8 +12436,8 @@ CREATE TABLE "Sso_scopes" (
 	PRIMARY KEY ("Sso_id", scopes),
 	FOREIGN KEY("Sso_id") REFERENCES "Sso" (id)
 );
-CREATE INDEX "ix_Sso_scopes_Sso_id" ON "Sso_scopes" ("Sso_id");
 CREATE INDEX "ix_Sso_scopes_scopes" ON "Sso_scopes" (scopes);
+CREATE INDEX "ix_Sso_scopes_Sso_id" ON "Sso_scopes" ("Sso_id");
 
 CREATE TABLE "Tls_certificate_chain" (
 	"Tls_id" INTEGER,
@@ -12445,8 +12445,8 @@ CREATE TABLE "Tls_certificate_chain" (
 	PRIMARY KEY ("Tls_id", certificate_chain),
 	FOREIGN KEY("Tls_id") REFERENCES "Tls" (id)
 );
-CREATE INDEX "ix_Tls_certificate_chain_certificate_chain" ON "Tls_certificate_chain" (certificate_chain);
 CREATE INDEX "ix_Tls_certificate_chain_Tls_id" ON "Tls_certificate_chain" ("Tls_id");
+CREATE INDEX "ix_Tls_certificate_chain_certificate_chain" ON "Tls_certificate_chain" (certificate_chain);
 
 CREATE TABLE "Tls_client_ciphers" (
 	"Tls_id" INTEGER,
@@ -12483,8 +12483,8 @@ CREATE TABLE "Tls_server_ciphers" (
 	PRIMARY KEY ("Tls_id", server_ciphers),
 	FOREIGN KEY("Tls_id") REFERENCES "Tls" (id)
 );
-CREATE INDEX "ix_Tls_server_ciphers_Tls_id" ON "Tls_server_ciphers" ("Tls_id");
 CREATE INDEX "ix_Tls_server_ciphers_server_ciphers" ON "Tls_server_ciphers" (server_ciphers);
+CREATE INDEX "ix_Tls_server_ciphers_Tls_id" ON "Tls_server_ciphers" ("Tls_id");
 
 CREATE TABLE "Tls_tls_extension_list" (
 	"Tls_id" INTEGER,
@@ -12493,8 +12493,8 @@ CREATE TABLE "Tls_tls_extension_list" (
 	FOREIGN KEY("Tls_id") REFERENCES "Tls" (id),
 	FOREIGN KEY(tls_extension_list_id) REFERENCES "TlsExtension" (id)
 );
-CREATE INDEX "ix_Tls_tls_extension_list_Tls_id" ON "Tls_tls_extension_list" ("Tls_id");
 CREATE INDEX "ix_Tls_tls_extension_list_tls_extension_list_id" ON "Tls_tls_extension_list" (tls_extension_list_id);
+CREATE INDEX "ix_Tls_tls_extension_list_Tls_id" ON "Tls_tls_extension_list" ("Tls_id");
 
 CREATE TABLE "Whois_domain_contacts" (
 	"Whois_id" INTEGER,
@@ -12503,8 +12503,8 @@ CREATE TABLE "Whois_domain_contacts" (
 	FOREIGN KEY("Whois_id") REFERENCES "Whois" (id),
 	FOREIGN KEY(domain_contacts_id) REFERENCES "DomainContact" (id)
 );
-CREATE INDEX "ix_Whois_domain_contacts_domain_contacts_id" ON "Whois_domain_contacts" (domain_contacts_id);
 CREATE INDEX "ix_Whois_domain_contacts_Whois_id" ON "Whois_domain_contacts" ("Whois_id");
+CREATE INDEX "ix_Whois_domain_contacts_domain_contacts_id" ON "Whois_domain_contacts" (domain_contacts_id);
 
 CREATE TABLE "Whois_name_servers" (
 	"Whois_id" INTEGER,
@@ -12531,8 +12531,8 @@ CREATE TABLE "Agent_policies" (
 	FOREIGN KEY("Agent_id") REFERENCES "Agent" (id),
 	FOREIGN KEY(policies_id) REFERENCES "Policy" (id)
 );
-CREATE INDEX "ix_Agent_policies_policies_id" ON "Agent_policies" (policies_id);
 CREATE INDEX "ix_Agent_policies_Agent_id" ON "Agent_policies" ("Agent_id");
+CREATE INDEX "ix_Agent_policies_policies_id" ON "Agent_policies" (policies_id);
 
 CREATE TABLE "Anomaly_observations" (
 	"Anomaly_id" INTEGER,
@@ -12935,8 +12935,8 @@ CREATE TABLE "ServicePrivilegeAnalysis_privilege_attack_info_list" (
 	FOREIGN KEY("ServicePrivilegeAnalysis_id") REFERENCES "ServicePrivilegeAnalysis" (id),
 	FOREIGN KEY(privilege_attack_info_list_id) REFERENCES "PrivilegeAttackInfo" (id)
 );
-CREATE INDEX "ix_ServicePrivilegeAnalysis_privilege_attack_info_list_ServicePrivilegeAnalysis_id" ON "ServicePrivilegeAnalysis_privilege_attack_info_list" ("ServicePrivilegeAnalysis_id");
 CREATE INDEX "ix_ServicePrivilegeAnalysis_privilege_attack_info_list_privilege_attack_info_list_id" ON "ServicePrivilegeAnalysis_privilege_attack_info_list" (privilege_attack_info_list_id);
+CREATE INDEX "ix_ServicePrivilegeAnalysis_privilege_attack_info_list_ServicePrivilegeAnalysis_id" ON "ServicePrivilegeAnalysis_privilege_attack_info_list" ("ServicePrivilegeAnalysis_id");
 
 CREATE TABLE "Trace_flags" (
 	"Trace_id" INTEGER,
@@ -13464,8 +13464,8 @@ CREATE TABLE "Resource_labels" (
 	PRIMARY KEY ("Resource_id", labels),
 	FOREIGN KEY("Resource_id") REFERENCES "Resource" (id)
 );
-CREATE INDEX "ix_Resource_labels_Resource_id" ON "Resource_labels" ("Resource_id");
 CREATE INDEX "ix_Resource_labels_labels" ON "Resource_labels" (labels);
+CREATE INDEX "ix_Resource_labels_Resource_id" ON "Resource_labels" ("Resource_id");
 
 CREATE TABLE "Resource_tags" (
 	"Resource_id" INTEGER,
@@ -14073,8 +14073,8 @@ CREATE TABLE "RelatedEvent_observables" (
 	FOREIGN KEY("RelatedEvent_id") REFERENCES "RelatedEvent" (id),
 	FOREIGN KEY(observables_id) REFERENCES "Observable" (id)
 );
-CREATE INDEX "ix_RelatedEvent_observables_RelatedEvent_id" ON "RelatedEvent_observables" ("RelatedEvent_id");
 CREATE INDEX "ix_RelatedEvent_observables_observables_id" ON "RelatedEvent_observables" (observables_id);
+CREATE INDEX "ix_RelatedEvent_observables_RelatedEvent_id" ON "RelatedEvent_observables" ("RelatedEvent_id");
 
 CREATE TABLE "RelatedEvent_tags" (
 	"RelatedEvent_id" INTEGER,
@@ -14113,8 +14113,8 @@ CREATE TABLE "Sbom_software_components" (
 	FOREIGN KEY("Sbom_id") REFERENCES "Sbom" (id),
 	FOREIGN KEY(software_components_id) REFERENCES "SoftwareComponent" (id)
 );
-CREATE INDEX "ix_Sbom_software_components_Sbom_id" ON "Sbom_software_components" ("Sbom_id");
 CREATE INDEX "ix_Sbom_software_components_software_components_id" ON "Sbom_software_components" (software_components_id);
+CREATE INDEX "ix_Sbom_software_components_Sbom_id" ON "Sbom_software_components" ("Sbom_id");
 
 CREATE TABLE "Advisory_references" (
 	"Advisory_id" INTEGER,
@@ -14132,8 +14132,8 @@ CREATE TABLE "Advisory_related_cves" (
 	FOREIGN KEY("Advisory_id") REFERENCES "Advisory" (id),
 	FOREIGN KEY(related_cves_id) REFERENCES "Cve" (id)
 );
-CREATE INDEX "ix_Advisory_related_cves_Advisory_id" ON "Advisory_related_cves" ("Advisory_id");
 CREATE INDEX "ix_Advisory_related_cves_related_cves_id" ON "Advisory_related_cves" (related_cves_id);
+CREATE INDEX "ix_Advisory_related_cves_Advisory_id" ON "Advisory_related_cves" ("Advisory_id");
 
 CREATE TABLE "Advisory_related_cwes" (
 	"Advisory_id" INTEGER,
@@ -14151,8 +14151,8 @@ CREATE TABLE "Check_standards" (
 	PRIMARY KEY ("Check_id", standards),
 	FOREIGN KEY("Check_id") REFERENCES "Check" (id)
 );
-CREATE INDEX "ix_Check_standards_Check_id" ON "Check_standards" ("Check_id");
 CREATE INDEX "ix_Check_standards_standards" ON "Check_standards" (standards);
+CREATE INDEX "ix_Check_standards_Check_id" ON "Check_standards" ("Check_id");
 
 CREATE TABLE "Compliance_checks" (
 	"Compliance_id" INTEGER,
@@ -14765,8 +14765,8 @@ CREATE TABLE "Vulnerability_kb_articles" (
 	PRIMARY KEY ("Vulnerability_id", kb_articles),
 	FOREIGN KEY("Vulnerability_id") REFERENCES "Vulnerability" (id)
 );
-CREATE INDEX "ix_Vulnerability_kb_articles_kb_articles" ON "Vulnerability_kb_articles" (kb_articles);
 CREATE INDEX "ix_Vulnerability_kb_articles_Vulnerability_id" ON "Vulnerability_kb_articles" ("Vulnerability_id");
+CREATE INDEX "ix_Vulnerability_kb_articles_kb_articles" ON "Vulnerability_kb_articles" (kb_articles);
 
 CREATE TABLE "Vulnerability_packages" (
 	"Vulnerability_id" INTEGER,
@@ -14775,8 +14775,8 @@ CREATE TABLE "Vulnerability_packages" (
 	FOREIGN KEY("Vulnerability_id") REFERENCES "Vulnerability" (id),
 	FOREIGN KEY(packages_id) REFERENCES "Package" (id)
 );
-CREATE INDEX "ix_Vulnerability_packages_packages_id" ON "Vulnerability_packages" (packages_id);
 CREATE INDEX "ix_Vulnerability_packages_Vulnerability_id" ON "Vulnerability_packages" ("Vulnerability_id");
+CREATE INDEX "ix_Vulnerability_packages_packages_id" ON "Vulnerability_packages" (packages_id);
 
 CREATE TABLE "Vulnerability_references" (
 	"Vulnerability_id" INTEGER,
@@ -14802,8 +14802,8 @@ CREATE TABLE "ApplicationObject_labels" (
 	PRIMARY KEY ("ApplicationObject_id", labels),
 	FOREIGN KEY("ApplicationObject_id") REFERENCES "ApplicationObject" (id)
 );
-CREATE INDEX "ix_ApplicationObject_labels_ApplicationObject_id" ON "ApplicationObject_labels" ("ApplicationObject_id");
 CREATE INDEX "ix_ApplicationObject_labels_labels" ON "ApplicationObject_labels" (labels);
+CREATE INDEX "ix_ApplicationObject_labels_ApplicationObject_id" ON "ApplicationObject_labels" ("ApplicationObject_id");
 
 CREATE TABLE "ApplicationObject_tags" (
 	"ApplicationObject_id" INTEGER,
@@ -14812,8 +14812,8 @@ CREATE TABLE "ApplicationObject_tags" (
 	FOREIGN KEY("ApplicationObject_id") REFERENCES "ApplicationObject" (id),
 	FOREIGN KEY(tags_id) REFERENCES "KeyValueObject" (id)
 );
-CREATE INDEX "ix_ApplicationObject_tags_tags_id" ON "ApplicationObject_tags" (tags_id);
 CREATE INDEX "ix_ApplicationObject_tags_ApplicationObject_id" ON "ApplicationObject_tags" ("ApplicationObject_id");
+CREATE INDEX "ix_ApplicationObject_tags_tags_id" ON "ApplicationObject_tags" (tags_id);
 
 CREATE TABLE "Databucket_agent_list" (
 	"Databucket_id" INTEGER,
@@ -21868,8 +21868,8 @@ CREATE TABLE "Osint_attacks" (
 	FOREIGN KEY("Osint_id") REFERENCES "Osint" (id),
 	FOREIGN KEY(attacks_id) REFERENCES "Attack" (id)
 );
-CREATE INDEX "ix_Osint_attacks_Osint_id" ON "Osint_attacks" ("Osint_id");
 CREATE INDEX "ix_Osint_attacks_attacks_id" ON "Osint_attacks" (attacks_id);
+CREATE INDEX "ix_Osint_attacks_Osint_id" ON "Osint_attacks" ("Osint_id");
 
 CREATE TABLE "Osint_intrusion_sets" (
 	"Osint_id" INTEGER,
@@ -21944,8 +21944,8 @@ CREATE TABLE "Osint_subdomains" (
 	PRIMARY KEY ("Osint_id", subdomains),
 	FOREIGN KEY("Osint_id") REFERENCES "Osint" (id)
 );
-CREATE INDEX "ix_Osint_subdomains_Osint_id" ON "Osint_subdomains" ("Osint_id");
 CREATE INDEX "ix_Osint_subdomains_subdomains" ON "Osint_subdomains" (subdomains);
+CREATE INDEX "ix_Osint_subdomains_Osint_id" ON "Osint_subdomains" ("Osint_id");
 
 CREATE TABLE "Osint_vulnerabilities" (
 	"Osint_id" INTEGER,
@@ -21954,8 +21954,8 @@ CREATE TABLE "Osint_vulnerabilities" (
 	FOREIGN KEY("Osint_id") REFERENCES "Osint" (id),
 	FOREIGN KEY(vulnerabilities_id) REFERENCES "Vulnerability" (id)
 );
-CREATE INDEX "ix_Osint_vulnerabilities_Osint_id" ON "Osint_vulnerabilities" ("Osint_id");
 CREATE INDEX "ix_Osint_vulnerabilities_vulnerabilities_id" ON "Osint_vulnerabilities" (vulnerabilities_id);
+CREATE INDEX "ix_Osint_vulnerabilities_Osint_id" ON "Osint_vulnerabilities" ("Osint_id");
 
 CREATE TABLE "StartupItem_run_mode_ids" (
 	"StartupItem_id" INTEGER,
@@ -21963,8 +21963,8 @@ CREATE TABLE "StartupItem_run_mode_ids" (
 	PRIMARY KEY ("StartupItem_id", run_mode_ids),
 	FOREIGN KEY("StartupItem_id") REFERENCES "StartupItem" (id)
 );
-CREATE INDEX "ix_StartupItem_run_mode_ids_run_mode_ids" ON "StartupItem_run_mode_ids" (run_mode_ids);
 CREATE INDEX "ix_StartupItem_run_mode_ids_StartupItem_id" ON "StartupItem_run_mode_ids" ("StartupItem_id");
+CREATE INDEX "ix_StartupItem_run_mode_ids_run_mode_ids" ON "StartupItem_run_mode_ids" (run_mode_ids);
 
 CREATE TABLE "StartupItem_run_modes" (
 	"StartupItem_id" INTEGER,
@@ -21982,8 +21982,8 @@ CREATE TABLE "Actor_authorizations" (
 	FOREIGN KEY("Actor_id") REFERENCES "Actor" (id),
 	FOREIGN KEY(authorizations_id) REFERENCES "Authorization" (id)
 );
-CREATE INDEX "ix_Actor_authorizations_authorizations_id" ON "Actor_authorizations" (authorizations_id);
 CREATE INDEX "ix_Actor_authorizations_Actor_id" ON "Actor_authorizations" ("Actor_id");
+CREATE INDEX "ix_Actor_authorizations_authorizations_id" ON "Actor_authorizations" (authorizations_id);
 
 CREATE TABLE "OsintProfile_osint" (
 	"OsintProfile_id" INTEGER,
@@ -22134,8 +22134,8 @@ CREATE TABLE "WindowsStartupItem_run_modes" (
 	PRIMARY KEY ("WindowsStartupItem_id", run_modes),
 	FOREIGN KEY("WindowsStartupItem_id") REFERENCES "WindowsStartupItem" (id)
 );
-CREATE INDEX "ix_WindowsStartupItem_run_modes_run_modes" ON "WindowsStartupItem_run_modes" (run_modes);
 CREATE INDEX "ix_WindowsStartupItem_run_modes_WindowsStartupItem_id" ON "WindowsStartupItem_run_modes" ("WindowsStartupItem_id");
+CREATE INDEX "ix_WindowsStartupItem_run_modes_run_modes" ON "WindowsStartupItem_run_modes" (run_modes);
 
 CREATE TABLE "EvidenceInfo" (
 	id INTEGER NOT NULL,
@@ -22211,8 +22211,8 @@ CREATE TABLE "QueryEvidence_network_interfaces" (
 	FOREIGN KEY("QueryEvidence_id") REFERENCES "QueryEvidence" (id),
 	FOREIGN KEY(network_interfaces_id) REFERENCES "NetworkInterface" (id)
 );
-CREATE INDEX "ix_QueryEvidence_network_interfaces_QueryEvidence_id" ON "QueryEvidence_network_interfaces" ("QueryEvidence_id");
 CREATE INDEX "ix_QueryEvidence_network_interfaces_network_interfaces_id" ON "QueryEvidence_network_interfaces" (network_interfaces_id);
+CREATE INDEX "ix_QueryEvidence_network_interfaces_QueryEvidence_id" ON "QueryEvidence_network_interfaces" ("QueryEvidence_id");
 
 CREATE TABLE "QueryEvidence_users" (
 	"QueryEvidence_id" INTEGER,
@@ -22221,8 +22221,8 @@ CREATE TABLE "QueryEvidence_users" (
 	FOREIGN KEY("QueryEvidence_id") REFERENCES "QueryEvidence" (id),
 	FOREIGN KEY(users_id) REFERENCES "User" (id)
 );
-CREATE INDEX "ix_QueryEvidence_users_users_id" ON "QueryEvidence_users" (users_id);
 CREATE INDEX "ix_QueryEvidence_users_QueryEvidence_id" ON "QueryEvidence_users" ("QueryEvidence_id");
+CREATE INDEX "ix_QueryEvidence_users_users_id" ON "QueryEvidence_users" (users_id);
 
 CREATE TABLE "Evidences_ja4_fingerprint_list" (
 	"Evidences_id" INTEGER,
@@ -25964,8 +25964,8 @@ CREATE TABLE "DnsActivity_authorizations" (
 	FOREIGN KEY("DnsActivity_id") REFERENCES "DnsActivity" (id),
 	FOREIGN KEY(authorizations_id) REFERENCES "Authorization" (id)
 );
-CREATE INDEX "ix_DnsActivity_authorizations_authorizations_id" ON "DnsActivity_authorizations" (authorizations_id);
 CREATE INDEX "ix_DnsActivity_authorizations_DnsActivity_id" ON "DnsActivity_authorizations" ("DnsActivity_id");
+CREATE INDEX "ix_DnsActivity_authorizations_authorizations_id" ON "DnsActivity_authorizations" (authorizations_id);
 
 CREATE TABLE "DnsActivity_malware" (
 	"DnsActivity_id" INTEGER,
