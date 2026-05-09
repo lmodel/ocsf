@@ -1,0 +1,19 @@
+{
+   "attack": "https://lmodel.github.io/attack/",
+   "capec": "https://w3id.org/lmodel/capec/",
+   "core": "https://w3id.org/lmodel/vulnerability-core/",
+   "cve": "https://w3id.org/lmodel/cve/",
+   "cwe": "https://w3id.org/lmodel/cwe/",
+   "dcterms": "http://purl.org/dc/terms/",
+   "iso27001": "https://w3id.org/lmodel/iso27001/",
+   "kev_catalog": "https://w3id.org/lmodel/kev-catalog/",
+   "linkml": "https://w3id.org/linkml/",
+   "nvd": "https://w3id.org/lmodel/nist-nvd/",
+   "ocsf": "https://w3id.org/lmodel/ocsf/",
+   "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+   "schema": "http://schema.org/",
+   "skos": "http://www.w3.org/2004/02/skos/core#",
+   "stix": "https://lmodel.github.io/stix/",
+   "uco_master": "https://lmodel.github.io/uco-master/",
+   "xsd": "http://www.w3.org/2001/XMLSchema#"
+}
