@@ -11756,8 +11756,8 @@ CREATE TABLE "Compliance_requirements" (
 	PRIMARY KEY ("Compliance_id", requirements),
 	FOREIGN KEY("Compliance_id") REFERENCES "Compliance" (id)
 );
-CREATE INDEX "ix_Compliance_requirements_requirements" ON "Compliance_requirements" (requirements);
 CREATE INDEX "ix_Compliance_requirements_Compliance_id" ON "Compliance_requirements" ("Compliance_id");
+CREATE INDEX "ix_Compliance_requirements_requirements" ON "Compliance_requirements" (requirements);
 
 CREATE TABLE "Compliance_standards" (
 	"Compliance_id" INTEGER,

@@ -1,5 +1,5 @@
 # Auto generated from ocsf.yaml by pythongen.py version: 0.0.1
-# Generation date: 2026-05-09T02:36:10
+# Generation date: 2026-05-09T22:13:19
 # Schema: ocsf
 #
 # id: https://w3id.org/lmodel/ocsf

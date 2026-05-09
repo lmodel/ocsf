@@ -52,84 +52,84 @@ imports:
 
 subsets:
 
-  application:
+  application_subset:
     description: |-
       Application Activity events report detailed information about the behavior of
       applications and services.
 
-  discovery:
+  discovery_subset:
     description: |-
       Discovery events report the existence and state of devices, files,
       configurations, processes, registry keys, and other objects.
 
-  findings:
+  findings_subset:
     description: |-
       Findings events report findings, detections, and possible resolutions of
       malware, anomalies, or other actions performed by security products.
 
-  iam:
+  iam_subset:
     description: |-
       Identity & Access Management (IAM) events relate to the supervision of the
       system's authentication and access control model. Examples of such events are
       the success or failure of authentication, granting of authority, password
       change, entity change, privileged use etc.
 
-  network:
+  network_subset:
     description: Network Activity events.
 
-  remediation:
+  remediation_subset:
     description: |-
       Remediation events report the results of remediation commands targeting files,
       processes, and other objects.
 
-  system:
+  system_subset:
     description: System Activity events.
 
-  unmanned_systems:
+  unmanned_systems_subset:
     description: |-
       Unmanned Systems events report the activity, existence, and/or state of
       unmanned systems for tracking, mission planning, and other related activities.
 
-  objects:
+  objects_subset:
     description: Reusable OCSF object definitions (mirrors upstream objects/ directory).
 
-  ai_operation_profile:
+  ai_operation_profile_subset:
     description: |-
       AI-specific attributes for model operations, retrieval systems, and agent
       activities. e.g. model_name, total_token_counts etc.
 
-  cloud_profile:
+  cloud_profile_subset:
     description: |-
       The attributes that describe information specific to Cloud
       services/applications.
 
-  container_profile:
+  container_profile_subset:
     description: The container context for a process.
 
-  data_classification_profile:
+  data_classification_profile_subset:
     description: |-
       The Data Classification profile adds attributes to specific resource objects,
       allowing users to describe information about classifiers & data classification
       results.
 
-  datetime_profile:
+  datetime_profile_subset:
     description: |-
       This profile defines date/time attributes as defined in RFC-3339. For example
       1985-04-12T23:20:50.52Z.
 
-  host_profile:
+  host_profile_subset:
     description: The attributes that identify host/device attributes.
 
-  incident_profile:
+  incident_profile_subset:
     description: The attributes that add incident handling semantics to a Finding.
 
-  load_balancer_profile:
+  load_balancer_profile_subset:
     description: The attributes that describe information specific to load balancers.
 
-  network_proxy_profile:
+  network_proxy_profile_subset:
     description: The attributes that identify network proxy attributes.
 
-  osint_profile:
+  osint_profile_subset:
     description: |-
       The OSINT (Open Source Intelligence) profile contains one or more indicators
       and associated analysis and details, such as registrar (WHOIS) information and
@@ -138,7 +138,7 @@ subsets:
       detection or finding by providing decisioning support to other analysts and
       engineers within the profile itself.
 
-  security_control_profile:
+  security_control_profile_subset:
     description: |-
       The attributes including disposition that represent the outcome of a security
       control including but not limited to access control, malware or policy
@@ -149,7 +149,7 @@ subsets:
       alertable outcome or action, the <code>is_alert</code> flag may be set to
       <code>true</code>.
 
-  trace_profile:
+  trace_profile_subset:
     description: |-
       The Trace Profile extends the OCSF framework to capture and standardize
       observability events, specifically targeting trace-level data. This profile
@@ -157,17 +157,17 @@ subsets:
       allowing OCSF events to retain essential trace context such as trace IDs, span
       relationships, and service dependencies.
 
-  linux_extension:
+  linux_extension_subset:
     description: |-
       The Linux extension defines Linux specific attributes, profiles, objects, and
       classes.
 
-  macos_extension:
+  macos_extension_subset:
     description: |-
       The macOS extension defines macOS specific attributes, profiles, objects, and
       classes.
 
-  windows_extension:
+  windows_extension_subset:
     description: |-
       The Windows extension defines Windows specific attributes, objects, and
       classes.

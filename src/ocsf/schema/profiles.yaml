@@ -47,7 +47,7 @@ classes:
       - AI Operation
     mixin: true
     in_subset:
-      - ai_operation_profile
+      - ai_operation_profile_subset
     slots:
       - ai_model
       - message_context
@@ -70,7 +70,7 @@ classes:
       - Cloud
     mixin: true
     in_subset:
-      - cloud_profile
+      - cloud_profile_subset
     slots:
       - api
       - cloud
@@ -91,7 +91,7 @@ classes:
       - Container
     mixin: true
     in_subset:
-      - container_profile
+      - container_profile_subset
     slots:
       - container
       - namespace_pid
@@ -116,7 +116,7 @@ classes:
       - Data Classification
     mixin: true
     in_subset:
-      - data_classification_profile
+      - data_classification_profile_subset
     slots:
       - data_classification
       - data_classifications
@@ -140,7 +140,7 @@ classes:
       - Date/Time
     mixin: true
     in_subset:
-      - datetime_profile
+      - datetime_profile_subset
     annotations:
       ocsf_profile: datetime
 
@@ -150,7 +150,7 @@ classes:
       - Host
     mixin: true
     in_subset:
-      - host_profile
+      - host_profile_subset
     slots:
       - actor
       - device
@@ -167,7 +167,7 @@ classes:
       - Incident
     mixin: true
     in_subset:
-      - incident_profile
+      - incident_profile_subset
     slots:
       - assignee
       - assignee_group
@@ -240,7 +240,7 @@ classes:
       - Load Balancer
     mixin: true
     in_subset:
-      - load_balancer_profile
+      - load_balancer_profile_subset
     slots:
       - load_balancer
     slot_usage:
@@ -256,7 +256,7 @@ classes:
       - Network Proxy
     mixin: true
     in_subset:
-      - network_proxy_profile
+      - network_proxy_profile_subset
     slots:
       - proxy_connection_info
       - proxy_endpoint
@@ -298,7 +298,7 @@ classes:
       - OSINT
     mixin: true
     in_subset:
-      - osint_profile
+      - osint_profile_subset
     slots:
       - osint
     slot_usage:
@@ -323,7 +323,7 @@ classes:
       - Security Control
     mixin: true
     in_subset:
-      - security_control_profile
+      - security_control_profile_subset
     slots:
       - action
       - action_id
@@ -410,7 +410,7 @@ classes:
       - Trace
     mixin: true
     in_subset:
-      - trace_profile
+      - trace_profile_subset
     slots:
       - trace
     slot_usage:

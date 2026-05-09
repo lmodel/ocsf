@@ -102,169 +102,169 @@
   "default_range": "string",
   "subsets": [
     {
-      "name": "application",
-      "definition_uri": "https://w3id.org/lmodel/ocsf/Application",
+      "name": "application_subset",
+      "definition_uri": "https://w3id.org/lmodel/ocsf/ApplicationSubset",
       "description": "Application Activity events report detailed information about the behavior of\napplications and services.",
       "from_schema": "https://w3id.org/lmodel/ocsf",
       "@type": "SubsetDefinition"
     },
     {
-      "name": "discovery",
-      "definition_uri": "https://w3id.org/lmodel/ocsf/Discovery",
+      "name": "discovery_subset",
+      "definition_uri": "https://w3id.org/lmodel/ocsf/DiscoverySubset",
       "description": "Discovery events report the existence and state of devices, files,\nconfigurations, processes, registry keys, and other objects.",
       "from_schema": "https://w3id.org/lmodel/ocsf",
       "@type": "SubsetDefinition"
     },
     {
-      "name": "findings",
-      "definition_uri": "https://w3id.org/lmodel/ocsf/Findings",
+      "name": "findings_subset",
+      "definition_uri": "https://w3id.org/lmodel/ocsf/FindingsSubset",
       "description": "Findings events report findings, detections, and possible resolutions of\nmalware, anomalies, or other actions performed by security products.",
       "from_schema": "https://w3id.org/lmodel/ocsf",
       "@type": "SubsetDefinition"
     },
     {
-      "name": "iam",
-      "definition_uri": "https://w3id.org/lmodel/ocsf/Iam",
+      "name": "iam_subset",
+      "definition_uri": "https://w3id.org/lmodel/ocsf/IamSubset",
       "description": "Identity & Access Management (IAM) events relate to the supervision of the\nsystem's authentication and access control model. Examples of such events are\nthe success or failure of authentication, granting of authority, password\nchange, entity change, privileged use etc.",
       "from_schema": "https://w3id.org/lmodel/ocsf",
       "@type": "SubsetDefinition"
     },
     {
-      "name": "network",
-      "definition_uri": "https://w3id.org/lmodel/ocsf/Network",
+      "name": "network_subset",
+      "definition_uri": "https://w3id.org/lmodel/ocsf/NetworkSubset",
       "description": "Network Activity events.",
       "from_schema": "https://w3id.org/lmodel/ocsf",
       "@type": "SubsetDefinition"
     },
     {
-      "name": "remediation",
-      "definition_uri": "https://w3id.org/lmodel/ocsf/Remediation",
+      "name": "remediation_subset",
+      "definition_uri": "https://w3id.org/lmodel/ocsf/RemediationSubset",
       "description": "Remediation events report the results of remediation commands targeting files,\nprocesses, and other objects.",
       "from_schema": "https://w3id.org/lmodel/ocsf",
       "@type": "SubsetDefinition"
     },
     {
-      "name": "system",
-      "definition_uri": "https://w3id.org/lmodel/ocsf/System",
+      "name": "system_subset",
+      "definition_uri": "https://w3id.org/lmodel/ocsf/SystemSubset",
       "description": "System Activity events.",
       "from_schema": "https://w3id.org/lmodel/ocsf",
       "@type": "SubsetDefinition"
     },
     {
-      "name": "unmanned_systems",
-      "definition_uri": "https://w3id.org/lmodel/ocsf/UnmannedSystems",
+      "name": "unmanned_systems_subset",
+      "definition_uri": "https://w3id.org/lmodel/ocsf/UnmannedSystemsSubset",
       "description": "Unmanned Systems events report the activity, existence, and/or state of\nunmanned systems for tracking, mission planning, and other related activities.",
       "from_schema": "https://w3id.org/lmodel/ocsf",
       "@type": "SubsetDefinition"
     },
     {
-      "name": "objects",
-      "definition_uri": "https://w3id.org/lmodel/ocsf/Objects",
+      "name": "objects_subset",
+      "definition_uri": "https://w3id.org/lmodel/ocsf/ObjectsSubset",
       "description": "Reusable OCSF object definitions (mirrors upstream objects/ directory).",
       "from_schema": "https://w3id.org/lmodel/ocsf",
       "@type": "SubsetDefinition"
     },
     {
-      "name": "ai_operation_profile",
-      "definition_uri": "https://w3id.org/lmodel/ocsf/AiOperationProfile",
+      "name": "ai_operation_profile_subset",
+      "definition_uri": "https://w3id.org/lmodel/ocsf/AiOperationProfileSubset",
       "description": "AI-specific attributes for model operations, retrieval systems, and agent\nactivities. e.g. model_name, total_token_counts etc.",
       "from_schema": "https://w3id.org/lmodel/ocsf",
       "@type": "SubsetDefinition"
     },
     {
-      "name": "cloud_profile",
-      "definition_uri": "https://w3id.org/lmodel/ocsf/CloudProfile",
+      "name": "cloud_profile_subset",
+      "definition_uri": "https://w3id.org/lmodel/ocsf/CloudProfileSubset",
       "description": "The attributes that describe information specific to Cloud\nservices/applications.",
       "from_schema": "https://w3id.org/lmodel/ocsf",
       "@type": "SubsetDefinition"
     },
     {
-      "name": "container_profile",
-      "definition_uri": "https://w3id.org/lmodel/ocsf/ContainerProfile",
+      "name": "container_profile_subset",
+      "definition_uri": "https://w3id.org/lmodel/ocsf/ContainerProfileSubset",
       "description": "The container context for a process.",
       "from_schema": "https://w3id.org/lmodel/ocsf",
       "@type": "SubsetDefinition"
     },
     {
-      "name": "data_classification_profile",
-      "definition_uri": "https://w3id.org/lmodel/ocsf/DataClassificationProfile",
+      "name": "data_classification_profile_subset",
+      "definition_uri": "https://w3id.org/lmodel/ocsf/DataClassificationProfileSubset",
       "description": "The Data Classification profile adds attributes to specific resource objects,\nallowing users to describe information about classifiers & data classification\nresults.",
       "from_schema": "https://w3id.org/lmodel/ocsf",
       "@type": "SubsetDefinition"
     },
     {
-      "name": "datetime_profile",
-      "definition_uri": "https://w3id.org/lmodel/ocsf/DatetimeProfile",
+      "name": "datetime_profile_subset",
+      "definition_uri": "https://w3id.org/lmodel/ocsf/DatetimeProfileSubset",
       "description": "This profile defines date/time attributes as defined in RFC-3339. For example\n1985-04-12T23:20:50.52Z.",
       "from_schema": "https://w3id.org/lmodel/ocsf",
       "@type": "SubsetDefinition"
     },
     {
-      "name": "host_profile",
-      "definition_uri": "https://w3id.org/lmodel/ocsf/HostProfile",
+      "name": "host_profile_subset",
+      "definition_uri": "https://w3id.org/lmodel/ocsf/HostProfileSubset",
       "description": "The attributes that identify host/device attributes.",
       "from_schema": "https://w3id.org/lmodel/ocsf",
       "@type": "SubsetDefinition"
     },
     {
-      "name": "incident_profile",
-      "definition_uri": "https://w3id.org/lmodel/ocsf/IncidentProfile",
+      "name": "incident_profile_subset",
+      "definition_uri": "https://w3id.org/lmodel/ocsf/IncidentProfileSubset",
       "description": "The attributes that add incident handling semantics to a Finding.",
       "from_schema": "https://w3id.org/lmodel/ocsf",
       "@type": "SubsetDefinition"
     },
     {
-      "name": "load_balancer_profile",
-      "definition_uri": "https://w3id.org/lmodel/ocsf/LoadBalancerProfile",
+      "name": "load_balancer_profile_subset",
+      "definition_uri": "https://w3id.org/lmodel/ocsf/LoadBalancerProfileSubset",
       "description": "The attributes that describe information specific to load balancers.",
       "from_schema": "https://w3id.org/lmodel/ocsf",
       "@type": "SubsetDefinition"
     },
     {
-      "name": "network_proxy_profile",
-      "definition_uri": "https://w3id.org/lmodel/ocsf/NetworkProxyProfile",
+      "name": "network_proxy_profile_subset",
+      "definition_uri": "https://w3id.org/lmodel/ocsf/NetworkProxyProfileSubset",
       "description": "The attributes that identify network proxy attributes.",
       "from_schema": "https://w3id.org/lmodel/ocsf",
       "@type": "SubsetDefinition"
     },
     {
-      "name": "osint_profile",
-      "definition_uri": "https://w3id.org/lmodel/ocsf/OsintProfile",
+      "name": "osint_profile_subset",
+      "definition_uri": "https://w3id.org/lmodel/ocsf/OsintProfileSubset",
       "description": "The OSINT (Open Source Intelligence) profile contains one or more indicators\nand associated analysis and details, such as registrar (WHOIS) information and\ncommentary about a hostname, or information about a digital certificate and its\nusage within a campaign. This information can be used to further enrich a\ndetection or finding by providing decisioning support to other analysts and\nengineers within the profile itself.",
       "from_schema": "https://w3id.org/lmodel/ocsf",
       "@type": "SubsetDefinition"
     },
     {
-      "name": "security_control_profile",
-      "definition_uri": "https://w3id.org/lmodel/ocsf/SecurityControlProfile",
+      "name": "security_control_profile_subset",
+      "definition_uri": "https://w3id.org/lmodel/ocsf/SecurityControlProfileSubset",
       "description": "The attributes including disposition that represent the outcome of a security\ncontrol including but not limited to access control, malware or policy\nviolation, network proxy, intrusion detection, firewall, or data control.  The\nprofile is intended to augment activities or findings with an outcome when a\nsecurity control has observed or intervened. If the control detected a security\nviolation, and the <code>disposition_id</code> or <code>action_id</code> is an\nalertable outcome or action, the <code>is_alert</code> flag may be set to\n<code>true</code>.",
       "from_schema": "https://w3id.org/lmodel/ocsf",
       "@type": "SubsetDefinition"
     },
     {
-      "name": "trace_profile",
-      "definition_uri": "https://w3id.org/lmodel/ocsf/TraceProfile",
+      "name": "trace_profile_subset",
+      "definition_uri": "https://w3id.org/lmodel/ocsf/TraceProfileSubset",
       "description": "The Trace Profile extends the OCSF framework to capture and standardize\nobservability events, specifically targeting trace-level data. This profile\nenables integration and normalization of distributed tracing information,\nallowing OCSF events to retain essential trace context such as trace IDs, span\nrelationships, and service dependencies.",
       "from_schema": "https://w3id.org/lmodel/ocsf",
       "@type": "SubsetDefinition"
     },
     {
-      "name": "linux_extension",
-      "definition_uri": "https://w3id.org/lmodel/ocsf/LinuxExtension",
+      "name": "linux_extension_subset",
+      "definition_uri": "https://w3id.org/lmodel/ocsf/LinuxExtensionSubset",
       "description": "The Linux extension defines Linux specific attributes, profiles, objects, and\nclasses.",
       "from_schema": "https://w3id.org/lmodel/ocsf",
       "@type": "SubsetDefinition"
     },
     {
-      "name": "macos_extension",
-      "definition_uri": "https://w3id.org/lmodel/ocsf/MacosExtension",
+      "name": "macos_extension_subset",
+      "definition_uri": "https://w3id.org/lmodel/ocsf/MacosExtensionSubset",
       "description": "The macOS extension defines macOS specific attributes, profiles, objects, and\nclasses.",
       "from_schema": "https://w3id.org/lmodel/ocsf",
       "@type": "SubsetDefinition"
     },
     {
-      "name": "windows_extension",
-      "definition_uri": "https://w3id.org/lmodel/ocsf/WindowsExtension",
+      "name": "windows_extension_subset",
+      "definition_uri": "https://w3id.org/lmodel/ocsf/WindowsExtensionSubset",
       "description": "The Windows extension defines Windows specific attributes, objects, and\nclasses.",
       "from_schema": "https://w3id.org/lmodel/ocsf",
       "@type": "SubsetDefinition"
@@ -93344,7 +93344,7 @@
       "definition_uri": "https://w3id.org/lmodel/ocsf/OcsfObject",
       "description": "Abstract root for every OCSF object class.",
       "in_subset": [
-        "objects"
+        "objects_subset"
       ],
       "from_schema": "https://w3id.org/lmodel/ocsf/objects",
       "abstract": true,
@@ -93357,7 +93357,7 @@
       "definition_uri": "https://w3id.org/lmodel/ocsf/AnalysisTarget",
       "description": "The analysis target defines the scope of monitored activities, specifying what\nentity, system or process is analyzed for activity patterns.",
       "in_subset": [
-        "objects"
+        "objects_subset"
       ],
       "from_schema": "https://w3id.org/lmodel/ocsf/objects",
       "aliases": [
@@ -93377,7 +93377,7 @@
       "definition_uri": "https://w3id.org/lmodel/ocsf/AnomalyAnalysis",
       "description": "Describes the analysis of activity patterns and anomalies of target entities to\nidentify potential security threats, performance issues, or other deviations\nfrom established baselines. This includes monitoring and analyzing user\ninteractions, API usage, resource utilization, access patterns and other\nmeasured indicators.",
       "in_subset": [
-        "objects"
+        "objects_subset"
       ],
       "from_schema": "https://w3id.org/lmodel/ocsf/objects",
       "aliases": [
@@ -93398,7 +93398,7 @@
       "definition_uri": "https://w3id.org/lmodel/ocsf/Object",
       "description": "An unordered collection of attributes. It defines a set of attributes available\nin all objects. It can be also used as a generic object to log objects that are\nnot otherwise defined by the schema.",
       "in_subset": [
-        "objects"
+        "objects_subset"
       ],
       "from_schema": "https://w3id.org/lmodel/ocsf/objects",
       "aliases": [
@@ -93417,7 +93417,7 @@
         "OCSF Observables FAQ \u2014\nhttps://github.com/ocsf/ocsf-docs/blob/main/Articles/Defining and Using\nObservables.md"
       ],
       "in_subset": [
-        "objects"
+        "objects_subset"
       ],
       "from_schema": "https://w3id.org/lmodel/ocsf/objects",
       "see_also": [
@@ -93448,7 +93448,7 @@
       "definition_uri": "https://w3id.org/lmodel/ocsf/Observation",
       "description": "A record of an observed value or event that captures the timing and frequency\nof its occurrence. Used to track when values/events were first detected, last\ndetected, and their total occurrence count.",
       "in_subset": [
-        "objects"
+        "objects_subset"
       ],
       "from_schema": "https://w3id.org/lmodel/ocsf/objects",
       "aliases": [
@@ -93479,7 +93479,7 @@
       ],
       "description": "Details about where in the target entity, specified information was discovered.\nOnly the attributes, relevant to the target entity type should be populated.",
       "in_subset": [
-        "objects"
+        "objects_subset"
       ],
       "from_schema": "https://w3id.org/lmodel/ocsf/objects",
       "aliases": [
@@ -93610,7 +93610,7 @@
         "D3FEND\u2122 Ontology d3f:OperatingSystem \u2014\nhttps://d3fend.mitre.org/dao/artifact/d3f:OperatingSystem/"
       ],
       "in_subset": [
-        "objects"
+        "objects_subset"
       ],
       "from_schema": "https://w3id.org/lmodel/ocsf/objects",
       "see_also": [
@@ -93650,7 +93650,7 @@
       "definition_uri": "https://w3id.org/lmodel/ocsf/Osint",
       "description": "The OSINT (Open Source Intelligence) object contains details related to an\nindicator such as the indicator itself, related indicators, geolocation,\nregistrar information, subdomains, analyst commentary, and other contextual\ninformation. This information can be used to further enrich a detection or\nfinding by providing decisioning support to other analysts and engineers.",
       "in_subset": [
-        "objects"
+        "objects_subset"
       ],
       "from_schema": "https://w3id.org/lmodel/ocsf/objects",
       "aliases": [
@@ -93718,7 +93718,7 @@
         "D3FEND\u2122 Ontology d3f:SoftwarePackage. \u2014\nhttps://d3fend.mitre.org/dao/artifact/d3f:SoftwarePackage/"
       ],
       "in_subset": [
-        "objects"
+        "objects_subset"
       ],
       "from_schema": "https://w3id.org/lmodel/ocsf/objects",
       "see_also": [
@@ -93761,7 +93761,7 @@
         "D3FEND\u2122 Ontology d3f:PacketLog. \u2014\nhttps://d3fend.mitre.org/dao/artifact/d3f:PacketLog/"
       ],
       "in_subset": [
-        "objects"
+        "objects_subset"
       ],
       "from_schema": "https://w3id.org/lmodel/ocsf/objects",
       "see_also": [
@@ -93801,7 +93801,7 @@
       ],
       "description": "The Parameter object provides details regarding a parameter of a a function.",
       "in_subset": [
-        "objects"
+        "objects_subset"
       ],
       "from_schema": "https://w3id.org/lmodel/ocsf/objects",
       "aliases": [
@@ -93863,7 +93863,7 @@
       "definition_uri": "https://w3id.org/lmodel/ocsf/PermissionAnalysisResult",
       "description": "The Permission Analysis object describes analysis results of permissions,\npolicies directly associated with an identity (user, role, or service account).\nThis evaluates what permissions an identity has been granted through attached\npolicies, which privileges are actively used versus unused, and identifies\npotential over-privileged access. Use this for identity-centric security\nassessments such as privilege audits, dormant permission discovery, and\nleast-privilege compliance analysis.",
       "in_subset": [
-        "objects"
+        "objects_subset"
       ],
       "from_schema": "https://w3id.org/lmodel/ocsf/objects",
       "aliases": [
@@ -93889,7 +93889,7 @@
       "definition_uri": "https://w3id.org/lmodel/ocsf/PortInfo",
       "description": "The Port Information object describes a port and its associated protocol\ndetails.",
       "in_subset": [
-        "objects"
+        "objects_subset"
       ],
       "from_schema": "https://w3id.org/lmodel/ocsf/objects",
       "aliases": [
@@ -93910,7 +93910,7 @@
       "definition_uri": "https://w3id.org/lmodel/ocsf/PrivilegeAttackInfo",
       "description": "The Privilege Attack Info object groups privileges by the potential attack they\ncould enable. It maps specific privileges to MITRE ATT&CK techniques, helping\nidentify security risks associated with granted permissions.",
       "in_subset": [
-        "objects"
+        "objects_subset"
       ],
       "from_schema": "https://w3id.org/lmodel/ocsf/objects",
       "aliases": [
@@ -93930,7 +93930,7 @@
       "definition_uri": "https://w3id.org/lmodel/ocsf/PrivilegeInfo",
       "description": "The Privilege Info object describes information about a specific privilege,\naction, or permission. It captures the privilege name, type, usage status, and\nwhen it was last used.",
       "in_subset": [
-        "objects"
+        "objects_subset"
       ],
       "from_schema": "https://w3id.org/lmodel/ocsf/objects",
       "aliases": [
@@ -93953,7 +93953,7 @@
       "definition_uri": "https://w3id.org/lmodel/ocsf/ProgrammaticCredential",
       "description": "The Programmatic Credential object describes service-specific credentials used\nfor direct API access and system integration. These credentials are typically\nissued by individual services or platforms for accessing their APIs and\nresources, focusing on credential lifecycle management and usage tracking.\nExamples include API keys, service account keys, client certificates, and\nvendor-specific access tokens.",
       "in_subset": [
-        "objects"
+        "objects_subset"
       ],
       "from_schema": "https://w3id.org/lmodel/ocsf/objects",
       "aliases": [
@@ -93981,7 +93981,7 @@
       ],
       "description": "The specific resulting evidence information that was queried or discovered.\nWhen mapping raw telemetry data users should select the appropriate child\nobject that best matches the evidence type as defined by query_type_id.",
       "in_subset": [
-        "objects"
+        "objects_subset"
       ],
       "from_schema": "https://w3id.org/lmodel/ocsf/objects",
       "aliases": [
@@ -94169,7 +94169,7 @@
       "definition_uri": "https://w3id.org/lmodel/ocsf/RelatedEvent",
       "description": "The Related Event object describes an event or another finding related to a\nfinding. It may or may not be an OCSF event.",
       "in_subset": [
-        "objects"
+        "objects_subset"
       ],
       "from_schema": "https://w3id.org/lmodel/ocsf/objects",
       "aliases": [
@@ -94208,7 +94208,7 @@
       "definition_uri": "https://w3id.org/lmodel/ocsf/Remediation",
       "description": "The Remediation object describes the recommended remediation steps to address\nidentified issue(s).",
       "in_subset": [
-        "objects"
+        "objects_subset"
       ],
       "from_schema": "https://w3id.org/lmodel/ocsf/objects",
       "aliases": [
@@ -94238,7 +94238,7 @@
       "definition_uri": "https://w3id.org/lmodel/ocsf/Reputation",
       "description": "The Reputation object describes the reputation/risk score of an entity (e.g.\ndevice, user, domain).",
       "in_subset": [
-        "objects"
+        "objects_subset"
       ],
       "from_schema": "https://w3id.org/lmodel/ocsf/objects",
       "aliases": [
@@ -94260,7 +94260,7 @@
       "definition_uri": "https://w3id.org/lmodel/ocsf/Request",
       "description": "The Request Elements object describes characteristics of an API request.",
       "in_subset": [
-        "objects"
+        "objects_subset"
       ],
       "from_schema": "https://w3id.org/lmodel/ocsf/objects",
       "aliases": [
@@ -94282,7 +94282,7 @@
       "definition_uri": "https://w3id.org/lmodel/ocsf/Response",
       "description": "The Response Elements object describes characteristics of an API response.",
       "in_subset": [
-        "objects"
+        "objects_subset"
       ],
       "from_schema": "https://w3id.org/lmodel/ocsf/objects",
       "aliases": [
@@ -94307,7 +94307,7 @@
       "definition_uri": "https://w3id.org/lmodel/ocsf/RpcInterface",
       "description": "The RPC Interface represents the remote procedure call interface used in the\nDCE/RPC session.",
       "in_subset": [
-        "objects"
+        "objects_subset"
       ],
       "from_schema": "https://w3id.org/lmodel/ocsf/objects",
       "aliases": [
@@ -94329,7 +94329,7 @@
       "definition_uri": "https://w3id.org/lmodel/ocsf/San",
       "description": "The Subject Alternative name (SAN) object describes a SAN secured by a digital\ncertificate",
       "in_subset": [
-        "objects"
+        "objects_subset"
       ],
       "from_schema": "https://w3id.org/lmodel/ocsf/objects",
       "aliases": [
@@ -94349,7 +94349,7 @@
       "definition_uri": "https://w3id.org/lmodel/ocsf/Sbom",
       "description": "The Software Bill of Materials object describes characteristics of a generated\nSBOM.",
       "in_subset": [
-        "objects"
+        "objects_subset"
       ],
       "from_schema": "https://w3id.org/lmodel/ocsf/objects",
       "aliases": [
@@ -94375,7 +94375,7 @@
       "definition_uri": "https://w3id.org/lmodel/ocsf/Scim",
       "description": "The System for Cross-domain Identity Management (SCIM) Configuration object\nprovides a structured set of attributes related to SCIM protocols used for\nidentity provisioning and management across cloud-based platforms. It\nstandardizes user and group provisioning details, enabling identity\nsynchronization and lifecycle management with compatible Identity Providers\n(IdPs) and applications. SCIM is defined in <a target='_blank'\nhref='https://datatracker.ietf.org/doc/html/rfc7643'>RFC-7634</a>",
       "in_subset": [
-        "objects"
+        "objects_subset"
       ],
       "from_schema": "https://w3id.org/lmodel/ocsf/objects",
       "aliases": [
@@ -94416,7 +94416,7 @@
         "D3FEND\u2122 Ontology d3f:ExecutableScript. \u2014\nhttps://d3fend.mitre.org/dao/artifact/d3f:ExecutableScript/"
       ],
       "in_subset": [
-        "objects"
+        "objects_subset"
       ],
       "from_schema": "https://w3id.org/lmodel/ocsf/objects",
       "see_also": [
@@ -94445,7 +94445,7 @@
       "definition_uri": "https://w3id.org/lmodel/ocsf/SecurityState",
       "description": "The Security State object describes the security related state of a managed\nentity.",
       "in_subset": [
-        "objects"
+        "objects_subset"
       ],
       "from_schema": "https://w3id.org/lmodel/ocsf/objects",
       "aliases": [
@@ -94465,7 +94465,7 @@
       "definition_uri": "https://w3id.org/lmodel/ocsf/ServicePrivilegeAnalysis",
       "description": "The Service Privilege Analysis object describes privilege analysis results for\na single cloud service or resource namespace. It provides metrics on privilege\nusage, counts by type, and mappings to potential attack techniques.",
       "in_subset": [
-        "objects"
+        "objects_subset"
       ],
       "from_schema": "https://w3id.org/lmodel/ocsf/objects",
       "aliases": [
@@ -94495,7 +94495,7 @@
         "D3FEND\u2122 Ontology d3f:Session \u2014\nhttps://d3fend.mitre.org/dao/artifact/d3f:Session/"
       ],
       "in_subset": [
-        "objects"
+        "objects_subset"
       ],
       "from_schema": "https://w3id.org/lmodel/ocsf/objects",
       "see_also": [
@@ -94529,7 +94529,7 @@
       "definition_uri": "https://w3id.org/lmodel/ocsf/SoftwareComponent",
       "description": "The Software Component object describes characteristics of a software component\nwithin a software package.",
       "in_subset": [
-        "objects"
+        "objects_subset"
       ],
       "from_schema": "https://w3id.org/lmodel/ocsf/objects",
       "aliases": [
@@ -94558,7 +94558,7 @@
       "definition_uri": "https://w3id.org/lmodel/ocsf/Span",
       "description": "Represents a single unit of work or operation within a distributed trace. A\nspan typically tracks the execution of a request across a service, capturing\nimportant details such as the operation, timestamps, and status. Spans help\nbreak down the overall trace into smaller, manageable parts, enabling detailed\nanalysis of the performance and behavior of specific operations within the\nsystem. They are crucial for understanding latency, dependencies, and\nbottlenecks in complex distributed systems.",
       "in_subset": [
-        "objects"
+        "objects_subset"
       ],
       "from_schema": "https://w3id.org/lmodel/ocsf/objects",
       "aliases": [
@@ -94585,7 +94585,7 @@
       "definition_uri": "https://w3id.org/lmodel/ocsf/Sso",
       "description": "The Single Sign-On (SSO) object provides a structure for normalizing SSO\nattributes, configuration, and/or settings from Identity Providers.",
       "in_subset": [
-        "objects"
+        "objects_subset"
       ],
       "from_schema": "https://w3id.org/lmodel/ocsf/objects",
       "aliases": [
@@ -94625,7 +94625,7 @@
       ],
       "description": "The startup item object describes an application component that has associated\nstartup criteria and configurations.",
       "in_subset": [
-        "objects"
+        "objects_subset"
       ],
       "from_schema": "https://w3id.org/lmodel/ocsf/objects",
       "aliases": [
@@ -94696,7 +94696,7 @@
       "definition_uri": "https://w3id.org/lmodel/ocsf/ThreatActor",
       "description": "Threat actor is responsible for the observed malicious activity.",
       "in_subset": [
-        "objects"
+        "objects_subset"
       ],
       "from_schema": "https://w3id.org/lmodel/ocsf/objects",
       "aliases": [
@@ -94730,7 +94730,7 @@
       ],
       "description": "The Ticket object represents ticket in the customer's IT Service Management\n(ITSM) systems like ServiceNow, Jira, etc.",
       "in_subset": [
-        "objects"
+        "objects_subset"
       ],
       "from_schema": "https://w3id.org/lmodel/ocsf/objects",
       "aliases": [
@@ -94794,7 +94794,7 @@
       ],
       "description": "The Time Span object represents different time period durations. If a timespan\nis fractional, i.e. crosses one period, e.g. a week and 3 days, more than one\nmay be populated since each member is of integral type. In that case\n<code>type_id</code> if present should be set to <code>Other.</code><P>A\ntimespan may also be defined by its time interval boundaries,\n<code>start_time</code> and <code>end_time</code>.",
       "in_subset": [
-        "objects"
+        "objects_subset"
       ],
       "from_schema": "https://w3id.org/lmodel/ocsf/objects",
       "aliases": [
@@ -94935,7 +94935,7 @@
       "definition_uri": "https://w3id.org/lmodel/ocsf/Tls",
       "description": "The Transport Layer Security (TLS) object describes the negotiated TLS protocol\nused for secure communications over an establish network connection.",
       "in_subset": [
-        "objects"
+        "objects_subset"
       ],
       "from_schema": "https://w3id.org/lmodel/ocsf/objects",
       "aliases": [
@@ -94968,7 +94968,7 @@
       "definition_uri": "https://w3id.org/lmodel/ocsf/TlsExtension",
       "description": "The TLS Extension object describes additional attributes that extend the base\nTransport Layer Security (TLS) object.",
       "in_subset": [
-        "objects"
+        "objects_subset"
       ],
       "from_schema": "https://w3id.org/lmodel/ocsf/objects",
       "aliases": [
@@ -94989,7 +94989,7 @@
       "definition_uri": "https://w3id.org/lmodel/ocsf/Token",
       "description": "The Token object is the base object for representing tokens, API keys, and\nauthentication credentials used across different contexts. This object provides\ncommon attributes for all token types, including protocol-specific\nauthentication tokens (Kerberos, OIDC, SAML) and API/client tokens used for\nservice authentication. When to use this object: Use the base\n<code>token</code> object directly in API activity events to represent API\ntokens, client tokens, or API keys used to authenticate API requests. Examples\ninclude: Okta API tokens, Microsoft Entra ID Application Registration client\nsecrets, Stripe API keys, AWS API keys. When NOT to use this object: Do NOT use\nthe base <code>token</code> object for protocol-specific authentication tokens\nin authentication events - use <code>authentication_token</code> instead (which\nextends this object). Do NOT use <code>token</code> for tracking credential\nlifecycle and usage patterns - use <code>programmatic_credential</code>\ninstead.",
       "in_subset": [
-        "objects"
+        "objects_subset"
       ],
       "from_schema": "https://w3id.org/lmodel/ocsf/objects",
       "aliases": [
@@ -95017,7 +95017,7 @@
       "definition_uri": "https://w3id.org/lmodel/ocsf/Trace",
       "description": "The trace object contains information about a distributed trace,  which is\ncrucial for observability. Traces are made up of one or more spans, which are\nindividual units of work in application activity. Traces track the journey of a\nrequest as it moves through various services in a system, capturing key details\nlike timing, status, and dependencies at each step. Traces provide insights\ninto system performance, helping to identify latency, bottlenecks, and issues\nin complex, distributed environments.",
       "in_subset": [
-        "objects"
+        "objects_subset"
       ],
       "from_schema": "https://w3id.org/lmodel/ocsf/objects",
       "aliases": [
@@ -95058,7 +95058,7 @@
         "D3FEND\u2122 Ontology d3f:URL \u2014 https://d3fend.mitre.org/dao/artifact/d3f:URL/"
       ],
       "in_subset": [
-        "objects"
+        "objects_subset"
       ],
       "from_schema": "https://w3id.org/lmodel/ocsf/objects",
       "see_also": [
@@ -95126,7 +95126,7 @@
       "definition_uri": "https://w3id.org/lmodel/ocsf/VendorAttributes",
       "description": "The Vendor Attributes object can be used to represent values of attributes\npopulated by the Vendor/Finding Provider. It can help distinguish between the\nvendor-provided values and consumer-updated values, of key attributes like\n<code>severity_id</code>.<br>The original finding producer should not populate\nthis object. It should be populated by consuming systems that support data\nmutability.",
       "in_subset": [
-        "objects"
+        "objects_subset"
       ],
       "from_schema": "https://w3id.org/lmodel/ocsf/objects",
       "aliases": [
@@ -95153,7 +95153,7 @@
       ],
       "description": "The vulnerability is an unintended characteristic of a computing component or\nsystem configuration that multiplies the risk of an adverse event or a loss\noccurring either due to accidental exposure, deliberate attack, or conflict\nwith new system components.",
       "in_subset": [
-        "objects"
+        "objects_subset"
       ],
       "from_schema": "https://w3id.org/lmodel/ocsf/objects",
       "aliases": [
@@ -95253,7 +95253,7 @@
       "definition_uri": "https://w3id.org/lmodel/ocsf/Whois",
       "description": "The resources of a WHOIS record for a given domain. This can include domain\nnames, IP address blocks, autonomous system information, and/or contact and\nregistration information for a domain.",
       "in_subset": [
-        "objects"
+        "objects_subset"
       ],
       "from_schema": "https://w3id.org/lmodel/ocsf/objects",
       "aliases": [
@@ -95290,7 +95290,7 @@
       "definition_uri": "https://w3id.org/lmodel/ocsf/Dns",
       "description": "The Domain Name System (DNS) object represents the shared information\nassociated with the DNS query and answer objects.",
       "in_subset": [
-        "objects"
+        "objects_subset"
       ],
       "from_schema": "https://w3id.org/lmodel/ocsf/objects",
       "aliases": [
@@ -95321,7 +95321,7 @@
       ],
       "description": "The Entity object is an unordered collection of attributes, with a name and\nunique identifier. It serves as a base object that defines a set of attributes\nand default constraints available in all objects that extend it.",
       "in_subset": [
-        "objects"
+        "objects_subset"
       ],
       "from_schema": "https://w3id.org/lmodel/ocsf/objects",
       "aliases": [
@@ -95372,7 +95372,7 @@
       "definition_uri": "https://w3id.org/lmodel/ocsf/Resource",
       "description": "The Resource object contains attributes that provide information about a\nparticular resource. It serves as a base object, offering attributes that help\nidentify and classify the resource effectively.",
       "in_subset": [
-        "objects"
+        "objects_subset"
       ],
       "from_schema": "https://w3id.org/lmodel/ocsf/objects",
       "aliases": [
@@ -95406,7 +95406,7 @@
       "definition_uri": "https://w3id.org/lmodel/ocsf/AccessAnalysisResult",
       "description": "The Access Analysis Result object describes access relationships and pathways\nbetween identities, resources, focusing on who can access what and through\nwhich mechanisms. This evaluates access levels (read/write/admin), access types\n(direct, cross-account, public, federated), and the conditions under which\naccess is granted. Use this for resource-centric security assessments such as\nexternal access discovery, public exposure analysis, etc.",
       "in_subset": [
-        "objects"
+        "objects_subset"
       ],
       "from_schema": "https://w3id.org/lmodel/ocsf/objects",
       "aliases": [
@@ -95434,7 +95434,7 @@
         "D3FEND\u2122 Ontology d3f:CloudUserAccount. \u2014\nhttps://d3fend.mitre.org/dao/artifact/d3f:CloudUserAccount/"
       ],
       "in_subset": [
-        "objects"
+        "objects_subset"
       ],
       "from_schema": "https://w3id.org/lmodel/ocsf/objects",
       "see_also": [
@@ -95481,7 +95481,7 @@
         "D3FEND\u2122 Ontology d3f:Agent. \u2014 https://next.d3fend.mitre.org/agent/d3f:Agent/"
       ],
       "in_subset": [
-        "objects"
+        "objects_subset"
       ],
       "from_schema": "https://w3id.org/lmodel/ocsf/objects",
       "see_also": [
@@ -95581,7 +95581,7 @@
       "definition_uri": "https://w3id.org/lmodel/ocsf/AdditionalRestriction",
       "description": "The Additional Restriction object describes supplementary access controls and\nguardrails that constrain or limit granted permissions beyond the primary\npolicy. These restrictions are typically applied through hierarchical policy\nframeworks, organizational controls, or conditional access mechanisms. Examples\ninclude AWS Service Control Policies (SCPs), Resource Control Policies (RCPs),\nAzure Management Group policies, GCP Organization policies, conditional access\npolicies, IP restrictions, time-based constraints, and MFA requirements.",
       "in_subset": [
-        "objects"
+        "objects_subset"
       ],
       "from_schema": "https://w3id.org/lmodel/ocsf/objects",
       "aliases": [
@@ -95602,7 +95602,7 @@
       "definition_uri": "https://w3id.org/lmodel/ocsf/Advisory",
       "description": "The Advisory object represents publicly disclosed cybersecurity vulnerabilities\ndefined in a Security advisory. e.g. <code> Microsoft KB Article</code>,\n<code>Apple Security Advisory</code>, or a <code>GitHub Security Advisory\n(GHSA)</code>",
       "in_subset": [
-        "objects"
+        "objects_subset"
       ],
       "from_schema": "https://w3id.org/lmodel/ocsf/objects",
       "aliases": [
@@ -95641,7 +95641,7 @@
       "definition_uri": "https://w3id.org/lmodel/ocsf/AffectedCode",
       "description": "The Affected Code object describes details about a code block identified as\nvulnerable.",
       "in_subset": [
-        "objects"
+        "objects_subset"
       ],
       "from_schema": "https://w3id.org/lmodel/ocsf/objects",
       "aliases": [
@@ -95673,7 +95673,7 @@
       "definition_uri": "https://w3id.org/lmodel/ocsf/AffectedPackage",
       "description": "The Affected Package object describes details about a software package\nidentified as affected by a vulnerability/vulnerabilities.",
       "in_subset": [
-        "objects"
+        "objects_subset"
       ],
       "from_schema": "https://w3id.org/lmodel/ocsf/objects",
       "aliases": [
@@ -95728,7 +95728,7 @@
         "D3FEND\u2122 Ontology d3f:Sensor. \u2014\nhttps://d3fend.mitre.org/dao/artifact/d3f:Sensor/"
       ],
       "in_subset": [
-        "objects"
+        "objects_subset"
       ],
       "from_schema": "https://w3id.org/lmodel/ocsf/objects",
       "see_also": [
@@ -95792,7 +95792,7 @@
         "OpenAI Model Documentation \u2014 https://platform.openai.com/docs/models"
       ],
       "in_subset": [
-        "objects"
+        "objects_subset"
       ],
       "from_schema": "https://w3id.org/lmodel/ocsf/objects",
       "see_also": [
@@ -95827,7 +95827,7 @@
       ],
       "description": "The Aircraft object represents any aircraft or otherwise airborne asset such as\nan unmanned system, airplane, balloon, spacecraft, or otherwise. The Aircraft\nobject is intended to normalized data captured or otherwise logged from active\nradar, passive radar, multi-spectral systems, or the Automatic Dependant\nBroadcast - Surveillance (ADS-B), and/or Mode S systems.",
       "in_subset": [
-        "objects"
+        "objects_subset"
       ],
       "from_schema": "https://w3id.org/lmodel/ocsf/objects",
       "aliases": [
@@ -95908,7 +95908,7 @@
       "definition_uri": "https://w3id.org/lmodel/ocsf/Analytic",
       "description": "The Analytic object contains details about the analytic technique used to\nanalyze and derive insights from the data or information that led to the\ncreation of a finding or conclusion.",
       "in_subset": [
-        "objects"
+        "objects_subset"
       ],
       "from_schema": "https://w3id.org/lmodel/ocsf/objects",
       "aliases": [
@@ -95939,7 +95939,7 @@
       "definition_uri": "https://w3id.org/lmodel/ocsf/Anomaly",
       "description": "Describes an anomaly or deviation detected in a system. Anomalies are\nunexpected activity patterns that could indicate potential issues needing\nattention.",
       "in_subset": [
-        "objects"
+        "objects_subset"
       ],
       "from_schema": "https://w3id.org/lmodel/ocsf/objects",
       "aliases": [
@@ -95961,7 +95961,7 @@
       "definition_uri": "https://w3id.org/lmodel/ocsf/Api",
       "description": "The API, or Application Programming Interface, object represents  information\npertaining to an API request and response.",
       "in_subset": [
-        "objects"
+        "objects_subset"
       ],
       "from_schema": "https://w3id.org/lmodel/ocsf/objects",
       "aliases": [
@@ -95996,7 +95996,7 @@
         "D3FEND\u2122 Ontology d3f:Application. \u2014\nhttps://d3fend.mitre.org/dao/artifact/d3f:Application/"
       ],
       "in_subset": [
-        "objects"
+        "objects_subset"
       ],
       "from_schema": "https://w3id.org/lmodel/ocsf/objects",
       "see_also": [
@@ -96071,7 +96071,7 @@
       "definition_uri": "https://w3id.org/lmodel/ocsf/Assessment",
       "description": "The Assessment object describes a point-in-time assessment, check, or\nevaluation of a specific configuration or signal against an asset, entity,\nperson, or otherwise. For example, this can encapsulate <code>os_signals</code>\nfrom CrowdStrike Falcon Zero Trust Assessments, or account for\n<code>Datastore</code> configurations from Cyera, or capture details of\nMicrosoft Intune configuration policies.",
       "in_subset": [
-        "objects"
+        "objects_subset"
       ],
       "from_schema": "https://w3id.org/lmodel/ocsf/objects",
       "aliases": [
@@ -96108,7 +96108,7 @@
         "ATLAS\u2122 Matrix \u2014 https://atlas.mitre.org/matrices/ATLAS"
       ],
       "in_subset": [
-        "objects"
+        "objects_subset"
       ],
       "from_schema": "https://w3id.org/lmodel/ocsf/objects",
       "see_also": [
@@ -96182,7 +96182,7 @@
       "definition_uri": "https://w3id.org/lmodel/ocsf/AuthFactor",
       "description": "An Authentication Factor object describes a category of methods used for\nidentity verification in an authentication attempt.",
       "in_subset": [
-        "objects"
+        "objects_subset"
       ],
       "from_schema": "https://w3id.org/lmodel/ocsf/objects",
       "aliases": [
@@ -96209,7 +96209,7 @@
       "definition_uri": "https://w3id.org/lmodel/ocsf/AuthenticationToken",
       "description": "The Authentication Token object extends the base <code>token</code> object and\nrepresents standardized authentication tokens, tickets, or assertions that\nconform to established authentication protocols such as Kerberos, OIDC, and\nSAML. This object inherits all attributes from <code>token</code> and adds\nprotocol-specific attributes (e.g., <code>kerberos_flags</code>,\n<code>encryption_details</code>) for authentication events. Use this object in\nauthentication events to represent protocol-specific tokens: Kerberos Ticket\nGranting Tickets (TGT) and Service Tickets (ST), OIDC Identity Tokens and\nRefresh Tokens, and SAML Assertions. These tokens are issued by authentication\nservers and identity providers and carry protocol-specific metadata, lifecycle\ninformation, and security attributes defined by their respective\nspecifications. When to use this object: Use <code>authentication_token</code>\nwhen representing protocol-specific authentication tokens (type_id values 1-5:\nKerberos TGT/ST, OIDC ID/Refresh tokens, SAML assertions) in authentication\nevents. When NOT to use this object: Do NOT use\n<code>authentication_token</code> for API tokens or client tokens (type_id\nvalues 6-7) used in API activity events - use the base <code>token</code>\nobject instead. Do NOT use <code>authentication_token</code> for generic API\nkeys - use the base <code>token</code> object instead.",
       "in_subset": [
-        "objects"
+        "objects_subset"
       ],
       "from_schema": "https://w3id.org/lmodel/ocsf/objects",
       "aliases": [
@@ -96244,7 +96244,7 @@
       "definition_uri": "https://w3id.org/lmodel/ocsf/Authorization",
       "description": "The Authorization Result object provides details about the authorization\noutcome and associated policies related to activity.",
       "in_subset": [
-        "objects"
+        "objects_subset"
       ],
       "from_schema": "https://w3id.org/lmodel/ocsf/objects",
       "aliases": [
@@ -96271,7 +96271,7 @@
       ],
       "description": "An autonomous system (AS) is a collection of connected Internet Protocol (IP)\nrouting prefixes under the control of one or more network operators on behalf\nof a single administrative entity or domain that presents a common, clearly\ndefined routing policy to the internet.",
       "in_subset": [
-        "objects"
+        "objects_subset"
       ],
       "from_schema": "https://w3id.org/lmodel/ocsf/objects",
       "aliases": [
@@ -96326,7 +96326,7 @@
       "definition_uri": "https://w3id.org/lmodel/ocsf/Baseline",
       "description": "Describes the baseline or expected behavior of a system, service, or component\nbased on historical observations and measurements. It establishes reference\npoints for comparison to detect anomalies, trends, and deviations from typical\npatterns.",
       "in_subset": [
-        "objects"
+        "objects_subset"
       ],
       "from_schema": "https://w3id.org/lmodel/ocsf/objects",
       "aliases": [
@@ -96348,7 +96348,7 @@
       "definition_uri": "https://w3id.org/lmodel/ocsf/Campaign",
       "description": "Campaign represent organized efforts by threat actors to achieve malicious\nobjectives over a period, often characterized by shared tactics, techniques,\nand procedures (TTPs).",
       "in_subset": [
-        "objects"
+        "objects_subset"
       ],
       "from_schema": "https://w3id.org/lmodel/ocsf/objects",
       "aliases": [
@@ -96374,7 +96374,7 @@
         "D3FEND\u2122 Ontology d3f:Certificate. \u2014\nhttps://d3fend.mitre.org/dao/artifact/d3f:Certificate/"
       ],
       "in_subset": [
-        "objects"
+        "objects_subset"
       ],
       "from_schema": "https://w3id.org/lmodel/ocsf/objects",
       "see_also": [
@@ -96408,7 +96408,7 @@
       "definition_uri": "https://w3id.org/lmodel/ocsf/Check",
       "description": "The check object defines a specific, testable compliance verification point\nthat evaluates a target device against a standard, framework, or custom\nrequirement. While checks are typically associated with formal standards (like\nCIS, NIST, or ISO), they can also represent custom or organizational\nrequirements. When mapped to controls, checks can evaluate specific\ncontrol_parameters to determine compliance status, but neither the control\nmapping nor control_parameters are required for a valid check.",
       "in_subset": [
-        "objects"
+        "objects_subset"
       ],
       "from_schema": "https://w3id.org/lmodel/ocsf/objects",
       "aliases": [
@@ -96437,7 +96437,7 @@
       "description": "The CIS Benchmark object describes best practices for securely configuring IT\nsystems, software, networks, and cloud infrastructure as defined by the <a\ntarget='_blank' href='https://www.cisecurity.org/cis-benchmarks/'>Center for\nInternet Security</a>. See also <a target='_blank'\nhref='https://www.cisecurity.org/insights/blog/getting-to-know-the-cis-benchmarks'>Getting\nto Know the CIS Benchmarks</a>.",
       "deprecated": "Use the Compliance object with Checks object instead. (since 1.5.0)",
       "in_subset": [
-        "objects"
+        "objects_subset"
       ],
       "from_schema": "https://w3id.org/lmodel/ocsf/objects",
       "aliases": [
@@ -96459,7 +96459,7 @@
       "description": "The CIS Benchmark Result object contains information as defined by the Center\nfor Internet Security (<a target='_blank'\nhref='https://www.cisecurity.org/cis-benchmarks/'>CIS</a>) benchmark result.\nCIS Benchmarks are a collection of best practices for securely configuring IT\nsystems, software, networks, and cloud infrastructure.",
       "deprecated": "Use the Compliance object with Checks object instead. (since 1.5.0)",
       "in_subset": [
-        "objects"
+        "objects_subset"
       ],
       "from_schema": "https://w3id.org/lmodel/ocsf/objects",
       "aliases": [
@@ -96481,7 +96481,7 @@
       "definition_uri": "https://w3id.org/lmodel/ocsf/CisControl",
       "description": "The CIS Control (aka Critical Security Control) object describes a prioritized\nset of actions to protect your organization and data from cyber-attack vectors.\nThe <a target='_blank' href='https://www.cisecurity.org/controls'>CIS\nControls</a> are defined by the Center for Internet Security.",
       "in_subset": [
-        "objects"
+        "objects_subset"
       ],
       "from_schema": "https://w3id.org/lmodel/ocsf/objects",
       "aliases": [
@@ -96506,7 +96506,7 @@
       "description": "The CIS Critical Security Control (CSC) contains information as defined by the\nCenter for Internet Security Critical Security Control <a target='_blank'\nhref='https://www.cisecurity.org/controls'>(CIS CSC)</a>. Prioritized set of\nactions to protect your organization and data from cyber-attack vectors.",
       "deprecated": "Use the cis_control object instead. (since 1.5.0)",
       "in_subset": [
-        "objects"
+        "objects_subset"
       ],
       "from_schema": "https://w3id.org/lmodel/ocsf/objects",
       "aliases": [
@@ -96526,7 +96526,7 @@
       "definition_uri": "https://w3id.org/lmodel/ocsf/ClassifierDetails",
       "description": "The Classifier Details object describes details about the classifier used for\ndata classification.",
       "in_subset": [
-        "objects"
+        "objects_subset"
       ],
       "from_schema": "https://w3id.org/lmodel/ocsf/objects",
       "aliases": [
@@ -96547,7 +96547,7 @@
       "definition_uri": "https://w3id.org/lmodel/ocsf/Cloud",
       "description": "The Cloud object describes the cloud computing environment where an event or\nfinding originated. It provides comprehensive context about the cloud\ninfrastructure, including the cloud service provider, account or subscription\ndetails, organizational structure, geographic regions, availability zones, and\nlogical partitions.",
       "in_subset": [
-        "objects"
+        "objects_subset"
       ],
       "from_schema": "https://w3id.org/lmodel/ocsf/objects",
       "aliases": [
@@ -96572,7 +96572,7 @@
       "definition_uri": "https://w3id.org/lmodel/ocsf/Compliance",
       "description": "The Compliance object contains information about Industry and Regulatory\nFramework standards, controls and requirements or details about custom\nassessments utilized in a compliance evaluation. Standards define broad\nsecurity frameworks, controls represent specific security requirements within\nthose frameworks, and checks are the testable verification points used to\ndetermine if controls are properly implemented.",
       "in_subset": [
-        "objects"
+        "objects_subset"
       ],
       "from_schema": "https://w3id.org/lmodel/ocsf/objects",
       "aliases": [
@@ -96623,7 +96623,7 @@
         "D3FEND\u2122 Ontology d3f:ContainerProcess. \u2014\nhttps://d3fend.mitre.org/dao/artifact/d3f:ContainerProcess/"
       ],
       "in_subset": [
-        "objects"
+        "objects_subset"
       ],
       "from_schema": "https://w3id.org/lmodel/ocsf/objects",
       "see_also": [
@@ -96690,7 +96690,7 @@
       "definition_uri": "https://w3id.org/lmodel/ocsf/Cve",
       "description": "The Common Vulnerabilities and Exposures (CVE) object represents publicly\ndisclosed cybersecurity vulnerabilities defined in CVE Program catalog (<a\ntarget='_blank' href='https://cve.mitre.org/'>CVE</a>). There is one CVE Record\nfor each vulnerability in the catalog.",
       "in_subset": [
-        "objects"
+        "objects_subset"
       ],
       "from_schema": "https://w3id.org/lmodel/ocsf/objects",
       "aliases": [
@@ -96731,7 +96731,7 @@
       "definition_uri": "https://w3id.org/lmodel/ocsf/Cvss",
       "description": "The Common Vulnerability Scoring System (<a target='_blank'\nhref='https://www.first.org/cvss/'>CVSS</a>) object provides a way to capture\nthe principal characteristics of a vulnerability and produce a numerical score\nreflecting its severity.",
       "in_subset": [
-        "objects"
+        "objects_subset"
       ],
       "from_schema": "https://w3id.org/lmodel/ocsf/objects",
       "aliases": [
@@ -96767,7 +96767,7 @@
       "definition_uri": "https://w3id.org/lmodel/ocsf/Cwe",
       "description": "The CWE object represents a weakness in a software system that can be exploited\nby a threat actor to perform an attack. The CWE object is based on the <a\ntarget='_blank' href='https://cwe.mitre.org/'>Common Weakness Enumeration\n(CWE)</a> catalog.",
       "in_subset": [
-        "objects"
+        "objects_subset"
       ],
       "from_schema": "https://w3id.org/lmodel/ocsf/objects",
       "aliases": [
@@ -96798,7 +96798,7 @@
         "D3FEND\u2122 Matrix \u2014 https://d3fend.mitre.org"
       ],
       "in_subset": [
-        "objects"
+        "objects_subset"
       ],
       "from_schema": "https://w3id.org/lmodel/ocsf/objects",
       "see_also": [
@@ -96827,7 +96827,7 @@
         "D3FEND\u2122 Matrix \u2014 href='https://d3fend.mitre.org"
       ],
       "in_subset": [
-        "objects"
+        "objects_subset"
       ],
       "from_schema": "https://w3id.org/lmodel/ocsf/objects",
       "aliases": [
@@ -96860,7 +96860,7 @@
         "D3FEND\u2122 Matrix \u2014 https://d3fend.mitre.org"
       ],
       "in_subset": [
-        "objects"
+        "objects_subset"
       ],
       "from_schema": "https://w3id.org/lmodel/ocsf/objects",
       "see_also": [
@@ -96922,7 +96922,7 @@
       ],
       "description": "The Data Classification object includes information about data classification\nlevels and data category types.",
       "in_subset": [
-        "objects"
+        "objects_subset"
       ],
       "from_schema": "https://w3id.org/lmodel/ocsf/objects",
       "aliases": [
@@ -96995,7 +96995,7 @@
       ],
       "description": "The Data Security object describes the characteristics, techniques and content\nof a Data Loss Prevention (DLP), Data Loss Detection (DLD), Data\nClassification, or similar tools' finding, alert, or detection mechanism(s).",
       "in_subset": [
-        "objects"
+        "objects_subset"
       ],
       "from_schema": "https://w3id.org/lmodel/ocsf/objects",
       "aliases": [
@@ -97088,7 +97088,7 @@
         "D3FEND\u2122 Ontology d3f:Database. \u2014\nhttps://d3fend.mitre.org/dao/artifact/d3f:Database/"
       ],
       "in_subset": [
-        "objects"
+        "objects_subset"
       ],
       "from_schema": "https://w3id.org/lmodel/ocsf/objects",
       "see_also": [
@@ -97129,7 +97129,7 @@
         "D3FEND\u2122 Ontology d3f:CloudStorage. \u2014\nhttps://d3fend.mitre.org/dao/artifact/d3f:CloudStorage/"
       ],
       "in_subset": [
-        "objects"
+        "objects_subset"
       ],
       "from_schema": "https://w3id.org/lmodel/ocsf/objects",
       "see_also": [
@@ -97194,7 +97194,7 @@
         "D3FEND\u2122 Ontology d3f:RemoteProcedureCall. \u2014\nhttps://d3fend.mitre.org/dao/artifact/d3f:RemoteProcedureCall/"
       ],
       "in_subset": [
-        "objects"
+        "objects_subset"
       ],
       "from_schema": "https://w3id.org/lmodel/ocsf/objects",
       "see_also": [
@@ -97220,7 +97220,7 @@
       "definition_uri": "https://w3id.org/lmodel/ocsf/DeviceHwInfo",
       "description": "The Device Hardware Information object contains details and specifications of\nthe physical components that make up a device. This information provides an\noverview of the hardware capabilities, configuration, and characteristics of\nthe device.",
       "in_subset": [
-        "objects"
+        "objects_subset"
       ],
       "from_schema": "https://w3id.org/lmodel/ocsf/objects",
       "aliases": [
@@ -97257,7 +97257,7 @@
       "definition_uri": "https://w3id.org/lmodel/ocsf/DigitalSignature",
       "description": "The Digital Signature object contains information about the cryptographic\nmechanism used to verify the authenticity, integrity, and origin of the file or\napplication.",
       "in_subset": [
-        "objects"
+        "objects_subset"
       ],
       "from_schema": "https://w3id.org/lmodel/ocsf/objects",
       "aliases": [
@@ -97283,7 +97283,7 @@
       "definition_uri": "https://w3id.org/lmodel/ocsf/DiscoveryDetails",
       "description": "The Discovery Details object describes results of a discovery task/job.",
       "in_subset": [
-        "objects"
+        "objects_subset"
       ],
       "from_schema": "https://w3id.org/lmodel/ocsf/objects",
       "aliases": [
@@ -97306,7 +97306,7 @@
       "definition_uri": "https://w3id.org/lmodel/ocsf/Display",
       "description": "The Display object contains information about the physical or virtual display\nconnected to a computer system.",
       "in_subset": [
-        "objects"
+        "objects_subset"
       ],
       "from_schema": "https://w3id.org/lmodel/ocsf/objects",
       "aliases": [
@@ -97332,7 +97332,7 @@
         "D3FEND\u2122 Ontology d3f:InboundInternetDNSResponseTraffic. \u2014\nhttps://d3fend.mitre.org/dao/artifact/d3f:InboundInternetDNSResponseTraffic/"
       ],
       "in_subset": [
-        "objects"
+        "objects_subset"
       ],
       "from_schema": "https://w3id.org/lmodel/ocsf/objects",
       "see_also": [
@@ -97368,7 +97368,7 @@
         "D3FEND\u2122 Ontology d3f:DNSLookup. \u2014\nhttps://d3fend.mitre.org/dao/artifact/d3f:DNSLookup/"
       ],
       "in_subset": [
-        "objects"
+        "objects_subset"
       ],
       "from_schema": "https://w3id.org/lmodel/ocsf/objects",
       "see_also": [
@@ -97395,7 +97395,7 @@
       "definition_uri": "https://w3id.org/lmodel/ocsf/DomainContact",
       "description": "The contact information related to a domain registration, e.g., registrant,\nadministrator, abuse, billing, or technical contact.",
       "in_subset": [
-        "objects"
+        "objects_subset"
       ],
       "from_schema": "https://w3id.org/lmodel/ocsf/objects",
       "aliases": [
@@ -97426,7 +97426,7 @@
         "JSON graph specification. \u2014\nhttps://github.com/jsongraph/json-graph-specification/"
       ],
       "in_subset": [
-        "objects"
+        "objects_subset"
       ],
       "from_schema": "https://w3id.org/lmodel/ocsf/objects",
       "see_also": [
@@ -97471,7 +97471,7 @@
         "D3FEND\u2122 Ontology d3f:Email. \u2014 https://d3fend.mitre.org/dao/artifact/d3f:Email/"
       ],
       "in_subset": [
-        "objects"
+        "objects_subset"
       ],
       "from_schema": "https://w3id.org/lmodel/ocsf/objects",
       "see_also": [
@@ -97560,7 +97560,7 @@
       "definition_uri": "https://w3id.org/lmodel/ocsf/EmailAuth",
       "description": "The Email Authentication object describes the Sender Policy Framework (SPF),\nDomainKeys Identified Mail (DKIM) and Domain-based Message Authentication,\nReporting and Conformance (DMARC) attributes of an email.",
       "in_subset": [
-        "objects"
+        "objects_subset"
       ],
       "from_schema": "https://w3id.org/lmodel/ocsf/objects",
       "aliases": [
@@ -97585,7 +97585,7 @@
       "definition_uri": "https://w3id.org/lmodel/ocsf/EncryptionDetails",
       "description": "Details about the encryption methodology utilized.",
       "in_subset": [
-        "objects"
+        "objects_subset"
       ],
       "from_schema": "https://w3id.org/lmodel/ocsf/objects",
       "aliases": [
@@ -97623,7 +97623,7 @@
         "D3FEND\u2122 Ontology d3f:Host. \u2014\nhttps://d3fend.mitre.org/dao/artifact/d3f:ComputerNetworkNode/"
       ],
       "in_subset": [
-        "objects"
+        "objects_subset"
       ],
       "from_schema": "https://w3id.org/lmodel/ocsf/objects",
       "see_also": [
@@ -97765,7 +97765,7 @@
       ],
       "description": "The Endpoint Connection object contains information detailing a connection\nattempt to an endpoint.",
       "in_subset": [
-        "objects"
+        "objects_subset"
       ],
       "from_schema": "https://w3id.org/lmodel/ocsf/objects",
       "aliases": [
@@ -97816,7 +97816,7 @@
       "definition_uri": "https://w3id.org/lmodel/ocsf/Enrichment",
       "description": "The Enrichment object provides inline enrichment data for specific attributes\nof interest within an event. It serves as a mechanism to enhance or supplement\nthe information associated with the event by adding additional relevant details\nor context.",
       "in_subset": [
-        "objects"
+        "objects_subset"
       ],
       "from_schema": "https://w3id.org/lmodel/ocsf/objects",
       "aliases": [
@@ -97844,7 +97844,7 @@
       "definition_uri": "https://w3id.org/lmodel/ocsf/EnvironmentVariable",
       "description": "An environment variable.",
       "in_subset": [
-        "objects"
+        "objects_subset"
       ],
       "from_schema": "https://w3id.org/lmodel/ocsf/objects",
       "aliases": [
@@ -97867,7 +97867,7 @@
       "definition_uri": "https://w3id.org/lmodel/ocsf/Epss",
       "description": "The Exploit Prediction Scoring System (EPSS) object describes the estimated\nprobability a vulnerability will be exploited. EPSS is a community-driven\neffort to combine descriptive information about vulnerabilities (CVEs) with\nevidence of actual exploitation in-the-wild. (<a target='_blank'\nhref='https://www.first.org/epss/'>EPSS</a>).",
       "in_subset": [
-        "objects"
+        "objects_subset"
       ],
       "from_schema": "https://w3id.org/lmodel/ocsf/objects",
       "aliases": [
@@ -97901,7 +97901,7 @@
       ],
       "description": "A collection of evidence artifacts associated to the activity/activities that\ntriggered a security detection.",
       "in_subset": [
-        "objects"
+        "objects_subset"
       ],
       "from_schema": "https://w3id.org/lmodel/ocsf/objects",
       "aliases": [
@@ -98139,7 +98139,7 @@
       "definition_uri": "https://w3id.org/lmodel/ocsf/Extension",
       "description": "The OCSF Schema Extension object provides detailed information about the schema\nextension used to construct the event. The schema extensions are registered in\nthe <a target='_blank'\nhref='https://github.com/ocsf/ocsf-schema/blob/main/extensions.md'>extensions.md</a>\nfile.",
       "in_subset": [
-        "objects"
+        "objects_subset"
       ],
       "from_schema": "https://w3id.org/lmodel/ocsf/objects",
       "aliases": [
@@ -98162,7 +98162,7 @@
       "definition_uri": "https://w3id.org/lmodel/ocsf/Feature",
       "description": "The Feature object provides information about the software product feature that\ngenerated a specific event. It encompasses details related to the capabilities,\ncomponents, user interface (UI) design, and performance upgrades associated\nwith the feature.",
       "in_subset": [
-        "objects"
+        "objects_subset"
       ],
       "from_schema": "https://w3id.org/lmodel/ocsf/objects",
       "aliases": [
@@ -98195,7 +98195,7 @@
         "D3FEND\u2122 Ontology d3f:File \u2014\nhttps://next.d3fend.mitre.org/dao/artifact/d3f:File/"
       ],
       "in_subset": [
-        "objects"
+        "objects_subset"
       ],
       "from_schema": "https://w3id.org/lmodel/ocsf/objects",
       "see_also": [
@@ -98271,7 +98271,7 @@
       "description": "The Finding object describes metadata related to a security finding generated\nby a security tool or system.",
       "deprecated": "Use the new <code>finding_info</code> object. (since 1.0.0)",
       "in_subset": [
-        "objects"
+        "objects_subset"
       ],
       "from_schema": "https://w3id.org/lmodel/ocsf/objects",
       "aliases": [
@@ -98303,7 +98303,7 @@
       "definition_uri": "https://w3id.org/lmodel/ocsf/FindingInfo",
       "description": "The Finding Information object describes metadata related to a security finding\ngenerated by a security tool or system.",
       "in_subset": [
-        "objects"
+        "objects_subset"
       ],
       "from_schema": "https://w3id.org/lmodel/ocsf/objects",
       "aliases": [
@@ -98353,7 +98353,7 @@
         "D3FEND\u2122 Ontology d3f:DigitalFingerprint. \u2014\nhttps://d3fend.mitre.org/dao/artifact/d3f:DigitalFingerprint/"
       ],
       "in_subset": [
-        "objects"
+        "objects_subset"
       ],
       "from_schema": "https://w3id.org/lmodel/ocsf/objects",
       "see_also": [
@@ -98387,7 +98387,7 @@
       ],
       "description": "The Function Invocation object provides details regarding the invocation of a\nfunction.",
       "in_subset": [
-        "objects"
+        "objects_subset"
       ],
       "from_schema": "https://w3id.org/lmodel/ocsf/objects",
       "aliases": [
@@ -98449,7 +98449,7 @@
       "definition_uri": "https://w3id.org/lmodel/ocsf/GpuInfo",
       "description": "The GPU information object contains attributes describing graphical processing\nhardware.",
       "in_subset": [
-        "objects"
+        "objects_subset"
       ],
       "from_schema": "https://w3id.org/lmodel/ocsf/objects",
       "aliases": [
@@ -98478,7 +98478,7 @@
         "JSON graph specification. \u2014\nhttps://github.com/jsongraph/json-graph-specification/"
       ],
       "in_subset": [
-        "objects"
+        "objects_subset"
       ],
       "from_schema": "https://w3id.org/lmodel/ocsf/objects",
       "see_also": [
@@ -98513,7 +98513,7 @@
         "D3FEND\u2122 Ontology d3f:AccessControlGroup. \u2014\nhttps://d3fend.mitre.org/dao/artifact/d3f:AccessControlGroup/"
       ],
       "in_subset": [
-        "objects"
+        "objects_subset"
       ],
       "from_schema": "https://w3id.org/lmodel/ocsf/objects",
       "see_also": [
@@ -98543,7 +98543,7 @@
       "definition_uri": "https://w3id.org/lmodel/ocsf/Hassh",
       "description": "The HASSH object contains SSH network fingerprinting values for specific\nclient/server implementations. It provides a standardized way of identifying\nand categorizing SSH connections based on their unique characteristics and\nbehavior.",
       "in_subset": [
-        "objects"
+        "objects_subset"
       ],
       "from_schema": "https://w3id.org/lmodel/ocsf/objects",
       "aliases": [
@@ -98566,7 +98566,7 @@
         "D3FEND\u2122 Ontology d3f:SessionCookie. \u2014\nhttps://d3fend.mitre.org/dao/artifact/d3f:SessionCookie/"
       ],
       "in_subset": [
-        "objects"
+        "objects_subset"
       ],
       "from_schema": "https://w3id.org/lmodel/ocsf/objects",
       "see_also": [
@@ -98600,7 +98600,7 @@
       "definition_uri": "https://w3id.org/lmodel/ocsf/HttpHeader",
       "description": "The HTTP Header object represents the headers sent in an HTTP request or\nresponse. HTTP headers are key-value pairs that convey additional information\nabout the HTTP message, including details about the content, caching,\nauthentication, encoding, and other aspects of the communication.",
       "in_subset": [
-        "objects"
+        "objects_subset"
       ],
       "from_schema": "https://w3id.org/lmodel/ocsf/objects",
       "aliases": [
@@ -98623,7 +98623,7 @@
         "D3FEND\u2122 Ontology d3f:OutboundInternetNetworkTraffic. \u2014\nhttps://d3fend.mitre.org/dao/artifact/d3f:OutboundInternetNetworkTraffic/"
       ],
       "in_subset": [
-        "objects"
+        "objects_subset"
       ],
       "from_schema": "https://w3id.org/lmodel/ocsf/objects",
       "see_also": [
@@ -98661,7 +98661,7 @@
         "D3FEND\u2122 Ontology d3f:InboundInternetNetworkTraffic. \u2014\nhttps://d3fend.mitre.org/dao/artifact/d3f:InboundInternetNetworkTraffic/"
       ],
       "in_subset": [
-        "objects"
+        "objects_subset"
       ],
       "from_schema": "https://w3id.org/lmodel/ocsf/objects",
       "see_also": [
@@ -98693,7 +98693,7 @@
       "definition_uri": "https://w3id.org/lmodel/ocsf/IdentityActivityMetrics",
       "description": "The Identity Activity Metrics object captures usage patterns, authentication\nactivity, credential usage and other metrics for identities across cloud and\non-premises environments. Example identities include AWS IAM Users, Roles,\nAzure AD Principals, GCP Service Accounts, on-premises Active Directory\naccounts.",
       "in_subset": [
-        "objects"
+        "objects_subset"
       ],
       "from_schema": "https://w3id.org/lmodel/ocsf/objects",
       "aliases": [
@@ -98716,7 +98716,7 @@
       "definition_uri": "https://w3id.org/lmodel/ocsf/Idp",
       "description": "The Identity Provider object contains detailed information about a provider\nresponsible for creating, maintaining, and managing identity information while\noffering authentication services to applications. An Identity Provider (IdP)\nserves as a trusted authority that verifies the identity of users and issues\nauthentication tokens or assertions to enable secure access to applications or\nservices.",
       "in_subset": [
-        "objects"
+        "objects_subset"
       ],
       "from_schema": "https://w3id.org/lmodel/ocsf/objects",
       "aliases": [
@@ -98753,7 +98753,7 @@
         "D3FEND\u2122 Ontology d3f:ContainerImage \u2014\nhttps://d3fend.mitre.org/dao/artifact/d3f:ContainerImage/"
       ],
       "in_subset": [
-        "objects"
+        "objects_subset"
       ],
       "from_schema": "https://w3id.org/lmodel/ocsf/objects",
       "see_also": [
@@ -98785,7 +98785,7 @@
       "definition_uri": "https://w3id.org/lmodel/ocsf/Ja4Fingerprint",
       "description": "The JA4+ fingerprint object provides detailed fingerprint information about\nvarious aspects of network traffic which is both machine and human readable.",
       "in_subset": [
-        "objects"
+        "objects_subset"
       ],
       "from_schema": "https://w3id.org/lmodel/ocsf/objects",
       "aliases": [
@@ -98813,7 +98813,7 @@
         "D3FEND\u2122 Ontology d3f:ScheduledJob. \u2014\nhttps://d3fend.mitre.org/dao/artifact/d3f:ScheduledJob/"
       ],
       "in_subset": [
-        "objects"
+        "objects_subset"
       ],
       "from_schema": "https://w3id.org/lmodel/ocsf/objects",
       "see_also": [
@@ -98851,7 +98851,7 @@
       ],
       "description": "The KB Article object contains metadata that describes the patch or update.",
       "in_subset": [
-        "objects"
+        "objects_subset"
       ],
       "from_schema": "https://w3id.org/lmodel/ocsf/objects",
       "aliases": [
@@ -98917,7 +98917,7 @@
         "D3FEND\u2122 Ontology d3f:Kernel \u2014 https://d3fend.mitre.org/dao/artifact/d3f:Kernel/"
       ],
       "in_subset": [
-        "objects"
+        "objects_subset"
       ],
       "from_schema": "https://w3id.org/lmodel/ocsf/objects",
       "see_also": [
@@ -98950,7 +98950,7 @@
         "D3FEND\u2122 Ontology d3f:KernelModule \u2014\nhttps://d3fend.mitre.org/dao/artifact/d3f:KernelModule/"
       ],
       "in_subset": [
-        "objects"
+        "objects_subset"
       ],
       "from_schema": "https://w3id.org/lmodel/ocsf/objects",
       "see_also": [
@@ -98982,7 +98982,7 @@
       ],
       "description": "A generic object allowing to define a <code>{key:value}</code> pair.",
       "in_subset": [
-        "objects"
+        "objects_subset"
       ],
       "from_schema": "https://w3id.org/lmodel/ocsf/objects",
       "aliases": [
@@ -99034,7 +99034,7 @@
       "definition_uri": "https://w3id.org/lmodel/ocsf/KeyboardInfo",
       "description": "The Keyboard Information object contains details and attributes related to a\ncomputer or device keyboard. It encompasses information that describes the\ncharacteristics, capabilities, and configuration of the keyboard.",
       "in_subset": [
-        "objects"
+        "objects_subset"
       ],
       "from_schema": "https://w3id.org/lmodel/ocsf/objects",
       "aliases": [
@@ -99057,7 +99057,7 @@
       "definition_uri": "https://w3id.org/lmodel/ocsf/KillChainPhase",
       "description": "The Kill Chain Phase object represents a single phase of a cyber attack,\nincluding the initial reconnaissance and planning stages up to the final\nobjective of the attacker. It provides a detailed description of each phase and\nits associated activities within the broader context of a cyber attack. See <a\ntarget='_blank'\nhref='https://www.lockheedmartin.com/en-us/capabilities/cyber/cyber-kill-chain.html'>Cyber\nKill Chain\u00ae</a>.",
       "in_subset": [
-        "objects"
+        "objects_subset"
       ],
       "from_schema": "https://w3id.org/lmodel/ocsf/objects",
       "aliases": [
@@ -99080,7 +99080,7 @@
       "definition_uri": "https://w3id.org/lmodel/ocsf/LdapPerson",
       "description": "The additional LDAP attributes that describe a person.",
       "in_subset": [
-        "objects"
+        "objects_subset"
       ],
       "from_schema": "https://w3id.org/lmodel/ocsf/objects",
       "aliases": [
@@ -99123,7 +99123,7 @@
       "definition_uri": "https://w3id.org/lmodel/ocsf/LoadBalancer",
       "description": "The load balancer object describes the load balancer entity and contains\nadditional information regarding the distribution of traffic across a network.",
       "in_subset": [
-        "objects"
+        "objects_subset"
       ],
       "from_schema": "https://w3id.org/lmodel/ocsf/objects",
       "aliases": [
@@ -99166,7 +99166,7 @@
       ],
       "description": "The Geo Location object describes a geographical location, usually associated\nwith an IP address.",
       "in_subset": [
-        "objects"
+        "objects_subset"
       ],
       "from_schema": "https://w3id.org/lmodel/ocsf/objects",
       "aliases": [
@@ -99256,7 +99256,7 @@
       "definition_uri": "https://w3id.org/lmodel/ocsf/Logger",
       "description": "The Logger object represents the device and product where events are stored\nwith times for receipt and transmission.  This may be at the source device\nwhere the event occurred, a remote scanning device, intermediate hops, or the\nultimate destination.",
       "in_subset": [
-        "objects"
+        "objects_subset"
       ],
       "from_schema": "https://w3id.org/lmodel/ocsf/objects",
       "aliases": [
@@ -99291,7 +99291,7 @@
       "definition_uri": "https://w3id.org/lmodel/ocsf/LongString",
       "description": "This object is a used to capture strings which may be truncated by a security\nproduct due to their length.",
       "in_subset": [
-        "objects"
+        "objects_subset"
       ],
       "from_schema": "https://w3id.org/lmodel/ocsf/objects",
       "aliases": [
@@ -99312,7 +99312,7 @@
       "definition_uri": "https://w3id.org/lmodel/ocsf/Malware",
       "description": "The Malware object describes the classification of known malicious software,\nwhich is intentionally designed to cause damage to a computer, server, client,\nor computer network.",
       "in_subset": [
-        "objects"
+        "objects_subset"
       ],
       "from_schema": "https://w3id.org/lmodel/ocsf/objects",
       "aliases": [
@@ -99360,7 +99360,7 @@
       ],
       "description": "The Managed Entity object describes the type and version of an entity, such as\na user, device, or policy.  For types in the <code>type_id</code> enum list, an\nassociated attribute should be populated.  If the type of entity is not in the\n<code>type_id</code> list, information can be put into the <code>data</code>\nattribute, <code>type_id</code> should be 'Other' and the <code>type</code>\nattribute should label the entity type.",
       "in_subset": [
-        "objects"
+        "objects_subset"
       ],
       "from_schema": "https://w3id.org/lmodel/ocsf/objects",
       "aliases": [
@@ -99485,7 +99485,7 @@
         "Model Context Protocol (MCP) Specification \u2014 https://modelcontextprotocol.io/"
       ],
       "in_subset": [
-        "objects"
+        "objects_subset"
       ],
       "from_schema": "https://w3id.org/lmodel/ocsf/objects",
       "see_also": [
@@ -99552,7 +99552,7 @@
         "D3FEND\u2122 Ontology d3f:Metadata \u2014\nhttps://d3fend.mitre.org/dao/artifact/d3f:Metadata/"
       ],
       "in_subset": [
-        "objects"
+        "objects_subset"
       ],
       "from_schema": "https://w3id.org/lmodel/ocsf/objects",
       "see_also": [
@@ -99611,7 +99611,7 @@
       "definition_uri": "https://w3id.org/lmodel/ocsf/Metric",
       "description": "The Metric object defines a simple name/value pair entity for a metric.",
       "in_subset": [
-        "objects"
+        "objects_subset"
       ],
       "from_schema": "https://w3id.org/lmodel/ocsf/objects",
       "aliases": [
@@ -99636,7 +99636,7 @@
         "ATT&CK\u00ae Mitigation to D3FEND\u2122 Technique Mappings \u2014\nhttps://d3fend.mitre.org/mappings/attack-mitigations/"
       ],
       "in_subset": [
-        "objects"
+        "objects_subset"
       ],
       "from_schema": "https://w3id.org/lmodel/ocsf/objects",
       "see_also": [
@@ -99678,7 +99678,7 @@
       ],
       "description": "The Module object describes the attributes of a module.",
       "in_subset": [
-        "objects"
+        "objects_subset"
       ],
       "from_schema": "https://w3id.org/lmodel/ocsf/objects",
       "aliases": [
@@ -99741,7 +99741,7 @@
         "D3FEND\u2122 Ontology d3f:NetworkSession \u2014\nhttps://d3fend.mitre.org/dao/artifact/d3f:NetworkSession/"
       ],
       "in_subset": [
-        "objects"
+        "objects_subset"
       ],
       "from_schema": "https://w3id.org/lmodel/ocsf/objects",
       "see_also": [
@@ -99791,7 +99791,7 @@
         "D3FEND\u2122 Ontology d3f:ComputerNetworkNode. \u2014\nhttps://d3fend.mitre.org/dao/artifact/d3f:ComputerNetworkNode/"
       ],
       "in_subset": [
-        "objects"
+        "objects_subset"
       ],
       "from_schema": "https://w3id.org/lmodel/ocsf/objects",
       "see_also": [
@@ -99959,7 +99959,7 @@
         "D3FEND\u2122 Ontology d3f:NetworkInterfaceCard. \u2014\nhttps://d3fend.mitre.org/dao/artifact/d3f:NetworkInterfaceCard/"
       ],
       "in_subset": [
-        "objects"
+        "objects_subset"
       ],
       "from_schema": "https://w3id.org/lmodel/ocsf/objects",
       "see_also": [
@@ -100059,7 +100059,7 @@
         "D3FEND\u2122 Ontology d3f:ProxyServer \u2014\nhttps://d3fend.mitre.org/dao/artifact/d3f:ProxyServer/"
       ],
       "in_subset": [
-        "objects"
+        "objects_subset"
       ],
       "from_schema": "https://w3id.org/lmodel/ocsf/objects",
       "see_also": [
@@ -100117,7 +100117,7 @@
         "D3FEND\u2122 Ontology d3f:NetworkTraffic \u2014\nhttps://d3fend.mitre.org/dao/artifact/d3f:NetworkTraffic/"
       ],
       "in_subset": [
-        "objects"
+        "objects_subset"
       ],
       "from_schema": "https://w3id.org/lmodel/ocsf/objects",
       "see_also": [
@@ -100154,7 +100154,7 @@
         "JSON graph specification. \u2014\nhttps://github.com/jsongraph/json-graph-specification/"
       ],
       "in_subset": [
-        "objects"
+        "objects_subset"
       ],
       "from_schema": "https://w3id.org/lmodel/ocsf/objects",
       "see_also": [
@@ -100180,7 +100180,7 @@
       "definition_uri": "https://w3id.org/lmodel/ocsf/Organization",
       "description": "The Organization object describes characteristics of an organization or company\nand its division if any. Additionally, it also describes cloud and\nSoftware-as-a-Service (SaaS) logical hierarchies such as AWS Organizations,\nGoogle Cloud Organizations, Oracle Cloud Tenancies, and similar constructs.",
       "in_subset": [
-        "objects"
+        "objects_subset"
       ],
       "from_schema": "https://w3id.org/lmodel/ocsf/objects",
       "aliases": [
@@ -100207,7 +100207,7 @@
       "definition_uri": "https://w3id.org/lmodel/ocsf/PeripheralDevice",
       "description": "The peripheral device object describes the properties of external, connectable,\nand detachable hardware.",
       "in_subset": [
-        "objects"
+        "objects_subset"
       ],
       "from_schema": "https://w3id.org/lmodel/ocsf/objects",
       "aliases": [
@@ -100246,7 +100246,7 @@
       ],
       "description": "The Policy object describes the policies that are applicable. <p>Policy\nattributes provide traceability to the operational state of the security\nproduct at the time that the event was captured, facilitating forensics,\ntroubleshooting, and policy tuning/adjustments.</p>",
       "in_subset": [
-        "objects"
+        "objects_subset"
       ],
       "from_schema": "https://w3id.org/lmodel/ocsf/objects",
       "aliases": [
@@ -100325,7 +100325,7 @@
       ],
       "description": "The Process Entity object provides critical fields for referencing a process.",
       "in_subset": [
-        "objects"
+        "objects_subset"
       ],
       "from_schema": "https://w3id.org/lmodel/ocsf/objects",
       "aliases": [
@@ -100423,7 +100423,7 @@
       "definition_uri": "https://w3id.org/lmodel/ocsf/Product",
       "description": "The Product object describes characteristics of a software product.",
       "in_subset": [
-        "objects"
+        "objects_subset"
       ],
       "from_schema": "https://w3id.org/lmodel/ocsf/objects",
       "aliases": [
@@ -100457,7 +100457,7 @@
       "definition_uri": "https://w3id.org/lmodel/ocsf/QueryInfo",
       "description": "The query info object holds information related to data access within a\ndatastore. To access, manipulate, delete, or retrieve data from a datastore, a\nquery must be written using a specific syntax.",
       "in_subset": [
-        "objects"
+        "objects_subset"
       ],
       "from_schema": "https://w3id.org/lmodel/ocsf/objects",
       "aliases": [
@@ -100490,7 +100490,7 @@
       ],
       "description": "The entity from which an event or finding was reported.",
       "in_subset": [
-        "objects"
+        "objects_subset"
       ],
       "from_schema": "https://w3id.org/lmodel/ocsf/objects",
       "aliases": [
@@ -100566,7 +100566,7 @@
       "definition_uri": "https://w3id.org/lmodel/ocsf/ResourceDetails",
       "description": "The Resource Details object describes details about resources that were\naffected by the activity/event.",
       "in_subset": [
-        "objects"
+        "objects_subset"
       ],
       "from_schema": "https://w3id.org/lmodel/ocsf/objects",
       "aliases": [
@@ -100616,7 +100616,7 @@
       "definition_uri": "https://w3id.org/lmodel/ocsf/Rule",
       "description": "The Rule object describes characteristics of a rule associated with a policy or\nan event.",
       "in_subset": [
-        "objects"
+        "objects_subset"
       ],
       "from_schema": "https://w3id.org/lmodel/ocsf/objects",
       "aliases": [
@@ -100642,7 +100642,7 @@
       "definition_uri": "https://w3id.org/lmodel/ocsf/Scan",
       "description": "The Scan object describes characteristics of a proactive scan.",
       "in_subset": [
-        "objects"
+        "objects_subset"
       ],
       "from_schema": "https://w3id.org/lmodel/ocsf/objects",
       "aliases": [
@@ -100669,7 +100669,7 @@
         "D3FEND\u2122 Ontology d3f:ServiceApplication. \u2014\nhttps://d3fend.mitre.org/dao/artifact/d3f:ServiceApplication/"
       ],
       "in_subset": [
-        "objects"
+        "objects_subset"
       ],
       "from_schema": "https://w3id.org/lmodel/ocsf/objects",
       "see_also": [
@@ -100704,7 +100704,7 @@
         "ATLAS\u2122 Matrix \u2014 https://atlas.mitre.org/matrices/ATLAS"
       ],
       "in_subset": [
-        "objects"
+        "objects_subset"
       ],
       "from_schema": "https://w3id.org/lmodel/ocsf/objects",
       "see_also": [
@@ -100737,7 +100737,7 @@
       "definition_uri": "https://w3id.org/lmodel/ocsf/Table",
       "description": "The table object represents a table within a structured relational database or\ndatastore, which contains columns and rows of data that are able to be create,\nupdated, deleted and queried.",
       "in_subset": [
-        "objects"
+        "objects_subset"
       ],
       "from_schema": "https://w3id.org/lmodel/ocsf/objects",
       "aliases": [
@@ -100768,7 +100768,7 @@
         "ATLAS\u2122 Matrix \u2014 https://atlas.mitre.org/matrices/ATLAS"
       ],
       "in_subset": [
-        "objects"
+        "objects_subset"
       ],
       "from_schema": "https://w3id.org/lmodel/ocsf/objects",
       "see_also": [
@@ -100805,7 +100805,7 @@
         "ATLAS\u2122 Matrix \u2014 https://atlas.mitre.org/matrices/ATLAS"
       ],
       "in_subset": [
-        "objects"
+        "objects_subset"
       ],
       "from_schema": "https://w3id.org/lmodel/ocsf/objects",
       "see_also": [
@@ -100836,7 +100836,7 @@
       "definition_uri": "https://w3id.org/lmodel/ocsf/Trait",
       "description": "Describes a characteristic or feature of an entity that was observed. For\nexample, this object can be used to represent specific characteristics derived\nfrom events or findings that can be surfaced as distinguishing traits of the\nentity in question.",
       "in_subset": [
-        "objects"
+        "objects_subset"
       ],
       "from_schema": "https://w3id.org/lmodel/ocsf/objects",
       "aliases": [
@@ -100861,7 +100861,7 @@
       "definition_uri": "https://w3id.org/lmodel/ocsf/TransformationInfo",
       "description": "The transformation_info object represents the mapping or transformation used.",
       "in_subset": [
-        "objects"
+        "objects_subset"
       ],
       "from_schema": "https://w3id.org/lmodel/ocsf/objects",
       "aliases": [
@@ -100887,7 +100887,7 @@
       "definition_uri": "https://w3id.org/lmodel/ocsf/UnmannedAerialSystem",
       "description": "The Unmanned Aerial System object describes the characteristics, Position\nLocation Information (PLI), and other metadata of Unmanned Aerial Systems (UAS)\nand other unmanned and drone systems used in Remote ID. Remote ID is defined in\nthe Standard Specification for Remote ID and Tracking (ASTM Designation:\nF3411-22a) <a target='_blank'\nhref='https://cdn.standards.iteh.ai/samples/112830/71297057ac42432880a203654f213709/ASTM-F3411-22a.pdf'>ASTM\nF3411-22a</a>.",
       "in_subset": [
-        "objects"
+        "objects_subset"
       ],
       "from_schema": "https://w3id.org/lmodel/ocsf/objects",
       "aliases": [
@@ -100922,7 +100922,7 @@
       "definition_uri": "https://w3id.org/lmodel/ocsf/UnmannedSystemOperatingArea",
       "description": "The Unmanned System Operating Area object describes details about a precise\narea of operations for a UAS flight or mission.",
       "in_subset": [
-        "objects"
+        "objects_subset"
       ],
       "from_schema": "https://w3id.org/lmodel/ocsf/objects",
       "aliases": [
@@ -100982,7 +100982,7 @@
         "D3FEND\u2122 Ontology d3f:UserAccount \u2014\nhttps://d3fend.mitre.org/dao/artifact/d3f:UserAccount/"
       ],
       "in_subset": [
-        "objects"
+        "objects_subset"
       ],
       "from_schema": "https://w3id.org/lmodel/ocsf/objects",
       "see_also": [
@@ -101074,7 +101074,7 @@
         "D3FEND\u2122 Ontology d3f:WebResource. \u2014\nhttps://d3fend.mitre.org/dao/artifact/d3f:WebResource/"
       ],
       "in_subset": [
-        "objects"
+        "objects_subset"
       ],
       "from_schema": "https://w3id.org/lmodel/ocsf/objects",
       "see_also": [
@@ -101113,7 +101113,7 @@
         "D3FEND\u2122 Ontology d3f:Host. \u2014 https://d3fend.mitre.org/dao/artifact/d3f:Host/"
       ],
       "in_subset": [
-        "objects"
+        "objects_subset"
       ],
       "from_schema": "https://w3id.org/lmodel/ocsf/objects",
       "see_also": [
@@ -101203,7 +101203,7 @@
       "definition_uri": "https://w3id.org/lmodel/ocsf/FirewallRule",
       "description": "The Firewall Rule object represents a specific rule within a firewall policy or\nevent. It contains information about a rule's configuration, properties, and\nassociated actions that define how network traffic is handled by the firewall.",
       "in_subset": [
-        "objects"
+        "objects_subset"
       ],
       "from_schema": "https://w3id.org/lmodel/ocsf/objects",
       "aliases": [
@@ -101233,7 +101233,7 @@
       "definition_uri": "https://w3id.org/lmodel/ocsf/MalwareScanInfo",
       "description": "The malware scan information object describes characteristics, metadata of a\nmalware scanning job.",
       "in_subset": [
-        "objects"
+        "objects_subset"
       ],
       "from_schema": "https://w3id.org/lmodel/ocsf/objects",
       "aliases": [
@@ -101277,7 +101277,7 @@
         "D3FEND\u2122 Ontology d3f:Process \u2014\nhttps://d3fend.mitre.org/dao/artifact/d3f:Process/"
       ],
       "in_subset": [
-        "objects"
+        "objects_subset"
       ],
       "from_schema": "https://w3id.org/lmodel/ocsf/objects",
       "see_also": [
@@ -101378,7 +101378,7 @@
       ],
       "description": "AI-specific attributes for model operations, retrieval systems, and agent\nactivities. e.g. model_name, total_token_counts etc.",
       "in_subset": [
-        "ai_operation_profile"
+        "ai_operation_profile_subset"
       ],
       "from_schema": "https://w3id.org/lmodel/ocsf/profiles",
       "aliases": [
@@ -101405,7 +101405,7 @@
       ],
       "description": "The attributes that describe information specific to Cloud\nservices/applications.",
       "in_subset": [
-        "cloud_profile"
+        "cloud_profile_subset"
       ],
       "from_schema": "https://w3id.org/lmodel/ocsf/profiles",
       "aliases": [
@@ -101432,7 +101432,7 @@
       ],
       "description": "The container context for a process.",
       "in_subset": [
-        "container_profile"
+        "container_profile_subset"
       ],
       "from_schema": "https://w3id.org/lmodel/ocsf/profiles",
       "aliases": [
@@ -101459,7 +101459,7 @@
       ],
       "description": "The Data Classification profile adds attributes to specific resource objects,\nallowing users to describe information about classifiers & data classification\nresults.",
       "in_subset": [
-        "data_classification_profile"
+        "data_classification_profile_subset"
       ],
       "from_schema": "https://w3id.org/lmodel/ocsf/profiles",
       "aliases": [
@@ -101486,7 +101486,7 @@
       ],
       "description": "This profile defines date/time attributes as defined in RFC-3339. For example\n1985-04-12T23:20:50.52Z.",
       "in_subset": [
-        "datetime_profile"
+        "datetime_profile_subset"
       ],
       "from_schema": "https://w3id.org/lmodel/ocsf/profiles",
       "aliases": [
@@ -101514,7 +101514,7 @@
       ],
       "description": "The attributes that identify host/device attributes.",
       "in_subset": [
-        "host_profile"
+        "host_profile_subset"
       ],
       "from_schema": "https://w3id.org/lmodel/ocsf/profiles",
       "aliases": [
@@ -101546,7 +101546,7 @@
       ],
       "description": "The attributes that add incident handling semantics to a Finding.",
       "in_subset": [
-        "incident_profile"
+        "incident_profile_subset"
       ],
       "from_schema": "https://w3id.org/lmodel/ocsf/profiles",
       "aliases": [
@@ -101589,7 +101589,7 @@
       ],
       "description": "The attributes that describe information specific to load balancers.",
       "in_subset": [
-        "load_balancer_profile"
+        "load_balancer_profile_subset"
       ],
       "from_schema": "https://w3id.org/lmodel/ocsf/profiles",
       "aliases": [
@@ -101620,7 +101620,7 @@
       ],
       "description": "The attributes that identify network proxy attributes.",
       "in_subset": [
-        "network_proxy_profile"
+        "network_proxy_profile_subset"
       ],
       "from_schema": "https://w3id.org/lmodel/ocsf/profiles",
       "aliases": [
@@ -101651,7 +101651,7 @@
       ],
       "description": "The OSINT (Open Source Intelligence) profile contains one or more indicators\nand associated analysis and details, such as registrar (WHOIS) information and\ncommentary about a hostname, or information about a digital certificate and its\nusage within a campaign. This information can be used to further enrich a\ndetection or finding by providing decisioning support to other analysts and\nengineers within the profile itself.",
       "in_subset": [
-        "osint_profile"
+        "osint_profile_subset"
       ],
       "from_schema": "https://w3id.org/lmodel/ocsf/profiles",
       "aliases": [
@@ -101682,7 +101682,7 @@
       ],
       "description": "The attributes including disposition that represent the outcome of a security\ncontrol including but not limited to access control, malware or policy\nviolation, network proxy, intrusion detection, firewall, or data control.  The\nprofile is intended to augment activities or findings with an outcome when a\nsecurity control has observed or intervened. If the control detected a security\nviolation, and the <code>disposition_id</code> or <code>action_id</code> is an\nalertable outcome or action, the <code>is_alert</code> flag may be set to\n<code>true</code>.",
       "in_subset": [
-        "security_control_profile"
+        "security_control_profile_subset"
       ],
       "from_schema": "https://w3id.org/lmodel/ocsf/profiles",
       "aliases": [
@@ -101730,7 +101730,7 @@
       ],
       "description": "The Trace Profile extends the OCSF framework to capture and standardize\nobservability events, specifically targeting trace-level data. This profile\nenables integration and normalization of distributed tracing information,\nallowing OCSF events to retain essential trace context such as trace IDs, span\nrelationships, and service dependencies.",
       "in_subset": [
-        "trace_profile"
+        "trace_profile_subset"
       ],
       "from_schema": "https://w3id.org/lmodel/ocsf/profiles",
       "aliases": [
@@ -101834,7 +101834,7 @@
         }
       ],
       "in_subset": [
-        "application"
+        "application_subset"
       ],
       "from_schema": "https://w3id.org/lmodel/ocsf/events",
       "aliases": [
@@ -101910,7 +101910,7 @@
       ],
       "description": "API events describe general CRUD (Create, Read, Update, Delete) API activities,\ne.g. (AWS Cloudtrail)",
       "in_subset": [
-        "application"
+        "application_subset"
       ],
       "from_schema": "https://w3id.org/lmodel/ocsf/events",
       "aliases": [
@@ -102000,7 +102000,7 @@
       ],
       "description": "Application Error events describe issues with an applications. The error\nmessage should be put in the event's <code>message</code> attribute. The\n<code>metadata.product</code> attribute can be used to capture the originating\napplication information. The <code>host</code> profile can used to include the\ngenerating device information. This class is helpful for applications that\ngenerate or handle OCSF events and can also be used for errors in upstream\nproducts and services.",
       "in_subset": [
-        "application"
+        "application_subset"
       ],
       "from_schema": "https://w3id.org/lmodel/ocsf/events",
       "aliases": [
@@ -102081,7 +102081,7 @@
         "D3FEND\u2122 Ontology d3f:ApplicationEvent \u2014\nhttps://d3fend.mitre.org/event/d3f:ApplicationEvent/"
       ],
       "in_subset": [
-        "application"
+        "application_subset"
       ],
       "from_schema": "https://w3id.org/lmodel/ocsf/events",
       "see_also": [
@@ -102167,7 +102167,7 @@
       ],
       "description": "Datastore events describe general activities (Read, Update, Query, Delete,\netc.) which affect datastores or data within those datastores, e.g. (AWS RDS,\nAWS S3).",
       "in_subset": [
-        "application"
+        "application_subset"
       ],
       "from_schema": "https://w3id.org/lmodel/ocsf/events",
       "aliases": [
@@ -102300,7 +102300,7 @@
       ],
       "description": "File Hosting Activity events report the actions taken by file management\napplications, including file sharing servers like Sharepoint and services such\nas Box, MS OneDrive, Google Drive, or network file share services.",
       "in_subset": [
-        "application"
+        "application_subset"
       ],
       "from_schema": "https://w3id.org/lmodel/ocsf/events",
       "aliases": [
@@ -102391,7 +102391,7 @@
       ],
       "description": "Scan events report the start, completion, and results of a scan job. The scan\nevent includes the number of items that were scanned and the number of\ndetections that were resolved.",
       "in_subset": [
-        "application"
+        "application_subset"
       ],
       "from_schema": "https://w3id.org/lmodel/ocsf/events",
       "aliases": [
@@ -102486,7 +102486,7 @@
       "description": "Web Resource Access Activity events describe successful/failed attempts to\naccess a web resource over HTTP.",
       "deprecated": "Use the <code>Web Resources Activity</code> class with the <code>Security\nControl</code> and/or <code>Network Proxy</code> profile instead. (since 1.1.0)",
       "in_subset": [
-        "application"
+        "application_subset"
       ],
       "from_schema": "https://w3id.org/lmodel/ocsf/events",
       "aliases": [
@@ -102578,7 +102578,7 @@
       ],
       "description": "Web Resources Activity events describe actions executed on a set of Web\nResources.",
       "in_subset": [
-        "application"
+        "application_subset"
       ],
       "from_schema": "https://w3id.org/lmodel/ocsf/events",
       "aliases": [
@@ -102671,7 +102671,7 @@
       ],
       "description": "The Discovery event is a generic event that defines a set of attributes\navailable in Discovery category events. As a generic event, it could be used to\nlog events that are not otherwise defined by the Discovery specific event\nclasses.",
       "in_subset": [
-        "discovery"
+        "discovery_subset"
       ],
       "from_schema": "https://w3id.org/lmodel/ocsf/events",
       "aliases": [
@@ -102749,7 +102749,7 @@
       "description": "Admin Group Query events report information about administrative groups.",
       "deprecated": "Use the <code>Live Evidence Info</code> class. (since 1.5.0)",
       "in_subset": [
-        "discovery"
+        "discovery_subset"
       ],
       "from_schema": "https://w3id.org/lmodel/ocsf/events",
       "aliases": [
@@ -102835,7 +102835,7 @@
       ],
       "description": "Cloud Resources Inventory Info events report cloud asset inventory data. This\ndata can be either logged or proactively collected. For example, use this event\nclass when creating an inventory of cloud resource information from a\nConfiguration Management Database (CMDB), Cyber Asset Attack Surface Management\n(CAASM), direct public cloud service provider APIs, Software-as-a-Service\n(SaaS) APIs, or otherwise.",
       "in_subset": [
-        "discovery"
+        "discovery_subset"
       ],
       "from_schema": "https://w3id.org/lmodel/ocsf/events",
       "aliases": [
@@ -103001,7 +103001,7 @@
       "description": "Device Config State events report device configuration data, device\nassessments, and/or CIS Benchmark results.",
       "deprecated": "Use <code>Compliance Finding</code> class. (since 1.5.0)",
       "in_subset": [
-        "discovery"
+        "discovery_subset"
       ],
       "from_schema": "https://w3id.org/lmodel/ocsf/events",
       "aliases": [
@@ -103080,7 +103080,7 @@
       ],
       "description": "Device Config State Change events report state changes that impact the security\nof the device.",
       "in_subset": [
-        "discovery"
+        "discovery_subset"
       ],
       "from_schema": "https://w3id.org/lmodel/ocsf/events",
       "aliases": [
@@ -103165,7 +103165,7 @@
       ],
       "description": "Discovery Result events report the results of a discovery request.",
       "in_subset": [
-        "discovery"
+        "discovery_subset"
       ],
       "from_schema": "https://w3id.org/lmodel/ocsf/events",
       "aliases": [
@@ -103245,7 +103245,7 @@
       ],
       "description": "Data collected directly from devices that represents forensic information\npulled, queried, or discovered from devices that may indicate malicious\nactivity. It contains a number of child objects, each representing a distinct\nevidence domain (network connections, file artifacts, registry entries, etc.).\nWhen mapping raw telemetry data users should select Query Evidence and then the\nappropriate child object that best matches the evidence type.",
       "in_subset": [
-        "discovery"
+        "discovery_subset"
       ],
       "from_schema": "https://w3id.org/lmodel/ocsf/events",
       "aliases": [
@@ -103327,7 +103327,7 @@
       "description": "File Query events report information about files that are present on the\nsystem.",
       "deprecated": "Use the <code>Live Evidence Info</code> class. (since 1.5.0)",
       "in_subset": [
-        "discovery"
+        "discovery_subset"
       ],
       "from_schema": "https://w3id.org/lmodel/ocsf/events",
       "aliases": [
@@ -103408,7 +103408,7 @@
       "description": "Folder Query events report information about folders that are present on the\nsystem.",
       "deprecated": "Use the <code>Live Evidence Info</code> class. (since 1.5.0)",
       "in_subset": [
-        "discovery"
+        "discovery_subset"
       ],
       "from_schema": "https://w3id.org/lmodel/ocsf/events",
       "aliases": [
@@ -103488,7 +103488,7 @@
       ],
       "description": "Device Inventory Info events report device inventory data that is either logged\nor proactively collected. For example, when collecting device information from\na CMDB or running a network sweep of connected devices.",
       "in_subset": [
-        "discovery"
+        "discovery_subset"
       ],
       "from_schema": "https://w3id.org/lmodel/ocsf/events",
       "aliases": [
@@ -103566,7 +103566,7 @@
       "description": "Job Query events report information about scheduled jobs.",
       "deprecated": "Use the <code>Live Evidence Info</code> class. (since 1.5.0)",
       "in_subset": [
-        "discovery"
+        "discovery_subset"
       ],
       "from_schema": "https://w3id.org/lmodel/ocsf/events",
       "aliases": [
@@ -103647,7 +103647,7 @@
       "description": "Kernel Object Query events report information about discovered kernel\nresources.",
       "deprecated": "Use the <code>Live Evidence Info</code> class. (since 1.5.0)",
       "in_subset": [
-        "discovery"
+        "discovery_subset"
       ],
       "from_schema": "https://w3id.org/lmodel/ocsf/events",
       "aliases": [
@@ -103728,7 +103728,7 @@
       "description": "Module Query events report information about loaded modules.",
       "deprecated": "Use the <code>Live Evidence Info</code> class. (since 1.5.0)",
       "in_subset": [
-        "discovery"
+        "discovery_subset"
       ],
       "from_schema": "https://w3id.org/lmodel/ocsf/events",
       "aliases": [
@@ -103810,7 +103810,7 @@
       "description": "Network Connection Query events report information about active network\nconnections.",
       "deprecated": "Use the <code>Live Evidence Info</code> class. (since 1.5.0)",
       "in_subset": [
-        "discovery"
+        "discovery_subset"
       ],
       "from_schema": "https://w3id.org/lmodel/ocsf/events",
       "aliases": [
@@ -103894,7 +103894,7 @@
       "description": "Networks Query events report information about network adapters.",
       "deprecated": "Use the <code>Live Evidence Info</code> class. (since 1.5.0)",
       "in_subset": [
-        "discovery"
+        "discovery_subset"
       ],
       "from_schema": "https://w3id.org/lmodel/ocsf/events",
       "aliases": [
@@ -103974,7 +103974,7 @@
       ],
       "description": "OSINT Inventory Info events report open source intelligence or threat\nintelligence inventory data that is either logged or proactively collected. For\nexample, when collecting OSINT information from Threat Intelligence Platforms\n(TIPs) or Extended Detection and Response (XDR) platforms, or collecting data\nfrom OSINT or other generic threat intelligence and enrichment feeds such as\nAPIs and datastores.",
       "in_subset": [
-        "discovery"
+        "discovery_subset"
       ],
       "from_schema": "https://w3id.org/lmodel/ocsf/events",
       "aliases": [
@@ -104056,7 +104056,7 @@
       ],
       "description": "Operating System Patch State reports the installation of an OS patch to a\ndevice and any associated knowledgebase articles.",
       "in_subset": [
-        "discovery"
+        "discovery_subset"
       ],
       "from_schema": "https://w3id.org/lmodel/ocsf/events",
       "aliases": [
@@ -104176,7 +104176,7 @@
       "description": "Peripheral Device Query events report information about peripheral devices.",
       "deprecated": "Use the <code>Live Evidence Info</code> class. (since 1.5.0)",
       "in_subset": [
-        "discovery"
+        "discovery_subset"
       ],
       "from_schema": "https://w3id.org/lmodel/ocsf/events",
       "aliases": [
@@ -104257,7 +104257,7 @@
       "description": "Process Query events report information about running processes.",
       "deprecated": "Use the <code>Live Evidence Info</code> class. (since 1.5.0)",
       "in_subset": [
-        "discovery"
+        "discovery_subset"
       ],
       "from_schema": "https://w3id.org/lmodel/ocsf/events",
       "aliases": [
@@ -104338,7 +104338,7 @@
       "description": "Service Query events report information about running services.",
       "deprecated": "Use the <code>Live Evidence Info</code> class. (since 1.5.0)",
       "in_subset": [
-        "discovery"
+        "discovery_subset"
       ],
       "from_schema": "https://w3id.org/lmodel/ocsf/events",
       "aliases": [
@@ -104419,7 +104419,7 @@
       "description": "User Session Query events report information about existing user sessions.",
       "deprecated": "Use the <code>Live Evidence Info</code> class. (since 1.5.0)",
       "in_subset": [
-        "discovery"
+        "discovery_subset"
       ],
       "from_schema": "https://w3id.org/lmodel/ocsf/events",
       "aliases": [
@@ -104499,7 +104499,7 @@
       ],
       "description": "Software Inventory Info events report device software inventory data that is\neither logged or proactively collected. For example, when collecting device\ninformation from a CMDB or running a network sweep of connected devices.",
       "in_subset": [
-        "discovery"
+        "discovery_subset"
       ],
       "from_schema": "https://w3id.org/lmodel/ocsf/events",
       "aliases": [
@@ -104580,7 +104580,7 @@
       "description": "Startup Item Query events report information about discovered items, e.g.,\napplication components that are generally configured to run automatically.",
       "deprecated": "Use the <code>Live Evidence Info</code> class. (since 1.5.0)",
       "in_subset": [
-        "discovery"
+        "discovery_subset"
       ],
       "from_schema": "https://w3id.org/lmodel/ocsf/events",
       "aliases": [
@@ -104660,7 +104660,7 @@
       ],
       "description": "User Inventory Info events report user inventory data that is either logged or\nproactively collected. For example, when collecting user information from\nActive Directory entries.",
       "in_subset": [
-        "discovery"
+        "discovery_subset"
       ],
       "from_schema": "https://w3id.org/lmodel/ocsf/events",
       "aliases": [
@@ -104738,7 +104738,7 @@
       "description": "User Query events report user data that have been discovered, queried, polled\nor searched. This event differs from User Inventory as it describes the result\nof a targeted search by filtering a subset of user attributes.",
       "deprecated": "Use the <code>Live Evidence Info</code> class. (since 1.5.0)",
       "in_subset": [
-        "discovery"
+        "discovery_subset"
       ],
       "from_schema": "https://w3id.org/lmodel/ocsf/events",
       "aliases": [
@@ -104823,7 +104823,7 @@
       ],
       "description": "The Application Security Posture Finding event is a notification about any bug,\ndefect, deficiency, exploit, vulnerability, weakness or any other issue with\nsoftware and related systems. Application Security Posture Findings typically\ninvolve reporting on the greater context including compliance, impacted\nresources, remediation guidance, specific code defects, and/or vulnerability\nmetadata. Application Security Posture Findings can be reported by Threat &\nVulnerability Management (TVM) tools, Application Security Posture Management\n(ASPM) tools, or other similar tools. Note: if the event producer is a security\ncontrol, the <code>security_control</code> profile should be applied and its\n<code>attacks</code> information, if present, should be duplicated into the\n<code>finding_info</code> object. <br><strong>Note: </strong>If the Finding is\nan incident, i.e. requires incident workflow, also apply the\n<code>incident</code> profile or aggregate this finding into an <code>Incident\nFinding</code>.",
       "in_subset": [
-        "findings"
+        "findings_subset"
       ],
       "from_schema": "https://w3id.org/lmodel/ocsf/events",
       "aliases": [
@@ -104974,7 +104974,7 @@
       ],
       "description": "Compliance Finding events describe results of evaluations performed against\nresources, to check compliance with various Industry Frameworks or Security\nStandards such as <code>NIST SP 800-53, CIS AWS Foundations Benchmark v1.4.0,\nISO/IEC 27001</code> etc. Note: if the event producer is a security control,\nthe <code>security_control</code> profile should be applied and its\n<code>attacks</code> information, if present, should be duplicated into the\n<code>finding_info</code> object. <br><strong>Note: </strong>If the Finding is\nan incident, i.e. requires incident workflow, also apply the\n<code>incident</code> profile or aggregate this finding into an <code>Incident\nFinding</code>.",
       "in_subset": [
-        "findings"
+        "findings_subset"
       ],
       "from_schema": "https://w3id.org/lmodel/ocsf/events",
       "aliases": [
@@ -105074,7 +105074,7 @@
       ],
       "description": "A Data Security Finding describes detections or alerts generated by various\ndata security products such as Data Loss Prevention (DLP), Data Classification,\nSecrets Management, Digital Rights Management (DRM), Data Security Posture\nManagement (DSPM), and similar tools. These detections or alerts can be created\nusing fingerprinting, statistical analysis, machine learning or other\nmethodologies. The finding describes the actors and endpoints who accessed or\nown the sensitive data, as well as the resources which store the sensitive\ndata. Note: if the event producer is a security control, the\n<code>security_control</code> profile should be applied and its\n<code>attacks</code> information, if present, should be duplicated into the\n<code>finding_info</code> object. <br><strong>Note: </strong>If the Finding is\nan incident, i.e. requires incident workflow, also apply the\n<code>incident</code> profile  or aggregate this finding into an <code>Incident\nFinding</code>.",
       "in_subset": [
-        "findings"
+        "findings_subset"
       ],
       "from_schema": "https://w3id.org/lmodel/ocsf/events",
       "aliases": [
@@ -105182,7 +105182,7 @@
       ],
       "description": "A Detection Finding describes detections or alerts generated by security\nproducts using correlation engines, detection engines or other methodologies.\nNote: if the event producer is a security control, the\n<code>security_control</code> profile should be applied and its\n<code>attacks</code> information, if present, should be duplicated into the\n<code>finding_info</code> object. <br><strong>Note: </strong>If the Finding is\nan incident, i.e. requires incident workflow, also apply the\n<code>incident</code> profile  or aggregate this finding into an <code>Incident\nFinding</code>.",
       "in_subset": [
-        "findings"
+        "findings_subset"
       ],
       "from_schema": "https://w3id.org/lmodel/ocsf/events",
       "aliases": [
@@ -105287,7 +105287,7 @@
       ],
       "description": "The Finding event is a generic event that defines a set of attributes available\nin the Findings category.",
       "in_subset": [
-        "findings"
+        "findings_subset"
       ],
       "from_schema": "https://w3id.org/lmodel/ocsf/events",
       "aliases": [
@@ -105400,7 +105400,7 @@
       ],
       "description": "This finding represents an IAM analysis result, which evaluates IAM policies,\naccess patterns, and IAM configurations for potential security risks. The\nanalysis can focus on either an identity (user, role, service account) or a\nresource to assess permissions, access patterns, and security posture within\nthe IAM domain. <br><strong>Note:</strong> Use\n<code>permission_analysis_results</code> for identity-centric analysis\n(evaluating what an identity can do) and <code>access_analysis_result</code>\nfor resource-centric analysis (evaluating who can access a resource). These\ncomplement each other for comprehensive IAM security\nassessment.<br><strong>Note:</strong> If the Finding is an incident, i.e.\nrequires incident workflow, also apply the <code>incident</code> profile or\naggregate this finding into an <code>Incident Finding</code>.",
       "in_subset": [
-        "findings"
+        "findings_subset"
       ],
       "from_schema": "https://w3id.org/lmodel/ocsf/events",
       "aliases": [
@@ -105560,7 +105560,7 @@
       ],
       "description": "An Incident Finding reports the creation, update, or closure of security\nincidents as a result of detections and/or analytics. <br><strong>Note:\n</strong><code>Incident Finding</code> implicitly includes the\n<code>incident</code> profile and it should be added to the\n<code>metadata.profiles[]</code> array.",
       "in_subset": [
-        "findings"
+        "findings_subset"
       ],
       "from_schema": "https://w3id.org/lmodel/ocsf/events",
       "aliases": [
@@ -105715,7 +105715,7 @@
       "description": "Security Finding events describe findings, detections, anomalies, alerts and/or\nactions performed by security products",
       "deprecated": "Use the new specific classes according to the use-case: <code>Vulnerability\nFinding, Compliance Finding, Detection Finding, Incident Finding, Data Security\nFinding.</code> (since 1.1.0)",
       "in_subset": [
-        "findings"
+        "findings_subset"
       ],
       "from_schema": "https://w3id.org/lmodel/ocsf/events",
       "aliases": [
@@ -105814,7 +105814,7 @@
       ],
       "description": "The Vulnerability Finding event is a notification about weakness in an\ninformation system, system security procedures, internal controls, or\nimplementation that could be exploited or triggered by a threat source. Note:\nif the event producer is a security control, the <code>security_control</code>\nprofile should be applied and its <code>attacks</code> information, if present,\nshould be duplicated into the <code>finding_info</code> object.\n<br><strong>Note: </strong>If the Finding is an incident, i.e. requires\nincident workflow, also apply the <code>incident</code> profile  or aggregate\nthis finding into an <code>Incident Finding</code>.",
       "in_subset": [
-        "findings"
+        "findings_subset"
       ],
       "from_schema": "https://w3id.org/lmodel/ocsf/events",
       "aliases": [
@@ -105920,7 +105920,7 @@
       ],
       "description": "The Identity & Access Management event is a generic event that defines a set of\nattributes available in the access control events. As a generic event, it could\nbe used to log events that are not otherwise defined by the IAM category.",
       "in_subset": [
-        "iam"
+        "iam_subset"
       ],
       "from_schema": "https://w3id.org/lmodel/ocsf/events",
       "aliases": [
@@ -105999,7 +105999,7 @@
       ],
       "description": "Account Change events report when specific user account management tasks are\nperformed, such as a user/role being created, changed, deleted, renamed,\ndisabled, enabled, locked out or unlocked.",
       "in_subset": [
-        "iam"
+        "iam_subset"
       ],
       "from_schema": "https://w3id.org/lmodel/ocsf/events",
       "aliases": [
@@ -106097,7 +106097,7 @@
         "D3FEND\u2122 Ontology d3f:AuthenticationEvent \u2014\nhttps://d3fend.mitre.org/event/d3f:AuthenticationEvent"
       ],
       "in_subset": [
-        "iam"
+        "iam_subset"
       ],
       "from_schema": "https://w3id.org/lmodel/ocsf/events",
       "see_also": [
@@ -106243,7 +106243,7 @@
         "D3FEND\u2122 Ontology d3f:AuthorizationEvent \u2014\nhttps://d3fend.mitre.org/event/d3f:AuthorizationEvent/"
       ],
       "in_subset": [
-        "iam"
+        "iam_subset"
       ],
       "from_schema": "https://w3id.org/lmodel/ocsf/events",
       "see_also": [
@@ -106362,7 +106362,7 @@
       ],
       "description": "Entity Management events report activity by a managed client, a micro service,\nor a user at a management console. The activity can be a create, read, update,\nand delete operation on a managed entity.",
       "in_subset": [
-        "iam"
+        "iam_subset"
       ],
       "from_schema": "https://w3id.org/lmodel/ocsf/events",
       "aliases": [
@@ -106450,7 +106450,7 @@
         "D3FEND\u2122 Ontology d3f:GroupManagementEvent \u2014\nhttps://d3fend.mitre.org/event/d3f:GroupManagementEvent/"
       ],
       "in_subset": [
-        "iam"
+        "iam_subset"
       ],
       "from_schema": "https://w3id.org/lmodel/ocsf/events",
       "see_also": [
@@ -106541,7 +106541,7 @@
         "D3FEND\u2122 Ontology d3f:PermissionGrantingEvent \u2014\nhttps://d3fend.mitre.org/event/d3f:PermissionGrantingEvent/"
       ],
       "in_subset": [
-        "iam"
+        "iam_subset"
       ],
       "from_schema": "https://w3id.org/lmodel/ocsf/events",
       "see_also": [
@@ -106636,7 +106636,7 @@
         "D3FEND\u2122 Ontology d3f:NetworkEvent \u2014\nhttps://d3fend.mitre.org/event/d3f:NetworkEvent/"
       ],
       "in_subset": [
-        "network"
+        "network_subset"
       ],
       "from_schema": "https://w3id.org/lmodel/ocsf/events",
       "see_also": [
@@ -106774,7 +106774,7 @@
         "D3FEND\u2122 Ontology d3f:DHCPEvent \u2014 https://d3fend.mitre.org/event/d3f:DHCPEvent/"
       ],
       "in_subset": [
-        "network"
+        "network_subset"
       ],
       "from_schema": "https://w3id.org/lmodel/ocsf/events",
       "see_also": [
@@ -106887,7 +106887,7 @@
         "D3FEND\u2122 Ontology d3f:DNSEvent \u2014 https://d3fend.mitre.org/event/d3f:DNSEvent/"
       ],
       "in_subset": [
-        "network"
+        "network_subset"
       ],
       "from_schema": "https://w3id.org/lmodel/ocsf/events",
       "see_also": [
@@ -107005,7 +107005,7 @@
         "D3FEND\u2122 Ontology d3f:EmailEvent \u2014\nhttps://d3fend.mitre.org/event/d3f:EmailEvent/"
       ],
       "in_subset": [
-        "network"
+        "network_subset"
       ],
       "from_schema": "https://w3id.org/lmodel/ocsf/events",
       "see_also": [
@@ -107105,7 +107105,7 @@
       "description": "Email File Activity events report files within emails.",
       "deprecated": "Use the <code>Email Activity</code> class with the <code>email.files[]</code>\narray instead. (since 1.3.0)",
       "in_subset": [
-        "network"
+        "network_subset"
       ],
       "from_schema": "https://w3id.org/lmodel/ocsf/events",
       "aliases": [
@@ -107190,7 +107190,7 @@
       "description": "Email URL Activity events report URLs within an email.",
       "deprecated": "Use the <code>Email Activity</code> class with the <code>email.urls[]</code>\narray instead. (since 1.3.0)",
       "in_subset": [
-        "network"
+        "network_subset"
       ],
       "from_schema": "https://w3id.org/lmodel/ocsf/events",
       "aliases": [
@@ -107272,7 +107272,7 @@
         "D3FEND\u2122 Ontology d3f:FTPEvent \u2014 https://d3fend.mitre.org/event/d3f:FTPEvent/"
       ],
       "in_subset": [
-        "network"
+        "network_subset"
       ],
       "from_schema": "https://w3id.org/lmodel/ocsf/events",
       "see_also": [
@@ -107388,7 +107388,7 @@
         "D3FEND\u2122 Ontology d3f:HTTPEvent \u2014 https://d3fend.mitre.org/event/d3f:HTTPEvent/"
       ],
       "in_subset": [
-        "network"
+        "network_subset"
       ],
       "from_schema": "https://w3id.org/lmodel/ocsf/events",
       "see_also": [
@@ -107532,7 +107532,7 @@
         "D3FEND\u2122 Ontology d3f:NetworkConnectionEvent \u2014\nhttps://d3fend.mitre.org/event/d3f:NetworkConnectionEvent/"
       ],
       "in_subset": [
-        "network"
+        "network_subset"
       ],
       "from_schema": "https://w3id.org/lmodel/ocsf/events",
       "see_also": [
@@ -107640,7 +107640,7 @@
       "description": "Network File Activity events report file activities traversing the network,\nincluding file storage services such as Box, MS OneDrive, or Google Drive.",
       "deprecated": "Use the new class: <code>'File Hosting Activity' in the 'Application'\ncategory.</code> (since 1.1.0)",
       "in_subset": [
-        "network"
+        "network_subset"
       ],
       "from_schema": "https://w3id.org/lmodel/ocsf/events",
       "aliases": [
@@ -107746,7 +107746,7 @@
         "D3FEND\u2122 Ontology d3f:NTPEvent \u2014 https://d3fend.mitre.org/event/d3f:NTPEvent/"
       ],
       "in_subset": [
-        "network"
+        "network_subset"
       ],
       "from_schema": "https://w3id.org/lmodel/ocsf/events",
       "see_also": [
@@ -107856,7 +107856,7 @@
         "D3FEND\u2122 Ontology d3f:RDPEvent \u2014 https://d3fend.mitre.org/event/d3f:RDPEvent/"
       ],
       "in_subset": [
-        "network"
+        "network_subset"
       ],
       "from_schema": "https://w3id.org/lmodel/ocsf/events",
       "see_also": [
@@ -107972,7 +107972,7 @@
         "D3FEND\u2122 Ontology d3f:SMBEvent \u2014 https://d3fend.mitre.org/event/d3f:SMBEvent/"
       ],
       "in_subset": [
-        "network"
+        "network_subset"
       ],
       "from_schema": "https://w3id.org/lmodel/ocsf/events",
       "see_also": [
@@ -108087,7 +108087,7 @@
         "D3FEND\u2122 Ontology d3f:SSHEvent \u2014 https://d3fend.mitre.org/event/d3f:SSHEvent/"
       ],
       "in_subset": [
-        "network"
+        "network_subset"
       ],
       "from_schema": "https://w3id.org/lmodel/ocsf/events",
       "see_also": [
@@ -108207,7 +108207,7 @@
         "D3FEND\u2122 Ontology d3f:TunnelEvent \u2014\nhttps://d3fend.mitre.org/event/d3f:TunnelEvent/"
       ],
       "in_subset": [
-        "network"
+        "network_subset"
       ],
       "from_schema": "https://w3id.org/lmodel/ocsf/events",
       "see_also": [
@@ -108390,7 +108390,7 @@
       ],
       "description": "File Remediation Activity events report on attempts at remediating files. It\nfollows the MITRE countermeasures defined by the D3FEND\u2122 <a target='_blank'\nhref='https://d3fend.mitre.org/'>Matrix</a>. Sub-techniques will include File,\nsuch as File Removal or Restore File.",
       "in_subset": [
-        "remediation"
+        "remediation_subset"
       ],
       "from_schema": "https://w3id.org/lmodel/ocsf/events",
       "aliases": [
@@ -108471,7 +108471,7 @@
       ],
       "description": "Network Remediation Activity events report on attempts at remediating computer\nnetworks. It follows the MITRE countermeasures defined by the D3FEND\u2122 <a\ntarget='_blank' href='https://d3fend.mitre.org/'>Matrix</a>. Techniques and\nSub-techniques will include Network, such as Network Isolation or Network\nTraffic Filtering.",
       "in_subset": [
-        "remediation"
+        "remediation_subset"
       ],
       "from_schema": "https://w3id.org/lmodel/ocsf/events",
       "aliases": [
@@ -108552,7 +108552,7 @@
       ],
       "description": "Process Remediation Activity events report on attempts at remediating\nprocesses. It follows the MITRE countermeasures defined by the D3FEND\u2122 <a\ntarget='_blank' href='https://d3fend.mitre.org/'>Matrix</a>. Sub-techniques\nwill include Process, such as Process Termination or Kernel-based Process\nIsolation.",
       "in_subset": [
-        "remediation"
+        "remediation_subset"
       ],
       "from_schema": "https://w3id.org/lmodel/ocsf/events",
       "aliases": [
@@ -108638,7 +108638,7 @@
       ],
       "description": "Remediation Activity events report on attempts at remediating a compromised\ndevice or computer network. It follows the MITRE countermeasures defined by the\nD3FEND\u2122 <a target='_blank' href='https://d3fend.mitre.org/'>Matrix</a>.",
       "in_subset": [
-        "remediation"
+        "remediation_subset"
       ],
       "from_schema": "https://w3id.org/lmodel/ocsf/events",
       "aliases": [
@@ -108725,7 +108725,7 @@
       ],
       "description": "The System Activity event is a generic event that defines a set of attributes\navailable in the system activity events. As a generic event, it could be used\nto log events that are not otherwise defined by the System Activity category.",
       "in_subset": [
-        "system"
+        "system_subset"
       ],
       "from_schema": "https://w3id.org/lmodel/ocsf/events",
       "aliases": [
@@ -108810,7 +108810,7 @@
         "D3FEND\u2122 Ontology d3f:EventLogEvent \u2014\nhttps://d3fend.mitre.org/event/d3f:EventLogEvent/"
       ],
       "in_subset": [
-        "system"
+        "system_subset"
       ],
       "from_schema": "https://w3id.org/lmodel/ocsf/events",
       "see_also": [
@@ -108964,7 +108964,7 @@
         "D3FEND\u2122 Ontology d3f:FileEvent \u2014 https://d3fend.mitre.org/event/d3f:FileEvent/"
       ],
       "in_subset": [
-        "system"
+        "system_subset"
       ],
       "from_schema": "https://w3id.org/lmodel/ocsf/events",
       "see_also": [
@@ -109055,7 +109055,7 @@
         "D3FEND\u2122 Ontology d3f:KernelEvent \u2014\nhttps://d3fend.mitre.org/event/d3f:KernelEvent/"
       ],
       "in_subset": [
-        "system"
+        "system_subset"
       ],
       "from_schema": "https://w3id.org/lmodel/ocsf/events",
       "see_also": [
@@ -109139,7 +109139,7 @@
         "D3FEND\u2122 Ontology d3f:KernelModuleEvent \u2014\nhttps://d3fend.mitre.org/event/d3f:KernelModuleEvent/"
       ],
       "in_subset": [
-        "system"
+        "system_subset"
       ],
       "from_schema": "https://w3id.org/lmodel/ocsf/events",
       "see_also": [
@@ -109224,7 +109224,7 @@
         "D3FEND\u2122 Ontology d3f:MemoryEvent \u2014\nhttps://d3fend.mitre.org/event/d3f:MemoryEvent/"
       ],
       "in_subset": [
-        "system"
+        "system_subset"
       ],
       "from_schema": "https://w3id.org/lmodel/ocsf/events",
       "see_also": [
@@ -109313,7 +109313,7 @@
         "D3FEND\u2122 Ontology d3f:UnloadLibraryEvent \u2014\nhttps://d3fend.mitre.org/event/d3f:UnloadLibraryEvent/"
       ],
       "in_subset": [
-        "system"
+        "system_subset"
       ],
       "from_schema": "https://w3id.org/lmodel/ocsf/events",
       "see_also": [
@@ -109396,7 +109396,7 @@
       ],
       "description": "Peripheral Activity events log a system's interactions with external,\nconnectable, and detachable hardware. These events provide visibility into the\nexternal devices connected to and used by a system.",
       "in_subset": [
-        "system"
+        "system_subset"
       ],
       "from_schema": "https://w3id.org/lmodel/ocsf/events",
       "aliases": [
@@ -109477,7 +109477,7 @@
         "D3FEND\u2122 Ontology d3f:ProcessEvent \u2014\nhttps://d3fend.mitre.org/event/d3f:ProcessEvent/"
       ],
       "in_subset": [
-        "system"
+        "system_subset"
       ],
       "from_schema": "https://w3id.org/lmodel/ocsf/events",
       "see_also": [
@@ -109575,7 +109575,7 @@
         "D3FEND\u2122 Ontology d3f:ScheduledJobEvent \u2014\nhttps://d3fend.mitre.org/event/d3f:ScheduledJobEvent/"
       ],
       "in_subset": [
-        "system"
+        "system_subset"
       ],
       "from_schema": "https://w3id.org/lmodel/ocsf/events",
       "see_also": [
@@ -109657,7 +109657,7 @@
       ],
       "description": "Script Activity events report when a process executes a script.",
       "in_subset": [
-        "system"
+        "system_subset"
       ],
       "from_schema": "https://w3id.org/lmodel/ocsf/events",
       "aliases": [
@@ -109735,7 +109735,7 @@
       ],
       "description": "The Unmanned Systems event is a generic event that defines a set of attributes\navailable in the Unmanned Systems category.",
       "in_subset": [
-        "unmanned_systems"
+        "unmanned_systems_subset"
       ],
       "from_schema": "https://w3id.org/lmodel/ocsf/events",
       "aliases": [
@@ -109822,7 +109822,7 @@
       ],
       "description": "Airborne Broadcast Activity events report the activity of any aircraft or\nunmanned system as reported and tracked by Automatic Dependent Surveillance -\nBroadcast (ADS-B) receivers. Based on the ADS-B standards described in <a\ntarget='_blank'\nhref='https://www.ecfr.gov/current/title-14/chapter-I/subchapter-F/part-91#91.225'>Code\nof Federal Regulations (CFR) Title 14 Chapter I Subchapter F Part 91</a> and in\nother general Federal Aviation Administration (FAA) supplemental orders and\nguidance described <a target='_blank'\nhref='https://www.faa.gov/about/office_org/headquarters_offices/avs/offices/afx/afs/afs400/afs410/ads-b'>here</a>.",
       "in_subset": [
-        "unmanned_systems"
+        "unmanned_systems_subset"
       ],
       "from_schema": "https://w3id.org/lmodel/ocsf/events",
       "aliases": [
@@ -109960,7 +109960,7 @@
       ],
       "description": "Drone Flights Activity events report the activity of Unmanned Aerial Systems\n(UAS), their Operators, and mission-planning and authorization metadata as\nreported by the UAS platforms themselves, by Counter-UAS (CUAS) systems, or\nother remote monitoring or sensing infrastructure. Based on the Remote ID\ndefined in Standard Specification for Remote ID and Tracking (ASTM Designation:\nF3411-22a) <a target='_blank'\nhref='https://cdn.standards.iteh.ai/samples/112830/71297057ac42432880a203654f213709/ASTM-F3411-22a.pdf'>ASTM\nF3411-22a</a>",
       "in_subset": [
-        "unmanned_systems"
+        "unmanned_systems_subset"
       ],
       "from_schema": "https://w3id.org/lmodel/ocsf/events",
       "aliases": [
@@ -110111,7 +110111,7 @@
       ],
       "description": "The attributes that Linux uses to identify user information.",
       "in_subset": [
-        "linux_extension"
+        "linux_extension_subset"
       ],
       "from_schema": "https://w3id.org/lmodel/ocsf/extensions",
       "aliases": [
@@ -110140,7 +110140,7 @@
       ],
       "description": "Extends the process object to add Linux specific fields",
       "in_subset": [
-        "linux_extension"
+        "linux_extension_subset"
       ],
       "from_schema": "https://w3id.org/lmodel/ocsf/extensions",
       "aliases": [
@@ -110205,7 +110205,7 @@
       ],
       "description": "The attributes that macOS uses to identify user information.",
       "in_subset": [
-        "macos_extension"
+        "macos_extension_subset"
       ],
       "from_schema": "https://w3id.org/lmodel/ocsf/extensions",
       "aliases": [
@@ -110232,7 +110232,7 @@
       ],
       "description": "Extends the process object to add macOS specific fields",
       "in_subset": [
-        "macos_extension"
+        "macos_extension_subset"
       ],
       "from_schema": "https://w3id.org/lmodel/ocsf/extensions",
       "aliases": [
@@ -110295,7 +110295,7 @@
       ],
       "description": "Extends the evidences object to add Windows specific fields",
       "in_subset": [
-        "windows_extension"
+        "windows_extension_subset"
       ],
       "from_schema": "https://w3id.org/lmodel/ocsf/extensions",
       "aliases": [
@@ -110566,7 +110566,7 @@
       ],
       "description": "Extends the process object to add Windows specific fields.",
       "in_subset": [
-        "windows_extension"
+        "windows_extension_subset"
       ],
       "from_schema": "https://w3id.org/lmodel/ocsf/extensions",
       "aliases": [
@@ -110666,7 +110666,7 @@
       ],
       "description": "The resulting evidence information that was queried.",
       "in_subset": [
-        "windows_extension"
+        "windows_extension_subset"
       ],
       "from_schema": "https://w3id.org/lmodel/ocsf/extensions",
       "aliases": [
@@ -110891,7 +110891,7 @@
         "D3FEND\u2122 Ontology d3f:WindowsRegistryKey. \u2014\nhttps://d3fend.mitre.org/dao/artifact/d3f:WindowsRegistryKey/"
       ],
       "in_subset": [
-        "windows_extension"
+        "windows_extension_subset"
       ],
       "from_schema": "https://w3id.org/lmodel/ocsf/extensions",
       "see_also": [
@@ -110935,7 +110935,7 @@
         "D3FEND\u2122 Ontology d3f:WindowsRegistryValue. \u2014\nhttps://d3fend.mitre.org/dao/artifact/d3f:WindowsRegistryValue/"
       ],
       "in_subset": [
-        "windows_extension"
+        "windows_extension_subset"
       ],
       "from_schema": "https://w3id.org/lmodel/ocsf/extensions",
       "see_also": [
@@ -110980,7 +110980,7 @@
       ],
       "description": "The startup item object describes an application component that has associated\nstartup criteria and configurations.",
       "in_subset": [
-        "windows_extension"
+        "windows_extension_subset"
       ],
       "from_schema": "https://w3id.org/lmodel/ocsf/extensions",
       "aliases": [
@@ -111069,7 +111069,7 @@
       ],
       "description": "The Windows resource object describes a resource object managed by Windows,\nsuch as mutant or timer.",
       "in_subset": [
-        "windows_extension"
+        "windows_extension_subset"
       ],
       "from_schema": "https://w3id.org/lmodel/ocsf/extensions",
       "aliases": [
@@ -111114,7 +111114,7 @@
       ],
       "description": "The Windows Service object describes a Windows service.",
       "in_subset": [
-        "windows_extension"
+        "windows_extension_subset"
       ],
       "from_schema": "https://w3id.org/lmodel/ocsf/extensions",
       "aliases": [
@@ -111249,7 +111249,7 @@
       "description": "Prefetch Query events report information about Windows prefetch files.",
       "deprecated": "Use the <code>Evidence Info</code> class with the <code>Query Evidence</code>\nobject populated with <code>File</code> instead. (since 1.5.0)",
       "in_subset": [
-        "windows_extension"
+        "windows_extension_subset"
       ],
       "from_schema": "https://w3id.org/lmodel/ocsf/extensions",
       "aliases": [
@@ -111336,7 +111336,7 @@
       ],
       "description": "Registry Key Activity events report when a process performs an action on a\nWindows registry key.",
       "in_subset": [
-        "windows_extension"
+        "windows_extension_subset"
       ],
       "from_schema": "https://w3id.org/lmodel/ocsf/extensions",
       "aliases": [
@@ -111425,7 +111425,7 @@
       "description": "Registry Key Query events report information about discovered Windows registry\nkeys.",
       "deprecated": "Use the <code>Evidence Info</code> class with the <code>Query Evidence</code>\nobject populated with <code>Registry Key</code> instead. (since 1.5.0)",
       "in_subset": [
-        "windows_extension"
+        "windows_extension_subset"
       ],
       "from_schema": "https://w3id.org/lmodel/ocsf/extensions",
       "aliases": [
@@ -111510,7 +111510,7 @@
       ],
       "description": "Registry Value Activity events reports when a process performs an action on a\nWindows registry value.",
       "in_subset": [
-        "windows_extension"
+        "windows_extension_subset"
       ],
       "from_schema": "https://w3id.org/lmodel/ocsf/extensions",
       "aliases": [
@@ -111596,7 +111596,7 @@
       "description": "Registry Value Query events report information about discovered Windows\nregistry values.",
       "deprecated": "Use the <code>Evidence Info</code> class with the <code>Query Evidence</code>\nobject populated with <code>Registry Value</code> instead. (since 1.5.0)",
       "in_subset": [
-        "windows_extension"
+        "windows_extension_subset"
       ],
       "from_schema": "https://w3id.org/lmodel/ocsf/extensions",
       "aliases": [
@@ -111681,7 +111681,7 @@
       ],
       "description": "Windows Resource Activity events report when a process accesses a Windows\nmanaged resource object, successful or otherwise.",
       "in_subset": [
-        "windows_extension"
+        "windows_extension_subset"
       ],
       "from_schema": "https://w3id.org/lmodel/ocsf/extensions",
       "aliases": [
@@ -111764,7 +111764,7 @@
       ],
       "description": "Windows Service Activity events report when a process interacts with the\nService Control Manager.",
       "in_subset": [
-        "windows_extension"
+        "windows_extension_subset"
       ],
       "from_schema": "https://w3id.org/lmodel/ocsf/extensions",
       "aliases": [
@@ -111833,9 +111833,9 @@
   ],
   "metamodel_version": "1.7.0",
   "source_file": "ocsf.yaml",
-  "source_file_date": "2026-05-09T02:24:17",
-  "source_file_size": 6139,
-  "generation_date": "2026-05-09T02:25:33",
+  "source_file_date": "2026-05-09T22:01:14",
+  "source_file_size": 6307,
+  "generation_date": "2026-05-09T22:03:47",
   "@type": "SchemaDefinition",
   "@context": [
     "project/jsonld/ocsf.context.jsonld",

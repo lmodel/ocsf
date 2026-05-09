@@ -26,6 +26,22 @@ use a ``ChoiceLoader`` that searches the local override directory first, then
 falls back to the built-in docgen directory, so all includes resolve.
 
 Drop this wrapper once the upstream template ships the None guard.
+
+Workaround 2 — subset filename collision
+-----------------------------------------
+``DocGenerator.name()`` applies ``camelcase()`` to *all* non-class/non-slot
+elements (including subsets). A snake_case subset such as
+``ai_operation_profile`` is therefore mapped to the filename
+``AiOperationProfile.md``, which overwrites the class page for
+``AiOperationProfile`` that was written earlier in the same ``generate_all``
+call.
+
+The local fix patches ``name()`` to return ``underscore(element.name)`` for
+``SubsetDefinition`` elements, keeping subset files as e.g.
+``ai_operation_profile.md`` and leaving class files untouched.
+
+Drop this patch once upstream ``DocGenerator.name()`` preserves snake_case for
+subsets.
 """
 from __future__ import annotations
 
@@ -36,6 +52,7 @@ from pathlib import Path
 
 from jinja2 import ChoiceLoader, Environment, FileSystemLoader
 from linkml.generators.docgen import DocGenerator, cli
+from linkml_runtime.utils.formatutils import camelcase, underscore
 
 _REPO_ROOT = Path(__file__).resolve().parent.parent
 _LOCAL_TEMPLATES = _REPO_ROOT / "docs" / "templates-linkml"
@@ -59,6 +76,17 @@ def _patched_get_template(self, element_type: str):
 
 
 DocGenerator._get_template = _patched_get_template
+
+_original_name = DocGenerator.name
+
+
+def _patched_name(self, element):
+    if element is not None and type(element).class_name == "subset_definition":
+        return underscore(element.name)
+    return _original_name(self, element)
+
+
+DocGenerator.name = _patched_name
 
 
 if __name__ == "__main__":

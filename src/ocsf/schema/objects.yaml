@@ -41,7 +41,7 @@ classes:
     description: Abstract root for every OCSF object class.
     abstract: true
     in_subset:
-      - objects
+      - objects_subset
 
   AnalysisTarget:
     description: |-
@@ -50,7 +50,7 @@ classes:
     aliases:
       - Analysis Target
     in_subset:
-      - objects
+      - objects_subset
     slots:
       - name
       - type
@@ -77,7 +77,7 @@ classes:
     aliases:
       - Anomaly Analysis
     in_subset:
-      - objects
+      - objects_subset
     slots:
       - analysis_targets
       - anomalies
@@ -115,7 +115,7 @@ classes:
       - Object
     is_a: OcsfObject
     in_subset:
-      - objects
+      - objects_subset
 
   Observable:
     description: |-
@@ -125,7 +125,7 @@ classes:
       - Observable
     is_a: Object
     in_subset:
-      - objects
+      - objects_subset
     slots:
       - event_uid
       - name
@@ -187,7 +187,7 @@ classes:
       - Observation
     is_a: Object
     in_subset:
-      - objects
+      - objects_subset
     slots:
       - count
       - timespan
@@ -220,7 +220,7 @@ classes:
       - Occurrence Details
     is_a: Object
     in_subset:
-      - objects
+      - objects_subset
     slots:
       - cell_name
       - column_name
@@ -308,7 +308,7 @@ classes:
       - Operating System (OS)
     is_a: Object
     in_subset:
-      - objects
+      - objects_subset
     slots:
       - build
       - country
@@ -364,7 +364,7 @@ classes:
       - OSINT
     is_a: Object
     in_subset:
-      - objects
+      - objects_subset
     slots:
       - answers
       - attacks
@@ -555,7 +555,7 @@ classes:
       - Software Package
     is_a: Object
     in_subset:
-      - objects
+      - objects_subset
     slots:
       - architecture
       - cpe_name
@@ -628,7 +628,7 @@ classes:
       - Packet
     is_a: Object
     in_subset:
-      - objects
+      - objects_subset
     slots:
       - encoding
       - encoding_id
@@ -712,7 +712,7 @@ classes:
       - Parameter
     is_a: Object
     in_subset:
-      - objects
+      - objects_subset
     slots:
       - name
       - post_value
@@ -755,7 +755,7 @@ classes:
       - Permission Analysis Result
     is_a: Object
     in_subset:
-      - objects
+      - objects_subset
     slots:
       - analyzed_privileges_count
       - condition_keys
@@ -818,7 +818,7 @@ classes:
       - Port Information
     is_a: Object
     in_subset:
-      - objects
+      - objects_subset
     slots:
       - port
       - protocol_name
@@ -844,7 +844,7 @@ classes:
       - Privilege Attack Info
     is_a: Object
     in_subset:
-      - objects
+      - objects_subset
     slots:
       - attack
       - privilege_info_list
@@ -867,7 +867,7 @@ classes:
       - Privilege Info
     is_a: Object
     in_subset:
-      - objects
+      - objects_subset
     slots:
       - is_unused
       - last_used_time
@@ -907,7 +907,7 @@ classes:
       - Programmatic Credential
     is_a: Object
     in_subset:
-      - objects
+      - objects_subset
     slots:
       - last_used_time
       - type
@@ -944,7 +944,7 @@ classes:
     aliases:
       - Query Evidence
     in_subset:
-      - objects
+      - objects_subset
     slots:
       - connection_info
       - file
@@ -1151,7 +1151,7 @@ classes:
       - Related Event/Finding
     is_a: Object
     in_subset:
-      - objects
+      - objects_subset
     slots:
       - attacks
       - count
@@ -1252,7 +1252,7 @@ classes:
       - Remediation
     is_a: Object
     in_subset:
-      - objects
+      - objects_subset
     slots:
       - cis_controls
       - desc
@@ -1285,7 +1285,7 @@ classes:
       - Reputation
     is_a: Object
     in_subset:
-      - objects
+      - objects_subset
     slots:
       - base_score
       - provider
@@ -1307,7 +1307,7 @@ classes:
       - Request Elements
     is_a: Object
     in_subset:
-      - objects
+      - objects_subset
     slots:
       - containers
       - data
@@ -1328,7 +1328,7 @@ classes:
       - Response Elements
     is_a: Object
     in_subset:
-      - objects
+      - objects_subset
     slots:
       - code
       - containers
@@ -1359,7 +1359,7 @@ classes:
       - RPC Interface
     is_a: Object
     in_subset:
-      - objects
+      - objects_subset
     slots:
       - ack_reason
       - ack_result
@@ -1385,7 +1385,7 @@ classes:
       - Subject Alternative Name
     is_a: Object
     in_subset:
-      - objects
+      - objects_subset
     slots:
       - name
       - type
@@ -1405,7 +1405,7 @@ classes:
       - Software Bill of Materials
     is_a: Object
     in_subset:
-      - objects
+      - objects_subset
     slots:
       - created_time
       - package
@@ -1461,7 +1461,7 @@ classes:
       - SCIM
     is_a: Object
     in_subset:
-      - objects
+      - objects_subset
     slots:
       - auth_protocol
       - auth_protocol_id
@@ -1568,7 +1568,7 @@ classes:
       - Script
     is_a: Object
     in_subset:
-      - objects
+      - objects_subset
     slots:
       - file
       - hashes
@@ -1630,7 +1630,7 @@ classes:
       - Security State
     is_a: Object
     in_subset:
-      - objects
+      - objects_subset
     slots:
       - state
       - state_id
@@ -1653,7 +1653,7 @@ classes:
       - Service Privilege Analysis
     is_a: Object
     in_subset:
-      - objects
+      - objects_subset
     slots:
       - all_privileges_unused
       - analyzed_privileges_count
@@ -1696,7 +1696,7 @@ classes:
       - Session
     is_a: Object
     in_subset:
-      - objects
+      - objects_subset
     slots:
       - count
       - created_time
@@ -1754,7 +1754,7 @@ classes:
       - Software Component
     is_a: Object
     in_subset:
-      - objects
+      - objects_subset
     slots:
       - author
       - hash
@@ -1814,7 +1814,7 @@ classes:
       - Span
     is_a: Object
     in_subset:
-      - objects
+      - objects_subset
     slots:
       - duration
       - end_time
@@ -1895,7 +1895,7 @@ classes:
       - SSO
     is_a: Object
     in_subset:
-      - objects
+      - objects_subset
     slots:
       - auth_protocol
       - auth_protocol_id
@@ -1971,7 +1971,7 @@ classes:
     aliases:
       - Startup Item
     in_subset:
-      - objects
+      - objects_subset
     slots:
       - driver
       - job
@@ -2046,7 +2046,7 @@ classes:
       - Threat Actor
     is_a: Object
     in_subset:
-      - objects
+      - objects_subset
     slots:
       - name
       - type
@@ -2077,7 +2077,7 @@ classes:
       - Ticket
     is_a: Object
     in_subset:
-      - objects
+      - objects_subset
     slots:
       - src_url
       - status
@@ -2138,7 +2138,7 @@ classes:
       - Time Span
     is_a: Object
     in_subset:
-      - objects
+      - objects_subset
     slots:
       - duration
       - duration_days
@@ -2240,7 +2240,7 @@ classes:
       - Transport Layer Security (TLS)
     is_a: Object
     in_subset:
-      - objects
+      - objects_subset
     slots:
       - alert
       - certificate
@@ -2286,7 +2286,7 @@ classes:
       - TLS Extension
     is_a: Object
     in_subset:
-      - objects
+      - objects_subset
     slots:
       - data
       - type
@@ -2325,7 +2325,7 @@ classes:
       - Token
     is_a: Object
     in_subset:
-      - objects
+      - objects_subset
     slots:
       - created_time
       - expiration_time
@@ -2395,7 +2395,7 @@ classes:
       - Trace
     is_a: Object
     in_subset:
-      - objects
+      - objects_subset
     slots:
       - duration
       - end_time
@@ -2469,7 +2469,7 @@ classes:
       - Uniform Resource Locator
     is_a: Object
     in_subset:
-      - objects
+      - objects_subset
     slots:
       - categories
       - category_ids
@@ -2551,7 +2551,7 @@ classes:
       - Vendor Attributes
     is_a: Object
     in_subset:
-      - objects
+      - objects_subset
     slots:
       - severity
       - severity_id
@@ -2574,7 +2574,7 @@ classes:
       - Vulnerability Details
     is_a: Object
     in_subset:
-      - objects
+      - objects_subset
     slots:
       - advisory
       - affected_code
@@ -2685,7 +2685,7 @@ classes:
       - WHOIS
     is_a: Object
     in_subset:
-      - objects
+      - objects_subset
     slots:
       - autonomous_system
       - created_time
@@ -2745,7 +2745,7 @@ classes:
       - DNS
     is_a: Object
     in_subset:
-      - objects
+      - objects_subset
     slots:
       - class_
       - packet_uid
@@ -2780,7 +2780,7 @@ classes:
       - Entity
     is_a: Object
     in_subset:
-      - objects
+      - objects_subset
     slots:
       - name
       - uid
@@ -2815,7 +2815,7 @@ classes:
     mixins:
       - DataClassificationProfile
     in_subset:
-      - objects
+      - objects_subset
     slots:
       - created_time
       - data
@@ -2858,7 +2858,7 @@ classes:
       - Access Analysis Result
     is_a: Object
     in_subset:
-      - objects
+      - objects_subset
     slots:
       - access_level
       - access_type
@@ -2922,7 +2922,7 @@ classes:
       - Account
     is_a: Entity
     in_subset:
-      - objects
+      - objects_subset
     slots:
       - is_disabled
       - is_locked
@@ -2985,7 +2985,7 @@ classes:
       - Actor
     is_a: Object
     in_subset:
-      - objects
+      - objects_subset
     slots:
       - app_name
       - app_uid
@@ -3065,7 +3065,7 @@ classes:
       - Additional Restriction
     is_a: Object
     in_subset:
-      - objects
+      - objects_subset
     slots:
       - policy
       - status
@@ -3098,7 +3098,7 @@ classes:
       - Advisory
     is_a: Object
     in_subset:
-      - objects
+      - objects_subset
     slots:
       - avg_timespan
       - bulletin
@@ -3183,7 +3183,7 @@ classes:
       - Affected Code
     is_a: Object
     in_subset:
-      - objects
+      - objects_subset
     slots:
       - end_column
       - end_line
@@ -3231,7 +3231,7 @@ classes:
       - Affected Software Package
     is_a: Package
     in_subset:
-      - objects
+      - objects_subset
     slots:
       - fixed_in_version
       - path
@@ -3258,7 +3258,7 @@ classes:
       - Agent
     is_a: Object
     in_subset:
-      - objects
+      - objects_subset
     slots:
       - name
       - policies
@@ -3330,7 +3330,7 @@ classes:
       - AI Model
     is_a: Entity
     in_subset:
-      - objects
+      - objects_subset
     slots:
       - ai_provider
       - name
@@ -3374,7 +3374,7 @@ classes:
       - Aircraft
     is_a: Entity
     in_subset:
-      - objects
+      - objects_subset
     slots:
       - location
       - model
@@ -3436,7 +3436,7 @@ classes:
       - Analytic
     is_a: Entity
     in_subset:
-      - objects
+      - objects_subset
     slots:
       - algorithm
       - category
@@ -3488,7 +3488,7 @@ classes:
       - Anomaly
     is_a: Object
     in_subset:
-      - objects
+      - objects_subset
     slots:
       - observation_parameter
       - observation_type
@@ -3532,7 +3532,7 @@ classes:
       - API
     is_a: Object
     in_subset:
-      - objects
+      - objects_subset
     slots:
       - group
       - operation
@@ -3580,7 +3580,7 @@ classes:
       - Application
     is_a: Object
     in_subset:
-      - objects
+      - objects_subset
     slots:
       - criticality
       - data
@@ -3683,7 +3683,7 @@ classes:
       - Assessment
     is_a: Entity
     in_subset:
-      - objects
+      - objects_subset
     slots:
       - category
       - desc
@@ -3729,7 +3729,7 @@ classes:
       - MITRE ATT&CK® & ATLAS™
     is_a: Object
     in_subset:
-      - objects
+      - objects_subset
     slots:
       - mitigation
       - sub_technique
@@ -3783,7 +3783,7 @@ classes:
       - Authentication Factor
     is_a: Object
     in_subset:
-      - objects
+      - objects_subset
     slots:
       - device
       - email_addr
@@ -3858,7 +3858,7 @@ classes:
       - Authentication Token
     is_a: Token
     in_subset:
-      - objects
+      - objects_subset
     slots:
       - created_time
       - encryption_details
@@ -3905,7 +3905,7 @@ classes:
       - Authorization Result
     is_a: Object
     in_subset:
-      - objects
+      - objects_subset
     slots:
       - decision
       - policy
@@ -3926,7 +3926,7 @@ classes:
       - Autonomous System
     is_a: Object
     in_subset:
-      - objects
+      - objects_subset
     slots:
       - name
       - number
@@ -3967,7 +3967,7 @@ classes:
       - Baseline
     is_a: Object
     in_subset:
-      - objects
+      - objects_subset
     slots:
       - observation_parameter
       - observation_type
@@ -4010,7 +4010,7 @@ classes:
       - Campaign
     is_a: Object
     in_subset:
-      - objects
+      - objects_subset
     slots:
       - name
     slot_usage:
@@ -4031,7 +4031,7 @@ classes:
       - Digital Certificate
     is_a: Object
     in_subset:
-      - objects
+      - objects_subset
     slots:
       - created_time
       - expiration_time
@@ -4095,7 +4095,7 @@ classes:
       - Check
     is_a: Object
     in_subset:
-      - objects
+      - objects_subset
     slots:
       - desc
       - name
@@ -4186,7 +4186,7 @@ classes:
     deprecated: Use the Compliance object with Checks object instead. (since 1.5.0)
     is_a: Object
     in_subset:
-      - objects
+      - objects_subset
     slots:
       - cis_controls
       - desc
@@ -4217,7 +4217,7 @@ classes:
     deprecated: Use the Compliance object with Checks object instead. (since 1.5.0)
     is_a: Object
     in_subset:
-      - objects
+      - objects_subset
     slots:
       - desc
       - name
@@ -4242,7 +4242,7 @@ classes:
       - CIS Control
     is_a: Object
     in_subset:
-      - objects
+      - objects_subset
     slots:
       - desc
       - name
@@ -4275,7 +4275,7 @@ classes:
     deprecated: Use the cis_control object instead. (since 1.5.0)
     is_a: Object
     in_subset:
-      - objects
+      - objects_subset
     slots:
       - control
       - version
@@ -4294,7 +4294,7 @@ classes:
       - Classifier Details
     is_a: Object
     in_subset:
-      - objects
+      - objects_subset
     slots:
       - name
       - type
@@ -4321,7 +4321,7 @@ classes:
       - Cloud
     is_a: Object
     in_subset:
-      - objects
+      - objects_subset
     slots:
       - account
       - cloud_partition
@@ -4417,7 +4417,7 @@ classes:
       - Compliance
     is_a: Object
     in_subset:
-      - objects
+      - objects_subset
     slots:
       - assessments
       - category
@@ -4511,7 +4511,7 @@ classes:
       - Container
     is_a: Object
     in_subset:
-      - objects
+      - objects_subset
     slots:
       - hash
       - image
@@ -4585,7 +4585,7 @@ classes:
       - CVE
     is_a: Object
     in_subset:
-      - objects
+      - objects_subset
     slots:
       - created_time
       - cvss
@@ -4668,7 +4668,7 @@ classes:
       - CVSS Score
     is_a: Object
     in_subset:
-      - objects
+      - objects_subset
     slots:
       - base_score
       - depth
@@ -4734,7 +4734,7 @@ classes:
       - CWE
     is_a: Object
     in_subset:
-      - objects
+      - objects_subset
     slots:
       - caption
       - src_url
@@ -4766,7 +4766,7 @@ classes:
       - MITRE D3FEND™ Tactic
     is_a: Entity
     in_subset:
-      - objects
+      - objects_subset
     slots:
       - name
       - src_url
@@ -4795,7 +4795,7 @@ classes:
       - MITRE D3FEND™ Technique
     is_a: Entity
     in_subset:
-      - objects
+      - objects_subset
     slots:
       - name
       - src_url
@@ -4824,7 +4824,7 @@ classes:
       - MITRE D3FEND™
     is_a: Object
     in_subset:
-      - objects
+      - objects_subset
     slots:
       - d3f_tactic
       - d3f_technique
@@ -4868,7 +4868,7 @@ classes:
       - Data Classification
     is_a: Object
     in_subset:
-      - objects
+      - objects_subset
     slots:
       - category
       - category_id
@@ -4949,7 +4949,7 @@ classes:
       - Data Security
     is_a: DataClassification
     in_subset:
-      - objects
+      - objects_subset
     slots:
       - data_lifecycle_state
       - data_lifecycle_state_id
@@ -5002,7 +5002,7 @@ classes:
     mixins:
       - DataClassificationProfile
     in_subset:
-      - objects
+      - objects_subset
     slots:
       - created_time
       - desc
@@ -5060,7 +5060,7 @@ classes:
       - DataClassificationProfile
       - CloudProfile
     in_subset:
-      - objects
+      - objects_subset
     slots:
       - agent_list
       - cloud_partition
@@ -5174,7 +5174,7 @@ classes:
       - DCE/RPC
     is_a: Object
     in_subset:
-      - objects
+      - objects_subset
     slots:
       - command
       - command_response
@@ -5212,7 +5212,7 @@ classes:
       - Device Hardware Info
     is_a: Object
     in_subset:
-      - objects
+      - objects_subset
     slots:
       - bios_date
       - bios_manufacturer
@@ -5259,7 +5259,7 @@ classes:
       - Digital Signature
     is_a: Object
     in_subset:
-      - objects
+      - objects_subset
     slots:
       - algorithm
       - algorithm_id
@@ -5298,7 +5298,7 @@ classes:
       - Discovery Details
     is_a: Object
     in_subset:
-      - objects
+      - objects_subset
     slots:
       - count
       - occurrence_details
@@ -5334,7 +5334,7 @@ classes:
       - Display
     is_a: Object
     in_subset:
-      - objects
+      - objects_subset
     slots:
       - color_depth
       - physical_height
@@ -5352,7 +5352,7 @@ classes:
       - DNS Answer
     is_a: Dns
     in_subset:
-      - objects
+      - objects_subset
     slots:
       - class_
       - flag_ids
@@ -5402,7 +5402,7 @@ classes:
       - DNS Query
     is_a: Dns
     in_subset:
-      - objects
+      - objects_subset
     slots:
       - hostname
       - opcode
@@ -5428,7 +5428,7 @@ classes:
       - Domain Contact
     is_a: Object
     in_subset:
-      - objects
+      - objects_subset
     slots:
       - email_addr
       - location
@@ -5468,7 +5468,7 @@ classes:
       - Edge
     is_a: Entity
     in_subset:
-      - objects
+      - objects_subset
     slots:
       - data
       - is_directed
@@ -5516,7 +5516,7 @@ classes:
     mixins:
       - DataClassificationProfile
     in_subset:
-      - objects
+      - objects_subset
     slots:
       - cc
       - cc_mailboxes
@@ -5607,7 +5607,7 @@ classes:
       - Email Authentication
     is_a: Object
     in_subset:
-      - objects
+      - objects_subset
     slots:
       - dkim
       - dkim_domain
@@ -5638,7 +5638,7 @@ classes:
       - Encryption Details
     is_a: Object
     in_subset:
-      - objects
+      - objects_subset
     slots:
       - algorithm
       - algorithm_id
@@ -5675,7 +5675,7 @@ classes:
     mixins:
       - ContainerProfile
     in_subset:
-      - objects
+      - objects_subset
     slots:
       - agent_list
       - domain
@@ -5799,7 +5799,7 @@ classes:
       - Endpoint Connection
     is_a: Object
     in_subset:
-      - objects
+      - objects_subset
     slots:
       - code
       - network_endpoint
@@ -5833,7 +5833,7 @@ classes:
       - Enrichment
     is_a: Object
     in_subset:
-      - objects
+      - objects_subset
     slots:
       - created_time
       - data
@@ -5883,7 +5883,7 @@ classes:
       - Environment Variable
     is_a: Object
     in_subset:
-      - objects
+      - objects_subset
     slots:
       - name
       - value
@@ -5908,7 +5908,7 @@ classes:
       - EPSS
     is_a: Object
     in_subset:
-      - objects
+      - objects_subset
     slots:
       - created_time
       - percentile
@@ -5939,7 +5939,7 @@ classes:
       - Evidence Artifacts
     is_a: Entity
     in_subset:
-      - objects
+      - objects_subset
     slots:
       - actor
       - api
@@ -6180,7 +6180,7 @@ classes:
       - Schema Extension
     is_a: Entity
     in_subset:
-      - objects
+      - objects_subset
     slots:
       - name
       - uid
@@ -6204,7 +6204,7 @@ classes:
       - Feature
     is_a: Entity
     in_subset:
-      - objects
+      - objects_subset
     slots:
       - name
       - uid
@@ -6229,7 +6229,7 @@ classes:
     mixins:
       - DataClassificationProfile
     in_subset:
-      - objects
+      - objects_subset
     slots:
       - accessed_time
       - accessor
@@ -6383,7 +6383,7 @@ classes:
     deprecated: Use the new <code>finding_info</code> object. (since 1.0.0)
     is_a: Object
     in_subset:
-      - objects
+      - objects_subset
     slots:
       - created_time
       - desc
@@ -6433,7 +6433,7 @@ classes:
       - Finding Information
     is_a: Object
     in_subset:
-      - objects
+      - objects_subset
     slots:
       - analytic
       - attack_graph
@@ -6519,7 +6519,7 @@ classes:
       - Fingerprint
     is_a: Object
     in_subset:
-      - objects
+      - objects_subset
     slots:
       - algorithm
       - algorithm_id
@@ -6561,7 +6561,7 @@ classes:
       - Function Invocation
     is_a: Object
     in_subset:
-      - objects
+      - objects_subset
     slots:
       - error
       - parameters
@@ -6597,7 +6597,7 @@ classes:
       - GPU Information
     is_a: Object
     in_subset:
-      - objects
+      - objects_subset
     slots:
       - bus_type
       - bus_type_id
@@ -6635,7 +6635,7 @@ classes:
       - Graph
     is_a: Entity
     in_subset:
-      - objects
+      - objects_subset
     slots:
       - desc
       - edges
@@ -6700,7 +6700,7 @@ classes:
       - Group
     is_a: Entity
     in_subset:
-      - objects
+      - objects_subset
     slots:
       - desc
       - domain
@@ -6746,7 +6746,7 @@ classes:
       - HASSH
     is_a: Object
     in_subset:
-      - objects
+      - objects_subset
     slots:
       - algorithm
       - fingerprint
@@ -6774,7 +6774,7 @@ classes:
       - HTTP Cookie
     is_a: Object
     in_subset:
-      - objects
+      - objects_subset
     slots:
       - domain
       - expiration_time
@@ -6818,7 +6818,7 @@ classes:
       - HTTP Header
     is_a: Object
     in_subset:
-      - objects
+      - objects_subset
     slots:
       - name
       - value
@@ -6840,7 +6840,7 @@ classes:
       - HTTP Request
     is_a: Object
     in_subset:
-      - objects
+      - objects_subset
     slots:
       - args
       - body_length
@@ -6898,7 +6898,7 @@ classes:
       - HTTP Response
     is_a: Object
     in_subset:
-      - objects
+      - objects_subset
     slots:
       - body_length
       - code
@@ -6946,7 +6946,7 @@ classes:
       - Identity Activity Metrics
     is_a: Object
     in_subset:
-      - objects
+      - objects_subset
     slots:
       - first_seen_time
       - last_authentication_time
@@ -6993,7 +6993,7 @@ classes:
       - Identity Provider
     is_a: Entity
     in_subset:
-      - objects
+      - objects_subset
     slots:
       - auth_factors
       - domain
@@ -7057,7 +7057,7 @@ classes:
       - Image
     is_a: Entity
     in_subset:
-      - objects
+      - objects_subset
     slots:
       - labels
       - name
@@ -7094,7 +7094,7 @@ classes:
       - JA4+ Fingerprint
     is_a: Object
     in_subset:
-      - objects
+      - objects_subset
     slots:
       - section_a
       - section_b
@@ -7127,7 +7127,7 @@ classes:
       - Job
     is_a: Object
     in_subset:
-      - objects
+      - objects_subset
     slots:
       - cmd_line
       - created_time
@@ -7180,7 +7180,7 @@ classes:
       - KB Article
     is_a: Object
     in_subset:
-      - objects
+      - objects_subset
     slots:
       - avg_timespan
       - bulletin
@@ -7253,7 +7253,7 @@ classes:
       - Kernel Resource
     is_a: Object
     in_subset:
-      - objects
+      - objects_subset
     slots:
       - is_system
       - name
@@ -7288,7 +7288,7 @@ classes:
       - Kernel Extension
     is_a: Object
     in_subset:
-      - objects
+      - objects_subset
     slots:
       - file
     slot_usage:
@@ -7312,7 +7312,7 @@ classes:
       - Key:Value object
     is_a: Object
     in_subset:
-      - objects
+      - objects_subset
     slots:
       - name
       - value
@@ -7351,7 +7351,7 @@ classes:
       - Keyboard Information
     is_a: Object
     in_subset:
-      - objects
+      - objects_subset
     slots:
       - function_keys
       - ime
@@ -7372,7 +7372,7 @@ classes:
       - Kill Chain Phase
     is_a: Object
     in_subset:
-      - objects
+      - objects_subset
     slots:
       - phase
       - phase_id
@@ -7390,7 +7390,7 @@ classes:
       - LDAP Person
     is_a: Object
     in_subset:
-      - objects
+      - objects_subset
     slots:
       - cost_center
       - created_time
@@ -7451,7 +7451,7 @@ classes:
       - Load Balancer
     is_a: Entity
     in_subset:
-      - objects
+      - objects_subset
     slots:
       - classification
       - code
@@ -7506,7 +7506,7 @@ classes:
       - Geo Location
     is_a: Object
     in_subset:
-      - objects
+      - objects_subset
     slots:
       - aerial_height
       - city
@@ -7580,7 +7580,7 @@ classes:
       - Logger
     is_a: Entity
     in_subset:
-      - objects
+      - objects_subset
     slots:
       - device
       - event_uid
@@ -7663,7 +7663,7 @@ classes:
       - Long String
     is_a: Object
     in_subset:
-      - objects
+      - objects_subset
     slots:
       - is_truncated
       - untruncated_size
@@ -7690,7 +7690,7 @@ classes:
       - Malware
     is_a: Entity
     in_subset:
-      - objects
+      - objects_subset
     slots:
       - classification_ids
       - classifications
@@ -7767,7 +7767,7 @@ classes:
       - Managed Entity
     is_a: Entity
     in_subset:
-      - objects
+      - objects_subset
     slots:
       - data
       - device
@@ -7866,7 +7866,7 @@ classes:
       - Message Context
     is_a: Entity
     in_subset:
-      - objects
+      - objects_subset
     slots:
       - ai_role
       - ai_role_id
@@ -7942,7 +7942,7 @@ classes:
     mixins:
       - DataClassificationProfile
     in_subset:
-      - objects
+      - objects_subset
     slots:
       - correlation_uid
       - debug
@@ -8094,7 +8094,7 @@ classes:
       - Metric
     is_a: Object
     in_subset:
-      - objects
+      - objects_subset
     slots:
       - name
       - value
@@ -8114,7 +8114,7 @@ classes:
       - MITRE Mitigation
     is_a: Entity
     in_subset:
-      - objects
+      - objects_subset
     slots:
       - countermeasures
       - name
@@ -8159,7 +8159,7 @@ classes:
       - Module
     is_a: Object
     in_subset:
-      - objects
+      - objects_subset
     slots:
       - base_address
       - file
@@ -8219,7 +8219,7 @@ classes:
       - Network Connection Information
     is_a: Object
     in_subset:
-      - objects
+      - objects_subset
     slots:
       - boundary
       - boundary_id
@@ -8274,7 +8274,7 @@ classes:
       - Network Endpoint
     is_a: Endpoint
     in_subset:
-      - objects
+      - objects_subset
     slots:
       - autonomous_system
       - fingerprints
@@ -8364,7 +8364,7 @@ classes:
       - Network Interface
     is_a: Entity
     in_subset:
-      - objects
+      - objects_subset
     slots:
       - hostname
       - ip
@@ -8437,7 +8437,7 @@ classes:
       - Network Proxy Endpoint
     is_a: NetworkEndpoint
     in_subset:
-      - objects
+      - objects_subset
     see_also:
       - https://d3fend.mitre.org/dao/artifact/d3f:ProxyServer/
     notes:
@@ -8454,7 +8454,7 @@ classes:
       - Network Traffic
     is_a: Object
     in_subset:
-      - objects
+      - objects_subset
     slots:
       - bytes
       - bytes_in
@@ -8533,7 +8533,7 @@ classes:
       - Node
     is_a: Object
     in_subset:
-      - objects
+      - objects_subset
     slots:
       - data
       - desc
@@ -8578,7 +8578,7 @@ classes:
       - Organization
     is_a: Entity
     in_subset:
-      - objects
+      - objects_subset
     slots:
       - name
       - ou_name
@@ -8616,7 +8616,7 @@ classes:
       - Peripheral Device
     is_a: Entity
     in_subset:
-      - objects
+      - objects_subset
     slots:
       - class_
       - model
@@ -8670,7 +8670,7 @@ classes:
       - Policy
     is_a: Entity
     in_subset:
-      - objects
+      - objects_subset
     slots:
       - data
       - desc
@@ -8729,7 +8729,7 @@ classes:
       - Process Entity
     is_a: Entity
     in_subset:
-      - objects
+      - objects_subset
     slots:
       - cmd_line
       - cpid
@@ -8791,7 +8791,7 @@ classes:
     mixins:
       - DataClassificationProfile
     in_subset:
-      - objects
+      - objects_subset
     slots:
       - cpe_name
       - feature
@@ -8829,7 +8829,7 @@ classes:
       - Query Information
     is_a: Entity
     in_subset:
-      - objects
+      - objects_subset
     slots:
       - bytes
       - data
@@ -8860,7 +8860,7 @@ classes:
       - Reporter
     is_a: Entity
     in_subset:
-      - objects
+      - objects_subset
     slots:
       - hostname
       - ip
@@ -8915,7 +8915,7 @@ classes:
     mixins:
       - CloudProfile
     in_subset:
-      - objects
+      - objects_subset
     slots:
       - agent_list
       - cloud_partition
@@ -9013,7 +9013,7 @@ classes:
       - Rule
     is_a: Entity
     in_subset:
-      - objects
+      - objects_subset
     slots:
       - category
       - desc
@@ -9041,7 +9041,7 @@ classes:
       - Scan
     is_a: Entity
     in_subset:
-      - objects
+      - objects_subset
     slots:
       - name
       - type
@@ -9070,7 +9070,7 @@ classes:
       - Service
     is_a: Entity
     in_subset:
-      - objects
+      - objects_subset
     slots:
       - labels
       - name
@@ -9106,7 +9106,7 @@ classes:
       - MITRE Sub-technique
     is_a: Entity
     in_subset:
-      - objects
+      - objects_subset
     slots:
       - name
       - src_url
@@ -9144,7 +9144,7 @@ classes:
       - Table
     is_a: Entity
     in_subset:
-      - objects
+      - objects_subset
     slots:
       - created_time
       - desc
@@ -9179,7 +9179,7 @@ classes:
       - MITRE Tactic
     is_a: Entity
     in_subset:
-      - objects
+      - objects_subset
     slots:
       - name
       - src_url
@@ -9216,7 +9216,7 @@ classes:
       - MITRE Technique
     is_a: Entity
     in_subset:
-      - objects
+      - objects_subset
     slots:
       - name
       - src_url
@@ -9254,7 +9254,7 @@ classes:
       - Trait
     is_a: Entity
     in_subset:
-      - objects
+      - objects_subset
     slots:
       - category
       - name
@@ -9282,7 +9282,7 @@ classes:
       - Transformation Info
     is_a: Entity
     in_subset:
-      - objects
+      - objects_subset
     slots:
       - lang
       - name
@@ -9320,7 +9320,7 @@ classes:
       - Unmanned Aerial System
     is_a: Aircraft
     in_subset:
-      - objects
+      - objects_subset
     slots:
       - hw_info
       - location
@@ -9374,7 +9374,7 @@ classes:
       - Unmanned System Operating Area
     is_a: Location
     in_subset:
-      - objects
+      - objects_subset
     slots:
       - altitude_ceiling
       - altitude_floor
@@ -9420,7 +9420,7 @@ classes:
       - User
     is_a: Entity
     in_subset:
-      - objects
+      - objects_subset
     slots:
       - account
       - credential_uid
@@ -9522,7 +9522,7 @@ classes:
       - Web Resource
     is_a: Resource
     in_subset:
-      - objects
+      - objects_subset
     slots:
       - data
       - desc
@@ -9562,7 +9562,7 @@ classes:
       - Device
     is_a: Endpoint
     in_subset:
-      - objects
+      - objects_subset
     slots:
       - autoscale_uid
       - boot_time
@@ -9691,7 +9691,7 @@ classes:
       - Firewall Rule
     is_a: Rule
     in_subset:
-      - objects
+      - objects_subset
     slots:
       - condition
       - duration
@@ -9713,7 +9713,7 @@ classes:
       - Malware Scan Info
     is_a: Scan
     in_subset:
-      - objects
+      - objects_subset
     slots:
       - end_time
       - num_files
@@ -9746,7 +9746,7 @@ classes:
     mixins:
       - ContainerProfile
     in_subset:
-      - objects
+      - objects_subset
     slots:
       - ancestry
       - environment_variables

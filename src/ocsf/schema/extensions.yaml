@@ -290,7 +290,7 @@ classes:
       - Linux Users
     mixin: true
     in_subset:
-      - linux_extension
+      - linux_extension_subset
     slots:
       - auid
       - egid
@@ -312,7 +312,7 @@ classes:
     mixins:
       - LinuxUsersProfile
     in_subset:
-      - linux_extension
+      - linux_extension_subset
     exact_mappings:
       - uco_master:UNIXProcess
     annotations:
@@ -324,7 +324,7 @@ classes:
       - macOS Users
     mixin: true
     in_subset:
-      - macos_extension
+      - macos_extension_subset
     slots:
       - egid
       - euid
@@ -340,7 +340,7 @@ classes:
     mixins:
       - MacosUsersProfile
     in_subset:
-      - macos_extension
+      - macos_extension_subset
     close_mappings:
       - uco_master:UNIXProcess
     annotations:
@@ -352,7 +352,7 @@ classes:
       - Windows Evidence Artifacts
     is_a: Evidences
     in_subset:
-      - windows_extension
+      - windows_extension_subset
     slots:
       - reg_key
       - reg_value
@@ -449,7 +449,7 @@ classes:
       - Process
     is_a: Process
     in_subset:
-      - windows_extension
+      - windows_extension_subset
     slots:
       - hosted_services
     rules:
@@ -477,7 +477,7 @@ classes:
       - Query Evidence
     is_a: QueryEvidence
     in_subset:
-      - windows_extension
+      - windows_extension_subset
     slots:
       - reg_key
       - reg_value
@@ -561,7 +561,7 @@ classes:
       - Registry Key
     is_a: Object
     in_subset:
-      - windows_extension
+      - windows_extension_subset
     slots:
       - is_system
       - modified_time
@@ -594,7 +594,7 @@ classes:
       - Registry Value
     is_a: Object
     in_subset:
-      - windows_extension
+      - windows_extension_subset
     slots:
       - data
       - is_default
@@ -650,7 +650,7 @@ classes:
       - Startup Item
     is_a: StartupItem
     in_subset:
-      - windows_extension
+      - windows_extension_subset
     slots:
       - win_service
     slot_usage:
@@ -686,7 +686,7 @@ classes:
       - Windows Resource
     is_a: Resource
     in_subset:
-      - windows_extension
+      - windows_extension_subset
     slots:
       - details
       - name
@@ -720,7 +720,7 @@ classes:
       - Windows Service
     is_a: Service
     in_subset:
-      - windows_extension
+      - windows_extension_subset
     slots:
       - cmd_line
       - hosting_process
@@ -807,7 +807,7 @@ classes:
       object populated with <code>File</code> instead. (since 1.5.0)
     is_a: DiscoveryResult
     in_subset:
-      - windows_extension
+      - windows_extension_subset
     slots:
       - last_run_time
       - name
@@ -839,7 +839,7 @@ classes:
       - Registry Key Activity
     is_a: SystemEvent
     in_subset:
-      - windows_extension
+      - windows_extension_subset
     slots:
       - access_mask
       - activity_id
@@ -889,7 +889,7 @@ classes:
       object populated with <code>Registry Key</code> instead. (since 1.5.0)
     is_a: DiscoveryResult
     in_subset:
-      - windows_extension
+      - windows_extension_subset
     slots:
       - reg_key
     slot_usage:
@@ -910,7 +910,7 @@ classes:
       - Registry Value Activity
     is_a: SystemEvent
     in_subset:
-      - windows_extension
+      - windows_extension_subset
     slots:
       - activity_id
       - actor
@@ -939,7 +939,7 @@ classes:
       object populated with <code>Registry Value</code> instead. (since 1.5.0)
     is_a: DiscoveryResult
     in_subset:
-      - windows_extension
+      - windows_extension_subset
     slots:
       - reg_value
     slot_usage:
@@ -960,7 +960,7 @@ classes:
       - Windows Resource Activity
     is_a: SystemEvent
     in_subset:
-      - windows_extension
+      - windows_extension_subset
     slots:
       - activity_id
       - win_resource
@@ -983,7 +983,7 @@ classes:
       - Windows Service Activity
     is_a: SystemEvent
     in_subset:
-      - windows_extension
+      - windows_extension_subset
     slots:
       - activity_id
       - win_service

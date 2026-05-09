@@ -204,7 +204,7 @@ classes:
       - Application Activity
     is_a: BaseEvent
     in_subset:
-      - application
+      - application_subset
     annotations:
       category: application
 
@@ -219,7 +219,7 @@ classes:
       - TraceProfile
       - AiOperationProfile
     in_subset:
-      - application
+      - application_subset
     slots:
       - activity_id
       - actor
@@ -280,7 +280,7 @@ classes:
       - Application Error
     is_a: ApplicationEvent
     in_subset:
-      - application
+      - application_subset
     slots:
       - activity_id
       - message
@@ -300,7 +300,7 @@ classes:
       - Application Lifecycle
     is_a: ApplicationEvent
     in_subset:
-      - application
+      - application_subset
     slots:
       - activity_id
       - app
@@ -335,7 +335,7 @@ classes:
     mixins:
       - AiOperationProfile
     in_subset:
-      - application
+      - application_subset
     slots:
       - activity_id
       - actor
@@ -426,7 +426,7 @@ classes:
       - File Hosting Activity
     is_a: ApplicationEvent
     in_subset:
-      - application
+      - application_subset
     slots:
       - access_list
       - access_mask
@@ -517,7 +517,7 @@ classes:
       - Scan Activity
     is_a: ApplicationEvent
     in_subset:
-      - application
+      - application_subset
     slots:
       - activity_id
       - command_uid
@@ -629,7 +629,7 @@ classes:
     mixins:
       - NetworkProxyProfile
     in_subset:
-      - application
+      - application_subset
     slots:
       - activity_id
       - http_request
@@ -681,7 +681,7 @@ classes:
     mixins:
       - NetworkProxyProfile
     in_subset:
-      - application
+      - application_subset
     slots:
       - activity_id
       - dst_endpoint
@@ -738,7 +738,7 @@ classes:
       - Discovery
     is_a: BaseEvent
     in_subset:
-      - discovery
+      - discovery_subset
     slots:
       - activity_id
     slot_usage:
@@ -754,7 +754,7 @@ classes:
     deprecated: Use the <code>Live Evidence Info</code> class. (since 1.5.0)
     is_a: DiscoveryResult
     in_subset:
-      - discovery
+      - discovery_subset
     slots:
       - group
       - users
@@ -784,7 +784,7 @@ classes:
       - Cloud Resources Inventory Info
     is_a: DiscoveryEvent
     in_subset:
-      - discovery
+      - discovery_subset
     slots:
       - cloud
       - container
@@ -890,7 +890,7 @@ classes:
     deprecated: Use <code>Compliance Finding</code> class. (since 1.5.0)
     is_a: DiscoveryEvent
     in_subset:
-      - discovery
+      - discovery_subset
     slots:
       - actor
       - assessments
@@ -924,7 +924,7 @@ classes:
       - Device Config State Change
     is_a: DiscoveryEvent
     in_subset:
-      - discovery
+      - discovery_subset
     slots:
       - actor
       - device
@@ -988,7 +988,7 @@ classes:
       - Discovery Result
     is_a: BaseEvent
     in_subset:
-      - discovery
+      - discovery_subset
     slots:
       - activity_id
       - query_info
@@ -1025,7 +1025,7 @@ classes:
       - Live Evidence Info
     is_a: DiscoveryResult
     in_subset:
-      - discovery
+      - discovery_subset
     slots:
       - device
       - query_evidence
@@ -1057,7 +1057,7 @@ classes:
     deprecated: Use the <code>Live Evidence Info</code> class. (since 1.5.0)
     is_a: DiscoveryResult
     in_subset:
-      - discovery
+      - discovery_subset
     slots:
       - file
     slot_usage:
@@ -1078,7 +1078,7 @@ classes:
     deprecated: Use the <code>Live Evidence Info</code> class. (since 1.5.0)
     is_a: DiscoveryResult
     in_subset:
-      - discovery
+      - discovery_subset
     slots:
       - folder
     slot_usage:
@@ -1099,7 +1099,7 @@ classes:
       - Device Inventory Info
     is_a: DiscoveryEvent
     in_subset:
-      - discovery
+      - discovery_subset
     slots:
       - actor
       - device
@@ -1122,7 +1122,7 @@ classes:
     deprecated: Use the <code>Live Evidence Info</code> class. (since 1.5.0)
     is_a: DiscoveryResult
     in_subset:
-      - discovery
+      - discovery_subset
     slots:
       - job
     slot_usage:
@@ -1142,7 +1142,7 @@ classes:
     deprecated: Use the <code>Live Evidence Info</code> class. (since 1.5.0)
     is_a: DiscoveryResult
     in_subset:
-      - discovery
+      - discovery_subset
     slots:
       - kernel
     slot_usage:
@@ -1161,7 +1161,7 @@ classes:
     deprecated: Use the <code>Live Evidence Info</code> class. (since 1.5.0)
     is_a: DiscoveryResult
     in_subset:
-      - discovery
+      - discovery_subset
     slots:
       - module
       - process
@@ -1187,7 +1187,7 @@ classes:
     deprecated: Use the <code>Live Evidence Info</code> class. (since 1.5.0)
     is_a: DiscoveryResult
     in_subset:
-      - discovery
+      - discovery_subset
     slots:
       - connection_info
       - process
@@ -1226,7 +1226,7 @@ classes:
     deprecated: Use the <code>Live Evidence Info</code> class. (since 1.5.0)
     is_a: DiscoveryResult
     in_subset:
-      - discovery
+      - discovery_subset
     slots:
       - network_interfaces
     slot_usage:
@@ -1249,7 +1249,7 @@ classes:
       - OSINT Inventory Info
     is_a: DiscoveryEvent
     in_subset:
-      - discovery
+      - discovery_subset
     slots:
       - actor
       - osint
@@ -1279,7 +1279,7 @@ classes:
       - Operating System Patch State
     is_a: DiscoveryEvent
     in_subset:
-      - discovery
+      - discovery_subset
     slots:
       - device
       - kb_article_list
@@ -1320,7 +1320,7 @@ classes:
     deprecated: Use the <code>Live Evidence Info</code> class. (since 1.5.0)
     is_a: DiscoveryResult
     in_subset:
-      - discovery
+      - discovery_subset
     slots:
       - peripheral_device
     slot_usage:
@@ -1338,7 +1338,7 @@ classes:
     deprecated: Use the <code>Live Evidence Info</code> class. (since 1.5.0)
     is_a: DiscoveryResult
     in_subset:
-      - discovery
+      - discovery_subset
     slots:
       - process
     slot_usage:
@@ -1356,7 +1356,7 @@ classes:
     deprecated: Use the <code>Live Evidence Info</code> class. (since 1.5.0)
     is_a: DiscoveryResult
     in_subset:
-      - discovery
+      - discovery_subset
     slots:
       - service
     slot_usage:
@@ -1374,7 +1374,7 @@ classes:
     deprecated: Use the <code>Live Evidence Info</code> class. (since 1.5.0)
     is_a: DiscoveryResult
     in_subset:
-      - discovery
+      - discovery_subset
     slots:
       - session
     slot_usage:
@@ -1394,7 +1394,7 @@ classes:
       - Software Inventory Info
     is_a: DiscoveryEvent
     in_subset:
-      - discovery
+      - discovery_subset
     slots:
       - actor
       - device
@@ -1441,7 +1441,7 @@ classes:
     deprecated: Use the <code>Live Evidence Info</code> class. (since 1.5.0)
     is_a: DiscoveryResult
     in_subset:
-      - discovery
+      - discovery_subset
     slots:
       - startup_item
     slot_usage:
@@ -1461,7 +1461,7 @@ classes:
       - User Inventory Info
     is_a: DiscoveryEvent
     in_subset:
-      - discovery
+      - discovery_subset
     slots:
       - actor
       - user
@@ -1492,7 +1492,7 @@ classes:
     deprecated: Use the <code>Live Evidence Info</code> class. (since 1.5.0)
     is_a: DiscoveryResult
     in_subset:
-      - discovery
+      - discovery_subset
     slots:
       - user
     slot_usage:
@@ -1525,7 +1525,7 @@ classes:
     mixins:
       - IncidentProfile
     in_subset:
-      - findings
+      - findings_subset
     slots:
       - application
       - compliance
@@ -1603,7 +1603,7 @@ classes:
       - Compliance Finding
     is_a: Finding
     in_subset:
-      - findings
+      - findings_subset
     slots:
       - compliance
       - evidences
@@ -1663,7 +1663,7 @@ classes:
       - Data Security Finding
     is_a: Finding
     in_subset:
-      - findings
+      - findings_subset
     slots:
       - activity_id
       - activity_name
@@ -1830,7 +1830,7 @@ classes:
       - Detection Finding
     is_a: Finding
     in_subset:
-      - findings
+      - findings_subset
     slots:
       - anomaly_analyses
       - confidence
@@ -1941,7 +1941,7 @@ classes:
     mixins:
       - IncidentProfile
     in_subset:
-      - findings
+      - findings_subset
     slots:
       - activity_id
       - activity_name
@@ -2030,7 +2030,7 @@ classes:
       - IAM Analysis Finding
     is_a: Finding
     in_subset:
-      - findings
+      - findings_subset
     slots:
       - access_analysis_result
       - applications
@@ -2117,7 +2117,7 @@ classes:
     mixins:
       - IncidentProfile
     in_subset:
-      - findings
+      - findings_subset
     slots:
       - activity_id
       - activity_name
@@ -2275,7 +2275,7 @@ classes:
       Finding.</code> (since 1.1.0)
     is_a: BaseEvent
     in_subset:
-      - findings
+      - findings_subset
     slots:
       - activity_id
       - analytic
@@ -2416,7 +2416,7 @@ classes:
       - Vulnerability Finding
     is_a: Finding
     in_subset:
-      - findings
+      - findings_subset
     slots:
       - resource
       - resources
@@ -2462,7 +2462,7 @@ classes:
       - Identity & Access Management
     is_a: BaseEvent
     in_subset:
-      - iam
+      - iam_subset
     slots:
       - actor
       - http_request
@@ -2498,7 +2498,7 @@ classes:
       - Account Change
     is_a: IamEvent
     in_subset:
-      - iam
+      - iam_subset
     slots:
       - activity_id
       - auth_factors
@@ -2550,7 +2550,7 @@ classes:
       - Authentication
     is_a: IamEvent
     in_subset:
-      - iam
+      - iam_subset
     slots:
       - account_switch_type
       - account_switch_type_id
@@ -2691,7 +2691,7 @@ classes:
       - Authorize Session
     is_a: IamEvent
     in_subset:
-      - iam
+      - iam_subset
     slots:
       - activity_id
       - dst_endpoint
@@ -2756,7 +2756,7 @@ classes:
       - Entity Management
     is_a: IamEvent
     in_subset:
-      - iam
+      - iam_subset
     slots:
       - access_list
       - access_mask
@@ -2797,7 +2797,7 @@ classes:
       - Group Management
     is_a: IamEvent
     in_subset:
-      - iam
+      - iam_subset
     slots:
       - activity_id
       - group
@@ -2848,7 +2848,7 @@ classes:
       - User Access Management
     is_a: IamEvent
     in_subset:
-      - iam
+      - iam_subset
     slots:
       - activity_id
       - privileges
@@ -2899,7 +2899,7 @@ classes:
       - NetworkProxyProfile
       - LoadBalancerProfile
     in_subset:
-      - network
+      - network_subset
     slots:
       - app_name
       - app_protocol_name
@@ -3033,7 +3033,7 @@ classes:
     mixins:
       - CloudProfile
     in_subset:
-      - network
+      - network_subset
     slots:
       - activity_id
       - dst_endpoint
@@ -3089,7 +3089,7 @@ classes:
       - DNS Activity
     is_a: NetworkEvent
     in_subset:
-      - network
+      - network_subset
     slots:
       - activity_id
       - answers
@@ -3159,7 +3159,7 @@ classes:
       - Email Activity
     is_a: BaseEvent
     in_subset:
-      - network
+      - network_subset
     slots:
       - activity_id
       - attempt
@@ -3276,7 +3276,7 @@ classes:
       array instead. (since 1.3.0)
     is_a: BaseEvent
     in_subset:
-      - network
+      - network_subset
     slots:
       - activity_id
       - email_uid
@@ -3308,7 +3308,7 @@ classes:
       array instead. (since 1.3.0)
     is_a: BaseEvent
     in_subset:
-      - network
+      - network_subset
     slots:
       - activity_id
       - email_uid
@@ -3339,7 +3339,7 @@ classes:
       - FTP Activity
     is_a: NetworkEvent
     in_subset:
-      - network
+      - network_subset
     slots:
       - activity_id
       - codes
@@ -3401,7 +3401,7 @@ classes:
     mixins:
       - TraceProfile
     in_subset:
-      - network
+      - network_subset
     slots:
       - activity_id
       - file
@@ -3458,7 +3458,7 @@ classes:
       - Network Activity
     is_a: NetworkEvent
     in_subset:
-      - network
+      - network_subset
     slots:
       - activity_id
       - dst_endpoint
@@ -3529,7 +3529,7 @@ classes:
       category.</code> (since 1.1.0)
     is_a: NetworkEvent
     in_subset:
-      - network
+      - network_subset
     slots:
       - activity_id
       - actor
@@ -3578,7 +3578,7 @@ classes:
       - NTP Activity
     is_a: NetworkEvent
     in_subset:
-      - network
+      - network_subset
     slots:
       - activity_id
       - delay
@@ -3633,7 +3633,7 @@ classes:
       - RDP Activity
     is_a: NetworkEvent
     in_subset:
-      - network
+      - network_subset
     slots:
       - activity_id
       - capabilities
@@ -3716,7 +3716,7 @@ classes:
       - SMB Activity
     is_a: NetworkEvent
     in_subset:
-      - network
+      - network_subset
     slots:
       - activity_id
       - client_dialects
@@ -3800,7 +3800,7 @@ classes:
       - SSH Activity
     is_a: NetworkEvent
     in_subset:
-      - network
+      - network_subset
     slots:
       - activity_id
       - auth_type
@@ -3857,7 +3857,7 @@ classes:
       - Tunnel Activity
     is_a: NetworkEvent
     in_subset:
-      - network
+      - network_subset
     slots:
       - activity_id
       - connection_info
@@ -3988,7 +3988,7 @@ classes:
       - File Remediation Activity
     is_a: RemediationActivity
     in_subset:
-      - remediation
+      - remediation_subset
     slots:
       - file
     slot_usage:
@@ -4011,7 +4011,7 @@ classes:
       - Network Remediation Activity
     is_a: RemediationActivity
     in_subset:
-      - remediation
+      - remediation_subset
     slots:
       - connection_info
     slot_usage:
@@ -4034,7 +4034,7 @@ classes:
       - Process Remediation Activity
     is_a: RemediationActivity
     in_subset:
-      - remediation
+      - remediation_subset
     slots:
       - process
     slot_usage:
@@ -4055,7 +4055,7 @@ classes:
       - Remediation Activity
     is_a: BaseEvent
     in_subset:
-      - remediation
+      - remediation_subset
     slots:
       - activity_id
       - command_uid
@@ -4100,7 +4100,7 @@ classes:
       - System Activity
     is_a: BaseEvent
     in_subset:
-      - system
+      - system_subset
     slots:
       - actor
       - device
@@ -4125,7 +4125,7 @@ classes:
       - Event Log Activity
     is_a: SystemEvent
     in_subset:
-      - system
+      - system_subset
     slots:
       - activity_id
       - actor
@@ -4255,7 +4255,7 @@ classes:
       - File System Activity
     is_a: SystemEvent
     in_subset:
-      - system
+      - system_subset
     slots:
       - access_mask
       - activity_id
@@ -4320,7 +4320,7 @@ classes:
       - Kernel Activity
     is_a: SystemEvent
     in_subset:
-      - system
+      - system_subset
     slots:
       - activity_id
       - kernel
@@ -4349,7 +4349,7 @@ classes:
       - Kernel Extension Activity
     is_a: SystemEvent
     in_subset:
-      - system
+      - system_subset
     slots:
       - activity_id
       - actor
@@ -4382,7 +4382,7 @@ classes:
       - Memory Activity
     is_a: SystemEvent
     in_subset:
-      - system
+      - system_subset
     slots:
       - activity_id
       - actual_permissions
@@ -4437,7 +4437,7 @@ classes:
       - Module Activity
     is_a: SystemEvent
     in_subset:
-      - system
+      - system_subset
     slots:
       - activity_id
       - actor
@@ -4477,7 +4477,7 @@ classes:
       - Peripheral Activity
     is_a: SystemEvent
     in_subset:
-      - system
+      - system_subset
     slots:
       - activity_id
       - peripheral_device
@@ -4502,7 +4502,7 @@ classes:
     mixins:
       - AiOperationProfile
     in_subset:
-      - system
+      - system_subset
     slots:
       - activity_id
       - actor
@@ -4580,7 +4580,7 @@ classes:
       - Scheduled Job Activity
     is_a: SystemEvent
     in_subset:
-      - system
+      - system_subset
     slots:
       - activity_id
       - actor
@@ -4611,7 +4611,7 @@ classes:
       - Script Activity
     is_a: SystemEvent
     in_subset:
-      - system
+      - system_subset
     slots:
       - activity_id
       - script
@@ -4634,7 +4634,7 @@ classes:
       - Unmanned Systems
     is_a: BaseEvent
     in_subset:
-      - unmanned_systems
+      - unmanned_systems_subset
     slots:
       - connection_info
       - dst_endpoint
@@ -4692,7 +4692,7 @@ classes:
       - Airborne Broadcast Activity
     is_a: UnmannedSystemsEvent
     in_subset:
-      - unmanned_systems
+      - unmanned_systems_subset
     slots:
       - activity_id
       - aircraft
@@ -4791,7 +4791,7 @@ classes:
       - Drone Flights Activity
     is_a: UnmannedSystemsEvent
     in_subset:
-      - unmanned_systems
+      - unmanned_systems_subset
     slots:
       - activity_id
       - auth_protocol

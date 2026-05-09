@@ -178,14 +178,16 @@ def to_perm_value(caption: str) -> str:
 
 
 def to_subset_name(name: str) -> str:
-    """Normalize any identifier to snake_case for use as a LinkML subset name.
+    """Normalize any identifier to snake_case with a ``_subset`` suffix.
 
-    Handles PascalCase, camelCase, spaces, and hyphens so that subset names
-    never collide with PascalCase class names even under case-folding generators.
+    Handles PascalCase, camelCase, spaces, and hyphens. The ``_subset`` suffix
+    guarantees that subset names never collide with PascalCase class names or
+    plain snake_case slot names, even under case-folding generators.
     """
     s = re.sub(r"([A-Z]+)([A-Z][a-z])", r"\1_\2", name)
     s = re.sub(r"([a-z\d])([A-Z])", r"\1_\2", s)
-    return re.sub(r"[^a-z0-9]+", "_", s.lower()).strip("_")
+    base = re.sub(r"[^a-z0-9]+", "_", s.lower()).strip("_")
+    return base if base.endswith("_subset") else f"{base}_subset"
 
 
 # ---------------------------------------------------------------------------
