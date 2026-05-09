@@ -2,7 +2,12 @@
  package
 // metamodel_version: 1.7.0
 // version: 1.9.0-dev
-// The Access Analysis Result object describes access relationships and pathways between identities, resources, focusing on who can access what and through which mechanisms. This evaluates access levels (read/write/admin), access types (direct, cross-account, public, federated), and the conditions under which access is granted. Use this for resource-centric security assessments such as external access discovery, public exposure analysis, etc.
+// The Access Analysis Result object describes access relationships and pathways
+// between identities, resources, focusing on who can access what and through
+// which mechanisms. This evaluates access levels (read/write/admin), access types
+// (direct, cross-account, public, federated), and the conditions under which
+// access is granted. Use this for resource-centric security assessments such as
+// external access discovery, public exposure analysis, etc.
 message AccessAnalysisResult
  {
   string accessLevel = 0
@@ -12,7 +17,11 @@ message AccessAnalysisResult
  repeated  keyValueObject conditionKeys = 0
  repeated  string grantedPrivileges = 0
  }
-// The Account object contains details about the account that initiated or performed a specific activity within a system or application. Additionally, the Account object refers to logical Cloud and Software-as-a-Service (SaaS) based containers such as AWS Accounts, Azure Subscriptions, Oracle Cloud Compartments, Google Cloud Projects, and otherwise.
+// The Account object contains details about the account that initiated or
+// performed a specific activity within a system or application. Additionally, the
+// Account object refers to logical Cloud and Software-as-a-Service (SaaS) based
+// containers such as AWS Accounts, Azure Subscriptions, Oracle Cloud
+// Compartments, Google Cloud Projects, and otherwise.
 message Account
  {
   boolean isDisabled = 0
@@ -25,7 +34,9 @@ message Account
   accountTypeIdEnum typeId = 0
   string uid = 0
  }
-// Account Change events report when specific user account management tasks are performed, such as a user/role being created, changed, deleted, renamed, disabled, enabled, locked out or unlocked.
+// Account Change events report when specific user account management tasks are
+// performed, such as a user/role being created, changed, deleted, renamed,
+// disabled, enabled, locked out or unlocked.
 message AccountChange
  {
   string activityName = 0
@@ -87,7 +98,9 @@ message AccountChange
   user user = 0
   user userResult = 0
  }
-// The Actor object contains details about the user, role, application, service, or process that initiated or performed a specific activity. Note that Actor is not the threat actor of a campaign but may be part of a campaign.
+// The Actor object contains details about the user, role, application, service,
+// or process that initiated or performed a specific activity. Note that Actor is
+// not the threat actor of a campaign but may be part of a campaign.
 message Actor
  {
   string appName = 0
@@ -99,7 +112,13 @@ message Actor
   session session = 0
   user user = 0
  }
-// The Additional Restriction object describes supplementary access controls and guardrails that constrain or limit granted permissions beyond the primary policy. These restrictions are typically applied through hierarchical policy frameworks, organizational controls, or conditional access mechanisms. Examples include AWS Service Control Policies (SCPs), Resource Control Policies (RCPs), Azure Management Group policies, GCP Organization policies, conditional access policies, IP restrictions, time-based constraints, and MFA requirements.
+// The Additional Restriction object describes supplementary access controls and
+// guardrails that constrain or limit granted permissions beyond the primary
+// policy. These restrictions are typically applied through hierarchical policy
+// frameworks, organizational controls, or conditional access mechanisms. Examples
+// include AWS Service Control Policies (SCPs), Resource Control Policies (RCPs),
+// Azure Management Group policies, GCP Organization policies, conditional access
+// policies, IP restrictions, time-based constraints, and MFA requirements.
 message AdditionalRestriction
  {
   policy policy = 0
@@ -166,7 +185,10 @@ message AdminGroupQuery
   group group = 0
  repeated  user users = 0
  }
-// The Advisory object represents publicly disclosed cybersecurity vulnerabilities defined in a Security advisory. e.g. <code> Microsoft KB Article</code>, <code>Apple Security Advisory</code>, or a <code>GitHub Security Advisory (GHSA)</code>
+// The Advisory object represents publicly disclosed cybersecurity vulnerabilities
+// defined in a Security advisory. e.g. <code> Microsoft KB Article</code>,
+// <code>Apple Security Advisory</code>, or a <code>GitHub Security Advisory
+// (GHSA)</code>
 message Advisory
  {
   timespan avgTimespan = 0
@@ -188,7 +210,8 @@ message Advisory
   string title = 0
   string uid = 0
  }
-// The Affected Code object describes details about a code block identified as vulnerable.
+// The Affected Code object describes details about a code block identified as
+// vulnerable.
 message AffectedCode
  {
   integer endColumn = 0
@@ -200,7 +223,8 @@ message AffectedCode
   integer startColumn = 0
   integer startLine = 0
  }
-// The Affected Package object describes details about a software package identified as affected by a vulnerability/vulnerabilities.
+// The Affected Package object describes details about a software package
+// identified as affected by a vulnerability/vulnerabilities.
 message AffectedPackage
  {
   string architecture = 0
@@ -224,7 +248,13 @@ message AffectedPackage
   string path = 0
   remediation remediation = 0
  }
-// An Agent (also known as a Sensor) is typically installed on an Operating System (OS) and serves as a specialized software component that can be designed to monitor, detect, collect, archive, or take action. These activities and possible actions are defined by the upstream system controlling the Agent and its intended purpose. For instance, an Agent can include Endpoint Detection & Response (EDR) agents, backup/disaster recovery sensors, Application Performance Monitoring or profiling sensors, and similar software.
+// An Agent (also known as a Sensor) is typically installed on an Operating System
+// (OS) and serves as a specialized software component that can be designed to
+// monitor, detect, collect, archive, or take action. These activities and
+// possible actions are defined by the upstream system controlling the Agent and
+// its intended purpose. For instance, an Agent can include Endpoint Detection &
+// Response (EDR) agents, backup/disaster recovery sensors, Application
+// Performance Monitoring or profiling sensors, and similar software.
 message Agent
  {
   string name = 0
@@ -236,7 +266,9 @@ message Agent
   string vendorName = 0
   string version = 0
  }
-// The AI Model object describes the characteristics of an AI/ML model. Examples include language models like GPT-4, embedding models like text-embedding-ada-002, and computer vision models like CLIP.
+// The AI Model object describes the characteristics of an AI/ML model. Examples
+// include language models like GPT-4, embedding models like
+// text-embedding-ada-002, and computer vision models like CLIP.
 message AiModel
  {
   string aiProvider = 0
@@ -244,7 +276,15 @@ message AiModel
   string uid = 0
   string version = 0
  }
-// Airborne Broadcast Activity events report the activity of any aircraft or unmanned system as reported and tracked by Automatic Dependent Surveillance - Broadcast (ADS-B) receivers. Based on the ADS-B standards described in <a target='_blank' href='https://www.ecfr.gov/current/title-14/chapter-I/subchapter-F/part-91#91.225'>Code of Federal Regulations (CFR) Title 14 Chapter I Subchapter F Part 91</a> and in other general Federal Aviation Administration (FAA) supplemental orders and guidance described <a target='_blank' href='https://www.faa.gov/about/office_org/headquarters_offices/avs/offices/afx/afs/afs400/afs410/ads-b'>here</a>.
+// Airborne Broadcast Activity events report the activity of any aircraft or
+// unmanned system as reported and tracked by Automatic Dependent Surveillance -
+// Broadcast (ADS-B) receivers. Based on the ADS-B standards described in <a
+// target='_blank'
+// href='https://www.ecfr.gov/current/title-14/chapter-I/subchapter-F/part-91#91.225'>Code
+// of Federal Regulations (CFR) Title 14 Chapter I Subchapter F Part 91</a> and in
+// other general Federal Aviation Administration (FAA) supplemental orders and
+// guidance described <a target='_blank'
+// href='https://www.faa.gov/about/office_org/headquarters_offices/avs/offices/afx/afs/afs400/afs410/ads-b'>here</a>.
 message AirborneBroadcastActivity
  {
   string activityName = 0
@@ -311,7 +351,11 @@ message AirborneBroadcastActivity
   unmannedSystemOperatingArea unmannedSystemOperatingArea = 0
   user unmannedSystemOperator = 0
  }
-// The Aircraft object represents any aircraft or otherwise airborne asset such as an unmanned system, airplane, balloon, spacecraft, or otherwise. The Aircraft object is intended to normalized data captured or otherwise logged from active radar, passive radar, multi-spectral systems, or the Automatic Dependant Broadcast - Surveillance (ADS-B), and/or Mode S systems.
+// The Aircraft object represents any aircraft or otherwise airborne asset such as
+// an unmanned system, airplane, balloon, spacecraft, or otherwise. The Aircraft
+// object is intended to normalized data captured or otherwise logged from active
+// radar, passive radar, multi-spectral systems, or the Automatic Dependant
+// Broadcast - Surveillance (ADS-B), and/or Mode S systems.
 message Aircraft
  {
   location location = 0
@@ -325,13 +369,16 @@ message Aircraft
   string uidAlt = 0
   string verticalSpeed = 0
  }
-// The analysis target defines the scope of monitored activities, specifying what entity, system or process is analyzed for activity patterns.
+// The analysis target defines the scope of monitored activities, specifying what
+// entity, system or process is analyzed for activity patterns.
 message AnalysisTarget
  {
   string name = 0
   string type = 0
  }
-// The Analytic object contains details about the analytic technique used to analyze and derive insights from the data or information that led to the creation of a finding or conclusion.
+// The Analytic object contains details about the analytic technique used to
+// analyze and derive insights from the data or information that led to the
+// creation of a finding or conclusion.
 message Analytic
  {
   string algorithm = 0
@@ -346,7 +393,9 @@ message Analytic
   string uid = 0
   string version = 0
  }
-// Describes an anomaly or deviation detected in a system. Anomalies are unexpected activity patterns that could indicate potential issues needing attention.
+// Describes an anomaly or deviation detected in a system. Anomalies are
+// unexpected activity patterns that could indicate potential issues needing
+// attention.
 message Anomaly
  {
   string observationParameter = 0
@@ -354,14 +403,19 @@ message Anomaly
  repeated  observation observations = 0
   string observedPattern = 0
  }
-// Describes the analysis of activity patterns and anomalies of target entities to identify potential security threats, performance issues, or other deviations from established baselines. This includes monitoring and analyzing user interactions, API usage, resource utilization, access patterns and other measured indicators.
+// Describes the analysis of activity patterns and anomalies of target entities to
+// identify potential security threats, performance issues, or other deviations
+// from established baselines. This includes monitoring and analyzing user
+// interactions, API usage, resource utilization, access patterns and other
+// measured indicators.
 message AnomalyAnalysis
  {
  repeated  analysisTarget analysisTargets = 0
  repeated  anomaly anomalies = 0
  repeated  baseline baselines = 0
  }
-// The API, or Application Programming Interface, object represents  information pertaining to an API request and response.
+// The API, or Application Programming Interface, object represents  information
+// pertaining to an API request and response.
 message Api
  {
   group group = 0
@@ -372,7 +426,8 @@ message Api
   token token = 0
   string version = 0
  }
-// API events describe general CRUD (Create, Read, Update, Delete) API activities, e.g. (AWS Cloudtrail)
+// API events describe general CRUD (Create, Read, Update, Delete) API activities,
+// e.g. (AWS Cloudtrail)
 message ApiActivity
  {
   string activityName = 0
@@ -435,7 +490,13 @@ message ApiActivity
   aiModel aiModel = 0
   messageContext messageContext = 0
  }
-// Application Error events describe issues with an applications. The error message should be put in the event's <code>message</code> attribute. The <code>metadata.product</code> attribute can be used to capture the originating application information. The <code>host</code> profile can used to include the generating device information. This class is helpful for applications that generate or handle OCSF events and can also be used for errors in upstream products and services.
+// Application Error events describe issues with an applications. The error
+// message should be put in the event's <code>message</code> attribute. The
+// <code>metadata.product</code> attribute can be used to capture the originating
+// application information. The <code>host</code> profile can used to include the
+// generating device information. This class is helpful for applications that
+// generate or handle OCSF events and can also be used for errors in upstream
+// products and services.
 message ApplicationError
  {
   string activityName = 0
@@ -544,7 +605,8 @@ message ApplicationEvent
   riskLevelIdEnum riskLevelId = 0
   integer riskScore = 0
  }
-// Application Lifecycle events report installation, removal, start, stop of an application or service.
+// Application Lifecycle events report installation, removal, start, stop of an
+// application or service.
 message ApplicationLifecycle
  {
   string activityName = 0
@@ -600,7 +662,11 @@ message ApplicationLifecycle
   activityIdEnum activityId = 0
   product app = 0
  }
-// An Application describes the details for an inventoried application as reported by an Application Security tool or other Developer-centric tooling. Applications can be defined as Kubernetes resources, Containerized resources, or application hosting-specific cloud sources such as AWS Elastic BeanStalk, AWS Lightsail, or Azure Logic Apps.
+// An Application describes the details for an inventoried application as reported
+// by an Application Security tool or other Developer-centric tooling.
+// Applications can be defined as Kubernetes resources, Containerized resources,
+// or application hosting-specific cloud sources such as AWS Elastic BeanStalk,
+// AWS Lightsail, or Azure Logic Apps.
 message ApplicationObject
  {
   string criticality = 0
@@ -624,7 +690,20 @@ message ApplicationObject
   url url = 0
   string version = 0
  }
-// The Application Security Posture Finding event is a notification about any bug, defect, deficiency, exploit, vulnerability, weakness or any other issue with software and related systems. Application Security Posture Findings typically involve reporting on the greater context including compliance, impacted resources, remediation guidance, specific code defects, and/or vulnerability metadata. Application Security Posture Findings can be reported by Threat & Vulnerability Management (TVM) tools, Application Security Posture Management (ASPM) tools, or other similar tools. Note: if the event producer is a security control, the <code>security_control</code> profile should be applied and its <code>attacks</code> information, if present, should be duplicated into the <code>finding_info</code> object. <br><strong>Note: </strong>If the Finding is an incident, i.e. requires incident workflow, also apply the <code>incident</code> profile or aggregate this finding into an <code>Incident Finding</code>.
+// The Application Security Posture Finding event is a notification about any bug,
+// defect, deficiency, exploit, vulnerability, weakness or any other issue with
+// software and related systems. Application Security Posture Findings typically
+// involve reporting on the greater context including compliance, impacted
+// resources, remediation guidance, specific code defects, and/or vulnerability
+// metadata. Application Security Posture Findings can be reported by Threat &
+// Vulnerability Management (TVM) tools, Application Security Posture Management
+// (ASPM) tools, or other similar tools. Note: if the event producer is a security
+// control, the <code>security_control</code> profile should be applied and its
+// <code>attacks</code> information, if present, should be duplicated into the
+// <code>finding_info</code> object. <br><strong>Note: </strong>If the Finding is
+// an incident, i.e. requires incident workflow, also apply the
+// <code>incident</code> profile or aggregate this finding into an <code>Incident
+// Finding</code>.
 message ApplicationSecurityPostureFinding
  {
   string categoryName = 0
@@ -700,7 +779,12 @@ message ApplicationSecurityPostureFinding
  repeated  resourceDetails resources = 0
  repeated  vulnerability vulnerabilities = 0
  }
-// The Assessment object describes a point-in-time assessment, check, or evaluation of a specific configuration or signal against an asset, entity, person, or otherwise. For example, this can encapsulate <code>os_signals</code> from CrowdStrike Falcon Zero Trust Assessments, or account for <code>Datastore</code> configurations from Cyera, or capture details of Microsoft Intune configuration policies.
+// The Assessment object describes a point-in-time assessment, check, or
+// evaluation of a specific configuration or signal against an asset, entity,
+// person, or otherwise. For example, this can encapsulate <code>os_signals</code>
+// from CrowdStrike Falcon Zero Trust Assessments, or account for
+// <code>Datastore</code> configurations from Cyera, or capture details of
+// Microsoft Intune configuration policies.
 message Assessment
  {
   string category = 0
@@ -710,7 +794,8 @@ message Assessment
   policy policy = 0
   string uid = 0
  }
-// The MITRE ATT&CK® & ATLAS™ object describes the tactic, technique, sub-technique & mitigation associated to an attack.
+// The MITRE ATT&CK® & ATLAS™ object describes the tactic, technique,
+// sub-technique & mitigation associated to an attack.
 message Attack
  {
   mitigation mitigation = 0
@@ -720,7 +805,12 @@ message Attack
   technique technique = 0
   string version = 0
  }
-// Authentication events report authentication session activities, including user attempts to log on or log off, regardless of success, as well as other key stages within the authentication process. These events are typically generated by authentication services, such as Kerberos, OIDC, or SAML, and may include information about the user, the authentication method used, and the status of the authentication attempt.
+// Authentication events report authentication session activities, including user
+// attempts to log on or log off, regardless of success, as well as other key
+// stages within the authentication process. These events are typically generated
+// by authentication services, such as Kerberos, OIDC, or SAML, and may include
+// information about the user, the authentication method used, and the status of
+// the authentication attempt.
 message Authentication
  {
   string activityName = 0
@@ -796,7 +886,25 @@ message Authentication
   string statusDetail = 0
   user user = 0
  }
-// The Authentication Token object extends the base <code>token</code> object and represents standardized authentication tokens, tickets, or assertions that conform to established authentication protocols such as Kerberos, OIDC, and SAML. This object inherits all attributes from <code>token</code> and adds protocol-specific attributes (e.g., <code>kerberos_flags</code>, <code>encryption_details</code>) for authentication events. Use this object in authentication events to represent protocol-specific tokens: Kerberos Ticket Granting Tickets (TGT) and Service Tickets (ST), OIDC Identity Tokens and Refresh Tokens, and SAML Assertions. These tokens are issued by authentication servers and identity providers and carry protocol-specific metadata, lifecycle information, and security attributes defined by their respective specifications. When to use this object: Use <code>authentication_token</code> when representing protocol-specific authentication tokens (type_id values 1-5: Kerberos TGT/ST, OIDC ID/Refresh tokens, SAML assertions) in authentication events. When NOT to use this object: Do NOT use <code>authentication_token</code> for API tokens or client tokens (type_id values 6-7) used in API activity events - use the base <code>token</code> object instead. Do NOT use <code>authentication_token</code> for generic API keys - use the base <code>token</code> object instead.
+// The Authentication Token object extends the base <code>token</code> object and
+// represents standardized authentication tokens, tickets, or assertions that
+// conform to established authentication protocols such as Kerberos, OIDC, and
+// SAML. This object inherits all attributes from <code>token</code> and adds
+// protocol-specific attributes (e.g., <code>kerberos_flags</code>,
+// <code>encryption_details</code>) for authentication events. Use this object in
+// authentication events to represent protocol-specific tokens: Kerberos Ticket
+// Granting Tickets (TGT) and Service Tickets (ST), OIDC Identity Tokens and
+// Refresh Tokens, and SAML Assertions. These tokens are issued by authentication
+// servers and identity providers and carry protocol-specific metadata, lifecycle
+// information, and security attributes defined by their respective
+// specifications. When to use this object: Use <code>authentication_token</code>
+// when representing protocol-specific authentication tokens (type_id values 1-5:
+// Kerberos TGT/ST, OIDC ID/Refresh tokens, SAML assertions) in authentication
+// events. When NOT to use this object: Do NOT use
+// <code>authentication_token</code> for API tokens or client tokens (type_id
+// values 6-7) used in API activity events - use the base <code>token</code>
+// object instead. Do NOT use <code>authentication_token</code> for generic API
+// keys - use the base <code>token</code> object instead.
 message AuthenticationToken
  {
   timestampT modifiedTime = 0
@@ -812,7 +920,8 @@ message AuthenticationToken
   string type = 0
   typeIdEnum typeId = 0
  }
-// An Authentication Factor object describes a category of methods used for identity verification in an authentication attempt.
+// An Authentication Factor object describes a category of methods used for
+// identity verification in an authentication attempt.
 message AuthFactor
  {
   device device = 0
@@ -825,13 +934,15 @@ message AuthFactor
   string provider = 0
  repeated  string securityQuestions = 0
  }
-// The Authorization Result object provides details about the authorization outcome and associated policies related to activity.
+// The Authorization Result object provides details about the authorization
+// outcome and associated policies related to activity.
 message Authorization
  {
   string decision = 0
   policy policy = 0
  }
-// Authorize Session events report privileges or groups assigned to a new user session, usually at login time.
+// Authorize Session events report privileges or groups assigned to a new user
+// session, usually at login time.
 message AuthorizeSession
  {
   string activityName = 0
@@ -894,13 +1005,19 @@ message AuthorizeSession
   session session = 0
   user user = 0
  }
-// An autonomous system (AS) is a collection of connected Internet Protocol (IP) routing prefixes under the control of one or more network operators on behalf of a single administrative entity or domain that presents a common, clearly defined routing policy to the internet.
+// An autonomous system (AS) is a collection of connected Internet Protocol (IP)
+// routing prefixes under the control of one or more network operators on behalf
+// of a single administrative entity or domain that presents a common, clearly
+// defined routing policy to the internet.
 message AutonomousSystem
  {
   string name = 0
   integer number = 0
  }
-// The base event is a generic and concrete event. It also defines a set of attributes available in most event classes. As a generic event that does not belong to any event category, it could be used to log events that are not otherwise defined by the schema.
+// The base event is a generic and concrete event. It also defines a set of
+// attributes available in most event classes. As a generic event that does not
+// belong to any event category, it could be used to log events that are not
+// otherwise defined by the schema.
 message BaseEvent
  {
   baseEventActivityIdEnum activityId = 0
@@ -955,7 +1072,10 @@ message BaseEvent
   riskLevelIdEnum riskLevelId = 0
   integer riskScore = 0
  }
-// Describes the baseline or expected behavior of a system, service, or component based on historical observations and measurements. It establishes reference points for comparison to detect anomalies, trends, and deviations from typical patterns.
+// Describes the baseline or expected behavior of a system, service, or component
+// based on historical observations and measurements. It establishes reference
+// points for comparison to detect anomalies, trends, and deviations from typical
+// patterns.
 message Baseline
  {
   string observationParameter = 0
@@ -963,12 +1083,17 @@ message Baseline
  repeated  observation observations = 0
   string observedPattern = 0
  }
-// Campaign represent organized efforts by threat actors to achieve malicious objectives over a period, often characterized by shared tactics, techniques, and procedures (TTPs).
+// Campaign represent organized efforts by threat actors to achieve malicious
+// objectives over a period, often characterized by shared tactics, techniques,
+// and procedures (TTPs).
 message Campaign
  {
   string name = 0
  }
-// The Digital Certificate, also known as a Public Key Certificate, object contains information about the ownership and usage of a public key. It serves as a means to establish trust in the authenticity and integrity of the public key and the associated entity.
+// The Digital Certificate, also known as a Public Key Certificate, object
+// contains information about the ownership and usage of a public key. It serves
+// as a means to establish trust in the authenticity and integrity of the public
+// key and the associated entity.
 message Certificate
  {
   timestampT createdTime = 0
@@ -982,7 +1107,13 @@ message Certificate
   string uid = 0
   string version = 0
  }
-// The check object defines a specific, testable compliance verification point that evaluates a target device against a standard, framework, or custom requirement. While checks are typically associated with formal standards (like CIS, NIST, or ISO), they can also represent custom or organizational requirements. When mapped to controls, checks can evaluate specific control_parameters to determine compliance status, but neither the control mapping nor control_parameters are required for a valid check.
+// The check object defines a specific, testable compliance verification point
+// that evaluates a target device against a standard, framework, or custom
+// requirement. While checks are typically associated with formal standards (like
+// CIS, NIST, or ISO), they can also represent custom or organizational
+// requirements. When mapped to controls, checks can evaluate specific
+// control_parameters to determine compliance status, but neither the control
+// mapping nor control_parameters are required for a valid check.
 message Check
  {
   string desc = 0
@@ -996,14 +1127,23 @@ message Check
   string uid = 0
   string version = 0
  }
-// The CIS Benchmark object describes best practices for securely configuring IT systems, software, networks, and cloud infrastructure as defined by the <a target='_blank' href='https://www.cisecurity.org/cis-benchmarks/'>Center for Internet Security</a>. See also <a target='_blank' href='https://www.cisecurity.org/insights/blog/getting-to-know-the-cis-benchmarks'>Getting to Know the CIS Benchmarks</a>.
+// The CIS Benchmark object describes best practices for securely configuring IT
+// systems, software, networks, and cloud infrastructure as defined by the <a
+// target='_blank' href='https://www.cisecurity.org/cis-benchmarks/'>Center for
+// Internet Security</a>. See also <a target='_blank'
+// href='https://www.cisecurity.org/insights/blog/getting-to-know-the-cis-benchmarks'>Getting
+// to Know the CIS Benchmarks</a>.
 message CisBenchmark
  {
  repeated  cisControl cisControls = 0
   string desc = 0
   string name = 0
  }
-// The CIS Benchmark Result object contains information as defined by the Center for Internet Security (<a target='_blank' href='https://www.cisecurity.org/cis-benchmarks/'>CIS</a>) benchmark result. CIS Benchmarks are a collection of best practices for securely configuring IT systems, software, networks, and cloud infrastructure.
+// The CIS Benchmark Result object contains information as defined by the Center
+// for Internet Security (<a target='_blank'
+// href='https://www.cisecurity.org/cis-benchmarks/'>CIS</a>) benchmark result.
+// CIS Benchmarks are a collection of best practices for securely configuring IT
+// systems, software, networks, and cloud infrastructure.
 message CisBenchmarkResult
  {
   string desc = 0
@@ -1011,27 +1151,38 @@ message CisBenchmarkResult
   remediation remediation = 0
   rule rule = 0
  }
-// The CIS Control (aka Critical Security Control) object describes a prioritized set of actions to protect your organization and data from cyber-attack vectors. The <a target='_blank' href='https://www.cisecurity.org/controls'>CIS Controls</a> are defined by the Center for Internet Security.
+// The CIS Control (aka Critical Security Control) object describes a prioritized
+// set of actions to protect your organization and data from cyber-attack vectors.
+// The <a target='_blank' href='https://www.cisecurity.org/controls'>CIS
+// Controls</a> are defined by the Center for Internet Security.
 message CisControl
  {
   string desc = 0
   string name = 0
   string version = 0
  }
-// The CIS Critical Security Control (CSC) contains information as defined by the Center for Internet Security Critical Security Control <a target='_blank' href='https://www.cisecurity.org/controls'>(CIS CSC)</a>. Prioritized set of actions to protect your organization and data from cyber-attack vectors.
+// The CIS Critical Security Control (CSC) contains information as defined by the
+// Center for Internet Security Critical Security Control <a target='_blank'
+// href='https://www.cisecurity.org/controls'>(CIS CSC)</a>. Prioritized set of
+// actions to protect your organization and data from cyber-attack vectors.
 message CisCsc
  {
   string control = 0
   string version = 0
  }
-// The Classifier Details object describes details about the classifier used for data classification.
+// The Classifier Details object describes details about the classifier used for
+// data classification.
 message ClassifierDetails
  {
   string name = 0
   string type = 0
   string uid = 0
  }
-// The Cloud object describes the cloud computing environment where an event or finding originated. It provides comprehensive context about the cloud infrastructure, including the cloud service provider, account or subscription details, organizational structure, geographic regions, availability zones, and logical partitions.
+// The Cloud object describes the cloud computing environment where an event or
+// finding originated. It provides comprehensive context about the cloud
+// infrastructure, including the cloud service provider, account or subscription
+// details, organizational structure, geographic regions, availability zones, and
+// logical partitions.
 message Cloud
  {
   account account = 0
@@ -1042,7 +1193,12 @@ message Cloud
   string region = 0
   string zone = 0
  }
-// Cloud Resources Inventory Info events report cloud asset inventory data. This data can be either logged or proactively collected. For example, use this event class when creating an inventory of cloud resource information from a Configuration Management Database (CMDB), Cyber Asset Attack Surface Management (CAASM), direct public cloud service provider APIs, Software-as-a-Service (SaaS) APIs, or otherwise.
+// Cloud Resources Inventory Info events report cloud asset inventory data. This
+// data can be either logged or proactively collected. For example, use this event
+// class when creating an inventory of cloud resource information from a
+// Configuration Management Database (CMDB), Cyber Asset Attack Surface Management
+// (CAASM), direct public cloud service provider APIs, Software-as-a-Service
+// (SaaS) APIs, or otherwise.
 message CloudResourcesInventoryInfo
  {
   string activityName = 0
@@ -1104,7 +1260,12 @@ message CloudResourcesInventoryInfo
  repeated  resourceDetails resources = 0
   table table = 0
  }
-// The Compliance object contains information about Industry and Regulatory Framework standards, controls and requirements or details about custom assessments utilized in a compliance evaluation. Standards define broad security frameworks, controls represent specific security requirements within those frameworks, and checks are the testable verification points used to determine if controls are properly implemented.
+// The Compliance object contains information about Industry and Regulatory
+// Framework standards, controls and requirements or details about custom
+// assessments utilized in a compliance evaluation. Standards define broad
+// security frameworks, controls represent specific security requirements within
+// those frameworks, and checks are the testable verification points used to
+// determine if controls are properly implemented.
 message Compliance
  {
  repeated  assessment assessments = 0
@@ -1123,7 +1284,16 @@ message Compliance
  repeated  string statusDetails = 0
   complianceStatusIdEnum statusId = 0
  }
-// Compliance Finding events describe results of evaluations performed against resources, to check compliance with various Industry Frameworks or Security Standards such as <code>NIST SP 800-53, CIS AWS Foundations Benchmark v1.4.0, ISO/IEC 27001</code> etc. Note: if the event producer is a security control, the <code>security_control</code> profile should be applied and its <code>attacks</code> information, if present, should be duplicated into the <code>finding_info</code> object. <br><strong>Note: </strong>If the Finding is an incident, i.e. requires incident workflow, also apply the <code>incident</code> profile or aggregate this finding into an <code>Incident Finding</code>.
+// Compliance Finding events describe results of evaluations performed against
+// resources, to check compliance with various Industry Frameworks or Security
+// Standards such as <code>NIST SP 800-53, CIS AWS Foundations Benchmark v1.4.0,
+// ISO/IEC 27001</code> etc. Note: if the event producer is a security control,
+// the <code>security_control</code> profile should be applied and its
+// <code>attacks</code> information, if present, should be duplicated into the
+// <code>finding_info</code> object. <br><strong>Note: </strong>If the Finding is
+// an incident, i.e. requires incident workflow, also apply the
+// <code>incident</code> profile or aggregate this finding into an <code>Incident
+// Finding</code>.
 message ComplianceFinding
  {
   string categoryName = 0
@@ -1199,7 +1369,8 @@ message ComplianceFinding
   resourceDetails resource = 0
  repeated  resourceDetails resources = 0
  }
-// Device Config State events report device configuration data, device assessments, and/or CIS Benchmark results.
+// Device Config State events report device configuration data, device
+// assessments, and/or CIS Benchmark results.
 message ConfigState
  {
   string activityName = 0
@@ -1256,7 +1427,9 @@ message ConfigState
   cisBenchmarkResult cisBenchmarkResult = 0
   device device = 0
  }
-// The Container object describes an instance of a specific container. A container is a prepackaged, portable system image that runs isolated on an existing system using a container runtime like containerd.
+// The Container object describes an instance of a specific container. A container
+// is a prepackaged, portable system image that runs isolated on an existing
+// system using a container runtime like containerd.
 message Container
  {
   fingerprint hash = 0
@@ -1272,7 +1445,10 @@ message Container
  repeated  keyValueObject tags = 0
   string uid = 0
  }
-// The Common Vulnerabilities and Exposures (CVE) object represents publicly disclosed cybersecurity vulnerabilities defined in CVE Program catalog (<a target='_blank' href='https://cve.mitre.org/'>CVE</a>). There is one CVE Record for each vulnerability in the catalog.
+// The Common Vulnerabilities and Exposures (CVE) object represents publicly
+// disclosed cybersecurity vulnerabilities defined in CVE Program catalog (<a
+// target='_blank' href='https://cve.mitre.org/'>CVE</a>). There is one CVE Record
+// for each vulnerability in the catalog.
 message Cve
  {
   timestampT createdTime = 0
@@ -1290,7 +1466,10 @@ message Cve
   string type = 0
   string uid = 0
  }
-// The Common Vulnerability Scoring System (<a target='_blank' href='https://www.first.org/cvss/'>CVSS</a>) object provides a way to capture the principal characteristics of a vulnerability and produce a numerical score reflecting its severity.
+// The Common Vulnerability Scoring System (<a target='_blank'
+// href='https://www.first.org/cvss/'>CVSS</a>) object provides a way to capture
+// the principal characteristics of a vulnerability and produce a numerical score
+// reflecting its severity.
 message Cvss
  {
   float baseScore = 0
@@ -1303,35 +1482,43 @@ message Cvss
   string vendorName = 0
   string version = 0
  }
-// The CWE object represents a weakness in a software system that can be exploited by a threat actor to perform an attack. The CWE object is based on the <a target='_blank' href='https://cwe.mitre.org/'>Common Weakness Enumeration (CWE)</a> catalog.
+// The CWE object represents a weakness in a software system that can be exploited
+// by a threat actor to perform an attack. The CWE object is based on the <a
+// target='_blank' href='https://cwe.mitre.org/'>Common Weakness Enumeration
+// (CWE)</a> catalog.
 message Cwe
  {
   string caption = 0
   urlT srcUrl = 0
   string uid = 0
  }
-// The MITRE D3FEND™ object describes the tactic & technique associated with a countermeasure.
+// The MITRE D3FEND™ object describes the tactic & technique associated with a
+// countermeasure.
 message D3fend
  {
   d3fTactic d3fTactic = 0
   d3fTechnique d3fTechnique = 0
   string version = 0
  }
-// The MITRE D3FEND™ Tactic object describes the tactic ID and/or name that is associated to an attack.
+// The MITRE D3FEND™ Tactic object describes the tactic ID and/or name that is
+// associated to an attack.
 message D3fTactic
  {
   string name = 0
   urlT srcUrl = 0
   string uid = 0
  }
-// The MITRE D3FEND™ Technique object describes the leaf defensive technique ID and/or name associated to a countermeasure.
+// The MITRE D3FEND™ Technique object describes the leaf defensive technique ID
+// and/or name associated to a countermeasure.
 message D3fTechnique
  {
   string name = 0
   urlT srcUrl = 0
   string uid = 0
  }
-// The database object is used for databases which are typically datastore services that contain an organized collection of structured and unstructured data or a types of data.
+// The database object is used for databases which are typically datastore
+// services that contain an organized collection of structured and unstructured
+// data or a types of data.
 message Database
  {
   timestampT createdTime = 0
@@ -1347,7 +1534,8 @@ message Database
   dataClassification dataClassification = 0
  repeated  dataClassification dataClassifications = 0
  }
-// The databucket object is a basic container that holds data, typically organized through the use of data partitions.
+// The databucket object is a basic container that holds data, typically organized
+// through the use of data partitions.
 message Databucket
  {
   string data = 0
@@ -1385,7 +1573,8 @@ message Databucket
   api api = 0
   cloud cloud = 0
  }
-// The Data Classification object includes information about data classification levels and data category types.
+// The Data Classification object includes information about data classification
+// levels and data category types.
 message DataClassification
  {
   string category = 0
@@ -1403,7 +1592,9 @@ message DataClassification
   integer total = 0
   string uid = 0
  }
-// The Data Security object describes the characteristics, techniques and content of a Data Loss Prevention (DLP), Data Loss Detection (DLD), Data Classification, or similar tools' finding, alert, or detection mechanism(s).
+// The Data Security object describes the characteristics, techniques and content
+// of a Data Loss Prevention (DLP), Data Loss Detection (DLD), Data
+// Classification, or similar tools' finding, alert, or detection mechanism(s).
 message DataSecurity
  {
   string category = 0
@@ -1427,7 +1618,20 @@ message DataSecurity
   string patternMatch = 0
   policy policy = 0
  }
-// A Data Security Finding describes detections or alerts generated by various data security products such as Data Loss Prevention (DLP), Data Classification, Secrets Management, Digital Rights Management (DRM), Data Security Posture Management (DSPM), and similar tools. These detections or alerts can be created using fingerprinting, statistical analysis, machine learning or other methodologies. The finding describes the actors and endpoints who accessed or own the sensitive data, as well as the resources which store the sensitive data. Note: if the event producer is a security control, the <code>security_control</code> profile should be applied and its <code>attacks</code> information, if present, should be duplicated into the <code>finding_info</code> object. <br><strong>Note: </strong>If the Finding is an incident, i.e. requires incident workflow, also apply the <code>incident</code> profile  or aggregate this finding into an <code>Incident Finding</code>.
+// A Data Security Finding describes detections or alerts generated by various
+// data security products such as Data Loss Prevention (DLP), Data Classification,
+// Secrets Management, Digital Rights Management (DRM), Data Security Posture
+// Management (DSPM), and similar tools. These detections or alerts can be created
+// using fingerprinting, statistical analysis, machine learning or other
+// methodologies. The finding describes the actors and endpoints who accessed or
+// own the sensitive data, as well as the resources which store the sensitive
+// data. Note: if the event producer is a security control, the
+// <code>security_control</code> profile should be applied and its
+// <code>attacks</code> information, if present, should be duplicated into the
+// <code>finding_info</code> object. <br><strong>Note: </strong>If the Finding is
+// an incident, i.e. requires incident workflow, also apply the
+// <code>incident</code> profile  or aggregate this finding into an <code>Incident
+// Finding</code>.
 message DataSecurityFinding
  {
   string categoryName = 0
@@ -1506,7 +1710,9 @@ message DataSecurityFinding
   networkEndpoint srcEndpoint = 0
   table table = 0
  }
-// Datastore events describe general activities (Read, Update, Query, Delete, etc.) which affect datastores or data within those datastores, e.g. (AWS RDS, AWS S3).
+// Datastore events describe general activities (Read, Update, Query, Delete,
+// etc.) which affect datastores or data within those datastores, e.g. (AWS RDS,
+// AWS S3).
 message DatastoreActivity
  {
   string activityName = 0
@@ -1573,7 +1779,9 @@ message DatastoreActivity
   aiModel aiModel = 0
   messageContext messageContext = 0
  }
-// The DCE/RPC, or Distributed Computing Environment/Remote Procedure Call, object describes the remote procedure call system for distributed computing environments.
+// The DCE/RPC, or Distributed Computing Environment/Remote Procedure Call, object
+// describes the remote procedure call system for distributed computing
+// environments.
 message DceRpc
  {
   string command = 0
@@ -1582,7 +1790,15 @@ message DceRpc
   integer opnum = 0
   rpcInterface rpcInterface = 0
  }
-// A Detection Finding describes detections or alerts generated by security products using correlation engines, detection engines or other methodologies. Note: if the event producer is a security control, the <code>security_control</code> profile should be applied and its <code>attacks</code> information, if present, should be duplicated into the <code>finding_info</code> object. <br><strong>Note: </strong>If the Finding is an incident, i.e. requires incident workflow, also apply the <code>incident</code> profile  or aggregate this finding into an <code>Incident Finding</code>.
+// A Detection Finding describes detections or alerts generated by security
+// products using correlation engines, detection engines or other methodologies.
+// Note: if the event producer is a security control, the
+// <code>security_control</code> profile should be applied and its
+// <code>attacks</code> information, if present, should be duplicated into the
+// <code>finding_info</code> object. <br><strong>Note: </strong>If the Finding is
+// an incident, i.e. requires incident workflow, also apply the
+// <code>incident</code> profile  or aggregate this finding into an <code>Incident
+// Finding</code>.
 message DetectionFinding
  {
   string categoryName = 0
@@ -1658,7 +1874,9 @@ message DetectionFinding
   integer riskScore = 0
  repeated  vulnerability vulnerabilities = 0
  }
-// The Device object represents an addressable computer system or host, which is typically connected to a computer network and participates in the transmission or processing of data within the computer network.
+// The Device object represents an addressable computer system or host, which is
+// typically connected to a computer network and participates in the transmission
+// or processing of data within the computer network.
 message Device
  {
  repeated  agent agentList = 0
@@ -1722,7 +1940,8 @@ message Device
   string uidAlt = 0
   string vendorName = 0
  }
-// Device Config State Change events report state changes that impact the security of the device.
+// Device Config State Change events report state changes that impact the security
+// of the device.
 message DeviceConfigStateChange
  {
   string activityName = 0
@@ -1785,7 +2004,10 @@ message DeviceConfigStateChange
   string state = 0
   deviceConfigStateChangeStateIdEnum stateId = 0
  }
-// The Device Hardware Information object contains details and specifications of the physical components that make up a device. This information provides an overview of the hardware capabilities, configuration, and characteristics of the device.
+// The Device Hardware Information object contains details and specifications of
+// the physical components that make up a device. This information provides an
+// overview of the hardware capabilities, configuration, and characteristics of
+// the device.
 message DeviceHwInfo
  {
   string biosDate = 0
@@ -1808,7 +2030,8 @@ message DeviceHwInfo
   uuidT uuid = 0
   string vendorName = 0
  }
-// DHCP Activity events report MAC to IP assignment via DHCP from a client or server.
+// DHCP Activity events report MAC to IP assignment via DHCP from a client or
+// server.
 message DhcpActivity
  {
   string activityName = 0
@@ -1888,7 +2111,9 @@ message DhcpActivity
   networkEndpoint srcEndpoint = 0
   string transactionUid = 0
  }
-// The Digital Signature object contains information about the cryptographic mechanism used to verify the authenticity, integrity, and origin of the file or application.
+// The Digital Signature object contains information about the cryptographic
+// mechanism used to verify the authenticity, integrity, and origin of the file or
+// application.
 message DigitalSignature
  {
   string algorithm = 0
@@ -1909,7 +2134,10 @@ message DiscoveryDetails
   string type = 0
   string value = 0
  }
-// The Discovery event is a generic event that defines a set of attributes available in Discovery category events. As a generic event, it could be used to log events that are not otherwise defined by the Discovery specific event classes.
+// The Discovery event is a generic event that defines a set of attributes
+// available in Discovery category events. As a generic event, it could be used to
+// log events that are not otherwise defined by the Discovery specific event
+// classes.
 message DiscoveryEvent
  {
   string activityName = 0
@@ -2022,7 +2250,8 @@ message DiscoveryResult
   string queryResult = 0
   queryResultIdEnum queryResultId = 0
  }
-// The Display object contains information about the physical or virtual display connected to a computer system.
+// The Display object contains information about the physical or virtual display
+// connected to a computer system.
 message Display
  {
   integer colorDepth = 0
@@ -2031,7 +2260,8 @@ message Display
   integer physicalWidth = 0
   integer scaleFactor = 0
  }
-// The Domain Name System (DNS) object represents the shared information associated with the DNS query and answer objects.
+// The Domain Name System (DNS) object represents the shared information
+// associated with the DNS query and answer objects.
 message Dns
  {
   string class = 0
@@ -2120,7 +2350,10 @@ message DnsActivity
   timestampT responseTime = 0
   networkTraffic traffic = 0
  }
-// The DNS Answer object represents a specific response provided by the Domain Name System (DNS) when querying for information about a domain or performing a DNS operation. It encapsulates the relevant details and data returned by the DNS server in response to a query.
+// The DNS Answer object represents a specific response provided by the Domain
+// Name System (DNS) when querying for information about a domain or performing a
+// DNS operation. It encapsulates the relevant details and data returned by the
+// DNS server in response to a query.
 message DnsAnswer
  {
   integer packetUid = 0
@@ -2131,7 +2364,10 @@ message DnsAnswer
   integer ttl = 0
   string type = 0
  }
-// The DNS query object represents a specific request made to the Domain Name System (DNS) to retrieve information about a domain or perform a DNS operation. This object encapsulates the necessary attributes and methods to construct and send DNS queries, specify the query type (e.g., A, AAAA, MX).
+// The DNS query object represents a specific request made to the Domain Name
+// System (DNS) to retrieve information about a domain or perform a DNS operation.
+// This object encapsulates the necessary attributes and methods to construct and
+// send DNS queries, specify the query type (e.g., A, AAAA, MX).
 message DnsQuery
  {
   string class = 0
@@ -2141,7 +2377,8 @@ message DnsQuery
   string opcode = 0
   opcodeIdEnum opcodeId = 0
  }
-// The contact information related to a domain registration, e.g., registrant, administrator, abuse, billing, or technical contact.
+// The contact information related to a domain registration, e.g., registrant,
+// administrator, abuse, billing, or technical contact.
 message DomainContact
  {
   emailT emailAddr = 0
@@ -2152,7 +2389,14 @@ message DomainContact
   domainContactTypeIdEnum typeId = 0
   string uid = 0
  }
-// Drone Flights Activity events report the activity of Unmanned Aerial Systems (UAS), their Operators, and mission-planning and authorization metadata as reported by the UAS platforms themselves, by Counter-UAS (CUAS) systems, or other remote monitoring or sensing infrastructure. Based on the Remote ID defined in Standard Specification for Remote ID and Tracking (ASTM Designation: F3411-22a) <a target='_blank' href='https://cdn.standards.iteh.ai/samples/112830/71297057ac42432880a203654f213709/ASTM-F3411-22a.pdf'>ASTM F3411-22a</a>
+// Drone Flights Activity events report the activity of Unmanned Aerial Systems
+// (UAS), their Operators, and mission-planning and authorization metadata as
+// reported by the UAS platforms themselves, by Counter-UAS (CUAS) systems, or
+// other remote monitoring or sensing infrastructure. Based on the Remote ID
+// defined in Standard Specification for Remote ID and Tracking (ASTM Designation:
+// F3411-22a) <a target='_blank'
+// href='https://cdn.standards.iteh.ai/samples/112830/71297057ac42432880a203654f213709/ASTM-F3411-22a.pdf'>ASTM
+// F3411-22a</a>
 message DroneFlightsActivity
  {
   string activityName = 0
@@ -2232,7 +2476,8 @@ message Edge
   string target = 0
   string uid = 0
  }
-// The Email object describes the email metadata such as sender, recipients, and direction, and can include embedded URLs and files.
+// The Email object describes the email metadata such as sender, recipients, and
+// direction, and can include embedded URLs and files.
 message Email
  {
  repeated  emailT cc = 0
@@ -2266,7 +2511,8 @@ message Email
   dataClassification dataClassification = 0
  repeated  dataClassification dataClassifications = 0
  }
-// Email Activity events report SMTP protocol and email activities including those with embedded URLs and files. See the <code>Email</code> object for details.
+// Email Activity events report SMTP protocol and email activities including those
+// with embedded URLs and files. See the <code>Email</code> object for details.
 message EmailActivity
  {
   string activityName = 0
@@ -2335,7 +2581,9 @@ message EmailActivity
   networkEndpoint srcEndpoint = 0
  repeated  emailT to = 0
  }
-// The Email Authentication object describes the Sender Policy Framework (SPF), DomainKeys Identified Mail (DKIM) and Domain-based Message Authentication, Reporting and Conformance (DMARC) attributes of an email.
+// The Email Authentication object describes the Sender Policy Framework (SPF),
+// DomainKeys Identified Mail (DKIM) and Domain-based Message Authentication,
+// Reporting and Conformance (DMARC) attributes of an email.
 message EmailAuth
  {
   string dkim = 0
@@ -2469,7 +2717,11 @@ message EncryptionDetails
   string keyUid = 0
   string type = 0
  }
-// The Endpoint object describes a physical or virtual device that connects to and exchanges information with a computer network. Some examples of endpoints are mobile devices, desktop computers, virtual machines, embedded devices, and servers. Internet-of-Things devices—like cameras, lighting, refrigerators, security systems, smart speakers, and thermostats—are also endpoints.
+// The Endpoint object describes a physical or virtual device that connects to and
+// exchanges information with a computer network. Some examples of endpoints are
+// mobile devices, desktop computers, virtual machines, embedded devices, and
+// servers. Internet-of-Things devices—like cameras, lighting, refrigerators,
+// security systems, smart speakers, and thermostats—are also endpoints.
 message Endpoint
  {
  repeated  agent agentList = 0
@@ -2497,13 +2749,17 @@ message Endpoint
   container container = 0
   integer namespacePid = 0
  }
-// The Endpoint Connection object contains information detailing a connection attempt to an endpoint.
+// The Endpoint Connection object contains information detailing a connection
+// attempt to an endpoint.
 message EndpointConnection
  {
   integer code = 0
   networkEndpoint networkEndpoint = 0
  }
-// The Enrichment object provides inline enrichment data for specific attributes of interest within an event. It serves as a mechanism to enhance or supplement the information associated with the event by adding additional relevant details or context.
+// The Enrichment object provides inline enrichment data for specific attributes
+// of interest within an event. It serves as a mechanism to enhance or supplement
+// the information associated with the event by adding additional relevant details
+// or context.
 message Enrichment
  {
   timestampT createdTime = 0
@@ -2517,13 +2773,17 @@ message Enrichment
   string type = 0
   string value = 0
  }
-// The Entity object is an unordered collection of attributes, with a name and unique identifier. It serves as a base object that defines a set of attributes and default constraints available in all objects that extend it.
+// The Entity object is an unordered collection of attributes, with a name and
+// unique identifier. It serves as a base object that defines a set of attributes
+// and default constraints available in all objects that extend it.
 message Entity
  {
   string name = 0
   string uid = 0
  }
-// Entity Management events report activity by a managed client, a micro service, or a user at a management console. The activity can be a create, read, update, and delete operation on a managed entity.
+// Entity Management events report activity by a managed client, a micro service,
+// or a user at a management console. The activity can be a create, read, update,
+// and delete operation on a managed entity.
 message EntityManagement
  {
   string activityName = 0
@@ -2592,7 +2852,11 @@ message EnvironmentVariable
   string name = 0
   string value = 0
  }
-// The Exploit Prediction Scoring System (EPSS) object describes the estimated probability a vulnerability will be exploited. EPSS is a community-driven effort to combine descriptive information about vulnerabilities (CVEs) with evidence of actual exploitation in-the-wild. (<a target='_blank' href='https://www.first.org/epss/'>EPSS</a>).
+// The Exploit Prediction Scoring System (EPSS) object describes the estimated
+// probability a vulnerability will be exploited. EPSS is a community-driven
+// effort to combine descriptive information about vulnerabilities (CVEs) with
+// evidence of actual exploitation in-the-wild. (<a target='_blank'
+// href='https://www.first.org/epss/'>EPSS</a>).
 message Epss
  {
   timestampT createdTime = 0
@@ -2600,7 +2864,8 @@ message Epss
   string score = 0
   string version = 0
  }
-// Event Log Activity events report actions pertaining to the system's event logging service(s), such as disabling logging or clearing the log data.
+// Event Log Activity events report actions pertaining to the system's event
+// logging service(s), such as disabling logging or clearing the log data.
 message EventLogActvity
  {
   string activityName = 0
@@ -2662,7 +2927,12 @@ message EventLogActvity
   string statusCode = 0
   string statusDetail = 0
  }
-// Data collected directly from devices that represents forensic information pulled, queried, or discovered from devices that may indicate malicious activity. It contains a number of child objects, each representing a distinct evidence domain (network connections, file artifacts, registry entries, etc.). When mapping raw telemetry data users should select Query Evidence and then the appropriate child object that best matches the evidence type.
+// Data collected directly from devices that represents forensic information
+// pulled, queried, or discovered from devices that may indicate malicious
+// activity. It contains a number of child objects, each representing a distinct
+// evidence domain (network connections, file artifacts, registry entries, etc.).
+// When mapping raw telemetry data users should select Query Evidence and then the
+// appropriate child object that best matches the evidence type.
 message EvidenceInfo
  {
   string activityName = 0
@@ -2721,7 +2991,8 @@ message EvidenceInfo
   device device = 0
   queryEvidence queryEvidence = 0
  }
-// A collection of evidence artifacts associated to the activity/activities that triggered a security detection.
+// A collection of evidence artifacts associated to the activity/activities that
+// triggered a security detection.
 message Evidences
  {
   actor actor = 0
@@ -2752,21 +3023,30 @@ message Evidences
   string verdict = 0
   evidencesVerdictIdEnum verdictId = 0
  }
-// The OCSF Schema Extension object provides detailed information about the schema extension used to construct the event. The schema extensions are registered in the <a target='_blank' href='https://github.com/ocsf/ocsf-schema/blob/main/extensions.md'>extensions.md</a> file.
+// The OCSF Schema Extension object provides detailed information about the schema
+// extension used to construct the event. The schema extensions are registered in
+// the <a target='_blank'
+// href='https://github.com/ocsf/ocsf-schema/blob/main/extensions.md'>extensions.md</a>
+// file.
 message Extension
  {
   string name = 0
   string uid = 0
   string version = 0
  }
-// The Feature object provides information about the software product feature that generated a specific event. It encompasses details related to the capabilities, components, user interface (UI) design, and performance upgrades associated with the feature.
+// The Feature object provides information about the software product feature that
+// generated a specific event. It encompasses details related to the capabilities,
+// components, user interface (UI) design, and performance upgrades associated
+// with the feature.
 message Feature
  {
   string name = 0
   string uid = 0
   string version = 0
  }
-// The File object represents the metadata associated with a file stored in a computer system. It encompasses information about the file itself, including its attributes, properties, and organizational details.
+// The File object represents the metadata associated with a file stored in a
+// computer system. It encompasses information about the file itself, including
+// its attributes, properties, and organizational details.
 message File
  {
   timestampT accessedTime = 0
@@ -2815,7 +3095,8 @@ message File
   dataClassification dataClassification = 0
  repeated  dataClassification dataClassifications = 0
  }
-// File System Activity events report when a process performs an action on a file or folder.
+// File System Activity events report when a process performs an action on a file
+// or folder.
 message FileActivity
  {
   string activityName = 0
@@ -2877,7 +3158,9 @@ message FileActivity
   string fileDiff = 0
   file fileResult = 0
  }
-// File Hosting Activity events report the actions taken by file management applications, including file sharing servers like Sharepoint and services such as Box, MS OneDrive, Google Drive, or network file share services.
+// File Hosting Activity events report the actions taken by file management
+// applications, including file sharing servers like Sharepoint and services such
+// as Box, MS OneDrive, Google Drive, or network file share services.
 message FileHosting
  {
   string activityName = 0
@@ -2946,7 +3229,8 @@ message FileHosting
   shareTypeIdEnum shareTypeId = 0
   networkEndpoint srcEndpoint = 0
  }
-// File Query events report information about files that are present on the system.
+// File Query events report information about files that are present on the
+// system.
 message FileQuery
  {
   string activityName = 0
@@ -3005,7 +3289,10 @@ message FileQuery
   discoveryResultActivityIdEnum activityId = 0
   file file = 0
  }
-// File Remediation Activity events report on attempts at remediating files. It follows the MITRE countermeasures defined by the D3FEND™ <a target='_blank' href='https://d3fend.mitre.org/'>Matrix</a>. Sub-techniques will include File, such as File Removal or Restore File.
+// File Remediation Activity events report on attempts at remediating files. It
+// follows the MITRE countermeasures defined by the D3FEND™ <a target='_blank'
+// href='https://d3fend.mitre.org/'>Matrix</a>. Sub-techniques will include File,
+// such as File Removal or Restore File.
 message FileRemediationActivity
  {
   string activityName = 0
@@ -3065,7 +3352,8 @@ message FileRemediationActivity
   remediationActivityStatusIdEnum statusId = 0
   file file = 0
  }
-// The Finding event is a generic event that defines a set of attributes available in the Findings category.
+// The Finding event is a generic event that defines a set of attributes available
+// in the Findings category.
 message Finding
  {
   string categoryName = 0
@@ -3136,7 +3424,8 @@ message Finding
   string verdict = 0
   verdictIdEnum verdictId = 0
  }
-// The Finding Information object describes metadata related to a security finding generated by a security tool or system.
+// The Finding Information object describes metadata related to a security finding
+// generated by a security tool or system.
 message FindingInfo
  {
   analytic analytic = 0
@@ -3162,7 +3451,8 @@ message FindingInfo
   string uid = 0
   string uidAlt = 0
  }
-// The Finding object describes metadata related to a security finding generated by a security tool or system.
+// The Finding object describes metadata related to a security finding generated
+// by a security tool or system.
 message FindingObject
  {
   timestampT createdTime = 0
@@ -3180,14 +3470,20 @@ message FindingObject
  repeated  string types = 0
   string uid = 0
  }
-// The Fingerprint object provides detailed information about a fingerprint, which is a compact representation of data used to identify a longer piece of information, such as a public key, file content, or application implementation. It contains the algorithm or scheme and value of the fingerprint, enabling efficient and reliable identification of the associated data.
+// The Fingerprint object provides detailed information about a fingerprint, which
+// is a compact representation of data used to identify a longer piece of
+// information, such as a public key, file content, or application implementation.
+// It contains the algorithm or scheme and value of the fingerprint, enabling
+// efficient and reliable identification of the associated data.
 message Fingerprint
  {
   string algorithm = 0
   fingerprintAlgorithmIdEnum algorithmId = 0
   string value = 0
  }
-// The Firewall Rule object represents a specific rule within a firewall policy or event. It contains information about a rule's configuration, properties, and associated actions that define how network traffic is handled by the firewall.
+// The Firewall Rule object represents a specific rule within a firewall policy or
+// event. It contains information about a rule's configuration, properties, and
+// associated actions that define how network traffic is handled by the firewall.
 message FirewallRule
  {
   string category = 0
@@ -3203,7 +3499,8 @@ message FirewallRule
   integer rateLimit = 0
   string sensitivity = 0
  }
-// Folder Query events report information about folders that are present on the system.
+// Folder Query events report information about folders that are present on the
+// system.
 message FolderQuery
  {
   string activityName = 0
@@ -3262,7 +3559,8 @@ message FolderQuery
   discoveryResultActivityIdEnum activityId = 0
   file folder = 0
  }
-// File Transfer Protocol (FTP) Activity events report file transfers between a server and a client as seen on the network.
+// File Transfer Protocol (FTP) Activity events report file transfers between a
+// server and a client as seen on the network.
 message FtpActivity
  {
   string activityName = 0
@@ -3345,14 +3643,16 @@ message FtpActivity
   portT port = 0
   string type = 0
  }
-// The Function Invocation object provides details regarding the invocation of a function.
+// The Function Invocation object provides details regarding the invocation of a
+// function.
 message FunctionInvocation
  {
   string error = 0
  repeated  parameter parameters = 0
   string returnValue = 0
  }
-// The GPU information object contains attributes describing graphical processing hardware.
+// The GPU information object contains attributes describing graphical processing
+// hardware.
 message GpuInfo
  {
   string busType = 0
@@ -3377,7 +3677,11 @@ message Graph
   string type = 0
   string uid = 0
  }
-// The Group object represents a collection or association of entities, such as users, policies, or devices. It serves as a logical grouping mechanism to organize and manage entities with similar characteristics or permissions within a system or organization, including but not limited to purposes of access control.
+// The Group object represents a collection or association of entities, such as
+// users, policies, or devices. It serves as a logical grouping mechanism to
+// organize and manage entities with similar characteristics or permissions within
+// a system or organization, including but not limited to purposes of access
+// control.
 message Group
  {
   string desc = 0
@@ -3388,7 +3692,8 @@ message Group
   string uid = 0
   string uidAlt = 0
  }
-// Group Management events report management updates to a group, including updates to membership and permissions.
+// Group Management events report management updates to a group, including updates
+// to membership and permissions.
 message GroupManagement
  {
   string activityName = 0
@@ -3451,7 +3756,10 @@ message GroupManagement
   group subgroup = 0
   user user = 0
  }
-// The HASSH object contains SSH network fingerprinting values for specific client/server implementations. It provides a standardized way of identifying and categorizing SSH connections based on their unique characteristics and behavior.
+// The HASSH object contains SSH network fingerprinting values for specific
+// client/server implementations. It provides a standardized way of identifying
+// and categorizing SSH connections based on their unique characteristics and
+// behavior.
 message Hassh
  {
   string algorithm = 0
@@ -3539,7 +3847,11 @@ message HttpActivity
   integer httpStatus = 0
   trace trace = 0
  }
-// The HTTP Cookie object, also known as a web cookie or browser cookie, contains details and values pertaining to a small piece of data that a server sends to a user's web browser. This data is then stored by the browser and sent back to the server with subsequent requests, allowing the server to remember and track certain information about the user's browsing session or preferences.
+// The HTTP Cookie object, also known as a web cookie or browser cookie, contains
+// details and values pertaining to a small piece of data that a server sends to a
+// user's web browser. This data is then stored by the browser and sent back to
+// the server with subsequent requests, allowing the server to remember and track
+// certain information about the user's browsing session or preferences.
 message HttpCookie
  {
   string domain = 0
@@ -3553,13 +3865,19 @@ message HttpCookie
   boolean secure = 0
   string value = 0
  }
-// The HTTP Header object represents the headers sent in an HTTP request or response. HTTP headers are key-value pairs that convey additional information about the HTTP message, including details about the content, caching, authentication, encoding, and other aspects of the communication.
+// The HTTP Header object represents the headers sent in an HTTP request or
+// response. HTTP headers are key-value pairs that convey additional information
+// about the HTTP message, including details about the content, caching,
+// authentication, encoding, and other aspects of the communication.
 message HttpHeader
  {
   string name = 0
   string value = 0
  }
-// The HTTP Request object represents the attributes of a request made to a web server. It encapsulates the details and metadata associated with an HTTP request, including the request method, headers, URL, query parameters, body content, and other relevant information.
+// The HTTP Request object represents the attributes of a request made to a web
+// server. It encapsulates the details and metadata associated with an HTTP
+// request, including the request method, headers, URL, query parameters, body
+// content, and other relevant information.
 message HttpRequest
  {
   string args = 0
@@ -3574,7 +3892,10 @@ message HttpRequest
   string version = 0
  repeated  ipT xForwardedFor = 0
  }
-// The HTTP Response object contains detailed information about the response sent from a web server to the requester. It encompasses attributes and metadata that describe the response status, headers, body content, and other relevant information.
+// The HTTP Response object contains detailed information about the response sent
+// from a web server to the requester. It encompasses attributes and metadata that
+// describe the response status, headers, body content, and other relevant
+// information.
 message HttpResponse
  {
   integer bodyLength = 0
@@ -3586,7 +3907,18 @@ message HttpResponse
   string message = 0
   string status = 0
  }
-// This finding represents an IAM analysis result, which evaluates IAM policies, access patterns, and IAM configurations for potential security risks. The analysis can focus on either an identity (user, role, service account) or a resource to assess permissions, access patterns, and security posture within the IAM domain. <br><strong>Note:</strong> Use <code>permission_analysis_results</code> for identity-centric analysis (evaluating what an identity can do) and <code>access_analysis_result</code> for resource-centric analysis (evaluating who can access a resource). These complement each other for comprehensive IAM security assessment.<br><strong>Note:</strong> If the Finding is an incident, i.e. requires incident workflow, also apply the <code>incident</code> profile or aggregate this finding into an <code>Incident Finding</code>.
+// This finding represents an IAM analysis result, which evaluates IAM policies,
+// access patterns, and IAM configurations for potential security risks. The
+// analysis can focus on either an identity (user, role, service account) or a
+// resource to assess permissions, access patterns, and security posture within
+// the IAM domain. <br><strong>Note:</strong> Use
+// <code>permission_analysis_results</code> for identity-centric analysis
+// (evaluating what an identity can do) and <code>access_analysis_result</code>
+// for resource-centric analysis (evaluating who can access a resource). These
+// complement each other for comprehensive IAM security
+// assessment.<br><strong>Note:</strong> If the Finding is an incident, i.e.
+// requires incident workflow, also apply the <code>incident</code> profile or
+// aggregate this finding into an <code>Incident Finding</code>.
 message IamAnalysisFinding
  {
   string categoryName = 0
@@ -3664,7 +3996,9 @@ message IamAnalysisFinding
  repeated  resourceDetails resources = 0
   user user = 0
  }
-// The Identity & Access Management event is a generic event that defines a set of attributes available in the access control events. As a generic event, it could be used to log events that are not otherwise defined by the IAM category.
+// The Identity & Access Management event is a generic event that defines a set of
+// attributes available in the access control events. As a generic event, it could
+// be used to log events that are not otherwise defined by the IAM category.
 message IamEvent
  {
   baseEventActivityIdEnum activityId = 0
@@ -3722,7 +4056,11 @@ message IamEvent
   httpResponse httpResponse = 0
   networkEndpoint srcEndpoint = 0
  }
-// The Identity Activity Metrics object captures usage patterns, authentication activity, credential usage and other metrics for identities across cloud and on-premises environments. Example identities include AWS IAM Users, Roles, Azure AD Principals, GCP Service Accounts, on-premises Active Directory accounts.
+// The Identity Activity Metrics object captures usage patterns, authentication
+// activity, credential usage and other metrics for identities across cloud and
+// on-premises environments. Example identities include AWS IAM Users, Roles,
+// Azure AD Principals, GCP Service Accounts, on-premises Active Directory
+// accounts.
 message IdentityActivityMetrics
  {
   timestampT firstSeenTime = 0
@@ -3731,7 +4069,12 @@ message IdentityActivityMetrics
   timestampT passwordLastUsedTime = 0
  repeated  programmaticCredential programmaticCredentials = 0
  }
-// The Identity Provider object contains detailed information about a provider responsible for creating, maintaining, and managing identity information while offering authentication services to applications. An Identity Provider (IdP) serves as a trusted authority that verifies the identity of users and issues authentication tokens or assertions to enable secure access to applications or services.
+// The Identity Provider object contains detailed information about a provider
+// responsible for creating, maintaining, and managing identity information while
+// offering authentication services to applications. An Identity Provider (IdP)
+// serves as a trusted authority that verifies the identity of users and issues
+// authentication tokens or assertions to enable secure access to applications or
+// services.
 message Idp
  {
  repeated  authFactor authFactors = 0
@@ -3749,7 +4092,8 @@ message Idp
   string uid = 0
   urlT urlString = 0
  }
-// The Image object provides a description of a specific Virtual Machine (VM) or Container image.
+// The Image object provides a description of a specific Virtual Machine (VM) or
+// Container image.
 message Image
  {
  repeated  string labels = 0
@@ -3759,7 +4103,11 @@ message Image
  repeated  keyValueObject tags = 0
   string uid = 0
  }
-// An Incident Finding reports the creation, update, or closure of security incidents as a result of detections and/or analytics. <br><strong>Note: </strong><code>Incident Finding</code> implicitly includes the <code>incident</code> profile and it should be added to the <code>metadata.profiles[]</code> array.
+// An Incident Finding reports the creation, update, or closure of security
+// incidents as a result of detections and/or analytics. <br><strong>Note:
+// </strong><code>Incident Finding</code> implicitly includes the
+// <code>incident</code> profile and it should be added to the
+// <code>metadata.profiles[]</code> array.
 message IncidentFinding
  {
   string categoryName = 0
@@ -3831,7 +4179,9 @@ message IncidentFinding
   string verdict = 0
   verdictIdEnum verdictId = 0
  }
-// Device Inventory Info events report device inventory data that is either logged or proactively collected. For example, when collecting device information from a CMDB or running a network sweep of connected devices.
+// Device Inventory Info events report device inventory data that is either logged
+// or proactively collected. For example, when collecting device information from
+// a CMDB or running a network sweep of connected devices.
 message InventoryInfo
  {
   string activityName = 0
@@ -3886,7 +4236,8 @@ message InventoryInfo
   actor actor = 0
   device device = 0
  }
-// The JA4+ fingerprint object provides detailed fingerprint information about various aspects of network traffic which is both machine and human readable.
+// The JA4+ fingerprint object provides detailed fingerprint information about
+// various aspects of network traffic which is both machine and human readable.
 message Ja4Fingerprint
  {
   string sectionA = 0
@@ -3897,7 +4248,9 @@ message Ja4Fingerprint
   ja4FingerprintTypeIdEnum typeId = 0
   string value = 0
  }
-// The Job object provides information about a scheduled job or task, including its name, command line, and state. It encompasses attributes that describe the properties and status of the scheduled job.
+// The Job object provides information about a scheduled job or task, including
+// its name, command line, and state. It encompasses attributes that describe the
+// properties and status of the scheduled job.
 message Job
  {
   string cmdLine = 0
@@ -3988,7 +4341,9 @@ message KbArticle
   string title = 0
   string uid = 0
  }
-// The Kernel Resource object provides information about a specific kernel resource, including its name and type. It describes essential attributes associated with a resource managed by the kernel of an operating system.
+// The Kernel Resource object provides information about a specific kernel
+// resource, including its name and type. It describes essential attributes
+// associated with a resource managed by the kernel of an operating system.
 message Kernel
  {
   boolean isSystem = 0
@@ -3998,7 +4353,8 @@ message Kernel
   string type = 0
   kernelTypeIdEnum typeId = 0
  }
-// Kernel Activity events report when an process creates, reads, or deletes a kernel resource.
+// Kernel Activity events report when an process creates, reads, or deletes a
+// kernel resource.
 message KernelActivity
  {
   string activityName = 0
@@ -4054,12 +4410,14 @@ message KernelActivity
   activityIdEnum activityId = 0
   kernel kernel = 0
  }
-// The Kernel Extension object describes a kernel driver that has been loaded or unloaded into the operating system (OS) kernel.
+// The Kernel Extension object describes a kernel driver that has been loaded or
+// unloaded into the operating system (OS) kernel.
 message KernelDriver
  {
   file file = 0
  }
-// Kernel Extension events report when a driver/extension is loaded or unloaded into the kernel
+// Kernel Extension events report when a driver/extension is loaded or unloaded
+// into the kernel
 message KernelExtensionActivity
  {
   string activityName = 0
@@ -4115,7 +4473,8 @@ message KernelExtensionActivity
   actor actor = 0
   kernelDriver driver = 0
  }
-// Kernel Object Query events report information about discovered kernel resources.
+// Kernel Object Query events report information about discovered kernel
+// resources.
 message KernelObjectQuery
  {
   string activityName = 0
@@ -4174,7 +4533,9 @@ message KernelObjectQuery
   discoveryResultActivityIdEnum activityId = 0
   kernel kernel = 0
  }
-// The Keyboard Information object contains details and attributes related to a computer or device keyboard. It encompasses information that describes the characteristics, capabilities, and configuration of the keyboard.
+// The Keyboard Information object contains details and attributes related to a
+// computer or device keyboard. It encompasses information that describes the
+// characteristics, capabilities, and configuration of the keyboard.
 message KeyboardInfo
  {
   integer functionKeys = 0
@@ -4190,7 +4551,13 @@ message KeyValueObject
   string value = 0
  repeated  string values = 0
  }
-// The Kill Chain Phase object represents a single phase of a cyber attack, including the initial reconnaissance and planning stages up to the final objective of the attacker. It provides a detailed description of each phase and its associated activities within the broader context of a cyber attack. See <a target='_blank' href='https://www.lockheedmartin.com/en-us/capabilities/cyber/cyber-kill-chain.html'>Cyber Kill Chain®</a>.
+// The Kill Chain Phase object represents a single phase of a cyber attack,
+// including the initial reconnaissance and planning stages up to the final
+// objective of the attacker. It provides a detailed description of each phase and
+// its associated activities within the broader context of a cyber attack. See <a
+// target='_blank'
+// href='https://www.lockheedmartin.com/en-us/capabilities/cyber/cyber-kill-chain.html'>Cyber
+// Kill Chain®</a>.
 message KillChainPhase
  {
   string phase = 0
@@ -4255,7 +4622,8 @@ message LinuxProcess
   integer euid = 0
   group group = 0
  }
-// The load balancer object describes the load balancer entity and contains additional information regarding the distribution of traffic across a network.
+// The load balancer object describes the load balancer entity and contains
+// additional information regarding the distribution of traffic across a network.
 message LoadBalancer
  {
   string classification = 0
@@ -4270,7 +4638,8 @@ message LoadBalancer
   string statusDetail = 0
   string uid = 0
  }
-// The Geo Location object describes a geographical location, usually associated with an IP address.
+// The Geo Location object describes a geographical location, usually associated
+// with an IP address.
 message Location
  {
   string aerialHeight = 0
@@ -4292,7 +4661,10 @@ message Location
   string provider = 0
   string region = 0
  }
-// The Logger object represents the device and product where events are stored with times for receipt and transmission.  This may be at the source device where the event occurred, a remote scanning device, intermediate hops, or the ultimate destination.
+// The Logger object represents the device and product where events are stored
+// with times for receipt and transmission.  This may be at the source device
+// where the event occurred, a remote scanning device, intermediate hops, or the
+// ultimate destination.
 message Logger
  {
   device device = 0
@@ -4311,7 +4683,8 @@ message Logger
   integer untruncatedSize = 0
   string version = 0
  }
-// This object is a used to capture strings which may be truncated by a security product due to their length.
+// This object is a used to capture strings which may be truncated by a security
+// product due to their length.
 message LongString
  {
   boolean isTruncated = 0
@@ -4349,7 +4722,9 @@ message MacosProcess
   integer egid = 0
   integer euid = 0
  }
-// The Malware object describes the classification of known malicious software, which is intentionally designed to cause damage to a computer, server, client, or computer network.
+// The Malware object describes the classification of known malicious software,
+// which is intentionally designed to cause damage to a computer, server, client,
+// or computer network.
 message Malware
  {
  repeated  malwareClassificationIdsEnum classificationIds = 0
@@ -4364,7 +4739,8 @@ message Malware
   severityIdEnum severityId = 0
   string uid = 0
  }
-// The malware scan information object describes characteristics, metadata of a malware scanning job.
+// The malware scan information object describes characteristics, metadata of a
+// malware scanning job.
 message MalwareScanInfo
  {
   string type = 0
@@ -4379,7 +4755,12 @@ message MalwareScanInfo
   timestampT startTime = 0
   integer uniqueMalwareCount = 0
  }
-// The Managed Entity object describes the type and version of an entity, such as a user, device, or policy.  For types in the <code>type_id</code> enum list, an associated attribute should be populated.  If the type of entity is not in the <code>type_id</code> list, information can be put into the <code>data</code> attribute, <code>type_id</code> should be 'Other' and the <code>type</code> attribute should label the entity type.
+// The Managed Entity object describes the type and version of an entity, such as
+// a user, device, or policy.  For types in the <code>type_id</code> enum list, an
+// associated attribute should be populated.  If the type of entity is not in the
+// <code>type_id</code> list, information can be put into the <code>data</code>
+// attribute, <code>type_id</code> should be 'Other' and the <code>type</code>
+// attribute should label the entity type.
 message ManagedEntity
  {
   string data = 0
@@ -4396,7 +4777,9 @@ message ManagedEntity
   user user = 0
   string version = 0
  }
-// Memory Activity events report when a process has memory allocated, read/modified, or other manipulation activities - such as a buffer overflow or turning off data execution protection (DEP).
+// Memory Activity events report when a process has memory allocated,
+// read/modified, or other manipulation activities - such as a buffer overflow or
+// turning off data execution protection (DEP).
 message MemoryActivity
  {
   string activityName = 0
@@ -4456,7 +4839,8 @@ message MemoryActivity
   integer requestedPermissions = 0
   integer size = 0
  }
-// Communication context for AI system interactions including protocols, roles, clients, and session information for MCP and other AI communication systems.
+// Communication context for AI system interactions including protocols, roles,
+// clients, and session information for MCP and other AI communication systems.
 message MessageContext
  {
   string aiRole = 0
@@ -4514,7 +4898,8 @@ message Metric
   string name = 0
   string value = 0
  }
-// The MITRE Mitigation object describes the ATT&CK® or ATLAS™ Mitigation ID and/or name that is associated to an attack.
+// The MITRE Mitigation object describes the ATT&CK® or ATLAS™ Mitigation ID
+// and/or name that is associated to an attack.
 message Mitigation
  {
  repeated  d3fend countermeasures = 0
@@ -4534,7 +4919,8 @@ message Module
   string startAddress = 0
   string type = 0
  }
-// Module Activity events report when an endpoint process acts on a <code>module</code>.
+// Module Activity events report when an endpoint process acts on a
+// <code>module</code>.
 message ModuleActivity
  {
   string activityName = 0
@@ -4730,7 +5116,8 @@ message NetworkActivity
   networkEndpoint srcEndpoint = 0
   url url = 0
  }
-// The Network Connection Information object describes characteristics of an OSI Transport Layer communication, including TCP and UDP.
+// The Network Connection Information object describes characteristics of an OSI
+// Transport Layer communication, including TCP and UDP.
 message NetworkConnectionInfo
  {
   string boundary = 0
@@ -4747,7 +5134,8 @@ message NetworkConnectionInfo
   integer tcpFlags = 0
   string uid = 0
  }
-// Network Connection Query events report information about active network connections.
+// Network Connection Query events report information about active network
+// connections.
 message NetworkConnectionQuery
  {
   string activityName = 0
@@ -4809,7 +5197,8 @@ message NetworkConnectionQuery
   string state = 0
   networkConnectionQueryStateIdEnum stateId = 0
  }
-// The Network Endpoint object describes characteristics of a network endpoint. These can be a source or destination of a network connection.
+// The Network Endpoint object describes characteristics of a network endpoint.
+// These can be a source or destination of a network connection.
 message NetworkEndpoint
  {
  repeated  agent agentList = 0
@@ -4847,7 +5236,8 @@ message NetworkEndpoint
   typeIdEnum typeId = 0
   string uid = 0
  }
-// Network event is a generic event that defines a set of attributes available in the Network category.
+// Network event is a generic event that defines a set of attributes available in
+// the Network category.
 message NetworkEvent
  {
   baseEventActivityIdEnum activityId = 0
@@ -4923,7 +5313,8 @@ message NetworkEvent
   networkTraffic proxyTraffic = 0
   loadBalancer loadBalancer = 0
  }
-// Network File Activity events report file activities traversing the network, including file storage services such as Box, MS OneDrive, or Google Drive.
+// Network File Activity events report file activities traversing the network,
+// including file storage services such as Box, MS OneDrive, or Google Drive.
 message NetworkFileActivity
  {
   string activityName = 0
@@ -5001,7 +5392,8 @@ message NetworkFileActivity
   file file = 0
   networkEndpoint srcEndpoint = 0
  }
-// The Network Interface object describes the type and associated attributes of a physical or virtual network interface.
+// The Network Interface object describes the type and associated attributes of a
+// physical or virtual network interface.
 message NetworkInterface
  {
   hostnameT hostname = 0
@@ -5015,7 +5407,9 @@ message NetworkInterface
   networkInterfaceTypeIdEnum typeId = 0
   string uid = 0
  }
-// The network proxy endpoint object describes a proxy server, which acts as an intermediary between a client requesting a resource and the server providing that resource.
+// The network proxy endpoint object describes a proxy server, which acts as an
+// intermediary between a client requesting a resource and the server providing
+// that resource.
 message NetworkProxy
  {
  repeated  agent agentList = 0
@@ -5053,7 +5447,11 @@ message NetworkProxy
   string type = 0
   endpointTypeIdEnum typeId = 0
  }
-// Network Remediation Activity events report on attempts at remediating computer networks. It follows the MITRE countermeasures defined by the D3FEND™ <a target='_blank' href='https://d3fend.mitre.org/'>Matrix</a>. Techniques and Sub-techniques will include Network, such as Network Isolation or Network Traffic Filtering.
+// Network Remediation Activity events report on attempts at remediating computer
+// networks. It follows the MITRE countermeasures defined by the D3FEND™ <a
+// target='_blank' href='https://d3fend.mitre.org/'>Matrix</a>. Techniques and
+// Sub-techniques will include Network, such as Network Isolation or Network
+// Traffic Filtering.
 message NetworkRemediationActivity
  {
   string activityName = 0
@@ -5172,7 +5570,9 @@ message NetworksQuery
   discoveryResultActivityIdEnum activityId = 0
  repeated  networkInterface networkInterfaces = 0
  }
-// The Network Traffic object describes characteristics of network traffic over a time period. The metrics represent network data transferred between source and destination during an observation window.
+// The Network Traffic object describes characteristics of network traffic over a
+// time period. The metrics represent network data transferred between source and
+// destination during an observation window.
 message NetworkTraffic
  {
   integer bytes = 0
@@ -5198,7 +5598,9 @@ message Node
   string type = 0
   string uid = 0
  }
-// The Network Time Protocol (NTP) Activity events report instances of remote clients synchronizing their clocks with an NTP server, as observed on the network.
+// The Network Time Protocol (NTP) Activity events report instances of remote
+// clients synchronizing their clocks with an NTP server, as observed on the
+// network.
 message NtpActivity
  {
   string activityName = 0
@@ -5280,7 +5682,8 @@ message NtpActivity
   stratumIdEnum stratumId = 0
   string version = 0
  }
-// The observable object is a pivot element that contains related information found in many places in the event.
+// The observable object is a pivot element that contains related information
+// found in many places in the event.
 message Observable
  {
   string eventUid = 0
@@ -5291,14 +5694,17 @@ message Observable
   integer typeUid = 0
   string value = 0
  }
-// A record of an observed value or event that captures the timing and frequency of its occurrence. Used to track when values/events were first detected, last detected, and their total occurrence count.
+// A record of an observed value or event that captures the timing and frequency
+// of its occurrence. Used to track when values/events were first detected, last
+// detected, and their total occurrence count.
 message Observation
  {
   integer count = 0
   timespan timespan = 0
   string value = 0
  }
-// Details about where in the target entity, specified information was discovered. Only the attributes, relevant to the target entity type should be populated.
+// Details about where in the target entity, specified information was discovered.
+// Only the attributes, relevant to the target entity type should be populated.
 message OccurrenceDetails
  {
   string cellName = 0
@@ -5311,7 +5717,10 @@ message OccurrenceDetails
   integer rowNumber = 0
   integer startLine = 0
  }
-// The Organization object describes characteristics of an organization or company and its division if any. Additionally, it also describes cloud and Software-as-a-Service (SaaS) logical hierarchies such as AWS Organizations, Google Cloud Organizations, Oracle Cloud Tenancies, and similar constructs.
+// The Organization object describes characteristics of an organization or company
+// and its division if any. Additionally, it also describes cloud and
+// Software-as-a-Service (SaaS) logical hierarchies such as AWS Organizations,
+// Google Cloud Organizations, Oracle Cloud Tenancies, and similar constructs.
 message Organization
  {
   string name = 0
@@ -5319,7 +5728,8 @@ message Organization
   string ouUid = 0
   string uid = 0
  }
-// The Operating System (OS) object describes characteristics of an OS, such as Linux or Windows.
+// The Operating System (OS) object describes characteristics of an OS, such as
+// Linux or Windows.
 message Os
  {
   string build = 0
@@ -5336,7 +5746,11 @@ message Os
   osTypeIdEnum typeId = 0
   string version = 0
  }
-// The OSINT (Open Source Intelligence) object contains details related to an indicator such as the indicator itself, related indicators, geolocation, registrar information, subdomains, analyst commentary, and other contextual information. This information can be used to further enrich a detection or finding by providing decisioning support to other analysts and engineers.
+// The OSINT (Open Source Intelligence) object contains details related to an
+// indicator such as the indicator itself, related indicators, geolocation,
+// registrar information, subdomains, analyst commentary, and other contextual
+// information. This information can be used to further enrich a detection or
+// finding by providing decisioning support to other analysts and engineers.
 message Osint
  {
  repeated  dnsAnswer answers = 0
@@ -5387,7 +5801,12 @@ message Osint
  repeated  vulnerability vulnerabilities = 0
   whois whois = 0
  }
-// OSINT Inventory Info events report open source intelligence or threat intelligence inventory data that is either logged or proactively collected. For example, when collecting OSINT information from Threat Intelligence Platforms (TIPs) or Extended Detection and Response (XDR) platforms, or collecting data from OSINT or other generic threat intelligence and enrichment feeds such as APIs and datastores.
+// OSINT Inventory Info events report open source intelligence or threat
+// intelligence inventory data that is either logged or proactively collected. For
+// example, when collecting OSINT information from Threat Intelligence Platforms
+// (TIPs) or Extended Detection and Response (XDR) platforms, or collecting data
+// from OSINT or other generic threat intelligence and enrichment feeds such as
+// APIs and datastores.
 message OsintInventoryInfo
  {
   string activityName = 0
@@ -5463,7 +5882,11 @@ message Package
   string vendorName = 0
   string version = 0
  }
-// The Packet object represents a single captured network packet and its associated metadata. It describes where the packet came from, how it is stored or encoded, and how it can be located within a capture file or stream. This object does not interpret protocol content; it only represents the captured packet data and its positioning information.
+// The Packet object represents a single captured network packet and its
+// associated metadata. It describes where the packet came from, how it is stored
+// or encoded, and how it can be located within a capture file or stream. This
+// object does not interpret protocol content; it only represents the captured
+// packet data and its positioning information.
 message Packet
  {
   string encoding = 0
@@ -5484,7 +5907,8 @@ message Parameter
   string postValue = 0
   string preValue = 0
  }
-// Operating System Patch State reports the installation of an OS patch to a device and any associated knowledgebase articles.
+// Operating System Patch State reports the installation of an OS patch to a
+// device and any associated knowledgebase articles.
 message PatchState
  {
   string activityName = 0
@@ -5540,7 +5964,9 @@ message PatchState
   device device = 0
  repeated  kbArticle kbArticleList = 0
  }
-// Peripheral Activity events log a system's interactions with external, connectable, and detachable hardware. These events provide visibility into the external devices connected to and used by a system.
+// Peripheral Activity events log a system's interactions with external,
+// connectable, and detachable hardware. These events provide visibility into the
+// external devices connected to and used by a system.
 message PeripheralActivity
  {
   string activityName = 0
@@ -5596,7 +6022,8 @@ message PeripheralActivity
   activityIdEnum activityId = 0
   peripheralDevice peripheralDevice = 0
  }
-// The peripheral device object describes the properties of external, connectable, and detachable hardware.
+// The peripheral device object describes the properties of external, connectable,
+// and detachable hardware.
 message PeripheralDevice
  {
   string class = 0
@@ -5668,7 +6095,13 @@ message PeripheralDeviceQuery
   discoveryResultActivityIdEnum activityId = 0
   peripheralDevice peripheralDevice = 0
  }
-// The Permission Analysis object describes analysis results of permissions, policies directly associated with an identity (user, role, or service account). This evaluates what permissions an identity has been granted through attached policies, which privileges are actively used versus unused, and identifies potential over-privileged access. Use this for identity-centric security assessments such as privilege audits, dormant permission discovery, and least-privilege compliance analysis.
+// The Permission Analysis object describes analysis results of permissions,
+// policies directly associated with an identity (user, role, or service account).
+// This evaluates what permissions an identity has been granted through attached
+// policies, which privileges are actively used versus unused, and identifies
+// potential over-privileged access. Use this for identity-centric security
+// assessments such as privilege audits, dormant permission discovery, and
+// least-privilege compliance analysis.
 message PermissionAnalysisResult
  {
   integer analyzedPrivilegesCount = 0
@@ -5680,7 +6113,10 @@ message PermissionAnalysisResult
   integer unusedPrivilegesCount = 0
   integer unusedServicesCount = 0
  }
-// The Policy object describes the policies that are applicable. <p>Policy attributes provide traceability to the operational state of the security product at the time that the event was captured, facilitating forensics, troubleshooting, and policy tuning/adjustments.</p>
+// The Policy object describes the policies that are applicable. <p>Policy
+// attributes provide traceability to the operational state of the security
+// product at the time that the event was captured, facilitating forensics,
+// troubleshooting, and policy tuning/adjustments.</p>
 message Policy
  {
   string data = 0
@@ -5692,7 +6128,8 @@ message Policy
   string uid = 0
   string version = 0
  }
-// The Port Information object describes a port and its associated protocol details.
+// The Port Information object describes a port and its associated protocol
+// details.
 message PortInfo
  {
   portT port = 0
@@ -5760,13 +6197,17 @@ message PrefetchQuery
   string name = 0
   integer runCount = 0
  }
-// The Privilege Attack Info object groups privileges by the potential attack they could enable. It maps specific privileges to MITRE ATT&CK techniques, helping identify security risks associated with granted permissions.
+// The Privilege Attack Info object groups privileges by the potential attack they
+// could enable. It maps specific privileges to MITRE ATT&CK techniques, helping
+// identify security risks associated with granted permissions.
 message PrivilegeAttackInfo
  {
   attack attack = 0
  repeated  privilegeInfo privilegeInfoList = 0
  }
-// The Privilege Info object describes information about a specific privilege, action, or permission. It captures the privilege name, type, usage status, and when it was last used.
+// The Privilege Info object describes information about a specific privilege,
+// action, or permission. It captures the privilege name, type, usage status, and
+// when it was last used.
 message PrivilegeInfo
  {
   boolean isUnused = 0
@@ -5804,7 +6245,8 @@ message Process
   container container = 0
   integer namespacePid = 0
  }
-// Process Activity events report when a process launches, injects, opens or terminates another process, successful or otherwise.
+// Process Activity events report when a process launches, injects, opens or
+// terminates another process, successful or otherwise.
 message ProcessActivity
  {
   string activityName = 0
@@ -5940,7 +6382,11 @@ message ProcessQuery
   discoveryResultActivityIdEnum activityId = 0
   process process = 0
  }
-// Process Remediation Activity events report on attempts at remediating processes. It follows the MITRE countermeasures defined by the D3FEND™ <a target='_blank' href='https://d3fend.mitre.org/'>Matrix</a>. Sub-techniques will include Process, such as Process Termination or Kernel-based Process Isolation.
+// Process Remediation Activity events report on attempts at remediating
+// processes. It follows the MITRE countermeasures defined by the D3FEND™ <a
+// target='_blank' href='https://d3fend.mitre.org/'>Matrix</a>. Sub-techniques
+// will include Process, such as Process Termination or Kernel-based Process
+// Isolation.
 message ProcessRemediationActivity
  {
   string activityName = 0
@@ -6015,14 +6461,21 @@ message Product
   dataClassification dataClassification = 0
  repeated  dataClassification dataClassifications = 0
  }
-// The Programmatic Credential object describes service-specific credentials used for direct API access and system integration. These credentials are typically issued by individual services or platforms for accessing their APIs and resources, focusing on credential lifecycle management and usage tracking. Examples include API keys, service account keys, client certificates, and vendor-specific access tokens.
+// The Programmatic Credential object describes service-specific credentials used
+// for direct API access and system integration. These credentials are typically
+// issued by individual services or platforms for accessing their APIs and
+// resources, focusing on credential lifecycle management and usage tracking.
+// Examples include API keys, service account keys, client certificates, and
+// vendor-specific access tokens.
 message ProgrammaticCredential
  {
   timestampT lastUsedTime = 0
   string type = 0
   string uid = 0
  }
-// The specific resulting evidence information that was queried or discovered. When mapping raw telemetry data users should select the appropriate child object that best matches the evidence type as defined by query_type_id.
+// The specific resulting evidence information that was queried or discovered.
+// When mapping raw telemetry data users should select the appropriate child
+// object that best matches the evidence type as defined by query_type_id.
 message QueryEvidence
  {
   networkConnectionInfo connectionInfo = 0
@@ -6045,7 +6498,9 @@ message QueryEvidence
   user user = 0
  repeated  user users = 0
  }
-// The query info object holds information related to data access within a datastore. To access, manipulate, delete, or retrieve data from a datastore, a query must be written using a specific syntax.
+// The query info object holds information related to data access within a
+// datastore. To access, manipulate, delete, or retrieve data from a datastore, a
+// query must be written using a specific syntax.
 message QueryInfo
  {
   integer bytes = 0
@@ -6055,7 +6510,8 @@ message QueryInfo
   timestampT queryTime = 0
   string uid = 0
  }
-// Remote Desktop Protocol (RDP) Activity events report post-authentication remote client connections between clients and servers over the network.
+// Remote Desktop Protocol (RDP) Activity events report post-authentication remote
+// client connections between clients and servers over the network.
 message RdpActivity
  {
   string activityName = 0
@@ -6141,7 +6597,8 @@ message RdpActivity
   response response = 0
   user user = 0
  }
-// Registry Key Activity events report when a process performs an action on a Windows registry key.
+// Registry Key Activity events report when a process performs an action on a
+// Windows registry key.
 message RegistryKeyActivity
  {
   string activityName = 0
@@ -6201,7 +6658,8 @@ message RegistryKeyActivity
   regKey prevRegKey = 0
   regKey regKey = 0
  }
-// Registry Key Query events report information about discovered Windows registry keys.
+// Registry Key Query events report information about discovered Windows registry
+// keys.
 message RegistryKeyQuery
  {
   string activityName = 0
@@ -6260,7 +6718,8 @@ message RegistryKeyQuery
   discoveryResultActivityIdEnum activityId = 0
   regKey regKey = 0
  }
-// Registry Value Activity events reports when a process performs an action on a Windows registry value.
+// Registry Value Activity events reports when a process performs an action on a
+// Windows registry value.
 message RegistryValueActivity
  {
   string activityName = 0
@@ -6317,7 +6776,8 @@ message RegistryValueActivity
   regValue prevRegValue = 0
   regValue regValue = 0
  }
-// Registry Value Query events report information about discovered Windows registry values.
+// Registry Value Query events report information about discovered Windows
+// registry values.
 message RegistryValueQuery
  {
   string activityName = 0
@@ -6400,7 +6860,8 @@ message RegValue
   string type = 0
   regValueTypeIdEnum typeId = 0
  }
-// The Related Event object describes an event or another finding related to a finding. It may or may not be an OCSF event.
+// The Related Event object describes an event or another finding related to a
+// finding. It may or may not be an OCSF event.
 message RelatedEvent
  {
  repeated  attack attacks = 0
@@ -6425,7 +6886,8 @@ message RelatedEvent
   integer typeUid = 0
   string uid = 0
  }
-// The Remediation object describes the recommended remediation steps to address identified issue(s).
+// The Remediation object describes the recommended remediation steps to address
+// identified issue(s).
 message Remediation
  {
  repeated  cisControl cisControls = 0
@@ -6434,7 +6896,9 @@ message Remediation
  repeated  string kbArticles = 0
  repeated  string references = 0
  }
-// Remediation Activity events report on attempts at remediating a compromised device or computer network. It follows the MITRE countermeasures defined by the D3FEND™ <a target='_blank' href='https://d3fend.mitre.org/'>Matrix</a>.
+// Remediation Activity events report on attempts at remediating a compromised
+// device or computer network. It follows the MITRE countermeasures defined by the
+// D3FEND™ <a target='_blank' href='https://d3fend.mitre.org/'>Matrix</a>.
 message RemediationActivity
  {
   string activityName = 0
@@ -6502,7 +6966,8 @@ message Reporter
   organization org = 0
   string uid = 0
  }
-// The Reputation object describes the reputation/risk score of an entity (e.g. device, user, domain).
+// The Reputation object describes the reputation/risk score of an entity (e.g.
+// device, user, domain).
 message Reputation
  {
   float baseScore = 0
@@ -6518,7 +6983,9 @@ message Request
  repeated  string flags = 0
   string uid = 0
  }
-// The Resource object contains attributes that provide information about a particular resource. It serves as a base object, offering attributes that help identify and classify the resource effectively.
+// The Resource object contains attributes that provide information about a
+// particular resource. It serves as a base object, offering attributes that help
+// identify and classify the resource effectively.
 message Resource
  {
   timestampT createdTime = 0
@@ -6533,7 +7000,8 @@ message Resource
   dataClassification dataClassification = 0
  repeated  dataClassification dataClassifications = 0
  }
-// The Resource Details object describes details about resources that were affected by the activity/event.
+// The Resource Details object describes details about resources that were
+// affected by the activity/event.
 message ResourceDetails
  {
   timestampT createdTime = 0
@@ -6577,7 +7045,8 @@ message Response
  repeated  string flags = 0
   string message = 0
  }
-// The RPC Interface represents the remote procedure call interface used in the DCE/RPC session.
+// The RPC Interface represents the remote procedure call interface used in the
+// DCE/RPC session.
 message RpcInterface
  {
   integer ackReason = 0
@@ -6585,7 +7054,8 @@ message RpcInterface
   uuidT uuid = 0
   string version = 0
  }
-// The Rule object describes characteristics of a rule associated with a policy or an event.
+// The Rule object describes characteristics of a rule associated with a policy or
+// an event.
 message Rule
  {
   string category = 0
@@ -6595,13 +7065,15 @@ message Rule
   string uid = 0
   string version = 0
  }
-// The Subject Alternative name (SAN) object describes a SAN secured by a digital certificate
+// The Subject Alternative name (SAN) object describes a SAN secured by a digital
+// certificate
 message San
  {
   string name = 0
   string type = 0
  }
-// The Software Bill of Materials object describes characteristics of a generated SBOM.
+// The Software Bill of Materials object describes characteristics of a generated
+// SBOM.
 message Sbom
  {
   timestampT createdTime = 0
@@ -6621,7 +7093,9 @@ message Scan
   scanTypeIdEnum typeId = 0
   string uid = 0
  }
-// Scan events report the start, completion, and results of a scan job. The scan event includes the number of items that were scanned and the number of detections that were resolved.
+// Scan events report the start, completion, and results of a scan job. The scan
+// event includes the number of items that were scanned and the number of
+// detections that were resolved.
 message ScanActivity
  {
   string activityName = 0
@@ -6689,7 +7163,8 @@ message ScanActivity
   timestampT startTime = 0
   integer total = 0
  }
-// Scheduled Job Activity events report activities related to scheduled jobs or tasks.
+// Scheduled Job Activity events report activities related to scheduled jobs or
+// tasks.
 message ScheduledJobActivity
  {
   string activityName = 0
@@ -6745,7 +7220,13 @@ message ScheduledJobActivity
   actor actor = 0
   job job = 0
  }
-// The System for Cross-domain Identity Management (SCIM) Configuration object provides a structured set of attributes related to SCIM protocols used for identity provisioning and management across cloud-based platforms. It standardizes user and group provisioning details, enabling identity synchronization and lifecycle management with compatible Identity Providers (IdPs) and applications. SCIM is defined in <a target='_blank' href='https://datatracker.ietf.org/doc/html/rfc7643'>RFC-7634</a>
+// The System for Cross-domain Identity Management (SCIM) Configuration object
+// provides a structured set of attributes related to SCIM protocols used for
+// identity provisioning and management across cloud-based platforms. It
+// standardizes user and group provisioning details, enabling identity
+// synchronization and lifecycle management with compatible Identity Providers
+// (IdPs) and applications. SCIM is defined in <a target='_blank'
+// href='https://datatracker.ietf.org/doc/html/rfc7643'>RFC-7634</a>
 message Scim
  {
   string authProtocol = 0
@@ -6769,7 +7250,12 @@ message Scim
   string vendorName = 0
   string version = 0
  }
-// The Script object describes a script or command that can be executed by a shell, script engine, or interpreter. Examples include Bash, JavsScript, PowerShell, Python, VBScript, etc. Note that the term <em>script</em> here denotes not only a script contained within a file but also a script or command typed interactively by a user, supplied on the command line, or provided by some other file-less mechanism.
+// The Script object describes a script or command that can be executed by a
+// shell, script engine, or interpreter. Examples include Bash, JavsScript,
+// PowerShell, Python, VBScript, etc. Note that the term <em>script</em> here
+// denotes not only a script contained within a file but also a script or command
+// typed interactively by a user, supplied on the command line, or provided by
+// some other file-less mechanism.
 message Script
  {
   file file = 0
@@ -6837,7 +7323,8 @@ message ScriptActivity
   activityIdEnum activityId = 0
   script script = 0
  }
-// Security Finding events describe findings, detections, anomalies, alerts and/or actions performed by security products
+// Security Finding events describe findings, detections, anomalies, alerts and/or
+// actions performed by security products
 message SecurityFinding
  {
   string activityName = 0
@@ -6908,13 +7395,15 @@ message SecurityFinding
   securityFindingStateIdEnum stateId = 0
  repeated  vulnerability vulnerabilities = 0
  }
-// The Security State object describes the security related state of a managed entity.
+// The Security State object describes the security related state of a managed
+// entity.
 message SecurityState
  {
   string state = 0
   securityStateStateIdEnum stateId = 0
  }
-// The Service object describes characteristics of a service, <code> e.g. AWS EC2. </code>
+// The Service object describes characteristics of a service, <code> e.g. AWS EC2.
+// </code>
 message Service
  {
  repeated  string labels = 0
@@ -6923,7 +7412,9 @@ message Service
   string uid = 0
   string version = 0
  }
-// The Service Privilege Analysis object describes privilege analysis results for a single cloud service or resource namespace. It provides metrics on privilege usage, counts by type, and mappings to potential attack techniques.
+// The Service Privilege Analysis object describes privilege analysis results for
+// a single cloud service or resource namespace. It provides metrics on privilege
+// usage, counts by type, and mappings to potential attack techniques.
 message ServicePrivilegeAnalysis
  {
   boolean allPrivilegesUnused = 0
@@ -6995,7 +7486,8 @@ message ServiceQuery
   discoveryResultActivityIdEnum activityId = 0
   service service = 0
  }
-// The Session object describes details about an authenticated session. e.g. Session Creation Time, Session Issuer.
+// The Session object describes details about an authenticated session. e.g.
+// Session Creation Time, Session Issuer.
 message Session
  {
   integer count = 0
@@ -7071,7 +7563,8 @@ message SessionQuery
   discoveryResultActivityIdEnum activityId = 0
   session session = 0
  }
-// Server Message Block (SMB) Protocol Activity events report client/server connections sharing resources within the network.
+// Server Message Block (SMB) Protocol Activity events report client/server
+// connections sharing resources within the network.
 message SmbActivity
  {
   string activityName = 0
@@ -7158,7 +7651,8 @@ message SmbActivity
   shareTypeIdEnum shareTypeId = 0
   string treeUid = 0
  }
-// The Software Component object describes characteristics of a software component within a software package.
+// The Software Component object describes characteristics of a software component
+// within a software package.
 message SoftwareComponent
  {
   string author = 0
@@ -7173,7 +7667,9 @@ message SoftwareComponent
   softwareComponentTypeIdEnum typeId = 0
   string version = 0
  }
-// Software Inventory Info events report device software inventory data that is either logged or proactively collected. For example, when collecting device information from a CMDB or running a network sweep of connected devices.
+// Software Inventory Info events report device software inventory data that is
+// either logged or proactively collected. For example, when collecting device
+// information from a CMDB or running a network sweep of connected devices.
 message SoftwareInfo
  {
   string activityName = 0
@@ -7231,7 +7727,13 @@ message SoftwareInfo
   product product = 0
   sbom sbom = 0
  }
-// Represents a single unit of work or operation within a distributed trace. A span typically tracks the execution of a request across a service, capturing important details such as the operation, timestamps, and status. Spans help break down the overall trace into smaller, manageable parts, enabling detailed analysis of the performance and behavior of specific operations within the system. They are crucial for understanding latency, dependencies, and bottlenecks in complex distributed systems.
+// Represents a single unit of work or operation within a distributed trace. A
+// span typically tracks the execution of a request across a service, capturing
+// important details such as the operation, timestamps, and status. Spans help
+// break down the overall trace into smaller, manageable parts, enabling detailed
+// analysis of the performance and behavior of specific operations within the
+// system. They are crucial for understanding latency, dependencies, and
+// bottlenecks in complex distributed systems.
 message Span
  {
   integer duration = 0
@@ -7244,7 +7746,8 @@ message Span
   string statusCode = 0
   string uid = 0
  }
-// SSH Activity events report remote client connections to a server using the Secure Shell (SSH) Protocol.
+// SSH Activity events report remote client connections to a server using the
+// Secure Shell (SSH) Protocol.
 message SshActivity
  {
   string activityName = 0
@@ -7326,7 +7829,8 @@ message SshActivity
   string protocolVer = 0
   hassh serverHassh = 0
  }
-// The Single Sign-On (SSO) object provides a structure for normalizing SSO attributes, configuration, and/or settings from Identity Providers.
+// The Single Sign-On (SSO) object provides a structure for normalizing SSO
+// attributes, configuration, and/or settings from Identity Providers.
 message Sso
  {
   string authProtocol = 0
@@ -7345,7 +7849,8 @@ message Sso
   string uid = 0
   string vendorName = 0
  }
-// The startup item object describes an application component that has associated startup criteria and configurations.
+// The startup item object describes an application component that has associated
+// startup criteria and configurations.
 message StartupItem
  {
   kernelDriver driver = 0
@@ -7361,7 +7866,8 @@ message StartupItem
   string type = 0
   startupItemTypeIdEnum typeId = 0
  }
-// Startup Item Query events report information about discovered items, e.g., application components that are generally configured to run automatically.
+// Startup Item Query events report information about discovered items, e.g.,
+// application components that are generally configured to run automatically.
 message StartupItemQuery
  {
   string activityName = 0
@@ -7420,14 +7926,17 @@ message StartupItemQuery
   discoveryResultActivityIdEnum activityId = 0
   startupItem startupItem = 0
  }
-// The MITRE Sub-technique object describes the ATT&CK® or ATLAS™ Sub-technique ID and/or name associated to an attack.
+// The MITRE Sub-technique object describes the ATT&CK® or ATLAS™ Sub-technique ID
+// and/or name associated to an attack.
 message SubTechnique
  {
   string name = 0
   urlT srcUrl = 0
   string uid = 0
  }
-// The System Activity event is a generic event that defines a set of attributes available in the system activity events. As a generic event, it could be used to log events that are not otherwise defined by the System Activity category.
+// The System Activity event is a generic event that defines a set of attributes
+// available in the system activity events. As a generic event, it could be used
+// to log events that are not otherwise defined by the System Activity category.
 message SystemEvent
  {
   baseEventActivityIdEnum activityId = 0
@@ -7482,7 +7991,9 @@ message SystemEvent
   actor actor = 0
   device device = 0
  }
-// The table object represents a table within a structured relational database or datastore, which contains columns and rows of data that are able to be create, updated, deleted and queried.
+// The table object represents a table within a structured relational database or
+// datastore, which contains columns and rows of data that are able to be create,
+// updated, deleted and queried.
 message Table
  {
   timestampT createdTime = 0
@@ -7493,14 +8004,16 @@ message Table
   integer size = 0
   string uid = 0
  }
-// The MITRE Tactic object describes the ATT&CK® or ATLAS™ Tactic ID and/or name that is associated to an attack.
+// The MITRE Tactic object describes the ATT&CK® or ATLAS™ Tactic ID and/or name
+// that is associated to an attack.
 message Tactic
  {
   string name = 0
   urlT srcUrl = 0
   string uid = 0
  }
-// The MITRE Technique object describes the ATT&CK® or ATLAS™ Technique ID and/or name associated to an attack.
+// The MITRE Technique object describes the ATT&CK® or ATLAS™ Technique ID and/or
+// name associated to an attack.
 message Technique
  {
   string name = 0
@@ -7514,7 +8027,8 @@ message ThreatActor
   string type = 0
   threatActorTypeIdEnum typeId = 0
  }
-// The Ticket object represents ticket in the customer's IT Service Management (ITSM) systems like ServiceNow, Jira, etc.
+// The Ticket object represents ticket in the customer's IT Service Management
+// (ITSM) systems like ServiceNow, Jira, etc.
 message Ticket
  {
   urlT srcUrl = 0
@@ -7526,7 +8040,12 @@ message Ticket
   ticketTypeIdEnum typeId = 0
   string uid = 0
  }
-// The Time Span object represents different time period durations. If a timespan is fractional, i.e. crosses one period, e.g. a week and 3 days, more than one may be populated since each member is of integral type. In that case <code>type_id</code> if present should be set to <code>Other.</code><P>A timespan may also be defined by its time interval boundaries, <code>start_time</code> and <code>end_time</code>.
+// The Time Span object represents different time period durations. If a timespan
+// is fractional, i.e. crosses one period, e.g. a week and 3 days, more than one
+// may be populated since each member is of integral type. In that case
+// <code>type_id</code> if present should be set to <code>Other.</code><P>A
+// timespan may also be defined by its time interval boundaries,
+// <code>start_time</code> and <code>end_time</code>.
 message Timespan
  {
   integer duration = 0
@@ -7542,7 +8061,8 @@ message Timespan
   string type = 0
   timespanTypeIdEnum typeId = 0
  }
-// The Transport Layer Security (TLS) object describes the negotiated TLS protocol used for secure communications over an establish network connection.
+// The Transport Layer Security (TLS) object describes the negotiated TLS protocol
+// used for secure communications over an establish network connection.
 message Tls
  {
   integer alert = 0
@@ -7561,14 +8081,28 @@ message Tls
  repeated  tlsExtension tlsExtensionList = 0
   string version = 0
  }
-// The TLS Extension object describes additional attributes that extend the base Transport Layer Security (TLS) object.
+// The TLS Extension object describes additional attributes that extend the base
+// Transport Layer Security (TLS) object.
 message TlsExtension
  {
   string data = 0
   string type = 0
   tlsExtensionTypeIdEnum typeId = 0
  }
-// The Token object is the base object for representing tokens, API keys, and authentication credentials used across different contexts. This object provides common attributes for all token types, including protocol-specific authentication tokens (Kerberos, OIDC, SAML) and API/client tokens used for service authentication. When to use this object: Use the base <code>token</code> object directly in API activity events to represent API tokens, client tokens, or API keys used to authenticate API requests. Examples include: Okta API tokens, Microsoft Entra ID Application Registration client secrets, Stripe API keys, AWS API keys. When NOT to use this object: Do NOT use the base <code>token</code> object for protocol-specific authentication tokens in authentication events - use <code>authentication_token</code> instead (which extends this object). Do NOT use <code>token</code> for tracking credential lifecycle and usage patterns - use <code>programmatic_credential</code> instead.
+// The Token object is the base object for representing tokens, API keys, and
+// authentication credentials used across different contexts. This object provides
+// common attributes for all token types, including protocol-specific
+// authentication tokens (Kerberos, OIDC, SAML) and API/client tokens used for
+// service authentication. When to use this object: Use the base
+// <code>token</code> object directly in API activity events to represent API
+// tokens, client tokens, or API keys used to authenticate API requests. Examples
+// include: Okta API tokens, Microsoft Entra ID Application Registration client
+// secrets, Stripe API keys, AWS API keys. When NOT to use this object: Do NOT use
+// the base <code>token</code> object for protocol-specific authentication tokens
+// in authentication events - use <code>authentication_token</code> instead (which
+// extends this object). Do NOT use <code>token</code> for tracking credential
+// lifecycle and usage patterns - use <code>programmatic_credential</code>
+// instead.
 message Token
  {
   timestampT createdTime = 0
@@ -7582,7 +8116,13 @@ message Token
   string uid = 0
   string zone = 0
  }
-// The trace object contains information about a distributed trace,  which is crucial for observability. Traces are made up of one or more spans, which are individual units of work in application activity. Traces track the journey of a request as it moves through various services in a system, capturing key details like timing, status, and dependencies at each step. Traces provide insights into system performance, helping to identify latency, bottlenecks, and issues in complex, distributed environments.
+// The trace object contains information about a distributed trace,  which is
+// crucial for observability. Traces are made up of one or more spans, which are
+// individual units of work in application activity. Traces track the journey of a
+// request as it moves through various services in a system, capturing key details
+// like timing, status, and dependencies at each step. Traces provide insights
+// into system performance, helping to identify latency, bottlenecks, and issues
+// in complex, distributed environments.
 message Trace
  {
   integer duration = 0
@@ -7593,7 +8133,10 @@ message Trace
   timestampT startTime = 0
   string uid = 0
  }
-// Describes a characteristic or feature of an entity that was observed. For example, this object can be used to represent specific characteristics derived from events or findings that can be surfaced as distinguishing traits of the entity in question.
+// Describes a characteristic or feature of an entity that was observed. For
+// example, this object can be used to represent specific characteristics derived
+// from events or findings that can be surfaced as distinguishing traits of the
+// entity in question.
 message Trait
  {
   string category = 0
@@ -7612,7 +8155,8 @@ message TransformationInfo
   string uid = 0
   urlT urlString = 0
  }
-// Tunnel Activity events report secure tunnel establishment (such as VPN), teardowns, renewals, and other network tunnel specific actions.
+// Tunnel Activity events report secure tunnel establishment (such as VPN),
+// teardowns, renewals, and other network tunnel specific actions.
 message TunnelActivity
  {
   string activityName = 0
@@ -7694,7 +8238,13 @@ message TunnelActivity
   tunnelActivityTunnelTypeIdEnum tunnelTypeId = 0
   user user = 0
  }
-// The Unmanned Aerial System object describes the characteristics, Position Location Information (PLI), and other metadata of Unmanned Aerial Systems (UAS) and other unmanned and drone systems used in Remote ID. Remote ID is defined in the Standard Specification for Remote ID and Tracking (ASTM Designation: F3411-22a) <a target='_blank' href='https://cdn.standards.iteh.ai/samples/112830/71297057ac42432880a203654f213709/ASTM-F3411-22a.pdf'>ASTM F3411-22a</a>.
+// The Unmanned Aerial System object describes the characteristics, Position
+// Location Information (PLI), and other metadata of Unmanned Aerial Systems (UAS)
+// and other unmanned and drone systems used in Remote ID. Remote ID is defined in
+// the Standard Specification for Remote ID and Tracking (ASTM Designation:
+// F3411-22a) <a target='_blank'
+// href='https://cdn.standards.iteh.ai/samples/112830/71297057ac42432880a203654f213709/ASTM-F3411-22a.pdf'>ASTM
+// F3411-22a</a>.
 message UnmannedAerialSystem
  {
   string model = 0
@@ -7712,7 +8262,8 @@ message UnmannedAerialSystem
   string uidAlt = 0
   uuidT uuid = 0
  }
-// The Unmanned System Operating Area object describes details about a precise area of operations for a UAS flight or mission.
+// The Unmanned System Operating Area object describes details about a precise
+// area of operations for a UAS flight or mission.
 message UnmannedSystemOperatingArea
  {
   string aerialHeight = 0
@@ -7743,7 +8294,8 @@ message UnmannedSystemOperatingArea
   string type = 0
   unmannedSystemOperatingAreaTypeIdEnum typeId = 0
  }
-// The Unmanned Systems event is a generic event that defines a set of attributes available in the Unmanned Systems category.
+// The Unmanned Systems event is a generic event that defines a set of attributes
+// available in the Unmanned Systems category.
 message UnmannedSystemsEvent
  {
   baseEventActivityIdEnum activityId = 0
@@ -7804,7 +8356,8 @@ message UnmannedSystemsEvent
   tls tls = 0
   networkTraffic traffic = 0
  }
-// The Uniform Resource Locator (URL) object describes the characteristics of a URL.
+// The Uniform Resource Locator (URL) object describes the characteristics of a
+// URL.
 message Url
  {
  repeated  string categories = 0
@@ -7819,7 +8372,8 @@ message Url
   string subdomain = 0
   urlT urlString = 0
  }
-// The User object describes the characteristics of a user/person or a security principal.
+// The User object describes the characteristics of a user/person or a security
+// principal.
 message User
  {
   account account = 0
@@ -7906,7 +8460,9 @@ message UserAccess
  repeated  resourceDetails resources = 0
   user user = 0
  }
-// User Inventory Info events report user inventory data that is either logged or proactively collected. For example, when collecting user information from Active Directory entries.
+// User Inventory Info events report user inventory data that is either logged or
+// proactively collected. For example, when collecting user information from
+// Active Directory entries.
 message UserInventory
  {
   string activityName = 0
@@ -7962,7 +8518,9 @@ message UserInventory
   actor actor = 0
   user user = 0
  }
-// User Query events report user data that have been discovered, queried, polled or searched. This event differs from User Inventory as it describes the result of a targeted search by filtering a subset of user attributes.
+// User Query events report user data that have been discovered, queried, polled
+// or searched. This event differs from User Inventory as it describes the result
+// of a targeted search by filtering a subset of user attributes.
 message UserQuery
  {
   string activityName = 0
@@ -8021,13 +8579,21 @@ message UserQuery
   discoveryResultActivityIdEnum activityId = 0
   user user = 0
  }
-// The Vendor Attributes object can be used to represent values of attributes populated by the Vendor/Finding Provider. It can help distinguish between the vendor-provided values and consumer-updated values, of key attributes like <code>severity_id</code>.<br>The original finding producer should not populate this object. It should be populated by consuming systems that support data mutability.
+// The Vendor Attributes object can be used to represent values of attributes
+// populated by the Vendor/Finding Provider. It can help distinguish between the
+// vendor-provided values and consumer-updated values, of key attributes like
+// <code>severity_id</code>.<br>The original finding producer should not populate
+// this object. It should be populated by consuming systems that support data
+// mutability.
 message VendorAttributes
  {
   string severity = 0
   severityIdEnum severityId = 0
  }
-// The vulnerability is an unintended characteristic of a computing component or system configuration that multiplies the risk of an adverse event or a loss occurring either due to accidental exposure, deliberate attack, or conflict with new system components.
+// The vulnerability is an unintended characteristic of a computing component or
+// system configuration that multiplies the risk of an adverse event or a loss
+// occurring either due to accidental exposure, deliberate attack, or conflict
+// with new system components.
 message Vulnerability
  {
   advisory advisory = 0
@@ -8059,7 +8625,15 @@ message Vulnerability
   string title = 0
   string vendorName = 0
  }
-// The Vulnerability Finding event is a notification about weakness in an information system, system security procedures, internal controls, or implementation that could be exploited or triggered by a threat source. Note: if the event producer is a security control, the <code>security_control</code> profile should be applied and its <code>attacks</code> information, if present, should be duplicated into the <code>finding_info</code> object. <br><strong>Note: </strong>If the Finding is an incident, i.e. requires incident workflow, also apply the <code>incident</code> profile  or aggregate this finding into an <code>Incident Finding</code>.
+// The Vulnerability Finding event is a notification about weakness in an
+// information system, system security procedures, internal controls, or
+// implementation that could be exploited or triggered by a threat source. Note:
+// if the event producer is a security control, the <code>security_control</code>
+// profile should be applied and its <code>attacks</code> information, if present,
+// should be duplicated into the <code>finding_info</code> object.
+// <br><strong>Note: </strong>If the Finding is an incident, i.e. requires
+// incident workflow, also apply the <code>incident</code> profile  or aggregate
+// this finding into an <code>Incident Finding</code>.
 message VulnerabilityFinding
  {
   string categoryName = 0
@@ -8133,7 +8707,8 @@ message VulnerabilityFinding
  repeated  resourceDetails resources = 0
  repeated  vulnerability vulnerabilities = 0
  }
-// The Web Resource object describes characteristics of a web resource that was affected by the activity/event.
+// The Web Resource object describes characteristics of a web resource that was
+// affected by the activity/event.
 message WebResource
  {
   timestampT createdTime = 0
@@ -8150,7 +8725,8 @@ message WebResource
   string uid = 0
   urlT urlString = 0
  }
-// Web Resource Access Activity events describe successful/failed attempts to access a web resource over HTTP.
+// Web Resource Access Activity events describe successful/failed attempts to
+// access a web resource over HTTP.
 message WebResourceAccessActivity
  {
   string activityName = 0
@@ -8217,7 +8793,8 @@ message WebResourceAccessActivity
   tls proxyTls = 0
   networkTraffic proxyTraffic = 0
  }
-// Web Resources Activity events describe actions executed on a set of Web Resources.
+// Web Resources Activity events describe actions executed on a set of Web
+// Resources.
 message WebResourcesActivity
  {
   string activityName = 0
@@ -8285,7 +8862,9 @@ message WebResourcesActivity
   tls proxyTls = 0
   networkTraffic proxyTraffic = 0
  }
-// The resources of a WHOIS record for a given domain. This can include domain names, IP address blocks, autonomous system information, and/or contact and registration information for a domain.
+// The resources of a WHOIS record for a given domain. This can include domain
+// names, IP address blocks, autonomous system information, and/or contact and
+// registration information for a domain.
 message Whois
  {
   autonomousSystem autonomousSystem = 0
@@ -8394,7 +8973,8 @@ message WindowsQueryEvidence
   regKey regKey = 0
   regValue regValue = 0
  }
-// Windows Resource Activity events report when a process accesses a Windows managed resource object, successful or otherwise.
+// Windows Resource Activity events report when a process accesses a Windows
+// managed resource object, successful or otherwise.
 message WindowsResourceActivity
  {
   string activityName = 0
@@ -8450,7 +9030,8 @@ message WindowsResourceActivity
   activityIdEnum activityId = 0
   winResource winResource = 0
  }
-// Windows Service Activity events report when a process interacts with the Service Control Manager.
+// Windows Service Activity events report when a process interacts with the
+// Service Control Manager.
 message WindowsServiceActivity
  {
   string activityName = 0
@@ -8506,7 +9087,8 @@ message WindowsServiceActivity
   activityIdEnum activityId = 0
   winService winService = 0
  }
-// The startup item object describes an application component that has associated startup criteria and configurations.
+// The startup item object describes an application component that has associated
+// startup criteria and configurations.
 message WindowsStartupItem
  {
   kernelDriver driver = 0
@@ -8523,7 +9105,8 @@ message WindowsStartupItem
   startupItemTypeIdEnum typeId = 0
   winService winService = 0
  }
-// The Windows resource object describes a resource object managed by Windows, such as mutant or timer.
+// The Windows resource object describes a resource object managed by Windows,
+// such as mutant or timer.
 message WinResource
  {
   timestampT createdTime = 0

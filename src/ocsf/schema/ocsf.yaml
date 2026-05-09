@@ -1,11 +1,23 @@
 id: https://w3id.org/lmodel/ocsf
 name: ocsf
-description: 'Open Cybersecurity Schema Framework (OCSF) — LinkML schema. Generated from upstream OCSF JSON at version 1.9.0-dev. Each top-level concern is one module: types, dictionary (slots), enums, categories, objects, profiles, events, extensions.'
+title: Open Cybersecurity Schema Framework (OCSF) — LinkML Schema
+description: |-
+  Open Cybersecurity Schema Framework (OCSF) — LinkML schema. Generated from
+  upstream OCSF JSON at version 1.9.0-dev. Each top-level concern is one module:
+  types, dictionary (slots), enums, categories, objects, profiles, events,
+  extensions.
 license: Apache-2.0
 source: https://github.com/ocsf/ocsf-schema/tree/main
 version: 1.9.0-dev
+
+see_also:
+  - https://lmodel.github.io/ocsf
+  - https://schema.ocsf.io/
+  - https://github.com/ocsf/ocsf-schema
+
 annotations:
   copyright: © OCSF a Series of LF Projects, LLC
+
 prefixes:
   ocsf: https://w3id.org/lmodel/ocsf/
   linkml: https://w3id.org/linkml/
@@ -26,18 +38,136 @@ prefixes:
   core: https://w3id.org/lmodel/vulnerability-core/
 default_prefix: ocsf
 default_range: string
+
 imports:
-- linkml:types
-- ./types
-- ./enums
-- ./dictionary
-- ./categories
-- ./objects
-- ./profiles
-- ./events
-- ./extensions
-title: Open Cybersecurity Schema Framework (OCSF) — LinkML Schema
-see_also:
-- https://lmodel.github.io/ocsf
-- https://schema.ocsf.io/
-- https://github.com/ocsf/ocsf-schema
+  - linkml:types
+  - ./types
+  - ./enums
+  - ./dictionary
+  - ./categories
+  - ./objects
+  - ./profiles
+  - ./events
+  - ./extensions
+
+subsets:
+
+  application:
+    description: |-
+      Application Activity events report detailed information about the behavior of
+      applications and services.
+
+  discovery:
+    description: |-
+      Discovery events report the existence and state of devices, files,
+      configurations, processes, registry keys, and other objects.
+
+  findings:
+    description: |-
+      Findings events report findings, detections, and possible resolutions of
+      malware, anomalies, or other actions performed by security products.
+
+  iam:
+    description: |-
+      Identity & Access Management (IAM) events relate to the supervision of the
+      system's authentication and access control model. Examples of such events are
+      the success or failure of authentication, granting of authority, password
+      change, entity change, privileged use etc.
+
+  network:
+    description: Network Activity events.
+
+  remediation:
+    description: |-
+      Remediation events report the results of remediation commands targeting files,
+      processes, and other objects.
+
+  system:
+    description: System Activity events.
+
+  unmanned_systems:
+    description: |-
+      Unmanned Systems events report the activity, existence, and/or state of
+      unmanned systems for tracking, mission planning, and other related activities.
+
+  objects:
+    description: Reusable OCSF object definitions (mirrors upstream objects/ directory).
+
+  ai_operation_profile:
+    description: |-
+      AI-specific attributes for model operations, retrieval systems, and agent
+      activities. e.g. model_name, total_token_counts etc.
+
+  cloud_profile:
+    description: |-
+      The attributes that describe information specific to Cloud
+      services/applications.
+
+  container_profile:
+    description: The container context for a process.
+
+  data_classification_profile:
+    description: |-
+      The Data Classification profile adds attributes to specific resource objects,
+      allowing users to describe information about classifiers & data classification
+      results.
+
+  datetime_profile:
+    description: |-
+      This profile defines date/time attributes as defined in RFC-3339. For example
+      1985-04-12T23:20:50.52Z.
+
+  host_profile:
+    description: The attributes that identify host/device attributes.
+
+  incident_profile:
+    description: The attributes that add incident handling semantics to a Finding.
+
+  load_balancer_profile:
+    description: The attributes that describe information specific to load balancers.
+
+  network_proxy_profile:
+    description: The attributes that identify network proxy attributes.
+
+  osint_profile:
+    description: |-
+      The OSINT (Open Source Intelligence) profile contains one or more indicators
+      and associated analysis and details, such as registrar (WHOIS) information and
+      commentary about a hostname, or information about a digital certificate and its
+      usage within a campaign. This information can be used to further enrich a
+      detection or finding by providing decisioning support to other analysts and
+      engineers within the profile itself.
+
+  security_control_profile:
+    description: |-
+      The attributes including disposition that represent the outcome of a security
+      control including but not limited to access control, malware or policy
+      violation, network proxy, intrusion detection, firewall, or data control.  The
+      profile is intended to augment activities or findings with an outcome when a
+      security control has observed or intervened. If the control detected a security
+      violation, and the <code>disposition_id</code> or <code>action_id</code> is an
+      alertable outcome or action, the <code>is_alert</code> flag may be set to
+      <code>true</code>.
+
+  trace_profile:
+    description: |-
+      The Trace Profile extends the OCSF framework to capture and standardize
+      observability events, specifically targeting trace-level data. This profile
+      enables integration and normalization of distributed tracing information,
+      allowing OCSF events to retain essential trace context such as trace IDs, span
+      relationships, and service dependencies.
+
+  linux_extension:
+    description: |-
+      The Linux extension defines Linux specific attributes, profiles, objects, and
+      classes.
+
+  macos_extension:
+    description: |-
+      The macOS extension defines macOS specific attributes, profiles, objects, and
+      classes.
+
+  windows_extension:
+    description: |-
+      The Windows extension defines Windows specific attributes, objects, and
+      classes.

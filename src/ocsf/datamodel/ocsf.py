@@ -1,9 +1,12 @@
 # Auto generated from ocsf.yaml by pythongen.py version: 0.0.1
-# Generation date: 2026-05-08T20:30:50
+# Generation date: 2026-05-09T01:05:33
 # Schema: ocsf
 #
 # id: https://w3id.org/lmodel/ocsf
-# description: Open Cybersecurity Schema Framework (OCSF) — LinkML schema. Generated from upstream OCSF JSON at version 1.9.0-dev. Each top-level concern is one module: types, dictionary (slots), enums, categories, objects, profiles, events, extensions.
+# description: Open Cybersecurity Schema Framework (OCSF) — LinkML schema. Generated from
+#   upstream OCSF JSON at version 1.9.0-dev. Each top-level concern is one module:
+#   types, dictionary (slots), enums, categories, objects, profiles, events,
+#   extensions.
 # license: Apache-2.0
 
 import dataclasses
@@ -173,7 +176,8 @@ class SubnetT(str):
 
 
 class TimestampT(Integer):
-    """ A UNIX timestamp, in milliseconds since the Unix Epoch (1 Jan 1970 00:00:00 UTC). """
+    """ A UNIX timestamp, in milliseconds since the Unix Epoch (1 Jan 1970 00:00:00
+UTC). """
     type_class_uri = XSD["long"]
     type_class_curie = "xsd:long"
     type_name = "TimestampT"
@@ -199,8 +203,8 @@ class OcsfObject(YAMLRoot):
 @dataclass(repr=False)
 class AnalysisTarget(OcsfObject):
     """
-    The analysis target defines the scope of monitored activities, specifying what entity, system or process is
-    analyzed for activity patterns.
+    The analysis target defines the scope of monitored activities, specifying what
+    entity, system or process is analyzed for activity patterns.
     """
     _inherited_slots: ClassVar[list[str]] = []
 
@@ -227,9 +231,11 @@ class AnalysisTarget(OcsfObject):
 @dataclass(repr=False)
 class AnomalyAnalysis(OcsfObject):
     """
-    Describes the analysis of activity patterns and anomalies of target entities to identify potential security
-    threats, performance issues, or other deviations from established baselines. This includes monitoring and
-    analyzing user interactions, API usage, resource utilization, access patterns and other measured indicators.
+    Describes the analysis of activity patterns and anomalies of target entities to
+    identify potential security threats, performance issues, or other deviations
+    from established baselines. This includes monitoring and analyzing user
+    interactions, API usage, resource utilization, access patterns and other
+    measured indicators.
     """
     _inherited_slots: ClassVar[list[str]] = []
 
@@ -258,8 +264,9 @@ class AnomalyAnalysis(OcsfObject):
 
 class Object(OcsfObject):
     """
-    An unordered collection of attributes. It defines a set of attributes available in all objects. It can be also
-    used as a generic object to log objects that are not otherwise defined by the schema.
+    An unordered collection of attributes. It defines a set of attributes available
+    in all objects. It can be also used as a generic object to log objects that are
+    not otherwise defined by the schema.
     """
     _inherited_slots: ClassVar[list[str]] = []
 
@@ -272,7 +279,8 @@ class Object(OcsfObject):
 @dataclass(repr=False)
 class Observable(Object):
     """
-    The observable object is a pivot element that contains related information found in many places in the event.
+    The observable object is a pivot element that contains related information
+    found in many places in the event.
     """
     _inherited_slots: ClassVar[list[str]] = []
 
@@ -292,7 +300,7 @@ class Observable(Object):
     def __post_init__(self, *_: str, **kwargs: Any):
         if self._is_empty(self.type_id):
             self.MissingRequiredField("type_id")
-        if isinstance(self.type_id, str):
+        if not isinstance(self.type_id, ObservableTypeIdEnum):
             self.type_id = ObservableTypeIdEnum(self.type_id)
 
         if self.event_uid is not None and not isinstance(self.event_uid, str):
@@ -319,8 +327,9 @@ class Observable(Object):
 @dataclass(repr=False)
 class Observation(Object):
     """
-    A record of an observed value or event that captures the timing and frequency of its occurrence. Used to track
-    when values/events were first detected, last detected, and their total occurrence count.
+    A record of an observed value or event that captures the timing and frequency
+    of its occurrence. Used to track when values/events were first detected, last
+    detected, and their total occurrence count.
     """
     _inherited_slots: ClassVar[list[str]] = []
 
@@ -351,8 +360,8 @@ class Observation(Object):
 @dataclass(repr=False)
 class OccurrenceDetails(Object):
     """
-    Details about where in the target entity, specified information was discovered. Only the attributes, relevant to
-    the target entity type should be populated.
+    Details about where in the target entity, specified information was discovered.
+    Only the attributes, relevant to the target entity type should be populated.
     """
     _inherited_slots: ClassVar[list[str]] = []
 
@@ -405,7 +414,8 @@ class OccurrenceDetails(Object):
 @dataclass(repr=False)
 class Os(Object):
     """
-    The Operating System (OS) object describes characteristics of an OS, such as Linux or Windows.
+    The Operating System (OS) object describes characteristics of an OS, such as
+    Linux or Windows.
     """
     _inherited_slots: ClassVar[list[str]] = []
 
@@ -436,7 +446,7 @@ class Os(Object):
 
         if self._is_empty(self.type_id):
             self.MissingRequiredField("type_id")
-        if isinstance(self.type_id, str):
+        if not isinstance(self.type_id, OsTypeIdEnum):
             self.type_id = OsTypeIdEnum(self.type_id)
 
         if self.build is not None and not isinstance(self.build, str):
@@ -478,10 +488,11 @@ class Os(Object):
 @dataclass(repr=False)
 class Osint(Object):
     """
-    The OSINT (Open Source Intelligence) object contains details related to an indicator such as the indicator itself,
-    related indicators, geolocation, registrar information, subdomains, analyst commentary, and other contextual
-    information. This information can be used to further enrich a detection or finding by providing decisioning
-    support to other analysts and engineers.
+    The OSINT (Open Source Intelligence) object contains details related to an
+    indicator such as the indicator itself, related indicators, geolocation,
+    registrar information, subdomains, analyst commentary, and other contextual
+    information. This information can be used to further enrich a detection or
+    finding by providing decisioning support to other analysts and engineers.
     """
     _inherited_slots: ClassVar[list[str]] = []
 
@@ -541,7 +552,7 @@ class Osint(Object):
     def __post_init__(self, *_: str, **kwargs: Any):
         if self._is_empty(self.type_id):
             self.MissingRequiredField("type_id")
-        if isinstance(self.type_id, str):
+        if not isinstance(self.type_id, OsintTypeIdEnum):
             self.type_id = OsintTypeIdEnum(self.type_id)
 
         if self._is_empty(self.value):
@@ -570,7 +581,7 @@ class Osint(Object):
         if self.confidence is not None and not isinstance(self.confidence, str):
             self.confidence = str(self.confidence)
 
-        if isinstance(self.confidence_id, str):
+        if self.confidence_id is not None and not isinstance(self.confidence_id, ConfidenceIdEnum):
             self.confidence_id = ConfidenceIdEnum(self.confidence_id)
 
         if self.created_time is not None and not isinstance(self.created_time, TimestampT):
@@ -588,7 +599,7 @@ class Osint(Object):
         if self.detection_pattern_type is not None and not isinstance(self.detection_pattern_type, str):
             self.detection_pattern_type = str(self.detection_pattern_type)
 
-        if isinstance(self.detection_pattern_type_id, str):
+        if self.detection_pattern_type_id is not None and not isinstance(self.detection_pattern_type_id, DetectionPatternTypeIdEnum):
             self.detection_pattern_type_id = DetectionPatternTypeIdEnum(self.detection_pattern_type_id)
 
         if self.email is not None and not isinstance(self.email, Email):
@@ -645,7 +656,7 @@ class Osint(Object):
         if self.severity is not None and not isinstance(self.severity, str):
             self.severity = str(self.severity)
 
-        if isinstance(self.severity_id, str):
+        if self.severity_id is not None and not isinstance(self.severity_id, SeverityIdEnum):
             self.severity_id = SeverityIdEnum(self.severity_id)
 
         self._normalize_inlined_as_list(slot_name="signatures", slot_type=DigitalSignature, key_name="algorithm_id", keyed=False)
@@ -663,7 +674,7 @@ class Osint(Object):
         if self.threat_actor is not None and not isinstance(self.threat_actor, ThreatActor):
             self.threat_actor = ThreatActor(**as_dict(self.threat_actor))
 
-        if isinstance(self.tlp, str):
+        if self.tlp is not None and not isinstance(self.tlp, OsintTlpEnum):
             self.tlp = OsintTlpEnum(self.tlp)
 
         if self.type is not None and not isinstance(self.type, str):
@@ -765,7 +776,7 @@ class Package(Object):
         if self.type is not None and not isinstance(self.type, str):
             self.type = str(self.type)
 
-        if isinstance(self.type_id, str):
+        if self.type_id is not None and not isinstance(self.type_id, PackageTypeIdEnum):
             self.type_id = PackageTypeIdEnum(self.type_id)
 
         if self.uid is not None and not isinstance(self.uid, str):
@@ -780,10 +791,11 @@ class Package(Object):
 @dataclass(repr=False)
 class Packet(Object):
     """
-    The Packet object represents a single captured network packet and its associated metadata. It describes where the
-    packet came from, how it is stored or encoded, and how it can be located within a capture file or stream. This
-    object does not interpret protocol content; it only represents the captured packet data and its positioning
-    information.
+    The Packet object represents a single captured network packet and its
+    associated metadata. It describes where the packet came from, how it is stored
+    or encoded, and how it can be located within a capture file or stream. This
+    object does not interpret protocol content; it only represents the captured
+    packet data and its positioning information.
     """
     _inherited_slots: ClassVar[list[str]] = []
 
@@ -812,7 +824,7 @@ class Packet(Object):
         if self.encoding is not None and not isinstance(self.encoding, str):
             self.encoding = str(self.encoding)
 
-        if isinstance(self.encoding_id, str):
+        if self.encoding_id is not None and not isinstance(self.encoding_id, PacketEncodingIdEnum):
             self.encoding_id = PacketEncodingIdEnum(self.encoding_id)
 
         if self.end_offset is not None and not isinstance(self.end_offset, int):
@@ -821,7 +833,7 @@ class Packet(Object):
         if self.format is not None and not isinstance(self.format, str):
             self.format = str(self.format)
 
-        if isinstance(self.format_id, str):
+        if self.format_id is not None and not isinstance(self.format_id, PacketFormatIdEnum):
             self.format_id = PacketFormatIdEnum(self.format_id)
 
         if self.sequence_number is not None and not isinstance(self.sequence_number, int):
@@ -830,7 +842,7 @@ class Packet(Object):
         if self.source is not None and not isinstance(self.source, str):
             self.source = str(self.source)
 
-        if isinstance(self.source_id, str):
+        if self.source_id is not None and not isinstance(self.source_id, PacketSourceIdEnum):
             self.source_id = PacketSourceIdEnum(self.source_id)
 
         if self.start_offset is not None and not isinstance(self.start_offset, int):
@@ -871,11 +883,13 @@ class Parameter(Object):
 @dataclass(repr=False)
 class PermissionAnalysisResult(Object):
     """
-    The Permission Analysis object describes analysis results of permissions, policies directly associated with an
-    identity (user, role, or service account). This evaluates what permissions an identity has been granted through
-    attached policies, which privileges are actively used versus unused, and identifies potential over-privileged
-    access. Use this for identity-centric security assessments such as privilege audits, dormant permission discovery,
-    and least-privilege compliance analysis.
+    The Permission Analysis object describes analysis results of permissions,
+    policies directly associated with an identity (user, role, or service account).
+    This evaluates what permissions an identity has been granted through attached
+    policies, which privileges are actively used versus unused, and identifies
+    potential over-privileged access. Use this for identity-centric security
+    assessments such as privilege audits, dormant permission discovery, and
+    least-privilege compliance analysis.
     """
     _inherited_slots: ClassVar[list[str]] = []
 
@@ -923,7 +937,8 @@ class PermissionAnalysisResult(Object):
 @dataclass(repr=False)
 class PortInfo(Object):
     """
-    The Port Information object describes a port and its associated protocol details.
+    The Port Information object describes a port and its associated protocol
+    details.
     """
     _inherited_slots: ClassVar[list[str]] = []
 
@@ -954,8 +969,9 @@ class PortInfo(Object):
 @dataclass(repr=False)
 class PrivilegeAttackInfo(Object):
     """
-    The Privilege Attack Info object groups privileges by the potential attack they could enable. It maps specific
-    privileges to MITRE ATT&CK techniques, helping identify security risks associated with granted permissions.
+    The Privilege Attack Info object groups privileges by the potential attack they
+    could enable. It maps specific privileges to MITRE ATT&CK techniques, helping
+    identify security risks associated with granted permissions.
     """
     _inherited_slots: ClassVar[list[str]] = []
 
@@ -983,8 +999,9 @@ class PrivilegeAttackInfo(Object):
 @dataclass(repr=False)
 class PrivilegeInfo(Object):
     """
-    The Privilege Info object describes information about a specific privilege, action, or permission. It captures the
-    privilege name, type, usage status, and when it was last used.
+    The Privilege Info object describes information about a specific privilege,
+    action, or permission. It captures the privilege name, type, usage status, and
+    when it was last used.
     """
     _inherited_slots: ClassVar[list[str]] = []
 
@@ -1014,7 +1031,7 @@ class PrivilegeInfo(Object):
         if self.type is not None and not isinstance(self.type, str):
             self.type = str(self.type)
 
-        if isinstance(self.type_id, str):
+        if self.type_id is not None and not isinstance(self.type_id, PrivilegeInfoTypeIdEnum):
             self.type_id = PrivilegeInfoTypeIdEnum(self.type_id)
 
         super().__post_init__(**kwargs)
@@ -1023,10 +1040,12 @@ class PrivilegeInfo(Object):
 @dataclass(repr=False)
 class ProgrammaticCredential(Object):
     """
-    The Programmatic Credential object describes service-specific credentials used for direct API access and system
-    integration. These credentials are typically issued by individual services or platforms for accessing their APIs
-    and resources, focusing on credential lifecycle management and usage tracking. Examples include API keys, service
-    account keys, client certificates, and vendor-specific access tokens.
+    The Programmatic Credential object describes service-specific credentials used
+    for direct API access and system integration. These credentials are typically
+    issued by individual services or platforms for accessing their APIs and
+    resources, focusing on credential lifecycle management and usage tracking.
+    Examples include API keys, service account keys, client certificates, and
+    vendor-specific access tokens.
     """
     _inherited_slots: ClassVar[list[str]] = []
 
@@ -1057,8 +1076,9 @@ class ProgrammaticCredential(Object):
 @dataclass(repr=False)
 class QueryEvidence(OcsfObject):
     """
-    The specific resulting evidence information that was queried or discovered. When mapping raw telemetry data users
-    should select the appropriate child object that best matches the evidence type as defined by query_type_id.
+    The specific resulting evidence information that was queried or discovered.
+    When mapping raw telemetry data users should select the appropriate child
+    object that best matches the evidence type as defined by query_type_id.
     """
     _inherited_slots: ClassVar[list[str]] = []
 
@@ -1090,7 +1110,7 @@ class QueryEvidence(OcsfObject):
     def __post_init__(self, *_: str, **kwargs: Any):
         if self._is_empty(self.query_type_id):
             self.MissingRequiredField("query_type_id")
-        if isinstance(self.query_type_id, str):
+        if not isinstance(self.query_type_id, QueryEvidenceQueryTypeIdEnum):
             self.query_type_id = QueryEvidenceQueryTypeIdEnum(self.query_type_id)
 
         if self.connection_info is not None and not isinstance(self.connection_info, NetworkConnectionInfo):
@@ -1139,7 +1159,7 @@ class QueryEvidence(OcsfObject):
         if self.state is not None and not isinstance(self.state, str):
             self.state = str(self.state)
 
-        if isinstance(self.tcp_state_id, str):
+        if self.tcp_state_id is not None and not isinstance(self.tcp_state_id, TcpStateIdEnum):
             self.tcp_state_id = TcpStateIdEnum(self.tcp_state_id)
 
         if self.user is not None and not isinstance(self.user, User):
@@ -1155,8 +1175,8 @@ class QueryEvidence(OcsfObject):
 @dataclass(repr=False)
 class RelatedEvent(Object):
     """
-    The Related Event object describes an event or another finding related to a finding. It may or may not be an OCSF
-    event.
+    The Related Event object describes an event or another finding related to a
+    finding. It may or may not be an OCSF event.
     """
     _inherited_slots: ClassVar[list[str]] = []
 
@@ -1228,7 +1248,7 @@ class RelatedEvent(Object):
         if self.severity is not None and not isinstance(self.severity, str):
             self.severity = str(self.severity)
 
-        if isinstance(self.severity_id, str):
+        if self.severity_id is not None and not isinstance(self.severity_id, SeverityIdEnum):
             self.severity_id = SeverityIdEnum(self.severity_id)
 
         if self.status is not None and not isinstance(self.status, str):
@@ -1258,7 +1278,8 @@ class RelatedEvent(Object):
 @dataclass(repr=False)
 class Remediation(Object):
     """
-    The Remediation object describes the recommended remediation steps to address identified issue(s).
+    The Remediation object describes the recommended remediation steps to address
+    identified issue(s).
     """
     _inherited_slots: ClassVar[list[str]] = []
 
@@ -1299,7 +1320,8 @@ class Remediation(Object):
 @dataclass(repr=False)
 class Reputation(Object):
     """
-    The Reputation object describes the reputation/risk score of an entity (e.g. device, user, domain).
+    The Reputation object describes the reputation/risk score of an entity (e.g.
+    device, user, domain).
     """
     _inherited_slots: ClassVar[list[str]] = []
 
@@ -1321,7 +1343,7 @@ class Reputation(Object):
 
         if self._is_empty(self.score_id):
             self.MissingRequiredField("score_id")
-        if isinstance(self.score_id, str):
+        if not isinstance(self.score_id, ScoreIdEnum):
             self.score_id = ScoreIdEnum(self.score_id)
 
         if self.provider is not None and not isinstance(self.provider, str):
@@ -1420,7 +1442,8 @@ class Response(Object):
 @dataclass(repr=False)
 class RpcInterface(Object):
     """
-    The RPC Interface represents the remote procedure call interface used in the DCE/RPC session.
+    The RPC Interface represents the remote procedure call interface used in the
+    DCE/RPC session.
     """
     _inherited_slots: ClassVar[list[str]] = []
 
@@ -1457,7 +1480,8 @@ class RpcInterface(Object):
 @dataclass(repr=False)
 class San(Object):
     """
-    The Subject Alternative name (SAN) object describes a SAN secured by a digital certificate
+    The Subject Alternative name (SAN) object describes a SAN secured by a digital
+    certificate
     """
     _inherited_slots: ClassVar[list[str]] = []
 
@@ -1486,7 +1510,8 @@ class San(Object):
 @dataclass(repr=False)
 class Sbom(Object):
     """
-    The Software Bill of Materials object describes characteristics of a generated SBOM.
+    The Software Bill of Materials object describes characteristics of a generated
+    SBOM.
     """
     _inherited_slots: ClassVar[list[str]] = []
 
@@ -1523,7 +1548,7 @@ class Sbom(Object):
         if self.type is not None and not isinstance(self.type, str):
             self.type = str(self.type)
 
-        if isinstance(self.type_id, str):
+        if self.type_id is not None and not isinstance(self.type_id, SbomTypeIdEnum):
             self.type_id = SbomTypeIdEnum(self.type_id)
 
         if self.uid is not None and not isinstance(self.uid, str):
@@ -1538,10 +1563,12 @@ class Sbom(Object):
 @dataclass(repr=False)
 class Scim(Object):
     """
-    The System for Cross-domain Identity Management (SCIM) Configuration object provides a structured set of
-    attributes related to SCIM protocols used for identity provisioning and management across cloud-based platforms.
-    It standardizes user and group provisioning details, enabling identity synchronization and lifecycle management
-    with compatible Identity Providers (IdPs) and applications. SCIM is defined in <a target='_blank'
+    The System for Cross-domain Identity Management (SCIM) Configuration object
+    provides a structured set of attributes related to SCIM protocols used for
+    identity provisioning and management across cloud-based platforms. It
+    standardizes user and group provisioning details, enabling identity
+    synchronization and lifecycle management with compatible Identity Providers
+    (IdPs) and applications. SCIM is defined in <a target='_blank'
     href='https://datatracker.ietf.org/doc/html/rfc7643'>RFC-7634</a>
     """
     _inherited_slots: ClassVar[list[str]] = []
@@ -1576,7 +1603,7 @@ class Scim(Object):
         if self.auth_protocol is not None and not isinstance(self.auth_protocol, str):
             self.auth_protocol = str(self.auth_protocol)
 
-        if isinstance(self.auth_protocol_id, str):
+        if self.auth_protocol_id is not None and not isinstance(self.auth_protocol_id, AuthProtocolIdEnum):
             self.auth_protocol_id = AuthProtocolIdEnum(self.auth_protocol_id)
 
         if self.created_time is not None and not isinstance(self.created_time, TimestampT):
@@ -1615,7 +1642,7 @@ class Scim(Object):
         if self.state is not None and not isinstance(self.state, str):
             self.state = str(self.state)
 
-        if isinstance(self.state_id, str):
+        if self.state_id is not None and not isinstance(self.state_id, ScimStateIdEnum):
             self.state_id = ScimStateIdEnum(self.state_id)
 
         if self.uid is not None and not isinstance(self.uid, str):
@@ -1639,10 +1666,12 @@ class Scim(Object):
 @dataclass(repr=False)
 class Script(Object):
     """
-    The Script object describes a script or command that can be executed by a shell, script engine, or interpreter.
-    Examples include Bash, JavsScript, PowerShell, Python, VBScript, etc. Note that the term <em>script</em> here
-    denotes not only a script contained within a file but also a script or command typed interactively by a user,
-    supplied on the command line, or provided by some other file-less mechanism.
+    The Script object describes a script or command that can be executed by a
+    shell, script engine, or interpreter. Examples include Bash, JavsScript,
+    PowerShell, Python, VBScript, etc. Note that the term <em>script</em> here
+    denotes not only a script contained within a file but also a script or command
+    typed interactively by a user, supplied on the command line, or provided by
+    some other file-less mechanism.
     """
     _inherited_slots: ClassVar[list[str]] = []
 
@@ -1668,7 +1697,7 @@ class Script(Object):
 
         if self._is_empty(self.type_id):
             self.MissingRequiredField("type_id")
-        if isinstance(self.type_id, str):
+        if not isinstance(self.type_id, ScriptTypeIdEnum):
             self.type_id = ScriptTypeIdEnum(self.type_id)
 
         if self.file is not None and not isinstance(self.file, File):
@@ -1694,7 +1723,8 @@ class Script(Object):
 @dataclass(repr=False)
 class SecurityState(Object):
     """
-    The Security State object describes the security related state of a managed entity.
+    The Security State object describes the security related state of a managed
+    entity.
     """
     _inherited_slots: ClassVar[list[str]] = []
 
@@ -1710,7 +1740,7 @@ class SecurityState(Object):
         if self.state is not None and not isinstance(self.state, str):
             self.state = str(self.state)
 
-        if isinstance(self.state_id, str):
+        if self.state_id is not None and not isinstance(self.state_id, SecurityStateStateIdEnum):
             self.state_id = SecurityStateStateIdEnum(self.state_id)
 
         super().__post_init__(**kwargs)
@@ -1719,8 +1749,9 @@ class SecurityState(Object):
 @dataclass(repr=False)
 class ServicePrivilegeAnalysis(Object):
     """
-    The Service Privilege Analysis object describes privilege analysis results for a single cloud service or resource
-    namespace. It provides metrics on privilege usage, counts by type, and mappings to potential attack techniques.
+    The Service Privilege Analysis object describes privilege analysis results for
+    a single cloud service or resource namespace. It provides metrics on privilege
+    usage, counts by type, and mappings to potential attack techniques.
     """
     _inherited_slots: ClassVar[list[str]] = []
 
@@ -1776,7 +1807,8 @@ class ServicePrivilegeAnalysis(Object):
 @dataclass(repr=False)
 class Session(Object):
     """
-    The Session object describes details about an authenticated session. e.g. Session Creation Time, Session Issuer.
+    The Session object describes details about an authenticated session. e.g.
+    Session Creation Time, Session Issuer.
     """
     _inherited_slots: ClassVar[list[str]] = []
 
@@ -1845,7 +1877,8 @@ class Session(Object):
 @dataclass(repr=False)
 class SoftwareComponent(Object):
     """
-    The Software Component object describes characteristics of a software component within a software package.
+    The Software Component object describes characteristics of a software component
+    within a software package.
     """
     _inherited_slots: ClassVar[list[str]] = []
 
@@ -1895,13 +1928,13 @@ class SoftwareComponent(Object):
         if self.relationship is not None and not isinstance(self.relationship, str):
             self.relationship = str(self.relationship)
 
-        if isinstance(self.relationship_id, str):
+        if self.relationship_id is not None and not isinstance(self.relationship_id, RelationshipIdEnum):
             self.relationship_id = RelationshipIdEnum(self.relationship_id)
 
         if self.type is not None and not isinstance(self.type, str):
             self.type = str(self.type)
 
-        if isinstance(self.type_id, str):
+        if self.type_id is not None and not isinstance(self.type_id, SoftwareComponentTypeIdEnum):
             self.type_id = SoftwareComponentTypeIdEnum(self.type_id)
 
         super().__post_init__(**kwargs)
@@ -1910,10 +1943,12 @@ class SoftwareComponent(Object):
 @dataclass(repr=False)
 class Span(Object):
     """
-    Represents a single unit of work or operation within a distributed trace. A span typically tracks the execution of
-    a request across a service, capturing important details such as the operation, timestamps, and status. Spans help
-    break down the overall trace into smaller, manageable parts, enabling detailed analysis of the performance and
-    behavior of specific operations within the system. They are crucial for understanding latency, dependencies, and
+    Represents a single unit of work or operation within a distributed trace. A
+    span typically tracks the execution of a request across a service, capturing
+    important details such as the operation, timestamps, and status. Spans help
+    break down the overall trace into smaller, manageable parts, enabling detailed
+    analysis of the performance and behavior of specific operations within the
+    system. They are crucial for understanding latency, dependencies, and
     bottlenecks in complex distributed systems.
     """
     _inherited_slots: ClassVar[list[str]] = []
@@ -1973,8 +2008,8 @@ class Span(Object):
 @dataclass(repr=False)
 class Sso(Object):
     """
-    The Single Sign-On (SSO) object provides a structure for normalizing SSO attributes, configuration, and/or
-    settings from Identity Providers.
+    The Single Sign-On (SSO) object provides a structure for normalizing SSO
+    attributes, configuration, and/or settings from Identity Providers.
     """
     _inherited_slots: ClassVar[list[str]] = []
 
@@ -2003,7 +2038,7 @@ class Sso(Object):
         if self.auth_protocol is not None and not isinstance(self.auth_protocol, str):
             self.auth_protocol = str(self.auth_protocol)
 
-        if isinstance(self.auth_protocol_id, str):
+        if self.auth_protocol_id is not None and not isinstance(self.auth_protocol_id, AuthProtocolIdEnum):
             self.auth_protocol_id = AuthProtocolIdEnum(self.auth_protocol_id)
 
         if self.certificate is not None and not isinstance(self.certificate, Certificate):
@@ -2052,7 +2087,8 @@ class Sso(Object):
 @dataclass(repr=False)
 class StartupItem(OcsfObject):
     """
-    The startup item object describes an application component that has associated startup criteria and configurations.
+    The startup item object describes an application component that has associated
+    startup criteria and configurations.
     """
     _inherited_slots: ClassVar[list[str]] = []
 
@@ -2082,7 +2118,7 @@ class StartupItem(OcsfObject):
 
         if self._is_empty(self.start_type_id):
             self.MissingRequiredField("start_type_id")
-        if isinstance(self.start_type_id, str):
+        if not isinstance(self.start_type_id, StartTypeIdEnum):
             self.start_type_id = StartTypeIdEnum(self.start_type_id)
 
         if self.driver is not None and not isinstance(self.driver, KernelDriver):
@@ -2105,7 +2141,7 @@ class StartupItem(OcsfObject):
         if self.run_state is not None and not isinstance(self.run_state, str):
             self.run_state = str(self.run_state)
 
-        if isinstance(self.run_state_id, str):
+        if self.run_state_id is not None and not isinstance(self.run_state_id, StartupItemRunStateIdEnum):
             self.run_state_id = StartupItemRunStateIdEnum(self.run_state_id)
 
         if self.start_type is not None and not isinstance(self.start_type, str):
@@ -2114,7 +2150,7 @@ class StartupItem(OcsfObject):
         if self.type is not None and not isinstance(self.type, str):
             self.type = str(self.type)
 
-        if isinstance(self.type_id, str):
+        if self.type_id is not None and not isinstance(self.type_id, StartupItemTypeIdEnum):
             self.type_id = StartupItemTypeIdEnum(self.type_id)
 
         super().__post_init__(**kwargs)
@@ -2145,7 +2181,7 @@ class ThreatActor(Object):
         if self.type is not None and not isinstance(self.type, str):
             self.type = str(self.type)
 
-        if isinstance(self.type_id, str):
+        if self.type_id is not None and not isinstance(self.type_id, ThreatActorTypeIdEnum):
             self.type_id = ThreatActorTypeIdEnum(self.type_id)
 
         super().__post_init__(**kwargs)
@@ -2154,8 +2190,8 @@ class ThreatActor(Object):
 @dataclass(repr=False)
 class Ticket(Object):
     """
-    The Ticket object represents ticket in the customer's IT Service Management (ITSM) systems like ServiceNow, Jira,
-    etc.
+    The Ticket object represents ticket in the customer's IT Service Management
+    (ITSM) systems like ServiceNow, Jira, etc.
     """
     _inherited_slots: ClassVar[list[str]] = []
 
@@ -2184,7 +2220,7 @@ class Ticket(Object):
             self.status_details = [self.status_details] if self.status_details is not None else []
         self.status_details = [v if isinstance(v, str) else str(v) for v in self.status_details]
 
-        if isinstance(self.status_id, str):
+        if self.status_id is not None and not isinstance(self.status_id, TicketStatusIdEnum):
             self.status_id = TicketStatusIdEnum(self.status_id)
 
         if self.title is not None and not isinstance(self.title, str):
@@ -2193,7 +2229,7 @@ class Ticket(Object):
         if self.type is not None and not isinstance(self.type, str):
             self.type = str(self.type)
 
-        if isinstance(self.type_id, str):
+        if self.type_id is not None and not isinstance(self.type_id, TicketTypeIdEnum):
             self.type_id = TicketTypeIdEnum(self.type_id)
 
         if self.uid is not None and not isinstance(self.uid, str):
@@ -2205,10 +2241,12 @@ class Ticket(Object):
 @dataclass(repr=False)
 class Timespan(Object):
     """
-    The Time Span object represents different time period durations. If a timespan is fractional, i.e. crosses one
-    period, e.g. a week and 3 days, more than one may be populated since each member is of integral type. In that case
-    <code>type_id</code> if present should be set to <code>Other.</code><P>A timespan may also be defined by its time
-    interval boundaries, <code>start_time</code> and <code>end_time</code>.
+    The Time Span object represents different time period durations. If a timespan
+    is fractional, i.e. crosses one period, e.g. a week and 3 days, more than one
+    may be populated since each member is of integral type. In that case
+    <code>type_id</code> if present should be set to <code>Other.</code><P>A
+    timespan may also be defined by its time interval boundaries,
+    <code>start_time</code> and <code>end_time</code>.
     """
     _inherited_slots: ClassVar[list[str]] = []
 
@@ -2264,7 +2302,7 @@ class Timespan(Object):
         if self.type is not None and not isinstance(self.type, str):
             self.type = str(self.type)
 
-        if isinstance(self.type_id, str):
+        if self.type_id is not None and not isinstance(self.type_id, TimespanTypeIdEnum):
             self.type_id = TimespanTypeIdEnum(self.type_id)
 
         super().__post_init__(**kwargs)
@@ -2273,8 +2311,8 @@ class Timespan(Object):
 @dataclass(repr=False)
 class Tls(Object):
     """
-    The Transport Layer Security (TLS) object describes the negotiated TLS protocol used for secure communications
-    over an establish network connection.
+    The Transport Layer Security (TLS) object describes the negotiated TLS protocol
+    used for secure communications over an establish network connection.
     """
     _inherited_slots: ClassVar[list[str]] = []
 
@@ -2353,8 +2391,8 @@ class Tls(Object):
 @dataclass(repr=False)
 class TlsExtension(Object):
     """
-    The TLS Extension object describes additional attributes that extend the base Transport Layer Security (TLS)
-    object.
+    The TLS Extension object describes additional attributes that extend the base
+    Transport Layer Security (TLS) object.
     """
     _inherited_slots: ClassVar[list[str]] = []
 
@@ -2370,7 +2408,7 @@ class TlsExtension(Object):
     def __post_init__(self, *_: str, **kwargs: Any):
         if self._is_empty(self.type_id):
             self.MissingRequiredField("type_id")
-        if isinstance(self.type_id, str):
+        if not isinstance(self.type_id, TlsExtensionTypeIdEnum):
             self.type_id = TlsExtensionTypeIdEnum(self.type_id)
 
         if self.data is not None and not isinstance(self.data, str):
@@ -2385,15 +2423,20 @@ class TlsExtension(Object):
 @dataclass(repr=False)
 class Token(Object):
     """
-    The Token object is the base object for representing tokens, API keys, and authentication credentials used across
-    different contexts. This object provides common attributes for all token types, including protocol-specific
-    authentication tokens (Kerberos, OIDC, SAML) and API/client tokens used for service authentication. When to use
-    this object: Use the base <code>token</code> object directly in API activity events to represent API tokens,
-    client tokens, or API keys used to authenticate API requests. Examples include: Okta API tokens, Microsoft Entra
-    ID Application Registration client secrets, Stripe API keys, AWS API keys. When NOT to use this object: Do NOT use
-    the base <code>token</code> object for protocol-specific authentication tokens in authentication events - use
-    <code>authentication_token</code> instead (which extends this object). Do NOT use <code>token</code> for tracking
-    credential lifecycle and usage patterns - use <code>programmatic_credential</code> instead.
+    The Token object is the base object for representing tokens, API keys, and
+    authentication credentials used across different contexts. This object provides
+    common attributes for all token types, including protocol-specific
+    authentication tokens (Kerberos, OIDC, SAML) and API/client tokens used for
+    service authentication. When to use this object: Use the base
+    <code>token</code> object directly in API activity events to represent API
+    tokens, client tokens, or API keys used to authenticate API requests. Examples
+    include: Okta API tokens, Microsoft Entra ID Application Registration client
+    secrets, Stripe API keys, AWS API keys. When NOT to use this object: Do NOT use
+    the base <code>token</code> object for protocol-specific authentication tokens
+    in authentication events - use <code>authentication_token</code> instead (which
+    extends this object). Do NOT use <code>token</code> for tracking credential
+    lifecycle and usage patterns - use <code>programmatic_credential</code>
+    instead.
     """
     _inherited_slots: ClassVar[list[str]] = []
 
@@ -2435,7 +2478,7 @@ class Token(Object):
         if self.type is not None and not isinstance(self.type, str):
             self.type = str(self.type)
 
-        if isinstance(self.type_id, str):
+        if self.type_id is not None and not isinstance(self.type_id, TokenTypeIdEnum):
             self.type_id = TokenTypeIdEnum(self.type_id)
 
         if self.uid is not None and not isinstance(self.uid, str):
@@ -2450,11 +2493,13 @@ class Token(Object):
 @dataclass(repr=False)
 class Trace(Object):
     """
-    The trace object contains information about a distributed trace, which is crucial for observability. Traces are
-    made up of one or more spans, which are individual units of work in application activity. Traces track the journey
-    of a request as it moves through various services in a system, capturing key details like timing, status, and
-    dependencies at each step. Traces provide insights into system performance, helping to identify latency,
-    bottlenecks, and issues in complex, distributed environments.
+    The trace object contains information about a distributed trace,  which is
+    crucial for observability. Traces are made up of one or more spans, which are
+    individual units of work in application activity. Traces track the journey of a
+    request as it moves through various services in a system, capturing key details
+    like timing, status, and dependencies at each step. Traces provide insights
+    into system performance, helping to identify latency, bottlenecks, and issues
+    in complex, distributed environments.
     """
     _inherited_slots: ClassVar[list[str]] = []
 
@@ -2502,7 +2547,8 @@ class Trace(Object):
 @dataclass(repr=False)
 class Url(Object):
     """
-    The Uniform Resource Locator (URL) object describes the characteristics of a URL.
+    The Uniform Resource Locator (URL) object describes the characteristics of a
+    URL.
     """
     _inherited_slots: ClassVar[list[str]] = []
 
@@ -2565,10 +2611,12 @@ class Url(Object):
 @dataclass(repr=False)
 class VendorAttributes(Object):
     """
-    The Vendor Attributes object can be used to represent values of attributes populated by the Vendor/Finding
-    Provider. It can help distinguish between the vendor-provided values and consumer-updated values, of key
-    attributes like <code>severity_id</code>.<br>The original finding producer should not populate this object. It
-    should be populated by consuming systems that support data mutability.
+    The Vendor Attributes object can be used to represent values of attributes
+    populated by the Vendor/Finding Provider. It can help distinguish between the
+    vendor-provided values and consumer-updated values, of key attributes like
+    <code>severity_id</code>.<br>The original finding producer should not populate
+    this object. It should be populated by consuming systems that support data
+    mutability.
     """
     _inherited_slots: ClassVar[list[str]] = []
 
@@ -2584,7 +2632,7 @@ class VendorAttributes(Object):
         if self.severity is not None and not isinstance(self.severity, str):
             self.severity = str(self.severity)
 
-        if isinstance(self.severity_id, str):
+        if self.severity_id is not None and not isinstance(self.severity_id, SeverityIdEnum):
             self.severity_id = SeverityIdEnum(self.severity_id)
 
         super().__post_init__(**kwargs)
@@ -2593,8 +2641,9 @@ class VendorAttributes(Object):
 @dataclass(repr=False)
 class Vulnerability(Object):
     """
-    The vulnerability is an unintended characteristic of a computing component or system configuration that multiplies
-    the risk of an adverse event or a loss occurring either due to accidental exposure, deliberate attack, or conflict
+    The vulnerability is an unintended characteristic of a computing component or
+    system configuration that multiplies the risk of an adverse event or a loss
+    occurring either due to accidental exposure, deliberate attack, or conflict
     with new system components.
     """
     _inherited_slots: ClassVar[list[str]] = []
@@ -2679,7 +2728,7 @@ class Vulnerability(Object):
         if self.fix_coverage is not None and not isinstance(self.fix_coverage, str):
             self.fix_coverage = str(self.fix_coverage)
 
-        if isinstance(self.fix_coverage_id, str):
+        if self.fix_coverage_id is not None and not isinstance(self.fix_coverage_id, VulnerabilityFixCoverageIdEnum):
             self.fix_coverage_id = VulnerabilityFixCoverageIdEnum(self.fix_coverage_id)
 
         if self.is_exploit_available is not None and not isinstance(self.is_exploit_available, Bool):
@@ -2727,8 +2776,9 @@ class Vulnerability(Object):
 @dataclass(repr=False)
 class Whois(Object):
     """
-    The resources of a WHOIS record for a given domain. This can include domain names, IP address blocks, autonomous
-    system information, and/or contact and registration information for a domain.
+    The resources of a WHOIS record for a given domain. This can include domain
+    names, IP address blocks, autonomous system information, and/or contact and
+    registration information for a domain.
     """
     _inherited_slots: ClassVar[list[str]] = []
 
@@ -2764,7 +2814,7 @@ class Whois(Object):
         if self.dnssec_status is not None and not isinstance(self.dnssec_status, str):
             self.dnssec_status = str(self.dnssec_status)
 
-        if isinstance(self.dnssec_status_id, str):
+        if self.dnssec_status_id is not None and not isinstance(self.dnssec_status_id, DnssecStatusIdEnum):
             self.dnssec_status_id = DnssecStatusIdEnum(self.dnssec_status_id)
 
         if self.domain is not None and not isinstance(self.domain, str):
@@ -2810,8 +2860,8 @@ class Whois(Object):
 @dataclass(repr=False)
 class Dns(Object):
     """
-    The Domain Name System (DNS) object represents the shared information associated with the DNS query and answer
-    objects.
+    The Domain Name System (DNS) object represents the shared information
+    associated with the DNS query and answer objects.
     """
     _inherited_slots: ClassVar[list[str]] = []
 
@@ -2840,8 +2890,9 @@ class Dns(Object):
 @dataclass(repr=False)
 class Entity(Object):
     """
-    The Entity object is an unordered collection of attributes, with a name and unique identifier. It serves as a base
-    object that defines a set of attributes and default constraints available in all objects that extend it.
+    The Entity object is an unordered collection of attributes, with a name and
+    unique identifier. It serves as a base object that defines a set of attributes
+    and default constraints available in all objects that extend it.
     """
     _inherited_slots: ClassVar[list[str]] = []
 
@@ -2866,8 +2917,9 @@ class Entity(Object):
 @dataclass(repr=False)
 class Resource(Entity):
     """
-    The Resource object contains attributes that provide information about a particular resource. It serves as a base
-    object, offering attributes that help identify and classify the resource effectively.
+    The Resource object contains attributes that provide information about a
+    particular resource. It serves as a base object, offering attributes that help
+    identify and classify the resource effectively.
     """
     _inherited_slots: ClassVar[list[str]] = []
 
@@ -2935,10 +2987,12 @@ class Resource(Entity):
 @dataclass(repr=False)
 class AccessAnalysisResult(Object):
     """
-    The Access Analysis Result object describes access relationships and pathways between identities, resources,
-    focusing on who can access what and through which mechanisms. This evaluates access levels (read/write/admin),
-    access types (direct, cross-account, public, federated), and the conditions under which access is granted. Use
-    this for resource-centric security assessments such as external access discovery, public exposure analysis, etc.
+    The Access Analysis Result object describes access relationships and pathways
+    between identities, resources, focusing on who can access what and through
+    which mechanisms. This evaluates access levels (read/write/admin), access types
+    (direct, cross-account, public, federated), and the conditions under which
+    access is granted. Use this for resource-centric security assessments such as
+    external access discovery, public exposure analysis, etc.
     """
     _inherited_slots: ClassVar[list[str]] = []
 
@@ -2983,10 +3037,11 @@ class AccessAnalysisResult(Object):
 @dataclass(repr=False)
 class Account(Entity):
     """
-    The Account object contains details about the account that initiated or performed a specific activity within a
-    system or application. Additionally, the Account object refers to logical Cloud and Software-as-a-Service (SaaS)
-    based containers such as AWS Accounts, Azure Subscriptions, Oracle Cloud Compartments, Google Cloud Projects, and
-    otherwise.
+    The Account object contains details about the account that initiated or
+    performed a specific activity within a system or application. Additionally, the
+    Account object refers to logical Cloud and Software-as-a-Service (SaaS) based
+    containers such as AWS Accounts, Azure Subscriptions, Oracle Cloud
+    Compartments, Google Cloud Projects, and otherwise.
     """
     _inherited_slots: ClassVar[list[str]] = []
 
@@ -3027,7 +3082,7 @@ class Account(Entity):
         if self.type is not None and not isinstance(self.type, str):
             self.type = str(self.type)
 
-        if isinstance(self.type_id, str):
+        if self.type_id is not None and not isinstance(self.type_id, AccountTypeIdEnum):
             self.type_id = AccountTypeIdEnum(self.type_id)
 
         if self.uid is not None and not isinstance(self.uid, str):
@@ -3045,9 +3100,9 @@ class Account(Entity):
 @dataclass(repr=False)
 class Actor(Object):
     """
-    The Actor object contains details about the user, role, application, service, or process that initiated or
-    performed a specific activity. Note that Actor is not the threat actor of a campaign but may be part of a
-    campaign.
+    The Actor object contains details about the user, role, application, service,
+    or process that initiated or performed a specific activity. Note that Actor is
+    not the threat actor of a campaign but may be part of a campaign.
     """
     _inherited_slots: ClassVar[list[str]] = []
 
@@ -3097,11 +3152,13 @@ class Actor(Object):
 @dataclass(repr=False)
 class AdditionalRestriction(Object):
     """
-    The Additional Restriction object describes supplementary access controls and guardrails that constrain or limit
-    granted permissions beyond the primary policy. These restrictions are typically applied through hierarchical
-    policy frameworks, organizational controls, or conditional access mechanisms. Examples include AWS Service Control
-    Policies (SCPs), Resource Control Policies (RCPs), Azure Management Group policies, GCP Organization policies,
-    conditional access policies, IP restrictions, time-based constraints, and MFA requirements.
+    The Additional Restriction object describes supplementary access controls and
+    guardrails that constrain or limit granted permissions beyond the primary
+    policy. These restrictions are typically applied through hierarchical policy
+    frameworks, organizational controls, or conditional access mechanisms. Examples
+    include AWS Service Control Policies (SCPs), Resource Control Policies (RCPs),
+    Azure Management Group policies, GCP Organization policies, conditional access
+    policies, IP restrictions, time-based constraints, and MFA requirements.
     """
     _inherited_slots: ClassVar[list[str]] = []
 
@@ -3123,7 +3180,7 @@ class AdditionalRestriction(Object):
         if self.status is not None and not isinstance(self.status, str):
             self.status = str(self.status)
 
-        if isinstance(self.status_id, str):
+        if self.status_id is not None and not isinstance(self.status_id, AdditionalRestrictionStatusIdEnum):
             self.status_id = AdditionalRestrictionStatusIdEnum(self.status_id)
 
         super().__post_init__(**kwargs)
@@ -3132,8 +3189,9 @@ class AdditionalRestriction(Object):
 @dataclass(repr=False)
 class Advisory(Object):
     """
-    The Advisory object represents publicly disclosed cybersecurity vulnerabilities defined in a Security advisory.
-    e.g. <code> Microsoft KB Article</code>, <code>Apple Security Advisory</code>, or a <code>GitHub Security Advisory
+    The Advisory object represents publicly disclosed cybersecurity vulnerabilities
+    defined in a Security advisory. e.g. <code> Microsoft KB Article</code>,
+    <code>Apple Security Advisory</code>, or a <code>GitHub Security Advisory
     (GHSA)</code>
     """
     _inherited_slots: ClassVar[list[str]] = []
@@ -3186,7 +3244,7 @@ class Advisory(Object):
         if self.install_state is not None and not isinstance(self.install_state, str):
             self.install_state = str(self.install_state)
 
-        if isinstance(self.install_state_id, str):
+        if self.install_state_id is not None and not isinstance(self.install_state_id, InstallStateIdEnum):
             self.install_state_id = InstallStateIdEnum(self.install_state_id)
 
         if self.is_superseded is not None and not isinstance(self.is_superseded, Bool):
@@ -3224,7 +3282,8 @@ class Advisory(Object):
 @dataclass(repr=False)
 class AffectedCode(Object):
     """
-    The Affected Code object describes details about a code block identified as vulnerable.
+    The Affected Code object describes details about a code block identified as
+    vulnerable.
     """
     _inherited_slots: ClassVar[list[str]] = []
 
@@ -3275,8 +3334,8 @@ class AffectedCode(Object):
 @dataclass(repr=False)
 class AffectedPackage(Package):
     """
-    The Affected Package object describes details about a software package identified as affected by a
-    vulnerability/vulnerabilities.
+    The Affected Package object describes details about a software package
+    identified as affected by a vulnerability/vulnerabilities.
     """
     _inherited_slots: ClassVar[list[str]] = []
 
@@ -3307,10 +3366,12 @@ class AffectedPackage(Package):
 @dataclass(repr=False)
 class Agent(Object):
     """
-    An Agent (also known as a Sensor) is typically installed on an Operating System (OS) and serves as a specialized
-    software component that can be designed to monitor, detect, collect, archive, or take action. These activities and
-    possible actions are defined by the upstream system controlling the Agent and its intended purpose. For instance,
-    an Agent can include Endpoint Detection & Response (EDR) agents, backup/disaster recovery sensors, Application
+    An Agent (also known as a Sensor) is typically installed on an Operating System
+    (OS) and serves as a specialized software component that can be designed to
+    monitor, detect, collect, archive, or take action. These activities and
+    possible actions are defined by the upstream system controlling the Agent and
+    its intended purpose. For instance, an Agent can include Endpoint Detection &
+    Response (EDR) agents, backup/disaster recovery sensors, Application
     Performance Monitoring or profiling sensors, and similar software.
     """
     _inherited_slots: ClassVar[list[str]] = []
@@ -3340,7 +3401,7 @@ class Agent(Object):
         if self.type is not None and not isinstance(self.type, str):
             self.type = str(self.type)
 
-        if isinstance(self.type_id, str):
+        if self.type_id is not None and not isinstance(self.type_id, AgentTypeIdEnum):
             self.type_id = AgentTypeIdEnum(self.type_id)
 
         if self.uid is not None and not isinstance(self.uid, str):
@@ -3361,8 +3422,9 @@ class Agent(Object):
 @dataclass(repr=False)
 class AiModel(Entity):
     """
-    The AI Model object describes the characteristics of an AI/ML model. Examples include language models like GPT-4,
-    embedding models like text-embedding-ada-002, and computer vision models like CLIP.
+    The AI Model object describes the characteristics of an AI/ML model. Examples
+    include language models like GPT-4, embedding models like
+    text-embedding-ada-002, and computer vision models like CLIP.
     """
     _inherited_slots: ClassVar[list[str]] = []
 
@@ -3405,10 +3467,11 @@ class AiModel(Entity):
 @dataclass(repr=False)
 class Aircraft(Entity):
     """
-    The Aircraft object represents any aircraft or otherwise airborne asset such as an unmanned system, airplane,
-    balloon, spacecraft, or otherwise. The Aircraft object is intended to normalized data captured or otherwise logged
-    from active radar, passive radar, multi-spectral systems, or the Automatic Dependant Broadcast - Surveillance
-    (ADS-B), and/or Mode S systems.
+    The Aircraft object represents any aircraft or otherwise airborne asset such as
+    an unmanned system, airplane, balloon, spacecraft, or otherwise. The Aircraft
+    object is intended to normalized data captured or otherwise logged from active
+    radar, passive radar, multi-spectral systems, or the Automatic Dependant
+    Broadcast - Surveillance (ADS-B), and/or Mode S systems.
     """
     _inherited_slots: ClassVar[list[str]] = []
 
@@ -3471,8 +3534,9 @@ class Aircraft(Entity):
 @dataclass(repr=False)
 class Analytic(Entity):
     """
-    The Analytic object contains details about the analytic technique used to analyze and derive insights from the
-    data or information that led to the creation of a finding or conclusion.
+    The Analytic object contains details about the analytic technique used to
+    analyze and derive insights from the data or information that led to the
+    creation of a finding or conclusion.
     """
     _inherited_slots: ClassVar[list[str]] = []
 
@@ -3496,7 +3560,7 @@ class Analytic(Entity):
     def __post_init__(self, *_: str, **kwargs: Any):
         if self._is_empty(self.type_id):
             self.MissingRequiredField("type_id")
-        if isinstance(self.type_id, str):
+        if not isinstance(self.type_id, AnalyticTypeIdEnum):
             self.type_id = AnalyticTypeIdEnum(self.type_id)
 
         if self.algorithm is not None and not isinstance(self.algorithm, str):
@@ -3516,7 +3580,7 @@ class Analytic(Entity):
         if self.state is not None and not isinstance(self.state, str):
             self.state = str(self.state)
 
-        if isinstance(self.state_id, str):
+        if self.state_id is not None and not isinstance(self.state_id, AnalyticStateIdEnum):
             self.state_id = AnalyticStateIdEnum(self.state_id)
 
         if self.type is not None and not isinstance(self.type, str):
@@ -3540,8 +3604,9 @@ class Analytic(Entity):
 @dataclass(repr=False)
 class Anomaly(Object):
     """
-    Describes an anomaly or deviation detected in a system. Anomalies are unexpected activity patterns that could
-    indicate potential issues needing attention.
+    Describes an anomaly or deviation detected in a system. Anomalies are
+    unexpected activity patterns that could indicate potential issues needing
+    attention.
     """
     _inherited_slots: ClassVar[list[str]] = []
 
@@ -3577,8 +3642,8 @@ class Anomaly(Object):
 @dataclass(repr=False)
 class Api(Object):
     """
-    The API, or Application Programming Interface, object represents information pertaining to an API request and
-    response.
+    The API, or Application Programming Interface, object represents  information
+    pertaining to an API request and response.
     """
     _inherited_slots: ClassVar[list[str]] = []
 
@@ -3625,9 +3690,11 @@ class Api(Object):
 @dataclass(repr=False)
 class ApplicationObject(Object):
     """
-    An Application describes the details for an inventoried application as reported by an Application Security tool or
-    other Developer-centric tooling. Applications can be defined as Kubernetes resources, Containerized resources, or
-    application hosting-specific cloud sources such as AWS Elastic BeanStalk, AWS Lightsail, or Azure Logic Apps.
+    An Application describes the details for an inventoried application as reported
+    by an Application Security tool or other Developer-centric tooling.
+    Applications can be defined as Kubernetes resources, Containerized resources,
+    or application hosting-specific cloud sources such as AWS Elastic BeanStalk,
+    AWS Lightsail, or Azure Logic Apps.
     """
     _inherited_slots: ClassVar[list[str]] = []
 
@@ -3692,7 +3759,7 @@ class ApplicationObject(Object):
         if self.risk_level is not None and not isinstance(self.risk_level, str):
             self.risk_level = str(self.risk_level)
 
-        if isinstance(self.risk_level_id, str):
+        if self.risk_level_id is not None and not isinstance(self.risk_level_id, RiskLevelIdEnum):
             self.risk_level_id = RiskLevelIdEnum(self.risk_level_id)
 
         if self.risk_score is not None and not isinstance(self.risk_score, int):
@@ -3724,10 +3791,12 @@ class ApplicationObject(Object):
 @dataclass(repr=False)
 class Assessment(Entity):
     """
-    The Assessment object describes a point-in-time assessment, check, or evaluation of a specific configuration or
-    signal against an asset, entity, person, or otherwise. For example, this can encapsulate <code>os_signals</code>
-    from CrowdStrike Falcon Zero Trust Assessments, or account for <code>Datastore</code> configurations from Cyera,
-    or capture details of Microsoft Intune configuration policies.
+    The Assessment object describes a point-in-time assessment, check, or
+    evaluation of a specific configuration or signal against an asset, entity,
+    person, or otherwise. For example, this can encapsulate <code>os_signals</code>
+    from CrowdStrike Falcon Zero Trust Assessments, or account for
+    <code>Datastore</code> configurations from Cyera, or capture details of
+    Microsoft Intune configuration policies.
     """
     _inherited_slots: ClassVar[list[str]] = []
 
@@ -3776,8 +3845,8 @@ class Assessment(Entity):
 @dataclass(repr=False)
 class Attack(Object):
     """
-    The MITRE ATT&CK® & ATLAS™ object describes the tactic, technique, sub-technique & mitigation associated to an
-    attack.
+    The MITRE ATT&CK® & ATLAS™ object describes the tactic, technique,
+    sub-technique & mitigation associated to an attack.
     """
     _inherited_slots: ClassVar[list[str]] = []
 
@@ -3819,8 +3888,8 @@ class Attack(Object):
 @dataclass(repr=False)
 class AuthFactor(Object):
     """
-    An Authentication Factor object describes a category of methods used for identity verification in an
-    authentication attempt.
+    An Authentication Factor object describes a category of methods used for
+    identity verification in an authentication attempt.
     """
     _inherited_slots: ClassVar[list[str]] = []
 
@@ -3842,7 +3911,7 @@ class AuthFactor(Object):
     def __post_init__(self, *_: str, **kwargs: Any):
         if self._is_empty(self.factor_type_id):
             self.MissingRequiredField("factor_type_id")
-        if isinstance(self.factor_type_id, str):
+        if not isinstance(self.factor_type_id, FactorTypeIdEnum):
             self.factor_type_id = FactorTypeIdEnum(self.factor_type_id)
 
         if self.device is not None and not isinstance(self.device, Device):
@@ -3876,19 +3945,25 @@ class AuthFactor(Object):
 @dataclass(repr=False)
 class AuthenticationToken(Token):
     """
-    The Authentication Token object extends the base <code>token</code> object and represents standardized
-    authentication tokens, tickets, or assertions that conform to established authentication protocols such as
-    Kerberos, OIDC, and SAML. This object inherits all attributes from <code>token</code> and adds protocol-specific
-    attributes (e.g., <code>kerberos_flags</code>, <code>encryption_details</code>) for authentication events. Use
-    this object in authentication events to represent protocol-specific tokens: Kerberos Ticket Granting Tickets (TGT)
-    and Service Tickets (ST), OIDC Identity Tokens and Refresh Tokens, and SAML Assertions. These tokens are issued by
-    authentication servers and identity providers and carry protocol-specific metadata, lifecycle information, and
-    security attributes defined by their respective specifications. When to use this object: Use
-    <code>authentication_token</code> when representing protocol-specific authentication tokens (type_id values 1-5:
-    Kerberos TGT/ST, OIDC ID/Refresh tokens, SAML assertions) in authentication events. When NOT to use this object:
-    Do NOT use <code>authentication_token</code> for API tokens or client tokens (type_id values 6-7) used in API
-    activity events - use the base <code>token</code> object instead. Do NOT use <code>authentication_token</code> for
-    generic API keys - use the base <code>token</code> object instead.
+    The Authentication Token object extends the base <code>token</code> object and
+    represents standardized authentication tokens, tickets, or assertions that
+    conform to established authentication protocols such as Kerberos, OIDC, and
+    SAML. This object inherits all attributes from <code>token</code> and adds
+    protocol-specific attributes (e.g., <code>kerberos_flags</code>,
+    <code>encryption_details</code>) for authentication events. Use this object in
+    authentication events to represent protocol-specific tokens: Kerberos Ticket
+    Granting Tickets (TGT) and Service Tickets (ST), OIDC Identity Tokens and
+    Refresh Tokens, and SAML Assertions. These tokens are issued by authentication
+    servers and identity providers and carry protocol-specific metadata, lifecycle
+    information, and security attributes defined by their respective
+    specifications. When to use this object: Use <code>authentication_token</code>
+    when representing protocol-specific authentication tokens (type_id values 1-5:
+    Kerberos TGT/ST, OIDC ID/Refresh tokens, SAML assertions) in authentication
+    events. When NOT to use this object: Do NOT use
+    <code>authentication_token</code> for API tokens or client tokens (type_id
+    values 6-7) used in API activity events - use the base <code>token</code>
+    object instead. Do NOT use <code>authentication_token</code> for generic API
+    keys - use the base <code>token</code> object instead.
     """
     _inherited_slots: ClassVar[list[str]] = []
 
@@ -3924,6 +3999,9 @@ class AuthenticationToken(Token):
         if self.type is not None and not isinstance(self.type, str):
             self.type = str(self.type)
 
+        if self.type_id is not None and not isinstance(self.type_id, TypeIdEnum):
+            self.type_id = TypeIdEnum(self.type_id)
+
         if self.created_time is not None and not isinstance(self.created_time, TimestampT):
             self.created_time = TimestampT(self.created_time)
 
@@ -3936,7 +4014,7 @@ class AuthenticationToken(Token):
         if self.type is not None and not isinstance(self.type, str):
             self.type = str(self.type)
 
-        if isinstance(self.type_id, str):
+        if self.type_id is not None and not isinstance(self.type_id, AuthenticationTokenTypeIdEnum):
             self.type_id = AuthenticationTokenTypeIdEnum(self.type_id)
 
         super().__post_init__(**kwargs)
@@ -3945,8 +4023,8 @@ class AuthenticationToken(Token):
 @dataclass(repr=False)
 class Authorization(Object):
     """
-    The Authorization Result object provides details about the authorization outcome and associated policies related
-    to activity.
+    The Authorization Result object provides details about the authorization
+    outcome and associated policies related to activity.
     """
     _inherited_slots: ClassVar[list[str]] = []
 
@@ -3971,9 +4049,10 @@ class Authorization(Object):
 @dataclass(repr=False)
 class AutonomousSystem(Object):
     """
-    An autonomous system (AS) is a collection of connected Internet Protocol (IP) routing prefixes under the control
-    of one or more network operators on behalf of a single administrative entity or domain that presents a common,
-    clearly defined routing policy to the internet.
+    An autonomous system (AS) is a collection of connected Internet Protocol (IP)
+    routing prefixes under the control of one or more network operators on behalf
+    of a single administrative entity or domain that presents a common, clearly
+    defined routing policy to the internet.
     """
     _inherited_slots: ClassVar[list[str]] = []
 
@@ -3998,9 +4077,10 @@ class AutonomousSystem(Object):
 @dataclass(repr=False)
 class Baseline(Object):
     """
-    Describes the baseline or expected behavior of a system, service, or component based on historical observations
-    and measurements. It establishes reference points for comparison to detect anomalies, trends, and deviations from
-    typical patterns.
+    Describes the baseline or expected behavior of a system, service, or component
+    based on historical observations and measurements. It establishes reference
+    points for comparison to detect anomalies, trends, and deviations from typical
+    patterns.
     """
     _inherited_slots: ClassVar[list[str]] = []
 
@@ -4036,8 +4116,9 @@ class Baseline(Object):
 @dataclass(repr=False)
 class Campaign(Object):
     """
-    Campaign represent organized efforts by threat actors to achieve malicious objectives over a period, often
-    characterized by shared tactics, techniques, and procedures (TTPs).
+    Campaign represent organized efforts by threat actors to achieve malicious
+    objectives over a period, often characterized by shared tactics, techniques,
+    and procedures (TTPs).
     """
     _inherited_slots: ClassVar[list[str]] = []
 
@@ -4060,8 +4141,9 @@ class Campaign(Object):
 @dataclass(repr=False)
 class Certificate(Object):
     """
-    The Digital Certificate, also known as a Public Key Certificate, object contains information about the ownership
-    and usage of a public key. It serves as a means to establish trust in the authenticity and integrity of the public
+    The Digital Certificate, also known as a Public Key Certificate, object
+    contains information about the ownership and usage of a public key. It serves
+    as a means to establish trust in the authenticity and integrity of the public
     key and the associated entity.
     """
     _inherited_slots: ClassVar[list[str]] = []
@@ -4121,11 +4203,13 @@ class Certificate(Object):
 @dataclass(repr=False)
 class Check(Object):
     """
-    The check object defines a specific, testable compliance verification point that evaluates a target device against
-    a standard, framework, or custom requirement. While checks are typically associated with formal standards (like
-    CIS, NIST, or ISO), they can also represent custom or organizational requirements. When mapped to controls, checks
-    can evaluate specific control_parameters to determine compliance status, but neither the control mapping nor
-    control_parameters are required for a valid check.
+    The check object defines a specific, testable compliance verification point
+    that evaluates a target device against a standard, framework, or custom
+    requirement. While checks are typically associated with formal standards (like
+    CIS, NIST, or ISO), they can also represent custom or organizational
+    requirements. When mapped to controls, checks can evaluate specific
+    control_parameters to determine compliance status, but neither the control
+    mapping nor control_parameters are required for a valid check.
     """
     _inherited_slots: ClassVar[list[str]] = []
 
@@ -4158,7 +4242,7 @@ class Check(Object):
         if self.severity is not None and not isinstance(self.severity, str):
             self.severity = str(self.severity)
 
-        if isinstance(self.severity_id, str):
+        if self.severity_id is not None and not isinstance(self.severity_id, CheckSeverityIdEnum):
             self.severity_id = CheckSeverityIdEnum(self.severity_id)
 
         if not isinstance(self.standards, list):
@@ -4168,7 +4252,7 @@ class Check(Object):
         if self.status is not None and not isinstance(self.status, str):
             self.status = str(self.status)
 
-        if isinstance(self.status_id, str):
+        if self.status_id is not None and not isinstance(self.status_id, CheckStatusIdEnum):
             self.status_id = CheckStatusIdEnum(self.status_id)
 
         if self.uid is not None and not isinstance(self.uid, str):
@@ -4183,11 +4267,12 @@ class Check(Object):
 @dataclass(repr=False)
 class CisBenchmark(Object):
     """
-    The CIS Benchmark object describes best practices for securely configuring IT systems, software, networks, and
-    cloud infrastructure as defined by the <a target='_blank' href='https://www.cisecurity.org/cis-benchmarks/'>Center
-    for Internet Security</a>. See also <a target='_blank'
-    href='https://www.cisecurity.org/insights/blog/getting-to-know-the-cis-benchmarks'>Getting to Know the CIS
-    Benchmarks</a>.
+    The CIS Benchmark object describes best practices for securely configuring IT
+    systems, software, networks, and cloud infrastructure as defined by the <a
+    target='_blank' href='https://www.cisecurity.org/cis-benchmarks/'>Center for
+    Internet Security</a>. See also <a target='_blank'
+    href='https://www.cisecurity.org/insights/blog/getting-to-know-the-cis-benchmarks'>Getting
+    to Know the CIS Benchmarks</a>.
     """
     _inherited_slots: ClassVar[list[str]] = []
 
@@ -4217,9 +4302,11 @@ class CisBenchmark(Object):
 @dataclass(repr=False)
 class CisBenchmarkResult(Object):
     """
-    The CIS Benchmark Result object contains information as defined by the Center for Internet Security (<a
-    target='_blank' href='https://www.cisecurity.org/cis-benchmarks/'>CIS</a>) benchmark result. CIS Benchmarks are a
-    collection of best practices for securely configuring IT systems, software, networks, and cloud infrastructure.
+    The CIS Benchmark Result object contains information as defined by the Center
+    for Internet Security (<a target='_blank'
+    href='https://www.cisecurity.org/cis-benchmarks/'>CIS</a>) benchmark result.
+    CIS Benchmarks are a collection of best practices for securely configuring IT
+    systems, software, networks, and cloud infrastructure.
     """
     _inherited_slots: ClassVar[list[str]] = []
 
@@ -4254,9 +4341,10 @@ class CisBenchmarkResult(Object):
 @dataclass(repr=False)
 class CisControl(Object):
     """
-    The CIS Control (aka Critical Security Control) object describes a prioritized set of actions to protect your
-    organization and data from cyber-attack vectors. The <a target='_blank'
-    href='https://www.cisecurity.org/controls'>CIS Controls</a> are defined by the Center for Internet Security.
+    The CIS Control (aka Critical Security Control) object describes a prioritized
+    set of actions to protect your organization and data from cyber-attack vectors.
+    The <a target='_blank' href='https://www.cisecurity.org/controls'>CIS
+    Controls</a> are defined by the Center for Internet Security.
     """
     _inherited_slots: ClassVar[list[str]] = []
 
@@ -4287,9 +4375,10 @@ class CisControl(Object):
 @dataclass(repr=False)
 class CisCsc(Object):
     """
-    The CIS Critical Security Control (CSC) contains information as defined by the Center for Internet Security
-    Critical Security Control <a target='_blank' href='https://www.cisecurity.org/controls'>(CIS CSC)</a>. Prioritized
-    set of actions to protect your organization and data from cyber-attack vectors.
+    The CIS Critical Security Control (CSC) contains information as defined by the
+    Center for Internet Security Critical Security Control <a target='_blank'
+    href='https://www.cisecurity.org/controls'>(CIS CSC)</a>. Prioritized set of
+    actions to protect your organization and data from cyber-attack vectors.
     """
     _inherited_slots: ClassVar[list[str]] = []
 
@@ -4316,7 +4405,8 @@ class CisCsc(Object):
 @dataclass(repr=False)
 class ClassifierDetails(Object):
     """
-    The Classifier Details object describes details about the classifier used for data classification.
+    The Classifier Details object describes details about the classifier used for
+    data classification.
     """
     _inherited_slots: ClassVar[list[str]] = []
 
@@ -4347,9 +4437,11 @@ class ClassifierDetails(Object):
 @dataclass(repr=False)
 class Cloud(Object):
     """
-    The Cloud object describes the cloud computing environment where an event or finding originated. It provides
-    comprehensive context about the cloud infrastructure, including the cloud service provider, account or
-    subscription details, organizational structure, geographic regions, availability zones, and logical partitions.
+    The Cloud object describes the cloud computing environment where an event or
+    finding originated. It provides comprehensive context about the cloud
+    infrastructure, including the cloud service provider, account or subscription
+    details, organizational structure, geographic regions, availability zones, and
+    logical partitions.
     """
     _inherited_slots: ClassVar[list[str]] = []
 
@@ -4396,10 +4488,12 @@ class Cloud(Object):
 @dataclass(repr=False)
 class Compliance(Object):
     """
-    The Compliance object contains information about Industry and Regulatory Framework standards, controls and
-    requirements or details about custom assessments utilized in a compliance evaluation. Standards define broad
-    security frameworks, controls represent specific security requirements within those frameworks, and checks are the
-    testable verification points used to determine if controls are properly implemented.
+    The Compliance object contains information about Industry and Regulatory
+    Framework standards, controls and requirements or details about custom
+    assessments utilized in a compliance evaluation. Standards define broad
+    security frameworks, controls represent specific security requirements within
+    those frameworks, and checks are the testable verification points used to
+    determine if controls are properly implemented.
     """
     _inherited_slots: ClassVar[list[str]] = []
 
@@ -4471,7 +4565,7 @@ class Compliance(Object):
             self.status_details = [self.status_details] if self.status_details is not None else []
         self.status_details = [v if isinstance(v, str) else str(v) for v in self.status_details]
 
-        if isinstance(self.status_id, str):
+        if self.status_id is not None and not isinstance(self.status_id, ComplianceStatusIdEnum):
             self.status_id = ComplianceStatusIdEnum(self.status_id)
 
         super().__post_init__(**kwargs)
@@ -4480,8 +4574,9 @@ class Compliance(Object):
 @dataclass(repr=False)
 class Container(Object):
     """
-    The Container object describes an instance of a specific container. A container is a prepackaged, portable system
-    image that runs isolated on an existing system using a container runtime like containerd.
+    The Container object describes an instance of a specific container. A container
+    is a prepackaged, portable system image that runs isolated on an existing
+    system using a container runtime like containerd.
     """
     _inherited_slots: ClassVar[list[str]] = []
 
@@ -4546,8 +4641,9 @@ class Container(Object):
 @dataclass(repr=False)
 class Cve(Object):
     """
-    The Common Vulnerabilities and Exposures (CVE) object represents publicly disclosed cybersecurity vulnerabilities
-    defined in CVE Program catalog (<a target='_blank' href='https://cve.mitre.org/'>CVE</a>). There is one CVE Record
+    The Common Vulnerabilities and Exposures (CVE) object represents publicly
+    disclosed cybersecurity vulnerabilities defined in CVE Program catalog (<a
+    target='_blank' href='https://cve.mitre.org/'>CVE</a>). There is one CVE Record
     for each vulnerability in the catalog.
     """
     _inherited_slots: ClassVar[list[str]] = []
@@ -4622,8 +4718,9 @@ class Cve(Object):
 @dataclass(repr=False)
 class Cvss(Object):
     """
-    The Common Vulnerability Scoring System (<a target='_blank' href='https://www.first.org/cvss/'>CVSS</a>) object
-    provides a way to capture the principal characteristics of a vulnerability and produce a numerical score
+    The Common Vulnerability Scoring System (<a target='_blank'
+    href='https://www.first.org/cvss/'>CVSS</a>) object provides a way to capture
+    the principal characteristics of a vulnerability and produce a numerical score
     reflecting its severity.
     """
     _inherited_slots: ClassVar[list[str]] = []
@@ -4654,7 +4751,7 @@ class Cvss(Object):
         if not isinstance(self.version, str):
             self.version = str(self.version)
 
-        if isinstance(self.depth, str):
+        if self.depth is not None and not isinstance(self.depth, DepthEnum):
             self.depth = DepthEnum(self.depth)
 
         self._normalize_inlined_as_list(slot_name="metrics", slot_type=Metric, key_name="name", keyed=False)
@@ -4680,9 +4777,10 @@ class Cvss(Object):
 @dataclass(repr=False)
 class Cwe(Object):
     """
-    The CWE object represents a weakness in a software system that can be exploited by a threat actor to perform an
-    attack. The CWE object is based on the <a target='_blank' href='https://cwe.mitre.org/'>Common Weakness
-    Enumeration (CWE)</a> catalog.
+    The CWE object represents a weakness in a software system that can be exploited
+    by a threat actor to perform an attack. The CWE object is based on the <a
+    target='_blank' href='https://cwe.mitre.org/'>Common Weakness Enumeration
+    (CWE)</a> catalog.
     """
     _inherited_slots: ClassVar[list[str]] = []
 
@@ -4713,7 +4811,8 @@ class Cwe(Object):
 @dataclass(repr=False)
 class D3fTactic(Entity):
     """
-    The MITRE D3FEND™ Tactic object describes the tactic ID and/or name that is associated to an attack.
+    The MITRE D3FEND™ Tactic object describes the tactic ID and/or name that is
+    associated to an attack.
     """
     _inherited_slots: ClassVar[list[str]] = []
 
@@ -4748,8 +4847,8 @@ class D3fTactic(Entity):
 @dataclass(repr=False)
 class D3fTechnique(Entity):
     """
-    The MITRE D3FEND™ Technique object describes the leaf defensive technique ID and/or name associated to a
-    countermeasure.
+    The MITRE D3FEND™ Technique object describes the leaf defensive technique ID
+    and/or name associated to a countermeasure.
     """
     _inherited_slots: ClassVar[list[str]] = []
 
@@ -4784,7 +4883,8 @@ class D3fTechnique(Entity):
 @dataclass(repr=False)
 class D3fend(Object):
     """
-    The MITRE D3FEND™ object describes the tactic & technique associated with a countermeasure.
+    The MITRE D3FEND™ object describes the tactic & technique associated with a
+    countermeasure.
     """
     _inherited_slots: ClassVar[list[str]] = []
 
@@ -4813,7 +4913,8 @@ class D3fend(Object):
 @dataclass(repr=False)
 class DataClassification(Object):
     """
-    The Data Classification object includes information about data classification levels and data category types.
+    The Data Classification object includes information about data classification
+    levels and data category types.
     """
     _inherited_slots: ClassVar[list[str]] = []
 
@@ -4841,7 +4942,7 @@ class DataClassification(Object):
         if self.category is not None and not isinstance(self.category, str):
             self.category = str(self.category)
 
-        if isinstance(self.category_id, str):
+        if self.category_id is not None and not isinstance(self.category_id, DataClassificationCategoryIdEnum):
             self.category_id = DataClassificationCategoryIdEnum(self.category_id)
 
         if self.classifier_details is not None and not isinstance(self.classifier_details, ClassifierDetails):
@@ -4850,7 +4951,7 @@ class DataClassification(Object):
         if self.confidentiality is not None and not isinstance(self.confidentiality, str):
             self.confidentiality = str(self.confidentiality)
 
-        if isinstance(self.confidentiality_id, str):
+        if self.confidentiality_id is not None and not isinstance(self.confidentiality_id, ConfidentialityIdEnum):
             self.confidentiality_id = ConfidentialityIdEnum(self.confidentiality_id)
 
         if not isinstance(self.discovery_details, list):
@@ -4873,7 +4974,7 @@ class DataClassification(Object):
             self.status_details = [self.status_details] if self.status_details is not None else []
         self.status_details = [v if isinstance(v, str) else str(v) for v in self.status_details]
 
-        if isinstance(self.status_id, str):
+        if self.status_id is not None and not isinstance(self.status_id, DataClassificationStatusIdEnum):
             self.status_id = DataClassificationStatusIdEnum(self.status_id)
 
         if self.total is not None and not isinstance(self.total, int):
@@ -4888,8 +4989,9 @@ class DataClassification(Object):
 @dataclass(repr=False)
 class DataSecurity(DataClassification):
     """
-    The Data Security object describes the characteristics, techniques and content of a Data Loss Prevention (DLP),
-    Data Loss Detection (DLD), Data Classification, or similar tools' finding, alert, or detection mechanism(s).
+    The Data Security object describes the characteristics, techniques and content
+    of a Data Loss Prevention (DLP), Data Loss Detection (DLD), Data
+    Classification, or similar tools' finding, alert, or detection mechanism(s).
     """
     _inherited_slots: ClassVar[list[str]] = []
 
@@ -4910,7 +5012,7 @@ class DataSecurity(DataClassification):
         if self.data_lifecycle_state is not None and not isinstance(self.data_lifecycle_state, str):
             self.data_lifecycle_state = str(self.data_lifecycle_state)
 
-        if isinstance(self.data_lifecycle_state_id, str):
+        if self.data_lifecycle_state_id is not None and not isinstance(self.data_lifecycle_state_id, DataLifecycleStateIdEnum):
             self.data_lifecycle_state_id = DataLifecycleStateIdEnum(self.data_lifecycle_state_id)
 
         if self.detection_pattern is not None and not isinstance(self.detection_pattern, str):
@@ -4919,7 +5021,7 @@ class DataSecurity(DataClassification):
         if self.detection_system is not None and not isinstance(self.detection_system, str):
             self.detection_system = str(self.detection_system)
 
-        if isinstance(self.detection_system_id, str):
+        if self.detection_system_id is not None and not isinstance(self.detection_system_id, DetectionSystemIdEnum):
             self.detection_system_id = DetectionSystemIdEnum(self.detection_system_id)
 
         if self.pattern_match is not None and not isinstance(self.pattern_match, str):
@@ -4937,8 +5039,9 @@ class DataSecurity(DataClassification):
 @dataclass(repr=False)
 class Database(Entity):
     """
-    The database object is used for databases which are typically datastore services that contain an organized
-    collection of structured and unstructured data or a types of data.
+    The database object is used for databases which are typically datastore
+    services that contain an organized collection of structured and unstructured
+    data or a types of data.
     """
     _inherited_slots: ClassVar[list[str]] = []
 
@@ -4963,7 +5066,7 @@ class Database(Entity):
     def __post_init__(self, *_: str, **kwargs: Any):
         if self._is_empty(self.type_id):
             self.MissingRequiredField("type_id")
-        if isinstance(self.type_id, str):
+        if not isinstance(self.type_id, DatabaseTypeIdEnum):
             self.type_id = DatabaseTypeIdEnum(self.type_id)
 
         if self.created_time is not None and not isinstance(self.created_time, TimestampT):
@@ -5013,7 +5116,8 @@ class Database(Entity):
 @dataclass(repr=False)
 class Databucket(Resource):
     """
-    The databucket object is a basic container that holds data, typically organized through the use of data partitions.
+    The databucket object is a basic container that holds data, typically organized
+    through the use of data partitions.
     """
     _inherited_slots: ClassVar[list[str]] = []
 
@@ -5056,7 +5160,7 @@ class Databucket(Resource):
     def __post_init__(self, *_: str, **kwargs: Any):
         if self._is_empty(self.type_id):
             self.MissingRequiredField("type_id")
-        if isinstance(self.type_id, str):
+        if not isinstance(self.type_id, DatabucketTypeIdEnum):
             self.type_id = DatabucketTypeIdEnum(self.type_id)
 
         if self._is_empty(self.cloud):
@@ -5166,8 +5270,9 @@ class Databucket(Resource):
 @dataclass(repr=False)
 class DceRpc(Object):
     """
-    The DCE/RPC, or Distributed Computing Environment/Remote Procedure Call, object describes the remote procedure
-    call system for distributed computing environments.
+    The DCE/RPC, or Distributed Computing Environment/Remote Procedure Call, object
+    describes the remote procedure call system for distributed computing
+    environments.
     """
     _inherited_slots: ClassVar[list[str]] = []
 
@@ -5209,9 +5314,10 @@ class DceRpc(Object):
 @dataclass(repr=False)
 class DeviceHwInfo(Object):
     """
-    The Device Hardware Information object contains details and specifications of the physical components that make up
-    a device. This information provides an overview of the hardware capabilities, configuration, and characteristics
-    of the device.
+    The Device Hardware Information object contains details and specifications of
+    the physical components that make up a device. This information provides an
+    overview of the hardware capabilities, configuration, and characteristics of
+    the device.
     """
     _inherited_slots: ClassVar[list[str]] = []
 
@@ -5256,7 +5362,7 @@ class DeviceHwInfo(Object):
         if self.cpu_architecture is not None and not isinstance(self.cpu_architecture, str):
             self.cpu_architecture = str(self.cpu_architecture)
 
-        if isinstance(self.cpu_architecture_id, str):
+        if self.cpu_architecture_id is not None and not isinstance(self.cpu_architecture_id, CpuArchitectureIdEnum):
             self.cpu_architecture_id = CpuArchitectureIdEnum(self.cpu_architecture_id)
 
         if self.cpu_bits is not None and not isinstance(self.cpu_bits, int):
@@ -5305,8 +5411,9 @@ class DeviceHwInfo(Object):
 @dataclass(repr=False)
 class DigitalSignature(Object):
     """
-    The Digital Signature object contains information about the cryptographic mechanism used to verify the
-    authenticity, integrity, and origin of the file or application.
+    The Digital Signature object contains information about the cryptographic
+    mechanism used to verify the authenticity, integrity, and origin of the file or
+    application.
     """
     _inherited_slots: ClassVar[list[str]] = []
 
@@ -5327,7 +5434,7 @@ class DigitalSignature(Object):
     def __post_init__(self, *_: str, **kwargs: Any):
         if self._is_empty(self.algorithm_id):
             self.MissingRequiredField("algorithm_id")
-        if isinstance(self.algorithm_id, str):
+        if not isinstance(self.algorithm_id, DigitalSignatureAlgorithmIdEnum):
             self.algorithm_id = DigitalSignatureAlgorithmIdEnum(self.algorithm_id)
 
         if self.algorithm is not None and not isinstance(self.algorithm, str):
@@ -5348,7 +5455,7 @@ class DigitalSignature(Object):
         if self.state is not None and not isinstance(self.state, str):
             self.state = str(self.state)
 
-        if isinstance(self.state_id, str):
+        if self.state_id is not None and not isinstance(self.state_id, DigitalSignatureStateIdEnum):
             self.state_id = DigitalSignatureStateIdEnum(self.state_id)
 
         super().__post_init__(**kwargs)
@@ -5395,7 +5502,8 @@ class DiscoveryDetails(Object):
 @dataclass(repr=False)
 class Display(Object):
     """
-    The Display object contains information about the physical or virtual display connected to a computer system.
+    The Display object contains information about the physical or virtual display
+    connected to a computer system.
     """
     _inherited_slots: ClassVar[list[str]] = []
 
@@ -5432,9 +5540,10 @@ class Display(Object):
 @dataclass(repr=False)
 class DnsAnswer(Dns):
     """
-    The DNS Answer object represents a specific response provided by the Domain Name System (DNS) when querying for
-    information about a domain or performing a DNS operation. It encapsulates the relevant details and data returned
-    by the DNS server in response to a query.
+    The DNS Answer object represents a specific response provided by the Domain
+    Name System (DNS) when querying for information about a domain or performing a
+    DNS operation. It encapsulates the relevant details and data returned by the
+    DNS server in response to a query.
     """
     _inherited_slots: ClassVar[list[str]] = []
 
@@ -5485,9 +5594,10 @@ class DnsAnswer(Dns):
 @dataclass(repr=False)
 class DnsQuery(Dns):
     """
-    The DNS query object represents a specific request made to the Domain Name System (DNS) to retrieve information
-    about a domain or perform a DNS operation. This object encapsulates the necessary attributes and methods to
-    construct and send DNS queries, specify the query type (e.g., A, AAAA, MX).
+    The DNS query object represents a specific request made to the Domain Name
+    System (DNS) to retrieve information about a domain or perform a DNS operation.
+    This object encapsulates the necessary attributes and methods to construct and
+    send DNS queries, specify the query type (e.g., A, AAAA, MX).
     """
     _inherited_slots: ClassVar[list[str]] = []
 
@@ -5509,7 +5619,7 @@ class DnsQuery(Dns):
         if self.opcode is not None and not isinstance(self.opcode, str):
             self.opcode = str(self.opcode)
 
-        if isinstance(self.opcode_id, str):
+        if self.opcode_id is not None and not isinstance(self.opcode_id, OpcodeIdEnum):
             self.opcode_id = OpcodeIdEnum(self.opcode_id)
 
         super().__post_init__(**kwargs)
@@ -5518,8 +5628,8 @@ class DnsQuery(Dns):
 @dataclass(repr=False)
 class DomainContact(Object):
     """
-    The contact information related to a domain registration, e.g., registrant, administrator, abuse, billing, or
-    technical contact.
+    The contact information related to a domain registration, e.g., registrant,
+    administrator, abuse, billing, or technical contact.
     """
     _inherited_slots: ClassVar[list[str]] = []
 
@@ -5539,7 +5649,7 @@ class DomainContact(Object):
     def __post_init__(self, *_: str, **kwargs: Any):
         if self._is_empty(self.type_id):
             self.MissingRequiredField("type_id")
-        if isinstance(self.type_id, str):
+        if not isinstance(self.type_id, DomainContactTypeIdEnum):
             self.type_id = DomainContactTypeIdEnum(self.type_id)
 
         if self.email_addr is not None and not isinstance(self.email_addr, str):
@@ -5621,8 +5731,8 @@ class Edge(Entity):
 @dataclass(repr=False)
 class Email(Object):
     """
-    The Email object describes the email metadata such as sender, recipients, and direction, and can include embedded
-    URLs and files.
+    The Email object describes the email metadata such as sender, recipients, and
+    direction, and can include embedded URLs and files.
     """
     _inherited_slots: ClassVar[list[str]] = []
 
@@ -5770,8 +5880,9 @@ class Email(Object):
 @dataclass(repr=False)
 class EmailAuth(Object):
     """
-    The Email Authentication object describes the Sender Policy Framework (SPF), DomainKeys Identified Mail (DKIM) and
-    Domain-based Message Authentication, Reporting and Conformance (DMARC) attributes of an email.
+    The Email Authentication object describes the Sender Policy Framework (SPF),
+    DomainKeys Identified Mail (DKIM) and Domain-based Message Authentication,
+    Reporting and Conformance (DMARC) attributes of an email.
     """
     _inherited_slots: ClassVar[list[str]] = []
 
@@ -5835,7 +5946,7 @@ class EncryptionDetails(Object):
         if self.algorithm is not None and not isinstance(self.algorithm, str):
             self.algorithm = str(self.algorithm)
 
-        if isinstance(self.algorithm_id, str):
+        if self.algorithm_id is not None and not isinstance(self.algorithm_id, EncryptionDetailsAlgorithmIdEnum):
             self.algorithm_id = EncryptionDetailsAlgorithmIdEnum(self.algorithm_id)
 
         if self.key_length is not None and not isinstance(self.key_length, int):
@@ -5853,10 +5964,11 @@ class EncryptionDetails(Object):
 @dataclass(repr=False)
 class Endpoint(Entity):
     """
-    The Endpoint object describes a physical or virtual device that connects to and exchanges information with a
-    computer network. Some examples of endpoints are mobile devices, desktop computers, virtual machines, embedded
-    devices, and servers. Internet-of-Things devices—like cameras, lighting, refrigerators, security systems, smart
-    speakers, and thermostats—are also endpoints.
+    The Endpoint object describes a physical or virtual device that connects to and
+    exchanges information with a computer network. Some examples of endpoints are
+    mobile devices, desktop computers, virtual machines, embedded devices, and
+    servers. Internet-of-Things devices—like cameras, lighting, refrigerators,
+    security systems, smart speakers, and thermostats—are also endpoints.
     """
     _inherited_slots: ClassVar[list[str]] = []
 
@@ -5943,7 +6055,7 @@ class Endpoint(Entity):
         if self.type is not None and not isinstance(self.type, str):
             self.type = str(self.type)
 
-        if isinstance(self.type_id, str):
+        if self.type_id is not None and not isinstance(self.type_id, EndpointTypeIdEnum):
             self.type_id = EndpointTypeIdEnum(self.type_id)
 
         if self.uid is not None and not isinstance(self.uid, str):
@@ -5976,7 +6088,8 @@ class Endpoint(Entity):
 @dataclass(repr=False)
 class EndpointConnection(Object):
     """
-    The Endpoint Connection object contains information detailing a connection attempt to an endpoint.
+    The Endpoint Connection object contains information detailing a connection
+    attempt to an endpoint.
     """
     _inherited_slots: ClassVar[list[str]] = []
 
@@ -6001,9 +6114,10 @@ class EndpointConnection(Object):
 @dataclass(repr=False)
 class Enrichment(Object):
     """
-    The Enrichment object provides inline enrichment data for specific attributes of interest within an event. It
-    serves as a mechanism to enhance or supplement the information associated with the event by adding additional
-    relevant details or context.
+    The Enrichment object provides inline enrichment data for specific attributes
+    of interest within an event. It serves as a mechanism to enhance or supplement
+    the information associated with the event by adding additional relevant details
+    or context.
     """
     _inherited_slots: ClassVar[list[str]] = []
 
@@ -6095,9 +6209,11 @@ class EnvironmentVariable(Object):
 @dataclass(repr=False)
 class Epss(Object):
     """
-    The Exploit Prediction Scoring System (EPSS) object describes the estimated probability a vulnerability will be
-    exploited. EPSS is a community-driven effort to combine descriptive information about vulnerabilities (CVEs) with
-    evidence of actual exploitation in-the-wild. (<a target='_blank' href='https://www.first.org/epss/'>EPSS</a>).
+    The Exploit Prediction Scoring System (EPSS) object describes the estimated
+    probability a vulnerability will be exploited. EPSS is a community-driven
+    effort to combine descriptive information about vulnerabilities (CVEs) with
+    evidence of actual exploitation in-the-wild. (<a target='_blank'
+    href='https://www.first.org/epss/'>EPSS</a>).
     """
     _inherited_slots: ClassVar[list[str]] = []
 
@@ -6132,7 +6248,8 @@ class Epss(Object):
 @dataclass(repr=False)
 class Evidences(Entity):
     """
-    A collection of evidence artifacts associated to the activity/activities that triggered a security detection.
+    A collection of evidence artifacts associated to the activity/activities that
+    triggered a security detection.
     """
     _inherited_slots: ClassVar[list[str]] = []
 
@@ -6248,7 +6365,7 @@ class Evidences(Entity):
         if self.verdict is not None and not isinstance(self.verdict, str):
             self.verdict = str(self.verdict)
 
-        if isinstance(self.verdict_id, str):
+        if self.verdict_id is not None and not isinstance(self.verdict_id, EvidencesVerdictIdEnum):
             self.verdict_id = EvidencesVerdictIdEnum(self.verdict_id)
 
         if self.name is not None and not isinstance(self.name, str):
@@ -6263,9 +6380,11 @@ class Evidences(Entity):
 @dataclass(repr=False)
 class Extension(Entity):
     """
-    The OCSF Schema Extension object provides detailed information about the schema extension used to construct the
-    event. The schema extensions are registered in the <a target='_blank'
-    href='https://github.com/ocsf/ocsf-schema/blob/main/extensions.md'>extensions.md</a> file.
+    The OCSF Schema Extension object provides detailed information about the schema
+    extension used to construct the event. The schema extensions are registered in
+    the <a target='_blank'
+    href='https://github.com/ocsf/ocsf-schema/blob/main/extensions.md'>extensions.md</a>
+    file.
     """
     _inherited_slots: ClassVar[list[str]] = []
 
@@ -6302,9 +6421,10 @@ class Extension(Entity):
 @dataclass(repr=False)
 class Feature(Entity):
     """
-    The Feature object provides information about the software product feature that generated a specific event. It
-    encompasses details related to the capabilities, components, user interface (UI) design, and performance upgrades
-    associated with the feature.
+    The Feature object provides information about the software product feature that
+    generated a specific event. It encompasses details related to the capabilities,
+    components, user interface (UI) design, and performance upgrades associated
+    with the feature.
     """
     _inherited_slots: ClassVar[list[str]] = []
 
@@ -6339,8 +6459,9 @@ class Feature(Entity):
 @dataclass(repr=False)
 class File(Entity):
     """
-    The File object represents the metadata associated with a file stored in a computer system. It encompasses
-    information about the file itself, including its attributes, properties, and organizational details.
+    The File object represents the metadata associated with a file stored in a
+    computer system. It encompasses information about the file itself, including
+    its attributes, properties, and organizational details.
     """
     _inherited_slots: ClassVar[list[str]] = []
 
@@ -6398,7 +6519,7 @@ class File(Entity):
     def __post_init__(self, *_: str, **kwargs: Any):
         if self._is_empty(self.type_id):
             self.MissingRequiredField("type_id")
-        if isinstance(self.type_id, str):
+        if not isinstance(self.type_id, FileTypeIdEnum):
             self.type_id = FileTypeIdEnum(self.type_id)
 
         if self._is_empty(self.name):
@@ -6421,7 +6542,7 @@ class File(Entity):
         if self.confidentiality is not None and not isinstance(self.confidentiality, str):
             self.confidentiality = str(self.confidentiality)
 
-        if isinstance(self.confidentiality_id, str):
+        if self.confidentiality_id is not None and not isinstance(self.confidentiality_id, ConfidentialityIdEnum):
             self.confidentiality_id = ConfidentialityIdEnum(self.confidentiality_id)
 
         if self.created_time is not None and not isinstance(self.created_time, TimestampT):
@@ -6436,7 +6557,7 @@ class File(Entity):
         if self.drive_type is not None and not isinstance(self.drive_type, str):
             self.drive_type = str(self.drive_type)
 
-        if isinstance(self.drive_type_id, str):
+        if self.drive_type_id is not None and not isinstance(self.drive_type_id, DriveTypeIdEnum):
             self.drive_type_id = DriveTypeIdEnum(self.drive_type_id)
 
         if self.encryption_details is not None and not isinstance(self.encryption_details, EncryptionDetails):
@@ -6546,7 +6667,8 @@ class File(Entity):
 @dataclass(repr=False)
 class FindingObject(Object):
     """
-    The Finding object describes metadata related to a security finding generated by a security tool or system.
+    The Finding object describes metadata related to a security finding generated
+    by a security tool or system.
     """
     _inherited_slots: ClassVar[list[str]] = []
 
@@ -6623,8 +6745,8 @@ class FindingObject(Object):
 @dataclass(repr=False)
 class FindingInfo(Object):
     """
-    The Finding Information object describes metadata related to a security finding generated by a security tool or
-    system.
+    The Finding Information object describes metadata related to a security finding
+    generated by a security tool or system.
     """
     _inherited_slots: ClassVar[list[str]] = []
 
@@ -6731,10 +6853,11 @@ class FindingInfo(Object):
 @dataclass(repr=False)
 class Fingerprint(Object):
     """
-    The Fingerprint object provides detailed information about a fingerprint, which is a compact representation of
-    data used to identify a longer piece of information, such as a public key, file content, or application
-    implementation. It contains the algorithm or scheme and value of the fingerprint, enabling efficient and reliable
-    identification of the associated data.
+    The Fingerprint object provides detailed information about a fingerprint, which
+    is a compact representation of data used to identify a longer piece of
+    information, such as a public key, file content, or application implementation.
+    It contains the algorithm or scheme and value of the fingerprint, enabling
+    efficient and reliable identification of the associated data.
     """
     _inherited_slots: ClassVar[list[str]] = []
 
@@ -6750,7 +6873,7 @@ class Fingerprint(Object):
     def __post_init__(self, *_: str, **kwargs: Any):
         if self._is_empty(self.algorithm_id):
             self.MissingRequiredField("algorithm_id")
-        if isinstance(self.algorithm_id, str):
+        if not isinstance(self.algorithm_id, FingerprintAlgorithmIdEnum):
             self.algorithm_id = FingerprintAlgorithmIdEnum(self.algorithm_id)
 
         if self._is_empty(self.value):
@@ -6767,7 +6890,8 @@ class Fingerprint(Object):
 @dataclass(repr=False)
 class FunctionInvocation(Object):
     """
-    The Function Invocation object provides details regarding the invocation of a function.
+    The Function Invocation object provides details regarding the invocation of a
+    function.
     """
     _inherited_slots: ClassVar[list[str]] = []
 
@@ -6797,7 +6921,8 @@ class FunctionInvocation(Object):
 @dataclass(repr=False)
 class GpuInfo(Object):
     """
-    The GPU information object contains attributes describing graphical processing hardware.
+    The GPU information object contains attributes describing graphical processing
+    hardware.
     """
     _inherited_slots: ClassVar[list[str]] = []
 
@@ -6819,7 +6944,7 @@ class GpuInfo(Object):
         if self.bus_type is not None and not isinstance(self.bus_type, str):
             self.bus_type = str(self.bus_type)
 
-        if isinstance(self.bus_type_id, str):
+        if self.bus_type_id is not None and not isinstance(self.bus_type_id, GpuInfoBusTypeIdEnum):
             self.bus_type_id = GpuInfoBusTypeIdEnum(self.bus_type_id)
 
         if self.cores is not None and not isinstance(self.cores, int):
@@ -6834,7 +6959,7 @@ class GpuInfo(Object):
         if self.vram_mode is not None and not isinstance(self.vram_mode, str):
             self.vram_mode = str(self.vram_mode)
 
-        if isinstance(self.vram_mode_id, str):
+        if self.vram_mode_id is not None and not isinstance(self.vram_mode_id, GpuInfoVramModeIdEnum):
             self.vram_mode_id = GpuInfoVramModeIdEnum(self.vram_mode_id)
 
         if self.vram_size is not None and not isinstance(self.vram_size, int):
@@ -6884,7 +7009,7 @@ class Graph(Entity):
         if self.query_language is not None and not isinstance(self.query_language, str):
             self.query_language = str(self.query_language)
 
-        if isinstance(self.query_language_id, str):
+        if self.query_language_id is not None and not isinstance(self.query_language_id, GraphQueryLanguageIdEnum):
             self.query_language_id = GraphQueryLanguageIdEnum(self.query_language_id)
 
         if self.type is not None and not isinstance(self.type, str):
@@ -6905,9 +7030,11 @@ class Graph(Entity):
 @dataclass(repr=False)
 class Group(Entity):
     """
-    The Group object represents a collection or association of entities, such as users, policies, or devices. It
-    serves as a logical grouping mechanism to organize and manage entities with similar characteristics or permissions
-    within a system or organization, including but not limited to purposes of access control.
+    The Group object represents a collection or association of entities, such as
+    users, policies, or devices. It serves as a logical grouping mechanism to
+    organize and manage entities with similar characteristics or permissions within
+    a system or organization, including but not limited to purposes of access
+    control.
     """
     _inherited_slots: ClassVar[list[str]] = []
 
@@ -6959,9 +7086,10 @@ class Group(Entity):
 @dataclass(repr=False)
 class Hassh(Object):
     """
-    The HASSH object contains SSH network fingerprinting values for specific client/server implementations. It
-    provides a standardized way of identifying and categorizing SSH connections based on their unique characteristics
-    and behavior.
+    The HASSH object contains SSH network fingerprinting values for specific
+    client/server implementations. It provides a standardized way of identifying
+    and categorizing SSH connections based on their unique characteristics and
+    behavior.
     """
     _inherited_slots: ClassVar[list[str]] = []
 
@@ -6988,10 +7116,11 @@ class Hassh(Object):
 @dataclass(repr=False)
 class HttpCookie(Object):
     """
-    The HTTP Cookie object, also known as a web cookie or browser cookie, contains details and values pertaining to a
-    small piece of data that a server sends to a user's web browser. This data is then stored by the browser and sent
-    back to the server with subsequent requests, allowing the server to remember and track certain information about
-    the user's browsing session or preferences.
+    The HTTP Cookie object, also known as a web cookie or browser cookie, contains
+    details and values pertaining to a small piece of data that a server sends to a
+    user's web browser. This data is then stored by the browser and sent back to
+    the server with subsequent requests, allowing the server to remember and track
+    certain information about the user's browsing session or preferences.
     """
     _inherited_slots: ClassVar[list[str]] = []
 
@@ -7052,8 +7181,9 @@ class HttpCookie(Object):
 @dataclass(repr=False)
 class HttpHeader(Object):
     """
-    The HTTP Header object represents the headers sent in an HTTP request or response. HTTP headers are key-value
-    pairs that convey additional information about the HTTP message, including details about the content, caching,
+    The HTTP Header object represents the headers sent in an HTTP request or
+    response. HTTP headers are key-value pairs that convey additional information
+    about the HTTP message, including details about the content, caching,
     authentication, encoding, and other aspects of the communication.
     """
     _inherited_slots: ClassVar[list[str]] = []
@@ -7083,8 +7213,9 @@ class HttpHeader(Object):
 @dataclass(repr=False)
 class HttpRequest(Object):
     """
-    The HTTP Request object represents the attributes of a request made to a web server. It encapsulates the details
-    and metadata associated with an HTTP request, including the request method, headers, URL, query parameters, body
+    The HTTP Request object represents the attributes of a request made to a web
+    server. It encapsulates the details and metadata associated with an HTTP
+    request, including the request method, headers, URL, query parameters, body
     content, and other relevant information.
     """
     _inherited_slots: ClassVar[list[str]] = []
@@ -7115,7 +7246,7 @@ class HttpRequest(Object):
 
         self._normalize_inlined_as_list(slot_name="http_headers", slot_type=HttpHeader, key_name="name", keyed=False)
 
-        if isinstance(self.http_method, str):
+        if self.http_method is not None and not isinstance(self.http_method, HttpRequestHttpMethodEnum):
             self.http_method = HttpRequestHttpMethodEnum(self.http_method)
 
         if self.length is not None and not isinstance(self.length, int):
@@ -7146,9 +7277,10 @@ class HttpRequest(Object):
 @dataclass(repr=False)
 class HttpResponse(Object):
     """
-    The HTTP Response object contains detailed information about the response sent from a web server to the requester.
-    It encompasses attributes and metadata that describe the response status, headers, body content, and other
-    relevant information.
+    The HTTP Response object contains detailed information about the response sent
+    from a web server to the requester. It encompasses attributes and metadata that
+    describe the response status, headers, body content, and other relevant
+    information.
     """
     _inherited_slots: ClassVar[list[str]] = []
 
@@ -7198,9 +7330,11 @@ class HttpResponse(Object):
 @dataclass(repr=False)
 class IdentityActivityMetrics(Object):
     """
-    The Identity Activity Metrics object captures usage patterns, authentication activity, credential usage and other
-    metrics for identities across cloud and on-premises environments. Example identities include AWS IAM Users, Roles,
-    Azure AD Principals, GCP Service Accounts, on-premises Active Directory accounts.
+    The Identity Activity Metrics object captures usage patterns, authentication
+    activity, credential usage and other metrics for identities across cloud and
+    on-premises environments. Example identities include AWS IAM Users, Roles,
+    Azure AD Principals, GCP Service Accounts, on-premises Active Directory
+    accounts.
     """
     _inherited_slots: ClassVar[list[str]] = []
 
@@ -7236,10 +7370,12 @@ class IdentityActivityMetrics(Object):
 @dataclass(repr=False)
 class Idp(Entity):
     """
-    The Identity Provider object contains detailed information about a provider responsible for creating, maintaining,
-    and managing identity information while offering authentication services to applications. An Identity Provider
-    (IdP) serves as a trusted authority that verifies the identity of users and issues authentication tokens or
-    assertions to enable secure access to applications or services.
+    The Identity Provider object contains detailed information about a provider
+    responsible for creating, maintaining, and managing identity information while
+    offering authentication services to applications. An Identity Provider (IdP)
+    serves as a trusted authority that verifies the identity of users and issues
+    authentication tokens or assertions to enable secure access to applications or
+    services.
     """
     _inherited_slots: ClassVar[list[str]] = []
 
@@ -7293,7 +7429,7 @@ class Idp(Entity):
         if self.state is not None and not isinstance(self.state, str):
             self.state = str(self.state)
 
-        if isinstance(self.state_id, str):
+        if self.state_id is not None and not isinstance(self.state_id, IdpStateIdEnum):
             self.state_id = IdpStateIdEnum(self.state_id)
 
         if self.tenant_uid is not None and not isinstance(self.tenant_uid, str):
@@ -7317,7 +7453,8 @@ class Idp(Entity):
 @dataclass(repr=False)
 class Image(Entity):
     """
-    The Image object provides a description of a specific Virtual Machine (VM) or Container image.
+    The Image object provides a description of a specific Virtual Machine (VM) or
+    Container image.
     """
     _inherited_slots: ClassVar[list[str]] = []
 
@@ -7366,8 +7503,8 @@ class Image(Entity):
 @dataclass(repr=False)
 class Ja4Fingerprint(Object):
     """
-    The JA4+ fingerprint object provides detailed fingerprint information about various aspects of network traffic
-    which is both machine and human readable.
+    The JA4+ fingerprint object provides detailed fingerprint information about
+    various aspects of network traffic which is both machine and human readable.
     """
     _inherited_slots: ClassVar[list[str]] = []
 
@@ -7387,7 +7524,7 @@ class Ja4Fingerprint(Object):
     def __post_init__(self, *_: str, **kwargs: Any):
         if self._is_empty(self.type_id):
             self.MissingRequiredField("type_id")
-        if isinstance(self.type_id, str):
+        if not isinstance(self.type_id, Ja4FingerprintTypeIdEnum):
             self.type_id = Ja4FingerprintTypeIdEnum(self.type_id)
 
         if self._is_empty(self.value):
@@ -7416,8 +7553,9 @@ class Ja4Fingerprint(Object):
 @dataclass(repr=False)
 class Job(Object):
     """
-    The Job object provides information about a scheduled job or task, including its name, command line, and state. It
-    encompasses attributes that describe the properties and status of the scheduled job.
+    The Job object provides information about a scheduled job or task, including
+    its name, command line, and state. It encompasses attributes that describe the
+    properties and status of the scheduled job.
     """
     _inherited_slots: ClassVar[list[str]] = []
 
@@ -7464,7 +7602,7 @@ class Job(Object):
         if self.run_state is not None and not isinstance(self.run_state, str):
             self.run_state = str(self.run_state)
 
-        if isinstance(self.run_state_id, str):
+        if self.run_state_id is not None and not isinstance(self.run_state_id, JobRunStateIdEnum):
             self.run_state_id = JobRunStateIdEnum(self.run_state_id)
 
         if self.user is not None and not isinstance(self.user, User):
@@ -7516,7 +7654,7 @@ class KbArticle(Object):
         if self.install_state is not None and not isinstance(self.install_state, str):
             self.install_state = str(self.install_state)
 
-        if isinstance(self.install_state_id, str):
+        if self.install_state_id is not None and not isinstance(self.install_state_id, InstallStateIdEnum):
             self.install_state_id = InstallStateIdEnum(self.install_state_id)
 
         if self.is_superseded is not None and not isinstance(self.is_superseded, Bool):
@@ -7549,8 +7687,9 @@ class KbArticle(Object):
 @dataclass(repr=False)
 class Kernel(Object):
     """
-    The Kernel Resource object provides information about a specific kernel resource, including its name and type. It
-    describes essential attributes associated with a resource managed by the kernel of an operating system.
+    The Kernel Resource object provides information about a specific kernel
+    resource, including its name and type. It describes essential attributes
+    associated with a resource managed by the kernel of an operating system.
     """
     _inherited_slots: ClassVar[list[str]] = []
 
@@ -7574,7 +7713,7 @@ class Kernel(Object):
 
         if self._is_empty(self.type_id):
             self.MissingRequiredField("type_id")
-        if isinstance(self.type_id, str):
+        if not isinstance(self.type_id, KernelTypeIdEnum):
             self.type_id = KernelTypeIdEnum(self.type_id)
 
         if self.is_system is not None and not isinstance(self.is_system, Bool):
@@ -7595,8 +7734,8 @@ class Kernel(Object):
 @dataclass(repr=False)
 class KernelDriver(Object):
     """
-    The Kernel Extension object describes a kernel driver that has been loaded or unloaded into the operating system
-    (OS) kernel.
+    The Kernel Extension object describes a kernel driver that has been loaded or
+    unloaded into the operating system (OS) kernel.
     """
     _inherited_slots: ClassVar[list[str]] = []
 
@@ -7651,8 +7790,9 @@ class KeyValueObject(Object):
 @dataclass(repr=False)
 class KeyboardInfo(Object):
     """
-    The Keyboard Information object contains details and attributes related to a computer or device keyboard. It
-    encompasses information that describes the characteristics, capabilities, and configuration of the keyboard.
+    The Keyboard Information object contains details and attributes related to a
+    computer or device keyboard. It encompasses information that describes the
+    characteristics, capabilities, and configuration of the keyboard.
     """
     _inherited_slots: ClassVar[list[str]] = []
 
@@ -7689,10 +7829,13 @@ class KeyboardInfo(Object):
 @dataclass(repr=False)
 class KillChainPhase(Object):
     """
-    The Kill Chain Phase object represents a single phase of a cyber attack, including the initial reconnaissance and
-    planning stages up to the final objective of the attacker. It provides a detailed description of each phase and
-    its associated activities within the broader context of a cyber attack. See <a target='_blank'
-    href='https://www.lockheedmartin.com/en-us/capabilities/cyber/cyber-kill-chain.html'>Cyber Kill Chain®</a>.
+    The Kill Chain Phase object represents a single phase of a cyber attack,
+    including the initial reconnaissance and planning stages up to the final
+    objective of the attacker. It provides a detailed description of each phase and
+    its associated activities within the broader context of a cyber attack. See <a
+    target='_blank'
+    href='https://www.lockheedmartin.com/en-us/capabilities/cyber/cyber-kill-chain.html'>Cyber
+    Kill Chain®</a>.
     """
     _inherited_slots: ClassVar[list[str]] = []
 
@@ -7707,7 +7850,7 @@ class KillChainPhase(Object):
     def __post_init__(self, *_: str, **kwargs: Any):
         if self._is_empty(self.phase_id):
             self.MissingRequiredField("phase_id")
-        if isinstance(self.phase_id, str):
+        if not isinstance(self.phase_id, PhaseIdEnum):
             self.phase_id = PhaseIdEnum(self.phase_id)
 
         if self.phase is not None and not isinstance(self.phase, str):
@@ -7825,8 +7968,8 @@ class LdapPerson(Object):
 @dataclass(repr=False)
 class LoadBalancer(Entity):
     """
-    The load balancer object describes the load balancer entity and contains additional information regarding the
-    distribution of traffic across a network.
+    The load balancer object describes the load balancer entity and contains
+    additional information regarding the distribution of traffic across a network.
     """
     _inherited_slots: ClassVar[list[str]] = []
 
@@ -7893,7 +8036,8 @@ class LoadBalancer(Entity):
 @dataclass(repr=False)
 class Location(Object):
     """
-    The Geo Location object describes a geographical location, usually associated with an IP address.
+    The Geo Location object describes a geographical location, usually associated
+    with an IP address.
     """
     _inherited_slots: ClassVar[list[str]] = []
 
@@ -7983,9 +8127,10 @@ class Location(Object):
 @dataclass(repr=False)
 class Logger(Entity):
     """
-    The Logger object represents the device and product where events are stored with times for receipt and
-    transmission. This may be at the source device where the event occurred, a remote scanning device, intermediate
-    hops, or the ultimate destination.
+    The Logger object represents the device and product where events are stored
+    with times for receipt and transmission.  This may be at the source device
+    where the event occurred, a remote scanning device, intermediate hops, or the
+    ultimate destination.
     """
     _inherited_slots: ClassVar[list[str]] = []
 
@@ -8068,7 +8213,8 @@ class Logger(Entity):
 @dataclass(repr=False)
 class LongString(Object):
     """
-    This object is a used to capture strings which may be truncated by a security product due to their length.
+    This object is a used to capture strings which may be truncated by a security
+    product due to their length.
     """
     _inherited_slots: ClassVar[list[str]] = []
 
@@ -8099,8 +8245,9 @@ class LongString(Object):
 @dataclass(repr=False)
 class Malware(Entity):
     """
-    The Malware object describes the classification of known malicious software, which is intentionally designed to
-    cause damage to a computer, server, client, or computer network.
+    The Malware object describes the classification of known malicious software,
+    which is intentionally designed to cause damage to a computer, server, client,
+    or computer network.
     """
     _inherited_slots: ClassVar[list[str]] = []
 
@@ -8151,7 +8298,7 @@ class Malware(Entity):
         if self.severity is not None and not isinstance(self.severity, str):
             self.severity = str(self.severity)
 
-        if isinstance(self.severity_id, str):
+        if self.severity_id is not None and not isinstance(self.severity_id, SeverityIdEnum):
             self.severity_id = SeverityIdEnum(self.severity_id)
 
         if self.uid is not None and not isinstance(self.uid, str):
@@ -8169,10 +8316,12 @@ class Malware(Entity):
 @dataclass(repr=False)
 class ManagedEntity(Entity):
     """
-    The Managed Entity object describes the type and version of an entity, such as a user, device, or policy. For
-    types in the <code>type_id</code> enum list, an associated attribute should be populated. If the type of entity is
-    not in the <code>type_id</code> list, information can be put into the <code>data</code> attribute,
-    <code>type_id</code> should be 'Other' and the <code>type</code> attribute should label the entity type.
+    The Managed Entity object describes the type and version of an entity, such as
+    a user, device, or policy.  For types in the <code>type_id</code> enum list, an
+    associated attribute should be populated.  If the type of entity is not in the
+    <code>type_id</code> list, information can be put into the <code>data</code>
+    attribute, <code>type_id</code> should be 'Other' and the <code>type</code>
+    attribute should label the entity type.
     """
     _inherited_slots: ClassVar[list[str]] = []
 
@@ -8223,7 +8372,7 @@ class ManagedEntity(Entity):
         if self.type is not None and not isinstance(self.type, str):
             self.type = str(self.type)
 
-        if isinstance(self.type_id, str):
+        if self.type_id is not None and not isinstance(self.type_id, ManagedEntityTypeIdEnum):
             self.type_id = ManagedEntityTypeIdEnum(self.type_id)
 
         if self.uid is not None and not isinstance(self.uid, str):
@@ -8247,8 +8396,8 @@ class ManagedEntity(Entity):
 @dataclass(repr=False)
 class MessageContext(Entity):
     """
-    Communication context for AI system interactions including protocols, roles, clients, and session information for
-    MCP and other AI communication systems.
+    Communication context for AI system interactions including protocols, roles,
+    clients, and session information for MCP and other AI communication systems.
     """
     _inherited_slots: ClassVar[list[str]] = []
 
@@ -8271,7 +8420,7 @@ class MessageContext(Entity):
         if self.ai_role is not None and not isinstance(self.ai_role, str):
             self.ai_role = str(self.ai_role)
 
-        if isinstance(self.ai_role_id, str):
+        if self.ai_role_id is not None and not isinstance(self.ai_role_id, MessageContextAiRoleIdEnum):
             self.ai_role_id = MessageContextAiRoleIdEnum(self.ai_role_id)
 
         if self.application is not None and not isinstance(self.application, ApplicationObject):
@@ -8501,8 +8650,8 @@ class Metric(Object):
 @dataclass(repr=False)
 class Mitigation(Entity):
     """
-    The MITRE Mitigation object describes the ATT&CK® or ATLAS™ Mitigation ID and/or name that is associated to an
-    attack.
+    The MITRE Mitigation object describes the ATT&CK® or ATLAS™ Mitigation ID
+    and/or name that is associated to an attack.
     """
     _inherited_slots: ClassVar[list[str]] = []
 
@@ -8576,7 +8725,7 @@ class Module(Object):
         if self.load_type is not None and not isinstance(self.load_type, str):
             self.load_type = str(self.load_type)
 
-        if isinstance(self.load_type_id, str):
+        if self.load_type_id is not None and not isinstance(self.load_type_id, ModuleLoadTypeIdEnum):
             self.load_type_id = ModuleLoadTypeIdEnum(self.load_type_id)
 
         if self.start_address is not None and not isinstance(self.start_address, str):
@@ -8591,8 +8740,8 @@ class Module(Object):
 @dataclass(repr=False)
 class NetworkConnectionInfo(Object):
     """
-    The Network Connection Information object describes characteristics of an OSI Transport Layer communication,
-    including TCP and UDP.
+    The Network Connection Information object describes characteristics of an OSI
+    Transport Layer communication, including TCP and UDP.
     """
     _inherited_slots: ClassVar[list[str]] = []
 
@@ -8618,13 +8767,13 @@ class NetworkConnectionInfo(Object):
     def __post_init__(self, *_: str, **kwargs: Any):
         if self._is_empty(self.direction_id):
             self.MissingRequiredField("direction_id")
-        if isinstance(self.direction_id, str):
+        if not isinstance(self.direction_id, DirectionIdEnum):
             self.direction_id = DirectionIdEnum(self.direction_id)
 
         if self.boundary is not None and not isinstance(self.boundary, str):
             self.boundary = str(self.boundary)
 
-        if isinstance(self.boundary_id, str):
+        if self.boundary_id is not None and not isinstance(self.boundary_id, BoundaryIdEnum):
             self.boundary_id = BoundaryIdEnum(self.boundary_id)
 
         if self.community_uid is not None and not isinstance(self.community_uid, str):
@@ -8645,7 +8794,7 @@ class NetworkConnectionInfo(Object):
         if self.protocol_ver is not None and not isinstance(self.protocol_ver, str):
             self.protocol_ver = str(self.protocol_ver)
 
-        if isinstance(self.protocol_ver_id, str):
+        if self.protocol_ver_id is not None and not isinstance(self.protocol_ver_id, NetworkConnectionInfoProtocolVerIdEnum):
             self.protocol_ver_id = NetworkConnectionInfoProtocolVerIdEnum(self.protocol_ver_id)
 
         if self.session is not None and not isinstance(self.session, Session):
@@ -8663,8 +8812,8 @@ class NetworkConnectionInfo(Object):
 @dataclass(repr=False)
 class NetworkEndpoint(Endpoint):
     """
-    The Network Endpoint object describes characteristics of a network endpoint. These can be a source or destination
-    of a network connection.
+    The Network Endpoint object describes characteristics of a network endpoint.
+    These can be a source or destination of a network connection.
     """
     _inherited_slots: ClassVar[list[str]] = []
 
@@ -8706,7 +8855,7 @@ class NetworkEndpoint(Endpoint):
         if self.network_scope is not None and not isinstance(self.network_scope, str):
             self.network_scope = str(self.network_scope)
 
-        if isinstance(self.network_scope_id, str):
+        if self.network_scope_id is not None and not isinstance(self.network_scope_id, NetworkScopeIdEnum):
             self.network_scope_id = NetworkScopeIdEnum(self.network_scope_id)
 
         if self.port is not None and not isinstance(self.port, int):
@@ -8721,13 +8870,16 @@ class NetworkEndpoint(Endpoint):
         if self.type is not None and not isinstance(self.type, str):
             self.type = str(self.type)
 
+        if self.type_id is not None and not isinstance(self.type_id, TypeIdEnum):
+            self.type_id = TypeIdEnum(self.type_id)
+
         if self.uid is not None and not isinstance(self.uid, str):
             self.uid = str(self.uid)
 
         if self.type is not None and not isinstance(self.type, str):
             self.type = str(self.type)
 
-        if isinstance(self.type_id, str):
+        if self.type_id is not None and not isinstance(self.type_id, EndpointTypeIdEnum):
             self.type_id = EndpointTypeIdEnum(self.type_id)
 
         super().__post_init__(**kwargs)
@@ -8736,8 +8888,8 @@ class NetworkEndpoint(Endpoint):
 @dataclass(repr=False)
 class NetworkInterface(Entity):
     """
-    The Network Interface object describes the type and associated attributes of a physical or virtual network
-    interface.
+    The Network Interface object describes the type and associated attributes of a
+    physical or virtual network interface.
     """
     _inherited_slots: ClassVar[list[str]] = []
 
@@ -8781,7 +8933,7 @@ class NetworkInterface(Entity):
         if self.type is not None and not isinstance(self.type, str):
             self.type = str(self.type)
 
-        if isinstance(self.type_id, str):
+        if self.type_id is not None and not isinstance(self.type_id, NetworkInterfaceTypeIdEnum):
             self.type_id = NetworkInterfaceTypeIdEnum(self.type_id)
 
         if self.uid is not None and not isinstance(self.uid, str):
@@ -8798,8 +8950,9 @@ class NetworkInterface(Entity):
 
 class NetworkProxy(NetworkEndpoint):
     """
-    The network proxy endpoint object describes a proxy server, which acts as an intermediary between a client
-    requesting a resource and the server providing that resource.
+    The network proxy endpoint object describes a proxy server, which acts as an
+    intermediary between a client requesting a resource and the server providing
+    that resource.
     """
     _inherited_slots: ClassVar[list[str]] = []
 
@@ -8812,8 +8965,9 @@ class NetworkProxy(NetworkEndpoint):
 @dataclass(repr=False)
 class NetworkTraffic(Object):
     """
-    The Network Traffic object describes characteristics of network traffic over a time period. The metrics represent
-    network data transferred between source and destination during an observation window.
+    The Network Traffic object describes characteristics of network traffic over a
+    time period. The metrics represent network data transferred between source and
+    destination during an observation window.
     """
     _inherited_slots: ClassVar[list[str]] = []
 
@@ -8921,9 +9075,10 @@ class Node(Object):
 @dataclass(repr=False)
 class Organization(Entity):
     """
-    The Organization object describes characteristics of an organization or company and its division if any.
-    Additionally, it also describes cloud and Software-as-a-Service (SaaS) logical hierarchies such as AWS
-    Organizations, Google Cloud Organizations, Oracle Cloud Tenancies, and similar constructs.
+    The Organization object describes characteristics of an organization or company
+    and its division if any. Additionally, it also describes cloud and
+    Software-as-a-Service (SaaS) logical hierarchies such as AWS Organizations,
+    Google Cloud Organizations, Oracle Cloud Tenancies, and similar constructs.
     """
     _inherited_slots: ClassVar[list[str]] = []
 
@@ -8962,7 +9117,8 @@ class Organization(Entity):
 @dataclass(repr=False)
 class PeripheralDevice(Entity):
     """
-    The peripheral device object describes the properties of external, connectable, and detachable hardware.
+    The peripheral device object describes the properties of external, connectable,
+    and detachable hardware.
     """
     _inherited_slots: ClassVar[list[str]] = []
 
@@ -9002,7 +9158,7 @@ class PeripheralDevice(Entity):
         if self.type is not None and not isinstance(self.type, str):
             self.type = str(self.type)
 
-        if isinstance(self.type_id, str):
+        if self.type_id is not None and not isinstance(self.type_id, PeripheralDeviceTypeIdEnum):
             self.type_id = PeripheralDeviceTypeIdEnum(self.type_id)
 
         if self.uid is not None and not isinstance(self.uid, str):
@@ -9024,8 +9180,9 @@ class PeripheralDevice(Entity):
 @dataclass(repr=False)
 class Policy(Entity):
     """
-    The Policy object describes the policies that are applicable. <p>Policy attributes provide traceability to the
-    operational state of the security product at the time that the event was captured, facilitating forensics,
+    The Policy object describes the policies that are applicable. <p>Policy
+    attributes provide traceability to the operational state of the security
+    product at the time that the event was captured, facilitating forensics,
     troubleshooting, and policy tuning/adjustments.</p>
     """
     _inherited_slots: ClassVar[list[str]] = []
@@ -9200,8 +9357,9 @@ class Product(Entity):
 @dataclass(repr=False)
 class QueryInfo(Entity):
     """
-    The query info object holds information related to data access within a datastore. To access, manipulate, delete,
-    or retrieve data from a datastore, a query must be written using a specific syntax.
+    The query info object holds information related to data access within a
+    datastore. To access, manipulate, delete, or retrieve data from a datastore, a
+    query must be written using a specific syntax.
     """
     _inherited_slots: ClassVar[list[str]] = []
 
@@ -9293,7 +9451,8 @@ class Reporter(Entity):
 @dataclass(repr=False)
 class ResourceDetails(Resource):
     """
-    The Resource Details object describes details about resources that were affected by the activity/event.
+    The Resource Details object describes details about resources that were
+    affected by the activity/event.
     """
     _inherited_slots: ClassVar[list[str]] = []
 
@@ -9371,7 +9530,7 @@ class ResourceDetails(Resource):
         if self.role is not None and not isinstance(self.role, str):
             self.role = str(self.role)
 
-        if isinstance(self.role_id, str):
+        if self.role_id is not None and not isinstance(self.role_id, ResourceDetailsRoleIdEnum):
             self.role_id = ResourceDetailsRoleIdEnum(self.role_id)
 
         if self.version is not None and not isinstance(self.version, str):
@@ -9389,7 +9548,8 @@ class ResourceDetails(Resource):
 @dataclass(repr=False)
 class Rule(Entity):
     """
-    The Rule object describes characteristics of a rule associated with a policy or an event.
+    The Rule object describes characteristics of a rule associated with a policy or
+    an event.
     """
     _inherited_slots: ClassVar[list[str]] = []
 
@@ -9453,7 +9613,7 @@ class Scan(Entity):
     def __post_init__(self, *_: str, **kwargs: Any):
         if self._is_empty(self.type_id):
             self.MissingRequiredField("type_id")
-        if isinstance(self.type_id, str):
+        if not isinstance(self.type_id, ScanTypeIdEnum):
             self.type_id = ScanTypeIdEnum(self.type_id)
 
         if self.name is not None and not isinstance(self.name, str):
@@ -9477,7 +9637,8 @@ class Scan(Entity):
 @dataclass(repr=False)
 class Service(Entity):
     """
-    The Service object describes characteristics of a service, <code> e.g. AWS EC2. </code>
+    The Service object describes characteristics of a service, <code> e.g. AWS EC2.
+    </code>
     """
     _inherited_slots: ClassVar[list[str]] = []
 
@@ -9520,8 +9681,8 @@ class Service(Entity):
 @dataclass(repr=False)
 class SubTechnique(Entity):
     """
-    The MITRE Sub-technique object describes the ATT&CK® or ATLAS™ Sub-technique ID and/or name associated to an
-    attack.
+    The MITRE Sub-technique object describes the ATT&CK® or ATLAS™ Sub-technique ID
+    and/or name associated to an attack.
     """
     _inherited_slots: ClassVar[list[str]] = []
 
@@ -9556,8 +9717,9 @@ class SubTechnique(Entity):
 @dataclass(repr=False)
 class Table(Entity):
     """
-    The table object represents a table within a structured relational database or datastore, which contains columns
-    and rows of data that are able to be create, updated, deleted and queried.
+    The table object represents a table within a structured relational database or
+    datastore, which contains columns and rows of data that are able to be create,
+    updated, deleted and queried.
     """
     _inherited_slots: ClassVar[list[str]] = []
 
@@ -9609,7 +9771,8 @@ class Table(Entity):
 @dataclass(repr=False)
 class Tactic(Entity):
     """
-    The MITRE Tactic object describes the ATT&CK® or ATLAS™ Tactic ID and/or name that is associated to an attack.
+    The MITRE Tactic object describes the ATT&CK® or ATLAS™ Tactic ID and/or name
+    that is associated to an attack.
     """
     _inherited_slots: ClassVar[list[str]] = []
 
@@ -9644,7 +9807,8 @@ class Tactic(Entity):
 @dataclass(repr=False)
 class Technique(Entity):
     """
-    The MITRE Technique object describes the ATT&CK® or ATLAS™ Technique ID and/or name associated to an attack.
+    The MITRE Technique object describes the ATT&CK® or ATLAS™ Technique ID and/or
+    name associated to an attack.
     """
     _inherited_slots: ClassVar[list[str]] = []
 
@@ -9679,9 +9843,10 @@ class Technique(Entity):
 @dataclass(repr=False)
 class Trait(Entity):
     """
-    Describes a characteristic or feature of an entity that was observed. For example, this object can be used to
-    represent specific characteristics derived from events or findings that can be surfaced as distinguishing traits
-    of the entity in question.
+    Describes a characteristic or feature of an entity that was observed. For
+    example, this object can be used to represent specific characteristics derived
+    from events or findings that can be surfaced as distinguishing traits of the
+    entity in question.
     """
     _inherited_slots: ClassVar[list[str]] = []
 
@@ -9772,9 +9937,11 @@ class TransformationInfo(Entity):
 @dataclass(repr=False)
 class UnmannedAerialSystem(Aircraft):
     """
-    The Unmanned Aerial System object describes the characteristics, Position Location Information (PLI), and other
-    metadata of Unmanned Aerial Systems (UAS) and other unmanned and drone systems used in Remote ID. Remote ID is
-    defined in the Standard Specification for Remote ID and Tracking (ASTM Designation: F3411-22a) <a target='_blank'
+    The Unmanned Aerial System object describes the characteristics, Position
+    Location Information (PLI), and other metadata of Unmanned Aerial Systems (UAS)
+    and other unmanned and drone systems used in Remote ID. Remote ID is defined in
+    the Standard Specification for Remote ID and Tracking (ASTM Designation:
+    F3411-22a) <a target='_blank'
     href='https://cdn.standards.iteh.ai/samples/112830/71297057ac42432880a203654f213709/ASTM-F3411-22a.pdf'>ASTM
     F3411-22a</a>.
     """
@@ -9811,7 +9978,7 @@ class UnmannedAerialSystem(Aircraft):
         if self.type is not None and not isinstance(self.type, str):
             self.type = str(self.type)
 
-        if isinstance(self.type_id, str):
+        if self.type_id is not None and not isinstance(self.type_id, UnmannedAerialSystemTypeIdEnum):
             self.type_id = UnmannedAerialSystemTypeIdEnum(self.type_id)
 
         if self.uid is not None and not isinstance(self.uid, str):
@@ -9838,8 +10005,8 @@ class UnmannedAerialSystem(Aircraft):
 @dataclass(repr=False)
 class UnmannedSystemOperatingArea(Location):
     """
-    The Unmanned System Operating Area object describes details about a precise area of operations for a UAS flight or
-    mission.
+    The Unmanned System Operating Area object describes details about a precise
+    area of operations for a UAS flight or mission.
     """
     _inherited_slots: ClassVar[list[str]] = []
 
@@ -9884,7 +10051,7 @@ class UnmannedSystemOperatingArea(Location):
         if self.type is not None and not isinstance(self.type, str):
             self.type = str(self.type)
 
-        if isinstance(self.type_id, str):
+        if self.type_id is not None and not isinstance(self.type_id, UnmannedSystemOperatingAreaTypeIdEnum):
             self.type_id = UnmannedSystemOperatingAreaTypeIdEnum(self.type_id)
 
         super().__post_init__(**kwargs)
@@ -9893,7 +10060,8 @@ class UnmannedSystemOperatingArea(Location):
 @dataclass(repr=False)
 class User(Entity):
     """
-    The User object describes the characteristics of a user/person or a security principal.
+    The User object describes the characteristics of a user/person or a security
+    principal.
     """
     _inherited_slots: ClassVar[list[str]] = []
 
@@ -9970,7 +10138,7 @@ class User(Entity):
         if self.risk_level is not None and not isinstance(self.risk_level, str):
             self.risk_level = str(self.risk_level)
 
-        if isinstance(self.risk_level_id, str):
+        if self.risk_level_id is not None and not isinstance(self.risk_level_id, RiskLevelIdEnum):
             self.risk_level_id = RiskLevelIdEnum(self.risk_level_id)
 
         if self.risk_score is not None and not isinstance(self.risk_score, int):
@@ -9979,7 +10147,7 @@ class User(Entity):
         if self.type is not None and not isinstance(self.type, str):
             self.type = str(self.type)
 
-        if isinstance(self.type_id, str):
+        if self.type_id is not None and not isinstance(self.type_id, UserTypeIdEnum):
             self.type_id = UserTypeIdEnum(self.type_id)
 
         if self.uid is not None and not isinstance(self.uid, str):
@@ -10000,7 +10168,8 @@ class User(Entity):
 @dataclass(repr=False)
 class WebResource(Resource):
     """
-    The Web Resource object describes characteristics of a web resource that was affected by the activity/event.
+    The Web Resource object describes characteristics of a web resource that was
+    affected by the activity/event.
     """
     _inherited_slots: ClassVar[list[str]] = []
 
@@ -10047,8 +10216,9 @@ class WebResource(Resource):
 @dataclass(repr=False)
 class Device(Endpoint):
     """
-    The Device object represents an addressable computer system or host, which is typically connected to a computer
-    network and participates in the transmission or processing of data within the computer network.
+    The Device object represents an addressable computer system or host, which is
+    typically connected to a computer network and participates in the transmission
+    or processing of data within the computer network.
     """
     _inherited_slots: ClassVar[list[str]] = []
 
@@ -10105,7 +10275,7 @@ class Device(Endpoint):
     def __post_init__(self, *_: str, **kwargs: Any):
         if self._is_empty(self.type_id):
             self.MissingRequiredField("type_id")
-        if isinstance(self.type_id, str):
+        if not isinstance(self.type_id, EndpointTypeIdEnum):
             self.type_id = EndpointTypeIdEnum(self.type_id)
 
         if self.autoscale_uid is not None and not isinstance(self.autoscale_uid, str):
@@ -10216,7 +10386,7 @@ class Device(Endpoint):
         if self.risk_level is not None and not isinstance(self.risk_level, str):
             self.risk_level = str(self.risk_level)
 
-        if isinstance(self.risk_level_id, str):
+        if self.risk_level_id is not None and not isinstance(self.risk_level_id, RiskLevelIdEnum):
             self.risk_level_id = RiskLevelIdEnum(self.risk_level_id)
 
         if self.risk_score is not None and not isinstance(self.risk_score, int):
@@ -10227,6 +10397,9 @@ class Device(Endpoint):
 
         if self.type is not None and not isinstance(self.type, str):
             self.type = str(self.type)
+
+        if self.type_id is not None and not isinstance(self.type_id, TypeIdEnum):
+            self.type_id = TypeIdEnum(self.type_id)
 
         if self.udid is not None and not isinstance(self.udid, str):
             self.udid = str(self.udid)
@@ -10261,9 +10434,9 @@ class Device(Endpoint):
 @dataclass(repr=False)
 class FirewallRule(Rule):
     """
-    The Firewall Rule object represents a specific rule within a firewall policy or event. It contains information
-    about a rule's configuration, properties, and associated actions that define how network traffic is handled by the
-    firewall.
+    The Firewall Rule object represents a specific rule within a firewall policy or
+    event. It contains information about a rule's configuration, properties, and
+    associated actions that define how network traffic is handled by the firewall.
     """
     _inherited_slots: ClassVar[list[str]] = []
 
@@ -10305,7 +10478,8 @@ class FirewallRule(Rule):
 @dataclass(repr=False)
 class MalwareScanInfo(Scan):
     """
-    The malware scan information object describes characteristics, metadata of a malware scanning job.
+    The malware scan information object describes characteristics, metadata of a
+    malware scanning job.
     """
     _inherited_slots: ClassVar[list[str]] = []
 
@@ -10392,7 +10566,7 @@ class Process(ProcessEntity):
         if self.integrity is not None and not isinstance(self.integrity, str):
             self.integrity = str(self.integrity)
 
-        if isinstance(self.integrity_id, str):
+        if self.integrity_id is not None and not isinstance(self.integrity_id, IntegrityIdEnum):
             self.integrity_id = IntegrityIdEnum(self.integrity_id)
 
         if not isinstance(self.lineage, list):
@@ -10442,8 +10616,8 @@ class Process(ProcessEntity):
 @dataclass(repr=False)
 class AiOperationProfile(YAMLRoot):
     """
-    AI-specific attributes for model operations, retrieval systems, and agent activities. e.g. model_name,
-    total_token_counts etc.
+    AI-specific attributes for model operations, retrieval systems, and agent
+    activities. e.g. model_name, total_token_counts etc.
     """
     _inherited_slots: ClassVar[list[str]] = []
 
@@ -10468,7 +10642,8 @@ class AiOperationProfile(YAMLRoot):
 @dataclass(repr=False)
 class CloudProfile(YAMLRoot):
     """
-    The attributes that describe information specific to Cloud services/applications.
+    The attributes that describe information specific to Cloud
+    services/applications.
     """
     _inherited_slots: ClassVar[list[str]] = []
 
@@ -10520,8 +10695,9 @@ class ContainerProfile(YAMLRoot):
 @dataclass(repr=False)
 class DataClassificationProfile(YAMLRoot):
     """
-    The Data Classification profile adds attributes to specific resource objects, allowing users to describe
-    information about classifiers & data classification results.
+    The Data Classification profile adds attributes to specific resource objects,
+    allowing users to describe information about classifiers & data classification
+    results.
     """
     _inherited_slots: ClassVar[list[str]] = []
 
@@ -10546,7 +10722,8 @@ class DataClassificationProfile(YAMLRoot):
 
 class DatetimeProfile(YAMLRoot):
     """
-    This profile defines date/time attributes as defined in RFC-3339. For example 1985-04-12T23:20:50.52Z.
+    This profile defines date/time attributes as defined in RFC-3339. For example
+    1985-04-12T23:20:50.52Z.
     """
     _inherited_slots: ClassVar[list[str]] = []
 
@@ -10617,7 +10794,7 @@ class IncidentProfile(YAMLRoot):
         if self.impact is not None and not isinstance(self.impact, str):
             self.impact = str(self.impact)
 
-        if isinstance(self.impact_id, str):
+        if self.impact_id is not None and not isinstance(self.impact_id, ImpactIdEnum):
             self.impact_id = ImpactIdEnum(self.impact_id)
 
         if self.impact_score is not None and not isinstance(self.impact_score, int):
@@ -10629,7 +10806,7 @@ class IncidentProfile(YAMLRoot):
         if self.priority is not None and not isinstance(self.priority, str):
             self.priority = str(self.priority)
 
-        if isinstance(self.priority_id, str):
+        if self.priority_id is not None and not isinstance(self.priority_id, PriorityIdEnum):
             self.priority_id = PriorityIdEnum(self.priority_id)
 
         if self.src_url is not None and not isinstance(self.src_url, str):
@@ -10645,7 +10822,7 @@ class IncidentProfile(YAMLRoot):
         if self.verdict is not None and not isinstance(self.verdict, str):
             self.verdict = str(self.verdict)
 
-        if isinstance(self.verdict_id, str):
+        if self.verdict_id is not None and not isinstance(self.verdict_id, VerdictIdEnum):
             self.verdict_id = VerdictIdEnum(self.verdict_id)
 
         super().__post_init__(**kwargs)
@@ -10716,10 +10893,12 @@ class NetworkProxyProfile(YAMLRoot):
 @dataclass(repr=False)
 class OsintProfile(YAMLRoot):
     """
-    The OSINT (Open Source Intelligence) profile contains one or more indicators and associated analysis and details,
-    such as registrar (WHOIS) information and commentary about a hostname, or information about a digital certificate
-    and its usage within a campaign. This information can be used to further enrich a detection or finding by
-    providing decisioning support to other analysts and engineers within the profile itself.
+    The OSINT (Open Source Intelligence) profile contains one or more indicators
+    and associated analysis and details, such as registrar (WHOIS) information and
+    commentary about a hostname, or information about a digital certificate and its
+    usage within a campaign. This information can be used to further enrich a
+    detection or finding by providing decisioning support to other analysts and
+    engineers within the profile itself.
     """
     _inherited_slots: ClassVar[list[str]] = []
 
@@ -10741,11 +10920,13 @@ class OsintProfile(YAMLRoot):
 @dataclass(repr=False)
 class SecurityControlProfile(YAMLRoot):
     """
-    The attributes including disposition that represent the outcome of a security control including but not limited to
-    access control, malware or policy violation, network proxy, intrusion detection, firewall, or data control. The
-    profile is intended to augment activities or findings with an outcome when a security control has observed or
-    intervened. If the control detected a security violation, and the <code>disposition_id</code> or
-    <code>action_id</code> is an alertable outcome or action, the <code>is_alert</code> flag may be set to
+    The attributes including disposition that represent the outcome of a security
+    control including but not limited to access control, malware or policy
+    violation, network proxy, intrusion detection, firewall, or data control.  The
+    profile is intended to augment activities or findings with an outcome when a
+    security control has observed or intervened. If the control detected a security
+    violation, and the <code>disposition_id</code> or <code>action_id</code> is an
+    alertable outcome or action, the <code>is_alert</code> flag may be set to
     <code>true</code>.
     """
     _inherited_slots: ClassVar[list[str]] = []
@@ -10778,7 +10959,7 @@ class SecurityControlProfile(YAMLRoot):
         if self.action is not None and not isinstance(self.action, str):
             self.action = str(self.action)
 
-        if isinstance(self.action_id, str):
+        if self.action_id is not None and not isinstance(self.action_id, ActionIdEnum):
             self.action_id = ActionIdEnum(self.action_id)
 
         if not isinstance(self.attacks, list):
@@ -10792,7 +10973,7 @@ class SecurityControlProfile(YAMLRoot):
         if self.confidence is not None and not isinstance(self.confidence, str):
             self.confidence = str(self.confidence)
 
-        if isinstance(self.confidence_id, str):
+        if self.confidence_id is not None and not isinstance(self.confidence_id, ConfidenceIdEnum):
             self.confidence_id = ConfidenceIdEnum(self.confidence_id)
 
         if self.confidence_score is not None and not isinstance(self.confidence_score, int):
@@ -10801,7 +10982,7 @@ class SecurityControlProfile(YAMLRoot):
         if self.disposition is not None and not isinstance(self.disposition, str):
             self.disposition = str(self.disposition)
 
-        if isinstance(self.disposition_id, str):
+        if self.disposition_id is not None and not isinstance(self.disposition_id, DispositionIdEnum):
             self.disposition_id = DispositionIdEnum(self.disposition_id)
 
         if self.firewall_rule is not None and not isinstance(self.firewall_rule, FirewallRule):
@@ -10824,7 +11005,7 @@ class SecurityControlProfile(YAMLRoot):
         if self.risk_level is not None and not isinstance(self.risk_level, str):
             self.risk_level = str(self.risk_level)
 
-        if isinstance(self.risk_level_id, str):
+        if self.risk_level_id is not None and not isinstance(self.risk_level_id, RiskLevelIdEnum):
             self.risk_level_id = RiskLevelIdEnum(self.risk_level_id)
 
         if self.risk_score is not None and not isinstance(self.risk_score, int):
@@ -10836,10 +11017,11 @@ class SecurityControlProfile(YAMLRoot):
 @dataclass(repr=False)
 class TraceProfile(YAMLRoot):
     """
-    The Trace Profile extends the OCSF framework to capture and standardize observability events, specifically
-    targeting trace-level data. This profile enables integration and normalization of distributed tracing information,
-    allowing OCSF events to retain essential trace context such as trace IDs, span relationships, and service
-    dependencies.
+    The Trace Profile extends the OCSF framework to capture and standardize
+    observability events, specifically targeting trace-level data. This profile
+    enables integration and normalization of distributed tracing information,
+    allowing OCSF events to retain essential trace context such as trace IDs, span
+    relationships, and service dependencies.
     """
     _inherited_slots: ClassVar[list[str]] = []
 
@@ -10860,9 +11042,10 @@ class TraceProfile(YAMLRoot):
 @dataclass(repr=False)
 class BaseEvent(YAMLRoot):
     """
-    The base event is a generic and concrete event. It also defines a set of attributes available in most event
-    classes. As a generic event that does not belong to any event category, it could be used to log events that are
-    not otherwise defined by the schema.
+    The base event is a generic and concrete event. It also defines a set of
+    attributes available in most event classes. As a generic event that does not
+    belong to any event category, it could be used to log events that are not
+    otherwise defined by the schema.
     """
     _inherited_slots: ClassVar[list[str]] = []
 
@@ -10926,17 +11109,17 @@ class BaseEvent(YAMLRoot):
     def __post_init__(self, *_: str, **kwargs: Any):
         if self._is_empty(self.activity_id):
             self.MissingRequiredField("activity_id")
-        if isinstance(self.activity_id, str):
+        if not isinstance(self.activity_id, BaseEventActivityIdEnum):
             self.activity_id = BaseEventActivityIdEnum(self.activity_id)
 
         if self._is_empty(self.category_uid):
             self.MissingRequiredField("category_uid")
-        if isinstance(self.category_uid, str):
+        if not isinstance(self.category_uid, BaseEventCategoryUidEnum):
             self.category_uid = BaseEventCategoryUidEnum(self.category_uid)
 
         if self._is_empty(self.class_uid):
             self.MissingRequiredField("class_uid")
-        if isinstance(self.class_uid, str):
+        if not isinstance(self.class_uid, BaseEventClassUidEnum):
             self.class_uid = BaseEventClassUidEnum(self.class_uid)
 
         if self._is_empty(self.metadata):
@@ -10946,7 +11129,7 @@ class BaseEvent(YAMLRoot):
 
         if self._is_empty(self.severity_id):
             self.MissingRequiredField("severity_id")
-        if isinstance(self.severity_id, str):
+        if not isinstance(self.severity_id, SeverityIdEnum):
             self.severity_id = SeverityIdEnum(self.severity_id)
 
         if self._is_empty(self.time):
@@ -11017,7 +11200,7 @@ class BaseEvent(YAMLRoot):
         if self.status_detail is not None and not isinstance(self.status_detail, str):
             self.status_detail = str(self.status_detail)
 
-        if isinstance(self.status_id, str):
+        if self.status_id is not None and not isinstance(self.status_id, StatusIdEnum):
             self.status_id = StatusIdEnum(self.status_id)
 
         if self.timezone_offset is not None and not isinstance(self.timezone_offset, int):
@@ -11041,7 +11224,7 @@ class BaseEvent(YAMLRoot):
         if self.action is not None and not isinstance(self.action, str):
             self.action = str(self.action)
 
-        if isinstance(self.action_id, str):
+        if self.action_id is not None and not isinstance(self.action_id, ActionIdEnum):
             self.action_id = ActionIdEnum(self.action_id)
 
         if not isinstance(self.attacks, list):
@@ -11055,7 +11238,7 @@ class BaseEvent(YAMLRoot):
         if self.confidence is not None and not isinstance(self.confidence, str):
             self.confidence = str(self.confidence)
 
-        if isinstance(self.confidence_id, str):
+        if self.confidence_id is not None and not isinstance(self.confidence_id, ConfidenceIdEnum):
             self.confidence_id = ConfidenceIdEnum(self.confidence_id)
 
         if self.confidence_score is not None and not isinstance(self.confidence_score, int):
@@ -11064,7 +11247,7 @@ class BaseEvent(YAMLRoot):
         if self.disposition is not None and not isinstance(self.disposition, str):
             self.disposition = str(self.disposition)
 
-        if isinstance(self.disposition_id, str):
+        if self.disposition_id is not None and not isinstance(self.disposition_id, DispositionIdEnum):
             self.disposition_id = DispositionIdEnum(self.disposition_id)
 
         if self.firewall_rule is not None and not isinstance(self.firewall_rule, FirewallRule):
@@ -11087,7 +11270,7 @@ class BaseEvent(YAMLRoot):
         if self.risk_level is not None and not isinstance(self.risk_level, str):
             self.risk_level = str(self.risk_level)
 
-        if isinstance(self.risk_level_id, str):
+        if self.risk_level_id is not None and not isinstance(self.risk_level_id, RiskLevelIdEnum):
             self.risk_level_id = RiskLevelIdEnum(self.risk_level_id)
 
         if self.risk_score is not None and not isinstance(self.risk_score, int):
@@ -11118,7 +11301,8 @@ class ApplicationEvent(BaseEvent):
 @dataclass(repr=False)
 class ApiActivity(ApplicationEvent):
     """
-    API events describe general CRUD (Create, Read, Update, Delete) API activities, e.g. (AWS Cloudtrail)
+    API events describe general CRUD (Create, Read, Update, Delete) API activities,
+    e.g. (AWS Cloudtrail)
     """
     _inherited_slots: ClassVar[list[str]] = []
 
@@ -11160,13 +11344,16 @@ class ApiActivity(ApplicationEvent):
 
         if self._is_empty(self.activity_id):
             self.MissingRequiredField("activity_id")
-        if isinstance(self.activity_id, str):
+        if not isinstance(self.activity_id, ApiActivityActivityIdEnum):
             self.activity_id = ApiActivityActivityIdEnum(self.activity_id)
 
         if self._is_empty(self.api):
             self.MissingRequiredField("api")
         if not isinstance(self.api, Api):
             self.api = Api(**as_dict(self.api))
+
+        if self.activity_id is not None and not isinstance(self.activity_id, ActivityIdEnum):
+            self.activity_id = ActivityIdEnum(self.activity_id)
 
         if self.api is not None and not isinstance(self.api, Api):
             self.api = Api(**as_dict(self.api))
@@ -11199,10 +11386,12 @@ class ApiActivity(ApplicationEvent):
 @dataclass(repr=False)
 class ApplicationError(ApplicationEvent):
     """
-    Application Error events describe issues with an applications. The error message should be put in the event's
-    <code>message</code> attribute. The <code>metadata.product</code> attribute can be used to capture the originating
-    application information. The <code>host</code> profile can used to include the generating device information. This
-    class is helpful for applications that generate or handle OCSF events and can also be used for errors in upstream
+    Application Error events describe issues with an applications. The error
+    message should be put in the event's <code>message</code> attribute. The
+    <code>metadata.product</code> attribute can be used to capture the originating
+    application information. The <code>host</code> profile can used to include the
+    generating device information. This class is helpful for applications that
+    generate or handle OCSF events and can also be used for errors in upstream
     products and services.
     """
     _inherited_slots: ClassVar[list[str]] = []
@@ -11226,8 +11415,11 @@ class ApplicationError(ApplicationEvent):
     def __post_init__(self, *_: str, **kwargs: Any):
         if self._is_empty(self.activity_id):
             self.MissingRequiredField("activity_id")
-        if isinstance(self.activity_id, str):
+        if not isinstance(self.activity_id, ApplicationErrorActivityIdEnum):
             self.activity_id = ApplicationErrorActivityIdEnum(self.activity_id)
+
+        if self.activity_id is not None and not isinstance(self.activity_id, ActivityIdEnum):
+            self.activity_id = ActivityIdEnum(self.activity_id)
 
         if self.message is not None and not isinstance(self.message, str):
             self.message = str(self.message)
@@ -11241,7 +11433,8 @@ class ApplicationError(ApplicationEvent):
 @dataclass(repr=False)
 class ApplicationLifecycle(ApplicationEvent):
     """
-    Application Lifecycle events report installation, removal, start, stop of an application or service.
+    Application Lifecycle events report installation, removal, start, stop of an
+    application or service.
     """
     _inherited_slots: ClassVar[list[str]] = []
 
@@ -11269,8 +11462,11 @@ class ApplicationLifecycle(ApplicationEvent):
 
         if self._is_empty(self.activity_id):
             self.MissingRequiredField("activity_id")
-        if isinstance(self.activity_id, str):
+        if not isinstance(self.activity_id, ApplicationLifecycleActivityIdEnum):
             self.activity_id = ApplicationLifecycleActivityIdEnum(self.activity_id)
+
+        if self.activity_id is not None and not isinstance(self.activity_id, ActivityIdEnum):
+            self.activity_id = ActivityIdEnum(self.activity_id)
 
         super().__post_init__(**kwargs)
 
@@ -11278,8 +11474,9 @@ class ApplicationLifecycle(ApplicationEvent):
 @dataclass(repr=False)
 class DatastoreActivity(ApplicationEvent):
     """
-    Datastore events describe general activities (Read, Update, Query, Delete, etc.) which affect datastores or data
-    within those datastores, e.g. (AWS RDS, AWS S3).
+    Datastore events describe general activities (Read, Update, Query, Delete,
+    etc.) which affect datastores or data within those datastores, e.g. (AWS RDS,
+    AWS S3).
     """
     _inherited_slots: ClassVar[list[str]] = []
 
@@ -11324,8 +11521,11 @@ class DatastoreActivity(ApplicationEvent):
 
         if self._is_empty(self.activity_id):
             self.MissingRequiredField("activity_id")
-        if isinstance(self.activity_id, str):
+        if not isinstance(self.activity_id, DatastoreActivityActivityIdEnum):
             self.activity_id = DatastoreActivityActivityIdEnum(self.activity_id)
+
+        if self.activity_id is not None and not isinstance(self.activity_id, ActivityIdEnum):
+            self.activity_id = ActivityIdEnum(self.activity_id)
 
         if self.database is not None and not isinstance(self.database, Database):
             self.database = Database(**as_dict(self.database))
@@ -11351,7 +11551,7 @@ class DatastoreActivity(ApplicationEvent):
         if self.type is not None and not isinstance(self.type, str):
             self.type = str(self.type)
 
-        if isinstance(self.type_id, str):
+        if self.type_id is not None and not isinstance(self.type_id, DatastoreActivityTypeIdEnum):
             self.type_id = DatastoreActivityTypeIdEnum(self.type_id)
 
         if self.ai_model is not None and not isinstance(self.ai_model, AiModel):
@@ -11366,8 +11566,9 @@ class DatastoreActivity(ApplicationEvent):
 @dataclass(repr=False)
 class FileHosting(ApplicationEvent):
     """
-    File Hosting Activity events report the actions taken by file management applications, including file sharing
-    servers like Sharepoint and services such as Box, MS OneDrive, Google Drive, or network file share services.
+    File Hosting Activity events report the actions taken by file management
+    applications, including file sharing servers like Sharepoint and services such
+    as Box, MS OneDrive, Google Drive, or network file share services.
     """
     _inherited_slots: ClassVar[list[str]] = []
 
@@ -11419,7 +11620,7 @@ class FileHosting(ApplicationEvent):
 
         if self._is_empty(self.activity_id):
             self.MissingRequiredField("activity_id")
-        if isinstance(self.activity_id, str):
+        if not isinstance(self.activity_id, FileHostingActivityIdEnum):
             self.activity_id = FileHostingActivityIdEnum(self.activity_id)
 
         if not isinstance(self.access_list, list):
@@ -11431,6 +11632,9 @@ class FileHosting(ApplicationEvent):
 
         if self.access_result is not None and not isinstance(self.access_result, str):
             self.access_result = str(self.access_result)
+
+        if self.activity_id is not None and not isinstance(self.activity_id, ActivityIdEnum):
+            self.activity_id = ActivityIdEnum(self.activity_id)
 
         if self.connection_info is not None and not isinstance(self.connection_info, NetworkConnectionInfo):
             self.connection_info = NetworkConnectionInfo(**as_dict(self.connection_info))
@@ -11456,7 +11660,7 @@ class FileHosting(ApplicationEvent):
         if self.share_type is not None and not isinstance(self.share_type, str):
             self.share_type = str(self.share_type)
 
-        if isinstance(self.share_type_id, str):
+        if self.share_type_id is not None and not isinstance(self.share_type_id, ShareTypeIdEnum):
             self.share_type_id = ShareTypeIdEnum(self.share_type_id)
 
         super().__post_init__(**kwargs)
@@ -11465,8 +11669,9 @@ class FileHosting(ApplicationEvent):
 @dataclass(repr=False)
 class ScanActivity(ApplicationEvent):
     """
-    Scan events report the start, completion, and results of a scan job. The scan event includes the number of items
-    that were scanned and the number of detections that were resolved.
+    Scan events report the start, completion, and results of a scan job. The scan
+    event includes the number of items that were scanned and the number of
+    detections that were resolved.
     """
     _inherited_slots: ClassVar[list[str]] = []
 
@@ -11510,8 +11715,11 @@ class ScanActivity(ApplicationEvent):
 
         if self._is_empty(self.activity_id):
             self.MissingRequiredField("activity_id")
-        if isinstance(self.activity_id, str):
+        if not isinstance(self.activity_id, ScanActivityActivityIdEnum):
             self.activity_id = ScanActivityActivityIdEnum(self.activity_id)
+
+        if self.activity_id is not None and not isinstance(self.activity_id, ActivityIdEnum):
+            self.activity_id = ActivityIdEnum(self.activity_id)
 
         if self.command_uid is not None and not isinstance(self.command_uid, str):
             self.command_uid = str(self.command_uid)
@@ -11579,7 +11787,8 @@ class ScanActivity(ApplicationEvent):
 @dataclass(repr=False)
 class WebResourceAccessActivity(ApplicationEvent):
     """
-    Web Resource Access Activity events describe successful/failed attempts to access a web resource over HTTP.
+    Web Resource Access Activity events describe successful/failed attempts to
+    access a web resource over HTTP.
     """
     _inherited_slots: ClassVar[list[str]] = []
 
@@ -11624,8 +11833,11 @@ class WebResourceAccessActivity(ApplicationEvent):
 
         if self._is_empty(self.activity_id):
             self.MissingRequiredField("activity_id")
-        if isinstance(self.activity_id, str):
+        if not isinstance(self.activity_id, WebResourceAccessActivityActivityIdEnum):
             self.activity_id = WebResourceAccessActivityActivityIdEnum(self.activity_id)
+
+        if self.activity_id is not None and not isinstance(self.activity_id, ActivityIdEnum):
+            self.activity_id = ActivityIdEnum(self.activity_id)
 
         if self.http_response is not None and not isinstance(self.http_response, HttpResponse):
             self.http_response = HttpResponse(**as_dict(self.http_response))
@@ -11663,7 +11875,8 @@ class WebResourceAccessActivity(ApplicationEvent):
 @dataclass(repr=False)
 class WebResourcesActivity(ApplicationEvent):
     """
-    Web Resources Activity events describe actions executed on a set of Web Resources.
+    Web Resources Activity events describe actions executed on a set of Web
+    Resources.
     """
     _inherited_slots: ClassVar[list[str]] = []
 
@@ -11704,8 +11917,11 @@ class WebResourcesActivity(ApplicationEvent):
 
         if self._is_empty(self.activity_id):
             self.MissingRequiredField("activity_id")
-        if isinstance(self.activity_id, str):
+        if not isinstance(self.activity_id, WebResourcesActivityActivityIdEnum):
             self.activity_id = WebResourcesActivityActivityIdEnum(self.activity_id)
+
+        if self.activity_id is not None and not isinstance(self.activity_id, ActivityIdEnum):
+            self.activity_id = ActivityIdEnum(self.activity_id)
 
         if self.dst_endpoint is not None and not isinstance(self.dst_endpoint, NetworkEndpoint):
             self.dst_endpoint = NetworkEndpoint(**as_dict(self.dst_endpoint))
@@ -11750,8 +11966,9 @@ class WebResourcesActivity(ApplicationEvent):
 @dataclass(repr=False)
 class DiscoveryEvent(BaseEvent):
     """
-    The Discovery event is a generic event that defines a set of attributes available in Discovery category events. As
-    a generic event, it could be used to log events that are not otherwise defined by the Discovery specific event
+    The Discovery event is a generic event that defines a set of attributes
+    available in Discovery category events. As a generic event, it could be used to
+    log events that are not otherwise defined by the Discovery specific event
     classes.
     """
     _inherited_slots: ClassVar[list[str]] = []
@@ -11774,8 +11991,11 @@ class DiscoveryEvent(BaseEvent):
     def __post_init__(self, *_: str, **kwargs: Any):
         if self._is_empty(self.activity_id):
             self.MissingRequiredField("activity_id")
-        if isinstance(self.activity_id, str):
+        if not isinstance(self.activity_id, DiscoveryEventActivityIdEnum):
             self.activity_id = DiscoveryEventActivityIdEnum(self.activity_id)
+
+        if self.activity_id is not None and not isinstance(self.activity_id, ActivityIdEnum):
+            self.activity_id = ActivityIdEnum(self.activity_id)
 
         super().__post_init__(**kwargs)
 
@@ -11783,10 +12003,12 @@ class DiscoveryEvent(BaseEvent):
 @dataclass(repr=False)
 class CloudResourcesInventoryInfo(DiscoveryEvent):
     """
-    Cloud Resources Inventory Info events report cloud asset inventory data. This data can be either logged or
-    proactively collected. For example, use this event class when creating an inventory of cloud resource information
-    from a Configuration Management Database (CMDB), Cyber Asset Attack Surface Management (CAASM), direct public
-    cloud service provider APIs, Software-as-a-Service (SaaS) APIs, or otherwise.
+    Cloud Resources Inventory Info events report cloud asset inventory data. This
+    data can be either logged or proactively collected. For example, use this event
+    class when creating an inventory of cloud resource information from a
+    Configuration Management Database (CMDB), Cyber Asset Attack Surface Management
+    (CAASM), direct public cloud service provider APIs, Software-as-a-Service
+    (SaaS) APIs, or otherwise.
     """
     _inherited_slots: ClassVar[list[str]] = []
 
@@ -11849,7 +12071,8 @@ class CloudResourcesInventoryInfo(DiscoveryEvent):
 @dataclass(repr=False)
 class ConfigState(DiscoveryEvent):
     """
-    Device Config State events report device configuration data, device assessments, and/or CIS Benchmark results.
+    Device Config State events report device configuration data, device
+    assessments, and/or CIS Benchmark results.
     """
     _inherited_slots: ClassVar[list[str]] = []
 
@@ -11895,7 +12118,8 @@ class ConfigState(DiscoveryEvent):
 @dataclass(repr=False)
 class DeviceConfigStateChange(DiscoveryEvent):
     """
-    Device Config State Change events report state changes that impact the security of the device.
+    Device Config State Change events report state changes that impact the security
+    of the device.
     """
     _inherited_slots: ClassVar[list[str]] = []
 
@@ -11939,7 +12163,7 @@ class DeviceConfigStateChange(DiscoveryEvent):
         if self.prev_security_level is not None and not isinstance(self.prev_security_level, str):
             self.prev_security_level = str(self.prev_security_level)
 
-        if isinstance(self.prev_security_level_id, str):
+        if self.prev_security_level_id is not None and not isinstance(self.prev_security_level_id, PrevSecurityLevelIdEnum):
             self.prev_security_level_id = PrevSecurityLevelIdEnum(self.prev_security_level_id)
 
         if not isinstance(self.prev_security_states, list):
@@ -11949,7 +12173,7 @@ class DeviceConfigStateChange(DiscoveryEvent):
         if self.security_level is not None and not isinstance(self.security_level, str):
             self.security_level = str(self.security_level)
 
-        if isinstance(self.security_level_id, str):
+        if self.security_level_id is not None and not isinstance(self.security_level_id, SecurityLevelIdEnum):
             self.security_level_id = SecurityLevelIdEnum(self.security_level_id)
 
         if not isinstance(self.security_states, list):
@@ -11959,7 +12183,7 @@ class DeviceConfigStateChange(DiscoveryEvent):
         if self.state is not None and not isinstance(self.state, str):
             self.state = str(self.state)
 
-        if isinstance(self.state_id, str):
+        if self.state_id is not None and not isinstance(self.state_id, DeviceConfigStateChangeStateIdEnum):
             self.state_id = DeviceConfigStateChangeStateIdEnum(self.state_id)
 
         super().__post_init__(**kwargs)
@@ -11993,13 +12217,16 @@ class DiscoveryResult(BaseEvent):
     def __post_init__(self, *_: str, **kwargs: Any):
         if self._is_empty(self.query_result_id):
             self.MissingRequiredField("query_result_id")
-        if isinstance(self.query_result_id, str):
+        if not isinstance(self.query_result_id, QueryResultIdEnum):
             self.query_result_id = QueryResultIdEnum(self.query_result_id)
 
         if self._is_empty(self.activity_id):
             self.MissingRequiredField("activity_id")
-        if isinstance(self.activity_id, str):
+        if not isinstance(self.activity_id, DiscoveryResultActivityIdEnum):
             self.activity_id = DiscoveryResultActivityIdEnum(self.activity_id)
+
+        if self.activity_id is not None and not isinstance(self.activity_id, ActivityIdEnum):
+            self.activity_id = ActivityIdEnum(self.activity_id)
 
         if self.query_info is not None and not isinstance(self.query_info, QueryInfo):
             self.query_info = QueryInfo(**as_dict(self.query_info))
@@ -12051,10 +12278,12 @@ class AdminGroupQuery(DiscoveryResult):
 @dataclass(repr=False)
 class EvidenceInfo(DiscoveryResult):
     """
-    Data collected directly from devices that represents forensic information pulled, queried, or discovered from
-    devices that may indicate malicious activity. It contains a number of child objects, each representing a distinct
-    evidence domain (network connections, file artifacts, registry entries, etc.). When mapping raw telemetry data
-    users should select Query Evidence and then the appropriate child object that best matches the evidence type.
+    Data collected directly from devices that represents forensic information
+    pulled, queried, or discovered from devices that may indicate malicious
+    activity. It contains a number of child objects, each representing a distinct
+    evidence domain (network connections, file artifacts, registry entries, etc.).
+    When mapping raw telemetry data users should select Query Evidence and then the
+    appropriate child object that best matches the evidence type.
     """
     _inherited_slots: ClassVar[list[str]] = []
 
@@ -12096,7 +12325,8 @@ class EvidenceInfo(DiscoveryResult):
 @dataclass(repr=False)
 class FileQuery(DiscoveryResult):
     """
-    File Query events report information about files that are present on the system.
+    File Query events report information about files that are present on the
+    system.
     """
     _inherited_slots: ClassVar[list[str]] = []
 
@@ -12129,7 +12359,8 @@ class FileQuery(DiscoveryResult):
 @dataclass(repr=False)
 class FolderQuery(DiscoveryResult):
     """
-    Folder Query events report information about folders that are present on the system.
+    Folder Query events report information about folders that are present on the
+    system.
     """
     _inherited_slots: ClassVar[list[str]] = []
 
@@ -12162,8 +12393,9 @@ class FolderQuery(DiscoveryResult):
 @dataclass(repr=False)
 class InventoryInfo(DiscoveryEvent):
     """
-    Device Inventory Info events report device inventory data that is either logged or proactively collected. For
-    example, when collecting device information from a CMDB or running a network sweep of connected devices.
+    Device Inventory Info events report device inventory data that is either logged
+    or proactively collected. For example, when collecting device information from
+    a CMDB or running a network sweep of connected devices.
     """
     _inherited_slots: ClassVar[list[str]] = []
 
@@ -12235,7 +12467,8 @@ class JobQuery(DiscoveryResult):
 @dataclass(repr=False)
 class KernelObjectQuery(DiscoveryResult):
     """
-    Kernel Object Query events report information about discovered kernel resources.
+    Kernel Object Query events report information about discovered kernel
+    resources.
     """
     _inherited_slots: ClassVar[list[str]] = []
 
@@ -12307,7 +12540,8 @@ class ModuleQuery(DiscoveryResult):
 @dataclass(repr=False)
 class NetworkConnectionQuery(DiscoveryResult):
     """
-    Network Connection Query events report information about active network connections.
+    Network Connection Query events report information about active network
+    connections.
     """
     _inherited_slots: ClassVar[list[str]] = []
 
@@ -12344,7 +12578,7 @@ class NetworkConnectionQuery(DiscoveryResult):
 
         if self._is_empty(self.state_id):
             self.MissingRequiredField("state_id")
-        if isinstance(self.state_id, str):
+        if not isinstance(self.state_id, NetworkConnectionQueryStateIdEnum):
             self.state_id = NetworkConnectionQueryStateIdEnum(self.state_id)
 
         if self.state is not None and not isinstance(self.state, str):
@@ -12390,10 +12624,12 @@ class NetworksQuery(DiscoveryResult):
 @dataclass(repr=False)
 class OsintInventoryInfo(DiscoveryEvent):
     """
-    OSINT Inventory Info events report open source intelligence or threat intelligence inventory data that is either
-    logged or proactively collected. For example, when collecting OSINT information from Threat Intelligence Platforms
-    (TIPs) or Extended Detection and Response (XDR) platforms, or collecting data from OSINT or other generic threat
-    intelligence and enrichment feeds such as APIs and datastores.
+    OSINT Inventory Info events report open source intelligence or threat
+    intelligence inventory data that is either logged or proactively collected. For
+    example, when collecting OSINT information from Threat Intelligence Platforms
+    (TIPs) or Extended Detection and Response (XDR) platforms, or collecting data
+    from OSINT or other generic threat intelligence and enrichment feeds such as
+    APIs and datastores.
     """
     _inherited_slots: ClassVar[list[str]] = []
 
@@ -12429,8 +12665,8 @@ class OsintInventoryInfo(DiscoveryEvent):
 @dataclass(repr=False)
 class PatchState(DiscoveryEvent):
     """
-    Operating System Patch State reports the installation of an OS patch to a device and any associated knowledgebase
-    articles.
+    Operating System Patch State reports the installation of an OS patch to a
+    device and any associated knowledgebase articles.
     """
     _inherited_slots: ClassVar[list[str]] = []
 
@@ -12602,9 +12838,9 @@ class SessionQuery(DiscoveryResult):
 @dataclass(repr=False)
 class SoftwareInfo(DiscoveryEvent):
     """
-    Software Inventory Info events report device software inventory data that is either logged or proactively
-    collected. For example, when collecting device information from a CMDB or running a network sweep of connected
-    devices.
+    Software Inventory Info events report device software inventory data that is
+    either logged or proactively collected. For example, when collecting device
+    information from a CMDB or running a network sweep of connected devices.
     """
     _inherited_slots: ClassVar[list[str]] = []
 
@@ -12655,8 +12891,8 @@ class SoftwareInfo(DiscoveryEvent):
 @dataclass(repr=False)
 class StartupItemQuery(DiscoveryResult):
     """
-    Startup Item Query events report information about discovered items, e.g., application components that are
-    generally configured to run automatically.
+    Startup Item Query events report information about discovered items, e.g.,
+    application components that are generally configured to run automatically.
     """
     _inherited_slots: ClassVar[list[str]] = []
 
@@ -12689,8 +12925,9 @@ class StartupItemQuery(DiscoveryResult):
 @dataclass(repr=False)
 class UserInventory(DiscoveryEvent):
     """
-    User Inventory Info events report user inventory data that is either logged or proactively collected. For example,
-    when collecting user information from Active Directory entries.
+    User Inventory Info events report user inventory data that is either logged or
+    proactively collected. For example, when collecting user information from
+    Active Directory entries.
     """
     _inherited_slots: ClassVar[list[str]] = []
 
@@ -12726,8 +12963,9 @@ class UserInventory(DiscoveryEvent):
 @dataclass(repr=False)
 class UserQuery(DiscoveryResult):
     """
-    User Query events report user data that have been discovered, queried, polled or searched. This event differs from
-    User Inventory as it describes the result of a targeted search by filtering a subset of user attributes.
+    User Query events report user data that have been discovered, queried, polled
+    or searched. This event differs from User Inventory as it describes the result
+    of a targeted search by filtering a subset of user attributes.
     """
     _inherited_slots: ClassVar[list[str]] = []
 
@@ -12760,7 +12998,8 @@ class UserQuery(DiscoveryResult):
 @dataclass(repr=False)
 class Finding(BaseEvent):
     """
-    The Finding event is a generic event that defines a set of attributes available in the Findings category.
+    The Finding event is a generic event that defines a set of attributes available
+    in the Findings category.
     """
     _inherited_slots: ClassVar[list[str]] = []
 
@@ -12812,8 +13051,11 @@ class Finding(BaseEvent):
 
         if self._is_empty(self.activity_id):
             self.MissingRequiredField("activity_id")
-        if isinstance(self.activity_id, str):
+        if not isinstance(self.activity_id, FindingActivityIdEnum):
             self.activity_id = FindingActivityIdEnum(self.activity_id)
+
+        if self.activity_id is not None and not isinstance(self.activity_id, ActivityIdEnum):
+            self.activity_id = ActivityIdEnum(self.activity_id)
 
         if self.activity_name is not None and not isinstance(self.activity_name, str):
             self.activity_name = str(self.activity_name)
@@ -12824,31 +13066,7 @@ class Finding(BaseEvent):
         if self.confidence is not None and not isinstance(self.confidence, str):
             self.confidence = str(self.confidence)
 
-        if self.confidence_score is not None and not isinstance(self.confidence_score, int):
-            self.confidence_score = int(self.confidence_score)
-
-        if self.device is not None and not isinstance(self.device, Device):
-            self.device = Device(**as_dict(self.device))
-
-        if self.end_time is not None and not isinstance(self.end_time, TimestampT):
-            self.end_time = TimestampT(self.end_time)
-
-        if self.start_time is not None and not isinstance(self.start_time, TimestampT):
-            self.start_time = TimestampT(self.start_time)
-
-        if self.status is not None and not isinstance(self.status, str):
-            self.status = str(self.status)
-
-        if self.vendor_attributes is not None and not isinstance(self.vendor_attributes, VendorAttributes):
-            self.vendor_attributes = VendorAttributes(**as_dict(self.vendor_attributes))
-
-        if self.activity_name is not None and not isinstance(self.activity_name, str):
-            self.activity_name = str(self.activity_name)
-
-        if self.confidence is not None and not isinstance(self.confidence, str):
-            self.confidence = str(self.confidence)
-
-        if isinstance(self.confidence_id, str):
+        if self.confidence_id is not None and not isinstance(self.confidence_id, ConfidenceIdEnum):
             self.confidence_id = ConfidenceIdEnum(self.confidence_id)
 
         if self.confidence_score is not None and not isinstance(self.confidence_score, int):
@@ -12866,7 +13084,37 @@ class Finding(BaseEvent):
         if self.status is not None and not isinstance(self.status, str):
             self.status = str(self.status)
 
-        if isinstance(self.status_id, str):
+        if self.status_id is not None and not isinstance(self.status_id, StatusIdEnum):
+            self.status_id = StatusIdEnum(self.status_id)
+
+        if self.vendor_attributes is not None and not isinstance(self.vendor_attributes, VendorAttributes):
+            self.vendor_attributes = VendorAttributes(**as_dict(self.vendor_attributes))
+
+        if self.activity_name is not None and not isinstance(self.activity_name, str):
+            self.activity_name = str(self.activity_name)
+
+        if self.confidence is not None and not isinstance(self.confidence, str):
+            self.confidence = str(self.confidence)
+
+        if self.confidence_id is not None and not isinstance(self.confidence_id, ConfidenceIdEnum):
+            self.confidence_id = ConfidenceIdEnum(self.confidence_id)
+
+        if self.confidence_score is not None and not isinstance(self.confidence_score, int):
+            self.confidence_score = int(self.confidence_score)
+
+        if self.device is not None and not isinstance(self.device, Device):
+            self.device = Device(**as_dict(self.device))
+
+        if self.end_time is not None and not isinstance(self.end_time, TimestampT):
+            self.end_time = TimestampT(self.end_time)
+
+        if self.start_time is not None and not isinstance(self.start_time, TimestampT):
+            self.start_time = TimestampT(self.start_time)
+
+        if self.status is not None and not isinstance(self.status, str):
+            self.status = str(self.status)
+
+        if self.status_id is not None and not isinstance(self.status_id, FindingStatusIdEnum):
             self.status_id = FindingStatusIdEnum(self.status_id)
 
         if self.assignee is not None and not isinstance(self.assignee, User):
@@ -12878,7 +13126,7 @@ class Finding(BaseEvent):
         if self.impact is not None and not isinstance(self.impact, str):
             self.impact = str(self.impact)
 
-        if isinstance(self.impact_id, str):
+        if self.impact_id is not None and not isinstance(self.impact_id, ImpactIdEnum):
             self.impact_id = ImpactIdEnum(self.impact_id)
 
         if self.impact_score is not None and not isinstance(self.impact_score, int):
@@ -12890,7 +13138,7 @@ class Finding(BaseEvent):
         if self.priority is not None and not isinstance(self.priority, str):
             self.priority = str(self.priority)
 
-        if isinstance(self.priority_id, str):
+        if self.priority_id is not None and not isinstance(self.priority_id, PriorityIdEnum):
             self.priority_id = PriorityIdEnum(self.priority_id)
 
         if self.src_url is not None and not isinstance(self.src_url, str):
@@ -12906,7 +13154,7 @@ class Finding(BaseEvent):
         if self.verdict is not None and not isinstance(self.verdict, str):
             self.verdict = str(self.verdict)
 
-        if isinstance(self.verdict_id, str):
+        if self.verdict_id is not None and not isinstance(self.verdict_id, VerdictIdEnum):
             self.verdict_id = VerdictIdEnum(self.verdict_id)
 
         super().__post_init__(**kwargs)
@@ -12915,15 +13163,19 @@ class Finding(BaseEvent):
 @dataclass(repr=False)
 class ApplicationSecurityPostureFinding(Finding):
     """
-    The Application Security Posture Finding event is a notification about any bug, defect, deficiency, exploit,
-    vulnerability, weakness or any other issue with software and related systems. Application Security Posture
-    Findings typically involve reporting on the greater context including compliance, impacted resources, remediation
-    guidance, specific code defects, and/or vulnerability metadata. Application Security Posture Findings can be
-    reported by Threat & Vulnerability Management (TVM) tools, Application Security Posture Management (ASPM) tools,
-    or other similar tools. Note: if the event producer is a security control, the <code>security_control</code>
-    profile should be applied and its <code>attacks</code> information, if present, should be duplicated into the
-    <code>finding_info</code> object. <br><strong>Note: </strong>If the Finding is an incident, i.e. requires incident
-    workflow, also apply the <code>incident</code> profile or aggregate this finding into an <code>Incident
+    The Application Security Posture Finding event is a notification about any bug,
+    defect, deficiency, exploit, vulnerability, weakness or any other issue with
+    software and related systems. Application Security Posture Findings typically
+    involve reporting on the greater context including compliance, impacted
+    resources, remediation guidance, specific code defects, and/or vulnerability
+    metadata. Application Security Posture Findings can be reported by Threat &
+    Vulnerability Management (TVM) tools, Application Security Posture Management
+    (ASPM) tools, or other similar tools. Note: if the event producer is a security
+    control, the <code>security_control</code> profile should be applied and its
+    <code>attacks</code> information, if present, should be duplicated into the
+    <code>finding_info</code> object. <br><strong>Note: </strong>If the Finding is
+    an incident, i.e. requires incident workflow, also apply the
+    <code>incident</code> profile or aggregate this finding into an <code>Incident
     Finding</code>.
     """
     _inherited_slots: ClassVar[list[str]] = []
@@ -12972,7 +13224,7 @@ class ApplicationSecurityPostureFinding(Finding):
         if self.impact is not None and not isinstance(self.impact, str):
             self.impact = str(self.impact)
 
-        if isinstance(self.impact_id, str):
+        if self.impact_id is not None and not isinstance(self.impact_id, ImpactIdEnum):
             self.impact_id = ImpactIdEnum(self.impact_id)
 
         if self.impact_score is not None and not isinstance(self.impact_score, int):
@@ -12984,7 +13236,7 @@ class ApplicationSecurityPostureFinding(Finding):
         if self.priority is not None and not isinstance(self.priority, str):
             self.priority = str(self.priority)
 
-        if isinstance(self.priority_id, str):
+        if self.priority_id is not None and not isinstance(self.priority_id, PriorityIdEnum):
             self.priority_id = PriorityIdEnum(self.priority_id)
 
         if self.src_url is not None and not isinstance(self.src_url, str):
@@ -13000,7 +13252,7 @@ class ApplicationSecurityPostureFinding(Finding):
         if self.verdict is not None and not isinstance(self.verdict, str):
             self.verdict = str(self.verdict)
 
-        if isinstance(self.verdict_id, str):
+        if self.verdict_id is not None and not isinstance(self.verdict_id, VerdictIdEnum):
             self.verdict_id = VerdictIdEnum(self.verdict_id)
 
         if self.application is not None and not isinstance(self.application, ApplicationObject):
@@ -13026,13 +13278,16 @@ class ApplicationSecurityPostureFinding(Finding):
 @dataclass(repr=False)
 class ComplianceFinding(Finding):
     """
-    Compliance Finding events describe results of evaluations performed against resources, to check compliance with
-    various Industry Frameworks or Security Standards such as <code>NIST SP 800-53, CIS AWS Foundations Benchmark
-    v1.4.0, ISO/IEC 27001</code> etc. Note: if the event producer is a security control, the
-    <code>security_control</code> profile should be applied and its <code>attacks</code> information, if present,
-    should be duplicated into the <code>finding_info</code> object. <br><strong>Note: </strong>If the Finding is an
-    incident, i.e. requires incident workflow, also apply the <code>incident</code> profile or aggregate this finding
-    into an <code>Incident Finding</code>.
+    Compliance Finding events describe results of evaluations performed against
+    resources, to check compliance with various Industry Frameworks or Security
+    Standards such as <code>NIST SP 800-53, CIS AWS Foundations Benchmark v1.4.0,
+    ISO/IEC 27001</code> etc. Note: if the event producer is a security control,
+    the <code>security_control</code> profile should be applied and its
+    <code>attacks</code> information, if present, should be duplicated into the
+    <code>finding_info</code> object. <br><strong>Note: </strong>If the Finding is
+    an incident, i.e. requires incident workflow, also apply the
+    <code>incident</code> profile or aggregate this finding into an <code>Incident
+    Finding</code>.
     """
     _inherited_slots: ClassVar[list[str]] = []
 
@@ -13083,15 +13338,20 @@ class ComplianceFinding(Finding):
 @dataclass(repr=False)
 class DataSecurityFinding(Finding):
     """
-    A Data Security Finding describes detections or alerts generated by various data security products such as Data
-    Loss Prevention (DLP), Data Classification, Secrets Management, Digital Rights Management (DRM), Data Security
-    Posture Management (DSPM), and similar tools. These detections or alerts can be created using fingerprinting,
-    statistical analysis, machine learning or other methodologies. The finding describes the actors and endpoints who
-    accessed or own the sensitive data, as well as the resources which store the sensitive data. Note: if the event
-    producer is a security control, the <code>security_control</code> profile should be applied and its
-    <code>attacks</code> information, if present, should be duplicated into the <code>finding_info</code> object.
-    <br><strong>Note: </strong>If the Finding is an incident, i.e. requires incident workflow, also apply the
-    <code>incident</code> profile or aggregate this finding into an <code>Incident Finding</code>.
+    A Data Security Finding describes detections or alerts generated by various
+    data security products such as Data Loss Prevention (DLP), Data Classification,
+    Secrets Management, Digital Rights Management (DRM), Data Security Posture
+    Management (DSPM), and similar tools. These detections or alerts can be created
+    using fingerprinting, statistical analysis, machine learning or other
+    methodologies. The finding describes the actors and endpoints who accessed or
+    own the sensitive data, as well as the resources which store the sensitive
+    data. Note: if the event producer is a security control, the
+    <code>security_control</code> profile should be applied and its
+    <code>attacks</code> information, if present, should be duplicated into the
+    <code>finding_info</code> object. <br><strong>Note: </strong>If the Finding is
+    an incident, i.e. requires incident workflow, also apply the
+    <code>incident</code> profile  or aggregate this finding into an <code>Incident
+    Finding</code>.
     """
     _inherited_slots: ClassVar[list[str]] = []
 
@@ -13136,7 +13396,7 @@ class DataSecurityFinding(Finding):
     def __post_init__(self, *_: str, **kwargs: Any):
         if self._is_empty(self.activity_id):
             self.MissingRequiredField("activity_id")
-        if isinstance(self.activity_id, str):
+        if not isinstance(self.activity_id, DataSecurityFindingActivityIdEnum):
             self.activity_id = DataSecurityFindingActivityIdEnum(self.activity_id)
 
         if self.activity_name is not None and not isinstance(self.activity_name, str):
@@ -13148,7 +13408,7 @@ class DataSecurityFinding(Finding):
         if self.confidence is not None and not isinstance(self.confidence, str):
             self.confidence = str(self.confidence)
 
-        if isinstance(self.confidence_id, str):
+        if self.confidence_id is not None and not isinstance(self.confidence_id, ConfidenceIdEnum):
             self.confidence_id = ConfidenceIdEnum(self.confidence_id)
 
         if self.confidence_score is not None and not isinstance(self.confidence_score, int):
@@ -13175,6 +13435,9 @@ class DataSecurityFinding(Finding):
         if self.impact is not None and not isinstance(self.impact, str):
             self.impact = str(self.impact)
 
+        if self.impact_id is not None and not isinstance(self.impact_id, ImpactIdEnum):
+            self.impact_id = ImpactIdEnum(self.impact_id)
+
         if self.impact_score is not None and not isinstance(self.impact_score, int):
             self.impact_score = int(self.impact_score)
 
@@ -13191,6 +13454,9 @@ class DataSecurityFinding(Finding):
         if self.risk_level is not None and not isinstance(self.risk_level, str):
             self.risk_level = str(self.risk_level)
 
+        if self.risk_level_id is not None and not isinstance(self.risk_level_id, RiskLevelIdEnum):
+            self.risk_level_id = RiskLevelIdEnum(self.risk_level_id)
+
         if self.risk_score is not None and not isinstance(self.risk_score, int):
             self.risk_score = int(self.risk_score)
 
@@ -13203,7 +13469,7 @@ class DataSecurityFinding(Finding):
         if self.impact is not None and not isinstance(self.impact, str):
             self.impact = str(self.impact)
 
-        if isinstance(self.impact_id, str):
+        if self.impact_id is not None and not isinstance(self.impact_id, ImpactIdEnum):
             self.impact_id = ImpactIdEnum(self.impact_id)
 
         if self.impact_score is not None and not isinstance(self.impact_score, int):
@@ -13218,7 +13484,7 @@ class DataSecurityFinding(Finding):
         if self.risk_level is not None and not isinstance(self.risk_level, str):
             self.risk_level = str(self.risk_level)
 
-        if isinstance(self.risk_level_id, str):
+        if self.risk_level_id is not None and not isinstance(self.risk_level_id, RiskLevelIdEnum):
             self.risk_level_id = RiskLevelIdEnum(self.risk_level_id)
 
         if self.risk_score is not None and not isinstance(self.risk_score, int):
@@ -13230,12 +13496,15 @@ class DataSecurityFinding(Finding):
 @dataclass(repr=False)
 class DetectionFinding(Finding):
     """
-    A Detection Finding describes detections or alerts generated by security products using correlation engines,
-    detection engines or other methodologies. Note: if the event producer is a security control, the
-    <code>security_control</code> profile should be applied and its <code>attacks</code> information, if present,
-    should be duplicated into the <code>finding_info</code> object. <br><strong>Note: </strong>If the Finding is an
-    incident, i.e. requires incident workflow, also apply the <code>incident</code> profile or aggregate this finding
-    into an <code>Incident Finding</code>.
+    A Detection Finding describes detections or alerts generated by security
+    products using correlation engines, detection engines or other methodologies.
+    Note: if the event producer is a security control, the
+    <code>security_control</code> profile should be applied and its
+    <code>attacks</code> information, if present, should be duplicated into the
+    <code>finding_info</code> object. <br><strong>Note: </strong>If the Finding is
+    an incident, i.e. requires incident workflow, also apply the
+    <code>incident</code> profile  or aggregate this finding into an <code>Incident
+    Finding</code>.
     """
     _inherited_slots: ClassVar[list[str]] = []
 
@@ -13281,7 +13550,7 @@ class DetectionFinding(Finding):
         if self.confidence is not None and not isinstance(self.confidence, str):
             self.confidence = str(self.confidence)
 
-        if isinstance(self.confidence_id, str):
+        if self.confidence_id is not None and not isinstance(self.confidence_id, ConfidenceIdEnum):
             self.confidence_id = ConfidenceIdEnum(self.confidence_id)
 
         if self.confidence_score is not None and not isinstance(self.confidence_score, int):
@@ -13293,6 +13562,9 @@ class DetectionFinding(Finding):
 
         if self.impact is not None and not isinstance(self.impact, str):
             self.impact = str(self.impact)
+
+        if self.impact_id is not None and not isinstance(self.impact_id, ImpactIdEnum):
+            self.impact_id = ImpactIdEnum(self.impact_id)
 
         if self.impact_score is not None and not isinstance(self.impact_score, int):
             self.impact_score = int(self.impact_score)
@@ -13318,6 +13590,9 @@ class DetectionFinding(Finding):
         if self.risk_level is not None and not isinstance(self.risk_level, str):
             self.risk_level = str(self.risk_level)
 
+        if self.risk_level_id is not None and not isinstance(self.risk_level_id, RiskLevelIdEnum):
+            self.risk_level_id = RiskLevelIdEnum(self.risk_level_id)
+
         if self.risk_score is not None and not isinstance(self.risk_score, int):
             self.risk_score = int(self.risk_score)
 
@@ -13328,7 +13603,7 @@ class DetectionFinding(Finding):
         if self.impact is not None and not isinstance(self.impact, str):
             self.impact = str(self.impact)
 
-        if isinstance(self.impact_id, str):
+        if self.impact_id is not None and not isinstance(self.impact_id, ImpactIdEnum):
             self.impact_id = ImpactIdEnum(self.impact_id)
 
         if self.impact_score is not None and not isinstance(self.impact_score, int):
@@ -13343,7 +13618,7 @@ class DetectionFinding(Finding):
         if self.risk_level is not None and not isinstance(self.risk_level, str):
             self.risk_level = str(self.risk_level)
 
-        if isinstance(self.risk_level_id, str):
+        if self.risk_level_id is not None and not isinstance(self.risk_level_id, RiskLevelIdEnum):
             self.risk_level_id = RiskLevelIdEnum(self.risk_level_id)
 
         if self.risk_score is not None and not isinstance(self.risk_score, int):
@@ -13355,14 +13630,18 @@ class DetectionFinding(Finding):
 @dataclass(repr=False)
 class IamAnalysisFinding(Finding):
     """
-    This finding represents an IAM analysis result, which evaluates IAM policies, access patterns, and IAM
-    configurations for potential security risks. The analysis can focus on either an identity (user, role, service
-    account) or a resource to assess permissions, access patterns, and security posture within the IAM domain.
-    <br><strong>Note:</strong> Use <code>permission_analysis_results</code> for identity-centric analysis (evaluating
-    what an identity can do) and <code>access_analysis_result</code> for resource-centric analysis (evaluating who can
-    access a resource). These complement each other for comprehensive IAM security
-    assessment.<br><strong>Note:</strong> If the Finding is an incident, i.e. requires incident workflow, also apply
-    the <code>incident</code> profile or aggregate this finding into an <code>Incident Finding</code>.
+    This finding represents an IAM analysis result, which evaluates IAM policies,
+    access patterns, and IAM configurations for potential security risks. The
+    analysis can focus on either an identity (user, role, service account) or a
+    resource to assess permissions, access patterns, and security posture within
+    the IAM domain. <br><strong>Note:</strong> Use
+    <code>permission_analysis_results</code> for identity-centric analysis
+    (evaluating what an identity can do) and <code>access_analysis_result</code>
+    for resource-centric analysis (evaluating who can access a resource). These
+    complement each other for comprehensive IAM security
+    assessment.<br><strong>Note:</strong> If the Finding is an incident, i.e.
+    requires incident workflow, also apply the <code>incident</code> profile or
+    aggregate this finding into an <code>Incident Finding</code>.
     """
     _inherited_slots: ClassVar[list[str]] = []
 
@@ -13420,9 +13699,11 @@ class IamAnalysisFinding(Finding):
 @dataclass(repr=False)
 class IncidentFinding(BaseEvent):
     """
-    An Incident Finding reports the creation, update, or closure of security incidents as a result of detections
-    and/or analytics. <br><strong>Note: </strong><code>Incident Finding</code> implicitly includes the
-    <code>incident</code> profile and it should be added to the <code>metadata.profiles[]</code> array.
+    An Incident Finding reports the creation, update, or closure of security
+    incidents as a result of detections and/or analytics. <br><strong>Note:
+    </strong><code>Incident Finding</code> implicitly includes the
+    <code>incident</code> profile and it should be added to the
+    <code>metadata.profiles[]</code> array.
     """
     _inherited_slots: ClassVar[list[str]] = []
 
@@ -13474,13 +13755,16 @@ class IncidentFinding(BaseEvent):
 
         if self._is_empty(self.activity_id):
             self.MissingRequiredField("activity_id")
-        if isinstance(self.activity_id, str):
+        if not isinstance(self.activity_id, IncidentFindingActivityIdEnum):
             self.activity_id = IncidentFindingActivityIdEnum(self.activity_id)
 
         if self._is_empty(self.status_id):
             self.MissingRequiredField("status_id")
-        if isinstance(self.status_id, str):
+        if not isinstance(self.status_id, IncidentFindingStatusIdEnum):
             self.status_id = IncidentFindingStatusIdEnum(self.status_id)
+
+        if self.activity_id is not None and not isinstance(self.activity_id, ActivityIdEnum):
+            self.activity_id = ActivityIdEnum(self.activity_id)
 
         if self.activity_name is not None and not isinstance(self.activity_name, str):
             self.activity_name = str(self.activity_name)
@@ -13501,6 +13785,9 @@ class IncidentFinding(BaseEvent):
         if self.confidence is not None and not isinstance(self.confidence, str):
             self.confidence = str(self.confidence)
 
+        if self.confidence_id is not None and not isinstance(self.confidence_id, ConfidenceIdEnum):
+            self.confidence_id = ConfidenceIdEnum(self.confidence_id)
+
         if self.confidence_score is not None and not isinstance(self.confidence_score, int):
             self.confidence_score = int(self.confidence_score)
 
@@ -13513,6 +13800,9 @@ class IncidentFinding(BaseEvent):
         if self.impact is not None and not isinstance(self.impact, str):
             self.impact = str(self.impact)
 
+        if self.impact_id is not None and not isinstance(self.impact_id, ImpactIdEnum):
+            self.impact_id = ImpactIdEnum(self.impact_id)
+
         if self.impact_score is not None and not isinstance(self.impact_score, int):
             self.impact_score = int(self.impact_score)
 
@@ -13522,6 +13812,9 @@ class IncidentFinding(BaseEvent):
         if self.priority is not None and not isinstance(self.priority, str):
             self.priority = str(self.priority)
 
+        if self.priority_id is not None and not isinstance(self.priority_id, PriorityIdEnum):
+            self.priority_id = PriorityIdEnum(self.priority_id)
+
         if self.src_url is not None and not isinstance(self.src_url, str):
             self.src_url = str(self.src_url)
 
@@ -13530,6 +13823,9 @@ class IncidentFinding(BaseEvent):
 
         if self.status is not None and not isinstance(self.status, str):
             self.status = str(self.status)
+
+        if self.status_id is not None and not isinstance(self.status_id, StatusIdEnum):
+            self.status_id = StatusIdEnum(self.status_id)
 
         if self.ticket is not None and not isinstance(self.ticket, Ticket):
             self.ticket = Ticket(**as_dict(self.ticket))
@@ -13544,6 +13840,9 @@ class IncidentFinding(BaseEvent):
         if self.verdict is not None and not isinstance(self.verdict, str):
             self.verdict = str(self.verdict)
 
+        if self.verdict_id is not None and not isinstance(self.verdict_id, VerdictIdEnum):
+            self.verdict_id = VerdictIdEnum(self.verdict_id)
+
         if self.activity_name is not None and not isinstance(self.activity_name, str):
             self.activity_name = str(self.activity_name)
 
@@ -13556,7 +13855,7 @@ class IncidentFinding(BaseEvent):
         if self.confidence is not None and not isinstance(self.confidence, str):
             self.confidence = str(self.confidence)
 
-        if isinstance(self.confidence_id, str):
+        if self.confidence_id is not None and not isinstance(self.confidence_id, ConfidenceIdEnum):
             self.confidence_id = ConfidenceIdEnum(self.confidence_id)
 
         if self.confidence_score is not None and not isinstance(self.confidence_score, int):
@@ -13568,7 +13867,7 @@ class IncidentFinding(BaseEvent):
         if self.impact is not None and not isinstance(self.impact, str):
             self.impact = str(self.impact)
 
-        if isinstance(self.impact_id, str):
+        if self.impact_id is not None and not isinstance(self.impact_id, ImpactIdEnum):
             self.impact_id = ImpactIdEnum(self.impact_id)
 
         if self.impact_score is not None and not isinstance(self.impact_score, int):
@@ -13580,7 +13879,7 @@ class IncidentFinding(BaseEvent):
         if self.priority is not None and not isinstance(self.priority, str):
             self.priority = str(self.priority)
 
-        if isinstance(self.priority_id, str):
+        if self.priority_id is not None and not isinstance(self.priority_id, PriorityIdEnum):
             self.priority_id = PriorityIdEnum(self.priority_id)
 
         if self.src_url is not None and not isinstance(self.src_url, str):
@@ -13602,7 +13901,7 @@ class IncidentFinding(BaseEvent):
         if self.verdict is not None and not isinstance(self.verdict, str):
             self.verdict = str(self.verdict)
 
-        if isinstance(self.verdict_id, str):
+        if self.verdict_id is not None and not isinstance(self.verdict_id, VerdictIdEnum):
             self.verdict_id = VerdictIdEnum(self.verdict_id)
 
         super().__post_init__(**kwargs)
@@ -13611,8 +13910,8 @@ class IncidentFinding(BaseEvent):
 @dataclass(repr=False)
 class SecurityFinding(BaseEvent):
     """
-    Security Finding events describe findings, detections, anomalies, alerts and/or actions performed by security
-    products
+    Security Finding events describe findings, detections, anomalies, alerts and/or
+    actions performed by security products
     """
     _inherited_slots: ClassVar[list[str]] = []
 
@@ -13663,13 +13962,16 @@ class SecurityFinding(BaseEvent):
 
         if self._is_empty(self.state_id):
             self.MissingRequiredField("state_id")
-        if isinstance(self.state_id, str):
+        if not isinstance(self.state_id, SecurityFindingStateIdEnum):
             self.state_id = SecurityFindingStateIdEnum(self.state_id)
 
         if self._is_empty(self.activity_id):
             self.MissingRequiredField("activity_id")
-        if isinstance(self.activity_id, str):
+        if not isinstance(self.activity_id, SecurityFindingActivityIdEnum):
             self.activity_id = SecurityFindingActivityIdEnum(self.activity_id)
+
+        if self.activity_id is not None and not isinstance(self.activity_id, ActivityIdEnum):
+            self.activity_id = ActivityIdEnum(self.activity_id)
 
         if self.analytic is not None and not isinstance(self.analytic, Analytic):
             self.analytic = Analytic(**as_dict(self.analytic))
@@ -13686,6 +13988,9 @@ class SecurityFinding(BaseEvent):
         if self.confidence is not None and not isinstance(self.confidence, str):
             self.confidence = str(self.confidence)
 
+        if self.confidence_id is not None and not isinstance(self.confidence_id, ConfidenceIdEnum):
+            self.confidence_id = ConfidenceIdEnum(self.confidence_id)
+
         if self.confidence_score is not None and not isinstance(self.confidence_score, int):
             self.confidence_score = int(self.confidence_score)
 
@@ -13699,7 +14004,7 @@ class SecurityFinding(BaseEvent):
         if self.impact is not None and not isinstance(self.impact, str):
             self.impact = str(self.impact)
 
-        if isinstance(self.impact_id, str):
+        if self.impact_id is not None and not isinstance(self.impact_id, ImpactIdEnum):
             self.impact_id = ImpactIdEnum(self.impact_id)
 
         if self.impact_score is not None and not isinstance(self.impact_score, int):
@@ -13723,6 +14028,9 @@ class SecurityFinding(BaseEvent):
         if self.risk_level is not None and not isinstance(self.risk_level, str):
             self.risk_level = str(self.risk_level)
 
+        if self.risk_level_id is not None and not isinstance(self.risk_level_id, RiskLevelIdEnum):
+            self.risk_level_id = RiskLevelIdEnum(self.risk_level_id)
+
         if self.risk_score is not None and not isinstance(self.risk_score, int):
             self.risk_score = int(self.risk_score)
 
@@ -13736,7 +14044,7 @@ class SecurityFinding(BaseEvent):
         if self.confidence is not None and not isinstance(self.confidence, str):
             self.confidence = str(self.confidence)
 
-        if isinstance(self.confidence_id, str):
+        if self.confidence_id is not None and not isinstance(self.confidence_id, ConfidenceIdEnum):
             self.confidence_id = ConfidenceIdEnum(self.confidence_id)
 
         if self.confidence_score is not None and not isinstance(self.confidence_score, int):
@@ -13745,7 +14053,7 @@ class SecurityFinding(BaseEvent):
         if self.risk_level is not None and not isinstance(self.risk_level, str):
             self.risk_level = str(self.risk_level)
 
-        if isinstance(self.risk_level_id, str):
+        if self.risk_level_id is not None and not isinstance(self.risk_level_id, RiskLevelIdEnum):
             self.risk_level_id = RiskLevelIdEnum(self.risk_level_id)
 
         if self.risk_score is not None and not isinstance(self.risk_score, int):
@@ -13757,12 +14065,15 @@ class SecurityFinding(BaseEvent):
 @dataclass(repr=False)
 class VulnerabilityFinding(Finding):
     """
-    The Vulnerability Finding event is a notification about weakness in an information system, system security
-    procedures, internal controls, or implementation that could be exploited or triggered by a threat source. Note: if
-    the event producer is a security control, the <code>security_control</code> profile should be applied and its
-    <code>attacks</code> information, if present, should be duplicated into the <code>finding_info</code> object.
-    <br><strong>Note: </strong>If the Finding is an incident, i.e. requires incident workflow, also apply the
-    <code>incident</code> profile or aggregate this finding into an <code>Incident Finding</code>.
+    The Vulnerability Finding event is a notification about weakness in an
+    information system, system security procedures, internal controls, or
+    implementation that could be exploited or triggered by a threat source. Note:
+    if the event producer is a security control, the <code>security_control</code>
+    profile should be applied and its <code>attacks</code> information, if present,
+    should be duplicated into the <code>finding_info</code> object.
+    <br><strong>Note: </strong>If the Finding is an incident, i.e. requires
+    incident workflow, also apply the <code>incident</code> profile  or aggregate
+    this finding into an <code>Incident Finding</code>.
     """
     _inherited_slots: ClassVar[list[str]] = []
 
@@ -13805,9 +14116,9 @@ class VulnerabilityFinding(Finding):
 @dataclass(repr=False)
 class IamEvent(BaseEvent):
     """
-    The Identity & Access Management event is a generic event that defines a set of attributes available in the access
-    control events. As a generic event, it could be used to log events that are not otherwise defined by the IAM
-    category.
+    The Identity & Access Management event is a generic event that defines a set of
+    attributes available in the access control events. As a generic event, it could
+    be used to log events that are not otherwise defined by the IAM category.
     """
     _inherited_slots: ClassVar[list[str]] = []
 
@@ -13849,8 +14160,9 @@ class IamEvent(BaseEvent):
 @dataclass(repr=False)
 class AccountChange(IamEvent):
     """
-    Account Change events report when specific user account management tasks are performed, such as a user/role being
-    created, changed, deleted, renamed, disabled, enabled, locked out or unlocked.
+    Account Change events report when specific user account management tasks are
+    performed, such as a user/role being created, changed, deleted, renamed,
+    disabled, enabled, locked out or unlocked.
     """
     _inherited_slots: ClassVar[list[str]] = []
 
@@ -13882,8 +14194,11 @@ class AccountChange(IamEvent):
 
         if self._is_empty(self.activity_id):
             self.MissingRequiredField("activity_id")
-        if isinstance(self.activity_id, str):
+        if not isinstance(self.activity_id, AccountChangeActivityIdEnum):
             self.activity_id = AccountChangeActivityIdEnum(self.activity_id)
+
+        if self.activity_id is not None and not isinstance(self.activity_id, ActivityIdEnum):
+            self.activity_id = ActivityIdEnum(self.activity_id)
 
         self._normalize_inlined_as_list(slot_name="auth_factors", slot_type=AuthFactor, key_name="factor_type_id", keyed=False)
 
@@ -13906,10 +14221,12 @@ class AccountChange(IamEvent):
 @dataclass(repr=False)
 class Authentication(IamEvent):
     """
-    Authentication events report authentication session activities, including user attempts to log on or log off,
-    regardless of success, as well as other key stages within the authentication process. These events are typically
-    generated by authentication services, such as Kerberos, OIDC, or SAML, and may include information about the user,
-    the authentication method used, and the status of the authentication attempt.
+    Authentication events report authentication session activities, including user
+    attempts to log on or log off, regardless of success, as well as other key
+    stages within the authentication process. These events are typically generated
+    by authentication services, such as Kerberos, OIDC, or SAML, and may include
+    information about the user, the authentication method used, and the status of
+    the authentication attempt.
     """
     _inherited_slots: ClassVar[list[str]] = []
 
@@ -13955,21 +14272,24 @@ class Authentication(IamEvent):
 
         if self._is_empty(self.activity_id):
             self.MissingRequiredField("activity_id")
-        if isinstance(self.activity_id, str):
+        if not isinstance(self.activity_id, AuthenticationActivityIdEnum):
             self.activity_id = AuthenticationActivityIdEnum(self.activity_id)
 
         if self.account_switch_type is not None and not isinstance(self.account_switch_type, str):
             self.account_switch_type = str(self.account_switch_type)
 
-        if isinstance(self.account_switch_type_id, str):
+        if self.account_switch_type_id is not None and not isinstance(self.account_switch_type_id, AccountSwitchTypeIdEnum):
             self.account_switch_type_id = AccountSwitchTypeIdEnum(self.account_switch_type_id)
+
+        if self.activity_id is not None and not isinstance(self.activity_id, ActivityIdEnum):
+            self.activity_id = ActivityIdEnum(self.activity_id)
 
         self._normalize_inlined_as_list(slot_name="auth_factors", slot_type=AuthFactor, key_name="factor_type_id", keyed=False)
 
         if self.auth_protocol is not None and not isinstance(self.auth_protocol, str):
             self.auth_protocol = str(self.auth_protocol)
 
-        if isinstance(self.auth_protocol_id, str):
+        if self.auth_protocol_id is not None and not isinstance(self.auth_protocol_id, AuthProtocolIdEnum):
             self.auth_protocol_id = AuthProtocolIdEnum(self.auth_protocol_id)
 
         if self.authentication_token is not None and not isinstance(self.authentication_token, AuthenticationToken):
@@ -13999,7 +14319,7 @@ class Authentication(IamEvent):
         if self.logon_type is not None and not isinstance(self.logon_type, str):
             self.logon_type = str(self.logon_type)
 
-        if isinstance(self.logon_type_id, str):
+        if self.logon_type_id is not None and not isinstance(self.logon_type_id, LogonTypeIdEnum):
             self.logon_type_id = LogonTypeIdEnum(self.logon_type_id)
 
         if self.service is not None and not isinstance(self.service, Service):
@@ -14020,7 +14340,8 @@ class Authentication(IamEvent):
 @dataclass(repr=False)
 class AuthorizeSession(IamEvent):
     """
-    Authorize Session events report privileges or groups assigned to a new user session, usually at login time.
+    Authorize Session events report privileges or groups assigned to a new user
+    session, usually at login time.
     """
     _inherited_slots: ClassVar[list[str]] = []
 
@@ -14052,8 +14373,11 @@ class AuthorizeSession(IamEvent):
 
         if self._is_empty(self.activity_id):
             self.MissingRequiredField("activity_id")
-        if isinstance(self.activity_id, str):
+        if not isinstance(self.activity_id, AuthorizeSessionActivityIdEnum):
             self.activity_id = AuthorizeSessionActivityIdEnum(self.activity_id)
+
+        if self.activity_id is not None and not isinstance(self.activity_id, ActivityIdEnum):
+            self.activity_id = ActivityIdEnum(self.activity_id)
 
         if self.dst_endpoint is not None and not isinstance(self.dst_endpoint, NetworkEndpoint):
             self.dst_endpoint = NetworkEndpoint(**as_dict(self.dst_endpoint))
@@ -14074,8 +14398,9 @@ class AuthorizeSession(IamEvent):
 @dataclass(repr=False)
 class EntityManagement(IamEvent):
     """
-    Entity Management events report activity by a managed client, a micro service, or a user at a management console.
-    The activity can be a create, read, update, and delete operation on a managed entity.
+    Entity Management events report activity by a managed client, a micro service,
+    or a user at a management console. The activity can be a create, read, update,
+    and delete operation on a managed entity.
     """
     _inherited_slots: ClassVar[list[str]] = []
 
@@ -14107,7 +14432,7 @@ class EntityManagement(IamEvent):
 
         if self._is_empty(self.activity_id):
             self.MissingRequiredField("activity_id")
-        if isinstance(self.activity_id, str):
+        if not isinstance(self.activity_id, EntityManagementActivityIdEnum):
             self.activity_id = EntityManagementActivityIdEnum(self.activity_id)
 
         if not isinstance(self.access_list, list):
@@ -14116,6 +14441,9 @@ class EntityManagement(IamEvent):
 
         if self.access_mask is not None and not isinstance(self.access_mask, int):
             self.access_mask = int(self.access_mask)
+
+        if self.activity_id is not None and not isinstance(self.activity_id, ActivityIdEnum):
+            self.activity_id = ActivityIdEnum(self.activity_id)
 
         if self.comment is not None and not isinstance(self.comment, str):
             self.comment = str(self.comment)
@@ -14129,7 +14457,8 @@ class EntityManagement(IamEvent):
 @dataclass(repr=False)
 class GroupManagement(IamEvent):
     """
-    Group Management events report management updates to a group, including updates to membership and permissions.
+    Group Management events report management updates to a group, including updates
+    to membership and permissions.
     """
     _inherited_slots: ClassVar[list[str]] = []
 
@@ -14161,8 +14490,11 @@ class GroupManagement(IamEvent):
 
         if self._is_empty(self.activity_id):
             self.MissingRequiredField("activity_id")
-        if isinstance(self.activity_id, str):
+        if not isinstance(self.activity_id, GroupManagementActivityIdEnum):
             self.activity_id = GroupManagementActivityIdEnum(self.activity_id)
+
+        if self.activity_id is not None and not isinstance(self.activity_id, ActivityIdEnum):
+            self.activity_id = ActivityIdEnum(self.activity_id)
 
         if not isinstance(self.privileges, list):
             self.privileges = [self.privileges] if self.privileges is not None else []
@@ -14220,8 +14552,11 @@ class UserAccess(IamEvent):
 
         if self._is_empty(self.activity_id):
             self.MissingRequiredField("activity_id")
-        if isinstance(self.activity_id, str):
+        if not isinstance(self.activity_id, UserAccessActivityIdEnum):
             self.activity_id = UserAccessActivityIdEnum(self.activity_id)
+
+        if self.activity_id is not None and not isinstance(self.activity_id, ActivityIdEnum):
+            self.activity_id = ActivityIdEnum(self.activity_id)
 
         if self.resource is not None and not isinstance(self.resource, ResourceDetails):
             self.resource = ResourceDetails(**as_dict(self.resource))
@@ -14236,7 +14571,8 @@ class UserAccess(IamEvent):
 @dataclass(repr=False)
 class NetworkEvent(BaseEvent):
     """
-    Network event is a generic event that defines a set of attributes available in the Network category.
+    Network event is a generic event that defines a set of attributes available in
+    the Network category.
     """
     _inherited_slots: ClassVar[list[str]] = []
 
@@ -14300,7 +14636,7 @@ class NetworkEvent(BaseEvent):
         if self.observation_point is not None and not isinstance(self.observation_point, str):
             self.observation_point = str(self.observation_point)
 
-        if isinstance(self.observation_point_id, str):
+        if self.observation_point_id is not None and not isinstance(self.observation_point_id, NetworkEventObservationPointIdEnum):
             self.observation_point_id = NetworkEventObservationPointIdEnum(self.observation_point_id)
 
         self._normalize_inlined_as_list(slot_name="packet_list", slot_type=Packet, key_name="value", keyed=False)
@@ -14344,7 +14680,8 @@ class NetworkEvent(BaseEvent):
 @dataclass(repr=False)
 class DhcpActivity(NetworkEvent):
     """
-    DHCP Activity events report MAC to IP assignment via DHCP from a client or server.
+    DHCP Activity events report MAC to IP assignment via DHCP from a client or
+    server.
     """
     _inherited_slots: ClassVar[list[str]] = []
 
@@ -14378,11 +14715,14 @@ class DhcpActivity(NetworkEvent):
 
         if self._is_empty(self.activity_id):
             self.MissingRequiredField("activity_id")
-        if isinstance(self.activity_id, str):
+        if not isinstance(self.activity_id, DhcpActivityActivityIdEnum):
             self.activity_id = DhcpActivityActivityIdEnum(self.activity_id)
 
         if self.api is not None and not isinstance(self.api, Api):
             self.api = Api(**as_dict(self.api))
+
+        if self.activity_id is not None and not isinstance(self.activity_id, ActivityIdEnum):
+            self.activity_id = ActivityIdEnum(self.activity_id)
 
         if self.dst_endpoint is not None and not isinstance(self.dst_endpoint, NetworkEndpoint):
             self.dst_endpoint = NetworkEndpoint(**as_dict(self.dst_endpoint))
@@ -14445,8 +14785,11 @@ class DnsActivity(NetworkEvent):
     def __post_init__(self, *_: str, **kwargs: Any):
         if self._is_empty(self.activity_id):
             self.MissingRequiredField("activity_id")
-        if isinstance(self.activity_id, str):
+        if not isinstance(self.activity_id, DnsActivityActivityIdEnum):
             self.activity_id = DnsActivityActivityIdEnum(self.activity_id)
+
+        if self.activity_id is not None and not isinstance(self.activity_id, ActivityIdEnum):
+            self.activity_id = ActivityIdEnum(self.activity_id)
 
         self._normalize_inlined_as_list(slot_name="answers", slot_type=DnsAnswer, key_name="rdata", keyed=False)
 
@@ -14465,7 +14808,7 @@ class DnsActivity(NetworkEvent):
         if self.rcode is not None and not isinstance(self.rcode, str):
             self.rcode = str(self.rcode)
 
-        if isinstance(self.rcode_id, str):
+        if self.rcode_id is not None and not isinstance(self.rcode_id, DnsActivityRcodeIdEnum):
             self.rcode_id = DnsActivityRcodeIdEnum(self.rcode_id)
 
         if self.response_time is not None and not isinstance(self.response_time, TimestampT):
@@ -14489,8 +14832,8 @@ class DnsActivity(NetworkEvent):
 @dataclass(repr=False)
 class EmailActivity(BaseEvent):
     """
-    Email Activity events report SMTP protocol and email activities including those with embedded URLs and files. See
-    the <code>Email</code> object for details.
+    Email Activity events report SMTP protocol and email activities including those
+    with embedded URLs and files. See the <code>Email</code> object for details.
     """
     _inherited_slots: ClassVar[list[str]] = []
 
@@ -14526,7 +14869,7 @@ class EmailActivity(BaseEvent):
     def __post_init__(self, *_: str, **kwargs: Any):
         if self._is_empty(self.direction_id):
             self.MissingRequiredField("direction_id")
-        if isinstance(self.direction_id, str):
+        if not isinstance(self.direction_id, EmailActivityDirectionIdEnum):
             self.direction_id = EmailActivityDirectionIdEnum(self.direction_id)
 
         if self._is_empty(self.email):
@@ -14536,8 +14879,11 @@ class EmailActivity(BaseEvent):
 
         if self._is_empty(self.activity_id):
             self.MissingRequiredField("activity_id")
-        if isinstance(self.activity_id, str):
+        if not isinstance(self.activity_id, EmailActivityActivityIdEnum):
             self.activity_id = EmailActivityActivityIdEnum(self.activity_id)
+
+        if self.activity_id is not None and not isinstance(self.activity_id, ActivityIdEnum):
+            self.activity_id = ActivityIdEnum(self.activity_id)
 
         if self.attempt is not None and not isinstance(self.attempt, int):
             self.attempt = int(self.attempt)
@@ -14616,8 +14962,11 @@ class EmailFileActivity(BaseEvent):
 
         if self._is_empty(self.activity_id):
             self.MissingRequiredField("activity_id")
-        if isinstance(self.activity_id, str):
+        if not isinstance(self.activity_id, EmailFileActivityActivityIdEnum):
             self.activity_id = EmailFileActivityActivityIdEnum(self.activity_id)
+
+        if self.activity_id is not None and not isinstance(self.activity_id, ActivityIdEnum):
+            self.activity_id = ActivityIdEnum(self.activity_id)
 
         super().__post_init__(**kwargs)
 
@@ -14659,8 +15008,11 @@ class EmailUrlActivity(BaseEvent):
 
         if self._is_empty(self.activity_id):
             self.MissingRequiredField("activity_id")
-        if isinstance(self.activity_id, str):
+        if not isinstance(self.activity_id, EmailUrlActivityActivityIdEnum):
             self.activity_id = EmailUrlActivityActivityIdEnum(self.activity_id)
+
+        if self.activity_id is not None and not isinstance(self.activity_id, ActivityIdEnum):
+            self.activity_id = ActivityIdEnum(self.activity_id)
 
         super().__post_init__(**kwargs)
 
@@ -14668,8 +15020,8 @@ class EmailUrlActivity(BaseEvent):
 @dataclass(repr=False)
 class FtpActivity(NetworkEvent):
     """
-    File Transfer Protocol (FTP) Activity events report file transfers between a server and a client as seen on the
-    network.
+    File Transfer Protocol (FTP) Activity events report file transfers between a
+    server and a client as seen on the network.
     """
     _inherited_slots: ClassVar[list[str]] = []
 
@@ -14698,8 +15050,11 @@ class FtpActivity(NetworkEvent):
     def __post_init__(self, *_: str, **kwargs: Any):
         if self._is_empty(self.activity_id):
             self.MissingRequiredField("activity_id")
-        if isinstance(self.activity_id, str):
+        if not isinstance(self.activity_id, FtpActivityActivityIdEnum):
             self.activity_id = FtpActivityActivityIdEnum(self.activity_id)
+
+        if self.activity_id is not None and not isinstance(self.activity_id, ActivityIdEnum):
+            self.activity_id = ActivityIdEnum(self.activity_id)
 
         if not isinstance(self.codes, list):
             self.codes = [self.codes] if self.codes is not None else []
@@ -14758,8 +15113,11 @@ class HttpActivity(NetworkEvent):
     def __post_init__(self, *_: str, **kwargs: Any):
         if self._is_empty(self.activity_id):
             self.MissingRequiredField("activity_id")
-        if isinstance(self.activity_id, str):
+        if not isinstance(self.activity_id, HttpActivityActivityIdEnum):
             self.activity_id = HttpActivityActivityIdEnum(self.activity_id)
+
+        if self.activity_id is not None and not isinstance(self.activity_id, ActivityIdEnum):
+            self.activity_id = ActivityIdEnum(self.activity_id)
 
         if self.file is not None and not isinstance(self.file, File):
             self.file = File(**as_dict(self.file))
@@ -14812,8 +15170,11 @@ class NetworkActivity(NetworkEvent):
     def __post_init__(self, *_: str, **kwargs: Any):
         if self._is_empty(self.activity_id):
             self.MissingRequiredField("activity_id")
-        if isinstance(self.activity_id, str):
+        if not isinstance(self.activity_id, NetworkActivityActivityIdEnum):
             self.activity_id = NetworkActivityActivityIdEnum(self.activity_id)
+
+        if self.activity_id is not None and not isinstance(self.activity_id, ActivityIdEnum):
+            self.activity_id = ActivityIdEnum(self.activity_id)
 
         if self.dst_endpoint is not None and not isinstance(self.dst_endpoint, NetworkEndpoint):
             self.dst_endpoint = NetworkEndpoint(**as_dict(self.dst_endpoint))
@@ -14821,7 +15182,7 @@ class NetworkActivity(NetworkEvent):
         if self.initiator is not None and not isinstance(self.initiator, str):
             self.initiator = str(self.initiator)
 
-        if isinstance(self.initiator_id, str):
+        if self.initiator_id is not None and not isinstance(self.initiator_id, NetworkActivityInitiatorIdEnum):
             self.initiator_id = NetworkActivityInitiatorIdEnum(self.initiator_id)
 
         if self.is_src_dst_assignment_known is not None and not isinstance(self.is_src_dst_assignment_known, Bool):
@@ -14845,8 +15206,8 @@ class NetworkActivity(NetworkEvent):
 @dataclass(repr=False)
 class NetworkFileActivity(NetworkEvent):
     """
-    Network File Activity events report file activities traversing the network, including file storage services such
-    as Box, MS OneDrive, or Google Drive.
+    Network File Activity events report file activities traversing the network,
+    including file storage services such as Box, MS OneDrive, or Google Drive.
     """
     _inherited_slots: ClassVar[list[str]] = []
 
@@ -14884,13 +15245,16 @@ class NetworkFileActivity(NetworkEvent):
 
         if self._is_empty(self.activity_id):
             self.MissingRequiredField("activity_id")
-        if isinstance(self.activity_id, str):
+        if not isinstance(self.activity_id, NetworkFileActivityActivityIdEnum):
             self.activity_id = NetworkFileActivityActivityIdEnum(self.activity_id)
 
         if self._is_empty(self.src_endpoint):
             self.MissingRequiredField("src_endpoint")
         if not isinstance(self.src_endpoint, NetworkEndpoint):
             self.src_endpoint = NetworkEndpoint(**as_dict(self.src_endpoint))
+
+        if self.activity_id is not None and not isinstance(self.activity_id, ActivityIdEnum):
+            self.activity_id = ActivityIdEnum(self.activity_id)
 
         if self.connection_info is not None and not isinstance(self.connection_info, NetworkConnectionInfo):
             self.connection_info = NetworkConnectionInfo(**as_dict(self.connection_info))
@@ -14916,8 +15280,9 @@ class NetworkFileActivity(NetworkEvent):
 @dataclass(repr=False)
 class NtpActivity(NetworkEvent):
     """
-    The Network Time Protocol (NTP) Activity events report instances of remote clients synchronizing their clocks with
-    an NTP server, as observed on the network.
+    The Network Time Protocol (NTP) Activity events report instances of remote
+    clients synchronizing their clocks with an NTP server, as observed on the
+    network.
     """
     _inherited_slots: ClassVar[list[str]] = []
 
@@ -14950,8 +15315,11 @@ class NtpActivity(NetworkEvent):
 
         if self._is_empty(self.activity_id):
             self.MissingRequiredField("activity_id")
-        if isinstance(self.activity_id, str):
+        if not isinstance(self.activity_id, NtpActivityActivityIdEnum):
             self.activity_id = NtpActivityActivityIdEnum(self.activity_id)
+
+        if self.activity_id is not None and not isinstance(self.activity_id, ActivityIdEnum):
+            self.activity_id = ActivityIdEnum(self.activity_id)
 
         if self.delay is not None and not isinstance(self.delay, int):
             self.delay = int(self.delay)
@@ -14965,7 +15333,7 @@ class NtpActivity(NetworkEvent):
         if self.stratum is not None and not isinstance(self.stratum, str):
             self.stratum = str(self.stratum)
 
-        if isinstance(self.stratum_id, str):
+        if self.stratum_id is not None and not isinstance(self.stratum_id, StratumIdEnum):
             self.stratum_id = StratumIdEnum(self.stratum_id)
 
         super().__post_init__(**kwargs)
@@ -14974,8 +15342,8 @@ class NtpActivity(NetworkEvent):
 @dataclass(repr=False)
 class RdpActivity(NetworkEvent):
     """
-    Remote Desktop Protocol (RDP) Activity events report post-authentication remote client connections between clients
-    and servers over the network.
+    Remote Desktop Protocol (RDP) Activity events report post-authentication remote
+    client connections between clients and servers over the network.
     """
     _inherited_slots: ClassVar[list[str]] = []
 
@@ -15009,8 +15377,11 @@ class RdpActivity(NetworkEvent):
     def __post_init__(self, *_: str, **kwargs: Any):
         if self._is_empty(self.activity_id):
             self.MissingRequiredField("activity_id")
-        if isinstance(self.activity_id, str):
+        if not isinstance(self.activity_id, RdpActivityActivityIdEnum):
             self.activity_id = RdpActivityActivityIdEnum(self.activity_id)
+
+        if self.activity_id is not None and not isinstance(self.activity_id, ActivityIdEnum):
+            self.activity_id = ActivityIdEnum(self.activity_id)
 
         if not isinstance(self.capabilities, list):
             self.capabilities = [self.capabilities] if self.capabilities is not None else []
@@ -15062,8 +15433,8 @@ class RdpActivity(NetworkEvent):
 @dataclass(repr=False)
 class SmbActivity(NetworkEvent):
     """
-    Server Message Block (SMB) Protocol Activity events report client/server connections sharing resources within the
-    network.
+    Server Message Block (SMB) Protocol Activity events report client/server
+    connections sharing resources within the network.
     """
     _inherited_slots: ClassVar[list[str]] = []
 
@@ -15096,8 +15467,11 @@ class SmbActivity(NetworkEvent):
     def __post_init__(self, *_: str, **kwargs: Any):
         if self._is_empty(self.activity_id):
             self.MissingRequiredField("activity_id")
-        if isinstance(self.activity_id, str):
+        if not isinstance(self.activity_id, SmbActivityActivityIdEnum):
             self.activity_id = SmbActivityActivityIdEnum(self.activity_id)
+
+        if self.activity_id is not None and not isinstance(self.activity_id, ActivityIdEnum):
+            self.activity_id = ActivityIdEnum(self.activity_id)
 
         if not isinstance(self.client_dialects, list):
             self.client_dialects = [self.client_dialects] if self.client_dialects is not None else []
@@ -15127,7 +15501,7 @@ class SmbActivity(NetworkEvent):
         if self.share_type is not None and not isinstance(self.share_type, str):
             self.share_type = str(self.share_type)
 
-        if isinstance(self.share_type_id, str):
+        if self.share_type_id is not None and not isinstance(self.share_type_id, ShareTypeIdEnum):
             self.share_type_id = ShareTypeIdEnum(self.share_type_id)
 
         if self.tree_uid is not None and not isinstance(self.tree_uid, str):
@@ -15139,7 +15513,8 @@ class SmbActivity(NetworkEvent):
 @dataclass(repr=False)
 class SshActivity(NetworkEvent):
     """
-    SSH Activity events report remote client connections to a server using the Secure Shell (SSH) Protocol.
+    SSH Activity events report remote client connections to a server using the
+    Secure Shell (SSH) Protocol.
     """
     _inherited_slots: ClassVar[list[str]] = []
 
@@ -15167,13 +15542,16 @@ class SshActivity(NetworkEvent):
     def __post_init__(self, *_: str, **kwargs: Any):
         if self._is_empty(self.activity_id):
             self.MissingRequiredField("activity_id")
-        if isinstance(self.activity_id, str):
+        if not isinstance(self.activity_id, SshActivityActivityIdEnum):
             self.activity_id = SshActivityActivityIdEnum(self.activity_id)
+
+        if self.activity_id is not None and not isinstance(self.activity_id, ActivityIdEnum):
+            self.activity_id = ActivityIdEnum(self.activity_id)
 
         if self.auth_type is not None and not isinstance(self.auth_type, str):
             self.auth_type = str(self.auth_type)
 
-        if isinstance(self.auth_type_id, str):
+        if self.auth_type_id is not None and not isinstance(self.auth_type_id, SshActivityAuthTypeIdEnum):
             self.auth_type_id = SshActivityAuthTypeIdEnum(self.auth_type_id)
 
         if self.client_hassh is not None and not isinstance(self.client_hassh, Hassh):
@@ -15194,8 +15572,8 @@ class SshActivity(NetworkEvent):
 @dataclass(repr=False)
 class TunnelActivity(NetworkEvent):
     """
-    Tunnel Activity events report secure tunnel establishment (such as VPN), teardowns, renewals, and other network
-    tunnel specific actions.
+    Tunnel Activity events report secure tunnel establishment (such as VPN),
+    teardowns, renewals, and other network tunnel specific actions.
     """
     _inherited_slots: ClassVar[list[str]] = []
 
@@ -15228,8 +15606,11 @@ class TunnelActivity(NetworkEvent):
     def __post_init__(self, *_: str, **kwargs: Any):
         if self._is_empty(self.activity_id):
             self.MissingRequiredField("activity_id")
-        if isinstance(self.activity_id, str):
+        if not isinstance(self.activity_id, TunnelActivityActivityIdEnum):
             self.activity_id = TunnelActivityActivityIdEnum(self.activity_id)
+
+        if self.activity_id is not None and not isinstance(self.activity_id, ActivityIdEnum):
+            self.activity_id = ActivityIdEnum(self.activity_id)
 
         if self.connection_info is not None and not isinstance(self.connection_info, NetworkConnectionInfo):
             self.connection_info = NetworkConnectionInfo(**as_dict(self.connection_info))
@@ -15258,7 +15639,7 @@ class TunnelActivity(NetworkEvent):
         if self.tunnel_type is not None and not isinstance(self.tunnel_type, str):
             self.tunnel_type = str(self.tunnel_type)
 
-        if isinstance(self.tunnel_type_id, str):
+        if self.tunnel_type_id is not None and not isinstance(self.tunnel_type_id, TunnelActivityTunnelTypeIdEnum):
             self.tunnel_type_id = TunnelActivityTunnelTypeIdEnum(self.tunnel_type_id)
 
         if self.user is not None and not isinstance(self.user, User):
@@ -15285,8 +15666,9 @@ class TunnelActivity(NetworkEvent):
 @dataclass(repr=False)
 class RemediationActivity(BaseEvent):
     """
-    Remediation Activity events report on attempts at remediating a compromised device or computer network. It follows
-    the MITRE countermeasures defined by the D3FEND™ <a target='_blank' href='https://d3fend.mitre.org/'>Matrix</a>.
+    Remediation Activity events report on attempts at remediating a compromised
+    device or computer network. It follows the MITRE countermeasures defined by the
+    D3FEND™ <a target='_blank' href='https://d3fend.mitre.org/'>Matrix</a>.
     """
     _inherited_slots: ClassVar[list[str]] = []
 
@@ -15318,8 +15700,11 @@ class RemediationActivity(BaseEvent):
 
         if self._is_empty(self.activity_id):
             self.MissingRequiredField("activity_id")
-        if isinstance(self.activity_id, str):
+        if not isinstance(self.activity_id, RemediationActivityActivityIdEnum):
             self.activity_id = RemediationActivityActivityIdEnum(self.activity_id)
+
+        if self.activity_id is not None and not isinstance(self.activity_id, ActivityIdEnum):
+            self.activity_id = ActivityIdEnum(self.activity_id)
 
         if not isinstance(self.countermeasures, list):
             self.countermeasures = [self.countermeasures] if self.countermeasures is not None else []
@@ -15331,7 +15716,10 @@ class RemediationActivity(BaseEvent):
         if self.scan is not None and not isinstance(self.scan, Scan):
             self.scan = Scan(**as_dict(self.scan))
 
-        if isinstance(self.status_id, str):
+        if self.status_id is not None and not isinstance(self.status_id, StatusIdEnum):
+            self.status_id = StatusIdEnum(self.status_id)
+
+        if self.status_id is not None and not isinstance(self.status_id, RemediationActivityStatusIdEnum):
             self.status_id = RemediationActivityStatusIdEnum(self.status_id)
 
         super().__post_init__(**kwargs)
@@ -15340,9 +15728,10 @@ class RemediationActivity(BaseEvent):
 @dataclass(repr=False)
 class FileRemediationActivity(RemediationActivity):
     """
-    File Remediation Activity events report on attempts at remediating files. It follows the MITRE countermeasures
-    defined by the D3FEND™ <a target='_blank' href='https://d3fend.mitre.org/'>Matrix</a>. Sub-techniques will include
-    File, such as File Removal or Restore File.
+    File Remediation Activity events report on attempts at remediating files. It
+    follows the MITRE countermeasures defined by the D3FEND™ <a target='_blank'
+    href='https://d3fend.mitre.org/'>Matrix</a>. Sub-techniques will include File,
+    such as File Removal or Restore File.
     """
     _inherited_slots: ClassVar[list[str]] = []
 
@@ -15375,9 +15764,11 @@ class FileRemediationActivity(RemediationActivity):
 @dataclass(repr=False)
 class NetworkRemediationActivity(RemediationActivity):
     """
-    Network Remediation Activity events report on attempts at remediating computer networks. It follows the MITRE
-    countermeasures defined by the D3FEND™ <a target='_blank' href='https://d3fend.mitre.org/'>Matrix</a>. Techniques
-    and Sub-techniques will include Network, such as Network Isolation or Network Traffic Filtering.
+    Network Remediation Activity events report on attempts at remediating computer
+    networks. It follows the MITRE countermeasures defined by the D3FEND™ <a
+    target='_blank' href='https://d3fend.mitre.org/'>Matrix</a>. Techniques and
+    Sub-techniques will include Network, such as Network Isolation or Network
+    Traffic Filtering.
     """
     _inherited_slots: ClassVar[list[str]] = []
 
@@ -15410,9 +15801,11 @@ class NetworkRemediationActivity(RemediationActivity):
 @dataclass(repr=False)
 class ProcessRemediationActivity(RemediationActivity):
     """
-    Process Remediation Activity events report on attempts at remediating processes. It follows the MITRE
-    countermeasures defined by the D3FEND™ <a target='_blank' href='https://d3fend.mitre.org/'>Matrix</a>.
-    Sub-techniques will include Process, such as Process Termination or Kernel-based Process Isolation.
+    Process Remediation Activity events report on attempts at remediating
+    processes. It follows the MITRE countermeasures defined by the D3FEND™ <a
+    target='_blank' href='https://d3fend.mitre.org/'>Matrix</a>. Sub-techniques
+    will include Process, such as Process Termination or Kernel-based Process
+    Isolation.
     """
     _inherited_slots: ClassVar[list[str]] = []
 
@@ -15445,9 +15838,9 @@ class ProcessRemediationActivity(RemediationActivity):
 @dataclass(repr=False)
 class SystemEvent(BaseEvent):
     """
-    The System Activity event is a generic event that defines a set of attributes available in the system activity
-    events. As a generic event, it could be used to log events that are not otherwise defined by the System Activity
-    category.
+    The System Activity event is a generic event that defines a set of attributes
+    available in the system activity events. As a generic event, it could be used
+    to log events that are not otherwise defined by the System Activity category.
     """
     _inherited_slots: ClassVar[list[str]] = []
 
@@ -15488,8 +15881,8 @@ class SystemEvent(BaseEvent):
 @dataclass(repr=False)
 class EventLogActvity(SystemEvent):
     """
-    Event Log Activity events report actions pertaining to the system's event logging service(s), such as disabling
-    logging or clearing the log data.
+    Event Log Activity events report actions pertaining to the system's event
+    logging service(s), such as disabling logging or clearing the log data.
     """
     _inherited_slots: ClassVar[list[str]] = []
 
@@ -15522,13 +15915,16 @@ class EventLogActvity(SystemEvent):
     def __post_init__(self, *_: str, **kwargs: Any):
         if self._is_empty(self.activity_id):
             self.MissingRequiredField("activity_id")
-        if isinstance(self.activity_id, str):
+        if not isinstance(self.activity_id, EventLogActvityActivityIdEnum):
             self.activity_id = EventLogActvityActivityIdEnum(self.activity_id)
 
         if self._is_empty(self.actor):
             self.MissingRequiredField("actor")
         if not isinstance(self.actor, Actor):
             self.actor = Actor(**as_dict(self.actor))
+
+        if self.activity_id is not None and not isinstance(self.activity_id, ActivityIdEnum):
+            self.activity_id = ActivityIdEnum(self.activity_id)
 
         if self.actor is not None and not isinstance(self.actor, Actor):
             self.actor = Actor(**as_dict(self.actor))
@@ -15551,7 +15947,7 @@ class EventLogActvity(SystemEvent):
         if self.log_type is not None and not isinstance(self.log_type, str):
             self.log_type = str(self.log_type)
 
-        if isinstance(self.log_type_id, str):
+        if self.log_type_id is not None and not isinstance(self.log_type_id, LogTypeIdEnum):
             self.log_type_id = LogTypeIdEnum(self.log_type_id)
 
         if self.src_endpoint is not None and not isinstance(self.src_endpoint, NetworkEndpoint):
@@ -15575,7 +15971,8 @@ class EventLogActvity(SystemEvent):
 @dataclass(repr=False)
 class FileActivity(SystemEvent):
     """
-    File System Activity events report when a process performs an action on a file or folder.
+    File System Activity events report when a process performs an action on a file
+    or folder.
     """
     _inherited_slots: ClassVar[list[str]] = []
 
@@ -15611,7 +16008,7 @@ class FileActivity(SystemEvent):
 
         if self._is_empty(self.activity_id):
             self.MissingRequiredField("activity_id")
-        if isinstance(self.activity_id, str):
+        if not isinstance(self.activity_id, FileActivityActivityIdEnum):
             self.activity_id = FileActivityActivityIdEnum(self.activity_id)
 
         if self._is_empty(self.actor):
@@ -15621,6 +16018,9 @@ class FileActivity(SystemEvent):
 
         if self.access_mask is not None and not isinstance(self.access_mask, int):
             self.access_mask = int(self.access_mask)
+
+        if self.activity_id is not None and not isinstance(self.activity_id, ActivityIdEnum):
+            self.activity_id = ActivityIdEnum(self.activity_id)
 
         if self.actor is not None and not isinstance(self.actor, Actor):
             self.actor = Actor(**as_dict(self.actor))
@@ -15646,7 +16046,8 @@ class FileActivity(SystemEvent):
 @dataclass(repr=False)
 class KernelActivity(SystemEvent):
     """
-    Kernel Activity events report when an process creates, reads, or deletes a kernel resource.
+    Kernel Activity events report when an process creates, reads, or deletes a
+    kernel resource.
     """
     _inherited_slots: ClassVar[list[str]] = []
 
@@ -15676,8 +16077,11 @@ class KernelActivity(SystemEvent):
 
         if self._is_empty(self.activity_id):
             self.MissingRequiredField("activity_id")
-        if isinstance(self.activity_id, str):
+        if not isinstance(self.activity_id, KernelActivityActivityIdEnum):
             self.activity_id = KernelActivityActivityIdEnum(self.activity_id)
+
+        if self.activity_id is not None and not isinstance(self.activity_id, ActivityIdEnum):
+            self.activity_id = ActivityIdEnum(self.activity_id)
 
         super().__post_init__(**kwargs)
 
@@ -15685,7 +16089,8 @@ class KernelActivity(SystemEvent):
 @dataclass(repr=False)
 class KernelExtensionActivity(SystemEvent):
     """
-    Kernel Extension events report when a driver/extension is loaded or unloaded into the kernel
+    Kernel Extension events report when a driver/extension is loaded or unloaded
+    into the kernel
     """
     _inherited_slots: ClassVar[list[str]] = []
 
@@ -15715,13 +16120,16 @@ class KernelExtensionActivity(SystemEvent):
 
         if self._is_empty(self.activity_id):
             self.MissingRequiredField("activity_id")
-        if isinstance(self.activity_id, str):
+        if not isinstance(self.activity_id, KernelExtensionActivityActivityIdEnum):
             self.activity_id = KernelExtensionActivityActivityIdEnum(self.activity_id)
 
         if self._is_empty(self.actor):
             self.MissingRequiredField("actor")
         if not isinstance(self.actor, Actor):
             self.actor = Actor(**as_dict(self.actor))
+
+        if self.activity_id is not None and not isinstance(self.activity_id, ActivityIdEnum):
+            self.activity_id = ActivityIdEnum(self.activity_id)
 
         if self.actor is not None and not isinstance(self.actor, Actor):
             self.actor = Actor(**as_dict(self.actor))
@@ -15732,8 +16140,9 @@ class KernelExtensionActivity(SystemEvent):
 @dataclass(repr=False)
 class MemoryActivity(SystemEvent):
     """
-    Memory Activity events report when a process has memory allocated, read/modified, or other manipulation activities
-    - such as a buffer overflow or turning off data execution protection (DEP).
+    Memory Activity events report when a process has memory allocated,
+    read/modified, or other manipulation activities - such as a buffer overflow or
+    turning off data execution protection (DEP).
     """
     _inherited_slots: ClassVar[list[str]] = []
 
@@ -15767,8 +16176,11 @@ class MemoryActivity(SystemEvent):
 
         if self._is_empty(self.activity_id):
             self.MissingRequiredField("activity_id")
-        if isinstance(self.activity_id, str):
+        if not isinstance(self.activity_id, MemoryActivityActivityIdEnum):
             self.activity_id = MemoryActivityActivityIdEnum(self.activity_id)
+
+        if self.activity_id is not None and not isinstance(self.activity_id, ActivityIdEnum):
+            self.activity_id = ActivityIdEnum(self.activity_id)
 
         if self.actual_permissions is not None and not isinstance(self.actual_permissions, int):
             self.actual_permissions = int(self.actual_permissions)
@@ -15788,7 +16200,8 @@ class MemoryActivity(SystemEvent):
 @dataclass(repr=False)
 class ModuleActivity(SystemEvent):
     """
-    Module Activity events report when an endpoint process acts on a <code>module</code>.
+    Module Activity events report when an endpoint process acts on a
+    <code>module</code>.
     """
     _inherited_slots: ClassVar[list[str]] = []
 
@@ -15818,13 +16231,16 @@ class ModuleActivity(SystemEvent):
 
         if self._is_empty(self.activity_id):
             self.MissingRequiredField("activity_id")
-        if isinstance(self.activity_id, str):
+        if not isinstance(self.activity_id, ModuleActivityActivityIdEnum):
             self.activity_id = ModuleActivityActivityIdEnum(self.activity_id)
 
         if self._is_empty(self.actor):
             self.MissingRequiredField("actor")
         if not isinstance(self.actor, Actor):
             self.actor = Actor(**as_dict(self.actor))
+
+        if self.activity_id is not None and not isinstance(self.activity_id, ActivityIdEnum):
+            self.activity_id = ActivityIdEnum(self.activity_id)
 
         if self.actor is not None and not isinstance(self.actor, Actor):
             self.actor = Actor(**as_dict(self.actor))
@@ -15835,8 +16251,9 @@ class ModuleActivity(SystemEvent):
 @dataclass(repr=False)
 class PeripheralActivity(SystemEvent):
     """
-    Peripheral Activity events log a system's interactions with external, connectable, and detachable hardware. These
-    events provide visibility into the external devices connected to and used by a system.
+    Peripheral Activity events log a system's interactions with external,
+    connectable, and detachable hardware. These events provide visibility into the
+    external devices connected to and used by a system.
     """
     _inherited_slots: ClassVar[list[str]] = []
 
@@ -15866,8 +16283,11 @@ class PeripheralActivity(SystemEvent):
 
         if self._is_empty(self.activity_id):
             self.MissingRequiredField("activity_id")
-        if isinstance(self.activity_id, str):
+        if not isinstance(self.activity_id, PeripheralActivityActivityIdEnum):
             self.activity_id = PeripheralActivityActivityIdEnum(self.activity_id)
+
+        if self.activity_id is not None and not isinstance(self.activity_id, ActivityIdEnum):
+            self.activity_id = ActivityIdEnum(self.activity_id)
 
         super().__post_init__(**kwargs)
 
@@ -15875,8 +16295,8 @@ class PeripheralActivity(SystemEvent):
 @dataclass(repr=False)
 class ProcessActivity(SystemEvent):
     """
-    Process Activity events report when a process launches, injects, opens or terminates another process, successful
-    or otherwise.
+    Process Activity events report when a process launches, injects, opens or
+    terminates another process, successful or otherwise.
     """
     _inherited_slots: ClassVar[list[str]] = []
 
@@ -15916,13 +16336,16 @@ class ProcessActivity(SystemEvent):
 
         if self._is_empty(self.activity_id):
             self.MissingRequiredField("activity_id")
-        if isinstance(self.activity_id, str):
+        if not isinstance(self.activity_id, ProcessActivityActivityIdEnum):
             self.activity_id = ProcessActivityActivityIdEnum(self.activity_id)
 
         if self._is_empty(self.actor):
             self.MissingRequiredField("actor")
         if not isinstance(self.actor, Actor):
             self.actor = Actor(**as_dict(self.actor))
+
+        if self.activity_id is not None and not isinstance(self.activity_id, ActivityIdEnum):
+            self.activity_id = ActivityIdEnum(self.activity_id)
 
         if self.actor is not None and not isinstance(self.actor, Actor):
             self.actor = Actor(**as_dict(self.actor))
@@ -15936,13 +16359,13 @@ class ProcessActivity(SystemEvent):
         if self.injection_type is not None and not isinstance(self.injection_type, str):
             self.injection_type = str(self.injection_type)
 
-        if isinstance(self.injection_type_id, str):
+        if self.injection_type_id is not None and not isinstance(self.injection_type_id, InjectionTypeIdEnum):
             self.injection_type_id = InjectionTypeIdEnum(self.injection_type_id)
 
         if self.launch_type is not None and not isinstance(self.launch_type, str):
             self.launch_type = str(self.launch_type)
 
-        if isinstance(self.launch_type_id, str):
+        if self.launch_type_id is not None and not isinstance(self.launch_type_id, LaunchTypeIdEnum):
             self.launch_type_id = LaunchTypeIdEnum(self.launch_type_id)
 
         if self.module is not None and not isinstance(self.module, Module):
@@ -15963,7 +16386,8 @@ class ProcessActivity(SystemEvent):
 @dataclass(repr=False)
 class ScheduledJobActivity(SystemEvent):
     """
-    Scheduled Job Activity events report activities related to scheduled jobs or tasks.
+    Scheduled Job Activity events report activities related to scheduled jobs or
+    tasks.
     """
     _inherited_slots: ClassVar[list[str]] = []
 
@@ -15993,13 +16417,16 @@ class ScheduledJobActivity(SystemEvent):
 
         if self._is_empty(self.activity_id):
             self.MissingRequiredField("activity_id")
-        if isinstance(self.activity_id, str):
+        if not isinstance(self.activity_id, ScheduledJobActivityActivityIdEnum):
             self.activity_id = ScheduledJobActivityActivityIdEnum(self.activity_id)
 
         if self._is_empty(self.actor):
             self.MissingRequiredField("actor")
         if not isinstance(self.actor, Actor):
             self.actor = Actor(**as_dict(self.actor))
+
+        if self.activity_id is not None and not isinstance(self.activity_id, ActivityIdEnum):
+            self.activity_id = ActivityIdEnum(self.activity_id)
 
         if self.actor is not None and not isinstance(self.actor, Actor):
             self.actor = Actor(**as_dict(self.actor))
@@ -16040,8 +16467,11 @@ class ScriptActivity(SystemEvent):
 
         if self._is_empty(self.activity_id):
             self.MissingRequiredField("activity_id")
-        if isinstance(self.activity_id, str):
+        if not isinstance(self.activity_id, ScriptActivityActivityIdEnum):
             self.activity_id = ScriptActivityActivityIdEnum(self.activity_id)
+
+        if self.activity_id is not None and not isinstance(self.activity_id, ActivityIdEnum):
+            self.activity_id = ActivityIdEnum(self.activity_id)
 
         super().__post_init__(**kwargs)
 
@@ -16049,8 +16479,8 @@ class ScriptActivity(SystemEvent):
 @dataclass(repr=False)
 class UnmannedSystemsEvent(BaseEvent):
     """
-    The Unmanned Systems event is a generic event that defines a set of attributes available in the Unmanned Systems
-    category.
+    The Unmanned Systems event is a generic event that defines a set of attributes
+    available in the Unmanned Systems category.
     """
     _inherited_slots: ClassVar[list[str]] = []
 
@@ -16102,11 +16532,14 @@ class UnmannedSystemsEvent(BaseEvent):
 @dataclass(repr=False)
 class AirborneBroadcastActivity(UnmannedSystemsEvent):
     """
-    Airborne Broadcast Activity events report the activity of any aircraft or unmanned system as reported and tracked
-    by Automatic Dependent Surveillance - Broadcast (ADS-B) receivers. Based on the ADS-B standards described in <a
-    target='_blank' href='https://www.ecfr.gov/current/title-14/chapter-I/subchapter-F/part-91#91.225'>Code of Federal
-    Regulations (CFR) Title 14 Chapter I Subchapter F Part 91</a> and in other general Federal Aviation Administration
-    (FAA) supplemental orders and guidance described <a target='_blank'
+    Airborne Broadcast Activity events report the activity of any aircraft or
+    unmanned system as reported and tracked by Automatic Dependent Surveillance -
+    Broadcast (ADS-B) receivers. Based on the ADS-B standards described in <a
+    target='_blank'
+    href='https://www.ecfr.gov/current/title-14/chapter-I/subchapter-F/part-91#91.225'>Code
+    of Federal Regulations (CFR) Title 14 Chapter I Subchapter F Part 91</a> and in
+    other general Federal Aviation Administration (FAA) supplemental orders and
+    guidance described <a target='_blank'
     href='https://www.faa.gov/about/office_org/headquarters_offices/avs/offices/afx/afs/afs400/afs410/ads-b'>here</a>.
     """
     _inherited_slots: ClassVar[list[str]] = []
@@ -16148,13 +16581,16 @@ class AirborneBroadcastActivity(UnmannedSystemsEvent):
 
         if self._is_empty(self.activity_id):
             self.MissingRequiredField("activity_id")
-        if isinstance(self.activity_id, str):
+        if not isinstance(self.activity_id, AirborneBroadcastActivityActivityIdEnum):
             self.activity_id = AirborneBroadcastActivityActivityIdEnum(self.activity_id)
 
         if self._is_empty(self.dst_endpoint):
             self.MissingRequiredField("dst_endpoint")
         if not isinstance(self.dst_endpoint, NetworkEndpoint):
             self.dst_endpoint = NetworkEndpoint(**as_dict(self.dst_endpoint))
+
+        if self.activity_id is not None and not isinstance(self.activity_id, ActivityIdEnum):
+            self.activity_id = ActivityIdEnum(self.activity_id)
 
         if self.aircraft is not None and not isinstance(self.aircraft, Aircraft):
             self.aircraft = Aircraft(**as_dict(self.aircraft))
@@ -16189,10 +16625,12 @@ class AirborneBroadcastActivity(UnmannedSystemsEvent):
 @dataclass(repr=False)
 class DroneFlightsActivity(UnmannedSystemsEvent):
     """
-    Drone Flights Activity events report the activity of Unmanned Aerial Systems (UAS), their Operators, and
-    mission-planning and authorization metadata as reported by the UAS platforms themselves, by Counter-UAS (CUAS)
-    systems, or other remote monitoring or sensing infrastructure. Based on the Remote ID defined in Standard
-    Specification for Remote ID and Tracking (ASTM Designation: F3411-22a) <a target='_blank'
+    Drone Flights Activity events report the activity of Unmanned Aerial Systems
+    (UAS), their Operators, and mission-planning and authorization metadata as
+    reported by the UAS platforms themselves, by Counter-UAS (CUAS) systems, or
+    other remote monitoring or sensing infrastructure. Based on the Remote ID
+    defined in Standard Specification for Remote ID and Tracking (ASTM Designation:
+    F3411-22a) <a target='_blank'
     href='https://cdn.standards.iteh.ai/samples/112830/71297057ac42432880a203654f213709/ASTM-F3411-22a.pdf'>ASTM
     F3411-22a</a>
     """
@@ -16239,13 +16677,16 @@ class DroneFlightsActivity(UnmannedSystemsEvent):
 
         if self._is_empty(self.activity_id):
             self.MissingRequiredField("activity_id")
-        if isinstance(self.activity_id, str):
+        if not isinstance(self.activity_id, DroneFlightsActivityActivityIdEnum):
             self.activity_id = DroneFlightsActivityActivityIdEnum(self.activity_id)
+
+        if self.activity_id is not None and not isinstance(self.activity_id, ActivityIdEnum):
+            self.activity_id = ActivityIdEnum(self.activity_id)
 
         if self.auth_protocol is not None and not isinstance(self.auth_protocol, str):
             self.auth_protocol = str(self.auth_protocol)
 
-        if isinstance(self.auth_protocol_id, str):
+        if self.auth_protocol_id is not None and not isinstance(self.auth_protocol_id, DroneFlightsActivityAuthProtocolIdEnum):
             self.auth_protocol_id = DroneFlightsActivityAuthProtocolIdEnum(self.auth_protocol_id)
 
         if self.classification is not None and not isinstance(self.classification, str):
@@ -16263,6 +16704,9 @@ class DroneFlightsActivity(UnmannedSystemsEvent):
         if self.status is not None and not isinstance(self.status, str):
             self.status = str(self.status)
 
+        if self.status_id is not None and not isinstance(self.status_id, StatusIdEnum):
+            self.status_id = StatusIdEnum(self.status_id)
+
         if self.traffic is not None and not isinstance(self.traffic, NetworkTraffic):
             self.traffic = NetworkTraffic(**as_dict(self.traffic))
 
@@ -16275,7 +16719,7 @@ class DroneFlightsActivity(UnmannedSystemsEvent):
         if self.status is not None and not isinstance(self.status, str):
             self.status = str(self.status)
 
-        if isinstance(self.status_id, str):
+        if self.status_id is not None and not isinstance(self.status_id, DroneFlightsActivityStatusIdEnum):
             self.status_id = DroneFlightsActivityStatusIdEnum(self.status_id)
 
         if self.traffic is not None and not isinstance(self.traffic, NetworkTraffic):
@@ -16574,7 +17018,7 @@ class RegValue(Object):
         if self.type is not None and not isinstance(self.type, str):
             self.type = str(self.type)
 
-        if isinstance(self.type_id, str):
+        if self.type_id is not None and not isinstance(self.type_id, RegValueTypeIdEnum):
             self.type_id = RegValueTypeIdEnum(self.type_id)
 
         super().__post_init__(**kwargs)
@@ -16583,7 +17027,8 @@ class RegValue(Object):
 @dataclass(repr=False)
 class WindowsStartupItem(StartupItem):
     """
-    The startup item object describes an application component that has associated startup criteria and configurations.
+    The startup item object describes an application component that has associated
+    startup criteria and configurations.
     """
     _inherited_slots: ClassVar[list[str]] = []
 
@@ -16606,7 +17051,8 @@ class WindowsStartupItem(StartupItem):
 @dataclass(repr=False)
 class WinResource(Resource):
     """
-    The Windows resource object describes a resource object managed by Windows, such as mutant or timer.
+    The Windows resource object describes a resource object managed by Windows,
+    such as mutant or timer.
     """
     _inherited_slots: ClassVar[list[str]] = []
 
@@ -16625,7 +17071,7 @@ class WinResource(Resource):
     def __post_init__(self, *_: str, **kwargs: Any):
         if self._is_empty(self.type_id):
             self.MissingRequiredField("type_id")
-        if isinstance(self.type_id, str):
+        if not isinstance(self.type_id, WinResourceTypeIdEnum):
             self.type_id = WinResourceTypeIdEnum(self.type_id)
 
         if self.details is not None and not isinstance(self.details, str):
@@ -16696,7 +17142,7 @@ class WinService(Service):
         if self.service_category is not None and not isinstance(self.service_category, str):
             self.service_category = str(self.service_category)
 
-        if isinstance(self.service_category_id, str):
+        if self.service_category_id is not None and not isinstance(self.service_category_id, WindowsServiceCategoryIdEnum):
             self.service_category_id = WindowsServiceCategoryIdEnum(self.service_category_id)
 
         if not isinstance(self.service_dependencies, list):
@@ -16709,7 +17155,7 @@ class WinService(Service):
         if self.service_error_control is not None and not isinstance(self.service_error_control, str):
             self.service_error_control = str(self.service_error_control)
 
-        if isinstance(self.service_error_control_id, str):
+        if self.service_error_control_id is not None and not isinstance(self.service_error_control_id, WindowsServiceErrorControlIdEnum):
             self.service_error_control_id = WindowsServiceErrorControlIdEnum(self.service_error_control_id)
 
         if self.service_file is not None and not isinstance(self.service_file, File):
@@ -16721,13 +17167,13 @@ class WinService(Service):
         if self.service_start_type is not None and not isinstance(self.service_start_type, str):
             self.service_start_type = str(self.service_start_type)
 
-        if isinstance(self.service_start_type_id, str):
+        if self.service_start_type_id is not None and not isinstance(self.service_start_type_id, WindowsServiceStartTypeIdEnum):
             self.service_start_type_id = WindowsServiceStartTypeIdEnum(self.service_start_type_id)
 
         if self.service_type is not None and not isinstance(self.service_type, str):
             self.service_type = str(self.service_type)
 
-        if isinstance(self.service_type_id, str):
+        if self.service_type_id is not None and not isinstance(self.service_type_id, WindowsServiceTypeIdEnum):
             self.service_type_id = WindowsServiceTypeIdEnum(self.service_type_id)
 
         super().__post_init__(**kwargs)
@@ -16777,7 +17223,8 @@ class PrefetchQuery(DiscoveryResult):
 @dataclass(repr=False)
 class RegistryKeyActivity(SystemEvent):
     """
-    Registry Key Activity events report when a process performs an action on a Windows registry key.
+    Registry Key Activity events report when a process performs an action on a
+    Windows registry key.
     """
     _inherited_slots: ClassVar[list[str]] = []
 
@@ -16811,7 +17258,7 @@ class RegistryKeyActivity(SystemEvent):
 
         if self._is_empty(self.activity_id):
             self.MissingRequiredField("activity_id")
-        if isinstance(self.activity_id, str):
+        if not isinstance(self.activity_id, RegistryKeyActivityActivityIdEnum):
             self.activity_id = RegistryKeyActivityActivityIdEnum(self.activity_id)
 
         if self._is_empty(self.actor):
@@ -16821,6 +17268,9 @@ class RegistryKeyActivity(SystemEvent):
 
         if self.access_mask is not None and not isinstance(self.access_mask, int):
             self.access_mask = int(self.access_mask)
+
+        if self.activity_id is not None and not isinstance(self.activity_id, ActivityIdEnum):
+            self.activity_id = ActivityIdEnum(self.activity_id)
 
         if self.actor is not None and not isinstance(self.actor, Actor):
             self.actor = Actor(**as_dict(self.actor))
@@ -16840,7 +17290,8 @@ class RegistryKeyActivity(SystemEvent):
 @dataclass(repr=False)
 class RegistryKeyQuery(DiscoveryResult):
     """
-    Registry Key Query events report information about discovered Windows registry keys.
+    Registry Key Query events report information about discovered Windows registry
+    keys.
     """
     _inherited_slots: ClassVar[list[str]] = []
 
@@ -16873,7 +17324,8 @@ class RegistryKeyQuery(DiscoveryResult):
 @dataclass(repr=False)
 class RegistryValueActivity(SystemEvent):
     """
-    Registry Value Activity events reports when a process performs an action on a Windows registry value.
+    Registry Value Activity events reports when a process performs an action on a
+    Windows registry value.
     """
     _inherited_slots: ClassVar[list[str]] = []
 
@@ -16904,13 +17356,16 @@ class RegistryValueActivity(SystemEvent):
 
         if self._is_empty(self.activity_id):
             self.MissingRequiredField("activity_id")
-        if isinstance(self.activity_id, str):
+        if not isinstance(self.activity_id, RegistryValueActivityActivityIdEnum):
             self.activity_id = RegistryValueActivityActivityIdEnum(self.activity_id)
 
         if self._is_empty(self.actor):
             self.MissingRequiredField("actor")
         if not isinstance(self.actor, Actor):
             self.actor = Actor(**as_dict(self.actor))
+
+        if self.activity_id is not None and not isinstance(self.activity_id, ActivityIdEnum):
+            self.activity_id = ActivityIdEnum(self.activity_id)
 
         if self.actor is not None and not isinstance(self.actor, Actor):
             self.actor = Actor(**as_dict(self.actor))
@@ -16924,7 +17379,8 @@ class RegistryValueActivity(SystemEvent):
 @dataclass(repr=False)
 class RegistryValueQuery(DiscoveryResult):
     """
-    Registry Value Query events report information about discovered Windows registry values.
+    Registry Value Query events report information about discovered Windows
+    registry values.
     """
     _inherited_slots: ClassVar[list[str]] = []
 
@@ -16957,8 +17413,8 @@ class RegistryValueQuery(DiscoveryResult):
 @dataclass(repr=False)
 class WindowsResourceActivity(SystemEvent):
     """
-    Windows Resource Activity events report when a process accesses a Windows managed resource object, successful or
-    otherwise.
+    Windows Resource Activity events report when a process accesses a Windows
+    managed resource object, successful or otherwise.
     """
     _inherited_slots: ClassVar[list[str]] = []
 
@@ -16988,8 +17444,11 @@ class WindowsResourceActivity(SystemEvent):
 
         if self._is_empty(self.activity_id):
             self.MissingRequiredField("activity_id")
-        if isinstance(self.activity_id, str):
+        if not isinstance(self.activity_id, WindowsResourceActivityActivityIdEnum):
             self.activity_id = WindowsResourceActivityActivityIdEnum(self.activity_id)
+
+        if self.activity_id is not None and not isinstance(self.activity_id, ActivityIdEnum):
+            self.activity_id = ActivityIdEnum(self.activity_id)
 
         super().__post_init__(**kwargs)
 
@@ -16997,7 +17456,8 @@ class WindowsResourceActivity(SystemEvent):
 @dataclass(repr=False)
 class WindowsServiceActivity(SystemEvent):
     """
-    Windows Service Activity events report when a process interacts with the Service Control Manager.
+    Windows Service Activity events report when a process interacts with the
+    Service Control Manager.
     """
     _inherited_slots: ClassVar[list[str]] = []
 
@@ -17027,8 +17487,11 @@ class WindowsServiceActivity(SystemEvent):
 
         if self._is_empty(self.activity_id):
             self.MissingRequiredField("activity_id")
-        if isinstance(self.activity_id, str):
+        if not isinstance(self.activity_id, WindowsServiceActivityActivityIdEnum):
             self.activity_id = WindowsServiceActivityActivityIdEnum(self.activity_id)
+
+        if self.activity_id is not None and not isinstance(self.activity_id, ActivityIdEnum):
+            self.activity_id = ActivityIdEnum(self.activity_id)
 
         super().__post_init__(**kwargs)
 
@@ -17043,13 +17506,16 @@ class AccountSwitchTypeIdEnum(EnumDefinitionImpl):
         description="The account switch type is unknown.")
     SUBSTITUTE_USER = PermissibleValue(
         text="SUBSTITUTE_USER",
-        description="""A utility like <code>sudo</code>, <code>su</code>, or equivalent was used to perform actions in the context of another user.""")
+        description="""A utility like <code>sudo</code>, <code>su</code>, or equivalent was used to
+perform actions in the context of another user.""")
     IMPERSONATE = PermissibleValue(
         text="IMPERSONATE",
-        description="""An API like <code>ImpersonateLoggedOnUser()</code> or equivalent was used to perform actions in the context of another user.""")
+        description="""An API like <code>ImpersonateLoggedOnUser()</code> or equivalent was used to
+perform actions in the context of another user.""")
     OTHER = PermissibleValue(
         text="OTHER",
-        description="""The account switch type is not mapped. See the <code>account_switch_type</code> attribute, which contains a data source specific value.""")
+        description="""The account switch type is not mapped. See the <code>account_switch_type</code>
+attribute, which contains a data source specific value.""")
 
     _defn = EnumDefinition(
         name="AccountSwitchTypeIdEnum",
@@ -17058,7 +17524,8 @@ class AccountSwitchTypeIdEnum(EnumDefinitionImpl):
 
 class ActionIdEnum(EnumDefinitionImpl):
     """
-    The normalized action taken by a control or other policy-based system leading to an outcome or disposition.
+    The normalized action taken by a control or other policy-based system leading
+    to an outcome or disposition.
     """
     UNKNOWN = PermissibleValue(
         text="UNKNOWN",
@@ -17071,11 +17538,13 @@ class ActionIdEnum(EnumDefinitionImpl):
         description="The attempted activity was denied.")
     OTHER = PermissibleValue(
         text="OTHER",
-        description="""The action was not mapped. See the <code>action</code> attribute, which contains a data source specific value.""")
+        description="""The action was not mapped. See the <code>action</code> attribute, which
+contains a data source specific value.""")
 
     _defn = EnumDefinition(
         name="ActionIdEnum",
-        description="""The normalized action taken by a control or other policy-based system leading to an outcome or disposition.""",
+        description="""The normalized action taken by a control or other policy-based system leading
+to an outcome or disposition.""",
     )
 
 class ActivityIdEnum(EnumDefinitionImpl):
@@ -17087,7 +17556,8 @@ class ActivityIdEnum(EnumDefinitionImpl):
         description="The event activity is unknown.")
     OTHER = PermissibleValue(
         text="OTHER",
-        description="""The event activity is not mapped. See the <code>activity_name</code> attribute, which contains a data source specific value.""")
+        description="""The event activity is not mapped. See the <code>activity_name</code> attribute,
+which contains a data source specific value.""")
 
     _defn = EnumDefinition(
         name="ActivityIdEnum",
@@ -17103,7 +17573,8 @@ class AlgorithmIdEnum(EnumDefinitionImpl):
         description="The algorithm is unknown.")
     OTHER = PermissibleValue(
         text="OTHER",
-        description="""The algorithm is not mapped. See the <code>algorithm</code> attribute, which contains a data source specific value.""")
+        description="""The algorithm is not mapped. See the <code>algorithm</code> attribute, which
+contains a data source specific value.""")
 
     _defn = EnumDefinition(
         name="AlgorithmIdEnum",
@@ -17112,7 +17583,8 @@ class AlgorithmIdEnum(EnumDefinitionImpl):
 
 class AuthProtocolIdEnum(EnumDefinitionImpl):
     """
-    The normalized identifier of the authentication protocol used to create the user session.
+    The normalized identifier of the authentication protocol used to create the
+    user session.
     """
     UNKNOWN = PermissibleValue(
         text="UNKNOWN",
@@ -17155,34 +17627,40 @@ class AuthProtocolIdEnum(EnumDefinitionImpl):
         description="LDAP")
     OTHER = PermissibleValue(
         text="OTHER",
-        description="""The authentication protocol is not mapped. See the <code>auth_protocol</code> attribute, which contains a data source specific value.""")
+        description="""The authentication protocol is not mapped. See the <code>auth_protocol</code>
+attribute, which contains a data source specific value.""")
 
     _defn = EnumDefinition(
         name="AuthProtocolIdEnum",
-        description="The normalized identifier of the authentication protocol used to create the user session.",
+        description="""The normalized identifier of the authentication protocol used to create the
+user session.""",
     )
 
 class AuthTypeIdEnum(EnumDefinitionImpl):
     """
-    The normalized identifier of the agreed upon authentication type. See specific usage.
+    The normalized identifier of the agreed upon authentication type. See specific
+    usage.
     """
     UNKNOWN = PermissibleValue(
         text="UNKNOWN",
         description="The authentication type is unknown.")
     OTHER = PermissibleValue(
         text="OTHER",
-        description="""The authentication type is not mapped. See the <code>auth_type</code> attribute, which contains a data source specific value.""")
+        description="""The authentication type is not mapped. See the <code>auth_type</code>
+attribute, which contains a data source specific value.""")
 
     _defn = EnumDefinition(
         name="AuthTypeIdEnum",
-        description="The normalized identifier of the agreed upon authentication type. See specific usage.",
+        description="""The normalized identifier of the agreed upon authentication type. See specific
+usage.""",
     )
 
 class BoundaryIdEnum(EnumDefinitionImpl):
     """
-    <p>The normalized identifier of the boundary of the connection. </p><p> For cloud connections, this translates to
-    the traffic-boundary (same VPC, through IGW, etc.). For traditional networks, this is described as Local,
-    Internal, or External.</p>
+    <p>The normalized identifier of the boundary of the connection. </p><p> For
+    cloud connections, this translates to the traffic-boundary (same VPC, through
+    IGW, etc.). For traditional networks, this is described as Local, Internal, or
+    External.</p>
     """
     UNKNOWN = PermissibleValue(
         text="UNKNOWN",
@@ -17195,7 +17673,8 @@ class BoundaryIdEnum(EnumDefinitionImpl):
         description="Internal network traffic between two endpoints inside network.")
     EXTERNAL = PermissibleValue(
         text="EXTERNAL",
-        description="External network traffic between two endpoints on the Internet or outside the network.")
+        description="""External network traffic between two endpoints on the Internet or outside the
+network.""")
     SAME_VPC = PermissibleValue(
         text="SAME_VPC",
         description="Through another resource in the same VPC")
@@ -17222,11 +17701,15 @@ class BoundaryIdEnum(EnumDefinitionImpl):
         description="Through an Internet gateway (Nitro-based instances only)")
     OTHER = PermissibleValue(
         text="OTHER",
-        description="""The boundary is not mapped. See the <code>boundary</code> attribute, which contains a data source specific value.""")
+        description="""The boundary is not mapped. See the <code>boundary</code> attribute, which
+contains a data source specific value.""")
 
     _defn = EnumDefinition(
         name="BoundaryIdEnum",
-        description="""<p>The normalized identifier of the boundary of the connection. </p><p> For cloud connections, this translates to the traffic-boundary (same VPC, through IGW, etc.). For traditional networks, this is described as Local, Internal, or External.</p>""",
+        description="""<p>The normalized identifier of the boundary of the connection. </p><p> For
+cloud connections, this translates to the traffic-boundary (same VPC, through
+IGW, etc.). For traditional networks, this is described as Local, Internal, or
+External.</p>""",
     )
 
 class BusTypeIdEnum(EnumDefinitionImpl):
@@ -17238,28 +17721,36 @@ class BusTypeIdEnum(EnumDefinitionImpl):
         description="The bus type is unknown or not reported.")
     ONBOARD = PermissibleValue(
         text="ONBOARD",
-        description="""The device is attached directly on the motherboard or SoC (often referred to as 'integrated' or 'onboard').""")
+        description="""The device is attached directly on the motherboard or SoC (often referred to as
+'integrated' or 'onboard').""")
     PCIE_X16 = PermissibleValue(
         text="PCIE_X16",
-        description="""Peripheral Component Interconnect Express slot with 16 lanes, typically used for high‑bandwidth add‑in devices.""")
+        description="""Peripheral Component Interconnect Express slot with 16 lanes, typically used
+for high‑bandwidth add‑in devices.""")
     PCIE_X8 = PermissibleValue(
         text="PCIE_X8",
-        description="""Peripheral Component Interconnect Express slot with 8 lanes; common for high‑performance NICs, storage controllers, and accelerators.""")
+        description="""Peripheral Component Interconnect Express slot with 8 lanes; common for
+high‑performance NICs, storage controllers, and accelerators.""")
     MXM_TYPE_A = PermissibleValue(
         text="MXM_TYPE_A",
-        description="Mobile PCI Express Module (MXM) Type A form factor (compact laptop/embedded GPU module).")
+        description="""Mobile PCI Express Module (MXM) Type A form factor (compact laptop/embedded GPU
+module).""")
     MXM_TYPE_B = PermissibleValue(
         text="MXM_TYPE_B",
-        description="Mobile PCI Express Module (MXM) Type B form factor (larger laptop/embedded GPU module).")
+        description="""Mobile PCI Express Module (MXM) Type B form factor (larger laptop/embedded GPU
+module).""")
     M_2 = PermissibleValue(
         text="M_2",
-        description="""M.2 (NGFF) internal module form factor/connector exposing PCIe (and/or SATA/USB) for SSDs and add‑in modules.""")
+        description="""M.2 (NGFF) internal module form factor/connector exposing PCIe (and/or
+SATA/USB) for SSDs and add‑in modules.""")
     CXL = PermissibleValue(
         text="CXL",
-        description="""Compute Express Link (CXL), an open cache‑coherent interconnect for processors, memory expansion, and accelerators built on the PCIe physical layer.""")
+        description="""Compute Express Link (CXL), an open cache‑coherent interconnect for processors,
+memory expansion, and accelerators built on the PCIe physical layer.""")
     OTHER = PermissibleValue(
         text="OTHER",
-        description="""A bus or interface standard not covered by the defined values; the exact value is reported by the event source.""")
+        description="""A bus or interface standard not covered by the defined values; the exact value
+is reported by the event source.""")
 
     _defn = EnumDefinition(
         name="BusTypeIdEnum",
@@ -17488,7 +17979,8 @@ class CategoryIdsEnum(EnumDefinitionImpl):
         description="Placeholders")
     OTHER = PermissibleValue(
         text="OTHER",
-        description="""The Domain/URL category is not mapped. See the <code>categories</code> attribute, which contains a data source specific value.""")
+        description="""The Domain/URL category is not mapped. See the <code>categories</code>
+attribute, which contains a data source specific value.""")
     SPAM = PermissibleValue(
         text="SPAM",
         description="Spam")
@@ -17546,7 +18038,8 @@ class ClassificationIdsEnum(EnumDefinitionImpl):
         description="The classification is unknown.")
     OTHER = PermissibleValue(
         text="OTHER",
-        description="""The classification is not mapped. See the <code>classifications</code> attribute, which contains a data source specific value.""")
+        description="""The classification is not mapped. See the <code>classifications</code>
+attribute, which contains a data source specific value.""")
 
     _defn = EnumDefinition(
         name="ClassificationIdsEnum",
@@ -17555,9 +18048,9 @@ class ClassificationIdsEnum(EnumDefinitionImpl):
 
 class ConfidenceIdEnum(EnumDefinitionImpl):
     """
-    The normalized confidence refers to the accuracy of the rule that created the finding. A rule with a low
-    confidence means that the finding scope is wide and may create finding reports that may not be malicious in
-    nature.
+    The normalized confidence refers to the accuracy of the rule that created the
+    finding. A rule with a low confidence means that the finding scope is wide and
+    may create finding reports that may not be malicious in nature.
     """
     UNKNOWN = PermissibleValue(
         text="UNKNOWN",
@@ -17573,11 +18066,14 @@ class ConfidenceIdEnum(EnumDefinitionImpl):
         description="High")
     OTHER = PermissibleValue(
         text="OTHER",
-        description="""The confidence is not mapped to the defined enum values. See the <code>confidence</code> attribute, which contains a data source specific value.""")
+        description="""The confidence is not mapped to the defined enum values. See the
+<code>confidence</code> attribute, which contains a data source specific value.""")
 
     _defn = EnumDefinition(
         name="ConfidenceIdEnum",
-        description="""The normalized confidence refers to the accuracy of the rule that created the finding. A rule with a low confidence means that the finding scope is wide and may create finding reports that may not be malicious in nature.""",
+        description="""The normalized confidence refers to the accuracy of the rule that created the
+finding. A rule with a low confidence means that the finding scope is wide and
+may create finding reports that may not be malicious in nature.""",
     )
 
 class ConfidentialityIdEnum(EnumDefinitionImpl):
@@ -17607,7 +18103,8 @@ class ConfidentialityIdEnum(EnumDefinitionImpl):
         description="Restricted")
     OTHER = PermissibleValue(
         text="OTHER",
-        description="""The confidentiality is not mapped. See the <code>confidentiality</code> attribute, which contains a data source specific value.""")
+        description="""The confidentiality is not mapped. See the <code>confidentiality</code>
+attribute, which contains a data source specific value.""")
 
     _defn = EnumDefinition(
         name="ConfidentialityIdEnum",
@@ -17632,7 +18129,8 @@ class CpuArchitectureIdEnum(EnumDefinitionImpl):
         description="CPU uses the RISC-V ISA. For bitness, refer to <code>cpu_bits</code>.")
     OTHER = PermissibleValue(
         text="OTHER",
-        description="""The CPU architecture is not mapped. See the <code>cpu_architecture</code> attribute, which contains a data source specific value.""")
+        description="""The CPU architecture is not mapped. See the <code>cpu_architecture</code>
+attribute, which contains a data source specific value.""")
 
     _defn = EnumDefinition(
         name="CpuArchitectureIdEnum",
@@ -17641,27 +18139,38 @@ class CpuArchitectureIdEnum(EnumDefinitionImpl):
 
 class DataLifecycleStateIdEnum(EnumDefinitionImpl):
     """
-    The stage or state that the data was in when it was assessed or scanned by a data security tool.
+    The stage or state that the data was in when it was assessed or scanned by a
+    data security tool.
     """
     UNKNOWN = PermissibleValue(
         text="UNKNOWN",
         description="The data lifecycle state is unknown.")
     DATA_AT_REST = PermissibleValue(
         text="DATA_AT_REST",
-        description="""The data was stored on physical or logical media and was not actively moving through the network nor was being processed. E.g., data stored in a database, PDF files in a file share, or EHR records in object storage.""")
+        description="""The data was stored on physical or logical media and was not actively moving
+through the network nor was being processed. E.g., data stored in a database,
+PDF files in a file share, or EHR records in object storage.""")
     DATA_IN_TRANSIT = PermissibleValue(
         text="DATA_IN_TRANSIT",
-        description="""The data was actively moving through the network or from one physical or logical location to another. E.g., emails being send, data replication or Change Data Capture (CDC) streams, or sensitive data processed on an API.""")
+        description="""The data was actively moving through the network or from one physical or
+logical location to another. E.g., emails being send, data replication or
+Change Data Capture (CDC) streams, or sensitive data processed on an API.""")
     DATA_IN_USE = PermissibleValue(
         text="DATA_IN_USE",
-        description="""The data was being processed, accessed, or read by a system, making it active in memory or CPU. E.g., sensitive data in a Business Intelligence tool, ePHI being processed in an EHR application or a user viewing data stored in a spreadsheet or PDF.""")
+        description="""The data was being processed, accessed, or read by a system, making it active
+in memory or CPU. E.g., sensitive data in a Business Intelligence tool, ePHI
+being processed in an EHR application or a user viewing data stored in a
+spreadsheet or PDF.""")
     OTHER = PermissibleValue(
         text="OTHER",
-        description="""The data lifecycle state is not mapped. See the <code>data_lifecycle_state</code> attribute, which contains a data source specific value.""")
+        description="""The data lifecycle state is not mapped. See the
+<code>data_lifecycle_state</code> attribute, which contains a data source
+specific value.""")
 
     _defn = EnumDefinition(
         name="DataLifecycleStateIdEnum",
-        description="The stage or state that the data was in when it was assessed or scanned by a data security tool.",
+        description="""The stage or state that the data was in when it was assessed or scanned by a
+data security tool.""",
     )
 
 class DepthEnum(EnumDefinitionImpl):
@@ -17685,7 +18194,8 @@ class DepthEnum(EnumDefinitionImpl):
 
 class DetectionPatternTypeIdEnum(EnumDefinitionImpl):
     """
-    Specifies the type of detection pattern used to identify the associated threat indicator.
+    Specifies the type of detection pattern used to identify the associated threat
+    indicator.
     """
     UNKNOWN = PermissibleValue(
         text="UNKNOWN",
@@ -17710,97 +18220,141 @@ class DetectionPatternTypeIdEnum(EnumDefinitionImpl):
         description="YARA")
     OTHER = PermissibleValue(
         text="OTHER",
-        description="""The detection pattern type is not mapped. See the <code>detection_pattern_type</code> attribute, which contains a data source specific value.""")
+        description="""The detection pattern type is not mapped. See the
+<code>detection_pattern_type</code> attribute, which contains a data source
+specific value.""")
 
     _defn = EnumDefinition(
         name="DetectionPatternTypeIdEnum",
-        description="Specifies the type of detection pattern used to identify the associated threat indicator.",
+        description="""Specifies the type of detection pattern used to identify the associated threat
+indicator.""",
     )
 
 class DetectionSystemIdEnum(EnumDefinitionImpl):
     """
-    The type of data security tool or system that the finding, detection, or alert originated from.
+    The type of data security tool or system that the finding, detection, or alert
+    originated from.
     """
     UNKNOWN = PermissibleValue(
         text="UNKNOWN",
-        description="""The type is not mapped. See the <code>detection_system</code> attribute, which contains a data source specific value.""")
+        description="""The type is not mapped. See the <code>detection_system</code> attribute, which
+contains a data source specific value.""")
     ENDPOINT = PermissibleValue(
         text="ENDPOINT",
-        description="""A dedicated agent or sensor installed on a device, either a dedicated data security tool or an Endpoint Detection & Response (EDR) tool that can detect sensitive data and/or enforce data security policies. E.g., Forcepoint DLP, Symantec DLP, Microsoft Defender for Endpoint (MDE).""")
+        description="""A dedicated agent or sensor installed on a device, either a dedicated data
+security tool or an Endpoint Detection & Response (EDR) tool that can detect
+sensitive data and/or enforce data security policies. E.g., Forcepoint DLP,
+Symantec DLP, Microsoft Defender for Endpoint (MDE).""")
     DLP_GATEWAY = PermissibleValue(
         text="DLP_GATEWAY",
-        description="""A Data Loss Prevention (DLP) gateway that is positioned in-line of an information store such as a network share, a database, or otherwise that can detect sensitive data and/or enforce data security policies.""")
+        description="""A Data Loss Prevention (DLP) gateway that is positioned in-line of an
+information store such as a network share, a database, or otherwise that can
+detect sensitive data and/or enforce data security policies.""")
     MOBILE_DEVICE_MANAGEMENT = PermissibleValue(
         text="MOBILE_DEVICE_MANAGEMENT",
-        description="""A Mobile Device Management (MDM) or Enterprise Mobility Management (EMM) tool that can detect sensitive data and/or enforce data security policies on mobile devices (e.g., cellphones, tablets, End User Devices [EUDs]).""")
+        description="""A Mobile Device Management (MDM) or Enterprise Mobility Management (EMM) tool
+that can detect sensitive data and/or enforce data security policies on mobile
+devices (e.g., cellphones, tablets, End User Devices [EUDs]).""")
     DATA_DISCOVERY_CLASSIFICATION = PermissibleValue(
         text="DATA_DISCOVERY_CLASSIFICATION",
-        description="""A tool that actively identifies and classifies sensitive data in digital media and information stores in accordance with a policy or automated functionality. E.g, Amazon Macie, Microsoft Purview.""")
+        description="""A tool that actively identifies and classifies sensitive data in digital media
+and information stores in accordance with a policy or automated functionality.
+E.g, Amazon Macie, Microsoft Purview.""")
     SECURE_WEB_GATEWAY = PermissibleValue(
         text="SECURE_WEB_GATEWAY",
-        description="""A Secure Web Gateway (SWG) is any tool that can detect sensitive data and/or enforce data security policies at a network-edge such as within a proxy or firewall service.""")
+        description="""A Secure Web Gateway (SWG) is any tool that can detect sensitive data and/or
+enforce data security policies at a network-edge such as within a proxy or
+firewall service.""")
     SECURE_EMAIL_GATEWAY = PermissibleValue(
         text="SECURE_EMAIL_GATEWAY",
-        description="""A Secure Email Gateway (SEG) is any tool that can detect sensitive data and/or enforce data security policies within email systems. E.g., Microsoft Defender for Office, Google Workspaces.""")
+        description="""A Secure Email Gateway (SEG) is any tool that can detect sensitive data and/or
+enforce data security policies within email systems. E.g., Microsoft Defender
+for Office, Google Workspaces.""")
     DIGITAL_RIGHTS_MANAGEMENT = PermissibleValue(
         text="DIGITAL_RIGHTS_MANAGEMENT",
-        description="""A Digital Rights Management (DRM) or a dedicated Information Rights Management (IRM) are tools which can detect sensitive data and/or enforce data security policies on digital media via policy or user access rights.""")
+        description="""A Digital Rights Management (DRM) or a dedicated Information Rights Management
+(IRM) are tools which can detect sensitive data and/or enforce data security
+policies on digital media via policy or user access rights.""")
     CLOUD_ACCESS_SECURITY_BROKER = PermissibleValue(
         text="CLOUD_ACCESS_SECURITY_BROKER",
-        description="""A Cloud Access Security Broker (CASB) that can detect sensitive data and/or enforce data security policies in-line to cloud systems such as the public cloud or Software-as-a-Service (SaaS) tool. E.g., Forcepoint CASB, SkyHigh Security.""")
+        description="""A Cloud Access Security Broker (CASB) that can detect sensitive data and/or
+enforce data security policies in-line to cloud systems such as the public
+cloud or Software-as-a-Service (SaaS) tool. E.g., Forcepoint CASB, SkyHigh
+Security.""")
     DATABASE_ACTIVITY_MONITORING = PermissibleValue(
         text="DATABASE_ACTIVITY_MONITORING",
-        description="""A Database Activity Monitoring (DAM) tool that can detect sensitive data and/or enforce data security policies as part of a dedicated database or warehouse monitoring solution.""")
+        description="""A Database Activity Monitoring (DAM) tool that can detect sensitive data and/or
+enforce data security policies as part of a dedicated database or warehouse
+monitoring solution.""")
     APPLICATION_LEVEL_DLP = PermissibleValue(
         text="APPLICATION_LEVEL_DLP",
-        description="""A built in Data Loss Prevention (DLP) or other data security capability within a tool or platform such as an Enterprise Resource Planning (ERP) or Customer Relations Management (CRM) tool that can detect sensitive data and/or enforce data security policies.""")
+        description="""A built in Data Loss Prevention (DLP) or other data security capability within
+a tool or platform such as an Enterprise Resource Planning (ERP) or Customer
+Relations Management (CRM) tool that can detect sensitive data and/or enforce
+data security policies.""")
     DEVELOPER_SECURITY = PermissibleValue(
         text="DEVELOPER_SECURITY",
-        description="""Any Developer Security tool such as an Infrastructure-as-Code (IAC) security scanner, Secrets Detection, or Secure Software Development Lifecycle (SSDLC) tool that can detect sensitive data and/or enforce data security policies. E.g., TruffleHog, GitGuardian, Git-Secrets.""")
+        description="""Any Developer Security tool such as an Infrastructure-as-Code (IAC) security
+scanner, Secrets Detection, or Secure Software Development Lifecycle (SSDLC)
+tool that can detect sensitive data and/or enforce data security policies.
+E.g., TruffleHog, GitGuardian, Git-Secrets.""")
     DATA_SECURITY_POSTURE_MANAGEMENT = PermissibleValue(
         text="DATA_SECURITY_POSTURE_MANAGEMENT",
-        description="""A Data Security Posture Management (DSPM) tool is a continuous monitoring and data discovery solution that can detect sensitive data and/or enforce data security policies for local and cloud environments. E.g., Cyera, Sentra, IBM Polar Security.""")
+        description="""A Data Security Posture Management (DSPM) tool is a continuous monitoring and
+data discovery solution that can detect sensitive data and/or enforce data
+security policies for local and cloud environments. E.g., Cyera, Sentra, IBM
+Polar Security.""")
     OTHER = PermissibleValue(
         text="OTHER",
-        description="Any other type of detection system or a multi-variate system made up of several other systems.")
+        description="""Any other type of detection system or a multi-variate system made up of several
+other systems.""")
 
     _defn = EnumDefinition(
         name="DetectionSystemIdEnum",
-        description="The type of data security tool or system that the finding, detection, or alert originated from.",
+        description="""The type of data security tool or system that the finding, detection, or alert
+originated from.""",
     )
 
 class DirectionIdEnum(EnumDefinitionImpl):
     """
-    The normalized identifier of the direction of the initiated connection, traffic, or email.
+    The normalized identifier of the direction of the initiated connection,
+    traffic, or email.
     """
     UNKNOWN = PermissibleValue(
         text="UNKNOWN",
         description="The connection direction is unknown.")
     INBOUND = PermissibleValue(
         text="INBOUND",
-        description="""Inbound network connection. The connection originated from the Internet or outside network, destined for services on the inside network.""")
+        description="""Inbound network connection. The connection originated from the Internet or
+outside network, destined for services on the inside network.""")
     OUTBOUND = PermissibleValue(
         text="OUTBOUND",
-        description="""Outbound network connection. The connection originated from inside the network, destined for services on the Internet or outside network.""")
+        description="""Outbound network connection. The connection originated from inside the network,
+destined for services on the Internet or outside network.""")
     LATERAL = PermissibleValue(
         text="LATERAL",
-        description="""Lateral network connection. The connection originated from inside the network, destined for services on the inside network.""")
+        description="""Lateral network connection. The connection originated from inside the network,
+destined for services on the inside network.""")
     LOCAL = PermissibleValue(
         text="LOCAL",
-        description="""Local network connection (<code>localhost</code>). The connection is intra-device, originating from and destined for services running on the same device.""")
+        description="""Local network connection (<code>localhost</code>). The connection is
+intra-device, originating from and destined for services running on the same
+device.""")
     OTHER = PermissibleValue(
         text="OTHER",
-        description="""The direction is not mapped. See the <code>direction</code> attribute, which contains a data source specific value.""")
+        description="""The direction is not mapped. See the <code>direction</code> attribute, which
+contains a data source specific value.""")
 
     _defn = EnumDefinition(
         name="DirectionIdEnum",
-        description="The normalized identifier of the direction of the initiated connection, traffic, or email.",
+        description="""The normalized identifier of the direction of the initiated connection,
+traffic, or email.""",
     )
 
 class DispositionIdEnum(EnumDefinitionImpl):
     """
-    Describes the outcome or action taken by a security control, such as access control checks, malware detections or
-    various types of policy violations.
+    Describes the outcome or action taken by a security control, such as access
+    control checks, malware detections or various types of policy violations.
     """
     UNKNOWN = PermissibleValue(
         text="UNKNOWN",
@@ -17822,13 +18376,16 @@ class DispositionIdEnum(EnumDefinitionImpl):
         description="A file or other content was deleted.")
     DROPPED = PermissibleValue(
         text="DROPPED",
-        description="The request was detected as a threat and resulted in the connection being dropped.")
+        description="""The request was detected as a threat and resulted in the connection being
+dropped.""")
     CUSTOM_ACTION = PermissibleValue(
         text="CUSTOM_ACTION",
-        description="""A custom action was executed such as running of a command script. Use the <code>message</code> attribute of the base class for details.""")
+        description="""A custom action was executed such as running of a command script. Use the
+<code>message</code> attribute of the base class for details.""")
     APPROVED = PermissibleValue(
         text="APPROVED",
-        description="""A request or submission was approved. For example, when a form was properly filled out and submitted. This is distinct from <code>1</code> 'Allowed'.""")
+        description="""A request or submission was approved. For example, when a form was properly
+filled out and submitted. This is distinct from <code>1</code> 'Allowed'.""")
     RESTORED = PermissibleValue(
         text="RESTORED",
         description="A quarantined file or other content was restored to its original location.")
@@ -17846,7 +18403,8 @@ class DispositionIdEnum(EnumDefinitionImpl):
         description="A corrupt file or configuration was not corrected.")
     DELAYED = PermissibleValue(
         text="DELAYED",
-        description="An operation was delayed, for example if a restart was required to finish the operation.")
+        description="""An operation was delayed, for example if a restart was required to finish the
+operation.""")
     DETECTED = PermissibleValue(
         text="DETECTED",
         description="Suspicious activity or a policy violation was detected without further action.")
@@ -17861,43 +18419,58 @@ class DispositionIdEnum(EnumDefinitionImpl):
         description="A file or other entity was marked with extended attributes.")
     ALERT = PermissibleValue(
         text="ALERT",
-        description="""The request or activity was detected as a threat and resulted in a notification but request was not blocked.""")
+        description="""The request or activity was detected as a threat and resulted in a notification
+but request was not blocked.""")
     COUNT = PermissibleValue(
         text="COUNT",
-        description="Counted the request or activity but did not determine whether to allow it or block it.")
+        description="""Counted the request or activity but did not determine whether to allow it or
+block it.""")
     RESET = PermissibleValue(
         text="RESET",
-        description="The request was detected as a threat and resulted in the connection being reset.")
+        description="""The request was detected as a threat and resulted in the connection being
+reset.""")
     CAPTCHA = PermissibleValue(
         text="CAPTCHA",
-        description="""Required the end user to solve a CAPTCHA puzzle to prove that a human being is sending the request.""")
+        description="""Required the end user to solve a CAPTCHA puzzle to prove that a human being is
+sending the request.""")
     CHALLENGE = PermissibleValue(
         text="CHALLENGE",
-        description="""Ran a silent challenge that required the client session to verify that it's a browser, and not a bot.""")
+        description="""Ran a silent challenge that required the client session to verify that it's a
+browser, and not a bot.""")
     ACCESS_REVOKED = PermissibleValue(
         text="ACCESS_REVOKED",
-        description="""The requestor's access has been revoked due to security policy enforcements. Note: use the <code>Host</code> profile if the <code>User</code> or <code>Actor</code> requestor is not present in the event class.""")
+        description="""The requestor's access has been revoked due to security policy enforcements.
+Note: use the <code>Host</code> profile if the <code>User</code> or
+<code>Actor</code> requestor is not present in the event class.""")
     REJECTED = PermissibleValue(
         text="REJECTED",
-        description="""A request or submission was rejected.  For example, when a form was improperly filled out and submitted. This is distinct from <code>2</code> 'Blocked'.""")
+        description="""A request or submission was rejected.  For example, when a form was improperly
+filled out and submitted. This is distinct from <code>2</code> 'Blocked'.""")
     UNAUTHORIZED = PermissibleValue(
         text="UNAUTHORIZED",
-        description="""An attempt to access a resource was denied due to an authorization check that failed. This is a more specific disposition than <code>2</code> 'Blocked' and can be complemented with the <code>authorizations</code> attribute for more detail.""")
+        description="""An attempt to access a resource was denied due to an authorization check that
+failed. This is a more specific disposition than <code>2</code> 'Blocked' and
+can be complemented with the <code>authorizations</code> attribute for more
+detail.""")
     ERROR = PermissibleValue(
         text="ERROR",
-        description="""An error occurred during the processing of the activity or request. Use the <code>message</code> attribute of the base class for details.""")
+        description="""An error occurred during the processing of the activity or request. Use the
+<code>message</code> attribute of the base class for details.""")
     OTHER = PermissibleValue(
         text="OTHER",
-        description="""The disposition is not mapped. See the <code>disposition</code> attribute, which contains a data source specific value.""")
+        description="""The disposition is not mapped. See the <code>disposition</code> attribute,
+which contains a data source specific value.""")
 
     _defn = EnumDefinition(
         name="DispositionIdEnum",
-        description="""Describes the outcome or action taken by a security control, such as access control checks, malware detections or various types of policy violations.""",
+        description="""Describes the outcome or action taken by a security control, such as access
+control checks, malware detections or various types of policy violations.""",
     )
 
 class DnssecStatusIdEnum(EnumDefinitionImpl):
     """
-    Describes the normalized status of DNS Security Extensions (DNSSEC) for a domain.
+    Describes the normalized status of DNS Security Extensions (DNSSEC) for a
+    domain.
     """
     UNKNOWN = PermissibleValue(
         text="UNKNOWN",
@@ -17910,11 +18483,13 @@ class DnssecStatusIdEnum(EnumDefinitionImpl):
         description="The related domain does not enable the signing of DNS records using DNSSEC.")
     OTHER = PermissibleValue(
         text="OTHER",
-        description="""The DNSSEC status is not mapped. See the <code>dnssec_status</code> attribute, which contains a data source specific value.""")
+        description="""The DNSSEC status is not mapped. See the <code>dnssec_status</code> attribute,
+which contains a data source specific value.""")
 
     _defn = EnumDefinition(
         name="DnssecStatusIdEnum",
-        description="Describes the normalized status of DNS Security Extensions (DNSSEC) for a domain.",
+        description="""Describes the normalized status of DNS Security Extensions (DNSSEC) for a
+domain.""",
     )
 
 class DriveTypeIdEnum(EnumDefinitionImpl):
@@ -17926,7 +18501,8 @@ class DriveTypeIdEnum(EnumDefinitionImpl):
         description="The drive type is unknown.")
     REMOVABLE = PermissibleValue(
         text="REMOVABLE",
-        description="The drive has removable media; for example, a floppy drive, thumb drive, or flash card reader.")
+        description="""The drive has removable media; for example, a floppy drive, thumb drive, or
+flash card reader.""")
     FIXED = PermissibleValue(
         text="FIXED",
         description="The drive has fixed media; for example, a hard disk drive or flash drive.")
@@ -17941,7 +18517,8 @@ class DriveTypeIdEnum(EnumDefinitionImpl):
         description="The drive is a RAM disk.")
     OTHER = PermissibleValue(
         text="OTHER",
-        description="""The drive type is not mapped. See the <code>drive_type</code> attribute, which contains a data source specific value.""")
+        description="""The drive type is not mapped. See the <code>drive_type</code> attribute, which
+contains a data source specific value.""")
 
     _defn = EnumDefinition(
         name="DriveTypeIdEnum",
@@ -17957,7 +18534,8 @@ class EncodingIdEnum(EnumDefinitionImpl):
         description="The encoding method is unknown.")
     OTHER = PermissibleValue(
         text="OTHER",
-        description="""The encoding method is not mapped. See the <code>encoding</code> attribute, which contains a data source specific value.""")
+        description="""The encoding method is not mapped. See the <code>encoding</code> attribute,
+which contains a data source specific value.""")
 
     _defn = EnumDefinition(
         name="EncodingIdEnum",
@@ -17973,19 +18551,24 @@ class FactorTypeIdEnum(EnumDefinitionImpl):
         description="Unknown")
     SMS = PermissibleValue(
         text="SMS",
-        description="User receives and inputs a code sent to their mobile device via SMS text message.")
+        description="""User receives and inputs a code sent to their mobile device via SMS text
+message.""")
     SECURITY_QUESTION = PermissibleValue(
         text="SECURITY_QUESTION",
-        description="The user responds to a security question as part of a question-based authentication factor")
+        description="""The user responds to a security question as part of a question-based
+authentication factor""")
     PHONE_CALL = PermissibleValue(
         text="PHONE_CALL",
-        description="""System calls the user's registered phone number and requires the user to answer and provide a response.""")
+        description="""System calls the user's registered phone number and requires the user to answer
+and provide a response.""")
     BIOMETRIC = PermissibleValue(
         text="BIOMETRIC",
-        description="""Devices that verify identity-based on user's physical identifiers, such as fingerprint scanners or retina scanners.""")
+        description="""Devices that verify identity-based on user's physical identifiers, such as
+fingerprint scanners or retina scanners.""")
     PUSH_NOTIFICATION = PermissibleValue(
         text="PUSH_NOTIFICATION",
-        description="Push notification is sent to user's registered device and requires the user to acknowledge.")
+        description="""Push notification is sent to user's registered device and requires the user to
+acknowledge.""")
     HARDWARE_TOKEN = PermissibleValue(
         text="HARDWARE_TOKEN",
         description="Physical device that generates a code to be used for authentication.")
@@ -17997,7 +18580,8 @@ class FactorTypeIdEnum(EnumDefinitionImpl):
         description="A code or link is sent to a user's registered email address.")
     U2F = PermissibleValue(
         text="U2F",
-        description="Typically involves a hardware token, which the user physically interacts with to authenticate.")
+        description="""Typically involves a hardware token, which the user physically interacts with
+to authenticate.""")
     WEBAUTHN = PermissibleValue(
         text="WEBAUTHN",
         description="Web-based API that enables users to register devices as authentication factors.")
@@ -18022,7 +18606,8 @@ class FixCoverageIdEnum(EnumDefinitionImpl):
         description="The fix coverage is unknown.")
     OTHER = PermissibleValue(
         text="OTHER",
-        description="""The fix coverage is not mapped. See the <code>fix_coverage</code> attribute, which contains a data source specific value.""")
+        description="""The fix coverage is not mapped. See the <code>fix_coverage</code> attribute,
+which contains a data source specific value.""")
 
     _defn = EnumDefinition(
         name="FixCoverageIdEnum",
@@ -18031,18 +18616,21 @@ class FixCoverageIdEnum(EnumDefinitionImpl):
 
 class FlagIdsEnum(EnumDefinitionImpl):
     """
-    The list of normalized identifiers of the communication flag IDs. See specific usage.
+    The list of normalized identifiers of the communication flag IDs. See specific
+    usage.
     """
     UNKNOWN = PermissibleValue(
         text="UNKNOWN",
         description="The flag is unknown.")
     OTHER = PermissibleValue(
         text="OTHER",
-        description="""The flag is not mapped. See the <code>flags</code> attribute, which contains a data source specific value.""")
+        description="""The flag is not mapped. See the <code>flags</code> attribute, which contains a
+data source specific value.""")
 
     _defn = EnumDefinition(
         name="FlagIdsEnum",
-        description="The list of normalized identifiers of the communication flag IDs. See specific usage.",
+        description="""The list of normalized identifiers of the communication flag IDs. See specific
+usage.""",
     )
 
 class FormatIdEnum(EnumDefinitionImpl):
@@ -18054,7 +18642,8 @@ class FormatIdEnum(EnumDefinitionImpl):
         description="The format is unknown.")
     OTHER = PermissibleValue(
         text="OTHER",
-        description="""The format is not mapped. See the <code>format</code> attribute, which contains a data source specific value.""")
+        description="""The format is not mapped. See the <code>format</code> attribute, which contains
+a data source specific value.""")
 
     _defn = EnumDefinition(
         name="FormatIdEnum",
@@ -18063,8 +18652,9 @@ class FormatIdEnum(EnumDefinitionImpl):
 
 class ImpactIdEnum(EnumDefinitionImpl):
     """
-    The normalized impact of the incident or finding. Per NIST, this is the magnitude of harm that can be expected to
-    result from the consequences of unauthorized disclosure, modification, destruction, or loss of information or
+    The normalized impact of the incident or finding. Per NIST, this is the
+    magnitude of harm that can be expected to result from the consequences of
+    unauthorized disclosure, modification, destruction, or loss of information or
     information system availability.
     """
     UNKNOWN = PermissibleValue(
@@ -18084,11 +18674,15 @@ class ImpactIdEnum(EnumDefinitionImpl):
         description="The magnitude of harm is high and the scope is widespread.")
     OTHER = PermissibleValue(
         text="OTHER",
-        description="""The impact is not mapped. See the <code>impact</code> attribute, which contains a data source specific value.""")
+        description="""The impact is not mapped. See the <code>impact</code> attribute, which contains
+a data source specific value.""")
 
     _defn = EnumDefinition(
         name="ImpactIdEnum",
-        description="""The normalized impact of the incident or finding. Per NIST, this is the magnitude of harm that can be expected to result from the consequences of unauthorized disclosure, modification, destruction, or loss of information or information system availability.""",
+        description="""The normalized impact of the incident or finding. Per NIST, this is the
+magnitude of harm that can be expected to result from the consequences of
+unauthorized disclosure, modification, destruction, or loss of information or
+information system availability.""",
     )
 
 class InjectionTypeIdEnum(EnumDefinitionImpl):
@@ -18109,7 +18703,8 @@ class InjectionTypeIdEnum(EnumDefinitionImpl):
         description="Queue APC")
     OTHER = PermissibleValue(
         text="OTHER",
-        description="""The injection type is not mapped. See the <code>injection_type</code> attribute, which contains a data source specific value.""")
+        description="""The injection type is not mapped. See the <code>injection_type</code>
+attribute, which contains a data source specific value.""")
 
     _defn = EnumDefinition(
         name="InjectionTypeIdEnum",
@@ -18134,7 +18729,8 @@ class InstallStateIdEnum(EnumDefinitionImpl):
         description="The item is installed pending reboot operation.")
     OTHER = PermissibleValue(
         text="OTHER",
-        description="""The install state is not mapped. See the <code>install_state</code> attribute, which contains a data source specific value.""")
+        description="""The install state is not mapped. See the <code>install_state</code> attribute,
+which contains a data source specific value.""")
 
     _defn = EnumDefinition(
         name="InstallStateIdEnum",
@@ -18184,7 +18780,8 @@ class IntegrityIdEnum(EnumDefinitionImpl):
         description="Protected")
     OTHER = PermissibleValue(
         text="OTHER",
-        description="""The integrity level is not mapped. See the <code>integrity</code> attribute, which contains a data source specific value.""")
+        description="""The integrity level is not mapped. See the <code>integrity</code> attribute,
+which contains a data source specific value.""")
 
     _defn = EnumDefinition(
         name="IntegrityIdEnum",
@@ -18193,27 +18790,36 @@ class IntegrityIdEnum(EnumDefinitionImpl):
 
 class LaunchTypeIdEnum(EnumDefinitionImpl):
     """
-    The normalized identifier for the specific type of <code>Launch</code> activity.
+    The normalized identifier for the specific type of <code>Launch</code>
+    activity.
     """
     UNKNOWN = PermissibleValue(
         text="UNKNOWN",
         description="The launch type is unknown or not specified.")
     SPAWN = PermissibleValue(
         text="SPAWN",
-        description="""Denotes that the <code>Launch</code> event represents atomic creation of a new process on Windows. This launch type ID may also be used to represent both steps of Unix process creation in a single <code>Launch</code> event.""")
+        description="""Denotes that the <code>Launch</code> event represents atomic creation of a new
+process on Windows. This launch type ID may also be used to represent both
+steps of Unix process creation in a single <code>Launch</code> event.""")
     FORK = PermissibleValue(
         text="FORK",
-        description="""Denotes that the <code>Launch</code> event represents the \"fork\" step of Unix process creation, where a process creates a clone of itself in a parent-child relationship. WSL1 pico processes on Windows also use the 2-step Unix model.""")
+        description="""Denotes that the <code>Launch</code> event represents the \"fork\" step of Unix
+process creation, where a process creates a clone of itself in a parent-child
+relationship. WSL1 pico processes on Windows also use the 2-step Unix model.""")
     EXEC = PermissibleValue(
         text="EXEC",
-        description="""Denotes that the <code>Launch</code> event represents the \"exec\" step of Unix process creation, where a process replaces its executable image, command line, and environment. WSL1 pico processes on Windows also use the 2-step Unix model.""")
+        description="""Denotes that the <code>Launch</code> event represents the \"exec\" step of Unix
+process creation, where a process replaces its executable image, command line,
+and environment. WSL1 pico processes on Windows also use the 2-step Unix model.""")
     OTHER = PermissibleValue(
         text="OTHER",
-        description="""The launch type is not mapped. See the <code>launch_type</code> attribute, which contains a data source specific value.""")
+        description="""The launch type is not mapped. See the <code>launch_type</code> attribute,
+which contains a data source specific value.""")
 
     _defn = EnumDefinition(
         name="LaunchTypeIdEnum",
-        description="The normalized identifier for the specific type of <code>Launch</code> activity.",
+        description="""The normalized identifier for the specific type of <code>Launch</code>
+activity.""",
     )
 
 class LoadTypeIdEnum(EnumDefinitionImpl):
@@ -18225,7 +18831,8 @@ class LoadTypeIdEnum(EnumDefinitionImpl):
         description="The load type is unknown.")
     OTHER = PermissibleValue(
         text="OTHER",
-        description="""The load type is not mapped. See the <code>load_type</code> attribute, which contains a data source specific value.""")
+        description="""The load type is not mapped. See the <code>load_type</code> attribute, which
+contains a data source specific value.""")
 
     _defn = EnumDefinition(
         name="LoadTypeIdEnum",
@@ -18247,7 +18854,8 @@ class LogTypeIdEnum(EnumDefinitionImpl):
         description="The log type is an Application log.")
     OTHER = PermissibleValue(
         text="OTHER",
-        description="""The log type is not mapped. See the <code>log_type</code> attribute, which contains a data source specific value.""")
+        description="""The log type is not mapped. See the <code>log_type</code> attribute, which
+contains a data source specific value.""")
 
     _defn = EnumDefinition(
         name="LogTypeIdEnum",
@@ -18272,7 +18880,8 @@ class LogonTypeIdEnum(EnumDefinitionImpl):
         description="A user or device logged onto this device from the network.")
     BATCH = PermissibleValue(
         text="BATCH",
-        description="""A batch server logon, where processes may be executing on behalf of a user without their direct intervention.""")
+        description="""A batch server logon, where processes may be executing on behalf of a user
+without their direct intervention.""")
     OS_SERVICE = PermissibleValue(
         text="OS_SERVICE",
         description="A logon by a service or daemon that was started by the OS.")
@@ -18281,16 +18890,21 @@ class LogonTypeIdEnum(EnumDefinitionImpl):
         description="A user unlocked the device.")
     NETWORK_CLEARTEXT = PermissibleValue(
         text="NETWORK_CLEARTEXT",
-        description="""A user logged on to this device from the network. The user's password in the authentication package was not hashed.""")
+        description="""A user logged on to this device from the network. The user's password in the
+authentication package was not hashed.""")
     NEW_CREDENTIALS = PermissibleValue(
         text="NEW_CREDENTIALS",
-        description="""A caller cloned its current token and specified new credentials for outbound connections. The new logon session has the same local identity, but uses different credentials for other network connections.""")
+        description="""A caller cloned its current token and specified new credentials for outbound
+connections. The new logon session has the same local identity, but uses
+different credentials for other network connections.""")
     REMOTE_INTERACTIVE = PermissibleValue(
         text="REMOTE_INTERACTIVE",
         description="A remote logon using Terminal Services or remote desktop application.")
     CACHED_INTERACTIVE = PermissibleValue(
         text="CACHED_INTERACTIVE",
-        description="""A user logged on to this device with network credentials that were stored locally on the device and the domain controller was not contacted to verify the credentials.""")
+        description="""A user logged on to this device with network credentials that were stored
+locally on the device and the domain controller was not contacted to verify the
+credentials.""")
     CACHED_REMOTE_INTERACTIVE = PermissibleValue(
         text="CACHED_REMOTE_INTERACTIVE",
         description="Same as Remote Interactive. This is used for internal auditing.")
@@ -18299,7 +18913,8 @@ class LogonTypeIdEnum(EnumDefinitionImpl):
         description="Workstation logon.")
     OTHER = PermissibleValue(
         text="OTHER",
-        description="""The logon type is not mapped. See the <code>logon_type</code> attribute, which contains a data source specific value.""")
+        description="""The logon type is not mapped. See the <code>logon_type</code> attribute, which
+contains a data source specific value.""")
 
     _defn = EnumDefinition(
         name="LogonTypeIdEnum",
@@ -18308,9 +18923,10 @@ class LogonTypeIdEnum(EnumDefinitionImpl):
 
 class NetworkScopeIdEnum(EnumDefinitionImpl):
     """
-    The normalized identifier of the endpoint’s network scope. The normalized network scope identifier indicates
-    whether the endpoint resides inside the customer’s network, outside on the Internet, or if its location relative
-    to the customer’s network cannot be determined.
+    The normalized identifier of the endpoint’s network scope. The normalized
+    network scope identifier indicates whether the endpoint resides inside the
+    customer’s network, outside on the Internet, or if its location relative to the
+    customer’s network cannot be determined.
     """
     UNKNOWN = PermissibleValue(
         text="UNKNOWN",
@@ -18320,14 +18936,19 @@ class NetworkScopeIdEnum(EnumDefinitionImpl):
         description="The endpoint resides inside the customer’s network.")
     EXTERNAL = PermissibleValue(
         text="EXTERNAL",
-        description="The endpoint is on the Internet or otherwise external to the customer’s network.")
+        description="""The endpoint is on the Internet or otherwise external to the customer’s
+network.""")
     OTHER = PermissibleValue(
         text="OTHER",
-        description="""The network scope is not mapped. See the <code>network_scope</code> attribute, which contains a data source specific value.""")
+        description="""The network scope is not mapped. See the <code>network_scope</code> attribute,
+which contains a data source specific value.""")
 
     _defn = EnumDefinition(
         name="NetworkScopeIdEnum",
-        description="""The normalized identifier of the endpoint’s network scope. The normalized network scope identifier indicates whether the endpoint resides inside the customer’s network, outside on the Internet, or if its location relative to the customer’s network cannot be determined.""",
+        description="""The normalized identifier of the endpoint’s network scope. The normalized
+network scope identifier indicates whether the endpoint resides inside the
+customer’s network, outside on the Internet, or if its location relative to the
+customer’s network cannot be determined.""",
     )
 
 class ObservationPointIdEnum(EnumDefinitionImpl):
@@ -18348,7 +18969,8 @@ class ObservationPointIdEnum(EnumDefinitionImpl):
 
 class OpcodeIdEnum(EnumDefinitionImpl):
     """
-    The DNS opcode ID specifies the normalized query message type as defined in <a target='_blank'
+    The DNS opcode ID specifies the normalized query message type as defined in <a
+    target='_blank'
     href='https://www.rfc-editor.org/rfc/rfc5395.html'>RFC-5395</a>.
     """
     QUERY = PermissibleValue(
@@ -18374,11 +18996,14 @@ class OpcodeIdEnum(EnumDefinitionImpl):
         description="DNS Stateful Operations (DSO)")
     OTHER = PermissibleValue(
         text="OTHER",
-        description="""The DNS Opcode is not defined by the RFC. See the <code>opcode</code> attribute, which contains a data source specific value.""")
+        description="""The DNS Opcode is not defined by the RFC. See the <code>opcode</code>
+attribute, which contains a data source specific value.""")
 
     _defn = EnumDefinition(
         name="OpcodeIdEnum",
-        description="""The DNS opcode ID specifies the normalized query message type as defined in <a target='_blank' href='https://www.rfc-editor.org/rfc/rfc5395.html'>RFC-5395</a>.""",
+        description="""The DNS opcode ID specifies the normalized query message type as defined in <a
+target='_blank'
+href='https://www.rfc-editor.org/rfc/rfc5395.html'>RFC-5395</a>.""",
     )
 
 class PhaseIdEnum(EnumDefinitionImpl):
@@ -18390,28 +19015,35 @@ class PhaseIdEnum(EnumDefinitionImpl):
         description="The kill chain phase is unknown.")
     RECONNAISSANCE = PermissibleValue(
         text="RECONNAISSANCE",
-        description="""The attackers pick a target and perform a detailed analysis, start collecting information (email addresses, conferences information, etc.) and evaluate the victim’s vulnerabilities to determine how to exploit them.""")
+        description="""The attackers pick a target and perform a detailed analysis, start collecting
+information (email addresses, conferences information, etc.) and evaluate the
+victim’s vulnerabilities to determine how to exploit them.""")
     WEAPONIZATION = PermissibleValue(
         text="WEAPONIZATION",
-        description="The attackers develop a malware weapon and aim to exploit the discovered vulnerabilities.")
+        description="""The attackers develop a malware weapon and aim to exploit the discovered
+vulnerabilities.""")
     DELIVERY = PermissibleValue(
         text="DELIVERY",
-        description="The intruders will use various tactics, such as phishing, infected USB drives, etc.")
+        description="""The intruders will use various tactics, such as phishing, infected USB drives,
+etc.""")
     EXPLOITATION = PermissibleValue(
         text="EXPLOITATION",
-        description="The intruders start leveraging vulnerabilities to executed code on the victim’s system.")
+        description="""The intruders start leveraging vulnerabilities to executed code on the victim’s
+system.""")
     INSTALLATION = PermissibleValue(
         text="INSTALLATION",
         description="The intruders install malware on the victim’s system.")
     COMMAND_CONTROL = PermissibleValue(
         text="COMMAND_CONTROL",
-        description="""Malware opens a command channel to enable the intruders to remotely manipulate the victim's system.""")
+        description="""Malware opens a command channel to enable the intruders to remotely manipulate
+the victim's system.""")
     ACTIONS_ON_OBJECTIVES = PermissibleValue(
         text="ACTIONS_ON_OBJECTIVES",
         description="With hands-on keyboard access, intruders accomplish the mission’s goal.")
     OTHER = PermissibleValue(
         text="OTHER",
-        description="""The kill chain phase is not mapped. See the <code>phase</code> attribute, which contains a data source specific value.""")
+        description="""The kill chain phase is not mapped. See the <code>phase</code> attribute, which
+contains a data source specific value.""")
 
     _defn = EnumDefinition(
         name="PhaseIdEnum",
@@ -18436,7 +19068,8 @@ class PrevSecurityLevelIdEnum(EnumDefinitionImpl):
         description="Compromised")
     OTHER = PermissibleValue(
         text="OTHER",
-        description="""The security level is not mapped. See the <code>prev_security_level</code> attribute, which contains data source specific values.""")
+        description="""The security level is not mapped. See the <code>prev_security_level</code>
+attribute, which contains data source specific values.""")
 
     _defn = EnumDefinition(
         name="PrevSecurityLevelIdEnum",
@@ -18445,31 +19078,39 @@ class PrevSecurityLevelIdEnum(EnumDefinitionImpl):
 
 class PriorityIdEnum(EnumDefinitionImpl):
     """
-    The normalized priority. Priority identifies the relative importance of the incident or finding. It is a
-    measurement of urgency.
+    The normalized priority. Priority identifies the relative importance of the
+    incident or finding. It is a measurement of urgency.
     """
     UNKNOWN = PermissibleValue(
         text="UNKNOWN",
         description="No priority is assigned.")
     LOW = PermissibleValue(
         text="LOW",
-        description="""Application or personal procedure is unusable, where a workaround is available or a repair is possible.""")
+        description="""Application or personal procedure is unusable, where a workaround is available
+or a repair is possible.""")
     MEDIUM = PermissibleValue(
         text="MEDIUM",
-        description="""Non-critical function or procedure is unusable or hard to use causing operational disruptions with no direct impact on a service's availability. A workaround is available.""")
+        description="""Non-critical function or procedure is unusable or hard to use causing
+operational disruptions with no direct impact on a service's availability. A
+workaround is available.""")
     HIGH = PermissibleValue(
         text="HIGH",
-        description="""Critical functionality or network access is interrupted, degraded or unusable, having a severe impact on services availability. No acceptable alternative is possible.""")
+        description="""Critical functionality or network access is interrupted, degraded or unusable,
+having a severe impact on services availability. No acceptable alternative is
+possible.""")
     CRITICAL = PermissibleValue(
         text="CRITICAL",
-        description="""Interruption making a critical functionality inaccessible or a complete network interruption causing a severe impact on services availability. There is no possible alternative.""")
+        description="""Interruption making a critical functionality inaccessible or a complete network
+interruption causing a severe impact on services availability. There is no
+possible alternative.""")
     OTHER = PermissibleValue(
         text="OTHER",
         description="The priority is not normalized.")
 
     _defn = EnumDefinition(
         name="PriorityIdEnum",
-        description="""The normalized priority. Priority identifies the relative importance of the incident or finding. It is a measurement of urgency.""",
+        description="""The normalized priority. Priority identifies the relative importance of the
+incident or finding. It is a measurement of urgency.""",
     )
 
 class ProtocolVerIdEnum(EnumDefinitionImpl):
@@ -18481,7 +19122,8 @@ class ProtocolVerIdEnum(EnumDefinitionImpl):
         description="The protocol version is unknown.")
     OTHER = PermissibleValue(
         text="OTHER",
-        description="""The protocol version is not mapped. See the <code>protocol_ver</code> attribute, which contains a data source specific value.""")
+        description="""The protocol version is not mapped. See the <code>protocol_ver</code>
+attribute, which contains a data source specific value.""")
 
     _defn = EnumDefinition(
         name="ProtocolVerIdEnum",
@@ -18497,7 +19139,8 @@ class QueryLanguageIdEnum(EnumDefinitionImpl):
         description="The Query Language is unknown.")
     OTHER = PermissibleValue(
         text="OTHER",
-        description="""The Query Language is not mapped. See the <code>query_language</code> attribute, which contains a data source specific value.""")
+        description="""The Query Language is not mapped. See the <code>query_language</code>
+attribute, which contains a data source specific value.""")
 
     _defn = EnumDefinition(
         name="QueryLanguageIdEnum",
@@ -18528,7 +19171,8 @@ class QueryResultIdEnum(EnumDefinitionImpl):
         description="Discovery of the target was not supported.")
     OTHER = PermissibleValue(
         text="OTHER",
-        description="""The query result is not mapped. See the <code>query_result</code> attribute, which contains a data source specific value.""")
+        description="""The query result is not mapped. See the <code>query_result</code> attribute,
+which contains a data source specific value.""")
 
     _defn = EnumDefinition(
         name="QueryResultIdEnum",
@@ -18537,14 +19181,16 @@ class QueryResultIdEnum(EnumDefinitionImpl):
 
 class QueryTypeIdEnum(EnumDefinitionImpl):
     """
-    The normalized type of system query performed against a device or system component.
+    The normalized type of system query performed against a device or system
+    component.
     """
     UNKNOWN = PermissibleValue(
         text="UNKNOWN",
         description="The query type was unknown or not specified.")
     KERNEL = PermissibleValue(
         text="KERNEL",
-        description="""A query about kernel resources including system calls, shared mutex, or other kernel components.""")
+        description="""A query about kernel resources including system calls, shared mutex, or other
+kernel components.""")
     FILE = PermissibleValue(
         text="FILE",
         description="A query about file attributes, metadata, content, hash values, or properties.")
@@ -18556,53 +19202,66 @@ class QueryTypeIdEnum(EnumDefinitionImpl):
         description="A query about group membership, privileges, domain, or group properties.")
     JOB = PermissibleValue(
         text="JOB",
-        description="A query about scheduled jobs, their command lines, run states, or execution times.")
+        description="""A query about scheduled jobs, their command lines, run states, or execution
+times.""")
     MODULE = PermissibleValue(
         text="MODULE",
-        description="A query about loaded modules, their base addresses, load types, or function entry points.")
+        description="""A query about loaded modules, their base addresses, load types, or function
+entry points.""")
     NETWORK_CONNECTION = PermissibleValue(
         text="NETWORK_CONNECTION",
         description="A query about active network connections, boundaries, protocols, or TCP states.")
     NETWORK_INTERFACES = PermissibleValue(
         text="NETWORK_INTERFACES",
-        description="A query about physical or virtual network interfaces, their IP/MAC addresses, or types.")
+        description="""A query about physical or virtual network interfaces, their IP/MAC addresses,
+or types.""")
     PERIPHERAL_DEVICE = PermissibleValue(
         text="PERIPHERAL_DEVICE",
-        description="A query about attached peripheral devices, their classes, models, or vendor information.")
+        description="""A query about attached peripheral devices, their classes, models, or vendor
+information.""")
     PROCESS = PermissibleValue(
         text="PROCESS",
-        description="""A query about running processes, command lines, ancestry, loaded modules, or execution context.""")
+        description="""A query about running processes, command lines, ancestry, loaded modules, or
+execution context.""")
     SERVICE = PermissibleValue(
         text="SERVICE",
         description="A query about system services, their names, versions, labels, or properties.")
     SESSION = PermissibleValue(
         text="SESSION",
-        description="A query about authenticated user or service sessions, their creation times, or issuer details.")
+        description="""A query about authenticated user or service sessions, their creation times, or
+issuer details.""")
     USER = PermissibleValue(
         text="USER",
-        description="A query about user accounts, their properties, credentials, or domain information.")
+        description="""A query about user accounts, their properties, credentials, or domain
+information.""")
     USERS = PermissibleValue(
         text="USERS",
         description="A query about multiple users belonging to an administrative group.")
     STARTUP_ITEM = PermissibleValue(
         text="STARTUP_ITEM",
-        description="A query about startup configuration items, their run modes, start types, or current states.")
+        description="""A query about startup configuration items, their run modes, start types, or
+current states.""")
     REGISTRY_KEY = PermissibleValue(
         text="REGISTRY_KEY",
-        description="""A Windows-specific query about registry keys, their paths, security descriptors, or modification times.""")
+        description="""A Windows-specific query about registry keys, their paths, security
+descriptors, or modification times.""")
     REGISTRY_VALUE = PermissibleValue(
         text="REGISTRY_VALUE",
-        description="A Windows-specific query about registry values, their data types, content, or names.")
+        description="""A Windows-specific query about registry values, their data types, content, or
+names.""")
     PREFETCH = PermissibleValue(
         text="PREFETCH",
-        description="""A Windows-specific query about prefetch files, their run counts, last execution times, or existence.""")
+        description="""A Windows-specific query about prefetch files, their run counts, last execution
+times, or existence.""")
     OTHER = PermissibleValue(
         text="OTHER",
-        description="""The query type was not mapped to a standard category. See the query_type attribute for source-specific value.""")
+        description="""The query type was not mapped to a standard category. See the query_type
+attribute for source-specific value.""")
 
     _defn = EnumDefinition(
         name="QueryTypeIdEnum",
-        description="The normalized type of system query performed against a device or system component.",
+        description="""The normalized type of system query performed against a device or system
+component.""",
     )
 
 class RcodeIdEnum(EnumDefinitionImpl):
@@ -18614,7 +19273,8 @@ class RcodeIdEnum(EnumDefinitionImpl):
         description="The DNS response code is unknown.")
     OTHER = PermissibleValue(
         text="OTHER",
-        description="""The DNS response code is not defined by the RFC. See the <code>rcode</code> attribute, which contains a data source specific value.""")
+        description="""The DNS response code is not defined by the RFC. See the <code>rcode</code>
+attribute, which contains a data source specific value.""")
 
     _defn = EnumDefinition(
         name="RcodeIdEnum",
@@ -18630,10 +19290,12 @@ class RelationshipIdEnum(EnumDefinitionImpl):
         description="The relationship is unknown.")
     DEPENDS_ON = PermissibleValue(
         text="DEPENDS_ON",
-        description="""The component is a dependency of another component. Can be used to define both direct and transitive dependencies.""")
+        description="""The component is a dependency of another component. Can be used to define both
+direct and transitive dependencies.""")
     OTHER = PermissibleValue(
         text="OTHER",
-        description="""The relationship is not mapped. See the <code>relationship</code> attribute, which contains a data source specific value.""")
+        description="""The relationship is not mapped. See the <code>relationship</code> attribute,
+which contains a data source specific value.""")
 
     _defn = EnumDefinition(
         name="RelationshipIdEnum",
@@ -18661,7 +19323,8 @@ class RiskLevelIdEnum(EnumDefinitionImpl):
         description="Critical")
     OTHER = PermissibleValue(
         text="OTHER",
-        description="""The risk level is not mapped. See the <code>risk_level</code> attribute, which contains a data source specific value.""")
+        description="""The risk level is not mapped. See the <code>risk_level</code> attribute, which
+contains a data source specific value.""")
 
     _defn = EnumDefinition(
         name="RiskLevelIdEnum",
@@ -18670,50 +19333,59 @@ class RiskLevelIdEnum(EnumDefinitionImpl):
 
 class RoleIdEnum(EnumDefinitionImpl):
     """
-    The normalized identifier of an entity's role in the context of the event or finding. See specific usage.
+    The normalized identifier of an entity's role in the context of the event or
+    finding. See specific usage.
     """
     UNKNOWN = PermissibleValue(
         text="UNKNOWN",
         description="The role is unknown.")
     OTHER = PermissibleValue(
         text="OTHER",
-        description="The role is not mapped. See the role attribute, which contains a data source specific value.")
+        description="""The role is not mapped. See the role attribute, which contains a data source
+specific value.""")
 
     _defn = EnumDefinition(
         name="RoleIdEnum",
-        description="""The normalized identifier of an entity's role in the context of the event or finding. See specific usage.""",
+        description="""The normalized identifier of an entity's role in the context of the event or
+finding. See specific usage.""",
     )
 
 class RunModeIdsEnum(EnumDefinitionImpl):
     """
-    The list of normalized identifiers that describe application attributes when it is running. See specific usage.
+    The list of normalized identifiers that describe application attributes when it
+    is running. See specific usage.
     """
     UNKNOWN = PermissibleValue(
         text="UNKNOWN",
         description="The run mode is unknown.")
     OTHER = PermissibleValue(
         text="OTHER",
-        description="""The run mode is not mapped. See the <code>run_modes</code> attribute, which contains data source specific values.""")
+        description="""The run mode is not mapped. See the <code>run_modes</code> attribute, which
+contains data source specific values.""")
 
     _defn = EnumDefinition(
         name="RunModeIdsEnum",
-        description="""The list of normalized identifiers that describe application attributes when it is running. See specific usage.""",
+        description="""The list of normalized identifiers that describe application attributes when it
+is running. See specific usage.""",
     )
 
 class RunStateIdEnum(EnumDefinitionImpl):
     """
-    The normalized identifier of the state of the job or service. See specific usage.
+    The normalized identifier of the state of the job or service. See specific
+    usage.
     """
     UNKNOWN = PermissibleValue(
         text="UNKNOWN",
         description="The run state is unknown.")
     OTHER = PermissibleValue(
         text="OTHER",
-        description="""The run state is not mapped. See the <code>run_state</code> attribute, which contains a data source specific value.""")
+        description="""The run state is not mapped. See the <code>run_state</code> attribute, which
+contains a data source specific value.""")
 
     _defn = EnumDefinition(
         name="RunStateIdEnum",
-        description="The normalized identifier of the state of the job or service. See specific usage.",
+        description="""The normalized identifier of the state of the job or service. See specific
+usage.""",
     )
 
 class ScoreIdEnum(EnumDefinitionImpl):
@@ -18743,7 +19415,8 @@ class ScoreIdEnum(EnumDefinitionImpl):
         description="Starting to establish a history of suspicious or risky behavior.")
     SUSPICIOUS_RISKY = PermissibleValue(
         text="SUSPICIOUS_RISKY",
-        description="""A site with a history of suspicious or risky behavior. (spam, scam, potentially unwanted software, potentially malicious).""")
+        description="""A site with a history of suspicious or risky behavior. (spam, scam, potentially
+unwanted software, potentially malicious).""")
     POSSIBLY_MALICIOUS = PermissibleValue(
         text="POSSIBLY_MALICIOUS",
         description="Strong possibility of maliciousness.")
@@ -18755,7 +19428,8 @@ class ScoreIdEnum(EnumDefinitionImpl):
         description="Proven evidence of maliciousness.")
     OTHER = PermissibleValue(
         text="OTHER",
-        description="""The reputation score is not mapped. See the <code>rep_score</code> attribute, which contains a data source specific value.""")
+        description="""The reputation score is not mapped. See the <code>rep_score</code> attribute,
+which contains a data source specific value.""")
 
     _defn = EnumDefinition(
         name="ScoreIdEnum",
@@ -18780,7 +19454,8 @@ class SecurityLevelIdEnum(EnumDefinitionImpl):
         description="Compromised")
     OTHER = PermissibleValue(
         text="OTHER",
-        description="""The security level is not mapped. See the <code>security_level</code> attribute, which contains data source specific values.""")
+        description="""The security level is not mapped. See the <code>security_level</code>
+attribute, which contains data source specific values.""")
 
     _defn = EnumDefinition(
         name="SecurityLevelIdEnum",
@@ -18789,9 +19464,10 @@ class SecurityLevelIdEnum(EnumDefinitionImpl):
 
 class SeverityIdEnum(EnumDefinitionImpl):
     """
-    <p>The normalized identifier of the event/finding severity.</p>The normalized severity is a measurement the effort
-    and expense required to manage and resolve an event or incident. Smaller numerical values represent lower impact
-    events, and larger numerical values represent higher impact events.
+    <p>The normalized identifier of the event/finding severity.</p>The normalized
+    severity is a measurement the effort and expense required to manage and resolve
+    an event or incident. Smaller numerical values represent lower impact events,
+    and larger numerical values represent higher impact events.
     """
     UNKNOWN = PermissibleValue(
         text="UNKNOWN",
@@ -18816,11 +19492,15 @@ class SeverityIdEnum(EnumDefinitionImpl):
         description="An error occurred but it is too late to take remedial action.")
     OTHER = PermissibleValue(
         text="OTHER",
-        description="""The event/finding severity is not mapped. See the <code>severity</code> attribute, which contains a data source specific value.""")
+        description="""The event/finding severity is not mapped. See the <code>severity</code>
+attribute, which contains a data source specific value.""")
 
     _defn = EnumDefinition(
         name="SeverityIdEnum",
-        description="""<p>The normalized identifier of the event/finding severity.</p>The normalized severity is a measurement the effort and expense required to manage and resolve an event or incident. Smaller numerical values represent lower impact events, and larger numerical values represent higher impact events.""",
+        description="""<p>The normalized identifier of the event/finding severity.</p>The normalized
+severity is a measurement the effort and expense required to manage and resolve
+an event or incident. Smaller numerical values represent lower impact events,
+and larger numerical values represent higher impact events.""",
     )
 
 class ShareTypeIdEnum(EnumDefinitionImpl):
@@ -18841,7 +19521,8 @@ class ShareTypeIdEnum(EnumDefinitionImpl):
         description="Print")
     OTHER = PermissibleValue(
         text="OTHER",
-        description="""The share type is not mapped. See the <code>share_type</code> attribute, which contains a data source specific value.""")
+        description="""The share type is not mapped. See the <code>share_type</code> attribute, which
+contains a data source specific value.""")
 
     _defn = EnumDefinition(
         name="ShareTypeIdEnum",
@@ -18857,7 +19538,8 @@ class SourceIdEnum(EnumDefinitionImpl):
         description="The source is unknown.")
     OTHER = PermissibleValue(
         text="OTHER",
-        description="""The source is not mapped. See the <code>source</code> attribute, which contains a data source specific value.""")
+        description="""The source is not mapped. See the <code>source</code> attribute, which contains
+a data source specific value.""")
 
     _defn = EnumDefinition(
         name="SourceIdEnum",
@@ -18879,7 +19561,8 @@ class StartTypeIdEnum(EnumDefinitionImpl):
         description="Device driver started by the system loader.")
     ON_DEMAND = PermissibleValue(
         text="ON_DEMAND",
-        description="""Started on demand. For example, by the Windows Service Control Manager when a process calls the <i>StartService</i> function.""")
+        description="""Started on demand. For example, by the Windows Service Control Manager when a
+process calls the <i>StartService</i> function.""")
     DISABLED = PermissibleValue(
         text="DISABLED",
         description="The service is disabled, and cannot be started.")
@@ -18897,7 +19580,8 @@ class StartTypeIdEnum(EnumDefinitionImpl):
         description="Started when a system item, such as a file or registry key, changes.")
     OTHER = PermissibleValue(
         text="OTHER",
-        description="""The start type is not mapped. See the <code>start_type</code> attribute, which contains a data source specific value.""")
+        description="""The start type is not mapped. See the <code>start_type</code> attribute, which
+contains a data source specific value.""")
 
     _defn = EnumDefinition(
         name="StartTypeIdEnum",
@@ -18913,7 +19597,8 @@ class StateIdEnum(EnumDefinitionImpl):
         description="The state is unknown.")
     OTHER = PermissibleValue(
         text="OTHER",
-        description="""The state is not mapped. See the <code>state</code> attribute, which contains a data source specific value.""")
+        description="""The state is not mapped. See the <code>state</code> attribute, which contains a
+data source specific value.""")
 
     _defn = EnumDefinition(
         name="StateIdEnum",
@@ -18935,7 +19620,8 @@ class StatusIdEnum(EnumDefinitionImpl):
         description="Failure")
     OTHER = PermissibleValue(
         text="OTHER",
-        description="""The status is not mapped. See the <code>status</code> attribute, which contains a data source specific value.""")
+        description="""The status is not mapped. See the <code>status</code> attribute, which contains
+a data source specific value.""")
 
     _defn = EnumDefinition(
         name="StatusIdEnum",
@@ -18944,7 +19630,8 @@ class StatusIdEnum(EnumDefinitionImpl):
 
 class StratumIdEnum(EnumDefinitionImpl):
     """
-    The normalized identifier of the stratum level, as defined in <a target='_blank'
+    The normalized identifier of the stratum level, as defined in <a
+    target='_blank'
     href='https://www.rfc-editor.org/rfc/rfc5905.html'>RFC-5905</a>.
     """
     UNKNOWN = PermissibleValue(
@@ -18964,11 +19651,14 @@ class StratumIdEnum(EnumDefinitionImpl):
         description="Reserved stratum (possible values: 17-255).")
     OTHER = PermissibleValue(
         text="OTHER",
-        description="""The stratum level is not mapped. See the <code>stratum</code> attribute, which contains a data source specific value.""")
+        description="""The stratum level is not mapped. See the <code>stratum</code> attribute, which
+contains a data source specific value.""")
 
     _defn = EnumDefinition(
         name="StratumIdEnum",
-        description="""The normalized identifier of the stratum level, as defined in <a target='_blank' href='https://www.rfc-editor.org/rfc/rfc5905.html'>RFC-5905</a>.""",
+        description="""The normalized identifier of the stratum level, as defined in <a
+target='_blank'
+href='https://www.rfc-editor.org/rfc/rfc5905.html'>RFC-5905</a>.""",
     )
 
 class TcpStateIdEnum(EnumDefinitionImpl):
@@ -18980,7 +19670,8 @@ class TcpStateIdEnum(EnumDefinitionImpl):
         description="The socket state is unknown.")
     ESTABLISHED = PermissibleValue(
         text="ESTABLISHED",
-        description="The socket has an established connection between a local application and a remote peer.")
+        description="""The socket has an established connection between a local application and a
+remote peer.""")
     SYN_SENT = PermissibleValue(
         text="SYN_SENT",
         description="The socket is actively trying to establish a connection to a remote peer.")
@@ -18989,28 +19680,39 @@ class TcpStateIdEnum(EnumDefinitionImpl):
         description="The socket has passively received a connection request from a remote peer.")
     FIN_WAIT_1 = PermissibleValue(
         text="FIN_WAIT_1",
-        description="""The socket connection has been closed by the local application, the remote peer has not yet acknowledged the close, and the system is waiting for it to close its half of the connection.""")
+        description="""The socket connection has been closed by the local application, the remote peer
+has not yet acknowledged the close, and the system is waiting for it to close
+its half of the connection.""")
     FIN_WAIT_2 = PermissibleValue(
         text="FIN_WAIT_2",
-        description="""The socket connection has been closed by the local application, the remote peer has acknowledged the close, and the system is waiting for it to close its half of the connection.""")
+        description="""The socket connection has been closed by the local application, the remote peer
+has acknowledged the close, and the system is waiting for it to close its half
+of the connection.""")
     TIME_WAIT = PermissibleValue(
         text="TIME_WAIT",
-        description="""The socket connection has been closed by the local application, the remote peer has closed its half of the connection, and the system is waiting to be sure that the remote peer received the last acknowledgement.""")
+        description="""The socket connection has been closed by the local application, the remote peer
+has closed its half of the connection, and the system is waiting to be sure
+that the remote peer received the last acknowledgement.""")
     CLOSED = PermissibleValue(
         text="CLOSED",
         description="The socket is not in use.")
     CLOSE_WAIT = PermissibleValue(
         text="CLOSE_WAIT",
-        description="""The socket connection has been closed by the remote peer, and the system is waiting for the local application to close its half of the connection.""")
+        description="""The socket connection has been closed by the remote peer, and the system is
+waiting for the local application to close its half of the connection.""")
     LAST_ACK = PermissibleValue(
         text="LAST_ACK",
-        description="""The socket connection has been closed by the remote peer, the local application has closed its half of the connection, and the system is waiting for the remote peer to acknowledge the close.""")
+        description="""The socket connection has been closed by the remote peer, the local application
+has closed its half of the connection, and the system is waiting for the remote
+peer to acknowledge the close.""")
     LISTEN = PermissibleValue(
         text="LISTEN",
         description="The socket is listening for incoming connections.")
     CLOSING = PermissibleValue(
         text="CLOSING",
-        description="""The socket connection has been closed by the local application and the remote peer simultaneously, and the remote peer has not yet acknowledged the close attempt of the local application.""")
+        description="""The socket connection has been closed by the local application and the remote
+peer simultaneously, and the remote peer has not yet acknowledged the close
+attempt of the local application.""")
 
     _defn = EnumDefinition(
         name="TcpStateIdEnum",
@@ -19019,8 +19721,8 @@ class TcpStateIdEnum(EnumDefinitionImpl):
 
 class TunnelTypeIdEnum(EnumDefinitionImpl):
     """
-    The normalized identifier for the type of tunnel configuration, indicating the scope of traffic routed through the
-    connection. See specific usage.
+    The normalized identifier for the type of tunnel configuration, indicating the
+    scope of traffic routed through the connection. See specific usage.
     """
     UNKNOWN = PermissibleValue(
         text="UNKNOWN",
@@ -19037,7 +19739,8 @@ class TunnelTypeIdEnum(EnumDefinitionImpl):
 
     _defn = EnumDefinition(
         name="TunnelTypeIdEnum",
-        description="""The normalized identifier for the type of tunnel configuration, indicating the scope of traffic routed through the connection. See specific usage.""",
+        description="""The normalized identifier for the type of tunnel configuration, indicating the
+scope of traffic routed through the connection. See specific usage.""",
     )
 
 class TypeIdEnum(EnumDefinitionImpl):
@@ -19049,7 +19752,8 @@ class TypeIdEnum(EnumDefinitionImpl):
         description="The type is unknown.")
     OTHER = PermissibleValue(
         text="OTHER",
-        description="""The type is not mapped. See the <code>type</code> attribute, which contains a data source specific value.""")
+        description="""The type is not mapped. See the <code>type</code> attribute, which contains a
+data source specific value.""")
 
     _defn = EnumDefinition(
         name="TypeIdEnum",
@@ -19095,7 +19799,8 @@ class VerdictIdEnum(EnumDefinitionImpl):
         description="The incident is a duplicate.")
     OTHER = PermissibleValue(
         text="OTHER",
-        description="""The type is not mapped. See the <code>type</code> attribute, which contains a data source specific value.""")
+        description="""The type is not mapped. See the <code>type</code> attribute, which contains a
+data source specific value.""")
 
     _defn = EnumDefinition(
         name="VerdictIdEnum",
@@ -19117,7 +19822,8 @@ class VramModeIdEnum(EnumDefinitionImpl):
         description="Video memory is physically separate from system memory.")
     OTHER = PermissibleValue(
         text="OTHER",
-        description="""A VRAM mode not covered by the defined values; the exact value is reported by the event source.""")
+        description="""A VRAM mode not covered by the defined values; the exact value is reported by
+the event source.""")
 
     _defn = EnumDefinition(
         name="VramModeIdEnum",
@@ -19133,7 +19839,8 @@ class ObservableTypeIdEnum(EnumDefinitionImpl):
         description="Unknown observable data type.")
     OTHER = PermissibleValue(
         text="OTHER",
-        description="""The observable data type is not mapped. See the <code>type</code> attribute, which may contain data source specific value.""")
+        description="""The observable data type is not mapped. See the <code>type</code> attribute,
+which may contain data source specific value.""")
 
     _defn = EnumDefinition(
         name="ObservableTypeIdEnum",
@@ -19179,7 +19886,8 @@ class OsTypeIdEnum(EnumDefinitionImpl):
         description="The type is unknown.")
     OTHER = PermissibleValue(
         text="OTHER",
-        description="""The type is not mapped. See the <code>type</code> attribute, which contains a data source specific value.""")
+        description="""The type is not mapped. See the <code>type</code> attribute, which contains a
+data source specific value.""")
 
     _defn = EnumDefinition(
         name="OsTypeIdEnum",
@@ -19188,32 +19896,72 @@ class OsTypeIdEnum(EnumDefinitionImpl):
 
 class OsintTlpEnum(EnumDefinitionImpl):
     """
-    The <a target='_blank' href='https://www.first.org/tlp/'>Traffic Light Protocol</a> was created to facilitate
-    greater sharing of potentially sensitive information and more effective collaboration. TLP provides a simple and
-    intuitive schema for indicating with whom potentially sensitive information can be shared.
+    The <a target='_blank' href='https://www.first.org/tlp/'>Traffic Light
+    Protocol</a> was created to facilitate greater sharing of potentially sensitive
+    information and more effective collaboration. TLP provides a simple and
+    intuitive schema for indicating with whom potentially sensitive information can
+    be shared.
     """
     TLP_AMBER = PermissibleValue(
         text="TLP_AMBER",
-        description="""TLP:AMBER is for limited disclosure, recipients can only spread this on a need-to-know basis within their organization and its clients. Note that TLP:AMBER+STRICT restricts sharing to the organization only. Sources may use TLP:AMBER when information requires support to be effectively acted upon, yet carries risk to privacy, reputation, or operations if shared outside of the organizations involved. Recipients may share TLP:AMBER information with members of their own organization and its clients, but only on a need-to-know basis to protect their organization and its clients and prevent further harm. Note: if the source wants to restrict sharing to the organization only, they must specify TLP:AMBER+STRICT.""")
+        description="""TLP:AMBER is for limited disclosure, recipients can only spread this on a
+need-to-know basis within their organization and its clients. Note that
+TLP:AMBER+STRICT restricts sharing to the organization only. Sources may use
+TLP:AMBER when information requires support to be effectively acted upon, yet
+carries risk to privacy, reputation, or operations if shared outside of the
+organizations involved. Recipients may share TLP:AMBER information with members
+of their own organization and its clients, but only on a need-to-know basis to
+protect their organization and its clients and prevent further harm. Note: if
+the source wants to restrict sharing to the organization only, they must
+specify TLP:AMBER+STRICT.""")
     TLP_AMBER_STRICT = PermissibleValue(
         text="TLP_AMBER_STRICT",
-        description="""TLP:AMBER is for limited disclosure, recipients can only spread this on a need-to-know basis within their organization and its clients. Note that TLP:AMBER+STRICT restricts sharing to the organization only. Sources may use TLP:AMBER when information requires support to be effectively acted upon, yet carries risk to privacy, reputation, or operations if shared outside of the organizations involved. Recipients may share TLP:AMBER information with members of their own organization and its clients, but only on a need-to-know basis to protect their organization and its clients and prevent further harm. Note: if the source wants to restrict sharing to the organization only, they must specify TLP:AMBER+STRICT.""")
+        description="""TLP:AMBER is for limited disclosure, recipients can only spread this on a
+need-to-know basis within their organization and its clients. Note that
+TLP:AMBER+STRICT restricts sharing to the organization only. Sources may use
+TLP:AMBER when information requires support to be effectively acted upon, yet
+carries risk to privacy, reputation, or operations if shared outside of the
+organizations involved. Recipients may share TLP:AMBER information with members
+of their own organization and its clients, but only on a need-to-know basis to
+protect their organization and its clients and prevent further harm. Note: if
+the source wants to restrict sharing to the organization only, they must
+specify TLP:AMBER+STRICT.""")
     TLP_CLEAR = PermissibleValue(
         text="TLP_CLEAR",
-        description="""TLP:CLEAR denotes that recipients can spread this to the world, there is no limit on disclosure. Sources may use TLP:CLEAR when information carries minimal or no foreseeable risk of misuse, in accordance with applicable rules and procedures for public release. Subject to standard copyright rules, TLP:CLEAR information may be shared without restriction.""")
+        description="""TLP:CLEAR denotes that recipients can spread this to the world, there is no
+limit on disclosure. Sources may use TLP:CLEAR when information carries minimal
+or no foreseeable risk of misuse, in accordance with applicable rules and
+procedures for public release. Subject to standard copyright rules, TLP:CLEAR
+information may be shared without restriction.""")
     TLP_GREEN = PermissibleValue(
         text="TLP_GREEN",
-        description="""TLP:GREEN is for limited disclosure, recipients can spread this within their community. Sources may use TLP:GREEN when information is useful to increase awareness within their wider community. Recipients may share TLP:GREEN information with peers and partner organizations within their community, but not via publicly accessible channels. TLP:GREEN information may not be shared outside of the community. Note: when “community” is not defined, assume the cybersecurity/defense community.""")
+        description="""TLP:GREEN is for limited disclosure, recipients can spread this within their
+community. Sources may use TLP:GREEN when information is useful to increase
+awareness within their wider community. Recipients may share TLP:GREEN
+information with peers and partner organizations within their community, but
+not via publicly accessible channels. TLP:GREEN information may not be shared
+outside of the community. Note: when “community” is not defined, assume the
+cybersecurity/defense community.""")
     TLP_RED = PermissibleValue(
         text="TLP_RED",
-        description="""TLP:RED is for the eyes and ears of individual recipients only, no further disclosure. Sources may use TLP:RED when information cannot be effectively acted upon without significant risk for the privacy, reputation, or operations of the organizations involved. Recipients may therefore not share TLP:RED information with anyone else. In the context of a meeting, for example, TLP:RED information is limited to those present at the meeting.""")
+        description="""TLP:RED is for the eyes and ears of individual recipients only, no further
+disclosure. Sources may use TLP:RED when information cannot be effectively
+acted upon without significant risk for the privacy, reputation, or operations
+of the organizations involved. Recipients may therefore not share TLP:RED
+information with anyone else. In the context of a meeting, for example, TLP:RED
+information is limited to those present at the meeting.""")
     TLP_WHITE = PermissibleValue(
         text="TLP_WHITE",
-        description="""TLP:WHITE and TLP:CLEAR may be used interchangeably, TLP:WHITE is the most up to date (as of TLP 2.0) usage.""")
+        description="""TLP:WHITE and TLP:CLEAR may be used interchangeably, TLP:WHITE is the most up
+to date (as of TLP 2.0) usage.""")
 
     _defn = EnumDefinition(
         name="OsintTlpEnum",
-        description="""The <a target='_blank' href='https://www.first.org/tlp/'>Traffic Light Protocol</a> was created to facilitate greater sharing of potentially sensitive information and more effective collaboration. TLP provides a simple and intuitive schema for indicating with whom potentially sensitive information can be shared.""",
+        description="""The <a target='_blank' href='https://www.first.org/tlp/'>Traffic Light
+Protocol</a> was created to facilitate greater sharing of potentially sensitive
+information and more effective collaboration. TLP provides a simple and
+intuitive schema for indicating with whom potentially sensitive information can
+be shared.""",
     )
 
 class OsintTypeIdEnum(EnumDefinitionImpl):
@@ -19222,7 +19970,8 @@ class OsintTypeIdEnum(EnumDefinitionImpl):
     """
     UNKNOWN = PermissibleValue(
         text="UNKNOWN",
-        description="The indicator type is ambiguous or there is not a related indicator for the OSINT object.")
+        description="""The indicator type is ambiguous or there is not a related indicator for the
+OSINT object.""")
     IP_ADDRESS = PermissibleValue(
         text="IP_ADDRESS",
         description="An IPv4 or IPv6 address.")
@@ -19234,7 +19983,9 @@ class OsintTypeIdEnum(EnumDefinitionImpl):
         description="A hostname or computer name.")
     HASH = PermissibleValue(
         text="HASH",
-        description="""Any type of hash e.g., MD5, SHA1, SHA2, BLAKE, BLAKE2, SSDEEP, VHASH, etc. generated from a file, malware sample, request header, or otherwise used to identify a pertinent artifact.""")
+        description="""Any type of hash e.g., MD5, SHA1, SHA2, BLAKE, BLAKE2, SSDEEP, VHASH, etc.
+generated from a file, malware sample, request header, or otherwise used to
+identify a pertinent artifact.""")
     URL = PermissibleValue(
         text="URL",
         description="A Uniform Resource Locator (URL) or Uniform Resource Indicator (URI).")
@@ -19243,7 +19994,8 @@ class OsintTypeIdEnum(EnumDefinitionImpl):
         description="A User Agent typically seen in HTTP request headers.")
     DIGITAL_CERTIFICATE = PermissibleValue(
         text="DIGITAL_CERTIFICATE",
-        description="The serial number, fingerprint, or full content of an X.509 digital certificate.")
+        description="""The serial number, fingerprint, or full content of an X.509 digital
+certificate.""")
     EMAIL = PermissibleValue(
         text="EMAIL",
         description="The contents of an email or any related information to an email object.")
@@ -19252,7 +20004,8 @@ class OsintTypeIdEnum(EnumDefinitionImpl):
         description="An email address.")
     VULNERABILITY = PermissibleValue(
         text="VULNERABILITY",
-        description="A CVE ID, CWE ID, or other identifier for a weakness, exploit, bug, or misconfiguration.")
+        description="""A CVE ID, CWE ID, or other identifier for a weakness, exploit, bug, or
+misconfiguration.""")
     FILE = PermissibleValue(
         text="FILE",
         description="A file or metadata about a file.")
@@ -19289,7 +20042,8 @@ class PackageTypeIdEnum(EnumDefinitionImpl):
         description="The type is unknown.")
     OTHER = PermissibleValue(
         text="OTHER",
-        description="""The type is not mapped. See the <code>type</code> attribute, which contains a data source specific value.""")
+        description="""The type is not mapped. See the <code>type</code> attribute, which contains a
+data source specific value.""")
 
     _defn = EnumDefinition(
         name="PackageTypeIdEnum",
@@ -19298,7 +20052,8 @@ class PackageTypeIdEnum(EnumDefinitionImpl):
 
 class PacketEncodingIdEnum(EnumDefinitionImpl):
     """
-    The normalized identifier of the encoding method used to represent the packet data as a string.
+    The normalized identifier of the encoding method used to represent the packet
+    data as a string.
     """
     UNKNOWN = PermissibleValue(
         text="UNKNOWN",
@@ -19308,17 +20063,20 @@ class PacketEncodingIdEnum(EnumDefinitionImpl):
         description="The packet data is encoded using Base64.")
     HEXADECIMAL = PermissibleValue(
         text="HEXADECIMAL",
-        description="The packet data is encoded as a hexadecimal string representation of the raw bytes.")
+        description="""The packet data is encoded as a hexadecimal string representation of the raw
+bytes.""")
     URL_ENCODED = PermissibleValue(
         text="URL_ENCODED",
         description="The packet data is encoded using percent-encoding (URL encoding).")
     OTHER = PermissibleValue(
         text="OTHER",
-        description="""The encoding method is not mapped. Refer to the <code>encoding</code> field for the original source-specific value.""")
+        description="""The encoding method is not mapped. Refer to the <code>encoding</code> field for
+the original source-specific value.""")
 
     _defn = EnumDefinition(
         name="PacketEncodingIdEnum",
-        description="The normalized identifier of the encoding method used to represent the packet data as a string.",
+        description="""The normalized identifier of the encoding method used to represent the packet
+data as a string.""",
     )
 
 class PacketFormatIdEnum(EnumDefinitionImpl):
@@ -19333,7 +20091,8 @@ class PacketFormatIdEnum(EnumDefinitionImpl):
         description="Standard libpcap/tcpdump packet capture file format.")
     PCAPNG = PermissibleValue(
         text="PCAPNG",
-        description="Next-generation PCAP format that supports multiple interfaces and enhanced metadata.")
+        description="""Next-generation PCAP format that supports multiple interfaces and enhanced
+metadata.""")
     SNOOP = PermissibleValue(
         text="SNOOP",
         description="Solaris/Unix capture format.")
@@ -19345,7 +20104,8 @@ class PacketFormatIdEnum(EnumDefinitionImpl):
         description="Microsoft Network Monitor capture file format.")
     OTHER = PermissibleValue(
         text="OTHER",
-        description="""The packet format is not mapped. Refer to the <code>format</code> field for the original source-specific value.""")
+        description="""The packet format is not mapped. Refer to the <code>format</code> field for the
+original source-specific value.""")
 
     _defn = EnumDefinition(
         name="PacketFormatIdEnum",
@@ -19361,7 +20121,8 @@ class PacketFormatIdEnum(EnumDefinitionImpl):
 
 class PacketSourceIdEnum(EnumDefinitionImpl):
     """
-    A normalized numeric identifier that specifies how the packet was obtained or generated.
+    A normalized numeric identifier that specifies how the packet was obtained or
+    generated.
     """
     UNKNOWN = PermissibleValue(
         text="UNKNOWN",
@@ -19377,23 +20138,29 @@ class PacketSourceIdEnum(EnumDefinitionImpl):
         description="The packet was generated or extracted by a protocol decoder or analysis engine.")
     TAP = PermissibleValue(
         text="TAP",
-        description="""The packet was captured from a physical network Test Access Point (TAP) device used for passive monitoring.""")
+        description="""The packet was captured from a physical network Test Access Point (TAP) device
+used for passive monitoring.""")
     SPAN = PermissibleValue(
         text="SPAN",
-        description="The packet was captured from a switch Switched Port Analyzer (SPAN) or mirror port.")
+        description="""The packet was captured from a switch Switched Port Analyzer (SPAN) or mirror
+port.""")
     ENDPOINT = PermissibleValue(
         text="ENDPOINT",
-        description="The packet was captured by a host-based agent or endpoint detection and response (EDR) sensor.")
+        description="""The packet was captured by a host-based agent or endpoint detection and
+response (EDR) sensor.""")
     VIRTUAL = PermissibleValue(
         text="VIRTUAL",
-        description="""The packet was captured from a virtual network interface, virtual switch, or container network.""")
+        description="""The packet was captured from a virtual network interface, virtual switch, or
+container network.""")
     OTHER = PermissibleValue(
         text="OTHER",
-        description="""The packet source is not mapped. Refer to the <code>source</code> field for the original source-specific value.""")
+        description="""The packet source is not mapped. Refer to the <code>source</code> field for the
+original source-specific value.""")
 
     _defn = EnumDefinition(
         name="PacketSourceIdEnum",
-        description="A normalized numeric identifier that specifies how the packet was obtained or generated.",
+        description="""A normalized numeric identifier that specifies how the packet was obtained or
+generated.""",
     )
 
 class PrivilegeInfoTypeIdEnum(EnumDefinitionImpl):
@@ -19405,16 +20172,24 @@ class PrivilegeInfoTypeIdEnum(EnumDefinitionImpl):
         description="The privilege type is unknown.")
     READ = PermissibleValue(
         text="READ",
-        description="""A read-type privilege that permits viewing or retrieving data. Examples: <code>s3:GetObject</code>, <code>Microsoft.Storage/storageAccounts/read</code>, <code>storage.objects.get</code>.""")
+        description="""A read-type privilege that permits viewing or retrieving data. Examples:
+<code>s3:GetObject</code>, <code>Microsoft.Storage/storageAccounts/read</code>,
+<code>storage.objects.get</code>.""")
     WRITE = PermissibleValue(
         text="WRITE",
-        description="""A write-type privilege that permits creating, modifying, or deleting data. Examples: <code>s3:PutObject</code>, <code>Microsoft.Storage/storageAccounts/write</code>, <code>storage.objects.create</code>.""")
+        description="""A write-type privilege that permits creating, modifying, or deleting data.
+Examples: <code>s3:PutObject</code>,
+<code>Microsoft.Storage/storageAccounts/write</code>,
+<code>storage.objects.create</code>.""")
     EXECUTE = PermissibleValue(
         text="EXECUTE",
-        description="""An execute-type privilege that permits running operations or invoking functions. Examples: <code>lambda:InvokeFunction</code>, <code>Microsoft.Compute/virtualMachines/start/action</code>.""")
+        description="""An execute-type privilege that permits running operations or invoking
+functions. Examples: <code>lambda:InvokeFunction</code>,
+<code>Microsoft.Compute/virtualMachines/start/action</code>.""")
     OTHER = PermissibleValue(
         text="OTHER",
-        description="""The privilege type is not mapped. See the <code>type</code> attribute, which contains a data source specific value.""")
+        description="""The privilege type is not mapped. See the <code>type</code> attribute, which
+contains a data source specific value.""")
 
     _defn = EnumDefinition(
         name="PrivilegeInfoTypeIdEnum",
@@ -19423,14 +20198,16 @@ class PrivilegeInfoTypeIdEnum(EnumDefinitionImpl):
 
 class QueryEvidenceQueryTypeIdEnum(EnumDefinitionImpl):
     """
-    The normalized type of system query performed against a device or system component.
+    The normalized type of system query performed against a device or system
+    component.
     """
     UNKNOWN = PermissibleValue(
         text="UNKNOWN",
         description="The query type was unknown or not specified.")
     KERNEL = PermissibleValue(
         text="KERNEL",
-        description="""A query about kernel resources including system calls, shared mutex, or other kernel components.""")
+        description="""A query about kernel resources including system calls, shared mutex, or other
+kernel components.""")
     FILE = PermissibleValue(
         text="FILE",
         description="A query about file attributes, metadata, content, hash values, or properties.")
@@ -19442,53 +20219,66 @@ class QueryEvidenceQueryTypeIdEnum(EnumDefinitionImpl):
         description="A query about group membership, privileges, domain, or group properties.")
     JOB = PermissibleValue(
         text="JOB",
-        description="A query about scheduled jobs, their command lines, run states, or execution times.")
+        description="""A query about scheduled jobs, their command lines, run states, or execution
+times.""")
     MODULE = PermissibleValue(
         text="MODULE",
-        description="A query about loaded modules, their base addresses, load types, or function entry points.")
+        description="""A query about loaded modules, their base addresses, load types, or function
+entry points.""")
     NETWORK_CONNECTION = PermissibleValue(
         text="NETWORK_CONNECTION",
         description="A query about active network connections, boundaries, protocols, or TCP states.")
     NETWORK_INTERFACES = PermissibleValue(
         text="NETWORK_INTERFACES",
-        description="A query about physical or virtual network interfaces, their IP/MAC addresses, or types.")
+        description="""A query about physical or virtual network interfaces, their IP/MAC addresses,
+or types.""")
     PERIPHERAL_DEVICE = PermissibleValue(
         text="PERIPHERAL_DEVICE",
-        description="A query about attached peripheral devices, their classes, models, or vendor information.")
+        description="""A query about attached peripheral devices, their classes, models, or vendor
+information.""")
     PROCESS = PermissibleValue(
         text="PROCESS",
-        description="""A query about running processes, command lines, ancestry, loaded modules, or execution context.""")
+        description="""A query about running processes, command lines, ancestry, loaded modules, or
+execution context.""")
     SERVICE = PermissibleValue(
         text="SERVICE",
         description="A query about system services, their names, versions, labels, or properties.")
     SESSION = PermissibleValue(
         text="SESSION",
-        description="A query about authenticated user or service sessions, their creation times, or issuer details.")
+        description="""A query about authenticated user or service sessions, their creation times, or
+issuer details.""")
     USER = PermissibleValue(
         text="USER",
-        description="A query about user accounts, their properties, credentials, or domain information.")
+        description="""A query about user accounts, their properties, credentials, or domain
+information.""")
     USERS = PermissibleValue(
         text="USERS",
         description="A query about multiple users belonging to an administrative group.")
     STARTUP_ITEM = PermissibleValue(
         text="STARTUP_ITEM",
-        description="A query about startup configuration items, their run modes, start types, or current states.")
+        description="""A query about startup configuration items, their run modes, start types, or
+current states.""")
     REGISTRY_KEY = PermissibleValue(
         text="REGISTRY_KEY",
-        description="""A Windows-specific query about registry keys, their paths, security descriptors, or modification times.""")
+        description="""A Windows-specific query about registry keys, their paths, security
+descriptors, or modification times.""")
     REGISTRY_VALUE = PermissibleValue(
         text="REGISTRY_VALUE",
-        description="A Windows-specific query about registry values, their data types, content, or names.")
+        description="""A Windows-specific query about registry values, their data types, content, or
+names.""")
     PREFETCH = PermissibleValue(
         text="PREFETCH",
-        description="""A Windows-specific query about prefetch files, their run counts, last execution times, or existence.""")
+        description="""A Windows-specific query about prefetch files, their run counts, last execution
+times, or existence.""")
     OTHER = PermissibleValue(
         text="OTHER",
-        description="""The query type was not mapped to a standard category. See the query_type attribute for source-specific value.""")
+        description="""The query type was not mapped to a standard category. See the query_type
+attribute for source-specific value.""")
 
     _defn = EnumDefinition(
         name="QueryEvidenceQueryTypeIdEnum",
-        description="The normalized type of system query performed against a device or system component.",
+        description="""The normalized type of system query performed against a device or system
+component.""",
     )
 
 class SbomTypeIdEnum(EnumDefinitionImpl):
@@ -19497,19 +20287,28 @@ class SbomTypeIdEnum(EnumDefinitionImpl):
     """
     SPDX = PermissibleValue(
         text="SPDX",
-        description="""System Package Data Exchange (SPDX®) is an open standard capable of representing systems with software components in as SBOMs (Software Bill of Materials) and other AI, data and security references supporting a range of risk management use cases. The SPDX specification is a freely available international open standard (ISO/IEC 5692:2021).""")
+        description="""System Package Data Exchange (SPDX®) is an open standard capable of
+representing systems with software components in as SBOMs (Software Bill of
+Materials) and other AI, data and security references supporting a range of
+risk management use cases. The SPDX specification is a freely available
+international open standard (ISO/IEC 5692:2021).""")
     CYCLONEDX = PermissibleValue(
         text="CYCLONEDX",
         description="CycloneDX is an International Standard for Bill of Materials (ECMA-424).")
     SWID = PermissibleValue(
         text="SWID",
-        description="""The International Organization for Standardization (ISO) and the International Electrotechnical Commission (IEC) publishes, ISO/IEC 19770-2, a standard for software identification (SWID) tags that defines a structured metadata format for describing a software product. A SWID tag document is composed of a structured set of data elements that identify the software product""")
+        description="""The International Organization for Standardization (ISO) and the International
+Electrotechnical Commission (IEC) publishes, ISO/IEC 19770-2, a standard for
+software identification (SWID) tags that defines a structured metadata format
+for describing a software product. A SWID tag document is composed of a
+structured set of data elements that identify the software product""")
     UNKNOWN = PermissibleValue(
         text="UNKNOWN",
         description="The type is unknown.")
     OTHER = PermissibleValue(
         text="OTHER",
-        description="""The type is not mapped. See the <code>type</code> attribute, which contains a data source specific value.""")
+        description="""The type is not mapped. See the <code>type</code> attribute, which contains a
+data source specific value.""")
 
     _defn = EnumDefinition(
         name="SbomTypeIdEnum",
@@ -19537,7 +20336,8 @@ class ScimStateIdEnum(EnumDefinitionImpl):
         description="The SCIM resource is in a Deleted state, or otherwise disabled.")
     OTHER = PermissibleValue(
         text="OTHER",
-        description="""The provisioning state of the SCIM resource is not mapped. See the <code>state</code> attribute, which contains a data source specific value.""")
+        description="""The provisioning state of the SCIM resource is not mapped. See the
+<code>state</code> attribute, which contains a data source specific value.""")
 
     _defn = EnumDefinition(
         name="ScimStateIdEnum",
@@ -19574,7 +20374,8 @@ class ScriptTypeIdEnum(EnumDefinitionImpl):
         description="VBA")
     OTHER = PermissibleValue(
         text="OTHER",
-        description="""The script type is not mapped. See the <code>type</code> attribute which contains an event source specific value.""")
+        description="""The script type is not mapped. See the <code>type</code> attribute which
+contains an event source specific value.""")
 
     _defn = EnumDefinition(
         name="ScriptTypeIdEnum",
@@ -19659,7 +20460,8 @@ class SecurityStateStateIdEnum(EnumDefinitionImpl):
         description="The entity is not compliant with the associated security policy.")
     OTHER = PermissibleValue(
         text="OTHER",
-        description="""The security state is not mapped. See the <code>state</code> attribute, which contains data source specific values.""")
+        description="""The security state is not mapped. See the <code>state</code> attribute, which
+contains data source specific values.""")
 
     _defn = EnumDefinition(
         name="SecurityStateStateIdEnum",
@@ -19684,7 +20486,8 @@ class SoftwareComponentTypeIdEnum(EnumDefinitionImpl):
         description="The type is unknown.")
     OTHER = PermissibleValue(
         text="OTHER",
-        description="""The type is not mapped. See the <code>type</code> attribute, which contains a data source specific value.""")
+        description="""The type is not mapped. See the <code>type</code> attribute, which contains a
+data source specific value.""")
 
     _defn = EnumDefinition(
         name="SoftwareComponentTypeIdEnum",
@@ -19693,9 +20496,10 @@ class SoftwareComponentTypeIdEnum(EnumDefinitionImpl):
 
 class StartupItemRunModeIdsEnum(EnumDefinitionImpl):
     """
-    The list of normalized identifiers that describe the startup items' properties when it is running. Use this field
-    to capture extended information about the process, which may depend on the type of startup item. E.g., A Windows
-    service that interacts with the desktop.
+    The list of normalized identifiers that describe the startup items' properties
+    when it is running.  Use this field to capture extended information about the
+    process, which may depend on the type of startup item.  E.g., A Windows service
+    that interacts with the desktop.
     """
     INTERACTIVE = PermissibleValue(
         text="INTERACTIVE",
@@ -19711,11 +20515,15 @@ class StartupItemRunModeIdsEnum(EnumDefinitionImpl):
         description="The run mode is unknown.")
     OTHER = PermissibleValue(
         text="OTHER",
-        description="""The run mode is not mapped. See the <code>run_modes</code> attribute, which contains data source specific values.""")
+        description="""The run mode is not mapped. See the <code>run_modes</code> attribute, which
+contains data source specific values.""")
 
     _defn = EnumDefinition(
         name="StartupItemRunModeIdsEnum",
-        description="""The list of normalized identifiers that describe the startup items' properties when it is running.  Use this field to capture extended information about the process, which may depend on the type of startup item.  E.g., A Windows service that interacts with the desktop.""",
+        description="""The list of normalized identifiers that describe the startup items' properties
+when it is running.  Use this field to capture extended information about the
+process, which may depend on the type of startup item.  E.g., A Windows service
+that interacts with the desktop.""",
     )
 
 class StartupItemRunStateIdEnum(EnumDefinitionImpl):
@@ -19751,7 +20559,8 @@ class StartupItemRunStateIdEnum(EnumDefinitionImpl):
         description="The run state is unknown.")
     OTHER = PermissibleValue(
         text="OTHER",
-        description="""The run state is not mapped. See the <code>run_state</code> attribute, which contains a data source specific value.""")
+        description="""The run state is not mapped. See the <code>run_state</code> attribute, which
+contains a data source specific value.""")
 
     _defn = EnumDefinition(
         name="StartupItemRunStateIdEnum",
@@ -19773,7 +20582,8 @@ class StartupItemTypeIdEnum(EnumDefinitionImpl):
         description="User mode driver.")
     SERVICE = PermissibleValue(
         text="SERVICE",
-        description="""A background process typically managed by the operating system, e.g., a service process on Windows or a systemd-managed daemon on Linux.""")
+        description="""A background process typically managed by the operating system, e.g., a service
+process on Windows or a systemd-managed daemon on Linux.""")
     USER_MODE_APPLICATION = PermissibleValue(
         text="USER_MODE_APPLICATION",
         description="An application that runs in the user space.")
@@ -19782,16 +20592,20 @@ class StartupItemTypeIdEnum(EnumDefinitionImpl):
         description="The macOS Autoload Application.")
     SYSTEM_EXTENSION = PermissibleValue(
         text="SYSTEM_EXTENSION",
-        description="System extensions on macOS enables 3rd parties to extend the capabilities of macOS.")
+        description="""System extensions on macOS enables 3rd parties to extend the capabilities of
+macOS.""")
     KERNEL_EXTENSION = PermissibleValue(
         text="KERNEL_EXTENSION",
-        description="""Kernel extensions on macOS includes Apple provided pre-installs and 3rd party installs which enables support for specific hardware or software features not natively supported by macOS.""")
+        description="""Kernel extensions on macOS includes Apple provided pre-installs and 3rd party
+installs which enables support for specific hardware or software features not
+natively supported by macOS.""")
     SCHEDULED_JOB_TASK = PermissibleValue(
         text="SCHEDULED_JOB_TASK",
         description="A job or task that runs on a configured schedule.")
     OTHER = PermissibleValue(
         text="OTHER",
-        description="""The startup item type is not mapped. See the <code>type</code> attribute, which contains data source specific values.""")
+        description="""The startup item type is not mapped. See the <code>type</code> attribute, which
+contains data source specific values.""")
 
     _defn = EnumDefinition(
         name="StartupItemTypeIdEnum",
@@ -19844,7 +20658,8 @@ class TicketStatusIdEnum(EnumDefinitionImpl):
         description="Work on the ticket is temporarily suspended.")
     RESOLVED = PermissibleValue(
         text="RESOLVED",
-        description="""The ticket is resolved and a solution is implemented, pending confirmation or verification from the requestor.""")
+        description="""The ticket is resolved and a solution is implemented, pending confirmation or
+verification from the requestor.""")
     CLOSED = PermissibleValue(
         text="CLOSED",
         description="The ticket has been completed and closed.")
@@ -19859,7 +20674,8 @@ class TicketStatusIdEnum(EnumDefinitionImpl):
         description="The status is unknown.")
     OTHER = PermissibleValue(
         text="OTHER",
-        description="""The status is not mapped. See the <code>status</code> attribute, which contains a data source specific value.""")
+        description="""The status is not mapped. See the <code>status</code> attribute, which contains
+a data source specific value.""")
 
     _defn = EnumDefinition(
         name="TicketStatusIdEnum",
@@ -19934,8 +20750,8 @@ class TimespanTypeIdEnum(EnumDefinitionImpl):
 class TlsExtensionTypeIdEnum(EnumDefinitionImpl):
     """
     The TLS extension type identifier. See <a target='_blank'
-    href='https://datatracker.ietf.org/doc/html/rfc8446#page-35'>The Transport Layer Security (TLS) extension
-    page</a>.
+    href='https://datatracker.ietf.org/doc/html/rfc8446#page-35'>The Transport
+    Layer Security (TLS) extension page</a>.
     """
     SERVER_NAME = PermissibleValue(
         text="SERVER_NAME",
@@ -20005,17 +20821,21 @@ class TlsExtensionTypeIdEnum(EnumDefinitionImpl):
         description="The Key Share extension.")
     OTHER = PermissibleValue(
         text="OTHER",
-        description="""The type is not mapped. See the <code>type</code> attribute, which contains a data source specific value.""")
+        description="""The type is not mapped. See the <code>type</code> attribute, which contains a
+data source specific value.""")
 
     _defn = EnumDefinition(
         name="TlsExtensionTypeIdEnum",
-        description="""The TLS extension type identifier. See <a target='_blank' href='https://datatracker.ietf.org/doc/html/rfc8446#page-35'>The Transport Layer Security (TLS) extension page</a>.""",
+        description="""The TLS extension type identifier. See <a target='_blank'
+href='https://datatracker.ietf.org/doc/html/rfc8446#page-35'>The Transport
+Layer Security (TLS) extension page</a>.""",
     )
 
 class TokenTypeIdEnum(EnumDefinitionImpl):
     """
-    The normalized token type identifier. Valid values: 0 (Unknown), 1 (Ticket Granting Ticket - Kerberos), 2 (Service
-    Ticket - Kerberos), 3 (Identity Token - OIDC), 4 (Refresh Token - OIDC), 5 (SAML Assertion), 6 (Client Token -
+    The normalized token type identifier. Valid values: 0 (Unknown), 1 (Ticket
+    Granting Ticket - Kerberos), 2 (Service Ticket - Kerberos), 3 (Identity Token -
+    OIDC), 4 (Refresh Token - OIDC), 5 (SAML Assertion), 6 (Client Token -
     IdP-issued), 7 (API Token - generic API keys), 99 (Other).
     """
     UNKNOWN = PermissibleValue(
@@ -20038,43 +20858,62 @@ class TokenTypeIdEnum(EnumDefinitionImpl):
         description="Authentication Assertion for SAML.")
     CLIENT_TOKEN = PermissibleValue(
         text="CLIENT_TOKEN",
-        description="""Client Token issued by an Identity Provider (IdP) for application authentication. Use this value for IdP-issued tokens used for service-to-service authentication. Examples: Microsoft Entra ID Application Registration client secrets, Okta API tokens, Auth0 Machine-to-Machine tokens. Key characteristic: These tokens are issued by Identity Providers, not by individual services.""")
+        description="""Client Token issued by an Identity Provider (IdP) for application
+authentication. Use this value for IdP-issued tokens used for
+service-to-service authentication. Examples: Microsoft Entra ID Application
+Registration client secrets, Okta API tokens, Auth0 Machine-to-Machine tokens.
+Key characteristic: These tokens are issued by Identity Providers, not by
+individual services.""")
     API_TOKEN = PermissibleValue(
         text="API_TOKEN",
-        description="""A generic API token or API key used for authenticating API requests. Use this value for service-specific API authentication tokens that are NOT issued by Identity Providers. Examples: REST API keys, GraphQL API keys, Stripe API keys, Twilio API keys, AWS API keys. Key characteristic: These tokens are issued by individual services/platforms, not by Identity Providers.""")
+        description="""A generic API token or API key used for authenticating API requests. Use this
+value for service-specific API authentication tokens that are NOT issued by
+Identity Providers. Examples: REST API keys, GraphQL API keys, Stripe API keys,
+Twilio API keys, AWS API keys. Key characteristic: These tokens are issued by
+individual services/platforms, not by Identity Providers.""")
     OTHER = PermissibleValue(
         text="OTHER",
         description="Other")
 
     _defn = EnumDefinition(
         name="TokenTypeIdEnum",
-        description="""The normalized token type identifier. Valid values: 0 (Unknown), 1 (Ticket Granting Ticket - Kerberos), 2 (Service Ticket - Kerberos), 3 (Identity Token - OIDC), 4 (Refresh Token - OIDC), 5 (SAML Assertion), 6 (Client Token - IdP-issued), 7 (API Token - generic API keys), 99 (Other).""",
+        description="""The normalized token type identifier. Valid values: 0 (Unknown), 1 (Ticket
+Granting Ticket - Kerberos), 2 (Service Ticket - Kerberos), 3 (Identity Token -
+OIDC), 4 (Refresh Token - OIDC), 5 (SAML Assertion), 6 (Client Token -
+IdP-issued), 7 (API Token - generic API keys), 99 (Other).""",
     )
 
 class VulnerabilityFixCoverageIdEnum(EnumDefinitionImpl):
     """
-    The normalized identifier for fix coverage, applicable to this vulnerability. Typically useful, when there are
-    multiple affected packages but only a subset have available fixes.
+    The normalized identifier for fix coverage, applicable to this vulnerability.
+    Typically useful, when there are multiple affected packages but only a subset
+    have available fixes.
     """
     COMPLETE = PermissibleValue(
         text="COMPLETE",
-        description="""All affected packages and components have available fixes or patches to remediate the vulnerability.""")
+        description="""All affected packages and components have available fixes or patches to
+remediate the vulnerability.""")
     PARTIAL = PermissibleValue(
         text="PARTIAL",
-        description="""Only some of the affected packages and components have available fixes or patches, while others remain vulnerable.""")
+        description="""Only some of the affected packages and components have available fixes or
+patches, while others remain vulnerable.""")
     NONE = PermissibleValue(
         text="NONE",
-        description="No fixes or patches are currently available for any of the affected packages and components.")
+        description="""No fixes or patches are currently available for any of the affected packages
+and components.""")
     UNKNOWN = PermissibleValue(
         text="UNKNOWN",
         description="The fix coverage is unknown.")
     OTHER = PermissibleValue(
         text="OTHER",
-        description="""The fix coverage is not mapped. See the <code>fix_coverage</code> attribute, which contains a data source specific value.""")
+        description="""The fix coverage is not mapped. See the <code>fix_coverage</code> attribute,
+which contains a data source specific value.""")
 
     _defn = EnumDefinition(
         name="VulnerabilityFixCoverageIdEnum",
-        description="""The normalized identifier for fix coverage, applicable to this vulnerability. Typically useful, when there are multiple affected packages but only a subset have available fixes.""",
+        description="""The normalized identifier for fix coverage, applicable to this vulnerability.
+Typically useful, when there are multiple affected packages but only a subset
+have available fixes.""",
     )
 
 class AccountTypeIdEnum(EnumDefinitionImpl):
@@ -20152,7 +20991,8 @@ class AccountTypeIdEnum(EnumDefinitionImpl):
 
 class AdditionalRestrictionStatusIdEnum(EnumDefinitionImpl):
     """
-    The normalized status identifier indicating the applicability of this policy restriction.
+    The normalized status identifier indicating the applicability of this policy
+    restriction.
     """
     APPLICABLE = PermissibleValue(
         text="APPLICABLE",
@@ -20168,55 +21008,75 @@ class AdditionalRestrictionStatusIdEnum(EnumDefinitionImpl):
         description="The status is unknown.")
     OTHER = PermissibleValue(
         text="OTHER",
-        description="""The status is not mapped. See the <code>status</code> attribute, which contains a data source specific value.""")
+        description="""The status is not mapped. See the <code>status</code> attribute, which contains
+a data source specific value.""")
 
     _defn = EnumDefinition(
         name="AdditionalRestrictionStatusIdEnum",
-        description="The normalized status identifier indicating the applicability of this policy restriction.",
+        description="""The normalized status identifier indicating the applicability of this policy
+restriction.""",
     )
 
 class AgentTypeIdEnum(EnumDefinitionImpl):
     """
-    The normalized representation of an agent or sensor. E.g., EDR, vulnerability management, APM, backup & recovery,
-    etc.
+    The normalized representation of an agent or sensor. E.g., EDR, vulnerability
+    management, APM, backup & recovery, etc.
     """
     ENDPOINT_DETECTION_AND_RESPONSE = PermissibleValue(
         text="ENDPOINT_DETECTION_AND_RESPONSE",
-        description="""Any EDR sensor or agent. Or any tool that provides similar threat detection, anti-malware, anti-ransomware, or similar capabilities. E.g., Crowdstrike Falcon, Microsoft Defender for Endpoint, Wazuh.""")
+        description="""Any EDR sensor or agent. Or any tool that provides similar threat detection,
+anti-malware, anti-ransomware, or similar capabilities. E.g., Crowdstrike
+Falcon, Microsoft Defender for Endpoint, Wazuh.""")
     DATA_LOSS_PREVENTION = PermissibleValue(
         text="DATA_LOSS_PREVENTION",
-        description="""Any DLP sensor or agent. Or any tool that provides similar data classification, data loss detection, and/or data loss prevention capabilities. E.g., Forcepoint DLP, Microsoft Purview, Symantec DLP.""")
+        description="""Any DLP sensor or agent. Or any tool that provides similar data classification,
+data loss detection, and/or data loss prevention capabilities. E.g., Forcepoint
+DLP, Microsoft Purview, Symantec DLP.""")
     BACKUP_RECOVERY = PermissibleValue(
         text="BACKUP_RECOVERY",
-        description="""Any agent or sensor that provides backups, archival, or recovery capabilities. E.g., Azure Backup, AWS Backint Agent.""")
+        description="""Any agent or sensor that provides backups, archival, or recovery capabilities.
+E.g., Azure Backup, AWS Backint Agent.""")
     PERFORMANCE_MONITORING_OBSERVABILITY = PermissibleValue(
         text="PERFORMANCE_MONITORING_OBSERVABILITY",
-        description="""Any agent or sensor that provides Application Performance Monitoring (APM), active tracing, profiling, or other observability use cases and optionally forwards the logs. E.g., New Relic Agent, Datadog Agent, Azure Monitor Agent.""")
+        description="""Any agent or sensor that provides Application Performance Monitoring (APM),
+active tracing, profiling, or other observability use cases and optionally
+forwards the logs. E.g., New Relic Agent, Datadog Agent, Azure Monitor Agent.""")
     VULNERABILITY_MANAGEMENT = PermissibleValue(
         text="VULNERABILITY_MANAGEMENT",
-        description="""Any agent or sensor that provides vulnerability management or scanning capabilities. E.g., Qualys VMDR, Microsoft Defender for Endpoint, Crowdstrike Spotlight, Amazon Inspector Agent.""")
+        description="""Any agent or sensor that provides vulnerability management or scanning
+capabilities. E.g., Qualys VMDR, Microsoft Defender for Endpoint, Crowdstrike
+Spotlight, Amazon Inspector Agent.""")
     LOG_FORWARDING = PermissibleValue(
         text="LOG_FORWARDING",
-        description="""Any agent or sensor that forwards logs to a 3rd party storage system such as a data lake or SIEM. E.g., Splunk Universal Forwarder, Tenzir, FluentBit, Amazon CloudWatch Agent, Amazon Kinesis Agent.""")
+        description="""Any agent or sensor that forwards logs to a 3rd party storage system such as a
+data lake or SIEM. E.g., Splunk Universal Forwarder, Tenzir, FluentBit, Amazon
+CloudWatch Agent, Amazon Kinesis Agent.""")
     MOBILE_DEVICE_MANAGEMENT = PermissibleValue(
         text="MOBILE_DEVICE_MANAGEMENT",
-        description="""Any agent or sensor responsible for providing Mobile Device Management (MDM) or Mobile Enterprise Management (MEM) capabilities. E.g., JumpCloud Agent, Esper Agent, Jamf Pro binary.""")
+        description="""Any agent or sensor responsible for providing Mobile Device Management (MDM) or
+Mobile Enterprise Management (MEM) capabilities. E.g., JumpCloud Agent, Esper
+Agent, Jamf Pro binary.""")
     CONFIGURATION_MANAGEMENT = PermissibleValue(
         text="CONFIGURATION_MANAGEMENT",
-        description="""Any agent or sensor that provides configuration management of a device, such as scanning for software, license management, or applying configurations. E.g., AWS Systems Manager Agent, Flexera, ServiceNow MID Server.""")
+        description="""Any agent or sensor that provides configuration management of a device, such as
+scanning for software, license management, or applying configurations. E.g.,
+AWS Systems Manager Agent, Flexera, ServiceNow MID Server.""")
     REMOTE_ACCESS = PermissibleValue(
         text="REMOTE_ACCESS",
-        description="""Any agent or sensor that provides remote access capabilities to a device. E.g., BeyondTrust, Amazon Systems Manager Agent, Verkada Agent.""")
+        description="""Any agent or sensor that provides remote access capabilities to a device. E.g.,
+BeyondTrust, Amazon Systems Manager Agent, Verkada Agent.""")
     UNKNOWN = PermissibleValue(
         text="UNKNOWN",
         description="The type is unknown.")
     OTHER = PermissibleValue(
         text="OTHER",
-        description="""The type is not mapped. See the <code>type</code> attribute, which contains a data source specific value.""")
+        description="""The type is not mapped. See the <code>type</code> attribute, which contains a
+data source specific value.""")
 
     _defn = EnumDefinition(
         name="AgentTypeIdEnum",
-        description="""The normalized representation of an agent or sensor. E.g., EDR, vulnerability management, APM, backup & recovery, etc.""",
+        description="""The normalized representation of an agent or sensor. E.g., EDR, vulnerability
+management, APM, backup & recovery, etc.""",
     )
 
 class AnalyticStateIdEnum(EnumDefinitionImpl):
@@ -20228,7 +21088,8 @@ class AnalyticStateIdEnum(EnumDefinitionImpl):
         description="The Analytic is active.")
     SUPPRESSED = PermissibleValue(
         text="SUPPRESSED",
-        description="""The Analytic is suppressed. For example, a user/customer has suppressed a particular detection signature in a security product.""")
+        description="""The Analytic is suppressed. For example, a user/customer has suppressed a
+particular detection signature in a security product.""")
     EXPERIMENTAL = PermissibleValue(
         text="EXPERIMENTAL",
         description="The Analytic is still under development and considered experimental.")
@@ -20237,7 +21098,8 @@ class AnalyticStateIdEnum(EnumDefinitionImpl):
         description="The state is unknown.")
     OTHER = PermissibleValue(
         text="OTHER",
-        description="""The state is not mapped. See the <code>state</code> attribute, which contains a data source specific value.""")
+        description="""The state is not mapped. See the <code>state</code> attribute, which contains a
+data source specific value.""")
 
     _defn = EnumDefinition(
         name="AnalyticStateIdEnum",
@@ -20253,37 +21115,59 @@ class AnalyticTypeIdEnum(EnumDefinitionImpl):
         description="Unknown")
     RULE = PermissibleValue(
         text="RULE",
-        description="""A Rule in security analytics refers to predefined criteria or conditions set to monitor, alert, or enforce policies, playing a crucial role in access control, threat detection, and regulatory compliance across security systems.""")
+        description="""A Rule in security analytics refers to predefined criteria or conditions set to
+monitor, alert, or enforce policies, playing a crucial role in access control,
+threat detection, and regulatory compliance across security systems.""")
     BEHAVIORAL = PermissibleValue(
         text="BEHAVIORAL",
-        description="""Behavioral analytics focus on monitoring and analyzing user or system actions to identify deviations from established patterns, aiding in the detection of insider threats, fraud, and advanced persistent threats (APTs).""")
+        description="""Behavioral analytics focus on monitoring and analyzing user or system actions
+to identify deviations from established patterns, aiding in the detection of
+insider threats, fraud, and advanced persistent threats (APTs).""")
     STATISTICAL = PermissibleValue(
         text="STATISTICAL",
-        description="""Statistical analytics pertains to analyzing data patterns and anomalies using statistical models to predict, detect, and respond to potential threats, enhancing overall security posture through informed decision-making.""")
+        description="""Statistical analytics pertains to analyzing data patterns and anomalies using
+statistical models to predict, detect, and respond to potential threats,
+enhancing overall security posture through informed decision-making.""")
     LEARNING_ML_DL = PermissibleValue(
         text="LEARNING_ML_DL",
-        description="""Learning (ML/DL) encompasses techniques that can \"learn\" from known data to create analytics that generalize to new data. There may be a statistical component to these techniques, but it is not a requirement.""")
+        description="""Learning (ML/DL) encompasses techniques that can \"learn\" from known data to
+create analytics that generalize to new data. There may be a statistical
+component to these techniques, but it is not a requirement.""")
     FINGERPRINTING = PermissibleValue(
         text="FINGERPRINTING",
-        description="""Fingerprinting is the technique of collecting detailed system data, including software versions and configurations, to enhance threat detection, data loss prevention (DLP), and endpoint detection and response (EDR) capabilities.""")
+        description="""Fingerprinting is the technique of collecting detailed system data, including
+software versions and configurations, to enhance threat detection, data loss
+prevention (DLP), and endpoint detection and response (EDR) capabilities.""")
     TAGGING = PermissibleValue(
         text="TAGGING",
-        description="""Tagging refers to the practice of assigning labels or identifiers to data, users, assets, or activities to monitor, control access, and facilitate incident response across various security domains such as DLP and EDR.""")
+        description="""Tagging refers to the practice of assigning labels or identifiers to data,
+users, assets, or activities to monitor, control access, and facilitate
+incident response across various security domains such as DLP and EDR.""")
     KEYWORD_MATCH = PermissibleValue(
         text="KEYWORD_MATCH",
-        description="""Keyword Match involves scanning content for specific terms to identify sensitive information, potential threats, or policy violations, aiding in DLP and compliance monitoring.""")
+        description="""Keyword Match involves scanning content for specific terms to identify
+sensitive information, potential threats, or policy violations, aiding in DLP
+and compliance monitoring.""")
     REGULAR_EXPRESSIONS = PermissibleValue(
         text="REGULAR_EXPRESSIONS",
-        description="""Regular Expressions are used to define complex search patterns for identifying, validating, and extracting specific data sets or threats within digital content, enhancing DLP, EDR, and threat detection mechanisms.""")
+        description="""Regular Expressions are used to define complex search patterns for identifying,
+validating, and extracting specific data sets or threats within digital
+content, enhancing DLP, EDR, and threat detection mechanisms.""")
     EXACT_DATA_MATCH = PermissibleValue(
         text="EXACT_DATA_MATCH",
-        description="""Exact Data Match is a precise comparison technique used to detect the unauthorized use or exposure of specific, sensitive information, crucial for enforcing DLP policies and protecting against data breaches.""")
+        description="""Exact Data Match is a precise comparison technique used to detect the
+unauthorized use or exposure of specific, sensitive information, crucial for
+enforcing DLP policies and protecting against data breaches.""")
     PARTIAL_DATA_MATCH = PermissibleValue(
         text="PARTIAL_DATA_MATCH",
-        description="""Partial Data Match involves identifying instances where segments of sensitive information or patterns match, facilitating nuanced DLP and threat detection without requiring complete data conformity.""")
+        description="""Partial Data Match involves identifying instances where segments of sensitive
+information or patterns match, facilitating nuanced DLP and threat detection
+without requiring complete data conformity.""")
     INDEXED_DATA_MATCH = PermissibleValue(
         text="INDEXED_DATA_MATCH",
-        description="""Indexed Data Match refers to comparing content against a pre-compiled index of sensitive information to efficiently detect and prevent unauthorized access or breaches, streamlining DLP and compliance efforts.""")
+        description="""Indexed Data Match refers to comparing content against a pre-compiled index of
+sensitive information to efficiently detect and prevent unauthorized access or
+breaches, streamlining DLP and compliance efforts.""")
     OTHER = PermissibleValue(
         text="OTHER",
         description="Other")
@@ -20295,10 +21179,11 @@ class AnalyticTypeIdEnum(EnumDefinitionImpl):
 
 class AuthenticationTokenTypeIdEnum(EnumDefinitionImpl):
     """
-    The normalized authentication token type identifier. This attribute restricts the base <code>token.type_id</code>
-    enum to only protocol-specific authentication token types (values 0, 1-5, 99). API tokens and client tokens
-    (values 6-7) are not valid for <code>authentication_token</code> - use the base <code>token</code> object for
-    those types.
+    The normalized authentication token type identifier. This attribute restricts
+    the base <code>token.type_id</code> enum to only protocol-specific
+    authentication token types (values 0, 1-5, 99). API tokens and client tokens
+    (values 6-7) are not valid for <code>authentication_token</code> - use the base
+    <code>token</code> object for those types.
     """
     UNKNOWN = PermissibleValue(
         text="UNKNOWN",
@@ -20324,15 +21209,21 @@ class AuthenticationTokenTypeIdEnum(EnumDefinitionImpl):
 
     _defn = EnumDefinition(
         name="AuthenticationTokenTypeIdEnum",
-        description="""The normalized authentication token type identifier. This attribute restricts the base <code>token.type_id</code> enum to only protocol-specific authentication token types (values 0, 1-5, 99). API tokens and client tokens (values 6-7) are not valid for <code>authentication_token</code> - use the base <code>token</code> object for those types.""",
+        description="""The normalized authentication token type identifier. This attribute restricts
+the base <code>token.type_id</code> enum to only protocol-specific
+authentication token types (values 0, 1-5, 99). API tokens and client tokens
+(values 6-7) are not valid for <code>authentication_token</code> - use the base
+<code>token</code> object for those types.""",
     )
 
 class CheckSeverityIdEnum(EnumDefinitionImpl):
     """
-    The normalized severity identifier that maps severity levels to standard severity levels. For example CIS
-    Benchmark: <code>Level 2</code> maps to <code>4</code> (High), <code>Level 1</code> maps to <code>3</code>
-    (Medium). For DISA STIG: <code>CAT I</code> maps to <code>5</code> (Critical), <code>CAT II</code> maps to
-    <code>4</code> (High), and <code>CAT III</code> maps to <code>3</code> (Medium).
+    The normalized severity identifier that maps severity levels to standard
+    severity levels. For example CIS Benchmark: <code>Level 2</code> maps to
+    <code>4</code> (High), <code>Level 1</code> maps to <code>3</code> (Medium).
+    For DISA STIG: <code>CAT I</code> maps to <code>5</code> (Critical), <code>CAT
+    II</code> maps to <code>4</code> (High), and <code>CAT III</code> maps to
+    <code>3</code> (Medium).
     """
     UNKNOWN = PermissibleValue(
         text="UNKNOWN",
@@ -20345,23 +21236,34 @@ class CheckSeverityIdEnum(EnumDefinitionImpl):
         description="The user decides if action is needed.")
     MEDIUM = PermissibleValue(
         text="MEDIUM",
-        description="""Maps to CIS Benchmark <code>Level 1</code> - Essential security settings recommended for all systems, or DISA STIG <code>CAT III</code> - Action is required but the situation is not serious at this time.""")
+        description="""Maps to CIS Benchmark <code>Level 1</code> - Essential security settings
+recommended for all systems, or DISA STIG <code>CAT III</code> - Action is
+required but the situation is not serious at this time.""")
     HIGH = PermissibleValue(
         text="HIGH",
-        description="""Maps to CIS Benchmark <code>Level 2</code> - More restrictive and security-focused settings for sensitive environments, or DISA STIG <code>CAT II</code> - Action is required immediately.""")
+        description="""Maps to CIS Benchmark <code>Level 2</code> - More restrictive and
+security-focused settings for sensitive environments, or DISA STIG <code>CAT
+II</code> - Action is required immediately.""")
     CRITICAL = PermissibleValue(
         text="CRITICAL",
-        description="Maps to DISA STIG <code>CAT I</code> - Action is required immediately and the scope is broad.")
+        description="""Maps to DISA STIG <code>CAT I</code> - Action is required immediately and the
+scope is broad.""")
     FATAL = PermissibleValue(
         text="FATAL",
         description="An error occurred but it is too late to take remedial action.")
     OTHER = PermissibleValue(
         text="OTHER",
-        description="""The severity is not mapped. See the <code>severity</code> attribute, which contains a data source specific value.""")
+        description="""The severity is not mapped. See the <code>severity</code> attribute, which
+contains a data source specific value.""")
 
     _defn = EnumDefinition(
         name="CheckSeverityIdEnum",
-        description="""The normalized severity identifier that maps severity levels to standard severity levels. For example CIS Benchmark: <code>Level 2</code> maps to <code>4</code> (High), <code>Level 1</code> maps to <code>3</code> (Medium). For DISA STIG: <code>CAT I</code> maps to <code>5</code> (Critical), <code>CAT II</code> maps to <code>4</code> (High), and <code>CAT III</code> maps to <code>3</code> (Medium).""",
+        description="""The normalized severity identifier that maps severity levels to standard
+severity levels. For example CIS Benchmark: <code>Level 2</code> maps to
+<code>4</code> (High), <code>Level 1</code> maps to <code>3</code> (Medium).
+For DISA STIG: <code>CAT I</code> maps to <code>5</code> (Critical), <code>CAT
+II</code> maps to <code>4</code> (High), and <code>CAT III</code> maps to
+<code>3</code> (Medium).""",
     )
 
 class CheckStatusIdEnum(EnumDefinitionImpl):
@@ -20382,7 +21284,8 @@ class CheckStatusIdEnum(EnumDefinitionImpl):
         description="The compliance check failed for at least one of the evaluated resources.")
     OTHER = PermissibleValue(
         text="OTHER",
-        description="""The event status is not mapped. See the <code>status</code> attribute, which contains a data source specific value.""")
+        description="""The event status is not mapped. See the <code>status</code> attribute, which
+contains a data source specific value.""")
 
     _defn = EnumDefinition(
         name="CheckStatusIdEnum",
@@ -20407,7 +21310,8 @@ class ComplianceStatusIdEnum(EnumDefinitionImpl):
         description="The status is unknown.")
     OTHER = PermissibleValue(
         text="OTHER",
-        description="""The status is not mapped. See the <code>status</code> attribute, which contains a data source specific value.""")
+        description="""The status is not mapped. See the <code>status</code> attribute, which contains
+a data source specific value.""")
 
     _defn = EnumDefinition(
         name="ComplianceStatusIdEnum",
@@ -20420,28 +21324,42 @@ class DataClassificationCategoryIdEnum(EnumDefinitionImpl):
     """
     UNKNOWN = PermissibleValue(
         text="UNKNOWN",
-        description="""The type is not mapped. See the <code>data_type</code> attribute, which contains a data source specific value.""")
+        description="""The type is not mapped. See the <code>data_type</code> attribute, which
+contains a data source specific value.""")
     PERSONAL = PermissibleValue(
         text="PERSONAL",
-        description="""Any Personally Identifiable Information (PII), Electronic Personal Health Information (ePHI), or similarly personal information. E.g., full name, home address, date of birth, etc.""")
+        description="""Any Personally Identifiable Information (PII), Electronic Personal Health
+Information (ePHI), or similarly personal information. E.g., full name, home
+address, date of birth, etc.""")
     GOVERNMENTAL = PermissibleValue(
         text="GOVERNMENTAL",
-        description="""Any sensitive government identification number related to a person or other classified material. E.g., Passport numbers, driver license numbers, business identification, taxation identifiers, etc.""")
+        description="""Any sensitive government identification number related to a person or other
+classified material. E.g., Passport numbers, driver license numbers, business
+identification, taxation identifiers, etc.""")
     FINANCIAL = PermissibleValue(
         text="FINANCIAL",
-        description="""Any financially-related sensitive information or Cardholder Data (CHD). E.g., banking account numbers, credit card numbers, International Banking Account Numbers (IBAN), SWIFT codes, etc.""")
+        description="""Any financially-related sensitive information or Cardholder Data (CHD). E.g.,
+banking account numbers, credit card numbers, International Banking Account
+Numbers (IBAN), SWIFT codes, etc.""")
     BUSINESS = PermissibleValue(
         text="BUSINESS",
-        description="""Any business-specific sensitive data such as intellectual property, trademarks, copyrights, human resource data, Board of Directors meeting minutes, and similar.""")
+        description="""Any business-specific sensitive data such as intellectual property, trademarks,
+copyrights, human resource data, Board of Directors meeting minutes, and
+similar.""")
     MILITARY_AND_LAW_ENFORCEMENT = PermissibleValue(
         text="MILITARY_AND_LAW_ENFORCEMENT",
-        description="""Any mission-specific sensitive data for military, law enforcement, or other government agencies such as specifically classified data, weapon systems information, or other planning data.""")
+        description="""Any mission-specific sensitive data for military, law enforcement, or other
+government agencies such as specifically classified data, weapon systems
+information, or other planning data.""")
     SECURITY = PermissibleValue(
         text="SECURITY",
-        description="""Any sensitive security-related data such as passwords, passkeys, IP addresses, API keys, credentials and similar secrets. E.g., AWS Access Secret Key, SaaS API Keys, user passwords, database credentials, etc.""")
+        description="""Any sensitive security-related data such as passwords, passkeys, IP addresses,
+API keys, credentials and similar secrets. E.g., AWS Access Secret Key, SaaS
+API Keys, user passwords, database credentials, etc.""")
     OTHER = PermissibleValue(
         text="OTHER",
-        description="""Any other type of data classification or a multi-variate classification made up of several other classification categories.""")
+        description="""Any other type of data classification or a multi-variate classification made up
+of several other classification categories.""")
 
     _defn = EnumDefinition(
         name="DataClassificationCategoryIdEnum",
@@ -20575,7 +21493,8 @@ class DigitalSignatureStateIdEnum(EnumDefinitionImpl):
         description="The digital signature is valid.")
     EXPIRED = PermissibleValue(
         text="EXPIRED",
-        description="""The digital signature is invalid because its timestamp does not fall within the certificate's validity period.""")
+        description="""The digital signature is invalid because its timestamp does not fall within the
+certificate's validity period.""")
     REVOKED = PermissibleValue(
         text="REVOKED",
         description="The digital signature is invalid due to certificate revocation.")
@@ -20587,16 +21506,21 @@ class DigitalSignatureStateIdEnum(EnumDefinitionImpl):
         description="The digital signature state is pending.")
     UNTRUSTED = PermissibleValue(
         text="UNTRUSTED",
-        description="""The digital signature is invalid because the certificate is rooted in an untrusted CA or is an untrusted self-signed certificate.""")
+        description="""The digital signature is invalid because the certificate is rooted in an
+untrusted CA or is an untrusted self-signed certificate.""")
     DISTRUSTED = PermissibleValue(
         text="DISTRUSTED",
-        description="""The digital signature is invalid because the certificate is explicitly distrusted. Note that whereas revocation is global, distrust reflects local IT/security policy.""")
+        description="""The digital signature is invalid because the certificate is explicitly
+distrusted. Note that whereas revocation is global, distrust reflects local
+IT/security policy.""")
     WRONGUSAGE = PermissibleValue(
         text="WRONGUSAGE",
-        description="""The digital signature is invalid because the certificate is not intended for code signing purposes.""")
+        description="""The digital signature is invalid because the certificate is not intended for
+code signing purposes.""")
     BAD = PermissibleValue(
         text="BAD",
-        description="""The digital signature is cryptographically invalid, e.g. a mismatched digest. This indicates possible tampering.""")
+        description="""The digital signature is cryptographically invalid, e.g. a mismatched digest.
+This indicates possible tampering.""")
     BROKEN = PermissibleValue(
         text="BROKEN",
         description="The digital signature is malformed and could not be processed.")
@@ -20605,7 +21529,8 @@ class DigitalSignatureStateIdEnum(EnumDefinitionImpl):
         description="The state is unknown.")
     OTHER = PermissibleValue(
         text="OTHER",
-        description="""The state is not mapped. See the <code>state</code> attribute, which contains a data source specific value.""")
+        description="""The state is not mapped. See the <code>state</code> attribute, which contains a
+data source specific value.""")
 
     _defn = EnumDefinition(
         name="DigitalSignatureStateIdEnum",
@@ -20639,7 +21564,8 @@ class DnsAnswerFlagIdsEnum(EnumDefinitionImpl):
         description="The flag is unknown.")
     OTHER = PermissibleValue(
         text="OTHER",
-        description="""The flag is not mapped. See the <code>flags</code> attribute, which contains a data source specific value.""")
+        description="""The flag is not mapped. See the <code>flags</code> attribute, which contains a
+data source specific value.""")
 
     _defn = EnumDefinition(
         name="DnsAnswerFlagIdsEnum",
@@ -20670,7 +21596,8 @@ class DomainContactTypeIdEnum(EnumDefinitionImpl):
         description="The type is unknown.")
     OTHER = PermissibleValue(
         text="OTHER",
-        description="""The type is not mapped. See the <code>type</code> attribute, which contains a data source specific value.""")
+        description="""The type is not mapped. See the <code>type</code> attribute, which contains a
+data source specific value.""")
 
     _defn = EnumDefinition(
         name="DomainContactTypeIdEnum",
@@ -20704,7 +21631,8 @@ class EncryptionDetailsAlgorithmIdEnum(EnumDefinitionImpl):
         description="The algorithm is unknown.")
     OTHER = PermissibleValue(
         text="OTHER",
-        description="""The algorithm is not mapped. See the <code>algorithm</code> attribute, which contains a data source specific value.""")
+        description="""The algorithm is not mapped. See the <code>algorithm</code> attribute, which
+contains a data source specific value.""")
 
     _defn = EnumDefinition(
         name="EncryptionDetailsAlgorithmIdEnum",
@@ -20717,55 +21645,80 @@ class EndpointTypeIdEnum(EnumDefinitionImpl):
     """
     SERVER = PermissibleValue(
         text="SERVER",
-        description="A <a target='_blank' href='https://d3fend.mitre.org/dao/artifact/d3f:Server/'>server</a>.")
+        description="""A <a target='_blank'
+href='https://d3fend.mitre.org/dao/artifact/d3f:Server/'>server</a>.""")
     DESKTOP = PermissibleValue(
         text="DESKTOP",
-        description="""A <a target='_blank' href='https://d3fend.mitre.org/dao/artifact/d3f:DesktopComputer/'>desktop computer</a>.""")
+        description="""A <a target='_blank'
+href='https://d3fend.mitre.org/dao/artifact/d3f:DesktopComputer/'>desktop
+computer</a>.""")
     LAPTOP = PermissibleValue(
         text="LAPTOP",
-        description="""A <a target='_blank' href='https://d3fend.mitre.org/dao/artifact/d3f:LaptopComputer/'>laptop computer</a>.""")
+        description="""A <a target='_blank'
+href='https://d3fend.mitre.org/dao/artifact/d3f:LaptopComputer/'>laptop
+computer</a>.""")
     TABLET = PermissibleValue(
         text="TABLET",
-        description="""A <a target='_blank' href='https://d3fend.mitre.org/dao/artifact/d3f:TabletComputer/'>tablet computer</a>.""")
+        description="""A <a target='_blank'
+href='https://d3fend.mitre.org/dao/artifact/d3f:TabletComputer/'>tablet
+computer</a>.""")
     MOBILE = PermissibleValue(
         text="MOBILE",
-        description="""A <a target='_blank' href='https://d3fend.mitre.org/dao/artifact/d3f:MobilePhone/'>mobile phone</a>.""")
+        description="""A <a target='_blank'
+href='https://d3fend.mitre.org/dao/artifact/d3f:MobilePhone/'>mobile phone</a>.""")
     VIRTUAL = PermissibleValue(
         text="VIRTUAL",
-        description="""A <a target='_blank' href='https://d3fend.mitre.org/dao/artifact/d3f:VirtualizationSoftware/'>virtual machine</a>.""")
+        description="""A <a target='_blank'
+href='https://d3fend.mitre.org/dao/artifact/d3f:VirtualizationSoftware/'>virtual
+machine</a>.""")
     IOT = PermissibleValue(
         text="IOT",
-        description="""An <a target='_blank' href='https://www.techtarget.com/iotagenda/definition/IoT-device'>IOT (Internet of Things) device</a>.""")
+        description="""An <a target='_blank'
+href='https://www.techtarget.com/iotagenda/definition/IoT-device'>IOT (Internet
+of Things) device</a>.""")
     BROWSER = PermissibleValue(
         text="BROWSER",
-        description="""A <a target='_blank' href='https://d3fend.mitre.org/dao/artifact/d3f:Browser/'>web browser</a>.""")
+        description="""A <a target='_blank'
+href='https://d3fend.mitre.org/dao/artifact/d3f:Browser/'>web browser</a>.""")
     FIREWALL = PermissibleValue(
         text="FIREWALL",
-        description="""A <a target='_blank' href='https://d3fend.mitre.org/dao/artifact/d3f:Firewall/'>networking firewall</a>.""")
+        description="""A <a target='_blank'
+href='https://d3fend.mitre.org/dao/artifact/d3f:Firewall/'>networking
+firewall</a>.""")
     SWITCH = PermissibleValue(
         text="SWITCH",
-        description="""A <a target='_blank' href='https://d3fend.mitre.org/dao/artifact/d3f:Switch/'>networking switch</a>.""")
+        description="""A <a target='_blank'
+href='https://d3fend.mitre.org/dao/artifact/d3f:Switch/'>networking switch</a>.""")
     HUB = PermissibleValue(
         text="HUB",
-        description="A <a target='_blank' href='https://en.wikipedia.org/wiki/Ethernet_hub'>networking hub</a>.")
+        description="""A <a target='_blank'
+href='https://en.wikipedia.org/wiki/Ethernet_hub'>networking hub</a>.""")
     ROUTER = PermissibleValue(
         text="ROUTER",
-        description="""A <a target='_blank' href='https://d3fend.mitre.org/dao/artifact/d3f:Router/'>networking router</a>.""")
+        description="""A <a target='_blank'
+href='https://d3fend.mitre.org/dao/artifact/d3f:Router/'>networking router</a>.""")
     IDS = PermissibleValue(
         text="IDS",
-        description="""An <a target='_blank' href='https://d3fend.mitre.org/dao/artifact/d3f:IntrusionDetectionSystem/'>intrusion detection system</a>.""")
+        description="""An <a target='_blank'
+href='https://d3fend.mitre.org/dao/artifact/d3f:IntrusionDetectionSystem/'>intrusion
+detection system</a>.""")
     IPS = PermissibleValue(
         text="IPS",
-        description="""An <a target='_blank' href='https://d3fend.mitre.org/dao/artifact/d3f:IntrusionPreventionSystem/'>intrusion prevention system</a>.""")
+        description="""An <a target='_blank'
+href='https://d3fend.mitre.org/dao/artifact/d3f:IntrusionPreventionSystem/'>intrusion
+prevention system</a>.""")
     LOAD_BALANCER = PermissibleValue(
         text="LOAD_BALANCER",
-        description="""A <a target='_blank' href='https://en.wikipedia.org/wiki/Load_balancing_(computing)'>Load Balancer device.</a>""")
+        description="""A <a target='_blank'
+href='https://en.wikipedia.org/wiki/Load_balancing_(computing)'>Load Balancer
+device.</a>""")
     UNKNOWN = PermissibleValue(
         text="UNKNOWN",
         description="The type is unknown.")
     OTHER = PermissibleValue(
         text="OTHER",
-        description="""The type is not mapped. See the <code>type</code> attribute, which contains a data source specific value.""")
+        description="""The type is not mapped. See the <code>type</code> attribute, which contains a
+data source specific value.""")
 
     _defn = EnumDefinition(
         name="EndpointTypeIdEnum",
@@ -20774,10 +21727,11 @@ class EndpointTypeIdEnum(EnumDefinitionImpl):
 
 class EvidencesVerdictIdEnum(EnumDefinitionImpl):
     """
-    The normalized verdict (or status) ID of the evidence associated with the security detection. For example,
-    Microsoft Graph Security Alerts contain a <code>verdict</code> enumeration for each type of <code>evidence</code>
-    associated with the Alert. This is typically set by an automated investigation process or an analyst/investigator
-    assigned to the finding.
+    The normalized verdict (or status) ID of the evidence associated with the
+    security detection. For example, Microsoft Graph Security Alerts contain a
+    <code>verdict</code> enumeration for each type of <code>evidence</code>
+    associated with the Alert. This is typically set by an automated investigation
+    process or an analyst/investigator assigned to the finding.
     """
     UNKNOWN = PermissibleValue(
         text="UNKNOWN",
@@ -20793,10 +21747,12 @@ class EvidencesVerdictIdEnum(EnumDefinitionImpl):
         description="The verdict for the evidence is that is should be Disregarded.")
     SUSPICIOUS = PermissibleValue(
         text="SUSPICIOUS",
-        description="The verdict for the evidence is that the behavior has been identified as Suspicious.")
+        description="""The verdict for the evidence is that the behavior has been identified as
+Suspicious.""")
     BENIGN = PermissibleValue(
         text="BENIGN",
-        description="The verdict for the evidence is that the behavior has been identified as Benign.")
+        description="""The verdict for the evidence is that the behavior has been identified as
+Benign.""")
     TEST = PermissibleValue(
         text="TEST",
         description="The evidence is part of a Test, or other sanctioned behavior(s).")
@@ -20805,26 +21761,34 @@ class EvidencesVerdictIdEnum(EnumDefinitionImpl):
         description="There is insufficient data to render a verdict on the evidence.")
     SECURITY_RISK = PermissibleValue(
         text="SECURITY_RISK",
-        description="The verdict for the evidence is that the behavior has been identified as a Security Risk.")
+        description="""The verdict for the evidence is that the behavior has been identified as a
+Security Risk.""")
     MANAGED_EXTERNALLY = PermissibleValue(
         text="MANAGED_EXTERNALLY",
-        description="The verdict for the evidence is Managed Externally, such as in a case management tool.")
+        description="""The verdict for the evidence is Managed Externally, such as in a case
+management tool.""")
     DUPLICATE = PermissibleValue(
         text="DUPLICATE",
         description="This evidence duplicates existing evidence related to this finding.")
     OTHER = PermissibleValue(
         text="OTHER",
-        description="""The type is not mapped. See the <code>type</code> attribute, which contains a data source specific value.""")
+        description="""The type is not mapped. See the <code>type</code> attribute, which contains a
+data source specific value.""")
 
     _defn = EnumDefinition(
         name="EvidencesVerdictIdEnum",
-        description="""The normalized verdict (or status) ID of the evidence associated with the security detection. For example, Microsoft Graph Security Alerts contain a <code>verdict</code> enumeration for each type of <code>evidence</code> associated with the Alert. This is typically set by an automated investigation process or an analyst/investigator assigned to the finding.""",
+        description="""The normalized verdict (or status) ID of the evidence associated with the
+security detection. For example, Microsoft Graph Security Alerts contain a
+<code>verdict</code> enumeration for each type of <code>evidence</code>
+associated with the Alert. This is typically set by an automated investigation
+process or an analyst/investigator assigned to the finding.""",
     )
 
 class FileTypeIdEnum(EnumDefinitionImpl):
     """
-    The file type ID. Note the distinction between a <code>Regular File</code> and an <code>Executable File</code>. If
-    the distinction is not known, or not indicated by the log, use <code>Regular File</code>. In this case, it should
+    The file type ID. Note the distinction between a <code>Regular File</code> and
+    an <code>Executable File</code>. If the distinction is not known, or not
+    indicated by the log, use <code>Regular File</code>. In this case, it should
     not be assumed that a Regular File is not executable.
     """
     UNKNOWN = PermissibleValue(
@@ -20860,12 +21824,16 @@ class FileTypeIdEnum(EnumDefinitionImpl):
 
     _defn = EnumDefinition(
         name="FileTypeIdEnum",
-        description="""The file type ID. Note the distinction between a <code>Regular File</code> and an <code>Executable File</code>. If the distinction is not known, or not indicated by the log, use <code>Regular File</code>. In this case, it should not be assumed that a Regular File is not executable.""",
+        description="""The file type ID. Note the distinction between a <code>Regular File</code> and
+an <code>Executable File</code>. If the distinction is not known, or not
+indicated by the log, use <code>Regular File</code>. In this case, it should
+not be assumed that a Regular File is not executable.""",
     )
 
 class FingerprintAlgorithmIdEnum(EnumDefinitionImpl):
     """
-    The identifier of the normalized algorithm or scheme, which was used to create the fingerprint.
+    The identifier of the normalized algorithm or scheme, which was used to create
+    the fingerprint.
     """
     UNKNOWN = PermissibleValue(
         text="UNKNOWN",
@@ -20884,13 +21852,15 @@ class FingerprintAlgorithmIdEnum(EnumDefinitionImpl):
         description="Secure Hash Algorithm 2 producing a 512-bit (64-byte) hash value.")
     CTPH = PermissibleValue(
         text="CTPH",
-        description="The ssdeep generated fuzzy checksum. Also known as Context Triggered Piecewise Hash (CTPH).")
+        description="""The ssdeep generated fuzzy checksum. Also known as Context Triggered Piecewise
+Hash (CTPH).""")
     TLSH = PermissibleValue(
         text="TLSH",
         description="The TLSH fuzzy hashing algorithm.")
     QUICKXORHASH = PermissibleValue(
         text="QUICKXORHASH",
-        description="""Microsoft simple non-cryptographic hash algorithm that works by XORing the bytes in a circular-shifting fashion.""")
+        description="""Microsoft simple non-cryptographic hash algorithm that works by XORing the
+bytes in a circular-shifting fashion.""")
     SHA_224 = PermissibleValue(
         text="SHA_224",
         description="Secure Hash Algorithm 2 producing a 224-bit (28-byte) hash value.")
@@ -20899,10 +21869,12 @@ class FingerprintAlgorithmIdEnum(EnumDefinitionImpl):
         description="Secure Hash Algorithm 2 producing a 384-bit (48-byte) hash value.")
     SHA_512_224 = PermissibleValue(
         text="SHA_512_224",
-        description="""Secure Hash Algorithm 2 producing a 512-bit (64-byte) hash value truncated to a 224-bit (28-byte) hash value.""")
+        description="""Secure Hash Algorithm 2 producing a 512-bit (64-byte) hash value truncated to a
+224-bit (28-byte) hash value.""")
     SHA_512_256 = PermissibleValue(
         text="SHA_512_256",
-        description="""Secure Hash Algorithm 2 producing a 512-bit (64-byte) hash value truncated to a 256-bit (32-byte) hash value.""")
+        description="""Secure Hash Algorithm 2 producing a 512-bit (64-byte) hash value truncated to a
+256-bit (32-byte) hash value.""")
     SHA3_224 = PermissibleValue(
         text="SHA3_224",
         description="Secure Hash Algorithm 3 producing a 224-bit (28-byte) hash value.")
@@ -20923,20 +21895,24 @@ class FingerprintAlgorithmIdEnum(EnumDefinitionImpl):
         description="xxHash H3 producing a 128-bit hash value.")
     IMPHASH = PermissibleValue(
         text="IMPHASH",
-        description="""Import hash (imphash) based on the import table of a Portable Executable (PE) file producing a 128-bit (16-byte) hash value.""")
+        description="""Import hash (imphash) based on the import table of a Portable Executable (PE)
+file producing a 128-bit (16-byte) hash value.""")
     NPF = PermissibleValue(
         text="NPF",
-        description="Network Protocol Fingerprint (NPF) used to identify network protocols and applications.")
+        description="""Network Protocol Fingerprint (NPF) used to identify network protocols and
+applications.""")
     HASSH = PermissibleValue(
         text="HASSH",
-        description="""HASSH is a network fingerprinting standard which can be used to identify specific SSH client and server implementations.""")
+        description="""HASSH is a network fingerprinting standard which can be used to identify
+specific SSH client and server implementations.""")
     OTHER = PermissibleValue(
         text="OTHER",
         description="Other")
 
     _defn = EnumDefinition(
         name="FingerprintAlgorithmIdEnum",
-        description="The identifier of the normalized algorithm or scheme, which was used to create the fingerprint.",
+        description="""The identifier of the normalized algorithm or scheme, which was used to create
+the fingerprint.""",
     )
 
 class GpuInfoBusTypeIdEnum(EnumDefinitionImpl):
@@ -21000,58 +21976,72 @@ class GpuInfoVramModeIdEnum(EnumDefinitionImpl):
 
 class GraphQueryLanguageIdEnum(EnumDefinitionImpl):
     """
-    The normalized identifier of a graph query language that can be used to interact with the graph.
+    The normalized identifier of a graph query language that can be used to
+    interact with the graph.
     """
     CYPHER = PermissibleValue(
         text="CYPHER",
-        description="""A declarative graph query language developed by Neo4j that allows for expressive and efficient querying of graph databases.""")
+        description="""A declarative graph query language developed by Neo4j that allows for
+expressive and efficient querying of graph databases.""")
     GRAPHQL = PermissibleValue(
         text="GRAPHQL",
-        description="""A query language for APIs that enables declarative data fetching and provides a complete description of the data in the API.""")
+        description="""A query language for APIs that enables declarative data fetching and provides a
+complete description of the data in the API.""")
     GREMLIN = PermissibleValue(
         text="GREMLIN",
-        description="""A graph traversal language and virtual machine developed by Apache TinkerPop that enables graph computing across different graph databases.""")
+        description="""A graph traversal language and virtual machine developed by Apache TinkerPop
+that enables graph computing across different graph databases.""")
     GQL = PermissibleValue(
         text="GQL",
-        description="""An ISO standard graph query language designed to provide a unified way to query graph databases.""")
+        description="""An ISO standard graph query language designed to provide a unified way to query
+graph databases.""")
     G_CORE = PermissibleValue(
         text="G_CORE",
-        description="""A graph query language that combines features from existing languages while adding support for paths as first-class citizens.""")
+        description="""A graph query language that combines features from existing languages while
+adding support for paths as first-class citizens.""")
     PGQL = PermissibleValue(
         text="PGQL",
-        description="""Property Graph Query Language developed by Oracle that provides SQL-like syntax for querying property graphs.""")
+        description="""Property Graph Query Language developed by Oracle that provides SQL-like syntax
+for querying property graphs.""")
     SPARQL = PermissibleValue(
         text="SPARQL",
-        description="""A semantic query language for databases that enables querying and manipulating data stored in RDF format.""")
+        description="""A semantic query language for databases that enables querying and manipulating
+data stored in RDF format.""")
     UNKNOWN = PermissibleValue(
         text="UNKNOWN",
         description="The Query Language is unknown.")
     OTHER = PermissibleValue(
         text="OTHER",
-        description="""The Query Language is not mapped. See the <code>query_language</code> attribute, which contains a data source specific value.""")
+        description="""The Query Language is not mapped. See the <code>query_language</code>
+attribute, which contains a data source specific value.""")
 
     _defn = EnumDefinition(
         name="GraphQueryLanguageIdEnum",
-        description="The normalized identifier of a graph query language that can be used to interact with the graph.",
+        description="""The normalized identifier of a graph query language that can be used to
+interact with the graph.""",
     )
 
 class HttpRequestHttpMethodEnum(EnumDefinitionImpl):
     """
-    The <a target='_blank' href='https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods'>HTTP request method</a>
-    indicates the desired action to be performed for a given resource.
+    The <a target='_blank'
+    href='https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods'>HTTP request
+    method</a> indicates the desired action to be performed for a given resource.
     """
     CONNECT = PermissibleValue(
         text="CONNECT",
-        description="The CONNECT method establishes a tunnel to the server identified by the target resource.")
+        description="""The CONNECT method establishes a tunnel to the server identified by the target
+resource.""")
     DELETE = PermissibleValue(
         text="DELETE",
         description="The DELETE method deletes the specified resource.")
     GET = PermissibleValue(
         text="GET",
-        description="""The GET method requests a representation of the specified resource. Requests using GET should only retrieve data.""")
+        description="""The GET method requests a representation of the specified resource. Requests
+using GET should only retrieve data.""")
     HEAD = PermissibleValue(
         text="HEAD",
-        description="The HEAD method asks for a response identical to a GET request, but without the response body.")
+        description="""The HEAD method asks for a response identical to a GET request, but without the
+response body.""")
     OPTIONS = PermissibleValue(
         text="OPTIONS",
         description="The OPTIONS method describes the communication options for the target resource.")
@@ -21060,22 +22050,28 @@ class HttpRequestHttpMethodEnum(EnumDefinitionImpl):
         description="The PATCH method applies partial modifications to a resource.")
     POST = PermissibleValue(
         text="POST",
-        description="""The POST method submits an entity to the specified resource, often causing a change in state or side effects on the server.""")
+        description="""The POST method submits an entity to the specified resource, often causing a
+change in state or side effects on the server.""")
     PUT = PermissibleValue(
         text="PUT",
-        description="""The PUT method replaces all current representations of the target resource with the request payload.""")
+        description="""The PUT method replaces all current representations of the target resource with
+the request payload.""")
     TRACE = PermissibleValue(
         text="TRACE",
-        description="The TRACE method performs a message loop-back test along the path to the target resource.")
+        description="""The TRACE method performs a message loop-back test along the path to the target
+resource.""")
 
     _defn = EnumDefinition(
         name="HttpRequestHttpMethodEnum",
-        description="""The <a target='_blank' href='https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods'>HTTP request method</a> indicates the desired action to be performed for a given resource.""",
+        description="""The <a target='_blank'
+href='https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods'>HTTP request
+method</a> indicates the desired action to be performed for a given resource.""",
     )
 
 class IdpStateIdEnum(EnumDefinitionImpl):
     """
-    The normalized state ID of the Identity Provider to reflect its configuration or activation status.
+    The normalized state ID of the Identity Provider to reflect its configuration
+    or activation status.
     """
     UNKNOWN = PermissibleValue(
         text="UNKNOWN",
@@ -21094,11 +22090,13 @@ class IdpStateIdEnum(EnumDefinitionImpl):
         description="The Identity Provider is in a Deleted state.")
     OTHER = PermissibleValue(
         text="OTHER",
-        description="""The configuration state of the Identity Provider is not mapped. See the <code>state</code> attribute, which contains a data source specific value.""")
+        description="""The configuration state of the Identity Provider is not mapped. See the
+<code>state</code> attribute, which contains a data source specific value.""")
 
     _defn = EnumDefinition(
         name="IdpStateIdEnum",
-        description="The normalized state ID of the Identity Provider to reflect its configuration or activation status.",
+        description="""The normalized state ID of the Identity Provider to reflect its configuration
+or activation status.""",
     )
 
 class Ja4FingerprintTypeIdEnum(EnumDefinitionImpl):
@@ -21187,7 +22185,8 @@ class KernelTypeIdEnum(EnumDefinitionImpl):
         description="The type is unknown.")
     OTHER = PermissibleValue(
         text="OTHER",
-        description="""The type is not mapped. See the <code>type</code> attribute, which contains a data source specific value.""")
+        description="""The type is not mapped. See the <code>type</code> attribute, which contains a
+data source specific value.""")
 
     _defn = EnumDefinition(
         name="KernelTypeIdEnum",
@@ -21266,7 +22265,8 @@ class MalwareClassificationIdsEnum(EnumDefinitionImpl):
         description="The classification is unknown.")
     OTHER = PermissibleValue(
         text="OTHER",
-        description="""The classification is not mapped. See the <code>classifications</code> attribute, which contains a data source specific value.""")
+        description="""The classification is not mapped. See the <code>classifications</code>
+attribute, which contains a data source specific value.""")
 
     _defn = EnumDefinition(
         name="MalwareClassificationIdsEnum",
@@ -21275,46 +22275,59 @@ class MalwareClassificationIdsEnum(EnumDefinitionImpl):
 
 class ManagedEntityTypeIdEnum(EnumDefinitionImpl):
     """
-    The type of the Managed Entity. It is recommended to also populate the <code>type</code> attribute with the
-    associated label, or the source specific name if <code>Other</code>.
+    The type of the Managed Entity. It is recommended to also populate the
+    <code>type</code> attribute with the associated label, or the source specific
+    name if <code>Other</code>.
     """
     DEVICE = PermissibleValue(
         text="DEVICE",
-        description="""A managed Device entity.  This item corresponds to population of the <code>device</code> attribute.""")
+        description="""A managed Device entity.  This item corresponds to population of the
+<code>device</code> attribute.""")
     USER = PermissibleValue(
         text="USER",
-        description="""A managed User entity.  This item corresponds to population of the <code>user</code> attribute.""")
+        description="""A managed User entity.  This item corresponds to population of the
+<code>user</code> attribute.""")
     GROUP = PermissibleValue(
         text="GROUP",
-        description="""A managed Group entity.  This item corresponds to population of the <code>group</code> attribute.""")
+        description="""A managed Group entity.  This item corresponds to population of the
+<code>group</code> attribute.""")
     ORGANIZATION = PermissibleValue(
         text="ORGANIZATION",
-        description="""A managed Organization entity.  This item corresponds to population of the <code>org</code> attribute.""")
+        description="""A managed Organization entity.  This item corresponds to population of the
+<code>org</code> attribute.""")
     POLICY = PermissibleValue(
         text="POLICY",
-        description="""A managed Policy entity.  This item corresponds to population of the <code>policy</code> attribute.""")
+        description="""A managed Policy entity.  This item corresponds to population of the
+<code>policy</code> attribute.""")
     EMAIL = PermissibleValue(
         text="EMAIL",
-        description="""A managed Email entity.  This item corresponds to population of the <code>email</code> attribute.""")
+        description="""A managed Email entity.  This item corresponds to population of the
+<code>email</code> attribute.""")
     NETWORK_ZONE = PermissibleValue(
         text="NETWORK_ZONE",
-        description="""A managed Network Zone entity. Populate the <code>name</code> attribute with the zone name and/or the <code>uid</code> attribute with the zone ID. Additional zone information can be added to the <code>data</code> attribute.""")
+        description="""A managed Network Zone entity. Populate the <code>name</code> attribute with
+the zone name and/or the <code>uid</code> attribute with the zone ID.
+Additional zone information can be added to the <code>data</code> attribute.""")
     UNKNOWN = PermissibleValue(
         text="UNKNOWN",
         description="The type is unknown.")
     OTHER = PermissibleValue(
         text="OTHER",
-        description="""The type is not mapped. See the <code>type</code> attribute, which contains a data source specific value.""")
+        description="""The type is not mapped. See the <code>type</code> attribute, which contains a
+data source specific value.""")
 
     _defn = EnumDefinition(
         name="ManagedEntityTypeIdEnum",
-        description="""The type of the Managed Entity. It is recommended to also populate the <code>type</code> attribute with the associated label, or the source specific name if <code>Other</code>.""",
+        description="""The type of the Managed Entity. It is recommended to also populate the
+<code>type</code> attribute with the associated label, or the source specific
+name if <code>Other</code>.""",
     )
 
 class MessageContextAiRoleIdEnum(EnumDefinitionImpl):
     """
-    Specifies the functional role of the AI within the context of this message, such as retrieving information,
-    assisting reasoning, executing a tool, or generating content.
+    Specifies the functional role of the AI within the context of this message,
+    such as retrieving information, assisting reasoning, executing a tool, or
+    generating content.
     """
     UNKNOWN = PermissibleValue(
         text="UNKNOWN",
@@ -21336,14 +22349,17 @@ class MessageContextAiRoleIdEnum(EnumDefinitionImpl):
         description="The component coordinating multiple agents or tools.")
     RETRIEVER = PermissibleValue(
         text="RETRIEVER",
-        description="""A component that retrieves information or context from a knowledge source (e.g., vector DB, search system, or API).""")
+        description="""A component that retrieves information or context from a knowledge source
+(e.g., vector DB, search system, or API).""")
     OTHER = PermissibleValue(
         text="OTHER",
         description="Other role type not covered above.")
 
     _defn = EnumDefinition(
         name="MessageContextAiRoleIdEnum",
-        description="""Specifies the functional role of the AI within the context of this message, such as retrieving information, assisting reasoning, executing a tool, or generating content.""",
+        description="""Specifies the functional role of the AI within the context of this message,
+such as retrieving information, assisting reasoning, executing a tool, or
+generating content.""",
     )
 
 class ModuleLoadTypeIdEnum(EnumDefinitionImpl):
@@ -21352,25 +22368,30 @@ class ModuleLoadTypeIdEnum(EnumDefinitionImpl):
     """
     STANDARD = PermissibleValue(
         text="STANDARD",
-        description="A normal module loaded by the normal windows loading mechanism i.e. LoadLibrary.")
+        description="""A normal module loaded by the normal windows loading mechanism i.e.
+LoadLibrary.""")
     NON_STANDARD = PermissibleValue(
         text="NON_STANDARD",
-        description="""A module loaded in a way avoidant of normal windows procedures. i.e. Bootstrapped Loading/Manual Dll Loading.""")
+        description="""A module loaded in a way avoidant of normal windows procedures. i.e.
+Bootstrapped Loading/Manual Dll Loading.""")
     SHELLCODE = PermissibleValue(
         text="SHELLCODE",
-        description="""A raw module in process memory that is READWRITE_EXECUTE and had a thread started in its range.""")
+        description="""A raw module in process memory that is READWRITE_EXECUTE and had a thread
+started in its range.""")
     MAPPED = PermissibleValue(
         text="MAPPED",
         description="A memory mapped file, typically created with CreatefileMapping/MapViewOfFile.")
     NONSTANDARD_BACKED = PermissibleValue(
         text="NONSTANDARD_BACKED",
-        description="A module loaded in a non standard way. However, GetModuleFileName succeeds on this allocation.")
+        description="""A module loaded in a non standard way. However, GetModuleFileName succeeds on
+this allocation.""")
     UNKNOWN = PermissibleValue(
         text="UNKNOWN",
         description="The load type is unknown.")
     OTHER = PermissibleValue(
         text="OTHER",
-        description="""The load type is not mapped. See the <code>load_type</code> attribute, which contains a data source specific value.""")
+        description="""The load type is not mapped. See the <code>load_type</code> attribute, which
+contains a data source specific value.""")
 
     _defn = EnumDefinition(
         name="ModuleLoadTypeIdEnum",
@@ -21457,7 +22478,8 @@ class PeripheralDeviceTypeIdEnum(EnumDefinitionImpl):
         description="The peripheral device is a webcam.")
     OTHER = PermissibleValue(
         text="OTHER",
-        description="""The peripheral device type is not mapped. See the <code>type</code> attribute which contains an event source specific value.""")
+        description="""The peripheral device type is not mapped. See the <code>type</code> attribute
+which contains an event source specific value.""")
 
     _defn = EnumDefinition(
         name="PeripheralDeviceTypeIdEnum",
@@ -21466,14 +22488,16 @@ class PeripheralDeviceTypeIdEnum(EnumDefinitionImpl):
 
 class ResourceDetailsRoleIdEnum(EnumDefinitionImpl):
     """
-    The normalized identifier of the resource's role in the context of the event or finding.
+    The normalized identifier of the resource's role in the context of the event or
+    finding.
     """
     TARGET = PermissibleValue(
         text="TARGET",
         description="The resource is the primary target or subject of the event/finding.")
     ACTOR = PermissibleValue(
         text="ACTOR",
-        description="The resource is acting as the initiator or performer in the context of the event/finding.")
+        description="""The resource is acting as the initiator or performer in the context of the
+event/finding.""")
     AFFECTED = PermissibleValue(
         text="AFFECTED",
         description="The resource was impacted or affected by the event/finding.")
@@ -21485,11 +22509,13 @@ class ResourceDetailsRoleIdEnum(EnumDefinitionImpl):
         description="The role is unknown.")
     OTHER = PermissibleValue(
         text="OTHER",
-        description="The role is not mapped. See the role attribute, which contains a data source specific value.")
+        description="""The role is not mapped. See the role attribute, which contains a data source
+specific value.""")
 
     _defn = EnumDefinition(
         name="ResourceDetailsRoleIdEnum",
-        description="The normalized identifier of the resource's role in the context of the event or finding.",
+        description="""The normalized identifier of the resource's role in the context of the event or
+finding.""",
     )
 
 class ScanTypeIdEnum(EnumDefinitionImpl):
@@ -21522,7 +22548,8 @@ class ScanTypeIdEnum(EnumDefinitionImpl):
         description="The scan was triggered by an Early Launch Anti-Malware (ELAM) detection.")
     OTHER = PermissibleValue(
         text="OTHER",
-        description="""The scan type id is not mapped. See the <code>type</code> attribute, which contains a data source specific value.""")
+        description="""The scan type id is not mapped. See the <code>type</code> attribute, which
+contains a data source specific value.""")
 
     _defn = EnumDefinition(
         name="ScanTypeIdEnum",
@@ -21627,7 +22654,8 @@ class UserTypeIdEnum(EnumDefinitionImpl):
         description="Admin/root user account.")
     SYSTEM = PermissibleValue(
         text="SYSTEM",
-        description="System account. For example, Windows computer accounts with a trailing dollar sign ($).")
+        description="""System account. For example, Windows computer accounts with a trailing dollar
+sign ($).""")
     SERVICE = PermissibleValue(
         text="SERVICE",
         description="Service account. For example, Windows service account.")
@@ -21703,7 +22731,8 @@ class ApiActivityActivityIdEnum(EnumDefinitionImpl):
         description="The event activity is unknown.")
     OTHER = PermissibleValue(
         text="OTHER",
-        description="""The event activity is not mapped. See the <code>activity_name</code> attribute, which contains a data source specific value.""")
+        description="""The event activity is not mapped. See the <code>activity_name</code> attribute,
+which contains a data source specific value.""")
 
     _defn = EnumDefinition(
         name="ApiActivityActivityIdEnum",
@@ -21719,13 +22748,16 @@ class ApplicationErrorActivityIdEnum(EnumDefinitionImpl):
         description="The application has experienced an error.")
     TRANSLATION_ERROR = PermissibleValue(
         text="TRANSLATION_ERROR",
-        description="""The application has experienced an error translating (mapping) a raw event to OCSF. Including the original raw event in the raw_data field is highly recommended.""")
+        description="""The application has experienced an error translating (mapping) a raw event to
+OCSF. Including the original raw event in the raw_data field is highly
+recommended.""")
     UNKNOWN = PermissibleValue(
         text="UNKNOWN",
         description="The event activity is unknown.")
     OTHER = PermissibleValue(
         text="OTHER",
-        description="""The event activity is not mapped. See the <code>activity_name</code> attribute, which contains a data source specific value.""")
+        description="""The event activity is not mapped. See the <code>activity_name</code> attribute,
+which contains a data source specific value.""")
 
     _defn = EnumDefinition(
         name="ApplicationErrorActivityIdEnum",
@@ -21765,7 +22797,8 @@ class ApplicationLifecycleActivityIdEnum(EnumDefinitionImpl):
         description="The event activity is unknown.")
     OTHER = PermissibleValue(
         text="OTHER",
-        description="""The event activity is not mapped. See the <code>activity_name</code> attribute, which contains a data source specific value.""")
+        description="""The event activity is not mapped. See the <code>activity_name</code> attribute,
+which contains a data source specific value.""")
 
     _defn = EnumDefinition(
         name="ApplicationLifecycleActivityIdEnum",
@@ -21787,7 +22820,8 @@ class DatastoreActivityActivityIdEnum(EnumDefinitionImpl):
         description="The 'Connect' activity involves establishing a connection to the datastore.")
     QUERY = PermissibleValue(
         text="QUERY",
-        description="The 'Query' activity involves retrieving a filtered subset of data based on specific criteria.")
+        description="""The 'Query' activity involves retrieving a filtered subset of data based on
+specific criteria.""")
     WRITE = PermissibleValue(
         text="WRITE",
         description="The 'Write' activity involves writing specific data record details.")
@@ -21802,16 +22836,19 @@ class DatastoreActivityActivityIdEnum(EnumDefinitionImpl):
         description="The 'List' activity provides an overview of existing data records.")
     ENCRYPT = PermissibleValue(
         text="ENCRYPT",
-        description="The 'Encrypt' activity involves securing data by encrypting a specific data record.")
+        description="""The 'Encrypt' activity involves securing data by encrypting a specific data
+record.""")
     DECRYPT = PermissibleValue(
         text="DECRYPT",
-        description="The 'Decrypt' activity involves converting encrypted data back to its original format.")
+        description="""The 'Decrypt' activity involves converting encrypted data back to its original
+format.""")
     UNKNOWN = PermissibleValue(
         text="UNKNOWN",
         description="The event activity is unknown.")
     OTHER = PermissibleValue(
         text="OTHER",
-        description="""The event activity is not mapped. See the <code>activity_name</code> attribute, which contains a data source specific value.""")
+        description="""The event activity is not mapped. See the <code>activity_name</code> attribute,
+which contains a data source specific value.""")
 
     _defn = EnumDefinition(
         name="DatastoreActivityActivityIdEnum",
@@ -21897,13 +22934,15 @@ class FileHostingActivityIdEnum(EnumDefinitionImpl):
         description="Mark a file or folder to not sync with a computer.")
     ACCESS_CHECK = PermissibleValue(
         text="ACCESS_CHECK",
-        description="""Access check for a file. The <code>security_control</code> profile can be used to add the access check results.""")
+        description="""Access check for a file. The <code>security_control</code> profile can be used
+to add the access check results.""")
     UNKNOWN = PermissibleValue(
         text="UNKNOWN",
         description="The event activity is unknown.")
     OTHER = PermissibleValue(
         text="OTHER",
-        description="""The event activity is not mapped. See the <code>activity_name</code> attribute, which contains a data source specific value.""")
+        description="""The event activity is not mapped. See the <code>activity_name</code> attribute,
+which contains a data source specific value.""")
 
     _defn = EnumDefinition(
         name="FileHostingActivityIdEnum",
@@ -21928,7 +22967,9 @@ class ScanActivityActivityIdEnum(EnumDefinitionImpl):
         description="The allocated scan time was insufficient to complete the requested scan.")
     PAUSE_VIOLATION = PermissibleValue(
         text="PAUSE_VIOLATION",
-        description="""The scan was paused, either by the user or by program constraints (e.g. scans that are suspended during certain time intervals), and not resumed within the allotted time.""")
+        description="""The scan was paused, either by the user or by program constraints (e.g. scans
+that are suspended during certain time intervals), and not resumed within the
+allotted time.""")
     ERROR = PermissibleValue(
         text="ERROR",
         description="The scan could not be completed due to an internal error.")
@@ -21949,7 +22990,8 @@ class ScanActivityActivityIdEnum(EnumDefinitionImpl):
         description="The event activity is unknown.")
     OTHER = PermissibleValue(
         text="OTHER",
-        description="""The event activity is not mapped. See the <code>activity_name</code> attribute, which contains a data source specific value.""")
+        description="""The event activity is not mapped. See the <code>activity_name</code> attribute,
+which contains a data source specific value.""")
 
     _defn = EnumDefinition(
         name="ScanActivityActivityIdEnum",
@@ -21968,7 +23010,8 @@ class WebResourceAccessActivityActivityIdEnum(EnumDefinitionImpl):
         description="The incoming request does not have permission to the web resource.")
     ACCESS_REVOKE = PermissibleValue(
         text="ACCESS_REVOKE",
-        description="The incoming request's access has been revoked due to security policy enforcements.")
+        description="""The incoming request's access has been revoked due to security policy
+enforcements.""")
     ACCESS_ERROR = PermissibleValue(
         text="ACCESS_ERROR",
         description="An error occurred during processing the request.")
@@ -21977,7 +23020,8 @@ class WebResourceAccessActivityActivityIdEnum(EnumDefinitionImpl):
         description="The event activity is unknown.")
     OTHER = PermissibleValue(
         text="OTHER",
-        description="""The event activity is not mapped. See the <code>activity_name</code> attribute, which contains a data source specific value.""")
+        description="""The event activity is not mapped. See the <code>activity_name</code> attribute,
+which contains a data source specific value.""")
 
     _defn = EnumDefinition(
         name="WebResourceAccessActivityActivityIdEnum",
@@ -22017,7 +23061,8 @@ class WebResourcesActivityActivityIdEnum(EnumDefinitionImpl):
         description="The event activity is unknown.")
     OTHER = PermissibleValue(
         text="OTHER",
-        description="""The event activity is not mapped. See the <code>activity_name</code> attribute, which contains a data source specific value.""")
+        description="""The event activity is not mapped. See the <code>activity_name</code> attribute,
+which contains a data source specific value.""")
 
     _defn = EnumDefinition(
         name="WebResourcesActivityActivityIdEnum",
@@ -22039,7 +23084,8 @@ class DiscoveryEventActivityIdEnum(EnumDefinitionImpl):
         description="The event activity is unknown.")
     OTHER = PermissibleValue(
         text="OTHER",
-        description="""The event activity is not mapped. See the <code>activity_name</code> attribute, which contains a data source specific value.""")
+        description="""The event activity is not mapped. See the <code>activity_name</code> attribute,
+which contains a data source specific value.""")
 
     _defn = EnumDefinition(
         name="DiscoveryEventActivityIdEnum",
@@ -22061,7 +23107,8 @@ class DeviceConfigStateChangeStateIdEnum(EnumDefinitionImpl):
         description="Config State Changed to Enabled.")
     OTHER = PermissibleValue(
         text="OTHER",
-        description="""The Config Change is not mapped. See the <code>state</code> attribute, which contains data source specific values.""")
+        description="""The Config Change is not mapped. See the <code>state</code> attribute, which
+contains data source specific values.""")
 
     _defn = EnumDefinition(
         name="DeviceConfigStateChangeStateIdEnum",
@@ -22080,7 +23127,8 @@ class DiscoveryResultActivityIdEnum(EnumDefinitionImpl):
         description="The event activity is unknown.")
     OTHER = PermissibleValue(
         text="OTHER",
-        description="""The event activity is not mapped. See the <code>activity_name</code> attribute, which contains a data source specific value.""")
+        description="""The event activity is not mapped. See the <code>activity_name</code> attribute,
+which contains a data source specific value.""")
 
     _defn = EnumDefinition(
         name="DiscoveryResultActivityIdEnum",
@@ -22096,7 +23144,8 @@ class NetworkConnectionQueryStateIdEnum(EnumDefinitionImpl):
         description="The socket state is unknown.")
     ESTABLISHED = PermissibleValue(
         text="ESTABLISHED",
-        description="The socket has an established connection between a local application and a remote peer.")
+        description="""The socket has an established connection between a local application and a
+remote peer.""")
     SYN_SENT = PermissibleValue(
         text="SYN_SENT",
         description="The socket is actively trying to establish a connection to a remote peer.")
@@ -22105,31 +23154,43 @@ class NetworkConnectionQueryStateIdEnum(EnumDefinitionImpl):
         description="The socket has passively received a connection request from a remote peer.")
     FIN_WAIT1 = PermissibleValue(
         text="FIN_WAIT1",
-        description="""The socket connection has been closed by the local application, the remote peer has not yet acknowledged the close, and the system is waiting for it to close its half of the connection.""")
+        description="""The socket connection has been closed by the local application, the remote peer
+has not yet acknowledged the close, and the system is waiting for it to close
+its half of the connection.""")
     FIN_WAIT2 = PermissibleValue(
         text="FIN_WAIT2",
-        description="""The socket connection has been closed by the local application, the remote peer has acknowledged the close, and the system is waiting for it to close its half of the connection.""")
+        description="""The socket connection has been closed by the local application, the remote peer
+has acknowledged the close, and the system is waiting for it to close its half
+of the connection.""")
     TIME_WAIT = PermissibleValue(
         text="TIME_WAIT",
-        description="""The socket connection has been closed by the local application, the remote peer has closed its half of the connection, and the system is waiting to be sure that the remote peer received the last acknowledgement.""")
+        description="""The socket connection has been closed by the local application, the remote peer
+has closed its half of the connection, and the system is waiting to be sure
+that the remote peer received the last acknowledgement.""")
     CLOSED = PermissibleValue(
         text="CLOSED",
         description="The socket is not in use.")
     CLOSE_WAIT = PermissibleValue(
         text="CLOSE_WAIT",
-        description="""The socket connection has been closed by the remote peer, and the system is waiting for the local application to close its half of the connection.""")
+        description="""The socket connection has been closed by the remote peer, and the system is
+waiting for the local application to close its half of the connection.""")
     LAST_ACK = PermissibleValue(
         text="LAST_ACK",
-        description="""The socket connection has been closed by the remote peer, the local application has closed its half of the connection, and the system is waiting for the remote peer to acknowledge the close.""")
+        description="""The socket connection has been closed by the remote peer, the local application
+has closed its half of the connection, and the system is waiting for the remote
+peer to acknowledge the close.""")
     LISTEN = PermissibleValue(
         text="LISTEN",
         description="The socket is listening for incoming connections.")
     CLOSING = PermissibleValue(
         text="CLOSING",
-        description="""The socket connection has been closed by the local application and the remote peer simultaneously, and the remote peer has not yet acknowledged the close attempt of the local application.""")
+        description="""The socket connection has been closed by the local application and the remote
+peer simultaneously, and the remote peer has not yet acknowledged the close
+attempt of the local application.""")
     OTHER = PermissibleValue(
         text="OTHER",
-        description="""The state is not mapped. See the <code>state</code> attribute, which contains a data source specific value.""")
+        description="""The state is not mapped. See the <code>state</code> attribute, which contains a
+data source specific value.""")
 
     _defn = EnumDefinition(
         name="NetworkConnectionQueryStateIdEnum",
@@ -22148,16 +23209,19 @@ class DataSecurityFindingActivityIdEnum(EnumDefinitionImpl):
         description="An existing Data Security finding is updated with more information.")
     CLOSE = PermissibleValue(
         text="CLOSE",
-        description="""An existing Data Security finding is closed, this can be due to any resolution (e.g., True Positive, False Positive, etc.).""")
+        description="""An existing Data Security finding is closed, this can be due to any resolution
+(e.g., True Positive, False Positive, etc.).""")
     SUPPRESSED = PermissibleValue(
         text="SUPPRESSED",
-        description="""An existing Data Security finding is suppressed due to inaccurate detection techniques or a known true negative.""")
+        description="""An existing Data Security finding is suppressed due to inaccurate detection
+techniques or a known true negative.""")
     UNKNOWN = PermissibleValue(
         text="UNKNOWN",
         description="The event activity is unknown.")
     OTHER = PermissibleValue(
         text="OTHER",
-        description="""The event activity is not mapped. See the <code>activity_name</code> attribute, which contains a data source specific value.""")
+        description="""The event activity is not mapped. See the <code>activity_name</code> attribute,
+which contains a data source specific value.""")
 
     _defn = EnumDefinition(
         name="DataSecurityFindingActivityIdEnum",
@@ -22182,7 +23246,8 @@ class FindingActivityIdEnum(EnumDefinitionImpl):
         description="The event activity is unknown.")
     OTHER = PermissibleValue(
         text="OTHER",
-        description="""The event activity is not mapped. See the <code>activity_name</code> attribute, which contains a data source specific value.""")
+        description="""The event activity is not mapped. See the <code>activity_name</code> attribute,
+which contains a data source specific value.""")
 
     _defn = EnumDefinition(
         name="FindingActivityIdEnum",
@@ -22201,7 +23266,8 @@ class FindingStatusIdEnum(EnumDefinitionImpl):
         description="The Finding is under review.")
     SUPPRESSED = PermissibleValue(
         text="SUPPRESSED",
-        description="The Finding was reviewed, determined to be benign or a false positive and is now suppressed.")
+        description="""The Finding was reviewed, determined to be benign or a false positive and is
+now suppressed.""")
     RESOLVED = PermissibleValue(
         text="RESOLVED",
         description="The Finding was reviewed, remediated and is now considered resolved.")
@@ -22216,7 +23282,8 @@ class FindingStatusIdEnum(EnumDefinitionImpl):
         description="The status is unknown.")
     OTHER = PermissibleValue(
         text="OTHER",
-        description="""The status is not mapped. See the <code>status</code> attribute, which contains a data source specific value.""")
+        description="""The status is not mapped. See the <code>status</code> attribute, which contains
+a data source specific value.""")
 
     _defn = EnumDefinition(
         name="FindingStatusIdEnum",
@@ -22241,7 +23308,8 @@ class IncidentFindingActivityIdEnum(EnumDefinitionImpl):
         description="The event activity is unknown.")
     OTHER = PermissibleValue(
         text="OTHER",
-        description="""The event activity is not mapped. See the <code>activity_name</code> attribute, which contains a data source specific value.""")
+        description="""The event activity is not mapped. See the <code>activity_name</code> attribute,
+which contains a data source specific value.""")
 
     _defn = EnumDefinition(
         name="IncidentFindingActivityIdEnum",
@@ -22257,10 +23325,12 @@ class IncidentFindingStatusIdEnum(EnumDefinitionImpl):
         description="The service desk has received the incident but has not assigned it to an agent.")
     IN_PROGRESS = PermissibleValue(
         text="IN_PROGRESS",
-        description="""The incident has been assigned to an agent but has not been resolved. The agent is actively working with the user to diagnose and resolve the incident.""")
+        description="""The incident has been assigned to an agent but has not been resolved. The agent
+is actively working with the user to diagnose and resolve the incident.""")
     ON_HOLD = PermissibleValue(
         text="ON_HOLD",
-        description="The incident requires some information or response from the user or from a third party.")
+        description="""The incident requires some information or response from the user or from a
+third party.""")
     RESOLVED = PermissibleValue(
         text="RESOLVED",
         description="The service desk has confirmed that the incident is resolved.")
@@ -22272,7 +23342,8 @@ class IncidentFindingStatusIdEnum(EnumDefinitionImpl):
         description="The status is unknown.")
     OTHER = PermissibleValue(
         text="OTHER",
-        description="""The status is not mapped. See the <code>status</code> attribute, which contains a data source specific value.""")
+        description="""The status is not mapped. See the <code>status</code> attribute, which contains
+a data source specific value.""")
 
     _defn = EnumDefinition(
         name="IncidentFindingStatusIdEnum",
@@ -22297,7 +23368,8 @@ class SecurityFindingActivityIdEnum(EnumDefinitionImpl):
         description="The event activity is unknown.")
     OTHER = PermissibleValue(
         text="OTHER",
-        description="""The event activity is not mapped. See the <code>activity_name</code> attribute, which contains a data source specific value.""")
+        description="""The event activity is not mapped. See the <code>activity_name</code> attribute,
+which contains a data source specific value.""")
 
     _defn = EnumDefinition(
         name="SecurityFindingActivityIdEnum",
@@ -22325,7 +23397,8 @@ class SecurityFindingStateIdEnum(EnumDefinitionImpl):
         description="The state is unknown.")
     OTHER = PermissibleValue(
         text="OTHER",
-        description="""The state is not mapped. See the <code>state</code> attribute, which contains a data source specific value.""")
+        description="""The state is not mapped. See the <code>state</code> attribute, which contains a
+data source specific value.""")
 
     _defn = EnumDefinition(
         name="SecurityFindingStateIdEnum",
@@ -22377,7 +23450,8 @@ class AccountChangeActivityIdEnum(EnumDefinitionImpl):
         description="The event activity is unknown.")
     OTHER = PermissibleValue(
         text="OTHER",
-        description="""The event activity is not mapped. See the <code>activity_name</code> attribute, which contains a data source specific value.""")
+        description="""The event activity is not mapped. See the <code>activity_name</code> attribute,
+which contains a data source specific value.""")
 
     _defn = EnumDefinition(
         name="AccountChangeActivityIdEnum",
@@ -22408,13 +23482,15 @@ class AuthenticationActivityIdEnum(EnumDefinitionImpl):
         description="A preauthentication stage was engaged.")
     ACCOUNT_SWITCH = PermissibleValue(
         text="ACCOUNT_SWITCH",
-        description="""A utility or service switched the user account. See the <code>account_switch_type_id</code> attribute for more details.""")
+        description="""A utility or service switched the user account. See the
+<code>account_switch_type_id</code> attribute for more details.""")
     UNKNOWN = PermissibleValue(
         text="UNKNOWN",
         description="The event activity is unknown.")
     OTHER = PermissibleValue(
         text="OTHER",
-        description="""The event activity is not mapped. See the <code>activity_name</code> attribute, which contains a data source specific value.""")
+        description="""The event activity is not mapped. See the <code>activity_name</code> attribute,
+which contains a data source specific value.""")
 
     _defn = EnumDefinition(
         name="AuthenticationActivityIdEnum",
@@ -22436,7 +23512,8 @@ class AuthorizeSessionActivityIdEnum(EnumDefinitionImpl):
         description="The event activity is unknown.")
     OTHER = PermissibleValue(
         text="OTHER",
-        description="""The event activity is not mapped. See the <code>activity_name</code> attribute, which contains a data source specific value.""")
+        description="""The event activity is not mapped. See the <code>activity_name</code> attribute,
+which contains a data source specific value.""")
 
     _defn = EnumDefinition(
         name="AuthorizeSessionActivityIdEnum",
@@ -22470,16 +23547,20 @@ class EntityManagementActivityIdEnum(EnumDefinitionImpl):
         description="Unenroll an existing managed entity.")
     ENABLE = PermissibleValue(
         text="ENABLE",
-        description="""Enable an existing managed entity. Note: This is typically regarded as a semi-permanent, editor visible, syncable change.""")
+        description="""Enable an existing managed entity. Note: This is typically regarded as a
+semi-permanent, editor visible, syncable change.""")
     DISABLE = PermissibleValue(
         text="DISABLE",
-        description="""Disable an existing managed entity. Note: This is typically regarded as a semi-permanent, editor visible, syncable change.""")
+        description="""Disable an existing managed entity. Note: This is typically regarded as a
+semi-permanent, editor visible, syncable change.""")
     ACTIVATE = PermissibleValue(
         text="ACTIVATE",
-        description="""Activate an existing managed entity. Note: This is a typically regarded as a transient change, a change of state of the engine.""")
+        description="""Activate an existing managed entity. Note: This is a typically regarded as a
+transient change, a change of state of the engine.""")
     DEACTIVATE = PermissibleValue(
         text="DEACTIVATE",
-        description="""Deactivate an existing managed entity. Note: This is a typically regarded as a transient change, a change of state of the engine.""")
+        description="""Deactivate an existing managed entity. Note: This is a typically regarded as a
+transient change, a change of state of the engine.""")
     SUSPEND = PermissibleValue(
         text="SUSPEND",
         description="Suspend an existing managed entity.")
@@ -22491,7 +23572,8 @@ class EntityManagementActivityIdEnum(EnumDefinitionImpl):
         description="The event activity is unknown.")
     OTHER = PermissibleValue(
         text="OTHER",
-        description="""The event activity is not mapped. See the <code>activity_name</code> attribute, which contains a data source specific value.""")
+        description="""The event activity is not mapped. See the <code>activity_name</code> attribute,
+which contains a data source specific value.""")
 
     _defn = EnumDefinition(
         name="EntityManagementActivityIdEnum",
@@ -22531,7 +23613,8 @@ class GroupManagementActivityIdEnum(EnumDefinitionImpl):
         description="The event activity is unknown.")
     OTHER = PermissibleValue(
         text="OTHER",
-        description="""The event activity is not mapped. See the <code>activity_name</code> attribute, which contains a data source specific value.""")
+        description="""The event activity is not mapped. See the <code>activity_name</code> attribute,
+which contains a data source specific value.""")
 
     _defn = EnumDefinition(
         name="GroupManagementActivityIdEnum",
@@ -22553,7 +23636,8 @@ class UserAccessActivityIdEnum(EnumDefinitionImpl):
         description="The event activity is unknown.")
     OTHER = PermissibleValue(
         text="OTHER",
-        description="""The event activity is not mapped. See the <code>activity_name</code> attribute, which contains a data source specific value.""")
+        description="""The event activity is not mapped. See the <code>activity_name</code> attribute,
+which contains a data source specific value.""")
 
     _defn = EnumDefinition(
         name="UserAccessActivityIdEnum",
@@ -22562,8 +23646,9 @@ class UserAccessActivityIdEnum(EnumDefinitionImpl):
 
 class NetworkEventObservationPointIdEnum(EnumDefinitionImpl):
     """
-    The normalized identifier of the observation point. The observation point identifier indicates whether the source
-    network endpoint, destination network endpoint, or neither served as the observation point for the activity.
+    The normalized identifier of the observation point. The observation point
+    identifier indicates whether the source network endpoint, destination network
+    endpoint, or neither served as the observation point for the activity.
     """
     UNKNOWN = PermissibleValue(
         text="UNKNOWN",
@@ -22576,17 +23661,24 @@ class NetworkEventObservationPointIdEnum(EnumDefinitionImpl):
         description="The destination network endpoint is the observation point.")
     NEITHER = PermissibleValue(
         text="NEITHER",
-        description="""Neither the source nor destination network endpoint is the observation point. Refer to the <code>network_observation_point</code> attribute for details.""")
+        description="""Neither the source nor destination network endpoint is the observation point.
+Refer to the <code>network_observation_point</code> attribute for details.""")
     BOTH = PermissibleValue(
         text="BOTH",
-        description="""Both the source and destination network endpoint are the observation point. This typically occurs in localhost or internal communications where the source and destination are the same endpoint, often resulting in a <code>connection_info.direction</code> of <code>Local</code>.""")
+        description="""Both the source and destination network endpoint are the observation point.
+This typically occurs in localhost or internal communications where the source
+and destination are the same endpoint, often resulting in a
+<code>connection_info.direction</code> of <code>Local</code>.""")
     OTHER = PermissibleValue(
         text="OTHER",
-        description="""The observation point is not mapped. See the <code>observation_point</code> attribute for a data source specific value.""")
+        description="""The observation point is not mapped. See the <code>observation_point</code>
+attribute for a data source specific value.""")
 
     _defn = EnumDefinition(
         name="NetworkEventObservationPointIdEnum",
-        description="""The normalized identifier of the observation point. The observation point identifier indicates whether the source network endpoint, destination network endpoint, or neither served as the observation point for the activity.""",
+        description="""The normalized identifier of the observation point. The observation point
+identifier indicates whether the source network endpoint, destination network
+endpoint, or neither served as the observation point for the activity.""",
     )
 
 class DhcpActivityActivityIdEnum(EnumDefinitionImpl):
@@ -22607,13 +23699,15 @@ class DhcpActivityActivityIdEnum(EnumDefinitionImpl):
         description="DHCPDECLINE")
     ACK = PermissibleValue(
         text="ACK",
-        description="DHCPACK: The server accepts the request by sending the client a DHCP Acknowledgment message.")
+        description="""DHCPACK: The server accepts the request by sending the client a DHCP
+Acknowledgment message.""")
     NAK = PermissibleValue(
         text="NAK",
         description="DHCPNAK")
     RELEASE = PermissibleValue(
         text="RELEASE",
-        description="""DHCPRELEASE: A DHCP client sends a DHCPRELEASE packet to the server to release the IP address and cancel any remaining lease.""")
+        description="""DHCPRELEASE: A DHCP client sends a DHCPRELEASE packet to the server to release
+the IP address and cancel any remaining lease.""")
     INFORM = PermissibleValue(
         text="INFORM",
         description="DHCPINFORM")
@@ -22625,7 +23719,8 @@ class DhcpActivityActivityIdEnum(EnumDefinitionImpl):
         description="The event activity is unknown.")
     OTHER = PermissibleValue(
         text="OTHER",
-        description="""The event activity is not mapped. See the <code>activity_name</code> attribute, which contains a data source specific value.""")
+        description="""The event activity is not mapped. See the <code>activity_name</code> attribute,
+which contains a data source specific value.""")
 
     _defn = EnumDefinition(
         name="DhcpActivityActivityIdEnum",
@@ -22650,7 +23745,8 @@ class DnsActivityActivityIdEnum(EnumDefinitionImpl):
         description="The event activity is unknown.")
     OTHER = PermissibleValue(
         text="OTHER",
-        description="""The event activity is not mapped. See the <code>activity_name</code> attribute, which contains a data source specific value.""")
+        description="""The event activity is not mapped. See the <code>activity_name</code> attribute,
+which contains a data source specific value.""")
 
     _defn = EnumDefinition(
         name="DnsActivityActivityIdEnum",
@@ -22659,7 +23755,8 @@ class DnsActivityActivityIdEnum(EnumDefinitionImpl):
 
 class DnsActivityRcodeIdEnum(EnumDefinitionImpl):
     """
-    The normalized identifier of the DNS server response code. See <a target='_blank'
+    The normalized identifier of the DNS server response code. See <a
+    target='_blank'
     href='https://datatracker.ietf.org/doc/html/rfc6895'>RFC-6895</a>.
     """
     NOERROR = PermissibleValue(
@@ -22724,7 +23821,8 @@ class DnsActivityRcodeIdEnum(EnumDefinitionImpl):
         description="Bad/missing Server Cookie.")
     UNASSIGNED = PermissibleValue(
         text="UNASSIGNED",
-        description="The codes deemed to be unassigned by the RFC (unassigned codes: 12-15, 24-3840, 4096-65534).")
+        description="""The codes deemed to be unassigned by the RFC (unassigned codes: 12-15, 24-3840,
+4096-65534).""")
     RESERVED = PermissibleValue(
         text="RESERVED",
         description="The codes deemed to be reserved by the RFC (codes: 3841-4095, 65535).")
@@ -22734,7 +23832,9 @@ class DnsActivityRcodeIdEnum(EnumDefinitionImpl):
 
     _defn = EnumDefinition(
         name="DnsActivityRcodeIdEnum",
-        description="""The normalized identifier of the DNS server response code. See <a target='_blank' href='https://datatracker.ietf.org/doc/html/rfc6895'>RFC-6895</a>.""",
+        description="""The normalized identifier of the DNS server response code. See <a
+target='_blank'
+href='https://datatracker.ietf.org/doc/html/rfc6895'>RFC-6895</a>.""",
     )
 
 class EmailActivityActivityIdEnum(EnumDefinitionImpl):
@@ -22752,16 +23852,19 @@ class EmailActivityActivityIdEnum(EnumDefinitionImpl):
         description="Email being scanned (example: security scanning)")
     TRACE = PermissibleValue(
         text="TRACE",
-        description="""Follow an email message as it travels through an organization. The <code>message_trace_uid</code> should be populated when selected.""")
+        description="""Follow an email message as it travels through an organization. The
+<code>message_trace_uid</code> should be populated when selected.""")
     MTA_RELAY = PermissibleValue(
         text="MTA_RELAY",
-        description="""Email processed by an MTA, typically combining send, receive, and scan operations into a single activity.""")
+        description="""Email processed by an MTA, typically combining send, receive, and scan
+operations into a single activity.""")
     UNKNOWN = PermissibleValue(
         text="UNKNOWN",
         description="The event activity is unknown.")
     OTHER = PermissibleValue(
         text="OTHER",
-        description="""The event activity is not mapped. See the <code>activity_name</code> attribute, which contains a data source specific value.""")
+        description="""The event activity is not mapped. See the <code>activity_name</code> attribute,
+which contains a data source specific value.""")
 
     _defn = EnumDefinition(
         name="EmailActivityActivityIdEnum",
@@ -22770,17 +23873,20 @@ class EmailActivityActivityIdEnum(EnumDefinitionImpl):
 
 class EmailActivityDirectionIdEnum(EnumDefinitionImpl):
     """
-    <p>The direction of the email relative to the scanning host or organization.</p>Email scanned at an internet
-    gateway might be characterized as inbound to the organization from the Internet, outbound from the organization to
-    the Internet, or internal within the organization. Email scanned at a workstation might be characterized as
-    inbound to, or outbound from the workstation.
+    <p>The direction of the email relative to the scanning host or
+    organization.</p>Email scanned at an internet gateway might be characterized as
+    inbound to the organization from the Internet, outbound from the organization
+    to the Internet, or internal within the organization. Email scanned at a
+    workstation might be characterized as inbound to, or outbound from the
+    workstation.
     """
     UNKNOWN = PermissibleValue(
         text="UNKNOWN",
         description="The email direction is unknown.")
     INBOUND = PermissibleValue(
         text="INBOUND",
-        description="Email Inbound, from the Internet or outside network destined for an entity inside network.")
+        description="""Email Inbound, from the Internet or outside network destined for an entity
+inside network.""")
     OUTBOUND = PermissibleValue(
         text="OUTBOUND",
         description="Email Outbound, from inside the network destined for an entity outside network.")
@@ -22792,11 +23898,18 @@ class EmailActivityDirectionIdEnum(EnumDefinitionImpl):
         description="Other")
     LOCAL = PermissibleValue(
         text="LOCAL",
-        description="""Local network connection (<code>localhost</code>). The connection is intra-device, originating from and destined for services running on the same device.""")
+        description="""Local network connection (<code>localhost</code>). The connection is
+intra-device, originating from and destined for services running on the same
+device.""")
 
     _defn = EnumDefinition(
         name="EmailActivityDirectionIdEnum",
-        description="""<p>The direction of the email relative to the scanning host or organization.</p>Email scanned at an internet gateway might be characterized as inbound to the organization from the Internet, outbound from the organization to the Internet, or internal within the organization. Email scanned at a workstation might be characterized as inbound to, or outbound from the workstation.""",
+        description="""<p>The direction of the email relative to the scanning host or
+organization.</p>Email scanned at an internet gateway might be characterized as
+inbound to the organization from the Internet, outbound from the organization
+to the Internet, or internal within the organization. Email scanned at a
+workstation might be characterized as inbound to, or outbound from the
+workstation.""",
     )
 
 class EmailFileActivityActivityIdEnum(EnumDefinitionImpl):
@@ -22817,7 +23930,8 @@ class EmailFileActivityActivityIdEnum(EnumDefinitionImpl):
         description="The event activity is unknown.")
     OTHER = PermissibleValue(
         text="OTHER",
-        description="""The event activity is not mapped. See the <code>activity_name</code> attribute, which contains a data source specific value.""")
+        description="""The event activity is not mapped. See the <code>activity_name</code> attribute,
+which contains a data source specific value.""")
 
     _defn = EnumDefinition(
         name="EmailFileActivityActivityIdEnum",
@@ -22842,7 +23956,8 @@ class EmailUrlActivityActivityIdEnum(EnumDefinitionImpl):
         description="The event activity is unknown.")
     OTHER = PermissibleValue(
         text="OTHER",
-        description="""The event activity is not mapped. See the <code>activity_name</code> attribute, which contains a data source specific value.""")
+        description="""The event activity is not mapped. See the <code>activity_name</code> attribute,
+which contains a data source specific value.""")
 
     _defn = EnumDefinition(
         name="EmailUrlActivityActivityIdEnum",
@@ -22861,7 +23976,8 @@ class FtpActivityActivityIdEnum(EnumDefinitionImpl):
         description="File download from the FTP or SFTP site.")
     POLL = PermissibleValue(
         text="POLL",
-        description="Poll directory for specific file(s) or folder(s) at the FTP or SFTP site location.")
+        description="""Poll directory for specific file(s) or folder(s) at the FTP or SFTP site
+location.""")
     DELETE = PermissibleValue(
         text="DELETE",
         description="Delete file(s) from the FTP or SFTP site.")
@@ -22876,7 +23992,8 @@ class FtpActivityActivityIdEnum(EnumDefinitionImpl):
         description="The event activity is unknown.")
     OTHER = PermissibleValue(
         text="OTHER",
-        description="""The event activity is not mapped. See the <code>activity_name</code> attribute, which contains a data source specific value.""")
+        description="""The event activity is not mapped. See the <code>activity_name</code> attribute,
+which contains a data source specific value.""")
 
     _defn = EnumDefinition(
         name="FtpActivityActivityIdEnum",
@@ -22889,28 +24006,34 @@ class HttpActivityActivityIdEnum(EnumDefinitionImpl):
     """
     CONNECT = PermissibleValue(
         text="CONNECT",
-        description="The CONNECT method establishes a tunnel to the server identified by the target resource.")
+        description="""The CONNECT method establishes a tunnel to the server identified by the target
+resource.""")
     DELETE = PermissibleValue(
         text="DELETE",
         description="The DELETE method deletes the specified resource.")
     GET = PermissibleValue(
         text="GET",
-        description="""The GET method requests a representation of the specified resource. Requests using GET should only retrieve data.""")
+        description="""The GET method requests a representation of the specified resource. Requests
+using GET should only retrieve data.""")
     HEAD = PermissibleValue(
         text="HEAD",
-        description="The HEAD method asks for a response identical to a GET request, but without the response body.")
+        description="""The HEAD method asks for a response identical to a GET request, but without the
+response body.""")
     OPTIONS = PermissibleValue(
         text="OPTIONS",
         description="The OPTIONS method describes the communication options for the target resource.")
     POST = PermissibleValue(
         text="POST",
-        description="""The POST method submits an entity to the specified resource, often causing a change in state or side effects on the server.""")
+        description="""The POST method submits an entity to the specified resource, often causing a
+change in state or side effects on the server.""")
     PUT = PermissibleValue(
         text="PUT",
-        description="""The PUT method replaces all current representations of the target resource with the request payload.""")
+        description="""The PUT method replaces all current representations of the target resource with
+the request payload.""")
     TRACE = PermissibleValue(
         text="TRACE",
-        description="The TRACE method performs a message loop-back test along the path to the target resource.")
+        description="""The TRACE method performs a message loop-back test along the path to the target
+resource.""")
     PATCH = PermissibleValue(
         text="PATCH",
         description="The PATCH method applies partial modifications to a resource.")
@@ -22919,7 +24042,8 @@ class HttpActivityActivityIdEnum(EnumDefinitionImpl):
         description="The event activity is unknown.")
     OTHER = PermissibleValue(
         text="OTHER",
-        description="""The event activity is not mapped. See the <code>activity_name</code> attribute, which contains a data source specific value.""")
+        description="""The event activity is not mapped. See the <code>activity_name</code> attribute,
+which contains a data source specific value.""")
 
     _defn = EnumDefinition(
         name="HttpActivityActivityIdEnum",
@@ -22938,13 +24062,16 @@ class NetworkActivityActivityIdEnum(EnumDefinitionImpl):
         description="The network connection was closed.")
     RESET = PermissibleValue(
         text="RESET",
-        description="The network connection was abnormally terminated or closed by a middle device like firewalls.")
+        description="""The network connection was abnormally terminated or closed by a middle device
+like firewalls.""")
     FAIL = PermissibleValue(
         text="FAIL",
-        description="The network connection failed. For example a connection timeout or no route to host.")
+        description="""The network connection failed. For example a connection timeout or no route to
+host.""")
     REFUSE = PermissibleValue(
         text="REFUSE",
-        description="""The network connection was refused. For example an attempt to connect to a server port which is not open.""")
+        description="""The network connection was refused. For example an attempt to connect to a
+server port which is not open.""")
     TRAFFIC = PermissibleValue(
         text="TRAFFIC",
         description="Network traffic report.")
@@ -22956,7 +24083,8 @@ class NetworkActivityActivityIdEnum(EnumDefinitionImpl):
         description="The event activity is unknown.")
     OTHER = PermissibleValue(
         text="OTHER",
-        description="""The event activity is not mapped. See the <code>activity_name</code> attribute, which contains a data source specific value.""")
+        description="""The event activity is not mapped. See the <code>activity_name</code> attribute,
+which contains a data source specific value.""")
 
     _defn = EnumDefinition(
         name="NetworkActivityActivityIdEnum",
@@ -22965,25 +24093,30 @@ class NetworkActivityActivityIdEnum(EnumDefinitionImpl):
 
 class NetworkActivityInitiatorIdEnum(EnumDefinitionImpl):
     """
-    The normalized identifier of the endpoint that initiated the network communication. Use this field to disambiguate
-    source and destination roles in bi-directional or asymmetric flow scenarios.
+    The normalized identifier of the endpoint that initiated the network
+    communication. Use this field to disambiguate source and destination roles in
+    bi-directional or asymmetric flow scenarios.
     """
     UNKNOWN = PermissibleValue(
         text="UNKNOWN",
         description="Unknown")
     SOURCE_ENDPOINT = PermissibleValue(
         text="SOURCE_ENDPOINT",
-        description="""The <code>src_endpoint</code> is the true initiator and the source/destination assignment is correct.""")
+        description="""The <code>src_endpoint</code> is the true initiator and the source/destination
+assignment is correct.""")
     DESTINATION_ENDPOINT = PermissibleValue(
         text="DESTINATION_ENDPOINT",
-        description="""The <code>dst_endpoint</code> is the true initiator and the source/destination assignment is reversed.""")
+        description="""The <code>dst_endpoint</code> is the true initiator and the source/destination
+assignment is reversed.""")
     OTHER = PermissibleValue(
         text="OTHER",
         description="Other")
 
     _defn = EnumDefinition(
         name="NetworkActivityInitiatorIdEnum",
-        description="""The normalized identifier of the endpoint that initiated the network communication. Use this field to disambiguate source and destination roles in bi-directional or asymmetric flow scenarios.""",
+        description="""The normalized identifier of the endpoint that initiated the network
+communication. Use this field to disambiguate source and destination roles in
+bi-directional or asymmetric flow scenarios.""",
     )
 
 class NetworkFileActivityActivityIdEnum(EnumDefinitionImpl):
@@ -23043,7 +24176,8 @@ class NetworkFileActivityActivityIdEnum(EnumDefinitionImpl):
         description="The event activity is unknown.")
     OTHER = PermissibleValue(
         text="OTHER",
-        description="""The event activity is not mapped. See the <code>activity_name</code> attribute, which contains a data source specific value.""")
+        description="""The event activity is not mapped. See the <code>activity_name</code> attribute,
+which contains a data source specific value.""")
 
     _defn = EnumDefinition(
         name="NetworkFileActivityActivityIdEnum",
@@ -23120,7 +24254,8 @@ class RdpActivityActivityIdEnum(EnumDefinitionImpl):
         description="The event activity is unknown.")
     OTHER = PermissibleValue(
         text="OTHER",
-        description="""The event activity is not mapped. See the <code>activity_name</code> attribute, which contains a data source specific value.""")
+        description="""The event activity is not mapped. See the <code>activity_name</code> attribute,
+which contains a data source specific value.""")
 
     _defn = EnumDefinition(
         name="RdpActivityActivityIdEnum",
@@ -23133,28 +24268,35 @@ class SmbActivityActivityIdEnum(EnumDefinitionImpl):
     """
     FILE_SUPERSEDE = PermissibleValue(
         text="FILE_SUPERSEDE",
-        description="The event pertains to file superseded activity (overwritten if it exists and created if not).")
+        description="""The event pertains to file superseded activity (overwritten if it exists and
+created if not).""")
     FILE_OPEN = PermissibleValue(
         text="FILE_OPEN",
-        description="""The event pertains to file open activity (the file is opened if it exists and fails to open if it doesn't).""")
+        description="""The event pertains to file open activity (the file is opened if it exists and
+fails to open if it doesn't).""")
     FILE_CREATE = PermissibleValue(
         text="FILE_CREATE",
-        description="""The event pertains to file creation activity (a file is created if it does not exist and fails if it does).""")
+        description="""The event pertains to file creation activity (a file is created if it does not
+exist and fails if it does).""")
     FILE_OPEN_IF = PermissibleValue(
         text="FILE_OPEN_IF",
-        description="""The event pertains to file open activity (the file is opened if it exists and is created if it doesn't).""")
+        description="""The event pertains to file open activity (the file is opened if it exists and
+is created if it doesn't).""")
     FILE_OVERWRITE = PermissibleValue(
         text="FILE_OVERWRITE",
-        description="""The event pertains to file overwrite activity (the file is opened in a truncated form if it exists and fails if it doesn't).""")
+        description="""The event pertains to file overwrite activity (the file is opened in a
+truncated form if it exists and fails if it doesn't).""")
     FILE_OVERWRITE_IF = PermissibleValue(
         text="FILE_OVERWRITE_IF",
-        description="""The event pertains to file overwrite activity (the file is opened in a truncated form if it exists and created otherwise)""")
+        description="""The event pertains to file overwrite activity (the file is opened in a
+truncated form if it exists and created otherwise)""")
     UNKNOWN = PermissibleValue(
         text="UNKNOWN",
         description="The event activity is unknown.")
     OTHER = PermissibleValue(
         text="OTHER",
-        description="""The event activity is not mapped. See the <code>activity_name</code> attribute, which contains a data source specific value.""")
+        description="""The event activity is not mapped. See the <code>activity_name</code> attribute,
+which contains a data source specific value.""")
 
     _defn = EnumDefinition(
         name="SmbActivityActivityIdEnum",
@@ -23173,13 +24315,16 @@ class SshActivityActivityIdEnum(EnumDefinitionImpl):
         description="The network connection was closed.")
     RESET = PermissibleValue(
         text="RESET",
-        description="The network connection was abnormally terminated or closed by a middle device like firewalls.")
+        description="""The network connection was abnormally terminated or closed by a middle device
+like firewalls.""")
     FAIL = PermissibleValue(
         text="FAIL",
-        description="The network connection failed. For example a connection timeout or no route to host.")
+        description="""The network connection failed. For example a connection timeout or no route to
+host.""")
     REFUSE = PermissibleValue(
         text="REFUSE",
-        description="""The network connection was refused. For example an attempt to connect to a server port which is not open.""")
+        description="""The network connection was refused. For example an attempt to connect to a
+server port which is not open.""")
     TRAFFIC = PermissibleValue(
         text="TRAFFIC",
         description="Network traffic report.")
@@ -23191,7 +24336,8 @@ class SshActivityActivityIdEnum(EnumDefinitionImpl):
         description="The event activity is unknown.")
     OTHER = PermissibleValue(
         text="OTHER",
-        description="""The event activity is not mapped. See the <code>activity_name</code> attribute, which contains a data source specific value.""")
+        description="""The event activity is not mapped. See the <code>activity_name</code> attribute,
+which contains a data source specific value.""")
 
     _defn = EnumDefinition(
         name="SshActivityActivityIdEnum",
@@ -23250,7 +24396,8 @@ class TunnelActivityActivityIdEnum(EnumDefinitionImpl):
         description="Renew a tunnel.")
     OTHER = PermissibleValue(
         text="OTHER",
-        description="""The event activity is not mapped. See the <code>activity_name</code> attribute, which contains a data source specific value.""")
+        description="""The event activity is not mapped. See the <code>activity_name</code> attribute,
+which contains a data source specific value.""")
 
     _defn = EnumDefinition(
         name="TunnelActivityActivityIdEnum",
@@ -23259,8 +24406,9 @@ class TunnelActivityActivityIdEnum(EnumDefinitionImpl):
 
 class TunnelActivityTunnelTypeIdEnum(EnumDefinitionImpl):
     """
-    The normalized identifier for the type of tunnel configuration, indicating the scope of traffic routed through the
-    connection. Example: <code>1 (Split Tunnel)</code> or <code>2 (Full Tunnel)</code>.
+    The normalized identifier for the type of tunnel configuration, indicating the
+    scope of traffic routed through the connection. Example: <code>1 (Split
+    Tunnel)</code> or <code>2 (Full Tunnel)</code>.
     """
     UNKNOWN = PermissibleValue(
         text="UNKNOWN",
@@ -23277,39 +24425,53 @@ class TunnelActivityTunnelTypeIdEnum(EnumDefinitionImpl):
 
     _defn = EnumDefinition(
         name="TunnelActivityTunnelTypeIdEnum",
-        description="""The normalized identifier for the type of tunnel configuration, indicating the scope of traffic routed through the connection. Example: <code>1 (Split Tunnel)</code> or <code>2 (Full Tunnel)</code>.""",
+        description="""The normalized identifier for the type of tunnel configuration, indicating the
+scope of traffic routed through the connection. Example: <code>1 (Split
+Tunnel)</code> or <code>2 (Full Tunnel)</code>.""",
     )
 
 class RemediationActivityActivityIdEnum(EnumDefinitionImpl):
     """
-    Matches the MITRE D3FEND™ Tactic. Note: the Model and Detect Tactics are not supported as remediations by the OCSF
-    Remediation event class.
+    Matches the MITRE D3FEND™ Tactic. Note: the Model and Detect Tactics are not
+    supported as remediations by the OCSF Remediation event class.
     """
     ISOLATE = PermissibleValue(
         text="ISOLATE",
-        description="""Creates logical or physical barriers in a system which reduces opportunities for adversaries to create further accesses. Defined by D3FEND™ <a target='_blank' href='https://d3fend.mitre.org/tactic/d3f:Isolate/'>d3f:Isolate</a>.""")
+        description="""Creates logical or physical barriers in a system which reduces opportunities
+for adversaries to create further accesses. Defined by D3FEND™ <a
+target='_blank'
+href='https://d3fend.mitre.org/tactic/d3f:Isolate/'>d3f:Isolate</a>.""")
     EVICT = PermissibleValue(
         text="EVICT",
-        description="""Removes an adversary or malicious resource from a device or computer network. Defined by D3FEND™ <a target='_blank' href='https://d3fend.mitre.org/tactic/d3f:Evict/'>d3f:Evict</a>.""")
+        description="""Removes an adversary or malicious resource from a device or computer network.
+Defined by D3FEND™ <a target='_blank'
+href='https://d3fend.mitre.org/tactic/d3f:Evict/'>d3f:Evict</a>.""")
     RESTORE = PermissibleValue(
         text="RESTORE",
-        description="""Returns the system to a better state. Defined by D3FEND™ <a target='_blank' href='https://d3fend.mitre.org/tactic/d3f:Restore/'>d3f:Restore</a>.""")
+        description="""Returns the system to a better state. Defined by D3FEND™ <a target='_blank'
+href='https://d3fend.mitre.org/tactic/d3f:Restore/'>d3f:Restore</a>.""")
     HARDEN = PermissibleValue(
         text="HARDEN",
-        description="""Increases the opportunity cost of computer network exploitation. Defined by D3FEND™ <a target='_blank' href='https://d3fend.mitre.org/tactic/d3f:Harden/'>d3f:Harden</a>.""")
+        description="""Increases the opportunity cost of computer network exploitation. Defined by
+D3FEND™ <a target='_blank'
+href='https://d3fend.mitre.org/tactic/d3f:Harden/'>d3f:Harden</a>.""")
     DETECT = PermissibleValue(
         text="DETECT",
-        description="""Further identify adversary access to or unauthorized activity on computer networks. Defined by D3FEND™ <a target='_blank' href='https://d3fend.mitre.org/tactic/d3f:Detect/'>d3f:Detect</a>.""")
+        description="""Further identify adversary access to or unauthorized activity on computer
+networks. Defined by D3FEND™ <a target='_blank'
+href='https://d3fend.mitre.org/tactic/d3f:Detect/'>d3f:Detect</a>.""")
     UNKNOWN = PermissibleValue(
         text="UNKNOWN",
         description="The event activity is unknown.")
     OTHER = PermissibleValue(
         text="OTHER",
-        description="""The event activity is not mapped. See the <code>activity_name</code> attribute, which contains a data source specific value.""")
+        description="""The event activity is not mapped. See the <code>activity_name</code> attribute,
+which contains a data source specific value.""")
 
     _defn = EnumDefinition(
         name="RemediationActivityActivityIdEnum",
-        description="""Matches the MITRE D3FEND™ Tactic. Note: the Model and Detect Tactics are not supported as remediations by the OCSF Remediation event class.""",
+        description="""Matches the MITRE D3FEND™ Tactic. Note: the Model and Detect Tactics are not
+supported as remediations by the OCSF Remediation event class.""",
     )
 
 class RemediationActivityStatusIdEnum(EnumDefinitionImpl):
@@ -23339,7 +24501,8 @@ class RemediationActivityStatusIdEnum(EnumDefinitionImpl):
         description="Failure")
     OTHER = PermissibleValue(
         text="OTHER",
-        description="""The status is not mapped. See the <code>status</code> attribute, which contains a data source specific value.""")
+        description="""The status is not mapped. See the <code>status</code> attribute, which contains
+a data source specific value.""")
 
     _defn = EnumDefinition(
         name="RemediationActivityStatusIdEnum",
@@ -23385,7 +24548,8 @@ class EventLogActvityActivityIdEnum(EnumDefinitionImpl):
         description="The event activity is unknown.")
     OTHER = PermissibleValue(
         text="OTHER",
-        description="""The event activity is not mapped. See the <code>activity_name</code> attribute, which contains a data source specific value.""")
+        description="""The event activity is not mapped. See the <code>activity_name</code> attribute,
+which contains a data source specific value.""")
 
     _defn = EnumDefinition(
         name="EventLogActvityActivityIdEnum",
@@ -23443,7 +24607,8 @@ class FileActivityActivityIdEnum(EnumDefinitionImpl):
         description="The event activity is unknown.")
     OTHER = PermissibleValue(
         text="OTHER",
-        description="""The event activity is not mapped. See the <code>activity_name</code> attribute, which contains a data source specific value.""")
+        description="""The event activity is not mapped. See the <code>activity_name</code> attribute,
+which contains a data source specific value.""")
 
     _defn = EnumDefinition(
         name="FileActivityActivityIdEnum",
@@ -23471,7 +24636,8 @@ class KernelActivityActivityIdEnum(EnumDefinitionImpl):
         description="The event activity is unknown.")
     OTHER = PermissibleValue(
         text="OTHER",
-        description="""The event activity is not mapped. See the <code>activity_name</code> attribute, which contains a data source specific value.""")
+        description="""The event activity is not mapped. See the <code>activity_name</code> attribute,
+which contains a data source specific value.""")
 
     _defn = EnumDefinition(
         name="KernelActivityActivityIdEnum",
@@ -23493,7 +24659,8 @@ class KernelExtensionActivityActivityIdEnum(EnumDefinitionImpl):
         description="The event activity is unknown.")
     OTHER = PermissibleValue(
         text="OTHER",
-        description="""The event activity is not mapped. See the <code>activity_name</code> attribute, which contains a data source specific value.""")
+        description="""The event activity is not mapped. See the <code>activity_name</code> attribute,
+which contains a data source specific value.""")
 
     _defn = EnumDefinition(
         name="KernelExtensionActivityActivityIdEnum",
@@ -23536,7 +24703,8 @@ class MemoryActivityActivityIdEnum(EnumDefinitionImpl):
         description="The event activity is unknown.")
     OTHER = PermissibleValue(
         text="OTHER",
-        description="""The event activity is not mapped. See the <code>activity_name</code> attribute, which contains a data source specific value.""")
+        description="""The event activity is not mapped. See the <code>activity_name</code> attribute,
+which contains a data source specific value.""")
 
     _defn = EnumDefinition(
         name="MemoryActivityActivityIdEnum",
@@ -23561,7 +24729,8 @@ class ModuleActivityActivityIdEnum(EnumDefinitionImpl):
         description="The event activity is unknown.")
     OTHER = PermissibleValue(
         text="OTHER",
-        description="""The event activity is not mapped. See the <code>activity_name</code> attribute, which contains a data source specific value.""")
+        description="""The event activity is not mapped. See the <code>activity_name</code> attribute,
+which contains a data source specific value.""")
 
     _defn = EnumDefinition(
         name="ModuleActivityActivityIdEnum",
@@ -23586,13 +24755,17 @@ class PeripheralActivityActivityIdEnum(EnumDefinitionImpl):
         description="A peripheral device was disabled on the system.")
     EJECT = PermissibleValue(
         text="EJECT",
-        description="""A peripheral device was ejected from the system. This is typically used for removable media devices. Note: For <code>Mount</code> and <code>Unmount</code> events, see the <a target='_blank' href='file_activity'>File System Activity</a> event class.""")
+        description="""A peripheral device was ejected from the system. This is typically used for
+removable media devices. Note: For <code>Mount</code> and <code>Unmount</code>
+events, see the <a target='_blank' href='file_activity'>File System
+Activity</a> event class.""")
     UNKNOWN = PermissibleValue(
         text="UNKNOWN",
         description="The event activity is unknown.")
     OTHER = PermissibleValue(
         text="OTHER",
-        description="""The event activity is not mapped. See the <code>activity_name</code> attribute, which contains a data source specific value.""")
+        description="""The event activity is not mapped. See the <code>activity_name</code> attribute,
+which contains a data source specific value.""")
 
     _defn = EnumDefinition(
         name="PeripheralActivityActivityIdEnum",
@@ -23605,25 +24778,41 @@ class ProcessActivityActivityIdEnum(EnumDefinitionImpl):
     """
     LAUNCH = PermissibleValue(
         text="LAUNCH",
-        description="""A request by the actor to launch another process. Refer to the <code>launch_type_id</code> attribute for details of the specific launch type.""")
+        description="""A request by the actor to launch another process. Refer to the
+<code>launch_type_id</code> attribute for details of the specific launch type.""")
     TERMINATE = PermissibleValue(
         text="TERMINATE",
-        description="""A request by the actor to terminate a process. This activity is most commonly reflexive, this being the case when a process exits at its own initiation. Note too that Windows security products cannot always identify the actor in the case of inter-process termination. In this case, <code>actor.process</code> and <code>process</code> refer to the exiting process, i.e. indistinguishable from the reflexive case.""")
+        description="""A request by the actor to terminate a process. This activity is most commonly
+reflexive, this being the case when a process exits at its own initiation. Note
+too that Windows security products cannot always identify the actor in the case
+of inter-process termination. In this case, <code>actor.process</code> and
+<code>process</code> refer to the exiting process, i.e. indistinguishable from
+the reflexive case.""")
     OPEN = PermissibleValue(
         text="OPEN",
-        description="""A request by the actor to obtain a handle or descriptor to a process with the aim of performing further actions upon that process. The target is usually a different process but this activity can also be reflexive.""")
+        description="""A request by the actor to obtain a handle or descriptor to a process with the
+aim of performing further actions upon that process. The target is usually a
+different process but this activity can also be reflexive.""")
     INJECT = PermissibleValue(
         text="INJECT",
-        description="""A request by the actor to execute code within the context of a process. The target is usually a different process but this activity can also be reflexive. Refer to the <code>injection_type_id</code> attribute for details of the specific injection type.""")
+        description="""A request by the actor to execute code within the context of a process. The
+target is usually a different process but this activity can also be reflexive.
+Refer to the <code>injection_type_id</code> attribute for details of the
+specific injection type.""")
     SET_USER_ID = PermissibleValue(
         text="SET_USER_ID",
-        description="""A request by the actor to change its user identity by invoking the <code>setuid()</code> system call. Common programs like <code>su</code> and <code>sudo</code> use this mechanism. Note that the <em>impersonation</em> mechanism on Windows is not directly equivalent because it acts at the thread level.""")
+        description="""A request by the actor to change its user identity by invoking the
+<code>setuid()</code> system call. Common programs like <code>su</code> and
+<code>sudo</code> use this mechanism. Note that the <em>impersonation</em>
+mechanism on Windows is not directly equivalent because it acts at the thread
+level.""")
     UNKNOWN = PermissibleValue(
         text="UNKNOWN",
         description="The event activity is unknown.")
     OTHER = PermissibleValue(
         text="OTHER",
-        description="""The event activity is not mapped. See the <code>activity_name</code> attribute, which contains a data source specific value.""")
+        description="""The event activity is not mapped. See the <code>activity_name</code> attribute,
+which contains a data source specific value.""")
 
     _defn = EnumDefinition(
         name="ProcessActivityActivityIdEnum",
@@ -23657,7 +24846,8 @@ class ScheduledJobActivityActivityIdEnum(EnumDefinitionImpl):
         description="The event activity is unknown.")
     OTHER = PermissibleValue(
         text="OTHER",
-        description="""The event activity is not mapped. See the <code>activity_name</code> attribute, which contains a data source specific value.""")
+        description="""The event activity is not mapped. See the <code>activity_name</code> attribute,
+which contains a data source specific value.""")
 
     _defn = EnumDefinition(
         name="ScheduledJobActivityActivityIdEnum",
@@ -23676,7 +24866,8 @@ class ScriptActivityActivityIdEnum(EnumDefinitionImpl):
         description="The event activity is unknown.")
     OTHER = PermissibleValue(
         text="OTHER",
-        description="""The event activity is not mapped. See the <code>activity_name</code> attribute, which contains a data source specific value.""")
+        description="""The event activity is not mapped. See the <code>activity_name</code> attribute,
+which contains a data source specific value.""")
 
     _defn = EnumDefinition(
         name="ScriptActivityActivityIdEnum",
@@ -23698,7 +24889,8 @@ class AirborneBroadcastActivityActivityIdEnum(EnumDefinitionImpl):
         description="ADS-B information is being recorded, for example by a standalone transceiver.")
     OTHER = PermissibleValue(
         text="OTHER",
-        description="""The event activity is not mapped. See the <code>activity_name</code> attribute, which contains a data source specific value.""")
+        description="""The event activity is not mapped. See the <code>activity_name</code> attribute,
+which contains a data source specific value.""")
 
     _defn = EnumDefinition(
         name="AirborneBroadcastActivityActivityIdEnum",
@@ -23720,7 +24912,8 @@ class DroneFlightsActivityActivityIdEnum(EnumDefinitionImpl):
         description="Unmanned System activity is being recorded.")
     OTHER = PermissibleValue(
         text="OTHER",
-        description="""The event activity is not mapped. See the <code>activity_name</code> attribute, which contains a data source specific value.""")
+        description="""The event activity is not mapped. See the <code>activity_name</code> attribute,
+which contains a data source specific value.""")
 
     _defn = EnumDefinition(
         name="DroneFlightsActivityActivityIdEnum",
@@ -23729,7 +24922,8 @@ class DroneFlightsActivityActivityIdEnum(EnumDefinitionImpl):
 
 class DroneFlightsActivityAuthProtocolIdEnum(EnumDefinitionImpl):
     """
-    The normalized identifier of the authentication type used to authorize a flight plan or mission.
+    The normalized identifier of the authentication type used to authorize a flight
+    plan or mission.
     """
     UNKNOWN = PermissibleValue(
         text="UNKNOWN",
@@ -23760,7 +24954,8 @@ class DroneFlightsActivityAuthProtocolIdEnum(EnumDefinitionImpl):
         description="Private User")
     OTHER = PermissibleValue(
         text="OTHER",
-        description="""The authentication type is not mapped. See the <code>auth_protocol</code> attribute, which contains a data source specific value.""")
+        description="""The authentication type is not mapped. See the <code>auth_protocol</code>
+attribute, which contains a data source specific value.""")
     EAP = PermissibleValue(
         text="EAP",
         description="EAP")
@@ -23776,12 +24971,14 @@ class DroneFlightsActivityAuthProtocolIdEnum(EnumDefinitionImpl):
 
     _defn = EnumDefinition(
         name="DroneFlightsActivityAuthProtocolIdEnum",
-        description="The normalized identifier of the authentication type used to authorize a flight plan or mission.",
+        description="""The normalized identifier of the authentication type used to authorize a flight
+plan or mission.""",
     )
 
 class DroneFlightsActivityStatusIdEnum(EnumDefinitionImpl):
     """
-    The normalized Operational status identifier for the Unmanned Aerial System (UAS).
+    The normalized Operational status identifier for the Unmanned Aerial System
+    (UAS).
     """
     UNDECLARED = PermissibleValue(
         text="UNDECLARED",
@@ -23797,7 +24994,8 @@ class DroneFlightsActivityStatusIdEnum(EnumDefinitionImpl):
         description="The Unmanned Aerial System (UAS) is reporting an emergency status.")
     REMOTE_ID_SYSTEM_FAILURE = PermissibleValue(
         text="REMOTE_ID_SYSTEM_FAILURE",
-        description="""The Unmanned Aerial System (UAS) is reporting the Remote ID beacon or device is malfunctioning or has failed.""")
+        description="""The Unmanned Aerial System (UAS) is reporting the Remote ID beacon or device is
+malfunctioning or has failed.""")
     RESERVED = PermissibleValue(
         text="RESERVED",
         description="An ASTM Reserved status is reported.")
@@ -23806,11 +25004,13 @@ class DroneFlightsActivityStatusIdEnum(EnumDefinitionImpl):
         description="The status is unknown.")
     OTHER = PermissibleValue(
         text="OTHER",
-        description="""The status is not mapped. See the <code>status</code> attribute, which contains a data source specific value.""")
+        description="""The status is not mapped. See the <code>status</code> attribute, which contains
+a data source specific value.""")
 
     _defn = EnumDefinition(
         name="DroneFlightsActivityStatusIdEnum",
-        description="The normalized Operational status identifier for the Unmanned Aerial System (UAS).",
+        description="""The normalized Operational status identifier for the Unmanned Aerial System
+(UAS).""",
     )
 
 class WindowsServiceCategoryIdEnum(EnumDefinitionImpl):
@@ -23828,7 +25028,8 @@ class WindowsServiceCategoryIdEnum(EnumDefinitionImpl):
         description="A user mode service.")
     OTHER = PermissibleValue(
         text="OTHER",
-        description="""The service category is not mapped. See the <code>service_category</code> attribute, which contains an event source specific value.""")
+        description="""The service category is not mapped. See the <code>service_category</code>
+attribute, which contains an event source specific value.""")
 
     _defn = EnumDefinition(
         name="WindowsServiceCategoryIdEnum",
@@ -23847,16 +25048,23 @@ class WindowsServiceErrorControlIdEnum(EnumDefinitionImpl):
         description="The startup program ignores the error and continues the startup operation.")
     NORMAL = PermissibleValue(
         text="NORMAL",
-        description="The startup program logs the error in the event log but continues the startup operation.")
+        description="""The startup program logs the error in the event log but continues the startup
+operation.""")
     SEVERE = PermissibleValue(
         text="SEVERE",
-        description="""The startup program logs the error in the event log. If the last-known-good configuration is being started, the startup operation continues. Otherwise, the system is restarted with the last-known-good configuration.""")
+        description="""The startup program logs the error in the event log. If the last-known-good
+configuration is being started, the startup operation continues. Otherwise, the
+system is restarted with the last-known-good configuration.""")
     CRITICAL = PermissibleValue(
         text="CRITICAL",
-        description="""The startup program logs the error in the event log, if possible. If the last-known-good configuration is being started, the startup operation fails. Otherwise, the system is restarted with the last-known good configuration.""")
+        description="""The startup program logs the error in the event log, if possible. If the
+last-known-good configuration is being started, the startup operation fails.
+Otherwise, the system is restarted with the last-known good configuration.""")
     OTHER = PermissibleValue(
         text="OTHER",
-        description="""The service error control is not mapped. See the <code>service_error_control</code> attribute, which contains an event source specific value.""")
+        description="""The service error control is not mapped. See the
+<code>service_error_control</code> attribute, which contains an event source
+specific value.""")
 
     _defn = EnumDefinition(
         name="WindowsServiceErrorControlIdEnum",
@@ -23881,13 +25089,15 @@ class WindowsServiceStartTypeIdEnum(EnumDefinitionImpl):
         description="A user mode service started automatically during system startup.")
     DEMAND = PermissibleValue(
         text="DEMAND",
-        description="A user mode service started on demand when a process calls <code>StartService</code>.")
+        description="""A user mode service started on demand when a process calls
+<code>StartService</code>.""")
     DISABLED = PermissibleValue(
         text="DISABLED",
         description="A driver or service that cannot be started.")
     OTHER = PermissibleValue(
         text="OTHER",
-        description="""The service start type is not mapped. See the <code>service_start_type</code> attribute, which contains an event source specific value.""")
+        description="""The service start type is not mapped. See the <code>service_start_type</code>
+attribute, which contains an event source specific value.""")
 
     _defn = EnumDefinition(
         name="WindowsServiceStartTypeIdEnum",
@@ -23915,7 +25125,8 @@ class WindowsServiceTypeIdEnum(EnumDefinitionImpl):
         description="A user mode service that shares a process with other services.")
     OTHER = PermissibleValue(
         text="OTHER",
-        description="""The service type is not mapped. See the <code>service_type</code> attribute, which contains an event source specific value.""")
+        description="""The service type is not mapped. See the <code>service_type</code> attribute,
+which contains an event source specific value.""")
 
     _defn = EnumDefinition(
         name="WindowsServiceTypeIdEnum",
@@ -23937,10 +25148,12 @@ class RegValueTypeIdEnum(EnumDefinitionImpl):
         description="A 32-bit integer in big-endian byte order.")
     REG_EXPAND_SZ = PermissibleValue(
         text="REG_EXPAND_SZ",
-        description="""A string containing unexpanded environment variables, e.g. <code>%USERPROFILE%\Downloads</code>.""")
+        description="""A string containing unexpanded environment variables, e.g.
+<code>%USERPROFILE%\Downloads</code>.""")
     REG_LINK = PermissibleValue(
         text="REG_LINK",
-        description="""A string containing the target path of a symbolic link created by calling <code>RegCreateKeyEx</code> with <code>REG_OPTION_CREATE_LINK</code>.""")
+        description="""A string containing the target path of a symbolic link created by calling
+<code>RegCreateKeyEx</code> with <code>REG_OPTION_CREATE_LINK</code>.""")
     REG_MULTI_SZ = PermissibleValue(
         text="REG_MULTI_SZ",
         description="A sequence of zero or more strings.")
@@ -23961,7 +25174,8 @@ class RegValueTypeIdEnum(EnumDefinitionImpl):
         description="The type is unknown.")
     OTHER = PermissibleValue(
         text="OTHER",
-        description="""The type is not mapped. See the <code>type</code> attribute, which contains a data source specific value.""")
+        description="""The type is not mapped. See the <code>type</code> attribute, which contains a
+data source specific value.""")
 
     _defn = EnumDefinition(
         name="RegValueTypeIdEnum",
@@ -24109,7 +25323,8 @@ class WinResourceTypeIdEnum(EnumDefinitionImpl):
         description="WFP Provider Context")
     OTHER = PermissibleValue(
         text="OTHER",
-        description="""The resource object type is not mapped. See the <code>type</code> attribute, which may contain a data source specific value.""")
+        description="""The resource object type is not mapped. See the <code>type</code> attribute,
+which may contain a data source specific value.""")
 
     _defn = EnumDefinition(
         name="WinResourceTypeIdEnum",
@@ -24152,7 +25367,8 @@ class RegistryKeyActivityActivityIdEnum(EnumDefinitionImpl):
         description="The event activity is unknown.")
     OTHER = PermissibleValue(
         text="OTHER",
-        description="""The event activity is not mapped. See the <code>activity_name</code> attribute, which contains a data source specific value.""")
+        description="""The event activity is not mapped. See the <code>activity_name</code> attribute,
+which contains a data source specific value.""")
 
     _defn = EnumDefinition(
         name="RegistryKeyActivityActivityIdEnum",
@@ -24180,7 +25396,8 @@ class RegistryValueActivityActivityIdEnum(EnumDefinitionImpl):
         description="The event activity is unknown.")
     OTHER = PermissibleValue(
         text="OTHER",
-        description="""The event activity is not mapped. See the <code>activity_name</code> attribute, which contains a data source specific value.""")
+        description="""The event activity is not mapped. See the <code>activity_name</code> attribute,
+which contains a data source specific value.""")
 
     _defn = EnumDefinition(
         name="RegistryValueActivityActivityIdEnum",
@@ -24199,7 +25416,8 @@ class WindowsResourceActivityActivityIdEnum(EnumDefinitionImpl):
         description="The event activity is unknown.")
     OTHER = PermissibleValue(
         text="OTHER",
-        description="""The event activity is not mapped. See the <code>activity_name</code> attribute, which contains a data source specific value.""")
+        description="""The event activity is not mapped. See the <code>activity_name</code> attribute,
+which contains a data source specific value.""")
 
     _defn = EnumDefinition(
         name="WindowsResourceActivityActivityIdEnum",
@@ -24212,31 +25430,43 @@ class WindowsServiceActivityActivityIdEnum(EnumDefinitionImpl):
     """
     CREATE = PermissibleValue(
         text="CREATE",
-        description="""A service is created, for example by calling <code>CreateService</code>. Refer to the <code>win_service</code> attribute for details.""")
+        description="""A service is created, for example by calling <code>CreateService</code>. Refer
+to the <code>win_service</code> attribute for details.""")
     RECONFIGURE = PermissibleValue(
         text="RECONFIGURE",
-        description="""A service is reconfigured, for example by calling <code>ChangeServiceConfig</code> or <code>ChangeServiceConfig2</code>. Refer to the <code>win_service</code> attribute for details.""")
+        description="""A service is reconfigured, for example by calling
+<code>ChangeServiceConfig</code> or <code>ChangeServiceConfig2</code>. Refer to
+the <code>win_service</code> attribute for details.""")
     START = PermissibleValue(
         text="START",
-        description="""A stopped service is started, for example by calling <code>StartService</code>. Refer to the <code>service</code> attribute for details.""")
+        description="""A stopped service is started, for example by calling <code>StartService</code>.
+Refer to the <code>service</code> attribute for details.""")
     STOP = PermissibleValue(
         text="STOP",
-        description="""A running or paused service is stopped, for example by calling <code>ControlService</code> or <code>ControlServiceEx</code>. Refer to the <code>win_service</code> attribute for details.""")
+        description="""A running or paused service is stopped, for example by calling
+<code>ControlService</code> or <code>ControlServiceEx</code>. Refer to the
+<code>win_service</code> attribute for details.""")
     PAUSE = PermissibleValue(
         text="PAUSE",
-        description="""A running service is paused, for example by calling <code>ControlService</code> or <code>ControlServiceEx</code>. Refer to the <code>win_service</code> attribute for details.""")
+        description="""A running service is paused, for example by calling <code>ControlService</code>
+or <code>ControlServiceEx</code>. Refer to the <code>win_service</code>
+attribute for details.""")
     CONTINUE = PermissibleValue(
         text="CONTINUE",
-        description="""A paused service is continued, for example by calling <code>ControlService</code> or <code>ControlServiceEx</code>. Refer to the <code>win_service</code> attribute for details.""")
+        description="""A paused service is continued, for example by calling
+<code>ControlService</code> or <code>ControlServiceEx</code>. Refer to the
+<code>win_service</code> attribute for details.""")
     DELETE = PermissibleValue(
         text="DELETE",
-        description="""A service is deleted, for example by calling <code>DeleteService</code>. Refer to the <code>win_service</code> attribute for details.""")
+        description="""A service is deleted, for example by calling <code>DeleteService</code>. Refer
+to the <code>win_service</code> attribute for details.""")
     UNKNOWN = PermissibleValue(
         text="UNKNOWN",
         description="The event activity is unknown.")
     OTHER = PermissibleValue(
         text="OTHER",
-        description="""The event activity is not mapped. See the <code>activity_name</code> attribute, which contains a data source specific value.""")
+        description="""The event activity is not mapped. See the <code>activity_name</code> attribute,
+which contains a data source specific value.""")
 
     _defn = EnumDefinition(
         name="WindowsServiceActivityActivityIdEnum",
@@ -24249,28 +25479,36 @@ class CategoryUidEnum(EnumDefinitionImpl):
     """
     APPLICATION_ACTIVITY = PermissibleValue(
         text="APPLICATION_ACTIVITY",
-        description="""Application Activity events report detailed information about the behavior of applications and services.""")
+        description="""Application Activity events report detailed information about the behavior of
+applications and services.""")
     DISCOVERY = PermissibleValue(
         text="DISCOVERY",
-        description="""Discovery events report the existence and state of devices, files, configurations, processes, registry keys, and other objects.""")
+        description="""Discovery events report the existence and state of devices, files,
+configurations, processes, registry keys, and other objects.""")
     FINDINGS = PermissibleValue(
         text="FINDINGS",
-        description="""Findings events report findings, detections, and possible resolutions of malware, anomalies, or other actions performed by security products.""")
+        description="""Findings events report findings, detections, and possible resolutions of
+malware, anomalies, or other actions performed by security products.""")
     IDENTITY_ACCESS_MANAGEMENT = PermissibleValue(
         text="IDENTITY_ACCESS_MANAGEMENT",
-        description="""Identity & Access Management (IAM) events relate to the supervision of the system's authentication and access control model. Examples of such events are the success or failure of authentication, granting of authority, password change, entity change, privileged use etc.""")
+        description="""Identity & Access Management (IAM) events relate to the supervision of the
+system's authentication and access control model. Examples of such events are
+the success or failure of authentication, granting of authority, password
+change, entity change, privileged use etc.""")
     NETWORK_ACTIVITY = PermissibleValue(
         text="NETWORK_ACTIVITY",
         description="Network Activity events.")
     REMEDIATION = PermissibleValue(
         text="REMEDIATION",
-        description="""Remediation events report the results of remediation commands targeting files, processes, and other objects.""")
+        description="""Remediation events report the results of remediation commands targeting files,
+processes, and other objects.""")
     SYSTEM_ACTIVITY = PermissibleValue(
         text="SYSTEM_ACTIVITY",
         description="System Activity events.")
     UNMANNED_SYSTEMS = PermissibleValue(
         text="UNMANNED_SYSTEMS",
-        description="""Unmanned Systems events report the activity, existence, and/or state of unmanned systems for tracking, mission planning, and other related activities.""")
+        description="""Unmanned Systems events report the activity, existence, and/or state of
+unmanned systems for tracking, mission planning, and other related activities.""")
 
     _defn = EnumDefinition(
         name="CategoryUidEnum",

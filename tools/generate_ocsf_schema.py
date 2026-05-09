@@ -28,6 +28,7 @@ from __future__ import annotations
 import argparse
 import json
 import re
+import textwrap
 from collections import OrderedDict
 from pathlib import Path
 from typing import Any
@@ -40,7 +41,8 @@ import yaml
 
 
 class _OrderedDumper(yaml.SafeDumper):
-    pass
+    def increase_indent(self, flow=False, indentless=False):
+        return super().increase_indent(flow=flow, indentless=False)
 
 
 def _dict_representer(dumper, data):
@@ -48,6 +50,8 @@ def _dict_representer(dumper, data):
 
 
 def _str_representer(dumper, data):
+    if len(data) > 60 and "\n" not in data:
+        data = textwrap.fill(data, width=79, break_on_hyphens=False, break_long_words=False)
     if "\n" in data:
         return dumper.represent_scalar("tag:yaml.org,2002:str", data, style="|")
     return dumper.represent_scalar("tag:yaml.org,2002:str", data)
@@ -67,6 +71,60 @@ def yaml_dump(obj: Any) -> str:
         width=10000,
         allow_unicode=True,
     )
+
+
+# Top-level keys that should be preceded by a blank line (standalone blocks).
+_STANDALONE_TOP_KEYS = frozenset({
+    "annotations",
+    "prefixes",
+    "see_also",
+    "imports",
+    "types",
+    "subsets",
+    "enums",
+    "slots",
+    "classes",
+})
+
+# Blocks where a blank line should also appear before each first-level item.
+_ITEM_SEPARATOR_BLOCKS = frozenset({
+    "types", "subsets", "enums", "slots", "classes",
+})
+
+
+def _format_yaml(raw: str) -> str:
+    """Format raw YAML for readability.
+
+    Inserts a blank line before each top-level standalone block key and
+    between first-level items in separator blocks (types, enums, classes,
+    slots, subsets).
+    """
+    lines = raw.splitlines()
+    out: list[str] = []
+    in_item_block = False
+
+    for line in lines:
+        if not line:
+            out.append(line)
+            continue
+
+        indent = len(line) - len(line.lstrip())
+
+        if indent == 0 and ":" in line:
+            key = line.split(":")[0].rstrip()
+            # Blank line before every top-level standalone block.
+            if key in _STANDALONE_TOP_KEYS and out and out[-1].strip() != "":
+                out.append("")
+            in_item_block = key in _ITEM_SEPARATOR_BLOCKS
+        elif in_item_block and indent == 2 and not line.lstrip().startswith("- "):
+            # First-level named item within a separator block (class, slot, …).
+            if out and out[-1].strip() != "":
+                out.append("")
+
+        out.append(line)
+
+    result = "\n".join(out)
+    return result if result.endswith("\n") else result + "\n"
 
 
 # ---------------------------------------------------------------------------
@@ -200,7 +258,7 @@ def _module_header(
     _source_base = "https://github.com/ocsf/ocsf-schema/tree/main"
     h["source"] = f"{_source_base}/{source_dir}" if source_dir else _source_base
     h["version"] = version
-    h["annotations"] = OrderedDict(copyright="\u00a9 OCSF a Series of LF Projects, LLC")
+    h["annotations"] = OrderedDict(copyright="Source schema \u00a9 OCSF a Series of LF Projects, LLC")
     h["prefixes"] = OrderedDict(_PREFIXES)
     h["default_prefix"] = "ocsf"
     h["default_range"] = "string"
@@ -478,28 +536,56 @@ def _constraints_to_rules(
         slot_names = [to_slot_name(s) for s in slots]
         if kind == "at_least_one":
             postconds = OrderedDict(any_of=[
-                {"slot_conditions": {sn: {"required": True}}} for sn in slot_names
+                OrderedDict(slot_conditions=OrderedDict({sn: OrderedDict(required=True)}))
+                for sn in slot_names
             ])
-            rules.append(
-                OrderedDict(
-                    description=f"OCSF at_least_one: at least one of {slot_names} must be set.",
-                    postconditions=postconds,
-                )
-            )
+            rules.append(OrderedDict(
+                postconditions=postconds,
+                description=f"OCSF at_least_one: at least one of {slot_names} must be set.",
+            ))
         elif kind == "just_one":
             postconds = OrderedDict(exactly_one_of=[
-                {"slot_conditions": {sn: {"required": True}}} for sn in slot_names
+                OrderedDict(slot_conditions=OrderedDict({sn: OrderedDict(required=True)}))
+                for sn in slot_names
             ])
-            rules.append(
-                OrderedDict(
-                    description=f"OCSF just_one: exactly one of {slot_names} must be set.",
-                    postconditions=postconds,
-                )
-            )
+            rules.append(OrderedDict(
+                postconditions=postconds,
+                description=f"OCSF just_one: exactly one of {slot_names} must be set.",
+            ))
         else:
             # Unknown constraint kind — preserve as annotation by the caller.
             continue
     return rules
+
+
+# ---------------------------------------------------------------------------
+# Subset helpers.
+# ---------------------------------------------------------------------------
+
+# Keys that mark where the "structural" body of a class begins; in_subset is
+# inserted just before the first of these that appears in the OrderedDict.
+_STRUCTURAL_KEYS = frozenset({
+    "slots", "slot_usage", "rules", "see_also", "notes",
+    "exact_mappings", "close_mappings", "broad_mappings",
+    "narrow_mappings", "related_mappings", "annotations",
+    "unique_keys", "defining_slots",
+})
+
+
+def _with_in_subset(
+    cls: "OrderedDict[str, Any]", subsets: list[str]
+) -> "OrderedDict[str, Any]":
+    """Return *cls* rebuilt with ``in_subset`` inserted before structural keys."""
+    new: "OrderedDict[str, Any]" = OrderedDict()
+    inserted = False
+    for k, v in cls.items():
+        if not inserted and k in _STRUCTURAL_KEYS:
+            new["in_subset"] = subsets
+            inserted = True
+        new[k] = v
+    if not inserted:
+        new["in_subset"] = subsets
+    return new
 
 
 # ---------------------------------------------------------------------------
@@ -572,7 +658,7 @@ def build_types(upstream: Upstream) -> str:
 
     out = OrderedDict(header)
     out["types"] = types
-    return yaml_dump(out)
+    return _format_yaml(yaml_dump(out))
 
 
 # Identifier-like slot names that should map to ``identifier: true`` on the
@@ -694,7 +780,7 @@ def build_dictionary_and_enums(
     enums_out = OrderedDict(enums_header)
     enums_out["enums"] = enums
 
-    return yaml_dump(dict_out), yaml_dump(enums_out), slot_enum_map
+    return _format_yaml(yaml_dump(dict_out)), _format_yaml(yaml_dump(enums_out)), slot_enum_map
 
 
 def build_categories(upstream: Upstream) -> str:
@@ -722,7 +808,7 @@ def build_categories(upstream: Upstream) -> str:
     )
     out = OrderedDict(header)
     out["enums"] = enums
-    return yaml_dump(out)
+    return _format_yaml(yaml_dump(out))
 
 
 # ---------------------------------------------------------------------------
@@ -945,9 +1031,9 @@ def build_objects(
     # Synthetic root for every concrete object class. Provides the canonical
     # `id` identifier that LinkML expects.
     classes: "OrderedDict[str, Any]" = OrderedDict()
-    classes["OcsfObject"] = OrderedDict(
-        description="Abstract root for every OCSF object class.",
-        abstract=True,
+    classes["OcsfObject"] = _with_in_subset(
+        OrderedDict(description="Abstract root for every OCSF object class.", abstract=True),
+        ["objects"],
     )
 
     # Emit objects in dependency order: objects whose ``extends`` parent is
@@ -977,7 +1063,7 @@ def build_objects(
             # If no parent declared, root under OcsfObject.
             if "is_a" not in cls:
                 cls["is_a"] = "OcsfObject"
-            classes[cls_name] = cls
+            classes[cls_name] = _with_in_subset(cls, ["objects"])
             emitted.add(cls_name)
             del pending[name]
             progressed = True
@@ -998,12 +1084,12 @@ def build_objects(
                 )
                 if "is_a" not in cls:
                     cls["is_a"] = "OcsfObject"
-                classes[cls_name] = cls
+                classes[cls_name] = _with_in_subset(cls, ["objects"])
             break
 
     out = OrderedDict(header)
     out["classes"] = classes
-    return yaml_dump(out), extracted
+    return _format_yaml(yaml_dump(out)), extracted
 
 
 def _profile_class_def(name: str, body: dict[str, Any], *, ocsf_id: str | None = None) -> "OrderedDict[str, Any]":
@@ -1065,10 +1151,11 @@ def build_profiles(upstream: Upstream) -> str:
     classes: "OrderedDict[str, Any]" = OrderedDict()
     for name, body in upstream.profiles.items():
         cls_name = _profile_class_name(name)
-        classes[cls_name] = _profile_class_def(name, body, ocsf_id=name)
+        cls_def = _profile_class_def(name, body, ocsf_id=name)
+        classes[cls_name] = _with_in_subset(cls_def, [f"{name}_profile"])
     out = OrderedDict(header)
     out["classes"] = classes
-    return yaml_dump(out)
+    return _format_yaml(yaml_dump(out))
 
 
 def compute_event_rename_map(upstream: Upstream) -> dict[str, str]:
@@ -1163,6 +1250,8 @@ def build_events(
                 sssom_mappings=sssom_mappings,
                 cls_name_override=cls_name,
             )
+            if cat not in ("base", "other"):
+                cls = _with_in_subset(cls, [cat])
             classes[cls_name] = cls
 
     header = _module_header(
@@ -1180,7 +1269,7 @@ def build_events(
     )
     doc = OrderedDict(header)
     doc["classes"] = classes
-    return yaml_dump(doc), extracted
+    return _format_yaml(yaml_dump(doc)), extracted
 
 
 def build_extensions(
@@ -1257,7 +1346,7 @@ def build_extensions(
             cls_name = _profile_class_name(pname)
             cls_def = _profile_class_def(pname, body, ocsf_id=f"{ext_name}/{pname}")
             cls_def["annotations"]["ocsf_extension"] = ext_name
-            all_classes[cls_name] = cls_def
+            all_classes[cls_name] = _with_in_subset(cls_def, [f"{ext_name}_extension"])
 
         # Objects inside the extension.
         for oname, body in (ext.get("objects") or {}).items():
@@ -1277,7 +1366,7 @@ def build_extensions(
             if "is_a" not in cls:
                 cls["is_a"] = "OcsfObject"
             cls.setdefault("annotations", OrderedDict())["ocsf_extension"] = ext_name
-            all_classes[cls_name] = cls
+            all_classes[cls_name] = _with_in_subset(cls, [f"{ext_name}_extension"])
 
         # Events inside the extension.
         for ename, body in (ext.get("events") or {}).items():
@@ -1295,7 +1384,7 @@ def build_extensions(
                 cls_name_override=cls_name,
             )
             cls.setdefault("annotations", OrderedDict())["ocsf_extension"] = ext_name
-            all_classes[cls_name] = cls
+            all_classes[cls_name] = _with_in_subset(cls, [f"{ext_name}_extension"])
 
     header = _module_header(
         name="ocsf-extensions",
@@ -1315,23 +1404,42 @@ def build_extensions(
         doc["slots"] = all_slots
     if all_classes:
         doc["classes"] = all_classes
-    return yaml_dump(doc), extracted
+    return _format_yaml(yaml_dump(doc)), extracted
 
 
 def build_root(upstream: Upstream) -> str:
-    header = _module_header(
-        name="ocsf",
-        description=(
-            "Open Cybersecurity Schema Framework (OCSF) — LinkML schema. "
-            f"Generated from upstream OCSF JSON at version {upstream.version}. "
-            "Each top-level concern is one module: types, dictionary (slots), enums, "
-            "categories, objects, profiles, events, extensions."
-        ),
-        version=upstream.version,
-        id_suffix="",
-        source_dir="",
+    version = upstream.version
+    doc: "OrderedDict[str, Any]" = OrderedDict()
+
+    # ── Scalar metadata (canonical order from the LinkML schema template) ────
+    doc["id"] = "https://w3id.org/lmodel/ocsf"
+    doc["name"] = "ocsf"
+    doc["title"] = "Open Cybersecurity Schema Framework (OCSF) — LinkML Schema"
+    doc["description"] = (
+        "Open Cybersecurity Schema Framework (OCSF) — LinkML schema. "
+        f"Generated from upstream OCSF JSON at version {version}. "
+        "Each top-level concern is one module: types, dictionary (slots), "
+        "enums, categories, objects, profiles, events, extensions."
     )
-    header["imports"] = [
+    doc["license"] = "Apache-2.0"
+    doc["source"] = "https://github.com/ocsf/ocsf-schema/tree/main"
+    doc["version"] = version
+
+    # ── Standalone blocks ────────────────────────────────────────────────────
+    doc["see_also"] = [
+        "https://lmodel.github.io/ocsf",
+        "https://schema.ocsf.io/",
+        "https://github.com/ocsf/ocsf-schema",
+    ]
+    doc["annotations"] = OrderedDict(copyright="Source schema © OCSF a Series of LF Projects, LLC")
+    doc["prefixes"] = OrderedDict(_PREFIXES)
+
+    # ── Scalar config ────────────────────────────────────────────────────────
+    doc["default_prefix"] = "ocsf"
+    doc["default_range"] = "string"
+
+    # ── Standalone block: imports ────────────────────────────────────────────
+    doc["imports"] = [
         "linkml:types",
         "./types",
         "./enums",
@@ -1342,14 +1450,27 @@ def build_root(upstream: Upstream) -> str:
         "./events",
         "./extensions",
     ]
-    header["title"] = "Open Cybersecurity Schema Framework (OCSF) — LinkML Schema"
-    header["see_also"] = [
-        "https://lmodel.github.io/ocsf",
-        "https://schema.ocsf.io/",
-        "https://github.com/ocsf/ocsf-schema",
-    ]
-    header["id"] = "https://w3id.org/lmodel/ocsf"
-    return yaml_dump(header)
+
+    # ── Subsets — derived from upstream directory structure ──────────────────
+    subsets: "OrderedDict[str, Any]" = OrderedDict()
+    for cat_name, cat_body in upstream.categories["attributes"].items():
+        desc = cat_body.get("description") or cat_body.get("caption", cat_name)
+        subsets[cat_name] = OrderedDict(description=desc)
+    subsets["objects"] = OrderedDict(
+        description="Reusable OCSF object definitions (mirrors upstream objects/ directory)."
+    )
+    for pname, pbody in upstream.profiles.items():
+        key = f"{pname}_profile"
+        desc = pbody.get("description") or pbody.get("caption") or f"OCSF '{pname}' profile."
+        subsets[key] = OrderedDict(description=desc)
+    for ext_name, ext in upstream.extensions.items():
+        key = f"{ext_name}_extension"
+        manifest = ext.get("manifest") or {}
+        desc = manifest.get("description") or manifest.get("caption") or f"OCSF '{ext_name}' extension."
+        subsets[key] = OrderedDict(description=desc)
+    doc["subsets"] = subsets
+
+    return _format_yaml(yaml_dump(doc))
 
 
 # ---------------------------------------------------------------------------
@@ -1441,7 +1562,7 @@ def main() -> int:
     )
     enums_doc = OrderedDict(enums_header)
     enums_doc["enums"] = all_enums
-    write(out_root / "enums.yaml", yaml_dump(enums_doc))
+    write(out_root / "enums.yaml", _format_yaml(yaml_dump(enums_doc)))
 
     # 9. ocsf.yaml (root)
     write(out_root / "ocsf.yaml", build_root(upstream))

@@ -1,11 +1,15 @@
 id: https://w3id.org/lmodel/ocsf/types
 name: ocsf-types
-description: Scalar type definitions derived from the OCSF Attribute Dictionary types section.
+description: |-
+  Scalar type definitions derived from the OCSF Attribute Dictionary types
+  section.
 license: Apache-2.0
 source: https://github.com/ocsf/ocsf-schema/tree/main
 version: 1.9.0-dev
+
 annotations:
   copyright: © OCSF a Series of LF Projects, LLC
+
 prefixes:
   ocsf: https://w3id.org/lmodel/ocsf/
   linkml: https://w3id.org/linkml/
@@ -26,60 +30,76 @@ prefixes:
   core: https://w3id.org/lmodel/vulnerability-core/
 default_prefix: ocsf
 default_range: string
+
 imports:
-- linkml:types
+  - linkml:types
+
 types:
+
   TimestampT:
     typeof: integer
     uri: xsd:long
     base: int
-    description: A UNIX timestamp, in milliseconds since the Unix Epoch (1 Jan 1970 00:00:00 UTC).
+    description: |-
+      A UNIX timestamp, in milliseconds since the Unix Epoch (1 Jan 1970 00:00:00
+      UTC).
+
   UrlT:
     uri: xsd:anyURI
     base: str
     description: A Uniform Resource Locator (URL).
+
   IpT:
     uri: xsd:string
     base: str
     pattern: ^((\d{1,3}\.){3}\d{1,3}|[0-9a-fA-F:]{2,39})$
     description: An IP address, in either IPv4 or IPv6 format.
+
   MacT:
     uri: xsd:string
     base: str
     pattern: ^([0-9a-fA-F]{2}[:\-]){5}[0-9a-fA-F]{2}$
     description: A MAC (Media Access Control) address.
+
   EmailT:
     uri: xsd:string
     base: str
     pattern: ^[\w.+\-]+@[\w\-]+(\.[\w\-]+)+$
     description: An email address.
+
   HostnameT:
     uri: xsd:string
     base: str
     description: A fully qualified domain name (FQDN).
+
   UsernameT:
     uri: xsd:string
     base: str
     description: A user name.
+
   FileNameT:
     uri: xsd:string
     base: str
     description: A file name.
+
   FilePathT:
     uri: xsd:string
     base: str
     description: A file path.
+
   PortT:
     uri: xsd:integer
     base: int
     minimum_value: 0
     maximum_value: 65535
     description: A TCP/UDP port number (0-65535).
+
   UuidT:
     uri: xsd:string
     base: str
     pattern: ^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$
     description: A Universally Unique Identifier (UUID).
+
   SubnetT:
     uri: xsd:string
     base: str

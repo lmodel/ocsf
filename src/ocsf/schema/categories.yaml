@@ -4,8 +4,10 @@ description: Event category enumeration and abstract per-category base classes.
 license: Apache-2.0
 source: https://github.com/ocsf/ocsf-schema/tree/main
 version: 1.9.0-dev
+
 annotations:
   copyright: © OCSF a Series of LF Projects, LLC
+
 prefixes:
   ocsf: https://w3id.org/lmodel/ocsf/
   linkml: https://w3id.org/linkml/
@@ -26,29 +28,42 @@ prefixes:
   core: https://w3id.org/lmodel/vulnerability-core/
 default_prefix: ocsf
 default_range: string
+
 imports:
-- linkml:types
+  - linkml:types
+
 enums:
+
   CategoryUidEnum:
     description: The normalized OCSF event category (see categories.json).
     permissible_values:
       APPLICATION_ACTIVITY:
-        description: Application Activity events report detailed information about the behavior of applications and services.
+        description: |-
+          Application Activity events report detailed information about the behavior of
+          applications and services.
         annotations:
           ocsf_uid: 6
           category: application
       DISCOVERY:
-        description: Discovery events report the existence and state of devices, files, configurations, processes, registry keys, and other objects.
+        description: |-
+          Discovery events report the existence and state of devices, files,
+          configurations, processes, registry keys, and other objects.
         annotations:
           ocsf_uid: 5
           category: discovery
       FINDINGS:
-        description: Findings events report findings, detections, and possible resolutions of malware, anomalies, or other actions performed by security products.
+        description: |-
+          Findings events report findings, detections, and possible resolutions of
+          malware, anomalies, or other actions performed by security products.
         annotations:
           ocsf_uid: 2
           category: findings
       IDENTITY_ACCESS_MANAGEMENT:
-        description: Identity & Access Management (IAM) events relate to the supervision of the system's authentication and access control model. Examples of such events are the success or failure of authentication, granting of authority, password change, entity change, privileged use etc.
+        description: |-
+          Identity & Access Management (IAM) events relate to the supervision of the
+          system's authentication and access control model. Examples of such events are
+          the success or failure of authentication, granting of authority, password
+          change, entity change, privileged use etc.
         annotations:
           ocsf_uid: 3
           category: iam
@@ -58,7 +73,9 @@ enums:
           ocsf_uid: 4
           category: network
       REMEDIATION:
-        description: Remediation events report the results of remediation commands targeting files, processes, and other objects.
+        description: |-
+          Remediation events report the results of remediation commands targeting files,
+          processes, and other objects.
         annotations:
           ocsf_uid: 7
           category: remediation
@@ -68,7 +85,9 @@ enums:
           ocsf_uid: 1
           category: system
       UNMANNED_SYSTEMS:
-        description: Unmanned Systems events report the activity, existence, and/or state of unmanned systems for tracking, mission planning, and other related activities.
+        description: |-
+          Unmanned Systems events report the activity, existence, and/or state of
+          unmanned systems for tracking, mission planning, and other related activities.
         annotations:
           ocsf_uid: 8
           category: unmanned_systems

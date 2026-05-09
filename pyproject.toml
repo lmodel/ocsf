@@ -11,11 +11,12 @@ authors = [
 license = "Apache-2.0"
 license-files = ["LICENSE"]
 readme = "README.md"
-requires-python = ">=3.9,<4.0"
+requires-python = ">=3.11,<4.0"
 dynamic = ["version"]
 
 dependencies = [
   "linkml-runtime >=1.9.4",
+  "ocsf-validator>=0.2.4",
 ]
 
 [dependency-groups]
