@@ -22,7 +22,7 @@ jobs:
 
     runs-on: ubuntu-latest
     # The generators take about six minutes over this schema, and `just test` runs them
-    # beside its 4,800 tests and the example runner.
+    # beside the tests and the example runner.
     timeout-minutes: 45
     permissions:
       contents: read
