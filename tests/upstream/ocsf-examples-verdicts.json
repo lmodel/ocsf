@@ -1,0 +1,1324 @@
+{
+ "commit": "ce0589ece917e9b9c018b795c8979ffb42072cad",
+ "files": {
+  "encodings/ilf/example_logs/1_0_0_OCSF_api_activity.ocsf": {
+   "blob": "67e8dd3271f1c178d26571cb477f43980446b0b9",
+   "events": [
+    {
+     "class_uid": 6003,
+     "errors": {},
+     "warnings": {
+      "attribute_deprecated": 1,
+      "attribute_enum_sibling_incorrect": 1,
+      "version_earlier": 1
+     }
+    }
+   ]
+  },
+  "encodings/ilf/example_logs/1_0_0_OCSF_authentication.ocsf": {
+   "blob": "3507360328b83ca3f0b9a6e2152e75fb9758d25d",
+   "events": [
+    {
+     "class_uid": 3002,
+     "errors": {},
+     "warnings": {
+      "attribute_enum_sibling_incorrect": 1,
+      "version_earlier": 1
+     }
+    }
+   ]
+  },
+  "encodings/ilf/example_logs/1_1_0_OCSF_account_change.ocsf": {
+   "blob": "2a9e589b51ead31d8140ef9f847c6d44a9d63386",
+   "events": [
+    {
+     "class_uid": 3001,
+     "errors": {},
+     "warnings": {
+      "attribute_enum_sibling_incorrect": 2,
+      "class_deprecated": 1,
+      "version_earlier": 1
+     }
+    }
+   ]
+  },
+  "encodings/ilf/example_logs/1_1_0_OCSF_api_activity.ocsf": {
+   "blob": "67e8dd3271f1c178d26571cb477f43980446b0b9",
+   "events": [
+    {
+     "class_uid": 6003,
+     "errors": {},
+     "warnings": {
+      "attribute_deprecated": 1,
+      "attribute_enum_sibling_incorrect": 1,
+      "version_earlier": 1
+     }
+    }
+   ]
+  },
+  "encodings/ilf/example_logs/1_1_0_OCSF_authentication.ocsf": {
+   "blob": "3507360328b83ca3f0b9a6e2152e75fb9758d25d",
+   "events": [
+    {
+     "class_uid": 3002,
+     "errors": {},
+     "warnings": {
+      "attribute_enum_sibling_incorrect": 1,
+      "version_earlier": 1
+     }
+    }
+   ]
+  },
+  "encodings/ilf/example_logs/1_1_0_account_change.ocsf": {
+   "blob": "a4ae4b60e7e69fb81b861f4839aa3333214ae7dc",
+   "events": [
+    {
+     "class_uid": 3001,
+     "errors": {},
+     "warnings": {
+      "attribute_deprecated": 1,
+      "class_deprecated": 1,
+      "version_earlier": 1
+     }
+    }
+   ]
+  },
+  "encodings/ilf/example_logs/1_1_0_authentication.ocsf": {
+   "blob": "139da2045bea3116677db145e0e803f2cbc2b5b4",
+   "events": [
+    {
+     "class_uid": 3002,
+     "errors": {},
+     "warnings": {
+      "version_earlier": 1
+     }
+    }
+   ]
+  },
+  "encodings/ilf/example_logs/1_1_0_generic_api_activity.ocsf": {
+   "blob": "fd1052a2b5c5b106261efba0ef382a180fd0d865",
+   "events": [
+    {
+     "class_uid": 6003,
+     "errors": {},
+     "warnings": {
+      "attribute_deprecated": 1,
+      "version_earlier": 1
+     }
+    }
+   ]
+  },
+  "encodings/ilf/example_logs/1_1_0_route53.ocsf": {
+   "blob": "eb4bcc1cb4557e10b3d9893a98b9ea6f61a58bd8",
+   "events": [
+    {
+     "class_uid": 4003,
+     "errors": {},
+     "warnings": {
+      "version_earlier": 1
+     }
+    }
+   ]
+  },
+  "encodings/ilf/example_logs/1_1_0_vpcflow.ocsf": {
+   "blob": "14577491b4b49740022c318cd4a9ad83bf262ebb",
+   "events": [
+    {
+     "class_uid": 4001,
+     "errors": {
+      "type_uid_incorrect": 1
+     },
+     "warnings": {
+      "attribute_enum_sibling_incorrect": 2,
+      "version_earlier": 1
+     }
+    }
+   ]
+  },
+  "encodings/ilf/example_logs/1_1_0_vpcflowlog.ocsf": {
+   "blob": "98f5a84bf9cf74e5e86a42a4f41578299a20a515",
+   "events": [
+    {
+     "class_uid": 4001,
+     "errors": {},
+     "warnings": {
+      "version_earlier": 1
+     }
+    }
+   ]
+  },
+  "encodings/ilf/example_logs/eks.ocsf": {
+   "blob": "df8afe95a52ab0837ca9de6c948c748fc551d2e7",
+   "events": [
+    {
+     "class_uid": 6003,
+     "errors": {},
+     "warnings": {
+      "attribute_value_regex_not_matched": 1,
+      "version_earlier": 1
+     }
+    }
+   ]
+  },
+  "encodings/ilf/example_logs/inspector.ocsf": {
+   "blob": "e3ecb7bc124b187d23bb33084af62caef6d4ba90",
+   "events": [
+    {
+     "class_uid": 2002,
+     "errors": {},
+     "warnings": {
+      "attribute_deprecated": 1,
+      "version_earlier": 1
+     }
+    }
+   ]
+  },
+  "encodings/ilf/example_logs/sechub-guardduty.ocsf": {
+   "blob": "c143ddc2f4fc50e4581fdba080c8d3cce17f2ef7",
+   "events": [
+    {
+     "class_uid": 2004,
+     "errors": {
+      "profile_unknown": 1
+     },
+     "warnings": {
+      "attribute_deprecated": 1,
+      "version_earlier": 1
+     }
+    }
+   ]
+  },
+  "encodings/ilf/example_logs/sechub-pci.ocsf": {
+   "blob": "b2a825517325730d2647b42432c8a08482233904",
+   "events": [
+    {
+     "class_uid": 2003,
+     "errors": {},
+     "warnings": {
+      "attribute_deprecated": 1,
+      "version_earlier": 1
+     }
+    }
+   ]
+  },
+  "mappings/bloblang/AWS/CloudTrail/v1.0.0/Account Chanage/samples/OCSF_account_change.json": {
+   "blob": "2a9e589b51ead31d8140ef9f847c6d44a9d63386",
+   "events": [
+    {
+     "class_uid": 3001,
+     "errors": {},
+     "warnings": {
+      "attribute_enum_sibling_incorrect": 2,
+      "class_deprecated": 1,
+      "version_earlier": 1
+     }
+    }
+   ]
+  },
+  "mappings/bloblang/AWS/CloudTrail/v1.0.0/Api Activity/samples/OCSF_api_activity.json": {
+   "blob": "67e8dd3271f1c178d26571cb477f43980446b0b9",
+   "events": [
+    {
+     "class_uid": 6003,
+     "errors": {},
+     "warnings": {
+      "attribute_deprecated": 1,
+      "attribute_enum_sibling_incorrect": 1,
+      "version_earlier": 1
+     }
+    }
+   ]
+  },
+  "mappings/bloblang/AWS/CloudTrail/v1.0.0/Authentication/samples/OCSF_authentication.json": {
+   "blob": "3507360328b83ca3f0b9a6e2152e75fb9758d25d",
+   "events": [
+    {
+     "class_uid": 3002,
+     "errors": {},
+     "warnings": {
+      "attribute_enum_sibling_incorrect": 1,
+      "version_earlier": 1
+     }
+    }
+   ]
+  },
+  "mappings/bloblang/AWS/CloudTrail/v1.1.0/Account Chnage/samples/OCSF_account_change.json": {
+   "blob": "2a9e589b51ead31d8140ef9f847c6d44a9d63386",
+   "events": [
+    {
+     "class_uid": 3001,
+     "errors": {},
+     "warnings": {
+      "attribute_enum_sibling_incorrect": 2,
+      "class_deprecated": 1,
+      "version_earlier": 1
+     }
+    }
+   ]
+  },
+  "mappings/bloblang/AWS/CloudTrail/v1.1.0/Api Activity/samples/OCSF_api_activity.json": {
+   "blob": "67e8dd3271f1c178d26571cb477f43980446b0b9",
+   "events": [
+    {
+     "class_uid": 6003,
+     "errors": {},
+     "warnings": {
+      "attribute_deprecated": 1,
+      "attribute_enum_sibling_incorrect": 1,
+      "version_earlier": 1
+     }
+    }
+   ]
+  },
+  "mappings/bloblang/AWS/CloudTrail/v1.1.0/Authentication/OCSF_authentication.json": {
+   "blob": "3507360328b83ca3f0b9a6e2152e75fb9758d25d",
+   "events": [
+    {
+     "class_uid": 3002,
+     "errors": {},
+     "warnings": {
+      "attribute_enum_sibling_incorrect": 1,
+      "version_earlier": 1
+     }
+    }
+   ]
+  },
+  "mappings/bloblang/AWS/eks/v1.2.0/samples/ocsf_eks.json": {
+   "blob": "3272aef3e7ccc4eb1a61fab3ee7599d6e26cbbe0",
+   "events": [
+    {
+     "class_uid": 6003,
+     "errors": {},
+     "warnings": {
+      "attribute_value_regex_not_matched": 1,
+      "version_earlier": 1
+     }
+    }
+   ]
+  },
+  "mappings/bloblang/AWS/route53/v1.0.0/samples/OCSF_dns_activity.json": {
+   "blob": "22a162721c9af49b44f8a13f4001db1c620e1647",
+   "events": [
+    {
+     "class_uid": 4003,
+     "errors": {
+      "attribute_required_missing": 2,
+      "attribute_unknown": 1,
+      "attribute_wrong_type": 3
+     },
+     "warnings": {
+      "attribute_enum_sibling_incorrect": 1,
+      "version_earlier": 1
+     }
+    }
+   ]
+  },
+  "mappings/dataprepper/AWS/v1.1.0/VPC Flow/samples/vpcflowlog.ocsf": {
+   "blob": "14577491b4b49740022c318cd4a9ad83bf262ebb",
+   "events": [
+    {
+     "class_uid": 4001,
+     "errors": {
+      "type_uid_incorrect": 1
+     },
+     "warnings": {
+      "attribute_enum_sibling_incorrect": 2,
+      "version_earlier": 1
+     }
+    }
+   ]
+  },
+  "mappings/markdown/AWS/v1.0.0-rc.2/CloudTrail/API Activity/samples/generic_api_activity.ocsf": {
+   "blob": "5856180a28e189afbedff6b58f85f3dcc753992f",
+   "events": [
+    {
+     "class_uid": 3005,
+     "errors": {
+      "attribute_required_missing": 1,
+      "attribute_unknown": 2,
+      "constraint_failed": 1,
+      "version_incompatible_prerelease": 1
+     },
+     "warnings": {
+      "attribute_deprecated": 1,
+      "attribute_enum_sibling_incorrect": 4,
+      "class_deprecated": 1
+     }
+    }
+   ]
+  },
+  "mappings/markdown/AWS/v1.0.0-rc.2/CloudTrail/Account Change/samples/account_change.ocsf": {
+   "blob": "dee1ea8192c0a530e6be8452d2b057716a935ca9",
+   "events": [
+    {
+     "class_uid": 3001,
+     "errors": {
+      "attribute_unknown": 3,
+      "constraint_failed": 1,
+      "version_incompatible_prerelease": 1
+     },
+     "warnings": {
+      "attribute_deprecated": 1,
+      "attribute_enum_sibling_incorrect": 1,
+      "class_deprecated": 1
+     }
+    }
+   ]
+  },
+  "mappings/markdown/AWS/v1.0.0-rc.2/CloudTrail/Authentication/samples/authentication.ocsf": {
+   "blob": "3f8a064d1ece3433079116be07322cc20a2ac7cc",
+   "events": [
+    {
+     "class_uid": 3002,
+     "errors": {
+      "attribute_unknown": 4,
+      "constraint_failed": 1,
+      "version_incompatible_prerelease": 1
+     },
+     "warnings": {
+      "attribute_enum_sibling_incorrect": 1
+     }
+    }
+   ]
+  },
+  "mappings/markdown/AWS/v1.0.0-rc.2/Route53/samples/route53.ocsf": {
+   "blob": "2d39cc2fe35e697998e9091f04166a2a9cf505e3",
+   "events": [
+    {
+     "class_uid": 4003,
+     "errors": {
+      "attribute_unknown": 1,
+      "version_incompatible_prerelease": 1
+     },
+     "warnings": {}
+    }
+   ]
+  },
+  "mappings/markdown/AWS/v1.0.0-rc.2/Security Hub/samples/Security Hub.ocsf": {
+   "blob": "3a2bb2d48195aa6af407c82010d1a3fe93ad1b65",
+   "events": [
+    {
+     "class_uid": 2001,
+     "errors": {
+      "attribute_unknown": 2,
+      "attribute_wrong_type": 1,
+      "version_incompatible_prerelease": 1
+     },
+     "warnings": {
+      "attribute_deprecated": 7,
+      "class_deprecated": 1,
+      "object_deprecated": 1
+     }
+    }
+   ]
+  },
+  "mappings/markdown/AWS/v1.0.0-rc.2/VPC Flowlogs/samples/vpcflowlog.ocsf": {
+   "blob": "4b78ca3026f542f313eb9b090257e9f186f6b79f",
+   "events": [
+    {
+     "class_uid": 4001,
+     "errors": {
+      "attribute_unknown": 1,
+      "version_incompatible_prerelease": 1
+     },
+     "warnings": {}
+    }
+   ]
+  },
+  "mappings/markdown/AWS/v1.1.0/CloudTrail/API Activity/samples/generic_api_activity.ocsf": {
+   "blob": "fd1052a2b5c5b106261efba0ef382a180fd0d865",
+   "events": [
+    {
+     "class_uid": 6003,
+     "errors": {},
+     "warnings": {
+      "attribute_deprecated": 1,
+      "version_earlier": 1
+     }
+    }
+   ]
+  },
+  "mappings/markdown/AWS/v1.1.0/CloudTrail/Account Change/samples/account_change.ocsf": {
+   "blob": "a4ae4b60e7e69fb81b861f4839aa3333214ae7dc",
+   "events": [
+    {
+     "class_uid": 3001,
+     "errors": {},
+     "warnings": {
+      "attribute_deprecated": 1,
+      "class_deprecated": 1,
+      "version_earlier": 1
+     }
+    }
+   ]
+  },
+  "mappings/markdown/AWS/v1.1.0/CloudTrail/Authentication/samples/authentication.ocsf": {
+   "blob": "139da2045bea3116677db145e0e803f2cbc2b5b4",
+   "events": [
+    {
+     "class_uid": 3002,
+     "errors": {},
+     "warnings": {
+      "version_earlier": 1
+     }
+    }
+   ]
+  },
+  "mappings/markdown/AWS/v1.1.0/EKS Audit Logs/samples/eks.ocsf": {
+   "blob": "bde749c42f124959c7a727fc07edbbd531af5f6d",
+   "events": [
+    {
+     "class_uid": 6003,
+     "errors": {},
+     "warnings": {
+      "attribute_value_regex_not_matched": 3,
+      "version_earlier": 1
+     }
+    }
+   ]
+  },
+  "mappings/markdown/AWS/v1.1.0/Route53/samples/route53.ocsf": {
+   "blob": "eb4bcc1cb4557e10b3d9893a98b9ea6f61a58bd8",
+   "events": [
+    {
+     "class_uid": 4003,
+     "errors": {},
+     "warnings": {
+      "version_earlier": 1
+     }
+    }
+   ]
+  },
+  "mappings/markdown/AWS/v1.1.0/Security Hub/Compliance Finding/samples/sechub-pci.ocsf": {
+   "blob": "b2a825517325730d2647b42432c8a08482233904",
+   "events": [
+    {
+     "class_uid": 2003,
+     "errors": {},
+     "warnings": {
+      "attribute_deprecated": 1,
+      "version_earlier": 1
+     }
+    }
+   ]
+  },
+  "mappings/markdown/AWS/v1.1.0/Security Hub/Detection Finding/samples/sechub-guardduty.ocsf": {
+   "blob": "c143ddc2f4fc50e4581fdba080c8d3cce17f2ef7",
+   "events": [
+    {
+     "class_uid": 2004,
+     "errors": {
+      "profile_unknown": 1
+     },
+     "warnings": {
+      "attribute_deprecated": 1,
+      "version_earlier": 1
+     }
+    }
+   ]
+  },
+  "mappings/markdown/AWS/v1.1.0/Security Hub/Vulnerability Finding/samples/inspector.ocsf": {
+   "blob": "e3ecb7bc124b187d23bb33084af62caef6d4ba90",
+   "events": [
+    {
+     "class_uid": 2002,
+     "errors": {},
+     "warnings": {
+      "attribute_deprecated": 1,
+      "version_earlier": 1
+     }
+    }
+   ]
+  },
+  "mappings/markdown/AWS/v1.1.0/VPC Flowlogs/samples/vpcflowlog.ocsf": {
+   "blob": "98f5a84bf9cf74e5e86a42a4f41578299a20a515",
+   "events": [
+    {
+     "class_uid": 4001,
+     "errors": {},
+     "warnings": {
+      "version_earlier": 1
+     }
+    }
+   ]
+  },
+  "mappings/markdown/AWS/v1.1.0/WAF/Samples/waf.ocsf": {
+   "blob": "1674500655a55f5898bab26df0525d101d5951b4",
+   "events": [
+    {
+     "class_uid": 4002,
+     "errors": {
+      "observable_name_invalid_reference": 1
+     },
+     "warnings": {
+      "attribute_deprecated": 1,
+      "attribute_enum_sibling_incorrect": 2,
+      "attribute_value_regex_not_matched": 1,
+      "version_earlier": 1
+     }
+    }
+   ]
+  },
+  "mappings/markdown/AWS/v1.5.0/CloudTrail/Account Change/samples/account_change.ocsf": {
+   "blob": "530d0d09e20e6228e1430625c5f16f9e205beaf9",
+   "events": [
+    {
+     "class_uid": 6003,
+     "errors": {},
+     "warnings": {
+      "attribute_deprecated": 2,
+      "version_earlier": 1
+     }
+    }
+   ]
+  },
+  "mappings/markdown/AWS/v1.5.0/Route53/samples/route53.ocsf": {
+   "blob": "ef6542365180d229266d98f71b1bfde5dcbcbd4a",
+   "events": [
+    {
+     "class_uid": 4003,
+     "errors": {},
+     "warnings": {
+      "version_earlier": 1
+     }
+    }
+   ]
+  },
+  "mappings/markdown/AWS/v1.5.0/VPC Flowlogs/samples/vpcflowlog.ocsf": {
+   "blob": "41203632e5b3adda7c6d87ae76fe267a481f58db",
+   "events": [
+    {
+     "class_uid": 4001,
+     "errors": {},
+     "warnings": {
+      "attribute_value_regex_not_matched": 3,
+      "version_earlier": 1
+     }
+    }
+   ]
+  },
+  "mappings/markdown/AWS/v1.5.0/WAF/Samples/waf.ocsf": {
+   "blob": "c624347843061e7f49088ac976f0c92a56348e01",
+   "events": [
+    {
+     "class_uid": 4002,
+     "errors": {},
+     "warnings": {
+      "attribute_value_regex_not_matched": 1,
+      "version_earlier": 1
+     }
+    }
+   ]
+  },
+  "mappings/markdown/CERT-NetSA at CMU-SEI/SiLK Network Flow Data/samples/SampleOCSF_FCCX.json": {
+   "blob": "a894bf0a18bc9a280dc62387718de663ce02da82",
+   "events": [
+    {
+     "class_uid": 4001,
+     "errors": {
+      "attribute_required_missing": 1,
+      "attribute_wrong_type": 3,
+      "version_incompatible_prerelease": 1
+     },
+     "warnings": {
+      "attribute_enum_sibling_suspicious_other": 1
+     }
+    }
+   ]
+  },
+  "mappings/markdown/Cisco/v1.3.0/ASA/106023/samples/cisco_asa_106023.ocsf": {
+   "blob": "3cf28a987cdb4098af9a16d18eb6de695cdf84e0",
+   "events": [
+    {
+     "class_uid": 4001,
+     "errors": {},
+     "warnings": {
+      "version_earlier": 1
+     }
+    }
+   ]
+  },
+  "mappings/markdown/Cisco/v1.3.0/ASA/302013/samples/cisco_asa_302013.ocsf": {
+   "blob": "eefcba75096678f2789f7752f3ccc92b9b9cb280",
+   "events": [
+    {
+     "class_uid": 4001,
+     "errors": {},
+     "warnings": {
+      "version_earlier": 1
+     }
+    }
+   ]
+  },
+  "mappings/markdown/Cisco/v1.3.0/ASA/302014/samples/cisco_asa_302014.ocsf": {
+   "blob": "2c90c07b2363f359b091591746d8e97682d73676",
+   "events": [
+    {
+     "class_uid": 4001,
+     "errors": {},
+     "warnings": {
+      "version_earlier": 1
+     }
+    }
+   ]
+  },
+  "mappings/markdown/Cisco/v1.3.0/ASA/302015/samples/cisco_asa_302015.ocsf": {
+   "blob": "bf59e1c8cc37aec25984b6653b1613e953d14b2d",
+   "events": [
+    {
+     "class_uid": 4001,
+     "errors": {},
+     "warnings": {
+      "version_earlier": 1
+     }
+    }
+   ]
+  },
+  "mappings/markdown/Cisco/v1.3.0/ASA/302016/samples/cisco_asa_302016.ocsf": {
+   "blob": "24e11ed7153c471b89646dd79ee207f39aad0f76",
+   "events": [
+    {
+     "class_uid": 4001,
+     "errors": {},
+     "warnings": {
+      "version_earlier": 1
+     }
+    }
+   ]
+  },
+  "mappings/markdown/Cisco/v1.3.0/ASA/305011/samples/cisco_asa_305011.ocsf": {
+   "blob": "82b0c3b130334e210eab2398ed28b0f6eb1e6347",
+   "events": [
+    {
+     "class_uid": 4001,
+     "errors": {},
+     "warnings": {
+      "version_earlier": 1
+     }
+    }
+   ]
+  },
+  "mappings/markdown/Cisco/v1.3.0/ASA/305012/samples/cisco_asa_305012.ocsf": {
+   "blob": "81f899c66370cc02be2a43b445f6897e45659b81",
+   "events": [
+    {
+     "class_uid": 4001,
+     "errors": {},
+     "warnings": {
+      "version_earlier": 1
+     }
+    }
+   ]
+  },
+  "mappings/markdown/Falco/samples/falco.ocsf": {
+   "blob": "c21f7fe987ae59f311c5a0eb35b8eb2646c4d150",
+   "events": [
+    {
+     "class_uid": 2001,
+     "errors": {
+      "attribute_unknown": 1,
+      "observable_name_invalid_reference": 8,
+      "version_incompatible_initial_development": 1
+     },
+     "warnings": {
+      "attribute_enum_sibling_incorrect": 10,
+      "class_deprecated": 1,
+      "object_deprecated": 1
+     }
+    }
+   ]
+  },
+  "mappings/markdown/GitHub/v1.3.0/Github Audit Logs/API Activity/samples/api_activity.ocsf": {
+   "blob": "312542c969edc6cf747c9f19486fa38f17c7d1d1",
+   "events": [
+    {
+     "class_uid": 6003,
+     "errors": {},
+     "warnings": {
+      "attribute_enum_sibling_suspicious_other": 2,
+      "version_earlier": 1
+     }
+    }
+   ]
+  },
+  "mappings/markdown/GitHub/v1.3.0/Github Audit Logs/Account Change/samples/account_change.ocsf": {
+   "blob": "d72c81cb5b8a83671fdf6c1c77434877345b2be3",
+   "events": [
+    {
+     "class_uid": 3001,
+     "errors": {},
+     "warnings": {
+      "class_deprecated": 1,
+      "version_earlier": 1
+     }
+    }
+   ]
+  },
+  "mappings/markdown/GitHub/v1.3.0/Github Audit Logs/Authentication/samples/authentication.ocsf": {
+   "blob": "18fd1ee9069c09b2f0abec527e9c0eaf616e05f9",
+   "events": [
+    {
+     "class_uid": 3002,
+     "errors": {
+      "constraint_failed": 1
+     },
+     "warnings": {
+      "attribute_enum_sibling_suspicious_other": 1,
+      "version_earlier": 1
+     }
+    }
+   ]
+  },
+  "mappings/markdown/GitHub/v1.3.0/Github Audit Logs/Entity Management/samples/entity_management.ocsf": {
+   "blob": "809c0ba514418721f79457eb8b70441bde2e08b4",
+   "events": [
+    {
+     "class_uid": 3004,
+     "errors": {},
+     "warnings": {
+      "attribute_enum_sibling_suspicious_other": 1,
+      "version_earlier": 1
+     }
+    }
+   ]
+  },
+  "mappings/markdown/GitHub/v1.3.0/Github Audit Logs/Group Management/samples/group_management.ocsf": {
+   "blob": "f3bd0dd85ce23f3bbef3ccd367acc6e26574ed1a",
+   "events": [
+    {
+     "class_uid": 3006,
+     "errors": {},
+     "warnings": {
+      "attribute_deprecated": 1,
+      "attribute_enum_sibling_suspicious_other": 1,
+      "version_earlier": 1
+     }
+    }
+   ]
+  },
+  "mappings/markdown/IBM/QRadar SIEM/samples/offense.ocsf": {
+   "blob": "b53f40fea847b25db5d6340739cb7a33de364d9b",
+   "events": [
+    {
+     "class_uid": 2001,
+     "errors": {
+      "attribute_required_missing": 20,
+      "attribute_unknown": 2,
+      "attribute_wrong_type": 1,
+      "observable_name_invalid_reference": 9,
+      "version_incompatible_later": 1
+     },
+     "warnings": {
+      "attribute_enum_sibling_incorrect": 1,
+      "attribute_enum_sibling_suspicious_other": 5,
+      "class_deprecated": 1,
+      "object_deprecated": 1
+     }
+    }
+   ]
+  },
+  "mappings/markdown/Microsoft/O365/Exchange/messagetrace/v1.4.0/samples/messagetrace_Delivered.ocsf": {
+   "blob": "aa96dfbc1e62ec7905709ef41f48204ee11d5058",
+   "events": [
+    {
+     "class_uid": 4009,
+     "errors": {
+      "constraint_failed": 1
+     },
+     "warnings": {
+      "attribute_deprecated": 2,
+      "version_earlier": 1
+     }
+    }
+   ]
+  },
+  "mappings/markdown/Microsoft/O365/Exchange/messagetrace/v1.4.0/samples/messagetrace_Expanded.ocsf": {
+   "blob": "6011f680b6d5b8a353b4ef4b296651c2c1775720",
+   "events": [
+    {
+     "class_uid": 4009,
+     "errors": {
+      "constraint_failed": 1
+     },
+     "warnings": {
+      "attribute_deprecated": 2,
+      "version_earlier": 1
+     }
+    }
+   ]
+  },
+  "mappings/markdown/Microsoft/O365/Exchange/messagetrace/v1.4.0/samples/messagetrace_Failed.ocsf": {
+   "blob": "292b7c1575d6901f127716b8fb80c4807ed50e84",
+   "events": [
+    {
+     "class_uid": 4009,
+     "errors": {
+      "constraint_failed": 1
+     },
+     "warnings": {
+      "attribute_deprecated": 2,
+      "version_earlier": 1
+     }
+    }
+   ]
+  },
+  "mappings/markdown/Microsoft/O365/Exchange/messagetrace/v1.4.0/samples/messagetrace_FilteredAsSpam.ocsf": {
+   "blob": "6c45e74ddddc8e0a76f1b9200ccc818732147ef8",
+   "events": [
+    {
+     "class_uid": 4009,
+     "errors": {
+      "constraint_failed": 1
+     },
+     "warnings": {
+      "attribute_deprecated": 2,
+      "version_earlier": 1
+     }
+    }
+   ]
+  },
+  "mappings/markdown/Microsoft/O365/Exchange/messagetrace/v1.4.0/samples/messagetrace_GettingStatus.ocsf": {
+   "blob": "96181e4adda9dab6bfdbc1a93858b20bfb1d4f01",
+   "events": [
+    {
+     "class_uid": 4009,
+     "errors": {
+      "constraint_failed": 1
+     },
+     "warnings": {
+      "attribute_deprecated": 2,
+      "version_earlier": 1
+     }
+    }
+   ]
+  },
+  "mappings/markdown/Microsoft/O365/Exchange/messagetrace/v1.4.0/samples/messagetrace_None.ocsf": {
+   "blob": "5af00b2c3eeb9370520780e336f97aef3b6753f1",
+   "events": [
+    {
+     "class_uid": 4009,
+     "errors": {
+      "constraint_failed": 1
+     },
+     "warnings": {
+      "attribute_deprecated": 2,
+      "version_earlier": 1
+     }
+    }
+   ]
+  },
+  "mappings/markdown/Microsoft/O365/Exchange/messagetrace/v1.4.0/samples/messagetrace_Pending.ocsf": {
+   "blob": "abd968585a0f773dc2abf955e0211dfc55b5e817",
+   "events": [
+    {
+     "class_uid": 4009,
+     "errors": {
+      "constraint_failed": 1
+     },
+     "warnings": {
+      "attribute_deprecated": 2,
+      "version_earlier": 1
+     }
+    }
+   ]
+  },
+  "mappings/markdown/Microsoft/O365/Exchange/messagetrace/v1.4.0/samples/messagetrace_Quarantined.ocsf": {
+   "blob": "c34a6669491446c0e68dad1315da5acf3bf6c201",
+   "events": [
+    {
+     "class_uid": 4009,
+     "errors": {
+      "constraint_failed": 1
+     },
+     "warnings": {
+      "attribute_deprecated": 2,
+      "version_earlier": 1
+     }
+    }
+   ]
+  },
+  "mappings/markdown/Microsoft/O365/Exchange/messagetrace/v1.4.0/samples/messagetrace_Resolved.ocsf": {
+   "blob": "d5484fcc2b29ee019973ad2b502ef828e436f0ce",
+   "events": [
+    {
+     "class_uid": 4009,
+     "errors": {
+      "constraint_failed": 1
+     },
+     "warnings": {
+      "attribute_deprecated": 2,
+      "version_earlier": 1
+     }
+    }
+   ]
+  },
+  "mappings/markdown/Microsoft/Windows Events/4624/4624_0.json": {
+   "blob": "dc4f8df1f94a82fa6a056174e0ef844ceecf0b4b",
+   "events": [
+    {
+     "class_uid": 3002,
+     "errors": {
+      "attribute_unknown": 4,
+      "version_incompatible_prerelease": 1
+     },
+     "warnings": {
+      "attribute_enum_sibling_incorrect": 1,
+      "attribute_enum_sibling_suspicious_other": 1,
+      "attribute_value_regex_not_matched": 1
+     }
+    }
+   ]
+  },
+  "mappings/markdown/Microsoft/Windows Events/4625/4625_0.json": {
+   "blob": "a5f4dded8d15892d55be701bf0ff301a7921b7df",
+   "events": [
+    {
+     "class_uid": 3002,
+     "errors": {
+      "attribute_unknown": 4,
+      "version_incompatible_prerelease": 1
+     },
+     "warnings": {
+      "attribute_enum_sibling_incorrect": 2,
+      "attribute_value_regex_not_matched": 1
+     }
+    }
+   ]
+  },
+  "mappings/markdown/Microsoft/Windows Events/4661/4661.json": {
+   "blob": "bd150bd127d49fb149493243001bef7b4e6ba570",
+   "events": [
+    {
+     "class_uid": 1010,
+     "errors": {
+      "attribute_required_missing": 2,
+      "attribute_unknown": 3,
+      "version_incompatible_prerelease": 1
+     },
+     "warnings": {}
+    }
+   ]
+  },
+  "mappings/markdown/Microsoft/Windows Events/4663/4663_0.json": {
+   "blob": "f9e34afe9b1389d6f6e0dfe8d7d6149fcff73423",
+   "events": [
+    {
+     "class_uid": 1010,
+     "errors": {
+      "attribute_required_missing": 1,
+      "attribute_unknown": 3,
+      "version_incompatible_prerelease": 1
+     },
+     "warnings": {
+      "attribute_enum_sibling_incorrect": 3
+     }
+    }
+   ]
+  },
+  "mappings/markdown/Microsoft/Windows Events/4673/4673_0.json": {
+   "blob": "bae00c1ee93e89941d5a3e405c6d03b9aa38b2c9",
+   "events": [
+    {
+     "class_uid": 1010,
+     "errors": {
+      "attribute_required_missing": 2,
+      "attribute_unknown": 3,
+      "version_incompatible_prerelease": 1
+     },
+     "warnings": {}
+    }
+   ]
+  },
+  "mappings/markdown/Microsoft/Windows Events/4688/4688_0.json": {
+   "blob": "cc54528d3d48a6ba2459ab858b38be6a27a9f5ab",
+   "events": [
+    {
+     "class_uid": 1007,
+     "errors": {
+      "attribute_unknown": 2,
+      "version_incompatible_prerelease": 1
+     },
+     "warnings": {}
+    }
+   ]
+  },
+  "mappings/markdown/Microsoft/Windows Events/4689/4689_0.json": {
+   "blob": "b91293e0e7ed77c21baf3beef7e8972dec228f95",
+   "events": [
+    {
+     "class_uid": 1007,
+     "errors": {
+      "attribute_unknown": 2,
+      "version_incompatible_prerelease": 1
+     },
+     "warnings": {}
+    }
+   ]
+  },
+  "mappings/markdown/Okta/v1.3.0/System Logs/API Activity/samples/generic_api_activity.ocsf": {
+   "blob": "a26659ab4dfad9163e62f6d18a9f636abd01d7ef",
+   "events": [
+    {
+     "class_uid": 6003,
+     "errors": {},
+     "warnings": {
+      "attribute_deprecated": 1,
+      "version_earlier": 1
+     }
+    }
+   ]
+  },
+  "mappings/markdown/Okta/v1.3.0/System Logs/Account Change/samples/account_change.ocsf": {
+   "blob": "b32f2fc22d8824a017a78ee2b22525d4eca1355c",
+   "events": [
+    {
+     "class_uid": 3001,
+     "errors": {},
+     "warnings": {
+      "attribute_deprecated": 1,
+      "class_deprecated": 1,
+      "version_earlier": 1
+     }
+    }
+   ]
+  },
+  "mappings/markdown/Okta/v1.3.0/System Logs/Authentication/samples/authentication.ocsf": {
+   "blob": "d274adeca63c4036e2bcc99de5ae1e5ec3f73da6",
+   "events": [
+    {
+     "class_uid": 3002,
+     "errors": {},
+     "warnings": {
+      "attribute_deprecated": 1,
+      "attribute_enum_sibling_suspicious_other": 1,
+      "version_earlier": 1
+     }
+    }
+   ]
+  },
+  "mappings/markdown/Okta/v1.3.0/System Logs/Detection Finding/samples/detection_finding.ocsf": {
+   "blob": "ef389e6e3aab2206e922facb1689e446b6197cba",
+   "events": [
+    {
+     "class_uid": 2004,
+     "errors": {},
+     "warnings": {
+      "attribute_deprecated": 1,
+      "attribute_enum_sibling_incorrect": 1,
+      "version_earlier": 1
+     }
+    }
+   ]
+  },
+  "mappings/markdown/Okta/v1.3.0/System Logs/Entity Management/samples/entity_management.ocsf": {
+   "blob": "ef97926eacd767c283e75626cc8cdc86797545f9",
+   "events": [
+    {
+     "class_uid": 3004,
+     "errors": {},
+     "warnings": {
+      "attribute_deprecated": 1,
+      "version_earlier": 1
+     }
+    }
+   ]
+  },
+  "mappings/markdown/Okta/v1.3.0/System Logs/Group Management/samples/group_management.ocsf": {
+   "blob": "09fa76a6fffa36a5c50977ac822581351a669a0c",
+   "events": [
+    {
+     "class_uid": 3006,
+     "errors": {},
+     "warnings": {
+      "attribute_deprecated": 2,
+      "version_earlier": 1
+     }
+    }
+   ]
+  },
+  "mappings/markdown/Prowler/samples/prowler.ocsf": {
+   "blob": "038cdd4dc31d364e2174484ffca9204dbaaa36ec",
+   "events": [
+    {
+     "class_uid": 2004,
+     "errors": {},
+     "warnings": {
+      "attribute_deprecated": 1,
+      "version_earlier": 1
+     }
+    }
+   ]
+  },
+  "mappings/markdown/SSC/samples/malware_infection_detected_sample.json": {
+   "blob": "04b9fbc77a244fc1632d313bd0087e4f4324920e",
+   "events": [
+    {
+     "class_uid": 2001,
+     "errors": {
+      "attribute_enum_array_value_unknown": 1,
+      "attribute_enum_value_unknown": 4,
+      "attribute_unknown": 2,
+      "attribute_wrong_type": 2,
+      "observable_name_invalid_reference": 6,
+      "profile_unknown": 2
+     },
+     "warnings": {
+      "attribute_deprecated": 2,
+      "attribute_enum_sibling_incorrect": 3,
+      "class_deprecated": 1,
+      "object_deprecated": 1,
+      "version_earlier": 1
+     }
+    },
+    {
+     "class_uid": 2001,
+     "errors": {
+      "attribute_enum_array_value_unknown": 1,
+      "attribute_enum_value_unknown": 4,
+      "attribute_unknown": 2,
+      "attribute_wrong_type": 2,
+      "observable_name_invalid_reference": 6,
+      "profile_unknown": 2
+     },
+     "warnings": {
+      "attribute_deprecated": 2,
+      "attribute_enum_sibling_incorrect": 3,
+      "class_deprecated": 1,
+      "object_deprecated": 1,
+      "version_earlier": 1
+     }
+    },
+    {
+     "class_uid": 2001,
+     "errors": {
+      "attribute_enum_array_value_unknown": 1,
+      "attribute_enum_value_unknown": 4,
+      "attribute_unknown": 2,
+      "attribute_wrong_type": 2,
+      "observable_name_invalid_reference": 6,
+      "profile_unknown": 2
+     },
+     "warnings": {
+      "attribute_deprecated": 2,
+      "attribute_enum_sibling_incorrect": 3,
+      "class_deprecated": 1,
+      "object_deprecated": 1,
+      "version_earlier": 1
+     }
+    },
+    {
+     "class_uid": 2001,
+     "errors": {
+      "attribute_enum_array_value_unknown": 1,
+      "attribute_enum_value_unknown": 4,
+      "attribute_unknown": 2,
+      "attribute_wrong_type": 2,
+      "observable_name_invalid_reference": 6,
+      "profile_unknown": 2
+     },
+     "warnings": {
+      "attribute_deprecated": 2,
+      "attribute_enum_sibling_incorrect": 3,
+      "class_deprecated": 1,
+      "object_deprecated": 1,
+      "version_earlier": 1
+     }
+    }
+   ]
+  },
+  "mappings/markdown/Zeek/v1.3.0/conn_log/samples/conn_log.ocsf": {
+   "blob": "637cf987fc8f3e8212d8196b8d4e47a775277951",
+   "events": [
+    {
+     "class_uid": 4001,
+     "errors": {},
+     "warnings": {
+      "version_earlier": 1
+     }
+    }
+   ]
+  },
+  "mappings/markdown/Zeek/v1.3.0/ftp_log/samples/ftp_log.ocsf": {
+   "blob": "f578fc917afa122b050a4451616ab92f4d2b130d",
+   "events": [
+    {
+     "class_uid": 4008,
+     "errors": {},
+     "warnings": {
+      "version_earlier": 1
+     }
+    }
+   ]
+  },
+  "mappings/markdown/Zeek/v1.3.0/http_log/samples/http_log.ocsf": {
+   "blob": "e7846833d00658c56c7ff8d0be95c71bf60da011",
+   "events": [
+    {
+     "class_uid": 4002,
+     "errors": {
+      "attribute_wrong_type": 2
+     },
+     "warnings": {
+      "version_earlier": 1
+     }
+    }
+   ]
+  },
+  "mappings/markdown/Zeek/v1.3.0/ssh_log/samples/ssh_log.ocsf": {
+   "blob": "1afd2ac38987446c92d78f9bd68016d039efc0be",
+   "events": [
+    {
+     "class_uid": 4007,
+     "errors": {},
+     "warnings": {
+      "version_earlier": 1
+     }
+    }
+   ]
+  },
+  "mappings/markdown/Zeek/v1.3.0/ssl_log/samples/ssl_log.ocsf": {
+   "blob": "1e6489fc7ff3eb4679630a9e638ec88c372e3ecc",
+   "events": [
+    {
+     "class_uid": 4001,
+     "errors": {},
+     "warnings": {
+      "version_earlier": 1
+     }
+    }
+   ]
+  },
+  "mappings/markdown/Zeek/v1.4.0/conn_log/samples/conn_log.ocsf": {
+   "blob": "126f8ea2d3b777fc6ce3a80c0ec5dea8147f5e8e",
+   "events": [
+    {
+     "class_uid": 4001,
+     "errors": {
+      "attribute_unknown": 1
+     },
+     "warnings": {
+      "version_earlier": 1
+     }
+    }
+   ]
+  },
+  "mappings/markdown/Zeek/v1.4.0/x509_log/samples/x509_log.ocsf": {
+   "blob": "3f1f4b4564c3858c0a503d40d6cb47a0a4eb4eab",
+   "events": [
+    {
+     "class_uid": 4001,
+     "errors": {
+      "attribute_required_missing": 2,
+      "attribute_unknown": 4,
+      "attribute_wrong_type": 2,
+      "constraint_failed": 1
+     },
+     "warnings": {
+      "version_earlier": 1
+     }
+    }
+   ]
+  }
+ },
+ "validator": "https://schema.ocsf.io/api/1.9.0/v2/validate"
+}
