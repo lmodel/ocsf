@@ -26,7 +26,9 @@ ROOT = Path(__file__).resolve().parent.parent
 SCHEMA = ROOT / "src" / "ocsf" / "schema" / "ocsf.yaml"
 OUT = ROOT / "tests" / "data" / "minimal"
 SUFFIX = "-minimal.yaml"
-HEADER = "# The least that {name} requires. scripts/make_examples.py writes this file.\n"
+HEADER = (
+    "# The least that {name} requires. scripts/make_examples.py writes this file.\n"
+)
 EDITION = "1.9.0"
 
 SCALARS = {
@@ -70,10 +72,14 @@ class Maker:
         if slot.equals_number is not None:
             one = int(slot.equals_number)
         elif any(entry.equals_number is not None for entry in slot.any_of):
-            numbers = [int(e.equals_number) for e in slot.any_of if e.equals_number is not None]
+            numbers = [
+                int(e.equals_number) for e in slot.any_of if e.equals_number is not None
+            ]
             ordinary = [n for n in numbers if n not in (0, 99)]
             one = ordinary[0] if ordinary else numbers[0]
-        elif slot.range == "OcsfObject" or any(e.range == "OcsfJsonValue" for e in slot.any_of):
+        elif slot.range == "OcsfObject" or any(
+            e.range == "OcsfJsonValue" for e in slot.any_of
+        ):
             one = {"example": "value"}
         elif slot.range in self.view.all_classes():
             one = self.instance(slot.range, path)
@@ -118,7 +124,9 @@ class Maker:
             held = self.instance(slot.range, path)
             current = held
             for part in rest.split("."):
-                inner = {s.name: s for s in self.view.class_induced_slots(slot.range)}[part]
+                inner = {s.name: s for s in self.view.class_induced_slots(slot.range)}[
+                    part
+                ]
                 current[part] = self.value(inner, path)
                 current = current[part]
                 slot = inner
@@ -140,7 +148,12 @@ def documents() -> dict[str, str]:
     maker = Maker(view)
     return {
         f"{name}{SUFFIX}": HEADER.format(name=name)
-        + yaml.safe_dump(maker.instance(name), sort_keys=True, allow_unicode=True, default_flow_style=False)
+        + yaml.safe_dump(
+            maker.instance(name),
+            sort_keys=True,
+            allow_unicode=True,
+            default_flow_style=False,
+        )
         for name in concrete_classes(view)
     }
 

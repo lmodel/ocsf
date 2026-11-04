@@ -28,7 +28,9 @@ def test_the_schema_is_valid_under_the_draft_it_declares():
 
 
 def test_the_committed_file_is_the_generators_output():
-    generated = json.loads(JsonSchemaGenerator(str(SCHEMA), mergeimports=True).serialize())
+    generated = json.loads(
+        JsonSchemaGenerator(str(SCHEMA), mergeimports=True).serialize()
+    )
     assert generated == schema()
 
 
@@ -75,7 +77,10 @@ def test_a_data_type_carries_its_bound(data_type, keyword, value):
 def test_an_enumerated_attribute_holds_integers():
     activity = schema()["$defs"]["OcsfAuthentication"]["properties"]["activity_id"]
     assert activity["type"] == "integer"
-    assert {"const": 1, "description": "A new logon session was requested."} in activity["anyOf"]
+    assert {
+        "const": 1,
+        "description": "A new logon session was requested.",
+    } in activity["anyOf"]
 
 
 def test_a_uid_is_constant_for_its_class():

@@ -56,11 +56,15 @@ def main() -> None:
     }
     used = set()
     for path in SCHEMA_DIR.glob("*.yaml"):
-        used |= set(re.findall(r"^\s*- d3f:(\S+)$", path.read_text(encoding="utf-8"), re.M))
+        used |= set(
+            re.findall(r"^\s*- d3f:(\S+)$", path.read_text(encoding="utf-8"), re.M)
+        )
     missing = sorted(used - declared)
     if missing:
         raise SystemExit(f"D3FEND 1.6.0 does not declare: {missing}")
-    OUTPUT.write_text(HEADER + "".join(f"{name}\n" for name in sorted(used)), encoding="utf-8")
+    OUTPUT.write_text(
+        HEADER + "".join(f"{name}\n" for name in sorted(used)), encoding="utf-8"
+    )
 
 
 if __name__ == "__main__":

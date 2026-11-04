@@ -80,12 +80,14 @@ skip = [
 ]
 
 # Reminder: words have to be lowercased for the ignore-words-list
-ignore-words-list = "linke"
+ignore-words-list = "linke,actvity"
 quiet-level = 3
 
 # Ref.: https://github.com/crate-ci/typos (spell checker)
 [tool.typos.default.extend-words]
 linke = "linke"
+# OCSF's own name for its Event Log Activity class, which tests/test_coverage.py holds.
+actvity = "actvity"
 
 [tool.typos.files]
 extend-exclude = [

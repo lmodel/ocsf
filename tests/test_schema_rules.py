@@ -56,7 +56,9 @@ ELEMENT_KINDS = ("classes", "enums", "types", "subsets")
 # composite of two copies would write each one under a single IRI, until lokf's adapt can
 # rename what a neighbour copy defines (lokf #169). A new overlap fails this test. No
 # class, enum, type or subset is shared, since each carries the Ocsf or ocsf prefix.
-SHARED_WITH_NEIGHBOURS = json.loads((ROOT / "tests" / "upstream" / "shared-keys.json").read_text("utf-8"))
+SHARED_WITH_NEIGHBOURS = json.loads(
+    (ROOT / "tests" / "upstream" / "shared-keys.json").read_text("utf-8")
+)
 
 # The class `just lokf-adapt` re-roots on Concept. OCSF's objects are values inside an
 # event, so an event class alone is what a concept may name.
@@ -85,7 +87,14 @@ RENAMED = {
     "url",
     "version",
 }
-MAPPING_KEYS = ("mappings", "exact_mappings", "close_mappings", "related_mappings", "narrow_mappings", "broad_mappings")
+MAPPING_KEYS = (
+    "mappings",
+    "exact_mappings",
+    "close_mappings",
+    "related_mappings",
+    "narrow_mappings",
+    "broad_mappings",
+)
 
 
 def _load(path):
@@ -106,7 +115,10 @@ def _names(path):
     elements = {kind: set(doc.get(kind) or {}) for kind in ELEMENT_KINDS}
     slots = {}
     owners = [doc.get("slots") or {}]
-    owners += [(cls or {}).get("attributes") or {} for cls in (doc.get("classes") or {}).values()]
+    owners += [
+        (cls or {}).get("attributes") or {}
+        for cls in (doc.get("classes") or {}).values()
+    ]
     for owner in owners:
         for name, slot in owner.items():
             uri = (slot or {}).get("slot_uri") or f"{default}:{name}"
@@ -139,7 +151,9 @@ def test_neighbours_are_the_released_assets():
     """Each neighbour copy is byte for byte the file pinned above."""
     assert {p.name for p in NEIGHBOUR_DIR.iterdir()} == set(NEIGHBOURS)
     for name, sha256 in NEIGHBOURS.items():
-        assert hashlib.sha256((NEIGHBOUR_DIR / name).read_bytes()).hexdigest() == sha256, name
+        assert (
+            hashlib.sha256((NEIGHBOUR_DIR / name).read_bytes()).hexdigest() == sha256
+        ), name
 
 
 def test_names_apart_from_lokf():
@@ -208,7 +222,9 @@ def test_every_annotation_key_is_declared():
 
 def test_the_copy_roots_the_base_event():
     doc = _load(COPY)
-    rooted = {name for name, cls in doc["classes"].items() if cls.get("is_a") == "Concept"}
+    rooted = {
+        name for name, cls in doc["classes"].items() if cls.get("is_a") == "Concept"
+    }
     assert rooted == ROOTS
     assert doc["imports"] == ["linkml:types", "lokf"]
     assert not doc["classes"]["OcsfBaseEvent"].get("tree_root")
@@ -217,7 +233,9 @@ def test_the_copy_roots_the_base_event():
 @cache
 def concept_definitions():
     """The JSON Schema of the adapt copy, as `lokf validate` reads it beside LOKF."""
-    return json.loads(JsonSchemaGenerator(str(COPY), mergeimports=True).serialize())["$defs"]
+    return json.loads(JsonSchemaGenerator(str(COPY), mergeimports=True).serialize())[
+        "$defs"
+    ]
 
 
 def _concept_types():
@@ -225,7 +243,9 @@ def _concept_types():
     return sorted(
         name
         for name, cls in source.items()
-        if not cls.get("abstract") and not cls.get("mixin") and _reaches_root(name, source)
+        if not cls.get("abstract")
+        and not cls.get("mixin")
+        and _reaches_root(name, source)
     )
 
 
@@ -240,7 +260,10 @@ def _reaches_root(name, classes):
 def _as_concept(value):
     """An example in the copy's keys: what LOKF defines takes the prefix, at any depth."""
     if isinstance(value, dict):
-        return {(f"ocsf_{k}" if k in RENAMED else k): _as_concept(v) for k, v in value.items()}
+        return {
+            (f"ocsf_{k}" if k in RENAMED else k): _as_concept(v)
+            for k, v in value.items()
+        }
     if isinstance(value, list):
         return [_as_concept(v) for v in value]
     return value
@@ -263,10 +286,15 @@ def test_a_concept_of_each_type_validates_against_the_copy(class_name):
     )
     schema = {"$ref": f"#/$defs/{class_name}", "$defs": concept_definitions()}
     checker = jsonschema.validators.validator_for(schema)(schema)
-    errors = [f"{list(e.absolute_path)} {e.message[:160]}" for e in checker.iter_errors(concept)]
+    errors = [
+        f"{list(e.absolute_path)} {e.message[:160]}"
+        for e in checker.iter_errors(concept)
+    ]
     assert not errors, errors
     concept["no_such_key_in_ocsf"] = 1
-    assert list(checker.iter_errors(concept)), "it takes a key the class does not define"
+    assert list(checker.iter_errors(concept)), (
+        "it takes a key the class does not define"
+    )
 
 
 def test_the_readme_lists_the_concept_types():
@@ -290,9 +318,14 @@ def test_mappings_use_a_bound_prefix():
 def _page_names(source):
     """The name of each page gen-doc writes. It camel-cases a type or a subset, so a
     subset named `ocsf_application` would overwrite the class OcsfApplication's page."""
-    subsets = yaml.safe_load((SOURCE_DIR / "ocsf_core.yaml").read_text(encoding="utf-8"))["subsets"]
+    subsets = yaml.safe_load(
+        (SOURCE_DIR / "ocsf_core.yaml").read_text(encoding="utf-8")
+    )["subsets"]
     names = set(source["classes"]) | set(source["enums"]) | set(source["slots"])
-    names |= {"".join(part.title() for part in name.split("_")) for name in [*source["types"], *subsets]}
+    names |= {
+        "".join(part.title() for part in name.split("_"))
+        for name in [*source["types"], *subsets]
+    }
     return names
 
 
@@ -300,7 +333,9 @@ def test_no_two_pages_collide():
     """gen-doc writes a page per element, and two names that are the same, or differ only
     by case, are one file on a case-insensitive disk."""
     source = _source()
-    subsets = yaml.safe_load((SOURCE_DIR / "ocsf_core.yaml").read_text(encoding="utf-8"))["subsets"]
+    subsets = yaml.safe_load(
+        (SOURCE_DIR / "ocsf_core.yaml").read_text(encoding="utf-8")
+    )["subsets"]
     pages = list(_page_names(source))
     lowered = {}
     for name in pages:
@@ -317,4 +352,7 @@ def test_no_page_overwrites_the_index():
 def test_the_python_keywords_are_ocsfs_two():
     """OCSF names two keys after Python keywords, and a real event holds them. The
     generated dataclasses rename them, and tests/test_datamodel.py says what that costs."""
-    assert {name for name in _source()["slots"] if keyword.iskeyword(name)} == {"class", "from"}
+    assert {name for name in _source()["slots"] if keyword.iskeyword(name)} == {
+        "class",
+        "from",
+    }

@@ -19,7 +19,9 @@ from linkml_runtime import SchemaView
 
 ROOT = Path(__file__).parent.parent
 SCHEMA = ROOT / "src" / "ocsf" / "schema" / "ocsf.yaml"
-COMPILED = json.loads((ROOT / "upstream" / "ocsf-compiled-1.9.0.json").read_text("utf-8"))
+COMPILED = json.loads(
+    (ROOT / "upstream" / "ocsf-compiled-1.9.0.json").read_text("utf-8")
+)
 SOURCE = ROOT / "upstream" / "ocsf-schema"
 DICTIONARY = COMPILED["dictionary"]["attributes"]
 TYPES = COMPILED["dictionary"]["types"]["attributes"]
@@ -50,7 +52,11 @@ def classes_by_ocsf_key():
 
 
 def urls(item):
-    return [ref["url"].removeprefix("href='") for ref in item.get("references", []) if ref.get("url")]
+    return [
+        ref["url"].removeprefix("href='")
+        for ref in item.get("references", [])
+        if ref.get("url")
+    ]
 
 
 def expected_range(attribute):
@@ -86,7 +92,9 @@ def stated_values(enum):
             for name, value in {
                 "caption": entry.get("caption"),
                 "description": (entry.get("description") or "").strip(),
-                "deprecated": (entry.get("@deprecated") or {}).get("message", "").strip(),
+                "deprecated": (entry.get("@deprecated") or {})
+                .get("message", "")
+                .strip(),
             }.items()
             if value
         }
@@ -99,7 +107,9 @@ def compare_attribute(class_key, name, attribute, slot):
     assert slot.title == attribute["caption"], context
     assert slot.description == attribute["description"].strip(), context
     if attribute["type"] == "string_t" and "enum" in attribute:
-        assert slot.range == "Ocsf" + "".join(part.title() for part in name.split("_")), context
+        assert slot.range == "Ocsf" + "".join(
+            part.title() for part in name.split("_")
+        ), context
     else:
         assert slot.range == expected_range(attribute), context
     assert bool(slot.multivalued) == bool(attribute.get("is_array")), context
@@ -131,7 +141,9 @@ def compare_attribute(class_key, name, attribute, slot):
     elif attribute["type"] == "string_t" and enum:
         assert set(VIEW.get_enum(slot.range).permissible_values) == set(enum), context
     elif attribute["type"] == "json_t":
-        assert [branch.range for branch in slot.any_of] == ["OcsfJsonValue"] * 2, context
+        assert [branch.range for branch in slot.any_of] == ["OcsfJsonValue"] * 2, (
+            context
+        )
     else:
         assert not held_values(slot), context
 
@@ -142,7 +154,9 @@ def compare_item(key, item):
     assert cls.title == item["caption"], key
     assert cls.description == item["description"].strip(), key
     assert list(cls.see_also) == urls(item), key
-    assert annotation(cls, "ocsf_profiles") == (" ".join(item.get("profiles", [])) or None), key
+    assert annotation(cls, "ocsf_profiles") == (
+        " ".join(item.get("profiles", [])) or None
+    ), key
     constraints = item.get("constraints")
     assert annotation(cls, "ocsf_constraints") == (
         json.dumps(constraints, sort_keys=True) if constraints else None
@@ -211,7 +225,9 @@ def test_dictionary_attribute(key):
     assert slot.description == attribute["description"].strip(), key
     assert bool(slot.multivalued) == bool(attribute.get("is_array")), key
     if attribute["type"] == "string_t" and "enum" in attribute:
-        assert set(VIEW.get_enum(slot.range).permissible_values) == set(attribute["enum"]), key
+        assert set(VIEW.get_enum(slot.range).permissible_values) == set(
+            attribute["enum"]
+        ), key
     else:
         assert slot.range == expected_range(attribute), key
     assert annotation(slot, "ocsf_sibling") == attribute.get("sibling"), key
@@ -231,7 +247,11 @@ def test_every_class_is_an_item_of_ocsf_or_says_why_not():
     }
     hidden |= {_read(path)["name"] for path in (SOURCE / "objects").glob("_*.json")}
     assert keys == stated | hidden | {"json_t"}
-    unnamed = {name for name, cls in VIEW.all_classes().items() if annotation(cls, "ocsf_key") is None}
+    unnamed = {
+        name
+        for name, cls in VIEW.all_classes().items()
+        if annotation(cls, "ocsf_key") is None
+    }
     assert unnamed == {"OcsfFacts"}
 
 
@@ -254,11 +274,20 @@ def test_object_extends_what_ocsf_says(key):
     elif parent == "object":
         assert cls.is_a == "OcsfObjectBase"
     else:
-        assert annotation(VIEW.get_class(cls.is_a), "ocsf_key") in (parent, f"win/{parent}"), key
+        assert annotation(VIEW.get_class(cls.is_a), "ocsf_key") in (
+            parent,
+            f"win/{parent}",
+        ), key
 
 
 def test_the_abstract_parents_stay_abstract():
-    for name in ("OcsfIamEvent", "OcsfSystemEvent", "OcsfFindingEvent", "OcsfEntity", "OcsfResource"):
+    for name in (
+        "OcsfIamEvent",
+        "OcsfSystemEvent",
+        "OcsfFindingEvent",
+        "OcsfEntity",
+        "OcsfResource",
+    ):
         assert VIEW.get_class(name).abstract, name
 
 
@@ -276,10 +305,14 @@ def test_profile(key):
     attributes = set(item.get("attributes", {})) - {"$include"}
     assert set(cls.slots) == attributes, key
     for slot in VIEW.class_induced_slots(name):
-        assert not slot.required, f"{key}.{slot.name}: only a listed profile requires it"
+        assert not slot.required, (
+            f"{key}.{slot.name}: only a listed profile requires it"
+        )
         assert annotation(slot, "ocsf_profiles") == key, f"{key}.{slot.name}"
         wanted = item["attributes"][slot.name].get("requirement")
-        assert annotation(slot, "ocsf_requirement") == ("required" if wanted == "required" else None)
+        assert annotation(slot, "ocsf_requirement") == (
+            "required" if wanted == "required" else None
+        )
 
 
 def test_each_category_and_extension_is_a_subset():
@@ -305,12 +338,20 @@ def test_data_type(key):
     assert held.minimum_value == bounds[0], key
     assert held.maximum_value == bounds[1], key
     held_len = annotation(held, "ocsf_max_len")
-    assert held_len == (None if item.get("max_len") is None else str(item["max_len"])), key
-    assert held.typeof == (PRIMITIVES[key] if key in PRIMITIVES else f"ocsf_{item['type']}"), key
+    assert held_len == (
+        None if item.get("max_len") is None else str(item["max_len"])
+    ), key
+    assert held.typeof == (
+        PRIMITIVES[key] if key in PRIMITIVES else f"ocsf_{item['type']}"
+    ), key
 
 
 def test_every_data_type_is_rendered():
-    held = {name.removeprefix("ocsf_") for name in VIEW.all_types() if name.startswith("ocsf_")}
+    held = {
+        name.removeprefix("ocsf_")
+        for name in VIEW.all_types()
+        if name.startswith("ocsf_")
+    }
     assert held | {"json_t"} == set(TYPES)
     assert annotation(VIEW.get_class("OcsfJsonValue"), "ocsf_key") == "json_t"
 
@@ -323,7 +364,11 @@ def test_the_one_bad_address_is_ocsfs():
     def walk(node):
         if isinstance(node, dict):
             for key, value in node.items():
-                if key == "url" and isinstance(value, str) and not value.startswith("http"):
+                if (
+                    key == "url"
+                    and isinstance(value, str)
+                    and not value.startswith("http")
+                ):
                     found.add(value)
                 else:
                     walk(value)

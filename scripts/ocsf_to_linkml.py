@@ -99,7 +99,9 @@ def dump(document: dict) -> str:
 
 
 def pascal(name: str) -> str:
-    return "".join(part[:1].upper() + part[1:] for part in re.split(r"[_/]", name) if part)
+    return "".join(
+        part[:1].upper() + part[1:] for part in re.split(r"[_/]", name) if part
+    )
 
 
 def event_class_name(key: str, hidden: bool) -> str:
@@ -229,7 +231,9 @@ def references(item: dict) -> list[str]:
     """A reference's address. OCSF 1.9.0's email_activity writes one with a stray
     `href='` in front, which LinkML refuses as a URI, so the address alone is kept."""
     return [
-        ref["url"].removeprefix("href='") for ref in item.get("references", []) if ref.get("url")
+        ref["url"].removeprefix("href='")
+        for ref in item.get("references", [])
+        if ref.get("url")
     ]
 
 
@@ -431,7 +435,8 @@ class Model:
         have = {
             key: value
             for key, value in self.slots[slot].items()
-            if key in ("title", "description", "range", "any_of", "deprecated", "see_also")
+            if key
+            in ("title", "description", "range", "any_of", "deprecated", "see_also")
         }
         have["annotations"] = self.slots[slot].get("annotations", {})
         have["required"] = False
@@ -494,7 +499,8 @@ def class_header(item: dict, name: str, abstract: bool = False) -> dict:
     cls["title"] = item["caption"]
     # OCSF's abstract application event alone has no description of its own.
     cls["description"] = text(
-        item.get("description") or f"The abstract parent of OCSF's {item['caption']} event classes."
+        item.get("description")
+        or f"The abstract parent of OCSF's {item['caption']} event classes."
     )
     cls["class_uri"] = f"ocsf:{name}"
     if abstract:
@@ -537,18 +543,28 @@ def constraint_expressions(constraints: dict, attributes: dict) -> dict:
     """OCSF's two constraints in LinkML's terms. A path such as `device.os.sp_name`
     has no slot condition, so that rule stays in tests/ocsf_rules.py alone."""
     out = OrderedDict()
-    for constraint, keyword in (("at_least_one", "any_of"), ("just_one", "exactly_one_of")):
+    for constraint, keyword in (
+        ("at_least_one", "any_of"),
+        ("just_one", "exactly_one_of"),
+    ):
         names = constraints.get(constraint)
         if not names or not all(name in attributes for name in names):
             continue
         out[keyword] = [
-            OrderedDict(slot_conditions={name: OrderedDict(required=True)}) for name in names
+            OrderedDict(slot_conditions={name: OrderedDict(required=True)})
+            for name in names
         ]
     return out
 
 
 def apply_mappings(element: dict, mappings: dict) -> None:
-    for kind in ("exact_mappings", "close_mappings", "related_mappings", "broad_mappings", "narrow_mappings"):
+    for kind in (
+        "exact_mappings",
+        "close_mappings",
+        "related_mappings",
+        "broad_mappings",
+        "narrow_mappings",
+    ):
         if mappings.get(kind):
             element[kind] = sorted(set(element.get(kind, [])) | set(mappings[kind]))
 
@@ -625,7 +641,9 @@ def build(compiled: dict) -> tuple[Model, dict]:
         placed[name] = "ocsf_objects"
         attributes = {}
         for slot, entry in item.get("attributes", {}).items():
-            attributes[slot] = model.facets(slot, source_attribute(model, slot, entry, profile=key))
+            attributes[slot] = model.facets(
+                slot, source_attribute(model, slot, entry, profile=key)
+            )
         model.refine(name, attributes)
 
     # Objects, parents before children.
@@ -695,9 +713,12 @@ def build(compiled: dict) -> tuple[Model, dict]:
             }
         else:
             attributes = {
-                slot: model.facets(slot, entry) for slot, entry in item["attributes"].items()
+                slot: model.facets(slot, entry)
+                for slot, entry in item["attributes"].items()
             }
-            cls.update(constraint_expressions(item.get("constraints", {}), item["attributes"]))
+            cls.update(
+                constraint_expressions(item.get("constraints", {}), item["attributes"])
+            )
         model.refine(name, attributes)
 
     for key in sorted(hidden_objects):
@@ -757,7 +778,9 @@ def build(compiled: dict) -> tuple[Model, dict]:
         if category in compiled["categories"]["attributes"]:
             cls["in_subset"] = [f"ocsf_category_{category}"]
         if event_extension(key):
-            cls.setdefault("in_subset", []).append(f"ocsf_extension_{event_extension(key)}")
+            cls.setdefault("in_subset", []).append(
+                f"ocsf_extension_{event_extension(key)}"
+            )
         cls["instantiates"] = [FACTS]
         cls["annotations"] = class_annotations(item, key)
         terms = d3fend_terms(item)
@@ -787,7 +810,9 @@ def build(compiled: dict) -> tuple[Model, dict]:
                     facets.pop("any_of")
                     facets["equals_number"] = int(next(iter(values)))
                 attributes[slot] = facets
-            cls.update(constraint_expressions(item.get("constraints", {}), item["attributes"]))
+            cls.update(
+                constraint_expressions(item.get("constraints", {}), item["attributes"])
+            )
         model.refine(name, attributes)
 
     for key in sorted(hidden_events):
@@ -798,13 +823,24 @@ def build(compiled: dict) -> tuple[Model, dict]:
     return model, placed
 
 
-def source_attribute(model: Model, slot: str, entry: dict, profile: str | None = None) -> dict:
+def source_attribute(
+    model: Model, slot: str, entry: dict, profile: str | None = None
+) -> dict:
     """An attribute of a profile's file, merged over its dictionary entry."""
     base = model.dictionary.get(slot)
     if base is None:
-        base = next(value for key, value in model.dictionary.items() if key.endswith(f"/{slot}"))
+        base = next(
+            value for key, value in model.dictionary.items() if key.endswith(f"/{slot}")
+        )
     merged = dict(base)
-    for key in ("caption", "description", "requirement", "group", "references", "@deprecated"):
+    for key in (
+        "caption",
+        "description",
+        "requirement",
+        "group",
+        "references",
+        "@deprecated",
+    ):
         if key in entry:
             merged[key] = entry[key]
     merged.setdefault("requirement", "optional")
@@ -939,12 +975,20 @@ def facts_classes() -> dict:
             class_uri=FACTS,
             abstract=True,
             attributes=OrderedDict(
-                ocsf_key=attribute("The item's key in OCSF, scoped by its extension where it has one."),
+                ocsf_key=attribute(
+                    "The item's key in OCSF, scoped by its extension where it has one."
+                ),
                 ocsf_category=attribute("The event class's category, by OCSF's key."),
-                ocsf_category_uid=attribute("The category's number, on the subset that stands for it."),
+                ocsf_category_uid=attribute(
+                    "The category's number, on the subset that stands for it."
+                ),
                 ocsf_extension=attribute("The extension that defines the element."),
-                ocsf_extension_uid=attribute("The extension's number, on the subset that stands for it."),
-                ocsf_group=attribute("An attribute's group: classification, context, occurrence or primary."),
+                ocsf_extension_uid=attribute(
+                    "The extension's number, on the subset that stands for it."
+                ),
+                ocsf_group=attribute(
+                    "An attribute's group: classification, context, occurrence or primary."
+                ),
                 ocsf_profiles=attribute(
                     "The profiles behind an element, by OCSF's key and space separated. An event holds "
                     "an attribute that names any only if metadata.profiles lists one of them. On a "
@@ -954,22 +998,41 @@ def facts_classes() -> dict:
                     "OCSF's requirement on an attribute a profile brings, which applies only when "
                     "the event lists the profile."
                 ),
-                ocsf_sibling=attribute("The string attribute that holds the label of an enumerated one."),
+                ocsf_sibling=attribute(
+                    "The string attribute that holds the label of an enumerated one."
+                ),
                 ocsf_observable=attribute("OCSF's observable type id for the element."),
-                ocsf_source_note=attribute("OCSF's note on where an attribute comes from."),
-                ocsf_suppress_checks=attribute("The convention checks OCSF turns off for an attribute."),
-                ocsf_max_len=attribute("OCSF's longest allowed value of a data type, in characters."),
-                ocsf_constraints=attribute("A class's at_least_one and just_one constraints, as JSON."),
-                ocsf_associations=attribute("A class's associations between attributes, as JSON."),
-                ocsf_deprecated_since=attribute("The OCSF version that deprecated the element."),
-                ocsf_superseded_by=attribute("What OCSF names as the replacement, space separated."),
+                ocsf_source_note=attribute(
+                    "OCSF's note on where an attribute comes from."
+                ),
+                ocsf_suppress_checks=attribute(
+                    "The convention checks OCSF turns off for an attribute."
+                ),
+                ocsf_max_len=attribute(
+                    "OCSF's longest allowed value of a data type, in characters."
+                ),
+                ocsf_constraints=attribute(
+                    "A class's at_least_one and just_one constraints, as JSON."
+                ),
+                ocsf_associations=attribute(
+                    "A class's associations between attributes, as JSON."
+                ),
+                ocsf_deprecated_since=attribute(
+                    "The OCSF version that deprecated the element."
+                ),
+                ocsf_superseded_by=attribute(
+                    "What OCSF names as the replacement, space separated."
+                ),
             ),
         ),
     )
 
 
 MODULE_TITLES = {
-    "ocsf_events_base": ("OCSF base event", "The base event, the parent of every OCSF event class."),
+    "ocsf_events_base": (
+        "OCSF base event",
+        "The base event, the parent of every OCSF event class.",
+    ),
     "ocsf_events_win": (
         "OCSF Windows event classes",
         "The event classes of OCSF's Windows extension. The extension's objects sit in "
@@ -1038,7 +1101,9 @@ def write(compiled: dict) -> None:
     core["slots"] = OrderedDict(
         (name, slot) for name, slot in model.slots.items() if name not in object_valued
     )
-    core["classes"] = OrderedDict(list(facts_classes().items()) + list(select_classes("ocsf_core").items()))
+    core["classes"] = OrderedDict(
+        list(facts_classes().items()) + list(select_classes("ocsf_core").items())
+    )
     documents["ocsf_core"] = core
 
     objects = header(
@@ -1069,7 +1134,11 @@ def write(compiled: dict) -> None:
         if module == "ocsf_events_base":
             pass
         elif module == "ocsf_events_win":
-            imports += ["ocsf_events_base", "ocsf_events_discovery", "ocsf_events_system"]
+            imports += [
+                "ocsf_events_base",
+                "ocsf_events_discovery",
+                "ocsf_events_system",
+            ]
         else:
             imports += ["ocsf_events_base"]
         document = header(module, title, description, imports)

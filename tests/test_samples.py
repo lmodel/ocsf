@@ -59,7 +59,9 @@ def test_there_is_a_sample_of_each_class():
     assert set(samples()) == set(verdicts())
 
 
-@pytest.mark.parametrize("key", sorted(json.loads(VERDICTS.read_text(encoding="utf-8"))))
+@pytest.mark.parametrize(
+    "key", sorted(json.loads(VERDICTS.read_text(encoding="utf-8")))
+)
 def test_every_key_and_number_of_a_sample_is_known(key):
     """No sample holds a key this schema lacks or a listed number it does not list."""
     sample = samples()[key]
@@ -68,7 +70,9 @@ def test_every_key_and_number_of_a_sample_is_known(key):
     assert not kinds & {"additionalProperties", "const"}, kinds
 
 
-@pytest.mark.parametrize("key", sorted(json.loads(VERDICTS.read_text(encoding="utf-8"))))
+@pytest.mark.parametrize(
+    "key", sorted(json.loads(VERDICTS.read_text(encoding="utf-8")))
+)
 def test_the_rules_find_what_ocsf_validator_finds(key):
     """Each finding both name is counted alike, on samples that hold plenty of each."""
     errors, warnings = findings(samples()[key])

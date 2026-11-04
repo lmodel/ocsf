@@ -26,7 +26,13 @@ SCHEMA = ROOT / "src" / "ocsf" / "schema" / "ocsf.yaml"
 COMMITTED = ROOT / "project" / "jsonschema" / "ocsf.schema.json"
 DATA = Path(__file__).parent / "data"
 MINIMAL = sorted((DATA / "minimal").glob("*.yaml"))
-VALID = sorted([*(DATA / "valid").glob("*.yaml"), *(DATA / "problem" / "valid").glob("*.yaml"), *MINIMAL])
+VALID = sorted(
+    [
+        *(DATA / "valid").glob("*.yaml"),
+        *(DATA / "problem" / "valid").glob("*.yaml"),
+        *MINIMAL,
+    ]
+)
 INVALID = sorted((DATA / "invalid").glob("*.yaml"))
 PROBLEM_INVALID = sorted((DATA / "problem" / "invalid").glob("*.yaml"))
 NOT_LISTED = 987654
@@ -58,7 +64,9 @@ def class_name_of(path):
 
 def fails_at(path):
     first = path.read_text(encoding="utf-8").splitlines()[0]
-    assert first.startswith("# Fails at: "), f"{path.name}: the first line names where it fails"
+    assert first.startswith("# Fails at: "), (
+        f"{path.name}: the first line names where it fails"
+    )
     return first.removeprefix("# Fails at: ").strip()
 
 
@@ -86,7 +94,11 @@ def places(error):
 
 
 def rule_findings(instance, class_name):
-    return findings(instance) if "class_uid" in instance else object_findings(instance, class_name)
+    return (
+        findings(instance)
+        if "class_uid" in instance
+        else object_findings(instance, class_name)
+    )
 
 
 def concrete():
@@ -129,12 +141,16 @@ def test_counter_examples_fail_where_they_say(path):
     """Every counter-example fails at the place its first line names, and nowhere else
     but on the way to it, so a file that starts failing for another reason fails this."""
     where = fails_at(path)
-    found = errors(yaml.safe_load(path.read_text(encoding="utf-8")), class_name_of(path))
+    found = errors(
+        yaml.safe_load(path.read_text(encoding="utf-8")), class_name_of(path)
+    )
     assert found, "it validates"
     reached = set().union(*(places(e) for e in found))
     report = [f"{pointer(e)}: {e.message[:200]}" for e in found]
     assert where in reached, (sorted(reached), report)
-    on_the_way = {p for p in reached if where == p or where.startswith(p.rstrip("/") + "/")}
+    on_the_way = {
+        p for p in reached if where == p or where.startswith(p.rstrip("/") + "/")
+    }
     assert reached == on_the_way, (sorted(reached - on_the_way), report)
 
 
@@ -184,8 +200,14 @@ def test_each_list_refuses_a_number_it_does_not_hold(name, slot):
     instance = copy.deepcopy(minimal(name))
     induced = VIEW.induced_slot(slot, name)
     instance[slot] = [NOT_LISTED] if induced.multivalued else NOT_LISTED
-    reached = set().union(*(places(e) for e in errors(instance, name))) if errors(instance, name) else set()
-    assert any(place.startswith(f"/{slot}") for place in reached), f"{name}.{slot} takes {NOT_LISTED}"
+    reached = (
+        set().union(*(places(e) for e in errors(instance, name)))
+        if errors(instance, name)
+        else set()
+    )
+    assert any(place.startswith(f"/{slot}") for place in reached), (
+        f"{name}.{slot} takes {NOT_LISTED}"
+    )
 
 
 def _constants(name):
@@ -230,7 +252,9 @@ def test_each_constraint_needs_a_member(name):
         for expression in [*cls.any_of, *cls.exactly_one_of]
         for slot in expression.slot_conditions
     ]
-    instance = {key: value for key, value in minimal(name).items() if key not in members}
+    instance = {
+        key: value for key, value in minimal(name).items() if key not in members
+    }
     assert errors(instance, name), f"{name} passes with none of {members}"
 
 
@@ -253,13 +277,19 @@ def _typed_examples():
 
 @pytest.mark.parametrize("type_name", _typed_examples())
 def test_each_data_type_refuses_a_value_outside_it(type_name):
-    bad = 70000 if VIEW.get_type(type_name).maximum_value is not None else "!! not this type !!"
+    bad = (
+        70000
+        if VIEW.get_type(type_name).maximum_value is not None
+        else "!! not this type !!"
+    )
     for class_name in concrete():
         for slot in VIEW.class_induced_slots(class_name):
             if slot.range == type_name and not slot.multivalued and not slot.any_of:
                 instance = dict(minimal(class_name), **{slot.name: bad})
                 reached = {pointer(e) for e in errors(instance, class_name)}
-                assert f"/{slot.name}" in reached, f"{class_name}.{slot.name} takes {bad!r}"
+                assert f"/{slot.name}" in reached, (
+                    f"{class_name}.{slot.name} takes {bad!r}"
+                )
                 return
     pytest.fail(f"no slot ranges over {type_name}")
 
@@ -270,11 +300,17 @@ def test_each_data_type_refuses_a_value_outside_it(type_name):
 def test_validator_agrees():
     """linkml-validate accepts a real-shaped event and rejects a name for a number."""
     good = DATA / "valid" / "OcsfAuthentication-logon.yaml"
-    report = validate(yaml.safe_load(good.read_text(encoding="utf-8")), SCHEMA, "OcsfAuthentication")
+    report = validate(
+        yaml.safe_load(good.read_text(encoding="utf-8")), SCHEMA, "OcsfAuthentication"
+    )
     assert not report.results, [r.message for r in report.results]
     bad = DATA / "invalid" / "OcsfAuthentication-activity-id-is-a-name.yaml"
-    report = validate(yaml.safe_load(bad.read_text(encoding="utf-8")), SCHEMA, "OcsfAuthentication")
-    assert any("/activity_id" in r.message for r in report.results), [r.message for r in report.results]
+    report = validate(
+        yaml.safe_load(bad.read_text(encoding="utf-8")), SCHEMA, "OcsfAuthentication"
+    )
+    assert any("/activity_id" in r.message for r in report.results), [
+        r.message for r in report.results
+    ]
 
 
 def test_a_class_is_found_from_its_uid():

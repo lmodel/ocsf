@@ -42,7 +42,10 @@ def test_a_pydantic_model_keeps_a_keyword_key():
     event = _load(PROBLEM / "OcsfEmailActivity-delivered.yaml")
     model = ocsf_pydantic.OcsfEmailActivity.model_validate(event)
     assert model.email.from_ == "sender@example.com"
-    assert model.model_dump(by_alias=True, exclude_none=True)["email"]["from"] == "sender@example.com"
+    assert (
+        model.model_dump(by_alias=True, exclude_none=True)["email"]["from"]
+        == "sender@example.com"
+    )
 
 
 def test_a_pydantic_model_keeps_what_ocsf_leaves_open():
@@ -71,7 +74,9 @@ def test_the_context_gives_each_key_its_iri():
     """Applied to an event, the JSON-LD context gives each value as a triple under this
     schema's namespace, and nothing identifies the event, so it is a blank node."""
     context = json.loads(CONTEXT.read_text(encoding="utf-8"))["@context"]
-    event = dict(_load(VALID / "OcsfAuthentication-logon.yaml"), **{"@context": context})
+    event = dict(
+        _load(VALID / "OcsfAuthentication-logon.yaml"), **{"@context": context}
+    )
     graph = rdflib.Graph()
     graph.parse(data=json.dumps(event), format="json-ld")
     namespace = rdflib.Namespace("https://w3id.org/lmodel/ocsf/")

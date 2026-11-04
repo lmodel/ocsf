@@ -155,7 +155,9 @@ def attributes_or_empty(name: str) -> dict:
 @cache
 def known_profiles() -> frozenset:
     return frozenset(
-        annotation(cls, "ocsf_key") for cls in view().all_classes().values() if cls.mixin
+        annotation(cls, "ocsf_key")
+        for cls in view().all_classes().values()
+        if cls.mixin
     )
 
 
@@ -168,7 +170,11 @@ def class_of(event: dict) -> str | None:
 def _listed_profiles(event: dict) -> frozenset:
     metadata = event.get("metadata")
     listed = metadata.get("profiles") if isinstance(metadata, dict) else None
-    return frozenset(p for p in listed if isinstance(p, str)) if isinstance(listed, list) else frozenset()
+    return (
+        frozenset(p for p in listed if isinstance(p, str))
+        if isinstance(listed, list)
+        else frozenset()
+    )
 
 
 def _path_present(item, parts) -> bool:
@@ -185,7 +191,9 @@ def _check_unstated_constraint(item, class_name, table, pointer, errors):
     if not names or all(name in table for name in names):
         return
     if not any(_path_present(item, name.split(".")) for name in names):
-        errors.append((pointer or "/", "constraint_failed", f"at least one of {names} is needed"))
+        errors.append(
+            (pointer or "/", "constraint_failed", f"at least one of {names} is needed")
+        )
 
 
 def _walk(item, class_name, pointer, profiles, errors, warnings):
@@ -197,7 +205,13 @@ def _walk(item, class_name, pointer, profiles, errors, warnings):
         if name in item:
             continue
         if attribute.gated_required and attribute.profiles & profiles:
-            errors.append((f"{pointer}/{name}", "attribute_required_missing", "a listed profile requires it"))
+            errors.append(
+                (
+                    f"{pointer}/{name}",
+                    "attribute_required_missing",
+                    "a listed profile requires it",
+                )
+            )
     for name, value in item.items():
         attribute = table.get(name)
         if attribute is None:
@@ -205,31 +219,57 @@ def _walk(item, class_name, pointer, profiles, errors, warnings):
         here = f"{pointer}/{name}"
         if attribute.profiles and not attribute.profiles & profiles:
             errors.append(
-                (here, "attribute_unknown", f"needs one of the profiles {sorted(attribute.profiles)} listed")
+                (
+                    here,
+                    "attribute_unknown",
+                    f"needs one of the profiles {sorted(attribute.profiles)} listed",
+                )
             )
             continue
         if value is None:
             continue
         if attribute.deprecated:
-            warnings.append((here, "attribute_deprecated", "the attribute is deprecated"))
+            warnings.append(
+                (here, "attribute_deprecated", "the attribute is deprecated")
+            )
         values = value if attribute.multivalued and isinstance(value, list) else [value]
         for index, one in enumerate(values):
             place = f"{here}/{index}" if attribute.multivalued else here
             if attribute.range == "OcsfObject" and not isinstance(one, dict):
-                errors.append((place, "attribute_wrong_type", "OCSF's object holds an object"))
+                errors.append(
+                    (place, "attribute_wrong_type", "OCSF's object holds an object")
+                )
             elif attribute.is_object and isinstance(one, dict):
                 if view().get_class(attribute.range).deprecated:
-                    warnings.append((place, "object_deprecated", "the object is deprecated"))
+                    warnings.append(
+                        (place, "object_deprecated", "the object is deprecated")
+                    )
                 _walk(one, attribute.range, place, profiles, errors, warnings)
             elif attribute.max_len is not None and isinstance(one, str):
                 if len(one) > attribute.max_len:
                     errors.append(
-                        (place, "attribute_value_exceeds_max_len", f"longer than {attribute.max_len}")
+                        (
+                            place,
+                            "attribute_value_exceeds_max_len",
+                            f"longer than {attribute.max_len}",
+                        )
                     )
-            if attribute.captions and isinstance(one, int) and one in attribute.captions:
-                _check_sibling(item, here, attribute, name, index, one, errors, warnings)
+            if (
+                attribute.captions
+                and isinstance(one, int)
+                and one in attribute.captions
+            ):
+                _check_sibling(
+                    item, here, attribute, name, index, one, errors, warnings
+                )
                 if one in attribute.deprecated_values:
-                    warnings.append((place, "attribute_enum_value_deprecated", "the value is deprecated"))
+                    warnings.append(
+                        (
+                            place,
+                            "attribute_enum_value_deprecated",
+                            "the value is deprecated",
+                        )
+                    )
 
 
 def _check_sibling(item, here, attribute, name, index, value, errors, warnings):
@@ -243,16 +283,38 @@ def _check_sibling(item, here, attribute, name, index, value, errors, warnings):
             return
         label = held[index] if isinstance(held, list) and index < len(held) else None
         if label is None:
-            errors.append((f"{here}/{index}", "attribute_enum_array_sibling_missing", f"{sibling} has no label"))
+            errors.append(
+                (
+                    f"{here}/{index}",
+                    "attribute_enum_array_sibling_missing",
+                    f"{sibling} has no label",
+                )
+            )
         elif label != caption:
             errors.append(
-                (f"{here}/{index}", "attribute_enum_array_sibling_incorrect", f"expected {caption!r}, got {label!r}")
+                (
+                    f"{here}/{index}",
+                    "attribute_enum_array_sibling_incorrect",
+                    f"expected {caption!r}, got {label!r}",
+                )
             )
     elif value == OTHER:
         if held == caption:
-            warnings.append((here, "attribute_enum_sibling_suspicious_other", f"{sibling} repeats the caption of 99"))
+            warnings.append(
+                (
+                    here,
+                    "attribute_enum_sibling_suspicious_other",
+                    f"{sibling} repeats the caption of 99",
+                )
+            )
     elif held != caption:
-        warnings.append((here, "attribute_enum_sibling_incorrect", f"expected {caption!r}, got {held!r}"))
+        warnings.append(
+            (
+                here,
+                "attribute_enum_sibling_incorrect",
+                f"expected {caption!r}, got {held!r}",
+            )
+        )
 
 
 def _check_version(event, errors, warnings):
@@ -270,7 +332,9 @@ def _check_version(event, errors, warnings):
     if numbers > EDITION:
         errors.append(("/metadata/version", "version_incompatible_later", version))
     elif numbers[0] == 0:
-        errors.append(("/metadata/version", "version_incompatible_initial_development", version))
+        errors.append(
+            ("/metadata/version", "version_incompatible_initial_development", version)
+        )
     elif prerelease:
         errors.append(("/metadata/version", "version_incompatible_prerelease", version))
     else:
@@ -292,7 +356,9 @@ def _observable_resolves(class_name, parts, profiles) -> bool:
     return _observable_resolves(attribute.range, parts[1:], profiles)
 
 
-def object_findings(item: dict, class_name: str, profiles: frozenset = frozenset()) -> tuple[list, list]:
+def object_findings(
+    item: dict, class_name: str, profiles: frozenset = frozenset()
+) -> tuple[list, list]:
     """The same rules for an object on its own, as an event holding it would apply them."""
     errors: list = []
     warnings: list = []
@@ -306,16 +372,30 @@ def findings(event: dict) -> tuple[list, list]:
     warnings: list = []
     class_name = class_of(event)
     if class_name is None:
-        errors.append(("/class_uid", "class_uid_unknown", f"no class holds {event.get('class_uid')!r}"))
+        errors.append(
+            (
+                "/class_uid",
+                "class_uid_unknown",
+                f"no class holds {event.get('class_uid')!r}",
+            )
+        )
         return errors, warnings
     profiles = _listed_profiles(event)
     for index, profile in enumerate(sorted(profiles)):
         if profile not in known_profiles():
             errors.append((f"/metadata/profiles/{index}", "profile_unknown", profile))
-    class_uid, activity_id, type_uid = (event.get(key) for key in ("class_uid", "activity_id", "type_uid"))
+    class_uid, activity_id, type_uid = (
+        event.get(key) for key in ("class_uid", "activity_id", "type_uid")
+    )
     if all(isinstance(value, int) for value in (class_uid, activity_id, type_uid)):
         if type_uid != class_uid * 100 + activity_id:
-            errors.append(("/type_uid", "type_uid_incorrect", f"expected {class_uid * 100 + activity_id}"))
+            errors.append(
+                (
+                    "/type_uid",
+                    "type_uid_incorrect",
+                    f"expected {class_uid * 100 + activity_id}",
+                )
+            )
     if view().get_class(class_name).deprecated:
         warnings.append(("", "class_deprecated", class_name))
     _check_version(event, errors, warnings)
@@ -324,7 +404,13 @@ def findings(event: dict) -> tuple[list, list]:
         if isinstance(name, str):
             parts = re.split(r"\.(?![^\[]*\])", name)
             if not _observable_resolves(class_name, parts, profiles):
-                errors.append((f"/observables/{index}/name", "observable_name_invalid_reference", name))
+                errors.append(
+                    (
+                        f"/observables/{index}/name",
+                        "observable_name_invalid_reference",
+                        name,
+                    )
+                )
     _walk(event, class_name, "", profiles, errors, warnings)
     return errors, warnings
 

@@ -62,7 +62,10 @@ SCHEMA_FINDINGS = {
     "attribute_enum_array_value_unknown",
     "constraint_failed",
 }
-REGEX_WARNINGS = {"attribute_value_regex_not_matched", "attribute_value_super_type_regex_not_matched"}
+REGEX_WARNINGS = {
+    "attribute_value_regex_not_matched",
+    "attribute_value_super_type_regex_not_matched",
+}
 
 
 def blob_sha(data: bytes) -> str:
@@ -101,7 +104,9 @@ def read_events(data: bytes) -> list[dict]:
     documents = [documents] if isinstance(documents, dict) else documents
     if not isinstance(documents, list):
         return []
-    return [event for event in documents if isinstance(event, dict) and "class_uid" in event]
+    return [
+        event for event in documents if isinstance(event, dict) and "class_uid" in event
+    ]
 
 
 def leaves(error):
@@ -134,7 +139,9 @@ def our_verdict(event: dict, definitions: dict, checkers: dict) -> dict:
         "passes": not schema_errors and not errors,
         "regex_only": bool(schema_errors)
         and not errors
-        and all(leaf.validator == "pattern" for e in schema_errors for leaf in leaves(e)),
+        and all(
+            leaf.validator == "pattern" for e in schema_errors for leaf in leaves(e)
+        ),
         "errors": collections.Counter(code for _, code, _ in errors),
         "warnings": collections.Counter(code for _, code, _ in warnings),
     }
@@ -155,14 +162,27 @@ def refresh(files: dict[str, bytes]) -> None:
             events.append(
                 {
                     "class_uid": event["class_uid"],
-                    "errors": dict(collections.Counter(e["error"] for e in answer.get("errors", []))),
-                    "warnings": dict(collections.Counter(w["warning"] for w in answer.get("warnings", []))),
+                    "errors": dict(
+                        collections.Counter(
+                            e["error"] for e in answer.get("errors", [])
+                        )
+                    ),
+                    "warnings": dict(
+                        collections.Counter(
+                            w["warning"] for w in answer.get("warnings", [])
+                        )
+                    ),
                 }
             )
         if events:
             verdicts[path] = {"blob": blob_sha(data), "events": events}
     VERDICTS.write_text(
-        json.dumps({"commit": COMMIT, "validator": VALIDATOR, "files": verdicts}, indent=1, sort_keys=True) + "\n",
+        json.dumps(
+            {"commit": COMMIT, "validator": VALIDATOR, "files": verdicts},
+            indent=1,
+            sort_keys=True,
+        )
+        + "\n",
         encoding="utf-8",
     )
 
@@ -180,7 +200,9 @@ def check(files: dict[str, bytes]) -> int:
         if blob_sha(files[path]) != pinned[path]["blob"]:
             problems.append(f"{path} is not the pinned blob")
             continue
-        for index, (event, theirs) in enumerate(zip(read_events(files[path]), pinned[path]["events"], strict=True)):
+        for index, (event, theirs) in enumerate(
+            zip(read_events(files[path]), pinned[path]["events"], strict=True)
+        ):
             ours = our_verdict(event, definitions, checkers)
             tally["events"] += 1
             their_pass = not theirs["errors"]
@@ -191,7 +213,9 @@ def check(files: dict[str, bytes]) -> int:
             elif ours["regex_only"] and their_pass:
                 tally["fail here only on a regex OCSF warns about"] += 1
             else:
-                problems.append(f"{path}#{index}: here {ours['passes']}, OCSF {their_pass}")
+                problems.append(
+                    f"{path}#{index}: here {ours['passes']}, OCSF {their_pass}"
+                )
             for kind in ("errors", "warnings"):
                 for code in set(ours[kind]) | set(theirs[kind]):
                     if code in SCHEMA_FINDINGS or code in REGEX_WARNINGS:
@@ -209,7 +233,11 @@ def check(files: dict[str, bytes]) -> int:
 
 def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(description=__doc__.splitlines()[0])
-    parser.add_argument("--refresh", action="store_true", help="Ask OCSF's validator again and rewrite the record")
+    parser.add_argument(
+        "--refresh",
+        action="store_true",
+        help="Ask OCSF's validator again and rewrite the record",
+    )
     args = parser.parse_args(argv)
     files = fetch_files()
     if args.refresh:

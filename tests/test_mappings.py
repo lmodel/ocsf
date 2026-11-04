@@ -22,7 +22,9 @@ SCHEMA_DIR = ROOT / "src" / "ocsf" / "schema"
 NEIGHBOURS = ROOT / "tests" / "neighbours"
 TERMS = ROOT / "tests" / "upstream" / "d3fend-terms.txt"
 TERMS_SHA256 = "06e7cfcf829744871256307668d614f3decdfa9dd4601f9513f6dfe12e377864"
-COMPILED = json.loads((ROOT / "upstream" / "ocsf-compiled-1.9.0.json").read_text("utf-8"))
+COMPILED = json.loads(
+    (ROOT / "upstream" / "ocsf-compiled-1.9.0.json").read_text("utf-8")
+)
 MAPPING_KEYS = (
     "exact_mappings",
     "close_mappings",
@@ -47,8 +49,13 @@ def _mappings(node):
             yield from _mappings(item)
 
 
-MODULES = {path.name: yaml.safe_load(path.read_text(encoding="utf-8")) for path in sorted(SCHEMA_DIR.glob("*.yaml"))}
-TARGETS = sorted({(name, curie) for name, doc in MODULES.items() for curie in _mappings(doc)})
+MODULES = {
+    path.name: yaml.safe_load(path.read_text(encoding="utf-8"))
+    for path in sorted(SCHEMA_DIR.glob("*.yaml"))
+}
+TARGETS = sorted(
+    {(name, curie) for name, doc in MODULES.items() for curie in _mappings(doc)}
+)
 
 
 @cache
@@ -64,7 +71,11 @@ def neighbour_iris():
             prefix, _, local = curie.partition(":")
             return prefixes[prefix] + local if prefix in prefixes else curie
 
-        for kind, uri_key in (("classes", "class_uri"), ("slots", "slot_uri"), ("enums", "enum_uri")):
+        for kind, uri_key in (
+            ("classes", "class_uri"),
+            ("slots", "slot_uri"),
+            ("enums", "enum_uri"),
+        ):
             for name, element in (doc.get(kind) or {}).items():
                 found.add(expand((element or {}).get(uri_key) or f"{default}:{name}"))
         for cls in (doc.get("classes") or {}).values():
@@ -118,10 +129,15 @@ def test_each_d3fend_relation_is_what_ocsf_references_name():
     for items in (COMPILED["classes"], COMPILED["objects"]):
         for item in items.values():
             for reference in item.get("references", []):
-                match = re.search(r"D3FEND\S* Ontology d3f:([A-Za-z0-9_-]+)", reference.get("description", ""))
+                match = re.search(
+                    r"D3FEND\S* Ontology d3f:([A-Za-z0-9_-]+)",
+                    reference.get("description", ""),
+                )
                 if match:
                     named.add(match.group(1))
-    mapped = {curie.removeprefix("d3f:") for _, curie in TARGETS if curie.startswith("d3f:")}
+    mapped = {
+        curie.removeprefix("d3f:") for _, curie in TARGETS if curie.startswith("d3f:")
+    }
     assert mapped - D3FEND_BY_HAND <= named
     assert named <= mapped
 

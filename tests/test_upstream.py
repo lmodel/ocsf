@@ -41,7 +41,11 @@ def _blob_sha(path):
 
 def test_the_copy_is_the_pinned_files():
     """Every copied file is the blob the watch pins, and nothing else is there."""
-    held = {p.relative_to(COPY).as_posix(): _blob_sha(p) for p in COPY.rglob("*") if p.is_file()}
+    held = {
+        p.relative_to(COPY).as_posix(): _blob_sha(p)
+        for p in COPY.rglob("*")
+        if p.is_file()
+    }
     assert held == WATCH.PINNED_BLOBS
 
 
@@ -50,13 +54,18 @@ def test_the_watch_hashes_files_as_git_does():
 
 
 def test_the_copy_says_it_is_the_pinned_edition():
-    assert json.loads((COPY / "version.json").read_text(encoding="utf-8"))["version"] == EDITION
+    assert (
+        json.loads((COPY / "version.json").read_text(encoding="utf-8"))["version"]
+        == EDITION
+    )
     assert WATCH.PINNED_TAG == EDITION
 
 
 def test_the_copy_keeps_its_licence_and_notice():
     assert "Apache License" in (COPY / "LICENSE").read_text(encoding="utf-8")
-    assert "OCSF a Series of LF Projects" in (COPY / "NOTICE").read_text(encoding="utf-8")
+    assert "OCSF a Series of LF Projects" in (COPY / "NOTICE").read_text(
+        encoding="utf-8"
+    )
 
 
 def test_the_compiled_form_is_of_this_edition():
@@ -65,7 +74,9 @@ def test_the_compiled_form_is_of_this_edition():
     assert compiled["compile_version"] == 1
 
 
-@pytest.mark.skipif(sys.version_info < (3, 14), reason="OCSF's compiler needs Python 3.14")
+@pytest.mark.skipif(
+    sys.version_info < (3, 14), reason="OCSF's compiler needs Python 3.14"
+)
 def test_the_compiled_form_is_what_the_compiler_writes():
     """The compiler, at the pinned version, makes the same bytes from the copy."""
     from importlib.metadata import version
@@ -79,13 +90,20 @@ def test_the_compiled_form_is_what_the_compiler_writes():
 
 def test_each_module_is_what_the_converter_writes(tmp_path, monkeypatch):
     """The schema comes from the pinned files alone, so nobody edits it by hand."""
-    spec = importlib.util.spec_from_file_location("converter", ROOT / "scripts" / "ocsf_to_linkml.py")
+    spec = importlib.util.spec_from_file_location(
+        "converter", ROOT / "scripts" / "ocsf_to_linkml.py"
+    )
     converter = importlib.util.module_from_spec(spec)
     spec.loader.exec_module(converter)
     monkeypatch.setattr(converter, "OUT", tmp_path)
     converter.main()
-    written = {path.name: path.read_text(encoding="utf-8") for path in tmp_path.glob("*.yaml")}
-    committed = {path.name: path.read_text(encoding="utf-8") for path in SCHEMA_DIR.glob("*.yaml")}
+    written = {
+        path.name: path.read_text(encoding="utf-8") for path in tmp_path.glob("*.yaml")
+    }
+    committed = {
+        path.name: path.read_text(encoding="utf-8")
+        for path in SCHEMA_DIR.glob("*.yaml")
+    }
     assert written == committed
 
 
@@ -93,5 +111,7 @@ def test_every_module_states_the_edition_and_its_source():
     for path in SCHEMA_DIR.glob("*.yaml"):
         header = yaml.safe_load(path.read_text(encoding="utf-8"))
         assert header["version"] == EDITION, path.name
-        assert header["source"] == f"https://github.com/ocsf/ocsf-schema/tree/{EDITION}", path.name
+        assert (
+            header["source"] == f"https://github.com/ocsf/ocsf-schema/tree/{EDITION}"
+        ), path.name
         assert header["license"] == "Apache-2.0", path.name
