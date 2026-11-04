@@ -901,6 +901,8 @@ def type_definitions(types: dict) -> dict:
         definition["typeof"] = typeof if key in PRIMITIVES else type_name(item["type"])
         definition["base"] = base
         definition["uri"] = uri
+        if base == "Bool":
+            definition["repr"] = "bool"
         if item.get("regex"):
             definition["pattern"] = item["regex"]
         if item.get("range"):

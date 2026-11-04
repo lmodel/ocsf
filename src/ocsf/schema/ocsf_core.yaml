@@ -98,6 +98,7 @@ types:
     typeof: boolean
     base: Bool
     uri: xsd:boolean
+    repr: bool
     instantiates:
       - ocsf:OcsfFacts
     annotations:
