@@ -22,7 +22,9 @@ CONTEXT = ROOT / "project" / "jsonld" / "ocsf.context.jsonld"
 VALID = ROOT / "tests" / "data" / "valid"
 PROBLEM = ROOT / "tests" / "data" / "problem" / "valid"
 MINIMAL = ROOT / "tests" / "data" / "minimal"
-EVERY_VALID = sorted([*VALID.glob("*.yaml"), *PROBLEM.glob("*.yaml"), *MINIMAL.glob("*.yaml")])
+EVERY_VALID = sorted(
+    [*VALID.glob("*.yaml"), *PROBLEM.glob("*.yaml"), *MINIMAL.glob("*.yaml")]
+)
 
 
 def _load(path):
