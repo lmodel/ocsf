@@ -1,9 +1,16 @@
 {
   "uid": 1,
   "caption": "Account Change",
-  "description": "Account Change events report when specific user account management tasks are performed, such as a user/role being created, changed, deleted, renamed, disabled, enabled, locked out or unlocked.",
+  "description": "Account Change events report when specific user account management tasks are performed, such as a user/role being created or role assigned, changed, deleted, renamed, disabled, enabled, locked out or unlocked.",
   "extends": "iam",
   "name": "account_change",
+  "@deprecated": {
+    "message": "Use the <code>user_management</code> class instead.",
+    "since": "1.9.0",
+    "superseded_by": [
+      "user_management"
+    ]
+  },
   "attributes": {
     "activity_id": {
       "enum": {
@@ -73,7 +80,10 @@
       "requirement": "optional",
       "@deprecated": {
         "message": "Use the <code>policies</code> attribute instead.",
-        "since": "1.4.0"
+        "since": "1.4.0",
+        "superseded_by": [
+          "policies"
+        ]
       },
       "profile": null
     },
