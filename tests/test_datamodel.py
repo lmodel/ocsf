@@ -21,7 +21,8 @@ ROOT = Path(__file__).parent.parent
 CONTEXT = ROOT / "project" / "jsonld" / "ocsf.context.jsonld"
 VALID = ROOT / "tests" / "data" / "valid"
 PROBLEM = ROOT / "tests" / "data" / "problem" / "valid"
-HAND_WRITTEN = sorted([*VALID.glob("*.yaml"), *PROBLEM.glob("*.yaml")])
+MINIMAL = ROOT / "tests" / "data" / "minimal"
+EVERY_VALID = sorted([*VALID.glob("*.yaml"), *PROBLEM.glob("*.yaml"), *MINIMAL.glob("*.yaml")])
 
 
 def _load(path):
@@ -32,8 +33,8 @@ def _class_name(path):
     return path.stem.split("-")[0]
 
 
-@pytest.mark.parametrize("path", HAND_WRITTEN, ids=lambda p: p.stem)
-def test_an_event_loads_into_the_pydantic_models(path):
+@pytest.mark.parametrize("path", EVERY_VALID, ids=lambda p: p.stem)
+def test_an_example_loads_into_the_pydantic_models(path):
     model = getattr(ocsf_pydantic, _class_name(path)).model_validate(_load(path))
     assert model is not None
 

@@ -346,6 +346,12 @@ def test_data_type(key):
     ), key
 
 
+def test_only_ocsfs_string_lists_are_enums():
+    """A list of integers stays an any_of, so an enum here is one of the lists OCSF writes
+    as strings, and each holds OCSF's values."""
+    assert set(VIEW.all_enums()) == {"OcsfDepth", "OcsfHttpMethod", "OcsfTlp"}
+
+
 def test_every_data_type_is_rendered():
     held = {
         name.removeprefix("ocsf_")

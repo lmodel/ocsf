@@ -36,11 +36,11 @@ A fact the metamodel has no slot for is an annotation with the `ocsf_` prefix, a
 
 `scripts/ocsf_to_linkml.py` writes `src/ocsf/schema/` and nobody edits those files. It reads two things under `upstream/`: what OCSF's compiler makes of the tag, which resolves `extends`, `$include`, extension patches and the datetime siblings as OCSF means them, and the tag's source files, for what the compiler folds away: the abstract parents and each profile's attributes. A test compares what the script writes with the committed files.
 
-Descriptions and captions are OCSF's, copied under its Apache License 2.0, HTML included. Only one class has this project's own description: `OcsfApplicationEvent`, since OCSF's file gives none.
+Descriptions and captions are OCSF's, copied under its Apache License 2.0, HTML included. The text this project adds is small: the descriptions of `OcsfFacts` and `OcsfObjectBase`, which OCSF has no item for, of `OcsfApplicationEvent`, since OCSF's file gives none, and of the three string enums.
 
 ## Python models
 
-The Pydantic models load every example. The dataclasses have two gaps in LinkML 1.12.1, which `tests/test_datamodel.py` holds. A key named after a Python keyword, `from` or `class`, becomes `from_` or `class_`, so they refuse the key as an event writes it. And a `json_t` value raises a `TypeError`, because the generated check calls `isinstance` against `typing.Any`.
+The Pydantic models load every valid example. The dataclasses have two gaps in LinkML 1.12.1, which `tests/test_datamodel.py` holds. A key named after a Python keyword, `from` or `class`, becomes `from_` or `class_`, so they refuse the key as an event writes it. And a `json_t` value raises a `TypeError`, because the generated check calls `isinstance` against `typing.Any`.
 
 ## RDF
 
