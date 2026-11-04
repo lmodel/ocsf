@@ -1,0 +1,17 @@
+# The least that OcsfIamAnalysisFinding requires. scripts/make_examples.py writes this file.
+access_analysis_result:
+  accessors:
+  - account:
+      name: example
+activity_id: 1
+category_uid: 2
+class_uid: 2008
+finding_info:
+  uid: example
+metadata:
+  product:
+    name: example
+  version: 1.9.0
+severity_id: 1
+time: 1793793600000
+type_uid: 200801

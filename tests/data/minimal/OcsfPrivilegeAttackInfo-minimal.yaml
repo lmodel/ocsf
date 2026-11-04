@@ -1,0 +1,6 @@
+# The least that OcsfPrivilegeAttackInfo requires. scripts/make_examples.py writes this file.
+attack:
+  tactic:
+    name: example
+privilege_info_list:
+- name: example

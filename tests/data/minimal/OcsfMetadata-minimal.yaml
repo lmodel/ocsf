@@ -1,0 +1,4 @@
+# The least that OcsfMetadata requires. scripts/make_examples.py writes this file.
+product:
+  name: example
+version: 1.9.0

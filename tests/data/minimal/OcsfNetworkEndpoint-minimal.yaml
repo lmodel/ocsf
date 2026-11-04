@@ -1,0 +1,2 @@
+# The least that OcsfNetworkEndpoint requires. scripts/make_examples.py writes this file.
+ip: 192.0.2.1

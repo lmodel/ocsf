@@ -1,0 +1,19 @@
+# Fails at: /cloud attribute_unknown
+# The cloud profile brings this attribute, and the event does not list it.
+activity_id: 1
+category_uid: 3
+class_uid: 3002
+service:
+  name: example
+severity_id: 1
+time: 1793793600000
+user:
+  account:
+    name: example
+metadata:
+  product:
+    name: example
+  version: 1.9.0
+type_uid: 300201
+cloud:
+  provider: example

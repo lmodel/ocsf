@@ -1,0 +1,2 @@
+# The least that OcsfProcess requires. scripts/make_examples.py writes this file.
+pid: 1

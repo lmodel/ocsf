@@ -1,0 +1,4 @@
+# Fails at: /base_score
+# A float_t holds a number.
+base_score: high
+version: "3.1"

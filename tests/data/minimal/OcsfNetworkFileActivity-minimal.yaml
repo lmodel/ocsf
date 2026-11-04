@@ -1,0 +1,19 @@
+# The least that OcsfNetworkFileActivity requires. scripts/make_examples.py writes this file.
+activity_id: 1
+actor:
+  process:
+    pid: 1
+category_uid: 4
+class_uid: 4010
+file:
+  name: example.txt
+  type_id: 1
+metadata:
+  product:
+    name: example
+  version: 1.9.0
+severity_id: 1
+src_endpoint:
+  ip: 192.0.2.1
+time: 1793793600000
+type_uid: 401001

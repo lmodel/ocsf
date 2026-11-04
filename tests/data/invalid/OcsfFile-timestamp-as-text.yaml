@@ -1,0 +1,5 @@
+# Fails at: /modified_time
+# A timestamp_t holds a number.
+name: example
+type_id: 1
+modified_time: soon

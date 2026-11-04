@@ -1,0 +1,2 @@
+# The least that OcsfReporter requires. scripts/make_examples.py writes this file.
+hostname: host.example.com

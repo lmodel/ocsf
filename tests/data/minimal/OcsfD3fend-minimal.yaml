@@ -1,0 +1,3 @@
+# The least that OcsfD3fend requires. scripts/make_examples.py writes this file.
+d3f_tactic:
+  name: example

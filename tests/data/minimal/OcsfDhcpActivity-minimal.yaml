@@ -1,0 +1,13 @@
+# The least that OcsfDhcpActivity requires. scripts/make_examples.py writes this file.
+activity_id: 1
+category_uid: 4
+class_uid: 4004
+dst_endpoint:
+  ip: 192.0.2.1
+metadata:
+  product:
+    name: example
+  version: 1.9.0
+severity_id: 1
+time: 1793793600000
+type_uid: 400401

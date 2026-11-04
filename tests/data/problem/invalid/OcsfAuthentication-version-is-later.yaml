@@ -1,0 +1,17 @@
+# Fails at: /metadata/version version_incompatible_later
+# A later version may hold what this edition cannot judge.
+activity_id: 1
+category_uid: 3
+class_uid: 3002
+service:
+  name: example
+severity_id: 1
+time: 1793793600000
+user:
+  account:
+    name: example
+metadata:
+  product:
+    name: example
+  version: 1.10.0
+type_uid: 300201

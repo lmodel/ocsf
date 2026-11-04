@@ -1,0 +1,4 @@
+# The least that OcsfAccessAnalysisResult requires. scripts/make_examples.py writes this file.
+accessors:
+- account:
+    name: example

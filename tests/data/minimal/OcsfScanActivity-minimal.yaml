@@ -1,0 +1,14 @@
+# The least that OcsfScanActivity requires. scripts/make_examples.py writes this file.
+activity_id: 1
+category_uid: 6
+class_uid: 6007
+metadata:
+  product:
+    name: example
+  version: 1.9.0
+scan:
+  name: example
+  type_id: 1
+severity_id: 1
+time: 1793793600000
+type_uid: 600701

@@ -1,0 +1,4 @@
+# The least that OcsfSpan requires. scripts/make_examples.py writes this file.
+end_time: 1793793600000
+start_time: 1793793600000
+uid: example

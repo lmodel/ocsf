@@ -1,0 +1,18 @@
+# Fails at: /http_request/url/category_ids/0 attribute_enum_array_sibling_missing
+# An enumerated array's labels follow its numbers, in order.
+activity_id: 3
+category_uid: 4
+class_uid: 4002
+http_request:
+  url:
+    categories: []
+    category_ids:
+      - 21
+    url_string: https://example.com/
+metadata:
+  product:
+    name: example
+  version: 1.9.0
+severity_id: 1
+time: 1793793600000
+type_uid: 400203

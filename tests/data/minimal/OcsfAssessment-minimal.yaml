@@ -1,0 +1,3 @@
+# The least that OcsfAssessment requires. scripts/make_examples.py writes this file.
+meets_criteria: true
+name: example

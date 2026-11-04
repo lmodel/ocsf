@@ -1,0 +1,15 @@
+# The least that OcsfWinRegistryValueQuery requires. scripts/make_examples.py writes this file.
+activity_id: 1
+category_uid: 5
+class_uid: 205005
+metadata:
+  product:
+    name: example
+  version: 1.9.0
+query_result_id: 1
+reg_value:
+  name: example
+  path: HKEY_LOCAL_MACHINE\SOFTWARE\Example
+severity_id: 1
+time: 1793793600000
+type_uid: 20500501

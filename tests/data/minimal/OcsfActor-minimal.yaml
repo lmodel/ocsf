@@ -1,0 +1,3 @@
+# The least that OcsfActor requires. scripts/make_examples.py writes this file.
+process:
+  pid: 1

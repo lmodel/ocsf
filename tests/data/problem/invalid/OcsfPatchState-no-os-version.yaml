@@ -1,0 +1,18 @@
+# Fails at: / constraint_failed
+# Patch State needs one of device.os.sp_name, sp_ver and version, a path no slot condition can state.
+activity_id: 1
+category_uid: 5
+class_uid: 5004
+device:
+  ip: 192.0.2.1
+  os:
+    name: example
+    type_id: 100
+  type_id: 1
+metadata:
+  product:
+    name: example
+  version: 1.9.0
+severity_id: 1
+time: 1793793600000
+type_uid: 500401

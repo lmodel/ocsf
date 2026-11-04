@@ -1,0 +1,3 @@
+# The least that OcsfReputation requires. scripts/make_examples.py writes this file.
+base_score: 1.5
+score_id: 1

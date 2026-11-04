@@ -1,0 +1,19 @@
+# The least that OcsfEvidenceInfo requires. scripts/make_examples.py writes this file.
+activity_id: 1
+category_uid: 5
+class_uid: 5040
+device:
+  ip: 192.0.2.1
+  type_id: 1
+metadata:
+  product:
+    name: example
+  version: 1.9.0
+query_evidence:
+  connection_info:
+    direction_id: 1
+  query_type_id: 1
+query_result_id: 1
+severity_id: 1
+time: 1793793600000
+type_uid: 504001

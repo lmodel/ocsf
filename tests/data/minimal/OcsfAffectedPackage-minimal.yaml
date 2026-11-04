@@ -1,0 +1,3 @@
+# The least that OcsfAffectedPackage requires. scripts/make_examples.py writes this file.
+name: example
+version: example

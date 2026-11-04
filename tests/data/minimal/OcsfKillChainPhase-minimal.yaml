@@ -1,0 +1,2 @@
+# The least that OcsfKillChainPhase requires. scripts/make_examples.py writes this file.
+phase_id: 1

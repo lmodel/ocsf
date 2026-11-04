@@ -1,0 +1,14 @@
+# The least that OcsfOsintInventoryInfo requires. scripts/make_examples.py writes this file.
+activity_id: 1
+category_uid: 5
+class_uid: 5021
+metadata:
+  product:
+    name: example
+  version: 1.9.0
+osint:
+- type_id: 1
+  value: example
+severity_id: 1
+time: 1793793600000
+type_uid: 502101

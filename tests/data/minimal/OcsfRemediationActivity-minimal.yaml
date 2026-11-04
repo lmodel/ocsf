@@ -1,0 +1,12 @@
+# The least that OcsfRemediationActivity requires. scripts/make_examples.py writes this file.
+activity_id: 1
+category_uid: 7
+class_uid: 7001
+command_uid: example
+metadata:
+  product:
+    name: example
+  version: 1.9.0
+severity_id: 1
+time: 1793793600000
+type_uid: 700101

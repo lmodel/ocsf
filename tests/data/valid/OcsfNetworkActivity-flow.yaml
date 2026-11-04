@@ -1,0 +1,36 @@
+# One traffic flow between two addresses, with a value only the 99 Other label explains.
+activity_id: 6
+activity_name: Traffic
+category_name: Network Activity
+category_uid: 4
+class_name: Network Activity
+class_uid: 4001
+connection_info:
+  direction: Outbound
+  direction_id: 2
+  protocol_name: tcp
+  protocol_num: 6
+dst_endpoint:
+  ip: 203.0.113.20
+  port: 443
+metadata:
+  product:
+    name: Example Flow Sensor
+    vendor_name: Example
+  version: 1.9.0
+severity: Unknown
+severity_id: 0
+src_endpoint:
+  ip: 192.0.2.4
+  mac: 00:00:5E:00:53:01
+  port: 51234
+status: Other
+status_id: 99
+time: 1793793600000
+traffic:
+  bytes_in: 1024
+  bytes_out: 2048
+  packets_in: 10
+  packets_out: 12
+type_name: "Network Activity: Traffic"
+type_uid: 400106

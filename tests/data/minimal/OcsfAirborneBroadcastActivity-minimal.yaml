@@ -1,0 +1,16 @@
+# The least that OcsfAirborneBroadcastActivity requires. scripts/make_examples.py writes this file.
+activity_id: 1
+category_uid: 8
+class_uid: 8002
+metadata:
+  product:
+    name: example
+  version: 1.9.0
+severity_id: 1
+time: 1793793600000
+type_uid: 800201
+unmanned_aerial_system:
+  name: example
+unmanned_system_operator:
+  account:
+    name: example

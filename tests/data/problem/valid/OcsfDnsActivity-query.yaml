@@ -1,0 +1,32 @@
+# A DNS query and its answer.
+activity_id: 6
+activity_name: Traffic
+answers:
+  - class: IN
+    packet_uid: 4242
+    rdata: 192.0.2.53
+    ttl: 300
+    type: A
+category_name: Network Activity
+category_uid: 4
+class_name: DNS Activity
+class_uid: 4003
+metadata:
+  product:
+    name: Example Resolver
+    vendor_name: Example
+  version: 1.9.0
+query:
+  class: IN
+  hostname: www.example.com
+  packet_uid: 4242
+  type: A
+rcode: NoError
+rcode_id: 0
+severity: Informational
+severity_id: 1
+src_endpoint:
+  ip: 192.0.2.4
+time: 1793793600000
+type_name: "DNS Activity: Traffic"
+type_uid: 400306

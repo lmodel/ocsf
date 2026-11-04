@@ -1,0 +1,25 @@
+# A delivered email. Its keys from and to are Python keywords and LOKF's own words.
+activity_id: 2
+activity_name: Receive
+category_name: Network Activity
+category_uid: 4
+class_name: Email Activity
+class_uid: 4009
+direction: Inbound
+direction_id: 1
+email:
+  from: sender@example.com
+  message_uid: "<0001@example.com>"
+  subject: Quarterly report
+  to:
+    - recipient@example.org
+metadata:
+  product:
+    name: Example Gateway
+    vendor_name: Example
+  version: 1.9.0
+severity: Informational
+severity_id: 1
+time: 1793793600000
+type_name: "Email Activity: Receive"
+type_uid: 400902

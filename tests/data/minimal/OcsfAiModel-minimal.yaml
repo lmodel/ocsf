@@ -1,0 +1,3 @@
+# The least that OcsfAiModel requires. scripts/make_examples.py writes this file.
+ai_provider: example
+name: example

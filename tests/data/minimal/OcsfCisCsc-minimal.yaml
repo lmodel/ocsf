@@ -1,0 +1,2 @@
+# The least that OcsfCisCsc requires. scripts/make_examples.py writes this file.
+control: example

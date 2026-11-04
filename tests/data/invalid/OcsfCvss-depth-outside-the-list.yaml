@@ -1,0 +1,5 @@
+# Fails at: /depth
+# OCSF lists Base, Environmental and Temporal, as strings.
+base_score: 9.8
+depth: Partial
+version: "3.1"

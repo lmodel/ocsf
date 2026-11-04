@@ -1,0 +1,4 @@
+# The least that OcsfEvidences requires. scripts/make_examples.py writes this file.
+actor:
+  process:
+    pid: 1

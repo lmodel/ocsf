@@ -1,0 +1,17 @@
+# Fails at: /metadata/version version_incompatible_initial_development
+# An initial development version has no compatibility with a release.
+activity_id: 1
+category_uid: 3
+class_uid: 3002
+service:
+  name: example
+severity_id: 1
+time: 1793793600000
+user:
+  account:
+    name: example
+metadata:
+  product:
+    name: example
+  version: 0.99.0
+type_uid: 300201

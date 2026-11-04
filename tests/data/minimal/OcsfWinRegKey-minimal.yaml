@@ -1,0 +1,2 @@
+# The least that OcsfWinRegKey requires. scripts/make_examples.py writes this file.
+path: HKEY_LOCAL_MACHINE\SOFTWARE\Example

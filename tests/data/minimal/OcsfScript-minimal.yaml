@@ -1,0 +1,4 @@
+# The least that OcsfScript requires. scripts/make_examples.py writes this file.
+script_content:
+  value: example
+type_id: 1

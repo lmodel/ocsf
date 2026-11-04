@@ -1,0 +1,2 @@
+# The least that OcsfThreatActor requires. scripts/make_examples.py writes this file.
+name: example

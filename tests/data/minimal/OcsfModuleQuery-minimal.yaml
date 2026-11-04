@@ -1,0 +1,16 @@
+# The least that OcsfModuleQuery requires. scripts/make_examples.py writes this file.
+activity_id: 1
+category_uid: 5
+class_uid: 5011
+metadata:
+  product:
+    name: example
+  version: 1.9.0
+module:
+  load_type_id: 1
+process:
+  pid: 1
+query_result_id: 1
+severity_id: 1
+time: 1793793600000
+type_uid: 501101

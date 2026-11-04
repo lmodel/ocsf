@@ -1,3 +1,0 @@
-# INVALID: Hassh requires `fingerprint` (a Fingerprint object) but it is
-# missing.
-algorithm: ssh

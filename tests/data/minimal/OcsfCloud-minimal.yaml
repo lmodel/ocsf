@@ -1,0 +1,2 @@
+# The least that OcsfCloud requires. scripts/make_examples.py writes this file.
+provider: example
