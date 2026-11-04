@@ -1,0 +1,1282 @@
+---
+id: https://w3id.org/lmodel/ocsf/ocsf_events_system
+name: ocsf_events_system
+title: 'OCSF event classes: System Activity'
+description: System Activity events.
+version: 1.9.0
+source: https://github.com/ocsf/ocsf-schema/tree/1.9.0
+license: Apache-2.0
+see_also:
+  - https://lmodel.github.io/ocsf
+  - https://schema.ocsf.io/1.9.0/
+prefixes:
+  ocsf: https://w3id.org/lmodel/ocsf/
+  linkml: https://w3id.org/linkml/
+  xsd: http://www.w3.org/2001/XMLSchema#
+  attack: https://w3id.org/lmodel/attack/
+  cve: https://w3id.org/lmodel/cve/
+  cwe: https://w3id.org/lmodel/cwe/
+  d3f: http://d3fend.mitre.org/ontologies/d3fend.owl#
+  kev_catalog: https://w3id.org/lmodel/kev-catalog/
+  nist_nvd: https://w3id.org/lmodel/nist-nvd/
+  stix: https://w3id.org/lmodel/stix/
+default_prefix: ocsf
+default_range: string
+imports:
+  - linkml:types
+  - ocsf_core
+  - ocsf_objects
+  - ocsf_events_base
+classes:
+  OcsfSystemEvent:
+    title: System Activity
+    description: The System Activity event is a generic event that defines a set of attributes
+      available in the system activity events. As a generic event, it could be used to log
+      events that are not otherwise defined by the System Activity category.
+    class_uri: ocsf:OcsfSystemEvent
+    abstract: true
+    is_a: OcsfBaseEvent
+    mixins:
+      - OcsfAiOperationProfile
+    in_subset:
+      - ocsf_category_system
+    instantiates:
+      - ocsf:OcsfFacts
+    annotations:
+      ocsf_key: system
+      ocsf_category: system
+      ocsf_profiles: ai_operation
+      ocsf_associations: '{"actor.user": ["device"], "device": ["actor.user"]}'
+    slot_usage:
+      actor:
+        required: true
+        annotations:
+          ocsf_group: primary
+      category_uid:
+        equals_number: 1
+      device:
+        required: true
+        recommended: false
+        annotations:
+          ocsf_group: primary
+  OcsfClipboardActivity:
+    title: Clipboard Activity
+    description: Clipboard Activity events report when a process performs an action on a clipboard.
+    class_uri: ocsf:OcsfClipboardActivity
+    is_a: OcsfSystemEvent
+    in_subset:
+      - ocsf_category_system
+    instantiates:
+      - ocsf:OcsfFacts
+    annotations:
+      ocsf_key: clipboard_activity
+      ocsf_category: system
+      ocsf_profiles: ai_operation cloud container data_classification datetime host linux/linux_users
+        macos/macos_users osint record_integrity security_control
+      ocsf_associations: '{"actor.user": ["device"], "device": ["actor.user"]}'
+    slots:
+      - clipboard
+      - source_process
+    slot_usage:
+      activity_id:
+        any_of:
+          - equals_number: 0
+            title: Unknown
+            description: The event activity is unknown.
+          - equals_number: 1
+            title: Read
+            description: A clipboard was read from. In user-interface terms, this is a 'paste'
+              operation. If present, <code>source_process</code> is the process which performed
+              the <code>Write</code> activity or, in other words, the process from which the
+              data was copied.
+          - equals_number: 2
+            title: Write
+            description: A clipboard was written to. In user-interface terms, this is a 'copy'
+              or 'cut' operation.
+          - equals_number: 3
+            title: Clear
+            description: A clipboard was cleared.
+          - equals_number: 99
+            title: Other
+            description: The event activity is not mapped. See the <code>activity_name</code>
+              attribute, which contains a data source specific value.
+      category_name:
+        description: 'The event category name, as defined by category_uid value: <code>System
+          Activity</code>.'
+      class_name:
+        description: 'The event class name, as defined by class_uid value: <code>Clipboard
+          Activity</code>.'
+      class_uid:
+        equals_number: 1012
+      clipboard:
+        description: The clipboard that is the target of the activity.
+        required: true
+        annotations:
+          ocsf_group: primary
+      source_process:
+        description: For a <code>Read</code> activity, this is the process which performed
+          the <code>Write</code>. In other words, <code>actor.process</code> is the process
+          performing the paste and <code>source_process</code> is the process that performed
+          the copy.
+        annotations:
+          ocsf_group: context
+      type_uid:
+        any_of:
+          - equals_number: 101200
+            title: 'Clipboard Activity: Unknown'
+          - equals_number: 101201
+            title: 'Clipboard Activity: Read'
+            description: A clipboard was read from. In user-interface terms, this is a 'paste'
+              operation. If present, <code>source_process</code> is the process which performed
+              the <code>Write</code> activity or, in other words, the process from which the
+              data was copied.
+          - equals_number: 101202
+            title: 'Clipboard Activity: Write'
+            description: A clipboard was written to. In user-interface terms, this is a 'copy'
+              or 'cut' operation.
+          - equals_number: 101203
+            title: 'Clipboard Activity: Clear'
+            description: A clipboard was cleared.
+          - equals_number: 101299
+            title: 'Clipboard Activity: Other'
+  OcsfDevicePowerStateActivity:
+    title: Device Power State Activity
+    description: Device Power State Activity events report activities related to power state
+      changes of a system.
+    class_uri: ocsf:OcsfDevicePowerStateActivity
+    see_also:
+      - https://d3fend.mitre.org/event/d3f:HardwareDeviceStateEvent/
+    is_a: OcsfSystemEvent
+    in_subset:
+      - ocsf_category_system
+    instantiates:
+      - ocsf:OcsfFacts
+    annotations:
+      ocsf_key: device_power_state_activity
+      ocsf_category: system
+      ocsf_profiles: ai_operation cloud container data_classification datetime host linux/linux_users
+        macos/macos_users osint record_integrity security_control
+      ocsf_associations: '{"actor.user": ["device"], "device": ["actor.user"]}'
+    related_mappings:
+      - d3f:HardwareDeviceStateEvent
+    slot_usage:
+      activity_id:
+        any_of:
+          - equals_number: 0
+            title: Unknown
+            description: The event activity is unknown.
+          - equals_number: 1
+            title: Power On
+            description: A power-on activity was reported for the system.
+          - equals_number: 2
+            title: Power Off
+            description: A power-off activity was reported for the system, including graceful
+              shutdowns and hard power-off events. For graceful or software-initiated shutdowns,
+              the <code>actor</code> may be specified when known.
+          - equals_number: 3
+            title: Sleep
+            description: A sleep activity was reported for the system.
+          - equals_number: 4
+            title: Hibernate
+            description: A hibernate activity was reported for the system.
+          - equals_number: 5
+            title: Reboot
+            description: A reboot activity was reported for the system.
+          - equals_number: 6
+            title: Wake
+            description: A wake activity was reported for the system.
+          - equals_number: 99
+            title: Other
+            description: The event activity is not mapped. See the <code>activity_name</code>
+              attribute, which contains a data source specific value.
+      actor:
+        description: The actor that performed the activity on the <code>device</code> object.
+        required: false
+        annotations:
+          ocsf_group: context
+      category_name:
+        description: 'The event category name, as defined by category_uid value: <code>System
+          Activity</code>.'
+      class_name:
+        description: 'The event class name, as defined by class_uid value: <code>Device Power
+          State Activity</code>.'
+      class_uid:
+        equals_number: 1011
+      device:
+        description: The host or device that changed power state.
+      type_uid:
+        any_of:
+          - equals_number: 101100
+            title: 'Device Power State Activity: Unknown'
+          - equals_number: 101101
+            title: 'Device Power State Activity: Power On'
+            description: A power-on activity was reported for the system.
+          - equals_number: 101102
+            title: 'Device Power State Activity: Power Off'
+            description: A power-off activity was reported for the system, including graceful
+              shutdowns and hard power-off events. For graceful or software-initiated shutdowns,
+              the <code>actor</code> may be specified when known.
+          - equals_number: 101103
+            title: 'Device Power State Activity: Sleep'
+            description: A sleep activity was reported for the system.
+          - equals_number: 101104
+            title: 'Device Power State Activity: Hibernate'
+            description: A hibernate activity was reported for the system.
+          - equals_number: 101105
+            title: 'Device Power State Activity: Reboot'
+            description: A reboot activity was reported for the system.
+          - equals_number: 101106
+            title: 'Device Power State Activity: Wake'
+            description: A wake activity was reported for the system.
+          - equals_number: 101199
+            title: 'Device Power State Activity: Other'
+  OcsfEventLogActvity:
+    title: Event Log Activity
+    description: Event Log Activity events report actions pertaining to the system's event
+      logging service(s), such as disabling logging or clearing the log data.
+    class_uri: ocsf:OcsfEventLogActvity
+    see_also:
+      - https://d3fend.mitre.org/event/d3f:EventLogEvent/
+    is_a: OcsfSystemEvent
+    in_subset:
+      - ocsf_category_system
+    instantiates:
+      - ocsf:OcsfFacts
+    annotations:
+      ocsf_key: event_log_actvity
+      ocsf_category: system
+      ocsf_profiles: ai_operation cloud container data_classification datetime host linux/linux_users
+        macos/macos_users osint record_integrity security_control
+      ocsf_constraints: '{"at_least_one": ["log_file", "log_name", "log_provider", "log_type",
+        "log_type_id"]}'
+      ocsf_associations: '{"actor.user": ["device"], "device": ["actor.user"]}'
+    related_mappings:
+      - d3f:EventLogEvent
+    slots:
+      - dst_endpoint
+      - file
+      - log_name
+      - log_provider
+      - log_type
+      - log_type_id
+      - src_endpoint
+    slot_usage:
+      activity_id:
+        any_of:
+          - equals_number: 0
+            title: Unknown
+            description: The event activity is unknown.
+          - equals_number: 1
+            title: Clear
+            description: Clear the event log database, file, or cache.
+          - equals_number: 2
+            title: Delete
+            description: Delete the event log database, file, or cache.
+          - equals_number: 3
+            title: Export
+            description: Export the event log database, file, or cache.
+          - equals_number: 4
+            title: Archive
+            description: Archive the event log database, file, or cache.
+          - equals_number: 5
+            title: Rotate
+            description: Rotate the event log database, file, or cache.
+          - equals_number: 6
+            title: Start
+            description: Start the event logging service.
+          - equals_number: 7
+            title: Stop
+            description: Stop the event logging service.
+          - equals_number: 8
+            title: Restart
+            description: Restart the event logging service.
+          - equals_number: 9
+            title: Enable
+            description: Enable the event logging service.
+          - equals_number: 10
+            title: Disable
+            description: Disable the event logging service.
+          - equals_number: 99
+            title: Other
+            description: The event activity is not mapped. See the <code>activity_name</code>
+              attribute, which contains a data source specific value.
+      actor:
+        description: The actor that performed the activity.
+        required: false
+        recommended: true
+      category_name:
+        description: 'The event category name, as defined by category_uid value: <code>System
+          Activity</code>.'
+      class_name:
+        description: 'The event class name, as defined by class_uid value: <code>Event Log
+          Activity</code>.'
+      class_uid:
+        equals_number: 1008
+      device:
+        description: The device that reported the event.
+        required: false
+        recommended: true
+      dst_endpoint:
+        description: The <p style='display:inline;color:red'>targeted</p> endpoint for the
+          event log activity.
+        recommended: true
+        annotations:
+          ocsf_group: primary
+      file:
+        description: 'The file <p style=''display:inline;color:red''>targeted by</p> the activity.
+          Example: <code>/var/log/audit.log</code>'
+        recommended: true
+        annotations:
+          ocsf_group: primary
+      log_name:
+        description: 'The name of the event log <p style=''display:inline;color:red''>targeted
+          by</p> the activity. Example: Windows <code>Security</code>.'
+        recommended: true
+        annotations:
+          ocsf_group: primary
+      log_provider:
+        description: 'The logging provider or logging service <p style=''display:inline;color:red''>targeted
+          by</p> the activity.<br />Example: <code>Microsoft-Windows-Security-Auditing</code>,
+          <code>Auditd</code>, or <code>Syslog</code>.'
+        recommended: true
+        annotations:
+          ocsf_group: primary
+      log_type:
+        recommended: true
+        annotations:
+          ocsf_group: primary
+      log_type_id:
+        recommended: true
+        annotations:
+          ocsf_group: primary
+          ocsf_sibling: log_type
+      src_endpoint:
+        description: The source endpoint for the event log activity.
+        recommended: true
+        annotations:
+          ocsf_group: primary
+      status_code:
+        description: 'The event status code, as reported by the event source.<br />Example:
+          <code>0</code>, <code>8</code>, or <code>21</code> for <a target=''_blank'' href=''https://learn.microsoft.com/en-us/previous-versions/windows/desktop/eventlogprov/cleareventlog-method-in-class-win32-nteventlogfile''>Windows
+          ClearEventLog</a>.'
+      status_detail:
+        description: 'The status detail contains additional information about the event outcome.<br
+          />Example: <code>Success</code>, <code>Privilege Missing</code>, or <code>Invalid
+          Parameter</code> for <a target=''_blank'' href=''https://learn.microsoft.com/en-us/previous-versions/windows/desktop/eventlogprov/cleareventlog-method-in-class-win32-nteventlogfile''>Windows
+          ClearEventLog</a>.'
+      type_uid:
+        any_of:
+          - equals_number: 100800
+            title: 'Event Log Activity: Unknown'
+          - equals_number: 100801
+            title: 'Event Log Activity: Clear'
+            description: Clear the event log database, file, or cache.
+          - equals_number: 100802
+            title: 'Event Log Activity: Delete'
+            description: Delete the event log database, file, or cache.
+          - equals_number: 100803
+            title: 'Event Log Activity: Export'
+            description: Export the event log database, file, or cache.
+          - equals_number: 100804
+            title: 'Event Log Activity: Archive'
+            description: Archive the event log database, file, or cache.
+          - equals_number: 100805
+            title: 'Event Log Activity: Rotate'
+            description: Rotate the event log database, file, or cache.
+          - equals_number: 100806
+            title: 'Event Log Activity: Start'
+            description: Start the event logging service.
+          - equals_number: 100807
+            title: 'Event Log Activity: Stop'
+            description: Stop the event logging service.
+          - equals_number: 100808
+            title: 'Event Log Activity: Restart'
+            description: Restart the event logging service.
+          - equals_number: 100809
+            title: 'Event Log Activity: Enable'
+            description: Enable the event logging service.
+          - equals_number: 100810
+            title: 'Event Log Activity: Disable'
+            description: Disable the event logging service.
+          - equals_number: 100899
+            title: 'Event Log Activity: Other'
+  OcsfFileActivity:
+    title: File System Activity
+    description: File System Activity events report when a process performs an action on a
+      file or folder.
+    class_uri: ocsf:OcsfFileActivity
+    see_also:
+      - https://d3fend.mitre.org/event/d3f:FileEvent/
+    is_a: OcsfSystemEvent
+    in_subset:
+      - ocsf_category_system
+    instantiates:
+      - ocsf:OcsfFacts
+    annotations:
+      ocsf_key: file_activity
+      ocsf_category: system
+      ocsf_profiles: ai_operation cloud container data_classification datetime host linux/linux_users
+        macos/macos_users osint record_integrity security_control
+      ocsf_associations: '{"actor.user": ["device"], "device": ["actor.user"]}'
+    related_mappings:
+      - d3f:FileEvent
+    slots:
+      - access_mask
+      - component
+      - connection_uid
+      - create_mask
+      - file
+      - file_diff
+      - file_result
+    slot_usage:
+      access_mask:
+        annotations:
+          ocsf_group: context
+      activity_id:
+        any_of:
+          - equals_number: 0
+            title: Unknown
+            description: The event activity is unknown.
+          - equals_number: 1
+            title: Create
+            description: A request to create a new file on a file system.
+          - equals_number: 2
+            title: Read
+            description: A request to read data from a file on a file system.
+          - equals_number: 3
+            title: Update
+            description: A request to write data to a file on a file system.
+          - equals_number: 4
+            title: Delete
+            description: A request to delete a file on a file system.
+          - equals_number: 5
+            title: Rename
+            description: A request to rename a file on a file system.
+          - equals_number: 6
+            title: Set Attributes
+            description: A request to set attributes for a file on a file system.
+          - equals_number: 7
+            title: Set Security
+            description: A request to set security for a file on a file system.
+          - equals_number: 8
+            title: Get Attributes
+            description: A request to get attributes for a file on a file system.
+          - equals_number: 9
+            title: Get Security
+            description: A request to get security for a file on a file system.
+          - equals_number: 10
+            title: Encrypt
+            description: A request to encrypt a file on a file system.
+          - equals_number: 11
+            title: Decrypt
+            description: A request to decrypt a file on a file system.
+          - equals_number: 12
+            title: Mount
+            description: A request to mount a file on a file system.
+          - equals_number: 13
+            title: Unmount
+            description: A request to unmount a file from a file system.
+          - equals_number: 14
+            title: Open
+            description: A request to create a file handle.
+          - equals_number: 99
+            title: Other
+            description: The event activity is not mapped. See the <code>activity_name</code>
+              attribute, which contains a data source specific value.
+      actor:
+        description: The actor that performed the activity on the <code>file</code> object
+      category_name:
+        description: 'The event category name, as defined by category_uid value: <code>System
+          Activity</code>.'
+      class_name:
+        description: 'The event class name, as defined by class_uid value: <code>File System
+          Activity</code>.'
+      class_uid:
+        equals_number: 1001
+      component:
+        description: '<p>The name or relative pathname of a sub-component of the data object,
+          if applicable. </p>For example: <code>attachment.doc</code>, <code>attachment.zip/bad.doc</code>,
+          or <code>part.mime/part.cab/part.uue/part.doc</code>.'
+        recommended: true
+        annotations:
+          ocsf_group: primary
+      connection_uid:
+        annotations:
+          ocsf_group: context
+      create_mask:
+        recommended: true
+        annotations:
+          ocsf_group: primary
+      file:
+        description: The file that is the target of the activity.
+        required: true
+        annotations:
+          ocsf_group: primary
+      file_diff:
+        recommended: true
+        annotations:
+          ocsf_group: primary
+      file_result:
+        description: The resulting file object when the activity was allowed and successful.
+        recommended: true
+        annotations:
+          ocsf_group: primary
+      type_uid:
+        any_of:
+          - equals_number: 100100
+            title: 'File System Activity: Unknown'
+          - equals_number: 100101
+            title: 'File System Activity: Create'
+            description: A request to create a new file on a file system.
+          - equals_number: 100102
+            title: 'File System Activity: Read'
+            description: A request to read data from a file on a file system.
+          - equals_number: 100103
+            title: 'File System Activity: Update'
+            description: A request to write data to a file on a file system.
+          - equals_number: 100104
+            title: 'File System Activity: Delete'
+            description: A request to delete a file on a file system.
+          - equals_number: 100105
+            title: 'File System Activity: Rename'
+            description: A request to rename a file on a file system.
+          - equals_number: 100106
+            title: 'File System Activity: Set Attributes'
+            description: A request to set attributes for a file on a file system.
+          - equals_number: 100107
+            title: 'File System Activity: Set Security'
+            description: A request to set security for a file on a file system.
+          - equals_number: 100108
+            title: 'File System Activity: Get Attributes'
+            description: A request to get attributes for a file on a file system.
+          - equals_number: 100109
+            title: 'File System Activity: Get Security'
+            description: A request to get security for a file on a file system.
+          - equals_number: 100110
+            title: 'File System Activity: Encrypt'
+            description: A request to encrypt a file on a file system.
+          - equals_number: 100111
+            title: 'File System Activity: Decrypt'
+            description: A request to decrypt a file on a file system.
+          - equals_number: 100112
+            title: 'File System Activity: Mount'
+            description: A request to mount a file on a file system.
+          - equals_number: 100113
+            title: 'File System Activity: Unmount'
+            description: A request to unmount a file from a file system.
+          - equals_number: 100114
+            title: 'File System Activity: Open'
+            description: A request to create a file handle.
+          - equals_number: 100199
+            title: 'File System Activity: Other'
+  OcsfKernelActivity:
+    title: Kernel Activity
+    description: Kernel Activity events report when an process creates, reads, or deletes
+      a kernel resource.
+    class_uri: ocsf:OcsfKernelActivity
+    see_also:
+      - https://d3fend.mitre.org/event/d3f:KernelEvent/
+    is_a: OcsfSystemEvent
+    in_subset:
+      - ocsf_category_system
+    instantiates:
+      - ocsf:OcsfFacts
+    annotations:
+      ocsf_key: kernel_activity
+      ocsf_category: system
+      ocsf_profiles: ai_operation cloud container data_classification datetime host linux/linux_users
+        macos/macos_users osint record_integrity security_control
+      ocsf_associations: '{"actor.user": ["device"], "device": ["actor.user"]}'
+    related_mappings:
+      - d3f:KernelEvent
+    slots:
+      - kernel
+    slot_usage:
+      activity_id:
+        any_of:
+          - equals_number: 0
+            title: Unknown
+            description: The event activity is unknown.
+          - equals_number: 1
+            title: Create
+          - equals_number: 2
+            title: Read
+          - equals_number: 3
+            title: Delete
+          - equals_number: 4
+            title: Invoke
+          - equals_number: 99
+            title: Other
+            description: The event activity is not mapped. See the <code>activity_name</code>
+              attribute, which contains a data source specific value.
+      category_name:
+        description: 'The event category name, as defined by category_uid value: <code>System
+          Activity</code>.'
+      class_name:
+        description: 'The event class name, as defined by class_uid value: <code>Kernel Activity</code>.'
+      class_uid:
+        equals_number: 1003
+      kernel:
+        description: The target kernel resource.
+        required: true
+        annotations:
+          ocsf_group: primary
+      type_uid:
+        any_of:
+          - equals_number: 100300
+            title: 'Kernel Activity: Unknown'
+          - equals_number: 100301
+            title: 'Kernel Activity: Create'
+          - equals_number: 100302
+            title: 'Kernel Activity: Read'
+          - equals_number: 100303
+            title: 'Kernel Activity: Delete'
+          - equals_number: 100304
+            title: 'Kernel Activity: Invoke'
+          - equals_number: 100399
+            title: 'Kernel Activity: Other'
+  OcsfKernelExtensionActivity:
+    title: Kernel Extension Activity
+    description: Kernel Extension events report when a driver/extension is loaded or unloaded
+      into the kernel
+    class_uri: ocsf:OcsfKernelExtensionActivity
+    see_also:
+      - https://d3fend.mitre.org/event/d3f:KernelModuleEvent/
+    is_a: OcsfSystemEvent
+    in_subset:
+      - ocsf_category_system
+    instantiates:
+      - ocsf:OcsfFacts
+    annotations:
+      ocsf_key: kernel_extension_activity
+      ocsf_category: system
+      ocsf_profiles: ai_operation cloud container data_classification datetime host linux/linux_users
+        macos/macos_users osint record_integrity security_control
+      ocsf_associations: '{"actor.user": ["device"], "device": ["actor.user"]}'
+    related_mappings:
+      - d3f:KernelModuleEvent
+    slots:
+      - driver
+    slot_usage:
+      activity_id:
+        any_of:
+          - equals_number: 0
+            title: Unknown
+            description: The event activity is unknown.
+          - equals_number: 1
+            title: Load
+            description: A driver/extension was loaded into the kernel
+          - equals_number: 2
+            title: Unload
+            description: A driver/extension was unloaded (removed) from the kernel
+          - equals_number: 99
+            title: Other
+            description: The event activity is not mapped. See the <code>activity_name</code>
+              attribute, which contains a data source specific value.
+      actor:
+        description: The actor process that loaded or unloaded the driver/extension.
+      category_name:
+        description: 'The event category name, as defined by category_uid value: <code>System
+          Activity</code>.'
+      class_name:
+        description: 'The event class name, as defined by class_uid value: <code>Kernel Extension
+          Activity</code>.'
+      class_uid:
+        equals_number: 1002
+      driver:
+        required: true
+        annotations:
+          ocsf_group: primary
+      type_uid:
+        any_of:
+          - equals_number: 100200
+            title: 'Kernel Extension Activity: Unknown'
+          - equals_number: 100201
+            title: 'Kernel Extension Activity: Load'
+            description: A driver/extension was loaded into the kernel
+          - equals_number: 100202
+            title: 'Kernel Extension Activity: Unload'
+            description: A driver/extension was unloaded (removed) from the kernel
+          - equals_number: 100299
+            title: 'Kernel Extension Activity: Other'
+  OcsfMemoryActivity:
+    title: Memory Activity
+    description: Memory Activity events report when a process has memory allocated, read/modified,
+      or other manipulation activities - such as a buffer overflow or turning off data execution
+      protection (DEP).
+    class_uri: ocsf:OcsfMemoryActivity
+    see_also:
+      - https://d3fend.mitre.org/event/d3f:MemoryEvent/
+    is_a: OcsfSystemEvent
+    in_subset:
+      - ocsf_category_system
+    instantiates:
+      - ocsf:OcsfFacts
+    annotations:
+      ocsf_key: memory_activity
+      ocsf_category: system
+      ocsf_profiles: ai_operation cloud container data_classification datetime host linux/linux_users
+        macos/macos_users osint record_integrity security_control
+      ocsf_associations: '{"actor.user": ["device"], "device": ["actor.user"]}'
+    related_mappings:
+      - d3f:MemoryEvent
+    slots:
+      - actual_permissions
+      - base_address
+      - process
+      - requested_permissions
+      - size
+    slot_usage:
+      activity_id:
+        any_of:
+          - equals_number: 0
+            title: Unknown
+            description: The event activity is unknown.
+          - equals_number: 1
+            title: Allocate Page
+          - equals_number: 2
+            title: Modify Page
+          - equals_number: 3
+            title: Delete Page
+          - equals_number: 4
+            title: Buffer Overflow
+          - equals_number: 5
+            title: Disable DEP
+            description: Data Execution Permission
+          - equals_number: 6
+            title: Enable DEP
+            description: Data Execution Permission
+          - equals_number: 7
+            title: Read
+            description: 'Read (Example: <code>ReadProcessMemory</code>)'
+          - equals_number: 8
+            title: Write
+            description: 'Write (Example: <code>WriteProcessMemory</code>)'
+          - equals_number: 9
+            title: Map View
+            description: 'Map View (Example: <code>MapViewOfFile2</code>)'
+          - equals_number: 99
+            title: Other
+            description: The event activity is not mapped. See the <code>activity_name</code>
+              attribute, which contains a data source specific value.
+      actual_permissions:
+        description: The permissions that were granted to access memory.
+        recommended: true
+        annotations:
+          ocsf_group: primary
+      base_address:
+        description: The memory address that was access or requested.
+        recommended: true
+        annotations:
+          ocsf_group: primary
+      category_name:
+        description: 'The event category name, as defined by category_uid value: <code>System
+          Activity</code>.'
+      class_name:
+        description: 'The event class name, as defined by class_uid value: <code>Memory Activity</code>.'
+      class_uid:
+        equals_number: 1004
+      process:
+        description: The process that had memory allocated, read/written, or had other manipulation
+          activities performed on it.
+        required: true
+        annotations:
+          ocsf_group: primary
+      requested_permissions:
+        description: The permissions mask that was requested to access memory.
+        recommended: true
+        annotations:
+          ocsf_group: primary
+      size:
+        description: The memory size that was access or requested.
+        recommended: true
+        annotations:
+          ocsf_group: primary
+      type_uid:
+        any_of:
+          - equals_number: 100400
+            title: 'Memory Activity: Unknown'
+          - equals_number: 100401
+            title: 'Memory Activity: Allocate Page'
+          - equals_number: 100402
+            title: 'Memory Activity: Modify Page'
+          - equals_number: 100403
+            title: 'Memory Activity: Delete Page'
+          - equals_number: 100404
+            title: 'Memory Activity: Buffer Overflow'
+          - equals_number: 100405
+            title: 'Memory Activity: Disable DEP'
+            description: Data Execution Permission
+          - equals_number: 100406
+            title: 'Memory Activity: Enable DEP'
+            description: Data Execution Permission
+          - equals_number: 100407
+            title: 'Memory Activity: Read'
+            description: 'Read (Example: <code>ReadProcessMemory</code>)'
+          - equals_number: 100408
+            title: 'Memory Activity: Write'
+            description: 'Write (Example: <code>WriteProcessMemory</code>)'
+          - equals_number: 100409
+            title: 'Memory Activity: Map View'
+            description: 'Map View (Example: <code>MapViewOfFile2</code>)'
+          - equals_number: 100499
+            title: 'Memory Activity: Other'
+  OcsfModuleActivity:
+    title: Module Activity
+    description: Module Activity events report when an endpoint process acts on a <code>module</code>.
+    class_uri: ocsf:OcsfModuleActivity
+    see_also:
+      - https://d3fend.mitre.org/event/d3f:LoadLibraryEvent/
+      - https://d3fend.mitre.org/event/d3f:UnloadLibraryEvent/
+    is_a: OcsfSystemEvent
+    in_subset:
+      - ocsf_category_system
+    instantiates:
+      - ocsf:OcsfFacts
+    annotations:
+      ocsf_key: module_activity
+      ocsf_category: system
+      ocsf_profiles: ai_operation cloud container data_classification datetime host linux/linux_users
+        macos/macos_users osint record_integrity security_control
+      ocsf_associations: '{"actor.user": ["device"], "device": ["actor.user"]}'
+    related_mappings:
+      - d3f:LoadLibraryEvent
+      - d3f:UnloadLibraryEvent
+    slots:
+      - module
+    slot_usage:
+      activity_id:
+        any_of:
+          - equals_number: 0
+            title: Unknown
+            description: The event activity is unknown.
+          - equals_number: 1
+            title: Load
+            description: The target module was loaded.
+            see_also:
+              - https://github.com/ocsf/ocsf-docs/blob/main/faqs/schema-faq.md#when-should-i-use-a-module-activity-load-event-and-when-should-i-use-a-process-activity-inject-event
+          - equals_number: 2
+            title: Unload
+            description: The target module was unloaded.
+          - equals_number: 3
+            title: Invoke
+            description: A function exported from the target module was invoked.
+          - equals_number: 99
+            title: Other
+            description: The event activity is not mapped. See the <code>activity_name</code>
+              attribute, which contains a data source specific value.
+      actor:
+        description: The actor that performed the activity on the target <code>module</code>.
+          For example, the process that loaded a module into memory.
+      category_name:
+        description: 'The event category name, as defined by category_uid value: <code>System
+          Activity</code>.'
+      class_name:
+        description: 'The event class name, as defined by class_uid value: <code>Module Activity</code>.'
+      class_uid:
+        equals_number: 1005
+      module:
+        description: The module that was loaded, unloaded, or invoked.
+        required: true
+        annotations:
+          ocsf_group: primary
+      type_uid:
+        any_of:
+          - equals_number: 100500
+            title: 'Module Activity: Unknown'
+          - equals_number: 100501
+            title: 'Module Activity: Load'
+            description: The target module was loaded.
+            see_also:
+              - https://github.com/ocsf/ocsf-docs/blob/main/faqs/schema-faq.md#when-should-i-use-a-module-activity-load-event-and-when-should-i-use-a-process-activity-inject-event
+          - equals_number: 100502
+            title: 'Module Activity: Unload'
+            description: The target module was unloaded.
+          - equals_number: 100503
+            title: 'Module Activity: Invoke'
+            description: A function exported from the target module was invoked.
+          - equals_number: 100599
+            title: 'Module Activity: Other'
+  OcsfPeripheralActivity:
+    title: Peripheral Activity
+    description: Peripheral Activity events log a system's interactions with external, connectable,
+      and detachable hardware. These events provide visibility into the external devices connected
+      to and used by a system.
+    class_uri: ocsf:OcsfPeripheralActivity
+    is_a: OcsfSystemEvent
+    in_subset:
+      - ocsf_category_system
+    instantiates:
+      - ocsf:OcsfFacts
+    annotations:
+      ocsf_key: peripheral_activity
+      ocsf_category: system
+      ocsf_profiles: ai_operation cloud container data_classification datetime host linux/linux_users
+        macos/macos_users osint record_integrity security_control
+      ocsf_associations: '{"actor.user": ["device"], "device": ["actor.user"]}'
+    slots:
+      - peripheral_device
+    slot_usage:
+      activity_id:
+        any_of:
+          - equals_number: 0
+            title: Unknown
+            description: The event activity is unknown.
+          - equals_number: 1
+            title: Connect
+            description: A peripheral device was connected to the system.
+          - equals_number: 2
+            title: Disconnect
+            description: A peripheral device was disconnected from the system.
+          - equals_number: 3
+            title: Enable
+            description: A peripheral device was enabled on the system.
+          - equals_number: 4
+            title: Disable
+            description: A peripheral device was disabled on the system.
+          - equals_number: 5
+            title: Eject
+            description: 'A peripheral device was ejected from the system. This is typically
+              used for removable media devices. Note: For <code>Mount</code> and <code>Unmount</code>
+              events, see the <a target=''_blank'' href=''file_activity''>File System Activity</a>
+              event class.'
+          - equals_number: 99
+            title: Other
+            description: The event activity is not mapped. See the <code>activity_name</code>
+              attribute, which contains a data source specific value.
+      category_name:
+        description: 'The event category name, as defined by category_uid value: <code>System
+          Activity</code>.'
+      class_name:
+        description: 'The event class name, as defined by class_uid value: <code>Peripheral
+          Activity</code>.'
+      class_uid:
+        equals_number: 1010
+      peripheral_device:
+        description: The peripheral device that is the subject of the activity.
+        required: true
+        annotations:
+          ocsf_group: primary
+      type_uid:
+        any_of:
+          - equals_number: 101000
+            title: 'Peripheral Activity: Unknown'
+          - equals_number: 101001
+            title: 'Peripheral Activity: Connect'
+            description: A peripheral device was connected to the system.
+          - equals_number: 101002
+            title: 'Peripheral Activity: Disconnect'
+            description: A peripheral device was disconnected from the system.
+          - equals_number: 101003
+            title: 'Peripheral Activity: Enable'
+            description: A peripheral device was enabled on the system.
+          - equals_number: 101004
+            title: 'Peripheral Activity: Disable'
+            description: A peripheral device was disabled on the system.
+          - equals_number: 101005
+            title: 'Peripheral Activity: Eject'
+            description: 'A peripheral device was ejected from the system. This is typically
+              used for removable media devices. Note: For <code>Mount</code> and <code>Unmount</code>
+              events, see the <a target=''_blank'' href=''file_activity''>File System Activity</a>
+              event class.'
+          - equals_number: 101099
+            title: 'Peripheral Activity: Other'
+  OcsfProcessActivity:
+    title: Process Activity
+    description: Process Activity events report when a process launches, injects, opens or
+      terminates another process, successful or otherwise.
+    class_uri: ocsf:OcsfProcessActivity
+    see_also:
+      - https://d3fend.mitre.org/event/d3f:ProcessEvent/
+    is_a: OcsfSystemEvent
+    in_subset:
+      - ocsf_category_system
+    instantiates:
+      - ocsf:OcsfFacts
+    annotations:
+      ocsf_key: process_activity
+      ocsf_category: system
+      ocsf_profiles: ai_operation cloud container data_classification datetime host linux/linux_users
+        macos/macos_users osint record_integrity security_control
+      ocsf_associations: '{"actor.user": ["device"], "device": ["actor.user"]}'
+    related_mappings:
+      - d3f:ProcessEvent
+    slots:
+      - actual_permissions
+      - exit_code
+      - injection_type
+      - injection_type_id
+      - launch_type
+      - launch_type_id
+      - module
+      - process
+      - requested_permissions
+    slot_usage:
+      activity_id:
+        any_of:
+          - equals_number: 0
+            title: Unknown
+            description: The event activity is unknown.
+          - equals_number: 1
+            title: Launch
+            description: A request by the actor to launch another process. Refer to the <code>launch_type_id</code>
+              attribute for details of the specific launch type.
+          - equals_number: 2
+            title: Terminate
+            description: A request by the actor to terminate a process. This activity is most
+              commonly reflexive, this being the case when a process exits at its own initiation.
+              Note too that Windows security products cannot always identify the actor in
+              the case of inter-process termination. In this case, <code>actor.process</code>
+              and <code>process</code> refer to the exiting process, i.e. indistinguishable
+              from the reflexive case.
+          - equals_number: 3
+            title: Open
+            description: A request by the actor to obtain a handle or descriptor to a process
+              with the aim of performing further actions upon that process. The target is
+              usually a different process but this activity can also be reflexive.
+          - equals_number: 4
+            title: Inject
+            description: A request by the actor to execute code within the context of a process.
+              The target is usually a different process but this activity can also be reflexive.
+              Refer to the <code>injection_type_id</code> attribute for details of the specific
+              injection type.
+            see_also:
+              - https://github.com/ocsf/ocsf-docs/blob/main/faqs/schema-faq.md#when-should-i-use-a-module-activity-load-event-and-when-should-i-use-a-process-activity-inject-event
+          - equals_number: 5
+            title: Set User ID
+            description: A request by the actor to change its user identity by invoking the
+              <code>setuid()</code> system call. Common programs like <code>su</code> and
+              <code>sudo</code> use this mechanism. Note that the <em>impersonation</em> mechanism
+              on Windows is not directly equivalent because it acts at the thread level.
+          - equals_number: 99
+            title: Other
+            description: The event activity is not mapped. See the <code>activity_name</code>
+              attribute, which contains a data source specific value.
+        see_also:
+          - https://www.man7.org/linux/man-pages/man2/setuid.2.html
+      actor:
+        description: The actor that performed the activity on the target <code>process</code>.
+          For example, the process that started a new process or injected code into another
+          process.
+      actual_permissions:
+        description: The permissions that were granted to the process in a platform-native
+          format.
+        recommended: true
+        annotations:
+          ocsf_group: primary
+      category_name:
+        description: 'The event category name, as defined by category_uid value: <code>System
+          Activity</code>.'
+      class_name:
+        description: 'The event class name, as defined by class_uid value: <code>Process Activity</code>.'
+      class_uid:
+        equals_number: 1007
+      exit_code:
+        recommended: true
+        annotations:
+          ocsf_group: primary
+      injection_type:
+        recommended: true
+        annotations:
+          ocsf_group: primary
+      injection_type_id:
+        recommended: true
+        annotations:
+          ocsf_group: primary
+          ocsf_sibling: injection_type
+      launch_type:
+        recommended: true
+        annotations:
+          ocsf_group: primary
+      launch_type_id:
+        recommended: true
+        annotations:
+          ocsf_group: primary
+          ocsf_sibling: launch_type
+      module:
+        description: The module that was injected by the actor process.
+        recommended: true
+        annotations:
+          ocsf_group: primary
+      process:
+        description: The process that was launched, injected into, opened, or terminated.
+        required: true
+        annotations:
+          ocsf_group: primary
+      requested_permissions:
+        description: The permissions mask that was requested by the process.
+        recommended: true
+        annotations:
+          ocsf_group: primary
+      type_uid:
+        any_of:
+          - equals_number: 100700
+            title: 'Process Activity: Unknown'
+          - equals_number: 100701
+            title: 'Process Activity: Launch'
+            description: A request by the actor to launch another process. Refer to the <code>launch_type_id</code>
+              attribute for details of the specific launch type.
+          - equals_number: 100702
+            title: 'Process Activity: Terminate'
+            description: A request by the actor to terminate a process. This activity is most
+              commonly reflexive, this being the case when a process exits at its own initiation.
+              Note too that Windows security products cannot always identify the actor in
+              the case of inter-process termination. In this case, <code>actor.process</code>
+              and <code>process</code> refer to the exiting process, i.e. indistinguishable
+              from the reflexive case.
+          - equals_number: 100703
+            title: 'Process Activity: Open'
+            description: A request by the actor to obtain a handle or descriptor to a process
+              with the aim of performing further actions upon that process. The target is
+              usually a different process but this activity can also be reflexive.
+          - equals_number: 100704
+            title: 'Process Activity: Inject'
+            description: A request by the actor to execute code within the context of a process.
+              The target is usually a different process but this activity can also be reflexive.
+              Refer to the <code>injection_type_id</code> attribute for details of the specific
+              injection type.
+            see_also:
+              - https://github.com/ocsf/ocsf-docs/blob/main/faqs/schema-faq.md#when-should-i-use-a-module-activity-load-event-and-when-should-i-use-a-process-activity-inject-event
+          - equals_number: 100705
+            title: 'Process Activity: Set User ID'
+            description: A request by the actor to change its user identity by invoking the
+              <code>setuid()</code> system call. Common programs like <code>su</code> and
+              <code>sudo</code> use this mechanism. Note that the <em>impersonation</em> mechanism
+              on Windows is not directly equivalent because it acts at the thread level.
+          - equals_number: 100799
+            title: 'Process Activity: Other'
+  OcsfScheduledJobActivity:
+    title: Scheduled Job Activity
+    description: Scheduled Job Activity events report activities related to scheduled jobs
+      or tasks.
+    class_uri: ocsf:OcsfScheduledJobActivity
+    see_also:
+      - https://d3fend.mitre.org/event/d3f:ScheduledJobEvent/
+    is_a: OcsfSystemEvent
+    in_subset:
+      - ocsf_category_system
+    instantiates:
+      - ocsf:OcsfFacts
+    annotations:
+      ocsf_key: scheduled_job_activity
+      ocsf_category: system
+      ocsf_profiles: ai_operation cloud container data_classification datetime host linux/linux_users
+        macos/macos_users osint record_integrity security_control
+      ocsf_associations: '{"actor.user": ["device"], "device": ["actor.user"]}'
+    related_mappings:
+      - d3f:ScheduledJobEvent
+    slots:
+      - job
+      - updated_job
+    slot_usage:
+      activity_id:
+        any_of:
+          - equals_number: 0
+            title: Unknown
+            description: The event activity is unknown.
+          - equals_number: 1
+            title: Create
+          - equals_number: 2
+            title: Update
+          - equals_number: 3
+            title: Delete
+          - equals_number: 4
+            title: Enable
+          - equals_number: 5
+            title: Disable
+          - equals_number: 6
+            title: Start
+          - equals_number: 99
+            title: Other
+            description: The event activity is not mapped. See the <code>activity_name</code>
+              attribute, which contains a data source specific value.
+      actor:
+        description: The actor that performed the activity on the <code>job</code> object.
+        required: false
+        annotations:
+          ocsf_group: context
+      category_name:
+        description: 'The event category name, as defined by category_uid value: <code>System
+          Activity</code>.'
+      class_name:
+        description: 'The event class name, as defined by class_uid value: <code>Scheduled
+          Job Activity</code>.'
+      class_uid:
+        equals_number: 1006
+      job:
+        required: true
+        annotations:
+          ocsf_group: primary
+      type_uid:
+        any_of:
+          - equals_number: 100600
+            title: 'Scheduled Job Activity: Unknown'
+          - equals_number: 100601
+            title: 'Scheduled Job Activity: Create'
+          - equals_number: 100602
+            title: 'Scheduled Job Activity: Update'
+          - equals_number: 100603
+            title: 'Scheduled Job Activity: Delete'
+          - equals_number: 100604
+            title: 'Scheduled Job Activity: Enable'
+          - equals_number: 100605
+            title: 'Scheduled Job Activity: Disable'
+          - equals_number: 100606
+            title: 'Scheduled Job Activity: Start'
+          - equals_number: 100699
+            title: 'Scheduled Job Activity: Other'
+      updated_job:
+        description: The intended state of the <code>job</code> after the update. On <code>Success</code>,
+          represents the actual post-update state.
+        recommended: true
+        annotations:
+          ocsf_group: primary
+  OcsfScriptActivity:
+    title: Script Activity
+    description: Script Activity events report when a process executes a script.
+    class_uri: ocsf:OcsfScriptActivity
+    is_a: OcsfSystemEvent
+    in_subset:
+      - ocsf_category_system
+    instantiates:
+      - ocsf:OcsfFacts
+    annotations:
+      ocsf_key: script_activity
+      ocsf_category: system
+      ocsf_profiles: ai_operation cloud container data_classification datetime host linux/linux_users
+        macos/macos_users osint record_integrity security_control
+      ocsf_associations: '{"actor.user": ["device"], "device": ["actor.user"]}'
+    slots:
+      - script
+    slot_usage:
+      activity_id:
+        any_of:
+          - equals_number: 0
+            title: Unknown
+            description: The event activity is unknown.
+          - equals_number: 1
+            title: Execute
+          - equals_number: 99
+            title: Other
+            description: The event activity is not mapped. See the <code>activity_name</code>
+              attribute, which contains a data source specific value.
+      category_name:
+        description: 'The event category name, as defined by category_uid value: <code>System
+          Activity</code>.'
+      class_name:
+        description: 'The event class name, as defined by class_uid value: <code>Script Activity</code>.'
+      class_uid:
+        equals_number: 1009
+      script:
+        description: The script that was the target of the activity.
+        required: true
+        annotations:
+          ocsf_group: primary
+      type_uid:
+        any_of:
+          - equals_number: 100900
+            title: 'Script Activity: Unknown'
+          - equals_number: 100901
+            title: 'Script Activity: Execute'
+          - equals_number: 100999
+            title: 'Script Activity: Other'

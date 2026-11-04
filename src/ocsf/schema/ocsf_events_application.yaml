@@ -1,0 +1,1233 @@
+---
+id: https://w3id.org/lmodel/ocsf/ocsf_events_application
+name: ocsf_events_application
+title: 'OCSF event classes: Application Activity'
+description: Application Activity events report detailed information about the behavior of
+  applications and services.
+version: 1.9.0
+source: https://github.com/ocsf/ocsf-schema/tree/1.9.0
+license: Apache-2.0
+see_also:
+  - https://lmodel.github.io/ocsf
+  - https://schema.ocsf.io/1.9.0/
+prefixes:
+  ocsf: https://w3id.org/lmodel/ocsf/
+  linkml: https://w3id.org/linkml/
+  xsd: http://www.w3.org/2001/XMLSchema#
+  attack: https://w3id.org/lmodel/attack/
+  cve: https://w3id.org/lmodel/cve/
+  cwe: https://w3id.org/lmodel/cwe/
+  d3f: http://d3fend.mitre.org/ontologies/d3fend.owl#
+  kev_catalog: https://w3id.org/lmodel/kev-catalog/
+  nist_nvd: https://w3id.org/lmodel/nist-nvd/
+  stix: https://w3id.org/lmodel/stix/
+default_prefix: ocsf
+default_range: string
+imports:
+  - linkml:types
+  - ocsf_core
+  - ocsf_objects
+  - ocsf_events_base
+classes:
+  OcsfApplicationEvent:
+    title: Application Activity
+    description: The abstract parent of OCSF's Application Activity event classes.
+    class_uri: ocsf:OcsfApplicationEvent
+    abstract: true
+    is_a: OcsfBaseEvent
+    mixins:
+      - OcsfAiOperationProfile
+    in_subset:
+      - ocsf_category_application
+    instantiates:
+      - ocsf:OcsfFacts
+    annotations:
+      ocsf_key: application
+      ocsf_category: application
+      ocsf_profiles: ai_operation
+    slot_usage:
+      category_uid:
+        equals_number: 6
+  OcsfApiActivity:
+    title: API Activity
+    description: API events describe general CRUD (Create, Read, Update, Delete) API activities,
+      e.g. (AWS Cloudtrail)
+    class_uri: ocsf:OcsfApiActivity
+    is_a: OcsfApplicationEvent
+    mixins:
+      - OcsfTraceProfile
+    in_subset:
+      - ocsf_category_application
+    instantiates:
+      - ocsf:OcsfFacts
+    annotations:
+      ocsf_key: api_activity
+      ocsf_category: application
+      ocsf_profiles: ai_operation cloud container data_classification datetime host linux/linux_users
+        macos/macos_users osint record_integrity security_control trace
+    slots:
+      - dst_endpoint
+      - http_request
+      - http_response
+      - resources
+      - src_endpoint
+    slot_usage:
+      activity_id:
+        any_of:
+          - equals_number: 0
+            title: Unknown
+            description: The event activity is unknown.
+          - equals_number: 1
+            title: Create
+            description: The API call in the event pertains to a 'create' activity.
+          - equals_number: 2
+            title: Read
+            description: The API call in the event pertains to a 'read' activity.
+          - equals_number: 3
+            title: Update
+            description: The API call in the event pertains to a 'update' activity.
+          - equals_number: 4
+            title: Delete
+            description: The API call in the event pertains to a 'delete' activity.
+          - equals_number: 99
+            title: Other
+            description: The event activity is not mapped. See the <code>activity_name</code>
+              attribute, which contains a data source specific value.
+      actor:
+        required: true
+        annotations:
+          ocsf_group: primary
+      api:
+        required: true
+        annotations:
+          ocsf_group: primary
+      category_name:
+        description: 'The event category name, as defined by category_uid value: <code>Application
+          Activity</code>.'
+      class_name:
+        description: 'The event class name, as defined by class_uid value: <code>API Activity</code>.'
+      class_uid:
+        equals_number: 6003
+      dst_endpoint:
+        recommended: true
+        annotations:
+          ocsf_group: primary
+      http_request:
+        description: Details about the underlying http request.
+        recommended: true
+        annotations:
+          ocsf_group: primary
+      http_response:
+        description: Details about the underlying http response.
+        recommended: true
+        annotations:
+          ocsf_group: primary
+      resources:
+        description: Details about resources that were affected by the activity/event.
+        recommended: true
+        annotations:
+          ocsf_group: primary
+      src_endpoint:
+        description: Details about the source of the activity.
+        required: true
+        annotations:
+          ocsf_group: primary
+      trace:
+        annotations:
+          ocsf_group: primary
+          ocsf_profiles: trace
+      type_uid:
+        any_of:
+          - equals_number: 600300
+            title: 'API Activity: Unknown'
+          - equals_number: 600301
+            title: 'API Activity: Create'
+            description: The API call in the event pertains to a 'create' activity.
+          - equals_number: 600302
+            title: 'API Activity: Read'
+            description: The API call in the event pertains to a 'read' activity.
+          - equals_number: 600303
+            title: 'API Activity: Update'
+            description: The API call in the event pertains to a 'update' activity.
+          - equals_number: 600304
+            title: 'API Activity: Delete'
+            description: The API call in the event pertains to a 'delete' activity.
+          - equals_number: 600399
+            title: 'API Activity: Other'
+  OcsfApplicationError:
+    title: Application Error
+    description: Application Error events describe issues with an applications. The error
+      message should be put in the event's <code>message</code> attribute. The <code>metadata.product</code>
+      attribute can be used to capture the originating application information. The <code>host</code>
+      profile can used to include the generating device information. This class is helpful
+      for applications that generate or handle OCSF events and can also be used for errors
+      in upstream products and services.
+    class_uri: ocsf:OcsfApplicationError
+    is_a: OcsfApplicationEvent
+    in_subset:
+      - ocsf_category_application
+    instantiates:
+      - ocsf:OcsfFacts
+    annotations:
+      ocsf_key: application_error
+      ocsf_category: application
+      ocsf_profiles: ai_operation cloud container data_classification datetime host linux/linux_users
+        macos/macos_users osint record_integrity security_control
+    slot_usage:
+      activity_id:
+        any_of:
+          - equals_number: 0
+            title: Unknown
+            description: The event activity is unknown.
+          - equals_number: 1
+            title: General Error
+            description: The application has experienced an error.
+          - equals_number: 2
+            title: Translation Error
+            description: The application has experienced an error translating (mapping) a
+              raw event to OCSF. Including the original raw event in the raw_data field is
+              highly recommended.
+          - equals_number: 99
+            title: Other
+            description: The event activity is not mapped. See the <code>activity_name</code>
+              attribute, which contains a data source specific value.
+      category_name:
+        description: 'The event category name, as defined by category_uid value: <code>Application
+          Activity</code>.'
+      class_name:
+        description: 'The event class name, as defined by class_uid value: <code>Application
+          Error</code>.'
+      class_uid:
+        equals_number: 6008
+      message:
+        description: The error message as reported by the application.
+      type_uid:
+        any_of:
+          - equals_number: 600800
+            title: 'Application Error: Unknown'
+          - equals_number: 600801
+            title: 'Application Error: General Error'
+            description: The application has experienced an error.
+          - equals_number: 600802
+            title: 'Application Error: Translation Error'
+            description: The application has experienced an error translating (mapping) a
+              raw event to OCSF. Including the original raw event in the raw_data field is
+              highly recommended.
+          - equals_number: 600899
+            title: 'Application Error: Other'
+  OcsfApplicationLifecycle:
+    title: Application Lifecycle
+    description: Application Lifecycle events report installation, removal, start, stop of
+      an application or service.
+    class_uri: ocsf:OcsfApplicationLifecycle
+    see_also:
+      - https://d3fend.mitre.org/event/d3f:ApplicationEvent/
+    is_a: OcsfApplicationEvent
+    in_subset:
+      - ocsf_category_application
+    instantiates:
+      - ocsf:OcsfFacts
+    annotations:
+      ocsf_key: application_lifecycle
+      ocsf_category: application
+      ocsf_profiles: ai_operation cloud container data_classification datetime host linux/linux_users
+        macos/macos_users osint record_integrity security_control
+      ocsf_constraints: '{"at_least_one": ["app", "application"]}'
+    related_mappings:
+      - d3f:ApplicationEvent
+    any_of:
+      - slot_conditions:
+          app:
+            required: true
+      - slot_conditions:
+          application:
+            required: true
+    slots:
+      - app
+      - application
+    slot_usage:
+      activity_id:
+        any_of:
+          - equals_number: 0
+            title: Unknown
+            description: The event activity is unknown.
+          - equals_number: 1
+            title: Install
+            description: Install the application.
+          - equals_number: 2
+            title: Remove
+            description: Remove the application.
+          - equals_number: 3
+            title: Start
+            description: Start the application.
+          - equals_number: 4
+            title: Stop
+            description: Stop the application.
+          - equals_number: 5
+            title: Restart
+            description: Restart the application.
+          - equals_number: 6
+            title: Enable
+            description: Enable the application.
+          - equals_number: 7
+            title: Disable
+            description: Disable the application.
+          - equals_number: 8
+            title: Update
+            description: Update the application.
+          - equals_number: 99
+            title: Other
+            description: The event activity is not mapped. See the <code>activity_name</code>
+              attribute, which contains a data source specific value.
+      app:
+        description: The application that was affected by the lifecycle event.  This also
+          applies to self-updating application systems.
+        annotations:
+          ocsf_group: context
+          ocsf_deprecated_since: 1.9.0
+          ocsf_superseded_by: application
+      application:
+        description: The application that was affected by the lifecycle event. This also applies
+          to self-updating application systems. Product identity, such as vendor and version,
+          can be conveyed via the nested <code>product</code> attribute.
+        recommended: true
+        annotations:
+          ocsf_group: primary
+      category_name:
+        description: 'The event category name, as defined by category_uid value: <code>Application
+          Activity</code>.'
+      class_name:
+        description: 'The event class name, as defined by class_uid value: <code>Application
+          Lifecycle</code>.'
+      class_uid:
+        equals_number: 6002
+      type_uid:
+        any_of:
+          - equals_number: 600200
+            title: 'Application Lifecycle: Unknown'
+          - equals_number: 600201
+            title: 'Application Lifecycle: Install'
+            description: Install the application.
+          - equals_number: 600202
+            title: 'Application Lifecycle: Remove'
+            description: Remove the application.
+          - equals_number: 600203
+            title: 'Application Lifecycle: Start'
+            description: Start the application.
+          - equals_number: 600204
+            title: 'Application Lifecycle: Stop'
+            description: Stop the application.
+          - equals_number: 600205
+            title: 'Application Lifecycle: Restart'
+            description: Restart the application.
+          - equals_number: 600206
+            title: 'Application Lifecycle: Enable'
+            description: Enable the application.
+          - equals_number: 600207
+            title: 'Application Lifecycle: Disable'
+            description: Disable the application.
+          - equals_number: 600208
+            title: 'Application Lifecycle: Update'
+            description: Update the application.
+          - equals_number: 600299
+            title: 'Application Lifecycle: Other'
+  OcsfDatastoreActivity:
+    title: Datastore Activity
+    description: Datastore events describe general activities (Read, Update, Query, Delete,
+      etc.) which affect datastores or data within those datastores, e.g. (AWS RDS, AWS S3).
+    class_uri: ocsf:OcsfDatastoreActivity
+    is_a: OcsfApplicationEvent
+    in_subset:
+      - ocsf_category_application
+    instantiates:
+      - ocsf:OcsfFacts
+    annotations:
+      ocsf_key: datastore_activity
+      ocsf_category: application
+      ocsf_profiles: ai_operation cloud container data_classification datetime host linux/linux_users
+        macos/macos_users osint record_integrity security_control
+      ocsf_constraints: '{"at_least_one": ["database", "databucket", "table"]}'
+    any_of:
+      - slot_conditions:
+          database:
+            required: true
+      - slot_conditions:
+          databucket:
+            required: true
+      - slot_conditions:
+          table:
+            required: true
+    slots:
+      - database
+      - databucket
+      - dst_endpoint
+      - http_request
+      - http_response
+      - query_info
+      - src_endpoint
+      - table
+      - type
+      - type_id
+    slot_usage:
+      activity_id:
+        any_of:
+          - equals_number: 0
+            title: Unknown
+            description: The event activity is unknown.
+          - equals_number: 1
+            title: Read
+            description: The 'Read' activity involves accessing specific data record details.
+          - equals_number: 2
+            title: Update
+            description: The 'Update' activity pertains to modifying specific data record
+              details.
+          - equals_number: 3
+            title: Connect
+            description: The 'Connect' activity involves establishing a connection to the
+              datastore.
+          - equals_number: 4
+            title: Query
+            description: The 'Query' activity involves retrieving a filtered subset of data
+              based on specific criteria.
+          - equals_number: 5
+            title: Write
+            description: The 'Write' activity involves writing specific data record details.
+          - equals_number: 6
+            title: Create
+            description: The 'Create' activity involves generating new data record details.
+          - equals_number: 7
+            title: Delete
+            description: The 'Delete' activity involves removing specific data record details.
+          - equals_number: 8
+            title: List
+            description: The 'List' activity provides an overview of existing data records.
+          - equals_number: 9
+            title: Encrypt
+            description: The 'Encrypt' activity involves securing data by encrypting a specific
+              data record.
+          - equals_number: 10
+            title: Decrypt
+            description: The 'Decrypt' activity involves converting encrypted data back to
+              its original format.
+          - equals_number: 99
+            title: Other
+            description: The event activity is not mapped. See the <code>activity_name</code>
+              attribute, which contains a data source specific value.
+      actor:
+        required: true
+        annotations:
+          ocsf_group: primary
+      category_name:
+        description: 'The event category name, as defined by category_uid value: <code>Application
+          Activity</code>.'
+      class_name:
+        description: 'The event class name, as defined by class_uid value: <code>Datastore
+          Activity</code>.'
+      class_uid:
+        equals_number: 6005
+      database:
+        recommended: true
+        annotations:
+          ocsf_group: primary
+      databucket:
+        recommended: true
+        annotations:
+          ocsf_group: primary
+      dst_endpoint:
+        description: Details about the endpoint hosting the datastore application or service.
+        recommended: true
+        annotations:
+          ocsf_group: primary
+      http_request:
+        description: Details about the underlying http request.
+        recommended: true
+        annotations:
+          ocsf_group: primary
+      http_response:
+        description: Details about the underlying http response.
+        recommended: true
+        annotations:
+          ocsf_group: primary
+      query_info:
+        recommended: true
+        annotations:
+          ocsf_group: primary
+      src_endpoint:
+        description: Details about the source of the activity.
+        required: true
+        annotations:
+          ocsf_group: primary
+      table:
+        recommended: true
+        annotations:
+          ocsf_group: primary
+      type:
+        title: Datastore Type
+        description: The datastore resource type (e.g. database, datastore, or table).
+      type_id:
+        title: Datastore Type ID
+        description: The normalized datastore resource type identifier.
+        any_of:
+          - equals_number: 0
+            title: Unknown
+            description: The datastore resource type is unknown.
+          - equals_number: 1
+            title: Database
+          - equals_number: 2
+            title: Databucket
+          - equals_number: 3
+            title: Table
+          - equals_number: 99
+            title: Other
+            description: The datastore resource type is not mapped.
+        recommended: true
+      type_uid:
+        any_of:
+          - equals_number: 600500
+            title: 'Datastore Activity: Unknown'
+          - equals_number: 600501
+            title: 'Datastore Activity: Read'
+            description: The 'Read' activity involves accessing specific data record details.
+          - equals_number: 600502
+            title: 'Datastore Activity: Update'
+            description: The 'Update' activity pertains to modifying specific data record
+              details.
+          - equals_number: 600503
+            title: 'Datastore Activity: Connect'
+            description: The 'Connect' activity involves establishing a connection to the
+              datastore.
+          - equals_number: 600504
+            title: 'Datastore Activity: Query'
+            description: The 'Query' activity involves retrieving a filtered subset of data
+              based on specific criteria.
+          - equals_number: 600505
+            title: 'Datastore Activity: Write'
+            description: The 'Write' activity involves writing specific data record details.
+          - equals_number: 600506
+            title: 'Datastore Activity: Create'
+            description: The 'Create' activity involves generating new data record details.
+          - equals_number: 600507
+            title: 'Datastore Activity: Delete'
+            description: The 'Delete' activity involves removing specific data record details.
+          - equals_number: 600508
+            title: 'Datastore Activity: List'
+            description: The 'List' activity provides an overview of existing data records.
+          - equals_number: 600509
+            title: 'Datastore Activity: Encrypt'
+            description: The 'Encrypt' activity involves securing data by encrypting a specific
+              data record.
+          - equals_number: 600510
+            title: 'Datastore Activity: Decrypt'
+            description: The 'Decrypt' activity involves converting encrypted data back to
+              its original format.
+          - equals_number: 600599
+            title: 'Datastore Activity: Other'
+  OcsfFileHosting:
+    title: File Hosting Activity
+    description: File Hosting Activity events report the actions taken by file management
+      applications, including file sharing servers like Sharepoint and services such as Box,
+      MS OneDrive, Google Drive, or network file share services.
+    class_uri: ocsf:OcsfFileHosting
+    is_a: OcsfApplicationEvent
+    in_subset:
+      - ocsf_category_application
+    instantiates:
+      - ocsf:OcsfFacts
+    annotations:
+      ocsf_key: file_hosting
+      ocsf_category: application
+      ocsf_profiles: ai_operation cloud container data_classification datetime host linux/linux_users
+        macos/macos_users osint record_integrity security_control
+    slots:
+      - access_list
+      - access_mask
+      - access_result
+      - connection_info
+      - dst_endpoint
+      - expiration_time
+      - expiration_time_dt
+      - file
+      - file_result
+      - http_request
+      - http_response
+      - share
+      - share_type
+      - share_type_id
+      - src_endpoint
+    slot_usage:
+      access_list:
+        annotations:
+          ocsf_group: context
+      access_mask:
+        description: The sum of hexadecimal values of requested access rights.
+        annotations:
+          ocsf_group: context
+      access_result:
+        annotations:
+          ocsf_group: context
+      activity_id:
+        any_of:
+          - equals_number: 0
+            title: Unknown
+            description: The event activity is unknown.
+          - equals_number: 1
+            title: Upload
+            description: Upload a file.
+          - equals_number: 2
+            title: Download
+            description: Download a file.
+          - equals_number: 3
+            title: Update
+            description: Update a file.
+          - equals_number: 4
+            title: Delete
+            description: Delete a file.
+          - equals_number: 5
+            title: Rename
+            description: Rename a file.
+          - equals_number: 6
+            title: Copy
+            description: Copy a file.
+          - equals_number: 7
+            title: Move
+            description: Move a file.
+          - equals_number: 8
+            title: Restore
+            description: Restore a file.
+          - equals_number: 9
+            title: Preview
+            description: Preview a file.
+          - equals_number: 10
+            title: Lock
+            description: Lock a file.
+          - equals_number: 11
+            title: Unlock
+            description: Unlock a file.
+          - equals_number: 12
+            title: Share
+            description: Share a file.
+          - equals_number: 13
+            title: Unshare
+            description: Unshare a file.
+          - equals_number: 14
+            title: Open
+            description: Open a file.
+          - equals_number: 15
+            title: Sync
+            description: Mark a file or folder to sync with a computer.
+          - equals_number: 16
+            title: Unsync
+            description: Mark a file or folder to not sync with a computer.
+          - equals_number: 17
+            title: Access Check
+            description: Access check for a file. The <code>security_control</code> profile
+              can be used to add the access check results.
+          - equals_number: 99
+            title: Other
+            description: The event activity is not mapped. See the <code>activity_name</code>
+              attribute, which contains a data source specific value.
+      actor:
+        description: The actor that performed the activity on the target file.
+        required: true
+        annotations:
+          ocsf_group: primary
+      category_name:
+        description: 'The event category name, as defined by category_uid value: <code>Application
+          Activity</code>.'
+      class_name:
+        description: 'The event class name, as defined by class_uid value: <code>File Hosting
+          Activity</code>.'
+      class_uid:
+        equals_number: 6006
+      connection_info:
+        annotations:
+          ocsf_group: context
+      dst_endpoint:
+        description: The endpoint that received the activity on the target file.
+        recommended: true
+      expiration_time:
+        description: The share expiration time.
+        annotations:
+          ocsf_group: context
+      expiration_time_dt:
+        description: The share expiration time.
+        annotations:
+          ocsf_group: context
+          ocsf_profiles: datetime
+      file:
+        description: The file that is the target of the activity.
+        required: true
+        annotations:
+          ocsf_group: primary
+      file_result:
+        description: The resulting file object when the activity was allowed and successful.
+        annotations:
+          ocsf_group: context
+      http_request:
+        description: Details about the underlying HTTP request.
+        recommended: true
+        annotations:
+          ocsf_group: context
+      http_response:
+        description: Details about the HTTP response, if available.
+        annotations:
+          ocsf_group: context
+      share:
+        description: The share name.
+        annotations:
+          ocsf_group: context
+      share_type:
+        annotations:
+          ocsf_group: context
+      share_type_id:
+        annotations:
+          ocsf_group: context
+          ocsf_sibling: share_type
+      src_endpoint:
+        description: The endpoint that performed the activity on the target file.
+        required: true
+        annotations:
+          ocsf_group: primary
+      type_uid:
+        any_of:
+          - equals_number: 600600
+            title: 'File Hosting Activity: Unknown'
+          - equals_number: 600601
+            title: 'File Hosting Activity: Upload'
+            description: Upload a file.
+          - equals_number: 600602
+            title: 'File Hosting Activity: Download'
+            description: Download a file.
+          - equals_number: 600603
+            title: 'File Hosting Activity: Update'
+            description: Update a file.
+          - equals_number: 600604
+            title: 'File Hosting Activity: Delete'
+            description: Delete a file.
+          - equals_number: 600605
+            title: 'File Hosting Activity: Rename'
+            description: Rename a file.
+          - equals_number: 600606
+            title: 'File Hosting Activity: Copy'
+            description: Copy a file.
+          - equals_number: 600607
+            title: 'File Hosting Activity: Move'
+            description: Move a file.
+          - equals_number: 600608
+            title: 'File Hosting Activity: Restore'
+            description: Restore a file.
+          - equals_number: 600609
+            title: 'File Hosting Activity: Preview'
+            description: Preview a file.
+          - equals_number: 600610
+            title: 'File Hosting Activity: Lock'
+            description: Lock a file.
+          - equals_number: 600611
+            title: 'File Hosting Activity: Unlock'
+            description: Unlock a file.
+          - equals_number: 600612
+            title: 'File Hosting Activity: Share'
+            description: Share a file.
+          - equals_number: 600613
+            title: 'File Hosting Activity: Unshare'
+            description: Unshare a file.
+          - equals_number: 600614
+            title: 'File Hosting Activity: Open'
+            description: Open a file.
+          - equals_number: 600615
+            title: 'File Hosting Activity: Sync'
+            description: Mark a file or folder to sync with a computer.
+          - equals_number: 600616
+            title: 'File Hosting Activity: Unsync'
+            description: Mark a file or folder to not sync with a computer.
+          - equals_number: 600617
+            title: 'File Hosting Activity: Access Check'
+            description: Access check for a file. The <code>security_control</code> profile
+              can be used to add the access check results.
+          - equals_number: 600699
+            title: 'File Hosting Activity: Other'
+  OcsfScanActivity:
+    title: Scan Activity
+    description: Scan events report the start, completion, and results of a scan job. The
+      scan event includes the number of items that were scanned and the number of detections
+      that were resolved.
+    class_uri: ocsf:OcsfScanActivity
+    is_a: OcsfApplicationEvent
+    in_subset:
+      - ocsf_category_application
+    instantiates:
+      - ocsf:OcsfFacts
+    annotations:
+      ocsf_key: scan_activity
+      ocsf_category: application
+      ocsf_profiles: ai_operation cloud container data_classification datetime host linux/linux_users
+        macos/macos_users osint record_integrity security_control
+    slots:
+      - command_uid
+      - num_detections
+      - num_files
+      - num_folders
+      - num_network_items
+      - num_processes
+      - num_registry_items
+      - num_resolutions
+      - num_skipped_items
+      - num_trusted_items
+      - scan
+      - schedule_uid
+      - total
+    slot_usage:
+      activity_id:
+        any_of:
+          - equals_number: 0
+            title: Unknown
+            description: The event activity is unknown.
+          - equals_number: 1
+            title: Started
+            description: The scan was started.
+          - equals_number: 2
+            title: Completed
+            description: The scan was completed.
+          - equals_number: 3
+            title: Cancelled
+            description: The scan was cancelled.
+          - equals_number: 4
+            title: Duration Violation
+            description: The allocated scan time was insufficient to complete the requested
+              scan.
+          - equals_number: 5
+            title: Pause Violation
+            description: The scan was paused, either by the user or by program constraints
+              (e.g. scans that are suspended during certain time intervals), and not resumed
+              within the allotted time.
+          - equals_number: 6
+            title: Error
+            description: The scan could not be completed due to an internal error.
+          - equals_number: 7
+            title: Paused
+            description: The scan was paused.
+          - equals_number: 8
+            title: Resumed
+            description: The scan was resumed from the pause point.
+          - equals_number: 9
+            title: Restarted
+            description: The scan restarted from the beginning of the file enumeration.
+          - equals_number: 10
+            title: Delayed
+            description: The user delayed the scan.
+          - equals_number: 99
+            title: Other
+            description: The event activity is not mapped. See the <code>activity_name</code>
+              attribute, which contains a data source specific value.
+      category_name:
+        description: 'The event category name, as defined by category_uid value: <code>Application
+          Activity</code>.'
+      class_name:
+        description: 'The event class name, as defined by class_uid value: <code>Scan Activity</code>.'
+      class_uid:
+        equals_number: 6007
+      command_uid:
+        description: The command identifier that is associated with this scan event.  This
+          ID uniquely identifies the proactive scan command, e.g., if remotely initiated.
+        recommended: true
+        annotations:
+          ocsf_group: primary
+      duration:
+        description: The duration of the scan
+        recommended: true
+      end_time:
+        description: The end time of the scan job.
+        recommended: true
+      end_time_dt:
+        description: The end time of the scan job.
+      num_detections:
+        recommended: true
+        annotations:
+          ocsf_group: primary
+      num_files:
+        recommended: true
+        annotations:
+          ocsf_group: primary
+      num_folders:
+        recommended: true
+        annotations:
+          ocsf_group: primary
+      num_network_items:
+        recommended: true
+        annotations:
+          ocsf_group: primary
+      num_processes:
+        recommended: true
+        annotations:
+          ocsf_group: primary
+      num_registry_items:
+        recommended: true
+        annotations:
+          ocsf_group: primary
+      num_resolutions:
+        recommended: true
+        annotations:
+          ocsf_group: primary
+      num_skipped_items:
+        recommended: true
+        annotations:
+          ocsf_group: primary
+      num_trusted_items:
+        recommended: true
+        annotations:
+          ocsf_group: primary
+      policy:
+        description: The policy associated with this Scan event; required if the scan was
+          initiated by a policy.
+        recommended: true
+        annotations:
+          ocsf_group: primary
+      scan:
+        description: The Scan object describes characteristics of the scan job.
+        required: true
+        annotations:
+          ocsf_group: primary
+      schedule_uid:
+        recommended: true
+        annotations:
+          ocsf_group: primary
+      start_time:
+        description: The start time of the scan job.
+        recommended: true
+      start_time_dt:
+        description: The start time of the scan job.
+      total:
+        description: The total number of items that were scanned; zero if no items were scanned.
+        recommended: true
+        annotations:
+          ocsf_group: primary
+      type_uid:
+        any_of:
+          - equals_number: 600700
+            title: 'Scan Activity: Unknown'
+          - equals_number: 600701
+            title: 'Scan Activity: Started'
+            description: The scan was started.
+          - equals_number: 600702
+            title: 'Scan Activity: Completed'
+            description: The scan was completed.
+          - equals_number: 600703
+            title: 'Scan Activity: Cancelled'
+            description: The scan was cancelled.
+          - equals_number: 600704
+            title: 'Scan Activity: Duration Violation'
+            description: The allocated scan time was insufficient to complete the requested
+              scan.
+          - equals_number: 600705
+            title: 'Scan Activity: Pause Violation'
+            description: The scan was paused, either by the user or by program constraints
+              (e.g. scans that are suspended during certain time intervals), and not resumed
+              within the allotted time.
+          - equals_number: 600706
+            title: 'Scan Activity: Error'
+            description: The scan could not be completed due to an internal error.
+          - equals_number: 600707
+            title: 'Scan Activity: Paused'
+            description: The scan was paused.
+          - equals_number: 600708
+            title: 'Scan Activity: Resumed'
+            description: The scan was resumed from the pause point.
+          - equals_number: 600709
+            title: 'Scan Activity: Restarted'
+            description: The scan restarted from the beginning of the file enumeration.
+          - equals_number: 600710
+            title: 'Scan Activity: Delayed'
+            description: The user delayed the scan.
+          - equals_number: 600799
+            title: 'Scan Activity: Other'
+  OcsfWebResourceAccessActivity:
+    title: Web Resource Access Activity
+    description: Web Resource Access Activity events describe successful/failed attempts to
+      access a web resource over HTTP.
+    class_uri: ocsf:OcsfWebResourceAccessActivity
+    deprecated: Use the <code>web_resources_activity</code> class with the <code>security_control</code>
+      and/or <code>network_proxy</code> profile instead.
+    is_a: OcsfApplicationEvent
+    mixins:
+      - OcsfNetworkProxyProfile
+    in_subset:
+      - ocsf_category_application
+    instantiates:
+      - ocsf:OcsfFacts
+    annotations:
+      ocsf_key: web_resource_access_activity
+      ocsf_category: application
+      ocsf_profiles: ai_operation cloud container data_classification datetime host linux/linux_users
+        macos/macos_users network_proxy osint record_integrity security_control
+      ocsf_deprecated_since: 1.1.0
+      ocsf_superseded_by: web_resources_activity
+    slots:
+      - http_request
+      - http_response
+      - proxy
+      - src_endpoint
+      - tls
+      - web_resources
+    slot_usage:
+      activity_id:
+        any_of:
+          - equals_number: 0
+            title: Unknown
+            description: The event activity is unknown.
+          - equals_number: 1
+            title: Access Grant
+            description: The incoming request has permission to the web resource.
+          - equals_number: 2
+            title: Access Deny
+            description: The incoming request does not have permission to the web resource.
+          - equals_number: 3
+            title: Access Revoke
+            description: The incoming request's access has been revoked due to security policy
+              enforcements.
+          - equals_number: 4
+            title: Access Error
+            description: An error occurred during processing the request.
+          - equals_number: 99
+            title: Other
+            description: The event activity is not mapped. See the <code>activity_name</code>
+              attribute, which contains a data source specific value.
+      category_name:
+        description: 'The event category name, as defined by category_uid value: <code>Application
+          Activity</code>.'
+      class_name:
+        description: 'The event class name, as defined by class_uid value: <code>Web Resource
+          Access Activity</code>.'
+      class_uid:
+        equals_number: 6004
+      http_request:
+        description: Details about the underlying HTTP request.
+        required: true
+        annotations:
+          ocsf_group: context
+      http_response:
+        description: Details about the HTTP response, if available.
+        annotations:
+          ocsf_group: context
+      proxy:
+        description: Details about the proxy service, if available.
+        annotations:
+          ocsf_group: context
+          ocsf_deprecated_since: 1.1.0
+          ocsf_superseded_by: proxy_endpoint
+      proxy_connection_info:
+        annotations:
+          ocsf_group: context
+          ocsf_profiles: network_proxy
+      proxy_endpoint:
+        annotations:
+          ocsf_group: context
+          ocsf_profiles: network_proxy
+      proxy_http_request:
+        annotations:
+          ocsf_group: context
+          ocsf_profiles: network_proxy
+      proxy_http_response:
+        annotations:
+          ocsf_group: context
+          ocsf_profiles: network_proxy
+      proxy_tls:
+        annotations:
+          ocsf_group: context
+          ocsf_profiles: network_proxy
+      proxy_traffic:
+        annotations:
+          ocsf_group: context
+          ocsf_profiles: network_proxy
+      src_endpoint:
+        description: Details about the source endpoint of the request.
+        recommended: true
+        annotations:
+          ocsf_group: primary
+      tls:
+        description: The Transport Layer Security (TLS) attributes, if available.
+        annotations:
+          ocsf_group: context
+      type_uid:
+        any_of:
+          - equals_number: 600400
+            title: 'Web Resource Access Activity: Unknown'
+          - equals_number: 600401
+            title: 'Web Resource Access Activity: Access Grant'
+            description: The incoming request has permission to the web resource.
+          - equals_number: 600402
+            title: 'Web Resource Access Activity: Access Deny'
+            description: The incoming request does not have permission to the web resource.
+          - equals_number: 600403
+            title: 'Web Resource Access Activity: Access Revoke'
+            description: The incoming request's access has been revoked due to security policy
+              enforcements.
+          - equals_number: 600404
+            title: 'Web Resource Access Activity: Access Error'
+            description: An error occurred during processing the request.
+          - equals_number: 600499
+            title: 'Web Resource Access Activity: Other'
+      web_resources:
+        description: Details about the resource that is the target of the activity.
+        required: true
+        annotations:
+          ocsf_group: primary
+  OcsfWebResourcesActivity:
+    title: Web Resources Activity
+    description: Web Resources Activity events describe actions executed on a set of Web Resources.
+    class_uri: ocsf:OcsfWebResourcesActivity
+    is_a: OcsfApplicationEvent
+    mixins:
+      - OcsfNetworkProxyProfile
+    in_subset:
+      - ocsf_category_application
+    instantiates:
+      - ocsf:OcsfFacts
+    annotations:
+      ocsf_key: web_resources_activity
+      ocsf_category: application
+      ocsf_profiles: ai_operation cloud container data_classification datetime host linux/linux_users
+        macos/macos_users network_proxy osint record_integrity security_control
+    slots:
+      - dst_endpoint
+      - http_request
+      - http_response
+      - src_endpoint
+      - tls
+      - updated_web_resources
+      - web_resources
+      - web_resources_result
+    slot_usage:
+      activity_id:
+        any_of:
+          - equals_number: 0
+            title: Unknown
+            description: The event activity is unknown.
+          - equals_number: 1
+            title: Create
+            description: One or more web resources were created.
+          - equals_number: 2
+            title: Read
+            description: One or more web resources were read / viewed.
+          - equals_number: 3
+            title: Update
+            description: One or more web resources were updated.
+          - equals_number: 4
+            title: Delete
+            description: One or more web resources were deleted.
+          - equals_number: 5
+            title: Search
+            description: A search was performed on one or more web resources.
+          - equals_number: 6
+            title: Import
+            description: One or more web resources were imported into an Application.
+          - equals_number: 7
+            title: Export
+            description: One or more web resources were exported from an Application.
+          - equals_number: 8
+            title: Share
+            description: One or more web resources were shared.
+          - equals_number: 99
+            title: Other
+            description: The event activity is not mapped. See the <code>activity_name</code>
+              attribute, which contains a data source specific value.
+      category_name:
+        description: 'The event category name, as defined by category_uid value: <code>Application
+          Activity</code>.'
+      class_name:
+        description: 'The event class name, as defined by class_uid value: <code>Web Resources
+          Activity</code>.'
+      class_uid:
+        equals_number: 6001
+      dst_endpoint:
+        description: Details about server providing the web resources.
+        recommended: true
+        annotations:
+          ocsf_group: primary
+      http_request:
+        description: Details about the underlying HTTP request.
+        recommended: true
+        annotations:
+          ocsf_group: context
+      http_response:
+        description: Details about the HTTP response, if available.
+        annotations:
+          ocsf_group: context
+      proxy_connection_info:
+        annotations:
+          ocsf_group: context
+          ocsf_profiles: network_proxy
+      proxy_endpoint:
+        annotations:
+          ocsf_group: context
+          ocsf_profiles: network_proxy
+      proxy_http_request:
+        annotations:
+          ocsf_group: context
+          ocsf_profiles: network_proxy
+      proxy_http_response:
+        annotations:
+          ocsf_group: context
+          ocsf_profiles: network_proxy
+      proxy_tls:
+        annotations:
+          ocsf_group: context
+          ocsf_profiles: network_proxy
+      proxy_traffic:
+        annotations:
+          ocsf_group: context
+          ocsf_profiles: network_proxy
+      src_endpoint:
+        description: Details about the endpoint from which the request originated.
+        recommended: true
+        annotations:
+          ocsf_group: primary
+      tls:
+        description: The Transport Layer Security (TLS) attributes, if available.
+        annotations:
+          ocsf_group: context
+      type_uid:
+        any_of:
+          - equals_number: 600100
+            title: 'Web Resources Activity: Unknown'
+          - equals_number: 600101
+            title: 'Web Resources Activity: Create'
+            description: One or more web resources were created.
+          - equals_number: 600102
+            title: 'Web Resources Activity: Read'
+            description: One or more web resources were read / viewed.
+          - equals_number: 600103
+            title: 'Web Resources Activity: Update'
+            description: One or more web resources were updated.
+          - equals_number: 600104
+            title: 'Web Resources Activity: Delete'
+            description: One or more web resources were deleted.
+          - equals_number: 600105
+            title: 'Web Resources Activity: Search'
+            description: A search was performed on one or more web resources.
+          - equals_number: 600106
+            title: 'Web Resources Activity: Import'
+            description: One or more web resources were imported into an Application.
+          - equals_number: 600107
+            title: 'Web Resources Activity: Export'
+            description: One or more web resources were exported from an Application.
+          - equals_number: 600108
+            title: 'Web Resources Activity: Share'
+            description: One or more web resources were shared.
+          - equals_number: 600199
+            title: 'Web Resources Activity: Other'
+      updated_web_resources:
+        description: The intended state of the <code>web_resources</code> after the update.
+          On <code>Success</code>, represents the actual post-update state.
+        recommended: true
+        annotations:
+          ocsf_group: primary
+      web_resources:
+        required: true
+        annotations:
+          ocsf_group: primary
+      web_resources_result:
+        recommended: true
+        annotations:
+          ocsf_group: primary
+          ocsf_deprecated_since: 1.9.0
+          ocsf_superseded_by: updated_web_resources

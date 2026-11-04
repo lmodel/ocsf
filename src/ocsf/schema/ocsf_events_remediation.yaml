@@ -1,0 +1,405 @@
+---
+id: https://w3id.org/lmodel/ocsf/ocsf_events_remediation
+name: ocsf_events_remediation
+title: 'OCSF event classes: Remediation'
+description: Remediation events report the results of remediation commands targeting files,
+  processes, and other objects.
+version: 1.9.0
+source: https://github.com/ocsf/ocsf-schema/tree/1.9.0
+license: Apache-2.0
+see_also:
+  - https://lmodel.github.io/ocsf
+  - https://schema.ocsf.io/1.9.0/
+prefixes:
+  ocsf: https://w3id.org/lmodel/ocsf/
+  linkml: https://w3id.org/linkml/
+  xsd: http://www.w3.org/2001/XMLSchema#
+  attack: https://w3id.org/lmodel/attack/
+  cve: https://w3id.org/lmodel/cve/
+  cwe: https://w3id.org/lmodel/cwe/
+  d3f: http://d3fend.mitre.org/ontologies/d3fend.owl#
+  kev_catalog: https://w3id.org/lmodel/kev-catalog/
+  nist_nvd: https://w3id.org/lmodel/nist-nvd/
+  stix: https://w3id.org/lmodel/stix/
+default_prefix: ocsf
+default_range: string
+imports:
+  - linkml:types
+  - ocsf_core
+  - ocsf_objects
+  - ocsf_events_base
+classes:
+  OcsfRemediationActivity:
+    title: Remediation Activity
+    description: Remediation Activity events report on attempts at remediating a compromised
+      device or computer network.
+    class_uri: ocsf:OcsfRemediationActivity
+    see_also:
+      - https://d3fend.mitre.org/
+    is_a: OcsfBaseEvent
+    in_subset:
+      - ocsf_category_remediation
+    instantiates:
+      - ocsf:OcsfFacts
+    annotations:
+      ocsf_key: remediation_activity
+      ocsf_category: remediation
+      ocsf_profiles: cloud container data_classification datetime host linux/linux_users macos/macos_users
+        osint record_integrity security_control
+    slots:
+      - command_uid
+      - countermeasures
+      - remediation
+      - scan
+    slot_usage:
+      activity_id:
+        description: 'Matches the countermeasure tactic. Note: the Model tactic is not supported
+          by the OCSF Remediation event class.'
+        any_of:
+          - equals_number: 0
+            title: Unknown
+            description: The event activity is unknown.
+          - equals_number: 1
+            title: Isolate
+            description: Creates logical or physical barriers in a system which reduces opportunities
+              for adversaries to create further accesses.
+            see_also:
+              - https://d3fend.mitre.org/tactic/d3f:Isolate/
+          - equals_number: 2
+            title: Evict
+            description: Removes an adversary or malicious resource from a device or computer
+              network.
+            see_also:
+              - https://d3fend.mitre.org/tactic/d3f:Evict/
+          - equals_number: 3
+            title: Restore
+            description: Returns the system to a better state.
+            see_also:
+              - https://d3fend.mitre.org/tactic/d3f:Restore/
+          - equals_number: 4
+            title: Harden
+            description: Increases the opportunity cost of computer network exploitation.
+            see_also:
+              - https://d3fend.mitre.org/tactic/d3f:Harden/
+          - equals_number: 5
+            title: Detect
+            description: Identify adversary access to or unauthorized activity on computer
+              networks.
+            see_also:
+              - https://d3fend.mitre.org/tactic/d3f:Detect/
+          - equals_number: 6
+            title: Deceive
+            description: Advertise, entice, and allow potential attackers access to an observed
+              or controlled environment.
+            see_also:
+              - https://d3fend.mitre.org/tactic/d3f:Deceive/
+          - equals_number: 99
+            title: Other
+            description: The event activity is not mapped. See the <code>activity_name</code>
+              attribute, which contains a data source specific value.
+      category_name:
+        description: 'The event category name, as defined by category_uid value: <code>Remediation</code>.'
+      category_uid:
+        equals_number: 7
+      class_name:
+        description: 'The event class name, as defined by class_uid value: <code>Remediation
+          Activity</code>.'
+      class_uid:
+        equals_number: 7001
+      command_uid:
+        description: The unique identifier of the remediation command that pertains to this
+          event.
+        required: true
+        annotations:
+          ocsf_group: primary
+      countermeasures:
+        recommended: true
+        annotations:
+          ocsf_group: primary
+      remediation:
+        annotations:
+          ocsf_group: context
+      scan:
+        description: The remediation scan that pertains to this event.
+        annotations:
+          ocsf_group: context
+      status_id:
+        any_of:
+          - equals_number: 0
+            title: Unknown
+            description: The status is unknown.
+          - equals_number: 1
+            title: Success
+            description: The activity completed successfully.
+          - equals_number: 2
+            title: Failure
+            description: The activity failed.
+          - equals_number: 3
+            title: Does Not Exist
+            description: The target of the remediation does not exist.
+          - equals_number: 4
+            title: Partial
+            description: The remediation was partially completed.
+          - equals_number: 5
+            title: Unsupported
+            description: The remediation was not supported.
+          - equals_number: 6
+            title: Error
+            description: There was an error during the remediation process.
+          - equals_number: 99
+            title: Other
+            description: The status is not mapped. See the <code>status</code> attribute,
+              which contains a data source specific value.
+      type_uid:
+        any_of:
+          - equals_number: 700100
+            title: 'Remediation Activity: Unknown'
+          - equals_number: 700101
+            title: 'Remediation Activity: Isolate'
+            description: Creates logical or physical barriers in a system which reduces opportunities
+              for adversaries to create further accesses.
+            see_also:
+              - https://d3fend.mitre.org/tactic/d3f:Isolate/
+          - equals_number: 700102
+            title: 'Remediation Activity: Evict'
+            description: Removes an adversary or malicious resource from a device or computer
+              network.
+            see_also:
+              - https://d3fend.mitre.org/tactic/d3f:Evict/
+          - equals_number: 700103
+            title: 'Remediation Activity: Restore'
+            description: Returns the system to a better state.
+            see_also:
+              - https://d3fend.mitre.org/tactic/d3f:Restore/
+          - equals_number: 700104
+            title: 'Remediation Activity: Harden'
+            description: Increases the opportunity cost of computer network exploitation.
+            see_also:
+              - https://d3fend.mitre.org/tactic/d3f:Harden/
+          - equals_number: 700105
+            title: 'Remediation Activity: Detect'
+            description: Identify adversary access to or unauthorized activity on computer
+              networks.
+            see_also:
+              - https://d3fend.mitre.org/tactic/d3f:Detect/
+          - equals_number: 700106
+            title: 'Remediation Activity: Deceive'
+            description: Advertise, entice, and allow potential attackers access to an observed
+              or controlled environment.
+            see_also:
+              - https://d3fend.mitre.org/tactic/d3f:Deceive/
+          - equals_number: 700199
+            title: 'Remediation Activity: Other'
+  OcsfFileRemediationActivity:
+    title: File Remediation Activity
+    description: File Remediation Activity events report on attempts at remediating files.
+      Sub-techniques of countermeasures will include File, such as File Removal or Restore
+      File.
+    class_uri: ocsf:OcsfFileRemediationActivity
+    see_also:
+      - https://d3fend.mitre.org/
+    is_a: OcsfRemediationActivity
+    in_subset:
+      - ocsf_category_remediation
+    instantiates:
+      - ocsf:OcsfFacts
+    annotations:
+      ocsf_key: file_remediation_activity
+      ocsf_category: remediation
+      ocsf_profiles: cloud container data_classification datetime host linux/linux_users macos/macos_users
+        osint record_integrity security_control
+    slots:
+      - file
+    slot_usage:
+      class_name:
+        description: 'The event class name, as defined by class_uid value: <code>File Remediation
+          Activity</code>.'
+      class_uid:
+        equals_number: 7002
+      file:
+        description: The file that pertains to the remediation event.
+        required: true
+        annotations:
+          ocsf_group: primary
+      type_uid:
+        any_of:
+          - equals_number: 700200
+            title: 'File Remediation Activity: Unknown'
+          - equals_number: 700201
+            title: 'File Remediation Activity: Isolate'
+            description: Creates logical or physical barriers in a system which reduces opportunities
+              for adversaries to create further accesses.
+            see_also:
+              - https://d3fend.mitre.org/tactic/d3f:Isolate/
+          - equals_number: 700202
+            title: 'File Remediation Activity: Evict'
+            description: Removes an adversary or malicious resource from a device or computer
+              network.
+            see_also:
+              - https://d3fend.mitre.org/tactic/d3f:Evict/
+          - equals_number: 700203
+            title: 'File Remediation Activity: Restore'
+            description: Returns the system to a better state.
+            see_also:
+              - https://d3fend.mitre.org/tactic/d3f:Restore/
+          - equals_number: 700204
+            title: 'File Remediation Activity: Harden'
+            description: Increases the opportunity cost of computer network exploitation.
+            see_also:
+              - https://d3fend.mitre.org/tactic/d3f:Harden/
+          - equals_number: 700205
+            title: 'File Remediation Activity: Detect'
+            description: Identify adversary access to or unauthorized activity on computer
+              networks.
+            see_also:
+              - https://d3fend.mitre.org/tactic/d3f:Detect/
+          - equals_number: 700206
+            title: 'File Remediation Activity: Deceive'
+            description: Advertise, entice, and allow potential attackers access to an observed
+              or controlled environment.
+            see_also:
+              - https://d3fend.mitre.org/tactic/d3f:Deceive/
+          - equals_number: 700299
+            title: 'File Remediation Activity: Other'
+  OcsfNetworkRemediationActivity:
+    title: Network Remediation Activity
+    description: Network Remediation Activity events report on attempts at remediating computer
+      networks. Techniques and Sub-techniques of countermeasures will include Network, such
+      as Network Isolation or Network Traffic Filtering.
+    class_uri: ocsf:OcsfNetworkRemediationActivity
+    see_also:
+      - https://d3fend.mitre.org/
+    is_a: OcsfRemediationActivity
+    in_subset:
+      - ocsf_category_remediation
+    instantiates:
+      - ocsf:OcsfFacts
+    annotations:
+      ocsf_key: network_remediation_activity
+      ocsf_category: remediation
+      ocsf_profiles: cloud container data_classification datetime host linux/linux_users macos/macos_users
+        osint record_integrity security_control
+    slots:
+      - connection_info
+    slot_usage:
+      class_name:
+        description: 'The event class name, as defined by class_uid value: <code>Network Remediation
+          Activity</code>.'
+      class_uid:
+        equals_number: 7004
+      connection_info:
+        description: The network connection that pertains to the remediation event.
+        required: true
+        annotations:
+          ocsf_group: primary
+      type_uid:
+        any_of:
+          - equals_number: 700400
+            title: 'Network Remediation Activity: Unknown'
+          - equals_number: 700401
+            title: 'Network Remediation Activity: Isolate'
+            description: Creates logical or physical barriers in a system which reduces opportunities
+              for adversaries to create further accesses.
+            see_also:
+              - https://d3fend.mitre.org/tactic/d3f:Isolate/
+          - equals_number: 700402
+            title: 'Network Remediation Activity: Evict'
+            description: Removes an adversary or malicious resource from a device or computer
+              network.
+            see_also:
+              - https://d3fend.mitre.org/tactic/d3f:Evict/
+          - equals_number: 700403
+            title: 'Network Remediation Activity: Restore'
+            description: Returns the system to a better state.
+            see_also:
+              - https://d3fend.mitre.org/tactic/d3f:Restore/
+          - equals_number: 700404
+            title: 'Network Remediation Activity: Harden'
+            description: Increases the opportunity cost of computer network exploitation.
+            see_also:
+              - https://d3fend.mitre.org/tactic/d3f:Harden/
+          - equals_number: 700405
+            title: 'Network Remediation Activity: Detect'
+            description: Identify adversary access to or unauthorized activity on computer
+              networks.
+            see_also:
+              - https://d3fend.mitre.org/tactic/d3f:Detect/
+          - equals_number: 700406
+            title: 'Network Remediation Activity: Deceive'
+            description: Advertise, entice, and allow potential attackers access to an observed
+              or controlled environment.
+            see_also:
+              - https://d3fend.mitre.org/tactic/d3f:Deceive/
+          - equals_number: 700499
+            title: 'Network Remediation Activity: Other'
+  OcsfProcessRemediationActivity:
+    title: Process Remediation Activity
+    description: Process Remediation Activity events report on attempts at remediating processes.
+      Sub-techniques of countermeasures will include Process Eviction, such as Process Termination
+      or Kernel-based Process Isolation.
+    class_uri: ocsf:OcsfProcessRemediationActivity
+    see_also:
+      - https://d3fend.mitre.org/
+    is_a: OcsfRemediationActivity
+    in_subset:
+      - ocsf_category_remediation
+    instantiates:
+      - ocsf:OcsfFacts
+    annotations:
+      ocsf_key: process_remediation_activity
+      ocsf_category: remediation
+      ocsf_profiles: cloud container data_classification datetime host linux/linux_users macos/macos_users
+        osint record_integrity security_control
+    slots:
+      - process
+    slot_usage:
+      class_name:
+        description: 'The event class name, as defined by class_uid value: <code>Process Remediation
+          Activity</code>.'
+      class_uid:
+        equals_number: 7003
+      process:
+        description: The process that pertains to the remediation event.
+        required: true
+        annotations:
+          ocsf_group: primary
+      type_uid:
+        any_of:
+          - equals_number: 700300
+            title: 'Process Remediation Activity: Unknown'
+          - equals_number: 700301
+            title: 'Process Remediation Activity: Isolate'
+            description: Creates logical or physical barriers in a system which reduces opportunities
+              for adversaries to create further accesses.
+            see_also:
+              - https://d3fend.mitre.org/tactic/d3f:Isolate/
+          - equals_number: 700302
+            title: 'Process Remediation Activity: Evict'
+            description: Removes an adversary or malicious resource from a device or computer
+              network.
+            see_also:
+              - https://d3fend.mitre.org/tactic/d3f:Evict/
+          - equals_number: 700303
+            title: 'Process Remediation Activity: Restore'
+            description: Returns the system to a better state.
+            see_also:
+              - https://d3fend.mitre.org/tactic/d3f:Restore/
+          - equals_number: 700304
+            title: 'Process Remediation Activity: Harden'
+            description: Increases the opportunity cost of computer network exploitation.
+            see_also:
+              - https://d3fend.mitre.org/tactic/d3f:Harden/
+          - equals_number: 700305
+            title: 'Process Remediation Activity: Detect'
+            description: Identify adversary access to or unauthorized activity on computer
+              networks.
+            see_also:
+              - https://d3fend.mitre.org/tactic/d3f:Detect/
+          - equals_number: 700306
+            title: 'Process Remediation Activity: Deceive'
+            description: Advertise, entice, and allow potential attackers access to an observed
+              or controlled environment.
+            see_also:
+              - https://d3fend.mitre.org/tactic/d3f:Deceive/
+          - equals_number: 700399
+            title: 'Process Remediation Activity: Other'

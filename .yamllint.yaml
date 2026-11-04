@@ -8,6 +8,10 @@ ignore:
   - .copier-answers.yml
   # Ignore schema files that may not conform due to imports.
   - docs/schema/*.yaml
+  # What scripts/ocsf_to_linkml.py and scripts/make_examples.py write, with OCSF's
+  # long text.
+  - src/ocsf/schema/*.yaml
+  - tests/data/minimal/*.yaml
   # LOKF's schema and the adapt copies, which `lokf adapt` writes with its own
   # list indentation; just lokf-adapt-check holds them to the source.
   - .lokf/lokf.yaml

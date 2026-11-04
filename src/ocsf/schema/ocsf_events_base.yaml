@@ -1,0 +1,372 @@
+---
+id: https://w3id.org/lmodel/ocsf/ocsf_events_base
+name: ocsf_events_base
+title: OCSF base event
+description: The base event, the parent of every OCSF event class.
+version: 1.9.0
+source: https://github.com/ocsf/ocsf-schema/tree/1.9.0
+license: Apache-2.0
+see_also:
+  - https://lmodel.github.io/ocsf
+  - https://schema.ocsf.io/1.9.0/
+prefixes:
+  ocsf: https://w3id.org/lmodel/ocsf/
+  linkml: https://w3id.org/linkml/
+  xsd: http://www.w3.org/2001/XMLSchema#
+  attack: https://w3id.org/lmodel/attack/
+  cve: https://w3id.org/lmodel/cve/
+  cwe: https://w3id.org/lmodel/cwe/
+  d3f: http://d3fend.mitre.org/ontologies/d3fend.owl#
+  kev_catalog: https://w3id.org/lmodel/kev-catalog/
+  nist_nvd: https://w3id.org/lmodel/nist-nvd/
+  stix: https://w3id.org/lmodel/stix/
+default_prefix: ocsf
+default_range: string
+imports:
+  - linkml:types
+  - ocsf_core
+  - ocsf_objects
+classes:
+  OcsfBaseEvent:
+    title: Base Event
+    description: The base event is a generic and concrete event. It also defines a set of
+      attributes available in most event classes. As a generic event that does not belong
+      to any event category, it could be used to log events that are not otherwise defined
+      by the schema.
+    class_uri: ocsf:OcsfBaseEvent
+    tree_root: true
+    mixins:
+      - OcsfCloudProfile
+      - OcsfDatetimeProfile
+      - OcsfHostProfile
+      - OcsfOsintProfile
+      - OcsfRecordIntegrityProfile
+      - OcsfSecurityControlProfile
+    instantiates:
+      - ocsf:OcsfFacts
+    annotations:
+      ocsf_key: base_event
+      ocsf_category: other
+      ocsf_profiles: cloud container data_classification datetime host linux/linux_users macos/macos_users
+        osint record_integrity security_control
+    slots:
+      - activity_id
+      - activity_name
+      - category_name
+      - category_uid
+      - class_name
+      - class_uid
+      - count
+      - duration
+      - end_time
+      - end_time_dt
+      - enrichments
+      - message
+      - metadata
+      - observables
+      - raw_data
+      - raw_data_hash
+      - raw_data_size
+      - severity
+      - severity_id
+      - start_time
+      - start_time_dt
+      - status
+      - status_code
+      - status_detail
+      - status_id
+      - time
+      - time_dt
+      - timezone_offset
+      - type_name
+      - type_uid
+      - unmapped
+    slot_usage:
+      action:
+        annotations:
+          ocsf_group: primary
+          ocsf_profiles: security_control
+      action_id:
+        any_of:
+          - equals_number: 0
+            title: Unknown
+            description: The action was unknown. The <code>disposition_id</code> attribute
+              may still be set to a non-unknown value, for example 'Custom Action', 'Challenge'.
+          - equals_number: 1
+            title: Allowed
+            description: The activity was allowed. The <code>disposition_id</code> attribute
+              should be set to a value that conforms to this action, for example 'Allowed',
+              'Approved', 'Delayed', 'No Action', 'Count' etc.
+          - equals_number: 2
+            title: Denied
+            description: The attempted activity was denied. The <code>disposition_id</code>
+              attribute should be set to a value that conforms to this action, for example
+              'Blocked', 'Rejected', 'Quarantined', 'Isolated', 'Dropped', 'Access Revoked,
+              etc.
+          - equals_number: 3
+            title: Observed
+            description: The activity was observed, but neither explicitly allowed nor denied.
+              This is common with IDS and EDR controls that report additional information
+              on observed behavior such as TTPs. The <code>disposition_id</code> attribute
+              should be set to a value that conforms to this action, for example 'Logged',
+              'Alert', 'Detected', 'Count', etc.
+          - equals_number: 4
+            title: Modified
+            description: The activity was modified, adjusted, or corrected. The <code>disposition_id</code>
+              attribute should be set appropriately, for example 'Restored', 'Corrected',
+              'Delayed', 'Captcha', 'Tagged'.
+          - equals_number: 99
+            title: Other
+            description: The action is not mapped. See the <code>action</code> attribute which
+              contains a data source specific value.
+        annotations:
+          ocsf_group: primary
+          ocsf_profiles: security_control
+          ocsf_sibling: action
+      activity_id:
+        required: true
+        annotations:
+          ocsf_group: classification
+          ocsf_sibling: activity_name
+          ocsf_suppress_checks: sibling_convention
+      activity_name:
+        annotations:
+          ocsf_group: classification
+      actor:
+        annotations:
+          ocsf_group: primary
+          ocsf_profiles: host
+      attacks:
+        annotations:
+          ocsf_group: primary
+          ocsf_profiles: security_control
+      authorizations:
+        annotations:
+          ocsf_group: primary
+          ocsf_profiles: security_control
+      category_name:
+        annotations:
+          ocsf_group: classification
+      category_uid:
+        equals_number: 0
+        required: true
+        annotations:
+          ocsf_group: classification
+          ocsf_sibling: category_name
+      class_name:
+        description: 'The event class name, as defined by class_uid value: <code>Base Event</code>.'
+        annotations:
+          ocsf_group: classification
+      class_uid:
+        equals_number: 0
+        required: true
+        annotations:
+          ocsf_group: classification
+          ocsf_sibling: class_name
+      count:
+        description: The number of events aggregated into this single record. Only populate
+          for aggregate events. When set, <code>start_time</code> and <code>end_time</code>
+          should also be provided to define the aggregation window.
+        annotations:
+          ocsf_group: occurrence
+      device:
+        annotations:
+          ocsf_group: primary
+          ocsf_profiles: host
+      disposition:
+        annotations:
+          ocsf_group: primary
+          ocsf_profiles: security_control
+      disposition_id:
+        annotations:
+          ocsf_group: primary
+          ocsf_profiles: security_control
+          ocsf_sibling: disposition
+      duration:
+        description: The elapsed time of the aggregation window in milliseconds, from <code>start_time</code>
+          to <code>end_time</code>. Only populate for aggregate events (<code>count</code>
+          &gt; 1). The value should equal <code>end_time - start_time</code>.
+        annotations:
+          ocsf_group: occurrence
+      end_time:
+        description: The time of the most recent event in an aggregate (<code>count</code>
+          &gt; 1). Do not populate for discrete, point-in-time events - use <code>time</code>
+          alone. Subclasses such as findings may redefine this for their own time-range semantics.
+        annotations:
+          ocsf_group: occurrence
+      end_time_dt:
+        description: The time of the most recent event in an aggregate (<code>count</code>
+          &gt; 1). Do not populate for discrete, point-in-time events - use <code>time</code>
+          alone. Subclasses such as findings may redefine this for their own time-range semantics.
+        annotations:
+          ocsf_group: occurrence
+          ocsf_profiles: datetime
+      enrichments:
+        annotations:
+          ocsf_group: context
+      firewall_rule:
+        annotations:
+          ocsf_group: primary
+          ocsf_profiles: security_control
+      is_alert:
+        annotations:
+          ocsf_group: primary
+          ocsf_profiles: security_control
+      malware:
+        annotations:
+          ocsf_group: primary
+          ocsf_profiles: security_control
+      malware_scan_info:
+        annotations:
+          ocsf_group: primary
+          ocsf_profiles: security_control
+      message:
+        description: 'A human-readable description of the event, as defined by the source.
+          This should be a concise, meaningful summary suitable for display in a UI or alert
+          notification - not a raw log line. For example: <code>"User john_doe logged in from
+          10.0.0.1."</code> rather than a raw syslog string.'
+        recommended: true
+        annotations:
+          ocsf_group: primary
+      metadata:
+        required: true
+        annotations:
+          ocsf_group: context
+      observables:
+        recommended: true
+        annotations:
+          ocsf_group: primary
+      policy:
+        annotations:
+          ocsf_group: primary
+          ocsf_profiles: security_control
+      raw_data:
+        annotations:
+          ocsf_group: context
+      raw_data_hash:
+        annotations:
+          ocsf_group: context
+      raw_data_size:
+        annotations:
+          ocsf_group: context
+      severity:
+        annotations:
+          ocsf_group: classification
+      severity_id:
+        required: true
+        annotations:
+          ocsf_group: classification
+          ocsf_sibling: severity
+      start_time:
+        description: The time of the earliest event in an aggregate (<code>count</code> &gt;
+          1). Do not populate for discrete, point-in-time events - use <code>time</code> alone.
+          Subclasses such as findings may redefine this for their own time-range semantics.
+        annotations:
+          ocsf_group: occurrence
+      start_time_dt:
+        description: The time of the earliest event in an aggregate (<code>count</code> &gt;
+          1). Do not populate for discrete, point-in-time events - use <code>time</code> alone.
+          Subclasses such as findings may redefine this for their own time-range semantics.
+        annotations:
+          ocsf_group: occurrence
+          ocsf_profiles: datetime
+      status:
+        description: 'The event status label, normalized to the caption of the <code>status_id</code>
+          value. When <code>status_id</code> is <code>99</code> (Other), this attribute <b>must</b>
+          contain the source-specific status label. For all other values, this must match
+          the caption defined for that <code>status_id</code> enum value (e.g., <code>"Success"</code>
+          for <code>status_id: 1</code>).'
+        recommended: true
+        annotations:
+          ocsf_group: primary
+      status_code:
+        description: The source-specific status or error code as reported by the event source.
+          For example, a Windows logon failure code (<code>0x18</code>), an HTTP response
+          code (<code>403</code>), or an AWS API error code. This preserves the original code
+          for detailed troubleshooting beyond what <code>status_id</code> conveys.
+        recommended: true
+        annotations:
+          ocsf_group: primary
+      status_detail:
+        description: 'A human-readable description providing additional context about the
+          event outcome. Use this to convey details that go beyond the normalized <code>status_id</code>
+          and source-specific <code>status_code</code>, such as a failure reason or error
+          message. For example: <code>"Account locked after 5 failed attempts."</code>.'
+        recommended: true
+        annotations:
+          ocsf_group: primary
+      status_id:
+        description: The normalized status of the event outcome. Use this family of attributes
+          to convey the outcome of the activity described by the event. Producers should map
+          their source outcome to <code>1</code> (Success) or <code>2</code> (Failure). Use
+          <code>0</code> (Unknown) when the outcome cannot be determined, and <code>99</code>
+          (Other) with a populated <code>status</code> string when the source value does not
+          map cleanly.
+        any_of:
+          - equals_number: 0
+            title: Unknown
+            description: The status is unknown.
+          - equals_number: 1
+            title: Success
+            description: The activity completed successfully.
+          - equals_number: 2
+            title: Failure
+            description: The activity failed.
+          - equals_number: 99
+            title: Other
+            description: The status is not mapped. See the <code>status</code> attribute,
+              which contains a data source specific value.
+        recommended: true
+        annotations:
+          ocsf_group: primary
+          ocsf_sibling: status
+      time:
+        description: 'The primary timestamp of the event - when the activity actually occurred
+          at the source. This does not capture when the event record was created or serialized
+          by the source system; for event lifecycle timestamps such as ingestion and processing,
+          use <code>metadata.logged_time</code> and <code>metadata.processed_time</code> respectively,
+          or the equivalent attributes in the <code>metadata.loggers</code> array when recording
+          pipeline stages. For aggregate events (<code>count</code> &gt; 1), set this to <code>start_time</code>
+          (the earliest OCSF <code>time</code> in the aggregate) to preserve causal ordering
+          and consistent timeline alignment. Note: finding classes redefine <code>time</code>
+          as the finding creation time rather than the activity occurrence time. This <b>must</b>
+          be a UTC epoch value in milliseconds (e.g., <code>1776881335332</code>). Mappers
+          should use the most precise and authoritative timestamp available from the source.'
+        required: true
+        annotations:
+          ocsf_group: occurrence
+      time_dt:
+        description: 'The primary timestamp of the event - when the activity actually occurred
+          at the source. This does not capture when the event record was created or serialized
+          by the source system; for event lifecycle timestamps such as ingestion and processing,
+          use <code>metadata.logged_time</code> and <code>metadata.processed_time</code> respectively,
+          or the equivalent attributes in the <code>metadata.loggers</code> array when recording
+          pipeline stages. For aggregate events (<code>count</code> &gt; 1), set this to <code>start_time</code>
+          (the earliest OCSF <code>time</code> in the aggregate) to preserve causal ordering
+          and consistent timeline alignment. Note: finding classes redefine <code>time</code>
+          as the finding creation time rather than the activity occurrence time. This <b>must</b>
+          be a UTC epoch value in milliseconds (e.g., <code>1776881335332</code>). Mappers
+          should use the most precise and authoritative timestamp available from the source.'
+        annotations:
+          ocsf_group: occurrence
+          ocsf_profiles: datetime
+      timezone_offset:
+        recommended: true
+        annotations:
+          ocsf_group: occurrence
+      type_name:
+        annotations:
+          ocsf_group: classification
+      type_uid:
+        any_of:
+          - equals_number: 0
+            title: 'Base Event: Unknown'
+          - equals_number: 99
+            title: 'Base Event: Other'
+        required: true
+        annotations:
+          ocsf_group: classification
+          ocsf_sibling: type_name
+      unmapped:
+        annotations:
+          ocsf_group: context

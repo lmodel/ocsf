@@ -1,0 +1,413 @@
+---
+id: https://w3id.org/lmodel/ocsf/ocsf_events_unmanned_systems
+name: ocsf_events_unmanned_systems
+title: 'OCSF event classes: Unmanned Systems'
+description: Unmanned Systems events report the activity, existence, and/or state of unmanned
+  systems for tracking, mission planning, and other related activities.
+version: 1.9.0
+source: https://github.com/ocsf/ocsf-schema/tree/1.9.0
+license: Apache-2.0
+see_also:
+  - https://lmodel.github.io/ocsf
+  - https://schema.ocsf.io/1.9.0/
+prefixes:
+  ocsf: https://w3id.org/lmodel/ocsf/
+  linkml: https://w3id.org/linkml/
+  xsd: http://www.w3.org/2001/XMLSchema#
+  attack: https://w3id.org/lmodel/attack/
+  cve: https://w3id.org/lmodel/cve/
+  cwe: https://w3id.org/lmodel/cwe/
+  d3f: http://d3fend.mitre.org/ontologies/d3fend.owl#
+  kev_catalog: https://w3id.org/lmodel/kev-catalog/
+  nist_nvd: https://w3id.org/lmodel/nist-nvd/
+  stix: https://w3id.org/lmodel/stix/
+default_prefix: ocsf
+default_range: string
+imports:
+  - linkml:types
+  - ocsf_core
+  - ocsf_objects
+  - ocsf_events_base
+classes:
+  OcsfUnmannedSystemsEvent:
+    title: Unmanned Systems
+    description: The Unmanned Systems event is a generic event that defines a set of attributes
+      available in the Unmanned Systems category.
+    class_uri: ocsf:OcsfUnmannedSystemsEvent
+    abstract: true
+    is_a: OcsfBaseEvent
+    in_subset:
+      - ocsf_category_unmanned_systems
+    instantiates:
+      - ocsf:OcsfFacts
+    annotations:
+      ocsf_key: unmanned_systems
+      ocsf_category: unmanned_systems
+    slots:
+      - connection_info
+      - dst_endpoint
+      - proxy_endpoint
+      - src_endpoint
+      - tls
+      - traffic
+    slot_usage:
+      category_uid:
+        equals_number: 8
+      connection_info:
+        recommended: true
+        annotations:
+          ocsf_group: context
+      dst_endpoint:
+        description: The destination network endpoint of the Unmanned Aerial System (UAS),
+          Counter Unmanned Aerial System (CUAS) platform, or other unmanned systems monitoring
+          and/or sensing infrastructure.
+        required: true
+        annotations:
+          ocsf_group: context
+      proxy_endpoint:
+        recommended: true
+        annotations:
+          ocsf_group: context
+      src_endpoint:
+        description: The source network endpoint of the Unmanned Aerial System (UAS), Counter
+          Unmanned Aerial System (CUAS) platform, or other unmanned systems monitoring and/or
+          sensing infrastructure.
+        recommended: true
+        annotations:
+          ocsf_group: context
+      tls:
+        annotations:
+          ocsf_group: context
+      traffic:
+        recommended: true
+        annotations:
+          ocsf_group: context
+  OcsfAirborneBroadcastActivity:
+    title: Airborne Broadcast Activity
+    description: Airborne Broadcast Activity events report the activity of any aircraft or
+      unmanned system as reported and tracked by Automatic Dependent Surveillance - Broadcast
+      (ADS-B) receivers. Based on the ADS-B standards described in Code of Federal Regulations
+      (CFR) Title 14 Chapter I Subchapter F Part 91 and in other general Federal Aviation
+      Administration (FAA) supplemental orders and guidance.
+    class_uri: ocsf:OcsfAirborneBroadcastActivity
+    see_also:
+      - https://www.ecfr.gov/current/title-14/chapter-I/subchapter-F/part-91#91.225
+      - https://www.faa.gov/about/office_org/headquarters_offices/avs/offices/afx/afs/afs400/afs410/ads-b
+    is_a: OcsfUnmannedSystemsEvent
+    in_subset:
+      - ocsf_category_unmanned_systems
+    instantiates:
+      - ocsf:OcsfFacts
+    annotations:
+      ocsf_key: airborne_broadcast_activity
+      ocsf_category: unmanned_systems
+      ocsf_profiles: cloud container data_classification datetime host linux/linux_users macos/macos_users
+        osint record_integrity security_control
+      ocsf_constraints: '{"at_least_one": ["aircraft", "unmanned_aerial_system", "unmanned_system_operating_area"]}'
+    any_of:
+      - slot_conditions:
+          aircraft:
+            required: true
+      - slot_conditions:
+          unmanned_aerial_system:
+            required: true
+      - slot_conditions:
+          unmanned_system_operating_area:
+            required: true
+    slots:
+      - aircraft
+      - protocol_name
+      - rssi
+      - unmanned_aerial_system
+      - unmanned_system_operating_area
+      - unmanned_system_operator
+    slot_usage:
+      activity_id:
+        any_of:
+          - equals_number: 0
+            title: Unknown
+            description: The event activity is unknown.
+          - equals_number: 1
+            title: Capture
+            description: ADS-B information is being captured (collected).
+          - equals_number: 2
+            title: Record
+            description: ADS-B information is being recorded, for example by a standalone
+              transceiver.
+          - equals_number: 99
+            title: Other
+            description: The event activity is not mapped. See the <code>activity_name</code>
+              attribute, which contains a data source specific value.
+        annotations:
+          ocsf_group: primary
+          ocsf_sibling: activity_name
+          ocsf_suppress_checks: sibling_convention
+      aircraft:
+        recommended: true
+        annotations:
+          ocsf_group: primary
+      category_name:
+        description: 'The event category name, as defined by category_uid value: <code>Unmanned
+          Systems</code>.'
+      class_name:
+        description: 'The event class name, as defined by class_uid value: <code>Airborne
+          Broadcast Activity</code>.'
+      class_uid:
+        equals_number: 8002
+      dst_endpoint:
+        description: The destination network endpoint for the ADS-B system, if telemetry is
+          being remotely broadcasted.
+        required: false
+      protocol_name:
+        title: ADS-B Protocol
+        description: The specific protocol associated with the ADS-B system. E.g. <code>ADS-B
+          UAT</code> or <code>ADS-B ES</code>.
+        recommended: true
+        annotations:
+          ocsf_group: primary
+      rssi:
+        description: Recent average RSSI (signal power) measured in dbFS. This value will
+          always be negative, e.g., <code>-87.13</code>.
+        annotations:
+          ocsf_group: context
+      src_endpoint:
+        description: The source network endpoint for the ADS-B system.
+        recommended: false
+      traffic:
+        description: 'Traffic refers to the amount of data transmitted from a ADS-B remote
+          monitoring system at a given point of time. Ex: <code>bytes_in</code> and <code>bytes_out</code>.'
+        recommended: false
+      type_uid:
+        any_of:
+          - equals_number: 800200
+            title: 'Airborne Broadcast Activity: Unknown'
+          - equals_number: 800201
+            title: 'Airborne Broadcast Activity: Capture'
+            description: ADS-B information is being captured (collected).
+          - equals_number: 800202
+            title: 'Airborne Broadcast Activity: Record'
+            description: ADS-B information is being recorded, for example by a standalone
+              transceiver.
+          - equals_number: 800299
+            title: 'Airborne Broadcast Activity: Other'
+            description: The event activity is not mapped. See the <code>activity_name</code>
+              attribute, which contains a data source specific value.
+      unmanned_aerial_system:
+        required: true
+        annotations:
+          ocsf_group: primary
+      unmanned_system_operating_area:
+        recommended: true
+        annotations:
+          ocsf_group: primary
+      unmanned_system_operator:
+        required: true
+        annotations:
+          ocsf_group: primary
+  OcsfDroneFlightsActivity:
+    title: Drone Flights Activity
+    description: 'Drone Flights Activity events report the activity of Unmanned Aerial Systems
+      (UAS), their Operators, and mission-planning and authorization metadata as reported
+      by the UAS platforms themselves, by Counter-UAS (CUAS) systems, or other remote monitoring
+      or sensing infrastructure. Based on the Remote ID defined in Standard Specification
+      for Remote ID and Tracking (ASTM Designation: F3411-22a).'
+    class_uri: ocsf:OcsfDroneFlightsActivity
+    see_also:
+      - https://store.astm.org/f3411-22a.html
+    is_a: OcsfUnmannedSystemsEvent
+    in_subset:
+      - ocsf_category_unmanned_systems
+    instantiates:
+      - ocsf:OcsfFacts
+    annotations:
+      ocsf_key: drone_flights_activity
+      ocsf_category: unmanned_systems
+      ocsf_profiles: cloud container data_classification datetime host linux/linux_users macos/macos_users
+        osint record_integrity security_control
+      ocsf_constraints: '{"at_least_one": ["src_endpoint", "unmanned_aerial_system", "unmanned_system_operator",
+        "unmanned_system_operating_area"]}'
+    any_of:
+      - slot_conditions:
+          src_endpoint:
+            required: true
+      - slot_conditions:
+          unmanned_aerial_system:
+            required: true
+      - slot_conditions:
+          unmanned_system_operator:
+            required: true
+      - slot_conditions:
+          unmanned_system_operating_area:
+            required: true
+    slots:
+      - auth_protocol
+      - auth_protocol_id
+      - classification
+      - comment
+      - protocol_name
+      - unmanned_aerial_system
+      - unmanned_system_operating_area
+      - unmanned_system_operator
+    slot_usage:
+      activity_id:
+        any_of:
+          - equals_number: 0
+            title: Unknown
+            description: The event activity is unknown.
+          - equals_number: 1
+            title: Capture
+            description: Remote ID information from an Unmanned System is being captured (collected).
+          - equals_number: 2
+            title: Record
+            description: Unmanned System activity is being recorded.
+          - equals_number: 99
+            title: Other
+            description: The event activity is not mapped. See the <code>activity_name</code>
+              attribute, which contains a data source specific value.
+        annotations:
+          ocsf_group: primary
+          ocsf_sibling: activity_name
+          ocsf_suppress_checks: sibling_convention
+      auth_protocol:
+        title: Authentication Type
+        description: The authentication type as defined by the caption of <code>auth_protocol_id</code>.
+          In the case of 'Other', it is defined by the event source.
+        annotations:
+          ocsf_group: context
+      auth_protocol_id:
+        title: Authentication Type ID
+        description: The normalized identifier of the authentication type used to authorize
+          a flight plan or mission.
+        any_of:
+          - equals_number: 0
+            title: Unknown
+            description: The authentication type is unknown.
+          - equals_number: 1
+            title: None
+          - equals_number: 2
+            title: UAS ID Signature
+          - equals_number: 3
+            title: Operator ID Signature
+          - equals_number: 4
+            title: Message Set Signature
+          - equals_number: 5
+            title: Authentication Provided by Network Remote ID
+          - equals_number: 6
+            title: Specific Authentication Method
+          - equals_number: 7
+            title: Reserved
+          - equals_number: 8
+            title: Private User
+          - equals_number: 9
+            title: EAP
+          - equals_number: 10
+            title: RADIUS
+          - equals_number: 11
+            title: Basic Authentication
+          - equals_number: 12
+            title: LDAP
+          - equals_number: 99
+            title: Other
+            description: The authentication type is not mapped. See the <code>auth_protocol</code>
+              attribute, which contains a data source specific value.
+        annotations:
+          ocsf_group: context
+          ocsf_sibling: auth_protocol
+      category_name:
+        description: 'The event category name, as defined by category_uid value: <code>Unmanned
+          Systems</code>.'
+      class_name:
+        description: 'The event class name, as defined by class_uid value: <code>Drone Flights
+          Activity</code>.'
+      class_uid:
+        equals_number: 8001
+      classification:
+        title: Classification Type
+        description: UA Classification - Allows a region to classify UAS in a regional specific
+          manner. The format may differ from region to region.
+        annotations:
+          ocsf_group: context
+      comment:
+        title: Operation Description
+        description: This optional, free-text field enables the operator to describe the purpose
+          of a flight, if so desired.
+        annotations:
+          ocsf_group: context
+      protocol_name:
+        title: Remote ID Protocol
+        description: The networking protocol associated with the Remote ID device or beacon.
+          E.g. <code>BLE</code>, <code>LTE</code>, <code>802.11</code>.
+        annotations:
+          ocsf_group: context
+      src_endpoint:
+        recommended: false
+      status:
+        title: Operational Status
+        description: The normalized Operational status for the Unmanned Aerial System (UAS)
+          normalized to the caption of the <code>status_id</code> value. In the case of 'Other',
+          it is defined by the source.
+        recommended: false
+        annotations:
+          ocsf_group: context
+      status_id:
+        title: Operational Status ID
+        description: The normalized Operational status identifier for the Unmanned Aerial
+          System (UAS).
+        any_of:
+          - equals_number: 0
+            title: Unknown
+            description: The status is unknown.
+          - equals_number: 1
+            title: Undeclared
+            description: The operational status is not reported.
+          - equals_number: 2
+            title: Ground
+            description: The Unmanned Aerial System (UAS) is grounded.
+          - equals_number: 3
+            title: Airborne
+            description: The Unmanned Aerial System (UAS) is airborne.
+          - equals_number: 4
+            title: Emergency
+            description: The Unmanned Aerial System (UAS) is reporting an emergency status.
+          - equals_number: 5
+            title: Remote ID System Failure
+            description: The Unmanned Aerial System (UAS) is reporting the Remote ID beacon
+              or device is malfunctioning or has failed.
+          - equals_number: 6
+            title: Reserved
+            description: An ASTM Reserved status is reported.
+          - equals_number: 99
+            title: Other
+            description: The status is not mapped. See the <code>status</code> attribute,
+              which contains a data source specific value.
+      traffic:
+        description: 'Traffic refers to the amount of data transmitted from a Unmanned Aerial
+          System (UAS) or Counter Unmanned Aerial System (UAS) (CUAS) system at a given point
+          of time. Ex: <code>bytes_in</code> and <code>bytes_out</code>.'
+        recommended: false
+      type_uid:
+        any_of:
+          - equals_number: 800100
+            title: 'Drone Flights Activity: Unknown'
+          - equals_number: 800101
+            title: 'Drone Flights Activity: Capture'
+            description: Remote ID information from an Unmanned System is being captured (collected).
+          - equals_number: 800102
+            title: 'Drone Flights Activity: Record'
+            description: Unmanned System activity is being recorded.
+          - equals_number: 800199
+            title: 'Drone Flights Activity: Other'
+            description: The event activity is not mapped. See the <code>activity_name</code>
+              attribute, which contains a data source specific value.
+      unmanned_aerial_system:
+        required: true
+        annotations:
+          ocsf_group: primary
+      unmanned_system_operating_area:
+        recommended: true
+        annotations:
+          ocsf_group: primary
+      unmanned_system_operator:
+        required: true
+        annotations:
+          ocsf_group: primary

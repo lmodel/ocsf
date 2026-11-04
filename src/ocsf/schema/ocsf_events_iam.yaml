@@ -1,0 +1,1433 @@
+---
+id: https://w3id.org/lmodel/ocsf/ocsf_events_iam
+name: ocsf_events_iam
+title: 'OCSF event classes: Identity & Access Management'
+description: Identity & Access Management (IAM) events relate to the supervision of the system's
+  authentication and access control model. Examples of such events are the success or failure
+  of authentication, granting of authority, password change, entity change, privileged use
+  etc.
+version: 1.9.0
+source: https://github.com/ocsf/ocsf-schema/tree/1.9.0
+license: Apache-2.0
+see_also:
+  - https://lmodel.github.io/ocsf
+  - https://schema.ocsf.io/1.9.0/
+prefixes:
+  ocsf: https://w3id.org/lmodel/ocsf/
+  linkml: https://w3id.org/linkml/
+  xsd: http://www.w3.org/2001/XMLSchema#
+  attack: https://w3id.org/lmodel/attack/
+  cve: https://w3id.org/lmodel/cve/
+  cwe: https://w3id.org/lmodel/cwe/
+  d3f: http://d3fend.mitre.org/ontologies/d3fend.owl#
+  kev_catalog: https://w3id.org/lmodel/kev-catalog/
+  nist_nvd: https://w3id.org/lmodel/nist-nvd/
+  stix: https://w3id.org/lmodel/stix/
+default_prefix: ocsf
+default_range: string
+imports:
+  - linkml:types
+  - ocsf_core
+  - ocsf_objects
+  - ocsf_events_base
+classes:
+  OcsfIamEvent:
+    title: Identity & Access Management
+    description: The Identity & Access Management event is a generic event that defines a
+      set of attributes available in the access control events. As a generic event, it could
+      be used to log events that are not otherwise defined by the IAM category.
+    class_uri: ocsf:OcsfIamEvent
+    abstract: true
+    is_a: OcsfBaseEvent
+    mixins:
+      - OcsfAiOperationProfile
+    in_subset:
+      - ocsf_category_iam
+    instantiates:
+      - ocsf:OcsfFacts
+    annotations:
+      ocsf_key: iam
+      ocsf_category: iam
+      ocsf_profiles: ai_operation
+    slots:
+      - http_request
+      - http_response
+      - src_endpoint
+    slot_usage:
+      actor:
+        recommended: true
+        annotations:
+          ocsf_group: context
+      category_uid:
+        equals_number: 3
+      http_request:
+        description: Details about the underlying HTTP request.
+        annotations:
+          ocsf_group: context
+      http_response:
+        description: Details about the underlying HTTP response.
+        annotations:
+          ocsf_group: context
+      src_endpoint:
+        description: Details about the source of the IAM activity.
+        recommended: true
+        annotations:
+          ocsf_group: primary
+  OcsfAccountChange:
+    title: Account Change
+    description: Account Change events report when specific user account management tasks
+      are performed, such as a user/role being created or role assigned, changed, deleted,
+      renamed, disabled, enabled, locked out or unlocked.
+    class_uri: ocsf:OcsfAccountChange
+    deprecated: Use the <code>user_management</code> class instead.
+    is_a: OcsfIamEvent
+    in_subset:
+      - ocsf_category_iam
+    instantiates:
+      - ocsf:OcsfFacts
+    annotations:
+      ocsf_key: account_change
+      ocsf_category: iam
+      ocsf_profiles: ai_operation cloud container data_classification datetime host linux/linux_users
+        macos/macos_users osint record_integrity security_control
+      ocsf_deprecated_since: 1.9.0
+      ocsf_superseded_by: user_management
+    slots:
+      - auth_factors
+      - policies
+      - user
+      - user_result
+    slot_usage:
+      activity_id:
+        any_of:
+          - equals_number: 0
+            title: Unknown
+            description: The event activity is unknown.
+          - equals_number: 1
+            title: Create
+            description: A user/role was created.
+          - equals_number: 2
+            title: Enable
+            description: A user/role was enabled.
+          - equals_number: 3
+            title: Password Change
+            description: An attempt was made to change a user account's password.
+          - equals_number: 4
+            title: Password Reset
+            description: An attempt was made to reset a user account's password.
+          - equals_number: 5
+            title: Disable
+            description: A user/role was disabled.
+          - equals_number: 6
+            title: Delete
+            description: A user/role was deleted.
+          - equals_number: 7
+            title: Attach Policy
+            description: An IAM Policy was attached to a user/role.
+          - equals_number: 8
+            title: Detach Policy
+            description: An IAM Policy was detached from a user/role.
+          - equals_number: 9
+            title: Lock
+            description: A user account was locked out.
+          - equals_number: 10
+            title: MFA Factor Enable
+            description: One or more authentication factors were enabled for a user account.
+          - equals_number: 11
+            title: MFA Factor Disable
+            description: One or more authentication factors were disabled for a user account.
+          - equals_number: 12
+            title: Unlock
+            description: A user account was unlocked.
+          - equals_number: 99
+            title: Other
+            description: The event activity is not mapped. See the <code>activity_name</code>
+              attribute, which contains a data source specific value.
+      auth_factors:
+        description: Details about the authentication factors associated with the MFA Factor
+          Enable/Disable activities.
+        annotations:
+          ocsf_group: context
+      category_name:
+        description: 'The event category name, as defined by category_uid value: <code>Identity
+          & Access Management</code>.'
+      class_name:
+        description: 'The event class name, as defined by class_uid value: <code>Account Change</code>.'
+      class_uid:
+        equals_number: 3001
+      policies:
+        description: Details about the IAM policies associated with the Attach/Detach Policy
+          activities.
+        annotations:
+          ocsf_group: context
+      policy:
+        description: Details about the IAM policy associated to the Attach/Detach Policy activities.
+        deprecated: Use the <code>policies</code> attribute instead.
+        annotations:
+          ocsf_group: context
+          ocsf_deprecated_since: 1.4.0
+          ocsf_superseded_by: policies
+      type_uid:
+        any_of:
+          - equals_number: 300100
+            title: 'Account Change: Unknown'
+          - equals_number: 300101
+            title: 'Account Change: Create'
+            description: A user/role was created.
+          - equals_number: 300102
+            title: 'Account Change: Enable'
+            description: A user/role was enabled.
+          - equals_number: 300103
+            title: 'Account Change: Password Change'
+            description: An attempt was made to change a user account's password.
+          - equals_number: 300104
+            title: 'Account Change: Password Reset'
+            description: An attempt was made to reset a user account's password.
+          - equals_number: 300105
+            title: 'Account Change: Disable'
+            description: A user/role was disabled.
+          - equals_number: 300106
+            title: 'Account Change: Delete'
+            description: A user/role was deleted.
+          - equals_number: 300107
+            title: 'Account Change: Attach Policy'
+            description: An IAM Policy was attached to a user/role.
+          - equals_number: 300108
+            title: 'Account Change: Detach Policy'
+            description: An IAM Policy was detached from a user/role.
+          - equals_number: 300109
+            title: 'Account Change: Lock'
+            description: A user account was locked out.
+          - equals_number: 300110
+            title: 'Account Change: MFA Factor Enable'
+            description: One or more authentication factors were enabled for a user account.
+          - equals_number: 300111
+            title: 'Account Change: MFA Factor Disable'
+            description: One or more authentication factors were disabled for a user account.
+          - equals_number: 300112
+            title: 'Account Change: Unlock'
+            description: A user account was unlocked.
+          - equals_number: 300199
+            title: 'Account Change: Other'
+      user:
+        description: The user that was a target of an activity.
+        required: true
+        annotations:
+          ocsf_group: primary
+      user_result:
+        recommended: true
+        annotations:
+          ocsf_group: primary
+          ocsf_deprecated_since: 1.9.0
+          ocsf_superseded_by: updated_user
+  OcsfAuthentication:
+    title: Authentication
+    description: Authentication events report authentication session activities, including
+      user attempts to log on or log off, regardless of success, as well as other key stages
+      within the authentication process. These events are typically generated by authentication
+      services, such as Kerberos, OIDC, or SAML, and may include information about the user,
+      the authentication method used, and the status of the authentication attempt.
+    class_uri: ocsf:OcsfAuthentication
+    see_also:
+      - https://d3fend.mitre.org/event/d3f:AuthenticationEvent
+    is_a: OcsfIamEvent
+    in_subset:
+      - ocsf_category_iam
+    instantiates:
+      - ocsf:OcsfFacts
+    annotations:
+      ocsf_key: authentication
+      ocsf_category: iam
+      ocsf_profiles: ai_operation cloud container data_classification datetime host linux/linux_users
+        macos/macos_users osint record_integrity security_control
+      ocsf_constraints: '{"at_least_one": ["service", "dst_endpoint"]}'
+      ocsf_associations: '{"actor.user": ["src_endpoint"], "dst_endpoint": ["user"], "src_endpoint":
+        ["actor.user"], "user": ["dst_endpoint"]}'
+    related_mappings:
+      - d3f:AuthenticationEvent
+    any_of:
+      - slot_conditions:
+          service:
+            required: true
+      - slot_conditions:
+          dst_endpoint:
+            required: true
+    slots:
+      - account_switch_type
+      - account_switch_type_id
+      - auth_factors
+      - auth_protocol
+      - auth_protocol_id
+      - authentication_token
+      - certificate
+      - dst_endpoint
+      - is_cleartext
+      - is_mfa
+      - is_new_logon
+      - is_remote
+      - logon_process
+      - logon_type
+      - logon_type_id
+      - service
+      - session
+      - user
+    slot_usage:
+      account_switch_type:
+        recommended: true
+        annotations:
+          ocsf_group: primary
+      account_switch_type_id:
+        recommended: true
+        annotations:
+          ocsf_group: primary
+          ocsf_sibling: account_switch_type
+      activity_id:
+        any_of:
+          - equals_number: 0
+            title: Unknown
+            description: The event activity is unknown.
+          - equals_number: 1
+            title: Logon
+            description: A new logon session was requested.
+          - equals_number: 2
+            title: Logoff
+            description: A logon session was terminated and no longer exists.
+          - equals_number: 3
+            title: Authentication Ticket
+            description: A Kerberos authentication ticket (TGT) was requested.
+          - equals_number: 4
+            title: Service Ticket Request
+            description: A Kerberos service ticket was requested.
+          - equals_number: 5
+            title: Service Ticket Renew
+            description: A Kerberos service ticket was renewed.
+          - equals_number: 6
+            title: Preauth
+            description: A preauthentication stage was engaged.
+          - equals_number: 7
+            title: Account Switch
+            description: A utility or service switched the user account. See the <code>account_switch_type_id</code>
+              attribute for more details.
+          - equals_number: 99
+            title: Other
+            description: The event activity is not mapped. See the <code>activity_name</code>
+              attribute, which contains a data source specific value.
+      auth_factors:
+        description: Describes a category of methods used for identity verification in an
+          authentication attempt.
+        annotations:
+          ocsf_group: context
+      auth_protocol:
+        recommended: true
+        annotations:
+          ocsf_group: primary
+      auth_protocol_id:
+        recommended: true
+        annotations:
+          ocsf_group: primary
+          ocsf_sibling: auth_protocol
+      authentication_token:
+        description: The authentication token, ticket, or assertion, e.g. <code>Kerberos</code>,
+          <code>OIDC</code>, <code>SAML</code>.
+        see_also:
+          - https://www.rfc-editor.org/rfc/rfc4120
+          - https://openid.net/specs/openid-connect-core-1_0.html
+          - https://docs.oasis-open.org/security/saml/v2.0/saml-core-2.0-os.pdf
+        annotations:
+          ocsf_group: context
+      category_name:
+        description: 'The event category name, as defined by category_uid value: <code>Identity
+          & Access Management</code>.'
+      certificate:
+        description: The certificate associated with the authentication or pre-authentication
+          (Kerberos).
+        recommended: true
+        annotations:
+          ocsf_group: primary
+      class_name:
+        description: 'The event class name, as defined by class_uid value: <code>Authentication</code>.'
+      class_uid:
+        equals_number: 3002
+      dst_endpoint:
+        description: The endpoint to which the authentication was targeted.
+        recommended: true
+        annotations:
+          ocsf_group: primary
+      is_cleartext:
+        annotations:
+          ocsf_group: context
+      is_mfa:
+        recommended: true
+        annotations:
+          ocsf_group: primary
+      is_new_logon:
+        annotations:
+          ocsf_group: context
+      is_remote:
+        description: The attempted authentication is over a remote connection.
+        recommended: true
+        annotations:
+          ocsf_group: primary
+      logon_process:
+        annotations:
+          ocsf_group: context
+      logon_type:
+        recommended: true
+        annotations:
+          ocsf_group: primary
+      logon_type_id:
+        recommended: true
+        annotations:
+          ocsf_group: primary
+          ocsf_sibling: logon_type
+      service:
+        description: The service or gateway to which the user or process is being authenticated
+        recommended: true
+        annotations:
+          ocsf_group: primary
+      session:
+        recommended: true
+        annotations:
+          ocsf_group: primary
+      status_detail:
+        description: The details about the authentication request. For example, possible details
+          for Windows logon or logoff events are:<ul><li>Success</li><ul><li>LOGOFF_USER_INITIATED</li><li>LOGOFF_OTHER</li></ul><li>Failure</li><ul><li>USER_DOES_NOT_EXIST</li><li>INVALID_CREDENTIALS</li><li>ACCOUNT_DISABLED</li><li>ACCOUNT_LOCKED_OUT</li><li>PASSWORD_EXPIRED</li></ul></ul>
+      type_uid:
+        any_of:
+          - equals_number: 300200
+            title: 'Authentication: Unknown'
+          - equals_number: 300201
+            title: 'Authentication: Logon'
+            description: A new logon session was requested.
+          - equals_number: 300202
+            title: 'Authentication: Logoff'
+            description: A logon session was terminated and no longer exists.
+          - equals_number: 300203
+            title: 'Authentication: Authentication Ticket'
+            description: A Kerberos authentication ticket (TGT) was requested.
+          - equals_number: 300204
+            title: 'Authentication: Service Ticket Request'
+            description: A Kerberos service ticket was requested.
+          - equals_number: 300205
+            title: 'Authentication: Service Ticket Renew'
+            description: A Kerberos service ticket was renewed.
+          - equals_number: 300206
+            title: 'Authentication: Preauth'
+            description: A preauthentication stage was engaged.
+          - equals_number: 300207
+            title: 'Authentication: Account Switch'
+            description: A utility or service switched the user account. See the <code>account_switch_type_id</code>
+              attribute for more details.
+          - equals_number: 300299
+            title: 'Authentication: Other'
+      user:
+        description: The subject (user/role or account) to authenticate.
+        required: true
+        annotations:
+          ocsf_group: primary
+  OcsfAuthorizeSession:
+    title: Authorize Session
+    description: Authorize Session events report privileges, groups or roles assigned to a
+      new user session, usually at login time.
+    class_uri: ocsf:OcsfAuthorizeSession
+    see_also:
+      - https://d3fend.mitre.org/event/d3f:AuthorizationEvent/
+    is_a: OcsfIamEvent
+    in_subset:
+      - ocsf_category_iam
+    instantiates:
+      - ocsf:OcsfFacts
+    annotations:
+      ocsf_key: authorize_session
+      ocsf_category: iam
+      ocsf_profiles: ai_operation cloud container data_classification datetime host linux/linux_users
+        macos/macos_users osint record_integrity security_control
+      ocsf_constraints: '{"at_least_one": ["privileges", "groups", "iam_roles"]}'
+      ocsf_associations: '{"session": ["user"], "user": ["session"]}'
+    related_mappings:
+      - d3f:AuthorizationEvent
+    any_of:
+      - slot_conditions:
+          privileges:
+            required: true
+      - slot_conditions:
+          groups:
+            required: true
+      - slot_conditions:
+          iam_roles:
+            required: true
+    slots:
+      - dst_endpoint
+      - group
+      - groups
+      - iam_roles
+      - privileges
+      - session
+      - user
+    slot_usage:
+      activity_id:
+        any_of:
+          - equals_number: 0
+            title: Unknown
+            description: The event activity is unknown.
+          - equals_number: 1
+            title: Assign Privileges
+            description: Assign special privileges to a new logon.
+          - equals_number: 2
+            title: Assign Groups
+            description: Assign special groups to a new logon.
+          - equals_number: 3
+            title: Assign Roles
+            description: Assign special roles to a new logon.
+          - equals_number: 99
+            title: Other
+            description: The event activity is not mapped. See the <code>activity_name</code>
+              attribute, which contains a data source specific value.
+      category_name:
+        description: 'The event category name, as defined by category_uid value: <code>Identity
+          & Access Management</code>.'
+      class_name:
+        description: 'The event class name, as defined by class_uid value: <code>Authorize
+          Session</code>.'
+      class_uid:
+        equals_number: 3003
+      dst_endpoint:
+        description: The Endpoint for which the user session was targeted.
+        annotations:
+          ocsf_group: context
+      group:
+        description: Group that was assigned to the new user session.
+        deprecated: Use <code>groups</code> instead.
+        recommended: true
+        annotations:
+          ocsf_group: primary
+          ocsf_deprecated_since: 1.9.0
+          ocsf_superseded_by: groups
+      groups:
+        description: The list of groups assigned to the new user session.
+        recommended: true
+        annotations:
+          ocsf_group: primary
+      iam_roles:
+        description: The list of roles assigned to the new user session.
+        recommended: true
+        annotations:
+          ocsf_group: primary
+      privileges:
+        description: The list of sensitive privileges, assigned to the new user session.
+        recommended: true
+        annotations:
+          ocsf_group: primary
+      session:
+        description: The user session with the assigned privileges.
+        recommended: true
+        annotations:
+          ocsf_group: primary
+      type_uid:
+        any_of:
+          - equals_number: 300300
+            title: 'Authorize Session: Unknown'
+          - equals_number: 300301
+            title: 'Authorize Session: Assign Privileges'
+            description: Assign special privileges to a new logon.
+          - equals_number: 300302
+            title: 'Authorize Session: Assign Groups'
+            description: Assign special groups to a new logon.
+          - equals_number: 300303
+            title: 'Authorize Session: Assign Roles'
+            description: Assign special roles to a new logon.
+          - equals_number: 300399
+            title: 'Authorize Session: Other'
+      user:
+        description: The user to which new privileges were assigned.
+        required: true
+        annotations:
+          ocsf_group: primary
+  OcsfEntityManagement:
+    title: Entity Management
+    description: Entity Management events report activity by a managed client, a micro service,
+      or a user at a management console. The activity can be a create, read, update, and delete
+      operation on a managed entity.
+    class_uri: ocsf:OcsfEntityManagement
+    is_a: OcsfIamEvent
+    in_subset:
+      - ocsf_category_iam
+    instantiates:
+      - ocsf:OcsfFacts
+    annotations:
+      ocsf_key: entity_management
+      ocsf_category: iam
+      ocsf_profiles: ai_operation cloud container data_classification datetime host linux/linux_users
+        macos/macos_users osint record_integrity security_control
+    slots:
+      - access_list
+      - access_mask
+      - comment
+      - entity
+      - entity_result
+      - updated_entity
+    slot_usage:
+      access_list:
+        annotations:
+          ocsf_group: context
+      access_mask:
+        annotations:
+          ocsf_group: context
+      activity_id:
+        any_of:
+          - equals_number: 0
+            title: Unknown
+            description: The event activity is unknown.
+          - equals_number: 1
+            title: Create
+            description: Create a new managed entity.
+          - equals_number: 2
+            title: Read
+            description: Read an existing managed entity.
+          - equals_number: 3
+            title: Update
+            description: Update an existing managed entity.
+          - equals_number: 4
+            title: Delete
+            description: Delete a managed entity.
+          - equals_number: 5
+            title: Move
+            description: Move or rename an existing managed entity.
+          - equals_number: 6
+            title: Enroll
+            description: Enroll an existing managed entity.
+          - equals_number: 7
+            title: Unenroll
+            description: Unenroll an existing managed entity.
+          - equals_number: 8
+            title: Enable
+            description: 'Enable an existing managed entity. Note: This is typically regarded
+              as a semi-permanent, editor visible, syncable change.'
+          - equals_number: 9
+            title: Disable
+            description: 'Disable an existing managed entity. Note: This is typically regarded
+              as a semi-permanent, editor visible, syncable change.'
+          - equals_number: 10
+            title: Activate
+            description: 'Activate an existing managed entity. Note: This is a typically regarded
+              as a transient change, a change of state of the engine.'
+          - equals_number: 11
+            title: Deactivate
+            description: 'Deactivate an existing managed entity. Note: This is a typically
+              regarded as a transient change, a change of state of the engine.'
+          - equals_number: 12
+            title: Suspend
+            description: Suspend an existing managed entity.
+          - equals_number: 13
+            title: Resume
+            description: Resume (unsuspend) an existing managed entity.
+          - equals_number: 99
+            title: Other
+            description: The event activity is not mapped. See the <code>activity_name</code>
+              attribute, which contains a data source specific value.
+      category_name:
+        description: 'The event category name, as defined by category_uid value: <code>Identity
+          & Access Management</code>.'
+      class_name:
+        description: 'The event class name, as defined by class_uid value: <code>Entity Management</code>.'
+      class_uid:
+        equals_number: 3004
+      comment:
+        description: The user provided comment about why the entity was changed.
+        recommended: true
+        annotations:
+          ocsf_group: primary
+      entity:
+        required: true
+        annotations:
+          ocsf_group: primary
+      entity_result:
+        recommended: true
+        annotations:
+          ocsf_group: primary
+          ocsf_deprecated_since: 1.9.0
+          ocsf_superseded_by: updated_entity
+      type_uid:
+        any_of:
+          - equals_number: 300400
+            title: 'Entity Management: Unknown'
+          - equals_number: 300401
+            title: 'Entity Management: Create'
+            description: Create a new managed entity.
+          - equals_number: 300402
+            title: 'Entity Management: Read'
+            description: Read an existing managed entity.
+          - equals_number: 300403
+            title: 'Entity Management: Update'
+            description: Update an existing managed entity.
+          - equals_number: 300404
+            title: 'Entity Management: Delete'
+            description: Delete a managed entity.
+          - equals_number: 300405
+            title: 'Entity Management: Move'
+            description: Move or rename an existing managed entity.
+          - equals_number: 300406
+            title: 'Entity Management: Enroll'
+            description: Enroll an existing managed entity.
+          - equals_number: 300407
+            title: 'Entity Management: Unenroll'
+            description: Unenroll an existing managed entity.
+          - equals_number: 300408
+            title: 'Entity Management: Enable'
+            description: 'Enable an existing managed entity. Note: This is typically regarded
+              as a semi-permanent, editor visible, syncable change.'
+          - equals_number: 300409
+            title: 'Entity Management: Disable'
+            description: 'Disable an existing managed entity. Note: This is typically regarded
+              as a semi-permanent, editor visible, syncable change.'
+          - equals_number: 300410
+            title: 'Entity Management: Activate'
+            description: 'Activate an existing managed entity. Note: This is a typically regarded
+              as a transient change, a change of state of the engine.'
+          - equals_number: 300411
+            title: 'Entity Management: Deactivate'
+            description: 'Deactivate an existing managed entity. Note: This is a typically
+              regarded as a transient change, a change of state of the engine.'
+          - equals_number: 300412
+            title: 'Entity Management: Suspend'
+            description: Suspend an existing managed entity.
+          - equals_number: 300413
+            title: 'Entity Management: Resume'
+            description: Resume (unsuspend) an existing managed entity.
+          - equals_number: 300499
+            title: 'Entity Management: Other'
+      updated_entity:
+        description: The intended state of the <code>entity</code> after the update. On <code>Success</code>,
+          represents the actual post-update state.
+        recommended: true
+        annotations:
+          ocsf_group: primary
+  OcsfGroupManagement:
+    title: Group Management
+    description: 'Group Management events report lifecycle management of a group, as well
+      as privileges, roles, and resources associated with the group. There are two ways updates
+      to the state of a group may be expressed: Using the <code>Update</code> activity, for
+      example when updating multiple items at one time, the <code>updated_group</code> reflects
+      the changes made to <code>group</code>. Using discrete activities, such as <code>Assign
+      Privileges</code> the state change is expressed by the <code>privileges</code> attribute.
+      Optionally, on success, the <code>updated_group</code> reflects the new state of the
+      group.'
+    class_uri: ocsf:OcsfGroupManagement
+    see_also:
+      - https://d3fend.mitre.org/event/d3f:GroupManagementEvent/
+    is_a: OcsfIamEvent
+    in_subset:
+      - ocsf_category_iam
+    instantiates:
+      - ocsf:OcsfFacts
+    annotations:
+      ocsf_key: group_management
+      ocsf_category: iam
+      ocsf_profiles: ai_operation cloud container data_classification datetime host linux/linux_users
+        macos/macos_users osint record_integrity security_control
+    related_mappings:
+      - d3f:GroupManagementEvent
+    slots:
+      - group
+      - iam_roles
+      - policies
+      - privileges
+      - resource
+      - resources
+      - subgroup
+      - updated_group
+      - user
+      - users
+    slot_usage:
+      activity_id:
+        description: The normalized identifier of the activity that triggered the event. The
+          target of each activity is the <code>group</code> attribute.
+        any_of:
+          - equals_number: 0
+            title: Unknown
+            description: The event activity is unknown.
+          - equals_number: 1
+            title: Assign Privileges
+            description: Assign privileges to the group. Use <code>privileges</code> as privileges
+              to be assigned.
+          - equals_number: 2
+            title: Revoke Privileges
+            description: Revoke privileges from the group. Use <code>privileges</code> as
+              privileges to be revoked.
+          - equals_number: 3
+            title: Add User
+            description: Add a user or users to the group. Use <code>users</code> for the
+              users to be added.
+          - equals_number: 4
+            title: Remove User
+            description: Remove a user or users from the group. Use <code>users</code> for
+              the users to be removed.
+          - equals_number: 5
+            title: Delete
+            description: Delete the group.
+          - equals_number: 6
+            title: Create
+            description: Create a group. Populate the <code>group</code> object with details
+              of the group to be created.
+          - equals_number: 7
+            title: Add Subgroup
+            description: Add a subgroup to the group. Use <code>sub_group</code> as the subgroup
+              to be added.
+          - equals_number: 8
+            title: Remove Subgroup
+            description: Remove a subgroup from the group. Use <code>sub_group</code> as the
+              subgroup to be removed.
+          - equals_number: 9
+            title: Update
+            description: Update the group. The updated group details should be populated in
+              the <code>updated_group</code> attribute.
+          - equals_number: 10
+            title: Attach Policies
+            description: Attach one or more IAM Policies to the group. Use <code>policies</code>
+              as policies to be attached.
+          - equals_number: 11
+            title: Detach Policies
+            description: Detach one or more IAM Policies from the group. Use <code>policies</code>
+              as policies to be detached.
+          - equals_number: 12
+            title: Assign Roles
+            description: Assign one or more roles to the group. Use <code>iam_roles</code>
+              for the specific roles to be assigned.
+          - equals_number: 13
+            title: Remove Roles
+            description: Remove one or more roles from the group. Use <code>iam_roles</code>
+              for the specific roles to be removed.
+          - equals_number: 99
+            title: Other
+            description: The event activity is not mapped. See the <code>activity_name</code>
+              attribute, which contains a data source specific value.
+      category_name:
+        description: 'The event category name, as defined by category_uid value: <code>Identity
+          & Access Management</code>.'
+      class_name:
+        description: 'The event class name, as defined by class_uid value: <code>Group Management</code>.'
+      class_uid:
+        equals_number: 3006
+      group:
+        description: Group that was the target of the event.
+        required: true
+        annotations:
+          ocsf_group: primary
+      iam_roles:
+        description: One or more roles assigned to or removed from a group.
+        recommended: true
+        annotations:
+          ocsf_group: primary
+      policies:
+        description: Details about the IAM policies associated with the Attach/Detach Policy
+          activities.
+        recommended: true
+        annotations:
+          ocsf_group: context
+      privileges:
+        description: A list of privileges assigned to the group.
+        recommended: true
+        annotations:
+          ocsf_group: primary
+      resource:
+        description: Resource that the privileges give access to.
+        deprecated: User <code>resources</code> instead.
+        recommended: true
+        annotations:
+          ocsf_group: primary
+          ocsf_deprecated_since: 1.9.0
+          ocsf_superseded_by: resources
+      resources:
+        description: Resources that the privileges, policies, and roles give access to.
+        recommended: true
+        annotations:
+          ocsf_group: primary
+      subgroup:
+        description: A subgroup added to or removed from <code>group</code>.
+        recommended: true
+        annotations:
+          ocsf_group: primary
+      type_uid:
+        any_of:
+          - equals_number: 300600
+            title: 'Group Management: Unknown'
+          - equals_number: 300601
+            title: 'Group Management: Assign Privileges'
+            description: Assign privileges to the group. Use <code>privileges</code> as privileges
+              to be assigned.
+          - equals_number: 300602
+            title: 'Group Management: Revoke Privileges'
+            description: Revoke privileges from the group. Use <code>privileges</code> as
+              privileges to be revoked.
+          - equals_number: 300603
+            title: 'Group Management: Add User'
+            description: Add a user or users to the group. Use <code>users</code> for the
+              users to be added.
+          - equals_number: 300604
+            title: 'Group Management: Remove User'
+            description: Remove a user or users from the group. Use <code>users</code> for
+              the users to be removed.
+          - equals_number: 300605
+            title: 'Group Management: Delete'
+            description: Delete the group.
+          - equals_number: 300606
+            title: 'Group Management: Create'
+            description: Create a group. Populate the <code>group</code> object with details
+              of the group to be created.
+          - equals_number: 300607
+            title: 'Group Management: Add Subgroup'
+            description: Add a subgroup to the group. Use <code>sub_group</code> as the subgroup
+              to be added.
+          - equals_number: 300608
+            title: 'Group Management: Remove Subgroup'
+            description: Remove a subgroup from the group. Use <code>sub_group</code> as the
+              subgroup to be removed.
+          - equals_number: 300609
+            title: 'Group Management: Update'
+            description: Update the group. The updated group details should be populated in
+              the <code>updated_group</code> attribute.
+          - equals_number: 300610
+            title: 'Group Management: Attach Policies'
+            description: Attach one or more IAM Policies to the group. Use <code>policies</code>
+              as policies to be attached.
+          - equals_number: 300611
+            title: 'Group Management: Detach Policies'
+            description: Detach one or more IAM Policies from the group. Use <code>policies</code>
+              as policies to be detached.
+          - equals_number: 300612
+            title: 'Group Management: Assign Roles'
+            description: Assign one or more roles to the group. Use <code>iam_roles</code>
+              for the specific roles to be assigned.
+          - equals_number: 300613
+            title: 'Group Management: Remove Roles'
+            description: Remove one or more roles from the group. Use <code>iam_roles</code>
+              for the specific roles to be removed.
+          - equals_number: 300699
+            title: 'Group Management: Other'
+      updated_group:
+        description: The intended state of the <code>group</code> after the update. On <code>Success</code>,
+          represents the actual post-update state.
+        recommended: true
+        annotations:
+          ocsf_group: primary
+      user:
+        description: A user that was added to or removed from <code>group</code>.
+        deprecated: Use <code>users</code> instead.
+        recommended: true
+        annotations:
+          ocsf_group: primary
+          ocsf_deprecated_since: 1.9.0
+          ocsf_superseded_by: users
+      users:
+        description: Users that were added to or removed from <code>group</code>.
+        recommended: true
+        annotations:
+          ocsf_group: primary
+  OcsfRoleManagement:
+    title: Role Management
+    description: 'Role Management events report lifecycle management of a role, as well as
+      privileges, policies, credentials, and resources associated with the role. There are
+      two ways updates to the state of a role may be expressed: Using the <code>Update</code>
+      activity, for example when updating multiple items at one time, the <code>updated_role</code>
+      reflects the changes made to <code>iam_role</code>. Using discrete activities, such
+      as <code>Assign Privileges</code> the state change is expressed by the <code>privileges</code>
+      attribute. Optionally, on success, the <code>updated_role</code> reflects the new state
+      of the role. Roles assigned or removed from users and groups are expressed by the <code>User
+      Management</code> and <code>Group Management</code> classes.'
+    class_uri: ocsf:OcsfRoleManagement
+    see_also:
+      - https://d3fend.mitre.org/event/d3f:PermissionGrantingEvent/
+    is_a: OcsfIamEvent
+    in_subset:
+      - ocsf_category_iam
+    instantiates:
+      - ocsf:OcsfFacts
+    annotations:
+      ocsf_key: role_management
+      ocsf_category: iam
+      ocsf_profiles: ai_operation cloud container data_classification datetime host linux/linux_users
+        macos/macos_users osint record_integrity security_control
+    related_mappings:
+      - d3f:PermissionGrantingEvent
+    slots:
+      - iam_role
+      - policies
+      - privileges
+      - programmatic_credentials
+      - resources
+      - updated_role
+    slot_usage:
+      activity_id:
+        any_of:
+          - equals_number: 0
+            title: Unknown
+            description: The event activity is unknown.
+          - equals_number: 1
+            title: Create
+            description: Create a role. Use <code>iam_role</code> as the role to be created.
+          - equals_number: 2
+            title: Update
+            description: Update a role. The updated role details should be populated in the
+              <code>updated_role</code> attribute.
+          - equals_number: 3
+            title: Delete
+            description: Delete a role. Use <code>iam_role</code> as the role to be deleted.
+          - equals_number: 4
+            title: Assign Privileges
+            description: Assign privileges to a role. Use <code>privileges</code> to be assigned
+              to <code>iam_role</code>.
+          - equals_number: 5
+            title: Remove Privileges
+            description: Remove privileges from a role. Use <code>privileges</code> to be
+              removed from <code>iam_role</code>.
+          - equals_number: 6
+            title: Assign Resources
+            description: Assign resources to a role. Use <code>resources</code> to be assigned
+              to <code>iam_role</code>.
+          - equals_number: 7
+            title: Remove Resources
+            description: Remove resources from a role. Use <code>resources</code> to be removed
+              from <code>iam_role</code>.
+          - equals_number: 8
+            title: Attach Policies
+            description: Attach one or more policies to a role. Use <code>policies</code>
+              to be attached to <code>iam_role</code>.
+          - equals_number: 9
+            title: Detach Policies
+            description: Detach one or more policies from a role. Use <code>policies</code>
+              to be detached from <code>iam_role</code>.
+          - equals_number: 10
+            title: Add Programmatic Credentials
+            description: Add credentials to a role. Use <code>programmatic_credentials</code>
+              to be added to <code>iam_role</code>.
+          - equals_number: 11
+            title: Remove Programmatic Credentials
+            description: Remove credentials from a role. Use <code>programmatic_credentials</code>
+              to be removed from <code>iam_role</code>.
+          - equals_number: 99
+            title: Other
+            description: The event activity is not mapped. See the <code>activity_name</code>
+              attribute, which contains a data source specific value.
+      category_name:
+        description: 'The event category name, as defined by category_uid value: <code>Identity
+          & Access Management</code>.'
+      class_name:
+        description: 'The event class name, as defined by class_uid value: <code>Role Management</code>.'
+      class_uid:
+        equals_number: 3008
+      iam_role:
+        description: The target role.
+        required: true
+        annotations:
+          ocsf_group: primary
+      policies:
+        description: Details about the IAM policies associated with the Attach/Detach Policy
+          activities.
+        annotations:
+          ocsf_group: context
+      privileges:
+        description: A list of privileges assigned to or removed from <code>iam_role</code>.
+        recommended: true
+        annotations:
+          ocsf_group: primary
+      programmatic_credentials:
+        description: Details about the programmatic credential (API keys, access tokens, certificates,
+          etc) associated with the role.
+        recommended: true
+      resources:
+        description: Resources assigned or removed from <code>iam_role</code>.
+        recommended: true
+        annotations:
+          ocsf_group: primary
+      type_uid:
+        any_of:
+          - equals_number: 300800
+            title: 'Role Management: Unknown'
+          - equals_number: 300801
+            title: 'Role Management: Create'
+            description: Create a role. Use <code>iam_role</code> as the role to be created.
+          - equals_number: 300802
+            title: 'Role Management: Update'
+            description: Update a role. The updated role details should be populated in the
+              <code>updated_role</code> attribute.
+          - equals_number: 300803
+            title: 'Role Management: Delete'
+            description: Delete a role. Use <code>iam_role</code> as the role to be deleted.
+          - equals_number: 300804
+            title: 'Role Management: Assign Privileges'
+            description: Assign privileges to a role. Use <code>privileges</code> to be assigned
+              to <code>iam_role</code>.
+          - equals_number: 300805
+            title: 'Role Management: Remove Privileges'
+            description: Remove privileges from a role. Use <code>privileges</code> to be
+              removed from <code>iam_role</code>.
+          - equals_number: 300806
+            title: 'Role Management: Assign Resources'
+            description: Assign resources to a role. Use <code>resources</code> to be assigned
+              to <code>iam_role</code>.
+          - equals_number: 300807
+            title: 'Role Management: Remove Resources'
+            description: Remove resources from a role. Use <code>resources</code> to be removed
+              from <code>iam_role</code>.
+          - equals_number: 300808
+            title: 'Role Management: Attach Policies'
+            description: Attach one or more policies to a role. Use <code>policies</code>
+              to be attached to <code>iam_role</code>.
+          - equals_number: 300809
+            title: 'Role Management: Detach Policies'
+            description: Detach one or more policies from a role. Use <code>policies</code>
+              to be detached from <code>iam_role</code>.
+          - equals_number: 300810
+            title: 'Role Management: Add Programmatic Credentials'
+            description: Add credentials to a role. Use <code>programmatic_credentials</code>
+              to be added to <code>iam_role</code>.
+          - equals_number: 300811
+            title: 'Role Management: Remove Programmatic Credentials'
+            description: Remove credentials from a role. Use <code>programmatic_credentials</code>
+              to be removed from <code>iam_role</code>.
+          - equals_number: 300899
+            title: 'Role Management: Other'
+      updated_role:
+        description: The intended state of the <code>iam_role</code> after the update. On
+          <code>Success</code>, represents the actual post-update state.
+        recommended: true
+        annotations:
+          ocsf_group: primary
+  OcsfUserAccess:
+    title: User Access Management
+    description: User Access Management events report management updates to a user's privileges.
+    class_uri: ocsf:OcsfUserAccess
+    deprecated: Use the <code>user_management</code> class instead.
+    see_also:
+      - https://d3fend.mitre.org/event/d3f:PermissionGrantingEvent/
+    is_a: OcsfIamEvent
+    in_subset:
+      - ocsf_category_iam
+    instantiates:
+      - ocsf:OcsfFacts
+    annotations:
+      ocsf_key: user_access
+      ocsf_category: iam
+      ocsf_profiles: ai_operation cloud container data_classification datetime host linux/linux_users
+        macos/macos_users osint record_integrity security_control
+      ocsf_deprecated_since: 1.9.0
+      ocsf_superseded_by: user_management
+    related_mappings:
+      - d3f:PermissionGrantingEvent
+    slots:
+      - iam_role
+      - privileges
+      - resource
+      - resources
+      - user
+    slot_usage:
+      activity_id:
+        any_of:
+          - equals_number: 0
+            title: Unknown
+            description: The event activity is unknown.
+          - equals_number: 1
+            title: Assign Privileges
+            description: Assign privileges to a user.
+          - equals_number: 2
+            title: Revoke Privileges
+            description: Revoke privileges from a user.
+          - equals_number: 3
+            title: Assign Role
+            description: Assign a role to a user.
+          - equals_number: 4
+            title: Remove Role
+            description: Remove a role from a user.
+          - equals_number: 99
+            title: Other
+            description: The event activity is not mapped. See the <code>activity_name</code>
+              attribute, which contains a data source specific value.
+      category_name:
+        description: 'The event category name, as defined by category_uid value: <code>Identity
+          & Access Management</code>.'
+      class_name:
+        description: 'The event class name, as defined by class_uid value: <code>User Access
+          Management</code>.'
+      class_uid:
+        equals_number: 3005
+      iam_role:
+        description: The role assigned to or removed from a user.
+        recommended: true
+        annotations:
+          ocsf_group: primary
+      privileges:
+        description: List of privileges assigned to a user.
+        recommended: true
+        annotations:
+          ocsf_group: primary
+      resource:
+        description: Resource that the privileges give access to.
+        deprecated: Use the <code>resources</code> attribute instead.
+        recommended: true
+        annotations:
+          ocsf_group: primary
+          ocsf_deprecated_since: 1.5.0
+          ocsf_superseded_by: resources
+      resources:
+        description: Resources that the privileges give access to.
+        recommended: true
+        annotations:
+          ocsf_group: primary
+      type_uid:
+        any_of:
+          - equals_number: 300500
+            title: 'User Access Management: Unknown'
+          - equals_number: 300501
+            title: 'User Access Management: Assign Privileges'
+            description: Assign privileges to a user.
+          - equals_number: 300502
+            title: 'User Access Management: Revoke Privileges'
+            description: Revoke privileges from a user.
+          - equals_number: 300503
+            title: 'User Access Management: Assign Role'
+            description: Assign a role to a user.
+          - equals_number: 300504
+            title: 'User Access Management: Remove Role'
+            description: Remove a role from a user.
+          - equals_number: 300599
+            title: 'User Access Management: Other'
+      user:
+        description: User to which privileges were assigned.
+        required: true
+        annotations:
+          ocsf_group: primary
+  OcsfUserManagement:
+    title: User Management
+    description: 'User Management events report lifecycle management of a user and account
+      management tasks that are performed, such as a password change or reset, a user being
+      created, updated, deleted, disabled, enabled, locked out or unlocked. There are two
+      ways updates to the state of a user may be expressed: Using the <code>Update</code>
+      activity, for example when updating multiple items at one time, the <code>updated_user</code>
+      reflects the changes made to <code>user</code>. Using discrete activities, such as <code>Assign
+      Privileges</code> the state change is expressed by the <code>privileges</code> attribute.
+      Optionally, on successful changes, the <code>updated_user</code> reflects the new state
+      of the user.'
+    class_uri: ocsf:OcsfUserManagement
+    see_also:
+      - https://d3fend.mitre.org/event/d3f:PermissionGrantingEvent/
+    is_a: OcsfIamEvent
+    in_subset:
+      - ocsf_category_iam
+    instantiates:
+      - ocsf:OcsfFacts
+    annotations:
+      ocsf_key: user_management
+      ocsf_category: iam
+      ocsf_profiles: ai_operation cloud container data_classification datetime host linux/linux_users
+        macos/macos_users osint record_integrity security_control
+    related_mappings:
+      - d3f:PermissionGrantingEvent
+    slots:
+      - auth_factors
+      - iam_roles
+      - policies
+      - privileges
+      - resources
+      - updated_user
+      - user
+    slot_usage:
+      activity_id:
+        description: The normalized identifier of the activity that triggered the event. The
+          target of each activity is the <code>user</code> attribute.
+        any_of:
+          - equals_number: 0
+            title: Unknown
+            description: The event activity is unknown.
+          - equals_number: 1
+            title: Create
+            description: Create a user. Populate the <code>user</code> object with details
+              of the user.
+          - equals_number: 2
+            title: Update
+            description: Update the user. The updated user details should be populated in
+              the <code>updated_user</code> attribute.
+          - equals_number: 3
+            title: Delete
+            description: Delete the user.
+          - equals_number: 4
+            title: Enable
+            description: Enable the user.
+          - equals_number: 5
+            title: Disable
+            description: Disable the user.
+          - equals_number: 6
+            title: Lock
+            description: Lock out the user.
+          - equals_number: 7
+            title: Unlock
+            description: Unlock a previously locked out user.
+          - equals_number: 8
+            title: Password Change
+            description: An attempt to change the user's password.
+          - equals_number: 9
+            title: Password Reset
+            description: An attempt to reset the user's password.
+          - equals_number: 10
+            title: Attach Policies
+            description: Attach one or more IAM Policies to the user. Use <code>policies</code>
+              as policies to be attached.
+          - equals_number: 11
+            title: Detach Policies
+            description: Detach one or more IAM Policies from the user. Use <code>policies</code>
+              as policies to be detached.
+          - equals_number: 12
+            title: Enable MFA Factors
+            description: Enable one or more authentication factors for the user. Use <code>auth_factors</code>
+              as factors to be enabled.
+          - equals_number: 13
+            title: Disable MFA Factors
+            description: Disable one or more authentication factors for the user. Use <code>auth_factors</code>
+              as factors to be disabled.
+          - equals_number: 14
+            title: Assign Privileges
+            description: Assign privileges to the user. Use <code>privileges</code> as privileges
+              to be assigned.
+          - equals_number: 15
+            title: Remove Privileges
+            description: Remove privileges from the user. Use <code>privileges</code> as privileges
+              to be removed.
+          - equals_number: 16
+            title: Assign Roles
+            description: Assign one or more roles to the user. Use <code>iam_roles</code>
+              as roles to be assigned.
+          - equals_number: 17
+            title: Remove Roles
+            description: Remove one or more roles from the user. Use <code>iam_roles</code>
+              as roles to be removed.
+          - equals_number: 18
+            title: Add Programmatic Credentials
+            description: Add credentials to a role. Use <code>programmatic_credentials</code>
+              as credentials to be added.
+          - equals_number: 19
+            title: Remove Programmatic Credentials
+            description: Remove credentials from a role. Use <code>programmatic_credentials</code>
+              as credentials to be removed.
+          - equals_number: 99
+            title: Other
+            description: The event activity is not mapped. See the <code>activity_name</code>
+              attribute, which contains a data source specific value.
+      auth_factors:
+        description: Details about the authentication factors associated with the MFA Factor
+          Enable/Disable activities.
+        recommended: true
+        annotations:
+          ocsf_group: context
+      category_name:
+        description: 'The event category name, as defined by category_uid value: <code>Identity
+          & Access Management</code>.'
+      class_name:
+        description: 'The event class name, as defined by class_uid value: <code>User Management</code>.'
+      class_uid:
+        equals_number: 3007
+      iam_roles:
+        description: One or more roles assigned to or removed from a user.
+        recommended: true
+        annotations:
+          ocsf_group: primary
+      policies:
+        description: Details about the IAM policies associated with the Attach/Detach Policy
+          activities.
+        recommended: true
+        annotations:
+          ocsf_group: context
+      privileges:
+        description: Set of privileges assigned to a user.
+        recommended: true
+        annotations:
+          ocsf_group: primary
+      resources:
+        description: Resources that the privileges, policies, and roles give access to.
+        recommended: true
+        annotations:
+          ocsf_group: primary
+      type_uid:
+        any_of:
+          - equals_number: 300700
+            title: 'User Management: Unknown'
+          - equals_number: 300701
+            title: 'User Management: Create'
+            description: Create a user. Populate the <code>user</code> object with details
+              of the user.
+          - equals_number: 300702
+            title: 'User Management: Update'
+            description: Update the user. The updated user details should be populated in
+              the <code>updated_user</code> attribute.
+          - equals_number: 300703
+            title: 'User Management: Delete'
+            description: Delete the user.
+          - equals_number: 300704
+            title: 'User Management: Enable'
+            description: Enable the user.
+          - equals_number: 300705
+            title: 'User Management: Disable'
+            description: Disable the user.
+          - equals_number: 300706
+            title: 'User Management: Lock'
+            description: Lock out the user.
+          - equals_number: 300707
+            title: 'User Management: Unlock'
+            description: Unlock a previously locked out user.
+          - equals_number: 300708
+            title: 'User Management: Password Change'
+            description: An attempt to change the user's password.
+          - equals_number: 300709
+            title: 'User Management: Password Reset'
+            description: An attempt to reset the user's password.
+          - equals_number: 300710
+            title: 'User Management: Attach Policies'
+            description: Attach one or more IAM Policies to the user. Use <code>policies</code>
+              as policies to be attached.
+          - equals_number: 300711
+            title: 'User Management: Detach Policies'
+            description: Detach one or more IAM Policies from the user. Use <code>policies</code>
+              as policies to be detached.
+          - equals_number: 300712
+            title: 'User Management: Enable MFA Factors'
+            description: Enable one or more authentication factors for the user. Use <code>auth_factors</code>
+              as factors to be enabled.
+          - equals_number: 300713
+            title: 'User Management: Disable MFA Factors'
+            description: Disable one or more authentication factors for the user. Use <code>auth_factors</code>
+              as factors to be disabled.
+          - equals_number: 300714
+            title: 'User Management: Assign Privileges'
+            description: Assign privileges to the user. Use <code>privileges</code> as privileges
+              to be assigned.
+          - equals_number: 300715
+            title: 'User Management: Remove Privileges'
+            description: Remove privileges from the user. Use <code>privileges</code> as privileges
+              to be removed.
+          - equals_number: 300716
+            title: 'User Management: Assign Roles'
+            description: Assign one or more roles to the user. Use <code>iam_roles</code>
+              as roles to be assigned.
+          - equals_number: 300717
+            title: 'User Management: Remove Roles'
+            description: Remove one or more roles from the user. Use <code>iam_roles</code>
+              as roles to be removed.
+          - equals_number: 300718
+            title: 'User Management: Add Programmatic Credentials'
+            description: Add credentials to a role. Use <code>programmatic_credentials</code>
+              as credentials to be added.
+          - equals_number: 300719
+            title: 'User Management: Remove Programmatic Credentials'
+            description: Remove credentials from a role. Use <code>programmatic_credentials</code>
+              as credentials to be removed.
+          - equals_number: 300799
+            title: 'User Management: Other'
+      updated_user:
+        description: The intended state of the <code>user</code> after the update. On <code>Success</code>,
+          represents the actual post-update state.
+        recommended: true
+        annotations:
+          ocsf_group: primary
+      user:
+        description: The user that was a target of an activity.
+        required: true
+        annotations:
+          ocsf_group: primary

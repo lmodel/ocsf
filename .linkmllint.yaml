@@ -1,6 +1,11 @@
 # linkml-lint reads this file from the directory `just lint` runs in.
-# The recommended rules apply unchanged. OCSF's keys are already snake_case, so a slot
-# can keep its key and still pass the naming rule, and the three lists of strings it
-# states (depth, http_method and tlp) keep OCSF's values, which the rule leaves alone
-# here. Class, enum and type names keep the rule's usual form.
+# The recommended rules apply, with one exception, so that a real event validates
+# unchanged. Permissible values keep OCSF's text in the three lists it writes as strings
+# (GET, Base and AMBER STRICT), which holds capitals and a space. Slots keep OCSF's keys,
+# which are already snake_case, and class, enum and type names keep the rule's usual form.
 extends: recommended
+rules:
+  standard_naming:
+    level: error
+    exclude_type:
+      - permissible_value

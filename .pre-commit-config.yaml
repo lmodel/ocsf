@@ -1,14 +1,17 @@
 ---
 # https://pre-commit.com/
 # No hook may rewrite a file this repository does not write by hand: what
-# the LinkML generators and `lokf adapt` write, which the next run would
-# rewrite back; the upstream's files and the mapping term list,
+# the converter, the LinkML generators and `lokf adapt` write, which the next
+# run would rewrite back; the upstream's files and the mapping term list,
 # which tests hold to their hashes; the neighbours' released copies, which tests
 # hold to their checksums; npm's lockfile for the release tools; and the KTL
 # sidecar's scripts, which the weekly sync replaces.
 exclude: >-
   (?x)^(
     src/ocsf/datamodel/|
+    src/ocsf/schema/ocsf.*\.yaml$|
+    tests/data/minimal/|
+    tests/data/.*\.gz$|
     project/|
     docs/schema/|
     \.lokf/(scripts|m365)/|
