@@ -2,6 +2,7 @@
 
 ## 2026-11-04
 
+* **Changed**: two references name their address in the frontmatter, not in the description.
 * **Changed**: four concepts now cite the test or rules file they name as a source.
 * **Added**: Documentation site.
 * **Added**: Knowledge librarian (knowledge-librarian.yaml).

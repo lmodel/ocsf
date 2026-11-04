@@ -3,7 +3,7 @@ type: Reference
 id: https://w3id.org/lmodel/ocsf/knowledge/references/ocsf-schema
 genre: reference
 title: OCSF schema repository
-description: The OCSF project's repository of the framework's dictionary, categories, events, objects, profiles and extensions, at https://github.com/ocsf/ocsf-schema, under Apache-2.0. The schema renders its tag 1.9.0 of 3 August 2026.
+description: The OCSF project's repository of the framework's dictionary, categories, events, objects, profiles and extensions, under Apache-2.0. The schema renders its tag 1.9.0 of 3 August 2026.
 resource: https://github.com/ocsf/ocsf-schema
 sources:
   - id: check_upstream_release.py
@@ -11,7 +11,7 @@ sources:
     title: PINNED_TAG and PINNED_COMMIT
 generated:
   by: process:ktl-librarian
-  at: "2026-11-04T23:20:36Z"
+  at: "2026-11-04T23:30:18Z"
 status: draft
 ---
 
