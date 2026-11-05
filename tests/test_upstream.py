@@ -78,14 +78,23 @@ def test_the_compiled_form_is_of_this_edition():
     sys.version_info < (3, 14), reason="OCSF's compiler needs Python 3.14"
 )
 def test_the_compiled_form_is_what_the_compiler_writes():
-    """The compiler, at the pinned version, makes the same bytes from the copy."""
+    """The compiler, at the pinned version, makes the same data from the copy.
+
+    The compiler's key order follows the directory listing, so its bytes differ
+    from one checkout to the next. The test compares digests of the sorted form,
+    because pytest's diff of two 4 MB lines does not finish under CI.
+    """
     from importlib.metadata import version
 
     from ocsf_schema_compiler.compiler import SchemaCompiler
 
     assert version(COMPILER.replace("-", "_")) == COMPILER_VERSION
-    written = json.dumps(SchemaCompiler(COPY).compile()) + "\n"
-    assert written == COMPILED.read_text(encoding="utf-8")
+
+    def digest(data):
+        return hashlib.sha256(json.dumps(data, sort_keys=True).encode()).hexdigest()
+
+    committed = json.loads(COMPILED.read_text(encoding="utf-8"))
+    assert digest(SchemaCompiler(COPY).compile()) == digest(committed)
 
 
 def test_each_module_is_what_the_converter_writes(tmp_path, monkeypatch):
