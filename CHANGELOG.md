@@ -6,6 +6,8 @@ The `v0.0.0` tag is a baseline, not a release: it marks where versioning starts 
 
 ## [Unreleased]
 
+## [0.1.0] - 2026-11-05
+
 ### Added
 
 - **A LinkML rendering of the Open Cybersecurity Schema Framework (OCSF) 1.9.0**, written by `scripts/ocsf_to_linkml.py` from the tag's files and OCSF's compiled form of them. Every key is OCSF's own, so a real event validates unchanged against the class its `class_uid` names.
