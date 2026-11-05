@@ -13,8 +13,8 @@ tests/upstream/ocsf-examples-verdicts.json, which holds no text of the events.
 - Each finding both name must be counted alike, so a rule cannot drift from theirs.
 
 It exits 1 on any other result. Because it fetches a live repository, it is a job of
-its own outside the required checks. To record the verdicts again from OCSF's public
-validator, which takes the events as they are::
+its own outside the required checks. To record the verdicts again, which posts each
+event's text, another repository's, to OCSF's public validator::
 
     uv run python scripts/check_real_events.py --refresh
 
@@ -49,6 +49,8 @@ COMMITTED = ROOT / "project" / "jsonschema" / "ocsf.schema.json"
 VERDICTS = ROOT / "tests" / "upstream" / "ocsf-examples-verdicts.json"
 USER_AGENT = "lmodel-ocsf-real-events"
 MAX_BYTES = 200_000_000
+# No file of the pinned commit comes near this, and a tar entry claims its own size.
+MAX_MEMBER_BYTES = 20_000_000
 SUFFIXES = (".json", ".ocsf", ".jsonl")
 MARKER = b'"class_uid"'
 # A file that names class_uid to describe the protobuf encoding, and holds no event.
@@ -84,6 +86,10 @@ def fetch_files() -> dict[str, bytes]:
         for member in archive:
             if not member.isfile() or not member.name.endswith(SUFFIXES):
                 continue
+            if "/" not in member.name:
+                continue
+            if member.size > MAX_MEMBER_BYTES:
+                raise SystemExit(f"{member.name} is larger than expected")
             path = member.name.split("/", 1)[1]
             data = archive.extractfile(member).read()
             if MARKER in data and path not in NOT_EVENTS:
