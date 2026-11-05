@@ -9,9 +9,9 @@ A LinkML schema of the Open Cybersecurity Schema Framework (OCSF) 1.9.0, written
 | Path | Holds |
 | --- | --- |
 | `scripts/ocsf_to_linkml.py`, `scripts/ocsf_mappings.yaml` | The converter and the mappings it adds. Edit these. |
-| `src/ocsf/schema/` | The LinkML schema the converter writes: `ocsf_core`, `ocsf_objects`, an `ocsf_events_*` per category and the umbrella `ocsf`. |
+| `src/ocsf/schema/` | The schema the converter writes: `ocsf_core`, `ocsf_objects`, an `ocsf_events_*` per category and the umbrella `ocsf`. |
 | `src/ocsf/datamodel/`, `project/`, `docs/schema/` | Artefacts generated from the schema. |
-| `upstream/` | The tag's files of the pinned edition and what OCSF's compiler makes of them, unchanged. |
+| `upstream/` | The pinned tag's files and what OCSF's compiler makes of them, unchanged. |
 | `docs/` | The website's own pages. |
 | `tests/` | Python tests and example data. |
 | `.lokf/knowledge/` | This repository's knowledge bundle. |
@@ -29,7 +29,7 @@ just --list
 
 ### Agent skills (optional, only for this repo's `.lokf/` bundle)
 
-The bundle is maintained with the Knowledge Trust Ladder (KTL) skills, **installed, never committed**. Continuous integration (CI) installs the librarian skill at run time, pinned to a release. [The install page](https://w3id.org/ktl/docs/install/) lists every route. With npm:
+The Knowledge Trust Ladder (KTL) skills maintain the bundle. They are **installed, never committed**: continuous integration (CI) installs the librarian skill at run time, pinned to a release. [The install page](https://w3id.org/ktl/docs/install/) lists every route. With npm:
 
 ```bash
 npx skills add noelmcloughlin/knowledge-trust-ladder --skill ktl-librarian --yes   # derive concepts
@@ -38,7 +38,7 @@ npx skills add noelmcloughlin/knowledge-trust-ladder --skill ktl-curator --yes  
 
 ## Before opening a pull request
 
-- **Edit the converter, then regenerate.** Change `scripts/ocsf_to_linkml.py` or its pin, and run `just gen-schema`, `just gen-examples`, `just gen-project`, `just gen-doc` and `just lokf-adapt`. Commit what they write. `gen-project` reorders `project/sqlschema/` and rewrites the Excel file on every run, so restore those unless the schema changed them.
+- **Edit the converter, then regenerate.** Change `scripts/ocsf_to_linkml.py` or its pin, run `just gen-schema`, `just gen-examples`, `just gen-project`, `just gen-doc` and `just lokf-adapt`, and commit what they write. `gen-project` reorders `project/sqlschema/` and rewrites the Excel file on every run, so restore those unless the schema changed them.
 - **Keep the upstream's keys and values.** A real event must validate unchanged, so a slot is spelled as OCSF spells it and an enumerated value stays its number. `tests/test_coverage.py` walks OCSF's compiled schema and fails on anything missing, added or stated differently.
 - **State only what the upstream states.** No bound or rule of your own. What JSON Schema cannot check is in `tests/ocsf_rules.py`, in the terms of OCSF's own validator, and [docs/index.md](docs/index.md) lists it.
 - **A mapping is read at its source.** `tests/test_mappings.py` holds each one to a neighbour copy or a pinned term list. A term with no sure match stays unmapped.
@@ -52,7 +52,7 @@ npx skills add noelmcloughlin/knowledge-trust-ladder --skill ktl-curator --yes  
 - **Knowledge-bundle changes**: `cd .lokf && just lokf-validate` must pass, and `knowledge-registrar.yaml` runs on any `.lokf/**` change.
 - **`lint-and-docs.yaml`** runs ShellCheck, actionlint, markdownlint, lychee and codespell.
 - **Actions are pinned to commit hashes**; Dependabot bumps them.
-- **The skills pin moves with the sidecar copies.** When moving `TRUST_LADDER_SKILLS_REF` in `.github/workflows/knowledge-librarian.yaml`, copy the other `knowledge-*.yaml` workflows and `.lokf/scripts/` and `.lokf/m365/` from that release's `skills/ktl-sidecar/templates/` in the same pull request.
+- **The skills pin moves with the sidecar copies.** When you move `TRUST_LADDER_SKILLS_REF` in `.github/workflows/knowledge-librarian.yaml`, copy the other `knowledge-*.yaml` workflows, `.lokf/scripts/` and `.lokf/m365/` from that release's `skills/ktl-sidecar/templates/` in the same pull request.
 - **If your change alters behaviour**, add an entry under `## [Unreleased]` in [CHANGELOG.md](CHANGELOG.md).
 
 ## Code of conduct
@@ -70,12 +70,12 @@ Use the [issue tracker](https://github.com/lmodel/ocsf/issues) for the schema. A
 ## Releasing (maintainers)
 
 - Write `## [Unreleased]` in [CHANGELOG.md](CHANGELOG.md) as you go. The release job refuses an empty one (`.github/scripts/changelog-release.mjs check`).
-- Type the commit ([Conventional Commits](https://www.conventionalcommits.org/)) for what the change *is*. Only `feat:`, `fix:`, `security:` and a breaking `!` start a release. Other types leave their entries for the next release that does. A pull request that would release must carry a releasing type in its title too, since a squash merge takes its subject from it.
-- On merge, [`semantic-release.yml`](.github/workflows/semantic-release.yml) retitles the section to `## [X.Y.Z] - YYYY-MM-DD`, commits `CHANGELOG.md`, tags `vX.Y.Z` and publishes the GitHub Release. No file is bumped. Once `KNOWLEDGE_RELEASE_ENABLED` is `true`, it dispatches `.github/workflows/knowledge-release.yaml`, which attaches the schema copy and the bundle when the bundle or the schema changed.
-- That step runs behind the `release` GitHub Environment. Configure required reviewers on it in Settings → Environments, or every qualifying merge is released unattended.
+- Type the commit ([Conventional Commits](https://www.conventionalcommits.org/)) for what the change *is*. Only `feat:`, `fix:`, `security:` and a breaking `!` start a release, and other types leave their entries for the next release that does. A pull request that would release must carry a releasing type in its title too, since a squash merge takes its subject from it.
+- On merge, [`semantic-release.yml`](.github/workflows/semantic-release.yml) retitles the section to `## [X.Y.Z] - YYYY-MM-DD`, commits `CHANGELOG.md`, tags `vX.Y.Z` and publishes the GitHub Release. No file is bumped. Once `KNOWLEDGE_RELEASE_ENABLED` is `true`, it dispatches `.github/workflows/knowledge-release.yaml`, which attaches the schema copy and the bundle when either changed.
+- That step runs behind the `release` GitHub Environment. Configure required reviewers on it under Settings, Environments, or every qualifying merge is released unattended.
 - Below 1.0.0: push the `v0.0.0` baseline tag on `main` before the first releasing merge, which then releases 0.1.0. Both release jobs refuse to run without a `v*` tag, because semantic-release would otherwise start at 1.0.0. `.releaserc.json` maps `breaking: true` to `minor`, and reaching 1.0.0 means removing that rule in a pull request of its own.
 - A branch rule requiring pull requests, status checks or signed commits would reject the release job's own push to `main`, so leave them off. [SECURITY.md](SECURITY.md) says what holds `main` instead, and the shared design is on [KTL's releasing page](https://github.com/noelmcloughlin/knowledge-trust-ladder/blob/main/docs/releasing.md).
 
 ## License
 
-By contributing, you agree that your contributions are licensed under the [Apache License 2.0](LICENSE). The upstream's files are under their own terms; [NOTICE](NOTICE) says what they allow. Update it when you add something from elsewhere.
+By contributing, you agree that your contributions are licensed under the [Apache License 2.0](LICENSE). The upstream's files are under their own terms, and [NOTICE](NOTICE) says what they allow. Update it when you add something from elsewhere.

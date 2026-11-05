@@ -14,7 +14,7 @@ An OCSF event says which class it is by its `class_uid`, so name that class:
 uv run linkml-validate -s src/ocsf/schema/ocsf.yaml -C OcsfAuthentication event.json
 ```
 
-`project/jsonschema/ocsf.schema.json` is the same schema for anyone without LinkML: validate against `#/$defs/OcsfAuthentication`. Then run the rules below, which `tests/ocsf_rules.py` holds as `findings(event)`, since they look at more than one object at a time.
+`project/jsonschema/ocsf.schema.json` is the same schema for anyone without LinkML: validate against `#/$defs/OcsfAuthentication`. Then run the rules below, which `tests/ocsf_rules.py` holds as `findings(event)`, because they look at more than one object at a time.
 
 ## What no validator checks
 
@@ -37,8 +37,8 @@ The same file reports what OCSF's validator only warns about: a label that diffe
 
 ## What was checked
 
-`tests/test_coverage.py` walks what OCSF's own compiler makes of the pinned tag and compares it with the schema as LinkML reads it, in both directions: all 87 event classes and 193 objects, each of their 7,904 attributes and each value list, with the captions, descriptions, requirements, groups, profiles and references. `tests/test_data.py` holds an example of each class, and a counter-example of each list, constant, required attribute, constraint and data type bound.
+`tests/test_coverage.py` walks what OCSF's own compiler makes of the pinned tag and compares it with the schema as LinkML reads it, in both directions. That covers all 87 event classes and 193 objects, each of their 7,904 attributes and each value list, with the captions, descriptions, requirements, groups, profiles and references. `tests/test_data.py` holds an example of each class, and a counter-example of each list, constant, required attribute, constraint and data type bound.
 
-`just test-real-events` reads the 93 events of [ocsf/examples](https://github.com/ocsf/examples) at a pinned commit, which stay out of this repository because that repository states no licence, and compares each verdict with OCSF's validator. The two agree on 88. On the other 5, OCSF's validator passes an event and this schema refuses it, because a value does not match its data type's regex, such as an `ip` of `12.000.22.33`. OCSF's validator only warns about those, and [about.md](about.md#a-data-types-regex) says why this schema keeps them. Nearly all of those events name an OCSF version from 1.0.0-rc.2 to 1.5.0, so none of them shows what 1.9.0 added. A sample from OCSF's server for each class covers that shape, and `tests/test_samples.py` says how far that goes.
+`just test-real-events` reads the 93 events of [ocsf/examples](https://github.com/ocsf/examples) at a pinned commit and compares each verdict with OCSF's validator. The events stay out of this repository, because that repository states no licence. The two validators agree on 88 events. On the other 5, OCSF's validator passes an event and this schema refuses it, because a value does not match its data type's regex, such as an `ip` of `12.000.22.33`. OCSF's validator only warns about those, and [about.md](about.md#a-data-types-regex) says why this schema keeps them. Nearly all of the 93 name an OCSF version from 1.0.0-rc.2 to 1.5.0, so none shows what 1.9.0 added. A sample from OCSF's server for each class covers that shape, and `tests/test_samples.py` says how far that goes.
 
 The schema says nothing about whether what an event claims is true.

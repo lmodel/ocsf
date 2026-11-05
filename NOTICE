@@ -11,10 +11,10 @@ The Open Cybersecurity Schema Framework
 
 src/ocsf/schema/, src/ocsf/datamodel/ and project/ render the Open Cybersecurity
 Schema Framework, version 1.9.0, which the OCSF project publishes at
-https://github.com/ocsf/ocsf-schema under the Apache License, Version 2.0. Its
-captions and descriptions are copied into the schema from there, and this project's
-own text is the rest. This project is not the OCSF project's, and OCSF's marks are
-its own. The framework's NOTICE reads:
+https://github.com/ocsf/ocsf-schema under the Apache License, Version 2.0. The
+schema copies its captions and descriptions from there, and the rest of the text is
+this project's own. This project is not the OCSF project's, and OCSF's marks are its
+own. The framework's NOTICE reads:
 
   Open Cybersecurity Schema Framework
 
@@ -39,7 +39,7 @@ same licence, and each answer is random words in the framework's shape.
 
 ocsf/examples, the OCSF project's repository of sample events, states no licence, so
 no event of it is copied here. scripts/check_real_events.py reads them at a pinned
-commit and tests/upstream/ocsf-examples-verdicts.json holds only their paths, their
+commit, and tests/upstream/ocsf-examples-verdicts.json holds only their paths, their
 git object hashes and what OCSF's validator found.
 
 MITRE D3FEND

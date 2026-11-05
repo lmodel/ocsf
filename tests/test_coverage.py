@@ -2,9 +2,9 @@
 
 `upstream/ocsf-compiled-1.9.0.json` is what OCSF's own compiler makes of the pinned
 tag. Each class and object in it is compared with the class whose `ocsf_key`
-annotation names it, as LinkML reads that class: its keys, then for each key the
-caption, description, range, cardinality, requirement, value list, group, profiles,
-sibling, observable, references and deprecation. The source files are then walked for
+annotation names it, as LinkML reads that class. The comparison covers its keys, then
+for each key the caption, description, range, cardinality, requirement, value list,
+group, profiles, sibling, observable, references and deprecation. The source files are then walked for
 what the compiler folds away: the abstract parents, the profiles and the extensions.
 A difference fails, so a fact of OCSF's cannot go missing and none can be added.
 """

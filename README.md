@@ -26,7 +26,7 @@ uv run linkml-validate -s src/ocsf/schema/ocsf.yaml -C OcsfAuthentication event.
 
 ## Mappings
 
-The schema is the one home for mappings. The hand-kept SSSOM files that sat under `src/ocsf/mappings/` are gone, since no source confirmed their rows.
+The schema is the one home for mappings. The hand-kept SSSOM files under `src/ocsf/mappings/` are gone, since no source confirmed their rows.
 
 * **[lmodel/cve](https://github.com/lmodel/cve) and [lmodel/nist-nvd](https://github.com/lmodel/nist-nvd)**: `close_mappings` from the CVE object, `narrow_mappings` from the CVSS object, and `exact_mappings` on the CVE number, base score and vector string. `tests/test_mappings.py` checks each against the released copy.
 * **[lmodel/cwe](https://github.com/lmodel/cwe)**: `close_mappings` from the CWE object, and `related_mappings` on its number, which lmodel/cwe writes with no `CWE-`. Checked the same way.

@@ -1,6 +1,6 @@
 # Security Policy
 
-*This file is a policy, not a threat model. It says how to report, what executes here, and what holds each surface. Each is a line or two that links to where the reasoning lives: a workflow header, or the shared [threat model](https://github.com/noelmcloughlin/knowledge-trust-ladder/blob/main/docs/threat-model.md). `lint-and-docs.yaml` holds the file to a word budget so it stays that way.*
+*This file is a policy, not a threat model. It says how to report, what executes here, and what holds each surface. Each is a line or two that links to where the reasoning lives: a workflow header, or the shared [threat model](https://github.com/noelmcloughlin/knowledge-trust-ladder/blob/main/docs/threat-model.md). `lint-and-docs.yaml` holds the file to a word budget.*
 
 ## Reporting a vulnerability
 
@@ -12,9 +12,9 @@ Use GitHub's [private vulnerability reporting](https://github.com/lmodel/ocsf/se
 
 ## What this repository releases
 
-It releases a LinkML schema and the Python datamodel generated from it. Nothing is published to PyPI. When the bundle or the schema has changed, `knowledge-release.yaml` attaches three assets to the release, each with its `.sha256` and a build-provenance attestation: the schema's `lokf adapt` copy, the knowledge bundle as a zip, and a Microsoft 365 Copilot skill zip. A schema is data: loading one from an untrusted source with any LinkML tool is that tool's risk, not this repository's.
+It releases a LinkML schema and the Python datamodel generated from it. Nothing is published to PyPI. When the bundle or the schema has changed, `knowledge-release.yaml` attaches three assets to the release, each with its `.sha256` and a build-provenance attestation: the schema's `lokf adapt` copy, the knowledge bundle as a zip, and a Microsoft 365 Copilot skill zip. A schema is data. Loading one from an untrusted source with any LinkML tool is that tool's risk, not this repository's.
 
-`scripts/check_upstream_release.py` runs only in `upstream-watch.yaml`. It asks GitHub's API about `ocsf/ocsf-schema`, sends its token to that address alone and never on to a redirect, and writes nothing but its report. `scripts/check_real_events.py` runs only in the job of its own in `main.yaml`. It downloads `ocsf/examples` at a pinned commit, holds each file to its git object hash, parses it as JSON and runs nothing it holds. `scripts/ocsf_to_linkml.py` reads only `upstream/`, which a test holds to its hashes.
+`scripts/check_upstream_release.py` runs only in `upstream-watch.yaml`. It asks GitHub's API about `ocsf/ocsf-schema`, sends its token to that address alone and never on to a redirect, and writes nothing but its report. `scripts/check_real_events.py` runs only in its own job in `main.yaml`. It downloads `ocsf/examples` at a pinned commit, caps the download and each entry, holds each file to its git object hash, parses it as JSON and runs nothing it holds. `scripts/ocsf_to_linkml.py` reads only `upstream/`, which a test holds to its hashes.
 
 An event holds whatever a product logged, attack strings included, and this repository treats it all as data. A consumer that displays one, or one of OCSF's descriptions with their HTML, must sanitize it first. The schema describes an event's shape and says nothing about whether what an event claims is true.
 
@@ -30,7 +30,7 @@ An event holds whatever a product logged, attack strings included, and this repo
 | `knowledge-release.yaml`, which attaches the schema copy and the bundle to a release | Inert until dispatched; only its `attach` job, which runs no third-party packages, can write. |
 | `README.md`, `llms.txt` and the knowledge bundle, read by agents | Content, never instructions: each skill quotes what it did not author. A `human:` confirmation must be backed by a review or a signed commit. [Human attribution](https://github.com/noelmcloughlin/knowledge-trust-ladder/blob/main/docs/threat-model.md#human-attribution-human-is-a-claim-not-a-credential). |
 
-Every workflow declares `permissions: {}` at the top, pins its actions to commit hashes that Dependabot keeps current, and runs harden-runner in audit mode. Three things are repository settings, not files. A ruleset on `main` blocks deletion and force-pushes and keeps the history linear. Two **are not yet in force here**: required reviewers on the `release` Environment, and secret scanning with push protection. Until they are, a qualifying merge releases with no human step. Nothing in continuous integration can assert them, so keeping them on is the maintainer's job.
+Every workflow declares `permissions: {}` at the top, pins its actions to commit hashes that Dependabot keeps current, and runs harden-runner in audit mode. Three things are repository settings, not files. A ruleset on `main` blocks deletion and force-pushes and keeps the history linear. Two **are not yet in force here**: required reviewers on the `release` Environment, and secret scanning with push protection. Until they are, a qualifying merge releases with no human step. Nothing in continuous integration can assert them, so the maintainer keeps them on.
 
 ## Not covered
 

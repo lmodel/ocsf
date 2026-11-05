@@ -1,30 +1,30 @@
 # About ocsf
 
-This page is for anyone reading the schema's elements: it says how the classes fit together, how the schema is written and what the model leaves out.
+This page is for anyone reading the schema's elements. It says how the classes fit together, how the schema is written and what the model leaves out.
 
 ## How an event is shaped
 
 An OCSF event is one JSON object of one event class. Every class descends from the base event, and most sit under a parent for their category, such as `OcsfIamEvent` for Identity & Access Management. The event names its class by `class_uid`, its category by `category_uid` and what happened by `activity_id`. Its attributes hold plain values or objects, such as `OcsfUser` or `OcsfProcess`, which exist only inside an event.
 
-The attribute dictionary is OCSF's own design: one definition of each attribute, which a class or object then refines. So each dictionary attribute is a top-level slot, and a class refines it through `slot_usage`, saying what OCSF says of it there: whether it is required or recommended, its description, its value list and its group. A class writes only what it does not inherit.
+OCSF defines each attribute once, in its attribute dictionary, and a class or object then refines it. So each dictionary attribute is a top-level slot, and a class refines it through `slot_usage`: whether it is required or recommended, its description, its value list and its group. A class writes only what it does not inherit.
 
 ## Numbers stay numbers
 
-OCSF writes a list as integers: `activity_id: 1` with the label `Logon` in its sibling `activity_name`. A LinkML enum's values are strings, so a real event could not satisfy one. Each list is therefore an `any_of` of `equals_number`, with OCSF's caption as the entry's `title` and its text as `description`, and the JSON Schema gets one `const` per number. A class's list is OCSF's compiled one: the base values merged with the class's own. `class_uid` and `category_uid`, which one class holds constant, use `equals_number` directly. A number outside the list is an error, as it is in OCSF's validator. The three lists OCSF writes as strings, `depth`, `http_method` and `tlp`, are ordinary enums.
+OCSF writes a list as integers: `activity_id: 1`, with the label `Logon` in its sibling `activity_name`. A LinkML enum's values are strings, so no real event could satisfy one. Each list is therefore an `any_of` of `equals_number`, with OCSF's caption as the entry's `title` and its text as its `description`, and the JSON Schema gets one `const` per number. A class's list is OCSF's compiled one: the base values merged with the class's own. `class_uid` and `category_uid`, which one class holds constant, use `equals_number` directly. A number outside the list is an error, as it is in OCSF's validator. The three lists OCSF writes as strings, `depth`, `http_method` and `tlp`, are ordinary enums.
 
 The generated pages show a list under each class's YAML, not as a table. The JSON Schema shows an entry's `description` and leaves out its `title`.
 
 ## Profiles
 
-A profile is a set of attributes that an event opts into by listing it in `metadata.profiles`, and each is a mixin here, such as `OcsfCloudProfile`. OCSF's validator treats a profile's attribute as unknown unless the event lists that profile, and requires what the profile requires only then. JSON Schema cannot see `metadata.profiles` from inside an object, so the schema declares such an attribute on the class, never requires it, and records its profiles in an `ocsf_profiles` annotation that `tests/ocsf_rules.py` reads. So the JSON Schema alone is looser than OCSF on this one point.
+A profile is a set of attributes an event opts into by listing it in `metadata.profiles`, and each is a mixin here, such as `OcsfCloudProfile`. OCSF's validator treats a profile's attribute as unknown unless the event lists that profile, and requires what the profile requires only then. JSON Schema cannot see `metadata.profiles` from inside an object. So the schema declares such an attribute on the class, never requires it, and records its profiles in an `ocsf_profiles` annotation that `tests/ocsf_rules.py` reads. On this one point the JSON Schema alone is looser than OCSF.
 
 ## What OCSF leaves open
 
-OCSF's `object`, which `unmapped` and `xattributes` hold, takes any keys, so `OcsfObject` has the class URI `linkml:Any`. So does `OcsfJsonValue`, for a `json_t`. Every other class is closed, as OCSF's validator closes it. LinkML's `Any` admits a scalar and leaves out an array. So a `json_t` slot says `any_of` a value or a list of values, and `tests/ocsf_rules.py` checks that an `object` holds an object.
+OCSF's `object`, which `unmapped` and `xattributes` hold, takes any keys, so `OcsfObject` has the class URI `linkml:Any`. So does `OcsfJsonValue`, for a `json_t`. Every other class is closed, as OCSF's validator closes it. LinkML's `Any` admits a scalar and leaves out an array, so a `json_t` slot says `any_of` a value or a list of values, and `tests/ocsf_rules.py` checks that an `object` holds an object.
 
 ## A data type's regex
 
-Each data type carries OCSF's regex as its `pattern` and OCSF's bounds as `minimum_value` and `maximum_value`, so the JSON Schema refuses a value outside them. OCSF's dictionary says that implementers should abide by these constraints, and its validator reports a regex mismatch as a warning. This schema keeps the stricter reading, because a LinkML pattern cannot warn. So 5 of the 93 events in ocsf/examples pass OCSF's validator and fail here: an `ip` of `12.000.22.33`, and a `*_dt` value with a space in place of the `T`. That last form is one the `datetime_t` description gives as an example, although its regex refuses it.
+Each data type carries OCSF's regex as its `pattern` and OCSF's bounds as `minimum_value` and `maximum_value`, so the JSON Schema refuses a value outside them. OCSF's dictionary says that implementers should abide by these constraints, and its validator reports a regex mismatch as a warning. A LinkML pattern cannot warn, so this schema keeps the stricter reading. So 5 of the 93 events in ocsf/examples pass OCSF's validator and fail here: an `ip` of `12.000.22.33`, and a `*_dt` value with a space in place of the `T`. The `datetime_t` description gives that last form as an example, although its regex refuses it.
 
 ## Modules
 
@@ -34,7 +34,7 @@ A fact the metamodel has no slot for is an annotation with the `ocsf_` prefix, a
 
 ## How the schema is written
 
-`scripts/ocsf_to_linkml.py` writes `src/ocsf/schema/` and nobody edits those files. It reads two things under `upstream/`: what OCSF's compiler makes of the tag, which resolves `extends`, `$include`, extension patches and the datetime siblings as OCSF means them, and the tag's source files, for what the compiler folds away: the abstract parents and each profile's attributes. A test compares what the script writes with the committed files.
+`scripts/ocsf_to_linkml.py` writes `src/ocsf/schema/`, and nobody edits those files. It reads two things under `upstream/`. The first is what OCSF's compiler makes of the tag, which resolves `extends`, `$include`, extension patches and the datetime siblings as OCSF means them. The second is the tag's source files, for what the compiler folds away: the abstract parents and each profile's attributes. A test compares what the script writes with the committed files.
 
 Descriptions and captions are OCSF's, copied under its Apache License 2.0, HTML included. The text this project adds is small: the descriptions of `OcsfFacts` and `OcsfObjectBase`, which OCSF has no item for, of `OcsfApplicationEvent`, since OCSF's file gives none, and of the three string enums.
 
