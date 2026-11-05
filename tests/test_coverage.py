@@ -15,17 +15,17 @@ from functools import cache
 from pathlib import Path
 
 import pytest
-from linkml_runtime import SchemaView
+
+from tests.ocsf_rules import view
 
 ROOT = Path(__file__).parent.parent
-SCHEMA = ROOT / "src" / "ocsf" / "schema" / "ocsf.yaml"
 COMPILED = json.loads(
     (ROOT / "upstream" / "ocsf-compiled-1.9.0.json").read_text("utf-8")
 )
 SOURCE = ROOT / "upstream" / "ocsf-schema"
 DICTIONARY = COMPILED["dictionary"]["attributes"]
 TYPES = COMPILED["dictionary"]["types"]["attributes"]
-VIEW = SchemaView(str(SCHEMA))
+VIEW = view()
 PRIMITIVES = {
     "string_t": "string",
     "integer_t": "integer",

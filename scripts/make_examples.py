@@ -143,8 +143,10 @@ def concrete_classes(view: SchemaView) -> list[str]:
     )
 
 
-def documents() -> dict[str, str]:
-    view = SchemaView(str(SCHEMA))
+def documents(view: SchemaView | None = None) -> dict[str, str]:
+    """Each file by name. A caller that already holds a SchemaView passes it, since
+    the induced slots of this schema take seconds to compute."""
+    view = view or SchemaView(str(SCHEMA))
     maker = Maker(view)
     return {
         f"{name}{SUFFIX}": HEADER.format(name=name)

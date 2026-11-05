@@ -97,10 +97,14 @@ MAPPING_KEYS = (
 )
 
 
+# Several tests read the same files, and the copy alone is 1.4 MB of YAML, so each
+# parse is kept and nothing below changes what it returns.
+@cache
 def _load(path):
     return yaml.safe_load(path.read_text(encoding="utf-8"))
 
 
+@cache
 def _names(path):
     """Each kind of element a schema file declares, and every slot and attribute name
     with the IRI it expands to."""
@@ -138,6 +142,7 @@ def _mappings(node):
             yield from _mappings(item)
 
 
+@cache
 def _source():
     merged = {"classes": {}, "slots": {}, "prefixes": {}, "enums": {}, "types": {}}
     for path in sorted(SOURCE_DIR.glob("*.yaml")):
@@ -318,9 +323,7 @@ def test_mappings_use_a_bound_prefix():
 def _page_names(source):
     """The name of each page gen-doc writes. It camel-cases a type or a subset, so a
     subset named `ocsf_application` would overwrite the class OcsfApplication's page."""
-    subsets = yaml.safe_load(
-        (SOURCE_DIR / "ocsf_core.yaml").read_text(encoding="utf-8")
-    )["subsets"]
+    subsets = _load(SOURCE_DIR / "ocsf_core.yaml")["subsets"]
     names = set(source["classes"]) | set(source["enums"]) | set(source["slots"])
     names |= {
         "".join(part.title() for part in name.split("_"))
@@ -333,9 +336,7 @@ def test_no_two_pages_collide():
     """gen-doc writes a page per element, and two names that are the same, or differ only
     by case, are one file on a case-insensitive disk."""
     source = _source()
-    subsets = yaml.safe_load(
-        (SOURCE_DIR / "ocsf_core.yaml").read_text(encoding="utf-8")
-    )["subsets"]
+    subsets = _load(SOURCE_DIR / "ocsf_core.yaml")["subsets"]
     pages = list(_page_names(source))
     lowered = {}
     for name in pages:

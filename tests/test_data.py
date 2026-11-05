@@ -16,10 +16,9 @@ import jsonschema
 import pytest
 import yaml
 from linkml.validator import validate
-from linkml_runtime import SchemaView
 
 from scripts import make_examples
-from tests.ocsf_rules import class_of, findings, object_findings
+from tests.ocsf_rules import class_of, findings, object_findings, view
 
 ROOT = Path(__file__).parent.parent
 SCHEMA = ROOT / "src" / "ocsf" / "schema" / "ocsf.yaml"
@@ -36,7 +35,8 @@ VALID = sorted(
 INVALID = sorted((DATA / "invalid").glob("*.yaml"))
 PROBLEM_INVALID = sorted((DATA / "problem" / "invalid").glob("*.yaml"))
 NOT_LISTED = 987654
-VIEW = SchemaView(str(SCHEMA))
+# The one SchemaView of the session: its induced slots take seconds to compute.
+VIEW = view()
 
 
 @cache
@@ -124,7 +124,7 @@ def test_every_concrete_class_has_an_example():
 
 def test_the_minimal_examples_are_what_the_script_writes():
     written = {path.name: path.read_text(encoding="utf-8") for path in MINIMAL}
-    assert written == make_examples.documents()
+    assert written == make_examples.documents(VIEW)
 
 
 @pytest.mark.parametrize("path", VALID, ids=lambda p: p.stem)
