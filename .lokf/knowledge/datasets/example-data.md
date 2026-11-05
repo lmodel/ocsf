@@ -26,7 +26,7 @@ verified:
 
 # Example data
 
-`tests/data/minimal/` holds the least each class and object requires, as `scripts/make_examples.py` writes it, and `tests/data/valid/` and `tests/data/problem/valid/` hold events written by hand. `tests/data/invalid/` holds a counter-example of each kind of constraint, whose first line names the one place it fails. `tests/data/problem/invalid/` holds a counter-example of each rule that `tests/ocsf_rules.py` checks.[^data-readme.md]
+`tests/data/minimal/` holds the least each class and object requires, as `scripts/make_examples.py` writes it. `tests/data/valid/` and `tests/data/problem/valid/` hold events written by hand. `tests/data/invalid/` holds a counter-example of each kind of constraint, whose first line names the one place it fails. `tests/data/problem/invalid/` holds a counter-example of each rule that `tests/ocsf_rules.py` checks.[^data-readme.md]
 
 `tests/test_data.py` runs them all, and makes the same counter-examples from the schema for every class, list and required attribute.[^test_data.py]
 

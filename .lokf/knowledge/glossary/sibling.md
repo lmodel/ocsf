@@ -25,7 +25,7 @@ verified:
 
 OCSF writes a list as integers, with the label in a sibling, as `activity_name` is for `activity_id`.[^about.md]
 
-OCSF's validator warns when a scalar's label differs from its caption and reports an error for an array's, which `tests/ocsf_rules.py` follows.[^ocsf_rules.py]
+OCSF's validator warns when a scalar's label differs from its caption, and reports an error when an array's does. `tests/ocsf_rules.py` follows both.[^ocsf_rules.py]
 
 [^about.md]: docs/about.md, Numbers stay numbers
 [^ocsf_rules.py]: tests/ocsf_rules.py, the docstring

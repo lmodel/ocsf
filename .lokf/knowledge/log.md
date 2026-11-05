@@ -2,6 +2,7 @@
 
 ## 2026-11-05
 
+* **Prose**: reworded 8 concept bodies in plain English. No fact, link, number or frontmatter changed.
 * **Changed**: the D3FEND term list also lists the OCSF addresses D3FEND's own file names.
 * **Changed**: the mappings explanation says D3FEND's own links also give a mapping.
 

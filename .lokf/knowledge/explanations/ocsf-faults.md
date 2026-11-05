@@ -26,7 +26,13 @@ verified:
 
 Five things in OCSF 1.9.0 needed a decision, and `tests/test_coverage.py` holds each, so a new edition that clears one fails a test.[^test_coverage.py]
 
-`event_log_activity.json` spells its class's name `event_log_actvity`, and that class's `at_least_one` names `log_file`, which it does not have. `patch_state`'s `at_least_one` names paths, which OCSF's validator looks up as one key, so it fails every such event. `email_activity.json` writes one reference address with a stray `href='`, and `dictionary.json` gives a `datetime_t` example its regex refuses.[^about.md]
+These are the five:[^about.md]
+
+- `event_log_activity.json` spells its class's name `event_log_actvity`;
+- that class's `at_least_one` names `log_file`, which it does not have;
+- `patch_state`'s `at_least_one` names paths, which OCSF's validator looks up as one key, so it fails every such event;
+- `email_activity.json` writes one reference address with a stray `href='`;
+- `dictionary.json` gives a `datetime_t` example its regex refuses.
 
 [^about.md]: docs/about.md, What OCSF's files get wrong
 [^test_coverage.py]: tests/test_coverage.py, test_the_faults_this_schema_works_around_are_still_there

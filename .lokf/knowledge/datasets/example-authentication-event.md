@@ -73,7 +73,7 @@ verified:
 
 This concept shows how a host writes an event in its bundle, in the adapt copy's keys. Its type is `OcsfAuthentication`, and `lokf validate` checks it against `.lokf/ocsf.yaml`.[^readme.md]
 
-Its other keys are as `tests/data/valid/OcsfAuthentication-logon.yaml` holds them, and a key LOKF also defines takes the `ocsf_` prefix.[^ocsfauthentication-logon.yaml]
+`tests/data/valid/OcsfAuthentication-logon.yaml` holds its other keys, and a key LOKF also defines takes the `ocsf_` prefix.[^ocsfauthentication-logon.yaml]
 
 [^readme.md]: README.md, the Knowledge Trust Ladder (KTL) section
 [^ocsfauthentication-logon.yaml]: tests/data/valid/OcsfAuthentication-logon.yaml

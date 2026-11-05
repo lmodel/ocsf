@@ -113,14 +113,14 @@ verified:
 
 # Knowledge sources map
 
-The schema and what it is written from: `scripts/`, `upstream/`, `src/ocsf/schema/` and `docs/`. Re-check with `just test`, which holds the schema to the upstream's files.
+`scripts/`, `upstream/`, `src/ocsf/schema/` and `docs/` hold the schema and what it is written from. Re-check them with `just test`, which holds the schema to the upstream's files.
 
-The tests and their pinned lists: `tests/`. Each test's docstring says what it holds.
+`tests/` holds the tests and their pinned lists. Each test's docstring says what it holds.
 
-The automation: `.github/workflows/`, one concept per workflow. Re-check by reading the workflow's header comment.
+`.github/workflows/` holds the automation, one concept per workflow. Re-check a workflow by reading its header comment.
 
-The governance files: `README.md`, `CONTRIBUTING.md`, `SECURITY.md`, `AI_COVENANT.md`, `NOTICE` and `CHANGELOG.md`.
+The governance files are `README.md`, `CONTRIBUTING.md`, `SECURITY.md`, `AI_COVENANT.md`, `NOTICE` and `CHANGELOG.md`.
 
-The external sources: the concepts under `references/`. Re-check each at its address; the upstream watch reports when OCSF's tag or files move.
+The concepts under `references/` are the external sources. Re-check each at its address. The upstream watch reports when OCSF's tag or files move.
 
 The frontmatter's `exclusions` list what was looked at and left out, each with its reason.

@@ -19,6 +19,6 @@ status: draft
 
 # Knowledge sync (knowledge-sync.yaml)
 
-Each week the workflow compares the skills pin with the newest release of Knowledge Trust Ladder. When the pin is behind, it runs `.lokf/scripts/knowledge-sync.sh` and opens one pull request. It runs no agent and no code from the release, never pushes to the default branch and never merges.[^knowledge-sync.yaml]
+Each week the workflow compares the skills pin with the newest release of Knowledge Trust Ladder. When the pin is behind, it runs `.lokf/scripts/knowledge-sync.sh` and opens one pull request. It runs no agent and no code from the release. It never pushes to the default branch and never merges.[^knowledge-sync.yaml]
 
 [^knowledge-sync.yaml]: .github/workflows/knowledge-sync.yaml, the header comment

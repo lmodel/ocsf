@@ -24,7 +24,7 @@ verified:
 
 # Python models
 
-The Pydantic models load every example. A key named after a Python keyword, `from` or `class`, is refused by the dataclasses, and a `json_t` value raises a `TypeError` there, because the generated check calls `isinstance` against `typing.Any`.[^about.md]
+The Pydantic models load every example. The dataclasses refuse a key named after a Python keyword, `from` or `class`. A `json_t` value raises a `TypeError` there, because the generated check calls `isinstance` against `typing.Any`.[^about.md]
 
 `tests/test_datamodel.py` holds both, so a fix in LinkML fails the test.[^test_datamodel.py]
 
