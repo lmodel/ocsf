@@ -4,8 +4,9 @@ Each mapping names its target by a CURIE whose prefix the schema binds. A target
 lmodel neighbour's namespace is held to that neighbour's released copy under
 tests/neighbours/. A D3FEND target is held to tests/upstream/d3fend-terms.txt, which
 scripts/extract_d3fend_terms.py writes from D3FEND's pinned file, and to the reference
-of OCSF's that names it. The schema is the one home for mappings: no SSSOM file sits
-beside it.
+of OCSF's that names it, or to the link D3FEND's own file states in
+tests/upstream/d3fend-ocsf-links.txt. The schema is the one home for mappings: no SSSOM
+file sits beside it.
 """
 
 import hashlib
@@ -21,7 +22,9 @@ ROOT = Path(__file__).parent.parent
 SCHEMA_DIR = ROOT / "src" / "ocsf" / "schema"
 NEIGHBOURS = ROOT / "tests" / "neighbours"
 TERMS = ROOT / "tests" / "upstream" / "d3fend-terms.txt"
-TERMS_SHA256 = "06e7cfcf829744871256307668d614f3decdfa9dd4601f9513f6dfe12e377864"
+TERMS_SHA256 = "fdfe185fc01ed26db49fc853f615eadbc8d7e27dc2b29fae9e6144b2c3123719"
+LINKS = ROOT / "tests" / "upstream" / "d3fend-ocsf-links.txt"
+LINKS_SHA256 = "644736639587c530b7a1e9efcbabb859e703d07cb4ff0eb4f632fa6ee08c3606"
 COMPILED = json.loads(
     (ROOT / "upstream" / "ocsf-compiled-1.9.0.json").read_text("utf-8")
 )
@@ -35,6 +38,13 @@ MAPPING_KEYS = (
 )
 # Terms D3FEND defines that the mapping table names by hand, as OCSF's d3f objects do.
 D3FEND_BY_HAND = {"DefensiveTactic", "DefensiveTechnique"}
+# D3FEND's links to an address OCSF 1.9.0 spells otherwise, with the key it holds there.
+# The first is OCSF's own misspelling, and the others are in the Windows extension.
+LINK_SPELLINGS = {
+    "classes/event_log_activity": "classes/event_log_actvity",
+    "objects/registry_key": "objects/win/reg_key",
+    "objects/registry_value": "objects/win/reg_value",
+}
 
 
 def _mappings(node):
@@ -95,9 +105,16 @@ def expand(module, curie):
     return MODULES[module]["prefixes"][prefix] + local
 
 
+@cache
+def d3fend_links():
+    lines = LINKS.read_text(encoding="utf-8").splitlines()
+    return [tuple(line.split()) for line in lines if line and not line.startswith("#")]
+
+
 def test_the_term_list_is_the_pinned_one():
     """The list is byte for byte what the script wrote from D3FEND's pinned file."""
     assert hashlib.sha256(TERMS.read_bytes()).hexdigest() == TERMS_SHA256
+    assert hashlib.sha256(LINKS.read_bytes()).hexdigest() == LINKS_SHA256
 
 
 def test_mappings_exist():
@@ -138,8 +155,26 @@ def test_each_d3fend_relation_is_what_ocsf_references_name():
     mapped = {
         curie.removeprefix("d3f:") for _, curie in TARGETS if curie.startswith("d3f:")
     }
-    assert mapped - D3FEND_BY_HAND <= named
+    linked = {term for term, _ in d3fend_links()}
+    assert mapped - D3FEND_BY_HAND - linked <= named
     assert named <= mapped
+
+
+def test_each_link_d3fend_states_is_a_mapping():
+    """Each OCSF element D3FEND's file names is related to the term that names it."""
+    elements = {}
+    for name, doc in MODULES.items():
+        kind = "objects" if name == "ocsf_objects.yaml" else "classes"
+        for element in (doc.get("classes") or {}).values():
+            key = (element.get("annotations") or {}).get("ocsf_key")
+            if key:
+                elements[f"{kind}/{key}"] = element
+    assert d3fend_links()
+    for term, address in d3fend_links():
+        if address.startswith("categories/"):
+            continue  # No class of this schema renders a category.
+        element = elements[LINK_SPELLINGS.get(address, address)]
+        assert f"d3f:{term}" in element.get("related_mappings", []), (term, address)
 
 
 def test_the_old_prefixes_are_gone():

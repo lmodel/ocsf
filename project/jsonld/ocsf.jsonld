@@ -125865,6 +125865,9 @@
       "exact_mappings": [
         "ocsf:OcsfDeviceHwInfo"
       ],
+      "related_mappings": [
+        "d3f:HardwareDevice"
+      ],
       "is_a": "OcsfObjectBase",
       "slots": [
         "bios_date",
@@ -127783,7 +127786,8 @@
         "ocsf:OcsfHttpRequest"
       ],
       "related_mappings": [
-        "d3f:OutboundInternetNetworkTraffic"
+        "d3f:OutboundInternetNetworkTraffic",
+        "d3f:OutboundInternetWebTraffic"
       ],
       "is_a": "OcsfObjectBase",
       "slots": [
@@ -127826,7 +127830,8 @@
         "ocsf:OcsfHttpResponse"
       ],
       "related_mappings": [
-        "d3f:InboundInternetNetworkTraffic"
+        "d3f:InboundInternetNetworkTraffic",
+        "d3f:InboundInternetWebTraffic"
       ],
       "is_a": "OcsfObjectBase",
       "slots": [
@@ -128679,6 +128684,9 @@
       "from_schema": "https://w3id.org/lmodel/ocsf/ocsf_objects",
       "exact_mappings": [
         "ocsf:OcsfLocation"
+      ],
+      "related_mappings": [
+        "d3f:PhysicalLocation"
       ],
       "is_a": "OcsfObjectBase",
       "slots": [
@@ -139456,6 +139464,9 @@
       "exact_mappings": [
         "ocsf:OcsfAccountChange"
       ],
+      "related_mappings": [
+        "d3f:UserAccountEvent"
+      ],
       "is_a": "OcsfIamEvent",
       "slots": [
         "OcsfBaseEvent_activity_name",
@@ -145110,6 +145121,9 @@
       "exact_mappings": [
         "ocsf:OcsfWinRegistryKeyActivity"
       ],
+      "related_mappings": [
+        "d3f:WindowsRegistryKeyEvent"
+      ],
       "is_a": "OcsfSystemEvent",
       "slots": [
         "OcsfBaseEvent_activity_name",
@@ -145338,6 +145352,9 @@
       "from_schema": "https://w3id.org/lmodel/ocsf/ocsf_events_win",
       "exact_mappings": [
         "ocsf:OcsfWinRegistryValueActivity"
+      ],
+      "related_mappings": [
+        "d3f:WindowsRegistryValueEvent"
       ],
       "is_a": "OcsfSystemEvent",
       "slots": [
@@ -145746,7 +145763,7 @@
   ],
   "metamodel_version": "1.12.0",
   "source_file": "ocsf.yaml",
-  "source_file_date": "2026-11-04T23:09:38",
+  "source_file_date": "2026-11-05T00:10:06",
   "source_file_size": 1740,
   "@type": "SchemaDefinition",
   "@context": [

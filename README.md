@@ -32,7 +32,7 @@ The schema is the one home for mappings. The hand-kept SSSOM files that sat unde
 * **[lmodel/cwe](https://github.com/lmodel/cwe)**: `close_mappings` from the CWE object, and `related_mappings` on its number, which lmodel/cwe writes with no `CWE-`. Checked the same way.
 * **[lmodel/attack](https://github.com/lmodel/attack)**: `close_mappings` from the tactic, technique and mitigation objects, and `broad_mappings` from the sub-technique. Checked the same way.
 * **[lmodel/kev-catalog](https://github.com/lmodel/kev-catalog) and [lmodel/stix](https://github.com/lmodel/stix)**: `related_mappings` from the CVE and vulnerability objects, since OCSF names no KEV field. Checked the same way.
-* **[MITRE D3FEND](https://d3fend.mitre.org/)**: `related_mappings` on each class or object whose references name a D3FEND term, and `close_mappings` from OCSF's two D3FEND objects. `tests/test_mappings.py` checks each against the term list from D3FEND 1.6.0's pinned file.
+* **[MITRE D3FEND](https://d3fend.mitre.org/)**: `related_mappings` on each class or object whose references name a D3FEND term, or whose address D3FEND's own file names under `rdfs:seeAlso`, and `close_mappings` from OCSF's two D3FEND objects. `tests/test_mappings.py` checks each against the lists from D3FEND 1.6.0's pinned file.
 
 ## Repository Structure
 

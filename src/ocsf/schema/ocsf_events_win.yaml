@@ -213,6 +213,8 @@ classes:
             title: 'Registry Key Activity: Export'
           - equals_number: 20100199
             title: 'Registry Key Activity: Other'
+    related_mappings:
+      - d3f:WindowsRegistryKeyEvent
   OcsfWinRegistryKeyQuery:
     title: Registry Key Query
     description: Registry Key Query events report information about discovered Windows registry
@@ -336,6 +338,8 @@ classes:
             title: 'Registry Value Activity: Delete'
           - equals_number: 20100299
             title: 'Registry Value Activity: Other'
+    related_mappings:
+      - d3f:WindowsRegistryValueEvent
   OcsfWinRegistryValueQuery:
     title: Registry Value Query
     description: Registry Value Query events report information about discovered Windows registry

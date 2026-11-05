@@ -6733,6 +6733,8 @@ classes:
           - https://github.com/apple-oss-distributions/xnu/blob/8d741a5de7ff4191bf97d57b9f54c2f6d4a15585/iokit/IOKit/IOKitKeys.h#L264-L265
       vendor_name:
         description: The device manufacturer.
+    related_mappings:
+      - d3f:HardwareDevice
   OcsfDigitalSignature:
     title: Digital Signature
     description: The Digital Signature object contains information about the cryptographic
@@ -9015,6 +9017,7 @@ classes:
       ocsf_key: http_request
     related_mappings:
       - d3f:OutboundInternetNetworkTraffic
+      - d3f:OutboundInternetWebTraffic
     slots:
       - args
       - body_length
@@ -9069,6 +9072,7 @@ classes:
       ocsf_key: http_response
     related_mappings:
       - d3f:InboundInternetNetworkTraffic
+      - d3f:InboundInternetWebTraffic
     slots:
       - body_length
       - code
@@ -10138,6 +10142,8 @@ classes:
         see_also:
           - https://www.iso.org/iso-3166-country-codes.html
           - https://www.iso.org/obp/ui/#iso:code:3166:US
+    related_mappings:
+      - d3f:PhysicalLocation
   OcsfLogger:
     title: Logger
     description: The Logger object represents the device and product where events are stored

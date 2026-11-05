@@ -27,10 +27,12 @@ File
 FileEvent
 GroupManagementEvent
 HTTPEvent
+HardwareDevice
 HardwareDeviceStateEvent
 Host
 InboundInternetDNSResponseTraffic
 InboundInternetNetworkTraffic
+InboundInternetWebTraffic
 Kernel
 KernelEvent
 KernelModule
@@ -47,9 +49,11 @@ NetworkSession
 NetworkTraffic
 OperatingSystem
 OutboundInternetNetworkTraffic
+OutboundInternetWebTraffic
 PacketCaptureFile
 PacketLog
 PermissionGrantingEvent
+PhysicalLocation
 Process
 ProcessEvent
 ProxyServer
@@ -68,6 +72,9 @@ TunnelEvent
 URL
 UnloadLibraryEvent
 UserAccount
+UserAccountEvent
 WebResource
 WindowsRegistryKey
+WindowsRegistryKeyEvent
 WindowsRegistryValue
+WindowsRegistryValueEvent

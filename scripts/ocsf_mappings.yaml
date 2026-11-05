@@ -9,6 +9,10 @@
 # same value in the same form. OCSF writes a CWE as CWE-787, as lmodel/cve does, and
 # lmodel/cwe's key holds the number alone, so that one is related. OCSF names no KEV
 # field: a KEV entry is keyed by its CVE id, which is the only relation stated.
+#
+# D3FEND's own file also ties terms to OCSF's addresses under rdfs:seeAlso. Where OCSF's
+# references do not name that term, it is listed here as related, and
+# tests/test_mappings.py holds every such link to tests/upstream/d3fend-ocsf-links.txt.
 classes:
   OcsfCve:
     close_mappings:
@@ -49,6 +53,27 @@ classes:
   OcsfD3fTechnique:
     close_mappings:
       - d3f:DefensiveTechnique
+  OcsfAccountChange:
+    related_mappings:
+      - d3f:UserAccountEvent
+  OcsfDeviceHwInfo:
+    related_mappings:
+      - d3f:HardwareDevice
+  OcsfHttpRequest:
+    related_mappings:
+      - d3f:OutboundInternetWebTraffic
+  OcsfHttpResponse:
+    related_mappings:
+      - d3f:InboundInternetWebTraffic
+  OcsfLocation:
+    related_mappings:
+      - d3f:PhysicalLocation
+  OcsfWinRegistryKeyActivity:
+    related_mappings:
+      - d3f:WindowsRegistryKeyEvent
+  OcsfWinRegistryValueActivity:
+    related_mappings:
+      - d3f:WindowsRegistryValueEvent
 slots:
   base_score:
     exact_mappings:

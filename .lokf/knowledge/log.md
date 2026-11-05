@@ -1,5 +1,10 @@
 # Change Log
 
+## 2026-11-05
+
+* **Changed**: the D3FEND term list also lists the OCSF addresses D3FEND's own file names.
+* **Changed**: the mappings explanation says D3FEND's own links also give a mapping.
+
 ## 2026-11-04
 
 * **Changed**: two references name their address in the frontmatter, not in the description.

@@ -4388,6 +4388,8 @@ classes:
         - https://github.com/apple-oss-distributions/xnu/blob/8d741a5de7ff4191bf97d57b9f54c2f6d4a15585/iokit/IOKit/IOKitKeys.h#L264-L265
       vendor_name:
         description: The device manufacturer.
+    related_mappings:
+    - d3f:HardwareDevice
   OcsfDigitalSignature:
     title: Digital Signature
     description: The Digital Signature object contains information about the cryptographic mechanism used
@@ -6627,6 +6629,7 @@ classes:
       ocsf_key: http_request
     related_mappings:
     - d3f:OutboundInternetNetworkTraffic
+    - d3f:OutboundInternetWebTraffic
     slots:
     - args
     - body_length
@@ -6681,6 +6684,7 @@ classes:
       ocsf_key: http_response
     related_mappings:
     - d3f:InboundInternetNetworkTraffic
+    - d3f:InboundInternetWebTraffic
     slots:
     - body_length
     - code
@@ -7738,6 +7742,8 @@ classes:
         see_also:
         - https://www.iso.org/iso-3166-country-codes.html
         - https://www.iso.org/obp/ui/#iso:code:3166:US
+    related_mappings:
+    - d3f:PhysicalLocation
   OcsfLogger:
     title: Logger
     description: The Logger object represents the device and product where events are stored with times
@@ -18816,6 +18822,8 @@ classes:
           ocsf_group: primary
           ocsf_deprecated_since: 1.9.0
           ocsf_superseded_by: updated_user
+    related_mappings:
+    - d3f:UserAccountEvent
   OcsfAuthentication:
     title: Authentication
     description: Authentication events report authentication session activities, including user attempts
@@ -25167,6 +25175,8 @@ classes:
           title: 'Registry Key Activity: Export'
         - equals_number: 20100199
           title: 'Registry Key Activity: Other'
+    related_mappings:
+    - d3f:WindowsRegistryKeyEvent
   OcsfWinRegistryKeyQuery:
     title: Registry Key Query
     description: Registry Key Query events report information about discovered Windows registry keys.
@@ -25286,6 +25296,8 @@ classes:
           title: 'Registry Value Activity: Delete'
         - equals_number: 20100299
           title: 'Registry Value Activity: Other'
+    related_mappings:
+    - d3f:WindowsRegistryValueEvent
   OcsfWinRegistryValueQuery:
     title: Registry Value Query
     description: Registry Value Query events report information about discovered Windows registry values.
