@@ -1,0 +1,1625 @@
+---
+id: https://w3id.org/lmodel/ocsf/ocsf_events_discovery
+name: ocsf_events_discovery
+title: 'OCSF event classes: Discovery'
+description: Discovery events report the existence and state of devices, files, configurations,
+  processes, registry keys, and other objects.
+version: 1.9.0
+source: https://github.com/ocsf/ocsf-schema/tree/1.9.0
+license: Apache-2.0
+see_also:
+  - https://lmodel.github.io/ocsf
+  - https://schema.ocsf.io/1.9.0/
+prefixes:
+  ocsf: https://w3id.org/lmodel/ocsf/
+  linkml: https://w3id.org/linkml/
+  xsd: http://www.w3.org/2001/XMLSchema#
+  attack: https://w3id.org/lmodel/attack/
+  cve: https://w3id.org/lmodel/cve/
+  cwe: https://w3id.org/lmodel/cwe/
+  d3f: http://d3fend.mitre.org/ontologies/d3fend.owl#
+  kev_catalog: https://w3id.org/lmodel/kev-catalog/
+  nist_nvd: https://w3id.org/lmodel/nist-nvd/
+  stix: https://w3id.org/lmodel/stix/
+default_prefix: ocsf
+default_range: string
+imports:
+  - linkml:types
+  - ocsf_core
+  - ocsf_objects
+  - ocsf_events_base
+classes:
+  OcsfDiscoveryEvent:
+    title: Discovery
+    description: The Discovery event is a generic event that defines a set of attributes available
+      in Discovery category events. As a generic event, it could be used to log events that
+      are not otherwise defined by the Discovery specific event classes.
+    class_uri: ocsf:OcsfDiscoveryEvent
+    abstract: true
+    is_a: OcsfBaseEvent
+    in_subset:
+      - ocsf_category_discovery
+    instantiates:
+      - ocsf:OcsfFacts
+    annotations:
+      ocsf_key: discovery
+      ocsf_category: discovery
+    slot_usage:
+      category_uid:
+        equals_number: 5
+  OcsfDiscoveryResultEvent:
+    title: Discovery Result
+    description: Discovery Result events report the results of a discovery request.
+    class_uri: ocsf:OcsfDiscoveryResultEvent
+    abstract: true
+    is_a: OcsfBaseEvent
+    in_subset:
+      - ocsf_category_discovery
+    instantiates:
+      - ocsf:OcsfFacts
+    annotations:
+      ocsf_key: discovery_result
+      ocsf_category: discovery
+    slots:
+      - query_info
+      - query_result
+      - query_result_id
+    slot_usage:
+      category_uid:
+        equals_number: 5
+      query_info:
+        description: The search details associated with the query request.
+        recommended: true
+        annotations:
+          ocsf_group: primary
+      query_result:
+        recommended: true
+        annotations:
+          ocsf_group: primary
+      query_result_id:
+        required: true
+        annotations:
+          ocsf_group: primary
+          ocsf_sibling: query_result
+  OcsfAdminGroupQuery:
+    title: Admin Group Query
+    description: Admin Group Query events report information about administrative groups.
+    class_uri: ocsf:OcsfAdminGroupQuery
+    deprecated: Use the <code>evidence_info</code> class.
+    is_a: OcsfDiscoveryResultEvent
+    in_subset:
+      - ocsf_category_discovery
+    instantiates:
+      - ocsf:OcsfFacts
+    annotations:
+      ocsf_key: admin_group_query
+      ocsf_category: discovery
+      ocsf_profiles: cloud container data_classification datetime host linux/linux_users macos/macos_users
+        osint record_integrity security_control
+      ocsf_deprecated_since: 1.5.0
+      ocsf_superseded_by: evidence_info
+    slots:
+      - group
+      - users
+    slot_usage:
+      activity_id:
+        any_of:
+          - equals_number: 0
+            title: Unknown
+            description: The event activity is unknown.
+          - equals_number: 1
+            title: Query
+            description: The discovered results are via a query request.
+          - equals_number: 99
+            title: Other
+            description: The event activity is not mapped. See the <code>activity_name</code>
+              attribute, which contains a data source specific value.
+      category_name:
+        description: 'The event category name, as defined by category_uid value: <code>Discovery</code>.'
+      class_name:
+        description: 'The event class name, as defined by class_uid value: <code>Admin Group
+          Query</code>.'
+      class_uid:
+        equals_number: 5009
+      group:
+        description: The administrative group.
+        required: true
+        annotations:
+          ocsf_group: primary
+      type_uid:
+        any_of:
+          - equals_number: 500900
+            title: 'Admin Group Query: Unknown'
+          - equals_number: 500901
+            title: 'Admin Group Query: Query'
+            description: The discovered results are via a query request.
+          - equals_number: 500999
+            title: 'Admin Group Query: Other'
+      users:
+        description: The users that belong to the administrative group.
+        recommended: true
+        annotations:
+          ocsf_group: primary
+  OcsfCloudResourcesInventoryInfo:
+    title: Cloud Resources Inventory Info
+    description: Cloud Resources Inventory Info events report cloud asset inventory data.
+      This data can be either logged or proactively collected. For example, use this event
+      class when creating an inventory of cloud resource information from a Configuration
+      Management Database (CMDB), Cyber Asset Attack Surface Management (CAASM), direct public
+      cloud service provider APIs, Software-as-a-Service (SaaS) APIs, or otherwise.
+    class_uri: ocsf:OcsfCloudResourcesInventoryInfo
+    is_a: OcsfDiscoveryEvent
+    in_subset:
+      - ocsf_category_discovery
+    instantiates:
+      - ocsf:OcsfFacts
+    annotations:
+      ocsf_key: cloud_resources_inventory_info
+      ocsf_category: discovery
+      ocsf_profiles: cloud container data_classification datetime host linux/linux_users macos/macos_users
+        osint record_integrity security_control
+      ocsf_constraints: '{"at_least_one": ["cloud", "container", "database", "databucket",
+        "idp", "resources", "table"]}'
+    any_of:
+      - slot_conditions:
+          cloud:
+            required: true
+      - slot_conditions:
+          container:
+            required: true
+      - slot_conditions:
+          database:
+            required: true
+      - slot_conditions:
+          databucket:
+            required: true
+      - slot_conditions:
+          idp:
+            required: true
+      - slot_conditions:
+          resources:
+            required: true
+      - slot_conditions:
+          table:
+            required: true
+    slots:
+      - container
+      - database
+      - databucket
+      - idp
+      - region
+      - resources
+      - table
+    slot_usage:
+      activity_id:
+        any_of:
+          - equals_number: 0
+            title: Unknown
+            description: The event activity is unknown.
+          - equals_number: 1
+            title: Log
+            description: The discovered information is via a log.
+          - equals_number: 2
+            title: Collect
+            description: The discovered information is via a collection process.
+          - equals_number: 99
+            title: Other
+            description: The event activity is not mapped. See the <code>activity_name</code>
+              attribute, which contains a data source specific value.
+      category_name:
+        description: 'The event category name, as defined by category_uid value: <code>Discovery</code>.'
+      class_name:
+        description: 'The event class name, as defined by class_uid value: <code>Cloud Resources
+          Inventory Info</code>.'
+      class_uid:
+        equals_number: 5023
+      cloud:
+        description: Cloud service provider or SaaS platform metadata about the cloud resource(s)
+          that are being discovered by an inventory process.
+        recommended: true
+        annotations:
+          ocsf_group: primary
+      container:
+        description: A cloud-based container image or running container discovered by an inventory
+          process.
+        recommended: true
+        annotations:
+          ocsf_group: primary
+      database:
+        description: A cloud-based database discovered by an inventory process.
+        recommended: true
+        annotations:
+          ocsf_group: primary
+      databucket:
+        description: A cloud-based data bucket or other object storage discovered by an inventory
+          process.
+        recommended: true
+        annotations:
+          ocsf_group: primary
+      idp:
+        description: The Identity Provider that is being discovered by an inventory process,
+          or that is related to the cloud resource(s) being discovered by an inventory process.
+        recommended: true
+        annotations:
+          ocsf_group: primary
+      region:
+        description: The cloud region where the resource is located, e.g., <code>us-isof-south-1</code>,
+          <code>eastus2</code>, <code>us-central1</code>, etc.
+        recommended: true
+        annotations:
+          ocsf_group: context
+      resources:
+        title: Cloud Resources
+        description: The cloud resource(s) that are being discovered by an inventory process.
+          Use this object if there is not a direct object match in the class.
+        recommended: true
+        annotations:
+          ocsf_group: primary
+      table:
+        description: A cloud-based database table discovered by an inventory process.
+        recommended: true
+        annotations:
+          ocsf_group: primary
+      type_uid:
+        any_of:
+          - equals_number: 502300
+            title: 'Cloud Resources Inventory Info: Unknown'
+          - equals_number: 502301
+            title: 'Cloud Resources Inventory Info: Log'
+            description: The discovered information is via a log.
+          - equals_number: 502302
+            title: 'Cloud Resources Inventory Info: Collect'
+            description: The discovered information is via a collection process.
+          - equals_number: 502399
+            title: 'Cloud Resources Inventory Info: Other'
+  OcsfConfigState:
+    title: Device Config State
+    description: Device Config State events report device configuration data, device assessments,
+      and/or CIS Benchmark results.
+    class_uri: ocsf:OcsfConfigState
+    deprecated: Use <code>compliance_finding</code> class.
+    is_a: OcsfDiscoveryEvent
+    in_subset:
+      - ocsf_category_discovery
+    instantiates:
+      - ocsf:OcsfFacts
+    annotations:
+      ocsf_key: config_state
+      ocsf_category: discovery
+      ocsf_profiles: cloud container data_classification datetime host linux/linux_users macos/macos_users
+        osint record_integrity security_control
+      ocsf_deprecated_since: 1.5.0
+      ocsf_superseded_by: compliance_finding
+    slots:
+      - assessments
+      - cis_benchmark_result
+    slot_usage:
+      activity_id:
+        any_of:
+          - equals_number: 0
+            title: Unknown
+            description: The event activity is unknown.
+          - equals_number: 1
+            title: Log
+            description: The discovered information is via a log.
+          - equals_number: 2
+            title: Collect
+            description: The discovered information is via a collection process.
+          - equals_number: 99
+            title: Other
+            description: The event activity is not mapped. See the <code>activity_name</code>
+              attribute, which contains a data source specific value.
+      actor:
+        annotations:
+          ocsf_group: context
+      assessments:
+        title: Related Assessments
+        description: A list of assessments associated with the device.
+        annotations:
+          ocsf_group: context
+      category_name:
+        description: 'The event category name, as defined by category_uid value: <code>Discovery</code>.'
+      cis_benchmark_result:
+        recommended: true
+        annotations:
+          ocsf_group: primary
+          ocsf_deprecated_since: 1.5.0
+          ocsf_superseded_by: compliance.checks
+      class_name:
+        description: 'The event class name, as defined by class_uid value: <code>Device Config
+          State</code>.'
+      class_uid:
+        equals_number: 5002
+      device:
+        description: The device that is being discovered by an inventory process.
+        required: true
+        recommended: false
+        annotations:
+          ocsf_group: primary
+      type_uid:
+        any_of:
+          - equals_number: 500200
+            title: 'Device Config State: Unknown'
+          - equals_number: 500201
+            title: 'Device Config State: Log'
+            description: The discovered information is via a log.
+          - equals_number: 500202
+            title: 'Device Config State: Collect'
+            description: The discovered information is via a collection process.
+          - equals_number: 500299
+            title: 'Device Config State: Other'
+  OcsfDeviceConfigStateChange:
+    title: Device Config State Change
+    description: Device Config State Change events report state changes that impact the security
+      of the device.
+    class_uri: ocsf:OcsfDeviceConfigStateChange
+    is_a: OcsfDiscoveryEvent
+    in_subset:
+      - ocsf_category_discovery
+    instantiates:
+      - ocsf:OcsfFacts
+    annotations:
+      ocsf_key: device_config_state_change
+      ocsf_category: discovery
+      ocsf_profiles: cloud container data_classification datetime host linux/linux_users macos/macos_users
+        osint record_integrity security_control
+    slots:
+      - prev_security_level
+      - prev_security_level_id
+      - prev_security_states
+      - security_level
+      - security_level_id
+      - security_states
+      - state
+      - state_id
+    slot_usage:
+      activity_id:
+        any_of:
+          - equals_number: 0
+            title: Unknown
+            description: The event activity is unknown.
+          - equals_number: 1
+            title: Log
+            description: The discovered information is via a log.
+          - equals_number: 2
+            title: Collect
+            description: The discovered information is via a collection process.
+          - equals_number: 99
+            title: Other
+            description: The event activity is not mapped. See the <code>activity_name</code>
+              attribute, which contains a data source specific value.
+      actor:
+        annotations:
+          ocsf_group: context
+      category_name:
+        description: 'The event category name, as defined by category_uid value: <code>Discovery</code>.'
+      class_name:
+        description: 'The event class name, as defined by class_uid value: <code>Device Config
+          State Change</code>.'
+      class_uid:
+        equals_number: 5019
+      device:
+        description: The device that is impacted by the state change.
+        required: true
+        recommended: false
+        annotations:
+          ocsf_group: primary
+      prev_security_level:
+        recommended: true
+        annotations:
+          ocsf_group: primary
+      prev_security_level_id:
+        recommended: true
+        annotations:
+          ocsf_group: primary
+          ocsf_sibling: prev_security_level
+      prev_security_states:
+        description: The previous security states of the device.
+        recommended: true
+        annotations:
+          ocsf_group: primary
+      security_level:
+        recommended: true
+        annotations:
+          ocsf_group: primary
+      security_level_id:
+        recommended: true
+        annotations:
+          ocsf_group: primary
+          ocsf_sibling: security_level
+      security_states:
+        description: The current security states of the device.
+        recommended: true
+        annotations:
+          ocsf_group: primary
+      state:
+        title: Config Change State
+        description: The Config Change Stat, normalized to the caption of the state_id value.
+          In the case of 'Other', it is defined by the source.
+      state_id:
+        title: Config Change State ID
+        description: The Config Change State of the managed entity.
+        any_of:
+          - equals_number: 0
+            title: Unknown
+            description: The Config Change state is unknown.
+          - equals_number: 1
+            title: Disabled
+            description: Config State Changed to Disabled.
+          - equals_number: 2
+            title: Enabled
+            description: Config State Changed to Enabled.
+          - equals_number: 99
+            title: Other
+            description: The Config Change is not mapped. See the <code>state</code> attribute,
+              which contains data source specific values.
+        recommended: true
+      type_uid:
+        any_of:
+          - equals_number: 501900
+            title: 'Device Config State Change: Unknown'
+          - equals_number: 501901
+            title: 'Device Config State Change: Log'
+            description: The discovered information is via a log.
+          - equals_number: 501902
+            title: 'Device Config State Change: Collect'
+            description: The discovered information is via a collection process.
+          - equals_number: 501999
+            title: 'Device Config State Change: Other'
+  OcsfEvidenceInfo:
+    title: Live Evidence Info
+    description: Data collected directly from devices that represents forensic information
+      pulled, queried, or discovered from devices that may indicate malicious activity. It
+      contains a number of child objects, each representing a distinct evidence domain (network
+      connections, file artifacts, registry entries, etc.). When mapping raw telemetry data
+      users should select Query Evidence and then the appropriate child object that best matches
+      the evidence type.
+    class_uri: ocsf:OcsfEvidenceInfo
+    is_a: OcsfDiscoveryResultEvent
+    in_subset:
+      - ocsf_category_discovery
+    instantiates:
+      - ocsf:OcsfFacts
+    annotations:
+      ocsf_key: evidence_info
+      ocsf_category: discovery
+      ocsf_profiles: cloud container data_classification datetime host linux/linux_users macos/macos_users
+        osint record_integrity security_control
+    slots:
+      - query_evidence
+    slot_usage:
+      activity_id:
+        any_of:
+          - equals_number: 0
+            title: Unknown
+            description: The event activity is unknown.
+          - equals_number: 1
+            title: Query
+            description: The discovered results are via a query request.
+          - equals_number: 99
+            title: Other
+            description: The event activity is not mapped. See the <code>activity_name</code>
+              attribute, which contains a data source specific value.
+      category_name:
+        description: 'The event category name, as defined by category_uid value: <code>Discovery</code>.'
+      class_name:
+        description: 'The event class name, as defined by class_uid value: <code>Live Evidence
+          Info</code>.'
+      class_uid:
+        equals_number: 5040
+      device:
+        description: An addressable device, computer system or host from which evidence was
+          collected.
+        required: true
+        recommended: false
+        annotations:
+          ocsf_group: primary
+      query_evidence:
+        description: The specific resulting evidence information that was queried or discovered
+          based on the query type. Contains various child objects corresponding to the query_type_id
+          values.
+        required: true
+        annotations:
+          ocsf_group: primary
+      type_uid:
+        any_of:
+          - equals_number: 504000
+            title: 'Live Evidence Info: Unknown'
+          - equals_number: 504001
+            title: 'Live Evidence Info: Query'
+            description: The discovered results are via a query request.
+          - equals_number: 504099
+            title: 'Live Evidence Info: Other'
+  OcsfFileQuery:
+    title: File Query
+    description: File Query events report information about files that are present on the
+      system.
+    class_uri: ocsf:OcsfFileQuery
+    deprecated: Use the <code>evidence_info</code> class.
+    is_a: OcsfDiscoveryResultEvent
+    in_subset:
+      - ocsf_category_discovery
+    instantiates:
+      - ocsf:OcsfFacts
+    annotations:
+      ocsf_key: file_query
+      ocsf_category: discovery
+      ocsf_profiles: cloud container data_classification datetime host linux/linux_users macos/macos_users
+        osint record_integrity security_control
+      ocsf_deprecated_since: 1.5.0
+      ocsf_superseded_by: evidence_info
+    slots:
+      - file
+    slot_usage:
+      activity_id:
+        any_of:
+          - equals_number: 0
+            title: Unknown
+            description: The event activity is unknown.
+          - equals_number: 1
+            title: Query
+            description: The discovered results are via a query request.
+          - equals_number: 99
+            title: Other
+            description: The event activity is not mapped. See the <code>activity_name</code>
+              attribute, which contains a data source specific value.
+      category_name:
+        description: 'The event category name, as defined by category_uid value: <code>Discovery</code>.'
+      class_name:
+        description: 'The event class name, as defined by class_uid value: <code>File Query</code>.'
+      class_uid:
+        equals_number: 5007
+      file:
+        description: The file that is the target of the query.
+        required: true
+        annotations:
+          ocsf_group: primary
+      type_uid:
+        any_of:
+          - equals_number: 500700
+            title: 'File Query: Unknown'
+          - equals_number: 500701
+            title: 'File Query: Query'
+            description: The discovered results are via a query request.
+          - equals_number: 500799
+            title: 'File Query: Other'
+  OcsfFolderQuery:
+    title: Folder Query
+    description: Folder Query events report information about folders that are present on
+      the system.
+    class_uri: ocsf:OcsfFolderQuery
+    deprecated: Use the <code>evidence_info</code> class.
+    is_a: OcsfDiscoveryResultEvent
+    in_subset:
+      - ocsf_category_discovery
+    instantiates:
+      - ocsf:OcsfFacts
+    annotations:
+      ocsf_key: folder_query
+      ocsf_category: discovery
+      ocsf_profiles: cloud container data_classification datetime host linux/linux_users macos/macos_users
+        osint record_integrity security_control
+      ocsf_deprecated_since: 1.5.0
+      ocsf_superseded_by: evidence_info
+    slots:
+      - folder
+    slot_usage:
+      activity_id:
+        any_of:
+          - equals_number: 0
+            title: Unknown
+            description: The event activity is unknown.
+          - equals_number: 1
+            title: Query
+            description: The discovered results are via a query request.
+          - equals_number: 99
+            title: Other
+            description: The event activity is not mapped. See the <code>activity_name</code>
+              attribute, which contains a data source specific value.
+      category_name:
+        description: 'The event category name, as defined by category_uid value: <code>Discovery</code>.'
+      class_name:
+        description: 'The event class name, as defined by class_uid value: <code>Folder Query</code>.'
+      class_uid:
+        equals_number: 5008
+      folder:
+        description: The folder that is the target of the query.
+        required: true
+        annotations:
+          ocsf_group: primary
+      type_uid:
+        any_of:
+          - equals_number: 500800
+            title: 'Folder Query: Unknown'
+          - equals_number: 500801
+            title: 'Folder Query: Query'
+            description: The discovered results are via a query request.
+          - equals_number: 500899
+            title: 'Folder Query: Other'
+  OcsfInventoryInfo:
+    title: Device Inventory Info
+    description: Device Inventory Info events report device inventory data that is either
+      logged or proactively collected. For example, when collecting device information from
+      a CMDB or running a network sweep of connected devices.
+    class_uri: ocsf:OcsfInventoryInfo
+    is_a: OcsfDiscoveryEvent
+    in_subset:
+      - ocsf_category_discovery
+    instantiates:
+      - ocsf:OcsfFacts
+    annotations:
+      ocsf_key: inventory_info
+      ocsf_category: discovery
+      ocsf_profiles: cloud container data_classification datetime host linux/linux_users macos/macos_users
+        osint record_integrity security_control
+    slot_usage:
+      activity_id:
+        any_of:
+          - equals_number: 0
+            title: Unknown
+            description: The event activity is unknown.
+          - equals_number: 1
+            title: Log
+            description: The discovered information is via a log.
+          - equals_number: 2
+            title: Collect
+            description: The discovered information is via a collection process.
+          - equals_number: 99
+            title: Other
+            description: The event activity is not mapped. See the <code>activity_name</code>
+              attribute, which contains a data source specific value.
+      actor:
+        annotations:
+          ocsf_group: context
+      category_name:
+        description: 'The event category name, as defined by category_uid value: <code>Discovery</code>.'
+      class_name:
+        description: 'The event class name, as defined by class_uid value: <code>Device Inventory
+          Info</code>.'
+      class_uid:
+        equals_number: 5001
+      device:
+        description: The device that is being discovered by an inventory process.
+        required: true
+        recommended: false
+        annotations:
+          ocsf_group: primary
+      type_uid:
+        any_of:
+          - equals_number: 500100
+            title: 'Device Inventory Info: Unknown'
+          - equals_number: 500101
+            title: 'Device Inventory Info: Log'
+            description: The discovered information is via a log.
+          - equals_number: 500102
+            title: 'Device Inventory Info: Collect'
+            description: The discovered information is via a collection process.
+          - equals_number: 500199
+            title: 'Device Inventory Info: Other'
+  OcsfJobQuery:
+    title: Job Query
+    description: Job Query events report information about scheduled jobs.
+    class_uri: ocsf:OcsfJobQuery
+    deprecated: Use the <code>evidence_info</code> class.
+    is_a: OcsfDiscoveryResultEvent
+    in_subset:
+      - ocsf_category_discovery
+    instantiates:
+      - ocsf:OcsfFacts
+    annotations:
+      ocsf_key: job_query
+      ocsf_category: discovery
+      ocsf_profiles: cloud container data_classification datetime host linux/linux_users macos/macos_users
+        osint record_integrity security_control
+      ocsf_deprecated_since: 1.5.0
+      ocsf_superseded_by: evidence_info
+    slots:
+      - job
+    slot_usage:
+      activity_id:
+        any_of:
+          - equals_number: 0
+            title: Unknown
+            description: The event activity is unknown.
+          - equals_number: 1
+            title: Query
+            description: The discovered results are via a query request.
+          - equals_number: 99
+            title: Other
+            description: The event activity is not mapped. See the <code>activity_name</code>
+              attribute, which contains a data source specific value.
+      category_name:
+        description: 'The event category name, as defined by category_uid value: <code>Discovery</code>.'
+      class_name:
+        description: 'The event class name, as defined by class_uid value: <code>Job Query</code>.'
+      class_uid:
+        equals_number: 5010
+      job:
+        required: true
+        annotations:
+          ocsf_group: primary
+      type_uid:
+        any_of:
+          - equals_number: 501000
+            title: 'Job Query: Unknown'
+          - equals_number: 501001
+            title: 'Job Query: Query'
+            description: The discovered results are via a query request.
+          - equals_number: 501099
+            title: 'Job Query: Other'
+  OcsfKernelObjectQuery:
+    title: Kernel Object Query
+    description: Kernel Object Query events report information about discovered kernel resources.
+    class_uri: ocsf:OcsfKernelObjectQuery
+    deprecated: Use the <code>evidence_info</code> class.
+    is_a: OcsfDiscoveryResultEvent
+    in_subset:
+      - ocsf_category_discovery
+    instantiates:
+      - ocsf:OcsfFacts
+    annotations:
+      ocsf_key: kernel_object_query
+      ocsf_category: discovery
+      ocsf_profiles: cloud container data_classification datetime host linux/linux_users macos/macos_users
+        osint record_integrity security_control
+      ocsf_deprecated_since: 1.5.0
+      ocsf_superseded_by: evidence_info
+    slots:
+      - kernel
+    slot_usage:
+      activity_id:
+        any_of:
+          - equals_number: 0
+            title: Unknown
+            description: The event activity is unknown.
+          - equals_number: 1
+            title: Query
+            description: The discovered results are via a query request.
+          - equals_number: 99
+            title: Other
+            description: The event activity is not mapped. See the <code>activity_name</code>
+              attribute, which contains a data source specific value.
+      category_name:
+        description: 'The event category name, as defined by category_uid value: <code>Discovery</code>.'
+      class_name:
+        description: 'The event class name, as defined by class_uid value: <code>Kernel Object
+          Query</code>.'
+      class_uid:
+        equals_number: 5006
+      kernel:
+        description: The kernel object that pertains to the event.
+        required: true
+        annotations:
+          ocsf_group: primary
+      type_uid:
+        any_of:
+          - equals_number: 500600
+            title: 'Kernel Object Query: Unknown'
+          - equals_number: 500601
+            title: 'Kernel Object Query: Query'
+            description: The discovered results are via a query request.
+          - equals_number: 500699
+            title: 'Kernel Object Query: Other'
+  OcsfModuleQuery:
+    title: Module Query
+    description: Module Query events report information about loaded modules.
+    class_uri: ocsf:OcsfModuleQuery
+    deprecated: Use the <code>evidence_info</code> class.
+    is_a: OcsfDiscoveryResultEvent
+    in_subset:
+      - ocsf_category_discovery
+    instantiates:
+      - ocsf:OcsfFacts
+    annotations:
+      ocsf_key: module_query
+      ocsf_category: discovery
+      ocsf_profiles: cloud container data_classification datetime host linux/linux_users macos/macos_users
+        osint record_integrity security_control
+      ocsf_deprecated_since: 1.5.0
+      ocsf_superseded_by: evidence_info
+    slots:
+      - module
+      - process
+    slot_usage:
+      activity_id:
+        any_of:
+          - equals_number: 0
+            title: Unknown
+            description: The event activity is unknown.
+          - equals_number: 1
+            title: Query
+            description: The discovered results are via a query request.
+          - equals_number: 99
+            title: Other
+            description: The event activity is not mapped. See the <code>activity_name</code>
+              attribute, which contains a data source specific value.
+      category_name:
+        description: 'The event category name, as defined by category_uid value: <code>Discovery</code>.'
+      class_name:
+        description: 'The event class name, as defined by class_uid value: <code>Module Query</code>.'
+      class_uid:
+        equals_number: 5011
+      module:
+        required: true
+        annotations:
+          ocsf_group: primary
+      process:
+        description: The process that loaded the module.
+        required: true
+        annotations:
+          ocsf_group: primary
+      type_uid:
+        any_of:
+          - equals_number: 501100
+            title: 'Module Query: Unknown'
+          - equals_number: 501101
+            title: 'Module Query: Query'
+            description: The discovered results are via a query request.
+          - equals_number: 501199
+            title: 'Module Query: Other'
+  OcsfNetworkConnectionQuery:
+    title: Network Connection Query
+    description: Network Connection Query events report information about active network connections.
+    class_uri: ocsf:OcsfNetworkConnectionQuery
+    deprecated: Use the <code>evidence_info</code> class.
+    is_a: OcsfDiscoveryResultEvent
+    in_subset:
+      - ocsf_category_discovery
+    instantiates:
+      - ocsf:OcsfFacts
+    annotations:
+      ocsf_key: network_connection_query
+      ocsf_category: discovery
+      ocsf_profiles: cloud container data_classification datetime host linux/linux_users macos/macos_users
+        osint record_integrity security_control
+      ocsf_deprecated_since: 1.5.0
+      ocsf_superseded_by: evidence_info
+    slots:
+      - connection_info
+      - process
+      - state
+      - state_id
+    slot_usage:
+      activity_id:
+        any_of:
+          - equals_number: 0
+            title: Unknown
+            description: The event activity is unknown.
+          - equals_number: 1
+            title: Query
+            description: The discovered results are via a query request.
+          - equals_number: 99
+            title: Other
+            description: The event activity is not mapped. See the <code>activity_name</code>
+              attribute, which contains a data source specific value.
+      category_name:
+        description: 'The event category name, as defined by category_uid value: <code>Discovery</code>.'
+      class_name:
+        description: 'The event class name, as defined by class_uid value: <code>Network Connection
+          Query</code>.'
+      class_uid:
+        equals_number: 5012
+      connection_info:
+        required: true
+        annotations:
+          ocsf_group: primary
+      process:
+        description: The process that owns the socket.
+        required: true
+        annotations:
+          ocsf_group: primary
+      state:
+        description: The state of the socket, normalized to the caption of the state_id value.
+          In the case of 'Other', it is defined by the event source.
+        recommended: true
+        annotations:
+          ocsf_group: primary
+      state_id:
+        description: The state of the socket.
+        any_of:
+          - equals_number: 0
+            title: Unknown
+            description: The socket state is unknown.
+          - equals_number: 1
+            title: ESTABLISHED
+            description: The socket has an established connection between a local application
+              and a remote peer.
+          - equals_number: 2
+            title: SYN_SENT
+            description: The socket is actively trying to establish a connection to a remote
+              peer.
+          - equals_number: 3
+            title: SYN_RECV
+            description: The socket has passively received a connection request from a remote
+              peer.
+          - equals_number: 4
+            title: FIN_WAIT1
+            description: The socket connection has been closed by the local application, the
+              remote peer has not yet acknowledged the close, and the system is waiting for
+              it to close its half of the connection.
+          - equals_number: 5
+            title: FIN_WAIT2
+            description: The socket connection has been closed by the local application, the
+              remote peer has acknowledged the close, and the system is waiting for it to
+              close its half of the connection.
+          - equals_number: 6
+            title: TIME_WAIT
+            description: The socket connection has been closed by the local application, the
+              remote peer has closed its half of the connection, and the system is waiting
+              to be sure that the remote peer received the last acknowledgement.
+          - equals_number: 7
+            title: CLOSED
+            description: The socket is not in use.
+          - equals_number: 8
+            title: CLOSE_WAIT
+            description: The socket connection has been closed by the remote peer, and the
+              system is waiting for the local application to close its half of the connection.
+          - equals_number: 9
+            title: LAST_ACK
+            description: The socket connection has been closed by the remote peer, the local
+              application has closed its half of the connection, and the system is waiting
+              for the remote peer to acknowledge the close.
+          - equals_number: 10
+            title: LISTEN
+            description: The socket is listening for incoming connections.
+          - equals_number: 11
+            title: CLOSING
+            description: The socket connection has been closed by the local application and
+              the remote peer simultaneously, and the remote peer has not yet acknowledged
+              the close attempt of the local application.
+          - equals_number: 99
+            title: Other
+            description: The state is not mapped. See the <code>state</code> attribute, which
+              contains a data source specific value.
+        required: true
+        annotations:
+          ocsf_group: primary
+          ocsf_sibling: state
+      type_uid:
+        any_of:
+          - equals_number: 501200
+            title: 'Network Connection Query: Unknown'
+          - equals_number: 501201
+            title: 'Network Connection Query: Query'
+            description: The discovered results are via a query request.
+          - equals_number: 501299
+            title: 'Network Connection Query: Other'
+  OcsfNetworksQuery:
+    title: Networks Query
+    description: Networks Query events report information about network adapters.
+    class_uri: ocsf:OcsfNetworksQuery
+    deprecated: Use the <code>evidence_info</code> class.
+    is_a: OcsfDiscoveryResultEvent
+    in_subset:
+      - ocsf_category_discovery
+    instantiates:
+      - ocsf:OcsfFacts
+    annotations:
+      ocsf_key: networks_query
+      ocsf_category: discovery
+      ocsf_profiles: cloud container data_classification datetime host linux/linux_users macos/macos_users
+        osint record_integrity security_control
+      ocsf_deprecated_since: 1.5.0
+      ocsf_superseded_by: evidence_info
+    slots:
+      - network_interfaces
+    slot_usage:
+      activity_id:
+        any_of:
+          - equals_number: 0
+            title: Unknown
+            description: The event activity is unknown.
+          - equals_number: 1
+            title: Query
+            description: The discovered results are via a query request.
+          - equals_number: 99
+            title: Other
+            description: The event activity is not mapped. See the <code>activity_name</code>
+              attribute, which contains a data source specific value.
+      category_name:
+        description: 'The event category name, as defined by category_uid value: <code>Discovery</code>.'
+      class_name:
+        description: 'The event class name, as defined by class_uid value: <code>Networks
+          Query</code>.'
+      class_uid:
+        equals_number: 5013
+      network_interfaces:
+        required: true
+        annotations:
+          ocsf_group: primary
+      type_uid:
+        any_of:
+          - equals_number: 501300
+            title: 'Networks Query: Unknown'
+          - equals_number: 501301
+            title: 'Networks Query: Query'
+            description: The discovered results are via a query request.
+          - equals_number: 501399
+            title: 'Networks Query: Other'
+  OcsfOsintInventoryInfo:
+    title: OSINT Inventory Info
+    description: OSINT Inventory Info events report open source intelligence or threat intelligence
+      inventory data that is either logged or proactively collected. For example, when collecting
+      OSINT information from Threat Intelligence Platforms (TIPs) or Extended Detection and
+      Response (XDR) platforms, or collecting data from OSINT or other generic threat intelligence
+      and enrichment feeds such as APIs and datastores.
+    class_uri: ocsf:OcsfOsintInventoryInfo
+    is_a: OcsfDiscoveryEvent
+    in_subset:
+      - ocsf_category_discovery
+    instantiates:
+      - ocsf:OcsfFacts
+    annotations:
+      ocsf_key: osint_inventory_info
+      ocsf_category: discovery
+      ocsf_profiles: cloud container data_classification datetime host linux/linux_users macos/macos_users
+        osint record_integrity security_control
+    slot_usage:
+      activity_id:
+        any_of:
+          - equals_number: 0
+            title: Unknown
+            description: The event activity is unknown.
+          - equals_number: 1
+            title: Log
+            description: The discovered information is via a log.
+          - equals_number: 2
+            title: Collect
+            description: The discovered information is via a collection process.
+          - equals_number: 99
+            title: Other
+            description: The event activity is not mapped. See the <code>activity_name</code>
+              attribute, which contains a data source specific value.
+      actor:
+        description: The actor describes the process that was the source of the inventory
+          activity. In the case of OSINT inventory data, that could be a particular process
+          or script that is run to scrape the OSINT or threat intelligence data. For example,
+          it could be a Python process that runs to pull data from a MISP or Shodan API.
+        annotations:
+          ocsf_group: context
+      category_name:
+        description: 'The event category name, as defined by category_uid value: <code>Discovery</code>.'
+      class_name:
+        description: 'The event class name, as defined by class_uid value: <code>OSINT Inventory
+          Info</code>.'
+      class_uid:
+        equals_number: 5021
+      osint:
+        description: The OSINT that is being discovered by an inventory process.
+        required: true
+        annotations:
+          ocsf_group: primary
+      type_uid:
+        any_of:
+          - equals_number: 502100
+            title: 'OSINT Inventory Info: Unknown'
+          - equals_number: 502101
+            title: 'OSINT Inventory Info: Log'
+            description: The discovered information is via a log.
+          - equals_number: 502102
+            title: 'OSINT Inventory Info: Collect'
+            description: The discovered information is via a collection process.
+          - equals_number: 502199
+            title: 'OSINT Inventory Info: Other'
+  OcsfPatchState:
+    title: Operating System Patch State
+    description: Operating System Patch State reports the installation of an OS patch to a
+      device and any associated knowledgebase articles.
+    class_uri: ocsf:OcsfPatchState
+    is_a: OcsfDiscoveryEvent
+    in_subset:
+      - ocsf_category_discovery
+    instantiates:
+      - ocsf:OcsfFacts
+    annotations:
+      ocsf_key: patch_state
+      ocsf_category: discovery
+      ocsf_profiles: cloud container data_classification datetime host linux/linux_users macos/macos_users
+        osint record_integrity security_control
+      ocsf_constraints: '{"at_least_one": ["device.os.sp_name", "device.os.sp_ver", "device.os.version"]}'
+    slots:
+      - kb_article_list
+    slot_usage:
+      activity_id:
+        any_of:
+          - equals_number: 0
+            title: Unknown
+            description: The event activity is unknown.
+          - equals_number: 1
+            title: Log
+            description: The discovered information is via a log.
+          - equals_number: 2
+            title: Collect
+            description: The discovered information is via a collection process.
+          - equals_number: 99
+            title: Other
+            description: The event activity is not mapped. See the <code>activity_name</code>
+              attribute, which contains a data source specific value.
+      category_name:
+        description: 'The event category name, as defined by category_uid value: <code>Discovery</code>.'
+      class_name:
+        description: 'The event class name, as defined by class_uid value: <code>Operating
+          System Patch State</code>.'
+      class_uid:
+        equals_number: 5004
+      device:
+        required: true
+        recommended: false
+        annotations:
+          ocsf_group: primary
+      kb_article_list:
+        recommended: true
+        annotations:
+          ocsf_group: primary
+      type_uid:
+        any_of:
+          - equals_number: 500400
+            title: 'Operating System Patch State: Unknown'
+          - equals_number: 500401
+            title: 'Operating System Patch State: Log'
+            description: The discovered information is via a log.
+          - equals_number: 500402
+            title: 'Operating System Patch State: Collect'
+            description: The discovered information is via a collection process.
+          - equals_number: 500499
+            title: 'Operating System Patch State: Other'
+  OcsfPeripheralDeviceQuery:
+    title: Peripheral Device Query
+    description: Peripheral Device Query events report information about peripheral devices.
+    class_uri: ocsf:OcsfPeripheralDeviceQuery
+    deprecated: Use the <code>evidence_info</code> class.
+    is_a: OcsfDiscoveryResultEvent
+    in_subset:
+      - ocsf_category_discovery
+    instantiates:
+      - ocsf:OcsfFacts
+    annotations:
+      ocsf_key: peripheral_device_query
+      ocsf_category: discovery
+      ocsf_profiles: cloud container data_classification datetime host linux/linux_users macos/macos_users
+        osint record_integrity security_control
+      ocsf_deprecated_since: 1.5.0
+      ocsf_superseded_by: evidence_info
+    slots:
+      - peripheral_device
+    slot_usage:
+      activity_id:
+        any_of:
+          - equals_number: 0
+            title: Unknown
+            description: The event activity is unknown.
+          - equals_number: 1
+            title: Query
+            description: The discovered results are via a query request.
+          - equals_number: 99
+            title: Other
+            description: The event activity is not mapped. See the <code>activity_name</code>
+              attribute, which contains a data source specific value.
+      category_name:
+        description: 'The event category name, as defined by category_uid value: <code>Discovery</code>.'
+      class_name:
+        description: 'The event class name, as defined by class_uid value: <code>Peripheral
+          Device Query</code>.'
+      class_uid:
+        equals_number: 5014
+      peripheral_device:
+        required: true
+        annotations:
+          ocsf_group: primary
+      type_uid:
+        any_of:
+          - equals_number: 501400
+            title: 'Peripheral Device Query: Unknown'
+          - equals_number: 501401
+            title: 'Peripheral Device Query: Query'
+            description: The discovered results are via a query request.
+          - equals_number: 501499
+            title: 'Peripheral Device Query: Other'
+  OcsfProcessQuery:
+    title: Process Query
+    description: Process Query events report information about running processes.
+    class_uri: ocsf:OcsfProcessQuery
+    deprecated: Use the <code>evidence_info</code> class.
+    is_a: OcsfDiscoveryResultEvent
+    in_subset:
+      - ocsf_category_discovery
+    instantiates:
+      - ocsf:OcsfFacts
+    annotations:
+      ocsf_key: process_query
+      ocsf_category: discovery
+      ocsf_profiles: cloud container data_classification datetime host linux/linux_users macos/macos_users
+        osint record_integrity security_control
+      ocsf_deprecated_since: 1.5.0
+      ocsf_superseded_by: evidence_info
+    slots:
+      - process
+    slot_usage:
+      activity_id:
+        any_of:
+          - equals_number: 0
+            title: Unknown
+            description: The event activity is unknown.
+          - equals_number: 1
+            title: Query
+            description: The discovered results are via a query request.
+          - equals_number: 99
+            title: Other
+            description: The event activity is not mapped. See the <code>activity_name</code>
+              attribute, which contains a data source specific value.
+      category_name:
+        description: 'The event category name, as defined by category_uid value: <code>Discovery</code>.'
+      class_name:
+        description: 'The event class name, as defined by class_uid value: <code>Process Query</code>.'
+      class_uid:
+        equals_number: 5015
+      process:
+        required: true
+        annotations:
+          ocsf_group: primary
+      type_uid:
+        any_of:
+          - equals_number: 501500
+            title: 'Process Query: Unknown'
+          - equals_number: 501501
+            title: 'Process Query: Query'
+            description: The discovered results are via a query request.
+          - equals_number: 501599
+            title: 'Process Query: Other'
+  OcsfServiceQuery:
+    title: Service Query
+    description: Service Query events report information about running services.
+    class_uri: ocsf:OcsfServiceQuery
+    deprecated: Use the <code>evidence_info</code> class.
+    is_a: OcsfDiscoveryResultEvent
+    in_subset:
+      - ocsf_category_discovery
+    instantiates:
+      - ocsf:OcsfFacts
+    annotations:
+      ocsf_key: service_query
+      ocsf_category: discovery
+      ocsf_profiles: cloud container data_classification datetime host linux/linux_users macos/macos_users
+        osint record_integrity security_control
+      ocsf_deprecated_since: 1.5.0
+      ocsf_superseded_by: evidence_info
+    slots:
+      - service
+    slot_usage:
+      activity_id:
+        any_of:
+          - equals_number: 0
+            title: Unknown
+            description: The event activity is unknown.
+          - equals_number: 1
+            title: Query
+            description: The discovered results are via a query request.
+          - equals_number: 99
+            title: Other
+            description: The event activity is not mapped. See the <code>activity_name</code>
+              attribute, which contains a data source specific value.
+      category_name:
+        description: 'The event category name, as defined by category_uid value: <code>Discovery</code>.'
+      class_name:
+        description: 'The event class name, as defined by class_uid value: <code>Service Query</code>.'
+      class_uid:
+        equals_number: 5016
+      service:
+        required: true
+        annotations:
+          ocsf_group: primary
+      type_uid:
+        any_of:
+          - equals_number: 501600
+            title: 'Service Query: Unknown'
+          - equals_number: 501601
+            title: 'Service Query: Query'
+            description: The discovered results are via a query request.
+          - equals_number: 501699
+            title: 'Service Query: Other'
+  OcsfSessionQuery:
+    title: User Session Query
+    description: User Session Query events report information about existing user sessions.
+    class_uri: ocsf:OcsfSessionQuery
+    deprecated: Use the <code>evidence_info</code> class.
+    is_a: OcsfDiscoveryResultEvent
+    in_subset:
+      - ocsf_category_discovery
+    instantiates:
+      - ocsf:OcsfFacts
+    annotations:
+      ocsf_key: session_query
+      ocsf_category: discovery
+      ocsf_profiles: cloud container data_classification datetime host linux/linux_users macos/macos_users
+        osint record_integrity security_control
+      ocsf_deprecated_since: 1.5.0
+      ocsf_superseded_by: evidence_info
+    slots:
+      - session
+    slot_usage:
+      activity_id:
+        any_of:
+          - equals_number: 0
+            title: Unknown
+            description: The event activity is unknown.
+          - equals_number: 1
+            title: Query
+            description: The discovered results are via a query request.
+          - equals_number: 99
+            title: Other
+            description: The event activity is not mapped. See the <code>activity_name</code>
+              attribute, which contains a data source specific value.
+      category_name:
+        description: 'The event category name, as defined by category_uid value: <code>Discovery</code>.'
+      class_name:
+        description: 'The event class name, as defined by class_uid value: <code>User Session
+          Query</code>.'
+      class_uid:
+        equals_number: 5017
+      session:
+        required: true
+        annotations:
+          ocsf_group: primary
+      type_uid:
+        any_of:
+          - equals_number: 501700
+            title: 'User Session Query: Unknown'
+          - equals_number: 501701
+            title: 'User Session Query: Query'
+            description: The discovered results are via a query request.
+          - equals_number: 501799
+            title: 'User Session Query: Other'
+  OcsfSoftwareInfo:
+    title: Software Inventory Info
+    description: Software Inventory Info events report device software inventory data that
+      is either logged or proactively collected. For example, when collecting device information
+      from a CMDB or running a network sweep of connected devices.
+    class_uri: ocsf:OcsfSoftwareInfo
+    is_a: OcsfDiscoveryEvent
+    in_subset:
+      - ocsf_category_discovery
+    instantiates:
+      - ocsf:OcsfFacts
+    annotations:
+      ocsf_key: software_info
+      ocsf_category: discovery
+      ocsf_profiles: cloud container data_classification datetime host linux/linux_users macos/macos_users
+        osint record_integrity security_control
+    slots:
+      - package
+      - product
+      - sbom
+    slot_usage:
+      activity_id:
+        any_of:
+          - equals_number: 0
+            title: Unknown
+            description: The event activity is unknown.
+          - equals_number: 1
+            title: Log
+            description: The discovered information is via a log.
+          - equals_number: 2
+            title: Collect
+            description: The discovered information is via a collection process.
+          - equals_number: 99
+            title: Other
+            description: The event activity is not mapped. See the <code>activity_name</code>
+              attribute, which contains a data source specific value.
+      actor:
+        annotations:
+          ocsf_group: context
+      category_name:
+        description: 'The event category name, as defined by category_uid value: <code>Discovery</code>.'
+      class_name:
+        description: 'The event class name, as defined by class_uid value: <code>Software
+          Inventory Info</code>.'
+      class_uid:
+        equals_number: 5020
+      device:
+        description: The device that is being discovered by an inventory process.
+        required: true
+        recommended: false
+        annotations:
+          ocsf_group: primary
+      package:
+        description: The device software that is being discovered by an inventory process.
+        deprecated: Use the <code>sbom</code> attribute instead.
+        recommended: true
+        annotations:
+          ocsf_group: primary
+          ocsf_deprecated_since: 1.4.0
+          ocsf_superseded_by: sbom
+      product:
+        description: Additional product attributes that have been discovered or enriched from
+          a catalog or other external source.
+        annotations:
+          ocsf_group: context
+      sbom:
+        description: The Software Bill of Materials (SBOM) of the device software that is
+          being discovered by an inventory process.
+        recommended: true
+        annotations:
+          ocsf_group: primary
+      type_uid:
+        any_of:
+          - equals_number: 502000
+            title: 'Software Inventory Info: Unknown'
+          - equals_number: 502001
+            title: 'Software Inventory Info: Log'
+            description: The discovered information is via a log.
+          - equals_number: 502002
+            title: 'Software Inventory Info: Collect'
+            description: The discovered information is via a collection process.
+          - equals_number: 502099
+            title: 'Software Inventory Info: Other'
+  OcsfStartupItemQuery:
+    title: Startup Item Query
+    description: Startup Item Query events report information about discovered items, e.g.,
+      application components that are generally configured to run automatically.
+    class_uri: ocsf:OcsfStartupItemQuery
+    deprecated: Use the <code>evidence_info</code> class.
+    is_a: OcsfDiscoveryResultEvent
+    in_subset:
+      - ocsf_category_discovery
+    instantiates:
+      - ocsf:OcsfFacts
+    annotations:
+      ocsf_key: startup_item_query
+      ocsf_category: discovery
+      ocsf_profiles: cloud container data_classification datetime host linux/linux_users macos/macos_users
+        osint record_integrity security_control
+      ocsf_deprecated_since: 1.5.0
+      ocsf_superseded_by: evidence_info
+    slots:
+      - startup_item
+    slot_usage:
+      activity_id:
+        any_of:
+          - equals_number: 0
+            title: Unknown
+            description: The event activity is unknown.
+          - equals_number: 1
+            title: Query
+            description: The discovered results are via a query request.
+          - equals_number: 99
+            title: Other
+            description: The event activity is not mapped. See the <code>activity_name</code>
+              attribute, which contains a data source specific value.
+      category_name:
+        description: 'The event category name, as defined by category_uid value: <code>Discovery</code>.'
+      class_name:
+        description: 'The event class name, as defined by class_uid value: <code>Startup Item
+          Query</code>.'
+      class_uid:
+        equals_number: 5022
+      startup_item:
+        required: true
+        annotations:
+          ocsf_group: primary
+      type_uid:
+        any_of:
+          - equals_number: 502200
+            title: 'Startup Item Query: Unknown'
+          - equals_number: 502201
+            title: 'Startup Item Query: Query'
+            description: The discovered results are via a query request.
+          - equals_number: 502299
+            title: 'Startup Item Query: Other'
+  OcsfUserInventory:
+    title: User Inventory Info
+    description: User Inventory Info events report user inventory data that is either logged
+      or proactively collected. For example, when collecting user information from Active
+      Directory entries.
+    class_uri: ocsf:OcsfUserInventory
+    is_a: OcsfDiscoveryEvent
+    in_subset:
+      - ocsf_category_discovery
+    instantiates:
+      - ocsf:OcsfFacts
+    annotations:
+      ocsf_key: user_inventory
+      ocsf_category: discovery
+      ocsf_profiles: cloud container data_classification datetime host linux/linux_users macos/macos_users
+        osint record_integrity security_control
+    slots:
+      - user
+    slot_usage:
+      activity_id:
+        any_of:
+          - equals_number: 0
+            title: Unknown
+            description: The event activity is unknown.
+          - equals_number: 1
+            title: Log
+            description: The discovered information is via a log.
+          - equals_number: 2
+            title: Collect
+            description: The discovered information is via a collection process.
+          - equals_number: 99
+            title: Other
+            description: The event activity is not mapped. See the <code>activity_name</code>
+              attribute, which contains a data source specific value.
+      actor:
+        description: The actor describes the process that was the source of the inventory
+          activity. In the case of user inventory data, that could be a particular process
+          or script that is run to scrape the user data. For example, it could be a powershell
+          process that runs to pull data from the Azure AD graph API.
+        annotations:
+          ocsf_group: context
+      category_name:
+        description: 'The event category name, as defined by category_uid value: <code>Discovery</code>.'
+      class_name:
+        description: 'The event class name, as defined by class_uid value: <code>User Inventory
+          Info</code>.'
+      class_uid:
+        equals_number: 5003
+      type_uid:
+        any_of:
+          - equals_number: 500300
+            title: 'User Inventory Info: Unknown'
+          - equals_number: 500301
+            title: 'User Inventory Info: Log'
+            description: The discovered information is via a log.
+          - equals_number: 500302
+            title: 'User Inventory Info: Collect'
+            description: The discovered information is via a collection process.
+          - equals_number: 500399
+            title: 'User Inventory Info: Other'
+      user:
+        description: The user that is being discovered by an inventory process.
+        required: true
+        annotations:
+          ocsf_group: primary
+  OcsfUserQuery:
+    title: User Query
+    description: User Query events report user data that have been discovered, queried, polled
+      or searched. This event differs from User Inventory as it describes the result of a
+      targeted search by filtering a subset of user attributes.
+    class_uri: ocsf:OcsfUserQuery
+    deprecated: Use the <code>evidence_info</code> class.
+    is_a: OcsfDiscoveryResultEvent
+    in_subset:
+      - ocsf_category_discovery
+    instantiates:
+      - ocsf:OcsfFacts
+    annotations:
+      ocsf_key: user_query
+      ocsf_category: discovery
+      ocsf_profiles: cloud container data_classification datetime host linux/linux_users macos/macos_users
+        osint record_integrity security_control
+      ocsf_deprecated_since: 1.5.0
+      ocsf_superseded_by: evidence_info
+    slots:
+      - user
+    slot_usage:
+      activity_id:
+        any_of:
+          - equals_number: 0
+            title: Unknown
+            description: The event activity is unknown.
+          - equals_number: 1
+            title: Query
+            description: The discovered results are via a query request.
+          - equals_number: 99
+            title: Other
+            description: The event activity is not mapped. See the <code>activity_name</code>
+              attribute, which contains a data source specific value.
+      category_name:
+        description: 'The event category name, as defined by category_uid value: <code>Discovery</code>.'
+      class_name:
+        description: 'The event class name, as defined by class_uid value: <code>User Query</code>.'
+      class_uid:
+        equals_number: 5018
+      type_uid:
+        any_of:
+          - equals_number: 501800
+            title: 'User Query: Unknown'
+          - equals_number: 501801
+            title: 'User Query: Query'
+            description: The discovered results are via a query request.
+          - equals_number: 501899
+            title: 'User Query: Other'
+      user:
+        required: true
+        annotations:
+          ocsf_group: primary

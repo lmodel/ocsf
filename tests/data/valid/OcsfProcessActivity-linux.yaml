@@ -1,0 +1,43 @@
+# A process launched on Linux, with the attributes the linux_users profile adds.
+activity_id: 1
+activity_name: Launch
+actor:
+  user:
+    name: root
+    uid: "0"
+category_name: System Activity
+category_uid: 1
+class_name: Process Activity
+class_uid: 1007
+device:
+  hostname: web-01.example.com
+  os:
+    name: Ubuntu
+    type: Linux
+    type_id: 200
+  type: Server
+  type_id: 1
+metadata:
+  product:
+    name: Example Agent
+    vendor_name: Example
+  profiles:
+    - host
+    - linux/linux_users
+  version: 1.9.0
+process:
+  auid: 1000
+  cmd_line: /usr/bin/id -u
+  euid: 0
+  file:
+    name: id
+    path: /usr/bin/id
+    type: Regular File
+    type_id: 1
+  name: id
+  pid: 4242
+severity: Informational
+severity_id: 1
+time: 1793793600000
+type_name: "Process Activity: Launch"
+type_uid: 100701

@@ -1,0 +1,3 @@
+# Fails at: /
+# A CVSS object requires its version.
+base_score: 9.8

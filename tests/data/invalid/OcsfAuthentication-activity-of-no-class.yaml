@@ -1,0 +1,17 @@
+# Fails at: /activity_id
+# Authentication lists activities 0 to 7 and 99.
+activity_id: 8
+category_uid: 3
+class_uid: 3002
+metadata:
+  product:
+    name: example
+  version: 1.9.0
+service:
+  name: example
+user:
+  account:
+    name: example
+severity_id: 1
+time: 1793793600000
+type_uid: 300201

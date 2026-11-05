@@ -8,13 +8,13 @@
 # - just works fine with quoted variables of dot-env files like this one
 LINKML_SCHEMA_NAME="ocsf"
 LINKML_SCHEMA_AUTHOR="Noel McLoughlin <noel.mcloughlin@gmail.com>"
-LINKML_SCHEMA_DESCRIPTION="Open Cybersecurity Schema Framework - LinkML Schema"
+LINKML_SCHEMA_DESCRIPTION="Open Cybersecurity Schema Framework (OCSF) 1.9.0 (LinkML)"
 LINKML_SCHEMA_SOURCE_DIR="src/ocsf/schema"
 
 ###### linkml generator variables, used by justfile
 
 ## gen-project configuration file
-LINKML_GENERATORS_CONFIG_YAML=config.yaml
+LINKML_GENERATORS_CONFIG_YAML=.linkml/generators.yaml
 
 ## pass args if gendoc ignores config.yaml (i.e. --no-mergeimports)
 LINKML_GENERATORS_DOC_ARGS=
@@ -26,4 +26,4 @@ LINKML_GENERATORS_OWL_ARGS=
 
 ## pass args to pydantic generator which isn't supported by gen-project
 ## https://github.com/linkml/linkml/issues/2537
-LINKML_GENERATORS_PYDANTIC_ARGS=
+LINKML_GENERATORS_PYDANTIC_ARGS="--meta None"

@@ -1,0 +1,3 @@
+# The least that OcsfDownloadInfo requires. scripts/make_examples.py writes this file.
+src_endpoint:
+  ip: 192.0.2.1

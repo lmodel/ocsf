@@ -1,0 +1,105 @@
+---
+# The mappings the converter adds to the schema, by element. Each target is held by
+# tests/test_mappings.py to a neighbour's released copy under tests/neighbours/, or to
+# tests/upstream/d3fend-terms.txt. A D3FEND term OCSF's own references name is not
+# listed here: the converter reads it from the reference and relates the element to it.
+#
+# An object that says it holds a CVE, a CWE or a CVSS score is close to the neighbour's
+# class for that thing, since the shapes differ. A key is exact only where both hold the
+# same value in the same form. OCSF writes a CWE as CWE-787, as lmodel/cve does, and
+# lmodel/cwe's key holds the number alone, so that one is related. OCSF names no KEV
+# field: a KEV entry is keyed by its CVE id, which is the only relation stated.
+#
+# D3FEND's own file also ties terms to OCSF's addresses under rdfs:seeAlso. Where OCSF's
+# references do not name that term, it is listed here as related, and
+# tests/test_mappings.py holds every such link to tests/upstream/d3fend-ocsf-links.txt.
+classes:
+  OcsfCve:
+    close_mappings:
+      - cve:CveRecord
+      - nist_nvd:NvdCve
+    related_mappings:
+      - kev_catalog:KevVulnerability
+      - stix:StixVulnerability
+  OcsfCwe:
+    close_mappings:
+      - cwe:CweWeakness
+    related_mappings:
+      - nist_nvd:NvdWeakness
+  OcsfCvss:
+    narrow_mappings:
+      - cve:CvssV20
+      - cve:CvssV30
+      - cve:CvssV31
+      - cve:CvssV40
+  OcsfVulnerability:
+    related_mappings:
+      - stix:StixVulnerability
+  OcsfTactic:
+    close_mappings:
+      - attack:AttackTactic
+  OcsfTechnique:
+    close_mappings:
+      - attack:AttackTechnique
+  OcsfSubTechnique:
+    broad_mappings:
+      - attack:AttackTechnique
+  OcsfMitigation:
+    close_mappings:
+      - attack:AttackMitigation
+  OcsfD3fTactic:
+    close_mappings:
+      - d3f:DefensiveTactic
+  OcsfD3fTechnique:
+    close_mappings:
+      - d3f:DefensiveTechnique
+  OcsfAccountChange:
+    related_mappings:
+      - d3f:UserAccountEvent
+  OcsfDeviceHwInfo:
+    related_mappings:
+      - d3f:HardwareDevice
+  OcsfHttpRequest:
+    related_mappings:
+      - d3f:OutboundInternetWebTraffic
+  OcsfHttpResponse:
+    related_mappings:
+      - d3f:InboundInternetWebTraffic
+  OcsfLocation:
+    related_mappings:
+      - d3f:PhysicalLocation
+  OcsfWinRegistryKeyActivity:
+    related_mappings:
+      - d3f:WindowsRegistryKeyEvent
+  OcsfWinRegistryValueActivity:
+    related_mappings:
+      - d3f:WindowsRegistryValueEvent
+slots:
+  base_score:
+    exact_mappings:
+      - cve:baseScore
+  vector_string:
+    exact_mappings:
+      - cve:vectorString
+  cwe_uid:
+    close_mappings:
+      - cve:cweId
+    related_mappings:
+      - kev_catalog:cwes
+  cves:
+    related_mappings:
+      - cve:cveId
+  cpe_name:
+    related_mappings:
+      - nist_nvd:cpeName
+slot_usage:
+  OcsfCve:
+    uid:
+      exact_mappings:
+        - cve:cveId
+  OcsfCwe:
+    uid:
+      close_mappings:
+        - cve:cweId
+      related_mappings:
+        - cwe:CWE_ID

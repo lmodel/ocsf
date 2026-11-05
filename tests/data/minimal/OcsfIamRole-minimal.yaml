@@ -1,0 +1,2 @@
+# The least that OcsfIamRole requires. scripts/make_examples.py writes this file.
+name: example

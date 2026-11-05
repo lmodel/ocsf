@@ -5,8 +5,6 @@
          "@type": "@id",
          "@id": "attack"
       },
-      "capec": "https://w3id.org/lmodel/capec/",
-      "core": "https://w3id.org/lmodel/vulnerability-core/",
       "cve": {
          "@type": "@id",
          "@id": "cve"
@@ -15,17 +13,13 @@
          "@type": "@id",
          "@id": "cwe"
       },
-      "dcterms": "http://purl.org/dc/terms/",
-      "iso27001": "https://w3id.org/lmodel/iso27001/",
+      "d3f": "http://d3fend.mitre.org/ontologies/d3fend.owl#",
       "kev_catalog": "https://w3id.org/lmodel/kev-catalog/",
       "linkml": "https://w3id.org/linkml/",
-      "nvd": "https://w3id.org/lmodel/nist-nvd/",
+      "nist_nvd": "https://w3id.org/lmodel/nist-nvd/",
       "ocsf": "https://w3id.org/lmodel/ocsf/",
-      "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
-      "schema": "http://schema.org/",
       "skos": "http://www.w3.org/2004/02/skos/core#",
-      "stix": "https://lmodel.github.io/stix/",
-      "uco_master": "https://lmodel.github.io/uco-master/",
+      "stix": "https://w3id.org/lmodel/stix/",
       "@vocab": "https://w3id.org/lmodel/ocsf/",
       "access_analysis_result": {
          "@type": "@id",
@@ -42,14 +36,18 @@
          "@id": "access_mask"
       },
       "access_result": {
+         "@type": "@id",
          "@id": "access_result"
       },
       "access_type": {
          "@id": "access_type"
       },
       "accessed_time": {
-         "@type": "xsd:long",
+         "@type": "xsd:integer",
          "@id": "accessed_time"
+      },
+      "accessed_time_dt": {
+         "@id": "accessed_time_dt"
       },
       "accessor": {
          "@type": "@id",
@@ -67,11 +65,7 @@
          "@id": "account_switch_type"
       },
       "account_switch_type_id": {
-         "@context": {
-            "text": "skos:notation",
-            "description": "skos:prefLabel",
-            "meaning": "@id"
-         },
+         "@type": "xsd:integer",
          "@id": "account_switch_type_id"
       },
       "ack_reason": {
@@ -86,19 +80,11 @@
          "@id": "action"
       },
       "action_id": {
-         "@context": {
-            "text": "skos:notation",
-            "description": "skos:prefLabel",
-            "meaning": "@id"
-         },
+         "@type": "xsd:integer",
          "@id": "action_id"
       },
       "activity_id": {
-         "@context": {
-            "text": "skos:notation",
-            "description": "skos:prefLabel",
-            "meaning": "@id"
-         },
+         "@type": "xsd:integer",
          "@id": "activity_id"
       },
       "activity_name": {
@@ -139,6 +125,10 @@
          "@type": "@id",
          "@id": "agent_list"
       },
+      "ai_agent": {
+         "@type": "@id",
+         "@id": "ai_agent"
+      },
       "ai_model": {
          "@type": "@id",
          "@id": "ai_model"
@@ -165,11 +155,7 @@
          "@id": "algorithm"
       },
       "algorithm_id": {
-         "@context": {
-            "text": "skos:notation",
-            "description": "skos:prefLabel",
-            "meaning": "@id"
-         },
+         "@type": "xsd:integer",
          "@id": "algorithm_id"
       },
       "all_privileges_unused": {
@@ -269,6 +255,10 @@
          "@type": "xsd:integer",
          "@id": "attempt"
       },
+      "attestation_list": {
+         "@type": "@id",
+         "@id": "attestation_list"
+      },
       "attributes": {
          "@type": "xsd:integer",
          "@id": "attributes"
@@ -285,22 +275,14 @@
          "@id": "auth_protocol"
       },
       "auth_protocol_id": {
-         "@context": {
-            "text": "skos:notation",
-            "description": "skos:prefLabel",
-            "meaning": "@id"
-         },
+         "@type": "xsd:integer",
          "@id": "auth_protocol_id"
       },
       "auth_type": {
          "@id": "auth_type"
       },
       "auth_type_id": {
-         "@context": {
-            "text": "skos:notation",
-            "description": "skos:prefLabel",
-            "meaning": "@id"
-         },
+         "@type": "xsd:integer",
          "@id": "auth_type_id"
       },
       "authentication_token": {
@@ -309,6 +291,13 @@
       },
       "author": {
          "@id": "author"
+      },
+      "authority": {
+         "@type": "@id",
+         "@id": "authority"
+      },
+      "authority_uid": {
+         "@id": "authority_uid"
       },
       "authorizations": {
          "@type": "@id",
@@ -339,6 +328,15 @@
          "@type": "@id",
          "@id": "baselines"
       },
+      "bcc": {
+         "@id": "bcc"
+      },
+      "bcc_mailboxes": {
+         "@id": "bcc_mailboxes"
+      },
+      "binary_data": {
+         "@id": "binary_data"
+      },
       "bios_date": {
          "@id": "bios_date"
       },
@@ -353,8 +351,11 @@
          "@id": "body_length"
       },
       "boot_time": {
-         "@type": "xsd:long",
+         "@type": "xsd:integer",
          "@id": "boot_time"
+      },
+      "boot_time_dt": {
+         "@id": "boot_time_dt"
       },
       "boot_uid": {
          "@id": "boot_uid"
@@ -363,11 +364,7 @@
          "@id": "boundary"
       },
       "boundary_id": {
-         "@context": {
-            "text": "skos:notation",
-            "description": "skos:prefLabel",
-            "meaning": "@id"
-         },
+         "@type": "xsd:integer",
          "@id": "boundary_id"
       },
       "build": {
@@ -380,11 +377,7 @@
          "@id": "bus_type"
       },
       "bus_type_id": {
-         "@context": {
-            "text": "skos:notation",
-            "description": "skos:prefLabel",
-            "meaning": "@id"
-         },
+         "@type": "xsd:integer",
          "@id": "bus_type_id"
       },
       "bytes": {
@@ -424,11 +417,7 @@
          "@id": "category_id"
       },
       "category_ids": {
-         "@context": {
-            "text": "skos:notation",
-            "description": "skos:prefLabel",
-            "meaning": "@id"
-         },
+         "@type": "xsd:integer",
          "@id": "category_ids"
       },
       "category_name": {
@@ -453,6 +442,13 @@
       },
       "certificate_chain": {
          "@id": "certificate_chain"
+      },
+      "chain_uid": {
+         "@id": "chain_uid"
+      },
+      "charter": {
+         "@type": "@id",
+         "@id": "charter"
       },
       "chassis": {
          "@id": "chassis"
@@ -495,8 +491,8 @@
       "city": {
          "@id": "city"
       },
-      "class_": {
-         "@id": "class_"
+      "class": {
+         "@id": "class"
       },
       "class_name": {
          "@id": "class_name"
@@ -509,11 +505,7 @@
          "@id": "classification"
       },
       "classification_ids": {
-         "@context": {
-            "text": "skos:notation",
-            "description": "skos:prefLabel",
-            "meaning": "@id"
-         },
+         "@type": "xsd:integer",
          "@id": "classification_ids"
       },
       "classifications": {
@@ -532,6 +524,13 @@
       "client_hassh": {
          "@type": "@id",
          "@id": "client_hassh"
+      },
+      "clipboard": {
+         "@type": "@id",
+         "@id": "clipboard"
+      },
+      "clipboard_native_type": {
+         "@id": "clipboard_native_type"
       },
       "cloud": {
          "@type": "@id",
@@ -561,6 +560,9 @@
       "column_number": {
          "@type": "xsd:integer",
          "@id": "column_number"
+      },
+      "com_class_uuid": {
+         "@id": "com_class_uuid"
       },
       "command": {
          "@id": "command"
@@ -613,11 +615,7 @@
          "@id": "confidence"
       },
       "confidence_id": {
-         "@context": {
-            "text": "skos:notation",
-            "description": "skos:prefLabel",
-            "meaning": "@id"
-         },
+         "@type": "xsd:integer",
          "@id": "confidence_id"
       },
       "confidence_score": {
@@ -628,11 +626,7 @@
          "@id": "confidentiality"
       },
       "confidentiality_id": {
-         "@context": {
-            "text": "skos:notation",
-            "description": "skos:prefLabel",
-            "meaning": "@id"
-         },
+         "@type": "xsd:integer",
          "@id": "confidentiality_id"
       },
       "connection_info": {
@@ -652,6 +646,10 @@
       },
       "content_type": {
          "@id": "content_type"
+      },
+      "contents": {
+         "@type": "@id",
+         "@id": "contents"
       },
       "continent": {
          "@id": "continent"
@@ -698,11 +696,7 @@
          "@id": "cpu_architecture"
       },
       "cpu_architecture_id": {
-         "@context": {
-            "text": "skos:notation",
-            "description": "skos:prefLabel",
-            "meaning": "@id"
-         },
+         "@type": "xsd:integer",
          "@id": "cpu_architecture_id"
       },
       "cpu_bits": {
@@ -717,6 +711,10 @@
          "@type": "xsd:integer",
          "@id": "cpu_count"
       },
+      "cpu_info_list": {
+         "@type": "@id",
+         "@id": "cpu_info_list"
+      },
       "cpu_speed": {
          "@type": "xsd:integer",
          "@id": "cpu_speed"
@@ -728,8 +726,11 @@
          "@id": "create_mask"
       },
       "created_time": {
-         "@type": "xsd:long",
+         "@type": "xsd:integer",
          "@id": "created_time"
+      },
+      "created_time_dt": {
+         "@id": "created_time_dt"
       },
       "creator": {
          "@type": "@id",
@@ -740,6 +741,10 @@
       },
       "criticality": {
          "@id": "criticality"
+      },
+      "criticality_id": {
+         "@type": "xsd:integer",
+         "@id": "criticality_id"
       },
       "cumulative_traffic": {
          "@type": "@id",
@@ -760,7 +765,6 @@
          "@id": "cwe_uid"
       },
       "cwe_url": {
-         "@type": "xsd:anyURI",
          "@id": "cwe_url"
       },
       "d3f_tactic": {
@@ -772,6 +776,7 @@
          "@id": "d3f_technique"
       },
       "data": {
+         "@type": "@id",
          "@id": "data"
       },
       "data_classification": {
@@ -786,11 +791,7 @@
          "@id": "data_lifecycle_state"
       },
       "data_lifecycle_state_id": {
-         "@context": {
-            "text": "skos:notation",
-            "description": "skos:prefLabel",
-            "meaning": "@id"
-         },
+         "@type": "xsd:integer",
          "@id": "data_lifecycle_state_id"
       },
       "data_security": {
@@ -822,9 +823,16 @@
          "@type": "xsd:integer",
          "@id": "delay"
       },
+      "delegation": {
+         "@type": "@id",
+         "@id": "delegation"
+      },
       "deleted_time": {
-         "@type": "xsd:long",
+         "@type": "xsd:integer",
          "@id": "deleted_time"
+      },
+      "deleted_time_dt": {
+         "@id": "deleted_time_dt"
       },
       "delivered_to": {
          "@id": "delivered_to"
@@ -863,22 +871,14 @@
          "@id": "detection_pattern_type"
       },
       "detection_pattern_type_id": {
-         "@context": {
-            "text": "skos:notation",
-            "description": "skos:prefLabel",
-            "meaning": "@id"
-         },
+         "@type": "xsd:integer",
          "@id": "detection_pattern_type_id"
       },
       "detection_system": {
          "@id": "detection_system"
       },
       "detection_system_id": {
-         "@context": {
-            "text": "skos:notation",
-            "description": "skos:prefLabel",
-            "meaning": "@id"
-         },
+         "@type": "xsd:integer",
          "@id": "detection_system_id"
       },
       "detection_uid": {
@@ -906,11 +906,7 @@
          "@id": "direction"
       },
       "direction_id": {
-         "@context": {
-            "text": "skos:notation",
-            "description": "skos:prefLabel",
-            "meaning": "@id"
-         },
+         "@type": "xsd:integer",
          "@id": "direction_id"
       },
       "discovery_details": {
@@ -928,11 +924,7 @@
          "@id": "disposition"
       },
       "disposition_id": {
-         "@context": {
-            "text": "skos:notation",
-            "description": "skos:prefLabel",
-            "meaning": "@id"
-         },
+         "@type": "xsd:integer",
          "@id": "disposition_id"
       },
       "dkim": {
@@ -957,11 +949,7 @@
          "@id": "dnssec_status"
       },
       "dnssec_status_id": {
-         "@context": {
-            "text": "skos:notation",
-            "description": "skos:prefLabel",
-            "meaning": "@id"
-         },
+         "@type": "xsd:integer",
          "@id": "dnssec_status_id"
       },
       "domain": {
@@ -975,15 +963,15 @@
          "@type": "@id",
          "@id": "domain_contacts"
       },
+      "download_info": {
+         "@type": "@id",
+         "@id": "download_info"
+      },
       "drive_type": {
          "@id": "drive_type"
       },
       "drive_type_id": {
-         "@context": {
-            "text": "skos:notation",
-            "description": "skos:prefLabel",
-            "meaning": "@id"
-         },
+         "@type": "xsd:integer",
          "@id": "drive_type_id"
       },
       "driver": {
@@ -1067,11 +1055,7 @@
          "@id": "encoding"
       },
       "encoding_id": {
-         "@context": {
-            "text": "skos:notation",
-            "description": "skos:prefLabel",
-            "meaning": "@id"
-         },
+         "@type": "xsd:integer",
          "@id": "encoding_id"
       },
       "encryption_details": {
@@ -1091,8 +1075,11 @@
          "@id": "end_offset"
       },
       "end_time": {
-         "@type": "xsd:long",
+         "@type": "xsd:integer",
          "@id": "end_time"
+      },
+      "end_time_dt": {
+         "@id": "end_time_dt"
       },
       "endpoint_connections": {
          "@type": "@id",
@@ -1125,6 +1112,10 @@
       "error": {
          "@id": "error"
       },
+      "error_id": {
+         "@type": "xsd:integer",
+         "@id": "error_id"
+      },
       "error_message": {
          "@id": "error_message"
       },
@@ -1135,10 +1126,14 @@
       "event_code": {
          "@id": "event_code"
       },
+      "event_codes": {
+         "@id": "event_codes"
+      },
       "event_uid": {
          "@id": "event_uid"
       },
       "evidence": {
+         "@type": "@id",
          "@id": "evidence"
       },
       "evidences": {
@@ -1157,15 +1152,20 @@
          "@id": "expiration_reason"
       },
       "expiration_time": {
-         "@type": "xsd:long",
+         "@type": "xsd:integer",
          "@id": "expiration_time"
       },
+      "expiration_time_dt": {
+         "@id": "expiration_time_dt"
+      },
       "exploit_last_seen_time": {
-         "@type": "xsd:long",
+         "@type": "xsd:integer",
          "@id": "exploit_last_seen_time"
       },
+      "exploit_last_seen_time_dt": {
+         "@id": "exploit_last_seen_time_dt"
+      },
       "exploit_ref_url": {
-         "@type": "xsd:anyURI",
          "@id": "exploit_ref_url"
       },
       "exploit_requirement": {
@@ -1196,11 +1196,7 @@
          "@id": "factor_type"
       },
       "factor_type_id": {
-         "@context": {
-            "text": "skos:notation",
-            "description": "skos:prefLabel",
-            "meaning": "@id"
-         },
+         "@type": "xsd:integer",
          "@id": "factor_type_id"
       },
       "feature": {
@@ -1247,8 +1243,11 @@
          "@id": "firewall_rule"
       },
       "first_seen_time": {
-         "@type": "xsd:long",
+         "@type": "xsd:integer",
          "@id": "first_seen_time"
+      },
+      "first_seen_time_dt": {
+         "@id": "first_seen_time_dt"
       },
       "fix_available": {
          "@type": "xsd:boolean",
@@ -1258,11 +1257,7 @@
          "@id": "fix_coverage"
       },
       "fix_coverage_id": {
-         "@context": {
-            "text": "skos:notation",
-            "description": "skos:prefLabel",
-            "meaning": "@id"
-         },
+         "@type": "xsd:integer",
          "@id": "fix_coverage_id"
       },
       "fixed_in_version": {
@@ -1272,11 +1267,7 @@
          "@id": "flag_history"
       },
       "flag_ids": {
-         "@context": {
-            "text": "skos:notation",
-            "description": "skos:prefLabel",
-            "meaning": "@id"
-         },
+         "@type": "xsd:integer",
          "@id": "flag_ids"
       },
       "flags": {
@@ -1290,18 +1281,14 @@
          "@id": "format"
       },
       "format_id": {
-         "@context": {
-            "text": "skos:notation",
-            "description": "skos:prefLabel",
-            "meaning": "@id"
-         },
+         "@type": "xsd:integer",
          "@id": "format_id"
       },
       "forward_addr": {
          "@id": "forward_addr"
       },
-      "from_": {
-         "@id": "from_"
+      "from": {
+         "@id": "from"
       },
       "from_list": {
          "@id": "from_list"
@@ -1381,11 +1368,18 @@
          "@id": "hashes"
       },
       "hire_time": {
-         "@type": "xsd:long",
+         "@type": "xsd:integer",
          "@id": "hire_time"
+      },
+      "hire_time_dt": {
+         "@id": "hire_time_dt"
       },
       "horizontal_accuracy": {
          "@id": "horizontal_accuracy"
+      },
+      "hosted_ai_agent_list": {
+         "@type": "@id",
+         "@id": "hosted_ai_agent_list"
       },
       "hosted_services": {
          "@type": "@id",
@@ -1432,6 +1426,14 @@
       "hypervisor": {
          "@id": "hypervisor"
       },
+      "iam_role": {
+         "@type": "@id",
+         "@id": "iam_role"
+      },
+      "iam_roles": {
+         "@type": "@id",
+         "@id": "iam_roles"
+      },
       "iccid": {
          "@id": "iccid"
       },
@@ -1467,11 +1469,7 @@
          "@id": "impact"
       },
       "impact_id": {
-         "@context": {
-            "text": "skos:notation",
-            "description": "skos:prefLabel",
-            "meaning": "@id"
-         },
+         "@type": "xsd:integer",
          "@id": "impact_id"
       },
       "impact_score": {
@@ -1485,33 +1483,21 @@
          "@id": "initiator"
       },
       "initiator_id": {
-         "@context": {
-            "text": "skos:notation",
-            "description": "skos:prefLabel",
-            "meaning": "@id"
-         },
+         "@type": "xsd:integer",
          "@id": "initiator_id"
       },
       "injection_type": {
          "@id": "injection_type"
       },
       "injection_type_id": {
-         "@context": {
-            "text": "skos:notation",
-            "description": "skos:prefLabel",
-            "meaning": "@id"
-         },
+         "@type": "xsd:integer",
          "@id": "injection_type_id"
       },
       "install_state": {
          "@id": "install_state"
       },
       "install_state_id": {
-         "@context": {
-            "text": "skos:notation",
-            "description": "skos:prefLabel",
-            "meaning": "@id"
-         },
+         "@type": "xsd:integer",
          "@id": "install_state_id"
       },
       "instance_uid": {
@@ -1521,11 +1507,7 @@
          "@id": "integrity"
       },
       "integrity_id": {
-         "@context": {
-            "text": "skos:notation",
-            "description": "skos:prefLabel",
-            "meaning": "@id"
-         },
+         "@type": "xsd:integer",
          "@id": "integrity_id"
       },
       "interface_name": {
@@ -1730,6 +1712,9 @@
       "issuer": {
          "@id": "issuer"
       },
+      "issuer_uid": {
+         "@id": "issuer_uid"
+      },
       "ja3_hash": {
          "@type": "@id",
          "@id": "ja3_hash"
@@ -1746,8 +1731,16 @@
          "@type": "@id",
          "@id": "job"
       },
+      "job_actions": {
+         "@type": "@id",
+         "@id": "job_actions"
+      },
       "job_title": {
          "@id": "job_title"
+      },
+      "job_triggers": {
+         "@type": "@id",
+         "@id": "job_triggers"
       },
       "json_path": {
          "@id": "json_path"
@@ -1772,6 +1765,9 @@
       "key_length": {
          "@type": "xsd:integer",
          "@id": "key_length"
+      },
+      "key_name": {
+         "@id": "key_name"
       },
       "key_uid": {
          "@id": "key_uid"
@@ -1801,24 +1797,39 @@
          "@id": "lang"
       },
       "last_authentication_time": {
-         "@type": "xsd:long",
+         "@type": "xsd:integer",
          "@id": "last_authentication_time"
       },
+      "last_authentication_time_dt": {
+         "@id": "last_authentication_time_dt"
+      },
       "last_login_time": {
-         "@type": "xsd:long",
+         "@type": "xsd:integer",
          "@id": "last_login_time"
       },
+      "last_login_time_dt": {
+         "@id": "last_login_time_dt"
+      },
       "last_run_time": {
-         "@type": "xsd:long",
+         "@type": "xsd:integer",
          "@id": "last_run_time"
       },
+      "last_run_time_dt": {
+         "@id": "last_run_time_dt"
+      },
       "last_seen_time": {
-         "@type": "xsd:long",
+         "@type": "xsd:integer",
          "@id": "last_seen_time"
       },
+      "last_seen_time_dt": {
+         "@id": "last_seen_time_dt"
+      },
       "last_used_time": {
-         "@type": "xsd:long",
+         "@type": "xsd:integer",
          "@id": "last_used_time"
+      },
+      "last_used_time_dt": {
+         "@id": "last_used_time_dt"
       },
       "lat": {
          "@type": "xsd:float",
@@ -1832,11 +1843,7 @@
          "@id": "launch_type"
       },
       "launch_type_id": {
-         "@context": {
-            "text": "skos:notation",
-            "description": "skos:prefLabel",
-            "meaning": "@id"
-         },
+         "@type": "xsd:integer",
          "@id": "launch_type_id"
       },
       "ldap_cn": {
@@ -1854,8 +1861,11 @@
          "@id": "lease_dur"
       },
       "leave_time": {
-         "@type": "xsd:long",
+         "@type": "xsd:integer",
          "@id": "leave_time"
+      },
+      "leave_time_dt": {
+         "@id": "leave_time_dt"
       },
       "length": {
          "@type": "xsd:integer",
@@ -1865,7 +1875,6 @@
          "@id": "license"
       },
       "license_url": {
-         "@type": "xsd:anyURI",
          "@id": "license_url"
       },
       "lineage": {
@@ -1882,11 +1891,7 @@
          "@id": "load_type"
       },
       "load_type_id": {
-         "@context": {
-            "text": "skos:notation",
-            "description": "skos:prefLabel",
-            "meaning": "@id"
-         },
+         "@type": "xsd:integer",
          "@id": "load_type_id"
       },
       "loaded_modules": {
@@ -1915,30 +1920,31 @@
       "log_source": {
          "@id": "log_source"
       },
+      "log_sources": {
+         "@id": "log_sources"
+      },
       "log_type": {
          "@id": "log_type"
       },
       "log_type_id": {
-         "@context": {
-            "text": "skos:notation",
-            "description": "skos:prefLabel",
-            "meaning": "@id"
-         },
+         "@type": "xsd:integer",
          "@id": "log_type_id"
       },
       "log_version": {
          "@id": "log_version"
       },
       "logged_time": {
-         "@type": "xsd:long",
+         "@type": "xsd:integer",
          "@id": "logged_time"
+      },
+      "logged_time_dt": {
+         "@id": "logged_time_dt"
       },
       "loggers": {
          "@type": "@id",
          "@id": "loggers"
       },
       "login_endpoint": {
-         "@type": "xsd:anyURI",
          "@id": "login_endpoint"
       },
       "logon_process": {
@@ -1949,15 +1955,10 @@
          "@id": "logon_type"
       },
       "logon_type_id": {
-         "@context": {
-            "text": "skos:notation",
-            "description": "skos:prefLabel",
-            "meaning": "@id"
-         },
+         "@type": "xsd:integer",
          "@id": "logon_type_id"
       },
       "logout_endpoint": {
-         "@type": "xsd:anyURI",
          "@id": "logout_endpoint"
       },
       "long": {
@@ -2013,7 +2014,6 @@
          "@id": "metadata"
       },
       "metadata_endpoint": {
-         "@type": "xsd:anyURI",
          "@id": "metadata_endpoint"
       },
       "metrics": {
@@ -2031,8 +2031,11 @@
          "@id": "model"
       },
       "modified_time": {
-         "@type": "xsd:long",
+         "@type": "xsd:integer",
          "@id": "modified_time"
+      },
+      "modified_time_dt": {
+         "@id": "modified_time_dt"
       },
       "modifier": {
          "@type": "@id",
@@ -2074,16 +2077,15 @@
          "@id": "network_scope"
       },
       "network_scope_id": {
-         "@context": {
-            "text": "skos:notation",
-            "description": "skos:prefLabel",
-            "meaning": "@id"
-         },
+         "@type": "xsd:integer",
          "@id": "network_scope_id"
       },
       "next_run_time": {
-         "@type": "xsd:long",
+         "@type": "xsd:integer",
          "@id": "next_run_time"
+      },
+      "next_run_time_dt": {
+         "@id": "next_run_time_dt"
       },
       "nist": {
          "@id": "nist"
@@ -2091,6 +2093,10 @@
       "nodes": {
          "@type": "@id",
          "@id": "nodes"
+      },
+      "notes": {
+         "@type": "@id",
+         "@id": "notes"
       },
       "num_detections": {
          "@type": "xsd:integer",
@@ -2155,11 +2161,7 @@
          "@id": "observation_point"
       },
       "observation_point_id": {
-         "@context": {
-            "text": "skos:notation",
-            "description": "skos:prefLabel",
-            "meaning": "@id"
-         },
+         "@type": "xsd:integer",
          "@id": "observation_point_id"
       },
       "observation_type": {
@@ -2180,6 +2182,57 @@
          "@type": "@id",
          "@id": "occurrences"
       },
+      "ocsf_associations": {
+         "@id": "ocsf_associations"
+      },
+      "ocsf_category": {
+         "@id": "ocsf_category"
+      },
+      "ocsf_category_uid": {
+         "@id": "ocsf_category_uid"
+      },
+      "ocsf_constraints": {
+         "@id": "ocsf_constraints"
+      },
+      "ocsf_deprecated_since": {
+         "@id": "ocsf_deprecated_since"
+      },
+      "ocsf_extension": {
+         "@id": "ocsf_extension"
+      },
+      "ocsf_extension_uid": {
+         "@id": "ocsf_extension_uid"
+      },
+      "ocsf_group": {
+         "@id": "ocsf_group"
+      },
+      "ocsf_key": {
+         "@id": "ocsf_key"
+      },
+      "ocsf_max_len": {
+         "@id": "ocsf_max_len"
+      },
+      "ocsf_observable": {
+         "@id": "ocsf_observable"
+      },
+      "ocsf_profiles": {
+         "@id": "ocsf_profiles"
+      },
+      "ocsf_requirement": {
+         "@id": "ocsf_requirement"
+      },
+      "ocsf_sibling": {
+         "@id": "ocsf_sibling"
+      },
+      "ocsf_source_note": {
+         "@id": "ocsf_source_note"
+      },
+      "ocsf_superseded_by": {
+         "@id": "ocsf_superseded_by"
+      },
+      "ocsf_suppress_checks": {
+         "@id": "ocsf_suppress_checks"
+      },
       "office_location": {
          "@id": "office_location"
       },
@@ -2187,11 +2240,7 @@
          "@id": "opcode"
       },
       "opcode_id": {
-         "@context": {
-            "text": "skos:notation",
-            "description": "skos:prefLabel",
-            "meaning": "@id"
-         },
+         "@type": "xsd:integer",
          "@id": "opcode_id"
       },
       "open_mask": {
@@ -2258,7 +2307,6 @@
          "@id": "package_manager"
       },
       "package_manager_url": {
-         "@type": "xsd:anyURI",
          "@id": "package_manager_url"
       },
       "packages": {
@@ -2308,8 +2356,11 @@
          "@id": "parent_uid"
       },
       "password_last_used_time": {
-         "@type": "xsd:long",
+         "@type": "xsd:integer",
          "@id": "password_last_used_time"
+      },
+      "password_last_used_time_dt": {
+         "@id": "password_last_used_time_dt"
       },
       "path": {
          "@id": "path"
@@ -2325,6 +2376,10 @@
          "@type": "@id",
          "@id": "peripheral_device"
       },
+      "peripheral_devices": {
+         "@type": "@id",
+         "@id": "peripheral_devices"
+      },
       "permission": {
          "@id": "permission"
       },
@@ -2336,11 +2391,7 @@
          "@id": "phase"
       },
       "phase_id": {
-         "@context": {
-            "text": "skos:notation",
-            "description": "skos:prefLabel",
-            "meaning": "@id"
-         },
+         "@type": "xsd:integer",
          "@id": "phase_id"
       },
       "phone_number": {
@@ -2400,6 +2451,10 @@
       "pressure_altitude": {
          "@id": "pressure_altitude"
       },
+      "prev_event": {
+         "@type": "@id",
+         "@id": "prev_event"
+      },
       "prev_reg_key": {
          "@type": "@id",
          "@id": "prev_reg_key"
@@ -2412,26 +2467,22 @@
          "@id": "prev_security_level"
       },
       "prev_security_level_id": {
-         "@context": {
-            "text": "skos:notation",
-            "description": "skos:prefLabel",
-            "meaning": "@id"
-         },
+         "@type": "xsd:integer",
          "@id": "prev_security_level_id"
       },
       "prev_security_states": {
          "@type": "@id",
          "@id": "prev_security_states"
       },
+      "prev_win_service": {
+         "@type": "@id",
+         "@id": "prev_win_service"
+      },
       "priority": {
          "@id": "priority"
       },
       "priority_id": {
-         "@context": {
-            "text": "skos:notation",
-            "description": "skos:prefLabel",
-            "meaning": "@id"
-         },
+         "@type": "xsd:integer",
          "@id": "priority_id"
       },
       "privilege_attack_info": {
@@ -2458,8 +2509,11 @@
          "@id": "process"
       },
       "processed_time": {
-         "@type": "xsd:long",
+         "@type": "xsd:integer",
          "@id": "processed_time"
+      },
+      "processed_time_dt": {
+         "@id": "processed_time_dt"
       },
       "product": {
          "@type": "@id",
@@ -2478,9 +2532,16 @@
       "project_uid": {
          "@id": "project_uid"
       },
+      "prompt_text": {
+         "@id": "prompt_text"
+      },
       "prompt_tokens": {
          "@type": "xsd:integer",
          "@id": "prompt_tokens"
+      },
+      "properties": {
+         "@type": "@id",
+         "@id": "properties"
       },
       "protocol_name": {
          "@id": "protocol_name"
@@ -2493,11 +2554,7 @@
          "@id": "protocol_ver"
       },
       "protocol_ver_id": {
-         "@context": {
-            "text": "skos:notation",
-            "description": "skos:prefLabel",
-            "meaning": "@id"
-         },
+         "@type": "xsd:integer",
          "@id": "protocol_ver_id"
       },
       "provider": {
@@ -2542,6 +2599,10 @@
          "@type": "@id",
          "@id": "query"
       },
+      "query_additional": {
+         "@type": "@id",
+         "@id": "query_additional"
+      },
       "query_evidence": {
          "@type": "@id",
          "@id": "query_evidence"
@@ -2554,40 +2615,31 @@
          "@id": "query_language"
       },
       "query_language_id": {
-         "@context": {
-            "text": "skos:notation",
-            "description": "skos:prefLabel",
-            "meaning": "@id"
-         },
+         "@type": "xsd:integer",
          "@id": "query_language_id"
       },
       "query_result": {
          "@id": "query_result"
       },
       "query_result_id": {
-         "@context": {
-            "text": "skos:notation",
-            "description": "skos:prefLabel",
-            "meaning": "@id"
-         },
+         "@type": "xsd:integer",
          "@id": "query_result_id"
       },
       "query_string": {
          "@id": "query_string"
       },
       "query_time": {
-         "@type": "xsd:long",
+         "@type": "xsd:integer",
          "@id": "query_time"
+      },
+      "query_time_dt": {
+         "@id": "query_time_dt"
       },
       "query_type": {
          "@id": "query_type"
       },
       "query_type_id": {
-         "@context": {
-            "text": "skos:notation",
-            "description": "skos:prefLabel",
-            "meaning": "@id"
-         },
+         "@type": "xsd:integer",
          "@id": "query_type_id"
       },
       "radius": {
@@ -2619,11 +2671,7 @@
          "@id": "rcode"
       },
       "rcode_id": {
-         "@context": {
-            "text": "skos:notation",
-            "description": "skos:prefLabel",
-            "meaning": "@id"
-         },
+         "@type": "xsd:integer",
          "@id": "rcode_id"
       },
       "rdata": {
@@ -2636,6 +2684,10 @@
       "record_index_in_array": {
          "@type": "xsd:integer",
          "@id": "record_index_in_array"
+      },
+      "records": {
+         "@type": "@id",
+         "@id": "records"
       },
       "references": {
          "@id": "references"
@@ -2703,11 +2755,7 @@
          "@id": "relationship"
       },
       "relationship_id": {
-         "@context": {
-            "text": "skos:notation",
-            "description": "skos:prefLabel",
-            "meaning": "@id"
-         },
+         "@type": "xsd:integer",
          "@id": "relationship_id"
       },
       "relay": {
@@ -2776,9 +2824,19 @@
          "@type": "@id",
          "@id": "response"
       },
+      "response_additional": {
+         "@type": "@id",
+         "@id": "response_additional"
+      },
+      "response_text": {
+         "@id": "response_text"
+      },
       "response_time": {
-         "@type": "xsd:long",
+         "@type": "xsd:integer",
          "@id": "response_time"
+      },
+      "response_time_dt": {
+         "@id": "response_time_dt"
       },
       "return_path": {
          "@id": "return_path"
@@ -2793,11 +2851,7 @@
          "@id": "risk_level"
       },
       "risk_level_id": {
-         "@context": {
-            "text": "skos:notation",
-            "description": "skos:prefLabel",
-            "meaning": "@id"
-         },
+         "@type": "xsd:integer",
          "@id": "risk_level_id"
       },
       "risk_score": {
@@ -2808,11 +2862,7 @@
          "@id": "role"
       },
       "role_id": {
-         "@context": {
-            "text": "skos:notation",
-            "description": "skos:prefLabel",
-            "meaning": "@id"
-         },
+         "@type": "xsd:integer",
          "@id": "role_id"
       },
       "row_number": {
@@ -2836,11 +2886,7 @@
          "@id": "run_count"
       },
       "run_mode_ids": {
-         "@context": {
-            "text": "skos:notation",
-            "description": "skos:prefLabel",
-            "meaning": "@id"
-         },
+         "@type": "xsd:integer",
          "@id": "run_mode_ids"
       },
       "run_modes": {
@@ -2850,11 +2896,7 @@
          "@id": "run_state"
       },
       "run_state_id": {
-         "@context": {
-            "text": "skos:notation",
-            "description": "skos:prefLabel",
-            "meaning": "@id"
-         },
+         "@type": "xsd:integer",
          "@id": "run_state_id"
       },
       "runtime": {
@@ -2893,9 +2935,11 @@
          "@id": "scim"
       },
       "scim_group_schema": {
+         "@type": "@id",
          "@id": "scim_group_schema"
       },
       "scim_user_schema": {
+         "@type": "@id",
          "@id": "scim_user_schema"
       },
       "scopes": {
@@ -2905,11 +2949,7 @@
          "@id": "score"
       },
       "score_id": {
-         "@context": {
-            "text": "skos:notation",
-            "description": "skos:prefLabel",
-            "meaning": "@id"
-         },
+         "@type": "xsd:integer",
          "@id": "score_id"
       },
       "script": {
@@ -2943,11 +2983,7 @@
          "@id": "security_level"
       },
       "security_level_id": {
-         "@context": {
-            "text": "skos:notation",
-            "description": "skos:prefLabel",
-            "meaning": "@id"
-         },
+         "@type": "xsd:integer",
          "@id": "security_level_id"
       },
       "security_questions": {
@@ -2966,6 +3002,17 @@
       "sensitivity": {
          "@id": "sensitivity"
       },
+      "sensor_info_list": {
+         "@type": "@id",
+         "@id": "sensor_info_list"
+      },
+      "sensor_layer": {
+         "@id": "sensor_layer"
+      },
+      "sensor_layer_id": {
+         "@type": "xsd:integer",
+         "@id": "sensor_layer_id"
+      },
       "sequence": {
          "@type": "xsd:integer",
          "@id": "sequence"
@@ -2976,6 +3023,13 @@
       },
       "serial_number": {
          "@id": "serial_number"
+      },
+      "serialization": {
+         "@id": "serialization"
+      },
+      "serialization_id": {
+         "@type": "xsd:integer",
+         "@id": "serialization_id"
       },
       "server_ciphers": {
          "@id": "server_ciphers"
@@ -2992,11 +3046,7 @@
          "@id": "service_category"
       },
       "service_category_id": {
-         "@context": {
-            "text": "skos:notation",
-            "description": "skos:prefLabel",
-            "meaning": "@id"
-         },
+         "@type": "xsd:integer",
          "@id": "service_category_id"
       },
       "service_dependencies": {
@@ -3010,11 +3060,7 @@
          "@id": "service_error_control"
       },
       "service_error_control_id": {
-         "@context": {
-            "text": "skos:notation",
-            "description": "skos:prefLabel",
-            "meaning": "@id"
-         },
+         "@type": "xsd:integer",
          "@id": "service_error_control_id"
       },
       "service_file": {
@@ -3036,22 +3082,14 @@
          "@id": "service_start_type"
       },
       "service_start_type_id": {
-         "@context": {
-            "text": "skos:notation",
-            "description": "skos:prefLabel",
-            "meaning": "@id"
-         },
+         "@type": "xsd:integer",
          "@id": "service_start_type_id"
       },
       "service_type": {
          "@id": "service_type"
       },
       "service_type_id": {
-         "@context": {
-            "text": "skos:notation",
-            "description": "skos:prefLabel",
-            "meaning": "@id"
-         },
+         "@type": "xsd:integer",
          "@id": "service_type_id"
       },
       "session": {
@@ -3062,11 +3100,7 @@
          "@id": "severity"
       },
       "severity_id": {
-         "@context": {
-            "text": "skos:notation",
-            "description": "skos:prefLabel",
-            "meaning": "@id"
-         },
+         "@type": "xsd:integer",
          "@id": "severity_id"
       },
       "share": {
@@ -3076,11 +3110,7 @@
          "@id": "share_type"
       },
       "share_type_id": {
-         "@context": {
-            "text": "skos:notation",
-            "description": "skos:prefLabel",
-            "meaning": "@id"
-         },
+         "@type": "xsd:integer",
          "@id": "share_type_id"
       },
       "short_desc": {
@@ -3118,12 +3148,12 @@
          "@id": "source"
       },
       "source_id": {
-         "@context": {
-            "text": "skos:notation",
-            "description": "skos:prefLabel",
-            "meaning": "@id"
-         },
+         "@type": "xsd:integer",
          "@id": "source_id"
+      },
+      "source_process": {
+         "@type": "@id",
+         "@id": "source_process"
       },
       "sp_name": {
          "@id": "sp_name"
@@ -3142,6 +3172,10 @@
       "speed_accuracy": {
          "@id": "speed_accuracy"
       },
+      "speed_mhz": {
+         "@type": "xsd:integer",
+         "@id": "speed_mhz"
+      },
       "spf": {
          "@id": "spf"
       },
@@ -3150,7 +3184,6 @@
          "@id": "src_endpoint"
       },
       "src_url": {
-         "@type": "xsd:anyURI",
          "@id": "src_url"
       },
       "sso": {
@@ -3176,18 +3209,17 @@
          "@id": "start_offset"
       },
       "start_time": {
-         "@type": "xsd:long",
+         "@type": "xsd:integer",
          "@id": "start_time"
+      },
+      "start_time_dt": {
+         "@id": "start_time_dt"
       },
       "start_type": {
          "@id": "start_type"
       },
       "start_type_id": {
-         "@context": {
-            "text": "skos:notation",
-            "description": "skos:prefLabel",
-            "meaning": "@id"
-         },
+         "@type": "xsd:integer",
          "@id": "start_type_id"
       },
       "startup_item": {
@@ -3198,11 +3230,7 @@
          "@id": "state"
       },
       "state_id": {
-         "@context": {
-            "text": "skos:notation",
-            "description": "skos:prefLabel",
-            "meaning": "@id"
-         },
+         "@type": "xsd:integer",
          "@id": "state_id"
       },
       "status": {
@@ -3218,11 +3246,7 @@
          "@id": "status_details"
       },
       "status_id": {
-         "@context": {
-            "text": "skos:notation",
-            "description": "skos:prefLabel",
-            "meaning": "@id"
-         },
+         "@type": "xsd:integer",
          "@id": "status_id"
       },
       "storage_class": {
@@ -3232,12 +3256,11 @@
          "@id": "stratum"
       },
       "stratum_id": {
-         "@context": {
-            "text": "skos:notation",
-            "description": "skos:prefLabel",
-            "meaning": "@id"
-         },
+         "@type": "xsd:integer",
          "@id": "stratum_id"
+      },
+      "string_data": {
+         "@id": "string_data"
       },
       "sub_technique": {
          "@type": "@id",
@@ -3267,6 +3290,7 @@
          "@id": "subnet_uid"
       },
       "supporting_data": {
+         "@type": "@id",
          "@id": "supporting_data"
       },
       "surname": {
@@ -3305,11 +3329,7 @@
          "@id": "tcp_flags"
       },
       "tcp_state_id": {
-         "@context": {
-            "text": "skos:notation",
-            "description": "skos:prefLabel",
-            "meaning": "@id"
-         },
+         "@type": "xsd:integer",
          "@id": "tcp_state_id"
       },
       "technique": {
@@ -3323,8 +3343,11 @@
          "@id": "terminal"
       },
       "terminated_time": {
-         "@type": "xsd:long",
+         "@type": "xsd:integer",
          "@id": "terminated_time"
+      },
+      "terminated_time_dt": {
+         "@id": "terminated_time_dt"
       },
       "threat_actor": {
          "@type": "@id",
@@ -3343,8 +3366,11 @@
          "@id": "tid"
       },
       "time": {
-         "@type": "xsd:long",
+         "@type": "xsd:integer",
          "@id": "time"
+      },
+      "time_dt": {
+         "@id": "time_dt"
       },
       "timespan": {
          "@type": "@id",
@@ -3409,6 +3435,10 @@
          "@type": "@id",
          "@id": "traits"
       },
+      "transaction_id": {
+         "@type": "xsd:integer",
+         "@id": "transaction_id"
+      },
       "transaction_uid": {
          "@id": "transaction_uid"
       },
@@ -3417,11 +3447,18 @@
          "@id": "transformation_info_list"
       },
       "transmit_time": {
-         "@type": "xsd:long",
+         "@type": "xsd:integer",
          "@id": "transmit_time"
+      },
+      "transmit_time_dt": {
+         "@id": "transmit_time_dt"
       },
       "tree_uid": {
          "@id": "tree_uid"
+      },
+      "tsig": {
+         "@type": "@id",
+         "@id": "tsig"
       },
       "ttl": {
          "@type": "xsd:integer",
@@ -3435,22 +3472,14 @@
          "@id": "tunnel_type"
       },
       "tunnel_type_id": {
-         "@context": {
-            "text": "skos:notation",
-            "description": "skos:prefLabel",
-            "meaning": "@id"
-         },
+         "@type": "xsd:integer",
          "@id": "tunnel_type_id"
       },
       "type": {
          "@id": "type"
       },
       "type_id": {
-         "@context": {
-            "text": "skos:notation",
-            "description": "skos:prefLabel",
-            "meaning": "@id"
-         },
+         "@type": "xsd:integer",
          "@id": "type_id"
       },
       "type_name": {
@@ -3471,6 +3500,10 @@
       },
       "uid_alt": {
          "@id": "uid_alt"
+      },
+      "uid_numeric": {
+         "@type": "xsd:integer",
+         "@id": "uid_numeric"
       },
       "unique_malware_count": {
          "@type": "xsd:integer",
@@ -3504,12 +3537,42 @@
          "@type": "xsd:integer",
          "@id": "unused_services_count"
       },
+      "updated_entity": {
+         "@type": "@id",
+         "@id": "updated_entity"
+      },
+      "updated_group": {
+         "@type": "@id",
+         "@id": "updated_group"
+      },
+      "updated_job": {
+         "@type": "@id",
+         "@id": "updated_job"
+      },
+      "updated_resources": {
+         "@type": "@id",
+         "@id": "updated_resources"
+      },
+      "updated_role": {
+         "@type": "@id",
+         "@id": "updated_role"
+      },
+      "updated_user": {
+         "@type": "@id",
+         "@id": "updated_user"
+      },
+      "updated_web_resources": {
+         "@type": "@id",
+         "@id": "updated_web_resources"
+      },
       "uploaded_time": {
-         "@type": "xsd:long",
+         "@type": "xsd:integer",
          "@id": "uploaded_time"
       },
+      "uploaded_time_dt": {
+         "@id": "uploaded_time_dt"
+      },
       "uri": {
-         "@type": "xsd:anyURI",
          "@id": "uri"
       },
       "url": {
@@ -3517,7 +3580,6 @@
          "@id": "url"
       },
       "url_string": {
-         "@type": "xsd:anyURI",
          "@id": "url_string"
       },
       "urls": {
@@ -3565,11 +3627,7 @@
          "@id": "verdict"
       },
       "verdict_id": {
-         "@context": {
-            "text": "skos:notation",
-            "description": "skos:prefLabel",
-            "meaning": "@id"
-         },
+         "@type": "xsd:integer",
          "@id": "verdict_id"
       },
       "version": {
@@ -3591,11 +3649,7 @@
          "@id": "vram_mode"
       },
       "vram_mode_id": {
-         "@context": {
-            "text": "skos:notation",
-            "description": "skos:prefLabel",
-            "meaning": "@id"
-         },
+         "@type": "xsd:integer",
          "@id": "vram_mode_id"
       },
       "vram_size": {
@@ -3650,884 +3704,932 @@
       "zone": {
          "@id": "zone"
       },
-      "AccessAnalysisResult": {
-         "@id": "AccessAnalysisResult"
+      "OcsfAccessAnalysisResult": {
+         "@id": "OcsfAccessAnalysisResult"
       },
-      "Account": {
-         "@id": "Account"
+      "OcsfAccount": {
+         "@id": "OcsfAccount"
       },
-      "AccountChange": {
-         "@id": "AccountChange"
+      "OcsfAccountChange": {
+         "@id": "OcsfAccountChange"
       },
-      "Actor": {
-         "@id": "Actor"
+      "OcsfActor": {
+         "@id": "OcsfActor"
       },
-      "AdditionalRestriction": {
-         "@id": "AdditionalRestriction"
+      "OcsfAdditionalRestriction": {
+         "@id": "OcsfAdditionalRestriction"
       },
-      "AdminGroupQuery": {
-         "@id": "AdminGroupQuery"
+      "OcsfAdminGroupQuery": {
+         "@id": "OcsfAdminGroupQuery"
       },
-      "Advisory": {
-         "@id": "Advisory"
+      "OcsfAdvisory": {
+         "@id": "OcsfAdvisory"
       },
-      "AffectedCode": {
-         "@id": "AffectedCode"
+      "OcsfAffectedCode": {
+         "@id": "OcsfAffectedCode"
       },
-      "AffectedPackage": {
-         "@id": "AffectedPackage"
+      "OcsfAffectedPackage": {
+         "@id": "OcsfAffectedPackage"
       },
-      "Agent": {
-         "@id": "Agent"
+      "OcsfAgent": {
+         "@id": "OcsfAgent"
       },
-      "AiModel": {
-         "@id": "AiModel"
+      "OcsfAiAgent": {
+         "@id": "OcsfAiAgent"
       },
-      "AiOperationProfile": {
-         "@id": "AiOperationProfile"
+      "OcsfAiModel": {
+         "@id": "OcsfAiModel"
       },
-      "AirborneBroadcastActivity": {
-         "@id": "AirborneBroadcastActivity"
+      "OcsfAiOperationProfile": {
+         "@id": "OcsfAiOperationProfile"
       },
-      "Aircraft": {
-         "@id": "Aircraft"
+      "OcsfAirborneBroadcastActivity": {
+         "@id": "OcsfAirborneBroadcastActivity"
       },
-      "AnalysisTarget": {
-         "@id": "AnalysisTarget"
+      "OcsfAircraft": {
+         "@id": "OcsfAircraft"
       },
-      "Analytic": {
-         "@id": "Analytic"
+      "OcsfAnalysisTarget": {
+         "@id": "OcsfAnalysisTarget"
       },
-      "Anomaly": {
-         "@id": "Anomaly"
+      "OcsfAnalytic": {
+         "@id": "OcsfAnalytic"
       },
-      "AnomalyAnalysis": {
-         "@id": "AnomalyAnalysis"
+      "OcsfAnomaly": {
+         "@id": "OcsfAnomaly"
       },
-      "Api": {
-         "@id": "Api"
+      "OcsfAnomalyAnalysis": {
+         "@id": "OcsfAnomalyAnalysis"
       },
-      "ApiActivity": {
-         "@id": "ApiActivity"
+      "OcsfApi": {
+         "@id": "OcsfApi"
       },
-      "ApplicationError": {
-         "@id": "ApplicationError"
+      "OcsfApiActivity": {
+         "@id": "OcsfApiActivity"
       },
-      "ApplicationEvent": {
-         "@id": "ApplicationEvent"
+      "OcsfApplication": {
+         "@id": "OcsfApplication"
       },
-      "ApplicationLifecycle": {
-         "@id": "ApplicationLifecycle"
+      "OcsfApplicationError": {
+         "@id": "OcsfApplicationError"
       },
-      "ApplicationObject": {
-         "@id": "ApplicationObject"
+      "OcsfApplicationEvent": {
+         "@id": "OcsfApplicationEvent"
       },
-      "ApplicationSecurityPostureFinding": {
-         "@id": "ApplicationSecurityPostureFinding"
+      "OcsfApplicationLifecycle": {
+         "@id": "OcsfApplicationLifecycle"
       },
-      "Assessment": {
-         "@id": "Assessment"
+      "OcsfApplicationSecurityPostureFinding": {
+         "@id": "OcsfApplicationSecurityPostureFinding"
       },
-      "Attack": {
-         "@id": "Attack"
+      "OcsfAssessment": {
+         "@id": "OcsfAssessment"
       },
-      "Authentication": {
-         "@id": "Authentication"
+      "OcsfAttack": {
+         "@id": "OcsfAttack"
       },
-      "AuthenticationToken": {
-         "@id": "AuthenticationToken"
+      "OcsfAttestation": {
+         "@id": "OcsfAttestation"
       },
-      "AuthFactor": {
-         "@id": "AuthFactor"
+      "OcsfAuthentication": {
+         "@id": "OcsfAuthentication"
       },
-      "Authorization": {
-         "@id": "Authorization"
+      "OcsfAuthenticationToken": {
+         "@id": "OcsfAuthenticationToken"
       },
-      "AuthorizeSession": {
-         "@id": "AuthorizeSession"
+      "OcsfAuthFactor": {
+         "@id": "OcsfAuthFactor"
       },
-      "AutonomousSystem": {
-         "@id": "AutonomousSystem"
+      "OcsfAuthorization": {
+         "@id": "OcsfAuthorization"
       },
-      "BaseEvent": {
-         "@id": "BaseEvent"
+      "OcsfAuthorizeSession": {
+         "@id": "OcsfAuthorizeSession"
       },
-      "Baseline": {
-         "@id": "Baseline"
+      "OcsfAutonomousSystem": {
+         "@id": "OcsfAutonomousSystem"
       },
-      "Campaign": {
-         "@id": "Campaign"
+      "OcsfBaseEvent": {
+         "@id": "OcsfBaseEvent"
       },
-      "Certificate": {
-         "@id": "Certificate"
+      "OcsfBaseline": {
+         "@id": "OcsfBaseline"
       },
-      "Check": {
-         "@id": "Check"
+      "OcsfCampaign": {
+         "@id": "OcsfCampaign"
       },
-      "CisBenchmark": {
-         "@id": "CisBenchmark"
+      "OcsfCertificate": {
+         "@id": "OcsfCertificate"
       },
-      "CisBenchmarkResult": {
-         "@id": "CisBenchmarkResult"
+      "OcsfCheck": {
+         "@id": "OcsfCheck"
       },
-      "CisControl": {
-         "@id": "CisControl"
+      "OcsfCisBenchmark": {
+         "@id": "OcsfCisBenchmark"
       },
-      "CisCsc": {
-         "@id": "CisCsc"
+      "OcsfCisBenchmarkResult": {
+         "@id": "OcsfCisBenchmarkResult"
       },
-      "ClassifierDetails": {
-         "@id": "ClassifierDetails"
+      "OcsfCisControl": {
+         "@id": "OcsfCisControl"
       },
-      "Cloud": {
-         "@id": "Cloud"
+      "OcsfCisCsc": {
+         "@id": "OcsfCisCsc"
       },
-      "CloudProfile": {
-         "@id": "CloudProfile"
+      "OcsfClassifierDetails": {
+         "@id": "OcsfClassifierDetails"
       },
-      "CloudResourcesInventoryInfo": {
-         "@id": "CloudResourcesInventoryInfo"
+      "OcsfClipboard": {
+         "@id": "OcsfClipboard"
       },
-      "Compliance": {
-         "@id": "Compliance"
+      "OcsfClipboardActivity": {
+         "@id": "OcsfClipboardActivity"
       },
-      "ComplianceFinding": {
-         "@id": "ComplianceFinding"
+      "OcsfClipboardItem": {
+         "@id": "OcsfClipboardItem"
       },
-      "ConfigState": {
-         "@id": "ConfigState"
+      "OcsfCloud": {
+         "@id": "OcsfCloud"
       },
-      "Container": {
-         "@id": "Container"
+      "OcsfCloudProfile": {
+         "@id": "OcsfCloudProfile"
       },
-      "ContainerProfile": {
-         "@id": "ContainerProfile"
+      "OcsfCloudResourcesInventoryInfo": {
+         "@id": "OcsfCloudResourcesInventoryInfo"
       },
-      "Cve": {
-         "@id": "Cve"
+      "OcsfCompliance": {
+         "@id": "OcsfCompliance"
       },
-      "Cvss": {
-         "@id": "Cvss"
+      "OcsfComplianceFinding": {
+         "@id": "OcsfComplianceFinding"
       },
-      "Cwe": {
-         "@id": "Cwe"
+      "OcsfConfigState": {
+         "@id": "OcsfConfigState"
       },
-      "D3fend": {
-         "@id": "D3fend"
+      "OcsfContainer": {
+         "@id": "OcsfContainer"
       },
-      "D3fTactic": {
-         "@id": "D3fTactic"
+      "OcsfContainerProfile": {
+         "@id": "OcsfContainerProfile"
       },
-      "D3fTechnique": {
-         "@id": "D3fTechnique"
+      "OcsfCpuInfo": {
+         "@id": "OcsfCpuInfo"
       },
-      "Database": {
-         "@id": "Database"
+      "OcsfCve": {
+         "@id": "OcsfCve"
       },
-      "Databucket": {
-         "@id": "Databucket"
+      "OcsfCvss": {
+         "@id": "OcsfCvss"
       },
-      "DataClassification": {
-         "@id": "DataClassification"
+      "OcsfCwe": {
+         "@id": "OcsfCwe"
       },
-      "DataClassificationProfile": {
-         "@id": "DataClassificationProfile"
+      "OcsfD3fend": {
+         "@id": "OcsfD3fend"
       },
-      "DataSecurity": {
-         "@id": "DataSecurity"
+      "OcsfD3fTactic": {
+         "@id": "OcsfD3fTactic"
       },
-      "DataSecurityFinding": {
-         "@id": "DataSecurityFinding"
+      "OcsfD3fTechnique": {
+         "@id": "OcsfD3fTechnique"
       },
-      "DatastoreActivity": {
-         "@id": "DatastoreActivity"
+      "OcsfDatabase": {
+         "@id": "OcsfDatabase"
       },
-      "DatetimeProfile": {
-         "@id": "DatetimeProfile"
+      "OcsfDatabucket": {
+         "@id": "OcsfDatabucket"
       },
-      "DceRpc": {
-         "@id": "DceRpc"
+      "OcsfDataClassification": {
+         "@id": "OcsfDataClassification"
       },
-      "DetectionFinding": {
-         "@id": "DetectionFinding"
+      "OcsfDataClassificationProfile": {
+         "@id": "OcsfDataClassificationProfile"
       },
-      "Device": {
-         "@id": "Device"
+      "OcsfDataSecurity": {
+         "@id": "OcsfDataSecurity"
       },
-      "DeviceConfigStateChange": {
-         "@id": "DeviceConfigStateChange"
+      "OcsfDataSecurityFinding": {
+         "@id": "OcsfDataSecurityFinding"
       },
-      "DeviceHwInfo": {
-         "@id": "DeviceHwInfo"
+      "OcsfDatastoreActivity": {
+         "@id": "OcsfDatastoreActivity"
       },
-      "DhcpActivity": {
-         "@id": "DhcpActivity"
+      "OcsfDatetimeProfile": {
+         "@id": "OcsfDatetimeProfile"
       },
-      "DigitalSignature": {
-         "@id": "DigitalSignature"
+      "OcsfDceRpc": {
+         "@id": "OcsfDceRpc"
       },
-      "DiscoveryDetails": {
-         "@id": "DiscoveryDetails"
+      "OcsfDelegation": {
+         "@id": "OcsfDelegation"
       },
-      "DiscoveryEvent": {
-         "@id": "DiscoveryEvent"
+      "OcsfDetectionFinding": {
+         "@id": "OcsfDetectionFinding"
       },
-      "DiscoveryResult": {
-         "@id": "DiscoveryResult"
+      "OcsfDevice": {
+         "@id": "OcsfDevice"
       },
-      "Display": {
-         "@id": "Display"
+      "OcsfDeviceConfigStateChange": {
+         "@id": "OcsfDeviceConfigStateChange"
       },
-      "Dns": {
-         "@id": "Dns"
+      "OcsfDeviceHwInfo": {
+         "@id": "OcsfDeviceHwInfo"
       },
-      "DnsActivity": {
-         "@id": "DnsActivity"
+      "OcsfDevicePowerStateActivity": {
+         "@id": "OcsfDevicePowerStateActivity"
       },
-      "DnsAnswer": {
-         "@id": "DnsAnswer"
+      "OcsfDhcpActivity": {
+         "@id": "OcsfDhcpActivity"
       },
-      "DnsQuery": {
-         "@id": "DnsQuery"
+      "OcsfDigitalSignature": {
+         "@id": "OcsfDigitalSignature"
       },
-      "DomainContact": {
-         "@id": "DomainContact"
+      "OcsfDiscoveryDetails": {
+         "@id": "OcsfDiscoveryDetails"
       },
-      "DroneFlightsActivity": {
-         "@id": "DroneFlightsActivity"
+      "OcsfDiscoveryEvent": {
+         "@id": "OcsfDiscoveryEvent"
       },
-      "Edge": {
-         "@id": "Edge"
+      "OcsfDiscoveryResultEvent": {
+         "@id": "OcsfDiscoveryResultEvent"
       },
-      "Email": {
-         "@id": "Email"
+      "OcsfDisplay": {
+         "@id": "OcsfDisplay"
       },
-      "EmailActivity": {
-         "@id": "EmailActivity"
+      "OcsfDnsActivity": {
+         "@id": "OcsfDnsActivity"
       },
-      "EmailAuth": {
-         "@id": "EmailAuth"
+      "OcsfDnsAnswer": {
+         "@id": "OcsfDnsAnswer"
       },
-      "EmailFileActivity": {
-         "@id": "EmailFileActivity"
+      "OcsfDnsQuery": {
+         "@id": "OcsfDnsQuery"
       },
-      "EmailUrlActivity": {
-         "@id": "EmailUrlActivity"
+      "OcsfDnsResourceRecord": {
+         "@id": "OcsfDnsResourceRecord"
       },
-      "EncryptionDetails": {
-         "@id": "EncryptionDetails"
+      "OcsfDnsSection": {
+         "@id": "OcsfDnsSection"
       },
-      "Endpoint": {
-         "@id": "Endpoint"
+      "OcsfDomainContact": {
+         "@id": "OcsfDomainContact"
       },
-      "EndpointConnection": {
-         "@id": "EndpointConnection"
+      "OcsfDownloadInfo": {
+         "@id": "OcsfDownloadInfo"
       },
-      "Enrichment": {
-         "@id": "Enrichment"
+      "OcsfDroneFlightsActivity": {
+         "@id": "OcsfDroneFlightsActivity"
       },
-      "Entity": {
-         "@id": "Entity"
+      "OcsfEdge": {
+         "@id": "OcsfEdge"
       },
-      "EntityManagement": {
-         "@id": "EntityManagement"
+      "OcsfEmail": {
+         "@id": "OcsfEmail"
       },
-      "EnvironmentVariable": {
-         "@id": "EnvironmentVariable"
+      "OcsfEmailActivity": {
+         "@id": "OcsfEmailActivity"
       },
-      "Epss": {
-         "@id": "Epss"
+      "OcsfEmailAuth": {
+         "@id": "OcsfEmailAuth"
       },
-      "EventLogActvity": {
-         "@id": "EventLogActvity"
+      "OcsfEmailFileActivity": {
+         "@id": "OcsfEmailFileActivity"
       },
-      "EvidenceInfo": {
-         "@id": "EvidenceInfo"
+      "OcsfEmailUrlActivity": {
+         "@id": "OcsfEmailUrlActivity"
       },
-      "Evidences": {
-         "@id": "Evidences"
+      "OcsfEncryptionDetails": {
+         "@id": "OcsfEncryptionDetails"
       },
-      "Extension": {
-         "@id": "Extension"
+      "OcsfEndpoint": {
+         "@id": "OcsfEndpoint"
       },
-      "Feature": {
-         "@id": "Feature"
+      "OcsfEndpointConnection": {
+         "@id": "OcsfEndpointConnection"
       },
-      "File": {
-         "@id": "File"
+      "OcsfEnrichment": {
+         "@id": "OcsfEnrichment"
       },
-      "FileActivity": {
-         "@id": "FileActivity"
+      "OcsfEntity": {
+         "@id": "OcsfEntity"
       },
-      "FileHosting": {
-         "@id": "FileHosting"
+      "OcsfEntityManagement": {
+         "@id": "OcsfEntityManagement"
       },
-      "FileQuery": {
-         "@id": "FileQuery"
+      "OcsfEnvironmentVariable": {
+         "@id": "OcsfEnvironmentVariable"
       },
-      "FileRemediationActivity": {
-         "@id": "FileRemediationActivity"
+      "OcsfEpss": {
+         "@id": "OcsfEpss"
       },
-      "Finding": {
-         "@id": "Finding"
+      "OcsfEventLogActvity": {
+         "@id": "OcsfEventLogActvity"
       },
-      "FindingInfo": {
-         "@id": "FindingInfo"
+      "OcsfEvidenceInfo": {
+         "@id": "OcsfEvidenceInfo"
       },
-      "FindingObject": {
-         "@id": "FindingObject"
+      "OcsfEvidences": {
+         "@id": "OcsfEvidences"
       },
-      "Fingerprint": {
-         "@id": "Fingerprint"
+      "OcsfExtension": {
+         "@id": "OcsfExtension"
       },
-      "FirewallRule": {
-         "@id": "FirewallRule"
+      "OcsfFacts": {
+         "@id": "OcsfFacts"
       },
-      "FolderQuery": {
-         "@id": "FolderQuery"
+      "OcsfFeature": {
+         "@id": "OcsfFeature"
       },
-      "FtpActivity": {
-         "@id": "FtpActivity"
+      "OcsfFile": {
+         "@id": "OcsfFile"
       },
-      "FunctionInvocation": {
-         "@id": "FunctionInvocation"
+      "OcsfFileActivity": {
+         "@id": "OcsfFileActivity"
       },
-      "GpuInfo": {
-         "@id": "GpuInfo"
+      "OcsfFileHosting": {
+         "@id": "OcsfFileHosting"
       },
-      "Graph": {
-         "@id": "Graph"
+      "OcsfFileQuery": {
+         "@id": "OcsfFileQuery"
       },
-      "Group": {
-         "@id": "Group"
+      "OcsfFileRemediationActivity": {
+         "@id": "OcsfFileRemediationActivity"
       },
-      "GroupManagement": {
-         "@id": "GroupManagement"
+      "OcsfFinding": {
+         "@id": "OcsfFinding"
       },
-      "Hassh": {
-         "@id": "Hassh"
+      "OcsfFindingEvent": {
+         "@id": "OcsfFindingEvent"
       },
-      "HostProfile": {
-         "@id": "HostProfile"
+      "OcsfFindingInfo": {
+         "@id": "OcsfFindingInfo"
       },
-      "HttpActivity": {
-         "@id": "HttpActivity"
+      "OcsfFingerprint": {
+         "@id": "OcsfFingerprint"
       },
-      "HttpCookie": {
-         "@id": "HttpCookie"
+      "OcsfFirewallRule": {
+         "@id": "OcsfFirewallRule"
       },
-      "HttpHeader": {
-         "@id": "HttpHeader"
+      "OcsfFolderQuery": {
+         "@id": "OcsfFolderQuery"
       },
-      "HttpRequest": {
-         "@id": "HttpRequest"
+      "OcsfFtpActivity": {
+         "@id": "OcsfFtpActivity"
       },
-      "HttpResponse": {
-         "@id": "HttpResponse"
+      "OcsfFunctionInvocation": {
+         "@id": "OcsfFunctionInvocation"
       },
-      "IamAnalysisFinding": {
-         "@id": "IamAnalysisFinding"
+      "OcsfGpuInfo": {
+         "@id": "OcsfGpuInfo"
       },
-      "IamEvent": {
-         "@id": "IamEvent"
+      "OcsfGraph": {
+         "@id": "OcsfGraph"
       },
-      "IdentityActivityMetrics": {
-         "@id": "IdentityActivityMetrics"
+      "OcsfGroup": {
+         "@id": "OcsfGroup"
       },
-      "Idp": {
-         "@id": "Idp"
+      "OcsfGroupManagement": {
+         "@id": "OcsfGroupManagement"
       },
-      "Image": {
-         "@id": "Image"
+      "OcsfHassh": {
+         "@id": "OcsfHassh"
       },
-      "IncidentFinding": {
-         "@id": "IncidentFinding"
+      "OcsfHostProfile": {
+         "@id": "OcsfHostProfile"
       },
-      "IncidentProfile": {
-         "@id": "IncidentProfile"
+      "OcsfHttpActivity": {
+         "@id": "OcsfHttpActivity"
       },
-      "InventoryInfo": {
-         "@id": "InventoryInfo"
+      "OcsfHttpCookie": {
+         "@id": "OcsfHttpCookie"
       },
-      "Ja4Fingerprint": {
-         "@id": "Ja4Fingerprint"
+      "OcsfHttpHeader": {
+         "@id": "OcsfHttpHeader"
       },
-      "Job": {
-         "@id": "Job"
+      "OcsfHttpRequest": {
+         "@id": "OcsfHttpRequest"
       },
-      "JobQuery": {
-         "@id": "JobQuery"
+      "OcsfHttpResponse": {
+         "@id": "OcsfHttpResponse"
       },
-      "KbArticle": {
-         "@id": "KbArticle"
+      "OcsfIamAnalysisFinding": {
+         "@id": "OcsfIamAnalysisFinding"
       },
-      "Kernel": {
-         "@id": "Kernel"
+      "OcsfIamEvent": {
+         "@id": "OcsfIamEvent"
       },
-      "KernelActivity": {
-         "@id": "KernelActivity"
+      "OcsfIamRole": {
+         "@id": "OcsfIamRole"
       },
-      "KernelDriver": {
-         "@id": "KernelDriver"
+      "OcsfIdentityActivityMetrics": {
+         "@id": "OcsfIdentityActivityMetrics"
       },
-      "KernelExtensionActivity": {
-         "@id": "KernelExtensionActivity"
+      "OcsfIdp": {
+         "@id": "OcsfIdp"
       },
-      "KernelObjectQuery": {
-         "@id": "KernelObjectQuery"
+      "OcsfImage": {
+         "@id": "OcsfImage"
       },
-      "KeyboardInfo": {
-         "@id": "KeyboardInfo"
+      "OcsfIncidentFinding": {
+         "@id": "OcsfIncidentFinding"
       },
-      "KeyValueObject": {
-         "@id": "KeyValueObject"
+      "OcsfIncidentProfile": {
+         "@id": "OcsfIncidentProfile"
       },
-      "KillChainPhase": {
-         "@id": "KillChainPhase"
+      "OcsfInventoryInfo": {
+         "@id": "OcsfInventoryInfo"
       },
-      "LdapPerson": {
-         "@id": "LdapPerson"
+      "OcsfJa4Fingerprint": {
+         "@id": "OcsfJa4Fingerprint"
       },
-      "LinuxProcess": {
-         "@id": "LinuxProcess"
+      "OcsfJob": {
+         "@id": "OcsfJob"
       },
-      "LinuxUsersProfile": {
-         "@id": "LinuxUsersProfile"
+      "OcsfJobAction": {
+         "@id": "OcsfJobAction"
       },
-      "LoadBalancer": {
-         "@id": "LoadBalancer"
+      "OcsfJobQuery": {
+         "@id": "OcsfJobQuery"
       },
-      "LoadBalancerProfile": {
-         "@id": "LoadBalancerProfile"
+      "OcsfJobTrigger": {
+         "@id": "OcsfJobTrigger"
       },
-      "Location": {
-         "@id": "Location"
+      "OcsfJsonValue": {
+         "@id": "linkml:Any"
       },
-      "Logger": {
-         "@id": "Logger"
+      "OcsfKbArticle": {
+         "@id": "OcsfKbArticle"
       },
-      "LongString": {
-         "@id": "LongString"
+      "OcsfKernel": {
+         "@id": "OcsfKernel"
       },
-      "MacosProcess": {
-         "@id": "MacosProcess"
+      "OcsfKernelActivity": {
+         "@id": "OcsfKernelActivity"
       },
-      "MacosUsersProfile": {
-         "@id": "MacosUsersProfile"
+      "OcsfKernelDriver": {
+         "@id": "OcsfKernelDriver"
       },
-      "Malware": {
-         "@id": "Malware"
+      "OcsfKernelExtensionActivity": {
+         "@id": "OcsfKernelExtensionActivity"
       },
-      "MalwareScanInfo": {
-         "@id": "MalwareScanInfo"
+      "OcsfKernelObjectQuery": {
+         "@id": "OcsfKernelObjectQuery"
       },
-      "ManagedEntity": {
-         "@id": "ManagedEntity"
+      "OcsfKeyboardInfo": {
+         "@id": "OcsfKeyboardInfo"
       },
-      "MemoryActivity": {
-         "@id": "MemoryActivity"
+      "OcsfKeyValueObject": {
+         "@id": "OcsfKeyValueObject"
       },
-      "MessageContext": {
-         "@id": "MessageContext"
+      "OcsfKillChainPhase": {
+         "@id": "OcsfKillChainPhase"
       },
-      "Metadata": {
-         "@id": "Metadata"
+      "OcsfLdapPerson": {
+         "@id": "OcsfLdapPerson"
       },
-      "Metric": {
-         "@id": "Metric"
+      "OcsfLinuxUsersProfile": {
+         "@id": "OcsfLinuxUsersProfile"
       },
-      "Mitigation": {
-         "@id": "Mitigation"
+      "OcsfLoadBalancer": {
+         "@id": "OcsfLoadBalancer"
       },
-      "Module": {
-         "@id": "Module"
+      "OcsfLoadBalancerProfile": {
+         "@id": "OcsfLoadBalancerProfile"
       },
-      "ModuleActivity": {
-         "@id": "ModuleActivity"
+      "OcsfLocation": {
+         "@id": "OcsfLocation"
       },
-      "ModuleQuery": {
-         "@id": "ModuleQuery"
+      "OcsfLogger": {
+         "@id": "OcsfLogger"
       },
-      "NetworkActivity": {
-         "@id": "NetworkActivity"
+      "OcsfLongString": {
+         "@id": "OcsfLongString"
       },
-      "NetworkConnectionInfo": {
-         "@id": "NetworkConnectionInfo"
+      "OcsfMacosUsersProfile": {
+         "@id": "OcsfMacosUsersProfile"
       },
-      "NetworkConnectionQuery": {
-         "@id": "NetworkConnectionQuery"
+      "OcsfMalware": {
+         "@id": "OcsfMalware"
       },
-      "NetworkEndpoint": {
-         "@id": "NetworkEndpoint"
+      "OcsfMalwareScanInfo": {
+         "@id": "OcsfMalwareScanInfo"
       },
-      "NetworkEvent": {
-         "@id": "NetworkEvent"
+      "OcsfManagedEntity": {
+         "@id": "OcsfManagedEntity"
       },
-      "NetworkFileActivity": {
-         "@id": "NetworkFileActivity"
+      "OcsfMemoryActivity": {
+         "@id": "OcsfMemoryActivity"
       },
-      "NetworkInterface": {
-         "@id": "NetworkInterface"
+      "OcsfMessageContext": {
+         "@id": "OcsfMessageContext"
       },
-      "NetworkProxy": {
-         "@id": "NetworkProxy"
+      "OcsfMetadata": {
+         "@id": "OcsfMetadata"
       },
-      "NetworkProxyProfile": {
-         "@id": "NetworkProxyProfile"
+      "OcsfMetric": {
+         "@id": "OcsfMetric"
       },
-      "NetworkRemediationActivity": {
-         "@id": "NetworkRemediationActivity"
+      "OcsfMitigation": {
+         "@id": "OcsfMitigation"
       },
-      "NetworksQuery": {
-         "@id": "NetworksQuery"
+      "OcsfModule": {
+         "@id": "OcsfModule"
       },
-      "NetworkTraffic": {
-         "@id": "NetworkTraffic"
+      "OcsfModuleActivity": {
+         "@id": "OcsfModuleActivity"
       },
-      "Node": {
-         "@id": "Node"
+      "OcsfModuleQuery": {
+         "@id": "OcsfModuleQuery"
       },
-      "NtpActivity": {
-         "@id": "NtpActivity"
+      "OcsfNetworkActivity": {
+         "@id": "OcsfNetworkActivity"
       },
-      "Object": {
-         "@id": "Object"
+      "OcsfNetworkConnectionInfo": {
+         "@id": "OcsfNetworkConnectionInfo"
       },
-      "Observable": {
-         "@id": "Observable"
+      "OcsfNetworkConnectionQuery": {
+         "@id": "OcsfNetworkConnectionQuery"
       },
-      "Observation": {
-         "@id": "Observation"
+      "OcsfNetworkEndpoint": {
+         "@id": "OcsfNetworkEndpoint"
       },
-      "OccurrenceDetails": {
-         "@id": "OccurrenceDetails"
+      "OcsfNetworkEvent": {
+         "@id": "OcsfNetworkEvent"
+      },
+      "OcsfNetworkFileActivity": {
+         "@id": "OcsfNetworkFileActivity"
+      },
+      "OcsfNetworkInterface": {
+         "@id": "OcsfNetworkInterface"
+      },
+      "OcsfNetworkProxy": {
+         "@id": "OcsfNetworkProxy"
+      },
+      "OcsfNetworkProxyProfile": {
+         "@id": "OcsfNetworkProxyProfile"
+      },
+      "OcsfNetworkRemediationActivity": {
+         "@id": "OcsfNetworkRemediationActivity"
+      },
+      "OcsfNetworksQuery": {
+         "@id": "OcsfNetworksQuery"
+      },
+      "OcsfNetworkTraffic": {
+         "@id": "OcsfNetworkTraffic"
+      },
+      "OcsfNode": {
+         "@id": "OcsfNode"
+      },
+      "OcsfNote": {
+         "@id": "OcsfNote"
+      },
+      "OcsfNtpActivity": {
+         "@id": "OcsfNtpActivity"
       },
       "OcsfObject": {
-         "@id": "OcsfObject"
+         "@id": "linkml:Any"
       },
-      "Organization": {
-         "@id": "Organization"
+      "OcsfObjectBase": {
+         "@id": "OcsfObjectBase"
       },
-      "Os": {
-         "@id": "Os"
+      "OcsfObservable": {
+         "@id": "OcsfObservable"
       },
-      "Osint": {
-         "@id": "Osint"
+      "OcsfObservation": {
+         "@id": "OcsfObservation"
       },
-      "OsintInventoryInfo": {
-         "@id": "OsintInventoryInfo"
+      "OcsfOccurrenceDetails": {
+         "@id": "OcsfOccurrenceDetails"
       },
-      "OsintProfile": {
-         "@id": "OsintProfile"
+      "OcsfOrganization": {
+         "@id": "OcsfOrganization"
       },
-      "Package": {
-         "@id": "Package"
+      "OcsfOs": {
+         "@id": "OcsfOs"
       },
-      "Packet": {
-         "@id": "Packet"
+      "OcsfOsint": {
+         "@id": "OcsfOsint"
       },
-      "Parameter": {
-         "@id": "Parameter"
+      "OcsfOsintInventoryInfo": {
+         "@id": "OcsfOsintInventoryInfo"
       },
-      "PatchState": {
-         "@id": "PatchState"
+      "OcsfOsintProfile": {
+         "@id": "OcsfOsintProfile"
       },
-      "PeripheralActivity": {
-         "@id": "PeripheralActivity"
+      "OcsfPackage": {
+         "@id": "OcsfPackage"
       },
-      "PeripheralDevice": {
-         "@id": "PeripheralDevice"
+      "OcsfPacket": {
+         "@id": "OcsfPacket"
       },
-      "PeripheralDeviceQuery": {
-         "@id": "PeripheralDeviceQuery"
+      "OcsfParameter": {
+         "@id": "OcsfParameter"
       },
-      "PermissionAnalysisResult": {
-         "@id": "PermissionAnalysisResult"
+      "OcsfPatchState": {
+         "@id": "OcsfPatchState"
       },
-      "Policy": {
-         "@id": "Policy"
+      "OcsfPeripheralActivity": {
+         "@id": "OcsfPeripheralActivity"
       },
-      "PortInfo": {
-         "@id": "PortInfo"
+      "OcsfPeripheralDevice": {
+         "@id": "OcsfPeripheralDevice"
       },
-      "PrefetchQuery": {
-         "@id": "PrefetchQuery"
+      "OcsfPeripheralDeviceQuery": {
+         "@id": "OcsfPeripheralDeviceQuery"
       },
-      "PrivilegeAttackInfo": {
-         "@id": "PrivilegeAttackInfo"
+      "OcsfPermissionAnalysisResult": {
+         "@id": "OcsfPermissionAnalysisResult"
       },
-      "PrivilegeInfo": {
-         "@id": "PrivilegeInfo"
+      "OcsfPolicy": {
+         "@id": "OcsfPolicy"
       },
-      "Process": {
-         "@id": "Process"
+      "OcsfPortInfo": {
+         "@id": "OcsfPortInfo"
       },
-      "ProcessActivity": {
-         "@id": "ProcessActivity"
+      "OcsfPrevEvent": {
+         "@id": "OcsfPrevEvent"
       },
-      "ProcessEntity": {
-         "@id": "ProcessEntity"
+      "OcsfPrivilegeAttackInfo": {
+         "@id": "OcsfPrivilegeAttackInfo"
       },
-      "ProcessQuery": {
-         "@id": "ProcessQuery"
+      "OcsfPrivilegeInfo": {
+         "@id": "OcsfPrivilegeInfo"
       },
-      "ProcessRemediationActivity": {
-         "@id": "ProcessRemediationActivity"
+      "OcsfProcess": {
+         "@id": "OcsfProcess"
       },
-      "Product": {
-         "@id": "Product"
+      "OcsfProcessActivity": {
+         "@id": "OcsfProcessActivity"
       },
-      "ProgrammaticCredential": {
-         "@id": "ProgrammaticCredential"
+      "OcsfProcessEntity": {
+         "@id": "OcsfProcessEntity"
       },
-      "QueryEvidence": {
-         "@id": "QueryEvidence"
+      "OcsfProcessQuery": {
+         "@id": "OcsfProcessQuery"
       },
-      "QueryInfo": {
-         "@id": "QueryInfo"
+      "OcsfProcessRemediationActivity": {
+         "@id": "OcsfProcessRemediationActivity"
       },
-      "RdpActivity": {
-         "@id": "RdpActivity"
+      "OcsfProduct": {
+         "@id": "OcsfProduct"
       },
-      "RegistryKeyActivity": {
-         "@id": "RegistryKeyActivity"
+      "OcsfProgrammaticCredential": {
+         "@id": "OcsfProgrammaticCredential"
       },
-      "RegistryKeyQuery": {
-         "@id": "RegistryKeyQuery"
+      "OcsfQueryEvidence": {
+         "@id": "OcsfQueryEvidence"
       },
-      "RegistryValueActivity": {
-         "@id": "RegistryValueActivity"
+      "OcsfQueryInfo": {
+         "@id": "OcsfQueryInfo"
       },
-      "RegistryValueQuery": {
-         "@id": "RegistryValueQuery"
+      "OcsfRdpActivity": {
+         "@id": "OcsfRdpActivity"
       },
-      "RegKey": {
-         "@id": "RegKey"
+      "OcsfRecordIntegrityProfile": {
+         "@id": "OcsfRecordIntegrityProfile"
       },
-      "RegValue": {
-         "@id": "RegValue"
+      "OcsfRelatedEvent": {
+         "@id": "OcsfRelatedEvent"
       },
-      "RelatedEvent": {
-         "@id": "RelatedEvent"
+      "OcsfRemediation": {
+         "@id": "OcsfRemediation"
       },
-      "Remediation": {
-         "@id": "Remediation"
+      "OcsfRemediationActivity": {
+         "@id": "OcsfRemediationActivity"
       },
-      "RemediationActivity": {
-         "@id": "RemediationActivity"
+      "OcsfReporter": {
+         "@id": "OcsfReporter"
       },
-      "Reporter": {
-         "@id": "Reporter"
+      "OcsfReputation": {
+         "@id": "OcsfReputation"
       },
-      "Reputation": {
-         "@id": "Reputation"
+      "OcsfRequest": {
+         "@id": "OcsfRequest"
       },
-      "Request": {
-         "@id": "Request"
+      "OcsfResource": {
+         "@id": "OcsfResource"
       },
-      "Resource": {
-         "@id": "Resource"
+      "OcsfResourceDetails": {
+         "@id": "OcsfResourceDetails"
       },
-      "ResourceDetails": {
-         "@id": "ResourceDetails"
+      "OcsfResponse": {
+         "@id": "OcsfResponse"
       },
-      "Response": {
-         "@id": "Response"
+      "OcsfRoleManagement": {
+         "@id": "OcsfRoleManagement"
       },
-      "RpcInterface": {
-         "@id": "RpcInterface"
+      "OcsfRpcInterface": {
+         "@id": "OcsfRpcInterface"
       },
-      "Rule": {
-         "@id": "Rule"
+      "OcsfRule": {
+         "@id": "OcsfRule"
       },
-      "San": {
-         "@id": "San"
+      "OcsfSan": {
+         "@id": "OcsfSan"
       },
-      "Sbom": {
-         "@id": "Sbom"
+      "OcsfSbom": {
+         "@id": "OcsfSbom"
       },
-      "Scan": {
-         "@id": "Scan"
+      "OcsfScan": {
+         "@id": "OcsfScan"
       },
-      "ScanActivity": {
-         "@id": "ScanActivity"
+      "OcsfScanActivity": {
+         "@id": "OcsfScanActivity"
       },
-      "ScheduledJobActivity": {
-         "@id": "ScheduledJobActivity"
+      "OcsfScheduledJobActivity": {
+         "@id": "OcsfScheduledJobActivity"
       },
-      "Scim": {
-         "@id": "Scim"
+      "OcsfScim": {
+         "@id": "OcsfScim"
       },
-      "Script": {
-         "@id": "Script"
+      "OcsfScript": {
+         "@id": "OcsfScript"
       },
-      "ScriptActivity": {
-         "@id": "ScriptActivity"
+      "OcsfScriptActivity": {
+         "@id": "OcsfScriptActivity"
       },
-      "SecurityControlProfile": {
-         "@id": "SecurityControlProfile"
+      "OcsfSecurityControlProfile": {
+         "@id": "OcsfSecurityControlProfile"
       },
-      "SecurityFinding": {
-         "@id": "SecurityFinding"
+      "OcsfSecurityFinding": {
+         "@id": "OcsfSecurityFinding"
       },
-      "SecurityState": {
-         "@id": "SecurityState"
+      "OcsfSecurityState": {
+         "@id": "OcsfSecurityState"
       },
-      "Service": {
-         "@id": "Service"
+      "OcsfSensorInfo": {
+         "@id": "OcsfSensorInfo"
       },
-      "ServicePrivilegeAnalysis": {
-         "@id": "ServicePrivilegeAnalysis"
+      "OcsfService": {
+         "@id": "OcsfService"
       },
-      "ServiceQuery": {
-         "@id": "ServiceQuery"
+      "OcsfServicePrivilegeAnalysis": {
+         "@id": "OcsfServicePrivilegeAnalysis"
       },
-      "Session": {
-         "@id": "Session"
+      "OcsfServiceQuery": {
+         "@id": "OcsfServiceQuery"
       },
-      "SessionQuery": {
-         "@id": "SessionQuery"
+      "OcsfSession": {
+         "@id": "OcsfSession"
       },
-      "SmbActivity": {
-         "@id": "SmbActivity"
+      "OcsfSessionQuery": {
+         "@id": "OcsfSessionQuery"
       },
-      "SoftwareComponent": {
-         "@id": "SoftwareComponent"
+      "OcsfSmbActivity": {
+         "@id": "OcsfSmbActivity"
       },
-      "SoftwareInfo": {
-         "@id": "SoftwareInfo"
+      "OcsfSoftwareComponent": {
+         "@id": "OcsfSoftwareComponent"
       },
-      "Span": {
-         "@id": "Span"
+      "OcsfSoftwareInfo": {
+         "@id": "OcsfSoftwareInfo"
       },
-      "SshActivity": {
-         "@id": "SshActivity"
+      "OcsfSpan": {
+         "@id": "OcsfSpan"
       },
-      "Sso": {
-         "@id": "Sso"
+      "OcsfSshActivity": {
+         "@id": "OcsfSshActivity"
       },
-      "StartupItem": {
-         "@id": "StartupItem"
+      "OcsfSso": {
+         "@id": "OcsfSso"
       },
-      "StartupItemQuery": {
-         "@id": "StartupItemQuery"
+      "OcsfStartupItem": {
+         "@id": "OcsfStartupItem"
       },
-      "SubTechnique": {
-         "@id": "SubTechnique"
+      "OcsfStartupItemQuery": {
+         "@id": "OcsfStartupItemQuery"
       },
-      "SystemEvent": {
-         "@id": "SystemEvent"
+      "OcsfSubTechnique": {
+         "@id": "OcsfSubTechnique"
       },
-      "Table": {
-         "@id": "Table"
+      "OcsfSystemEvent": {
+         "@id": "OcsfSystemEvent"
       },
-      "Tactic": {
-         "@id": "Tactic"
+      "OcsfTable": {
+         "@id": "OcsfTable"
       },
-      "Technique": {
-         "@id": "Technique"
+      "OcsfTactic": {
+         "@id": "OcsfTactic"
       },
-      "ThreatActor": {
-         "@id": "ThreatActor"
+      "OcsfTechnique": {
+         "@id": "OcsfTechnique"
       },
-      "Ticket": {
-         "@id": "Ticket"
+      "OcsfThreatActor": {
+         "@id": "OcsfThreatActor"
       },
-      "Timespan": {
-         "@id": "Timespan"
+      "OcsfTicket": {
+         "@id": "OcsfTicket"
       },
-      "Tls": {
-         "@id": "Tls"
+      "OcsfTimespan": {
+         "@id": "OcsfTimespan"
       },
-      "TlsExtension": {
-         "@id": "TlsExtension"
+      "OcsfTls": {
+         "@id": "OcsfTls"
       },
-      "Token": {
-         "@id": "Token"
+      "OcsfTlsExtension": {
+         "@id": "OcsfTlsExtension"
       },
-      "Trace": {
-         "@id": "Trace"
+      "OcsfToken": {
+         "@id": "OcsfToken"
       },
-      "TraceProfile": {
-         "@id": "TraceProfile"
+      "OcsfTrace": {
+         "@id": "OcsfTrace"
       },
-      "Trait": {
-         "@id": "Trait"
+      "OcsfTraceProfile": {
+         "@id": "OcsfTraceProfile"
       },
-      "TransformationInfo": {
-         "@id": "TransformationInfo"
+      "OcsfTrait": {
+         "@id": "OcsfTrait"
       },
-      "TunnelActivity": {
-         "@id": "TunnelActivity"
+      "OcsfTransformationInfo": {
+         "@id": "OcsfTransformationInfo"
       },
-      "UnmannedAerialSystem": {
-         "@id": "UnmannedAerialSystem"
+      "OcsfTsig": {
+         "@id": "OcsfTsig"
       },
-      "UnmannedSystemOperatingArea": {
-         "@id": "UnmannedSystemOperatingArea"
+      "OcsfTunnelActivity": {
+         "@id": "OcsfTunnelActivity"
       },
-      "UnmannedSystemsEvent": {
-         "@id": "UnmannedSystemsEvent"
+      "OcsfUnmannedAerialSystem": {
+         "@id": "OcsfUnmannedAerialSystem"
       },
-      "Url": {
-         "@id": "Url"
+      "OcsfUnmannedSystemOperatingArea": {
+         "@id": "OcsfUnmannedSystemOperatingArea"
       },
-      "User": {
-         "@id": "User"
+      "OcsfUnmannedSystemsEvent": {
+         "@id": "OcsfUnmannedSystemsEvent"
       },
-      "UserAccess": {
-         "@id": "UserAccess"
+      "OcsfUrl": {
+         "@id": "OcsfUrl"
       },
-      "UserInventory": {
-         "@id": "UserInventory"
+      "OcsfUser": {
+         "@id": "OcsfUser"
       },
-      "UserQuery": {
-         "@id": "UserQuery"
+      "OcsfUserAccess": {
+         "@id": "OcsfUserAccess"
       },
-      "VendorAttributes": {
-         "@id": "VendorAttributes"
+      "OcsfUserInventory": {
+         "@id": "OcsfUserInventory"
       },
-      "Vulnerability": {
-         "@id": "Vulnerability"
+      "OcsfUserManagement": {
+         "@id": "OcsfUserManagement"
       },
-      "VulnerabilityFinding": {
-         "@id": "VulnerabilityFinding"
+      "OcsfUserQuery": {
+         "@id": "OcsfUserQuery"
       },
-      "WebResource": {
-         "@id": "WebResource"
+      "OcsfVendorAttributes": {
+         "@id": "OcsfVendorAttributes"
       },
-      "WebResourceAccessActivity": {
-         "@id": "WebResourceAccessActivity"
+      "OcsfVulnerability": {
+         "@id": "OcsfVulnerability"
       },
-      "WebResourcesActivity": {
-         "@id": "WebResourcesActivity"
+      "OcsfVulnerabilityFinding": {
+         "@id": "OcsfVulnerabilityFinding"
       },
-      "Whois": {
-         "@id": "Whois"
+      "OcsfWebResource": {
+         "@id": "OcsfWebResource"
       },
-      "WindowsEvidences": {
-         "@id": "WindowsEvidences"
+      "OcsfWebResourceAccessActivity": {
+         "@id": "OcsfWebResourceAccessActivity"
       },
-      "WindowsProcess": {
-         "@id": "WindowsProcess"
+      "OcsfWebResourcesActivity": {
+         "@id": "OcsfWebResourcesActivity"
       },
-      "WindowsQueryEvidence": {
-         "@id": "WindowsQueryEvidence"
+      "OcsfWhois": {
+         "@id": "OcsfWhois"
       },
-      "WindowsResourceActivity": {
-         "@id": "WindowsResourceActivity"
+      "OcsfWinPrefetchQuery": {
+         "@id": "OcsfWinPrefetchQuery"
       },
-      "WindowsServiceActivity": {
-         "@id": "WindowsServiceActivity"
+      "OcsfWinRegistryKeyActivity": {
+         "@id": "OcsfWinRegistryKeyActivity"
       },
-      "WindowsStartupItem": {
-         "@id": "WindowsStartupItem"
+      "OcsfWinRegistryKeyQuery": {
+         "@id": "OcsfWinRegistryKeyQuery"
       },
-      "WinResource": {
-         "@id": "WinResource"
+      "OcsfWinRegistryValueActivity": {
+         "@id": "OcsfWinRegistryValueActivity"
       },
-      "WinService": {
-         "@id": "WinService"
+      "OcsfWinRegistryValueQuery": {
+         "@id": "OcsfWinRegistryValueQuery"
+      },
+      "OcsfWinRegKey": {
+         "@id": "OcsfWinRegKey"
+      },
+      "OcsfWinRegValue": {
+         "@id": "OcsfWinRegValue"
+      },
+      "OcsfWinResource": {
+         "@id": "OcsfWinResource"
+      },
+      "OcsfWinResourceActivity": {
+         "@id": "OcsfWinResourceActivity"
+      },
+      "OcsfWinService": {
+         "@id": "OcsfWinService"
+      },
+      "OcsfWinServiceActivity": {
+         "@id": "OcsfWinServiceActivity"
       }
    }
 }

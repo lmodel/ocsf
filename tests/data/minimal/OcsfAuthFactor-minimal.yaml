@@ -1,0 +1,2 @@
+# The least that OcsfAuthFactor requires. scripts/make_examples.py writes this file.
+factor_type_id: 1

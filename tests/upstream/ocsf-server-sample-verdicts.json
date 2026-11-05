@@ -1,0 +1,870 @@
+{
+ "account_change": {
+  "errors": {
+   "attribute_unknown": 107,
+   "observable_name_invalid_reference": 2
+  },
+  "warnings": {
+   "attribute_deprecated": 10,
+   "attribute_value_regex_not_matched": 9,
+   "class_deprecated": 1
+  }
+ },
+ "admin_group_query": {
+  "errors": {
+   "attribute_unknown": 27,
+   "observable_name_invalid_reference": 2
+  },
+  "warnings": {
+   "attribute_deprecated": 2,
+   "class_deprecated": 1
+  }
+ },
+ "airborne_broadcast_activity": {
+  "errors": {
+   "attribute_unknown": 22,
+   "observable_name_invalid_reference": 2
+  },
+  "warnings": {
+   "attribute_deprecated": 4
+  }
+ },
+ "api_activity": {
+  "errors": {
+   "attribute_unknown": 75,
+   "observable_name_invalid_reference": 1
+  },
+  "warnings": {
+   "attribute_deprecated": 12,
+   "attribute_value_regex_not_matched": 7
+  }
+ },
+ "application_error": {
+  "errors": {
+   "attribute_unknown": 21,
+   "observable_name_invalid_reference": 1
+  },
+  "warnings": {
+   "attribute_deprecated": 1
+  }
+ },
+ "application_lifecycle": {
+  "errors": {
+   "attribute_unknown": 19,
+   "observable_name_invalid_reference": 2
+  },
+  "warnings": {
+   "attribute_deprecated": 1
+  }
+ },
+ "application_security_posture_finding": {
+  "errors": {
+   "attribute_unknown": 33,
+   "observable_name_invalid_reference": 1
+  },
+  "warnings": {
+   "attribute_deprecated": 2
+  }
+ },
+ "authentication": {
+  "errors": {
+   "attribute_unknown": 42
+  },
+  "warnings": {
+   "attribute_deprecated": 3,
+   "attribute_value_regex_not_matched": 3
+  }
+ },
+ "authorize_session": {
+  "errors": {
+   "attribute_unknown": 47,
+   "observable_name_invalid_reference": 2
+  },
+  "warnings": {
+   "attribute_deprecated": 5,
+   "attribute_enum_value_deprecated": 1,
+   "attribute_value_regex_not_matched": 7
+  }
+ },
+ "base_event": {
+  "errors": {
+   "attribute_unknown": 19,
+   "observable_name_invalid_reference": 2
+  },
+  "warnings": {
+   "attribute_enum_sibling_suspicious_other": 1
+  }
+ },
+ "clipboard_activity": {
+  "errors": {
+   "attribute_unknown": 101,
+   "observable_name_invalid_reference": 1
+  },
+  "warnings": {
+   "attribute_deprecated": 15,
+   "attribute_value_regex_not_matched": 12
+  }
+ },
+ "cloud_resources_inventory_info": {
+  "errors": {
+   "attribute_unknown": 32
+  },
+  "warnings": {
+   "attribute_deprecated": 1
+  }
+ },
+ "compliance_finding": {
+  "errors": {
+   "attribute_unknown": 35,
+   "observable_name_invalid_reference": 2
+  },
+  "warnings": {
+   "attribute_deprecated": 4,
+   "attribute_value_regex_not_matched": 2
+  }
+ },
+ "config_state": {
+  "errors": {
+   "attribute_unknown": 17,
+   "observable_name_invalid_reference": 2
+  },
+  "warnings": {
+   "attribute_deprecated": 6,
+   "class_deprecated": 1,
+   "object_deprecated": 1
+  }
+ },
+ "data_security_finding": {
+  "errors": {
+   "attribute_unknown": 55,
+   "observable_name_invalid_reference": 1
+  },
+  "warnings": {
+   "attribute_deprecated": 12,
+   "attribute_value_regex_not_matched": 3
+  }
+ },
+ "datastore_activity": {
+  "errors": {
+   "attribute_unknown": 137,
+   "observable_name_invalid_reference": 2
+  },
+  "warnings": {
+   "attribute_deprecated": 16,
+   "attribute_value_regex_not_matched": 14
+  }
+ },
+ "detection_finding": {
+  "errors": {
+   "attribute_enum_array_sibling_incorrect": 2,
+   "attribute_enum_array_sibling_missing": 1,
+   "attribute_unknown": 758,
+   "attribute_wrong_type": 2,
+   "observable_name_invalid_reference": 1
+  },
+  "warnings": {
+   "attribute_deprecated": 106,
+   "attribute_enum_value_deprecated": 5,
+   "attribute_value_regex_not_matched": 100
+  }
+ },
+ "device_config_state_change": {
+  "errors": {
+   "attribute_enum_array_sibling_incorrect": 2,
+   "attribute_unknown": 94,
+   "observable_name_invalid_reference": 1
+  },
+  "warnings": {
+   "attribute_deprecated": 10,
+   "attribute_value_regex_not_matched": 8
+  }
+ },
+ "device_power_state_activity": {
+  "errors": {
+   "attribute_unknown": 36,
+   "observable_name_invalid_reference": 1
+  },
+  "warnings": {
+   "attribute_deprecated": 1
+  }
+ },
+ "dhcp_activity": {
+  "errors": {
+   "attribute_unknown": 34,
+   "observable_name_invalid_reference": 1
+  },
+  "warnings": {
+   "attribute_deprecated": 4,
+   "attribute_value_regex_not_matched": 2
+  }
+ },
+ "dns_activity": {
+  "errors": {
+   "attribute_unknown": 24,
+   "observable_name_invalid_reference": 2
+  },
+  "warnings": {
+   "attribute_deprecated": 12
+  }
+ },
+ "drone_flights_activity": {
+  "errors": {
+   "attribute_unknown": 23,
+   "observable_name_invalid_reference": 2
+  },
+  "warnings": {
+   "attribute_deprecated": 6,
+   "attribute_value_regex_not_matched": 1
+  }
+ },
+ "email_activity": {
+  "errors": {
+   "attribute_unknown": 28,
+   "observable_name_invalid_reference": 2
+  },
+  "warnings": {
+   "attribute_deprecated": 7
+  }
+ },
+ "email_file_activity": {
+  "errors": {
+   "attribute_unknown": 25,
+   "attribute_wrong_type": 1
+  },
+  "warnings": {
+   "attribute_deprecated": 3,
+   "class_deprecated": 1
+  }
+ },
+ "email_url_activity": {
+  "errors": {
+   "attribute_unknown": 15,
+   "observable_name_invalid_reference": 2
+  },
+  "warnings": {
+   "attribute_deprecated": 1,
+   "class_deprecated": 1
+  }
+ },
+ "entity_management": {
+  "errors": {
+   "attribute_enum_array_sibling_incorrect": 3,
+   "attribute_unknown": 100,
+   "observable_name_invalid_reference": 2
+  },
+  "warnings": {
+   "attribute_deprecated": 15,
+   "attribute_value_regex_not_matched": 7
+  }
+ },
+ "event_log_actvity": {
+  "errors": {
+   "attribute_enum_array_sibling_incorrect": 1,
+   "attribute_enum_array_sibling_missing": 1,
+   "attribute_unknown": 190,
+   "attribute_wrong_type": 1
+  },
+  "warnings": {
+   "attribute_deprecated": 29,
+   "attribute_value_regex_not_matched": 29
+  }
+ },
+ "evidence_info": {
+  "errors": {
+   "attribute_unknown": 29,
+   "observable_name_invalid_reference": 2
+  },
+  "warnings": {
+   "attribute_value_regex_not_matched": 2
+  }
+ },
+ "file_activity": {
+  "errors": {
+   "attribute_enum_array_sibling_incorrect": 2,
+   "attribute_unknown": 277,
+   "attribute_wrong_type": 1,
+   "observable_name_invalid_reference": 1
+  },
+  "warnings": {
+   "attribute_deprecated": 33,
+   "attribute_enum_value_deprecated": 2,
+   "attribute_value_regex_not_matched": 31
+  }
+ },
+ "file_hosting": {
+  "errors": {
+   "attribute_unknown": 112
+  },
+  "warnings": {
+   "attribute_deprecated": 13,
+   "attribute_value_regex_not_matched": 15
+  }
+ },
+ "file_query": {
+  "errors": {
+   "attribute_unknown": 21,
+   "observable_name_invalid_reference": 2
+  },
+  "warnings": {
+   "attribute_deprecated": 1,
+   "class_deprecated": 1
+  }
+ },
+ "file_remediation_activity": {
+  "errors": {
+   "attribute_unknown": 21,
+   "observable_name_invalid_reference": 1
+  },
+  "warnings": {
+   "attribute_deprecated": 1
+  }
+ },
+ "folder_query": {
+  "errors": {
+   "attribute_unknown": 18,
+   "observable_name_invalid_reference": 2
+  },
+  "warnings": {
+   "class_deprecated": 1
+  }
+ },
+ "ftp_activity": {
+  "errors": {
+   "attribute_unknown": 38,
+   "observable_name_invalid_reference": 2
+  },
+  "warnings": {
+   "attribute_deprecated": 6,
+   "attribute_value_regex_not_matched": 1
+  }
+ },
+ "group_management": {
+  "errors": {
+   "attribute_enum_array_sibling_incorrect": 1,
+   "attribute_unknown": 43
+  },
+  "warnings": {
+   "attribute_deprecated": 10,
+   "attribute_enum_value_deprecated": 1,
+   "attribute_value_regex_not_matched": 3
+  }
+ },
+ "http_activity": {
+  "errors": {
+   "attribute_unknown": 37,
+   "observable_name_invalid_reference": 1
+  },
+  "warnings": {
+   "attribute_deprecated": 6,
+   "attribute_value_regex_not_matched": 1
+  }
+ },
+ "iam_analysis_finding": {
+  "errors": {
+   "attribute_unknown": 31
+  },
+  "warnings": {
+   "attribute_deprecated": 1
+  }
+ },
+ "incident_finding": {
+  "errors": {
+   "attribute_unknown": 16,
+   "attribute_wrong_type": 1
+  },
+  "warnings": {
+   "attribute_deprecated": 6
+  }
+ },
+ "inventory_info": {
+  "errors": {
+   "attribute_unknown": 20,
+   "observable_name_invalid_reference": 1
+  },
+  "warnings": {
+   "attribute_deprecated": 1,
+   "attribute_value_regex_not_matched": 3
+  }
+ },
+ "job_query": {
+  "errors": {
+   "attribute_unknown": 26,
+   "observable_name_invalid_reference": 1
+  },
+  "warnings": {
+   "attribute_deprecated": 4,
+   "attribute_enum_value_deprecated": 1,
+   "attribute_value_regex_not_matched": 4,
+   "class_deprecated": 1
+  }
+ },
+ "kernel_activity": {
+  "errors": {
+   "attribute_unknown": 23,
+   "observable_name_invalid_reference": 1
+  },
+  "warnings": {
+   "attribute_deprecated": 2,
+   "attribute_value_regex_not_matched": 3
+  }
+ },
+ "kernel_extension_activity": {
+  "errors": {
+   "attribute_unknown": 44,
+   "observable_name_invalid_reference": 2
+  },
+  "warnings": {
+   "attribute_deprecated": 8,
+   "attribute_value_regex_not_matched": 4
+  }
+ },
+ "kernel_object_query": {
+  "errors": {
+   "attribute_unknown": 17,
+   "observable_name_invalid_reference": 2
+  },
+  "warnings": {
+   "class_deprecated": 1
+  }
+ },
+ "memory_activity": {
+  "errors": {
+   "attribute_unknown": 142,
+   "attribute_wrong_type": 1
+  },
+  "warnings": {
+   "attribute_deprecated": 18,
+   "attribute_value_regex_not_matched": 14
+  }
+ },
+ "module_activity": {
+  "errors": {
+   "attribute_unknown": 41,
+   "observable_name_invalid_reference": 1
+  },
+  "warnings": {
+   "attribute_deprecated": 1,
+   "attribute_value_regex_not_matched": 1
+  }
+ },
+ "module_query": {
+  "errors": {
+   "attribute_enum_array_sibling_incorrect": 1,
+   "attribute_unknown": 376,
+   "attribute_wrong_type": 1,
+   "observable_name_invalid_reference": 2
+  },
+  "warnings": {
+   "attribute_deprecated": 47,
+   "attribute_enum_value_deprecated": 1,
+   "attribute_value_regex_not_matched": 55,
+   "class_deprecated": 1
+  }
+ },
+ "network_activity": {
+  "errors": {
+   "attribute_unknown": 45,
+   "observable_name_invalid_reference": 1
+  },
+  "warnings": {
+   "attribute_deprecated": 3,
+   "attribute_value_regex_not_matched": 1
+  }
+ },
+ "network_connection_query": {
+  "errors": {
+   "attribute_unknown": 131,
+   "observable_name_invalid_reference": 2
+  },
+  "warnings": {
+   "attribute_deprecated": 12,
+   "attribute_value_regex_not_matched": 17,
+   "class_deprecated": 1
+  }
+ },
+ "network_file_activity": {
+  "errors": {
+   "attribute_unknown": 72
+  },
+  "warnings": {
+   "attribute_deprecated": 8,
+   "attribute_value_regex_not_matched": 2,
+   "class_deprecated": 1
+  }
+ },
+ "network_remediation_activity": {
+  "errors": {
+   "attribute_unknown": 17
+  },
+  "warnings": {
+   "attribute_deprecated": 1
+  }
+ },
+ "networks_query": {
+  "errors": {
+   "attribute_unknown": 17,
+   "observable_name_invalid_reference": 2
+  },
+  "warnings": {
+   "attribute_value_regex_not_matched": 2,
+   "class_deprecated": 1
+  }
+ },
+ "ntp_activity": {
+  "errors": {
+   "attribute_unknown": 28
+  },
+  "warnings": {
+   "attribute_deprecated": 1,
+   "attribute_value_regex_not_matched": 1
+  }
+ },
+ "osint_inventory_info": {
+  "errors": {
+   "attribute_unknown": 22,
+   "observable_name_invalid_reference": 2
+  },
+  "warnings": {
+   "attribute_deprecated": 3
+  }
+ },
+ "patch_state": {
+  "errors": {
+   "attribute_unknown": 20,
+   "constraint_failed": 1,
+   "observable_name_invalid_reference": 2
+  },
+  "warnings": {
+   "attribute_deprecated": 2,
+   "attribute_value_regex_not_matched": 1
+  }
+ },
+ "peripheral_activity": {
+  "errors": {
+   "attribute_unknown": 63,
+   "observable_name_invalid_reference": 2
+  },
+  "warnings": {
+   "attribute_deprecated": 13,
+   "attribute_value_regex_not_matched": 7
+  }
+ },
+ "peripheral_device_query": {
+  "errors": {
+   "attribute_unknown": 18,
+   "observable_name_invalid_reference": 1
+  },
+  "warnings": {
+   "class_deprecated": 1
+  }
+ },
+ "process_activity": {
+  "errors": {
+   "attribute_enum_array_sibling_incorrect": 2,
+   "attribute_unknown": 136,
+   "observable_name_invalid_reference": 1
+  },
+  "warnings": {
+   "attribute_deprecated": 15,
+   "attribute_enum_value_deprecated": 1,
+   "attribute_value_regex_not_matched": 17
+  }
+ },
+ "process_query": {
+  "errors": {
+   "attribute_unknown": 221,
+   "attribute_wrong_type": 1,
+   "observable_name_invalid_reference": 1
+  },
+  "warnings": {
+   "attribute_deprecated": 22,
+   "attribute_value_regex_not_matched": 30,
+   "class_deprecated": 1
+  }
+ },
+ "process_remediation_activity": {
+  "errors": {
+   "attribute_unknown": 45,
+   "attribute_wrong_type": 1,
+   "observable_name_invalid_reference": 1
+  },
+  "warnings": {
+   "attribute_deprecated": 5,
+   "attribute_value_regex_not_matched": 6
+  }
+ },
+ "rdp_activity": {
+  "errors": {
+   "attribute_unknown": 30,
+   "observable_name_invalid_reference": 2
+  },
+  "warnings": {
+   "attribute_deprecated": 6
+  }
+ },
+ "remediation_activity": {
+  "errors": {
+   "attribute_unknown": 18,
+   "observable_name_invalid_reference": 2
+  },
+  "warnings": {
+   "attribute_deprecated": 1
+  }
+ },
+ "role_management": {
+  "errors": {
+   "attribute_unknown": 29,
+   "observable_name_invalid_reference": 2
+  },
+  "warnings": {
+   "attribute_deprecated": 2
+  }
+ },
+ "scan_activity": {
+  "errors": {
+   "attribute_unknown": 20,
+   "observable_name_invalid_reference": 1
+  },
+  "warnings": {}
+ },
+ "scheduled_job_activity": {
+  "errors": {
+   "attribute_unknown": 23,
+   "observable_name_invalid_reference": 1
+  },
+  "warnings": {
+   "attribute_deprecated": 4,
+   "attribute_value_regex_not_matched": 1
+  }
+ },
+ "script_activity": {
+  "errors": {
+   "attribute_unknown": 95
+  },
+  "warnings": {
+   "attribute_deprecated": 10,
+   "attribute_value_regex_not_matched": 10
+  }
+ },
+ "security_finding": {
+  "errors": {
+   "attribute_unknown": 24,
+   "observable_name_invalid_reference": 2
+  },
+  "warnings": {
+   "attribute_deprecated": 4,
+   "attribute_value_regex_not_matched": 1,
+   "class_deprecated": 1,
+   "object_deprecated": 1
+  }
+ },
+ "service_query": {
+  "errors": {
+   "attribute_unknown": 18,
+   "observable_name_invalid_reference": 2
+  },
+  "warnings": {
+   "attribute_deprecated": 1,
+   "class_deprecated": 1
+  }
+ },
+ "session_query": {
+  "errors": {
+   "attribute_unknown": 19
+  },
+  "warnings": {
+   "attribute_deprecated": 1,
+   "class_deprecated": 1
+  }
+ },
+ "smb_activity": {
+  "errors": {
+   "attribute_unknown": 33,
+   "observable_name_invalid_reference": 1
+  },
+  "warnings": {
+   "attribute_deprecated": 3
+  }
+ },
+ "software_info": {
+  "errors": {
+   "attribute_unknown": 30,
+   "observable_name_invalid_reference": 1
+  },
+  "warnings": {
+   "attribute_deprecated": 3,
+   "attribute_value_regex_not_matched": 1
+  }
+ },
+ "ssh_activity": {
+  "errors": {
+   "attribute_unknown": 36,
+   "observable_name_invalid_reference": 1
+  },
+  "warnings": {
+   "attribute_deprecated": 3
+  }
+ },
+ "startup_item_query": {
+  "errors": {
+   "attribute_unknown": 12,
+   "constraint_failed": 1,
+   "observable_name_invalid_reference": 2
+  },
+  "warnings": {
+   "attribute_deprecated": 1,
+   "class_deprecated": 1
+  }
+ },
+ "tunnel_activity": {
+  "errors": {
+   "attribute_unknown": 36,
+   "observable_name_invalid_reference": 1
+  },
+  "warnings": {
+   "attribute_deprecated": 5,
+   "attribute_value_regex_not_matched": 3
+  }
+ },
+ "user_access": {
+  "errors": {
+   "attribute_unknown": 94,
+   "observable_name_invalid_reference": 2
+  },
+  "warnings": {
+   "attribute_deprecated": 13,
+   "attribute_value_regex_not_matched": 8,
+   "class_deprecated": 1
+  }
+ },
+ "user_inventory": {
+  "errors": {
+   "attribute_enum_array_sibling_incorrect": 1,
+   "attribute_unknown": 118,
+   "observable_name_invalid_reference": 1
+  },
+  "warnings": {
+   "attribute_deprecated": 16,
+   "attribute_enum_value_deprecated": 1,
+   "attribute_value_regex_not_matched": 9
+  }
+ },
+ "user_management": {
+  "errors": {
+   "attribute_unknown": 110,
+   "observable_name_invalid_reference": 1
+  },
+  "warnings": {
+   "attribute_deprecated": 9,
+   "attribute_value_regex_not_matched": 12
+  }
+ },
+ "user_query": {
+  "errors": {
+   "attribute_unknown": 19,
+   "observable_name_invalid_reference": 2
+  },
+  "warnings": {
+   "class_deprecated": 1
+  }
+ },
+ "vulnerability_finding": {
+  "errors": {
+   "attribute_unknown": 42
+  },
+  "warnings": {
+   "attribute_deprecated": 6,
+   "attribute_value_regex_not_matched": 1
+  }
+ },
+ "web_resource_access_activity": {
+  "errors": {
+   "attribute_unknown": 25
+  },
+  "warnings": {
+   "class_deprecated": 1
+  }
+ },
+ "web_resources_activity": {
+  "errors": {
+   "attribute_enum_array_sibling_incorrect": 2,
+   "attribute_unknown": 50,
+   "observable_name_invalid_reference": 2
+  },
+  "warnings": {
+   "attribute_deprecated": 6,
+   "attribute_value_regex_not_matched": 1
+  }
+ },
+ "win/prefetch_query": {
+  "errors": {
+   "attribute_unknown": 14,
+   "observable_name_invalid_reference": 2
+  },
+  "warnings": {
+   "class_deprecated": 1
+  }
+ },
+ "win/registry_key_activity": {
+  "errors": {
+   "attribute_unknown": 136,
+   "observable_name_invalid_reference": 2
+  },
+  "warnings": {
+   "attribute_deprecated": 20,
+   "attribute_value_regex_not_matched": 19
+  }
+ },
+ "win/registry_key_query": {
+  "errors": {
+   "attribute_unknown": 31,
+   "observable_name_invalid_reference": 2
+  },
+  "warnings": {
+   "attribute_deprecated": 2,
+   "attribute_value_regex_not_matched": 3,
+   "class_deprecated": 1
+  }
+ },
+ "win/registry_value_activity": {
+  "errors": {
+   "attribute_unknown": 59,
+   "observable_name_invalid_reference": 1
+  },
+  "warnings": {
+   "attribute_deprecated": 12,
+   "attribute_enum_value_deprecated": 1,
+   "attribute_value_regex_not_matched": 5
+  }
+ },
+ "win/registry_value_query": {
+  "errors": {
+   "attribute_unknown": 16,
+   "observable_name_invalid_reference": 1
+  },
+  "warnings": {
+   "attribute_enum_value_deprecated": 1,
+   "class_deprecated": 1
+  }
+ },
+ "win/windows_resource_activity": {
+  "errors": {
+   "attribute_unknown": 102,
+   "observable_name_invalid_reference": 2
+  },
+  "warnings": {
+   "attribute_deprecated": 14,
+   "attribute_value_regex_not_matched": 6
+  }
+ },
+ "win/windows_service_activity": {
+  "errors": {
+   "attribute_unknown": 40,
+   "observable_name_invalid_reference": 2
+  },
+  "warnings": {
+   "attribute_deprecated": 3,
+   "attribute_value_regex_not_matched": 1
+  }
+ }
+}

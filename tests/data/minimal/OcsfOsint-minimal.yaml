@@ -1,0 +1,3 @@
+# The least that OcsfOsint requires. scripts/make_examples.py writes this file.
+type_id: 1
+value: example

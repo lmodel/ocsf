@@ -1,0 +1,15 @@
+# The least that OcsfEmailFileActivity requires. scripts/make_examples.py writes this file.
+activity_id: 1
+category_uid: 4
+class_uid: 4011
+email_uid: example
+file:
+  name: example.txt
+  type_id: 1
+metadata:
+  product:
+    name: example
+  version: 1.9.0
+severity_id: 1
+time: 1793793600000
+type_uid: 401101

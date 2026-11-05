@@ -1,0 +1,5 @@
+# Fails at: /is_system
+# A boolean_t is true or false.
+name: example
+is_system: maybe
+type_id: 1

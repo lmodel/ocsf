@@ -1,0 +1,11 @@
+# linkml-lint reads this file from the directory `just lint` runs in.
+# The recommended rules apply, with one exception, so that a real event validates
+# unchanged. Permissible values keep OCSF's text in the three lists it writes as strings
+# (GET, Base and AMBER STRICT), which holds capitals and a space. Slots keep OCSF's keys,
+# which are already snake_case, and class, enum and type names keep the rule's usual form.
+extends: recommended
+rules:
+  standard_naming:
+    level: error
+    exclude_type:
+      - permissible_value

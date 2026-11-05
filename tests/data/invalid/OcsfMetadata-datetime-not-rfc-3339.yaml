@@ -1,0 +1,6 @@
+# Fails at: /logged_time_dt
+# A datetime_t matches OCSF's regex for RFC 3339.
+product:
+  name: example
+version: 1.9.0
+logged_time_dt: yesterday

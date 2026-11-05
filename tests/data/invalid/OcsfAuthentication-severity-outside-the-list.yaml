@@ -1,0 +1,17 @@
+# Fails at: /severity_id
+# OCSF lists severities 0 to 6 and 99.
+activity_id: 1
+category_uid: 3
+class_uid: 3002
+metadata:
+  product:
+    name: example
+  version: 1.9.0
+service:
+  name: example
+user:
+  account:
+    name: example
+severity_id: 7
+time: 1793793600000
+type_uid: 300201

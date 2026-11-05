@@ -1,0 +1,17 @@
+# Fails at: /time
+# A timestamp_t is milliseconds since the epoch, and the text form is the time_dt sibling.
+activity_id: 1
+category_uid: 3
+class_uid: 3002
+metadata:
+  product:
+    name: example
+  version: 1.9.0
+service:
+  name: example
+user:
+  account:
+    name: example
+severity_id: 1
+time: "2026-11-04T12:00:00Z"
+type_uid: 300201

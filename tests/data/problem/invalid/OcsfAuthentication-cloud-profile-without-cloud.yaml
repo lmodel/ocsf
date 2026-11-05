@@ -1,0 +1,19 @@
+# Fails at: /cloud attribute_required_missing
+# The listed cloud profile requires this attribute.
+activity_id: 1
+category_uid: 3
+class_uid: 3002
+service:
+  name: example
+severity_id: 1
+time: 1793793600000
+user:
+  account:
+    name: example
+metadata:
+  product:
+    name: example
+  version: 1.9.0
+  profiles:
+    - cloud
+type_uid: 300201

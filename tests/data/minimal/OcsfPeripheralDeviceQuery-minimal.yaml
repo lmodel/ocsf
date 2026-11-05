@@ -1,0 +1,14 @@
+# The least that OcsfPeripheralDeviceQuery requires. scripts/make_examples.py writes this file.
+activity_id: 1
+category_uid: 5
+class_uid: 5014
+metadata:
+  product:
+    name: example
+  version: 1.9.0
+peripheral_device:
+  name: example
+query_result_id: 1
+severity_id: 1
+time: 1793793600000
+type_uid: 501401

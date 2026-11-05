@@ -1,0 +1,15 @@
+# The least that OcsfApplicationSecurityPostureFinding requires. scripts/make_examples.py writes this file.
+activity_id: 1
+application:
+  uid: example
+category_uid: 2
+class_uid: 2007
+finding_info:
+  uid: example
+metadata:
+  product:
+    name: example
+  version: 1.9.0
+severity_id: 1
+time: 1793793600000
+type_uid: 200701

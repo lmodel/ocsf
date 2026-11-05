@@ -1,0 +1,30 @@
+# An event class of OCSF's Windows extension, whose class_uid carries the extension's.
+activity_id: 1
+activity_name: Create
+actor:
+  user:
+    name: SYSTEM
+category_name: System Activity
+category_uid: 1
+class_name: Registry Key Activity
+class_uid: 201001
+device:
+  hostname: desktop-01.example.com
+  os:
+    name: Windows 11
+    type: Windows
+    type_id: 100
+  type: Desktop
+  type_id: 2
+metadata:
+  product:
+    name: Example Agent
+    vendor_name: Example
+  version: 1.9.0
+reg_key:
+  path: HKEY_LOCAL_MACHINE\SOFTWARE\Example
+severity: Informational
+severity_id: 1
+time: 1793793600000
+type_name: "Registry Key Activity: Create"
+type_uid: 20100101

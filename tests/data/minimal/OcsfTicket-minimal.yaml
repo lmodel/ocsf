@@ -1,0 +1,2 @@
+# The least that OcsfTicket requires. scripts/make_examples.py writes this file.
+src_url: https://example.com/

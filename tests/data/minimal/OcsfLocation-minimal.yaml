@@ -1,0 +1,2 @@
+# The least that OcsfLocation requires. scripts/make_examples.py writes this file.
+city: example

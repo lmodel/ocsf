@@ -1,3 +1,0 @@
-# INVALID: `uid` is required on Cwe but is missing.
-caption: "Cross-site Scripting"
-src_url: https://cwe.mitre.org/data/definitions/79.html

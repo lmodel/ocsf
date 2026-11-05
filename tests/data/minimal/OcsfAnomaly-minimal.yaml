@@ -1,0 +1,4 @@
+# The least that OcsfAnomaly requires. scripts/make_examples.py writes this file.
+observation_parameter: example
+observations:
+- value: example

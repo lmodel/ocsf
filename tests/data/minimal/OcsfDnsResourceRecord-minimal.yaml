@@ -1,0 +1,2 @@
+# The least that OcsfDnsResourceRecord requires. scripts/make_examples.py writes this file.
+rdata: example

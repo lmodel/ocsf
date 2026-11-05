@@ -1,0 +1,2 @@
+# The least that OcsfOccurrenceDetails requires. scripts/make_examples.py writes this file.
+cell_name: example

@@ -1,0 +1,2 @@
+# The least that OcsfDnsAnswer requires. scripts/make_examples.py writes this file.
+rdata: example

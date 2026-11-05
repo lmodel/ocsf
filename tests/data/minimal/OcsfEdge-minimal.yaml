@@ -1,0 +1,4 @@
+# The least that OcsfEdge requires. scripts/make_examples.py writes this file.
+name: example
+source: example
+target: example

@@ -1,0 +1,14 @@
+# The least that OcsfEmailUrlActivity requires. scripts/make_examples.py writes this file.
+activity_id: 1
+category_uid: 4
+class_uid: 4012
+email_uid: example
+metadata:
+  product:
+    name: example
+  version: 1.9.0
+severity_id: 1
+time: 1793793600000
+type_uid: 401201
+url:
+  url_string: https://example.com/

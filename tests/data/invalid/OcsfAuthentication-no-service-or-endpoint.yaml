@@ -1,0 +1,15 @@
+# Fails at: /
+# Authentication needs at least one of service and dst_endpoint.
+activity_id: 1
+category_uid: 3
+class_uid: 3002
+metadata:
+  product:
+    name: example
+  version: 1.9.0
+user:
+  account:
+    name: example
+severity_id: 1
+time: 1793793600000
+type_uid: 300201

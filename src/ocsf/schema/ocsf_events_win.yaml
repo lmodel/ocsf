@@ -1,0 +1,570 @@
+---
+id: https://w3id.org/lmodel/ocsf/ocsf_events_win
+name: ocsf_events_win
+title: OCSF Windows event classes
+description: The event classes of OCSF's Windows extension. The extension's objects sit in
+  ocsf_objects, because it patches base objects with attributes that range over them.
+version: 1.9.0
+source: https://github.com/ocsf/ocsf-schema/tree/1.9.0
+license: Apache-2.0
+see_also:
+  - https://lmodel.github.io/ocsf
+  - https://schema.ocsf.io/1.9.0/
+prefixes:
+  ocsf: https://w3id.org/lmodel/ocsf/
+  linkml: https://w3id.org/linkml/
+  xsd: http://www.w3.org/2001/XMLSchema#
+  attack: https://w3id.org/lmodel/attack/
+  cve: https://w3id.org/lmodel/cve/
+  cwe: https://w3id.org/lmodel/cwe/
+  d3f: http://d3fend.mitre.org/ontologies/d3fend.owl#
+  kev_catalog: https://w3id.org/lmodel/kev-catalog/
+  nist_nvd: https://w3id.org/lmodel/nist-nvd/
+  stix: https://w3id.org/lmodel/stix/
+default_prefix: ocsf
+default_range: string
+imports:
+  - linkml:types
+  - ocsf_core
+  - ocsf_objects
+  - ocsf_events_base
+  - ocsf_events_discovery
+  - ocsf_events_system
+classes:
+  OcsfWinPrefetchQuery:
+    title: Prefetch Query
+    description: Prefetch Query events report information about Windows prefetch files.
+    class_uri: ocsf:OcsfWinPrefetchQuery
+    deprecated: Use the <code>evidence_info</code> class instead. Populate <code>query_evidence.file</code>
+      and set <code>query_type_id</code> to <code>Prefetch</code>.
+    is_a: OcsfDiscoveryResultEvent
+    in_subset:
+      - ocsf_category_discovery
+      - ocsf_extension_win
+    instantiates:
+      - ocsf:OcsfFacts
+    annotations:
+      ocsf_key: win/prefetch_query
+      ocsf_category: discovery
+      ocsf_profiles: cloud container data_classification datetime host linux/linux_users macos/macos_users
+        osint record_integrity security_control
+      ocsf_extension: win
+      ocsf_deprecated_since: 1.5.0
+      ocsf_superseded_by: evidence_info
+    slots:
+      - last_run_time
+      - last_run_time_dt
+      - name
+      - run_count
+    slot_usage:
+      activity_id:
+        any_of:
+          - equals_number: 0
+            title: Unknown
+            description: The event activity is unknown.
+          - equals_number: 1
+            title: Query
+            description: The discovered results are via a query request.
+          - equals_number: 99
+            title: Other
+            description: The event activity is not mapped. See the <code>activity_name</code>
+              attribute, which contains a data source specific value.
+      category_name:
+        description: 'The event category name, as defined by category_uid value: <code>Discovery</code>.'
+      class_name:
+        description: 'The event class name, as defined by class_uid value: <code>Prefetch
+          Query</code>.'
+      class_uid:
+        equals_number: 205019
+      last_run_time:
+        description: The prefetch file last run time.
+        recommended: true
+        annotations:
+          ocsf_group: occurrence
+      last_run_time_dt:
+        description: The prefetch file last run time.
+        annotations:
+          ocsf_group: occurrence
+          ocsf_profiles: datetime
+      name:
+        description: The name of the prefetch file that is the target of the query.
+        required: true
+        annotations:
+          ocsf_group: primary
+      run_count:
+        recommended: true
+        annotations:
+          ocsf_group: primary
+          ocsf_extension: win
+      type_uid:
+        any_of:
+          - equals_number: 20501900
+            title: 'Prefetch Query: Unknown'
+          - equals_number: 20501901
+            title: 'Prefetch Query: Query'
+            description: The discovered results are via a query request.
+          - equals_number: 20501999
+            title: 'Prefetch Query: Other'
+  OcsfWinRegistryKeyActivity:
+    title: Registry Key Activity
+    description: Registry Key Activity events report when a process performs an action on
+      a Windows registry key.
+    class_uri: ocsf:OcsfWinRegistryKeyActivity
+    is_a: OcsfSystemEvent
+    in_subset:
+      - ocsf_category_system
+      - ocsf_extension_win
+    instantiates:
+      - ocsf:OcsfFacts
+    annotations:
+      ocsf_key: win/registry_key_activity
+      ocsf_category: system
+      ocsf_profiles: ai_operation cloud container data_classification datetime host linux/linux_users
+        macos/macos_users osint record_integrity security_control
+      ocsf_associations: '{"actor.user": ["device"], "device": ["actor.user"]}'
+      ocsf_extension: win
+    slots:
+      - access_mask
+      - create_mask
+      - open_mask
+      - prev_reg_key
+      - reg_key
+    slot_usage:
+      access_mask:
+        recommended: true
+        annotations:
+          ocsf_group: primary
+      activity_id:
+        any_of:
+          - equals_number: 0
+            title: Unknown
+            description: The event activity is unknown.
+          - equals_number: 1
+            title: Create
+          - equals_number: 2
+            title: Read
+          - equals_number: 3
+            title: Modify
+          - equals_number: 4
+            title: Delete
+          - equals_number: 5
+            title: Rename
+          - equals_number: 6
+            title: Set Security
+          - equals_number: 7
+            title: Restore
+          - equals_number: 8
+            title: Import
+          - equals_number: 9
+            title: Export
+          - equals_number: 99
+            title: Other
+            description: The event activity is not mapped. See the <code>activity_name</code>
+              attribute, which contains a data source specific value.
+      actor:
+        description: The actor that performed the activity on the <code>reg_key</code> object.
+      category_name:
+        description: 'The event category name, as defined by category_uid value: <code>System
+          Activity</code>.'
+      class_name:
+        description: 'The event class name, as defined by class_uid value: <code>Registry
+          Key Activity</code>.'
+      class_uid:
+        equals_number: 201001
+      create_mask:
+        recommended: true
+        annotations:
+          ocsf_group: primary
+      open_mask:
+        recommended: true
+        annotations:
+          ocsf_group: primary
+      prev_reg_key:
+        recommended: true
+        annotations:
+          ocsf_group: primary
+          ocsf_extension: win
+      reg_key:
+        required: true
+        annotations:
+          ocsf_group: primary
+          ocsf_extension: win
+      type_uid:
+        any_of:
+          - equals_number: 20100100
+            title: 'Registry Key Activity: Unknown'
+          - equals_number: 20100101
+            title: 'Registry Key Activity: Create'
+          - equals_number: 20100102
+            title: 'Registry Key Activity: Read'
+          - equals_number: 20100103
+            title: 'Registry Key Activity: Modify'
+          - equals_number: 20100104
+            title: 'Registry Key Activity: Delete'
+          - equals_number: 20100105
+            title: 'Registry Key Activity: Rename'
+          - equals_number: 20100106
+            title: 'Registry Key Activity: Set Security'
+          - equals_number: 20100107
+            title: 'Registry Key Activity: Restore'
+          - equals_number: 20100108
+            title: 'Registry Key Activity: Import'
+          - equals_number: 20100109
+            title: 'Registry Key Activity: Export'
+          - equals_number: 20100199
+            title: 'Registry Key Activity: Other'
+    related_mappings:
+      - d3f:WindowsRegistryKeyEvent
+  OcsfWinRegistryKeyQuery:
+    title: Registry Key Query
+    description: Registry Key Query events report information about discovered Windows registry
+      keys.
+    class_uri: ocsf:OcsfWinRegistryKeyQuery
+    deprecated: Use the <code>evidence_info</code> class instead. Populate <code>query_evidence.reg_key</code>
+      and set <code>query_type_id</code> to <code>Registry Key</code>.
+    is_a: OcsfDiscoveryResultEvent
+    in_subset:
+      - ocsf_category_discovery
+      - ocsf_extension_win
+    instantiates:
+      - ocsf:OcsfFacts
+    annotations:
+      ocsf_key: win/registry_key_query
+      ocsf_category: discovery
+      ocsf_profiles: cloud container data_classification datetime host linux/linux_users macos/macos_users
+        osint record_integrity security_control
+      ocsf_extension: win
+      ocsf_deprecated_since: 1.5.0
+      ocsf_superseded_by: evidence_info
+    slots:
+      - reg_key
+    slot_usage:
+      activity_id:
+        any_of:
+          - equals_number: 0
+            title: Unknown
+            description: The event activity is unknown.
+          - equals_number: 1
+            title: Query
+            description: The discovered results are via a query request.
+          - equals_number: 99
+            title: Other
+            description: The event activity is not mapped. See the <code>activity_name</code>
+              attribute, which contains a data source specific value.
+      category_name:
+        description: 'The event category name, as defined by category_uid value: <code>Discovery</code>.'
+      class_name:
+        description: 'The event class name, as defined by class_uid value: <code>Registry
+          Key Query</code>.'
+      class_uid:
+        equals_number: 205004
+      reg_key:
+        description: The registry key that pertains to the event.
+        required: true
+        annotations:
+          ocsf_group: primary
+          ocsf_extension: win
+      type_uid:
+        any_of:
+          - equals_number: 20500400
+            title: 'Registry Key Query: Unknown'
+          - equals_number: 20500401
+            title: 'Registry Key Query: Query'
+            description: The discovered results are via a query request.
+          - equals_number: 20500499
+            title: 'Registry Key Query: Other'
+  OcsfWinRegistryValueActivity:
+    title: Registry Value Activity
+    description: Registry Value Activity events reports when a process performs an action
+      on a Windows registry value.
+    class_uri: ocsf:OcsfWinRegistryValueActivity
+    is_a: OcsfSystemEvent
+    in_subset:
+      - ocsf_category_system
+      - ocsf_extension_win
+    instantiates:
+      - ocsf:OcsfFacts
+    annotations:
+      ocsf_key: win/registry_value_activity
+      ocsf_category: system
+      ocsf_profiles: ai_operation cloud container data_classification datetime host linux/linux_users
+        macos/macos_users osint record_integrity security_control
+      ocsf_associations: '{"actor.user": ["device"], "device": ["actor.user"]}'
+      ocsf_extension: win
+    slots:
+      - prev_reg_value
+      - reg_value
+    slot_usage:
+      activity_id:
+        any_of:
+          - equals_number: 0
+            title: Unknown
+            description: The event activity is unknown.
+          - equals_number: 1
+            title: Get
+          - equals_number: 2
+            title: Set
+          - equals_number: 3
+            title: Modify
+          - equals_number: 4
+            title: Delete
+          - equals_number: 99
+            title: Other
+            description: The event activity is not mapped. See the <code>activity_name</code>
+              attribute, which contains a data source specific value.
+      actor:
+        description: The actor that performed the activity on the <code>reg_value</code> object.
+      category_name:
+        description: 'The event category name, as defined by category_uid value: <code>System
+          Activity</code>.'
+      class_name:
+        description: 'The event class name, as defined by class_uid value: <code>Registry
+          Value Activity</code>.'
+      class_uid:
+        equals_number: 201002
+      reg_value:
+        required: true
+      type_uid:
+        any_of:
+          - equals_number: 20100200
+            title: 'Registry Value Activity: Unknown'
+          - equals_number: 20100201
+            title: 'Registry Value Activity: Get'
+          - equals_number: 20100202
+            title: 'Registry Value Activity: Set'
+          - equals_number: 20100203
+            title: 'Registry Value Activity: Modify'
+          - equals_number: 20100204
+            title: 'Registry Value Activity: Delete'
+          - equals_number: 20100299
+            title: 'Registry Value Activity: Other'
+    related_mappings:
+      - d3f:WindowsRegistryValueEvent
+  OcsfWinRegistryValueQuery:
+    title: Registry Value Query
+    description: Registry Value Query events report information about discovered Windows registry
+      values.
+    class_uri: ocsf:OcsfWinRegistryValueQuery
+    deprecated: Use the <code>evidence_info</code> class instead. Populate <code>query_evidence.reg_value</code>
+      and set <code>query_type_id</code> to <code>Registry Value</code>.
+    is_a: OcsfDiscoveryResultEvent
+    in_subset:
+      - ocsf_category_discovery
+      - ocsf_extension_win
+    instantiates:
+      - ocsf:OcsfFacts
+    annotations:
+      ocsf_key: win/registry_value_query
+      ocsf_category: discovery
+      ocsf_profiles: cloud container data_classification datetime host linux/linux_users macos/macos_users
+        osint record_integrity security_control
+      ocsf_extension: win
+      ocsf_deprecated_since: 1.5.0
+      ocsf_superseded_by: evidence_info
+    slots:
+      - reg_value
+    slot_usage:
+      activity_id:
+        any_of:
+          - equals_number: 0
+            title: Unknown
+            description: The event activity is unknown.
+          - equals_number: 1
+            title: Query
+            description: The discovered results are via a query request.
+          - equals_number: 99
+            title: Other
+            description: The event activity is not mapped. See the <code>activity_name</code>
+              attribute, which contains a data source specific value.
+      category_name:
+        description: 'The event category name, as defined by category_uid value: <code>Discovery</code>.'
+      class_name:
+        description: 'The event class name, as defined by class_uid value: <code>Registry
+          Value Query</code>.'
+      class_uid:
+        equals_number: 205005
+      reg_value:
+        description: The registry value that pertains to the event.
+        required: true
+        annotations:
+          ocsf_group: primary
+          ocsf_extension: win
+      type_uid:
+        any_of:
+          - equals_number: 20500500
+            title: 'Registry Value Query: Unknown'
+          - equals_number: 20500501
+            title: 'Registry Value Query: Query'
+            description: The discovered results are via a query request.
+          - equals_number: 20500599
+            title: 'Registry Value Query: Other'
+  OcsfWinResourceActivity:
+    title: Windows Resource Activity
+    description: Windows Resource Activity events report when a process accesses a Windows
+      managed resource object, successful or otherwise.
+    class_uri: ocsf:OcsfWinResourceActivity
+    is_a: OcsfSystemEvent
+    in_subset:
+      - ocsf_category_system
+      - ocsf_extension_win
+    instantiates:
+      - ocsf:OcsfFacts
+    annotations:
+      ocsf_key: win/windows_resource_activity
+      ocsf_category: system
+      ocsf_profiles: ai_operation cloud container data_classification datetime host linux/linux_users
+        macos/macos_users osint record_integrity security_control
+      ocsf_associations: '{"actor.user": ["device"], "device": ["actor.user"]}'
+      ocsf_extension: win
+    slots:
+      - win_resource
+    slot_usage:
+      activity_id:
+        any_of:
+          - equals_number: 0
+            title: Unknown
+            description: The event activity is unknown.
+          - equals_number: 1
+            title: Access
+          - equals_number: 99
+            title: Other
+            description: The event activity is not mapped. See the <code>activity_name</code>
+              attribute, which contains a data source specific value.
+      category_name:
+        description: 'The event category name, as defined by category_uid value: <code>System
+          Activity</code>.'
+      class_name:
+        description: 'The event class name, as defined by class_uid value: <code>Windows Resource
+          Activity</code>.'
+      class_uid:
+        equals_number: 201003
+      type_uid:
+        any_of:
+          - equals_number: 20100300
+            title: 'Windows Resource Activity: Unknown'
+          - equals_number: 20100301
+            title: 'Windows Resource Activity: Access'
+          - equals_number: 20100399
+            title: 'Windows Resource Activity: Other'
+      win_resource:
+        required: true
+        annotations:
+          ocsf_group: primary
+          ocsf_extension: win
+  OcsfWinServiceActivity:
+    title: Windows Service Activity
+    description: Windows Service Activity events report when a process interacts with the
+      Service Control Manager.
+    class_uri: ocsf:OcsfWinServiceActivity
+    is_a: OcsfSystemEvent
+    in_subset:
+      - ocsf_category_system
+      - ocsf_extension_win
+    instantiates:
+      - ocsf:OcsfFacts
+    annotations:
+      ocsf_key: win/windows_service_activity
+      ocsf_category: system
+      ocsf_profiles: ai_operation cloud container data_classification datetime host linux/linux_users
+        macos/macos_users osint record_integrity security_control
+      ocsf_associations: '{"actor.user": ["device"], "device": ["actor.user"]}'
+      ocsf_extension: win
+    slots:
+      - prev_win_service
+      - win_service
+    slot_usage:
+      activity_id:
+        description: The normalized identifier of the activity that triggered the event. Each
+          event class defines its own set of activity values. Use 0 (Unknown) when the activity
+          cannot be determined. Use 99 (Other) when the activity does not match any defined
+          value, in which case activity_name must be populated with the source-specific label.<br>Refer
+          to the <code>win_service</code> attribute for details, unless any other attribute
+          is mentioned.
+        any_of:
+          - equals_number: 0
+            title: Unknown
+            description: The event activity is unknown.
+          - equals_number: 1
+            title: Create
+            description: A service is created, for example by calling the CreateService API.
+          - equals_number: 2
+            title: Reconfigure
+            description: A service is reconfigured, for example by calling the ChangeServiceConfig
+              or ChangeServiceConfig2 API. Refer to <code>prev_win_service</code> and <code>win_service</code>
+              attributes for details.
+          - equals_number: 3
+            title: Start
+            description: A stopped service is started, for example by calling the StartService
+              API.
+          - equals_number: 4
+            title: Stop
+            description: A running or paused service is stopped, for example by calling the
+              ControlService or ControlServiceEx API.
+          - equals_number: 5
+            title: Pause
+            description: A running service is paused, for example by calling the ControlService
+              or ControlServiceEx API.
+          - equals_number: 6
+            title: Continue
+            description: A paused service is continued, for example by calling the ControlService
+              or ControlServiceEx API.
+          - equals_number: 7
+            title: Delete
+            description: A service is deleted, for example by calling the DeleteService API.
+          - equals_number: 99
+            title: Other
+            description: The event activity is not mapped. See the <code>activity_name</code>
+              attribute, which contains a data source specific value.
+      category_name:
+        description: 'The event category name, as defined by category_uid value: <code>System
+          Activity</code>.'
+      class_name:
+        description: 'The event class name, as defined by class_uid value: <code>Windows Service
+          Activity</code>.'
+      class_uid:
+        equals_number: 201004
+      prev_win_service:
+        recommended: true
+        annotations:
+          ocsf_group: primary
+          ocsf_extension: win
+      type_uid:
+        any_of:
+          - equals_number: 20100400
+            title: 'Windows Service Activity: Unknown'
+          - equals_number: 20100401
+            title: 'Windows Service Activity: Create'
+            description: A service is created, for example by calling the CreateService API.
+          - equals_number: 20100402
+            title: 'Windows Service Activity: Reconfigure'
+            description: A service is reconfigured, for example by calling the ChangeServiceConfig
+              or ChangeServiceConfig2 API. Refer to <code>prev_win_service</code> and <code>win_service</code>
+              attributes for details.
+          - equals_number: 20100403
+            title: 'Windows Service Activity: Start'
+            description: A stopped service is started, for example by calling the StartService
+              API.
+          - equals_number: 20100404
+            title: 'Windows Service Activity: Stop'
+            description: A running or paused service is stopped, for example by calling the
+              ControlService or ControlServiceEx API.
+          - equals_number: 20100405
+            title: 'Windows Service Activity: Pause'
+            description: A running service is paused, for example by calling the ControlService
+              or ControlServiceEx API.
+          - equals_number: 20100406
+            title: 'Windows Service Activity: Continue'
+            description: A paused service is continued, for example by calling the ControlService
+              or ControlServiceEx API.
+          - equals_number: 20100407
+            title: 'Windows Service Activity: Delete'
+            description: A service is deleted, for example by calling the DeleteService API.
+          - equals_number: 20100499
+            title: 'Windows Service Activity: Other'
+      win_service:
+        description: The current Windows service. On failed or unknown status of <code>Reconfigure</code>
+          action may be populated with the intended state.
+        required: true
+        annotations:
+          ocsf_group: primary
+          ocsf_extension: win

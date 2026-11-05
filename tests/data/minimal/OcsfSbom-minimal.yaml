@@ -1,0 +1,7 @@
+# The least that OcsfSbom requires. scripts/make_examples.py writes this file.
+package:
+  name: example
+  version: example
+software_components:
+- name: example
+  version: example

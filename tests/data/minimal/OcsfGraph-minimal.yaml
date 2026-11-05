@@ -1,0 +1,4 @@
+# The least that OcsfGraph requires. scripts/make_examples.py writes this file.
+name: example
+nodes:
+- uid: example

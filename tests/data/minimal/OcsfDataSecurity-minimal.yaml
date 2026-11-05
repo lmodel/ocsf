@@ -1,0 +1,2 @@
+# The least that OcsfDataSecurity requires. scripts/make_examples.py writes this file.
+data_lifecycle_state_id: 1

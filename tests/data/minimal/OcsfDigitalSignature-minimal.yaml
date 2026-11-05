@@ -1,0 +1,2 @@
+# The least that OcsfDigitalSignature requires. scripts/make_examples.py writes this file.
+algorithm_id: 1

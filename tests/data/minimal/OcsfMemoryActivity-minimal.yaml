@@ -1,0 +1,19 @@
+# The least that OcsfMemoryActivity requires. scripts/make_examples.py writes this file.
+activity_id: 1
+actor:
+  process:
+    pid: 1
+category_uid: 1
+class_uid: 1004
+device:
+  ip: 192.0.2.1
+  type_id: 1
+metadata:
+  product:
+    name: example
+  version: 1.9.0
+process:
+  pid: 1
+severity_id: 1
+time: 1793793600000
+type_uid: 100401

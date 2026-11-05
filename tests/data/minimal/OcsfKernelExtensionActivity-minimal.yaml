@@ -1,0 +1,21 @@
+# The least that OcsfKernelExtensionActivity requires. scripts/make_examples.py writes this file.
+activity_id: 1
+actor:
+  process:
+    pid: 1
+category_uid: 1
+class_uid: 1002
+device:
+  ip: 192.0.2.1
+  type_id: 1
+driver:
+  file:
+    name: example.txt
+    type_id: 1
+metadata:
+  product:
+    name: example
+  version: 1.9.0
+severity_id: 1
+time: 1793793600000
+type_uid: 100201

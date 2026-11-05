@@ -1,0 +1,7 @@
+# The least that OcsfAnomalyAnalysis requires. scripts/make_examples.py writes this file.
+analysis_targets:
+- name: example
+anomalies:
+- observation_parameter: example
+  observations:
+  - value: example

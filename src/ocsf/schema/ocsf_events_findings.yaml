@@ -1,0 +1,1606 @@
+---
+id: https://w3id.org/lmodel/ocsf/ocsf_events_findings
+name: ocsf_events_findings
+title: 'OCSF event classes: Findings'
+description: Findings events report findings, detections, and possible resolutions of malware,
+  anomalies, or other actions performed by security products.
+version: 1.9.0
+source: https://github.com/ocsf/ocsf-schema/tree/1.9.0
+license: Apache-2.0
+see_also:
+  - https://lmodel.github.io/ocsf
+  - https://schema.ocsf.io/1.9.0/
+prefixes:
+  ocsf: https://w3id.org/lmodel/ocsf/
+  linkml: https://w3id.org/linkml/
+  xsd: http://www.w3.org/2001/XMLSchema#
+  attack: https://w3id.org/lmodel/attack/
+  cve: https://w3id.org/lmodel/cve/
+  cwe: https://w3id.org/lmodel/cwe/
+  d3f: http://d3fend.mitre.org/ontologies/d3fend.owl#
+  kev_catalog: https://w3id.org/lmodel/kev-catalog/
+  nist_nvd: https://w3id.org/lmodel/nist-nvd/
+  stix: https://w3id.org/lmodel/stix/
+default_prefix: ocsf
+default_range: string
+imports:
+  - linkml:types
+  - ocsf_core
+  - ocsf_objects
+  - ocsf_events_base
+classes:
+  OcsfFindingEvent:
+    title: Finding
+    description: The Finding event is a generic event that defines a set of attributes available
+      in the Findings category.
+    class_uri: ocsf:OcsfFindingEvent
+    abstract: true
+    is_a: OcsfBaseEvent
+    mixins:
+      - OcsfIncidentProfile
+    in_subset:
+      - ocsf_category_findings
+    instantiates:
+      - ocsf:OcsfFacts
+    annotations:
+      ocsf_key: finding
+      ocsf_category: findings
+      ocsf_profiles: incident
+    slots:
+      - comment
+      - finding_info
+      - notes
+      - resources
+      - vendor_attributes
+    slot_usage:
+      activity_id:
+        description: The normalized identifier of the finding activity. Use <code>1</code>
+          (Create) when a finding is first generated, <code>2</code> (Update) when an existing
+          finding is modified (e.g., severity change, new evidence), and <code>3</code> (Close)
+          when a finding is resolved or dismissed.
+      activity_name:
+        description: The finding activity name, as defined by the <code>activity_id</code>.
+          When <code>activity_id</code> is <code>99</code> (Other), this <b>must</b> contain
+          the source-specific activity label.
+      category_uid:
+        equals_number: 2
+      comment:
+        description: A user provided comment about the finding.
+        annotations:
+          ocsf_group: context
+      confidence:
+        description: The confidence, normalized to the caption of the confidence_id value.
+          In the case of 'Other', it is defined by the event source and should be the same
+          as <code>confidence_score</code> if also populated..
+        annotations:
+          ocsf_group: context
+      confidence_id:
+        description: The normalized confidence refers to the accuracy of the analytics that
+          produced the finding. An analytic with a low confidence means that the finding scope
+          is wide and may create finding reports that are noisy or may not be malicious in
+          nature.
+        annotations:
+          ocsf_group: context
+          ocsf_sibling: confidence
+      confidence_score:
+        annotations:
+          ocsf_group: context
+      device:
+        description: Describes the affected device/host. It can be used in conjunction with
+          <code>resources</code> or when there are multiple devices affected. E.g. The role
+          of the device as target or actor, specific details about a cloud resource compute
+          instance, etc.<p>If a single device is the source of the finding, use the <code>Host</code>
+          profile and populate <code>device</code>.</p>
+        recommended: false
+        annotations:
+          ocsf_group: context
+      end_time:
+        description: The time of the most recent event or finding that contributed to this
+          finding.
+      finding_info:
+        required: true
+        annotations:
+          ocsf_group: primary
+      notes:
+        description: Additional notes related to the finding. Each note in the array can include
+          a comment, the user who made the comment, the time when the note was created, and
+          the time when the note was last modified (typically by the same user). Notes can
+          be used to provide additional context, explanations, or observations by analysts
+          related to the finding over time.
+        annotations:
+          ocsf_group: context
+      resources:
+        title: Affected Resources
+        description: Describes details about resources that were the target of the activity
+          that triggered the finding.
+        recommended: true
+        annotations:
+          ocsf_group: context
+      start_time:
+        description: The time of the earliest event or finding that contributed to this finding.
+      status:
+        description: The finding lifecycle status label, normalized to the caption of the
+          <code>status_id</code> value. When <code>status_id</code> is <code>99</code> (Other),
+          this <b>must</b> contain the source-specific status label.
+        recommended: false
+        annotations:
+          ocsf_group: context
+      status_id:
+        description: 'The normalized finding lifecycle status identifier. Unlike the status
+          of an activity event, which indicates the success or failure of the activity, finding
+          status tracks the review and triage workflow: whether the finding is new, being
+          investigated, suppressed, or resolved. Producers should set this to reflect the
+          current state of the finding in their system (e.g., <code>1</code> for newly created
+          findings, <code>4</code> when remediated).'
+        annotations:
+          ocsf_group: context
+          ocsf_sibling: status
+      time:
+        description: The finding creation time - when the finding was first generated, not
+          when the underlying activity occurred. For the time range of contributing events,
+          use <code>start_time</code> and <code>end_time</code>.
+      vendor_attributes:
+        annotations:
+          ocsf_group: context
+  OcsfApplicationSecurityPostureFinding:
+    title: Application Security Posture Finding
+    description: 'The Application Security Posture Finding event is a notification about any
+      bug, defect, deficiency, exploit, vulnerability, weakness or any other issue with software
+      and related systems. Application Security Posture Findings typically involve reporting
+      on the greater context including compliance, impacted resources, remediation guidance,
+      specific code defects, and/or vulnerability metadata. Application Security Posture Findings
+      can be reported by Threat & Vulnerability Management (TVM) tools, Application Security
+      Posture Management (ASPM) tools, or other similar tools. Note: if the event producer
+      is a security control, the <code>security_control</code> profile should be applied and
+      its <code>attacks</code> information, if present, should be duplicated into the <code>finding_info</code>
+      object. <br><strong>Note: </strong>If the Finding is an incident, i.e. requires incident
+      workflow, also apply the <code>incident</code> profile or aggregate this finding into
+      an <code>Incident Finding</code>.'
+    class_uri: ocsf:OcsfApplicationSecurityPostureFinding
+    is_a: OcsfFindingEvent
+    in_subset:
+      - ocsf_category_findings
+    instantiates:
+      - ocsf:OcsfFacts
+    annotations:
+      ocsf_key: application_security_posture_finding
+      ocsf_category: findings
+      ocsf_profiles: cloud container data_classification datetime host incident linux/linux_users
+        macos/macos_users osint record_integrity security_control
+      ocsf_constraints: '{"at_least_one": ["application", "compliance", "remediation", "vulnerabilities"]}'
+    any_of:
+      - slot_conditions:
+          application:
+            required: true
+      - slot_conditions:
+          compliance:
+            required: true
+      - slot_conditions:
+          remediation:
+            required: true
+      - slot_conditions:
+          vulnerabilities:
+            required: true
+    slots:
+      - application
+      - compliance
+      - remediation
+      - vulnerabilities
+    slot_usage:
+      activity_id:
+        any_of:
+          - equals_number: 0
+            title: Unknown
+            description: The event activity is unknown.
+          - equals_number: 1
+            title: Create
+            description: A finding was created.
+          - equals_number: 2
+            title: Update
+            description: A finding was updated.
+          - equals_number: 3
+            title: Close
+            description: A finding was closed.
+          - equals_number: 99
+            title: Other
+            description: The event activity is not mapped. See the <code>activity_name</code>
+              attribute, which contains a data source specific value.
+      application:
+        title: Related Application
+        recommended: true
+        annotations:
+          ocsf_group: primary
+      category_name:
+        description: 'The event category name, as defined by category_uid value: <code>Findings</code>.'
+      class_name:
+        description: 'The event class name, as defined by class_uid value: <code>Application
+          Security Posture Finding</code>.'
+      class_uid:
+        equals_number: 2007
+      comment:
+        deprecated: Use the <code>notes</code> attribute instead.
+        annotations:
+          ocsf_group: context
+          ocsf_deprecated_since: 1.9.0
+          ocsf_superseded_by: notes
+      compliance:
+        title: Related Compliance
+        description: Provides compliance context to vulnerabilities and other weaknesses that
+          are reported as part of an Application Security or Vulnerability Management tool's
+          built-in compliance framework mapping.
+        recommended: true
+        annotations:
+          ocsf_group: primary
+      end_time_dt:
+        description: The time of the most recent event or finding that contributed to this
+          finding.
+      remediation:
+        description: Describes the recommended remediation steps to address identified vulnerabilities
+          or weaknesses.
+        recommended: true
+        annotations:
+          ocsf_group: context
+      resources:
+        description: Describes details about the resource/resources that are affected by the
+          vulnerability/vulnerabilities.
+      start_time_dt:
+        description: The time of the earliest event or finding that contributed to this finding.
+      status_id:
+        any_of:
+          - equals_number: 0
+            title: Unknown
+            description: The status is unknown.
+          - equals_number: 1
+            title: New
+            description: The Finding is new and yet to be reviewed.
+          - equals_number: 2
+            title: In Progress
+            description: The Finding is under review.
+          - equals_number: 3
+            title: Suppressed
+            description: The Finding was reviewed, determined to be benign or a false positive
+              and is now suppressed.
+          - equals_number: 4
+            title: Resolved
+            description: The Finding was reviewed, remediated and is now considered resolved.
+          - equals_number: 5
+            title: Archived
+            description: The Finding was archived.
+          - equals_number: 6
+            title: Deleted
+            description: The Finding was deleted. For example, it might have been created
+              in error.
+          - equals_number: 99
+            title: Other
+            description: The status is not mapped. See the <code>status</code> attribute,
+              which contains a data source specific value.
+      time_dt:
+        description: The finding creation time - when the finding was first generated, not
+          when the underlying activity occurred. For the time range of contributing events,
+          use <code>start_time</code> and <code>end_time</code>.
+      type_uid:
+        any_of:
+          - equals_number: 200700
+            title: 'Application Security Posture Finding: Unknown'
+          - equals_number: 200701
+            title: 'Application Security Posture Finding: Create'
+            description: A finding was created.
+          - equals_number: 200702
+            title: 'Application Security Posture Finding: Update'
+            description: A finding was updated.
+          - equals_number: 200703
+            title: 'Application Security Posture Finding: Close'
+            description: A finding was closed.
+          - equals_number: 200799
+            title: 'Application Security Posture Finding: Other'
+      vulnerabilities:
+        recommended: true
+        annotations:
+          ocsf_group: primary
+  OcsfComplianceFinding:
+    title: Compliance Finding
+    description: 'Compliance Finding events describe results of evaluations performed against
+      resources, to check compliance with various Industry Frameworks or Security Standards
+      such as <code>NIST SP 800-53, CIS AWS Foundations Benchmark v1.4.0, ISO/IEC 27001</code>
+      etc. Note: if the event producer is a security control, the <code>security_control</code>
+      profile should be applied and its <code>attacks</code> information, if present, should
+      be duplicated into the <code>finding_info</code> object. <br><strong>Note: </strong>If
+      the Finding is an incident, i.e. requires incident workflow, also apply the <code>incident</code>
+      profile or aggregate this finding into an <code>Incident Finding</code>.'
+    class_uri: ocsf:OcsfComplianceFinding
+    is_a: OcsfFindingEvent
+    in_subset:
+      - ocsf_category_findings
+    instantiates:
+      - ocsf:OcsfFacts
+    annotations:
+      ocsf_key: compliance_finding
+      ocsf_category: findings
+      ocsf_profiles: cloud container data_classification datetime host incident linux/linux_users
+        macos/macos_users osint record_integrity security_control
+    slots:
+      - compliance
+      - evidences
+      - remediation
+      - resource
+    slot_usage:
+      activity_id:
+        any_of:
+          - equals_number: 0
+            title: Unknown
+            description: The event activity is unknown.
+          - equals_number: 1
+            title: Create
+            description: A finding was created.
+          - equals_number: 2
+            title: Update
+            description: A finding was updated.
+          - equals_number: 3
+            title: Close
+            description: A finding was closed.
+          - equals_number: 99
+            title: Other
+            description: The event activity is not mapped. See the <code>activity_name</code>
+              attribute, which contains a data source specific value.
+      category_name:
+        description: 'The event category name, as defined by category_uid value: <code>Findings</code>.'
+      class_name:
+        description: 'The event class name, as defined by class_uid value: <code>Compliance
+          Finding</code>.'
+      class_uid:
+        equals_number: 2003
+      comment:
+        deprecated: Use the <code>notes</code> attribute instead.
+        annotations:
+          ocsf_group: context
+          ocsf_deprecated_since: 1.9.0
+          ocsf_superseded_by: notes
+      compliance:
+        required: true
+        annotations:
+          ocsf_group: primary
+      end_time_dt:
+        description: The time of the most recent event or finding that contributed to this
+          finding.
+      evidences:
+        description: Describes various evidence artifacts associated with the compliance finding.
+        annotations:
+          ocsf_group: context
+      remediation:
+        recommended: true
+        annotations:
+          ocsf_group: context
+      resource:
+        description: Describes details about the resource that is the subject of the compliance
+          check.
+        deprecated: Use the <code>resources</code> attribute instead.
+        recommended: true
+        annotations:
+          ocsf_group: primary
+          ocsf_deprecated_since: 1.3.0
+          ocsf_superseded_by: resources
+      resources:
+        description: Describes details about the resource/resources that are the subject of
+          the compliance check.
+        annotations:
+          ocsf_group: primary
+      start_time_dt:
+        description: The time of the earliest event or finding that contributed to this finding.
+      status_id:
+        any_of:
+          - equals_number: 0
+            title: Unknown
+            description: The status is unknown.
+          - equals_number: 1
+            title: New
+            description: The Finding is new and yet to be reviewed.
+          - equals_number: 2
+            title: In Progress
+            description: The Finding is under review.
+          - equals_number: 3
+            title: Suppressed
+            description: The Finding was reviewed, determined to be benign or a false positive
+              and is now suppressed.
+          - equals_number: 4
+            title: Resolved
+            description: The Finding was reviewed, remediated and is now considered resolved.
+          - equals_number: 5
+            title: Archived
+            description: The Finding was archived.
+          - equals_number: 6
+            title: Deleted
+            description: The Finding was deleted. For example, it might have been created
+              in error.
+          - equals_number: 99
+            title: Other
+            description: The status is not mapped. See the <code>status</code> attribute,
+              which contains a data source specific value.
+      time_dt:
+        description: The finding creation time - when the finding was first generated, not
+          when the underlying activity occurred. For the time range of contributing events,
+          use <code>start_time</code> and <code>end_time</code>.
+      type_uid:
+        any_of:
+          - equals_number: 200300
+            title: 'Compliance Finding: Unknown'
+          - equals_number: 200301
+            title: 'Compliance Finding: Create'
+            description: A finding was created.
+          - equals_number: 200302
+            title: 'Compliance Finding: Update'
+            description: A finding was updated.
+          - equals_number: 200303
+            title: 'Compliance Finding: Close'
+            description: A finding was closed.
+          - equals_number: 200399
+            title: 'Compliance Finding: Other'
+  OcsfDataSecurityFinding:
+    title: Data Security Finding
+    description: 'A Data Security Finding describes detections or alerts generated by various
+      data security products such as Data Loss Prevention (DLP), Data Classification, Secrets
+      Management, Digital Rights Management (DRM), Data Security Posture Management (DSPM),
+      and similar tools. These detections or alerts can be created using fingerprinting, statistical
+      analysis, machine learning or other methodologies. The finding describes the actors
+      and endpoints who accessed or own the sensitive data, as well as the resources which
+      store the sensitive data. Note: if the event producer is a security control, the <code>security_control</code>
+      profile should be applied and its <code>attacks</code> information, if present, should
+      be duplicated into the <code>finding_info</code> object. <br><strong>Note: </strong>If
+      the Finding is an incident, i.e. requires incident workflow, also apply the <code>incident</code>
+      profile  or aggregate this finding into an <code>Incident Finding</code>.'
+    class_uri: ocsf:OcsfDataSecurityFinding
+    is_a: OcsfFindingEvent
+    in_subset:
+      - ocsf_category_findings
+    instantiates:
+      - ocsf:OcsfFacts
+    annotations:
+      ocsf_key: data_security_finding
+      ocsf_category: findings
+      ocsf_profiles: cloud container data_classification datetime host incident linux/linux_users
+        macos/macos_users osint record_integrity security_control
+    slots:
+      - data_security
+      - database
+      - databucket
+      - dst_endpoint
+      - file
+      - src_endpoint
+      - table
+    slot_usage:
+      activity_id:
+        description: The normalized identifier of the Data Security Finding activity.
+        any_of:
+          - equals_number: 0
+            title: Unknown
+            description: The event activity is unknown.
+          - equals_number: 1
+            title: Create
+            description: A new Data Security finding is created.
+          - equals_number: 2
+            title: Update
+            description: An existing Data Security finding is updated with more information.
+          - equals_number: 3
+            title: Close
+            description: An existing Data Security finding is closed, this can be due to any
+              resolution (e.g., True Positive, False Positive, etc.).
+          - equals_number: 4
+            title: Suppressed
+            description: An existing Data Security finding is suppressed due to inaccurate
+              detection techniques or a known true negative.
+            deprecated: Use <code>status_id</code> attribute instead.
+            annotations:
+              ocsf_deprecated_since: 1.4.0
+              ocsf_superseded_by: status_id
+          - equals_number: 99
+            title: Other
+            description: The event activity is not mapped. See the <code>activity_name</code>
+              attribute, which contains a data source specific value.
+      activity_name:
+        description: The Data Security finding activity name, as defined by the <code>activity_id</code>.
+      actor:
+        description: Describes details about the actor implicated in the data security finding.
+          Either an actor that owns a particular digital file or information store, or an
+          actor which accessed classified or sensitive data.
+        recommended: true
+        annotations:
+          ocsf_group: context
+      category_name:
+        description: 'The event category name, as defined by category_uid value: <code>Findings</code>.'
+      class_name:
+        description: 'The event class name, as defined by class_uid value: <code>Data Security
+          Finding</code>.'
+      class_uid:
+        equals_number: 2006
+      comment:
+        deprecated: Use the <code>notes</code> attribute instead.
+        annotations:
+          ocsf_group: context
+          ocsf_deprecated_since: 1.9.0
+          ocsf_superseded_by: notes
+      data_security:
+        recommended: true
+        annotations:
+          ocsf_group: context
+      database:
+        description: Describes the database where classified or sensitive data is stored in,
+          or was accessed from. Databases are typically datastore services that contain an
+          organized collection of structured and/or semi-structured data.
+        recommended: true
+        annotations:
+          ocsf_group: primary
+      databucket:
+        description: Describes the databucket where classified or sensitive data is stored
+          in, or was accessed from. The data bucket object is a basic container that holds
+          data, typically organized through the use of data partitions.
+        recommended: true
+        annotations:
+          ocsf_group: primary
+      device:
+        description: Describes the device where classified or sensitive data is stored in,
+          or was accessed from.
+        recommended: true
+      dst_endpoint:
+        description: Describes the endpoint where classified or sensitive data is stored in,
+          or was accessed from.
+        recommended: true
+        annotations:
+          ocsf_group: context
+      end_time_dt:
+        description: The time of the most recent event or finding that contributed to this
+          finding.
+      file:
+        description: Describes a file that contains classified or sensitive data.
+        recommended: true
+        annotations:
+          ocsf_group: primary
+      impact:
+        recommended: false
+        annotations:
+          ocsf_group: context
+      impact_id:
+        recommended: false
+        annotations:
+          ocsf_group: context
+          ocsf_sibling: impact
+          ocsf_source_note: impact value; impact level
+      impact_score:
+        recommended: false
+        annotations:
+          ocsf_group: context
+      is_alert:
+        description: Indicates that the event is considered to be an alertable signal. For
+          example, an <code>activity_id</code> of 'Create' could constitute an alertable signal
+          and the value would be <code>true</code>, while 'Close' likely would not and either
+          omit the attribute or set its value to <code>false</code>.  Note that other events
+          with the <code>security_control</code> profile may also be deemed alertable signals
+          and may also carry <code>is_alert = true</code> attributes.
+        annotations:
+          ocsf_group: primary
+      resources:
+        title: Additional Resources
+        description: Describes details about additional resources, where classified or sensitive
+          data is stored in, or was accessed from. <p> You can populate this object, if the
+          specific resource type objects available in the class (<code>database, databucket,
+          table, file</code>) aren't sufficient; OR <br> You can also choose to duplicate
+          <code>uid, name</code> of the specific resources objects, for a consistent access
+          to resource uids across all findings.
+        annotations:
+          ocsf_group: primary
+      risk_details:
+        annotations:
+          ocsf_group: context
+      risk_level:
+        annotations:
+          ocsf_group: context
+      risk_level_id:
+        annotations:
+          ocsf_group: context
+          ocsf_sibling: risk_level
+          ocsf_suppress_checks: enum_convention
+      risk_score:
+        annotations:
+          ocsf_group: context
+      src_endpoint:
+        description: Details about the source endpoint where classified or sensitive data
+          was accessed from.
+        recommended: true
+        annotations:
+          ocsf_group: context
+      start_time_dt:
+        description: The time of the earliest event or finding that contributed to this finding.
+      status_id:
+        any_of:
+          - equals_number: 0
+            title: Unknown
+            description: The status is unknown.
+          - equals_number: 1
+            title: New
+            description: The Finding is new and yet to be reviewed.
+          - equals_number: 2
+            title: In Progress
+            description: The Finding is under review.
+          - equals_number: 3
+            title: Suppressed
+            description: The Finding was reviewed, determined to be benign or a false positive
+              and is now suppressed.
+          - equals_number: 4
+            title: Resolved
+            description: The Finding was reviewed, remediated and is now considered resolved.
+          - equals_number: 5
+            title: Archived
+            description: The Finding was archived.
+          - equals_number: 6
+            title: Deleted
+            description: The Finding was deleted. For example, it might have been created
+              in error.
+          - equals_number: 99
+            title: Other
+            description: The status is not mapped. See the <code>status</code> attribute,
+              which contains a data source specific value.
+      table:
+        description: Describes the table where classified or sensitive data is stored in,
+          or was accessed from. The table object represents a table within a structured relational
+          database, warehouse, lake, or similar.
+        recommended: true
+        annotations:
+          ocsf_group: primary
+      time_dt:
+        description: The finding creation time - when the finding was first generated, not
+          when the underlying activity occurred. For the time range of contributing events,
+          use <code>start_time</code> and <code>end_time</code>.
+      type_uid:
+        any_of:
+          - equals_number: 200600
+            title: 'Data Security Finding: Unknown'
+          - equals_number: 200601
+            title: 'Data Security Finding: Create'
+            description: A new Data Security finding is created.
+          - equals_number: 200602
+            title: 'Data Security Finding: Update'
+            description: An existing Data Security finding is updated with more information.
+          - equals_number: 200603
+            title: 'Data Security Finding: Close'
+            description: An existing Data Security finding is closed, this can be due to any
+              resolution (e.g., True Positive, False Positive, etc.).
+          - equals_number: 200604
+            title: 'Data Security Finding: Suppressed'
+            description: An existing Data Security finding is suppressed due to inaccurate
+              detection techniques or a known true negative.
+            deprecated: Use <code>status_id</code> attribute instead.
+            annotations:
+              ocsf_deprecated_since: 1.4.0
+              ocsf_superseded_by: status_id
+          - equals_number: 200699
+            title: 'Data Security Finding: Other'
+  OcsfDetectionFinding:
+    title: Detection Finding
+    description: 'A Detection Finding describes detections or alerts generated by security
+      products using correlation engines, detection engines or other methodologies.<br><strong>Note:
+      </strong>If the event producer is a security control, the <code>Security Control</code>
+      profile should be applied and its <code>attacks</code> information, if present, should
+      be duplicated into the <code>finding_info</code> object. <br><strong>Note: </strong>If
+      the Finding is an incident, i.e. requires incident workflow, also apply the <code>Incident</code>
+      profile or aggregate the finding into an <code>Incident Finding</code>.<p><strong>Note:
+      </strong>Findings are mutable and as such have a lifecycle, via <code>Update</code>
+      activities. When modeling atomic alerts, you are encouraged to consider using the <code>Security
+      Control</code> profile with the activity event associated with the alert. See the referenced
+      article below.'
+    class_uri: ocsf:OcsfDetectionFinding
+    see_also:
+      - https://github.com/ocsf/ocsf-docs/blob/main/articles/modeling-alerts.md
+    is_a: OcsfFindingEvent
+    in_subset:
+      - ocsf_category_findings
+    instantiates:
+      - ocsf:OcsfFacts
+    annotations:
+      ocsf_key: detection_finding
+      ocsf_category: findings
+      ocsf_profiles: cloud container data_classification datetime host incident linux/linux_users
+        macos/macos_users osint record_integrity security_control
+    slots:
+      - anomaly_analyses
+      - evidences
+      - remediation
+      - vulnerabilities
+    slot_usage:
+      activity_id:
+        any_of:
+          - equals_number: 0
+            title: Unknown
+            description: The event activity is unknown.
+          - equals_number: 1
+            title: Create
+            description: A finding was created.
+          - equals_number: 2
+            title: Update
+            description: A finding was updated.
+          - equals_number: 3
+            title: Close
+            description: A finding was closed.
+          - equals_number: 99
+            title: Other
+            description: The event activity is not mapped. See the <code>activity_name</code>
+              attribute, which contains a data source specific value.
+      anomaly_analyses:
+        description: Describes baseline information about normal activity patterns, along
+          with any detected deviations or anomalies that triggered this finding.
+        annotations:
+          ocsf_group: context
+      category_name:
+        description: 'The event category name, as defined by category_uid value: <code>Findings</code>.'
+      class_name:
+        description: 'The event class name, as defined by class_uid value: <code>Detection
+          Finding</code>.'
+      class_uid:
+        equals_number: 2004
+      comment:
+        deprecated: Use the <code>notes</code> attribute instead.
+        annotations:
+          ocsf_group: context
+          ocsf_deprecated_since: 1.9.0
+          ocsf_superseded_by: notes
+      end_time_dt:
+        description: The time of the most recent event or finding that contributed to this
+          finding.
+      evidences:
+        description: Describes various evidence artifacts associated to the activity/activities
+          that triggered a security detection.
+        recommended: true
+        annotations:
+          ocsf_group: primary
+      impact:
+        recommended: false
+        annotations:
+          ocsf_group: context
+      impact_id:
+        recommended: false
+        annotations:
+          ocsf_group: context
+          ocsf_sibling: impact
+          ocsf_source_note: impact value; impact level
+      impact_score:
+        recommended: false
+        annotations:
+          ocsf_group: context
+      is_alert:
+        description: Indicates that the event is considered to be an alertable signal. For
+          example, an <code>activity_id</code> of 'Create' could constitute an alertable signal
+          and the value would be <code>true</code>, while 'Close' likely would not and either
+          omit the attribute or set its value to <code>false</code>.  Note that other events
+          with the <code>security_control</code> profile may also be deemed alertable signals
+          and may also carry <code>is_alert = true</code> attributes.
+        annotations:
+          ocsf_group: primary
+      malware:
+        description: Describes malware reported in a Detection Finding.
+        annotations:
+          ocsf_group: context
+      malware_scan_info:
+        description: Describes details about malware scan job that triggered this Detection
+          Finding.
+        annotations:
+          ocsf_group: context
+      remediation:
+        annotations:
+          ocsf_group: context
+      resources:
+        annotations:
+          ocsf_group: primary
+      risk_details:
+        annotations:
+          ocsf_group: context
+      risk_level:
+        annotations:
+          ocsf_group: context
+      risk_level_id:
+        annotations:
+          ocsf_group: context
+          ocsf_sibling: risk_level
+          ocsf_suppress_checks: enum_convention
+      risk_score:
+        annotations:
+          ocsf_group: context
+      start_time_dt:
+        description: The time of the earliest event or finding that contributed to this finding.
+      status_id:
+        any_of:
+          - equals_number: 0
+            title: Unknown
+            description: The status is unknown.
+          - equals_number: 1
+            title: New
+            description: The Finding is new and yet to be reviewed.
+          - equals_number: 2
+            title: In Progress
+            description: The Finding is under review.
+          - equals_number: 3
+            title: Suppressed
+            description: The Finding was reviewed, determined to be benign or a false positive
+              and is now suppressed.
+          - equals_number: 4
+            title: Resolved
+            description: The Finding was reviewed, remediated and is now considered resolved.
+          - equals_number: 5
+            title: Archived
+            description: The Finding was archived.
+          - equals_number: 6
+            title: Deleted
+            description: The Finding was deleted. For example, it might have been created
+              in error.
+          - equals_number: 99
+            title: Other
+            description: The status is not mapped. See the <code>status</code> attribute,
+              which contains a data source specific value.
+      time_dt:
+        description: The finding creation time - when the finding was first generated, not
+          when the underlying activity occurred. For the time range of contributing events,
+          use <code>start_time</code> and <code>end_time</code>.
+      type_uid:
+        any_of:
+          - equals_number: 200400
+            title: 'Detection Finding: Unknown'
+          - equals_number: 200401
+            title: 'Detection Finding: Create'
+            description: A finding was created.
+          - equals_number: 200402
+            title: 'Detection Finding: Update'
+            description: A finding was updated.
+          - equals_number: 200403
+            title: 'Detection Finding: Close'
+            description: A finding was closed.
+          - equals_number: 200499
+            title: 'Detection Finding: Other'
+      vulnerabilities:
+        description: Describes vulnerabilities reported in a Detection Finding.
+        annotations:
+          ocsf_group: context
+  OcsfIamAnalysisFinding:
+    title: IAM Analysis Finding
+    description: This finding represents an IAM analysis result, which evaluates IAM policies,
+      access patterns, and IAM configurations for potential security risks. The analysis can
+      focus on either an identity (user, role, service account) or a resource to assess permissions,
+      access patterns, and security posture within the IAM domain. <br><strong>Note:</strong>
+      Use <code>permission_analysis_results</code> for identity-centric analysis (evaluating
+      what an identity can do) and <code>access_analysis_result</code> for resource-centric
+      analysis (evaluating who can access a resource). These complement each other for comprehensive
+      IAM security assessment.<br><strong>Note:</strong> If the Finding is an incident, i.e.
+      requires incident workflow, also apply the <code>incident</code> profile or aggregate
+      this finding into an <code>Incident Finding</code>.
+    class_uri: ocsf:OcsfIamAnalysisFinding
+    is_a: OcsfFindingEvent
+    in_subset:
+      - ocsf_category_findings
+    instantiates:
+      - ocsf:OcsfFacts
+    annotations:
+      ocsf_key: iam_analysis_finding
+      ocsf_category: findings
+      ocsf_profiles: cloud container data_classification datetime host incident linux/linux_users
+        macos/macos_users osint record_integrity security_control
+      ocsf_constraints: '{"at_least_one": ["access_analysis_result", "applications", "identity_activity_metrics",
+        "permission_analysis_results"]}'
+    any_of:
+      - slot_conditions:
+          access_analysis_result:
+            required: true
+      - slot_conditions:
+          applications:
+            required: true
+      - slot_conditions:
+          identity_activity_metrics:
+            required: true
+      - slot_conditions:
+          permission_analysis_results:
+            required: true
+    slots:
+      - access_analysis_result
+      - applications
+      - identity_activity_metrics
+      - permission_analysis_results
+      - remediation
+      - user
+    slot_usage:
+      access_analysis_result:
+        annotations:
+          ocsf_group: context
+      activity_id:
+        any_of:
+          - equals_number: 0
+            title: Unknown
+            description: The event activity is unknown.
+          - equals_number: 1
+            title: Create
+            description: A finding was created.
+          - equals_number: 2
+            title: Update
+            description: A finding was updated.
+          - equals_number: 3
+            title: Close
+            description: A finding was closed.
+          - equals_number: 99
+            title: Other
+            description: The event activity is not mapped. See the <code>activity_name</code>
+              attribute, which contains a data source specific value.
+      applications:
+        description: Details about applications, services, or systems that are accessible
+          based on the IAM analysis. For identity-centric analysis, this represents applications
+          the identity can access. For resource-centric analysis, this represents applications
+          that can access the resource.
+        recommended: true
+        annotations:
+          ocsf_group: primary
+      category_name:
+        description: 'The event category name, as defined by category_uid value: <code>Findings</code>.'
+      class_name:
+        description: 'The event class name, as defined by class_uid value: <code>IAM Analysis
+          Finding</code>.'
+      class_uid:
+        equals_number: 2008
+      comment:
+        deprecated: Use the <code>notes</code> attribute instead.
+        annotations:
+          ocsf_group: context
+          ocsf_deprecated_since: 1.9.0
+          ocsf_superseded_by: notes
+      end_time_dt:
+        description: The time of the most recent event or finding that contributed to this
+          finding.
+      identity_activity_metrics:
+        recommended: true
+        annotations:
+          ocsf_group: primary
+      permission_analysis_results:
+        recommended: true
+        annotations:
+          ocsf_group: primary
+      remediation:
+        annotations:
+          ocsf_group: context
+      resources:
+        description: Details about resources involved in the IAM analysis. For identity-centric
+          analysis, this represents resources the identity can access. For resource-centric
+          analysis, this represents the resource being analyzed and related resources in the
+          access chain.
+        annotations:
+          ocsf_group: primary
+      start_time_dt:
+        description: The time of the earliest event or finding that contributed to this finding.
+      status_id:
+        any_of:
+          - equals_number: 0
+            title: Unknown
+            description: The status is unknown.
+          - equals_number: 1
+            title: New
+            description: The Finding is new and yet to be reviewed.
+          - equals_number: 2
+            title: In Progress
+            description: The Finding is under review.
+          - equals_number: 3
+            title: Suppressed
+            description: The Finding was reviewed, determined to be benign or a false positive
+              and is now suppressed.
+          - equals_number: 4
+            title: Resolved
+            description: The Finding was reviewed, remediated and is now considered resolved.
+          - equals_number: 5
+            title: Archived
+            description: The Finding was archived.
+          - equals_number: 6
+            title: Deleted
+            description: The Finding was deleted. For example, it might have been created
+              in error.
+          - equals_number: 99
+            title: Other
+            description: The status is not mapped. See the <code>status</code> attribute,
+              which contains a data source specific value.
+      time_dt:
+        description: The finding creation time - when the finding was first generated, not
+          when the underlying activity occurred. For the time range of contributing events,
+          use <code>start_time</code> and <code>end_time</code>.
+      type_uid:
+        any_of:
+          - equals_number: 200800
+            title: 'IAM Analysis Finding: Unknown'
+          - equals_number: 200801
+            title: 'IAM Analysis Finding: Create'
+            description: A finding was created.
+          - equals_number: 200802
+            title: 'IAM Analysis Finding: Update'
+            description: A finding was updated.
+          - equals_number: 200803
+            title: 'IAM Analysis Finding: Close'
+            description: A finding was closed.
+          - equals_number: 200899
+            title: 'IAM Analysis Finding: Other'
+      user:
+        description: Details about the identity (user, role, service account, or other principal)
+          that is the subject of the IAM analysis. This provides context about the identity
+          being evaluated for security risks and access patterns.
+        recommended: true
+        annotations:
+          ocsf_group: primary
+  OcsfIncidentFinding:
+    title: Incident Finding
+    description: 'An Incident Finding reports the creation, update, or closure of security
+      incidents as a result of detections and/or analytics. <br><strong>Note: </strong><code>Incident
+      Finding</code> implicitly includes the <code>incident</code> profile and it should be
+      added to the <code>metadata.profiles[]</code> array.'
+    class_uri: ocsf:OcsfIncidentFinding
+    is_a: OcsfBaseEvent
+    in_subset:
+      - ocsf_category_findings
+    instantiates:
+      - ocsf:OcsfFacts
+    annotations:
+      ocsf_key: incident_finding
+      ocsf_category: findings
+      ocsf_profiles: cloud container data_classification datetime host incident linux/linux_users
+        macos/macos_users osint record_integrity security_control
+      ocsf_constraints: '{"at_least_one": ["assignee", "assignee_group"]}'
+    any_of:
+      - slot_conditions:
+          assignee:
+            required: true
+      - slot_conditions:
+          assignee_group:
+            required: true
+    slots:
+      - assignee
+      - assignee_group
+      - comment
+      - desc
+      - finding_info_list
+      - impact
+      - impact_id
+      - impact_score
+      - is_suspected_breach
+      - notes
+      - priority
+      - priority_id
+      - src_url
+      - ticket
+      - tickets
+      - vendor_attributes
+      - verdict
+      - verdict_id
+    slot_usage:
+      activity_id:
+        description: The normalized identifier of the incident activity. Use <code>1</code>
+          (Create) when an incident is first opened, <code>2</code> (Update) when an existing
+          incident is modified (e.g., new findings added, priority changed, assignee updated),
+          and <code>3</code> (Close) when the incident is resolved.
+        any_of:
+          - equals_number: 0
+            title: Unknown
+            description: The event activity is unknown.
+          - equals_number: 1
+            title: Create
+            description: Reports the creation of an Incident.
+          - equals_number: 2
+            title: Update
+            description: Reports updates to an Incident.
+          - equals_number: 3
+            title: Close
+            description: Reports closure of an Incident .
+          - equals_number: 99
+            title: Other
+            description: The event activity is not mapped. See the <code>activity_name</code>
+              attribute, which contains a data source specific value.
+      activity_name:
+        description: The incident activity name, as defined by the <code>activity_id</code>.
+          When <code>activity_id</code> is <code>99</code> (Other), this <b>must</b> contain
+          the source-specific activity label.
+      assignee:
+        annotations:
+          ocsf_group: context
+      assignee_group:
+        annotations:
+          ocsf_group: context
+      attacks:
+        description: An array of attack objects, each describing a tactic, technique, and/or
+          sub-technique associated with the Incident.
+        see_also:
+          - https://attack.mitre.org
+        annotations:
+          ocsf_group: context
+      category_name:
+        description: 'The event category name, as defined by category_uid value: <code>Findings</code>.'
+      category_uid:
+        equals_number: 2
+      class_name:
+        description: 'The event class name, as defined by class_uid value: <code>Incident
+          Finding</code>.'
+      class_uid:
+        equals_number: 2005
+      comment:
+        description: Additional user supplied details for updating or closing the incident.
+        deprecated: Use the <code>notes</code> attribute instead.
+        annotations:
+          ocsf_group: context
+          ocsf_deprecated_since: 1.9.0
+          ocsf_superseded_by: notes
+      confidence:
+        annotations:
+          ocsf_group: context
+      confidence_id:
+        description: The normalized identifier of the confidence level for this incident,
+          representing a summary across all aggregated findings. It reflects the accuracy
+          of the analytics that produced those findings. A lower confidence value indicates
+          a wider finding scope that may produce noisy or potentially non-malicious reports.
+          When the value is <code>99</code> (Other), the <code>confidence</code> attribute
+          must contain the incident-specific label.
+        annotations:
+          ocsf_group: context
+          ocsf_sibling: confidence
+      confidence_score:
+        description: The confidence score assigned to the incident by the system or analyst,
+          expressed on a source-specific numeric scale. This score provides finer-grained
+          confidence information than the categorical <code>confidence_id</code> value. When
+          <code>confidence_id</code> is <code>99</code> (Other), the <code>confidence</code>
+          attribute should reflect the same assessment if both are populated.
+        annotations:
+          ocsf_group: context
+      desc:
+        description: The short description of the Incident.
+        recommended: true
+        annotations:
+          ocsf_group: primary
+      end_time:
+        description: The time of the most recent event or finding that contributed to this
+          incident.
+      end_time_dt:
+        description: The time of the most recent event or finding that contributed to this
+          incident.
+      finding_info_list:
+        required: true
+        annotations:
+          ocsf_group: primary
+      impact:
+        recommended: true
+        annotations:
+          ocsf_group: primary
+      impact_id:
+        recommended: true
+        annotations:
+          ocsf_group: primary
+          ocsf_sibling: impact
+          ocsf_source_note: impact value; impact level
+      impact_score:
+        recommended: true
+        annotations:
+          ocsf_group: primary
+      is_suspected_breach:
+        annotations:
+          ocsf_group: context
+      notes:
+        description: Additional notes related to the finding. Each note in the array can include
+          a comment, the user who made the comment, the time when the note was created, and
+          the time when the note was last modified (typically by the same user). Notes can
+          be used to provide additional context, explanations, or observations by analysts
+          related to the incident over time.
+        annotations:
+          ocsf_group: context
+      priority:
+        annotations:
+          ocsf_group: context
+      priority_id:
+        recommended: true
+        annotations:
+          ocsf_group: context
+          ocsf_sibling: priority
+      src_url:
+        description: A Url link used to access the original incident.
+        recommended: true
+        annotations:
+          ocsf_group: primary
+      start_time:
+        description: The time of the earliest event or finding that contributed to this incident.
+      start_time_dt:
+        description: The time of the earliest event or finding that contributed to this incident.
+      status:
+        description: The incident lifecycle status label, normalized to the caption of the
+          <code>status_id</code> value. When <code>status_id</code> is <code>99</code> (Other),
+          this <b>must</b> contain the source-specific status label.
+      status_id:
+        description: The normalized incident lifecycle status identifier. This tracks the
+          incident management workflow from initial triage through resolution. Producers should
+          set this to reflect the current state in their incident management system.
+        any_of:
+          - equals_number: 0
+            title: Unknown
+            description: The status is unknown.
+          - equals_number: 1
+            title: New
+            description: The service desk has received the incident but has not assigned it
+              to an agent.
+          - equals_number: 2
+            title: In Progress
+            description: The incident has been assigned to an agent but has not been resolved.
+              The agent is actively working with the user to diagnose and resolve the incident.
+          - equals_number: 3
+            title: On Hold
+            description: The incident requires some information or response from the user
+              or from a third party.
+          - equals_number: 4
+            title: Resolved
+            description: The service desk has confirmed that the incident is resolved.
+          - equals_number: 5
+            title: Closed
+            description: The incident is resolved and no further action is necessary.
+          - equals_number: 99
+            title: Other
+            description: The status is not mapped. See the <code>status</code> attribute,
+              which contains a data source specific value.
+        required: true
+        recommended: false
+      ticket:
+        deprecated: Use <code>tickets</code> instead.
+        annotations:
+          ocsf_group: context
+          ocsf_deprecated_since: 1.5.0
+          ocsf_superseded_by: tickets
+      tickets:
+        annotations:
+          ocsf_group: context
+      time:
+        description: The incident creation time - when the incident was first opened, not
+          when the underlying activity occurred. For the time range of contributing events,
+          use <code>start_time</code> and <code>end_time</code>.
+      time_dt:
+        description: The incident creation time - when the incident was first opened, not
+          when the underlying activity occurred. For the time range of contributing events,
+          use <code>start_time</code> and <code>end_time</code>.
+      type_uid:
+        any_of:
+          - equals_number: 200500
+            title: 'Incident Finding: Unknown'
+          - equals_number: 200501
+            title: 'Incident Finding: Create'
+            description: Reports the creation of an Incident.
+          - equals_number: 200502
+            title: 'Incident Finding: Update'
+            description: Reports updates to an Incident.
+          - equals_number: 200503
+            title: 'Incident Finding: Close'
+            description: Reports closure of an Incident .
+          - equals_number: 200599
+            title: 'Incident Finding: Other'
+      verdict:
+        recommended: true
+        annotations:
+          ocsf_group: primary
+      verdict_id:
+        recommended: true
+        annotations:
+          ocsf_group: primary
+          ocsf_sibling: verdict
+  OcsfSecurityFinding:
+    title: Security Finding
+    description: Security Finding events describe findings, detections, anomalies, alerts
+      and/or actions performed by security products
+    class_uri: ocsf:OcsfSecurityFinding
+    deprecated: 'Use the new specific classes according to the use-case: <code>vulnerability_finding</code>,
+      <code>compliance_finding</code>, <code>detection_finding</code>, <code>incident_finding</code>,
+      <code>data_security_finding</code>.'
+    is_a: OcsfBaseEvent
+    in_subset:
+      - ocsf_category_findings
+    instantiates:
+      - ocsf:OcsfFacts
+    annotations:
+      ocsf_key: security_finding
+      ocsf_category: findings
+      ocsf_profiles: cloud container data_classification datetime host linux/linux_users macos/macos_users
+        osint record_integrity security_control
+      ocsf_deprecated_since: 1.1.0
+      ocsf_superseded_by: vulnerability_finding compliance_finding detection_finding incident_finding
+        data_security_finding
+    slots:
+      - analytic
+      - cis_csc
+      - compliance
+      - data_sources
+      - evidence
+      - finding
+      - impact
+      - impact_id
+      - impact_score
+      - kill_chain
+      - nist
+      - process
+      - resources
+      - state
+      - state_id
+      - vulnerabilities
+    slot_usage:
+      activity_id:
+        any_of:
+          - equals_number: 0
+            title: Unknown
+            description: The event activity is unknown.
+          - equals_number: 1
+            title: Create
+            description: A security finding was created.
+          - equals_number: 2
+            title: Update
+            description: A security finding was updated.
+          - equals_number: 3
+            title: Close
+            description: A security finding was closed.
+          - equals_number: 99
+            title: Other
+            description: The event activity is not mapped. See the <code>activity_name</code>
+              attribute, which contains a data source specific value.
+      analytic:
+        recommended: true
+        annotations:
+          ocsf_group: primary
+      attacks:
+        description: An array of attack objects, each describing a tactic, technique, and/or
+          sub-technique associated with the Finding.
+        see_also:
+          - https://attack.mitre.org
+        annotations:
+          ocsf_group: context
+      category_name:
+        description: 'The event category name, as defined by category_uid value: <code>Findings</code>.'
+      category_uid:
+        equals_number: 2
+      cis_csc:
+        annotations:
+          ocsf_group: context
+          ocsf_deprecated_since: 1.5.0
+          ocsf_superseded_by: cis_control
+      class_name:
+        description: 'The event class name, as defined by class_uid value: <code>Security
+          Finding</code>.'
+      class_uid:
+        equals_number: 2001
+      compliance:
+        annotations:
+          ocsf_group: context
+      confidence:
+        recommended: true
+        annotations:
+          ocsf_group: primary
+      confidence_id:
+        annotations:
+          ocsf_group: primary
+          ocsf_sibling: confidence
+      confidence_score:
+        recommended: true
+        annotations:
+          ocsf_group: primary
+      data_sources:
+        annotations:
+          ocsf_group: context
+      evidence:
+        annotations:
+          ocsf_group: context
+          ocsf_deprecated_since: 1.1.0
+          ocsf_superseded_by: evidences
+      finding:
+        required: true
+        annotations:
+          ocsf_group: primary
+      impact:
+        recommended: true
+        annotations:
+          ocsf_group: primary
+      impact_id:
+        recommended: true
+        annotations:
+          ocsf_group: primary
+          ocsf_sibling: impact
+          ocsf_source_note: impact value; impact level
+      impact_score:
+        recommended: true
+        annotations:
+          ocsf_group: primary
+      kill_chain:
+        annotations:
+          ocsf_group: context
+      malware:
+        annotations:
+          ocsf_group: context
+      nist:
+        annotations:
+          ocsf_group: context
+      process:
+        annotations:
+          ocsf_group: context
+      resources:
+        recommended: true
+        annotations:
+          ocsf_group: primary
+      risk_level:
+        recommended: true
+        annotations:
+          ocsf_group: primary
+      risk_level_id:
+        recommended: true
+        annotations:
+          ocsf_group: primary
+          ocsf_sibling: risk_level
+          ocsf_suppress_checks: enum_convention
+      risk_score:
+        recommended: true
+        annotations:
+          ocsf_group: primary
+      state:
+        description: The normalized state of a security finding.
+        annotations:
+          ocsf_group: context
+      state_id:
+        description: The normalized state identifier of a security finding.
+        any_of:
+          - equals_number: 0
+            title: Unknown
+            description: The state is unknown.
+          - equals_number: 1
+            title: New
+            description: The finding is new and yet to be reviewed.
+          - equals_number: 2
+            title: In Progress
+            description: The finding is under review.
+          - equals_number: 3
+            title: Suppressed
+            description: The finding was reviewed, considered as a false positive and is now
+              suppressed.
+          - equals_number: 4
+            title: Resolved
+            description: The finding was reviewed and remediated and is now considered resolved.
+          - equals_number: 99
+            title: Other
+            description: The state is not mapped. See the <code>state</code> attribute, which
+              contains a data source specific value.
+        required: true
+        annotations:
+          ocsf_group: context
+          ocsf_sibling: state
+      type_uid:
+        any_of:
+          - equals_number: 200100
+            title: 'Security Finding: Unknown'
+          - equals_number: 200101
+            title: 'Security Finding: Create'
+            description: A security finding was created.
+          - equals_number: 200102
+            title: 'Security Finding: Update'
+            description: A security finding was updated.
+          - equals_number: 200103
+            title: 'Security Finding: Close'
+            description: A security finding was closed.
+          - equals_number: 200199
+            title: 'Security Finding: Other'
+      vulnerabilities:
+        annotations:
+          ocsf_group: context
+  OcsfVulnerabilityFinding:
+    title: Vulnerability Finding
+    description: 'The Vulnerability Finding event is a notification about weakness in an information
+      system, system security procedures, internal controls, or implementation that could
+      be exploited or triggered by a threat source. Note: if the event producer is a security
+      control, the <code>security_control</code> profile should be applied and its <code>attacks</code>
+      information, if present, should be duplicated into the <code>finding_info</code> object.
+      <br><strong>Note: </strong>If the Finding is an incident, i.e. requires incident workflow,
+      also apply the <code>incident</code> profile  or aggregate this finding into an <code>Incident
+      Finding</code>.'
+    class_uri: ocsf:OcsfVulnerabilityFinding
+    is_a: OcsfFindingEvent
+    in_subset:
+      - ocsf_category_findings
+    instantiates:
+      - ocsf:OcsfFacts
+    annotations:
+      ocsf_key: vulnerability_finding
+      ocsf_category: findings
+      ocsf_profiles: cloud container data_classification datetime host incident linux/linux_users
+        macos/macos_users osint record_integrity security_control
+    slots:
+      - resource
+      - vulnerabilities
+    slot_usage:
+      activity_id:
+        any_of:
+          - equals_number: 0
+            title: Unknown
+            description: The event activity is unknown.
+          - equals_number: 1
+            title: Create
+            description: A finding was created.
+          - equals_number: 2
+            title: Update
+            description: A finding was updated.
+          - equals_number: 3
+            title: Close
+            description: A finding was closed.
+          - equals_number: 99
+            title: Other
+            description: The event activity is not mapped. See the <code>activity_name</code>
+              attribute, which contains a data source specific value.
+      category_name:
+        description: 'The event category name, as defined by category_uid value: <code>Findings</code>.'
+      class_name:
+        description: 'The event class name, as defined by class_uid value: <code>Vulnerability
+          Finding</code>.'
+      class_uid:
+        equals_number: 2002
+      comment:
+        deprecated: Use the <code>notes</code> attribute instead.
+        annotations:
+          ocsf_group: context
+          ocsf_deprecated_since: 1.9.0
+          ocsf_superseded_by: notes
+      end_time_dt:
+        description: The time of the most recent event or finding that contributed to this
+          finding.
+      resource:
+        description: Describes details about the resource that is affected by the vulnerability/vulnerabilities.
+        deprecated: Use the <code>resources</code> attribute instead.
+        recommended: true
+        annotations:
+          ocsf_group: primary
+          ocsf_deprecated_since: 1.3.0
+          ocsf_superseded_by: resources
+      resources:
+        description: Describes details about the resource/resources that are affected by the
+          vulnerability/vulnerabilities.
+        annotations:
+          ocsf_group: primary
+      start_time_dt:
+        description: The time of the earliest event or finding that contributed to this finding.
+      status_id:
+        any_of:
+          - equals_number: 0
+            title: Unknown
+            description: The status is unknown.
+          - equals_number: 1
+            title: New
+            description: The Finding is new and yet to be reviewed.
+          - equals_number: 2
+            title: In Progress
+            description: The Finding is under review.
+          - equals_number: 3
+            title: Suppressed
+            description: The Finding was reviewed, determined to be benign or a false positive
+              and is now suppressed.
+          - equals_number: 4
+            title: Resolved
+            description: The Finding was reviewed, remediated and is now considered resolved.
+          - equals_number: 5
+            title: Archived
+            description: The Finding was archived.
+          - equals_number: 6
+            title: Deleted
+            description: The Finding was deleted. For example, it might have been created
+              in error.
+          - equals_number: 99
+            title: Other
+            description: The status is not mapped. See the <code>status</code> attribute,
+              which contains a data source specific value.
+      time_dt:
+        description: The finding creation time - when the finding was first generated, not
+          when the underlying activity occurred. For the time range of contributing events,
+          use <code>start_time</code> and <code>end_time</code>.
+      type_uid:
+        any_of:
+          - equals_number: 200200
+            title: 'Vulnerability Finding: Unknown'
+          - equals_number: 200201
+            title: 'Vulnerability Finding: Create'
+            description: A finding was created.
+          - equals_number: 200202
+            title: 'Vulnerability Finding: Update'
+            description: A finding was updated.
+          - equals_number: 200203
+            title: 'Vulnerability Finding: Close'
+            description: A finding was closed.
+          - equals_number: 200299
+            title: 'Vulnerability Finding: Other'
+      vulnerabilities:
+        required: true
+        annotations:
+          ocsf_group: primary

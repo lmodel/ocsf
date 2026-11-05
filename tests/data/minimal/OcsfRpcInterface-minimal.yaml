@@ -1,0 +1,3 @@
+# The least that OcsfRpcInterface requires. scripts/make_examples.py writes this file.
+uuid: 123e4567-e89b-12d3-a456-426614174000
+version: example

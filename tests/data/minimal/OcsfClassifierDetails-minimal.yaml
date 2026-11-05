@@ -1,0 +1,2 @@
+# The least that OcsfClassifierDetails requires. scripts/make_examples.py writes this file.
+type: example

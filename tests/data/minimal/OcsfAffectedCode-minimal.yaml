@@ -1,0 +1,4 @@
+# The least that OcsfAffectedCode requires. scripts/make_examples.py writes this file.
+file:
+  name: example.txt
+  type_id: 1

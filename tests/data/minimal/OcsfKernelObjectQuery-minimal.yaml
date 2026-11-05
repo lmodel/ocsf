@@ -1,0 +1,15 @@
+# The least that OcsfKernelObjectQuery requires. scripts/make_examples.py writes this file.
+activity_id: 1
+category_uid: 5
+class_uid: 5006
+kernel:
+  name: example
+  type_id: 1
+metadata:
+  product:
+    name: example
+  version: 1.9.0
+query_result_id: 1
+severity_id: 1
+time: 1793793600000
+type_uid: 500601

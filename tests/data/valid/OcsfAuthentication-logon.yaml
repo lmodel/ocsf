@@ -1,0 +1,48 @@
+# A user logs on over SSH, with the label beside each number and two profiles listed.
+activity_id: 1
+activity_name: Logon
+auth_protocol: Other
+auth_protocol_id: 99
+category_name: Identity & Access Management
+category_uid: 3
+class_name: Authentication
+class_uid: 3002
+cloud:
+  provider: AWS
+  region: eu-west-1
+device:
+  hostname: bastion-01.example.com
+  ip: 192.0.2.10
+  type: Server
+  type_id: 1
+dst_endpoint:
+  hostname: bastion-01.example.com
+  ip: 192.0.2.10
+  port: 22
+is_mfa: true
+is_remote: true
+logon_type: Remote Interactive
+logon_type_id: 10
+metadata:
+  product:
+    name: OpenSSH
+    vendor_name: OpenBSD
+    version: 9.6p1
+  profiles:
+    - cloud
+    - host
+  version: 1.9.0
+severity: Informational
+severity_id: 1
+src_endpoint:
+  ip: 198.51.100.7
+status: Success
+status_id: 1
+time: 1793793600000
+type_name: "Authentication: Logon"
+type_uid: 300201
+user:
+  name: analyst
+  type: User
+  type_id: 1
+  uid: "1001"

@@ -1,0 +1,35 @@
+# A web request, with a URL whose categories keep their labels in the same order.
+activity_id: 3
+activity_name: Get
+category_name: Network Activity
+category_uid: 4
+class_name: HTTP Activity
+class_uid: 4002
+dst_endpoint:
+  hostname: www.example.com
+  port: 443
+http_request:
+  http_method: GET
+  url:
+    categories:
+      - Business/Economy
+    category_ids:
+      - 21
+    hostname: www.example.com
+    path: /index.html
+    scheme: https
+    url_string: https://www.example.com/index.html
+  user_agent: Example/1.0
+  version: HTTP/1.1
+http_response:
+  code: 200
+metadata:
+  product:
+    name: Example Proxy
+    vendor_name: Example
+  version: 1.9.0
+severity: Informational
+severity_id: 1
+time: 1793793600000
+type_name: "HTTP Activity: Get"
+type_uid: 400203

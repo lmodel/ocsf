@@ -1,0 +1,5 @@
+# Fails at: /category_ids/0
+# An enumerated array holds listed numbers only.
+category_ids:
+  - 12345
+url_string: https://example.com/

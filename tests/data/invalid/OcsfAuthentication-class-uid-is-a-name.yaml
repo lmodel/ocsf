@@ -1,0 +1,17 @@
+# Fails at: /class_uid
+# OCSF writes the class's number. A name in its place is what this schema once asked for.
+activity_id: 1
+category_uid: 3
+class_uid: BASE_EVENT
+metadata:
+  product:
+    name: example
+  version: 1.9.0
+service:
+  name: example
+user:
+  account:
+    name: example
+severity_id: 1
+time: 1793793600000
+type_uid: 300201

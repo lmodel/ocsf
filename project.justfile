@@ -4,51 +4,45 @@
 # name in this file is not possible until a known issue in just is fixed,
 # https://github.com/casey/just/issues/2540
 
-# Reads upstream/ocsf-schema/ + src/ocsf/mappings/*.sssom.tsv; writes src/ocsf/schema/.
-# Run `just gen-python` afterwards to refresh the Python datamodel.
-# Rebuild the LinkML schema YAMLs from upstream OCSF JSON + SSSOM mappings
+# ============ The schema, from OCSF's own files ============
+
+# Write src/ocsf/schema/ from upstream/ and scripts/ocsf_mappings.yaml
 [group('model development')]
 gen-schema:
-  uv run python tools/generate_ocsf_schema.py
+  uv run python scripts/ocsf_to_linkml.py
 
-# Workaround for upstream LinkML codegen bugs: strips redundant
-# base-enum cast blocks from the generated datamodel. Idempotent. Wired into
-# `just test` via the root justfile's `_test-python` recipe.
-_apply-codegen-workaround:
-  uv run python tools/strip_redundant_enum_casts.py {{pymodel}}/{{schema_name}}.py
+# Write the smallest valid example of each class into tests/data/valid/
+[group('model development')]
+gen-examples:
+  uv run python scripts/make_examples.py
 
-# Workaround for an upstream LinkML serialisation bug where slot_usage merges
-# leave a bare jsonasobj2.JsonObj as `slot.annotations`, which has no PyYAML
-# representer registered (only its YAMLRoot subclass does). The wrapper
-# registers the same representer used for YAMLRoot, then delegates to the
-# standard `gen-yaml` CLI. Replaces the body of `_gen-yaml` in the root
-# justfile. Upstream fix: https://github.com/linkml/linkml/pull/3423
-_gen-yaml-jsonobj-safe:
-  -mkdir -p {{distrib_schema_path}}
-  uv run python tools/gen_yaml_jsonobj_safe.py {{source_schema_path}} > {{distrib_schema_path}}/{{schema_name}}.yaml
+# Validate the events of ocsf/examples at its pinned commit, which stay out of git. The
+# files are live data of no stated licence, and this fails when a verdict moves.
+[group('model development')]
+test-real-events:
+  uv run python scripts/check_real_events.py
 
-# Workaround for an upstream LinkML gen-doc bug where rules with only
-# postconditions (preconditions=None) crash class.md.jinja2 line 227
-# ({% for key in rule.preconditions %}). The wrapper patches _get_template to
-# use a ChoiceLoader so docs/templates-linkml/class.md.jinja2 (the fixed
-# override) takes precedence while {% include %} for sibling templates still
-# resolves from the built-in docgen folder. Replaces the gen-doc call in the
-# root justfile's gen-doc recipe.
-_gen-doc-template-safe:
-  uv run python tools/gen_doc_template_safe.py {{gen_doc_args}} -d {{docdir}} {{source_schema_path}}
+# ============ Knowledge bundle: the adapted domain schema ============
 
-# Workaround for upstream LinkML example-runner bug: ExampleRunner regenerates
-# the Python datamodel in memory via PythonGenerator.compile_module(), bypassing
-# strip_redundant_enum_casts.py (upstream bug). The wrapper monkey-patches
-# ExampleRunner.python_module to return the already-patched ocsf.datamodel.ocsf
-# module. Must run after _test-python (which generates + patches the module).
-_run-examples-safe: _ensure_examples_output
-  uv run python tools/run_examples_safe.py \
-    --input-formats json \
-    --input-formats yaml \
-    --output-formats json \
-    --output-formats yaml \
-    --counter-example-input-directory tests/data/invalid \
-    --input-directory tests/data/valid \
-    --output-directory examples/output \
-    --schema {{source_schema_path}} > examples/output/README.md
+# `.lokf/ocsf.yaml` is the copy `lokf adapt` writes from the schema so that it can
+# sit beside `.lokf/lokf.yaml` (`lokf adapt --help` lists the moves). The one root is
+# OcsfBaseEvent, the parent of every event class, so a concept may be an event of
+# any class. An object has no root, since OCSF's objects are values inside an event,
+# and a value class stays inlined. OCSF's schema carries no identifier, so adapt drops
+# none and LOKF's `id` stands beside the event's keys. Adapt renames the keys LOKF also
+# defines with the `ocsf` prefix, such as `name` and `type`, and keeps their IRIs. The
+# recipes run the `lokf` the sidecar's floor pins (0.9.0 or later); LOKF_CMD runs
+# another, such as a checkout:
+# LOKF_CMD="uv run --project ../lokf lokf" just lokf-adapt
+lokf_cmd := env_var_or_default("LOKF_CMD", "uv run --project .lokf lokf")
+lokf_adapt_roots := "--root OcsfBaseEvent --prefix ocsf"
+
+# Rewrite .lokf/ocsf.yaml from the schema (run after every schema change)
+[group('knowledge bundle')]
+lokf-adapt:
+  {{lokf_cmd}} adapt {{source_schema_path}} {{lokf_adapt_roots}} --lokf .lokf/lokf.yaml -o .lokf/ocsf.yaml
+
+# Fail when .lokf/ocsf.yaml is stale against the schema or .lokf/lokf.yaml
+[group('knowledge bundle')]
+lokf-adapt-check:
+  {{lokf_cmd}} adapt {{source_schema_path}} {{lokf_adapt_roots}} --lokf .lokf/lokf.yaml -o .lokf/ocsf.yaml --check

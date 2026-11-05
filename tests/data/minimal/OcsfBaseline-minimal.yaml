@@ -1,0 +1,4 @@
+# The least that OcsfBaseline requires. scripts/make_examples.py writes this file.
+observation_parameter: example
+observations:
+- value: example

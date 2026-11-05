@@ -1,0 +1,18 @@
+# Fails at: / constraint_failed
+# This class needs one of its log attributes, and OCSF's list names log_file, which it does not have.
+activity_id: 1
+actor:
+  user:
+    name: example
+category_uid: 1
+class_uid: 1008
+device:
+  ip: 192.0.2.1
+  type_id: 1
+metadata:
+  product:
+    name: example
+  version: 1.9.0
+severity_id: 1
+time: 1793793600000
+type_uid: 100801

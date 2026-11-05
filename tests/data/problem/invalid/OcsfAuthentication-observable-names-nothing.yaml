@@ -1,0 +1,20 @@
+# Fails at: /observables/0/name observable_name_invalid_reference
+# An observable's name is a path to an attribute of the class.
+activity_id: 1
+category_uid: 3
+class_uid: 3002
+service:
+  name: example
+severity_id: 1
+time: 1793793600000
+user:
+  account:
+    name: example
+metadata:
+  product:
+    name: example
+  version: 1.9.0
+type_uid: 300201
+observables:
+  - name: no.such.attribute
+    type_id: 1

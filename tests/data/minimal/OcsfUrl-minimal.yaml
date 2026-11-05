@@ -1,0 +1,2 @@
+# The least that OcsfUrl requires. scripts/make_examples.py writes this file.
+url_string: https://example.com/

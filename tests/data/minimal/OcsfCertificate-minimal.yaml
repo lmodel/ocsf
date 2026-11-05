@@ -1,0 +1,3 @@
+# The least that OcsfCertificate requires. scripts/make_examples.py writes this file.
+issuer: example
+serial_number: example

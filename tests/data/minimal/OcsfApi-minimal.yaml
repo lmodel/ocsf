@@ -1,0 +1,2 @@
+# The least that OcsfApi requires. scripts/make_examples.py writes this file.
+operation: example

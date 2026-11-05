@@ -1,4 +1,0 @@
-# INVALID: Image (Entity) requires `uid` but it is missing.
-name: nginx
-path: docker.io/library/nginx
-tag: "1.25-alpine"

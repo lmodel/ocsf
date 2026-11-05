@@ -1,0 +1,39 @@
+# A detection that names an ATT&CK technique, under the security_control profile.
+action: Denied
+action_id: 2
+activity_id: 1
+activity_name: Create
+attacks:
+  - tactic:
+      name: Credential Access
+      uid: TA0006
+    technique:
+      name: OS Credential Dumping
+      uid: T1003
+    version: "18.1"
+category_name: Findings
+category_uid: 2
+class_name: Detection Finding
+class_uid: 2004
+disposition: Blocked
+disposition_id: 2
+finding_info:
+  title: Credential dumping attempt
+  uid: finding-0001
+is_alert: true
+metadata:
+  product:
+    name: Example EDR
+    vendor_name: Example
+  profiles:
+    - security_control
+  version: 1.9.0
+risk_level: High
+risk_level_id: 3
+severity: High
+severity_id: 4
+status: New
+status_id: 1
+time: 1793793600000
+type_name: "Detection Finding: Create"
+type_uid: 200401

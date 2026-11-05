@@ -1,0 +1,2 @@
+# The least that OcsfProcessEntity requires. scripts/make_examples.py writes this file.
+cmd_line: example

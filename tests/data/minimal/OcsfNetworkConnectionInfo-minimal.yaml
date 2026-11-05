@@ -1,0 +1,2 @@
+# The least that OcsfNetworkConnectionInfo requires. scripts/make_examples.py writes this file.
+direction_id: 1

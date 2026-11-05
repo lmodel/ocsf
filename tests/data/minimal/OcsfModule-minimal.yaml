@@ -1,0 +1,2 @@
+# The least that OcsfModule requires. scripts/make_examples.py writes this file.
+load_type_id: 1

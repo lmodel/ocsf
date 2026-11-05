@@ -1,0 +1,7 @@
+# The least that OcsfStartupItem requires. scripts/make_examples.py writes this file.
+driver:
+  file:
+    name: example.txt
+    type_id: 1
+name: example
+start_type_id: 1

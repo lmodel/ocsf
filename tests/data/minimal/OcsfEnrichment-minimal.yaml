@@ -1,0 +1,5 @@
+# The least that OcsfEnrichment requires. scripts/make_examples.py writes this file.
+data:
+  example: value
+name: example
+value: example

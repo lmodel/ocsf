@@ -1,0 +1,17 @@
+# Fails at: /category_uid
+# A class holds its category's number constant.
+activity_id: 1
+category_uid: 2
+class_uid: 3002
+metadata:
+  product:
+    name: example
+  version: 1.9.0
+service:
+  name: example
+user:
+  account:
+    name: example
+severity_id: 1
+time: 1793793600000
+type_uid: 300201

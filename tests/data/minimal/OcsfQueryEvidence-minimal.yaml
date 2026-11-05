@@ -1,0 +1,4 @@
+# The least that OcsfQueryEvidence requires. scripts/make_examples.py writes this file.
+connection_info:
+  direction_id: 1
+query_type_id: 1

@@ -1,0 +1,3 @@
+# The least that OcsfCvss requires. scripts/make_examples.py writes this file.
+base_score: 1.5
+version: example
