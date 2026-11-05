@@ -140,10 +140,14 @@ def test_each_target_is_read_at_its_source(module, curie):
 
 
 def test_each_d3fend_relation_is_what_ocsf_references_name():
-    """A D3FEND term other than the two by hand comes from a reference of OCSF's, and no
-    such reference is left out."""
+    """A D3FEND term other than the two by hand comes from a reference of OCSF's, on a
+    class, an object or a dictionary attribute, and no such reference is left out."""
     named = set()
-    for items in (COMPILED["classes"], COMPILED["objects"]):
+    for items in (
+        COMPILED["classes"],
+        COMPILED["objects"],
+        COMPILED["dictionary"]["attributes"],
+    ):
         for item in items.values():
             for reference in item.get("references", []):
                 match = re.search(

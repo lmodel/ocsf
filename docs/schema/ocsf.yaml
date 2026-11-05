@@ -17726,6 +17726,8 @@ slots:
     - https://d3fend.mitre.org/dao/artifact/d3f:SoftwarePackage/
     mappings:
     - ocsf:package
+    related_mappings:
+    - d3f:SoftwarePackage
     slot_uri: ocsf:package
     owner: OcsfSoftwareInfo
     domain_of:
@@ -50678,6 +50680,8 @@ slots:
     - https://d3fend.mitre.org/dao/artifact/d3f:SoftwarePackage/
     mappings:
     - ocsf:package
+    related_mappings:
+    - d3f:SoftwarePackage
     is_a: package
     domain: OcsfSbom
     slot_uri: ocsf:package
@@ -67928,6 +67932,8 @@ slots:
     - https://d3fend.mitre.org/dao/artifact/d3f:SoftwarePackage/
     mappings:
     - ocsf:package
+    related_mappings:
+    - d3f:SoftwarePackage
     is_a: package
     domain: OcsfSoftwareInfo
     slot_uri: ocsf:package
@@ -100437,6 +100443,8 @@ classes:
     from_schema: https://w3id.org/lmodel/ocsf/ocsf_objects
     exact_mappings:
     - ocsf:OcsfDeviceHwInfo
+    related_mappings:
+    - d3f:HardwareDevice
     is_a: OcsfObjectBase
     slots:
     - bios_date
@@ -103574,6 +103582,7 @@ classes:
     - ocsf:OcsfHttpRequest
     related_mappings:
     - d3f:OutboundInternetNetworkTraffic
+    - d3f:OutboundInternetWebTraffic
     is_a: OcsfObjectBase
     slots:
     - args
@@ -103644,6 +103653,7 @@ classes:
     - ocsf:OcsfHttpResponse
     related_mappings:
     - d3f:InboundInternetNetworkTraffic
+    - d3f:InboundInternetWebTraffic
     is_a: OcsfObjectBase
     slots:
     - OcsfHttpResponse_body_length
@@ -105045,6 +105055,8 @@ classes:
     from_schema: https://w3id.org/lmodel/ocsf/ocsf_objects
     exact_mappings:
     - ocsf:OcsfLocation
+    related_mappings:
+    - d3f:PhysicalLocation
     is_a: OcsfObjectBase
     slots:
     - aerial_height
@@ -123270,6 +123282,8 @@ classes:
     from_schema: https://w3id.org/lmodel/ocsf/ocsf_events_iam
     exact_mappings:
     - ocsf:OcsfAccountChange
+    related_mappings:
+    - d3f:UserAccountEvent
     is_a: OcsfIamEvent
     slots:
     - OcsfBaseEvent_activity_name
@@ -134954,6 +134968,8 @@ classes:
     from_schema: https://w3id.org/lmodel/ocsf/ocsf_events_win
     exact_mappings:
     - ocsf:OcsfWinRegistryKeyActivity
+    related_mappings:
+    - d3f:WindowsRegistryKeyEvent
     is_a: OcsfSystemEvent
     slots:
     - OcsfBaseEvent_activity_name
@@ -135305,6 +135321,8 @@ classes:
     from_schema: https://w3id.org/lmodel/ocsf/ocsf_events_win
     exact_mappings:
     - ocsf:OcsfWinRegistryValueActivity
+    related_mappings:
+    - d3f:WindowsRegistryValueEvent
     is_a: OcsfSystemEvent
     slots:
     - OcsfBaseEvent_activity_name
@@ -135913,6 +135931,6 @@ classes:
     class_uri: ocsf:OcsfWinServiceActivity
 metamodel_version: 1.12.0
 source_file: ocsf.yaml
-source_file_date: '2026-11-04T23:09:38'
+source_file_date: '2026-11-05T01:36:34'
 source_file_size: 1740
 

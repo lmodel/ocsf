@@ -1375,6 +1375,8 @@ slots:
     inlined: true
     see_also:
       - https://d3fend.mitre.org/dao/artifact/d3f:SoftwarePackage/
+    related_mappings:
+      - d3f:SoftwarePackage
   packages:
     title: Software Packages
     description: List of vulnerable packages as identified by the security product

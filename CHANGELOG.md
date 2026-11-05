@@ -13,7 +13,7 @@ The `v0.0.0` tag is a baseline, not a release: it marks where versioning starts 
 - **A test that walks OCSF's compiled schema beside the classes in both directions**, and a counter-example of each list, constant, required attribute, constraint and data type bound.
 - **`just test-real-events`**, a job outside the required checks, which compares the verdict on each of the 93 events of ocsf/examples with what OCSF's validator found.
 - **A weekly upstream watch** that reports a new OCSF release, a moved tag or a changed file.
-- **Mappings to lmodel/cve, lmodel/cwe, lmodel/nist-nvd, lmodel/kev-catalog, lmodel/attack and lmodel/stix**, each held by a test to a released copy, and to the D3FEND terms OCSF's own references name or D3FEND's own file ties to OCSF's addresses, held to D3FEND 1.6.0's file.
+- **Mappings to lmodel/cve, lmodel/cwe, lmodel/nist-nvd, lmodel/kev-catalog, lmodel/attack and lmodel/stix**, each held by a test to a released copy. Mappings to the D3FEND terms that OCSF's references name on a class, an object or an attribute, or that D3FEND's own file ties to OCSF's addresses, each held to D3FEND 1.6.0's file.
 - **`.lokf/ocsf.yaml`, the schema's `lokf adapt` copy, rooted on `OcsfBaseEvent`.** The knowledge release attaches it as `schema-<tag>-ocsf.yaml`.
 - **The repository's Knowledge Trust Ladder (KTL) knowledge bundle and its sidecar automation**, from the KTL v0.61.0 templates with the lokf floor at 0.9.0, and a knowledge website that replaces the mkdocs site.
 

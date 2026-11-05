@@ -7423,7 +7423,8 @@ ocsf:package dcterms:title "Software Package" ;
 	rdfs:range ocsf:OcsfPackage ;
 	rdfs:seeAlso <https://d3fend.mitre.org/dao/artifact/d3f:SoftwarePackage/> ;
 	skos:definition "The Software Package object describes details about a software package." ;
-	skos:inScheme ocsf:ocsf_objects .
+	skos:inScheme ocsf:ocsf_objects ;
+	skos:relatedMatch d3f:SoftwarePackage .
 ocsf:package_manager dcterms:title "Package Manager" ;
 	a owl:DatatypeProperty ;
 	rdfs:label "package_manager" ;

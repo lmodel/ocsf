@@ -22959,6 +22959,9 @@
       "mappings": [
         "https://w3id.org/lmodel/ocsf/package"
       ],
+      "related_mappings": [
+        "http://d3fend.mitre.org/ontologies/d3fend.owl#SoftwarePackage"
+      ],
       "slot_uri": "https://w3id.org/lmodel/ocsf/package",
       "owner": "OcsfSoftwareInfo",
       "domain_of": [
@@ -63929,6 +63932,9 @@
       "mappings": [
         "https://w3id.org/lmodel/ocsf/package"
       ],
+      "related_mappings": [
+        "http://d3fend.mitre.org/ontologies/d3fend.owl#SoftwarePackage"
+      ],
       "is_a": "package",
       "domain": "OcsfSbom",
       "slot_uri": "https://w3id.org/lmodel/ocsf/package",
@@ -86788,6 +86794,9 @@
       ],
       "mappings": [
         "https://w3id.org/lmodel/ocsf/package"
+      ],
+      "related_mappings": [
+        "http://d3fend.mitre.org/ontologies/d3fend.owl#SoftwarePackage"
       ],
       "is_a": "package",
       "domain": "OcsfSoftwareInfo",
@@ -145763,7 +145772,7 @@
   ],
   "metamodel_version": "1.12.0",
   "source_file": "ocsf.yaml",
-  "source_file_date": "2026-11-05T00:10:06",
+  "source_file_date": "2026-11-05T01:36:34",
   "source_file_size": 1740,
   "@type": "SchemaDefinition",
   "@context": [

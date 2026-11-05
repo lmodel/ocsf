@@ -397,6 +397,11 @@ class Model:
             if facets["annotations"]:
                 slot["instantiates"] = [FACTS]
                 slot["annotations"] = facets["annotations"]
+            # A dictionary attribute's references can name a D3FEND term too, as
+            # `package` names d3f:SoftwarePackage.
+            terms = d3fend_terms(attribute)
+            if terms:
+                slot["related_mappings"] = terms
             self.slots[name] = slot
 
     # -- what a class inherits ---------------------------------------------
