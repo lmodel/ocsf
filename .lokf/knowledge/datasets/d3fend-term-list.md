@@ -17,6 +17,9 @@ generated:
   by: process:ktl-librarian
   at: "2026-11-05T00:11:19Z"
 status: draft
+verified:
+  - by: process:ktl-librarian
+    at: "2026-11-05T01:45:03Z"
 ---
 
 # D3FEND term list

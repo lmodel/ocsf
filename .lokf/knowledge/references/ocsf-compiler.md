@@ -14,6 +14,9 @@ generated:
   by: process:ktl-librarian
   at: "2026-11-04T23:20:36Z"
 status: draft
+verified:
+  - by: process:ktl-librarian
+    at: "2026-11-05T01:45:03Z"
 ---
 
 # OCSF schema compiler
