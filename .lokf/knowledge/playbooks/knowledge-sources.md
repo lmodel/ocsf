@@ -53,7 +53,7 @@ exclusions:
     reason: The sidecar's link to the bundle.
   - resource: .github/PULL_REQUEST_TEMPLATE
     reason: The sidecar sync's pull request template.
-  - resource: .lokf/lokf.yaml
+  - resource: .lokf/schema/lokf.yaml
     reason: LOKF's schema, pinned by the sidecar.
   - resource: .lokf/scripts
     reason: The sidecar's scripts, which the weekly sync replaces.
@@ -80,7 +80,7 @@ sources:
   - resource: src/ocsf/schema
   - resource: src/ocsf/datamodel
   - resource: project.justfile
-  - resource: .lokf/ocsf.yaml
+  - resource: .lokf/schema/ocsf.yaml
   - resource: .lokf/justfile
   - resource: .lokf/pyproject.toml
   - resource: NOTICE
@@ -104,7 +104,7 @@ sources:
   - resource: website
 generated:
   by: process:ktl-librarian
-  at: "2026-11-04T23:20:36Z"
+  at: "2026-11-06T21:23:27Z"
 status: draft
 verified:
   - by: process:ktl-librarian
