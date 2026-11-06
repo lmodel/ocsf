@@ -18,8 +18,8 @@ ROOT = Path(__file__).parent.parent
 # schema asset of a release, downloaded and checked against the release's .sha256 and
 # its build-provenance attestation, and pinned here by that checksum.
 SOURCE_DIR = ROOT / "src" / "ocsf" / "schema"
-COPY = ROOT / ".lokf" / "ocsf.yaml"
-LOKF = ROOT / ".lokf" / "lokf.yaml"
+COPY = ROOT / ".lokf" / "schema" / "ocsf.yaml"
+LOKF = ROOT / ".lokf" / "schema" / "lokf.yaml"
 MINIMAL = ROOT / "tests" / "data" / "minimal"
 NEIGHBOUR_DIR = ROOT / "tests" / "neighbours"
 NEIGHBOURS = {
