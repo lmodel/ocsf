@@ -51,7 +51,7 @@ Run `just` to list the project's [just](https://github.com/casey/just/) recipes.
 
 ## Knowledge Trust Ladder (KTL)
 
-`.lokf/` holds this project's [KTL](https://w3id.org/ktl/) knowledge bundle. Its domain schema, `.lokf/ocsf.yaml`, is the copy `just lokf-adapt` writes from `src/ocsf/schema/ocsf.yaml`, and `just lokf-adapt-check` says when it is stale. Edit the source, never the copy. A release carries the copy as `schema-<tag>-ocsf.yaml`.
+`.lokf/` holds this project's [KTL](https://w3id.org/ktl/) knowledge bundle. Its domain schema, `.lokf/schema/ocsf.yaml`, is the copy `just lokf-adapt` writes from `src/ocsf/schema/ocsf.yaml`, and `just lokf-adapt-check` says when it is stale. Edit the source, never the copy. A release carries the copy as `schema-<tag>-ocsf.yaml`.
 
 The copy roots `OcsfBaseEvent` on `Concept`, so a concept may be an event of any class. OCSF's objects stay values inside an event. In Obsidian, add the classes to the *Known LOKF types* setting of the KTL Registrar and KTL Curator plugins:
 
