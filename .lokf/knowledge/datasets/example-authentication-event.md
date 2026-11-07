@@ -62,7 +62,7 @@ user:
   uid: "1001"
 generated:
   by: process:ktl-librarian
-  at: "2026-11-04T23:20:36Z"
+  at: "2026-11-06T21:23:27Z"
 status: draft
 verified:
   - by: process:ktl-librarian
@@ -71,7 +71,7 @@ verified:
 
 # A logon over SSH
 
-This concept shows how a host writes an event in its bundle, in the adapt copy's keys. Its type is `OcsfAuthentication`, and `lokf validate` checks it against `.lokf/ocsf.yaml`.[^readme.md]
+This concept shows how a host writes an event in its bundle, in the adapt copy's keys. Its type is `OcsfAuthentication`, and `lokf validate` checks it against `.lokf/schema/ocsf.yaml`.[^readme.md]
 
 `tests/data/valid/OcsfAuthentication-logon.yaml` holds its other keys, and a key LOKF also defines takes the `ocsf_` prefix.[^ocsfauthentication-logon.yaml]
 
