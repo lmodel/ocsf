@@ -43,7 +43,7 @@ The schema is the one home for mappings. The hand-kept SSSOM files under `src/oc
 * [src/ocsf/datamodel/](src/ocsf/datamodel): the generated Python datamodel
 * [tests/](tests/): Python tests, with example data in [data/](tests/data), pinned lists in [upstream/](tests/upstream) and the neighbours' adapt copies in [neighbours/](tests/neighbours)
 * [upstream/](upstream/): OCSF's files at the pinned tag and their compiled form, unchanged
-* [website/](website/): the Astro Starlight site built from the README, `docs/`, the schema's pages and the knowledge bundle
+* [website/](website/): the Hugo site built from the README, `docs/`, the schema's pages and the knowledge bundle
 
 ## Developer Tools
 
