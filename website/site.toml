@@ -1,0 +1,2064 @@
+# This repository's own values for the knowledge website. hugo.toml beside
+# this file holds everything that is the same on every site. The ktl-website
+# skill wrote this file once and never replaces it.
+
+# The site's address: the owner's GitHub Pages domain and the repository's
+# name under it. A user site (the <owner>.github.io repository) or a custom
+# domain has no name after the domain: "https://docs.example.org/".
+baseURL = "https://lmodel.github.io/ocsf/"
+
+# The site's title, in the header and on every social card.
+title = "ocsf"
+
+[params]
+# One sentence, for search engines and link previews.
+description = "Open Cybersecurity Schema Framework (OCSF) 1.9.0 (LinkML)"
+# The repository. Links to files that are not pages go here.
+repo = "https://github.com/lmodel/ocsf"
+
+# Everything below is optional. The site finds the README, the docs, the
+# figures, the changelog, a LinkML schema and a workspace by itself.
+
+# The default branch, when it is not main, and the tag a release carries,
+# when it is not v<version>.
+# branch = "master"
+# releaseTag = "{version}"
+
+# A logo of the repository's own, as files under .assets/. Left out, the
+# site shows the Knowledge Trust Ladder logo.
+# logo = ".assets/logo.svg"
+# logoDark = ".assets/logo-dark.svg"
+
+# The data: a folder of SQLite databases and their Datasette metadata, from
+# the repository's root, served under browse/ with a page that opens each in
+# Datasette Lite, and the command that writes the folder when it holds no
+# database. The databases go on the public site, so none is served until
+# this is set.
+# browse = "my-project/browse"
+# browseBuild = "just build-browse"
+
+# More folders under docs/ that are not pages.
+# docsExclude = ["templates-linkml", "elements", "drafts"]
+
+# The docs pages in groups of your choosing, each page by its path under
+# docs/ without .md. Left out, the pages at the top of docs/ are one group
+# and each folder is a group of its own. With groups, the build stops when
+# one names a missing page or a page is in no group.
+# [[params.docsGroups]]
+# label = "Start here"
+# pages = ["install", "usage"]
+
+# Old addresses, each sent on to the page built from a repository file. One
+# ending in /* stands for every page of the schema. Hugo lowercases a
+# table's keys, so an address with capitals takes the list form below.
+# [params.redirects]
+# "about" = "docs/about.md"
+# "elements/*" = "schema/*"
+#
+# [[params.redirects]]
+# from = "elements/OldName"
+# to = "website/generated/schema/classes/NewName.md"
+
+[[params.redirects]]
+from = "about"
+to = "docs/about.md"
+
+[[params.redirects]]
+from = "elements/AccessAnalysisResult"
+to = "website/generated/schema/classes/OcsfAccessAnalysisResult.md"
+
+[[params.redirects]]
+from = "elements/Account"
+to = "website/generated/schema/classes/OcsfAccount.md"
+
+[[params.redirects]]
+from = "elements/AccountChange"
+to = "website/generated/schema/classes/OcsfAccountChange.md"
+
+[[params.redirects]]
+from = "elements/AccountChangeActivityIdEnum"
+to = "website/generated/schema/_index.md"
+
+[[params.redirects]]
+from = "elements/AccountSwitchTypeIdEnum"
+to = "website/generated/schema/_index.md"
+
+[[params.redirects]]
+from = "elements/AccountTypeIdEnum"
+to = "website/generated/schema/_index.md"
+
+[[params.redirects]]
+from = "elements/ActionIdEnum"
+to = "website/generated/schema/_index.md"
+
+[[params.redirects]]
+from = "elements/ActivityIdEnum"
+to = "website/generated/schema/_index.md"
+
+[[params.redirects]]
+from = "elements/Actor"
+to = "website/generated/schema/classes/OcsfActor.md"
+
+[[params.redirects]]
+from = "elements/AdditionalRestriction"
+to = "website/generated/schema/classes/OcsfAdditionalRestriction.md"
+
+[[params.redirects]]
+from = "elements/AdditionalRestrictionStatusIdEnum"
+to = "website/generated/schema/_index.md"
+
+[[params.redirects]]
+from = "elements/AdminGroupQuery"
+to = "website/generated/schema/classes/OcsfAdminGroupQuery.md"
+
+[[params.redirects]]
+from = "elements/Advisory"
+to = "website/generated/schema/classes/OcsfAdvisory.md"
+
+[[params.redirects]]
+from = "elements/AffectedCode"
+to = "website/generated/schema/classes/OcsfAffectedCode.md"
+
+[[params.redirects]]
+from = "elements/AffectedPackage"
+to = "website/generated/schema/classes/OcsfAffectedPackage.md"
+
+[[params.redirects]]
+from = "elements/Agent"
+to = "website/generated/schema/classes/OcsfAgent.md"
+
+[[params.redirects]]
+from = "elements/AgentTypeIdEnum"
+to = "website/generated/schema/_index.md"
+
+[[params.redirects]]
+from = "elements/AiModel"
+to = "website/generated/schema/classes/OcsfAiModel.md"
+
+[[params.redirects]]
+from = "elements/AiOperationProfile"
+to = "website/generated/schema/classes/OcsfAiOperationProfile.md"
+
+[[params.redirects]]
+from = "elements/AirborneBroadcastActivity"
+to = "website/generated/schema/classes/OcsfAirborneBroadcastActivity.md"
+
+[[params.redirects]]
+from = "elements/AirborneBroadcastActivityActivityIdEnum"
+to = "website/generated/schema/_index.md"
+
+[[params.redirects]]
+from = "elements/Aircraft"
+to = "website/generated/schema/classes/OcsfAircraft.md"
+
+[[params.redirects]]
+from = "elements/AlgorithmIdEnum"
+to = "website/generated/schema/_index.md"
+
+[[params.redirects]]
+from = "elements/AnalysisTarget"
+to = "website/generated/schema/classes/OcsfAnalysisTarget.md"
+
+[[params.redirects]]
+from = "elements/Analytic"
+to = "website/generated/schema/classes/OcsfAnalytic.md"
+
+[[params.redirects]]
+from = "elements/AnalyticStateIdEnum"
+to = "website/generated/schema/_index.md"
+
+[[params.redirects]]
+from = "elements/AnalyticTypeIdEnum"
+to = "website/generated/schema/_index.md"
+
+[[params.redirects]]
+from = "elements/Anomaly"
+to = "website/generated/schema/classes/OcsfAnomaly.md"
+
+[[params.redirects]]
+from = "elements/AnomalyAnalysis"
+to = "website/generated/schema/classes/OcsfAnomalyAnalysis.md"
+
+[[params.redirects]]
+from = "elements/Api"
+to = "website/generated/schema/classes/OcsfApi.md"
+
+[[params.redirects]]
+from = "elements/ApiActivity"
+to = "website/generated/schema/classes/OcsfApiActivity.md"
+
+[[params.redirects]]
+from = "elements/ApiActivityActivityIdEnum"
+to = "website/generated/schema/_index.md"
+
+[[params.redirects]]
+from = "elements/ApplicationError"
+to = "website/generated/schema/classes/OcsfApplicationError.md"
+
+[[params.redirects]]
+from = "elements/ApplicationErrorActivityIdEnum"
+to = "website/generated/schema/_index.md"
+
+[[params.redirects]]
+from = "elements/ApplicationEvent"
+to = "website/generated/schema/classes/OcsfApplicationEvent.md"
+
+[[params.redirects]]
+from = "elements/ApplicationLifecycle"
+to = "website/generated/schema/classes/OcsfApplicationLifecycle.md"
+
+[[params.redirects]]
+from = "elements/ApplicationLifecycleActivityIdEnum"
+to = "website/generated/schema/_index.md"
+
+[[params.redirects]]
+from = "elements/ApplicationObject"
+to = "website/generated/schema/classes/OcsfApplication.md"
+
+[[params.redirects]]
+from = "elements/ApplicationSecurityPostureFinding"
+to = "website/generated/schema/classes/OcsfApplicationSecurityPostureFinding.md"
+
+[[params.redirects]]
+from = "elements/Assessment"
+to = "website/generated/schema/classes/OcsfAssessment.md"
+
+[[params.redirects]]
+from = "elements/Attack"
+to = "website/generated/schema/classes/OcsfAttack.md"
+
+[[params.redirects]]
+from = "elements/AuthFactor"
+to = "website/generated/schema/classes/OcsfAuthFactor.md"
+
+[[params.redirects]]
+from = "elements/AuthProtocolIdEnum"
+to = "website/generated/schema/_index.md"
+
+[[params.redirects]]
+from = "elements/AuthTypeIdEnum"
+to = "website/generated/schema/_index.md"
+
+[[params.redirects]]
+from = "elements/Authentication"
+to = "website/generated/schema/classes/OcsfAuthentication.md"
+
+[[params.redirects]]
+from = "elements/AuthenticationActivityIdEnum"
+to = "website/generated/schema/_index.md"
+
+[[params.redirects]]
+from = "elements/AuthenticationToken"
+to = "website/generated/schema/classes/OcsfAuthenticationToken.md"
+
+[[params.redirects]]
+from = "elements/AuthenticationTokenTypeIdEnum"
+to = "website/generated/schema/_index.md"
+
+[[params.redirects]]
+from = "elements/Authorization"
+to = "website/generated/schema/classes/OcsfAuthorization.md"
+
+[[params.redirects]]
+from = "elements/AuthorizeSession"
+to = "website/generated/schema/classes/OcsfAuthorizeSession.md"
+
+[[params.redirects]]
+from = "elements/AuthorizeSessionActivityIdEnum"
+to = "website/generated/schema/_index.md"
+
+[[params.redirects]]
+from = "elements/AutonomousSystem"
+to = "website/generated/schema/classes/OcsfAutonomousSystem.md"
+
+[[params.redirects]]
+from = "elements/BaseEvent"
+to = "website/generated/schema/classes/OcsfBaseEvent.md"
+
+[[params.redirects]]
+from = "elements/BaseEventActivityIdEnum"
+to = "website/generated/schema/_index.md"
+
+[[params.redirects]]
+from = "elements/BaseEventCategoryUidEnum"
+to = "website/generated/schema/_index.md"
+
+[[params.redirects]]
+from = "elements/BaseEventClassUidEnum"
+to = "website/generated/schema/_index.md"
+
+[[params.redirects]]
+from = "elements/Baseline"
+to = "website/generated/schema/classes/OcsfBaseline.md"
+
+[[params.redirects]]
+from = "elements/BoundaryIdEnum"
+to = "website/generated/schema/_index.md"
+
+[[params.redirects]]
+from = "elements/BusTypeIdEnum"
+to = "website/generated/schema/_index.md"
+
+[[params.redirects]]
+from = "elements/Campaign"
+to = "website/generated/schema/classes/OcsfCampaign.md"
+
+[[params.redirects]]
+from = "elements/CategoryIdsEnum"
+to = "website/generated/schema/_index.md"
+
+[[params.redirects]]
+from = "elements/Certificate"
+to = "website/generated/schema/classes/OcsfCertificate.md"
+
+[[params.redirects]]
+from = "elements/Check"
+to = "website/generated/schema/classes/OcsfCheck.md"
+
+[[params.redirects]]
+from = "elements/CheckSeverityIdEnum"
+to = "website/generated/schema/_index.md"
+
+[[params.redirects]]
+from = "elements/CheckStatusIdEnum"
+to = "website/generated/schema/_index.md"
+
+[[params.redirects]]
+from = "elements/CisBenchmark"
+to = "website/generated/schema/classes/OcsfCisBenchmark.md"
+
+[[params.redirects]]
+from = "elements/CisBenchmarkResult"
+to = "website/generated/schema/classes/OcsfCisBenchmarkResult.md"
+
+[[params.redirects]]
+from = "elements/CisControl"
+to = "website/generated/schema/classes/OcsfCisControl.md"
+
+[[params.redirects]]
+from = "elements/CisCsc"
+to = "website/generated/schema/classes/OcsfCisCsc.md"
+
+[[params.redirects]]
+from = "elements/ClassificationIdsEnum"
+to = "website/generated/schema/_index.md"
+
+[[params.redirects]]
+from = "elements/ClassifierDetails"
+to = "website/generated/schema/classes/OcsfClassifierDetails.md"
+
+[[params.redirects]]
+from = "elements/Cloud"
+to = "website/generated/schema/classes/OcsfCloud.md"
+
+[[params.redirects]]
+from = "elements/CloudProfile"
+to = "website/generated/schema/classes/OcsfCloudProfile.md"
+
+[[params.redirects]]
+from = "elements/CloudResourcesInventoryInfo"
+to = "website/generated/schema/classes/OcsfCloudResourcesInventoryInfo.md"
+
+[[params.redirects]]
+from = "elements/Compliance"
+to = "website/generated/schema/classes/OcsfCompliance.md"
+
+[[params.redirects]]
+from = "elements/ComplianceFinding"
+to = "website/generated/schema/classes/OcsfComplianceFinding.md"
+
+[[params.redirects]]
+from = "elements/ComplianceStatusIdEnum"
+to = "website/generated/schema/_index.md"
+
+[[params.redirects]]
+from = "elements/ConfidenceIdEnum"
+to = "website/generated/schema/_index.md"
+
+[[params.redirects]]
+from = "elements/ConfidentialityIdEnum"
+to = "website/generated/schema/_index.md"
+
+[[params.redirects]]
+from = "elements/ConfigState"
+to = "website/generated/schema/classes/OcsfConfigState.md"
+
+[[params.redirects]]
+from = "elements/Container"
+to = "website/generated/schema/classes/OcsfContainer.md"
+
+[[params.redirects]]
+from = "elements/ContainerProfile"
+to = "website/generated/schema/classes/OcsfContainerProfile.md"
+
+[[params.redirects]]
+from = "elements/CpuArchitectureIdEnum"
+to = "website/generated/schema/_index.md"
+
+[[params.redirects]]
+from = "elements/Cve"
+to = "website/generated/schema/classes/OcsfCve.md"
+
+[[params.redirects]]
+from = "elements/Cvss"
+to = "website/generated/schema/classes/OcsfCvss.md"
+
+[[params.redirects]]
+from = "elements/Cwe"
+to = "website/generated/schema/classes/OcsfCwe.md"
+
+[[params.redirects]]
+from = "elements/D3fTactic"
+to = "website/generated/schema/classes/OcsfD3fTactic.md"
+
+[[params.redirects]]
+from = "elements/D3fTechnique"
+to = "website/generated/schema/classes/OcsfD3fTechnique.md"
+
+[[params.redirects]]
+from = "elements/D3fend"
+to = "website/generated/schema/classes/OcsfD3fend.md"
+
+[[params.redirects]]
+from = "elements/DataClassification"
+to = "website/generated/schema/classes/OcsfDataClassification.md"
+
+[[params.redirects]]
+from = "elements/DataClassificationCategoryIdEnum"
+to = "website/generated/schema/_index.md"
+
+[[params.redirects]]
+from = "elements/DataClassificationProfile"
+to = "website/generated/schema/classes/OcsfDataClassificationProfile.md"
+
+[[params.redirects]]
+from = "elements/DataClassificationStatusIdEnum"
+to = "website/generated/schema/_index.md"
+
+[[params.redirects]]
+from = "elements/DataLifecycleStateIdEnum"
+to = "website/generated/schema/_index.md"
+
+[[params.redirects]]
+from = "elements/DataSecurity"
+to = "website/generated/schema/classes/OcsfDataSecurity.md"
+
+[[params.redirects]]
+from = "elements/DataSecurityFinding"
+to = "website/generated/schema/classes/OcsfDataSecurityFinding.md"
+
+[[params.redirects]]
+from = "elements/DataSecurityFindingActivityIdEnum"
+to = "website/generated/schema/_index.md"
+
+[[params.redirects]]
+from = "elements/Database"
+to = "website/generated/schema/classes/OcsfDatabase.md"
+
+[[params.redirects]]
+from = "elements/DatabaseTypeIdEnum"
+to = "website/generated/schema/_index.md"
+
+[[params.redirects]]
+from = "elements/Databucket"
+to = "website/generated/schema/classes/OcsfDatabucket.md"
+
+[[params.redirects]]
+from = "elements/DatabucketTypeIdEnum"
+to = "website/generated/schema/_index.md"
+
+[[params.redirects]]
+from = "elements/DatastoreActivity"
+to = "website/generated/schema/classes/OcsfDatastoreActivity.md"
+
+[[params.redirects]]
+from = "elements/DatastoreActivityActivityIdEnum"
+to = "website/generated/schema/_index.md"
+
+[[params.redirects]]
+from = "elements/DatastoreActivityTypeIdEnum"
+to = "website/generated/schema/_index.md"
+
+[[params.redirects]]
+from = "elements/DatetimeProfile"
+to = "website/generated/schema/classes/OcsfDatetimeProfile.md"
+
+[[params.redirects]]
+from = "elements/DceRpc"
+to = "website/generated/schema/classes/OcsfDceRpc.md"
+
+[[params.redirects]]
+from = "elements/DepthEnum"
+to = "website/generated/schema/_index.md"
+
+[[params.redirects]]
+from = "elements/DetectionFinding"
+to = "website/generated/schema/classes/OcsfDetectionFinding.md"
+
+[[params.redirects]]
+from = "elements/DetectionPatternTypeIdEnum"
+to = "website/generated/schema/_index.md"
+
+[[params.redirects]]
+from = "elements/DetectionSystemIdEnum"
+to = "website/generated/schema/_index.md"
+
+[[params.redirects]]
+from = "elements/Device"
+to = "website/generated/schema/classes/OcsfDevice.md"
+
+[[params.redirects]]
+from = "elements/DeviceConfigStateChange"
+to = "website/generated/schema/classes/OcsfDeviceConfigStateChange.md"
+
+[[params.redirects]]
+from = "elements/DeviceConfigStateChangeStateIdEnum"
+to = "website/generated/schema/_index.md"
+
+[[params.redirects]]
+from = "elements/DeviceHwInfo"
+to = "website/generated/schema/classes/OcsfDeviceHwInfo.md"
+
+[[params.redirects]]
+from = "elements/DhcpActivity"
+to = "website/generated/schema/classes/OcsfDhcpActivity.md"
+
+[[params.redirects]]
+from = "elements/DhcpActivityActivityIdEnum"
+to = "website/generated/schema/_index.md"
+
+[[params.redirects]]
+from = "elements/DigitalSignature"
+to = "website/generated/schema/classes/OcsfDigitalSignature.md"
+
+[[params.redirects]]
+from = "elements/DigitalSignatureAlgorithmIdEnum"
+to = "website/generated/schema/_index.md"
+
+[[params.redirects]]
+from = "elements/DigitalSignatureStateIdEnum"
+to = "website/generated/schema/_index.md"
+
+[[params.redirects]]
+from = "elements/DirectionIdEnum"
+to = "website/generated/schema/_index.md"
+
+[[params.redirects]]
+from = "elements/DiscoveryDetails"
+to = "website/generated/schema/classes/OcsfDiscoveryDetails.md"
+
+[[params.redirects]]
+from = "elements/DiscoveryEvent"
+to = "website/generated/schema/classes/OcsfDiscoveryEvent.md"
+
+[[params.redirects]]
+from = "elements/DiscoveryEventActivityIdEnum"
+to = "website/generated/schema/_index.md"
+
+[[params.redirects]]
+from = "elements/DiscoveryResult"
+to = "website/generated/schema/classes/OcsfDiscoveryResultEvent.md"
+
+[[params.redirects]]
+from = "elements/DiscoveryResultActivityIdEnum"
+to = "website/generated/schema/_index.md"
+
+[[params.redirects]]
+from = "elements/Display"
+to = "website/generated/schema/classes/OcsfDisplay.md"
+
+[[params.redirects]]
+from = "elements/DispositionIdEnum"
+to = "website/generated/schema/_index.md"
+
+[[params.redirects]]
+from = "elements/Dns"
+to = "website/generated/schema/_index.md"
+
+[[params.redirects]]
+from = "elements/DnsActivity"
+to = "website/generated/schema/classes/OcsfDnsActivity.md"
+
+[[params.redirects]]
+from = "elements/DnsActivityActivityIdEnum"
+to = "website/generated/schema/_index.md"
+
+[[params.redirects]]
+from = "elements/DnsActivityRcodeIdEnum"
+to = "website/generated/schema/_index.md"
+
+[[params.redirects]]
+from = "elements/DnsAnswer"
+to = "website/generated/schema/classes/OcsfDnsAnswer.md"
+
+[[params.redirects]]
+from = "elements/DnsAnswerFlagIdsEnum"
+to = "website/generated/schema/_index.md"
+
+[[params.redirects]]
+from = "elements/DnsQuery"
+to = "website/generated/schema/classes/OcsfDnsQuery.md"
+
+[[params.redirects]]
+from = "elements/DnssecStatusIdEnum"
+to = "website/generated/schema/_index.md"
+
+[[params.redirects]]
+from = "elements/DomainContact"
+to = "website/generated/schema/classes/OcsfDomainContact.md"
+
+[[params.redirects]]
+from = "elements/DomainContactTypeIdEnum"
+to = "website/generated/schema/_index.md"
+
+[[params.redirects]]
+from = "elements/DriveTypeIdEnum"
+to = "website/generated/schema/_index.md"
+
+[[params.redirects]]
+from = "elements/DroneFlightsActivity"
+to = "website/generated/schema/classes/OcsfDroneFlightsActivity.md"
+
+[[params.redirects]]
+from = "elements/DroneFlightsActivityActivityIdEnum"
+to = "website/generated/schema/_index.md"
+
+[[params.redirects]]
+from = "elements/DroneFlightsActivityAuthProtocolIdEnum"
+to = "website/generated/schema/_index.md"
+
+[[params.redirects]]
+from = "elements/DroneFlightsActivityStatusIdEnum"
+to = "website/generated/schema/_index.md"
+
+[[params.redirects]]
+from = "elements/Edge"
+to = "website/generated/schema/classes/OcsfEdge.md"
+
+[[params.redirects]]
+from = "elements/Email"
+to = "website/generated/schema/classes/OcsfEmail.md"
+
+[[params.redirects]]
+from = "elements/EmailActivity"
+to = "website/generated/schema/classes/OcsfEmailActivity.md"
+
+[[params.redirects]]
+from = "elements/EmailActivityActivityIdEnum"
+to = "website/generated/schema/_index.md"
+
+[[params.redirects]]
+from = "elements/EmailActivityDirectionIdEnum"
+to = "website/generated/schema/_index.md"
+
+[[params.redirects]]
+from = "elements/EmailAuth"
+to = "website/generated/schema/classes/OcsfEmailAuth.md"
+
+[[params.redirects]]
+from = "elements/EmailFileActivity"
+to = "website/generated/schema/classes/OcsfEmailFileActivity.md"
+
+[[params.redirects]]
+from = "elements/EmailFileActivityActivityIdEnum"
+to = "website/generated/schema/_index.md"
+
+[[params.redirects]]
+from = "elements/EmailUrlActivity"
+to = "website/generated/schema/classes/OcsfEmailUrlActivity.md"
+
+[[params.redirects]]
+from = "elements/EmailUrlActivityActivityIdEnum"
+to = "website/generated/schema/_index.md"
+
+[[params.redirects]]
+from = "elements/EncodingIdEnum"
+to = "website/generated/schema/_index.md"
+
+[[params.redirects]]
+from = "elements/EncryptionDetails"
+to = "website/generated/schema/classes/OcsfEncryptionDetails.md"
+
+[[params.redirects]]
+from = "elements/EncryptionDetailsAlgorithmIdEnum"
+to = "website/generated/schema/_index.md"
+
+[[params.redirects]]
+from = "elements/Endpoint"
+to = "website/generated/schema/classes/OcsfEndpoint.md"
+
+[[params.redirects]]
+from = "elements/EndpointConnection"
+to = "website/generated/schema/classes/OcsfEndpointConnection.md"
+
+[[params.redirects]]
+from = "elements/EndpointTypeIdEnum"
+to = "website/generated/schema/_index.md"
+
+[[params.redirects]]
+from = "elements/Enrichment"
+to = "website/generated/schema/classes/OcsfEnrichment.md"
+
+[[params.redirects]]
+from = "elements/Entity"
+to = "website/generated/schema/classes/OcsfEntity.md"
+
+[[params.redirects]]
+from = "elements/EntityManagement"
+to = "website/generated/schema/classes/OcsfEntityManagement.md"
+
+[[params.redirects]]
+from = "elements/EntityManagementActivityIdEnum"
+to = "website/generated/schema/_index.md"
+
+[[params.redirects]]
+from = "elements/EnvironmentVariable"
+to = "website/generated/schema/classes/OcsfEnvironmentVariable.md"
+
+[[params.redirects]]
+from = "elements/Epss"
+to = "website/generated/schema/classes/OcsfEpss.md"
+
+[[params.redirects]]
+from = "elements/EventLogActvity"
+to = "website/generated/schema/classes/OcsfEventLogActvity.md"
+
+[[params.redirects]]
+from = "elements/EventLogActvityActivityIdEnum"
+to = "website/generated/schema/_index.md"
+
+[[params.redirects]]
+from = "elements/EvidenceInfo"
+to = "website/generated/schema/classes/OcsfEvidenceInfo.md"
+
+[[params.redirects]]
+from = "elements/Evidences"
+to = "website/generated/schema/classes/OcsfEvidences.md"
+
+[[params.redirects]]
+from = "elements/EvidencesVerdictIdEnum"
+to = "website/generated/schema/_index.md"
+
+[[params.redirects]]
+from = "elements/Extension"
+to = "website/generated/schema/classes/OcsfExtension.md"
+
+[[params.redirects]]
+from = "elements/FactorTypeIdEnum"
+to = "website/generated/schema/_index.md"
+
+[[params.redirects]]
+from = "elements/Feature"
+to = "website/generated/schema/classes/OcsfFeature.md"
+
+[[params.redirects]]
+from = "elements/File"
+to = "website/generated/schema/classes/OcsfFile.md"
+
+[[params.redirects]]
+from = "elements/FileActivity"
+to = "website/generated/schema/classes/OcsfFileActivity.md"
+
+[[params.redirects]]
+from = "elements/FileActivityActivityIdEnum"
+to = "website/generated/schema/_index.md"
+
+[[params.redirects]]
+from = "elements/FileHosting"
+to = "website/generated/schema/classes/OcsfFileHosting.md"
+
+[[params.redirects]]
+from = "elements/FileHostingActivityIdEnum"
+to = "website/generated/schema/_index.md"
+
+[[params.redirects]]
+from = "elements/FileQuery"
+to = "website/generated/schema/classes/OcsfFileQuery.md"
+
+[[params.redirects]]
+from = "elements/FileRemediationActivity"
+to = "website/generated/schema/classes/OcsfFileRemediationActivity.md"
+
+[[params.redirects]]
+from = "elements/FileTypeIdEnum"
+to = "website/generated/schema/_index.md"
+
+[[params.redirects]]
+from = "elements/Finding"
+to = "website/generated/schema/classes/OcsfFinding.md"
+
+[[params.redirects]]
+from = "elements/FindingActivityIdEnum"
+to = "website/generated/schema/_index.md"
+
+[[params.redirects]]
+from = "elements/FindingInfo"
+to = "website/generated/schema/classes/OcsfFindingInfo.md"
+
+[[params.redirects]]
+from = "elements/FindingObject"
+to = "website/generated/schema/classes/OcsfFinding.md"
+
+[[params.redirects]]
+from = "elements/FindingStatusIdEnum"
+to = "website/generated/schema/_index.md"
+
+[[params.redirects]]
+from = "elements/Fingerprint"
+to = "website/generated/schema/classes/OcsfFingerprint.md"
+
+[[params.redirects]]
+from = "elements/FingerprintAlgorithmIdEnum"
+to = "website/generated/schema/_index.md"
+
+[[params.redirects]]
+from = "elements/FirewallRule"
+to = "website/generated/schema/classes/OcsfFirewallRule.md"
+
+[[params.redirects]]
+from = "elements/FixCoverageIdEnum"
+to = "website/generated/schema/_index.md"
+
+[[params.redirects]]
+from = "elements/FlagIdsEnum"
+to = "website/generated/schema/_index.md"
+
+[[params.redirects]]
+from = "elements/FolderQuery"
+to = "website/generated/schema/classes/OcsfFolderQuery.md"
+
+[[params.redirects]]
+from = "elements/FormatIdEnum"
+to = "website/generated/schema/_index.md"
+
+[[params.redirects]]
+from = "elements/FtpActivity"
+to = "website/generated/schema/classes/OcsfFtpActivity.md"
+
+[[params.redirects]]
+from = "elements/FtpActivityActivityIdEnum"
+to = "website/generated/schema/_index.md"
+
+[[params.redirects]]
+from = "elements/FunctionInvocation"
+to = "website/generated/schema/classes/OcsfFunctionInvocation.md"
+
+[[params.redirects]]
+from = "elements/GpuInfo"
+to = "website/generated/schema/classes/OcsfGpuInfo.md"
+
+[[params.redirects]]
+from = "elements/GpuInfoBusTypeIdEnum"
+to = "website/generated/schema/_index.md"
+
+[[params.redirects]]
+from = "elements/GpuInfoVramModeIdEnum"
+to = "website/generated/schema/_index.md"
+
+[[params.redirects]]
+from = "elements/Graph"
+to = "website/generated/schema/classes/OcsfGraph.md"
+
+[[params.redirects]]
+from = "elements/GraphQueryLanguageIdEnum"
+to = "website/generated/schema/_index.md"
+
+[[params.redirects]]
+from = "elements/Group"
+to = "website/generated/schema/classes/OcsfGroup.md"
+
+[[params.redirects]]
+from = "elements/GroupManagement"
+to = "website/generated/schema/classes/OcsfGroupManagement.md"
+
+[[params.redirects]]
+from = "elements/GroupManagementActivityIdEnum"
+to = "website/generated/schema/_index.md"
+
+[[params.redirects]]
+from = "elements/Hassh"
+to = "website/generated/schema/classes/OcsfHassh.md"
+
+[[params.redirects]]
+from = "elements/HostProfile"
+to = "website/generated/schema/classes/OcsfHostProfile.md"
+
+[[params.redirects]]
+from = "elements/HttpActivity"
+to = "website/generated/schema/classes/OcsfHttpActivity.md"
+
+[[params.redirects]]
+from = "elements/HttpActivityActivityIdEnum"
+to = "website/generated/schema/_index.md"
+
+[[params.redirects]]
+from = "elements/HttpCookie"
+to = "website/generated/schema/classes/OcsfHttpCookie.md"
+
+[[params.redirects]]
+from = "elements/HttpHeader"
+to = "website/generated/schema/classes/OcsfHttpHeader.md"
+
+[[params.redirects]]
+from = "elements/HttpRequest"
+to = "website/generated/schema/classes/OcsfHttpRequest.md"
+
+[[params.redirects]]
+from = "elements/HttpRequestHttpMethodEnum"
+to = "website/generated/schema/_index.md"
+
+[[params.redirects]]
+from = "elements/HttpResponse"
+to = "website/generated/schema/classes/OcsfHttpResponse.md"
+
+[[params.redirects]]
+from = "elements/IamAnalysisFinding"
+to = "website/generated/schema/classes/OcsfIamAnalysisFinding.md"
+
+[[params.redirects]]
+from = "elements/IamEvent"
+to = "website/generated/schema/classes/OcsfIamEvent.md"
+
+[[params.redirects]]
+from = "elements/IdentityActivityMetrics"
+to = "website/generated/schema/classes/OcsfIdentityActivityMetrics.md"
+
+[[params.redirects]]
+from = "elements/Idp"
+to = "website/generated/schema/classes/OcsfIdp.md"
+
+[[params.redirects]]
+from = "elements/IdpStateIdEnum"
+to = "website/generated/schema/_index.md"
+
+[[params.redirects]]
+from = "elements/Image"
+to = "website/generated/schema/classes/OcsfImage.md"
+
+[[params.redirects]]
+from = "elements/ImpactIdEnum"
+to = "website/generated/schema/_index.md"
+
+[[params.redirects]]
+from = "elements/IncidentFinding"
+to = "website/generated/schema/classes/OcsfIncidentFinding.md"
+
+[[params.redirects]]
+from = "elements/IncidentFindingActivityIdEnum"
+to = "website/generated/schema/_index.md"
+
+[[params.redirects]]
+from = "elements/IncidentFindingStatusIdEnum"
+to = "website/generated/schema/_index.md"
+
+[[params.redirects]]
+from = "elements/IncidentProfile"
+to = "website/generated/schema/classes/OcsfIncidentProfile.md"
+
+[[params.redirects]]
+from = "elements/InitiatorIdEnum"
+to = "website/generated/schema/_index.md"
+
+[[params.redirects]]
+from = "elements/InjectionTypeIdEnum"
+to = "website/generated/schema/_index.md"
+
+[[params.redirects]]
+from = "elements/InstallStateIdEnum"
+to = "website/generated/schema/_index.md"
+
+[[params.redirects]]
+from = "elements/IntegrityIdEnum"
+to = "website/generated/schema/_index.md"
+
+[[params.redirects]]
+from = "elements/InventoryInfo"
+to = "website/generated/schema/classes/OcsfInventoryInfo.md"
+
+[[params.redirects]]
+from = "elements/Ja4Fingerprint"
+to = "website/generated/schema/classes/OcsfJa4Fingerprint.md"
+
+[[params.redirects]]
+from = "elements/Ja4FingerprintTypeIdEnum"
+to = "website/generated/schema/_index.md"
+
+[[params.redirects]]
+from = "elements/Job"
+to = "website/generated/schema/classes/OcsfJob.md"
+
+[[params.redirects]]
+from = "elements/JobQuery"
+to = "website/generated/schema/classes/OcsfJobQuery.md"
+
+[[params.redirects]]
+from = "elements/JobRunStateIdEnum"
+to = "website/generated/schema/_index.md"
+
+[[params.redirects]]
+from = "elements/KbArticle"
+to = "website/generated/schema/classes/OcsfKbArticle.md"
+
+[[params.redirects]]
+from = "elements/Kernel"
+to = "website/generated/schema/classes/OcsfKernel.md"
+
+[[params.redirects]]
+from = "elements/KernelActivity"
+to = "website/generated/schema/classes/OcsfKernelActivity.md"
+
+[[params.redirects]]
+from = "elements/KernelActivityActivityIdEnum"
+to = "website/generated/schema/_index.md"
+
+[[params.redirects]]
+from = "elements/KernelDriver"
+to = "website/generated/schema/classes/OcsfKernelDriver.md"
+
+[[params.redirects]]
+from = "elements/KernelExtensionActivity"
+to = "website/generated/schema/classes/OcsfKernelExtensionActivity.md"
+
+[[params.redirects]]
+from = "elements/KernelExtensionActivityActivityIdEnum"
+to = "website/generated/schema/_index.md"
+
+[[params.redirects]]
+from = "elements/KernelObjectQuery"
+to = "website/generated/schema/classes/OcsfKernelObjectQuery.md"
+
+[[params.redirects]]
+from = "elements/KernelTypeIdEnum"
+to = "website/generated/schema/_index.md"
+
+[[params.redirects]]
+from = "elements/KeyValueObject"
+to = "website/generated/schema/classes/OcsfKeyValueObject.md"
+
+[[params.redirects]]
+from = "elements/KeyboardInfo"
+to = "website/generated/schema/classes/OcsfKeyboardInfo.md"
+
+[[params.redirects]]
+from = "elements/KillChainPhase"
+to = "website/generated/schema/classes/OcsfKillChainPhase.md"
+
+[[params.redirects]]
+from = "elements/LaunchTypeIdEnum"
+to = "website/generated/schema/_index.md"
+
+[[params.redirects]]
+from = "elements/LdapPerson"
+to = "website/generated/schema/classes/OcsfLdapPerson.md"
+
+[[params.redirects]]
+from = "elements/LinuxProcess"
+to = "website/generated/schema/classes/OcsfProcess.md"
+
+[[params.redirects]]
+from = "elements/LinuxUsersProfile"
+to = "website/generated/schema/classes/OcsfLinuxUsersProfile.md"
+
+[[params.redirects]]
+from = "elements/LoadBalancer"
+to = "website/generated/schema/classes/OcsfLoadBalancer.md"
+
+[[params.redirects]]
+from = "elements/LoadBalancerProfile"
+to = "website/generated/schema/classes/OcsfLoadBalancerProfile.md"
+
+[[params.redirects]]
+from = "elements/LoadTypeIdEnum"
+to = "website/generated/schema/_index.md"
+
+[[params.redirects]]
+from = "elements/Location"
+to = "website/generated/schema/classes/OcsfLocation.md"
+
+[[params.redirects]]
+from = "elements/LogTypeIdEnum"
+to = "website/generated/schema/_index.md"
+
+[[params.redirects]]
+from = "elements/Logger"
+to = "website/generated/schema/classes/OcsfLogger.md"
+
+[[params.redirects]]
+from = "elements/LogonTypeIdEnum"
+to = "website/generated/schema/_index.md"
+
+[[params.redirects]]
+from = "elements/LongString"
+to = "website/generated/schema/classes/OcsfLongString.md"
+
+[[params.redirects]]
+from = "elements/MacosProcess"
+to = "website/generated/schema/classes/OcsfProcess.md"
+
+[[params.redirects]]
+from = "elements/MacosUsersProfile"
+to = "website/generated/schema/classes/OcsfMacosUsersProfile.md"
+
+[[params.redirects]]
+from = "elements/Malware"
+to = "website/generated/schema/classes/OcsfMalware.md"
+
+[[params.redirects]]
+from = "elements/MalwareClassificationIdsEnum"
+to = "website/generated/schema/_index.md"
+
+[[params.redirects]]
+from = "elements/MalwareScanInfo"
+to = "website/generated/schema/classes/OcsfMalwareScanInfo.md"
+
+[[params.redirects]]
+from = "elements/ManagedEntity"
+to = "website/generated/schema/classes/OcsfManagedEntity.md"
+
+[[params.redirects]]
+from = "elements/ManagedEntityTypeIdEnum"
+to = "website/generated/schema/_index.md"
+
+[[params.redirects]]
+from = "elements/MemoryActivity"
+to = "website/generated/schema/classes/OcsfMemoryActivity.md"
+
+[[params.redirects]]
+from = "elements/MemoryActivityActivityIdEnum"
+to = "website/generated/schema/_index.md"
+
+[[params.redirects]]
+from = "elements/MessageContext"
+to = "website/generated/schema/classes/OcsfMessageContext.md"
+
+[[params.redirects]]
+from = "elements/MessageContextAiRoleIdEnum"
+to = "website/generated/schema/_index.md"
+
+[[params.redirects]]
+from = "elements/Metadata"
+to = "website/generated/schema/classes/OcsfMetadata.md"
+
+[[params.redirects]]
+from = "elements/Metric"
+to = "website/generated/schema/classes/OcsfMetric.md"
+
+[[params.redirects]]
+from = "elements/Mitigation"
+to = "website/generated/schema/classes/OcsfMitigation.md"
+
+[[params.redirects]]
+from = "elements/Module"
+to = "website/generated/schema/classes/OcsfModule.md"
+
+[[params.redirects]]
+from = "elements/ModuleActivity"
+to = "website/generated/schema/classes/OcsfModuleActivity.md"
+
+[[params.redirects]]
+from = "elements/ModuleActivityActivityIdEnum"
+to = "website/generated/schema/_index.md"
+
+[[params.redirects]]
+from = "elements/ModuleLoadTypeIdEnum"
+to = "website/generated/schema/_index.md"
+
+[[params.redirects]]
+from = "elements/ModuleQuery"
+to = "website/generated/schema/classes/OcsfModuleQuery.md"
+
+[[params.redirects]]
+from = "elements/NetworkActivity"
+to = "website/generated/schema/classes/OcsfNetworkActivity.md"
+
+[[params.redirects]]
+from = "elements/NetworkActivityActivityIdEnum"
+to = "website/generated/schema/_index.md"
+
+[[params.redirects]]
+from = "elements/NetworkActivityInitiatorIdEnum"
+to = "website/generated/schema/_index.md"
+
+[[params.redirects]]
+from = "elements/NetworkConnectionInfo"
+to = "website/generated/schema/classes/OcsfNetworkConnectionInfo.md"
+
+[[params.redirects]]
+from = "elements/NetworkConnectionInfoProtocolVerIdEnum"
+to = "website/generated/schema/_index.md"
+
+[[params.redirects]]
+from = "elements/NetworkConnectionQuery"
+to = "website/generated/schema/classes/OcsfNetworkConnectionQuery.md"
+
+[[params.redirects]]
+from = "elements/NetworkConnectionQueryStateIdEnum"
+to = "website/generated/schema/_index.md"
+
+[[params.redirects]]
+from = "elements/NetworkEndpoint"
+to = "website/generated/schema/classes/OcsfNetworkEndpoint.md"
+
+[[params.redirects]]
+from = "elements/NetworkEvent"
+to = "website/generated/schema/classes/OcsfNetworkEvent.md"
+
+[[params.redirects]]
+from = "elements/NetworkEventObservationPointIdEnum"
+to = "website/generated/schema/_index.md"
+
+[[params.redirects]]
+from = "elements/NetworkFileActivity"
+to = "website/generated/schema/classes/OcsfNetworkFileActivity.md"
+
+[[params.redirects]]
+from = "elements/NetworkFileActivityActivityIdEnum"
+to = "website/generated/schema/_index.md"
+
+[[params.redirects]]
+from = "elements/NetworkInterface"
+to = "website/generated/schema/classes/OcsfNetworkInterface.md"
+
+[[params.redirects]]
+from = "elements/NetworkInterfaceTypeIdEnum"
+to = "website/generated/schema/_index.md"
+
+[[params.redirects]]
+from = "elements/NetworkProxy"
+to = "website/generated/schema/classes/OcsfNetworkProxy.md"
+
+[[params.redirects]]
+from = "elements/NetworkProxyProfile"
+to = "website/generated/schema/classes/OcsfNetworkProxyProfile.md"
+
+[[params.redirects]]
+from = "elements/NetworkRemediationActivity"
+to = "website/generated/schema/classes/OcsfNetworkRemediationActivity.md"
+
+[[params.redirects]]
+from = "elements/NetworkScopeIdEnum"
+to = "website/generated/schema/_index.md"
+
+[[params.redirects]]
+from = "elements/NetworkTraffic"
+to = "website/generated/schema/classes/OcsfNetworkTraffic.md"
+
+[[params.redirects]]
+from = "elements/NetworksQuery"
+to = "website/generated/schema/classes/OcsfNetworksQuery.md"
+
+[[params.redirects]]
+from = "elements/Node"
+to = "website/generated/schema/classes/OcsfNode.md"
+
+[[params.redirects]]
+from = "elements/NtpActivity"
+to = "website/generated/schema/classes/OcsfNtpActivity.md"
+
+[[params.redirects]]
+from = "elements/NtpActivityActivityIdEnum"
+to = "website/generated/schema/_index.md"
+
+[[params.redirects]]
+from = "elements/Object"
+to = "website/generated/schema/classes/OcsfObject.md"
+
+[[params.redirects]]
+from = "elements/Observable"
+to = "website/generated/schema/classes/OcsfObservable.md"
+
+[[params.redirects]]
+from = "elements/ObservableTypeIdEnum"
+to = "website/generated/schema/_index.md"
+
+[[params.redirects]]
+from = "elements/Observation"
+to = "website/generated/schema/classes/OcsfObservation.md"
+
+[[params.redirects]]
+from = "elements/ObservationPointIdEnum"
+to = "website/generated/schema/_index.md"
+
+[[params.redirects]]
+from = "elements/OccurrenceDetails"
+to = "website/generated/schema/classes/OcsfOccurrenceDetails.md"
+
+[[params.redirects]]
+from = "elements/OpcodeIdEnum"
+to = "website/generated/schema/_index.md"
+
+[[params.redirects]]
+from = "elements/Organization"
+to = "website/generated/schema/classes/OcsfOrganization.md"
+
+[[params.redirects]]
+from = "elements/Os"
+to = "website/generated/schema/classes/OcsfOs.md"
+
+[[params.redirects]]
+from = "elements/OsTypeIdEnum"
+to = "website/generated/schema/_index.md"
+
+[[params.redirects]]
+from = "elements/Osint"
+to = "website/generated/schema/classes/OcsfOsint.md"
+
+[[params.redirects]]
+from = "elements/OsintInventoryInfo"
+to = "website/generated/schema/classes/OcsfOsintInventoryInfo.md"
+
+[[params.redirects]]
+from = "elements/OsintProfile"
+to = "website/generated/schema/classes/OcsfOsintProfile.md"
+
+[[params.redirects]]
+from = "elements/OsintTlpEnum"
+to = "website/generated/schema/_index.md"
+
+[[params.redirects]]
+from = "elements/OsintTypeIdEnum"
+to = "website/generated/schema/_index.md"
+
+[[params.redirects]]
+from = "elements/Package"
+to = "website/generated/schema/classes/OcsfPackage.md"
+
+[[params.redirects]]
+from = "elements/PackageTypeIdEnum"
+to = "website/generated/schema/_index.md"
+
+[[params.redirects]]
+from = "elements/Packet"
+to = "website/generated/schema/classes/OcsfPacket.md"
+
+[[params.redirects]]
+from = "elements/PacketEncodingIdEnum"
+to = "website/generated/schema/_index.md"
+
+[[params.redirects]]
+from = "elements/PacketFormatIdEnum"
+to = "website/generated/schema/_index.md"
+
+[[params.redirects]]
+from = "elements/PacketSourceIdEnum"
+to = "website/generated/schema/_index.md"
+
+[[params.redirects]]
+from = "elements/Parameter"
+to = "website/generated/schema/classes/OcsfParameter.md"
+
+[[params.redirects]]
+from = "elements/PatchState"
+to = "website/generated/schema/classes/OcsfPatchState.md"
+
+[[params.redirects]]
+from = "elements/PeripheralActivity"
+to = "website/generated/schema/classes/OcsfPeripheralActivity.md"
+
+[[params.redirects]]
+from = "elements/PeripheralActivityActivityIdEnum"
+to = "website/generated/schema/_index.md"
+
+[[params.redirects]]
+from = "elements/PeripheralDevice"
+to = "website/generated/schema/classes/OcsfPeripheralDevice.md"
+
+[[params.redirects]]
+from = "elements/PeripheralDeviceQuery"
+to = "website/generated/schema/classes/OcsfPeripheralDeviceQuery.md"
+
+[[params.redirects]]
+from = "elements/PeripheralDeviceTypeIdEnum"
+to = "website/generated/schema/_index.md"
+
+[[params.redirects]]
+from = "elements/PermissionAnalysisResult"
+to = "website/generated/schema/classes/OcsfPermissionAnalysisResult.md"
+
+[[params.redirects]]
+from = "elements/PhaseIdEnum"
+to = "website/generated/schema/_index.md"
+
+[[params.redirects]]
+from = "elements/Policy"
+to = "website/generated/schema/classes/OcsfPolicy.md"
+
+[[params.redirects]]
+from = "elements/PortInfo"
+to = "website/generated/schema/classes/OcsfPortInfo.md"
+
+[[params.redirects]]
+from = "elements/PrefetchQuery"
+to = "website/generated/schema/classes/OcsfWinPrefetchQuery.md"
+
+[[params.redirects]]
+from = "elements/PrevSecurityLevelIdEnum"
+to = "website/generated/schema/_index.md"
+
+[[params.redirects]]
+from = "elements/PriorityIdEnum"
+to = "website/generated/schema/_index.md"
+
+[[params.redirects]]
+from = "elements/PrivilegeAttackInfo"
+to = "website/generated/schema/classes/OcsfPrivilegeAttackInfo.md"
+
+[[params.redirects]]
+from = "elements/PrivilegeInfo"
+to = "website/generated/schema/classes/OcsfPrivilegeInfo.md"
+
+[[params.redirects]]
+from = "elements/PrivilegeInfoTypeIdEnum"
+to = "website/generated/schema/_index.md"
+
+[[params.redirects]]
+from = "elements/Process"
+to = "website/generated/schema/classes/OcsfProcess.md"
+
+[[params.redirects]]
+from = "elements/ProcessActivity"
+to = "website/generated/schema/classes/OcsfProcessActivity.md"
+
+[[params.redirects]]
+from = "elements/ProcessActivityActivityIdEnum"
+to = "website/generated/schema/_index.md"
+
+[[params.redirects]]
+from = "elements/ProcessEntity"
+to = "website/generated/schema/classes/OcsfProcessEntity.md"
+
+[[params.redirects]]
+from = "elements/ProcessQuery"
+to = "website/generated/schema/classes/OcsfProcessQuery.md"
+
+[[params.redirects]]
+from = "elements/ProcessRemediationActivity"
+to = "website/generated/schema/classes/OcsfProcessRemediationActivity.md"
+
+[[params.redirects]]
+from = "elements/Product"
+to = "website/generated/schema/classes/OcsfProduct.md"
+
+[[params.redirects]]
+from = "elements/ProgrammaticCredential"
+to = "website/generated/schema/classes/OcsfProgrammaticCredential.md"
+
+[[params.redirects]]
+from = "elements/ProtocolVerIdEnum"
+to = "website/generated/schema/_index.md"
+
+[[params.redirects]]
+from = "elements/QueryEvidence"
+to = "website/generated/schema/classes/OcsfQueryEvidence.md"
+
+[[params.redirects]]
+from = "elements/QueryEvidenceQueryTypeIdEnum"
+to = "website/generated/schema/_index.md"
+
+[[params.redirects]]
+from = "elements/QueryInfo"
+to = "website/generated/schema/classes/OcsfQueryInfo.md"
+
+[[params.redirects]]
+from = "elements/QueryLanguageIdEnum"
+to = "website/generated/schema/_index.md"
+
+[[params.redirects]]
+from = "elements/QueryResultIdEnum"
+to = "website/generated/schema/_index.md"
+
+[[params.redirects]]
+from = "elements/QueryTypeIdEnum"
+to = "website/generated/schema/_index.md"
+
+[[params.redirects]]
+from = "elements/RcodeIdEnum"
+to = "website/generated/schema/_index.md"
+
+[[params.redirects]]
+from = "elements/RdpActivity"
+to = "website/generated/schema/classes/OcsfRdpActivity.md"
+
+[[params.redirects]]
+from = "elements/RdpActivityActivityIdEnum"
+to = "website/generated/schema/_index.md"
+
+[[params.redirects]]
+from = "elements/RegKey"
+to = "website/generated/schema/classes/OcsfWinRegKey.md"
+
+[[params.redirects]]
+from = "elements/RegValue"
+to = "website/generated/schema/classes/OcsfWinRegValue.md"
+
+[[params.redirects]]
+from = "elements/RegValueTypeIdEnum"
+to = "website/generated/schema/_index.md"
+
+[[params.redirects]]
+from = "elements/RegistryKeyActivity"
+to = "website/generated/schema/classes/OcsfWinRegistryKeyActivity.md"
+
+[[params.redirects]]
+from = "elements/RegistryKeyActivityActivityIdEnum"
+to = "website/generated/schema/_index.md"
+
+[[params.redirects]]
+from = "elements/RegistryKeyQuery"
+to = "website/generated/schema/classes/OcsfWinRegistryKeyQuery.md"
+
+[[params.redirects]]
+from = "elements/RegistryValueActivity"
+to = "website/generated/schema/classes/OcsfWinRegistryValueActivity.md"
+
+[[params.redirects]]
+from = "elements/RegistryValueActivityActivityIdEnum"
+to = "website/generated/schema/_index.md"
+
+[[params.redirects]]
+from = "elements/RegistryValueQuery"
+to = "website/generated/schema/classes/OcsfWinRegistryValueQuery.md"
+
+[[params.redirects]]
+from = "elements/RelatedEvent"
+to = "website/generated/schema/classes/OcsfRelatedEvent.md"
+
+[[params.redirects]]
+from = "elements/RelationshipIdEnum"
+to = "website/generated/schema/_index.md"
+
+[[params.redirects]]
+from = "elements/Remediation"
+to = "website/generated/schema/classes/OcsfRemediation.md"
+
+[[params.redirects]]
+from = "elements/RemediationActivity"
+to = "website/generated/schema/classes/OcsfRemediationActivity.md"
+
+[[params.redirects]]
+from = "elements/RemediationActivityActivityIdEnum"
+to = "website/generated/schema/_index.md"
+
+[[params.redirects]]
+from = "elements/RemediationActivityStatusIdEnum"
+to = "website/generated/schema/_index.md"
+
+[[params.redirects]]
+from = "elements/Reporter"
+to = "website/generated/schema/classes/OcsfReporter.md"
+
+[[params.redirects]]
+from = "elements/Reputation"
+to = "website/generated/schema/classes/OcsfReputation.md"
+
+[[params.redirects]]
+from = "elements/Request"
+to = "website/generated/schema/classes/OcsfRequest.md"
+
+[[params.redirects]]
+from = "elements/Resource"
+to = "website/generated/schema/classes/OcsfResource.md"
+
+[[params.redirects]]
+from = "elements/ResourceDetails"
+to = "website/generated/schema/classes/OcsfResourceDetails.md"
+
+[[params.redirects]]
+from = "elements/ResourceDetailsRoleIdEnum"
+to = "website/generated/schema/_index.md"
+
+[[params.redirects]]
+from = "elements/Response"
+to = "website/generated/schema/classes/OcsfResponse.md"
+
+[[params.redirects]]
+from = "elements/RiskLevelIdEnum"
+to = "website/generated/schema/_index.md"
+
+[[params.redirects]]
+from = "elements/RoleIdEnum"
+to = "website/generated/schema/_index.md"
+
+[[params.redirects]]
+from = "elements/RpcInterface"
+to = "website/generated/schema/classes/OcsfRpcInterface.md"
+
+[[params.redirects]]
+from = "elements/Rule"
+to = "website/generated/schema/classes/OcsfRule.md"
+
+[[params.redirects]]
+from = "elements/RunModeIdsEnum"
+to = "website/generated/schema/_index.md"
+
+[[params.redirects]]
+from = "elements/RunStateIdEnum"
+to = "website/generated/schema/_index.md"
+
+[[params.redirects]]
+from = "elements/San"
+to = "website/generated/schema/classes/OcsfSan.md"
+
+[[params.redirects]]
+from = "elements/Sbom"
+to = "website/generated/schema/classes/OcsfSbom.md"
+
+[[params.redirects]]
+from = "elements/SbomTypeIdEnum"
+to = "website/generated/schema/_index.md"
+
+[[params.redirects]]
+from = "elements/Scan"
+to = "website/generated/schema/classes/OcsfScan.md"
+
+[[params.redirects]]
+from = "elements/ScanActivity"
+to = "website/generated/schema/classes/OcsfScanActivity.md"
+
+[[params.redirects]]
+from = "elements/ScanActivityActivityIdEnum"
+to = "website/generated/schema/_index.md"
+
+[[params.redirects]]
+from = "elements/ScanTypeIdEnum"
+to = "website/generated/schema/_index.md"
+
+[[params.redirects]]
+from = "elements/ScheduledJobActivity"
+to = "website/generated/schema/classes/OcsfScheduledJobActivity.md"
+
+[[params.redirects]]
+from = "elements/ScheduledJobActivityActivityIdEnum"
+to = "website/generated/schema/_index.md"
+
+[[params.redirects]]
+from = "elements/Scim"
+to = "website/generated/schema/classes/OcsfScim.md"
+
+[[params.redirects]]
+from = "elements/ScimStateIdEnum"
+to = "website/generated/schema/_index.md"
+
+[[params.redirects]]
+from = "elements/ScoreIdEnum"
+to = "website/generated/schema/_index.md"
+
+[[params.redirects]]
+from = "elements/Script"
+to = "website/generated/schema/classes/OcsfScript.md"
+
+[[params.redirects]]
+from = "elements/ScriptActivity"
+to = "website/generated/schema/classes/OcsfScriptActivity.md"
+
+[[params.redirects]]
+from = "elements/ScriptActivityActivityIdEnum"
+to = "website/generated/schema/_index.md"
+
+[[params.redirects]]
+from = "elements/ScriptTypeIdEnum"
+to = "website/generated/schema/_index.md"
+
+[[params.redirects]]
+from = "elements/SecurityControlProfile"
+to = "website/generated/schema/classes/OcsfSecurityControlProfile.md"
+
+[[params.redirects]]
+from = "elements/SecurityFinding"
+to = "website/generated/schema/classes/OcsfSecurityFinding.md"
+
+[[params.redirects]]
+from = "elements/SecurityFindingActivityIdEnum"
+to = "website/generated/schema/_index.md"
+
+[[params.redirects]]
+from = "elements/SecurityFindingStateIdEnum"
+to = "website/generated/schema/_index.md"
+
+[[params.redirects]]
+from = "elements/SecurityLevelIdEnum"
+to = "website/generated/schema/_index.md"
+
+[[params.redirects]]
+from = "elements/SecurityState"
+to = "website/generated/schema/classes/OcsfSecurityState.md"
+
+[[params.redirects]]
+from = "elements/SecurityStateStateIdEnum"
+to = "website/generated/schema/_index.md"
+
+[[params.redirects]]
+from = "elements/Service"
+to = "website/generated/schema/classes/OcsfService.md"
+
+[[params.redirects]]
+from = "elements/ServicePrivilegeAnalysis"
+to = "website/generated/schema/classes/OcsfServicePrivilegeAnalysis.md"
+
+[[params.redirects]]
+from = "elements/ServiceQuery"
+to = "website/generated/schema/classes/OcsfServiceQuery.md"
+
+[[params.redirects]]
+from = "elements/Session"
+to = "website/generated/schema/classes/OcsfSession.md"
+
+[[params.redirects]]
+from = "elements/SessionQuery"
+to = "website/generated/schema/classes/OcsfSessionQuery.md"
+
+[[params.redirects]]
+from = "elements/SeverityIdEnum"
+to = "website/generated/schema/_index.md"
+
+[[params.redirects]]
+from = "elements/ShareTypeIdEnum"
+to = "website/generated/schema/_index.md"
+
+[[params.redirects]]
+from = "elements/SmbActivity"
+to = "website/generated/schema/classes/OcsfSmbActivity.md"
+
+[[params.redirects]]
+from = "elements/SmbActivityActivityIdEnum"
+to = "website/generated/schema/_index.md"
+
+[[params.redirects]]
+from = "elements/SoftwareComponent"
+to = "website/generated/schema/classes/OcsfSoftwareComponent.md"
+
+[[params.redirects]]
+from = "elements/SoftwareComponentTypeIdEnum"
+to = "website/generated/schema/_index.md"
+
+[[params.redirects]]
+from = "elements/SoftwareInfo"
+to = "website/generated/schema/classes/OcsfSoftwareInfo.md"
+
+[[params.redirects]]
+from = "elements/SourceIdEnum"
+to = "website/generated/schema/_index.md"
+
+[[params.redirects]]
+from = "elements/Span"
+to = "website/generated/schema/classes/OcsfSpan.md"
+
+[[params.redirects]]
+from = "elements/SshActivity"
+to = "website/generated/schema/classes/OcsfSshActivity.md"
+
+[[params.redirects]]
+from = "elements/SshActivityActivityIdEnum"
+to = "website/generated/schema/_index.md"
+
+[[params.redirects]]
+from = "elements/SshActivityAuthTypeIdEnum"
+to = "website/generated/schema/_index.md"
+
+[[params.redirects]]
+from = "elements/Sso"
+to = "website/generated/schema/classes/OcsfSso.md"
+
+[[params.redirects]]
+from = "elements/StartTypeIdEnum"
+to = "website/generated/schema/_index.md"
+
+[[params.redirects]]
+from = "elements/StartupItem"
+to = "website/generated/schema/classes/OcsfStartupItem.md"
+
+[[params.redirects]]
+from = "elements/StartupItemQuery"
+to = "website/generated/schema/classes/OcsfStartupItemQuery.md"
+
+[[params.redirects]]
+from = "elements/StartupItemRunModeIdsEnum"
+to = "website/generated/schema/_index.md"
+
+[[params.redirects]]
+from = "elements/StartupItemRunStateIdEnum"
+to = "website/generated/schema/_index.md"
+
+[[params.redirects]]
+from = "elements/StartupItemTypeIdEnum"
+to = "website/generated/schema/_index.md"
+
+[[params.redirects]]
+from = "elements/StateIdEnum"
+to = "website/generated/schema/_index.md"
+
+[[params.redirects]]
+from = "elements/StatusIdEnum"
+to = "website/generated/schema/_index.md"
+
+[[params.redirects]]
+from = "elements/StratumIdEnum"
+to = "website/generated/schema/_index.md"
+
+[[params.redirects]]
+from = "elements/SubTechnique"
+to = "website/generated/schema/classes/OcsfSubTechnique.md"
+
+[[params.redirects]]
+from = "elements/SystemEvent"
+to = "website/generated/schema/classes/OcsfSystemEvent.md"
+
+[[params.redirects]]
+from = "elements/Table"
+to = "website/generated/schema/classes/OcsfTable.md"
+
+[[params.redirects]]
+from = "elements/Tactic"
+to = "website/generated/schema/classes/OcsfTactic.md"
+
+[[params.redirects]]
+from = "elements/TcpStateIdEnum"
+to = "website/generated/schema/_index.md"
+
+[[params.redirects]]
+from = "elements/Technique"
+to = "website/generated/schema/classes/OcsfTechnique.md"
+
+[[params.redirects]]
+from = "elements/ThreatActor"
+to = "website/generated/schema/classes/OcsfThreatActor.md"
+
+[[params.redirects]]
+from = "elements/ThreatActorTypeIdEnum"
+to = "website/generated/schema/_index.md"
+
+[[params.redirects]]
+from = "elements/Ticket"
+to = "website/generated/schema/classes/OcsfTicket.md"
+
+[[params.redirects]]
+from = "elements/TicketStatusIdEnum"
+to = "website/generated/schema/_index.md"
+
+[[params.redirects]]
+from = "elements/TicketTypeIdEnum"
+to = "website/generated/schema/_index.md"
+
+[[params.redirects]]
+from = "elements/Timespan"
+to = "website/generated/schema/classes/OcsfTimespan.md"
+
+[[params.redirects]]
+from = "elements/TimespanTypeIdEnum"
+to = "website/generated/schema/_index.md"
+
+[[params.redirects]]
+from = "elements/Tls"
+to = "website/generated/schema/classes/OcsfTls.md"
+
+[[params.redirects]]
+from = "elements/TlsExtension"
+to = "website/generated/schema/classes/OcsfTlsExtension.md"
+
+[[params.redirects]]
+from = "elements/TlsExtensionTypeIdEnum"
+to = "website/generated/schema/_index.md"
+
+[[params.redirects]]
+from = "elements/Token"
+to = "website/generated/schema/classes/OcsfToken.md"
+
+[[params.redirects]]
+from = "elements/TokenTypeIdEnum"
+to = "website/generated/schema/_index.md"
+
+[[params.redirects]]
+from = "elements/Trace"
+to = "website/generated/schema/classes/OcsfTrace.md"
+
+[[params.redirects]]
+from = "elements/TraceProfile"
+to = "website/generated/schema/classes/OcsfTraceProfile.md"
+
+[[params.redirects]]
+from = "elements/Trait"
+to = "website/generated/schema/classes/OcsfTrait.md"
+
+[[params.redirects]]
+from = "elements/TransformationInfo"
+to = "website/generated/schema/classes/OcsfTransformationInfo.md"
+
+[[params.redirects]]
+from = "elements/TunnelActivity"
+to = "website/generated/schema/classes/OcsfTunnelActivity.md"
+
+[[params.redirects]]
+from = "elements/TunnelActivityActivityIdEnum"
+to = "website/generated/schema/_index.md"
+
+[[params.redirects]]
+from = "elements/TunnelActivityTunnelTypeIdEnum"
+to = "website/generated/schema/_index.md"
+
+[[params.redirects]]
+from = "elements/TunnelTypeIdEnum"
+to = "website/generated/schema/_index.md"
+
+[[params.redirects]]
+from = "elements/TypeIdEnum"
+to = "website/generated/schema/_index.md"
+
+[[params.redirects]]
+from = "elements/UnmannedAerialSystem"
+to = "website/generated/schema/classes/OcsfUnmannedAerialSystem.md"
+
+[[params.redirects]]
+from = "elements/UnmannedAerialSystemTypeIdEnum"
+to = "website/generated/schema/_index.md"
+
+[[params.redirects]]
+from = "elements/UnmannedSystemOperatingArea"
+to = "website/generated/schema/classes/OcsfUnmannedSystemOperatingArea.md"
+
+[[params.redirects]]
+from = "elements/UnmannedSystemOperatingAreaTypeIdEnum"
+to = "website/generated/schema/_index.md"
+
+[[params.redirects]]
+from = "elements/UnmannedSystemsEvent"
+to = "website/generated/schema/classes/OcsfUnmannedSystemsEvent.md"
+
+[[params.redirects]]
+from = "elements/Url"
+to = "website/generated/schema/classes/OcsfUrl.md"
+
+[[params.redirects]]
+from = "elements/User"
+to = "website/generated/schema/classes/OcsfUser.md"
+
+[[params.redirects]]
+from = "elements/UserAccess"
+to = "website/generated/schema/classes/OcsfUserAccess.md"
+
+[[params.redirects]]
+from = "elements/UserAccessActivityIdEnum"
+to = "website/generated/schema/_index.md"
+
+[[params.redirects]]
+from = "elements/UserInventory"
+to = "website/generated/schema/classes/OcsfUserInventory.md"
+
+[[params.redirects]]
+from = "elements/UserQuery"
+to = "website/generated/schema/classes/OcsfUserQuery.md"
+
+[[params.redirects]]
+from = "elements/UserTypeIdEnum"
+to = "website/generated/schema/_index.md"
+
+[[params.redirects]]
+from = "elements/VendorAttributes"
+to = "website/generated/schema/classes/OcsfVendorAttributes.md"
+
+[[params.redirects]]
+from = "elements/VerdictIdEnum"
+to = "website/generated/schema/_index.md"
+
+[[params.redirects]]
+from = "elements/VramModeIdEnum"
+to = "website/generated/schema/_index.md"
+
+[[params.redirects]]
+from = "elements/Vulnerability"
+to = "website/generated/schema/classes/OcsfVulnerability.md"
+
+[[params.redirects]]
+from = "elements/VulnerabilityFinding"
+to = "website/generated/schema/classes/OcsfVulnerabilityFinding.md"
+
+[[params.redirects]]
+from = "elements/VulnerabilityFixCoverageIdEnum"
+to = "website/generated/schema/_index.md"
+
+[[params.redirects]]
+from = "elements/WebResource"
+to = "website/generated/schema/classes/OcsfWebResource.md"
+
+[[params.redirects]]
+from = "elements/WebResourceAccessActivity"
+to = "website/generated/schema/classes/OcsfWebResourceAccessActivity.md"
+
+[[params.redirects]]
+from = "elements/WebResourceAccessActivityActivityIdEnum"
+to = "website/generated/schema/_index.md"
+
+[[params.redirects]]
+from = "elements/WebResourcesActivity"
+to = "website/generated/schema/classes/OcsfWebResourcesActivity.md"
+
+[[params.redirects]]
+from = "elements/WebResourcesActivityActivityIdEnum"
+to = "website/generated/schema/_index.md"
+
+[[params.redirects]]
+from = "elements/Whois"
+to = "website/generated/schema/classes/OcsfWhois.md"
+
+[[params.redirects]]
+from = "elements/WinResource"
+to = "website/generated/schema/classes/OcsfWinResource.md"
+
+[[params.redirects]]
+from = "elements/WinResourceTypeIdEnum"
+to = "website/generated/schema/_index.md"
+
+[[params.redirects]]
+from = "elements/WinService"
+to = "website/generated/schema/classes/OcsfWinService.md"
+
+[[params.redirects]]
+from = "elements/WindowsEvidences"
+to = "website/generated/schema/classes/OcsfEvidences.md"
+
+[[params.redirects]]
+from = "elements/WindowsProcess"
+to = "website/generated/schema/classes/OcsfProcess.md"
+
+[[params.redirects]]
+from = "elements/WindowsQueryEvidence"
+to = "website/generated/schema/classes/OcsfQueryEvidence.md"
+
+[[params.redirects]]
+from = "elements/WindowsResourceActivity"
+to = "website/generated/schema/classes/OcsfWinResourceActivity.md"
+
+[[params.redirects]]
+from = "elements/WindowsResourceActivityActivityIdEnum"
+to = "website/generated/schema/_index.md"
+
+[[params.redirects]]
+from = "elements/WindowsServiceActivity"
+to = "website/generated/schema/classes/OcsfWinServiceActivity.md"
+
+[[params.redirects]]
+from = "elements/WindowsServiceActivityActivityIdEnum"
+to = "website/generated/schema/_index.md"
+
+[[params.redirects]]
+from = "elements/WindowsServiceCategoryIdEnum"
+to = "website/generated/schema/_index.md"
+
+[[params.redirects]]
+from = "elements/WindowsServiceErrorControlIdEnum"
+to = "website/generated/schema/_index.md"
+
+[[params.redirects]]
+from = "elements/WindowsServiceStartTypeIdEnum"
+to = "website/generated/schema/_index.md"
+
+[[params.redirects]]
+from = "elements/WindowsServiceTypeIdEnum"
+to = "website/generated/schema/_index.md"
+
+[[params.redirects]]
+from = "elements/WindowsStartupItem"
+to = "website/generated/schema/classes/OcsfStartupItem.md"
+
+[[params.redirects]]
+from = "schema/*"
+to = "schema/*"
