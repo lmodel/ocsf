@@ -71,7 +71,7 @@ exclusions:
     reason: "Tooling: what the sidecar keeps out of git."
   - resource: .lokf/.gitattributes
     reason: "Tooling: line endings in the bundle."
-  - resource: .github/release
+  - resource: .release
     reason: The release job's pinned tools.
 sources:
   - resource: README.md
@@ -104,7 +104,7 @@ sources:
   - resource: website
 generated:
   by: process:ktl-librarian
-  at: "2026-11-06T21:23:27Z"
+  at: "2026-11-15T20:59:48Z"
 status: draft
 verified:
   - by: process:ktl-librarian
