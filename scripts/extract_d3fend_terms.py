@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # /// script
-# requires-python = ">=3.10"
+# requires-python = ">=3.11"
 # dependencies = ["rdflib>=7.1", "pyyaml>=6"]
 # ///
 """List the D3FEND terms the schema's mappings name, each found at D3FEND's own file.
